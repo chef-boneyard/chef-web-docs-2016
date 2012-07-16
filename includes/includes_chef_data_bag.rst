@@ -1,0 +1,3 @@
+.. This is an included file. 
+
+A data bag is a read-only global variable that is stored as JSON data and is accessible from a |chef server|. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords). The contents of a data bag can also be encrypted to prevent the contents of that data bag from being compromised.

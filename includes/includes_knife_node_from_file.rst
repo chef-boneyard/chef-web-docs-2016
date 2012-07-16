@@ -1,0 +1,17 @@
+.. This is an included file that describes a sub-command or argument in Knife.
+
+
+The ``from file`` argument is used to create a node using existing node data as a template. 
+
+This argument has the following syntax::
+
+   knife node from file FILE
+
+This argument does not have any options.
+
+For example:
+
+.. code-block:: bash
+
+   $ knife node from file 'path to JSON file'
+

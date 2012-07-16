@@ -1,0 +1,32 @@
+.. This is an included file that describes a sub-command or argument in Knife.
+
+
+The ``server delete`` argument is used to delete one or more instances that are running in the |eucalyptus| cloud. To find a specific cloud instance, use the ``knife eucalyptus server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required).
+
+This argument has the following syntax::
+
+   knife eucalyptus server delete [SERVER_ID...]
+
+This argument has the following options:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Option
+     - Description
+   * - ``-A ID``, ``--euca-access-key-id ID``
+     - |euca-access-key-id|
+   * - ``-K SECRET``, ``--euca-secret-access-key SECRET``
+     - |euca-secret-access-key|
+   * - ``--euca-api-endpoint ENDPOINT``
+     - |euca-api-endpoint|
+   * - ``--region REGION``
+     - |region eucalyptus|
+
+For example, to delete an instance named "devops2012", enter:
+
+.. code-block:: bash
+
+   $ knife eucalyptus server delete devops2012
+
