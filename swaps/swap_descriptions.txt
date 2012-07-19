@@ -79,12 +79,13 @@
 .. |editor| replace:: The |chef editor| that is used for all interactive commands.
 .. |email| replace:: The email address for the individual who maintains the cookbook. This option will place an email address in each of the pre-created files. If this option is not specified, an email name of "your_email" will be used instead; it can be easily modified later.
 .. |environment| replace:: The name of the |chef server| environment.
-.. |environment cookbooks| replace:: The environment that will be applied to all cookbooks that are uploaded using the same action.
+.. |environment cookbooks| replace:: The environment that will be applied to all cookbooks that are uploaded using the same action. This will automatically set the version constraint on the environment to match the version of a cookbook that is being uploaded.
 .. |euca-access-key-id| replace:: The access key identifier for |eucalyptus|.
 .. |euca-api-endpoint| replace:: The Eucalyptus API endpoint.
 .. |euca-secret-access-key| replace:: The secret access key for |eucalyptus|.
 .. |exec| replace:: A string of code that will be executed.
 .. |external-ip-address| replace:: A static IP address that is provided by |google compute engine|.
+
 
 .. F -- EDITED
 .. 
@@ -99,6 +100,7 @@
 .. |format| replace:: The output format: ``summary`` (default), ``text``, ``json``, ``yaml``, and ``pp``.
 .. |fqdn| replace:: The fully qualified domain name of the host.
 .. |freeze| replace:: Indicates that a cookbook cannot be modified; any changes to this cookbook must be included as a new version. Only the ``--force`` option can override this setting.
+
 
 .. G -- EDITED
 .. 
@@ -170,6 +172,13 @@
 .. |manual-list| replace:: Indicates that a search query is a space-separated list of servers.
 .. |media-location| replace:: The location of the blob in the |windows azure| blob store.
 .. |medium| replace:: Display more, but not all, of a node's data when searching using the default summary format.
+.. |metadata rb conflicts| replace:: Indicates that a cookbook conflicts with another cookbook or cookbook version. Use a version constraint to define constraints for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than).  This field requires that a cookbook with a matching name and version exist on the |chef server|. When the match exists, the |chef server| will ensure that conflicted cookbook is not included with the set of cookbooks that are sent to the node when the |chef client| runs. **jamescott: wild-ass guess based on the seeming parallelism of the ``depends`` field.**
+.. |metadata rb depends| replace:: Indicates that a cookbook has a dependency on another cookbook or cookbook version. Use a version constraint to define dependencies for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than). This field requires that a cookbook with a matching name and version exist on the |chef server|. When the match exists, the |chef server| will include the dependency as part of the set of cookbooks that are sent to the node when the |chef client| runs. This field should be used whenever a feature that is included in another cookbook should be run when this cookbook is run, such as including recipes, using the same resources or providers in lightweight resource providers, custom libraries, or definitions. It is very important that the ``depends`` field contain accurate data. If a dependency statement is inaccurate, |chef| may not be able to complete the configuration of the system.
+.. |metadata rb provides| replace:: Adds a recipe, definition, or resource that is provided by this cookbook, should the auto-populated list be insufficient.
+.. |metadata rb recommends| replace:: Adds a dependency on another cookbook that is recommended, but not required. A cookbook will still work even if recommended dependencies are not available.
+.. |metadata rb replaces| replace:: Indicates that this cookbook should replace another (and can be used in-place of that cookbook).
+.. |metadata rb suggests| replace:: Adds a dependency on another cookbook that is suggested, but not required. This field is weaker than ``recommends``; a cookbook will still work even when suggested dependencies are not available.
+.. |metadata rb supports| replace:: Indicates that a cookbook has a supported platform. Use a version constraint to define dependencies for platform versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than). To specify more than one platform, use more than one ``supports`` field, once for each platform.
 
 
 .. N -- EDITED
