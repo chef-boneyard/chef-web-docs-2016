@@ -104,7 +104,7 @@ html_theme = 'sphinxdoc'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Opscode:  Knife Command Line Reference"
+html_title = "Opscode: Knife Command Line Reference"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -229,7 +229,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'Knife', u'Knife',
-   u'Opscode, Inc.', 'Knife', 'Documentation for Knife, a command-line tool for Chef.',
+   u'Opscode, Inc.', 'Knife', 'Documentation for Knife, a command-line tool that is part of Chef.',
    'Miscellaneous'),
 ]
 
@@ -246,7 +246,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Opscode Knife Documentation'
+epub_title = u'Knife Command Line Documentation'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'

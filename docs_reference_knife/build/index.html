@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Knife Command Line Reference &mdash; Opscode:  Knife Command Line Reference</title>
+    <title>Knife Command Line Reference &mdash; Opscode: Knife Command Line Reference</title>
     
     <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,13 +25,13 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="Opscode:  Knife Command Line Reference" href="#" /> 
+    <link rel="top" title="Opscode: Knife Command Line Reference" href="#" /> 
   </head>
   <body>
     <div class="related">
       <h3>Navigation</h3>
       <ul>
-        <li><a href="#">Opscode:  Knife Command Line Reference</a> &raquo;</li> 
+        <li><a href="#">Opscode: Knife Command Line Reference</a> &raquo;</li> 
       </ul>
     </div>
       <div class="sphinxsidebar">
@@ -1053,7 +1053,7 @@ public_key:
 <li>cookbook/libraries</li>
 <li>cookbook/metadata.rb</li>
 <li>cookbook/providers</li>
-<li>cookbook/readme.md</li>
+<li>cookbook/readme.md (or .rdoc)</li>
 <li>cookbook/recipes/default.rb</li>
 <li>cookbook/resources</li>
 <li>cookbook/templates/default</li>
@@ -1100,6 +1100,12 @@ readme_format <span class="s2">&quot;md&quot;</span>
 </div>
 <p>For example, to create a cookbook named &#8220;my_cookbook&#8221; with copyright, email, license, and readme format options specified, enter:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook create my_cookbook -c <span class="s2">&quot;My Name&quot;</span> -e <span class="s2">&quot;my@email.com&quot;</span> -l apachev2 -r md
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre>** Creating cookbook my_cookbook
+** Creating README <span class="k">for </span>cookbook: my_cookbook
+** Creating metadata <span class="k">for </span>cookbook: my_cookbook
 </pre></div>
 </div>
 </div>
@@ -1327,6 +1333,14 @@ specificity:  default
 url:          https://someurlhere.com
 </pre></div>
 </div>
+<p>To see if a cookbook named &#8220;redis&#8221; with a version number of &#8220;0.1.6&#8221; is frozen, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook show redis 0.1.6 | grep frozen
+</pre></div>
+</div>
+<p>If the cookbook is frozen, something like the following is returned:</p>
+<div class="highlight-bash"><div class="highlight"><pre>frozen?:        <span class="nb">true</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="test">
 <h3>test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h3>
@@ -1388,7 +1402,7 @@ url:          https://someurlhere.com
 <td>Indicates that when a cookbook has a dependency on one or more other cookbooks, those cookbooks will also be uploaded.</td>
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-E</span> <span class="pre">ENVIRONMENT</span></tt>, <tt class="docutils literal"><span class="pre">--environment</span> <span class="pre">ENVIRONMENT</span></tt></td>
-<td>The environment that will be applied to all cookbooks that are uploaded using the same action.</td>
+<td>The environment that will be applied to all cookbooks that are uploaded using the same action. This will automatically set the version constraint on the environment to match the version of a cookbook that is being uploaded.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--force</span></tt></td>
 <td>Indicates that a cookbook should be updated even if the <tt class="docutils literal"><span class="pre">--freeze</span></tt> flag has been set.</td>
@@ -4959,7 +4973,7 @@ ec2-50-xx-xx-124.amazonaws.com <span class="o">[</span>date<span class="o">]</sp
     <div class="related">
       <h3>Navigation</h3>
       <ul>
-        <li><a href="#">Opscode:  Knife Command Line Reference</a> &raquo;</li> 
+        <li><a href="#">Opscode: Knife Command Line Reference</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
