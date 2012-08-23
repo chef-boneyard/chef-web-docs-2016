@@ -1,4 +1,6 @@
-.. This is an included file that describes a sub-command or argument in Knife.
+.. The contents of this file are included in multiple topics.
+.. This file describes a command or a sub-command for Knife.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
 The ``upload`` argument is used to upload one or more cookbooks (and any files that are associated with those cookbooks) from a local repository to the |chef server|. Only files that do not already exist on the |chef server| will be uploaded.
@@ -35,5 +37,25 @@ For example:
 .. code-block:: bash
 
    $ knife cookbook upload getting-started
+
+To upload a cookbook, and then prevent other users from being able to make changes to it, enter:
+
+.. code-block:: bash
+
+   $ knife cookbook upload redis --freeze
+
+To return::
+
+.. code-block:: bash
+
+   Uploading redis...
+   Upload completed
+
+If a cookbook is frozen and the ``--force`` option is not specified, |knife| will return an error message similar to the following:
+
+.. code-block:: bash
+
+   Uploading redis...
+   ERROR: Version 0.1.6 of cookbook redis is frozen. Use --force to override.
 
 

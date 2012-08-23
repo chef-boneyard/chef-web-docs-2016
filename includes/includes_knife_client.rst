@@ -1,7 +1,9 @@
-.. This is an included file that describes a sub-command or argument in Knife.
+.. The contents of this file are included in multiple topics.
+.. This file describes a command or a sub-command for Knife.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``client`` sub-command is used to manage one or more instances of a |chef client|, including ensuring they are properly registered with the |chef server| and have a valid RSA key pair.
+|knife client|
 
 This sub-command has the following syntax::
 

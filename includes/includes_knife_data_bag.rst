@@ -1,7 +1,9 @@
-.. This is an included file that describes a sub-command or argument in Knife.
+.. The contents of this file are included in multiple topics.
+.. This file describes a command or a sub-command for Knife.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``data bag`` sub-command is used to manage arbitrary stores of globally available JSON data.
+|knife data bag|
 
 This sub-command has the following syntax::
 
