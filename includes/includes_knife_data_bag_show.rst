@@ -1,4 +1,6 @@
-.. This is an included file that describes a sub-command or argument in Knife.
+.. The contents of this file are included in multiple topics.
+.. This file describes a command or a sub-command for Knife.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
 The ``show`` argument is used to view the contents of a data bag.
@@ -60,7 +62,7 @@ To show the contents of a data bag named "passwords" with an item that contains 
 
 to return:
 
-.. code-block:: bash
+.. code-block:: javascript
 
    ## sample:
    {
@@ -77,7 +79,7 @@ To show the decrypted contents of the same databag, enter:
 
 to return:
 
-.. code-block:: bash
+.. code-block:: javascript
 
    ## sample:
    {

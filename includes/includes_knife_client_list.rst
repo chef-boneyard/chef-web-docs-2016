@@ -1,4 +1,6 @@
-.. This is an included file that describes a sub-command or argument in Knife.
+.. The contents of this file are included in multiple topics.
+.. This file describes a command or a sub-command for Knife.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
 The ``list`` argument is used to view a list of registered clients. 
@@ -18,11 +20,15 @@ This argument has the following options:
    * - ``-w``, ``--with-uri``
      - |with-uri|
 
-For example, enter::
+For example, enter:
 
-   knife client list
+.. code-block:: bash
+
+   $ knife client list
 
 to return something similar to:
+
+.. code-block:: bash
 
    exampleorg-validator
    i-12345678

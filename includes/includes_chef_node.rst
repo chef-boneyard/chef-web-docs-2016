@@ -1,4 +1,5 @@
-.. This is an included file. 
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A node is a host that runs a |chef client|. The primary features of a node are groups of attributes and run lists. An attribute is a specific piece of data about a node, such as a network interface, a file system, or the number of clients that may be accepted by an Apache server. A run list is an ordered list of recipes and/or roles that are run in an exact order. Typically, there is a 1:1 mapping between a node and a physical device (a computer, a switch, a router, etc.).
 
+A node is a server or virtual server that is configured to be maintained by a |chef client|. A node can be physical or cloud-based. The |chef client| runs on each node and |ohai| is used to collect data about the system so that |chef| can use it. Each node keeps a cache that contains the most recent node object and all of the cookbooks that are used during configuration of the node.

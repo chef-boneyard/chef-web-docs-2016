@@ -62,7 +62,7 @@ The following options can be run with all |knife| sub-commands:
    * - ``-e EDITOR``, ``--editor EDITOR``
      - |editor|
    * - ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-     - |environment| The environment on the |chef server|.
+     - |environment|
    * - ``-F FORMAT``, ``--format FORMAT``
      - |format|
    * - ``-h``, ``--help``
@@ -649,6 +649,9 @@ status
 
 tag
 =====================================================
+
+.. include:: ../../includes/includes_chef_tags.rst
+
 .. include:: ../../includes/includes_knife_tag.rst
 
 create

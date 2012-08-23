@@ -8,7 +8,7 @@
 .. A -- EDITED
 .. 
 
-.. |admin| replace:: Indicates that a client will be created as an admin client.
+.. |admin client| replace:: Indicates that a client will be created as an admin client. This is required when users of |chef open server| need to access the API as an administrator.
 .. |after| replace:: Use this to add the run list item after the specified run list item.
 .. |all| replace:: Displays a node in the |chef editor|. By default, attributes that are default, override, or automatic are not shown.
 .. |all cookbooks| replace:: Indicates that all cookbooks will be uploaded.
@@ -18,7 +18,7 @@
 .. |all cookbooks test| replace:: Indicates that all cookbooks will be tested.
 .. |all data bags| replace:: Indicates that all data bags found at the specified path will be uploaded.
 .. |attribute| replace:: Indicates that only a single attribute is shown, as defined by the ``ATTR`` value.
-.. |attribute ssh| replace:: The attribute that is used when opening the connection. The default attribute is the fully-qualified domain name of the host.
+.. |attribute ssh| replace:: The attribute that is used when opening the |ssh| connection. The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 .. |availability-zone amazon ec2| replace:: The name of the |amazon ec2| availability zone. Each availability zone is unique within a region. Default: ``us-east-1b``.
 .. |availability-zone eucalyptus| replace:: The name of the |eucalyptus| availability zone. Each availability zone is unique within a region. Default: ``us-east-1b``.
 .. |availability-zone google| replace:: The name of the |google compute engine| availability zone. Each availability zone is unique within a region. Default: ``us-east-a``.
@@ -45,6 +45,7 @@
 
 .. |ca-trust-file| replace:: The |ca| trust file used for |ssl| transport.
 .. |CATEGORY| replace:: The cookbook category: ``Databases``, ``Web Servers``, ``Process Management``, ``Monitoring and Trending``, ``Programming Languages``, ``Package Management``, ``Applications``, ``Networking``, ``Operations Systems and Virtualization``, ``Utilities``, or ``Other``.
+.. |checksum_path| replace:: The location in which checksums for individual cookbook files (such as recipes) are stored. The checksum itself is stored in |couch db| and is compared to a file in this location that has a filename that is identical to the checksum.
 .. |client| replace:: Use to create a client configuration. This will read from the |knife rb| config file to generate a config file suitable for use in |path chef client rb|, and will then copy the validation certificate into the specified directory.
 .. |color| replace:: Indicates that colored output will be used.
 .. |concurrency| replace:: The number of allowed concurrent connections.
@@ -112,6 +113,7 @@
 .. H -- EDITED
 .. 
 
+.. |handler chef handler| replace:: The ``chef_handler`` |lwrp| allows report and exception handlers to be enabled within recipes using |ruby| code, as opposed to them being hard-coded in the |client rb| file.
 .. |help| replace:: Shows help for |knife| or for a sub-command.
 .. |hint| replace:: Indicates that an |ohai| hint will be set on the target of the bootstrap. Use multiple ``--hint`` options to specify multiple hints.
 .. |host-name| replace:: The host name for the virtual machine.
@@ -139,6 +141,8 @@
 .. 
 
 .. |json-attributes| replace:: A JSON string that is added to the first run of a |chef client|.
+.. |json dsl chef type| replace:: This should always be set to ``environment``. Use this setting for any custom process that consumes environment objects outside of |ruby|.
+.. |json dsl json class| replace:: This should always be set to ``Chef::Environment``. This setting is used internally by |chef| to auto-inflate an environment object. If objects are being rebuilt outside of |ruby|, ignore it.
 
 
 .. K -- EDITED
@@ -148,6 +152,33 @@
 .. |kerberos-service| replace:: The service principal used during |kerberos|-based authentication.
 .. |key| replace:: The API key that a |chef client| must provide before it can access a |chef server|.
 .. |keytab-file| replace:: The keytab file that contains the encryption key required by |kerberos|-based authentication.
+.. |knife azure| replace:: |windows azure| is a cloud hosting platform from |microsoft| that provides virtual machines for |linux| and |windows server|, cloud and database services, and more. The ``azure`` sub-command is used to manage API-driven cloud servers that are hosted by |windows azure|.
+.. |knife bluebox| replace:: |bluebox| provides on-demand computing that is backed by a proprietary cloud operating system. The ``bluebox`` sub-command is used to manage API-driven cloud servers that are hosted by |bluebox|.
+.. |knife bootstrap| replace:: The ``bootstrap`` sub-command is used run a bootstrap operation that installs |chef| on the target system. The bootstrap operation must specify the IP address or FQDN of the target system.
+.. |knife client| replace:: The ``client`` sub-command is used to manage one or more instances of a |chef client|, including ensuring they are properly registered with the |chef server| and have a valid RSA key pair.
+.. |knife configure| replace:: The ``configure`` sub-command is used to create the |knife rb| and |client rb| files so that they can be distributed to workstations and nodes.
+.. |knife cookbook| replace:: The ``cookbook`` sub-command is used to interact with cookbooks that are located on the |chef server|.
+.. |knife data bag| replace:: The ``data bag`` sub-command is used to manage arbitrary stores of globally available JSON data.
+.. |knife ec2| replace:: |amazon ec2| is a web service that provides resizable compute capacity in the cloud based and pre-configured operating system and virtual application software using |amazon ami|. The ``ec2`` sub-command is used to manage API-driven cloud servers that are hosted by |amazon ec2|.
+.. |knife environment| replace:: The ``environment`` sub-command is used to manage environments within a single organization on the |chef server|.
+.. |knife exec| replace:: The ``exec`` sub-command uses the |knife| configuration file to execute |ruby| scripts in the context of a fully configured |chef client|. This sub-command is most often used to run scripts that will only access |chef server| one time (or otherwise very infrequently). Use this command any time that an operation does not warrant full usage of the |knife| sub-command library.
+.. |knife eucalyptus| replace:: |eucalyptus| is an infrastructure as a service (IaaS) platform that supports hybrid-IaaS configurations that allow data to move between hosted and on-premise data centers. The ``eucalyptus`` sub-command is used to manage API-driven cloud servers that are hosted by |eucalyptus|.
+.. |knife google| replace:: |google compute engine| is a cloud hosting platform that offers scalable and flexible virtual machine computing. The ``google`` sub-command is used to manage API-driven cloud servers that are hosted by |google compute engine|.
+.. |knife index rebuild| replace:: The ``index rebuild`` sub-command is used to rebuild the search indexes for |chef open server|. This operation is destructive and may take some time.
+.. |knife hp| replace:: |hp cloud| is a cloud hosting platform that provides computing, storage, identity, and other services across private, managed, and public clouds. The ``hp`` sub-command is used to manage API-driven cloud servers that are hosted by |hp cloud|.
+.. |knife linode| replace:: |linode| is a cloud hosting platform that provides virtual private server hosting from the kernal and root access on up. The ``linode`` sub-command is used to manage API-driven cloud servers that are hosted by |linode|.
+.. |knife node| replace:: The ``node`` sub-command is used to manage the nodes that exist on a |chef server|.
+.. |knife openstack| replace:: |openstack| is a cloud operating system that provides support for provisioning large networks of virtual machines, pluggable and scalable network and IP management, and object and block storage. The ``openstack`` sub-command is used to manage API-driven cloud servers that are hosted by |openstack|.
+.. |knife rackspace| replace:: |rackspace| is a cloud-driven platform of virtualized servers that provide services for storage and data, platform and networking, and cloud computing. The ``rackspace`` sub-command is used to manage API-driven cloud servers that are hosted by |rackspace| cloud services.
+.. |knife recipe list| replace:: The ``recipe list`` sub-command is used to view all of the recipes that are on a |chef server|. A regular expression can be used to limit the results to recipes that match a specific pattern. The regular expression must be within quotes and not be surrounded by forward slashes (/).
+.. |knife role| replace:: The ``role`` sub-command is used to manage the roles that are associated with one or more nodes on a |chef server|.
+.. |knife search| replace:: The ``search`` sub-command is used run a search query for information that is indexed on a |chef server|.
+.. |knife site cookbook| replace:: The ``cookbook site`` sub-command is used to interact with cookbooks that are located at |url cookbook|. A user account is required for any community actions that write data to this site.
+.. |knife ssh| replace:: The ``ssh`` sub-command is used to invoke |ssh| commands (in parallel) on a subset of nodes within an organization, based on the results of a search query.
+.. |knife status| replace:: The ``status`` sub-command is used to display a brief summary of the nodes on a |chef server|, including the time of the most recent successful |chef client| run.
+.. |knife tag| replace:: The ``tag`` sub-command is used to apply tags to nodes on a |chef server|.
+.. |knife terremark| replace:: |terremark| is a cloud hosting platform that provides cloud, IT infrastructure, and managed hosting services. The ``terremark`` sub-command is used to manage API-driven cloud servers that are hosted by |terremark|.
+.. |knife windows| replace:: The ``windows`` sub-command is used to configure and interact with nodes that exist on server and/or desktop machines that are running |windows|. Nodes are configured using |windows remote management|, which allows native objects---batch scripts, |windows powershell| scripts, or scripting library variables---to be called by external applications.
 
 .. L -- EDITED
 .. 
@@ -221,7 +252,7 @@
 .. Q -- EDITED
 .. 
 
-.. |query| replace:: The search query; useful to protect queries starting with a hyphen (-). A ``-q`` query may be specified as an argument or an option, but not both.
+.. |query| replace:: Use to protect search queries that start with a hyphen (-). A ``-q`` query may be specified as an argument or an option, but not both.
 
 
 .. R -- EDITED
@@ -240,6 +271,14 @@
 .. |role-name| replace:: The name of the virtual machine.
 .. |role-size| replace:: The size of the virtual machine: ``ExtraSmall``, ``Small``, ``Medium``, ``Large``, or ``ExtraLarge``.
 .. |rows| replace:: The number of rows to be returned.
+.. |ruby dsl cookbook| replace:: A version constraint for a single cookbook.
+.. |ruby dsl cookbook version| replace:: A version constraint for a group of cookbooks.
+.. |ruby dsl default attribute| replace:: Optional. A set of attributes that should be applied to all nodes, assuming the node does not already have a value for the attribute. This is useful for setting global defaults that can then be overridden for specific nodes. If more than one role attempts to set a default value for the same attribute, the last role applied will win. When nested attributes are present, they will be preserved.
+.. |ruby dsl description| replace:: A description of the functionality that is covered.
+.. |ruby dsl environment run list| replace:: Optional. A list of environments, and then a list of recipes and/or roles that will be applied to each specific environment. Each environment may only have a single recipe or role assigned to it. If a run list is not specified, the default run list will be used.
+.. |ruby dsl name| replace:: A unique name within the |chef| organization. Each name must be unique and must be made up of letters (upper- and lower-case), numbers, underscores, and hyphens: [A-Z][a-z][0-9] and [_-]. Spaces are not allowed.
+.. |ruby dsl override attribute| replace:: Optional. A set of attributes that should be applied to all nodes, even if the node already has a value for an attribute. This is useful for ensuring that certain attributes always have specific values. If more than one role attempts to set an override value for the same attribute, the last role applied will win. When nested attributes are present, they will be preserved.
+.. |ruby dsl run list| replace:: A list of recipes and/or roles that will be applied **and** the order in which those recipes and/or roles will be applied.
 .. |run-list| replace:: A comma-separated list of roles and/or recipes to be applied.
 .. |run-list indicator| replace:: Indicates that only the run-list will be shown.
 
@@ -247,6 +286,7 @@
 .. S -- EDITED
 .. 
 
+.. |sandbox_path| replace:: The location in which cookbook files are stored (temporarily) during upload.
 .. |script-path| replace:: A colon-separated path at which |ruby| scripts are located.
 .. |SEARCH_QUERY| replace:: The search query used to identify a a list of items on a |chef server|. This option uses the same syntax as the ``search`` sub-command.
 .. |SEARCH_QUERY SSH| replace:: The search query used to return a list of servers to be accessed using |ssh| and the specified ``SSH_COMMAND``. This option uses the same syntax as the search sub-command.

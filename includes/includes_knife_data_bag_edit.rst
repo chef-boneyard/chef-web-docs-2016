@@ -1,4 +1,6 @@
-.. This is an included file that describes a sub-command or argument in Knife.
+.. The contents of this file are included in multiple topics.
+.. This file describes a command or a sub-command for Knife.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
 The ``edit`` argument is used to edit the data contained in a data bag. If encryption is being used, the data bag will be decrypted, the data will be made available in the $EDITOR, and then encrypted again before saving it to the |chef server|.
@@ -46,7 +48,7 @@ to open the $EDITOR. Once opened, you can update the data before saving it to th
 
 to:
 
-.. code-block:: bash
+.. code-block:: javascript
 
    {
       "id": "charlie",
