@@ -25,9 +25,11 @@
 .. |availability-zone openstack| replace:: The name of the |openstack| availability zone. Each availability zone is unique within a region. Default: ``us-east-1b``.
 .. |aws-access-key-id| replace:: The access key identifier used with |amazon ec2|.
 .. |aws-secret-access-key| replace:: The secret access key for the API endpoint used with |amazon ec2|.
-.. |azure-host-name| replace:: The host name for the |windows azure| environment.
+.. |azure host description| replace:: The description for the host.
+.. |azure host name| replace:: The host name for the |windows azure| environment.
 .. |azure-pem-filename| replace:: The name of the file that contains the |ssh| public key that is used when authenticating to |windows azure|.
 .. |azure-subscription-id| replace:: The subscription identifier for the |windows azure| portal.
+.. |azure verify ssl certificate| replace:: The |ssl| certificate that is used to verify communication over HTTPS.
 
 
 
@@ -36,6 +38,7 @@
 
 .. |block-startup-timeout| replace:: The amount of time that should elapse before the deployment process is stopped.
 .. |bootstrap-proxy| replace:: The proxy server for the node that is the target of a bootstrap operation.
+.. |bootstrap protocol| replace:: The protocol used to bootstrap on a machine that is running |windows server|: ``winrm`` or ``ssh``.
 .. |bootstrap-version| replace:: The version of |chef| to install.
 .. |branch| replace:: The name of the default branch. This will default to the master branch.
 
@@ -153,6 +156,7 @@
 .. |key| replace:: The API key that a |chef client| must provide before it can access a |chef server|.
 .. |keytab-file| replace:: The keytab file that contains the encryption key required by |kerberos|-based authentication.
 .. |knife azure| replace:: |windows azure| is a cloud hosting platform from |microsoft| that provides virtual machines for |linux| and |windows server|, cloud and database services, and more. The ``azure`` sub-command is used to manage API-driven cloud servers that are hosted by |windows azure|.
+.. |knife azure certificate| replace:: The ``azure`` sub-command must use a management certificate for secure communication with |windows azure|.
 .. |knife bluebox| replace:: |bluebox| provides on-demand computing that is backed by a proprietary cloud operating system. The ``bluebox`` sub-command is used to manage API-driven cloud servers that are hosted by |bluebox|.
 .. |knife bootstrap| replace:: The ``bootstrap`` sub-command is used run a bootstrap operation that installs |chef| on the target system. The bootstrap operation must specify the IP address or FQDN of the target system.
 .. |knife client| replace:: The ``client`` sub-command is used to manage one or more instances of a |chef client|, including ensuring they are properly registered with the |chef server| and have a valid RSA key pair.
@@ -201,7 +205,7 @@
 .. 
 
 .. |manual-list| replace:: Indicates that a search query is a space-separated list of servers.
-.. |media-location| replace:: The location of the blob in the |windows azure| blob store.
+.. |media location| replace:: The geographic location for a virtual machine and its services.
 .. |medium| replace:: Display more, but not all, of a node's data when searching using the default summary format.
 .. |metadata rb conflicts| replace:: Indicates that a cookbook conflicts with another cookbook or cookbook version. Use a version constraint to define constraints for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than).  This field requires that a cookbook with a matching name and version exist on the |chef server|. When the match exists, the |chef server| will ensure that conflicted cookbook is not included with the set of cookbooks that are sent to the node when the |chef client| runs. **jamescott: wild-ass guess based on the seeming parallelism of the ``depends`` field.**
 .. |metadata rb depends| replace:: Indicates that a cookbook has a dependency on another cookbook or cookbook version. Use a version constraint to define dependencies for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than). This field requires that a cookbook with a matching name and version exist on the |chef server|. When the match exists, the |chef server| will include the dependency as part of the set of cookbooks that are sent to the node when the |chef client| runs. This field should be used whenever a feature that is included in another cookbook should be run when this cookbook is run, such as including recipes, using the same resources or providers in lightweight resource providers, custom libraries, or definitions. It is very important that the ``depends`` field contain accurate data. If a dependency statement is inaccurate, |chef| may not be able to complete the configuration of the system.
@@ -245,6 +249,7 @@
 .. |public-key-file| replace:: The file in which the |ssh| public key used for authentication is located.
 .. |purge amazon ec2| replace:: Indicates that all corresponding nodes and clients on the |chef server| will be destroyed, in addition to the |amazon ec2| node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the ``--node-name`` option must be used to specify the name of the node.
 .. |purge windows azure| replace:: Indicates that all corresponding nodes and clients on the |chef server| will be destroyed, in addition to the |windows azure| node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the ``--node-name`` option must be used to specify the name of the node.
+.. |purge os disk windows azure| replace:: Indicates that all corresponding operating system disks will be destroyed, in addition to the |windows azure| node itself.
 .. |purge cookbook| replace:: Indicates that a cookbook (or cookbook version) will be removed entirely from the repository and its backup. This action should be used carefully because purging a cookbook will disable any other cookbook that references one or more files from a cookbook that has been purged.
 
 
@@ -267,6 +272,88 @@
 .. |region eucalyptus| replace:: The name of the region from which instances of hosted applications are launched.
 .. |region openstack| replace:: The name of the region from which instances of hosted applications are launched.
 .. |repository| replace:: The path to the |chef| repository.
+
+.. |resource action add ifconfig| replace:: Use to run |ifconfig| to configure a network interface and (on some platforms) write a configuration file for that network interface.
+.. |resource action add route| replace:: Use to add a route.
+.. |resource action assemble mdadm| replace:: Use to assemble a previously created array into an active array.
+.. |resource action checkout scm| replace:: Use to clone or check out the source. When a checkout is available, this provider does nothing.
+.. |resource action create cookbook_file| replace:: Use to create a file.
+.. |resource action create cron| replace:: Use to create an entry in a |cron| table file ("crontab"). If an entry already exists with the same name, use to update that entry.
+.. |resource action create directory| replace:: Use to create a directory.
+.. |resource action create env| replace:: Use to create a new environment variable.
+.. |resource action create file| replace:: Use to create a file.
+.. |resource action create group| replace:: Use to create a group.
+.. |resource action create link| replace:: Use to create a link.
+.. |resource action create mdadm| replace:: Use to create a new array with per-device superblocks.
+.. |resource action create remote_file| replace:: Use to synchronize a file from a remote source to the file system.
+.. |resource action create ruby_block| replace:: Use to create a |ruby| block.
+.. |resource action create user| replace:: Use to create a user with given attributes. If the user already exists, use to ensure that the resource is in the correct state (which is effectively the same as ``:modify``).
+.. |resource action create template| replace:: Use to create a file.
+.. |resource action create_if_missing cookbook_file| replace:: Use to create a file if it doesn't already exist.
+.. |resource action create_if_missing file| replace:: Use to create a file only if the file does not already exist. (When the file exists, nothing happens.)
+.. |resource action create_if_missing remote_file| replace:: Use to create a file locally by fetching from the remote source, but only if the file doesn't yet exist.
+.. |resource action create_if_missing template| replace:: Use to create a file only if it does not exist.
+.. |resource action delete cookbook_file| replace:: Use to delete a file.
+.. |resource action delete cron| replace:: Use to delete an entry from a |cron| table file ("crontab").
+.. |resource action delete directory| replace:: Use to delete a directory.
+.. |resource action delete env| replace:: Use to delete an environment variable.
+.. |resource action delete file| replace:: Use to delete a file.
+.. |resource action delete http_request| replace:: Use to send a DELETE request.
+.. |resource action delete ifconfig| replace:: Use to run |ifconfig| to disable a network interface and (on some platforms) delete that network interface's configuration file.
+.. |resource action delete link| replace:: Use to delete a link.
+.. |resource action delete route| replace:: Use to delete a route.
+.. |resource action deploy deploy| replace:: Use to deploy an application.
+.. |resource action disable ifconfig| replace:: Use to run |ifconfig| to disable a network interface.
+.. |resource action disable mount| replace:: Use to remove an entry from the file systems table (fstab).
+.. |resource action disable service| replace:: Use to disable a service.
+.. |resource action enable ifconfig| replace:: Use to run |ifconfig| to enable a network interface.
+.. |resource action enable mount| replace:: Use to add an entry to the file systems table (fstab).
+.. |resource action export scm| replace:: Use to export the source, excluding or removing any version control artifacts.
+.. |resource action export service| replace:: Use to enable a service at boot.
+.. |resource action force_deploy deploy| replace:: Use to remove any existing release of the same code version and re-deploy a new one in its place.
+.. |resource action force_export scm| replace:: Use to export the source, excluding or removing any version control artifacts and to force an export of the source that is overwriting the existing copy (if it exists).
+.. |resource action get http_request| replace:: Use to send a GET request.
+.. |resource action head http_request| replace:: Use to send a HEAD request.
+.. |resource action install package| replace:: Use to install a package. If a version is specified, use to install the specified version of a package.
+.. |resource action install yum| replace:: Indicates that a package (or a version, when provided) will be installed.
+.. |resource action lock user| replace:: Use to lock a user's password.
+.. |resource action manage group| replace:: Use to manage an existing group. This action will do nothing if the group does not exist.
+.. |resource action manage user| replace:: Use to manage an existing user. This action will do nothing if the user does not exist.
+.. |resource action modify env| replace:: Use to modify an existing environment variable. This will append the new value to the existing value, using the delimiter specified by the ``delim`` attribute.
+.. |resource action modify group| replace:: Use to modify an existing group. This action will raise an exception if the group does not exist.
+.. |resource action modify user| replace:: Use to modify an existing user. This action will raise an exception if the user does not exist.
+.. |resource action mount mount| replace:: Use to mount a device.
+.. |resource action nothing erlang| replace:: Indicates that the |erlang| call should not be run.
+.. |resource action nothing execute| replace:: Indicates that the command should not be run. This action is used to specify that a command is run only when another resource notifies it.
+.. |resource action nothing service| replace:: Use to do nothing with a service.
+.. |resource action options http_request| replace:: Use to send an OPTIONS request.
+.. |resource action post http_request| replace:: Use to send a POST request.
+.. |resource action purge package| replace:: Use to purge a package. This action typically removes the configuration files as well as the package.
+.. |resource action put http_request| replace:: Use to send a PUT request.
+.. |resource action reload ohai| replace:: Use to reload the |ohai| configuration on a node.
+.. |resource action reload service| replace:: Use to reload the configuration for this service.
+.. |resource action remount mount| replace:: Use to remount a device.
+.. |resource action remove group| replace:: Use to remove a group.
+.. |resource action remove package| replace:: Use to remove a package.
+.. |resource action remove user| replace:: Use to remove a user.
+.. |resource action remove yum| replace:: Indicates that a package (or a version, when provided) will be removed.
+.. |resource action restart service| replace:: Use to restart a service.
+.. |resource action rollback deploy| replace:: Use to roll an application back to the previous release.
+.. |resource action run erlang| replace:: Indicates that the |erlang| call should be run.
+.. |resource action run execute| replace:: Indicates that the command should be run.
+.. |resource action run powershell_script| replace:: Use to run the script.
+.. |resource action run script| replace:: Use to run a script.
+.. |resource action start service| replace:: Use to start a service (and keep it running until stopped or disabled).
+.. |resource action stop mdadm| replace:: Use to stop an active array.
+.. |resource action stop service| replace:: Use to stop a service.
+.. |resource action sync scm| replace:: Use to update the source to the specified version, or to get a new clone or checkout.
+.. |resource action touch file| replace:: Use to touch a file. This updates the access (atime) and file modification (mtime) times for a file.
+.. |resource action umount mount| replace:: Use to unmount a device.
+.. |resource action unlock user| replace:: Use to unlock a user's password.
+.. |resource action upgrade package| replace:: Use to upgrade a package to the latest version.
+.. |resource action upgrade yum| replace:: Indicates that a package will be upgraded to the latest available version.
+.. |resource action write log| replace:: Use to write to log.
+
 .. |returns| replace:: A comma-delimited list of return codes, which indicate success. **jamescott: success of what?**
 .. |role-name| replace:: The name of the virtual machine.
 .. |role-size| replace:: The size of the virtual machine: ``ExtraSmall``, ``Small``, ``Medium``, ``Large``, or ``ExtraLarge``.
@@ -299,7 +386,7 @@
 .. |sort| replace:: The order in which search results will be sorted.
 .. |source-image| replace:: The name of the disk image that will be used to create the virtual machine.
 .. |SSH_COMMAND| replace:: The command that will be run against the results of a search query.
-.. |ssh-gateway| replace:: The |ssh| gateway.
+.. |ssh-gateway| replace:: The |ssh| tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
 .. |ssh-key amazon ec2| replace:: The |ssh| key for the |amazon ec2| environment.
 .. |ssh-key eucalyptus| replace:: The |ssh| key for the |eucalyptus| environment.
 .. |ssh-key hp| replace:: The |ssh| key for the |hp cloud| environment.
@@ -308,6 +395,7 @@
 .. |ssh-port| replace:: The |ssh| port.
 .. |ssh-user| replace:: The |ssh| user name.
 .. |start| replace:: The row at which return results will begin.
+.. |storage account| replace:: The name of the storage account used with the hosted service.
 .. |subnet| replace:: The |amazon vpc| instance in which a node will be created.
 .. |sudo| replace:: Indicates that a bootstrap operation should be executed using |sudo cmd|.
 

@@ -17,18 +17,24 @@ This argument has the following options:
 
    * - Option
      - Description
+   * - ``-a STORAGE_ACCOUNT_NAME``, ``--storage-account STORAGE_ACCOUNT_NAME``
+     - |storage account|
+   * - ``--bootstrap-protocol PROTOCOL``
+     - |bootstrap protocol| Default value: ``winrm``.
    * - ``--bootstrap-version VERSION``
      - |bootstrap-version|
    * - ``-d DISTRO``, ``--distro DISTRO``
      - |distro|
+   * - ``-D DESCRIPTION``
+     - |azure host description|
    * - ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
-     - |azure-host-name|
+     - |azure host name|
    * - ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
      - |identity-file|
    * - ``-I IMAGE``, ``--source-image IMAGE``
      - |source-image|
-   * - ``-m PREFIX``, ``--media-location PREFIX``
-     - |media-location|
+   * - ``-m LOCATION``, ``--service-location LOCATION``
+     - |media location|
    * - ``-N NAME``, ``--node-name NAME``
      - |node-name| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
    * - ``--[no-]host-key-verify``
@@ -55,6 +61,8 @@ This argument has the following options:
      - |template-file|
    * - ``--u PORT_LIST``, ``---udp-endpoints PORT_LIST``
      - |udp-endpoints|
+   * - ``--verify-ssl-cert``
+     - |azure verify ssl certificate|
    * - ``-x USER_NAME``, ``--ssh-user USER_NAME``
      - |ssh-user|
    * - ``-z SIZE``, ``--role-size SIZE``
