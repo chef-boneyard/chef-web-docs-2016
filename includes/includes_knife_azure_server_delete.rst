@@ -18,15 +18,19 @@ This argument has the following options:
    * - Option
      - Description
    * - ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
-     - |azure-host-name|
+     - |azure host name|
    * - ``-N NODE_NAME``, ``--node-name NODE_NAME``
      - |node-name purge| This must be used with the ``-p`` (purge) option.
    * - ``-p``, ``--purge``
      - |purge windows azure|
+   * - ``--purge-os-disk``
+     - |purge os disk windows azure|
    * - ``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
      - |azure-pem-filename|
    * - ``-S ID``, ``--azure-subscription-id ID``
      - |azure-subscription-id|
+   * - ``--verify-ssl-cert``
+     - |azure verify ssl certificate|
 
 For example, to delete an instance named "devops12", enter:
 

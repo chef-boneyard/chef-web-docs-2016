@@ -366,6 +366,7 @@
 <div class="section" id="azure-plug-in">
 <h2>azure (plug-in)<a class="headerlink" href="#azure-plug-in" title="Permalink to this headline">¶</a></h2>
 <p>Windows Azure is a cloud hosting platform from Microsoft that provides virtual machines for Linux and Windows Server, cloud and database services, and more. The <tt class="docutils literal"><span class="pre">azure</span></tt> sub-command is used to manage API-driven cloud servers that are hosted by Windows Azure.</p>
+<p>The <tt class="docutils literal"><span class="pre">azure</span></tt> sub-command must use a management certificate for secure communication with Windows Azure.</p>
 <p>This plugin is available on github: <a class="reference external" href="https://github.com/opscode/knife-azure">https://github.com/opscode/knife-azure</a>.</p>
 <p>This sub-command has the following syntax:</p>
 <div class="highlight-python"><pre>knife azure [ARGUMENT] (options)</pre>
@@ -397,6 +398,9 @@
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></td>
 <td>The subscription identifier for the Windows Azure portal.</td>
 </tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></td>
+<td>The SSL certificate that is used to verify communication over HTTPS.</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -418,62 +422,74 @@
 </tr>
 </thead>
 <tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-a</span> <span class="pre">STORAGE_ACCOUNT_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--storage-account</span> <span class="pre">STORAGE_ACCOUNT_NAME</span></tt></td>
+<td>The name of the storage account used with the hosted service.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--bootstrap-protocol</span> <span class="pre">PROTOCOL</span></tt></td>
+<td>The protocol used to bootstrap on a machine that is running Windows Server: <tt class="docutils literal"><span class="pre">winrm</span></tt> or <tt class="docutils literal"><span class="pre">ssh</span></tt>. Default value: <tt class="docutils literal"><span class="pre">winrm</span></tt>.</td>
+</tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">--bootstrap-version</span> <span class="pre">VERSION</span></tt></td>
 <td>The version of Chef to install.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></td>
 <td>Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (<tt class="docutils literal"><span class="pre">--template-file</span></tt>) must also be provided. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-H</span> <span class="pre">HOST_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure_host_name</span> <span class="pre">HOST_NAME</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-D</span> <span class="pre">DESCRIPTION</span></tt></td>
+<td>The description for the host.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-H</span> <span class="pre">HOST_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure_host_name</span> <span class="pre">HOST_NAME</span></tt></td>
 <td>The host name for the Windows Azure environment.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></td>
 <td>The SSH identity file used for authentication. Key-based authentication is recommended.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-I</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--source-image</span> <span class="pre">IMAGE</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-I</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--source-image</span> <span class="pre">IMAGE</span></tt></td>
 <td>The name of the disk image that will be used to create the virtual machine.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-m</span> <span class="pre">PREFIX</span></tt>, <tt class="docutils literal"><span class="pre">--media-location</span> <span class="pre">PREFIX</span></tt></td>
-<td>The location of the blob in the Windows Azure blob store.</td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-m</span> <span class="pre">LOCATION</span></tt>, <tt class="docutils literal"><span class="pre">--service-location</span> <span class="pre">LOCATION</span></tt></td>
+<td>The geographic location for a virtual machine and its services.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></td>
 <td>The name of the node on the Chef server. Node names in Chef, when used with Windows Azure, must be 91 characters or shorter.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></td>
 <td>Use <tt class="docutils literal"><span class="pre">--no-host-key-verify</span></tt> to disable host key verification. Host key verification is enabled by default.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-o</span> <span class="pre">DISK_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--os-disk-name</span> <span class="pre">DISK_NAME</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-o</span> <span class="pre">DISK_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--os-disk-name</span> <span class="pre">DISK_NAME</span></tt></td>
 <td>The operating system type of the Windows Azure OS image: <tt class="docutils literal"><span class="pre">Linux</span></tt> or <tt class="docutils literal"><span class="pre">Windows</span></tt>.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></td>
 <td>The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></td>
 <td>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--prerelease</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--prerelease</span></tt></td>
 <td>Indicates that pre-release Chef gems should be installed.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></td>
 <td>A comma-separated list of roles and/or recipes to be applied.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-R</span> <span class="pre">ROLE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--role-name</span> <span class="pre">ROLE_NAME</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-R</span> <span class="pre">ROLE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--role-name</span> <span class="pre">ROLE_NAME</span></tt></td>
 <td>The name of the virtual machine.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-s</span> <span class="pre">SERVICE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--hosted-service-name</span> <span class="pre">SERVICE_NAME</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-s</span> <span class="pre">SERVICE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--hosted-service-name</span> <span class="pre">SERVICE_NAME</span></tt></td>
 <td>The name of the hosted service.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></td>
 <td>The subscription identifier for the Windows Azure portal.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-t</span> <span class="pre">PORT_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--tcp-endpoints</span> <span class="pre">PORT_LIST</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-t</span> <span class="pre">PORT_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--tcp-endpoints</span> <span class="pre">PORT_LIST</span></tt></td>
 <td>A comma-separated list of local and public TCP ports that will be opened, for example: <tt class="docutils literal"><span class="pre">80:80,433:5000</span></tt>.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></td>
 <td>The path to the template file that will be used during a bootstrap operation.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--u</span> <span class="pre">PORT_LIST</span></tt>, <tt class="docutils literal"><span class="pre">---udp-endpoints</span> <span class="pre">PORT_LIST</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--u</span> <span class="pre">PORT_LIST</span></tt>, <tt class="docutils literal"><span class="pre">---udp-endpoints</span> <span class="pre">PORT_LIST</span></tt></td>
 <td>A comma-separated list of local and public UDP ports that will be opened, for example: <tt class="docutils literal"><span class="pre">80:80,433:5000</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></td>
+<td>The SSL certificate that is used to verify communication over HTTPS.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USER_NAME</span></tt></td>
 <td>The SSH user name.</td>
@@ -515,11 +531,17 @@
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-p</span></tt>, <tt class="docutils literal"><span class="pre">--purge</span></tt></td>
 <td>Indicates that all corresponding nodes and clients on the Chef server will be destroyed, in addition to the Windows Azure node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the <tt class="docutils literal"><span class="pre">--node-name</span></tt> option must be used to specify the name of the node.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--purge-os-disk</span></tt></td>
+<td>Indicates that all corresponding operating system disks will be destroyed, in addition to the Windows Azure node itself.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></td>
 <td>The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></td>
 <td>The subscription identifier for the Windows Azure portal.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></td>
+<td>The SSL certificate that is used to verify communication over HTTPS.</td>
 </tr>
 </tbody>
 </table>
@@ -555,6 +577,9 @@
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></td>
 <td>The subscription identifier for the Windows Azure portal.</td>
 </tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></td>
+<td>The SSL certificate that is used to verify communication over HTTPS.</td>
+</tr>
 </tbody>
 </table>
 <p>For example, to view the details for a role named &#8220;admin&#8221;, enter:</p>
@@ -588,6 +613,9 @@
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></td>
 <td>The subscription identifier for the Windows Azure portal.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></td>
+<td>The SSL certificate that is used to verify communication over HTTPS.</td>
 </tr>
 </tbody>
 </table>
@@ -713,7 +741,7 @@
 <td>Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (<tt class="docutils literal"><span class="pre">--template-file</span></tt>) must also be provided. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-G</span> <span class="pre">GATEWAY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-gateway</span> <span class="pre">GATEWAY</span></tt></td>
-<td>The SSH gateway.</td>
+<td>The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.</td>
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">--hint</span> <span class="pre">HINT_NAME[=HINT_FILE]</span></tt></td>
 <td>Indicates that an Ohai hint will be set on the target of the bootstrap. Use multiple <tt class="docutils literal"><span class="pre">--hint</span></tt> options to specify multiple hints.</td>
@@ -4481,7 +4509,7 @@ id:                 ip-0A7CFFD5.ec2.internal
 <td>The number of allowed concurrent connections.</td>
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-G</span> <span class="pre">GATEWAY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-gateway</span> <span class="pre">GATEWAY</span></tt></td>
-<td>The SSH gateway.</td>
+<td>The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTIFY_FILE</span></tt></td>
 <td>The SSH identity file used for authentication. Key-based authentication is recommended.</td>

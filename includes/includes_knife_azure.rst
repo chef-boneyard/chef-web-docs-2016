@@ -5,9 +5,11 @@
 
 |knife azure|
 
+|knife azure certificate|
+
 This plugin is available on |github|: https://github.com/opscode/knife-azure.
 
-This sub-command has the following syntax:: 
+This sub-command has the following syntax::
 
    knife azure [ARGUMENT] (options)
 

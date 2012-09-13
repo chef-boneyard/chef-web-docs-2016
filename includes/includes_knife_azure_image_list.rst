@@ -18,9 +18,11 @@ This argument has the following options:
    * - Option
      - Description
    * - ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
-     - |azure-host-name|
+     - |azure host name|
    * - ``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
      - |azure-pem-filename|
    * - ``-S ID``, ``--azure-subscription-id ID``
      - |azure-subscription-id|
+   * - ``--verify-ssl-cert``
+     - |azure verify ssl certificate|
 
