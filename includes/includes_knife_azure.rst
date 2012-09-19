@@ -9,6 +9,8 @@
 
 This plugin is available on |github|: https://github.com/opscode/knife-azure.
 
+.. note:: This plugin requires the ``knife windows`` plugin to be present on the same machine: https://github.com/opscode/knife-windows.
+
 This sub-command has the following syntax::
 
    knife azure [ARGUMENT] (options)
