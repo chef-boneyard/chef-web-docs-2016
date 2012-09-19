@@ -1,0 +1,4 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+For |chef|, two important aspects of nodes are groups of attributes and run-lists. An attribute is a specific piece of data about the node, such as a network interface, a file system, or the number of clients that may be accepted. A run-list is an ordered list of recipes and/or roles that are run in an exact order. The run-list and node attributes comprise the node object, which is a |json| file that is stored on the |chef server| and cached locally on every node by the |chef client|. The |chef client| ensures that the locally cached node object is up-do-date at the beginning of every |chef| run and then uses the data stored in the node object while it brings the system to the desired state.
