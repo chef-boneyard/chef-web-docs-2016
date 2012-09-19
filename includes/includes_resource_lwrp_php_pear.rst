@@ -1,0 +1,4 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+The |lwrp php pear| lightweight resource is used to to integrate reusable |php| components into recipes. |pear| is a framework and distribution system for reusable |php| components. |pecl| is a repository for |php extensions|. |pecl| contains |c programming language| extensions for compiling into |php|. As |c programming language| programs, |pecl| extensions run more efficiently than |pear| packages. Both |pear| and |pecl| use the same packaging and distribution system. As such this lightweight resource is clever enough to abstract away the small differences and can be used for managing both |pear| and |pecl|. This lightweight resource also creates the proper module .ini file for each |pecl| extension at the correct location for each supported platform.
