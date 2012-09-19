@@ -2927,6 +2927,8 @@ apt_repository
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_apt_repository.rst
 
+.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3103,6 +3105,8 @@ bluepill_service
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_bluepill_service.rst
 
+.. note:: This lightweight resource is part of the ``bluepill`` cookbook (http://community.opscode.com/cookbooks/bluepill).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3157,6 +3161,8 @@ chef_handler
 
 .. include:: ../../includes/includes_resource_lwrp_chef_handler.rst
 
+.. note:: This lightweight resource is part of the ``chef_handler`` cookbook (http://community.opscode.com/cookbooks/chef_handler).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3204,6 +3210,8 @@ Examples
 daemontools_service
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_daemontools_service.rst
+
+.. note:: This lightweight resource is part of the ``daemontools`` cookbook (http://community.opscode.com/cookbooks/daemontools).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3283,6 +3291,8 @@ djbdns_rr
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_djbdns_rr.rst
 
+.. note:: This lightweight resource is part of the ``djbdns`` cookbook (http://community.opscode.com/cookbooks/djbdns).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3324,6 +3334,8 @@ dmg_package
 .. include:: ../../includes/includes_resource_lwrp_dmg_package.rst
 
 .. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
+
+.. note:: This lightweight resource is part of the ``dmg`` cookbook (http://community.opscode.com/cookbooks/dmg).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3473,6 +3485,8 @@ firewall_rule
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_firewall_rule.rst
 
+.. note:: This lightweight resource is part of the ``firewall`` cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3522,6 +3536,8 @@ Examples
 mysql_database
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_mysql_database.rst
+
+.. note:: This lightweight resource is part of the ``mysql`` cookbook (http://community.opscode.com/cookbooks/mysql).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3575,6 +3591,8 @@ pacman_aur
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_pacman_aur.rst
 
+.. note:: This lightweight resource is part of the ``pacman`` cookbook (http://community.opscode.com/cookbooks/pacman).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3623,6 +3641,8 @@ pacman_group
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_pacman_group.rst
 
+.. note:: This lightweight resource is part of the ``pacman`` cookbook (http://community.opscode.com/cookbooks/pacman).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3660,6 +3680,8 @@ Examples
 php_pear_channel
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_php_pear.rst
+
+.. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3719,6 +3741,8 @@ php_pear
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_php_pear_channel.rst
 
+.. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3764,6 +3788,8 @@ Examples
 python_pip
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_python_pip.rst
+
+.. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3817,6 +3843,8 @@ python_virtualenv
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_python_virtualenv.rst
 
+.. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3863,6 +3891,8 @@ riak_cluster
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_riak_cluster.rst
 
+.. note:: This lightweight resource is part of the ``riak`` cookbook (http://community.opscode.com/cookbooks/riak).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3907,6 +3937,8 @@ samba_user
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_samba_user.rst
 
+.. note:: This lightweight resource is part of the ``samba`` cookbook (http://community.opscode.com/cookbooks/samba).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -3944,6 +3976,8 @@ Examples
 transmission_torrent_file
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_transmission_torrent_file.rst
+
+.. note:: This lightweight resource is part of the ``transmission`` cookbook (http://community.opscode.com/cookbooks/transmission).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4000,6 +4034,8 @@ Examples
 windows_package
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_windows_package.rst
+
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4058,6 +4094,8 @@ windows_registry
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_windows_registry.rst
 
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 This lightweight resource provider has the following actions:
@@ -4098,6 +4136,8 @@ Examples
 windows_zipfile
 -----------------------------------------------------
 .. include:: ../../includes/includes_resource_lwrp_windows_zipfile.rst
+
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
