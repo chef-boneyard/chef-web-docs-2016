@@ -2059,6 +2059,10 @@ uid:      1005
 <h2>ec2 (plug-in)<a class="headerlink" href="#ec2-plug-in" title="Permalink to this headline">¶</a></h2>
 <p>Amazon EC2 is a web service that provides resizable compute capacity in the cloud based and pre-configured operating system and virtual application software using Amazon Machine Images (AMI). The <tt class="docutils literal"><span class="pre">ec2</span></tt> sub-command is used to manage API-driven cloud servers that are hosted by Amazon EC2.</p>
 <p>This plugin is available on github: <a class="reference external" href="https://github.com/opscode/knife-ec2">https://github.com/opscode/knife-ec2</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This plugin requires the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">windows</span></tt> plugin to be present on the same machine: <a class="reference external" href="https://github.com/opscode/knife-windows">https://github.com/opscode/knife-windows</a>.</p>
+</div>
 <p>This sub-command has the following syntax:</p>
 <div class="highlight-python"><pre>knife ec2 [ARGUMENT] (options)</pre>
 </div>
@@ -2090,7 +2094,7 @@ uid:      1005
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-e</span></tt>, <tt class="docutils literal"><span class="pre">--edit</span></tt></td>
 <td>Indicates that instance data should be edited. <strong>jamescott: EDITED WHERE?</strong></td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--aws-secret-access-key</span> <span class="pre">SECRET</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--aws-secret-access-key</span> <span class="pre">SECRET</span></tt></td>
 <td>The secret access key for the API endpoint used with Amazon EC2.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></td>
@@ -2123,59 +2127,77 @@ uid:      1005
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--aws-access-key-id</span> <span class="pre">KEY</span></tt></td>
 <td>The access key identifier used with Amazon EC2.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--bootstrap-version</span> <span class="pre">VERSION</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-bootstrap-protocol</span> <span class="pre">PROTOCOL</span></tt></td>
+<td>The protocol used to bootstrap on a machine that is running Windows Server: <tt class="docutils literal"><span class="pre">winrm</span></tt> or <tt class="docutils literal"><span class="pre">ssh</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--bootstrap-version</span> <span class="pre">VERSION</span></tt></td>
 <td>The version of Chef to install.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></td>
 <td>Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (<tt class="docutils literal"><span class="pre">--template-file</span></tt>) must also be provided. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--ebs-size</span> <span class="pre">SIZE</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--ebs-size</span> <span class="pre">SIZE</span></tt></td>
 <td>The size of the Amazon Elastic Block Store volume, in GB. This option is only available for instances that are backed with Amazon Elastic Block Store.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--ebs-no-delete-on-term</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--ebs-no-delete-on-term</span></tt></td>
 <td>Indicates that the Amazon Elastic Block Store volume will not be deleted upon instance termination. This option is only available for instances that are backed with Amazon Elastic Block Store.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-ephemeral</span> <span class="pre">DEVICE</span></tt></td>
+<td>A comma-separated list of device locations to be mapped to ephemeral devices.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">FLAVOR</span></tt>, <tt class="docutils literal"><span class="pre">--flavor</span> <span class="pre">FLAVOR</span></tt></td>
 <td>The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-G</span> <span class="pre">X,Y,Z</span></tt>, <tt class="docutils literal"><span class="pre">--groups</span> <span class="pre">X,Y,Z</span></tt></td>
-<td>A comma-separated list of security groups.</td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-fqdn</span> <span class="pre">FQDN</span></tt></td>
+<td>A pre-defined fully qualified domain name.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-g</span> <span class="pre">X,Y,Z</span></tt>, <tt class="docutils literal"><span class="pre">--security-group-ids</span> <span class="pre">X,Y,Z</span></tt></td>
+<td>A comma-separated list of security group identifiers. Required when using Amazon Virtual Private Cloud.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-G</span> <span class="pre">X,Y,Z</span></tt>, <tt class="docutils literal"><span class="pre">--groups</span> <span class="pre">X,Y,Z</span></tt></td>
+<td>A comma-separated list of security groups. Not supported when using Amazon Virtual Private Cloud.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-hint</span> <span class="pre">HINT_NAME[=HINT_FILE]</span></tt></td>
+<td>Indicates that an Ohai hint will be set on the target of the bootstrap. Use multiple <tt class="docutils literal"><span class="pre">--hint</span></tt> options to specify multiple hints.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></td>
 <td>The SSH identity file used for authentication. Key-based authentication is recommended.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-I</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--image</span> <span class="pre">IMAGE</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-I</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--image</span> <span class="pre">IMAGE</span></tt></td>
 <td>The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--aws-secret-access-key</span> <span class="pre">SECRET</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--aws-secret-access-key</span> <span class="pre">SECRET</span></tt></td>
 <td>The secret access key for the API endpoint used with Amazon EC2.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></td>
 <td>The name of the node on the Chef server.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></td>
 <td>Use <tt class="docutils literal"><span class="pre">--no-host-key-verify</span></tt> to disable host key verification. Host key verification is enabled by default.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">PORT</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-port</span> <span class="pre">PORT</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">PORT</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-port</span> <span class="pre">PORT</span></tt></td>
 <td>The SSH port.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></td>
 <td>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--prerelease</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--prerelease</span></tt></td>
 <td>Indicates that pre-release Chef gems should be installed.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></td>
 <td>A comma-separated list of roles and/or recipes to be applied.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--region</span> <span class="pre">REGION</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--region</span> <span class="pre">REGION</span></tt></td>
 <td>The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-s</span> <span class="pre">SUBNET-ID</span></tt>, <tt class="docutils literal"><span class="pre">--subnet</span> <span class="pre">SUBNET-ID</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-s</span> <span class="pre">SUBNET-ID</span></tt>, <tt class="docutils literal"><span class="pre">--subnet</span> <span class="pre">SUBNET-ID</span></tt></td>
 <td>The Amazon Virtual Private Cloud instance in which a node will be created.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-key</span> <span class="pre">KEY</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-key</span> <span class="pre">KEY</span></tt></td>
 <td>The SSH key for the Amazon EC2 environment.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-server-connect-attribute</span> <span class="pre">ATTRIBUTE</span></tt></td>
+<td>The attribute that is used when opening the SSH connection. This should be an Amazon EC2 server attribute.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--T</span> <span class="pre">Tag=Value[,Tag=Value]</span></tt>, <tt class="docutils literal"><span class="pre">--tags</span> <span class="pre">Tag=Value[,Tag=Value]</span></tt></td>
 <td>The tags for this server.</td>
@@ -2186,10 +2208,13 @@ uid:      1005
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-u</span> <span class="pre">USER_DATA_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--user-data</span> <span class="pre">USER_DATA_FILE</span></tt></td>
 <td>The Amazon EC2 user data file used during instance provisioning.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USERNAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USERNAME</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-w</span> <span class="pre">GATEWAY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-gateway</span> <span class="pre">GATEWAY</span></tt></td>
+<td>The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USERNAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USERNAME</span></tt></td>
 <td>The SSH user name.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE&quot;</span></tt>, <tt class="docutils literal"><span class="pre">--availability-zone</span> <span class="pre">ZONE</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE&quot;</span></tt>, <tt class="docutils literal"><span class="pre">--availability-zone</span> <span class="pre">ZONE</span></tt></td>
 <td>The name of the Amazon EC2 availability zone. Each availability zone is unique within a region. Default: <tt class="docutils literal"><span class="pre">us-east-1b</span></tt>.</td>
 </tr>
 </tbody>
@@ -2224,7 +2249,7 @@ uid:      1005
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--aws-access-key-id</span> <span class="pre">KEY</span></tt></td>
 <td>The access key identifier used with Amazon EC2.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--aws-secret-access-key</span> <span class="pre">SECRET</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--aws-secret-access-key</span> <span class="pre">SECRET</span></tt></td>
 <td>The secret access key for the API endpoint used with Amazon EC2.</td>
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></td>
@@ -2264,11 +2289,17 @@ uid:      1005
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--aws-access-key-id</span> <span class="pre">KEY</span></tt></td>
 <td>The access key identifier used with Amazon EC2.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--aws-secret-access-key</span> <span class="pre">SECRET</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--aws-secret-access-key</span> <span class="pre">SECRET</span></tt></td>
 <td>The secret access key for the API endpoint used with Amazon EC2.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--region</span> <span class="pre">REGION</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-n</span></tt>, <tt class="docutils literal"><span class="pre">--no-name</span></tt></td>
+<td>Indicates that tag names will not be displayed in the output.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--region</span> <span class="pre">REGION</span></tt></td>
 <td>The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-t</span> <span class="pre">TAG1,</span> <span class="pre">TAG2</span></tt>, <tt class="docutils literal"><span class="pre">--tags</span> <span class="pre">TAG1,</span> <span class="pre">TAG2</span></tt></td>
+<td>A list of tags that will be displayed in the output.</td>
 </tr>
 </tbody>
 </table>
@@ -4507,7 +4538,7 @@ id:                 ip-0A7CFFD5.ec2.internal
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-a</span> <span class="pre">SSH_ATTR</span></tt>, <tt class="docutils literal"><span class="pre">--attribute</span> <span class="pre">SSH_ATTR</span></tt></td>
-<td>The attribute that is used when opening the SSH connection. The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.</td>
+<td>The attribute that is used when opening the SSH connection.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-C</span> <span class="pre">NUM</span></tt>, <tt class="docutils literal"><span class="pre">--concurrency</span> <span class="pre">NUM</span></tt></td>
 <td>The number of allowed concurrent connections.</td>
