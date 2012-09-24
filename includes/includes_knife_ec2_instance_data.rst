@@ -23,7 +23,7 @@ This argument has the following options:
      - |aws-access-key-id|
    * - ``-e``, ``--edit``
      - |edit|
-   * - ``--K SECRET``, ``--aws-secret-access-key SECRET``
+   * - ``-K SECRET``, ``--aws-secret-access-key SECRET``
      - |aws-secret-access-key|
    * - ``-r RUN_LIST``, ``--run-list RUN_LIST``
      - |run-list|

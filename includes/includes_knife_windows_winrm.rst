@@ -18,7 +18,7 @@ This argument has the following options:
    * - Option
      - Description
    * - ``-a ATTR``, ``--attribute ATTR``
-     - |attribute ssh|
+     - |attribute ssh| The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
    * - ``-f CA_TRUST_FILE``, ``--ca-trust-file CA_TRUST_FILE``
      - |ca-trust-file|
    * - ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``

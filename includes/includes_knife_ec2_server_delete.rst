@@ -19,7 +19,7 @@ This argument has the following options:
      - Description
    * - ``-A KEY``, ``--aws-access-key-id KEY``
      - |aws-access-key-id|
-   * - ``--K SECRET``, ``--aws-secret-access-key SECRET``
+   * - ``-K SECRET``, ``--aws-secret-access-key SECRET``
      - |aws-secret-access-key|
    * - ``-N NODE_NAME``, ``--node-name NODE_NAME``
      - |node-name purge|
