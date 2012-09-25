@@ -10,6 +10,8 @@ Resources and Providers Reference
 
 .. include:: ../../includes/includes_chef_provider.rst
 
+.. include:: ../../includes/includes_chef_provider_platform.rst
+
 This reference describes each of the resources available in the |chef| library, including the list of actions available for the resource, the attributes that can be used, the providers that will do the work (and the provider's shortcut resource name), and examples of using each resource.
 
 
