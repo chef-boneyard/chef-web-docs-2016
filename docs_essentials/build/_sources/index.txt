@@ -493,19 +493,19 @@ H4 -- Attribute Types -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_node_attribute_type.rst
 
-H4 -- Attribute Precedence -- NEEDS REWRITE
+H4 -- Attribute Precedence -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_node_attribute_precedence.rst
 
-H4 -- Attribute Persistence -- NEEDS REWRITE
+H4 -- Attribute Persistence -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_node_attribute_persistence.rst
 
-H4 -- Automatic Attributes -- NEEDS REWRITE
+H4 -- Automatic Attributes -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_node_attribute_automatic.rst
 
-H4 -- Attribute Notation -- NEEDS REWRITE
+H4 -- Attribute Notation -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_node_attribute_notation.rst
 
