@@ -289,11 +289,9 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#h2-resources-and-providers">H2 - Resources and Providers</a><ul>
-<li><a class="reference internal" href="#h3-resources">H3 &#8211; Resources</a></li>
-<li><a class="reference internal" href="#h3-providers">H3 &#8211; Providers</a><ul>
-<li><a class="reference internal" href="#h4-platform-providers">H4 &#8211; Platform Providers</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#h3-resources-syntax-done">H3 &#8211; Resources Syntax &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h3-platform-resources-done">H3 &#8211; Platform Resources &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h3-platform-providers">H3 &#8211; Platform Providers</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#h2-templates-done">H2 &#8211; Templates &#8211; DONE</a><ul>
@@ -4302,18 +4300,141 @@ end</pre>
 </div>
 <div class="section" id="h2-resources-and-providers">
 <h3>H2 - Resources and Providers<a class="headerlink" href="#h2-resources-and-providers" title="Permalink to this headline">¶</a></h3>
-<p>xxxxx</p>
-<p><strong>jamescott: THIS SECTION WILL NEED TO LINK TO THE RESOURCES AND PROVIDERS REFERENCE SOMEDAY</strong></p>
-<div class="section" id="h3-resources">
-<h4>H3 &#8211; Resources<a class="headerlink" href="#h3-resources" title="Permalink to this headline">¶</a></h4>
-<p>xxxxx</p>
-</div>
-<div class="section" id="h3-providers">
-<h4>H3 &#8211; Providers<a class="headerlink" href="#h3-providers" title="Permalink to this headline">¶</a></h4>
+<p>A resource is a key part of a recipe. A resource defines the actions that can be taken, such as when a package should be installed, whether a service should be enabled or restarted, which groups, users, or groups of users should be created, where to put a collection of files, what the name of a new directory should be, and so on. During a Chef run, each resource is identified and then associated with a provider. The provider then does the work to complete the action defined by the resource. Chef ensures that the same actions are taken the same way everywhere and that actions are idempotent. A resource is implemented within a recipe using Ruby.</p>
 <p>A resource represents a piece of the system, its current state, and the action that is needed to move it to a desired state. A provider defines the path required to bring that piece of the system from its current to the desired state. An action is de-coupled from the steps required to complete that action, which means that a provider exists for each of the paths that are required to complete the action. This is important because a single action may require different steps, depending on the platform of the system on which the action is being taken.</p>
 <p>For example, &#8220;install a package&#8221; is a single action. To install a package onto various platforms, the steps required steps for each of those platforms may be different. This requires  different providers. On a Red Hat or CentOS machine a provider will use the Yum package provider to get the package installed and on a Debian or an Ubuntu machine a provider will use the APT package installer. One action, two providers, each taking only the steps required to complete that action.</p>
-<div class="section" id="h4-platform-providers">
-<h5>H4 &#8211; Platform Providers<a class="headerlink" href="#h4-platform-providers" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="h3-resources-syntax-done">
+<h4>H3 &#8211; Resources Syntax &#8211; DONE<a class="headerlink" href="#h3-resources-syntax-done" title="Permalink to this headline">¶</a></h4>
+<p>A resource is a Ruby block with four components: a type, a name, one (or more) parameters (with attributes), and one (or more) actions. The syntax for a resource is like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">type</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
+   <span class="n">parameter</span> <span class="s2">&quot;attribute&quot;</span>
+   <span class="n">action</span> <span class="ss">:type_of_action</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>For example, a resource that is used to install a tar.gz package for version 1.16.1 may look something like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">package</span> <span class="s2">&quot;tar&quot;</span> <span class="k">do</span>
+  <span class="n">version</span> <span class="s2">&quot;1.16.1-1&quot;</span>
+  <span class="n">action</span> <span class="ss">:install</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Every resource in Chef has its own set of parameters and actions. Many parameters have default attributes. Some parameters are available to all resources; these are sometimes referred to as &#8220;meta&#8221; parameters and they are commonly used to send notifications to other resources or to set up conditional execution rules. All actions have a default value. Only non-default behaviors of parameters and actions need to be specified.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Attributes used with resource parameters are not the same as the attributes associated with nodes.</p>
+</div>
+</div>
+<div class="section" id="h3-platform-resources-done">
+<h4>H3 &#8211; Platform Resources &#8211; DONE<a class="headerlink" href="#h3-platform-resources-done" title="Permalink to this headline">¶</a></h4>
+<p>The following resources are built into Chef:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="23%" />
+<col width="77%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Resource</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Cookbook File</td>
+<td>The Cookbook File resource is used to transfer files from a sub-directory of the <tt class="docutils literal"><span class="pre">files/</span></tt> directory in a cookbook to a specified path on the host running the chef-client or Chef Solo. <strong>jamescott: what about uploads to the Chef Hosted/Private servers?</strong> The file in a cookbook is selected according to file specificity, which allows different source files to be used based on the hostname, host platform (operating system, distro, or as appropriate), or platform version. Place files under COOKBOOK_NAME/files/default to use them on any platform.</td>
+</tr>
+<tr class="row-odd"><td>Cron</td>
+<td>The Cron resource is used to manage cron entries for time-based job scheduling. Attributes for a schedule will default to <tt class="docutils literal"><span class="pre">*</span></tt> of not provided, so only specify scheduling attributes that are applicable to a cron entry. The Cron resource requires that a package be installed that provides the crontab program, typically cron.</td>
+</tr>
+<tr class="row-even"><td>Deploy</td>
+<td>The Deploy resource is used to manage and control deployments. There is a large number of attributes available for this resource that can be used to specify many different behaviors. Please review them carefully before deciding on which approach is required for a particular recipe.</td>
+</tr>
+<tr class="row-odd"><td>Directory</td>
+<td>The Directory resource is used to manage a directory.</td>
+</tr>
+<tr class="row-even"><td>Env</td>
+<td>The Env resource is used to manage environment keys in Microsoft Windows. After an environment key is set, Microsoft Windows must be restarted before the environment key will be available to the Task Scheduler.</td>
+</tr>
+<tr class="row-odd"><td>Erlang Call</td>
+<td>The Erlang Call resource is used to connect to a node located within a distributed Erlang system. An Erlang Call resource is not idempotent. Use the <tt class="docutils literal"><span class="pre">not_if</span></tt> and <tt class="docutils literal"><span class="pre">only_if</span></tt> meta parameters to guard the use of this resource for idempotence.</td>
+</tr>
+<tr class="row-even"><td>Execute</td>
+<td>The Execute resource is used to execute a command. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the <tt class="docutils literal"><span class="pre">not_if</span></tt> and <tt class="docutils literal"><span class="pre">only_if</span></tt> meta parameters to guard the use of this resource for idempotence.</td>
+</tr>
+<tr class="row-odd"><td>File</td>
+<td>The File resource is used to manage files that are present on a node, including setting or updating the contents of those files.</td>
+</tr>
+<tr class="row-even"><td>Group</td>
+<td>The Group resource is used to manage a local group.</td>
+</tr>
+<tr class="row-odd"><td>HTTP Request</td>
+<td>The HTTP Request resource is used to send an HTTP request (GET, PUT, POST, DELETE, HEAD, or OPTIONS) with an arbitrary message. This resource is useful when custom callbacks are necessary.</td>
+</tr>
+<tr class="row-even"><td>Ifconfig</td>
+<td>The Ifconfig resource is used to manage interfaces.</td>
+</tr>
+<tr class="row-odd"><td>Link</td>
+<td>The Link resource is used to create symbolic or hard links.</td>
+</tr>
+<tr class="row-even"><td>Log</td>
+<td>The Log resource is used to create log entries from a recipe.</td>
+</tr>
+<tr class="row-odd"><td>MDADM</td>
+<td>The MDADM resource is used to manage mdadm software RAID devices in a Linux environment. The MDADM provider will create and assemble an array, but it will not create the config file that is used to persist the array upon reboot. If the config file is required, it must be done by specifying a template with the correct array layout, and then by using the Mount provider to create a file systems table (fstab) entry.</td>
+</tr>
+<tr class="row-even"><td>Mount</td>
+<td>The Ohai resource is used to reload the Ohai configuration on node. This allows recipes that have changed system attributes (such as adding a user) to refer to those attributes later in the recipe.</td>
+</tr>
+<tr class="row-odd"><td>Ohai</td>
+<td>The Ohai resource is used to re-load the Ohai configuration on a node. This allows recipes that change system attributes (like adding a user) to refer to those attributes later on during the Chef run.</td>
+</tr>
+<tr class="row-even"><td>Package</td>
+<td>The Package resource is used to manage packages. When the package is installed from a local file (such as RubyGems dkpg or RPM Package Manager) the file must be added to the node using the Remote File or Cookbook File resources.</td>
+</tr>
+<tr class="row-odd"><td>PowerShell Script</td>
+<td><p class="first">The PowerShell Script resource is used to execute a script using the Windows PowerShell interpreter.</p>
+<ul class="simple">
+<li>This resource is used just like the Script resource or the providers for Bash, Csh, Perl, Python, and Ruby. The PowerShell Script resource is similar to those, but with some small tweaks under the covers for the Microsoft Windows platform and Windows PowerShell interpreter.</li>
+<li>This resource creates and executes a temporary file (similar to the Script resource), rather than running it inline.</li>
+<li>This resource includes actions (<tt class="docutils literal"><span class="pre">:run</span></tt> and <tt class="docutils literal"><span class="pre">:nothing</span></tt>; ) and attributes (<tt class="docutils literal"><span class="pre">creates</span></tt>, <tt class="docutils literal"><span class="pre">cwd</span></tt>, <tt class="docutils literal"><span class="pre">environment</span></tt>, <tt class="docutils literal"><span class="pre">group</span></tt>, <tt class="docutils literal"><span class="pre">path</span></tt>, <tt class="docutils literal"><span class="pre">timeout</span></tt>, and <tt class="docutils literal"><span class="pre">user</span></tt>) that are available from the Execute resource.</li>
+</ul>
+<p class="last">Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the <tt class="docutils literal"><span class="pre">not_if</span></tt> and <tt class="docutils literal"><span class="pre">only_if</span></tt> meta parameters to guard the use of this resource for idempotence.</p>
+</td>
+</tr>
+<tr class="row-even"><td>Remote Directory</td>
+<td>The Directory resource is used to manage a directory.</td>
+</tr>
+<tr class="row-odd"><td>Remote File</td>
+<td>The Remote File resource is used to transfer a file from a remote location using file specificity. This resource is similar to File.</td>
+</tr>
+<tr class="row-even"><td>Route</td>
+<td>The Route resource is used to manage the system routing table in a Linux environment.</td>
+</tr>
+<tr class="row-odd"><td>Ruby Block</td>
+<td>The Ruby Block resource is used to execute Ruby code during a Chef run. Ruby code in the <tt class="docutils literal"><span class="pre">ruby_block</span></tt> resource is evaluated with other resources during convergence, whereas Ruby code outside of a <tt class="docutils literal"><span class="pre">ruby_block</span></tt> resource is evaluated before other resources, as the recipe is compiled.</td>
+</tr>
+<tr class="row-even"><td>Source Control Management (SCM)</td>
+<td>The Source Control Management (SCM) resource is used to manage source control resources that exist in a git repository or a Subversion repository.</td>
+</tr>
+<tr class="row-odd"><td>Script</td>
+<td>The Script resource is used to execute using the specified interpreter (Bash, Csh, Perl, Python, or Ruby). This resource includes all of the actions and attributes that are available to the Execute resource. The Ruby script resource is different from the Ruby Block resource because Ruby run with the Script resource is created as a temporary file and executed like other script resources, rather than run inline. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the <tt class="docutils literal"><span class="pre">not_if</span></tt> and <tt class="docutils literal"><span class="pre">only_if</span></tt> meta parameters to guard the use of this resource for idempotence.</td>
+</tr>
+<tr class="row-even"><td>Service</td>
+<td>The Service resource is used to manage a service.</td>
+</tr>
+<tr class="row-odd"><td>Template</td>
+<td>The Template resource is used to manage file contents with an embedded Ruby (erb) template. This resource includes actions and attributes from the File resource. Templates follow the same file specificity rules as the Remote File and File resources.</td>
+</tr>
+<tr class="row-even"><td>User</td>
+<td>The User resource is used to manage a local user.</td>
+</tr>
+<tr class="row-odd"><td>Yum Package</td>
+<td>The Yum Package resource is used to use yum for installation, upgrade, and removal of packages. This resource is able to resolve provides data for packages much like yum can do when running it from the command line. This allows a variety of options for installing packages, like minimum versions, virtual provides, and library names.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="h3-platform-providers">
+<h4>H3 &#8211; Platform Providers<a class="headerlink" href="#h3-platform-providers" title="Permalink to this headline">¶</a></h4>
 <p>The <tt class="docutils literal"><span class="pre">Chef::Platform</span></tt> class maps providers to platforms (and platform versions). Ohai, as part of every Chef run, verifies the <tt class="docutils literal"><span class="pre">platform</span></tt> and <tt class="docutils literal"><span class="pre">platform_version</span></tt> attributes on each node, and then Chef uses those values to identify the correct provider, build an instance of that provider, identify the current state of the resource, do the specified action, and then mark the resource as updated (if changes were made). For example, given the following resource:</p>
 <div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;/tmp/folder&quot;</span> <span class="k">do</span>
   <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
@@ -4324,7 +4445,6 @@ end</pre>
 </pre></div>
 </div>
 <p>Chef will look up the provider for the <tt class="docutils literal"><span class="pre">directory</span></tt> resource, which happens to be <tt class="docutils literal"><span class="pre">Chef::Provider::Directory</span></tt>, call <tt class="docutils literal"><span class="pre">load_current_resource</span></tt> to create a new resource called <tt class="docutils literal"><span class="pre">directory[&quot;/tmp/folder&quot;]</span></tt>, and then based on the current state of the directory, do the specified action, which in this case is to create a directory called <tt class="docutils literal"><span class="pre">/tmp/folder</span></tt>. If the directory already exists, nothing will happen. If the directory was changed in any way, the resource is marked as updated.</p>
-</div>
 </div>
 </div>
 <div class="section" id="h2-templates-done">

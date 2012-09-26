@@ -945,20 +945,83 @@ H3 -- Exceptions and Logging -- DONE
 
 H2 - Resources and Providers
 -----------------------------------------------------
-xxxxx
+.. include:: ../../includes/includes_chef_cookbook_resource.rst
 
-**jamescott: THIS SECTION WILL NEED TO LINK TO THE RESOURCES AND PROVIDERS REFERENCE SOMEDAY**
-
-H3 -- Resources
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-H3 -- Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_provider.rst
 
-H4 -- Platform Providers
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+H3 -- Resources Syntax -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_resource_syntax.rst
+
+H3 -- Platform Resources -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following resources are built into |chef|:
+
+.. list-table::
+   :widths: 120 400
+   :header-rows: 1
+
+   * - Resource
+     - Description
+   * - |resource cookbook file|
+     - .. include:: ../../includes_resources/includes_resource_cookbook_file.rst
+   * - |resource cron|
+     - .. include:: ../../includes_resources/includes_resource_cron.rst
+   * - |resource deploy|
+     - .. include:: ../../includes_resources/includes_resource_deploy.rst
+   * - |resource directory|
+     - .. include:: ../../includes_resources/includes_resource_directory.rst
+   * - |resource env|
+     - .. include:: ../../includes_resources/includes_resource_env.rst
+   * - |resource erlang call|
+     - .. include:: ../../includes_resources/includes_resource_erlang_call.rst
+   * - |resource execute|
+     - .. include:: ../../includes_resources/includes_resource_execute.rst
+   * - |resource file|
+     - .. include:: ../../includes_resources/includes_resource_file.rst
+   * - |resource group|
+     - .. include:: ../../includes_resources/includes_resource_group.rst
+   * - |resource http request|
+     - .. include:: ../../includes_resources/includes_resource_http_request.rst
+   * - |resource ifconfig|
+     - .. include:: ../../includes_resources/includes_resource_ifconfig.rst
+   * - |resource link|
+     - .. include:: ../../includes_resources/includes_resource_link.rst
+   * - |resource log|
+     - .. include:: ../../includes_resources/includes_resource_log.rst
+   * - |resource mdadm|
+     - .. include:: ../../includes_resources/includes_resource_mdadm.rst
+   * - |resource mount|
+     - .. include:: ../../includes_resources/includes_resource_mount.rst
+   * - |resource ohai|
+     - .. include:: ../../includes_resources/includes_resource_ohai.rst
+   * - |resource package|
+     - .. include:: ../../includes_resources/includes_resource_package.rst       
+   * - |resource powershell script|
+     - .. include:: ../../includes_resources/includes_resource_powershell_script.rst
+   * - |resource remote directory|
+     - .. include:: ../../includes_resources/includes_resource_directory.rst
+   * - |resource remote file|
+     - .. include:: ../../includes_resources/includes_resource_remote_file.rst
+   * - |resource route|
+     - .. include:: ../../includes_resources/includes_resource_route.rst
+   * - |resource ruby block|
+     - .. include:: ../../includes_resources/includes_resource_ruby_block.rst
+   * - |resource scm|
+     - .. include:: ../../includes_resources/includes_resource_scm.rst
+   * - |resource script|
+     - .. include:: ../../includes_resources/includes_resource_script.rst
+   * - |resource service|
+     - .. include:: ../../includes_resources/includes_resource_service.rst
+   * - |resource template|
+     - .. include:: ../../includes_resources/includes_resource_template.rst
+   * - |resource user|
+     - .. include:: ../../includes_resources/includes_resource_user.rst
+   * - |resource yum package|
+     - .. include:: ../../includes_resources/includes_resource_yum.rst
+
+H3 -- Platform Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_provider_platform.rst
 
 
