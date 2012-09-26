@@ -245,12 +245,21 @@
 <li><a class="reference internal" href="#h3-error-messages-done">H3 &#8211; Error Messages &#8211; DONE</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#h2-providers">H2 &#8211; Providers</a></li>
+<li><a class="reference internal" href="#h2-providers-done">H2 &#8211; Providers &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#h3-platform-providers-done">H3 &#8211; Platform Providers &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h3-lightweight-providers-done">H3 &#8211; Lightweight Providers &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#h4-keywords-actions">H4 &#8211; Keywords (Actions)</a></li>
+<li><a class="reference internal" href="#id4">H4 &#8211; Example &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h4-extending-a-lightweight-provider">H4 &#8211; Extending a Lightweight Provider</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a class="reference internal" href="#h2-recipes-done">H2 &#8211; Recipes &#8211; DONE</a><ul>
 <li><a class="reference internal" href="#h3-apply-recipes-to-run-lists-done">H3 &#8211; Apply Recipes to Run-lists &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-include-recipes-in-recipes-done">H3 &#8211; Include Recipes in Recipes &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-cookbook-dependencies-done">H3 &#8211; Cookbook Dependencies &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id4">H3 &#8211; Search Indexes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id5">H3 &#8211; Search Indexes &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-data-bags-done">H3 &#8211; Data Bags &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-other-recipe-dsl-methods-done-deprecate">H3 &#8211; Other Recipe DSL Methods &#8211; DONE, DEPRECATE?</a></li>
 <li><a class="reference internal" href="#h3-tags-done-but-weak">H3 &#8211; Tags &#8211; DONE, BUT WEAK</a></li>
@@ -263,10 +272,10 @@
 <li><a class="reference internal" href="#h3-requirements-done">H3 &#8211; Requirements &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-variables-done">H3 &#8211; Variables &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-location-specificity-done">H3 &#8211; Location Specificity &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id5">H3 &#8211; Host Notation &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id6">H3 &#8211; Host Notation &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-transfer-frequency-done">H3 &#8211; Transfer Frequency &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-versions-done">H3 &#8211; Versions &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id6">H3 &#8211; Syntax &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id7">H3 &#8211; Syntax &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-operators-done">H3 &#8211; Operators &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-version-constraints-done">H3 &#8211; Version Constraints &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-metadata-in-metadata-rb-done">H3 &#8211; Metadata (in metadata.rb) &#8211; DONE</a></li>
@@ -3433,9 +3442,79 @@ end</pre>
 <p>The Chef server will only try to distribute the cookbooks that are needed to configure an individual node. This is determined by identifying the roles and recipes that are assigned directly to that system, and then to expand the list of dependencies, and then deliver that entire set to the node. In some cases, if the dependency is not specified in the cookbook&#8217;s metadata the Chef server may not treat that dependency as a requirement, which will result in an error message. If an error message is received from the Chef server about cookbook distribution, verify the <tt class="docutils literal"><span class="pre">depends</span></tt> entries in the metadata.rb file, and then try again.</p>
 </div>
 </div>
-<div class="section" id="h2-providers">
-<h3>H2 &#8211; Providers<a class="headerlink" href="#h2-providers" title="Permalink to this headline">¶</a></h3>
-<p>STILL A MESS</p>
+<div class="section" id="h2-providers-done">
+<h3>H2 &#8211; Providers &#8211; DONE<a class="headerlink" href="#h2-providers-done" title="Permalink to this headline">¶</a></h3>
+<p>A resource represents a piece of the system, its current state, and the action that is needed to move it to a desired state. A provider defines the path required to bring that piece of the system from its current to the desired state. An action is de-coupled from the steps required to complete that action, which means that a provider exists for each of the paths that are required to complete the action. This is important because a single action may require different steps, depending on the platform of the system on which the action is being taken.</p>
+<p>For example, &#8220;install a package&#8221; is a single action. To install a package onto various platforms, the steps required steps for each of those platforms may be different. This requires  different providers. On a Red Hat or CentOS machine a provider will use the Yum package provider to get the package installed and on a Debian or an Ubuntu machine a provider will use the APT package installer. One action, two providers, each taking only the steps required to complete that action.</p>
+<div class="section" id="h3-platform-providers-done">
+<h4>H3 &#8211; Platform Providers &#8211; DONE<a class="headerlink" href="#h3-platform-providers-done" title="Permalink to this headline">¶</a></h4>
+<p>The <tt class="docutils literal"><span class="pre">Chef::Platform</span></tt> class maps providers to platforms (and platform versions). Ohai, as part of every Chef run, verifies the <tt class="docutils literal"><span class="pre">platform</span></tt> and <tt class="docutils literal"><span class="pre">platform_version</span></tt> attributes on each node, and then Chef uses those values to identify the correct provider, build an instance of that provider, identify the current state of the resource, do the specified action, and then mark the resource as updated (if changes were made). For example, given the following resource:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;/tmp/folder&quot;</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="mo">0755</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Chef will look up the provider for the <tt class="docutils literal"><span class="pre">directory</span></tt> resource, which happens to be <tt class="docutils literal"><span class="pre">Chef::Provider::Directory</span></tt>, call <tt class="docutils literal"><span class="pre">load_current_resource</span></tt> to create a new resource called <tt class="docutils literal"><span class="pre">directory[&quot;/tmp/folder&quot;]</span></tt>, and then based on the current state of the directory, do the specified action, which in this case is to create a directory called <tt class="docutils literal"><span class="pre">/tmp/folder</span></tt>. If the directory already exists, nothing will happen. If the directory was changed in any way, the resource is marked as updated.</p>
+</div>
+<div class="section" id="h3-lightweight-providers-done">
+<h4>H3 &#8211; Lightweight Providers &#8211; DONE<a class="headerlink" href="#h3-lightweight-providers-done" title="Permalink to this headline">¶</a></h4>
+<p>The <tt class="docutils literal"><span class="pre">Chef::Platform</span></tt> class maps providers to platforms (and platform versions). Ohai, as part of every Chef run, verifies the <tt class="docutils literal"><span class="pre">platform</span></tt> and <tt class="docutils literal"><span class="pre">platform_version</span></tt> attributes on each node, and then Chef uses those values to identify the correct provider, build an instance of that provider, identify the current state of the resource, do the specified action, and then mark the resource as updated (if changes were made). For example, given the following resource:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;/tmp/folder&quot;</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="mo">0755</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Chef will look up the provider for the <tt class="docutils literal"><span class="pre">directory</span></tt> resource, which happens to be <tt class="docutils literal"><span class="pre">Chef::Provider::Directory</span></tt>, call <tt class="docutils literal"><span class="pre">load_current_resource</span></tt> to create a new resource called <tt class="docutils literal"><span class="pre">directory[&quot;/tmp/folder&quot;]</span></tt>, and then based on the current state of the directory, do the specified action, which in this case is to create a directory called <tt class="docutils literal"><span class="pre">/tmp/folder</span></tt>. If the directory already exists, nothing will happen. If the directory was changed in any way, the resource is marked as updated.</p>
+<div class="section" id="h4-keywords-actions">
+<h5>H4 &#8211; Keywords (Actions)<a class="headerlink" href="#h4-keywords-actions" title="Permalink to this headline">¶</a></h5>
+<p>NOT DONE</p>
+</div>
+<div class="section" id="id4">
+<h5>H4 &#8211; Example &#8211; DONE<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
+<p>A lightweight resource named <tt class="docutils literal"><span class="pre">database.rb</span></tt> should be created and located in the <tt class="docutils literal"><span class="pre">resources/</span></tt> folder of a cookbook. This resource will define the actions for creating and deleting a MySQL database:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">actions</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">:delete</span>
+
+<span class="n">attribute</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:name_attribute</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="n">attribute</span> <span class="ss">:type</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span>
+</pre></div>
+</div>
+<p>A lightweight provider named <tt class="docutils literal"><span class="pre">mysql.rb</span></tt> should be created in the <tt class="docutils literal"><span class="pre">providers/</span></tt> folder of the same cookbook. This provider will define the steps required to take the actions that are defined by the resource. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">action</span> <span class="ss">:create</span> <span class="k">do</span>
+  <span class="n">execute</span> <span class="s2">&quot;create database&quot;</span> <span class="k">do</span>
+    <span class="n">not_if</span> <span class="s2">&quot;mysql -e &#39;show databases;&#39; | grep </span><span class="si">#{</span><span class="n">new_resource</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">command</span> <span class="s2">&quot;mysqladmin create </span><span class="si">#{</span><span class="n">new_resource</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">action</span> <span class="ss">:delete</span> <span class="k">do</span>
+  <span class="n">execute</span> <span class="s2">&quot;delete database&quot;</span> <span class="k">do</span>
+    <span class="n">only_if</span> <span class="s2">&quot;mysql -e &#39;show databases;&#39; | grep </span><span class="si">#{</span><span class="n">new_resource</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="n">command</span> <span class="s2">&quot;mysqladmin drop </span><span class="si">#{</span><span class="n">new_resource</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>If the name of the cookbook was <tt class="docutils literal"><span class="pre">opscode</span></tt>, then the short name of the provider that is created is <tt class="docutils literal"><span class="pre">opscode_mysql</span></tt>, where the name of the cookbook and the name of the provider are joined with an underscore to comprise the name of the provider. The <tt class="docutils literal"><span class="pre">load_current_resource</span></tt> method will do nothing (since it is not defined) and the <tt class="docutils literal"><span class="pre">action_create</span></tt> and <tt class="docutils literal"><span class="pre">action_delete</span></tt> methods are available for use in a recipe. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">opscode_database</span> <span class="s2">&quot;database&quot;</span> <span class="k">do</span>
+  <span class="n">type</span> <span class="s2">&quot;innodb&quot;</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+  <span class="n">provider</span> <span class="s2">&quot;opscode_mysql&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>This resource will execute the <tt class="docutils literal"><span class="pre">action</span> <span class="pre">:create</span> <span class="pre">do</span></tt> block in the provider (above) and would create a MySQL database called &#8220;database&#8221;.</p>
+</div>
+<div class="section" id="h4-extending-a-lightweight-provider">
+<h5>H4 &#8211; Extending a Lightweight Provider<a class="headerlink" href="#h4-extending-a-lightweight-provider" title="Permalink to this headline">¶</a></h5>
+<p>NOT DONE</p>
+</div>
+</div>
 </div>
 <div class="section" id="h2-recipes-done">
 <h3>H2 &#8211; Recipes &#8211; DONE<a class="headerlink" href="#h2-recipes-done" title="Permalink to this headline">¶</a></h3>
@@ -3532,8 +3611,8 @@ Use a JSON file to pass run-list details to Chef Solo as long as the cookbook in
 <div class="highlight-python"><pre>depends "apache2"</pre>
 </div>
 </div>
-<div class="section" id="id4">
-<h4>H3 &#8211; Search Indexes &#8211; DONE<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id5">
+<h4>H3 &#8211; Search Indexes &#8211; DONE<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
 <p>Search indexes allow queries to be made for any type of data that is indexed by a Chef server, including data for a chef-client, data bags (and data bag items), environments, nodes, and roles. Chef has a defined query syntax that includes search patterns like exact, wildcard, range, and fuzzy. The search engine is based on Apache Solr and is run from a Chef server. A search is a full-text query that can be done from within a recipe or by using the <tt class="docutils literal"><span class="pre">search</span></tt> sub-command in Knife.</p>
 <p>The results of a search query can be loaded into a recipe. For example, a very simple search query (in a recipe) might look like this:</p>
 <div class="highlight-python"><pre>search(:node, "attribute:value")</pre>
@@ -3796,8 +3875,8 @@ end</pre>
 </ol>
 <p>where <tt class="docutils literal"><span class="pre">default</span></tt> does not refer to a recipe in <tt class="docutils literal"><span class="pre">default.rb</span></tt>. Templates are not split up into different directories by a recipe.</p>
 </div>
-<div class="section" id="id5">
-<h4>H3 &#8211; Host Notation &#8211; DONE<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id6">
+<h4>H3 &#8211; Host Notation &#8211; DONE<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
 <p>The naming of folders within cookbook directories must literally match the host notation used for template specificity matching. For example, if a host is named <tt class="docutils literal"><span class="pre">foo.example.com</span></tt>, then the folder must be named <tt class="docutils literal"><span class="pre">host-foo.example.com</span></tt>.</p>
 <p><strong>jamescott: this is probably best to single-source, as it lives in several places. WOULD NEED TO MAKE IT MORE GENERIC FOR THIS TO WORK REALLY WELL</strong></p>
 </div>
@@ -3810,8 +3889,8 @@ end</pre>
 <p>A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as for ensuring that the correct versions of third-party components are being used or to provide an update to a cookbook that fixes previous issues or adds new improvements. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is a cookbook, from the perspective of the repository and how cookbooks are stored on the Chef server and pushed out to one (or more) nodes.</p>
 <p>A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as for ensuring that the correct versions of third-party components are being used or to provide an update to a cookbook that fixes previous issues or adds new improvements. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is a cookbook, from the perspective of the repository and how cookbooks are stored on the Chef server and pushed out to one (or more) nodes.</p>
 </div>
-<div class="section" id="id6">
-<h4>H3 &#8211; Syntax &#8211; DONE<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id7">
+<h4>H3 &#8211; Syntax &#8211; DONE<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
 <p>A cookbook version always takes the form x.y.z, where x, y, and z are decimal numbers that are used to represent major (x), minor (y), and patch (z) versions. A two-part version (x.y) is also allowed. Alphanumeric version numbers (1.2.a3) and version numbers with more than three parts (1.2.3.4) are not allowed.</p>
 </div>
 <div class="section" id="h3-operators-done">
