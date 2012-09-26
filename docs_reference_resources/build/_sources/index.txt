@@ -8,9 +8,9 @@ Resources and Providers Reference
 
 .. include:: ../../includes/includes_chef_cookbook_resource.rst
 
-.. include:: ../../includes/includes_chef_provider.rst
+.. include:: ../../includes/includes_chef_cookbook_provider.rst
 
-.. include:: ../../includes/includes_chef_provider_platform.rst
+.. include:: ../../includes/includes_chef_cookbook_provider_platform.rst
 
 This reference describes each of the resources available in the |chef| library, including the list of actions available for the resource, the attributes that can be used, the providers that will do the work (and the provider's shortcut resource name), and examples of using each resource.
 
@@ -21,16 +21,7 @@ The attributes and actions in this section apply to all resources.
 
 Actions
 -----------------------------------------------------
-The following actions are common to every resource:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``nothing``
-     - Use to do nothing. In the absence of another default action, ``nothing`` is the default. This action can be useful to specify a resource so that it can be notified of other actions.
+.. include:: ../../includes/includes_chef_cookbook_resource_common_actions.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -45,24 +36,7 @@ For example:
 
 Attributes
 -----------------------------------------------------
-The following attributes are common to every resource:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``ignore_failure``
-     - Use to continue running a recipe if a resource fails for any reason. Default value: ``false``.
-   * - ``provider``
-     - Use to specify the class name of a provider for use with a resource.
-   * - ``retries``
-     - Use to specify the number of times to catch exceptions and retry the resource. Default value: ``0``.
-   * - ``retry_delay``
-     - Use to specify the retry delay (in seconds). Default value: ``2``.
-   * - ``supports``
-     - Use to specify a hash of options that contains hints about the capabilities of a resource. |chef| may use these hints to help identify the correct provider. This attribute is only utilized by a small number of providers, including ``User`` and ``Service``.
+.. include:: ../../includes/includes_chef_cookbook_resource_common_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -104,67 +78,15 @@ Using ``provider`` and ``supports``:
 
 Conditional Execution
 -----------------------------------------------------
-A conditional execution can be used to put additional guards around certain resources so that they are only run when the condition is met. The most common reason for using a conditional execution is to ensure that the ``execute`` resource is idempotent, but conditional executions can be used with any resource. A conditional execution can be passed as a string or as a block. A strings is executed as a shell command and a block is |ruby| code. In both cases, the attribute is ``true`` when the command returns ``0``).
+.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following attributes can be used to define a conditional execution for a resource:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``not_if``
-     - Indicates whether this resource should not be applied. If ``true``, this action should not be performed. If ``false`` this action should always be performed.
-   * - ``only_if``
-     - Indicates whether only this resource is applied. If ``true``, this action should always be performed. If ``false`` this action should never be performed.
+.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_attributes.rst
 
 Arguments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following arguments can be used with the ``not_if`` or ``only_if`` attributes:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Argument
-     - Description
-   * - ``:user``
-     - Use to specify the user that a command will run as. For example:
-
-       .. code-block:: ruby
-
-          not_if "grep adam /etc/passwd", :user => 'adam'
-
-   * - ``:group``
-     - Use to specify the group that a command will run as. For example:
-
-       .. code-block:: ruby
-
-          not_if "grep adam /etc/passwd", :group => 'adam'
-
-   * - ``:environment``
-     - Use to specify a hash of environment variables to be set. For example:
-
-       .. code-block:: ruby
-
-          not_if "grep adam /etc/passwd", :environment => { 'HOME' => "/home/adam" }
-
-   * - ``:cwd``
-     - Use to set the current working directory before running a command. For example:
-
-       .. code-block:: ruby
-
-          not_if "grep adam passwd", :cwd => '/etc'
-
-   * - ``:timeout``
-     - Use to set a timeout for a command. For example:
-
-       .. code-block:: ruby
-
-          not_if "sleep 10000", :timeout => 10
+.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_arguments.rst
 
 ``not_if`` Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -249,45 +171,15 @@ The following example will create ``tmp/somefile``, but only if the node has the
 
 Notifications
 -----------------------------------------------------
-The following notifications can be used with any resource:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Notification
-     - Description
-   * - ``notifies``
-     - Use to notify another resource to take an action if this resource's state changes for any reason.
-   * - ``subscribes``
-     - Use to take action on this resource if another resource's state changes. This is similar to ``notifies``, but reversed.
+.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications.rst
 
 Notifications Timers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following timers can be used to define when a notification is triggered:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Timer
-     - Description
-   * - ``:restart``
-     - Use to restart a service or application.
-   * - ``:delayed``
-     - Use to specify that a notification should be queued up and then executed at the very end of a |chef| run.
-   * - ``:immediately``
-     - Use to specify that a notification be run immediately.
+.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_timers.rst
 
 Notifies Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The basic syntax of a ``notifies`` notification is:
-
-.. code-block:: ruby
-
-   resource "name" do
-     notifies :action, "resource_type[resource_name]", :notification_timing
-   end
+.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_notifies.rst
 
 For example, if you need to restart the |apache| service when you modify a template that configures |apache|, use ``:restart``:
 
@@ -390,24 +282,9 @@ where the sequencing will be in the following order: ``execute 'foo'``, ``templa
 
 Subscribes Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-A resource must be defined before another resource may subscribe to it. The basic syntax of a ``subscribes`` notification is:
-
-.. code-block:: ruby
-
-   resource "name" do
-     subscribes :action, resources(:resource_type => "resource_name"), :notification_timing
-   end
-
-or:
-
-.. code-block:: ruby
-
-   resource "name" do
-     subscribes :action, resources("resource[resource_name]"), :notification_timing
-   end
+.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_subscribes.rst
 
 The notification timings for ``subscribes`` work in the same manner as ``notifies``, so the following code should achieve the same results:
-
 
 .. code-block:: ruby
 
@@ -445,16 +322,7 @@ To reload a service based on a template **jamescott: WHAT DOES THIS ACTUALLY DO?
 
 Relative Paths
 -----------------------------------------------------
-The following relative paths can be used with any resource:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Relative Path
-     - Description
-   * - ``#{ENV['HOME']}``
-     - Use to return the ``~`` path in |linux| and |mac os x| or the ``%HOMEPATH%`` in |windows|.
+.. include:: ../../includes/includes_chef_cookbook_resource_common_relative_paths.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -508,7 +376,7 @@ See below for more information about each of these resources, their related acti
 
 cookbook_file
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_cookbook_file.rst
+.. include:: ../../includes_resources/includes_resource_cookbook_file.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -580,7 +448,7 @@ Examples
 
 cron
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_cron.rst
+.. include:: ../../includes_resources/includes_resource_cron.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -656,7 +524,7 @@ Examples
 
 deploy
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_deploy.rst
+.. include:: ../../includes_resources/includes_resource_deploy.rst
 
 Deployment Strategies
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -906,7 +774,7 @@ Examples
 
 directory
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_directory.rst
+.. include:: ../../includes_resources/includes_resource_directory.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -978,7 +846,7 @@ Examples
 
 env
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_env.rst
+.. include:: ../../includes_resources/includes_resource_env.rst
 
 .. note:: On |unix|-based systems, the best way to manipulate environment keys is with the ENV variable in |ruby|; however, this approach does not have the same "permanent" effect as using the ``env`` resource.
 
@@ -1040,7 +908,7 @@ Examples
 
 erlang_call
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_erlang_call.rst
+.. include:: ../../includes_resources/includes_resource_erlang_call.rst
 
 .. note:: The ``erl_call`` command needs to be on the path for this resource to work properly. **jamescott: HOW DO WE KNOW IF THE erl_call COMMAND IS "ON THE PATH"?**
 
@@ -1104,7 +972,7 @@ Examples
 
 execute
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_execute.rst
+.. include:: ../../includes_resources/includes_resource_execute.rst
 
 .. note:: Use the |resource script| resource to execute a script using a specific interpreter (|ruby|, |python|, |perl|, |csh|, or |bash|).
 
@@ -1182,7 +1050,7 @@ Examples
 
 file
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_file.rst
+.. include:: ../../includes_resources/includes_resource_file.rst
 
 .. note:: Other resources should be used to manage files that are not present on a node. Use |resource cookbook file| when copying a file from a cookbook, |resource template| when using a template, and |resource remote file| when transferring files from remote locations.
 
@@ -1262,7 +1130,7 @@ Examples
 
 group
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_group.rst
+.. include:: ../../includes_resources/includes_resource_group.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1344,7 +1212,7 @@ Examples
 
 http_request
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_http_request.rst
+.. include:: ../../includes_resources/includes_resource_http_request.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1412,7 +1280,7 @@ Examples
 
 ifconfig
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_ifconfig.rst
+.. include:: ../../includes_resources/includes_resource_ifconfig.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1492,7 +1360,7 @@ Examples
 
 link
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_link.rst
+.. include:: ../../includes_resources/includes_resource_link.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1558,7 +1426,7 @@ Examples
 
 log
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_log.rst
+.. include:: ../../includes_resources/includes_resource_log.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1612,7 +1480,7 @@ Examples
 
 mdadm
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_mdadm.rst
+.. include:: ../../includes_resources/includes_resource_mdadm.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1674,7 +1542,7 @@ Examples
 
 mount
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_mount.rst
+.. include:: ../../includes_resources/includes_resource_mount.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1766,7 +1634,7 @@ Examples
 
 ohai
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_ohai.rst
+.. include:: ../../includes_resources/includes_resource_ohai.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1820,7 +1688,7 @@ Examples
 
 package
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_package.rst
+.. include:: ../../includes_resources/includes_resource_package.rst
 
 Gem Package Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2011,7 +1879,7 @@ Examples
 
 powershell_script
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_powershell_script.rst
+.. include:: ../../includes_resources/includes_resource_powershell_script.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2075,7 +1943,7 @@ Examples
 
 remote_directory
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_directory.rst
+.. include:: ../../includes_resources/includes_resource_directory.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2138,7 +2006,7 @@ Examples
 
 remote_file
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_remote_file.rst
+.. include:: ../../includes_resources/includes_resource_remote_file.rst
 
 **jamescott: NEED NEW DESCRIPTION IN INCLUDE FILE -- THIS ONE HAS ROUTES.**
 
@@ -2214,7 +2082,7 @@ Examples
 
 route
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_route.rst
+.. include:: ../../includes_resources/includes_resource_route.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2276,7 +2144,7 @@ Examples
 
 ruby_block
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_ruby_block.rst
+.. include:: ../../includes_resources/includes_resource_ruby_block.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2328,7 +2196,7 @@ Examples
 
 scm
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_scm.rst
+.. include:: ../../includes_resources/includes_resource_scm.rst
 
 .. note:: This resource is often used in conjunction with the |resource deploy| resource.
 
@@ -2424,7 +2292,7 @@ Examples
 
 script
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_script.rst
+.. include:: ../../includes_resources/includes_resource_script.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2500,7 +2368,7 @@ Examples
 
 service
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_service.rst
+.. include:: ../../includes_resources/includes_resource_service.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2618,7 +2486,7 @@ Examples
 
 template
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_template.rst
+.. include:: ../../includes_resources/includes_resource_template.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2696,7 +2564,7 @@ Examples
 
 user
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_user.rst
+.. include:: ../../includes_resources/includes_resource_user.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2752,11 +2620,11 @@ This resource has the following has the following attributes:
 
 Supported Features
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_resource_user_supported_features.rst
+.. include:: ../../includes_resources/includes_resource_user_supported_features.rst
 
 Password Shadow Hash
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_resource_user_password_shadow_hash.rst
+.. include:: ../../includes_resources/includes_resource_user_password_shadow_hash.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2796,7 +2664,7 @@ Examples
 
 yum
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_yum.rst
+.. include:: ../../includes_resources/includes_resource_yum.rst
 
 .. note:: Support for using file names to install packages (as in ``yum_package "/bin/sh"``) is not available because the volume of data required to parse for this is excessive.
 
@@ -2927,7 +2795,7 @@ Opscode team member Joshua Timberman has a slideshare presentation on Understand
 
 apt_repository
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_apt_repository.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository.rst
 
 .. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
 
@@ -2987,13 +2855,13 @@ Examples
 
 aws_ebs_volume
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_aws_ebs_volume.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_resource_lwrp_aws_credentials.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3055,13 +2923,13 @@ Examples
 
 aws_elastic_ip
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_aws_elastic_ip.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_resource_lwrp_aws_credentials.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3105,7 +2973,7 @@ Examples
 
 bluepill_service
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_bluepill_service.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service.rst
 
 .. note:: This lightweight resource is part of the ``bluepill`` cookbook (http://community.opscode.com/cookbooks/bluepill).
 
@@ -3161,7 +3029,7 @@ chef_handler
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_handler.rst
 
-.. include:: ../../includes/includes_resource_lwrp_chef_handler.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler.rst
 
 .. note:: This lightweight resource is part of the ``chef_handler`` cookbook (http://community.opscode.com/cookbooks/chef_handler).
 
@@ -3211,7 +3079,7 @@ Examples
 
 daemontools_service
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_daemontools_service.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service.rst
 
 .. note:: This lightweight resource is part of the ``daemontools`` cookbook (http://community.opscode.com/cookbooks/daemontools).
 
@@ -3291,7 +3159,7 @@ Examples
 
 djbdns_rr
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_djbdns_rr.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr.rst
 
 .. note:: This lightweight resource is part of the ``djbdns`` cookbook (http://community.opscode.com/cookbooks/djbdns).
 
@@ -3333,7 +3201,7 @@ Examples
 
 dmg_package
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_dmg_package.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package.rst
 
 .. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
 
@@ -3389,7 +3257,7 @@ Examples
 
 dynect_rr
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_dynect_rr.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_dynect_rr.rst
 
 .. note:: This lightweight resource is part of the ``dynect`` cookbook (http://community.opscode.com/cookbooks/dynect). The ``dynect_rest`` |ruby| |gem| is required.
 
@@ -3445,7 +3313,7 @@ Examples
 
 firewall
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_firewall.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_firewall.rst
 
 .. note:: This lightweight resource is part of the ``firewall`` cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
 
@@ -3485,7 +3353,7 @@ Examples
 
 firewall_rule
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_firewall_rule.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_firewall_rule.rst
 
 .. note:: This lightweight resource is part of the ``firewall`` cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
 
@@ -3537,7 +3405,7 @@ Examples
 
 mysql_database
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_mysql_database.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_mysql_database.rst
 
 .. note:: This lightweight resource is part of the ``mysql`` cookbook (http://community.opscode.com/cookbooks/mysql).
 
@@ -3591,7 +3459,7 @@ Examples
 
 pacman_aur
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_pacman_aur.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_pacman_aur.rst
 
 .. note:: This lightweight resource is part of the ``pacman`` cookbook (http://community.opscode.com/cookbooks/pacman).
 
@@ -3641,7 +3509,7 @@ Examples
 
 pacman_group
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_pacman_group.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_pacman_group.rst
 
 .. note:: This lightweight resource is part of the ``pacman`` cookbook (http://community.opscode.com/cookbooks/pacman).
 
@@ -3681,7 +3549,7 @@ Examples
 
 php_pear_channel
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_php_pear.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_php_pear.rst
 
 .. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
 
@@ -3741,7 +3609,7 @@ Examples
 
 php_pear
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_php_pear_channel.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_channel.rst
 
 .. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
 
@@ -3789,7 +3657,7 @@ Examples
 
 python_pip
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_python_pip.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_python_pip.rst
 
 .. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
 
@@ -3843,7 +3711,7 @@ Examples
 
 python_virtualenv
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_python_virtualenv.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_python_virtualenv.rst
 
 .. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
 
@@ -3891,7 +3759,7 @@ Examples
 
 riak_cluster
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_riak_cluster.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_riak_cluster.rst
 
 .. note:: This lightweight resource is part of the ``riak`` cookbook (http://community.opscode.com/cookbooks/riak).
 
@@ -3937,7 +3805,7 @@ Examples
 
 samba_user
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_samba_user.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_samba_user.rst
 
 .. note:: This lightweight resource is part of the ``samba`` cookbook (http://community.opscode.com/cookbooks/samba).
 
@@ -3977,7 +3845,7 @@ Examples
 
 transmission_torrent_file
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_transmission_torrent_file.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_transmission_torrent_file.rst
 
 .. note:: This lightweight resource is part of the ``transmission`` cookbook (http://community.opscode.com/cookbooks/transmission).
 
@@ -4035,7 +3903,7 @@ Examples
 
 windows_package
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_windows_package.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_package.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
@@ -4094,7 +3962,7 @@ Examples
 
 windows_registry
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_windows_registry.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_registry.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
@@ -4137,7 +4005,7 @@ Examples
 
 windows_zipfile
 -----------------------------------------------------
-.. include:: ../../includes/includes_resource_lwrp_windows_zipfile.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_zipfile.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 

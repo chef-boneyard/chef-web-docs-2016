@@ -83,47 +83,58 @@ When used with a |chef server|, |ohai| will report this information back to the 
 
 .. include:: ../../includes/includes_ohai_automatic_attribute.rst
 
+
+H3 -- |ohai| Attribute List -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following attributes are those which are re-written with each Ohai run, so they should be recognized as being unmodifiable when considering the use of attributes:
+
+.. code-block:: bash
+
+   ohai$ grep -R "provides" -h lib/ohai/plugins|sed 's/^\s*//g'|sed "s/\\\"/\'/g"|sort|uniq|grep ^provides
+
+
+
 H2 -- Handlers -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_handler.rst
 
-Handler Properties -- DONE
+H3 -- Handler Properties -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_handler_properties.rst
 
-Writing a Handler -- DONE
+H3 -- Writing a Handler -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_handler_write.rst
 
-Example: Send email when |Chef| run fails: -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+H4 -- Example: Send email when |Chef| run fails: -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_write_example_send_email.rst
 
-Installing and Configuring a Handler -- DONE
+H3 -- Installing and Configuring a Handler -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_handler_install.rst
 
-|lwrp chef handler|: -- DONE
+H4 -- |lwrp chef handler|: -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_install_from_cookbook.rst
 
-Manual Install: -- DONE
+H4 -- Manual Install: -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_install_manual.rst
 
-Distributing Handlers -- DONE
+H3 -- Distributing Handlers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_handler_distribute.rst
 
-Available Handlers -- DONE
+H3 -- Available Handlers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_handler_available.rst
 
-|opscode|: JsonFile Handler: -- DONE
+H4 -- |opscode|: JsonFile Handler: -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_available_jsonfile.rst
 
-Community: Open Source Handlers: -- DONE
+H4 --  Community: Open Source Handlers: -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_available_community.rst
 
@@ -142,25 +153,25 @@ The following sections discuss these elements (and their various sub-components)
 * Knife
 * Ruby
 
-Repository -- DONE
+H2 -- Repository -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_repository.rst
 
-Directory Structure -- DONE
+H3 -- Directory Structure -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_repository_directory.rst
 
-certificates/ -- DONE
+H4 -- certificates/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_repository_directory_certificates.rst
 
 .. include:: ../../steps/step_repository_certificate_generate.rst
 
-.chef/ -- DONE
+H4 -- .chef/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_repository_directory_chef.rst
 
-config/ -- DONE
+H4 -- config/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_repository_directory_config.rst
 
@@ -179,8 +190,8 @@ The |chef| repository uses two configuration files: ``rake.rb`` (required) and `
 
        .. include:: ../../includes/includes_rake_tasks_included_in_chef_libraries.rst
 
-cookbooks/ -- DONE -- THIS IS THE COOKBOOK CACHE!
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+H4 -- cookbooks/ -- DONE -- THIS IS THE COOKBOOK CACHE!
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_repository_directory_cookbooks.rst
 
 .. include:: ../../steps/step_repository_cookbooks_configure_settings.rst
@@ -197,7 +208,7 @@ cookbooks/ -- DONE -- THIS IS THE COOKBOOK CACHE!
 
 **jamescott: We need to say something about the fact that the cookbooks are uploaded to the Chef server and are then (from there) propagated across nodes when and where required (and cached on each of the nodes, refreshed as required).**
 
-data_bags/ -- DONE
+H4 -- data_bags/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_repository_directory_data_bags.rst
 
@@ -205,19 +216,19 @@ data_bags/ -- DONE
 
 .. include:: ../../steps/step_repository_data_bags_upload_data_bag_item.rst
 
-environments/ -- DONE
+H4 -- environments/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_repository_directory_environments.rst
 
 .. include:: ../../steps/step_repository_roles_upload_environment.rst
 
-roles/ -- DONE
+H4 -- roles/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_repository_directory_roles.rst 
 
 .. include:: ../../steps/step_repository_roles_upload_role.rst
 
-Create the |chef| Repository -- DONE
+H3 -- Create the |chef| Repository -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 There are two ways to create a |chef| repository: 
 
@@ -226,33 +237,33 @@ There are two ways to create a |chef| repository:
 
 .. note:: |opscode| strongly recommends using some type of version control tool to manage the source code in the |chef| repository. We use |git| for everything, including for cookbooks. If another version source control system is preferred over |git| (such as |svn|, |mercurial|, or |bazaar|) that is just fine.
 
-Clone -- DONE
+H4 -- Clone -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../steps/step_repository_create_clone.rst
 
-Download -- DONE
+H4 -- Download -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../steps/step_repository_create_download.rst
 
-Knife -- DONE
+H2 -- Knife -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_knife.rst
+.. include:: ../../includes_knife/includes_knife.rst
 
-Sub-commands -- DONE
+H3 -- Sub-commands -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_knife_subcommand.rst
 
-Plugins -- DONE
+H3 -- Plugins -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_knife_plugin.rst
 
-Ruby -- DONE
+H2 -- Ruby -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_ruby.rst
 
 .. include:: ../../includes/includes_ruby_dsl.rst
 
-Just Enough Ruby for Chef -- DONE
+H3 -- Just Enough Ruby for Chef -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_ruby_just_enough.rst
 
@@ -675,11 +686,22 @@ H2 -- Manager (Management Console) -- DONE
 
 H1 -- Cookbooks
 =====================================================
-xxxxx
+.. include:: ../../includes/includes_chef_cookbook.rst
+
+H2 -- Cookbooks Directory Structure -- DONE
+-----------------------------------------------------
+.. include:: ../../includes/includes_chef_repository_directory_cookbooks.rst
+
 
 H2 -- Attributes
 -----------------------------------------------------
+.. include:: ../../includes/includes_chef_cookbook_attribute.rst
+
 THE ATTRIBUTES DISCUSSION NEEDS TO BE CONSOLIDATED AS MUCH AS POSSIBLE. THERE ARE NODE ATTRIBUTES AS WELL -- SEE THE NODE TOPICS AND THE CHEF SERVER TOPICS.
+
+H3 -- xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+xxxxx
 
 H2 -- Definitions -- DONE
 -----------------------------------------------------
@@ -750,6 +772,97 @@ H3 -- Scenario: Creating a namespace -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_cookbooks_library_create_namespace.rst
 
+
+
+
+
+H2 -- Lightweight Resources and Providers -- DONE
+-----------------------------------------------------
+.. include:: ../../includes/includes_chef_cookbook_lightweight.rst
+
+H3 -- File Locations -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_lightweight_file_locations.rst
+
+H3 -- Lightweight Resources -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_lightweight_resource.rst
+
+H4 -- Common Functionality for all Lightweight Resources -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The attributes and actions in this section apply to all lightweight resources.
+
+H5 -- Actions -- DONE, NEEDS TO BE H5
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_resource_common_actions.rst
+
+H5 -- Attributes -- DONE, NEEDS TO BE H5
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_resource_common_attributes.rst
+
+H5 -- Conditional Execution -- DONE, NEEDS TO BE H5
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional.rst
+
+.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_attributes.rst
+
+.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_arguments.rst
+
+H5 -- Notifications -- DONE, NEEDS TO BE H5
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications.rst
+
+.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_timers.rst
+
+.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_notifies.rst
+
+.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_subscribes.rst
+
+H5 -- Relative Paths -- DONE, NEEDS TO BE H5
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_resource_common_relative_paths.rst
+
+H4 -- Actions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_actions.rst
+
+H4 -- Attributes and Validation Parameters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_attributes.rst
+
+.. include:: ../../includes/includes_chef_cookbook_resource_common_validation_parameters.rst
+
+H4 -- Syntax
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_syntax.rst
+
+H4 -- Compare Platform and Lightweight Resources
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_compared_to_platform_resource.rst
+
+H4 -- Use a Default Provider
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_use_default_provider.rst
+
+H3 -- Lightweight Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_lightweight_provider.rst
+
+H4 -- Actions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_lightweight_provider_actions.rst
+
+H4 -- Extending Providers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_lightweight_provider_extend.rst
+
+H3 -- Example: Create Lightweight Provider and Resource
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_lightweight_example.rst
+
+
+
+
 H2 -- Metadata
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_cookbook_metadata.rst
@@ -765,29 +878,6 @@ H3 -- Error Messages -- DONE
 .. include:: ../../includes/includes_chef_cookbook_metadata_error_messages.rst
 
 
-H2 -- Providers -- DONE
------------------------------------------------------
-.. include:: ../../includes/includes_chef_provider.rst
-
-H3 -- Platform Providers -- DONE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_provider_platform.rst
-
-H3 -- Lightweight Providers -- DONE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_provider_platform.rst
-
-H4 -- Keywords (Actions)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-NOT DONE
-
-H4 -- Example -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_provider_example.rst
-
-H4 -- Extending a Lightweight Provider
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-NOT DONE
 
 
 
@@ -849,9 +939,31 @@ H3 -- Exceptions and Logging -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_recipe_exceptions_and_logging.rst
 
-H2 -- Resources
+
+
+
+
+H2 - Resources and Providers
 -----------------------------------------------------
 xxxxx
+
+**jamescott: THIS SECTION WILL NEED TO LINK TO THE RESOURCES AND PROVIDERS REFERENCE SOMEDAY**
+
+H3 -- Resources
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+xxxxx
+
+H3 -- Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_provider.rst
+
+H4 -- Platform Providers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_provider_platform.rst
+
+
+
+
 
 H2 -- Templates -- DONE
 -----------------------------------------------------
