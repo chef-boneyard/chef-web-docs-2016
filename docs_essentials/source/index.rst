@@ -765,9 +765,30 @@ H3 -- Error Messages -- DONE
 .. include:: ../../includes/includes_chef_cookbook_metadata_error_messages.rst
 
 
-H2 -- Providers
+H2 -- Providers -- DONE
 -----------------------------------------------------
-STILL A MESS
+.. include:: ../../includes/includes_chef_provider.rst
+
+H3 -- Platform Providers -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_provider_platform.rst
+
+H3 -- Lightweight Providers -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_provider_platform.rst
+
+H4 -- Keywords (Actions)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NOT DONE
+
+H4 -- Example -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_provider_example.rst
+
+H4 -- Extending a Lightweight Provider
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NOT DONE
+
 
 
 H2 -- Recipes -- DONE
