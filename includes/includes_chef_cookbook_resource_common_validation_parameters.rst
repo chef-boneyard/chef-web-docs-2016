@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following options can be passed to the attribute keyword in order to validate a parameter that has been set on a resource in a recipe:
+The following parameters can be passed to the attribute keyword in order to validate a parameter that has been set on a resource in a recipe:
 
 .. list-table::
    :widths: 200 300

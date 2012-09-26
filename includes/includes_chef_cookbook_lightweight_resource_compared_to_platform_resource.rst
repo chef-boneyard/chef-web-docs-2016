@@ -1,8 +1,6 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-**jamescott: IF THIS FILE IS IN A BUILD THEN REMOVE IT. SEE includes_chef_cookbook_lightweight_compare_to_platform_resource AND DEPRECATE, RESET INCLUDES, ETC.**
-
 The following example uses the |resource file| resource to show the difference between it and what it would look like if it were a lightweight resource.
 
 .. code-block:: ruby
