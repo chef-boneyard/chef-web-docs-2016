@@ -62,7 +62,7 @@ Some important components of workstations include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_knife.png
-     - .. include:: ../../includes/includes_knife.rst
+     - .. include:: ../../includes_knife/includes_knife.rst
    * - .. image:: ../../images/icon_repository.png
      - .. include:: ../../includes/includes_chef_repository.rst
 
