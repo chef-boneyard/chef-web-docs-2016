@@ -822,48 +822,48 @@ H5 -- Relative Paths -- DONE, NEEDS TO BE H5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_resource_common_relative_paths.rst
 
-H4 -- Actions
+H4 -- Actions -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_resource_actions.rst
 
-H4 -- Attributes and Validation Parameters
+H4 -- Attributes and Validation Parameters -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_resource_attributes.rst
 
 .. include:: ../../includes/includes_chef_cookbook_resource_common_validation_parameters.rst
 
-H4 -- Syntax
+H4 -- Syntax -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_resource_syntax.rst
 
-H4 -- Compare Platform and Lightweight Resources
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+H4 -- Compare Platform and Lightweight Resources -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_resource_compared_to_platform_resource.rst
 
-H4 -- Use a Default Provider
+H4 -- Use a Default Provider -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_resource_use_default_provider.rst
 
-H3 -- Lightweight Providers
+H3 -- Lightweight Providers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_lightweight_provider.rst
 
-H4 -- Actions
+H4 -- Actions -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_provider_actions.rst
 
-H4 -- Extending Providers
+H4 -- Extending Providers -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_provider_extend.rst
 
-H3 -- Example: Create Lightweight Provider and Resource
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+H3 -- Example: Create Lightweight Provider and Resource -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_lightweight_example.rst
 
 
 
 
-H2 -- Metadata
+H2 -- Metadata -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_cookbook_metadata.rst
 
@@ -943,7 +943,7 @@ H3 -- Exceptions and Logging -- DONE
 
 
 
-H2 - Resources and Providers
+H2 - Resources and Providers -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_cookbook_resource.rst
 
@@ -1020,7 +1020,7 @@ The following resources are built into |chef|:
    * - |resource yum package|
      - .. include:: ../../includes_resources/includes_resource_yum.rst
 
-H3 -- Platform Providers
+H3 -- Platform Providers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_provider_platform.rst
 
