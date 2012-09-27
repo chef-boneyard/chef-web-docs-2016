@@ -223,7 +223,15 @@
 <li><a class="reference internal" href="#h1-cookbooks">H1 &#8211; Cookbooks</a><ul>
 <li><a class="reference internal" href="#h2-cookbooks-directory-structure-done">H2 &#8211; Cookbooks Directory Structure &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h2-attributes">H2 &#8211; Attributes</a><ul>
-<li><a class="reference internal" href="#h3-xxxxx">H3 &#8211; xxxxx</a></li>
+<li><a class="reference internal" href="#h3-deep-merging-of-role-environment-attributes">H3 &#8211; Deep Merging of ROLE | ENVIRONMENT Attributes</a><ul>
+<li><a class="reference internal" href="#h4-substitution">H4 &#8211; Substitution</a></li>
+<li><a class="reference internal" href="#h4-addition">H4 &#8211; Addition</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h3-xxxxx">H3 &#8211; xxxxx</a><ul>
+<li><a class="reference internal" href="#id6">H4 &#8211; xxxxx</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#h2-definitions-done">H2 &#8211; Definitions &#8211; DONE</a><ul>
@@ -264,7 +272,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#h3-lightweight-providers-done">H3 &#8211; Lightweight Providers &#8211; DONE</a><ul>
-<li><a class="reference internal" href="#id6">H4 &#8211; Actions &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id7">H4 &#8211; Actions &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h4-extending-providers-done">H4 &#8211; Extending Providers &#8211; DONE</a></li>
 </ul>
 </li>
@@ -280,7 +288,7 @@
 <li><a class="reference internal" href="#h3-apply-recipes-to-run-lists-done">H3 &#8211; Apply Recipes to Run-lists &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-include-recipes-in-recipes-done">H3 &#8211; Include Recipes in Recipes &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-cookbook-dependencies-done">H3 &#8211; Cookbook Dependencies &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id7">H3 &#8211; Search Indexes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id8">H3 &#8211; Search Indexes &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-data-bags-done">H3 &#8211; Data Bags &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-other-recipe-dsl-methods-done-deprecate">H3 &#8211; Other Recipe DSL Methods &#8211; DONE, DEPRECATE?</a></li>
 <li><a class="reference internal" href="#h3-tags-done-but-weak">H3 &#8211; Tags &#8211; DONE, BUT WEAK</a></li>
@@ -298,10 +306,10 @@
 <li><a class="reference internal" href="#h3-requirements-done">H3 &#8211; Requirements &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-variables-done">H3 &#8211; Variables &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-location-specificity-done">H3 &#8211; Location Specificity &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id8">H3 &#8211; Host Notation &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id9">H3 &#8211; Host Notation &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-transfer-frequency-done">H3 &#8211; Transfer Frequency &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-versions-done">H3 &#8211; Versions &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id9">H3 &#8211; Syntax &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id10">H3 &#8211; Syntax &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-operators-done">H3 &#8211; Operators &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-version-constraints-done">H3 &#8211; Version Constraints &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-metadata-in-metadata-rb-done">H3 &#8211; Metadata (in metadata.rb) &#8211; DONE</a></li>
@@ -3102,9 +3110,163 @@ end</pre>
 <h3>H2 &#8211; Attributes<a class="headerlink" href="#h2-attributes" title="Permalink to this headline">¶</a></h3>
 <p>An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on node. When a cookbook is loaded during a Chef run, these attributes are compared to the attributes that are already present on the node. When the cookbook attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
 <p>THE ATTRIBUTES DISCUSSION NEEDS TO BE CONSOLIDATED AS MUCH AS POSSIBLE. THERE ARE NODE ATTRIBUTES AS WELL &#8211; SEE THE NODE TOPICS AND THE CHEF SERVER TOPICS.</p>
+<div class="section" id="h3-deep-merging-of-role-environment-attributes">
+<h4>H3 &#8211; Deep Merging of ROLE | ENVIRONMENT Attributes<a class="headerlink" href="#h3-deep-merging-of-role-environment-attributes" title="Permalink to this headline">¶</a></h4>
+<p>Attributes are typically stored in multi-level hashes or arrays. For example, a group of attributes for web servers might be:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>But what if all of the web servers aren&#8217;t the same? What if some of the web servers required a single attribute to have a different value? You could store these settings twice, once just like above and once just like below:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>But that is not very efficient, especially since most of them are the same in both places. The deep merge capabilities of Chef enable attributes to be layered. This allows attributes to be reused across nodes, yet still provide a way for certain attributes to be applied only when they are supposed to be. For example, a role named <tt class="docutils literal"><span class="pre">baseline.rb</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;baseline&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;The most basic role for all configurations&quot;</span>
+<span class="n">run_list</span> <span class="s2">&quot;recipe[baseline]&quot;</span>
+
+<span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>and then a role named <tt class="docutils literal"><span class="pre">web.rb</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;web&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;Web server config&quot;</span>
+<span class="n">run_list</span> <span class="s2">&quot;role[baseline]&quot;</span>
+
+<span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Both of these files are similar. They share the same structure. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> references the <tt class="docutils literal"><span class="pre">baseline.rb</span></tt> role. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> file only provides a value for one attribute: <tt class="docutils literal"><span class="pre">:startservers</span></tt>. When Chef compares these attributes, the deep merge feature will ensure that <tt class="docutils literal"><span class="pre">:startservers</span></tt> (and it&#8217;s value of <tt class="docutils literal"><span class="pre">30</span></tt>) will be applied to any node for which the <tt class="docutils literal"><span class="pre">web.rb</span></tt> attribute structure should be applied.</p>
+<p>This approach will allow a recipe like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_recipe</span> <span class="s2">&quot;apache2&quot;</span>
+<span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;apache&#39;</span><span class="o">][</span><span class="s1">&#39;prefork&#39;</span><span class="o">].</span><span class="n">to_hash</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and a <tt class="docutils literal"><span class="pre">run_list</span></tt> like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">run_list</span><span class="o">/</span><span class="n">web</span><span class="o">.</span><span class="n">json</span>
+<span class="p">{</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="p">:</span> <span class="o">[</span> <span class="s2">&quot;role[web]&quot;</span> <span class="o">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>to produce results like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="o">[</span><span class="no">Tue</span><span class="p">,</span> <span class="mi">16</span> <span class="no">Aug</span> <span class="mi">2011</span> <span class="mi">14</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">26</span> <span class="o">-</span><span class="mo">0700</span><span class="o">]</span> <span class="no">INFO</span><span class="p">:</span>
+         <span class="p">{</span>
+           <span class="s2">&quot;startservers&quot;</span><span class="o">=&gt;</span><span class="mi">30</span><span class="p">,</span>
+           <span class="s2">&quot;minspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">20</span><span class="p">,</span>
+           <span class="s2">&quot;maxspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">40</span><span class="p">,</span>
+           <span class="s2">&quot;serverlimit&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
+           <span class="s2">&quot;maxclients&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
+           <span class="s2">&quot;maxrequestsperchild&quot;</span><span class="o">=&gt;</span><span class="mi">10000</span>
+         <span class="p">}</span>
+</pre></div>
+</div>
+<p>Even though the <tt class="docutils literal"><span class="pre">web.rb</span></tt> file does not contain attributes and values for <tt class="docutils literal"><span class="pre">minspareservers</span></tt>, <tt class="docutils literal"><span class="pre">maxspareservers</span></tt>, <tt class="docutils literal"><span class="pre">serverlimit</span></tt>, <tt class="docutils literal"><span class="pre">maxclients</span></tt>, and <tt class="docutils literal"><span class="pre">maxrequestsperchild</span></tt>, the deep merge capabilities pulled them in.</p>
+<p>The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.</p>
+<div class="section" id="h4-substitution">
+<h5>H4 &#8211; Substitution<a class="headerlink" href="#h4-substitution" title="Permalink to this headline">¶</a></h5>
+<p>The following examples show how the logic works for substituting an existing string using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
++
+role_or_environment 2 { :y =&gt; "3" }
+=
+{ :x =&gt; "1", :y =&gt; "3" }</pre>
+</div>
+<p>For substituting an existing boolean using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; true, :y =&gt; false }
++
+role_or_environment 2 { :y =&gt; true }
+=
+{ :x =&gt; true, :y =&gt; true }</pre>
+</div>
+<p>For substituting an existing string in an array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
++
+role_or_environment 2 [ "!merge:2", "3" ]
+=
+[ "1", "3" ]</pre>
+</div>
+<p>For substituting an array with a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2", "3" ]
++
+role_or_environment 2 { :x =&gt; "1" , :y =&gt; "2" }
+=
+{ :x =&gt; "1", :y =&gt; "3" }</pre>
+</div>
+<p>When items can&#8217;t be merged through substitution, the original data is overwritten.</p>
+</div>
+<div class="section" id="h4-addition">
+<h5>H4 &#8211; Addition<a class="headerlink" href="#h4-addition" title="Permalink to this headline">¶</a></h5>
+<p>The following examples show how the logic works for adding a string using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
++
+role_or_environment 2 { :z =&gt; "3" }
+=
+{ :x =&gt; "1", :y =&gt; "2", :z =&gt; "3" }</pre>
+</div>
+<p>For adding a string using an array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
++
+role_or_environment 2 [ "3" ]
+=
+[ "1", "2", "3" ]</pre>
+</div>
+<p>For adding a string using a multi-level hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; { :y =&gt; "2" } }
++
+role_or_environment 2 { :x =&gt; { :z =&gt; "3" } }
+=
+{ :x =&gt; { :y =&gt; "2", :z =&gt; "3" } }</pre>
+</div>
+<p>For adding a string using a multi-level array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ [ 1, 2 ] ]
++
+role_or_environment 2 [ [ 3 ] ]
+=
+[ [ 1, 2 ], [ 3 ] ]</pre>
+</div>
+</div>
+</div>
 <div class="section" id="h3-xxxxx">
 <h4>H3 &#8211; xxxxx<a class="headerlink" href="#h3-xxxxx" title="Permalink to this headline">¶</a></h4>
 <p>xxxxx</p>
+<div class="section" id="id6">
+<h5>H4 &#8211; xxxxx<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+<p>xxxxx</p>
+</div>
 </div>
 </div>
 <div class="section" id="h2-definitions-done">
@@ -3960,8 +4122,8 @@ end</pre>
 <p class="first admonition-title">Note</p>
 <p class="last">Typically, using a lightweight provider is the best (and recommended) way of handling a resource that does not already exist. If using a lightweight provider is not an option, then creating a custom provider might be the best approach. Please use the Chef IRC channel to contact us and we will help you get started.</p>
 </div>
-<div class="section" id="id6">
-<h5>H4 &#8211; Actions &#8211; DONE<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id7">
+<h5>H4 &#8211; Actions &#8211; DONE<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
 <p>Actions are defined as list of keywords in a resource:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -4159,8 +4321,8 @@ Use a JSON file to pass run-list details to Chef Solo as long as the cookbook in
 <div class="highlight-python"><pre>depends "apache2"</pre>
 </div>
 </div>
-<div class="section" id="id7">
-<h4>H3 &#8211; Search Indexes &#8211; DONE<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id8">
+<h4>H3 &#8211; Search Indexes &#8211; DONE<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
 <p>Search indexes allow queries to be made for any type of data that is indexed by a Chef server, including data for a chef-client, data bags (and data bag items), environments, nodes, and roles. Chef has a defined query syntax that includes search patterns like exact, wildcard, range, and fuzzy. The search engine is based on Apache Solr and is run from a Chef server. A search is a full-text query that can be done from within a recipe or by using the <tt class="docutils literal"><span class="pre">search</span></tt> sub-command in Knife.</p>
 <p>The results of a search query can be loaded into a recipe. For example, a very simple search query (in a recipe) might look like this:</p>
 <div class="highlight-python"><pre>search(:node, "attribute:value")</pre>
@@ -4568,8 +4730,8 @@ end</pre>
 </ol>
 <p>where <tt class="docutils literal"><span class="pre">default</span></tt> does not refer to a recipe in <tt class="docutils literal"><span class="pre">default.rb</span></tt>. Templates are not split up into different directories by a recipe.</p>
 </div>
-<div class="section" id="id8">
-<h4>H3 &#8211; Host Notation &#8211; DONE<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id9">
+<h4>H3 &#8211; Host Notation &#8211; DONE<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
 <p>The naming of folders within cookbook directories must literally match the host notation used for template specificity matching. For example, if a host is named <tt class="docutils literal"><span class="pre">foo.example.com</span></tt>, then the folder must be named <tt class="docutils literal"><span class="pre">host-foo.example.com</span></tt>.</p>
 <p><strong>jamescott: this is probably best to single-source, as it lives in several places. WOULD NEED TO MAKE IT MORE GENERIC FOR THIS TO WORK REALLY WELL</strong></p>
 </div>
@@ -4582,8 +4744,8 @@ end</pre>
 <p>A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as for ensuring that the correct versions of third-party components are being used or to provide an update to a cookbook that fixes previous issues or adds new improvements. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is a cookbook, from the perspective of the repository and how cookbooks are stored on the Chef server and pushed out to one (or more) nodes.</p>
 <p>A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as for ensuring that the correct versions of third-party components are being used or to provide an update to a cookbook that fixes previous issues or adds new improvements. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is a cookbook, from the perspective of the repository and how cookbooks are stored on the Chef server and pushed out to one (or more) nodes.</p>
 </div>
-<div class="section" id="id9">
-<h4>H3 &#8211; Syntax &#8211; DONE<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id10">
+<h4>H3 &#8211; Syntax &#8211; DONE<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
 <p>A cookbook version always takes the form x.y.z, where x, y, and z are decimal numbers that are used to represent major (x), minor (y), and patch (z) versions. A two-part version (x.y) is also allowed. Alphanumeric version numbers (1.2.a3) and version numbers with more than three parts (1.2.3.4) are not allowed.</p>
 </div>
 <div class="section" id="h3-operators-done">

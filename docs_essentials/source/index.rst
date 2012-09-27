@@ -536,10 +536,6 @@ xxxxx
 
 
 
-
-
-
-
 H2 -- Search -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_search.rst
@@ -699,9 +695,32 @@ H2 -- Attributes
 
 THE ATTRIBUTES DISCUSSION NEEDS TO BE CONSOLIDATED AS MUCH AS POSSIBLE. THERE ARE NODE ATTRIBUTES AS WELL -- SEE THE NODE TOPICS AND THE CHEF SERVER TOPICS.
 
+H3 -- Deep Merging of ROLE | ENVIRONMENT Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge.rst
+
+The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
+
+H4 -- Substitution
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_substitute.rst
+
+H4 -- Addition
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_add.rst
+
 H3 -- xxxxx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
+
+H4 -- xxxxx
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+xxxxx
+
+
+
+
+
 
 H2 -- Definitions -- DONE
 -----------------------------------------------------
