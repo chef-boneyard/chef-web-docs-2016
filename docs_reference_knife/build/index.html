@@ -3061,28 +3061,31 @@ Your attributes: ipaddress fqdn
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></td>
 <td>The name of the node on the Chef server.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></td>
+<td>Use <tt class="docutils literal"><span class="pre">--no-host-key-verify</span></tt> to disable host key verification. Host key verification is enabled by default.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></td>
 <td>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--prerelease</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--prerelease</span></tt></td>
 <td>Indicates that pre-release Chef gems should be installed.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></td>
 <td>A comma-separated list of roles and/or recipes to be applied.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-key</span> <span class="pre">KEY</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-key</span> <span class="pre">KEY</span></tt></td>
 <td>The SSH key for the HP Cloud Compute environment.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-tenant</span> <span class="pre">ID</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-tenant</span> <span class="pre">ID</span></tt></td>
 <td>The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></td>
 <td>The path to the template file that will be used during a bootstrap operation.</td>
 </tr>
-<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USER_NAME</span></tt></td>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USER_NAME</span></tt></td>
 <td>The SSH user name.</td>
 </tr>
-<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--hp-zone</span> <span class="pre">ZONE</span></tt></td>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--hp-zone</span> <span class="pre">ZONE</span></tt></td>
 <td>The name of the HP Cloud Compute availability zone.</td>
 </tr>
 </tbody>
@@ -3150,6 +3153,12 @@ Run List: role<span class="o">[</span>base<span class="o">]</span>
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--hp-secret</span> <span class="pre">SECRET</span></tt></td>
 <td>The secret key for the HP Cloud Compute account.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></td>
+<td>The name of the node on the Chef server. This option only has meaning when used with the <tt class="docutils literal"><span class="pre">--purge</span></tt> option.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-p</span></tt>, <tt class="docutils literal"><span class="pre">--purge</span></tt></td>
+<td>Indicates that all corresponding nodes on the Chef server will be destroyed, in addition to the HP Cloud Compute node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the <tt class="docutils literal"><span class="pre">--node-name</span></tt> option to specify the correct name for the node.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-tenant</span> <span class="pre">ID</span></tt></td>
 <td>The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.</td>
