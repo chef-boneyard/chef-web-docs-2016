@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``server delete`` argument is used to delete one or more instances that are running in the |rackspace| cloud. To find a specific cloud instance, use the ``knife rackspace server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required).
+The ``server delete`` argument is used to delete one or more instances that are running in the |rackspace| cloud. The corresponding node on the |chef| server can also be deleted with the same action. To find a specific cloud instance, use the ``knife rackspace server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required).
 
 This argument has the following syntax::
 
@@ -21,6 +21,10 @@ This argument has the following options:
      - |rackspace-api-key|
    * - ``-A USER_NAME``, ``--rackspace-username USER_NAME``
      - |rackspace-username|
+   * - ``-N NODE_NAME``, ``--node-name NODE_NAME``
+     - |node-name| This option only has meaning when used with the ``--purge`` option.
+   * - ``-p``, ``--purge``
+     - |purge node rackspace|
    * - ``--rackspace-api-auth-url``
      - |rackspace-api-auth-url|
 

@@ -4135,7 +4135,7 @@ Platform:
 </div>
 <div class="section" id="id58">
 <h3>server delete<a class="headerlink" href="#id58" title="Permalink to this headline">¶</a></h3>
-<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">delete</span></tt> argument is used to delete one or more instances that are running in the Rackspace cloud. To find a specific cloud instance, use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">rackspace</span> <span class="pre">server</span> <span class="pre">list</span></tt> argument. Use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">node</span> <span class="pre">delete</span></tt> and <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">delete</span></tt> sub-commands to delete associated node and client objects (if required).</p>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">delete</span></tt> argument is used to delete one or more instances that are running in the Rackspace cloud. The corresponding node on the Chef server can also be deleted with the same action. To find a specific cloud instance, use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">rackspace</span> <span class="pre">server</span> <span class="pre">list</span></tt> argument. Use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">node</span> <span class="pre">delete</span></tt> and <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">delete</span></tt> sub-commands to delete associated node and client objects (if required).</p>
 <p>This argument has the following syntax:</p>
 <div class="highlight-python"><pre>knife rackspace server delete [SERVER_ID...]</pre>
 </div>
@@ -4156,6 +4156,12 @@ Platform:
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--rackspace-username</span> <span class="pre">USER_NAME</span></tt></td>
 <td>The user name for the Rackspace account.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></td>
+<td>The name of the node on the Chef server. This option only has meaning when used with the <tt class="docutils literal"><span class="pre">--purge</span></tt> option.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-p</span></tt>, <tt class="docutils literal"><span class="pre">--purge</span></tt></td>
+<td>Indicates that all corresponding nodes on the Chef server will be destroyed, in addition to the Rackspace node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the <tt class="docutils literal"><span class="pre">--node-name</span></tt> option to specify the correct name for the node.</td>
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">--rackspace-api-auth-url</span></tt></td>
 <td>The URL used to authenticate the Rackspace API key. Default: <tt class="docutils literal"><span class="pre">auth.api.rackspacecloud.com</span></tt>.</td>
