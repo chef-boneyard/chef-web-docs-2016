@@ -23,6 +23,10 @@ This argument has the following options:
      - |hp-auth|
    * - ``-K SECRET``, ``--hp-secret SECRET``
      - |hp-secret|
+   * - ``-N NODE_NAME``, ``--node-name NODE_NAME``
+     - |node-name| This option only has meaning when used with the ``--purge`` option.
+   * - ``-p``, ``--purge``
+     - |purge node hp|
    * - ``-T ID``, ``--hp-tenant ID``
      - |hp-tenant|
    * - ``-Z ZONE``, ``--hp-zone ZONE``

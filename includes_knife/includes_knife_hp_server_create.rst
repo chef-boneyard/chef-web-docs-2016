@@ -39,6 +39,8 @@ This argument has the following options:
      - |hp-secret|
    * - ``-N NODE_NAME``, ``--node-name NODE_NAME``
      - |node-name|
+   * - ``--[no-]host-key-verify``
+     - |[no-]host-key-verify|
    * - ``-P PASSWORD``, ``--ssh-password PASSWORD``
      - |ssh-password|
    * - ``--prerelease``
