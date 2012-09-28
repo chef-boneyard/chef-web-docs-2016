@@ -1,0 +1,339 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>hp (plug-in) &mdash; Opscode: Knife Reference</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Opscode: Knife Reference" href="index.html" />
+    <link rel="next" title="index rebuild" href="man_knife_index_rebuild.html" />
+    <link rel="prev" title="google (plug-in)" href="man_knife_google.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_index_rebuild.html" title="index rebuild"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="man_knife_google.html" title="google (plug-in)"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">hp (plug-in)</a><ul>
+<li><a class="reference internal" href="#flavor-list">flavor list</a></li>
+<li><a class="reference internal" href="#image-list">image list</a></li>
+<li><a class="reference internal" href="#server-create">server create</a></li>
+<li><a class="reference internal" href="#server-delete">server delete</a></li>
+<li><a class="reference internal" href="#server-list">server list</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="man_knife_google.html"
+                        title="previous chapter">google (plug-in)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="man_knife_index_rebuild.html"
+                        title="next chapter">index rebuild</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/man_knife_hp.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="hp-plug-in">
+<h1>hp (plug-in)<a class="headerlink" href="#hp-plug-in" title="Permalink to this headline">¶</a></h1>
+<p>HP Cloud Compute is a cloud hosting platform that provides computing, storage, identity, and other services across private, managed, and public clouds. The <tt class="docutils literal"><span class="pre">hp</span></tt> sub-command is used to manage API-driven cloud servers that are hosted by HP Cloud Compute.</p>
+<p>This plugin is available on github: <a class="reference external" href="https://github.com/mattray/knife-hp">https://github.com/mattray/knife-hp</a>.</p>
+<p>This sub-command has the following syntax:</p>
+<div class="highlight-python"><pre>knife hp [ARGUMENT] (options)</pre>
+</div>
+<div class="section" id="flavor-list">
+<h2>flavor list<a class="headerlink" href="#flavor-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">flavor</span> <span class="pre">list</span></tt> argument is used to get a list of servers from the HP Cloud Compute environment, listed by ID, name, cores, RAM, and disk size.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife hp flavor list</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-account</span> <span class="pre">ID</span></tt></dt>
+<dd>The access key identifier for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">--hp-auth</span> <span class="pre">URI</span></tt></dt>
+<dd>The URI used during authentication to the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--hp-secret</span> <span class="pre">SECRET</span></tt></dt>
+<dd>The secret key for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-tenant</span> <span class="pre">ID</span></tt></dt>
+<dd>The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--hp-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The name of the HP Cloud Compute availability zone.</dd>
+</dl>
+<p>For example, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife hp flavor list
+</pre></div>
+</div>
+<p>to return:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ID        Name              Cores     RAM          Disk
+100       standard.xsmall   1         1024 MB      30 GB
+101       standard.small    2         2048 MB      60 GB
+102       standard.medium   2         4096 MB      120 GB
+103       standard.large    4         8192 MB      240 GB
+104       standard.xlarge   4         16384 MB     480 GB
+105       standard.2xlarge  8         32768 MB     960 GB
+</pre></div>
+</div>
+</div>
+<div class="section" id="image-list">
+<h2>image list<a class="headerlink" href="#image-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">image</span> <span class="pre">list</span></tt> argument is used to list of images from the HP Cloud Compute environment, listed by ID and name.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife hp image list</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-account</span> <span class="pre">ID</span></tt></dt>
+<dd>The access key identifier for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">--hp-auth</span> <span class="pre">URI</span></tt></dt>
+<dd>The URI used during authentication to the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--hp-secret</span> <span class="pre">SECRET</span></tt></dt>
+<dd>The secret key for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-tenant</span> <span class="pre">ID</span></tt></dt>
+<dd>The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--hp-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The name of the HP Cloud Compute availability zone.</dd>
+</dl>
+<p>For example, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife hp flavor list
+</pre></div>
+</div>
+<p>to return:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ID                Name
+1234              CentOS 5.6 Server 64-bit
+1358              CentOS 6.2 Server 64-bit
+1361              Debian Squeeze 6.0.3 Server 64-bit
+1236              Ubuntu Lucid 10.04 LTS Server 64-bit
+1238              Ubuntu Maverick 10.10 Server 64-bit
+1240              Ubuntu Natty 11.04 Server 64-bit
+1242              Ubuntu Oneiric 11.10 Server 64-bit
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-create">
+<h2>server create<a class="headerlink" href="#server-create" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">create</span></tt> argument is used to create a new HP Cloud Compute cloud instance. This will provision a new image in HP Cloud Compute, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef-client and communicate with a Chef server.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife hp server create (options)</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-account</span> <span class="pre">ID</span></tt></dt>
+<dd>The access key identifier for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">--bootstrap-proxy</span> <span class="pre">PROXY_URL</span></tt></dt>
+<dd>The proxy server for the node that is the target of a bootstrap operation.</dd>
+<dt><tt class="docutils literal"><span class="pre">--bootstrap-version</span> <span class="pre">VERSION</span></tt></dt>
+<dd>The version of Chef to install.</dd>
+<dt><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></dt>
+<dd>Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (<tt class="docutils literal"><span class="pre">--template-file</span></tt>) must also be provided. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">FLAVOR_ID</span></tt>, <tt class="docutils literal"><span class="pre">--flavor</span> <span class="pre">FLAVOR_ID</span></tt></dt>
+<dd>The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.</dd>
+<dt><tt class="docutils literal"><span class="pre">-G</span> <span class="pre">X,Y,Z</span></tt>, <tt class="docutils literal"><span class="pre">--groups</span> <span class="pre">X,Y,Z</span></tt></dt>
+<dd>A comma-separated list of security groups.</dd>
+<dt><tt class="docutils literal"><span class="pre">--hp-auth</span> <span class="pre">URI</span></tt></dt>
+<dd>The URI used during authentication to the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></dt>
+<dd>The SSH identity file used for authentication. Key-based authentication is recommended.</dd>
+<dt><tt class="docutils literal"><span class="pre">-I</span> <span class="pre">IMAGE_ID</span></tt>, <tt class="docutils literal"><span class="pre">--image</span> <span class="pre">IMAGE_ID</span></tt></dt>
+<dd>The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--hp-secret</span> <span class="pre">SECRET</span></tt></dt>
+<dd>The secret key for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></dt>
+<dd>The name of the node on the Chef server.</dd>
+<dt><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></dt>
+<dd>Use <tt class="docutils literal"><span class="pre">--no-host-key-verify</span></tt> to disable host key verification. Host key verification is enabled by default.</dd>
+<dt><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</dd>
+<dt><tt class="docutils literal"><span class="pre">--prerelease</span></tt></dt>
+<dd>Indicates that pre-release Chef gems should be installed.</dd>
+<dt><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></dt>
+<dd>A comma-separated list of roles and/or recipes to be applied.</dd>
+<dt><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-key</span> <span class="pre">KEY</span></tt></dt>
+<dd>The SSH key for the HP Cloud Compute environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-tenant</span> <span class="pre">ID</span></tt></dt>
+<dd>The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></dt>
+<dd>The path to the template file that will be used during a bootstrap operation.</dd>
+<dt><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USER_NAME</span></tt></dt>
+<dd>The SSH user name.</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--hp-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The name of the HP Cloud Compute availability zone.</dd>
+</dl>
+<p>For example, to provision a server and then perform a bootstrap operation (using SSH), enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife hp server create -f 101 -I 1236 -S hptesting -x ubuntu -i ~/.ssh/hptesting.pem -d omnibus -r <span class="s1">&#39;role[base]&#39;</span> 2
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Instance ID: 65646
+Instance Name: hp15-185-114-127
+Flavor: 101
+Image: 1236
+SSH Key Pair: hptesting
+
+Waiting <span class="k">for </span>server............................................
+Public IP Address: 15.185.114.127
+Private IP Address: 10.4.21.238
+
+Waiting <span class="k">for </span>sshd..done
+Bootstrapping Chef on 15.185.114.127
+15.185.114.127 --2012-03-09 18:18:17--  http://opscode.com/chef/install.sh
+............
+
+............
+15.185.114.127 <span class="o">[</span>Fri, 09 Mar 2012 18:19:20 +0000<span class="o">]</span> INFO: Chef Run <span class="nb">complete </span>in 25.468149268 seconds
+15.185.114.127 <span class="o">[</span>Fri, 09 Mar 2012 18:19:20 +0000<span class="o">]</span> INFO: Running report handlers
+15.185.114.127 <span class="o">[</span>Fri, 09 Mar 2012 18:19:20 +0000<span class="o">]</span> INFO: Report handlers <span class="nb">complete</span>
+
+Instance ID: 65646
+Instance Name: hp15-185-114-127
+Flavor: 101
+Image: 1236
+SSH Key Pair: hptesting
+Public IP Address: 15.185.114.127
+Private IP Address: 10.4.21.238
+Environment: _default
+Run List: role<span class="o">[</span>base<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-delete">
+<h2>server delete<a class="headerlink" href="#server-delete" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">delete</span></tt> argument is used to delete one or more instances that are running in the HP Cloud Compute cloud. To find a specific cloud instance, use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">hp</span> <span class="pre">server</span> <span class="pre">list</span></tt> argument. Use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">node</span> <span class="pre">delete</span></tt> and <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">delete</span></tt> sub-commands to delete associated node and client objects (if required).</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife hp server delete [SERVER_NAME...]</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-account</span> <span class="pre">ID</span></tt></dt>
+<dd>The access key identifier for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">--hp-auth</span> <span class="pre">URI</span></tt></dt>
+<dd>The URI used during authentication to the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--hp-secret</span> <span class="pre">SECRET</span></tt></dt>
+<dd>The secret key for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></dt>
+<dd>The name of the node on the Chef server. This option only has meaning when used with the <tt class="docutils literal"><span class="pre">--purge</span></tt> option.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span></tt>, <tt class="docutils literal"><span class="pre">--purge</span></tt></dt>
+<dd>Indicates that all corresponding nodes on the Chef server will be destroyed, in addition to the HP Cloud Compute node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the <tt class="docutils literal"><span class="pre">--node-name</span></tt> option to specify the correct name for the node.</dd>
+<dt><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-tenant</span> <span class="pre">ID</span></tt></dt>
+<dd>The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--hp-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The name of the HP Cloud Compute availability zone.</dd>
+</dl>
+<p>For example, to delete an instance named &#8220;65646&#8221;, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife hp server delete 65646
+</pre></div>
+</div>
+<p>to return:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Instance ID: 65646
+Instance Name: hp15-185-114-127
+Flavor: 101
+Image: 1236
+Public IP Address: 15.185.114.127
+Private IP Address: 10.4.21.238
+
+WARNING: Deleted server 65646
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-list">
+<h2>server list<a class="headerlink" href="#server-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">list</span></tt> argument is used to find instances that are associated with an HP Cloud Compute account. The results may show instances that are not currently managed by the Chef server.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife hp server list</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-account</span> <span class="pre">ID</span></tt></dt>
+<dd>The access key identifier for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">--hp-auth</span> <span class="pre">URI</span></tt></dt>
+<dd>The URI used during authentication to the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">SECRET</span></tt>, <tt class="docutils literal"><span class="pre">--hp-secret</span> <span class="pre">SECRET</span></tt></dt>
+<dd>The secret key for the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--hp-tenant</span> <span class="pre">ID</span></tt></dt>
+<dd>The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--hp-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The name of the HP Cloud Compute availability zone.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_index_rebuild.html" title="index rebuild"
+             >next</a></li>
+        <li class="right" >
+          <a href="man_knife_google.html" title="google (plug-in)"
+             >previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Opscode, Inc.
+    </div>
+  </body>
+</html>

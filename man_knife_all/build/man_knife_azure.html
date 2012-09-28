@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>azure (plug-in) &mdash; Opscode: Knife Reference</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Opscode: Knife Reference" href="index.html" />
+    <link rel="next" title="bluebox (plug-in)" href="man_knife_bluebox.html" />
+    <link rel="prev" title="Knife Command Line Reference" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_bluebox.html" title="bluebox (plug-in)"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="index.html" title="Knife Command Line Reference"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">azure (plug-in)</a><ul>
+<li><a class="reference internal" href="#image-list">image list</a></li>
+<li><a class="reference internal" href="#server-create">server create</a></li>
+<li><a class="reference internal" href="#server-delete">server delete</a></li>
+<li><a class="reference internal" href="#server-describe">server describe</a></li>
+<li><a class="reference internal" href="#server-list">server list</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Knife Command Line Reference</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="man_knife_bluebox.html"
+                        title="next chapter">bluebox (plug-in)</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/man_knife_azure.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="azure-plug-in">
+<h1>azure (plug-in)<a class="headerlink" href="#azure-plug-in" title="Permalink to this headline">¶</a></h1>
+<p>Windows Azure is a cloud hosting platform from Microsoft that provides virtual machines for Linux and Windows Server, cloud and database services, and more. The <tt class="docutils literal"><span class="pre">azure</span></tt> sub-command is used to manage API-driven cloud servers that are hosted by Windows Azure.</p>
+<p>The <tt class="docutils literal"><span class="pre">azure</span></tt> sub-command must use a management certificate for secure communication with Windows Azure.</p>
+<p>This plugin is available on github: <a class="reference external" href="https://github.com/opscode/knife-azure">https://github.com/opscode/knife-azure</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This plugin requires the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">windows</span></tt> plugin to be present on the same machine: <a class="reference external" href="https://github.com/opscode/knife-windows">https://github.com/opscode/knife-windows</a>.</p>
+</div>
+<p>This sub-command has the following syntax:</p>
+<div class="highlight-python"><pre>knife azure [ARGUMENT] (options)</pre>
+</div>
+<div class="section" id="image-list">
+<h2>image list<a class="headerlink" href="#image-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">image</span> <span class="pre">list</span></tt> argument is used to get a list of images that exist in a Windows Azure environment. Any image in this list may be used for provisioning. The results may show instances that are not currently managed by the Chef server.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife azure image list (options)</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-H</span> <span class="pre">HOST_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure_host_name</span> <span class="pre">HOST_NAME</span></tt></dt>
+<dd>The host name for the Windows Azure environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></dt>
+<dd>The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.</dd>
+<dt><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></dt>
+<dd>The subscription identifier for the Windows Azure portal.</dd>
+<dt><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></dt>
+<dd>The SSL certificate that is used to verify communication over HTTPS.</dd>
+</dl>
+</div>
+<div class="section" id="server-create">
+<h2>server create<a class="headerlink" href="#server-create" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">create</span></tt> argument is used to create a new Windows Azure cloud instance. This will provision a new image in Windows Azure, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef-client and communicate with a Chef server.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife azure server create (options)</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-a</span> <span class="pre">STORAGE_ACCOUNT_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--storage-account</span> <span class="pre">STORAGE_ACCOUNT_NAME</span></tt></dt>
+<dd>The name of the storage account used with the hosted service.</dd>
+<dt><tt class="docutils literal"><span class="pre">--bootstrap-protocol</span> <span class="pre">PROTOCOL</span></tt></dt>
+<dd>The protocol used to bootstrap on a machine that is running Windows Server: <tt class="docutils literal"><span class="pre">winrm</span></tt> or <tt class="docutils literal"><span class="pre">ssh</span></tt>. Default value: <tt class="docutils literal"><span class="pre">winrm</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">--bootstrap-version</span> <span class="pre">VERSION</span></tt></dt>
+<dd>The version of Chef to install.</dd>
+<dt><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></dt>
+<dd>Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (<tt class="docutils literal"><span class="pre">--template-file</span></tt>) must also be provided. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-D</span> <span class="pre">DESCRIPTION</span></tt></dt>
+<dd>The description for the host.</dd>
+<dt><tt class="docutils literal"><span class="pre">-H</span> <span class="pre">HOST_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure_host_name</span> <span class="pre">HOST_NAME</span></tt></dt>
+<dd>The host name for the Windows Azure environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></dt>
+<dd>The SSH identity file used for authentication. Key-based authentication is recommended.</dd>
+<dt><tt class="docutils literal"><span class="pre">-I</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--source-image</span> <span class="pre">IMAGE</span></tt></dt>
+<dd>The name of the disk image that will be used to create the virtual machine.</dd>
+<dt><tt class="docutils literal"><span class="pre">-m</span> <span class="pre">LOCATION</span></tt>, <tt class="docutils literal"><span class="pre">--service-location</span> <span class="pre">LOCATION</span></tt></dt>
+<dd>The geographic location for a virtual machine and its services.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></dt>
+<dd>The name of the node on the Chef server. Node names in Chef, when used with Windows Azure, must be 91 characters or shorter.</dd>
+<dt><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></dt>
+<dd>Use <tt class="docutils literal"><span class="pre">--no-host-key-verify</span></tt> to disable host key verification. Host key verification is enabled by default.</dd>
+<dt><tt class="docutils literal"><span class="pre">-o</span> <span class="pre">DISK_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--os-disk-name</span> <span class="pre">DISK_NAME</span></tt></dt>
+<dd>The operating system type of the Windows Azure OS image: <tt class="docutils literal"><span class="pre">Linux</span></tt> or <tt class="docutils literal"><span class="pre">Windows</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></dt>
+<dd>The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.</dd>
+<dt><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</dd>
+<dt><tt class="docutils literal"><span class="pre">--prerelease</span></tt></dt>
+<dd>Indicates that pre-release Chef gems should be installed.</dd>
+<dt><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></dt>
+<dd>A comma-separated list of roles and/or recipes to be applied.</dd>
+<dt><tt class="docutils literal"><span class="pre">-R</span> <span class="pre">ROLE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--role-name</span> <span class="pre">ROLE_NAME</span></tt></dt>
+<dd>The name of the virtual machine.</dd>
+<dt><tt class="docutils literal"><span class="pre">-s</span> <span class="pre">SERVICE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--hosted-service-name</span> <span class="pre">SERVICE_NAME</span></tt></dt>
+<dd>The name of the hosted service.</dd>
+<dt><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></dt>
+<dd>The subscription identifier for the Windows Azure portal.</dd>
+<dt><tt class="docutils literal"><span class="pre">-t</span> <span class="pre">PORT_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--tcp-endpoints</span> <span class="pre">PORT_LIST</span></tt></dt>
+<dd>A comma-separated list of local and public TCP ports that will be opened, for example: <tt class="docutils literal"><span class="pre">80:80,433:5000</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></dt>
+<dd>The path to the template file that will be used during a bootstrap operation.</dd>
+<dt><tt class="docutils literal"><span class="pre">--u</span> <span class="pre">PORT_LIST</span></tt>, <tt class="docutils literal"><span class="pre">---udp-endpoints</span> <span class="pre">PORT_LIST</span></tt></dt>
+<dd>A comma-separated list of local and public UDP ports that will be opened, for example: <tt class="docutils literal"><span class="pre">80:80,433:5000</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></dt>
+<dd>The SSL certificate that is used to verify communication over HTTPS.</dd>
+<dt><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USER_NAME</span></tt></dt>
+<dd>The SSH user name.</dd>
+<dt><tt class="docutils literal"><span class="pre">-z</span> <span class="pre">SIZE</span></tt>, <tt class="docutils literal"><span class="pre">--role-size</span> <span class="pre">SIZE</span></tt></dt>
+<dd>The size of the virtual machine: <tt class="docutils literal"><span class="pre">ExtraSmall</span></tt>, <tt class="docutils literal"><span class="pre">Small</span></tt>, <tt class="docutils literal"><span class="pre">Medium</span></tt>, <tt class="docutils literal"><span class="pre">Large</span></tt>, or <tt class="docutils literal"><span class="pre">ExtraLarge</span></tt>.</dd>
+</dl>
+<p>For example, to provision a medium-sized CentOS machine configured as a web server in the &#8220;West US&#8221; data center, while also creating new hosted service and storage accounts, enter something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife azure server create -r <span class="s2">&quot;role[webserver]&quot;</span> --service-location <span class="s2">&quot;West US&quot;</span> --ssh-user foo
+  --ssh--password password --role-name web-apache-0001 --host-name web-apache
+  --tcp-endpoints 80:80,8080:8080 --source-image name_of_source_image --role-size Medium
+</pre></div>
+</div>
+<p>To provision a medium-sized CentOS machine configured as a web server in the &#8220;West US&#8221; data center, while reusing existing hosted service and storage accounts, enter something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife azure server create -r <span class="s2">&quot;role[webserver]&quot;</span> --service-location <span class="s2">&quot;West US&quot;</span>
+  --hosted-service-name webservers --storage-account webservers-storage --ssh-user foo
+  --ssh--password password --role-name web-apache-0001 --host-name web-apache
+  --tcp-endpoints 80:80,8080:8080 --source-image name_of_source_image --role-size Medium
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-delete">
+<h2>server delete<a class="headerlink" href="#server-delete" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">delete</span></tt> argument is used to delete one or more instances that are running in the Windows Azure cloud. To find a specific cloud instance, use <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">azure</span> <span class="pre">server</span> <span class="pre">list</span></tt>. Use the <tt class="docutils literal"><span class="pre">--purge</span></tt> option to delete all associated node and client objects from the Chef server or use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">node</span> <span class="pre">delete</span></tt> and <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">delete</span></tt> sub-commands to delete specific node and client objects.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife azure server delete [SERVER...] (options)</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-H</span> <span class="pre">HOST_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure_host_name</span> <span class="pre">HOST_NAME</span></tt></dt>
+<dd>The host name for the Windows Azure environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></dt>
+<dd>The name of the node and client to delete, if different from the server name. This must be used with the <tt class="docutils literal"><span class="pre">--purge</span></tt> option. This must be used with the <tt class="docutils literal"><span class="pre">-p</span></tt> (purge) option.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span></tt>, <tt class="docutils literal"><span class="pre">--purge</span></tt></dt>
+<dd>Indicates that all corresponding nodes and clients on the Chef server will be destroyed, in addition to the Windows Azure node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the <tt class="docutils literal"><span class="pre">--node-name</span></tt> option must be used to specify the name of the node.</dd>
+<dt><tt class="docutils literal"><span class="pre">--purge-os-disk</span></tt></dt>
+<dd>Indicates that all corresponding operating system disks will be destroyed, in addition to the Windows Azure node itself.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></dt>
+<dd>The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.</dd>
+<dt><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></dt>
+<dd>The subscription identifier for the Windows Azure portal.</dd>
+<dt><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></dt>
+<dd>The SSL certificate that is used to verify communication over HTTPS.</dd>
+</dl>
+<p>For example, to delete an instance named &#8220;devops12&#8221;, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife azure server delete devops12
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-describe">
+<h2>server describe<a class="headerlink" href="#server-describe" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">describe</span></tt> argument is used to view a detailed description of one or more roles that exist in a Windows Azure cloud instance. For each specified role name, information such as status, size, hosted service name, deployment name, ports (open, local, public) and IP are displayed.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife azure server describe [ROLE_NAME...]</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-H</span> <span class="pre">HOST_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure_host_name</span> <span class="pre">HOST_NAME</span></tt></dt>
+<dd>The host name for the Windows Azure environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></dt>
+<dd>The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.</dd>
+<dt><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></dt>
+<dd>The subscription identifier for the Windows Azure portal.</dd>
+<dt><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></dt>
+<dd>The SSL certificate that is used to verify communication over HTTPS.</dd>
+</dl>
+<p>For example, to view the details for a role named &#8220;admin&#8221;, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife azure server describe admin
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-list">
+<h2>server list<a class="headerlink" href="#server-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">list</span></tt> argument is used to find instances that are associated with a Windows Azure account.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife azure server list</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-H</span> <span class="pre">HOST_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure_host_name</span> <span class="pre">HOST_NAME</span></tt></dt>
+<dd>The host name for the Windows Azure environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">FILE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--azure-pem-filename</span> <span class="pre">FILE_NAME</span></tt></dt>
+<dd>The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.</dd>
+<dt><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">ID</span></tt>, <tt class="docutils literal"><span class="pre">--azure-subscription-id</span> <span class="pre">ID</span></tt></dt>
+<dd>The subscription identifier for the Windows Azure portal.</dd>
+<dt><tt class="docutils literal"><span class="pre">--verify-ssl-cert</span></tt></dt>
+<dd>The SSL certificate that is used to verify communication over HTTPS.</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_bluebox.html" title="bluebox (plug-in)"
+             >next</a></li>
+        <li class="right" >
+          <a href="index.html" title="Knife Command Line Reference"
+             >previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Opscode, Inc.
+    </div>
+  </body>
+</html>

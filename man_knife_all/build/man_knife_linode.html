@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>linode (plug-in) &mdash; Opscode: Knife Reference</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Opscode: Knife Reference" href="index.html" />
+    <link rel="next" title="node" href="man_knife_node.html" />
+    <link rel="prev" title="index rebuild" href="man_knife_index_rebuild.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_node.html" title="node"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="man_knife_index_rebuild.html" title="index rebuild"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">linode (plug-in)</a><ul>
+<li><a class="reference internal" href="#datacenter-list">datacenter list</a></li>
+<li><a class="reference internal" href="#flavor-list">flavor list</a></li>
+<li><a class="reference internal" href="#image-list">image list</a></li>
+<li><a class="reference internal" href="#kernel-list">kernel list</a></li>
+<li><a class="reference internal" href="#server-create">server create</a></li>
+<li><a class="reference internal" href="#server-delete">server delete</a></li>
+<li><a class="reference internal" href="#server-list">server list</a></li>
+<li><a class="reference internal" href="#server-reboot">server reboot</a></li>
+<li><a class="reference internal" href="#stackscript-list">stackscript list</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="man_knife_index_rebuild.html"
+                        title="previous chapter">index rebuild</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="man_knife_node.html"
+                        title="next chapter">node</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/man_knife_linode.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="linode-plug-in">
+<h1>linode (plug-in)<a class="headerlink" href="#linode-plug-in" title="Permalink to this headline">¶</a></h1>
+<p>Linode is a cloud hosting platform that provides virtual private server hosting from the kernal and root access on up. The <tt class="docutils literal"><span class="pre">linode</span></tt> sub-command is used to manage API-driven cloud servers that are hosted by Linode.</p>
+<p>This plugin is available on github: <a class="reference external" href="https://github.com/opscode/knife-linode">https://github.com/opscode/knife-linode</a>.</p>
+<p>This sub-command has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode [ARGUMENT] (options)</pre>
+</div>
+<div class="section" id="datacenter-list">
+<h2>datacenter list<a class="headerlink" href="#datacenter-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">datacenter</span> <span class="pre">list</span></tt> argument is used to view a list of available data centers, listed by data center ID and location.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode datacenter list</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--linode-api-key</span> <span class="pre">KEY</span></tt></dt>
+<dd>The Linode API key.</dd>
+</dl>
+</div>
+<div class="section" id="flavor-list">
+<h2>flavor list<a class="headerlink" href="#flavor-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">flavor</span> <span class="pre">list</span></tt> argument is used to get a list of servers from the Linode environment, listed by ID, name, RAM, disk, and Price.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode flavor list</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--linode-api-key</span> <span class="pre">KEY</span></tt></dt>
+<dd>The Linode API key.</dd>
+</dl>
+</div>
+<div class="section" id="image-list">
+<h2>image list<a class="headerlink" href="#image-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">image</span> <span class="pre">list</span></tt> argument is used to list of images from the Linode environment, listed by ID, name, bits, and image size.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode image list</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--linode-api-key</span> <span class="pre">KEY</span></tt></dt>
+<dd>The Linode API key.</dd>
+</dl>
+</div>
+<div class="section" id="kernel-list">
+<h2>kernel list<a class="headerlink" href="#kernel-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">kernel</span> <span class="pre">list</span></tt> argument is used to view a list of available kernels, listed by ID and name.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode kernel list</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--linode-api-key</span> <span class="pre">KEY</span></tt></dt>
+<dd>The Linode API key.</dd>
+</dl>
+</div>
+<div class="section" id="server-create">
+<h2>server create<a class="headerlink" href="#server-create" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">create</span></tt> argument is used to create a new Linode cloud instance. This will provision a new image in Linode, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef-client and communicate with a Chef server.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode server create (options)</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--linode-api-key</span> <span class="pre">KEY</span></tt></dt>
+<dd>The Linode API key.</dd>
+<dt><tt class="docutils literal"><span class="pre">--bootstrap-version</span> <span class="pre">VERSION</span></tt></dt>
+<dd>The version of Chef to install.</dd>
+<dt><tt class="docutils literal"><span class="pre">-D</span> <span class="pre">DATACENTER</span></tt>, <tt class="docutils literal"><span class="pre">--linode-datacenter</span> <span class="pre">DATACENTER</span></tt></dt>
+<dd>The datacenter for the Linode server.</dd>
+<dt><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></dt>
+<dd>Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (<tt class="docutils literal"><span class="pre">--template-file</span></tt>) must also be provided. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">FLAVOR</span></tt>, <tt class="docutils literal"><span class="pre">--linode-flavor</span> <span class="pre">FLAVOR</span></tt></dt>
+<dd>The flavor of the Linode server.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></dt>
+<dd>The SSH identity file used for authentication. Key-based authentication is recommended.</dd>
+<dt><tt class="docutils literal"><span class="pre">-I</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--linode-image</span> <span class="pre">IMAGE</span></tt></dt>
+<dd>The image for the Linode server.</dd>
+<dt><tt class="docutils literal"><span class="pre">-k</span> <span class="pre">KERNEL</span></tt>, <tt class="docutils literal"><span class="pre">--linode-kernel</span> <span class="pre">KERNEL</span></tt></dt>
+<dd>The kernel for the Linode server.</dd>
+<dt><tt class="docutils literal"><span class="pre">-L</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--linode-node-name</span> <span class="pre">NAME</span></tt></dt>
+<dd>The name of the node in the Linode environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></dt>
+<dd>The name of the node on the Chef server.</dd>
+<dt><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></dt>
+<dd>Use <tt class="docutils literal"><span class="pre">--no-host-key-verify</span></tt> to disable host key verification. Host key verification is enabled by default.</dd>
+<dt><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</dd>
+<dt><tt class="docutils literal"><span class="pre">--prerelease</span></tt></dt>
+<dd>Indicates that pre-release Chef gems should be installed.</dd>
+<dt><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></dt>
+<dd>A comma-separated list of roles and/or recipes to be applied.</dd>
+<dt><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></dt>
+<dd>The path to the template file that will be used during a bootstrap operation.</dd>
+<dt><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USER_NAME</span></tt></dt>
+<dd>The SSH user name.</dd>
+</dl>
+<p>For example, to create a new instance, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>xxxxx
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-delete">
+<h2>server delete<a class="headerlink" href="#server-delete" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">delete</span></tt> argument is used to delete one or more instances that are running in the Linode cloud. To find a specific cloud instance, use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">linode</span> <span class="pre">server</span> <span class="pre">list</span></tt> argument. Use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">node</span> <span class="pre">delete</span></tt> and <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">delete</span></tt> sub-commands to delete associated node and client objects (if required).</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode server delete LINODE_ID</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--linode-api-key</span> <span class="pre">KEY</span></tt></dt>
+<dd>The Linode API key.</dd>
+</dl>
+</div>
+<div class="section" id="server-list">
+<h2>server list<a class="headerlink" href="#server-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">list</span></tt> argument is used to find instances that are associated with a Linode account. The results may show instances that are not currently managed by the Chef server.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode server list</pre>
+</div>
+<p>This argument does not have any options.</p>
+</div>
+<div class="section" id="server-reboot">
+<h2>server reboot<a class="headerlink" href="#server-reboot" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">reboot</span></tt> argument is used to reboot all of the servers in a Linode environment.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode server reboot LINODE_ID</pre>
+</div>
+<p>This argument does not have any options.</p>
+</div>
+<div class="section" id="stackscript-list">
+<h2>stackscript list<a class="headerlink" href="#stackscript-list" title="Permalink to this headline">¶</a></h2>
+<p>Linode StackScripts are customized distribution templates. This argument is used to view a list of Linode StackScripts that are currently being used.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife linode stackscript list</pre>
+</div>
+<p>This argument does not have any options.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_node.html" title="node"
+             >next</a></li>
+        <li class="right" >
+          <a href="man_knife_index_rebuild.html" title="index rebuild"
+             >previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Opscode, Inc.
+    </div>
+  </body>
+</html>

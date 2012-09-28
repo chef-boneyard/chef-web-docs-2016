@@ -297,8 +297,7 @@
 </li>
 </ul>
 </li>
-<li><a class="reference internal" href="#lightweight-resources">Lightweight Resources</a><ul>
-<li><a class="reference internal" href="#creating-a-lightweight-resource-need-to-add">Creating a Lightweight Resource &#8211; NEED TO ADD</a></li>
+<li><a class="reference internal" href="#lightweight-resources-and-providers">Lightweight Resources and Providers</a><ul>
 <li><a class="reference internal" href="#apt-repository">apt_repository</a><ul>
 <li><a class="reference internal" href="#id117">Actions</a></li>
 <li><a class="reference internal" href="#id118">Attributes</a></li>
@@ -5028,9 +5027,83 @@ When a <tt class="docutils literal"><span class="pre">cookbook_file</span></tt> 
 </div>
 </div>
 </div>
-<div class="section" id="lightweight-resources">
-<h2>Lightweight Resources<a class="headerlink" href="#lightweight-resources" title="Permalink to this headline">¶</a></h2>
-<p>Custom resources can also be created using the lightweight resource provider (LWRP) DSL. Opscode provides several cookbooks that define some commonly used lightweight resource provider (LWRP). To use the lightweight resources provided by Opscode the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.</p>
+<div class="section" id="lightweight-resources-and-providers">
+<h2>Lightweight Resources and Providers<a class="headerlink" href="#lightweight-resources-and-providers" title="Permalink to this headline">¶</a></h2>
+<p>Custom resources and providers can also be created using the lightweight resource provider (LWRP) DSL. Opscode provides several cookbooks that define some commonly used lightweight resource provider (LWRP). To use the lightweight resources provided by Opscode the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.</p>
+<p>A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state.</p>
+<p>A lightweight provider is a custom provider that is designed to take the steps that are required to bring a piece of the system to a desired state based on an action that is defined by a lightweight resource.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Typically, using a lightweight provider is the best (and recommended) way of handling a resource that does not already exist. If using a lightweight provider is not an option, then creating a custom provider might be the best approach. Please use the Chef IRC channel to contact us and we will help you get started.</p>
+</div>
+<p>Lightweight resources and providers are loaded from files that are saved in the following cookbook sub-directories:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Directory</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">providers/</span></tt></td>
+<td>The sub-directory in which lightweight providers are located.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">resources/</span></tt></td>
+<td>The sub-directory in which lightweight resources are located.</td>
+</tr>
+</tbody>
+</table>
+<p>The naming patterns of lightweight resources and providers are determined by the name of the cookbook and by the name of the files in the <tt class="docutils literal"><span class="pre">resources/</span></tt> and <tt class="docutils literal"><span class="pre">providers/</span></tt> sub-directories. For example, if a cookbook named <tt class="docutils literal"><span class="pre">example</span></tt> was downloaded to the Chef repository, it would be located at <tt class="docutils literal"><span class="pre">/cookbooks/example/</span></tt>. If that cookbook contained two resources and two providers, the following files would be part of the <tt class="docutils literal"><span class="pre">resources/</span></tt> directory:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Files</th>
+<th class="head">Resource Name</th>
+<th class="head">Generated Class</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default.rb</span></tt></td>
+<td>example</td>
+<td>Chef::Resource::Example</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">custom.rb</span></tt></td>
+<td>custom</td>
+<td>Chef::Resource::ExampleCustom</td>
+</tr>
+</tbody>
+</table>
+<p>And the following files would be part of the <tt class="docutils literal"><span class="pre">providers/</span></tt> directory:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Files</th>
+<th class="head">Provider Name</th>
+<th class="head">Generated Class</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default.rb</span></tt></td>
+<td>example</td>
+<td>Chef::Provider::Example</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">custom.rb</span></tt></td>
+<td>custom</td>
+<td>Chef::Provider::ExampleCustom</td>
+</tr>
+</tbody>
+</table>
 <p>The following groups of lightweight resources are available in open source cookbooks that are provided by Opscode:</p>
 <ul class="simple">
 <li>apt</li>
@@ -5052,18 +5125,6 @@ When a <tt class="docutils literal"><span class="pre">cookbook_file</span></tt> 
 <li>windows</li>
 </ul>
 <p>Some of the cookbooks contain more than one lightweight resource. Each lightweight resource is described individually in the following sections.</p>
-<div class="section" id="creating-a-lightweight-resource-need-to-add">
-<h3>Creating a Lightweight Resource &#8211; NEED TO ADD<a class="headerlink" href="#creating-a-lightweight-resource-need-to-add" title="Permalink to this headline">¶</a></h3>
-<p><a class="reference external" href="http://wiki.opscode.com/display/chef/Lightweight+Resources+and+Providers+%28LWRP%29">http://wiki.opscode.com/display/chef/Lightweight+Resources+and+Providers+%28LWRP%29</a></p>
-<p>For additional information on lightweight resource providers, including the DSL for creating Resources and Providers, see Lightweight Resources and Providers (LWRP).</p>
-<p>Just an observation here &#8211; these are reasonably well documented in the Git source AND/OR on the Community page &#8211; not all, but most. The most important question is: &#8220;are these official, from Opscode?&#8221; If the answer is &#8220;yes&#8221; then there should be at least a stripped down version of this in the &#8220;official docs&#8221;</p>
-<p>Understanding LWRP Development</p>
-<p>Opscode team member Joshua Timberman has a slideshare presentation on Understanding LWRP Development, available for your review.</p>
-<p><a class="reference external" href="http://www.slideshare.net/jtimberman/understanding-lwrp-development">http://www.slideshare.net/jtimberman/understanding-lwrp-development</a></p>
-<p>Opscode team member Joshua Timberman has a slideshare presentation on Understanding LWRP Development, available for your review.</p>
-<p><strong>jamescott: effectively, these are ruby code blocks that can be PUT IN RECIPES and then run FROM RECIPES? IF YES, THAT GOES SOMEWHERE AT THE TOP.</strong></p>
-<p><strong>Jamescott: these examples seem incomplete. They aren&#8217;t showing all of the options/syntax. QUESTION: CAN DIFFERENT LWRPS HAVE THE SAME PARAMETERS? IS THERE A CORE &#8220;DSL&#8221; FOR THE LWRPS? SEEMS LIKE NO.</strong></p>
-</div>
 <div class="section" id="apt-repository">
 <h3>apt_repository<a class="headerlink" href="#apt-repository" title="Permalink to this headline">¶</a></h3>
 <p>The apt_repository lightweight resource is used to manage APT repositories by dropping a <tt class="docutils literal"><span class="pre">sources.list</span></tt> in <tt class="docutils literal"><span class="pre">etc/apt/sources.list.d</span></tt>. This lightweight resource is only useful on distributions that have APT (for example, Debian or Ubuntu distributions). The <tt class="docutils literal"><span class="pre">sources.list</span></tt> file name is the same as the value for the <tt class="docutils literal"><span class="pre">repo_name</span></tt> attribute.</p>

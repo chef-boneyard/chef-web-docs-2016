@@ -1,0 +1,182 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>search &mdash; Opscode: Knife Reference</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Opscode: Knife Reference" href="index.html" />
+    <link rel="next" title="ssh" href="man_knife_ssh.html" />
+    <link rel="prev" title="role" href="man_knife_role.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_ssh.html" title="ssh"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="man_knife_role.html" title="role"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="man_knife_role.html"
+                        title="previous chapter">role</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="man_knife_ssh.html"
+                        title="next chapter">ssh</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/man_knife_search.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="search">
+<h1>search<a class="headerlink" href="#search" title="Permalink to this headline">¶</a></h1>
+<p>Search indexes allow queries to be made for any type of data that is indexed by a Chef server, including data for a chef-client, data bags (and data bag items), environments, nodes, and roles. Chef has a defined query syntax that includes search patterns like exact, wildcard, range, and fuzzy. The search engine is based on Apache Solr and is run from a Chef server. A search is a full-text query that can be done from within a recipe or by using the <tt class="docutils literal"><span class="pre">search</span></tt> sub-command in Knife.</p>
+<p>The <tt class="docutils literal"><span class="pre">search</span></tt> sub-command is used run a search query for information that is indexed on a Chef server.</p>
+<p>This sub-command has the following syntax:</p>
+<div class="highlight-python"><pre>knife search INDEX SEARCH_QUERY (options)</pre>
+</div>
+<p>This sub-command has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-a</span> <span class="pre">ATTR</span></tt>, <tt class="docutils literal"><span class="pre">--attribute</span> <span class="pre">ATTR</span></tt></dt>
+<dd>Indicates that only a single attribute is shown, as defined by the <tt class="docutils literal"><span class="pre">ATTR</span></tt> value.</dd>
+<dt><tt class="docutils literal"><span class="pre">-b</span> <span class="pre">ROW</span></tt>, <tt class="docutils literal"><span class="pre">-start</span> <span class="pre">ROW</span></tt></dt>
+<dd>The row at which return results will begin.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span></tt>, <tt class="docutils literal"><span class="pre">--id-only</span></tt></dt>
+<dd>Indicates that only matching object IDs will be shown.</dd>
+<dt><tt class="docutils literal"><span class="pre">INDEX</span></tt></dt>
+<dd>The name of the index to be queried: <tt class="docutils literal"><span class="pre">client</span></tt>, <tt class="docutils literal"><span class="pre">environment</span></tt>, <tt class="docutils literal"><span class="pre">node</span></tt>, <tt class="docutils literal"><span class="pre">role</span></tt>, or <tt class="docutils literal"><span class="pre">DATA_BAG_NAME</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-l</span></tt>, <tt class="docutils literal"><span class="pre">--long</span></tt></dt>
+<dd>Display long output when searching nodes while using the default summary format.</dd>
+<dt><tt class="docutils literal"><span class="pre">-m</span></tt>, <tt class="docutils literal"><span class="pre">--medium</span></tt></dt>
+<dd>Display more, but not all, of a node&#8217;s data when searching using the default summary format.</dd>
+<dt><tt class="docutils literal"><span class="pre">-o</span> <span class="pre">SORT</span></tt>, <tt class="docutils literal"><span class="pre">--sort</span> <span class="pre">SORT</span></tt></dt>
+<dd>The order in which search results will be sorted.</dd>
+<dt><tt class="docutils literal"><span class="pre">-q</span> <span class="pre">SEARCH_QUERY</span></tt>, <tt class="docutils literal"><span class="pre">--query</span> <span class="pre">SEARCH_QUERY</span></tt></dt>
+<dd>Use to protect search queries that start with a hyphen (-). A <tt class="docutils literal"><span class="pre">-q</span></tt> query may be specified as an argument or an option, but not both.</dd>
+<dt><tt class="docutils literal"><span class="pre">-r</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span></tt></dt>
+<dd>Indicates that only the run-list will be shown.</dd>
+<dt><tt class="docutils literal"><span class="pre">-R</span> <span class="pre">INT</span></tt>, <tt class="docutils literal"><span class="pre">--rows</span> <span class="pre">INT</span></tt></dt>
+<dd>The number of rows to be returned.</dd>
+<dt><tt class="docutils literal"><span class="pre">SEARCH_QUERY</span></tt></dt>
+<dd>The search query used to identify a a list of items on a Chef server. This option uses the same syntax as the <tt class="docutils literal"><span class="pre">search</span></tt> sub-command.</dd>
+</dl>
+<p>For example, to search for the IDs of all nodes running on the Amazon EC2 platform, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;ec2:*&#39;</span> -i
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre>4 items found
+
+ip-0A7CA19F.ec2.internal
+
+ip-0A58CF8E.ec2.internal
+
+ip-0A58E134.ec2.internal
+
+ip-0A7CFFD5.ec2.internal
+</pre></div>
+</div>
+<p>To search for the instance type (flavor) of all nodes running on the Amazon EC2 platform, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;ec2:*&#39;</span> -a ec2.instance_type
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre>4 items found
+
+ec2.instance_type:  m1.large
+id:                 ip-0A7CA19F.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip-0A58CF8E.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip-0A58E134.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip-0A7CFFD5.ec2.internal
+</pre></div>
+</div>
+<p>To search for all nodes running Ubuntu, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;platform:ubuntu&#39;</span>
+</pre></div>
+</div>
+<p>To search for all nodes running CentOS in the production environment, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;chef_environment:production AND platform:centos&#39;</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_ssh.html" title="ssh"
+             >next</a></li>
+        <li class="right" >
+          <a href="man_knife_role.html" title="role"
+             >previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Opscode, Inc.
+    </div>
+  </body>
+</html>

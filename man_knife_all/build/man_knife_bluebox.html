@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>bluebox (plug-in) &mdash; Opscode: Knife Reference</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Opscode: Knife Reference" href="index.html" />
+    <link rel="next" title="bootstrap" href="man_knife_bootstrap.html" />
+    <link rel="prev" title="azure (plug-in)" href="man_knife_azure.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_bootstrap.html" title="bootstrap"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="man_knife_azure.html" title="azure (plug-in)"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">bluebox (plug-in)</a><ul>
+<li><a class="reference internal" href="#images-list">images list</a></li>
+<li><a class="reference internal" href="#server-create">server create</a></li>
+<li><a class="reference internal" href="#server-delete">server delete</a></li>
+<li><a class="reference internal" href="#server-list">server list</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="man_knife_azure.html"
+                        title="previous chapter">azure (plug-in)</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="man_knife_bootstrap.html"
+                        title="next chapter">bootstrap</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/man_knife_bluebox.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="bluebox-plug-in">
+<h1>bluebox (plug-in)<a class="headerlink" href="#bluebox-plug-in" title="Permalink to this headline">¶</a></h1>
+<p>Blue Box provides on-demand computing that is backed by a proprietary cloud operating system. The <tt class="docutils literal"><span class="pre">bluebox</span></tt> sub-command is used to manage API-driven cloud servers that are hosted by Blue Box.</p>
+<p>This plugin is available on github: <a class="reference external" href="https://github.com/opscode/knife-bluebox">https://github.com/opscode/knife-bluebox</a>.</p>
+<p>This sub-command has the following syntax:</p>
+<div class="highlight-python"><pre>knife bluebox [ARGUMENT] (options)</pre>
+</div>
+<div class="section" id="images-list">
+<h2>images list<a class="headerlink" href="#images-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">images</span> <span class="pre">list</span></tt> argument is used to view a list of images that are running on servers that are hosted by Blue Box, including returning a list of each server (and server ID). The results may show instances that are not currently managed by the Chef server.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife bluebox images list</pre>
+</div>
+<p>This argument does not have any options.</p>
+</div>
+<div class="section" id="server-create">
+<h2>server create<a class="headerlink" href="#server-create" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">create</span></tt> argument is used to create a new Blue Box cloud instance. A comma-separated run-list of roles and/or recipes must be specified.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife bluebox server create [RUN_LIST...] (options)</pre>
+</div>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-b</span> <span class="pre">LB_APP</span></tt>, <tt class="docutils literal"><span class="pre">--load_balancer</span> <span class="pre">LB_APP</span></tt></dt>
+<dd>The load balancing application to which a server should be added.</dd>
+<dt><tt class="docutils literal"><span class="pre">--block_startup_timeout</span> <span class="pre">TIME</span></tt></dt>
+<dd>The amount of time that should elapse before the deployment process is stopped.</dd>
+<dt><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></dt>
+<dd>Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (<tt class="docutils literal"><span class="pre">--template-file</span></tt>) must also be provided. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">--disable-bootstrap</span></tt></dt>
+<dd>Indicates that the bootstrap process should be disabled.</dd>
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">FLAVOR</span></tt>, <tt class="docutils literal"><span class="pre">--flavor</span> <span class="pre">FLAVOR</span></tt></dt>
+<dd>The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></dt>
+<dd>The SSH identity file used for authentication. Key-based authentication is recommended.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--image</span> <span class="pre">IMAGE</span></tt></dt>
+<dd>The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></dt>
+<dd>The name of the node on the Chef server.</dd>
+<dt><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</dd>
+<dt><tt class="docutils literal"><span class="pre">-U</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--username</span> <span class="pre">USERNAME</span></tt></dt>
+<dd>The user name for the Blue Box server.</dd>
+</dl>
+<p>For example, to xxxxx, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>xxxxx
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-delete">
+<h2>server delete<a class="headerlink" href="#server-delete" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">delete</span></tt> argument is used to delete one or more instances that are running in the Blue Box cloud. A block represents the on-demand virtual computing resource; a hostname is specific to a block. To find a specific cloud instance, use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">bluebox</span> <span class="pre">server</span> <span class="pre">list</span></tt> argument. Use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">node</span> <span class="pre">delete</span></tt> and <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">delete</span></tt> sub-commands to delete associated node and client objects (if required).</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife bluebox server delete BLOCK_HOSTNAME</pre>
+</div>
+<p>This argument does not have any options.</p>
+<p>For example, to delete an instance at block &#8220;12345&#8221; with a hostname of &#8220;dev&#8221;, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife bluebox server delete block12345-dev.blueboxgrid.com
+</pre></div>
+</div>
+</div>
+<div class="section" id="server-list">
+<h2>server list<a class="headerlink" href="#server-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">list</span></tt> argument is used to find instances that are associated with a Blue Box account.</p>
+<p>This argument has the following syntax:</p>
+<div class="highlight-python"><pre>knife bluebox server list</pre>
+</div>
+<p>This argument does not have any options.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_bootstrap.html" title="bootstrap"
+             >next</a></li>
+        <li class="right" >
+          <a href="man_knife_azure.html" title="azure (plug-in)"
+             >previous</a> |</li>
+        <li><a href="index.html">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Opscode, Inc.
+    </div>
+  </body>
+</html>

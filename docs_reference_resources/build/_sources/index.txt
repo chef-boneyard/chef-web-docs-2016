@@ -2745,10 +2745,16 @@ Examples
 
 
 
-Lightweight Resources
+Lightweight Resources and Providers
 =====================================================
 
-Custom resources can also be created using the |lwrp| DSL. |opscode| provides several cookbooks that define some commonly used |lwrp|. To use the lightweight resources provided by |opscode| the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.
+Custom resources and providers can also be created using the |lwrp| DSL. |opscode| provides several cookbooks that define some commonly used |lwrp|. To use the lightweight resources provided by |opscode| the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.
+
+.. include:: ../../includes/includes_chef_cookbook_lightweight_resource.rst
+
+.. include:: ../../includes/includes_chef_cookbook_lightweight_provider.rst
+
+.. include:: ../../includes/includes_chef_cookbook_lightweight_file_locations.rst
 
 The following groups of lightweight resources are available in open source cookbooks that are provided by |opscode|:
 
@@ -2771,27 +2777,6 @@ The following groups of lightweight resources are available in open source cookb
 * windows
 
 Some of the cookbooks contain more than one lightweight resource. Each lightweight resource is described individually in the following sections.
-
-Creating a Lightweight Resource -- NEED TO ADD
------------------------------------------------------
-http://wiki.opscode.com/display/chef/Lightweight+Resources+and+Providers+%28LWRP%29
-
-For additional information on lightweight resource providers, including the DSL for creating Resources and Providers, see Lightweight Resources and Providers (LWRP).
-
-Just an observation here -- these are reasonably well documented in the Git source AND/OR on the Community page -- not all, but most. The most important question is: "are these official, from Opscode?" If the answer is "yes" then there should be at least a stripped down version of this in the "official docs"
-
-Understanding LWRP Development
-
-Opscode team member Joshua Timberman has a slideshare presentation on Understanding LWRP Development, available for your review.
-
-http://www.slideshare.net/jtimberman/understanding-lwrp-development
-
-Opscode team member Joshua Timberman has a slideshare presentation on Understanding LWRP Development, available for your review.
-
-
-**jamescott: effectively, these are ruby code blocks that can be PUT IN RECIPES and then run FROM RECIPES? IF YES, THAT GOES SOMEWHERE AT THE TOP.**
-
-**Jamescott: these examples seem incomplete. They aren't showing all of the options/syntax. QUESTION: CAN DIFFERENT LWRPS HAVE THE SAME PARAMETERS? IS THERE A CORE "DSL" FOR THE LWRPS? SEEMS LIKE NO.**
 
 apt_repository
 -----------------------------------------------------

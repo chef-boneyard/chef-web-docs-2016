@@ -1,0 +1,230 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Knife Command Line Reference &mdash; Opscode: Knife Reference</title>
+    
+    <link rel="stylesheet" href="_static/sphinxdoc.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Opscode: Knife Reference" href="#" />
+    <link rel="next" title="azure (plug-in)" href="man_knife_azure.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_azure.html" title="azure (plug-in)"
+             accesskey="N">next</a></li>
+        <li><a href="#">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="_static/opscode_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Knife Command Line Reference</a><ul>
+<li><a class="reference internal" href="#working-with-knife">Working with Knife</a><ul>
+<li><a class="reference internal" href="#json-data-format">JSON Data Format</a></li>
+<li><a class="reference internal" href="#using-quotes">Using Quotes</a></li>
+<li><a class="reference internal" href="#sub-commands">Sub-commands</a></li>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#common-options">Common Options</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="man_knife_azure.html"
+                        title="next chapter">azure (plug-in)</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="knife-command-line-reference">
+<h1>Knife Command Line Reference<a class="headerlink" href="#knife-command-line-reference" title="Permalink to this headline">¶</a></h1>
+<p>Knife is a command-line tool that provides an interface between a local Chef repository and the Chef server. Knife helps users of Chef to manage:</p>
+<ul class="simple">
+<li>Nodes</li>
+<li>Cookbooks and recipes</li>
+<li>Roles</li>
+<li>Stores of JSON data (data bags), including encrypted data</li>
+<li>Environments</li>
+<li>Cloud resources, including provisioning</li>
+<li>The installation of Chef on management workstations</li>
+<li>Searching of indexed data on the Chef server</li>
+</ul>
+<div class="section" id="working-with-knife">
+<h2>Working with Knife<a class="headerlink" href="#working-with-knife" title="Permalink to this headline">¶</a></h2>
+<p>Knife runs from a management workstation and sits in-between a Chef server and an organization&#8217;s infrastructure. Knife interacts with a Chef server by using the same REST API that is used by a chef-client. Role-based authentication controls (RBAC) can be used to authorize changes when Knife is run with Hosted Chef or Private Chef. Knife is configured during workstation setup, but subsequent modifications can be made using the knife.rb configuration file.</p>
+<div class="section" id="json-data-format">
+<h3>JSON Data Format<a class="headerlink" href="#json-data-format" title="Permalink to this headline">¶</a></h3>
+<p>All data is entered using a text editor in JSON format, unless the <tt class="docutils literal"><span class="pre">--no-editor</span></tt> option is entered as part of a command. JSON is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see <a class="reference external" href="http://www.json.org/">http://www.json.org/</a> or <a class="reference external" href="http://en.wikipedia.org/wiki/JSON">http://en.wikipedia.org/wiki/JSON</a>.</p>
+</div>
+<div class="section" id="using-quotes">
+<h3>Using Quotes<a class="headerlink" href="#using-quotes" title="Permalink to this headline">¶</a></h3>
+<p>Values can be entered with double quotes (&#8221; &#8221;) or single quotes (&#8216; &#8216;), but this should be done consistently.</p>
+</div>
+<div class="section" id="sub-commands">
+<h3>Sub-commands<a class="headerlink" href="#sub-commands" title="Permalink to this headline">¶</a></h3>
+<p>Knife comes with a collection of built in sub-commands that work together to provide all of the functionality required to take specific actions against any object in a Chef environment, including cookbooks, nodes, roles, data bags, and environments. A Knife plugin extends the functionality beyond built-in sub-commands.</p>
+<p>Knife has the following sub-commands: <tt class="docutils literal"><span class="pre">bootstrap</span></tt>, <tt class="docutils literal"><span class="pre">client</span></tt>, <tt class="docutils literal"><span class="pre">configure</span></tt>, <tt class="docutils literal"><span class="pre">cookbook</span></tt>, <tt class="docutils literal"><span class="pre">cookbook</span> <span class="pre">site</span></tt>, <tt class="docutils literal"><span class="pre">data</span> <span class="pre">bag</span></tt>, <tt class="docutils literal"><span class="pre">environment</span></tt>, <tt class="docutils literal"><span class="pre">exec</span></tt>, <tt class="docutils literal"><span class="pre">index</span> <span class="pre">rebuild</span></tt>, <tt class="docutils literal"><span class="pre">node</span></tt>, <tt class="docutils literal"><span class="pre">recipe</span> <span class="pre">list</span></tt>, <tt class="docutils literal"><span class="pre">role</span></tt>, <tt class="docutils literal"><span class="pre">search</span></tt>, <tt class="docutils literal"><span class="pre">ssh</span></tt>, <tt class="docutils literal"><span class="pre">status</span></tt>, and <tt class="docutils literal"><span class="pre">tag</span></tt>.</p>
+<p>Opscode provides the following plug-ins, which work the same as built-in sub-commands (including common options), but must be downloaded separately from github: <tt class="docutils literal"><span class="pre">azure</span></tt>, <tt class="docutils literal"><span class="pre">bluebox</span></tt>, <tt class="docutils literal"><span class="pre">ec2</span></tt>, <tt class="docutils literal"><span class="pre">eucalyptus</span></tt>, <tt class="docutils literal"><span class="pre">google</span></tt>, <tt class="docutils literal"><span class="pre">hp</span></tt>, <tt class="docutils literal"><span class="pre">linode</span></tt>, <tt class="docutils literal"><span class="pre">openstack</span></tt>, <tt class="docutils literal"><span class="pre">rackspace</span></tt>, <tt class="docutils literal"><span class="pre">slicehost</span></tt>, <tt class="docutils literal"><span class="pre">terremark</span></tt>, and <tt class="docutils literal"><span class="pre">windows</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The following sub-command runs only against the Open Source Chef Server: <tt class="docutils literal"><span class="pre">index</span> <span class="pre">rebuild</span></tt>.</p>
+</div>
+<p>The Chef community provides many other plugins for Knife: <a class="reference external" href="http://community.opscode.com/">http://community.opscode.com/</a>.</p>
+</div>
+<div class="section" id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h3>
+<p>All Knife sub-commands have the following syntax:</p>
+<div class="highlight-python"><pre>knife subcommand [ARGUMENT] (options)</pre>
+</div>
+<p>Each sub-command has its own set of arguments and options.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All syntax examples in this document show variables in ALL_CAPS. For example <tt class="docutils literal"><span class="pre">-u</span> <span class="pre">PORT_LIST</span></tt> (where PORT_LIST is a comma-separated list of local and public UDP ports) or <tt class="docutils literal"><span class="pre">-F</span> <span class="pre">FORMAT</span></tt> (where FORMAT determines the output format, either <tt class="docutils literal"><span class="pre">summary</span></tt>, <tt class="docutils literal"><span class="pre">text</span></tt>, <tt class="docutils literal"><span class="pre">json</span></tt>, <tt class="docutils literal"><span class="pre">yaml</span></tt>, or <tt class="docutils literal"><span class="pre">pp</span></tt>). These variables often require specific values that are unique to your organization&#8217;s Chef environment.</p>
+</div>
+</div>
+<div class="section" id="common-options">
+<h3>Common Options<a class="headerlink" href="#common-options" title="Permalink to this headline">¶</a></h3>
+<p>The following options can be run with all Knife sub-commands:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-c</span> <span class="pre">CONFIG</span></tt>, <tt class="docutils literal"><span class="pre">--config</span> <span class="pre">CONFIG</span></tt></dt>
+<dd>The configuration file to use.</dd>
+<dt><tt class="docutils literal"><span class="pre">--color</span></tt></dt>
+<dd>Indicates that colored output will be used.</dd>
+<dt><tt class="docutils literal"><span class="pre">--defaults</span></tt></dt>
+<dd>Indicates that Knife will use the default value, instead of asking a user to provide one.</dd>
+<dt><tt class="docutils literal"><span class="pre">-e</span> <span class="pre">EDITOR</span></tt>, <tt class="docutils literal"><span class="pre">--editor</span> <span class="pre">EDITOR</span></tt></dt>
+<dd>The $EDITOR that is used for all interactive commands.</dd>
+<dt><tt class="docutils literal"><span class="pre">-E</span> <span class="pre">ENVIRONMENT</span></tt>, <tt class="docutils literal"><span class="pre">--environment</span> <span class="pre">ENVIRONMENT</span></tt></dt>
+<dd>The name of the Chef server environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-F</span> <span class="pre">FORMAT</span></tt>, <tt class="docutils literal"><span class="pre">--format</span> <span class="pre">FORMAT</span></tt></dt>
+<dd>The output format: <tt class="docutils literal"><span class="pre">summary</span></tt> (default), <tt class="docutils literal"><span class="pre">text</span></tt>, <tt class="docutils literal"><span class="pre">json</span></tt>, <tt class="docutils literal"><span class="pre">yaml</span></tt>, and <tt class="docutils literal"><span class="pre">pp</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-h</span></tt>, <tt class="docutils literal"><span class="pre">--help</span></tt></dt>
+<dd>Shows help for Knife or for a sub-command.</dd>
+<dt><tt class="docutils literal"><span class="pre">-k</span> <span class="pre">KEY</span></tt>, <tt class="docutils literal"><span class="pre">--key</span> <span class="pre">KEY</span></tt></dt>
+<dd>The API key that a chef-client must provide before it can access a Chef server.</dd>
+<dt><tt class="docutils literal"><span class="pre">--no-color</span></tt></dt>
+<dd>Indicates that color will not be used in the output.</dd>
+<dt><tt class="docutils literal"><span class="pre">-n</span></tt>, <tt class="docutils literal"><span class="pre">--no-editor</span></tt></dt>
+<dd>Indicates that $EDITOR will not be opened; data will be accepted as-is.</dd>
+<dt><tt class="docutils literal"><span class="pre">--print-after</span></tt></dt>
+<dd>Indicates that data will be shown after a destructive operation.</dd>
+<dt><tt class="docutils literal"><span class="pre">-s</span> <span class="pre">URL</span></tt>, <tt class="docutils literal"><span class="pre">--server-url</span> <span class="pre">URL</span></tt></dt>
+<dd>The URL for the Chef server.</dd>
+<dt><tt class="docutils literal"><span class="pre">-u</span> <span class="pre">USER</span></tt>, <tt class="docutils literal"><span class="pre">--user</span> <span class="pre">USER</span></tt></dt>
+<dd>The user name for the chef-client.</dd>
+<dt><tt class="docutils literal"><span class="pre">-v</span></tt>, <tt class="docutils literal"><span class="pre">--version</span></tt></dt>
+<dd>Shows the version of Chef.</dd>
+<dt><tt class="docutils literal"><span class="pre">-V</span></tt>, <tt class="docutils literal"><span class="pre">--verbose</span></tt></dt>
+<dd>Set for more verbose outputs. Use <tt class="docutils literal"><span class="pre">-VV</span></tt> for maximum verbosity.</dd>
+<dt><tt class="docutils literal"><span class="pre">-y</span></tt>, <tt class="docutils literal"><span class="pre">--yes</span></tt></dt>
+<dd>Indicates that &#8220;yes&#8221; will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).</dd>
+</dl>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_azure.html">azure (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_bluebox.html">bluebox (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_bootstrap.html">bootstrap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_client.html">client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_configure.html">configure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_cookbook_site.html">cookbook site</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_cookbook.html">cookbook</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_data_bag.html">data bag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_ec2.html">ec2 (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_environment.html">environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_eucalyptus.html">eucalyptus (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_exec.html">exec</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_google.html">google (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_hp.html">hp (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_index_rebuild.html">index rebuild</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_linode.html">linode (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_node.html">node</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_openstack.html">openstack (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_rackspace.html">rackspace (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_recipe_list.html">recipe list</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_role.html">role</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_search.html">search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_ssh.html">ssh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_status.html">status</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_tag.html">tag</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_terremark.html">terremark (plug-in)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="man_knife_windows.html">windows (plug-in)</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="man_knife_azure.html" title="azure (plug-in)"
+             >next</a></li>
+        <li><a href="#">Opscode: Knife Reference</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2012, Opscode, Inc.
+    </div>
+  </body>
+</html>

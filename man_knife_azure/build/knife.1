@@ -1,0 +1,5396 @@
+.TH "KNIFE" "1" "September 28, 2012" "0.0.1" "Knife"
+.SH NAME
+knife \- Knife
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+Knife is a command\-line tool that provides an interface between a local Chef repository and the Chef server. Knife helps users of Chef to manage:
+.INDENT 0.0
+.IP \(bu 2
+Nodes
+.IP \(bu 2
+Cookbooks and recipes
+.IP \(bu 2
+Roles
+.IP \(bu 2
+Stores of JSON data (data bags), including encrypted data
+.IP \(bu 2
+Environments
+.IP \(bu 2
+Cloud resources, including provisioning
+.IP \(bu 2
+The installation of Chef on management workstations
+.IP \(bu 2
+Searching of indexed data on the Chef server
+.UNINDENT
+.SH WORKING WITH KNIFE
+.sp
+Knife runs from a management workstation and sits in\-between a Chef server and an organization\(aqs infrastructure. Knife interacts with a Chef server by using the same REST API that is used by a chef\-client. Role\-based authentication controls (RBAC) can be used to authorize changes when Knife is run with Hosted Chef or Private Chef. Knife is configured during workstation setup, but subsequent modifications can be made using the knife.rb configuration file.
+.SS JSON Data Format
+.sp
+All data is entered using a text editor in JSON format, unless the \fB\-\-no\-editor\fP option is entered as part of a command. JSON is a common, language\-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see \fI\%http://www.json.org/\fP or \fI\%http://en.wikipedia.org/wiki/JSON\fP.
+.SS Using Quotes
+.sp
+Values can be entered with double quotes (" ") or single quotes (\(aq \(aq), but this should be done consistently.
+.SS Sub\-commands
+.sp
+Knife comes with a collection of built in sub\-commands that work together to provide all of the functionality required to take specific actions against any object in a Chef environment, including cookbooks, nodes, roles, data bags, and environments. A Knife plugin extends the functionality beyond built\-in sub\-commands.
+.sp
+Knife has the following sub\-commands: \fBbootstrap\fP, \fBclient\fP, \fBconfigure\fP, \fBcookbook\fP, \fBcookbook site\fP, \fBdata bag\fP, \fBenvironment\fP, \fBexec\fP, \fBindex rebuild\fP, \fBnode\fP, \fBrecipe list\fP, \fBrole\fP, \fBsearch\fP, \fBssh\fP, \fBstatus\fP, and \fBtag\fP.
+.sp
+Opscode provides the following plug\-ins, which work the same as built\-in sub\-commands (including common options), but must be downloaded separately from github: \fBazure\fP, \fBbluebox\fP, \fBec2\fP, \fBeucalyptus\fP, \fBgoogle\fP, \fBhp\fP, \fBlinode\fP, \fBopenstack\fP, \fBrackspace\fP, \fBslicehost\fP, \fBterremark\fP, and \fBwindows\fP.
+.IP Note
+The following sub\-command runs only against the Open Source Chef Server: \fBindex rebuild\fP.
+.RE
+.sp
+The Chef community provides many other plugins for Knife: \fI\%http://community.opscode.com/\fP.
+.SS Syntax
+.sp
+All Knife sub\-commands have the following syntax:
+.sp
+.nf
+.ft C
+knife subcommand [ARGUMENT] (options)
+.ft P
+.fi
+.sp
+Each sub\-command has its own set of arguments and options.
+.IP Note
+All syntax examples in this document show variables in ALL_CAPS. For example \fB\-u PORT_LIST\fP (where PORT_LIST is a comma\-separated list of local and public UDP ports) or \fB\-F FORMAT\fP (where FORMAT determines the output format, either \fBsummary\fP, \fBtext\fP, \fBjson\fP, \fByaml\fP, or \fBpp\fP). These variables often require specific values that are unique to your organization\(aqs Chef environment.
+.RE
+.SS Common Options
+.sp
+The following options can be run with all Knife sub\-commands:
+.INDENT 0.0
+.TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-no\-editor\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
+.UNINDENT
+.sp
+Contents:
+.SS azure (plug\-in)
+.sp
+Windows Azure is a cloud hosting platform from Microsoft that provides virtual machines for Linux and Windows Server, cloud and database services, and more. The \fBazure\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Windows Azure.
+.sp
+The \fBazure\fP sub\-command must use a management certificate for secure communication with Windows Azure.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-azure\fP.
+.IP Note
+This plugin requires the \fBknife windows\fP plugin to be present on the same machine: \fI\%https://github.com/opscode/knife-windows\fP.
+.RE
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife azure [ARGUMENT] (options)
+.ft P
+.fi
+.SS image list
+.sp
+The \fBimage list\fP argument is used to get a list of images that exist in a Windows Azure environment. Any image in this list may be used for provisioning. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife azure image list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-H HOST_NAME\fP, \fB\-\-azure_host_name HOST_NAME\fP
+The host name for the Windows Azure environment.
+.TP
+.B \fB\-p FILE_NAME\fP, \fB\-\-azure\-pem\-filename FILE_NAME\fP
+The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.
+.TP
+.B \fB\-S ID\fP, \fB\-\-azure\-subscription\-id ID\fP
+The subscription identifier for the Windows Azure portal.
+.TP
+.B \fB\-\-verify\-ssl\-cert\fP
+The SSL certificate that is used to verify communication over HTTPS.
+.UNINDENT
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new Windows Azure cloud instance. This will provision a new image in Windows Azure, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife azure server create (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a STORAGE_ACCOUNT_NAME\fP, \fB\-\-storage\-account STORAGE_ACCOUNT_NAME\fP
+The name of the storage account used with the hosted service.
+.TP
+.B \fB\-\-bootstrap\-protocol PROTOCOL\fP
+The protocol used to bootstrap on a machine that is running Windows Server: \fBwinrm\fP or \fBssh\fP. Default value: \fBwinrm\fP.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-D DESCRIPTION\fP
+The description for the host.
+.TP
+.B \fB\-H HOST_NAME\fP, \fB\-\-azure_host_name HOST_NAME\fP
+The host name for the Windows Azure environment.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-source\-image IMAGE\fP
+The name of the disk image that will be used to create the virtual machine.
+.TP
+.B \fB\-m LOCATION\fP, \fB\-\-service\-location LOCATION\fP
+The geographic location for a virtual machine and its services.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server. Node names in Chef, when used with Windows Azure, must be 91 characters or shorter.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-o DISK_NAME\fP, \fB\-\-os\-disk\-name DISK_NAME\fP
+The operating system type of the Windows Azure OS image: \fBLinux\fP or \fBWindows\fP.
+.TP
+.B \fB\-p FILE_NAME\fP, \fB\-\-azure\-pem\-filename FILE_NAME\fP
+The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-R ROLE_NAME\fP, \fB\-\-role\-name ROLE_NAME\fP
+The name of the virtual machine.
+.TP
+.B \fB\-s SERVICE_NAME\fP, \fB\-\-hosted\-service\-name SERVICE_NAME\fP
+The name of the hosted service.
+.TP
+.B \fB\-S ID\fP, \fB\-\-azure\-subscription\-id ID\fP
+The subscription identifier for the Windows Azure portal.
+.TP
+.B \fB\-t PORT_LIST\fP, \fB\-\-tcp\-endpoints PORT_LIST\fP
+A comma\-separated list of local and public TCP ports that will be opened, for example: \fB80:80,433:5000\fP.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-\-u PORT_LIST\fP, \fB\-\-\-udp\-endpoints PORT_LIST\fP
+A comma\-separated list of local and public UDP ports that will be opened, for example: \fB80:80,433:5000\fP.
+.TP
+.B \fB\-\-verify\-ssl\-cert\fP
+The SSL certificate that is used to verify communication over HTTPS.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.TP
+.B \fB\-z SIZE\fP, \fB\-\-role\-size SIZE\fP
+The size of the virtual machine: \fBExtraSmall\fP, \fBSmall\fP, \fBMedium\fP, \fBLarge\fP, or \fBExtraLarge\fP.
+.UNINDENT
+.sp
+For example, to provision a medium\-sized CentOS machine configured as a web server in the "West US" data center, while also creating new hosted service and storage accounts, enter something like:
+.sp
+.nf
+.ft C
+$ knife azure server create \-r "role[webserver]" \-\-service\-location "West US" \-\-ssh\-user foo
+  \-\-ssh\-\-password password \-\-role\-name web\-apache\-0001 \-\-host\-name web\-apache
+  \-\-tcp\-endpoints 80:80,8080:8080 \-\-source\-image name_of_source_image \-\-role\-size Medium
+.ft P
+.fi
+.sp
+To provision a medium\-sized CentOS machine configured as a web server in the "West US" data center, while reusing existing hosted service and storage accounts, enter something like:
+.sp
+.nf
+.ft C
+$ knife azure server create \-r "role[webserver]" \-\-service\-location "West US"
+  \-\-hosted\-service\-name webservers \-\-storage\-account webservers\-storage \-\-ssh\-user foo
+  \-\-ssh\-\-password password \-\-role\-name web\-apache\-0001 \-\-host\-name web\-apache
+  \-\-tcp\-endpoints 80:80,8080:8080 \-\-source\-image name_of_source_image \-\-role\-size Medium
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Windows Azure cloud. To find a specific cloud instance, use \fBknife azure server list\fP. Use the \fB\-\-purge\fP option to delete all associated node and client objects from the Chef server or use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete specific node and client objects.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife azure server delete [SERVER...] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-H HOST_NAME\fP, \fB\-\-azure_host_name HOST_NAME\fP
+The host name for the Windows Azure environment.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node and client to delete, if different from the server name. This must be used with the \fB\-\-purge\fP option. This must be used with the \fB\-p\fP (purge) option.
+.TP
+.B \fB\-p\fP, \fB\-\-purge\fP
+Indicates that all corresponding nodes and clients on the Chef server will be destroyed, in addition to the Windows Azure node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the \fB\-\-node\-name\fP option must be used to specify the name of the node.
+.TP
+.B \fB\-\-purge\-os\-disk\fP
+Indicates that all corresponding operating system disks will be destroyed, in addition to the Windows Azure node itself.
+.TP
+.B \fB\-p FILE_NAME\fP, \fB\-\-azure\-pem\-filename FILE_NAME\fP
+The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.
+.TP
+.B \fB\-S ID\fP, \fB\-\-azure\-subscription\-id ID\fP
+The subscription identifier for the Windows Azure portal.
+.TP
+.B \fB\-\-verify\-ssl\-cert\fP
+The SSL certificate that is used to verify communication over HTTPS.
+.UNINDENT
+.sp
+For example, to delete an instance named "devops12", enter:
+.sp
+.nf
+.ft C
+$ knife azure server delete devops12
+.ft P
+.fi
+.SS server describe
+.sp
+The \fBserver describe\fP argument is used to view a detailed description of one or more roles that exist in a Windows Azure cloud instance. For each specified role name, information such as status, size, hosted service name, deployment name, ports (open, local, public) and IP are displayed.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife azure server describe [ROLE_NAME...]
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-H HOST_NAME\fP, \fB\-\-azure_host_name HOST_NAME\fP
+The host name for the Windows Azure environment.
+.TP
+.B \fB\-p FILE_NAME\fP, \fB\-\-azure\-pem\-filename FILE_NAME\fP
+The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.
+.TP
+.B \fB\-S ID\fP, \fB\-\-azure\-subscription\-id ID\fP
+The subscription identifier for the Windows Azure portal.
+.TP
+.B \fB\-\-verify\-ssl\-cert\fP
+The SSL certificate that is used to verify communication over HTTPS.
+.UNINDENT
+.sp
+For example, to view the details for a role named "admin", enter:
+.sp
+.nf
+.ft C
+$ knife azure server describe admin
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Windows Azure account.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife azure server list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-H HOST_NAME\fP, \fB\-\-azure_host_name HOST_NAME\fP
+The host name for the Windows Azure environment.
+.TP
+.B \fB\-p FILE_NAME\fP, \fB\-\-azure\-pem\-filename FILE_NAME\fP
+The name of the file that contains the SSH public key that is used when authenticating to Windows Azure.
+.TP
+.B \fB\-S ID\fP, \fB\-\-azure\-subscription\-id ID\fP
+The subscription identifier for the Windows Azure portal.
+.TP
+.B \fB\-\-verify\-ssl\-cert\fP
+The SSL certificate that is used to verify communication over HTTPS.
+.UNINDENT
+.SS bluebox (plug\-in)
+.sp
+Blue Box provides on\-demand computing that is backed by a proprietary cloud operating system. The \fBbluebox\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Blue Box.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-bluebox\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox [ARGUMENT] (options)
+.ft P
+.fi
+.SS images list
+.sp
+The \fBimages list\fP argument is used to view a list of images that are running on servers that are hosted by Blue Box, including returning a list of each server (and server ID). The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox images list
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new Blue Box cloud instance. A comma\-separated run\-list of roles and/or recipes must be specified.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox server create [RUN_LIST...] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-b LB_APP\fP, \fB\-\-load_balancer LB_APP\fP
+The load balancing application to which a server should be added.
+.TP
+.B \fB\-\-block_startup_timeout TIME\fP
+The amount of time that should elapse before the deployment process is stopped.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-\-disable\-bootstrap\fP
+Indicates that the bootstrap process should be disabled.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-i IMAGE\fP, \fB\-\-image IMAGE\fP
+The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-U KEY\fP, \fB\-\-username USERNAME\fP
+The user name for the Blue Box server.
+.UNINDENT
+.sp
+For example, to xxxxx, enter:
+.sp
+.nf
+.ft C
+$ xxxxx
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Blue Box cloud. A block represents the on\-demand virtual computing resource; a hostname is specific to a block. To find a specific cloud instance, use the \fBknife bluebox server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox server delete BLOCK_HOSTNAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to delete an instance at block "12345" with a hostname of "dev", enter:
+.sp
+.nf
+.ft C
+$ knife bluebox server delete block12345\-dev.blueboxgrid.com
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Blue Box account.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox server list
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.SS bootstrap
+.sp
+A bootstrap is a process that installs Chef on a target system so that it can run as a chef\-client and communicate with a Chef server.
+.sp
+The \fBbootstrap\fP sub\-command is used run a bootstrap operation that installs Chef on the target system. The bootstrap operation must specify the IP address or FQDN of the target system.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife bootstrap FQDN_or_IP_ADDRESS (options)
+.ft P
+.fi
+.sp
+This sub\-command has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-\-bootstrap\-proxy PROXY_URL\fP
+The proxy server for the node that is the target of a bootstrap operation.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-G GATEWAY\fP, \fB\-\-ssh\-gateway GATEWAY\fP
+The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
+.TP
+.B \fB\-\-hint HINT_NAME[=HINT_FILE]\fP
+Indicates that an Ohai hint will be set on the target of the bootstrap. Use multiple \fB\-\-hint\fP options to specify multiple hints.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-j JSON_ATTRIBS\fP, \fB\-\-json\-attributes JSON_ATTRIBS\fP
+A JSON string that is added to the first run of a chef\-client.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-p PORT\fP, \fB\-\-ssh\-port PORT\fP
+The SSH port.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-\-sudo\fP
+Indicates that a bootstrap operation should be executed using sudo.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-x USERNAME\fP, \fB\-\-ssh\-user USERNAME\fP
+The SSH user name.
+.UNINDENT
+.sp
+For example, to pass an SSH password as part of the command:
+.sp
+.nf
+.ft C
+$ knife bootstrap 192.168.1.1 \-x username \-P PASSWORD \-\-sudo
+.ft P
+.fi
+.sp
+To use a file that contains a private key:
+.sp
+.nf
+.ft C
+$ knife bootstrap 192.168.1.1 \-x username \-i ~/.ssh/id_rsa \-\-sudo
+.ft P
+.fi
+.SS client
+.sp
+A chef\-client is an agent that runs locally on every node that is registered with the Chef server. When a chef\-client is run, it will perform all of the steps that are required to bring the node into the expected state, including:
+.INDENT 0.0
+.IP \(bu 2
+Building, registering, and authenticating the node with the Chef server
+.IP \(bu 2
+Synchronizing each required cookbook with the local file cache
+.IP \(bu 2
+Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies
+.IP \(bu 2
+Taking the appropriate and required actions to configure the node
+.IP \(bu 2
+Looking for exceptions and notifications, handling each as required
+.UNINDENT
+.sp
+The \fBclient\fP sub\-command is used to manage one or more instances of a chef\-client, including ensuring they are properly registered with the Chef server and have a valid RSA key pair.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife client [ARGUMENT] (options)
+.ft P
+.fi
+.SS bulk delete
+.sp
+The \fBbulk delete\fP argument is used to delete clients that match a pattern defined by a regular expression. The regular expression must be within quotes and not be surrounded by forward slashes (/).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client bulk delete REGEX
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife client bulk delete "^[0\-9]{3}$"
+.ft P
+.fi
+.SS create
+.sp
+The \fBcreate\fP argument is used to create a new chef\-client. This process will generate an RSA key pair for the named chef\-client. The public key will be stored on the Chef server and the private key will be displayed on STDOUT or written to a named file.
+.sp
+For the chef\-client, the private key should be copied to the system as /etc/chef/client.pem. The private key is typically copied to ~/.chef/client_name.pem and referenced in the knife.rb configuration file. If the private key is not copied, a 403 error will be returned. This is because the file in which the private key is located does not exist and the user who is trying to run the chef\-client does not have permission to re\-create the private key.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client create CLIENT_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-admin\fP
+Indicates that a client will be created as an admin client. This is required when users of Open Source Chef Server need to access the API as an administrator. This option only works when used with Open Source Chef Server and will have no effect when used with Hosted Chef or Private Chef.
+.TP
+.B \fB\-f FILE_NAME\fP, \fB\-\-file FILE_NAME\fP
+Indicates that the private key will be saved to a specified file name.
+.UNINDENT
+.sp
+For example, to create a Chef Admin Client with the name "exampleorg\-validator" and save its private key to a file, enter:
+.sp
+.nf
+.ft C
+$ knife client create exampleorg\-validator \-a \-f "/etc/chef/client.pem"
+.ft P
+.fi
+.sp
+When running the \fBcreate\fP argument on Hosted Chef or Private Chef, be sure to omit the \fB\-a\fP option:
+.sp
+.nf
+.ft C
+$ knife client create exampleorg\-validator \-f "/etc/chef/client.pem"
+.ft P
+.fi
+.SS delete
+.sp
+The \fBdelete\fP argument is used to delete a registered client.
+.IP Note
+Deleting a client will not delete any corresponding API clients.
+.RE
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client delete CLIENT_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to delete a client with the name "exampleorg\-validator", enter:
+.sp
+.nf
+.ft C
+$ knife client delete exampleorg\-validator
+.ft P
+.fi
+.sp
+Type \fBY\fP to confirm a deletion.
+.SS edit
+.sp
+The \fBedit\fP argument is used to edit the details of a registered Chef client. When this argument is run, Knife will open $EDITOR to enable editing of ENVIRONMENT attributes. When finished, Knife will update the Chef server with those changes.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client edit CLIENT_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to edit a client with the name "exampleorg\-validator", enter:
+.sp
+.nf
+.ft C
+$ knife client edit exampleorg\-validator
+.ft P
+.fi
+.SS list
+.sp
+The \fBlist\fP argument is used to view a list of registered clients.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife client list
+.ft P
+.fi
+.sp
+to return something similar to:
+.sp
+.nf
+.ft C
+exampleorg\-validator
+i\-12345678
+rs\-123456
+.ft P
+.fi
+.sp
+To get the list of clients for a specific organization, use the \fB\-u\fP and \fB\-k\fP options:
+.sp
+.nf
+.ft C
+$ knife client list \-u ORGNAME\-validator \-k .chef/ORGNAME\-validator.pem
+.ft P
+.fi
+.SS reregister
+.sp
+The \fBreregister\fP argument is used to regenerate an RSA key pair for a chef\-client. The public key will be stored on the Chef server and the private key will be displayed on STDOUT or written to a named file.
+.IP Note
+Running this argument will invalidate the previous RSA key pair, making it unusable during authentication to the Chef server.
+.RE
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client reregister CLIENT_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-f FILE_NAME\fP, \fB\-\-file FILE_NAME\fP
+Indicates that the private key will be saved to a specified file name.
+.UNINDENT
+.sp
+For example, to regenerate the RSA key pair for a client named "testclient" and save it to a file named "rsa_key", enter:
+.sp
+.nf
+.ft C
+$ knife client regenerate testclient \-f rsa_key
+.ft P
+.fi
+.SS show
+.sp
+The \fBshow\fP argument is used to show the details of a Chef client.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client show CLIENT_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a ATTR\fP, \fB\-\-attribute ATTR\fP
+Indicates that only a single attribute is shown, as defined by the \fBATTR\fP value.
+.UNINDENT
+.sp
+For example, to view a client named "testclient", enter:
+.sp
+.nf
+.ft C
+$ knife client show testclient
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+admin:       false
+chef_type:   client
+json_class:  Chef::ApiClient
+name:        testclient
+public_key:
+.ft P
+.fi
+.SS configure
+.sp
+The \fBconfigure\fP sub\-command is used to create the knife.rb and client.rb files so that they can be distributed to workstations and nodes.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife configure (options)
+.ft P
+.fi
+.sp
+This sub\-command has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-\-client DIRECTORY\fP
+Use to create a client configuration. This will read from the knife.rb config file to generate a config file suitable for use in /etc/chef/client.rb, and will then copy the validation certificate into the specified directory.
+.TP
+.B \fB\-i\fP, \fB\-\-initial\fP
+Use to create an initial chef\-client.
+.TP
+.B \fB\-r REPO\fP, \fB\-\-repository REPO\fP
+The path to the Chef repository.
+.UNINDENT
+.sp
+For example, to create a knife.rb file, enter:
+.sp
+.nf
+.ft C
+$ knife configure
+.ft P
+.fi
+.sp
+To configure a client.rb, enter:
+.sp
+.nf
+.ft C
+$ knife configure client \(aq/directory\(aq
+.ft P
+.fi
+.SS cookbook site
+.sp
+The Cookbooks Site API is used to provide access to the cookbooks community hosted at cookbooks.opscode.com. All of the cookbooks in the community are accessible through a REST API located at cookbooks.opscode.com/api/v1/ by using any of the supported endpoints. In most cases, using Knife and the \fBknife cookbook site\fP sub\-command (and any of its arguments) is the recommended method of interacting with these cookbooks, but in some cases, using the REST API directly may make sense.
+.sp
+The \fBcookbook site\fP sub\-command is used to interact with cookbooks that are located at cookbooks.opscode.com. A user account is required for any community actions that write data to this site. The following arguments do not require a user account: \fBdownload\fP, \fBsearch\fP, \fBinstall\fP, and \fBlist\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook site [ARGUMENT] (options)
+.ft P
+.fi
+.SS download
+.sp
+The \fBdownload\fP argument is used to download a cookbook from the community website. A cookbook will be downloaded as a tar.gz archive and placed in the current working directory. If a cookbook (or cookbook version) has been deprecated and the \fB\-\-force\fP option is not used, Knife will alert the user that the cookbook is deprecated and then will provide the name of the most recent non\-deprecated version of that cookbook.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook site download COOKBOOK_NAME [COOKBOOK_VERSION] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-f FILE\fP, \fB\-\-file FILE\fP
+The name of the cookbook file to be downloaded.
+.TP
+.B \fB\-\-force\fP
+Indicates that the download of a deprecated cookbook will be forced.
+.TP
+.B \fBCOOKBOOK_VERSION\fP
+The version of a cookbook to be downloaded. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, Knife will prompt for a version.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife cookbook site download getting\-started
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+Downloading getting\-started from the cookbooks site at version 0.3.0 to
+  /Users/sdanna/opscodesupport/getting\-started\-0.3.0.tar.gz
+Cookbook saved: /Users/sdanna/opscodesupport/getting\-started\-0.3.0.tar.gz
+.ft P
+.fi
+.SS install
+.sp
+The \fBinstall\fP argument is used to install a cookbook that has been downloaded from the community site to a local repository . This action uses the git version control system in conjunction with the cookbooks.opscode.com site to install community\-contributed cookbooks to the local repository. Using this argument does the following:
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.IP 1. 3
+A new "pristine copy" branch is created in git for tracking the upstream.
+.IP 2. 3
+All existing cookbooks are removed from the branch.
+.IP 3. 3
+The cookbook is downloaded from cookbooks.opscode.com in the tar.gz format.
+.IP 4. 3
+The downloaded cookbook is untarred and its contents are committed to git.
+.IP 5. 3
+The "pristine copy" branch is merged into the master branch.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+This process allows the upstream cookbook in the master branch to be modified while letting git maintain changes as a separate patch. When an updated upstream version becomes available, those changes can be merged while maintaining any local modifications.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook site install COOKBOOK_NAME [COOKBOOK_VERSION] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-b\fP, \fB\-\-use\-current\-branch\fP
+Indicates that the current branch will be used.
+.TP
+.B \fB\-B BRANCH\fP, \fB\-\-branch BRANCH\fP
+The name of the default branch. This will default to the master branch.
+.TP
+.B \fB\-D\fP, \fB\-\-skip\-dependencies\fP
+Indicates that all cookbooks to which the installed cookbook has a dependency will not be installed.
+.TP
+.B \fB\-o PATH:PATH\fP, \fB\-\-cookbook\-path PATH:PATH\fP
+A colon\-separated path at which cookbooks are located.
+.TP
+.B \fBCOOKBOOK_VERSION\fP
+The version of the cookbook to be installed. If a version is not specified, the most recent version of the cookbook will be installed.
+.UNINDENT
+.sp
+For example, to install the cookbook "getting\-started", enter:
+.sp
+.nf
+.ft C
+$ knife cookbook site install getting\-started
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+Installing getting\-started to /Users/sdanna/opscodesupport/.chef/../cookbooks
+Checking out the master branch.
+Creating pristine copy branch chef\-vendor\-getting\-started
+Downloading getting\-started from the cookbooks site at version 0.3.0 to
+  /Users/sdanna/opscodesupport/.chef/../cookbooks/getting\-started.tar.gz
+Cookbook saved: /Users/sdanna/opscodesupport/.chef/../cookbooks/getting\-started.tar.gz
+Removing pre\-existing version.
+Uncompressing getting\-started version /Users/sdanna/opscodesupport/.chef/../cookbooks.
+removing downloaded tarball
+1 files updated, committing changes
+Creating tag cookbook\-site\-imported\-getting\-started\-0.3.0
+Checking out the master branch.
+Updating 4d44b5b..b4c32f2
+Fast\-forward
+ cookbooks/getting\-started/README.rdoc              |    4 +++
+ cookbooks/getting\-started/attributes/default.rb    |    1 +
+ cookbooks/getting\-started/metadata.json            |   29 ++++++++++++++++++++
+ cookbooks/getting\-started/metadata.rb              |    6 ++++
+ cookbooks/getting\-started/recipes/default.rb       |   23 +++++++++++++++
+ .../templates/default/chef\-getting\-started.txt.erb |    5 +++
+ 6 files changed, 68 insertions(+), 0 deletions(\-)
+ create mode 100644 cookbooks/getting\-started/README.rdoc
+ create mode 100644 cookbooks/getting\-started/attributes/default.rb
+ create mode 100644 cookbooks/getting\-started/metadata.json
+ create mode 100644 cookbooks/getting\-started/metadata.rb
+ create mode 100644 cookbooks/getting\-started/recipes/default.rb
+ create mode 100644 cookbooks/getting\-started/templates/default/chef\-getting\-started.txt.erb
+Cookbook getting\-started version 0.3.0 successfully installed
+.ft P
+.fi
+.SS list
+.sp
+The \fBlist\fP argument is used to view a list of cookbooks that are currently available at cookbooks.opscode.com.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook site list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example, to view a list of cookbooks at cookbooks.opscode.com server, enter:
+.sp
+.nf
+.ft C
+$ knife cookbook site list
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+1password             homesick              rabbitmq
+7\-zip                 hostname              rabbitmq\-management
+AmazonEC2Tag          hosts                 rabbitmq_chef
+R                     hosts\-awareness       rackspaceknife
+accounts              htop                  radiant
+ack\-grep              hudson                rails
+activemq              icinga                rails_enterprise
+ad                    id3lib                redis\-package
+ad\-likewise           iftop                 redis2
+ant                   iis                   redmine
+[...truncated...]
+.ft P
+.fi
+.SS search
+.sp
+The \fBsearch\fP argument is used to search for a cookbook at cookbooks.opscode.com. A search query is used to return a list of cookbooks at cookbooks.opscode.com and uses the same syntax as the \fBsearch\fP sub\-command.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook site search SEARCH_QUERY (options)
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to search for all of the cookbooks that can be used with Apache, enter:
+.sp
+.nf
+.ft C
+$ knife cookbook site search apache*
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+apache2:
+  cookbook:              http://cookbooks.opscode.com/api/v1/cookbooks/apache2
+  cookbook_description:  Installs and configures apache2 using Debian symlinks with helper definitions
+  cookbook_maintainer:   opscode
+  cookbook_name:         apache2
+instiki:
+  cookbook:              http://cookbooks.opscode.com/api/v1/cookbooks/instiki
+  cookbook_description:  Installs instiki, a Ruby on Rails wiki server under passenger+Apache2.
+  cookbook_maintainer:   jtimberman
+  cookbook_name:         instiki
+kickstart:
+  cookbook:              http://cookbooks.opscode.com/api/v1/cookbooks/kickstart
+  cookbook_description:  Creates apache2 vhost and serves a kickstart file.
+  cookbook_maintainer:   opscode
+  cookbook_name:         kickstart
+[...truncated...]
+.ft P
+.fi
+.SS share
+.sp
+The \fBshare\fP argument is used to add a cookbook to cookbooks.opscode.com. This action will require a user account and a certificate for community.opscode.com. By default, Knife will use the user name and API key that is identified in the configuration file used during the upload; otherwise these values must be specified on the command line or in an alternate configuration file. If a cookbook already exists on cookbooks.opscode.com, then only an owner or maintainer of that cookbook can make updates.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook site share COOKBOOK_NAME CATEGORY (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fBCATEGORY\fP
+The cookbook category: \fBDatabases\fP, \fBWeb Servers\fP, \fBProcess Management\fP, \fBMonitoring and Trending\fP, \fBProgramming Languages\fP, \fBPackage Management\fP, \fBApplications\fP, \fBNetworking\fP, \fBOperations Systems and Virtualization\fP, \fBUtilities\fP, or \fBOther\fP.
+.TP
+.B \fB\-o PATH:PATH\fP, \fB\-\-cookbook\-path PATH:PATH\fP
+A colon\-separated path at which cookbooks are located.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife cookbook site share "apache2" "Web Servers"
+.ft P
+.fi
+.SS show
+.sp
+The \fBshow\fP argument is used to view information about a cookbook on cookbooks.opscode.com.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook site show COOKBOOK_NAME [COOKBOOK_VERSION]
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fBCOOKBOOK_VERSION\fP
+The version of a cookbook to be shown. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, a list of cookbook versions will be returned.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife cookbook site show haproxy
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+average_rating:
+category:        Networking
+created_at:      2009\-10\-25T23:51:07Z
+description:     Installs and configures haproxy
+external_url:
+latest_version:  http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_3
+maintainer:      opscode
+name:            haproxy
+updated_at:      2011\-06\-30T21:53:25Z
+versions:
+   http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_3
+   http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_2
+   http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_1
+   http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/1_0_0
+   http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/0_8_1
+   http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/0_8_0
+   http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/0_7_0
+.ft P
+.fi
+.SS unshare
+.sp
+The \fBunshare\fP argument is used to stop the sharing of a cookbook at cookbooks.opscode.com. Only the maintainer of a cookbook may perform this action.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook site unshare COOKBOOK_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to unshare a cookbook named "getting\-started", enter:
+.sp
+.nf
+.ft C
+$ knife cookbook site unshare getting\-started
+.ft P
+.fi
+.SS cookbook
+.sp
+A cookbook is the fundamental unit of distribution across Chef organizations. Each cookbook defines an automation scenario and then contains all of the components that are required to run it, including:
+.INDENT 0.0
+.IP \(bu 2
+Attributes that set values on nodes
+.IP \(bu 2
+Definitions that allow the creation of reusable collections of resources
+.IP \(bu 2
+File distributions
+.IP \(bu 2
+Libraries that extend Chef and/or provide helpers to Ruby code
+.IP \(bu 2
+Recipes that specify which resources to manage and the order in which those resources will be applied.
+.IP \(bu 2
+Custom resources and providers
+.IP \(bu 2
+Templates
+.IP \(bu 2
+Metadata about recipes (including dependencies), version constraints, supported platforms, and so on
+.UNINDENT
+.sp
+The \fBcookbook\fP sub\-command is used to interact with cookbooks that are located on the Chef server.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook [ARGUMENT] (options)
+.ft P
+.fi
+.SS bulk delete
+.sp
+The \fBbulk delete\fP argument is used to delete cookbook files that match a pattern defined by a regular expression. The regular expression must be within quotes and not be surrounded by forward slashes (/).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook bulk delete REGEX (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-p\fP, \fB\-\-purge\fP
+Indicates that a cookbook (or cookbook version) will be removed entirely from the repository and its backup. This action should be used carefully because purging a cookbook will disable any other cookbook that references one or more files from a cookbook that has been purged.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife cookbook bulk delete "^[0\-9]{3}$" \-p
+.ft P
+.fi
+.SS create
+.sp
+The \fBcreate\fP argument is used to create a new cookbook directory, including the following directories and files:
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.IP \(bu 2
+cookbook/attributes
+.IP \(bu 2
+cookbook/definitions
+.IP \(bu 2
+cookbook/files/default
+.IP \(bu 2
+cookbook/libraries
+.IP \(bu 2
+cookbook/metadata.rb
+.IP \(bu 2
+cookbook/providers
+.IP \(bu 2
+cookbook/readme.md (or .rdoc)
+.IP \(bu 2
+cookbook/recipes/default.rb
+.IP \(bu 2
+cookbook/resources
+.IP \(bu 2
+cookbook/templates/default
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook create COOKBOOK_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-c COPYRIGHT_HOLDER\fP, \fB\-\-copyright COPYRIGHT_HOLDER\fP
+The name of the copyright holder. This option will place a copyright notice that contains the name of the copyright holder in each of the pre\-created files. If this option is not specified, a copyright name of "your_company_name" will be used instead; it can be easily modified later.
+.TP
+.B \fB\-e EMAIL\fP, \fB\-\-email EMAIL\fP
+The email address for the individual who maintains the cookbook. This option will place an email address in each of the pre\-created files. If this option is not specified, an email name of "your_email" will be used instead; it can be easily modified later.
+.TP
+.B \fB\-i LICENSE\fP, \fB\-\-license LICENSE\fP
+The type of license under which a cookbook is distributed: \fBapachev2\fP or \fBnone\fP (default). This option will place the appropriate license notice in the pre\-created files. Be aware of the licenses for files inside of a cookbook and be sure to follow any restrictions they describe.
+.TP
+.B \fB\-o PATH\fP, \fB\-\-cookbook\-path PATH\fP
+The directory in which the cookbook will be created.
+.TP
+.B \fB\-r FORMAT\fP, \fB\-\-readme\-format FORMAT\fP
+The document format of the readme file: \fBmd\fP (markdown) and \fBrdoc\fP (Ruby docs).
+.UNINDENT
+.sp
+The cookbook copyright, license, email, and readme format settings can be configured in a knife.rb file or using the Knife command prompt:
+.sp
+.nf
+.ft C
+cookbook_copyright "your_company_name"
+cookbook_license "none"
+cookbook_email "your_email"
+readme_format "md"
+.ft P
+.fi
+.sp
+For example, to create a cookbook named "my_cookbook" with copyright, email, license, and readme format options specified, enter:
+.sp
+.nf
+.ft C
+$ knife cookbook create my_cookbook \-c "My Name" \-e "my@email.com" \-l apachev2 \-r md
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+** Creating cookbook my_cookbook
+** Creating README for cookbook: my_cookbook
+** Creating metadata for cookbook: my_cookbook
+.ft P
+.fi
+.SS delete
+.sp
+The \fBdelete\fP argument is used to delete a specified cookbook or cookbook version.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook delete COOKBOOK_NAME [COOKBOOK_VERSION] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-all\fP
+Indicates that a cookbook and every version of that cookbook will be deleted.
+.TP
+.B \fB\-p\fP, \fB\-\-purge\fP
+Indicates that a cookbook (or cookbook version) will be removed entirely from the repository and its backup. This action should be used carefully because purging a cookbook will disable any other cookbook that references one or more files from a cookbook that has been purged.
+.TP
+.B \fBCOOKBOOK_VERSION\fP
+The version of a cookbook to be deleted. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, Knife will prompt for a version.
+.UNINDENT
+.sp
+For example, to delete version "0.8" from a cookbook named "smartmon", enter:
+.sp
+.nf
+.ft C
+$ knife cookbook delete smartmon version 0.8
+.ft P
+.fi
+.sp
+Type \fBY\fP to confirm a deletion.
+.SS download
+.sp
+The \fBdownload\fP argument is used to download a cookbook from the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook download COOKBOOK_NAME [COOKBOOK_VERSION] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-d DOWNLOAD_DIRECTORY\fP, \fB\-\-dir DOWNLOAD_DIRECTORY\fP
+The directory into which a cookbook will be downloaded.
+.TP
+.B \fB\-f\fP, \fB\-\-force\fP
+Indicates that an existing directory will be overwritten.
+.TP
+.B \fB\-n\fP, \fB\-\-latest\fP
+Indicates that the most recent version of a cookbook will be downloaded.
+.UNINDENT
+.sp
+For example, to download a cookbook named "smartmon", enter:
+.sp
+.nf
+.ft C
+$ knife cookbook download smartmon
+.ft P
+.fi
+.SS list
+.sp
+The \fBlist\fP argument is used to view a list of cookbooks that are currently available on the Chef server. The list will contain only the most recent version for each cookbook by default.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-all\fP
+Indicates that all available versions of each cookbook will be returned.
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife cookbook list
+.ft P
+.fi
+.SS metadata
+.sp
+The \fBmetadata\fP argument is used to generate the metadata for one or more cookbooks.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook metadata (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-all\fP
+Indicates that metadata should be generated for all cookbooks, and not just for a specified cookbook.
+.TP
+.B \fB\-o PATH:PATH\fP, \fB\-\-cookbook\-path PATH:PATH\fP
+A colon\-separated path at which cookbooks are located.
+.UNINDENT
+.sp
+For example, to generate metadata for all cookbooks:
+.sp
+.nf
+.ft C
+$ knife cookbook metadata \-a
+.ft P
+.fi
+.SS metadata from file
+.sp
+The \fBmetadata from file\fP argument is used to load the metadata for a cookbook from a file.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook metadata from file FILE
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife cookbook metadta from file /path/to/file
+.ft P
+.fi
+.SS show
+.sp
+The \fBshow\fP argument is used to view information about a cookbook, parts of a cookbook (attributes, definitions, files, libraries, providers, recipes, resources, and templates), or a file that is associated with a cookbook (including attributes such as checksum or specificity).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook show COOKBOOK_NAME [COOKBOOK_VERSION] [PART...] [FILE_NAME] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-f FQDN\fP, \fB\-\-fqdn FQDN\fP
+The fully qualified domain name of the host.
+.TP
+.B \fBFILE_NAME\fP
+The name of a file that is associated with a cookbook.
+.TP
+.B \fB\-p PLATFORM\fP, \fB\-\-platform PLATFORM\fP
+The platform for which a cookbook is designed.
+.TP
+.B \fBPART\fP
+The part of the cookbook to show: \fBattributes\fP, \fBdefinitions\fP, \fBfiles\fP, \fBlibraries\fP, \fBproviders\fP, \fBrecipes\fP, \fBresources\fP, or \fBtemplates\fP. More than one part can be specified.
+.TP
+.B \fB\-V PLATFORM_VERSION\fP, \fB\-\-platform\-version PLATFORM_VERSION\fP
+The version of the platform.
+.TP
+.B \fBCOOKBOOK_VERSION\fP
+The version of a cookbook to be shown. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, a list of cookbook versions will be returned.
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example, to get the list of available versions of a cookbook named "getting\-started", enter:
+.sp
+.nf
+.ft C
+$ knife cookbook show getting\-started
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+getting\-started   0.3.0  0.2.0
+.ft P
+.fi
+.sp
+To show a list of data about a cookbook using the name of the cookbook and the version, enter:
+.sp
+.nf
+.ft C
+$ knife cookbook show getting\-started 0.3.0
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+attributes:
+  checksum:     fa0fc4abf3f6787aeb5c3c5c35de667c
+  name:         default.rb
+  path:         attributes/default.rb
+  specificity:  default
+  url:          https://somelongurlhere.com
+chef_type:      cookbook_version
+cookbook_name:  getting\-started
+definitions:    []
+files:          []
+frozen?:        false
+json_class:     Chef::CookbookVersion
+libraries:      []
+.ft P
+.fi
+.sp
+To only view data about "templates", enter:
+.sp
+.nf
+.ft C
+$ knife cookbook show getting\-started 0.3.0 templates
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+checksum:     a29d6f254577b830091f140c3a78b1fe
+name:         chef\-getting\-started.txt.erb
+path:         templates/default/chef\-getting\-started.txt.erb
+specificity:  default
+url:          https://someurlhere.com
+.ft P
+.fi
+.sp
+To see if a cookbook named "redis" with a version number of "0.1.6" is frozen, enter:
+.sp
+.nf
+.ft C
+$ knife cookbook show redis 0.1.6 | grep frozen
+.ft P
+.fi
+.sp
+If the cookbook is frozen, something like the following is returned:
+.sp
+.nf
+.ft C
+frozen?:        true
+.ft P
+.fi
+.SS test
+.sp
+The \fBtest\fP argument is used to test a cookbook for syntax errors. This argument uses Ruby syntax checking to verify every file in a cookbook that ends in .rb and erb.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook test COOKBOOK_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-all\fP
+Indicates that all cookbooks will be tested.
+.TP
+.B \fB\-o PATH:PATH\fP, \fB\-\-cookbook\-path PATH:PATH\fP
+A colon\-separated path at which cookbooks are located.
+.UNINDENT
+.sp
+For example, to test a cookbook named "getting\-started", enter:
+.sp
+.nf
+.ft C
+$ knife cookbook test getting\-started
+.ft P
+.fi
+.SS upload
+.sp
+The \fBupload\fP argument is used to upload one or more cookbooks (and any files that are associated with those cookbooks) from a local repository to the Chef server. Only files that do not already exist on the Chef server will be uploaded.
+.IP Note
+Use a chefignore file to prevent the upload of specific files and file types, such as temporary files or files placed in folders by version control systems. The chefignore file must be located in the root of the cookbook repository and must use rules similar to filename globbing (as defined by the Ruby File.fnmatch syntax).
+.RE
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife cookbook upload [COOKBOOK_NAME...] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-all\fP
+Indicates that all cookbooks will be uploaded.
+.TP
+.B \fB\-d\fP, \fB\-\-include\-dependencies\fP
+Indicates that when a cookbook has a dependency on one or more other cookbooks, those cookbooks will also be uploaded.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The environment that will be applied to all cookbooks that are uploaded using the same action. This will automatically set the version constraint on the environment to match the version of a cookbook that is being uploaded.
+.TP
+.B \fB\-\-force\fP
+Indicates that a cookbook should be updated even if the \fB\-\-freeze\fP flag has been set.
+.TP
+.B \fB\-\-freeze\fP
+Indicates that a cookbook cannot be modified; any changes to this cookbook must be included as a new version. Only the \fB\-\-force\fP option can override this setting.
+.TP
+.B \fB\-o PATH:PATH\fP, \fB\-\-cookbook\-path PATH:PATH\fP
+A colon\-separated path at which cookbooks are located.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife cookbook upload getting\-started
+.ft P
+.fi
+.sp
+To upload a cookbook, and then prevent other users from being able to make changes to it, enter:
+.sp
+.nf
+.ft C
+$ knife cookbook upload redis \-\-freeze
+.ft P
+.fi
+.sp
+To return:
+.sp
+.nf
+.ft C
+\&.. code\-block:: bash
+.ft P
+.fi
+.INDENT 0.0
+.INDENT 3.5
+Uploading redis...
+Upload completed
+.UNINDENT
+.UNINDENT
+.sp
+If a cookbook is frozen and the \fB\-\-force\fP option is not specified, Knife will return an error message similar to the following:
+.sp
+.nf
+.ft C
+Uploading redis...
+ERROR: Version 0.1.6 of cookbook redis is frozen. Use \-\-force to override.
+.ft P
+.fi
+.SS data bag
+.sp
+A data bag is a read\-only global variable that is stored as JSON data and is accessible from a Chef server. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords). The contents of a data bag can also be encrypted to prevent the contents of that data bag from being compromised.
+.sp
+The \fBdata bag\fP sub\-command is used to manage arbitrary stores of globally available JSON data.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife data bag [ARGUMENT] (options)
+.ft P
+.fi
+.SS create
+.sp
+The \fBcreate\fP argument is used to add a data bag to the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife data bag create DATA_BAG_NAME [DATA_BAG_ITEM] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fBDATA_BAG_ITEM\fP
+The name of a specific item within a data bag.
+.TP
+.B \fB\-\-secret SECRET\fP
+The encryption key that is used for values contained within a data bag.
+.TP
+.B \fB\-\-secret\-file FILE\fP
+The path to the file that contains the encryption key.
+.UNINDENT
+.IP Note
+For encrypted data bag items, use \fIeither\fP \fB\-\-secret\fP or \fB\-\-secret\-file\fP, not both.
+.RE
+.sp
+For example, to create a data bag named "admins", enter:
+.sp
+.nf
+.ft C
+$ knife data bag create admins
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+Created data_bag[admins]
+.ft P
+.fi
+.SS delete
+.sp
+The \fBdelete\fP argument is used to delete a data bag or a data bag item from a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife data bag delete DATA_BAG_NAME [DATA_BAG_ITEM] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fBDATA_BAG_ITEM\fP
+The name of a specific item within a data bag.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife data bag delete admins
+.ft P
+.fi
+.sp
+Or, to delete an item named "charlie", enter:
+.sp
+.nf
+.ft C
+$ knife data bag delete admins charlie
+.ft P
+.fi
+.sp
+Type \fBY\fP to confirm a deletion.
+.SS edit
+.sp
+The \fBedit\fP argument is used to edit the data contained in a data bag. If encryption is being used, the data bag will be decrypted, the data will be made available in the $EDITOR, and then encrypted again before saving it to the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife data bag edit DATA_BAG_NAME [DATA_BAG_ITEM] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fBDATA_BAG_ITEM\fP
+The name of a specific item within a data bag.
+.TP
+.B \fB\-\-secret SECRET\fP
+The encryption key that is used for values contained within a data bag.
+.TP
+.B \fB\-\-secret\-file FILE\fP
+The path to the file that contains the encryption key.
+.UNINDENT
+.IP Note
+For encrypted data bag items, use \fIeither\fP \fB\-\-secret\fP or \fB\-\-secret\-file\fP, not both.
+.RE
+.sp
+For example, to edit the contents of a data bag, enter:
+.sp
+.nf
+.ft C
+$ knife data bag edit admins
+.ft P
+.fi
+.sp
+To edit an item named "charlie" that is contained in a data bag named "admins", enter:
+.sp
+.nf
+.ft C
+$ knife data bag edit admins charlie
+.ft P
+.fi
+.sp
+to open the $EDITOR. Once opened, you can update the data before saving it to the Chef server. For example, by changing:
+.sp
+.nf
+.ft C
+{
+   "id": "charlie"
+}
+.ft P
+.fi
+.sp
+to:
+.sp
+.nf
+.ft C
+{
+   "id": "charlie",
+   "uid": 1005,
+   "gid":"ops",
+   "shell":"/bin/zsh",
+   "comment":"Crazy Charlie"
+}
+.ft P
+.fi
+.SS from file
+.sp
+The \fBfrom file\fP argument is used to create a data bag using an existing data bag data as a template. The path to the data bag file must specify one of the following:
+.INDENT 0.0
+.IP \(bu 2
+the name of a data bag
+.IP \(bu 2
+a relative or absolute path to a file
+.UNINDENT
+.sp
+If the name of a data bag is specified, Knife will search for the data bag in ./data_bags/bag_name/file. Once opened, the JSON file should be a hash that contains at least an ID key which represents the name of the data bag item.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife data bag from file DATA_BAG_NAME_or_PATH
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-all\fP
+Indicates that all data bags found at the specified path will be uploaded.
+.TP
+.B \fB\-\-secret SECRET\fP
+The encryption key that is used for values contained within a data bag.
+.TP
+.B \fB\-\-secret\-file FILE\fP
+The path to the file that contains the encryption key.
+.UNINDENT
+.IP Note
+For encrypted data bag items, use \fIeither\fP \fB\-\-secret\fP or \fB\-\-secret\-file\fP, not both.
+.RE
+.sp
+For example, to create a data bag from a specified path:
+.sp
+.nf
+.ft C
+$ knife data bag from file /path/to JSON/file
+.ft P
+.fi
+.sp
+To create a data bag named "devops_data" that contains encrypted data, enter:
+.sp
+.nf
+.ft C
+$ knife node from file devops_data \-\-secret\-file /path/to/decryption/file
+.ft P
+.fi
+.SS list
+.sp
+The \fBlist\fP argument is used to view a list of data bags that are currently available on the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife data bag list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example, to view a list of data bags on the Chef server, enter:
+.sp
+.nf
+.ft C
+$ knife data bag list
+.ft P
+.fi
+.SS show
+.sp
+The \fBshow\fP argument is used to view the contents of a data bag.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife data bag show DATA_BAG_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fBDATA_BAG_ITEM\fP
+The name of a specific item within a data bag.
+.TP
+.B \fB\-\-secret SECRET\fP
+The encryption key that is used for values contained within a data bag.
+.TP
+.B \fB\-\-secret\-file FILE\fP
+The path to the file that contains the encryption key.
+.UNINDENT
+.IP Note
+For encrypted data bag items, use \fIeither\fP \fB\-\-secret\fP or \fB\-\-secret\-file\fP, not both.
+.RE
+.sp
+For example, to show the contents of a data bag, enter:
+.sp
+.nf
+.ft C
+$ knife data bag show admins
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+charlie
+.ft P
+.fi
+.sp
+To show the contents of a specific item within data bag, enter:
+.sp
+.nf
+.ft C
+$ knife data bag show admins charlie
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+comment:  Crazy Charlie
+gid:      ops
+id:       charlie
+shell:    /bin/zsh
+uid:      1005
+.ft P
+.fi
+.sp
+To show the contents of a data bag named "passwords" with an item that contains encrypted data named "mysql", enter:
+.sp
+.nf
+.ft C
+$ knife data bag show passwords mysql
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+## sample:
+{
+  "id": "mysql",
+  "pass": "trywgFA6R70NO28PNhMpGhEvKBZuxouemnbnAUQsUyo=\en",
+  "user": "e/p+8WJYVHY9fHcEgAAReg==\en"
+}
+.ft P
+.fi
+.sp
+To show the decrypted contents of the same databag, enter:
+.sp
+.nf
+.ft C
+$ knife data bag show \-\-secret\-file /path/to/decryption/file passwords mysql
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+## sample:
+{
+   "id": "mysql",
+   "pass": "thesecret123",
+   "user": "fred"
+}
+.ft P
+.fi
+.SS ec2 (plug\-in)
+.sp
+Amazon EC2 is a web service that provides resizable compute capacity in the cloud based and pre\-configured operating system and virtual application software using Amazon Machine Images (AMI). The \fBec2\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Amazon EC2.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-ec2\fP.
+.IP Note
+This plugin requires the \fBknife windows\fP plugin to be present on the same machine: \fI\%https://github.com/opscode/knife-windows\fP.
+.RE
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife ec2 [ARGUMENT] (options)
+.ft P
+.fi
+.SS instance data
+.sp
+The \fBinstance data\fP argument is used to generate instance metadata used with custom Opscode Amazon Machine Images (AMI). This process will read the validation certificate and Chef server URL from the Knife configuration file (~/.chef/knife.rb) and will output the data in JSON format.
+.IP Note
+Using this sub\-command is an older way of launching Amazon EC2 instances for Chef and should be considered deprecated. Using the \fBserver create\fP sub\-command is preferred (and more flexible). Although this sub\-command will remain, the Opscode custom Amazon Machine Images (AMI) are out of date.
+.RE
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife ec2 instance data (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-aws\-access\-key\-id KEY\fP
+The access key identifier used with Amazon EC2.
+.TP
+.B \fB\-e\fP, \fB\-\-edit\fP
+Indicates that instance data should be edited. \fBjamescott: EDITED WHERE?\fP
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-aws\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with Amazon EC2.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.
+.UNINDENT
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new Amazon EC2 cloud instance. This will provision a new image in Amazon EC2, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife ec2 server create (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-aws\-access\-key\-id KEY\fP
+The access key identifier used with Amazon EC2.
+.TP
+.B \fB\-bootstrap\-protocol PROTOCOL\fP
+The protocol used to bootstrap on a machine that is running Windows Server: \fBwinrm\fP or \fBssh\fP.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-\-ebs\-size SIZE\fP
+The size of the Amazon Elastic Block Store volume, in GB. This option is only available for instances that are backed with Amazon Elastic Block Store.
+.TP
+.B \fB\-\-ebs\-no\-delete\-on\-term\fP
+Indicates that the Amazon Elastic Block Store volume will not be deleted upon instance termination. This option is only available for instances that are backed with Amazon Elastic Block Store.
+.TP
+.B \fB\-ephemeral DEVICE\fP
+A comma\-separated list of device locations to be mapped to ephemeral devices.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-fqdn FQDN\fP
+A pre\-defined fully qualified domain name.
+.TP
+.B \fB\-g X,Y,Z\fP, \fB\-\-security\-group\-ids X,Y,Z\fP
+A comma\-separated list of security group identifiers. Required when using Amazon Virtual Private Cloud.
+.TP
+.B \fB\-G X,Y,Z\fP, \fB\-\-groups X,Y,Z\fP
+A comma\-separated list of security groups. Not supported when using Amazon Virtual Private Cloud.
+.TP
+.B \fB\-hint HINT_NAME[=HINT_FILE]\fP
+Indicates that an Ohai hint will be set on the target of the bootstrap. Use multiple \fB\-\-hint\fP options to specify multiple hints.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-image IMAGE\fP
+The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-aws\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with Amazon EC2.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-p PORT\fP, \fB\-\-ssh\-port PORT\fP
+The SSH port.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.
+.TP
+.B \fB\-s SUBNET\-ID\fP, \fB\-\-subnet SUBNET\-ID\fP
+The Amazon Virtual Private Cloud instance in which a node will be created.
+.TP
+.B \fB\-S KEY\fP, \fB\-\-ssh\-key KEY\fP
+The SSH key for the Amazon EC2 environment.
+.TP
+.B \fB\-server\-connect\-attribute ATTRIBUTE\fP
+The attribute that is used when opening the SSH connection. This should be an Amazon EC2 server attribute.
+.TP
+.B \fB\-\-T Tag=Value[,Tag=Value]\fP, \fB\-\-tags Tag=Value[,Tag=Value]\fP
+The tags for this server.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-u USER_DATA_FILE\fP, \fB\-\-user\-data USER_DATA_FILE\fP
+The Amazon EC2 user data file used during instance provisioning.
+.TP
+.B \fB\-w GATEWAY\fP, \fB\-\-ssh\-gateway GATEWAY\fP
+The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
+.TP
+.B \fB\-x USERNAME\fP, \fB\-\-ssh\-user USERNAME\fP
+The SSH user name.
+.TP
+.B \fB\-Z ZONE"\fP, \fB\-\-availability\-zone ZONE\fP
+The name of the Amazon EC2 availability zone. Each availability zone is unique within a region. Default: \fBus\-east\-1b\fP.
+.UNINDENT
+.sp
+For example, to launch a new Amazon EC2 instance with the "webserver" role, enter:
+.sp
+.nf
+.ft C
+$ knife ec2 server create \-r "role[webserver]" \-I ami\-2d4aa444 \-\-flavor m1.small \-G www,default \-x ubuntu \-N server01
+.ft P
+.fi
+.sp
+To launch a new Amazon EC2 instance with multiple roles, enter:
+.sp
+.nf
+.ft C
+$ knife ec2 server create \-r "role[base],role[webserver]" \-I ami\-2d4aa444 \-G www,default \-x ubuntu \-\-node\-name server01
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more nodes that are running in the Amazon EC2 cloud. To find a specific cloud instance, use the \fBknife ec2 server list\fP argument. Use the \fB\-\-purge\fP option to delete all associated node and client objects from the Chef server or use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete specific node and client objects.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife ec2 server delete SERVER [NODE_NAME...] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-aws\-access\-key\-id KEY\fP
+The access key identifier used with Amazon EC2.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-aws\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with Amazon EC2.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node and client to delete, if different from the server name. This must be used with the \fB\-\-purge\fP option.
+.TP
+.B \fB\-p\fP, \fB\-\-purge\fP
+Indicates that all corresponding nodes and clients on the Chef server will be destroyed, in addition to the Amazon EC2 node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the \fB\-\-node\-name\fP option must be used to specify the name of the node.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.
+.UNINDENT
+.sp
+For example, to delete a node called "preprod" in an instance named "operations", enter:
+.sp
+.nf
+.ft C
+$ knife ec2 server delete operations preprod
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Amazon EC2 account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife ec2 server list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-aws\-access\-key\-id KEY\fP
+The access key identifier used with Amazon EC2.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-aws\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with Amazon EC2.
+.TP
+.B \fB\-n\fP, \fB\-\-no\-name\fP
+Indicates that tag names will not be displayed in the output.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.
+.TP
+.B \fB\-t TAG1, TAG2\fP, \fB\-\-tags TAG1, TAG2\fP
+A list of tags that will be displayed in the output.
+.UNINDENT
+.SS environment
+.sp
+An environment is a way to map an organization\(aqs real\-life workflow to what can be configured and managed when using Chef server. Every Chef organization begins with a single environment called the \fB_default\fP environment, which cannot be modified (or deleted). Additional environments can be created, such as production, staging, testing, and development. Generally, an environment is also associated with one (or more) cookbook versions.
+.sp
+The \fBenvironment\fP sub\-command is used to manage environments within a single organization on the Chef server.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife environment [ARGUMENT] (options)
+.ft P
+.fi
+.SS create
+.sp
+The \fBcreate\fP argument is used to add an environment object to the Chef server. When this argument is run, Knife will open $EDITOR to enable editing of the ENVIRONMENT description field (unless a description is specified as part of the command). When finished, Knife will add the environment to the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife environment create ENVIRONMENT_NAME \-d DESCRIPTION
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-d DESCRIPTION\fP, \fB\-\-description DESCRIPTION\fP
+The description of the environment. This value will populate the description field for the environment on the Chef server.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife environment create dev \-d "The development environment."
+.ft P
+.fi
+.SS delete
+.sp
+The \fBdelete\fP argument is used to delete an environment from a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife environment delete ENVIRONMENT_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to delete an environment named "dev", enter:
+.sp
+.nf
+.ft C
+$ knife environment delete dev
+.ft P
+.fi
+.sp
+Type \fBY\fP to confirm a deletion.
+.SS edit
+.sp
+The \fBedit\fP argument is used to edit the attributes of an environment. When this argument is run, Knife will open $EDITOR to enable editing of ENVIRONMENT attributes. When finished, Knife will update the Chef server with those changes.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife environment edit ENVIRONMENT_NAME
+.ft P
+.fi
+.sp
+For example, to edit an environment named "devops", enter:
+.sp
+.nf
+.ft C
+$ knife environment edit devops
+.ft P
+.fi
+.SS from file
+.sp
+The \fBfrom file\fP argument is used to add or update an environment using a JSON or Ruby DSL description. It must be run with the \fBcreate\fP or \fBedit\fP arguments.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife environment [create | edit] from file FILE
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife environment create devops from file "path to file"
+.ft P
+.fi
+.sp
+Or:
+.sp
+.nf
+.ft C
+$ knife environment edit devops from file "path to file"
+.ft P
+.fi
+.SS list
+.sp
+The \fBlist\fP argument is used to list all of the environments that are currently available on the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife environment list \-w
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife environment list \-w
+.ft P
+.fi
+.SS show
+.sp
+The \fBshow\fP argument is used to display information about the specified environment.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife environment show ENVIRONMENT_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to view information about the "dev" environment enter:
+.sp
+.nf
+.ft C
+$ knife environment show dev
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+% knife environment show dev
+chef_type:            environment
+cookbook_versions:
+default_attributes:
+description:
+json_class:           Chef::Environment
+name:                 dev
+override_attributes:
+
+\e\e
+\e\e
+\e\e
+\e\e
+.ft P
+.fi
+.SS eucalyptus (plug\-in)
+.sp
+Eucalyptus is an infrastructure as a service (IaaS) platform that supports hybrid\-IaaS configurations that allow data to move between hosted and on\-premise data centers. The \fBeucalyptus\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Eucalyptus.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-eucalyptus\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife eucalyptus [ARGUMENT] (options)
+.ft P
+.fi
+.SS flavor list
+.sp
+The \fBflavor list\fP argument is used to get a list of servers from the Eucalyptus environment, listed by ID, architecture, RAM, and disks, and cores.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife eucalyptus flavor list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-euca\-access\-key\-id ID\fP
+The access key identifier for Eucalyptus.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-euca\-secret\-access\-key SECRET\fP
+The secret access key for Eucalyptus.
+.TP
+.B \fB\-\-euca\-api\-endpoint ENDPOINT\fP
+The Eucalyptus API endpoint.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.UNINDENT
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife eucalyptus flavor list
+.ft P
+.fi
+.SS image list
+.sp
+The \fBimage list\fP argument is used to list of images from the Eucalyptus environment, listed by ID, kernel ID, architecture, and location.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife eucalyptus image list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-euca\-access\-key\-id ID\fP
+The access key identifier for Eucalyptus.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-euca\-secret\-access\-key SECRET\fP
+The secret access key for Eucalyptus.
+.TP
+.B \fB\-\-euca\-api\-endpoint ENDPOINT\fP
+The Eucalyptus API endpoint.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.UNINDENT
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife eucalyptus flavor list
+.ft P
+.fi
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new Eucalyptus cloud instance. This will provision a new image in Eucalyptus, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife eucalyptus server create (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-euca\-access\-key\-id ID\fP
+The access key identifier for Eucalyptus.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-\-euca\-api\-endpoint ENDPOINT\fP
+The Eucalyptus API endpoint.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-G X,Y,Z\fP, \fB\-\-groups X,Y,Z\fP
+A comma\-separated list of security groups.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-image IMAGE\fP
+The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-euca\-secret\-access\-key SECRET\fP
+The secret access key for Eucalyptus.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.TP
+.B \fB\-S KEY\fP, \fB\-\-ssh\-key KEY\fP
+The SSH key for the Eucalyptus environment.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-availability\-zone ZONE\fP
+The name of the Eucalyptus availability zone. Each availability zone is unique within a region. Default: \fBus\-east\-1b\fP.
+.UNINDENT
+.sp
+For example, to create a new instance, enter:
+.sp
+.nf
+.ft C
+$ xxxxx
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Eucalyptus cloud. To find a specific cloud instance, use the \fBknife eucalyptus server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife eucalyptus server delete [SERVER_ID...]
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-euca\-access\-key\-id ID\fP
+The access key identifier for Eucalyptus.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-euca\-secret\-access\-key SECRET\fP
+The secret access key for Eucalyptus.
+.TP
+.B \fB\-\-euca\-api\-endpoint ENDPOINT\fP
+The Eucalyptus API endpoint.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.UNINDENT
+.sp
+For example, to delete an instance named "devops2012", enter:
+.sp
+.nf
+.ft C
+$ knife eucalyptus server delete devops2012
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Eucalyptus account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife eucalyptus server list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-euca\-access\-key\-id ID\fP
+The access key identifier for Eucalyptus.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-euca\-secret\-access\-key SECRET\fP
+The secret access key for Eucalyptus.
+.TP
+.B \fB\-\-euca\-api\-endpoint ENDPOINT\fP
+The Eucalyptus API endpoint.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.UNINDENT
+.SS exec
+.sp
+The \fBexec\fP sub\-command uses the Knife configuration file to execute Ruby scripts in the context of a fully configured chef\-client. This sub\-command is most often used to run scripts that will only access Chef server one time (or otherwise very infrequently). Use this command any time that an operation does not warrant full usage of the Knife sub\-command library.
+.sp
+For Ruby scripts that will be run using the \fBexec\fP sub\-command, note the following:
+.INDENT 0.0
+.INDENT 3.5
+.INDENT 0.0
+.IP \(bu 2
+The Ruby script must be located on the system from which Knife is run (and not be located on any of the systems that Knife will be managing).
+.IP \(bu 2
+Shell commands will be run from a management workstation. For example, something like \fB%x[ls \-lash /opt/only\-on\-a\-node]\fP would give you the directory listing for the "opt/only\-on\-a\-node" directory or a "No such file or directory" error if the file does not already exist locally.
+.IP \(bu 2
+When the Shef DSL is available, the chef\-client DSL will not be (unless the management workstation is also a chef\-client). Without the chef\-client DSL, a bash block cannot be used to run bash commands.
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife exec SCRIPT (options)
+.ft P
+.fi
+.sp
+This sub\-command has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-E CODE\fP, \fB\-\-exec CODE\fP
+A string of code that will be executed.
+.TP
+.B \fB\-p PATH:PATH\fP, \fB\-\-script\-path PATH:PATH\fP
+A colon\-separated path at which Ruby scripts are located.
+.UNINDENT
+.sp
+There are three ways to use \fBknife exec\fP to run Ruby script files. For example:
+.sp
+.nf
+.ft C
+$ knife exec /path/to/script_file
+.ft P
+.fi
+.sp
+Or:
+.sp
+.nf
+.ft C
+$ knife exec \-E \(aqRUBY CODE\(aq
+.ft P
+.fi
+.sp
+Or:
+.sp
+.nf
+.ft C
+$ knife exec
+RUBY CODE
+^D
+.ft P
+.fi
+.sp
+For example, to list all of the available search indexes, enter:
+.sp
+.nf
+.ft C
+$ knife exec \-E \(aqputs api.get("search").keys\(aq
+.ft P
+.fi
+.sp
+Or to show the available free memory for all nodes, enter:
+.sp
+.nf
+.ft C
+$ knife exec \-E \(aqnodes.all {|n| puts "#{n.name} has #{n.memory.total} free memory"}\(aq
+.ft P
+.fi
+.sp
+Or to check the status of Knife using a Ruby script named "status.rb" (which looks like):
+.sp
+.nf
+.ft C
+printf "%\-5s %\-12s %\-8s %s\en", "Check In", "Name", "Ruby", "Recipes"
+nodes.all do |n|
+   checkin = Time.at(n[\(aqohai_time\(aq]).strftime("%F %R")
+   rubyver = n[\(aqlanguages\(aq][\(aqruby\(aq][\(aqversion\(aq]
+   recipes = n.run_list.expand.recipes.join(", ")
+   printf "%\-20s %\-12s %\-8s %s\en", checkin, n.name, rubyver, recipes
+end
+.ft P
+.fi
+.sp
+and is located in a directory named "scripts", enter:
+.sp
+.nf
+.ft C
+$ knife exec scripts/status.rb
+.ft P
+.fi
+.sp
+To query a node for multiple attributes using a Ruby script named search_attributes.rb (which looks like):
+.sp
+.nf
+.ft C
+% cat scripts/search_attributes.rb
+query = ARGV[2]
+attributes = ARGV[3].split(",")
+puts "Your query: #{query}"
+puts "Your attributes: #{attributes.join(" ")}"
+results = {}
+search(:node, query) do |n|
+   results[n.name] = {}
+   attributes.each {|a| results[n.name][a] = n[a]}
+end
+
+puts results
+exit 0
+.ft P
+.fi
+.sp
+enter:
+.sp
+.nf
+.ft C
+% knife exec scripts/search_attributes.rb "hostname:test_system" ipaddress,fqdn
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+Your query: hostname:test_system
+Your attributes: ipaddress fqdn
+{"test_system.example.com"=>{"ipaddress"=>"10.1.1.200", "fqdn"=>"test_system.example.com"}}
+.ft P
+.fi
+.SS google (plug\-in)
+.sp
+Google Compute Engine is a cloud hosting platform that offers scalable and flexible virtual machine computing. The \fBgoogle\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Google Compute Engine.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-google\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife google [ARGUMENT] (options)
+.ft P
+.fi
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new Google Compute Engine cloud instance. This will provision a new image in Google Compute Engine, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server create SERVER_NAME [RUN_LIST] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-e IP_ADDRESS\fP, \fB\-\-external\-ip\-address IP_ADDRESS\fP
+A static IP address that is provided by Google Compute Engine.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-i PRIVATE_KEY_FILE\fP, \fB\-\-private\-key\-file PRIVATE_KEY_FILE\fP
+The file in which the SSH private key used for authentication is located.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-google\-image IMAGE\fP
+The name of the virtual application template or image that will be used to create the virtual machine. Default: \fBgcompute8\-standard\fP.
+.TP
+.B \fB\-k PUBLIC_KEY_FILE\fP, \fB\-\-public\-key\-file PUBLIC_KEY_FILE\fP]
+The file in which the SSH public key used for authentication is located.
+.TP
+.B \fB\-n NETWORK_NAME\fP, \fB\-\-network NETWORK_NAME\fP
+The name of the network in which the virtual machine will be created.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-s SERVER_NAME\fP, \fB\-\-server\-name SERVER_NAME\fP
+The name of the server.
+.TP
+.B \fB\-p PROJECT\fP, \fB\-\-project_id PROJECT\fP
+The identifier for the Google Compute Engine project.
+.TP
+.B \fB\-P IP_ADDRESS\fP, \fB\-\-internal\-ip\-address IP_ADDRESS\fP
+A static IP address that is provided by Google Compute Engine.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-availability\-zone ZONE\fP
+The name of the Google Compute Engine availability zone. Each availability zone is unique within a region. Default: \fBus\-east\-a\fP.
+.UNINDENT
+.sp
+For example, to create an instance, enter:
+.sp
+.nf
+.ft C
+$ xxxxx
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Google Compute Engine cloud. To find a specific cloud instance, use the \fBknife google server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server delete SERVER_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-p PROJECT_NAME\fP, \fB\-\-project\-id PROJECT_NAME\fP
+The identifier for the Google Compute Engine project.
+.UNINDENT
+.sp
+For example, to delete a server named "devops01" from a project named "engineering", enter:
+.sp
+.nf
+.ft C
+$ knife google server delete devops1 engineering
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Google Compute Engine account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-p PROJECT_NAME\fP, \fB\-\-project\-id PROJECT_NAME\fP
+The identifier for the Google Compute Engine project.
+.UNINDENT
+.sp
+For example, to view a list of instances associated with a project named "dev\-01", enter:
+.sp
+.nf
+.ft C
+$ knife google server list \-p dev\-01
+.ft P
+.fi
+.SS hp (plug\-in)
+.sp
+HP Cloud Compute is a cloud hosting platform that provides computing, storage, identity, and other services across private, managed, and public clouds. The \fBhp\fP sub\-command is used to manage API\-driven cloud servers that are hosted by HP Cloud Compute.
+.sp
+This plugin is available on github: \fI\%https://github.com/mattray/knife-hp\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife hp [ARGUMENT] (options)
+.ft P
+.fi
+.SS flavor list
+.sp
+The \fBflavor list\fP argument is used to get a list of servers from the HP Cloud Compute environment, listed by ID, name, cores, RAM, and disk size.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife hp flavor list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-hp\-account ID\fP
+The access key identifier for the HP Cloud Compute account.
+.TP
+.B \fB\-\-hp\-auth URI\fP
+The URI used during authentication to the HP Cloud Compute account.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-hp\-secret SECRET\fP
+The secret key for the HP Cloud Compute account.
+.TP
+.B \fB\-T ID\fP, \fB\-\-hp\-tenant ID\fP
+The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-hp\-zone ZONE\fP
+The name of the HP Cloud Compute availability zone.
+.UNINDENT
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife hp flavor list
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+ID        Name              Cores     RAM          Disk
+100       standard.xsmall   1         1024 MB      30 GB
+101       standard.small    2         2048 MB      60 GB
+102       standard.medium   2         4096 MB      120 GB
+103       standard.large    4         8192 MB      240 GB
+104       standard.xlarge   4         16384 MB     480 GB
+105       standard.2xlarge  8         32768 MB     960 GB
+.ft P
+.fi
+.SS image list
+.sp
+The \fBimage list\fP argument is used to list of images from the HP Cloud Compute environment, listed by ID and name.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife hp image list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-hp\-account ID\fP
+The access key identifier for the HP Cloud Compute account.
+.TP
+.B \fB\-\-hp\-auth URI\fP
+The URI used during authentication to the HP Cloud Compute account.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-hp\-secret SECRET\fP
+The secret key for the HP Cloud Compute account.
+.TP
+.B \fB\-T ID\fP, \fB\-\-hp\-tenant ID\fP
+The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-hp\-zone ZONE\fP
+The name of the HP Cloud Compute availability zone.
+.UNINDENT
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife hp flavor list
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+ID                Name
+1234              CentOS 5.6 Server 64\-bit
+1358              CentOS 6.2 Server 64\-bit
+1361              Debian Squeeze 6.0.3 Server 64\-bit
+1236              Ubuntu Lucid 10.04 LTS Server 64\-bit
+1238              Ubuntu Maverick 10.10 Server 64\-bit
+1240              Ubuntu Natty 11.04 Server 64\-bit
+1242              Ubuntu Oneiric 11.10 Server 64\-bit
+.ft P
+.fi
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new HP Cloud Compute cloud instance. This will provision a new image in HP Cloud Compute, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife hp server create (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-hp\-account ID\fP
+The access key identifier for the HP Cloud Compute account.
+.TP
+.B \fB\-\-bootstrap\-proxy PROXY_URL\fP
+The proxy server for the node that is the target of a bootstrap operation.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-f FLAVOR_ID\fP, \fB\-\-flavor FLAVOR_ID\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-G X,Y,Z\fP, \fB\-\-groups X,Y,Z\fP
+A comma\-separated list of security groups.
+.TP
+.B \fB\-\-hp\-auth URI\fP
+The URI used during authentication to the HP Cloud Compute account.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-I IMAGE_ID\fP, \fB\-\-image IMAGE_ID\fP
+The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-hp\-secret SECRET\fP
+The secret key for the HP Cloud Compute account.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-S KEY\fP, \fB\-\-ssh\-key KEY\fP
+The SSH key for the HP Cloud Compute environment.
+.TP
+.B \fB\-T ID\fP, \fB\-\-hp\-tenant ID\fP
+The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-hp\-zone ZONE\fP
+The name of the HP Cloud Compute availability zone.
+.UNINDENT
+.sp
+For example, to provision a server and then perform a bootstrap operation (using SSH), enter:
+.sp
+.nf
+.ft C
+$ knife hp server create \-f 101 \-I 1236 \-S hptesting \-x ubuntu \-i ~/.ssh/hptesting.pem \-d omnibus \-r \(aqrole[base]\(aq 2
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+Instance ID: 65646
+Instance Name: hp15\-185\-114\-127
+Flavor: 101
+Image: 1236
+SSH Key Pair: hptesting
+
+Waiting for server............................................
+Public IP Address: 15.185.114.127
+Private IP Address: 10.4.21.238
+
+Waiting for sshd..done
+Bootstrapping Chef on 15.185.114.127
+15.185.114.127 \-\-2012\-03\-09 18:18:17\-\-  http://opscode.com/chef/install.sh
+\&............
+
+\&............
+15.185.114.127 [Fri, 09 Mar 2012 18:19:20 +0000] INFO: Chef Run complete in 25.468149268 seconds
+15.185.114.127 [Fri, 09 Mar 2012 18:19:20 +0000] INFO: Running report handlers
+15.185.114.127 [Fri, 09 Mar 2012 18:19:20 +0000] INFO: Report handlers complete
+
+Instance ID: 65646
+Instance Name: hp15\-185\-114\-127
+Flavor: 101
+Image: 1236
+SSH Key Pair: hptesting
+Public IP Address: 15.185.114.127
+Private IP Address: 10.4.21.238
+Environment: _default
+Run List: role[base]
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the HP Cloud Compute cloud. To find a specific cloud instance, use the \fBknife hp server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife hp server delete [SERVER_NAME...]
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-hp\-account ID\fP
+The access key identifier for the HP Cloud Compute account.
+.TP
+.B \fB\-\-hp\-auth URI\fP
+The URI used during authentication to the HP Cloud Compute account.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-hp\-secret SECRET\fP
+The secret key for the HP Cloud Compute account.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node on the Chef server. This option only has meaning when used with the \fB\-\-purge\fP option.
+.TP
+.B \fB\-p\fP, \fB\-\-purge\fP
+Indicates that all corresponding nodes on the Chef server will be destroyed, in addition to the HP Cloud Compute node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the \fB\-\-node\-name\fP option to specify the correct name for the node.
+.TP
+.B \fB\-T ID\fP, \fB\-\-hp\-tenant ID\fP
+The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-hp\-zone ZONE\fP
+The name of the HP Cloud Compute availability zone.
+.UNINDENT
+.sp
+For example, to delete an instance named "65646", enter:
+.sp
+.nf
+.ft C
+$ knife hp server delete 65646
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+Instance ID: 65646
+Instance Name: hp15\-185\-114\-127
+Flavor: 101
+Image: 1236
+Public IP Address: 15.185.114.127
+Private IP Address: 10.4.21.238
+
+WARNING: Deleted server 65646
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with an HP Cloud Compute account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife hp server list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-hp\-account ID\fP
+The access key identifier for the HP Cloud Compute account.
+.TP
+.B \fB\-\-hp\-auth URI\fP
+The URI used during authentication to the HP Cloud Compute account.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-hp\-secret SECRET\fP
+The secret key for the HP Cloud Compute account.
+.TP
+.B \fB\-T ID\fP, \fB\-\-hp\-tenant ID\fP
+The tenant identifier that represents a collection of service subscriptions and/or resources in the HP Cloud Compute account.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-hp\-zone ZONE\fP
+The name of the HP Cloud Compute availability zone.
+.UNINDENT
+.SS index rebuild
+.sp
+The \fBindex rebuild\fP sub\-command is used to rebuild the search indexes for Open Source Chef Server. This operation is destructive and may take some time.
+.IP Note
+This sub\-command ONLY works when run against the Open Source Chef Server and will not run against any other flavor of Chef, including Hosted Chef and Private Chef.
+.RE
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife index rebuild
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
+.UNINDENT
+.SS linode (plug\-in)
+.sp
+Linode is a cloud hosting platform that provides virtual private server hosting from the kernal and root access on up. The \fBlinode\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Linode.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-linode\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife linode [ARGUMENT] (options)
+.ft P
+.fi
+.SS datacenter list
+.sp
+The \fBdatacenter list\fP argument is used to view a list of available data centers, listed by data center ID and location.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode datacenter list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-linode\-api\-key KEY\fP
+The Linode API key.
+.UNINDENT
+.SS flavor list
+.sp
+The \fBflavor list\fP argument is used to get a list of servers from the Linode environment, listed by ID, name, RAM, disk, and Price.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode flavor list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-linode\-api\-key KEY\fP
+The Linode API key.
+.UNINDENT
+.SS image list
+.sp
+The \fBimage list\fP argument is used to list of images from the Linode environment, listed by ID, name, bits, and image size.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode image list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-linode\-api\-key KEY\fP
+The Linode API key.
+.UNINDENT
+.SS kernel list
+.sp
+The \fBkernel list\fP argument is used to view a list of available kernels, listed by ID and name.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode kernel list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-linode\-api\-key KEY\fP
+The Linode API key.
+.UNINDENT
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new Linode cloud instance. This will provision a new image in Linode, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode server create (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-linode\-api\-key KEY\fP
+The Linode API key.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-D DATACENTER\fP, \fB\-\-linode\-datacenter DATACENTER\fP
+The datacenter for the Linode server.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-linode\-flavor FLAVOR\fP
+The flavor of the Linode server.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-linode\-image IMAGE\fP
+The image for the Linode server.
+.TP
+.B \fB\-k KERNEL\fP, \fB\-\-linode\-kernel KERNEL\fP
+The kernel for the Linode server.
+.TP
+.B \fB\-L NAME\fP, \fB\-\-linode\-node\-name NAME\fP
+The name of the node in the Linode environment.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.UNINDENT
+.sp
+For example, to create a new instance, enter:
+.sp
+.nf
+.ft C
+$ xxxxx
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Linode cloud. To find a specific cloud instance, use the \fBknife linode server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode server delete LINODE_ID
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A KEY\fP, \fB\-\-linode\-api\-key KEY\fP
+The Linode API key.
+.UNINDENT
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Linode account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode server list
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.SS server reboot
+.sp
+The \fBserver reboot\fP argument is used to reboot all of the servers in a Linode environment.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode server reboot LINODE_ID
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.SS stackscript list
+.sp
+Linode StackScripts are customized distribution templates. This argument is used to view a list of Linode StackScripts that are currently being used.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife linode stackscript list
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.SS node
+.sp
+A node is a server or virtual server that is configured to be maintained by a chef\-client. A node can be physical or cloud\-based. A Chef organization can be comprised of any combination of physical and cloud\-based nodes. The chef\-client runs on each node and Ohai is used to collect data about the system so that Chef can use it. Each node keeps a cache that contains the most recent node object and all of the cookbooks that are used during configuration of the node.
+.sp
+The \fBnode\fP sub\-command is used to manage the nodes that exist on a Chef server.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife node [ARGUMENT] (options)
+.ft P
+.fi
+.SS bulk delete
+.sp
+The \fBbulk delete\fP argument is used to delete one or more nodes that match a pattern defined by a regular expression. The regular expression must be within quotes and not be surrounded by forward slashes (/).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node bulk delete REGEX
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife node bulk delete "^[0\-9]{3}$"
+.ft P
+.fi
+.sp
+Type \fBY\fP to confirm a deletion.
+.SS create
+.sp
+The \fBcreate\fP argument is used to add a node to the Chef server. Node data is stored as JSON on the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node create NODE_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to add a node, enter:
+.sp
+.nf
+.ft C
+$ knife node create node1
+.ft P
+.fi
+.sp
+In the $EDITOR enter the node data in JSON:
+.sp
+.nf
+.ft C
+## sample:
+{
+   "normal": {
+   },
+   "name": "foobar",
+   "override": {
+   },
+   "default": {
+   },
+   "json_class": "Chef::Node",
+   "automatic": {
+   },
+   "run_list": [
+      "recipe[zsh]",
+      "role[webserver]"
+   ],
+   "chef_type": "node"
+}
+.ft P
+.fi
+.sp
+When finished, save it.
+.SS delete
+.sp
+The \fBdelete\fP argument is used to delete a node from the Chef server.
+.IP Note
+Deleting a node will not delete any corresponding API clients.
+.RE
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node delete NODE_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to delete a node called "dev", enter:
+.sp
+.nf
+.ft C
+$ knife node delete dev
+.ft P
+.fi
+.SS edit
+.sp
+The \fBedit\fP argument is used to edit the details of a node on a Chef server. Node data is stored as JSON on the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node edit NODE_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-all\fP
+Displays a node in the $EDITOR. By default, attributes that are default, override, or automatic are not shown.
+.UNINDENT
+.sp
+For example, to edit the data for a node named "node1", enter:
+.sp
+.nf
+.ft C
+$ knife node edit node1 \-a
+.ft P
+.fi
+.sp
+Update the role data in JSON:
+.sp
+.nf
+.ft C
+## sample:
+{
+   "normal": {
+   },
+   "name": "node1",
+   "override": {
+   },
+   "default": {
+   },
+   "json_class": "Chef::Node",
+   "automatic": {
+   },
+   "run_list": [
+      "recipe[devops]",
+      "role[webserver]"
+   ],
+   "chef_type": "node"
+}
+.ft P
+.fi
+.sp
+When finished, save it.
+.SS from file
+.sp
+The \fBfrom file\fP argument is used to create a node using existing node data as a template.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node from file FILE
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife node from file \(aqpath to JSON file\(aq
+.ft P
+.fi
+.SS list
+.sp
+The \fBlist\fP argument is used to view all of the nodes that exist on a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife node list
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+i\-12345678
+rs\-123456
+.ft P
+.fi
+.SS run_list add
+.sp
+The \fBrun_list add\fP argument is used to add run list items (roles or recipes) to a node. A recipe must be in one of the following formats: fully qualified, cookbook, or default. Both roles and recipes must be in quotes, for example: \fB\(aqrole[ROLE_NAME]\(aq\fP or \fB\(aqrecipe[COOKBOOK::RECIPE_NAME]\(aq\fP. Use a comma to separate roles and recipes when adding more than one, like this: \fB\(aqrecipe[COOKBOOK::RECIPE_NAME],COOKBOOK::RECIPE_NAME,role[ROLE_NAME]\(aq\fP.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node run_list add NODE_NAME RUN_LIST_ITEM (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a ITEM\fP, \fB\-\-after ITEM\fP
+Use this to add the run list item after the specified run list item.
+.UNINDENT
+.sp
+For example, to add a role to a run list, enter:
+.sp
+.nf
+.ft C
+$ knife node run_list add node \(aqrole[ROLE_NAME]\(aq
+.ft P
+.fi
+.sp
+To add a recipe to a run list using the fully qualified format, enter:
+.sp
+.nf
+.ft C
+$ knife node run_list add node \(aqrecipe[COOKBOOK::RECIPE_NAME]\(aq
+.ft P
+.fi
+.sp
+To add a recipe to a run list using the cookbook format, enter:
+.sp
+.nf
+.ft C
+$ knife node run_list add node \(aqCOOKBOOK::RECIPE_NAME\(aq
+.ft P
+.fi
+.sp
+To add the default recipe of a cookbook to a run list, enter:
+.sp
+.nf
+.ft C
+$ knife node run_list add node \(aqCOOKBOOK\(aq
+.ft P
+.fi
+.sp
+To add roles and recipes to a run list, enter:
+.sp
+.nf
+.ft C
+$ knife node run_list add node \(aqrecipe[COOKBOOK::RECIPE_NAME],COOKBOOK::RECIPE_NAME,role[ROLE_NAME]\(aq
+.ft P
+.fi
+.SS run_list remove
+.sp
+The \fBrun_list remove\fP argument is used to remove run list items (roles or recipes) from a node. A recipe must be in one of the following formats: fully qualified, cookbook, or default. Both roles and recipes must be in quotes, for example: \fB\(aqrole[ROLE_NAME]\(aq\fP or \fB\(aqrecipe[COOKBOOK::RECIPE_NAME]\(aq\fP. Use a comma to separate roles and recipes when removing more than one, like this: \fB\(aqrecipe[COOKBOOK::RECIPE_NAME],COOKBOOK::RECIPE_NAME,role[ROLE_NAME]\(aq\fP.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node run_list remove NODE_NAME RUN_LIST_ITEM
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to remove a role from a run list, enter:
+.sp
+.nf
+.ft C
+$ knife node run_list remove node \(aqrole[ROLE_NAME]\(aq
+.ft P
+.fi
+.sp
+To remove a recipe from a run list using the fully qualified format, enter:
+.sp
+.nf
+.ft C
+$ knife node run_list remove node \(aqrecipe[COOKBOOK::RECIPE_NAME]\(aq
+.ft P
+.fi
+.SS show
+.sp
+The \fBshow\fP argument is used to display information about a node.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife node show NODE_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a ATTR\fP, \fB\-\-attribute ATTR\fP
+Indicates that only a single attribute is shown, as defined by the \fBATTR\fP value.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-l\fP, \fB\-\-long\fP
+Display long output when searching nodes while using the default summary format.
+.TP
+.B \fB\-m\fP, \fB\-\-medium\fP
+Display more, but not all, of a node\(aqs data when searching using the default summary format.
+.TP
+.B \fB\-r\fP, \fB\-\-run\-list\fP
+Indicates that only the run\-list will be shown.
+.UNINDENT
+.sp
+For example, to view all data for a node named "build", enter:
+.sp
+.nf
+.ft C
+$ knife node show build
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+Node Name:   build
+Environment: _default
+FQDN:
+IP:
+Run List:
+Roles:
+Recipes:
+Platform:
+.ft P
+.fi
+.sp
+To view the FQDN for a node named "i\-12345678", enter:
+.sp
+.nf
+.ft C
+$ knife node show i\-12345678 \-a fqdn
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+fqdn: ip\-10\-251\-75\-20.ec2.internal
+.ft P
+.fi
+.sp
+To view the run list for a node named "dev", enter:
+.sp
+.nf
+.ft C
+$ knife node show dev \-r
+.ft P
+.fi
+.SS openstack (plug\-in)
+.sp
+OpenStack is a cloud operating system that provides support for provisioning large networks of virtual machines, pluggable and scalable network and IP management, and object and block storage. The \fBopenstack\fP sub\-command is used to manage API\-driven cloud servers that are hosted by OpenStack.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-openstack\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife openstack [ARGUMENT] (options)
+.ft P
+.fi
+.SS flavor list
+.sp
+The \fBflavor list\fP argument is used to show a list of flavors in an OpenStack environment, including details such as ID, name, architecture, RAM, disk, and cores.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife openstack flavor list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-openstack\-access\-key\-id ID\fP
+The access key identifier used with the OpenStack environment.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-openstack\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-\-openstack\-api\-endpoint ENDPOINT\fP
+The API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.UNINDENT
+.sp
+For example, to xxxxx, enter:
+.sp
+.nf
+.ft C
+$ knife openstack flavor list
+.ft P
+.fi
+.SS image list
+.sp
+The \fBimage list\fP argument is used to show a list of images in an OpenStack environment, including details such as ID, kernel ID, architecture, root store, name, and location.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife openstack image list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-openstack\-access\-key\-id ID\fP
+The access key identifier used with the OpenStack environment.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-openstack\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-\-openstack\-api\-endpoint ENDPOINT\fP
+The API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.UNINDENT
+.sp
+For example, to view a list of images, enter:
+.sp
+.nf
+.ft C
+$ knife openstack image list
+.ft P
+.fi
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new OpenStack cloud instance.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife openstack server create (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-openstack\-access\-key\-id ID\fP
+The access key identifier used with the OpenStack environment.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-G X,Y,Z\fP, \fB\-\-groups X,Y,Z\fP
+A comma\-separated list of security groups.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-image IMAGE\fP
+The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-openstack\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-\-openstack\-api\-endpoint ENDPOINT\fP
+The API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.TP
+.B \fB\-S KEY\fP, \fB\-\-ssh\-key KEY\fP
+The SSH key for the OpenStack environment.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-x USERNAME\fP, \fB\-\-ssh\-user USERNAME\fP
+The SSH user name.
+.TP
+.B \fB\-Z ZONE"\fP, \fB\-\-availability\-zone ZONE\fP
+The name of the OpenStack availability zone. Each availability zone is unique within a region. Default: \fBus\-east\-1b\fP.
+.UNINDENT
+.sp
+For example, to create a new instance, enter:
+.sp
+.nf
+.ft C
+$ xxxxx
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the OpenStack cloud. To find a specific cloud instance, use the \fBknife openstack server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife openstack server delete [SERVER...]
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-openstack\-access\-key\-id ID\fP
+The access key identifier used with the OpenStack environment.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-openstack\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-\-openstack\-api\-endpoint ENDPOINT\fP
+The API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.UNINDENT
+.sp
+For example, to delete a server named "qa\-test\-01", enter:
+.sp
+.nf
+.ft C
+$ knife openstack server delete qa\-test\-01
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with an OpenStack account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife openstack server list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A ID\fP, \fB\-\-openstack\-access\-key\-id ID\fP
+The access key identifier used with the OpenStack environment.
+.TP
+.B \fB\-K SECRET\fP, \fB\-\-openstack\-secret\-access\-key SECRET\fP
+The secret access key for the API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-\-openstack\-api\-endpoint ENDPOINT\fP
+The API endpoint used with the OpenStack environment.
+.TP
+.B \fB\-\-region REGION\fP
+The name of the region from which instances of hosted applications are launched.
+.UNINDENT
+.SS rackspace (plug\-in)
+.sp
+Rackspace is a cloud\-driven platform of virtualized servers that provide services for storage and data, platform and networking, and cloud computing. The \fBrackspace\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Rackspace cloud services.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-rackspace\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife rackspace [ARGUMENT] (options)
+.ft P
+.fi
+.SS flavor list
+.sp
+The \fBflavor list\fP argument is used to view a list of flavors that are running on servers that are associated with a Rackspace account, including the server ID, server name, architecture, RAM, and disk. The results may show flavor that are not currently managed by the Chef Server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife rackspace flavor list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-K API_KEY\fP, \fB\-\-rackspace\-api\-key API_KEY\fP
+The unique alphanumeric identifier that is associated with a Rackspace account.
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-rackspace\-username USER_NAME\fP
+The user name for the Rackspace account.
+.TP
+.B \fB\-\-rackspace\-api\-auth\-url\fP
+The URL used to authenticate the Rackspace API key. Default: \fBauth.api.rackspacecloud.com\fP.
+.UNINDENT
+.SS image list
+.sp
+The \fBimage list\fP argument is used to view a list of images that are running on servers that are hosted at a Rackspace cloud services, including returning a list of each server (and server ID).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife rackspace image list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-K API_KEY\fP, \fB\-\-rackspace\-api\-key API_KEY\fP
+The unique alphanumeric identifier that is associated with a Rackspace account.
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-rackspace\-username USER_NAME\fP
+The user name for the Rackspace account.
+.TP
+.B \fB\-\-rackspace\-api\-auth\-url\fP
+The URL used to authenticate the Rackspace API key. Default: \fBauth.api.rackspacecloud.com\fP.
+.UNINDENT
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new Rackspace cloud instance. This will provision a new image in Rackspace, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife rackspace server create (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-rackspace\-username USER_NAME\fP
+The user name for the Rackspace account.
+.TP
+.B \fB\-\-bootstrap\-version VERSION"\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-image IMAGE\fP
+The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
+.TP
+.B \fB\-j JSON_ATTRIBS\fP, \fB\-\-json\-attributes\fP
+A JSON string that is added to the first run of a chef\-client.
+.TP
+.B \fB\-K API_KEY\fP, \fB\-\-rackspace\-api\-key API_KEY\fP
+The unique alphanumeric identifier that is associated with a Rackspace account.
+.TP
+.B \fB\-M JSON\fP, \fB\-\-rackspace\-metadata JSON\fP
+A JSON string that contains a metadata hash.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-\-rackspace\-api\-auth\-url\fP
+The URL used to authenticate the Rackspace API key. Default: \fBauth.api.rackspacecloud.com\fP.
+.TP
+.B \fB\-S NAME\fP, \fB\-\-server\-name NAME\fP
+The name of the server.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-x USERNAME\fP, \fB\-\-ssh\-user USERNAME\fP
+The SSH user name.
+.UNINDENT
+.sp
+To launch a new Rackspace instance with the "webserver" role, enter:
+.sp
+.nf
+.ft C
+$ knife rackspace server create \-r \(aqrole[webserver]\(aq \-\-server\-name server01 \-\-node\-name server01 \-\-image 49 \-\-flavor 2
+.ft P
+.fi
+.sp
+To launch a new Rackspace instance with multiple roles, enter:
+.sp
+.nf
+.ft C
+$ knife rackspace server create \-r \(aqrole[base],role[webserver]\(aq \-\-server\-name server01 \-N server01 \-\-image 49 \-\-flavor 2
+.ft P
+.fi
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Rackspace cloud. The corresponding node on the Chef server can also be deleted with the same action. To find a specific cloud instance, use the \fBknife rackspace server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife rackspace server delete [SERVER_ID...]
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-K API_KEY\fP, \fB\-\-rackspace\-api\-key API_KEY\fP
+The unique alphanumeric identifier that is associated with a Rackspace account.
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-rackspace\-username USER_NAME\fP
+The user name for the Rackspace account.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node on the Chef server. This option only has meaning when used with the \fB\-\-purge\fP option.
+.TP
+.B \fB\-p\fP, \fB\-\-purge\fP
+Indicates that all corresponding nodes on the Chef server will be destroyed, in addition to the Rackspace node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the \fB\-\-node\-name\fP option to specify the correct name for the node.
+.TP
+.B \fB\-\-rackspace\-api\-auth\-url\fP
+The URL used to authenticate the Rackspace API key. Default: \fBauth.api.rackspacecloud.com\fP.
+.UNINDENT
+.sp
+For example, to delete a Rackspace instance with an Instance ID of "12345678", enter:
+.sp
+.nf
+.ft C
+$ knife rackspace server delete 12345678
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+Instance ID: 12345678
+Host ID: testexample
+Name: slice12345678
+Flavor: 1GB server
+Image: Ubuntu 10.04 LTS (lucid)
+Public DNS Name: 1\-1\-1\-1.static.cloud\-ips.com
+Public IP Address: 1.1.1.1
+Private IP Address: 192.168.1.1
+.ft P
+.fi
+.sp
+Confirm the deletion:
+.sp
+.nf
+.ft C
+Do you really want to delete this server? (Y/N) Y
+WARNING: Deleted server 12345678 named slice12345678
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Rackspace account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife rackspace server list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-K API_KEY\fP, \fB\-\-rackspace\-api\-key API_KEY\fP
+The unique alphanumeric identifier that is associated with a Rackspace account.
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-rackspace\-username USER_NAME\fP
+The user name for the Rackspace account.
+.TP
+.B \fB\-\-rackspace\-api\-auth\-url\fP
+The URL used to authenticate the Rackspace API key. Default: \fBauth.api.rackspacecloud.com\fP.
+.UNINDENT
+.sp
+For example, to find all Rackspace instances, enter:
+.sp
+.nf
+.ft C
+$ knife cloud rackspace list
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+Instance ID    Public IP    Private IP    Flavor    Image     State     Name
+12345678       1.1.1.1      192.168.1.1   3         49        active    slice12345678
+.ft P
+.fi
+.SS recipe list
+.sp
+The \fBrecipe list\fP sub\-command is used to view all of the recipes that are on a Chef server. A regular expression can be used to limit the results to recipes that match a specific pattern. The regular expression must be within quotes and not be surrounded by forward slashes (/).
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife recipe list REGEX
+.ft P
+.fi
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife role list \(aqcouchdb::*\(aq
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+couchdb::main_monitors
+couchdb::master
+couchdb::default
+couchdb::org_cleanu
+.ft P
+.fi
+.SS role
+.sp
+A role is a way to define certain patterns and processes that exist across nodes in a Chef organization as belonging to a single job function. Each role consists of one (or more) attributes and a run list. Each node can have one (or more) roles assigned to it. When a role is run against a node the configuration details of that node are compared against the attributes of the role, and then the contents of that role\(aqs run list are applied to the node\(aqs configuration details. When a chef\-client runs, it merges its own attributes and run lists with those contained within each assigned role.
+.sp
+The \fBrole\fP sub\-command is used to manage the roles that are associated with one or more nodes on a Chef server.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife role [ARGUMENT] (options)
+.ft P
+.fi
+.IP Note
+Use the \fBnode\fP sub\-command (and the \fBrun_list add node\fP argument) to add a role to a node on the Chef server.
+.RE
+.SS bulk delete
+.sp
+The \fBbulk delete\fP argument is used to delete one or more roles that match a pattern defined by a regular expression. The regular expression must be within quotes and not be surrounded by forward slashes (/).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife role bulk delete REGEX
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife role bulk delete "^[0\-9]{3}$"
+.ft P
+.fi
+.SS create
+.sp
+The \fBcreate\fP argument is used to add a role to the Chef server. To add a role to a node, you must use the \fBnode\fP sub\-command and the \fBrun\-list add\fP argument. Role data is saved as JSON on the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife role create ROLE_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-d DESCRIPTION\fP, \fB\-\-description DESCRIPTION\fP
+The description of the role. This value will populate the description field for the role on the Chef server.
+.UNINDENT
+.sp
+For example, to add a role named "role1", enter:
+.sp
+.nf
+.ft C
+$ knife role create role1
+.ft P
+.fi
+.sp
+In the $EDITOR enter the role data in JSON:
+.sp
+.nf
+.ft C
+## sample:
+{
+   "name": "role1",
+   "default_attributes": {
+   },
+   "json_class": "Chef::Role",
+   "run_list": [
+
+   ],
+   "description": "",
+   "chef_type": "role",
+   "override_attributes": {
+   }
+}
+.ft P
+.fi
+.sp
+When finished, save it.
+.SS delete
+.sp
+The \fBdelete\fP argument is used to delete a role from the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife role delete ROLE_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife role delete devops
+.ft P
+.fi
+.sp
+Type \fBY\fP to confirm a deletion.
+.SS edit
+.sp
+The \fBedit\fP argument is used to edit role details on the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife role edit ROLE_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to edit the data for a role named "role1", enter:
+.sp
+.nf
+.ft C
+$ knife role edit role1
+.ft P
+.fi
+.sp
+Update the role data in JSON:
+.sp
+.nf
+.ft C
+## sample:
+{
+   "name": "role1",
+   "default_attributes": {
+   },
+   "json_class": "Chef::Role",
+   "run_list": [
+
+   ],
+   "description": "This is the description for the role1 role.",
+   "chef_type": "role",
+   "override_attributes": {
+   }
+}
+.ft P
+.fi
+.sp
+When finished, save it.
+.SS from file
+.sp
+The \fBfrom file\fP argument is used to create a role using existing JSON data as a template.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife role from file FILE
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife role from file "path to JSON file"
+.ft P
+.fi
+.SS list
+.sp
+The \fBlist\fP argument is used to view a list of roles that are currently available on the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife role list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example, to view a list of roles on the Chef server and display the URI for each role returned, enter:
+.sp
+.nf
+.ft C
+$ knife role list \-w
+.ft P
+.fi
+.SS show
+.sp
+The \fBshow\fP argument is used to view the details of a role.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife role show ROLE_NAME
+.ft P
+.fi
+.sp
+This sub\-command has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a ATTR\fP, \fB\-\-attribute ATTR\fP
+Indicates that only a single attribute is shown, as defined by the \fBATTR\fP value.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife role show devops
+.ft P
+.fi
+.SS search
+.sp
+Search indexes allow queries to be made for any type of data that is indexed by a Chef server, including data for a chef\-client, data bags (and data bag items), environments, nodes, and roles. Chef has a defined query syntax that includes search patterns like exact, wildcard, range, and fuzzy. The search engine is based on Apache Solr and is run from a Chef server. A search is a full\-text query that can be done from within a recipe or by using the \fBsearch\fP sub\-command in Knife.
+.sp
+The \fBsearch\fP sub\-command is used run a search query for information that is indexed on a Chef server.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife search INDEX SEARCH_QUERY (options)
+.ft P
+.fi
+.sp
+This sub\-command has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a ATTR\fP, \fB\-\-attribute ATTR\fP
+Indicates that only a single attribute is shown, as defined by the \fBATTR\fP value.
+.TP
+.B \fB\-b ROW\fP, \fB\-start ROW\fP
+The row at which return results will begin.
+.TP
+.B \fB\-i\fP, \fB\-\-id\-only\fP
+Indicates that only matching object IDs will be shown.
+.TP
+.B \fBINDEX\fP
+The name of the index to be queried: \fBclient\fP, \fBenvironment\fP, \fBnode\fP, \fBrole\fP, or \fBDATA_BAG_NAME\fP.
+.TP
+.B \fB\-l\fP, \fB\-\-long\fP
+Display long output when searching nodes while using the default summary format.
+.TP
+.B \fB\-m\fP, \fB\-\-medium\fP
+Display more, but not all, of a node\(aqs data when searching using the default summary format.
+.TP
+.B \fB\-o SORT\fP, \fB\-\-sort SORT\fP
+The order in which search results will be sorted.
+.TP
+.B \fB\-q SEARCH_QUERY\fP, \fB\-\-query SEARCH_QUERY\fP
+Use to protect search queries that start with a hyphen (\-). A \fB\-q\fP query may be specified as an argument or an option, but not both.
+.TP
+.B \fB\-r\fP, \fB\-\-run\-list\fP
+Indicates that only the run\-list will be shown.
+.TP
+.B \fB\-R INT\fP, \fB\-\-rows INT\fP
+The number of rows to be returned.
+.TP
+.B \fBSEARCH_QUERY\fP
+The search query used to identify a a list of items on a Chef server. This option uses the same syntax as the \fBsearch\fP sub\-command.
+.UNINDENT
+.sp
+For example, to search for the IDs of all nodes running on the Amazon EC2 platform, enter:
+.sp
+.nf
+.ft C
+$ knife search node \(aqec2:*\(aq \-i
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+4 items found
+
+ip\-0A7CA19F.ec2.internal
+
+ip\-0A58CF8E.ec2.internal
+
+ip\-0A58E134.ec2.internal
+
+ip\-0A7CFFD5.ec2.internal
+.ft P
+.fi
+.sp
+To search for the instance type (flavor) of all nodes running on the Amazon EC2 platform, enter:
+.sp
+.nf
+.ft C
+$ knife search node \(aqec2:*\(aq \-a ec2.instance_type
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+4 items found
+
+ec2.instance_type:  m1.large
+id:                 ip\-0A7CA19F.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip\-0A58CF8E.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip\-0A58E134.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip\-0A7CFFD5.ec2.internal
+.ft P
+.fi
+.sp
+To search for all nodes running Ubuntu, enter:
+.sp
+.nf
+.ft C
+$ knife search node \(aqplatform:ubuntu\(aq
+.ft P
+.fi
+.sp
+To search for all nodes running CentOS in the production environment, enter:
+.sp
+.nf
+.ft C
+$ knife search node \(aqchef_environment:production AND platform:centos\(aq
+.ft P
+.fi
+.SS ssh
+.sp
+The \fBssh\fP sub\-command is used to invoke SSH commands (in parallel) on a subset of nodes within an organization, based on the results of a search query.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife ssh SEARCH_QUERY SSH_COMMAND (options)
+.ft P
+.fi
+.sp
+This sub\-command has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a SSH_ATTR\fP, \fB\-\-attribute SSH_ATTR\fP
+The attribute that is used when opening the SSH connection. The default attribute is the fully\-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
+.TP
+.B \fB\-C NUM\fP, \fB\-\-concurrency NUM\fP
+The number of allowed concurrent connections.
+.TP
+.B \fB\-G GATEWAY\fP, \fB\-\-ssh\-gateway GATEWAY\fP
+The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTIFY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-m\fP, \fB\-\-manual\-list\fP
+Indicates that a search query is a space\-separated list of servers.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-p PORT\fP, \fB\-\-ssh\-port PORT\fP
+The SSH port.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fBSEARCH_QUERY\fP
+The search query used to return a list of servers to be accessed using SSH and the specified \fBSSH_COMMAND\fP. This option uses the same syntax as the search sub\-command.
+.TP
+.B \fBSSH_COMMAND\fP
+The command that will be run against the results of a search query.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.UNINDENT
+.sp
+For example, to query for all nodes that have the "webserver" role and then use SSH to run the command "sudo chef\-client", enter:
+.sp
+.nf
+.ft C
+$ knife ssh "role:webserver" "sudo chef\-client"
+.ft P
+.fi
+.sp
+To upgrade all nodes, enter:
+.sp
+.nf
+.ft C
+$ knife ssh name:* "sudo aptitude upgrade \-y"
+.ft P
+.fi
+.sp
+To find the uptime of all of your Web servers running Ubuntu on the Amazon EC2 platform, enter:
+.sp
+.nf
+.ft C
+$ knife ssh "role:web" "uptime" \-x ubuntu \-a ec2.public_hostname
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+ec2\-174\-129\-127\-206.compute\-1.amazonaws.com  13:50:47 up 1 day, 23:26,  1 user,  load average: 0.25, 0.18, 0.11
+ec2\-67\-202\-63\-102.compute\-1.amazonaws.com    13:50:47 up 1 day, 23:33,  1 user,  load average: 0.12, 0.13, 0.10
+ec2\-184\-73\-9\-250.compute\-1.amazonaws.com     13:50:48 up 16:45,  1 user,  load average: 0.30, 0.22, 0.13
+ec2\-75\-101\-240\-230.compute\-1.amazonaws.com   13:50:48 up 1 day, 22:59,  1 user,  load average: 0.24, 0.17, 0.11
+ec2\-184\-73\-60\-141.compute\-1.amazonaws.com    13:50:48 up 1 day, 23:30,  1 user,  load average: 0.32, 0.17, 0.15
+.ft P
+.fi
+.sp
+To force a chef\-client run on all of your Web servers running Ubuntu on the Amazon EC2 platform, enter:
+.sp
+.nf
+.ft C
+$ knife ssh "role:web" "sudo chef\-client" \-x ubuntu \-a ec2.public_hostname
+.ft P
+.fi
+.sp
+to return:
+.sp
+.nf
+.ft C
+ec2\-67\-202\-63\-102.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:37 +0000] INFO: Starting Chef Run (Version 0.9.10)
+ec2\-174\-129\-127\-206.compute\-1.amazonaws.com [Fri, 22 Oct 2010 14:18:37 +0000] INFO: Starting Chef Run (Version 0.9.10)
+ec2\-184\-73\-9\-250.compute\-1.amazonaws.com    [Fri, 22 Oct 2010 14:18:38 +0000] INFO: Starting Chef Run (Version 0.9.10)
+ec2\-75\-101\-240\-230.compute\-1.amazonaws.com  [Fri, 22 Oct 2010 14:18:38 +0000] INFO: Starting Chef Run (Version 0.9.10)
+ec2\-184\-73\-60\-141.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:38 +0000] INFO: Starting Chef Run (Version 0.9.10)
+ec2\-174\-129\-127\-206.compute\-1.amazonaws.com [Fri, 22 Oct 2010 14:18:39 +0000] INFO: Chef Run complete in 1.419243 seconds
+ec2\-174\-129\-127\-206.compute\-1.amazonaws.com [Fri, 22 Oct 2010 14:18:39 +0000] INFO: cleaning the checksum cache
+ec2\-174\-129\-127\-206.compute\-1.amazonaws.com [Fri, 22 Oct 2010 14:18:39 +0000] INFO: Running report handlers
+ec2\-174\-129\-127\-206.compute\-1.amazonaws.com [Fri, 22 Oct 2010 14:18:39 +0000] INFO: Report handlers complete
+ec2\-67\-202\-63\-102.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:39 +0000] INFO: Chef Run complete in 1.578265 seconds
+ec2\-67\-202\-63\-102.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:39 +0000] INFO: cleaning the checksum cache
+ec2\-67\-202\-63\-102.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:39 +0000] INFO: Running report handlers
+ec2\-67\-202\-63\-102.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:39 +0000] INFO: Report handlers complete
+ec2\-184\-73\-9\-250.compute\-1.amazonaws.com    [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Chef Run complete in 1.638884 seconds
+ec2\-184\-73\-9\-250.compute\-1.amazonaws.com    [Fri, 22 Oct 2010 14:18:40 +0000] INFO: cleaning the checksum cache
+ec2\-184\-73\-9\-250.compute\-1.amazonaws.com    [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Running report handlers
+ec2\-184\-73\-9\-250.compute\-1.amazonaws.com    [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Report handlers complete
+ec2\-75\-101\-240\-230.compute\-1.amazonaws.com  [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Chef Run complete in 1.540257 seconds
+ec2\-75\-101\-240\-230.compute\-1.amazonaws.com  [Fri, 22 Oct 2010 14:18:40 +0000] INFO: cleaning the checksum cache
+ec2\-75\-101\-240\-230.compute\-1.amazonaws.com  [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Running report handlers
+ec2\-75\-101\-240\-230.compute\-1.amazonaws.com  [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Report handlers complete
+ec2\-184\-73\-60\-141.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Chef Run complete in 1.502489 seconds
+ec2\-184\-73\-60\-141.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:40 +0000] INFO: cleaning the checksum cache
+ec2\-184\-73\-60\-141.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Running report handlers
+ec2\-184\-73\-60\-141.compute\-1.amazonaws.com   [Fri, 22 Oct 2010 14:18:40 +0000] INFO: Report handlers complete
+.ft P
+.fi
+.SS status
+.sp
+The \fBstatus\fP sub\-command is used to display a brief summary of the nodes on a Chef server, including the time of the most recent successful chef\-client run.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife status (options)
+.ft P
+.fi
+.sp
+This sub\-command has the following options:
+.INDENT 0.0
+.TP
+.B \fBQUERY\fP
+The search query used to identify a a list of items on a Chef server. This option uses the same syntax as the \fBsearch\fP sub\-command.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.UNINDENT
+.sp
+For example, to view the status of all nodes in the organization, enter:
+.sp
+.nf
+.ft C
+$ knife status
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+20 hours ago, dev\-vm.chisamore.com, ubuntu 10.04, dev\-vm.chisamore.com, 10.66.44.126
+3 hours ago, i\-225f954f, ubuntu 10.04, ec2\-67\-202\-63\-102.compute\-1.amazonaws.com, 67.202.63.102
+3 hours ago, i\-a45298c9, ubuntu 10.04, ec2\-174\-129\-127\-206.compute\-1.amazonaws.com, 174.129.127.206
+3 hours ago, i\-5272a43f, ubuntu 10.04, ec2\-184\-73\-9\-250.compute\-1.amazonaws.com, 184.73.9.250
+3 hours ago, i\-226ca64f, ubuntu 10.04, ec2\-75\-101\-240\-230.compute\-1.amazonaws.com, 75.101.240.230
+3 hours ago, i\-f65c969b, ubuntu 10.04, ec2\-184\-73\-60\-141.compute\-1.amazonaws.com, 184.73.60.141
+.ft P
+.fi
+.sp
+To include run lists in the status, enter:
+.sp
+.nf
+.ft C
+$ knife status \-\-run\-list
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+20 hours ago, dev\-vm.chisamore.com, ubuntu 10.04, dev\-vm.chisamore.com, 10.66.44.126, role[lb].
+3 hours ago, i\-225f954f, ubuntu 10.04, ec2\-67\-202\-63\-102.compute\-1.amazonaws.com, 67.202.63.102, role[web].
+3 hours ago, i\-a45298c9, ubuntu 10.04, ec2\-174\-129\-127\-206.compute\-1.amazonaws.com, 174.129.127.206, role[web].
+3 hours ago, i\-5272a43f, ubuntu 10.04, ec2\-184\-73\-9\-250.compute\-1.amazonaws.com, 184.73.9.250, role[web].
+3 hours ago, i\-226ca64f, ubuntu 10.04, ec2\-75\-101\-240\-230.compute\-1.amazonaws.com, 75.101.240.230, role[web].
+3 hours ago, i\-f65c969b, ubuntu 10.04, ec2\-184\-73\-60\-141.compute\-1.amazonaws.com, 184.73.60.141, role[web].
+.ft P
+.fi
+.sp
+To show the status of a subset of nodes that are returned by a specific query, enter:
+.sp
+.nf
+.ft C
+$ knife status "role:web" \-\-run\-list
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+3 hours ago, i\-225f954f, ubuntu 10.04, ec2\-67\-202\-63\-102.compute\-1.amazonaws.com, 67.202.63.102, role[web].
+3 hours ago, i\-a45298c9, ubuntu 10.04, ec2\-174\-129\-127\-206.compute\-1.amazonaws.com, 174.129.127.206, role[web].
+3 hours ago, i\-5272a43f, ubuntu 10.04, ec2\-184\-73\-9\-250.compute\-1.amazonaws.com, 184.73.9.250, role[web].
+3 hours ago, i\-226ca64f, ubuntu 10.04, ec2\-75\-101\-240\-230.compute\-1.amazonaws.com, 75.101.240.230, role[web].
+3 hours ago, i\-f65c969b, ubuntu 10.04, ec2\-184\-73\-60\-141.compute\-1.amazonaws.com, 184.73.60.141, role[web].
+.ft P
+.fi
+.SS tag
+.sp
+A tag is a custom description that is applied to a node. A tag, once applied, can be helpful when managing nodes using Knife or when building recipes by providing alternate methods of grouping similar types of information.
+.sp
+The \fBtag\fP sub\-command is used to apply tags to nodes on a Chef server.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife tag [ARGUMENT]
+.ft P
+.fi
+.SS create
+.sp
+The \fBcreate\fP argument is used to add one or more tags to a node.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife tag create NODE_NAME [TAG...]
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife tag create node tag1 tag2 tag3
+.ft P
+.fi
+.SS delete
+.sp
+The \fBdelete\fP argument is used to delete one or more tags from a node.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife tag delete NODE_NAME [TAG...]
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife tag delete node tag1 tag2 tag3
+.ft P
+.fi
+.sp
+Type \fBY\fP to confirm a deletion.
+.SS list
+.sp
+The \fBlist\fP argument is used to list all of the tags that have been applied to one or more nodes.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife tag list [NODE_NAME...]
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to view the tags for a single node, enter:
+.sp
+.nf
+.ft C
+$ knife tag list node
+.ft P
+.fi
+.sp
+To view tags for more than one node, just specify the additional nodes:
+.sp
+.nf
+.ft C
+$ knife tag list node1 node2 node3
+.ft P
+.fi
+.SS terremark (plug\-in)
+.sp
+Terremark is a cloud hosting platform that provides cloud, IT infrastructure, and managed hosting services. The \fBterremark\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Terremark.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-terremark\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife terremark [ARGUMENT] (options)
+.ft P
+.fi
+.SS server create
+.sp
+The \fBserver create\fP argument is used to create a new Terremark instance.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife terremark server create SERVER_NAME [RUN_LIST] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-terremark\-username USER_NAME\fP
+A user name with permission to access a Terremark service.
+.TP
+.B \fB\-K PASSWORD\fP, \fB\-\-terremark\-password PASSWORD\fP
+The password for the Terremark service.
+.TP
+.B \fB\-S SERVICE\fP, \fB\-\-terremark\-service SERVICE\fP
+The name of the Terremark service.
+.UNINDENT
+.sp
+For example, to create a new instance, enter:
+.sp
+.nf
+.ft C
+$ knife terremark server list server_name \-A useraccount \-K password \-S service_name
+.ft P
+.fi
+.sp
+To provision a new dual\-core 1.0 GB Ubuntu 10.04 web server with three attached disks with sizes of "25G", "50G", and "50G", enter something like:
+.sp
+.nf
+.ft C
+$ knife terremark server create \-\-vcpus 2 \-m 1024 \-I 40 \-A \(aqusername\(aq \-K "password"
+  \-r \(aqrole[webserver]\(aq \-i ~/.ssh/ssh\-identity\-file.pem \-N web\-server\-nginx \-\-tcp 80,8080
+  \-\-udp 5050 \-\-disks 25,50,50
+.ft P
+.fi
+.sp
+\fBjamescott: TO THE ABOVE SAMPLE, PENDING REVIEW QUESTION WITH CHIRAG.\fP
+.SS server delete
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Terremark cloud. To find a specific cloud instance, use the \fBknife terremark server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife terremark server delete SERVER_ID
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to delete an instance with an identifier of "abcdefg", enter:
+.sp
+.nf
+.ft C
+$ knife terremark server delete abcdefg
+.ft P
+.fi
+.SS server list
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Terremark account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife terremark server list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-terremark\-username USER_NAME\fP
+A user name with permission to access a Terremark service.
+.TP
+.B \fB\-K PASSWORD\fP, \fB\-\-terremark\-password PASSWORD\fP
+The password for the Terremark service.
+.TP
+.B \fB\-S SERVICE_NAME\fP, \fB\-\-terremark\-service SERVICE_NAME\fP
+The name of the Terremark service.
+.UNINDENT
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife terremark server list \-A useraccount \-K password \-S service_name
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+xxxxx
+.ft P
+.fi
+.SS windows (plug\-in)
+.sp
+The \fBwindows\fP sub\-command is used to configure and interact with nodes that exist on server and/or desktop machines that are running Microsoft Windows. Nodes are configured using Windows Remote Management, which allows native objects\-\-\-batch scripts, Windows PowerShell scripts, or scripting library variables\-\-\-to be called by external applications.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-windows\fP.
+.sp
+This sub\-command has the following syntax when connecting to one (or more) machines that run Microsoft Windows:
+.sp
+.nf
+.ft C
+knife winrm [ARGUMENT] (options)
+.ft P
+.fi
+.sp
+And the following syntax when performing a bootstrap:
+.sp
+.nf
+.ft C
+knife bootstrap windows [ARGUMENT] (options)
+.ft P
+.fi
+.SS bootstrap windows ssh
+.sp
+The \fBbootstrap windows ssh\fP argument is used to bootstrap Chef installations in a Microsoft Windows environment, using a command shell that is native to Microsoft Windows.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bootstrap windows ssh (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-\-bootstrap\-proxy PROXY_URL\fP
+The proxy server for the node that is the target of a bootstrap operation.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-p PORT\fP, \fB\-\-ssh\-port PORT\fP
+The SSH port.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-s SECRET\fP, \fB\-\-secret SECRET\fP
+The encryption key that is used for values contained within a data bag.
+.TP
+.B \fB\-\-secret\-file FILE\fP
+The path to the file that contains the encryption key.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife bootstrap windows ssh ec2\-50\-xx\-xx\-124.compute\-1.amazonaws.com \-r \(aqrole[webserver],role[production]\(aq \-x Administrator \-i ~/.ssh/id_rsa
+.ft P
+.fi
+.SS bootstrap windows winrm
+.sp
+The \fBbootstrap windows winrm\fP argument is used to bootstrap Chef installations in a Microsoft Windows environment, using Windows Remote Management and the WS\-Management protocol for communication. This argument requires the fully\-qualified domain name of the host machine to be specified.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bootstrap windows winrm FQDN
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-\-bootstrap\-proxy PROXY_URL\fP
+The proxy server for the node that is the target of a bootstrap operation.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-s SECRET\fP, \fB\-\-secret SECRET\fP
+The encryption key that is used for values contained within a data bag.
+.TP
+.B \fB\-\-secret\-file FILE\fP
+The path to the file that contains the encryption key.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife bootstrap windows winrm ec2\-50\-xx\-xx\-124.compute\-1.amazonaws.com \-r \(aqrole[webserver],role[production]\(aq \-x Administrator \-P \(aqsuper_secret_password\(aq
+.ft P
+.fi
+.SS winrm
+.sp
+The \fBwinrm\fP argument is used to create a connection to one or more remote machines. As each connection is created, a password must be provided. This argument uses the same syntax as the \fBsearch\fP sub\-command.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife winrm SEARCH_QUERY SSH_COMMAND (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a ATTR\fP, \fB\-\-attribute ATTR\fP
+The attribute that is used when opening the SSH connection. The default attribute is the fully\-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
+.TP
+.B \fB\-f CA_TRUST_FILE\fP, \fB\-\-ca\-trust\-file CA_TRUST_FILE\fP
+The certificate authority (CA) trust file used for SSL transport.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-i KEYTAB_FILE\fP, \fB\-\-keytab\-file KEYTAB_FILE\fP
+The keytab file that contains the encryption key required by Kerberos\-based authentication.
+.TP
+.B \fB\-m\fP, \fB\-\-manual\-list\fP
+Indicates that a search query is a space\-separated list of servers.
+.TP
+.B \fB\-p PORT\fP, \fB\-\-winrm\-port PORT\fP
+The Windows Remote Management port. Default: \fB5985\fP.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-winrm\-password PASSWORD\fP
+The Windows Remote Management password.
+.TP
+.B \fB\-R KERBEROS_REALM\fP, \fB\-\-kerberos\-realm KERBEROS_REALM\fP
+The administrative domain to which a user belongs.
+.TP
+.B \fB\-\-returns CODES\fP
+A comma\-delimited list of return codes, which indicate the success or failure for the command that was run remotely.
+.TP
+.B \fB\-S KERBEROS_SERVICE\fP, \fB\-\-kerberos\-service KERBEROS_SERVICE\fP
+The service principal used during Kerberos\-based authentication.
+.TP
+.B \fBSEARCH_QUERY\fP
+The search query used to return a list of servers to be accessed using SSH and the specified \fBSSH_COMMAND\fP. This option uses the same syntax as the search sub\-command.
+.TP
+.B \fBSSH_COMMAND\fP
+The command that will be run against the results of a search query.
+.TP
+.B \fB\-t TRANSPORT\fP, \fB\-\-winrm\-transport TRANSPORT\fP
+The Windows Remote Management transport type: \fBssl\fP or \fBplaintext\fP.
+.TP
+.B \fB\-x USERNAME\fP, \fB\-\-winrm\-user USERNAME\fP
+The Windows Remote Management user name.
+.UNINDENT
+.sp
+For example, to find the uptime of all web servers, enter:
+.sp
+.nf
+.ft C
+$ knife winrm "role:web" "net stats srv" \-x Administrator \-P password
+.ft P
+.fi
+.sp
+Or, to force a Chef run:
+.sp
+.nf
+.ft C
+knife winrm \(aqec2\-50\-xx\-xx\-124.amazonaws.com\(aq \(aqchef\-client \-c c:/chef/client.rb\(aq \-m \-x admin \-P \(aqpassword\(aq
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: Starting Chef Run (Version 0.9.12)
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] WARN: Node ip\-0A502FFB has an empty run list.
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: Chef Run complete in 4.383966 seconds
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: cleaning the checksum cache
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: Running report handlers
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: Report handlers complete
+.ft P
+.fi
+.sp
+Where in the examples above, \fB[date]\fP represents the date and time the long entry was created. For example: \fB[Fri, 04 Mar 2011 22:00:53 +0000]\fP.
+.SH AUTHOR
+Opscode, Inc.
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.
