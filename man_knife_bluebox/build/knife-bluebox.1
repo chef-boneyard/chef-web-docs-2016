@@ -1,0 +1,150 @@
+.TH "KNIFE-BLUEBOX" "1" "September 28, 2012" "0.0.1" "knife-bluebox"
+.SH NAME
+knife-bluebox \- knife-bluebox
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+Blue Box provides on\-demand computing that is backed by a proprietary cloud operating system. The \fBbluebox\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Blue Box.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-bluebox\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox [ARGUMENT] (options)
+.ft P
+.fi
+.SH IMAGES LIST
+.sp
+The \fBimages list\fP argument is used to view a list of images that are running on servers that are hosted by Blue Box, including returning a list of each server (and server ID). The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox images list
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.SH SERVER CREATE
+.sp
+The \fBserver create\fP argument is used to create a new Blue Box cloud instance. A comma\-separated run\-list of roles and/or recipes must be specified.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox server create [RUN_LIST...] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-b LB_APP\fP, \fB\-\-load_balancer LB_APP\fP
+The load balancing application to which a server should be added.
+.TP
+.B \fB\-\-block_startup_timeout TIME\fP
+The amount of time that should elapse before the deployment process is stopped.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-\-disable\-bootstrap\fP
+Indicates that the bootstrap process should be disabled.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-i IMAGE\fP, \fB\-\-image IMAGE\fP
+The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-U KEY\fP, \fB\-\-username USERNAME\fP
+The user name for the Blue Box server.
+.UNINDENT
+.sp
+For example, to xxxxx, enter:
+.sp
+.nf
+.ft C
+$ xxxxx
+.ft P
+.fi
+.SH SERVER DELETE
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Blue Box cloud. A block represents the on\-demand virtual computing resource; a hostname is specific to a block. To find a specific cloud instance, use the \fBknife bluebox server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox server delete BLOCK_HOSTNAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to delete an instance at block "12345" with a hostname of "dev", enter:
+.sp
+.nf
+.ft C
+$ knife bluebox server delete block12345\-dev.blueboxgrid.com
+.ft P
+.fi
+.SH SERVER LIST
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Blue Box account.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluebox server list
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.SH AUTHOR
+Opscode, Inc.
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.

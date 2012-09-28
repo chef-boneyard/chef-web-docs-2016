@@ -1,0 +1,280 @@
+.TH "KNIFE-CLIENT" "1" "September 28, 2012" "0.0.1" "knife-client"
+.SH NAME
+knife-client \- knife-client
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+A chef\-client is an agent that runs locally on every node that is registered with the Chef server. When a chef\-client is run, it will perform all of the steps that are required to bring the node into the expected state, including:
+.INDENT 0.0
+.IP \(bu 2
+Building, registering, and authenticating the node with the Chef server
+.IP \(bu 2
+Synchronizing each required cookbook with the local file cache
+.IP \(bu 2
+Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies
+.IP \(bu 2
+Taking the appropriate and required actions to configure the node
+.IP \(bu 2
+Looking for exceptions and notifications, handling each as required
+.UNINDENT
+.sp
+The \fBclient\fP sub\-command is used to manage one or more instances of a chef\-client, including ensuring they are properly registered with the Chef server and have a valid RSA key pair.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife client [ARGUMENT] (options)
+.ft P
+.fi
+.SH BULK DELETE
+.sp
+The \fBbulk delete\fP argument is used to delete clients that match a pattern defined by a regular expression. The regular expression must be within quotes and not be surrounded by forward slashes (/).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client bulk delete REGEX
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife client bulk delete "^[0\-9]{3}$"
+.ft P
+.fi
+.SH CREATE
+.sp
+The \fBcreate\fP argument is used to create a new chef\-client. This process will generate an RSA key pair for the named chef\-client. The public key will be stored on the Chef server and the private key will be displayed on STDOUT or written to a named file.
+.sp
+For the chef\-client, the private key should be copied to the system as /etc/chef/client.pem. The private key is typically copied to ~/.chef/client_name.pem and referenced in the knife.rb configuration file. If the private key is not copied, a 403 error will be returned. This is because the file in which the private key is located does not exist and the user who is trying to run the chef\-client does not have permission to re\-create the private key.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client create CLIENT_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a\fP, \fB\-\-admin\fP
+Indicates that a client will be created as an admin client. This is required when users of Open Source Chef Server need to access the API as an administrator. This option only works when used with Open Source Chef Server and will have no effect when used with Hosted Chef or Private Chef.
+.TP
+.B \fB\-f FILE_NAME\fP, \fB\-\-file FILE_NAME\fP
+Indicates that the private key will be saved to a specified file name.
+.UNINDENT
+.sp
+For example, to create a Chef Admin Client with the name "exampleorg\-validator" and save its private key to a file, enter:
+.sp
+.nf
+.ft C
+$ knife client create exampleorg\-validator \-a \-f "/etc/chef/client.pem"
+.ft P
+.fi
+.sp
+When running the \fBcreate\fP argument on Hosted Chef or Private Chef, be sure to omit the \fB\-a\fP option:
+.sp
+.nf
+.ft C
+$ knife client create exampleorg\-validator \-f "/etc/chef/client.pem"
+.ft P
+.fi
+.SH DELETE
+.sp
+The \fBdelete\fP argument is used to delete a registered client.
+.IP Note
+Deleting a client will not delete any corresponding API clients.
+.RE
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client delete CLIENT_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to delete a client with the name "exampleorg\-validator", enter:
+.sp
+.nf
+.ft C
+$ knife client delete exampleorg\-validator
+.ft P
+.fi
+.sp
+Type \fBY\fP to confirm a deletion.
+.SH EDIT
+.sp
+The \fBedit\fP argument is used to edit the details of a registered Chef client. When this argument is run, Knife will open $EDITOR to enable editing of ENVIRONMENT attributes. When finished, Knife will update the Chef server with those changes.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client edit CLIENT_NAME
+.ft P
+.fi
+.sp
+This argument does not have any options.
+.sp
+For example, to edit a client with the name "exampleorg\-validator", enter:
+.sp
+.nf
+.ft C
+$ knife client edit exampleorg\-validator
+.ft P
+.fi
+.SH LIST
+.sp
+The \fBlist\fP argument is used to view a list of registered clients.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-w\fP, \fB\-\-with\-uri\fP
+Indicates that the corresponding URIs will be shown.
+.UNINDENT
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife client list
+.ft P
+.fi
+.sp
+to return something similar to:
+.sp
+.nf
+.ft C
+exampleorg\-validator
+i\-12345678
+rs\-123456
+.ft P
+.fi
+.sp
+To get the list of clients for a specific organization, use the \fB\-u\fP and \fB\-k\fP options:
+.sp
+.nf
+.ft C
+$ knife client list \-u ORGNAME\-validator \-k .chef/ORGNAME\-validator.pem
+.ft P
+.fi
+.SH REREGISTER
+.sp
+The \fBreregister\fP argument is used to regenerate an RSA key pair for a chef\-client. The public key will be stored on the Chef server and the private key will be displayed on STDOUT or written to a named file.
+.IP Note
+Running this argument will invalidate the previous RSA key pair, making it unusable during authentication to the Chef server.
+.RE
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client reregister CLIENT_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-f FILE_NAME\fP, \fB\-\-file FILE_NAME\fP
+Indicates that the private key will be saved to a specified file name.
+.UNINDENT
+.sp
+For example, to regenerate the RSA key pair for a client named "testclient" and save it to a file named "rsa_key", enter:
+.sp
+.nf
+.ft C
+$ knife client regenerate testclient \-f rsa_key
+.ft P
+.fi
+.SH SHOW
+.sp
+The \fBshow\fP argument is used to show the details of a Chef client.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife client show CLIENT_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a ATTR\fP, \fB\-\-attribute ATTR\fP
+Indicates that only a single attribute is shown, as defined by the \fBATTR\fP value.
+.UNINDENT
+.sp
+For example, to view a client named "testclient", enter:
+.sp
+.nf
+.ft C
+$ knife client show testclient
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+admin:       false
+chef_type:   client
+json_class:  Chef::ApiClient
+name:        testclient
+public_key:
+.ft P
+.fi
+.SH AUTHOR
+Opscode, Inc.
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.

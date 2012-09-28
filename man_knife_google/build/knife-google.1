@@ -1,0 +1,170 @@
+.TH "KNIFE-GOOGLE" "1" "September 28, 2012" "0.0.1" "knife-google"
+.SH NAME
+knife-google \- knife-google
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+Google Compute Engine is a cloud hosting platform that offers scalable and flexible virtual machine computing. The \fBgoogle\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Google Compute Engine.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-google\fP.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife google [ARGUMENT] (options)
+.ft P
+.fi
+.SH SERVER CREATE
+.sp
+The \fBserver create\fP argument is used to create a new Google Compute Engine cloud instance. This will provision a new image in Google Compute Engine, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server create SERVER_NAME [RUN_LIST] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-e IP_ADDRESS\fP, \fB\-\-external\-ip\-address IP_ADDRESS\fP
+A static IP address that is provided by Google Compute Engine.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-i PRIVATE_KEY_FILE\fP, \fB\-\-private\-key\-file PRIVATE_KEY_FILE\fP
+The file in which the SSH private key used for authentication is located.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-google\-image IMAGE\fP
+The name of the virtual application template or image that will be used to create the virtual machine. Default: \fBgcompute8\-standard\fP.
+.TP
+.B \fB\-k PUBLIC_KEY_FILE\fP, \fB\-\-public\-key\-file PUBLIC_KEY_FILE\fP]
+The file in which the SSH public key used for authentication is located.
+.TP
+.B \fB\-n NETWORK_NAME\fP, \fB\-\-network NETWORK_NAME\fP
+The name of the network in which the virtual machine will be created.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-s SERVER_NAME\fP, \fB\-\-server\-name SERVER_NAME\fP
+The name of the server.
+.TP
+.B \fB\-p PROJECT\fP, \fB\-\-project_id PROJECT\fP
+The identifier for the Google Compute Engine project.
+.TP
+.B \fB\-P IP_ADDRESS\fP, \fB\-\-internal\-ip\-address IP_ADDRESS\fP
+A static IP address that is provided by Google Compute Engine.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-availability\-zone ZONE\fP
+The name of the Google Compute Engine availability zone. Each availability zone is unique within a region. Default: \fBus\-east\-a\fP.
+.UNINDENT
+.sp
+For example, to create an instance, enter:
+.sp
+.nf
+.ft C
+$ xxxxx
+.ft P
+.fi
+.SH SERVER DELETE
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Google Compute Engine cloud. To find a specific cloud instance, use the \fBknife google server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server delete SERVER_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-p PROJECT_NAME\fP, \fB\-\-project\-id PROJECT_NAME\fP
+The identifier for the Google Compute Engine project.
+.UNINDENT
+.sp
+For example, to delete a server named "devops01" from a project named "engineering", enter:
+.sp
+.nf
+.ft C
+$ knife google server delete devops1 engineering
+.ft P
+.fi
+.SH SERVER LIST
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Google Compute Engine account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-p PROJECT_NAME\fP, \fB\-\-project\-id PROJECT_NAME\fP
+The identifier for the Google Compute Engine project.
+.UNINDENT
+.sp
+For example, to view a list of instances associated with a project named "dev\-01", enter:
+.sp
+.nf
+.ft C
+$ knife google server list \-p dev\-01
+.ft P
+.fi
+.SH AUTHOR
+Opscode, Inc.
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.

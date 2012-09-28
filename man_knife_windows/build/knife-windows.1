@@ -1,0 +1,254 @@
+.TH "KNIFE-WINDOWS" "1" "September 28, 2012" "0.0.1" "knife-windows"
+.SH NAME
+knife-windows \- knife-windows
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+The \fBwindows\fP sub\-command is used to configure and interact with nodes that exist on server and/or desktop machines that are running Microsoft Windows. Nodes are configured using Windows Remote Management, which allows native objects\-\-\-batch scripts, Windows PowerShell scripts, or scripting library variables\-\-\-to be called by external applications.
+.sp
+This plugin is available on github: \fI\%https://github.com/opscode/knife-windows\fP.
+.sp
+This sub\-command has the following syntax when connecting to one (or more) machines that run Microsoft Windows:
+.sp
+.nf
+.ft C
+knife winrm [ARGUMENT] (options)
+.ft P
+.fi
+.sp
+And the following syntax when performing a bootstrap:
+.sp
+.nf
+.ft C
+knife bootstrap windows [ARGUMENT] (options)
+.ft P
+.fi
+.SH BOOTSTRAP WINDOWS SSH
+.sp
+The \fBbootstrap windows ssh\fP argument is used to bootstrap Chef installations in a Microsoft Windows environment, using a command shell that is native to Microsoft Windows.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bootstrap windows ssh (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-\-bootstrap\-proxy PROXY_URL\fP
+The proxy server for the node that is the target of a bootstrap operation.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-p PORT\fP, \fB\-\-ssh\-port PORT\fP
+The SSH port.
+.TP
+.B \fB\-\-[no\-]host\-key\-verify\fP
+Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-s SECRET\fP, \fB\-\-secret SECRET\fP
+The encryption key that is used for values contained within a data bag.
+.TP
+.B \fB\-\-secret\-file FILE\fP
+The path to the file that contains the encryption key.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife bootstrap windows ssh ec2\-50\-xx\-xx\-124.compute\-1.amazonaws.com \-r \(aqrole[webserver],role[production]\(aq \-x Administrator \-i ~/.ssh/id_rsa
+.ft P
+.fi
+.SH BOOTSTRAP WINDOWS WINRM
+.sp
+The \fBbootstrap windows winrm\fP argument is used to bootstrap Chef installations in a Microsoft Windows environment, using Windows Remote Management and the WS\-Management protocol for communication. This argument requires the fully\-qualified domain name of the host machine to be specified.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bootstrap windows winrm FQDN
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-\-bootstrap\-proxy PROXY_URL\fP
+The proxy server for the node that is the target of a bootstrap operation.
+.TP
+.B \fB\-\-bootstrap\-version VERSION\fP
+The version of Chef to install.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node on the Chef server.
+.TP
+.B \fB\-\-prerelease\fP
+Indicates that pre\-release Chef gems should be installed.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-s SECRET\fP, \fB\-\-secret SECRET\fP
+The encryption key that is used for values contained within a data bag.
+.TP
+.B \fB\-\-secret\-file FILE\fP
+The path to the file that contains the encryption key.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.UNINDENT
+.sp
+For example:
+.sp
+.nf
+.ft C
+$ knife bootstrap windows winrm ec2\-50\-xx\-xx\-124.compute\-1.amazonaws.com \-r \(aqrole[webserver],role[production]\(aq \-x Administrator \-P \(aqsuper_secret_password\(aq
+.ft P
+.fi
+.SH WINRM
+.sp
+The \fBwinrm\fP argument is used to create a connection to one or more remote machines. As each connection is created, a password must be provided. This argument uses the same syntax as the \fBsearch\fP sub\-command.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife winrm SEARCH_QUERY SSH_COMMAND (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-a ATTR\fP, \fB\-\-attribute ATTR\fP
+The attribute that is used when opening the SSH connection. The default attribute is the fully\-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
+.TP
+.B \fB\-f CA_TRUST_FILE\fP, \fB\-\-ca\-trust\-file CA_TRUST_FILE\fP
+The certificate authority (CA) trust file used for SSL transport.
+.TP
+.B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTITY_FILE\fP
+The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-i KEYTAB_FILE\fP, \fB\-\-keytab\-file KEYTAB_FILE\fP
+The keytab file that contains the encryption key required by Kerberos\-based authentication.
+.TP
+.B \fB\-m\fP, \fB\-\-manual\-list\fP
+Indicates that a search query is a space\-separated list of servers.
+.TP
+.B \fB\-p PORT\fP, \fB\-\-winrm\-port PORT\fP
+The Windows Remote Management port. Default: \fB5985\fP.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-winrm\-password PASSWORD\fP
+The Windows Remote Management password.
+.TP
+.B \fB\-R KERBEROS_REALM\fP, \fB\-\-kerberos\-realm KERBEROS_REALM\fP
+The administrative domain to which a user belongs.
+.TP
+.B \fB\-\-returns CODES\fP
+A comma\-delimited list of return codes, which indicate the success or failure for the command that was run remotely.
+.TP
+.B \fB\-S KERBEROS_SERVICE\fP, \fB\-\-kerberos\-service KERBEROS_SERVICE\fP
+The service principal used during Kerberos\-based authentication.
+.TP
+.B \fBSEARCH_QUERY\fP
+The search query used to return a list of servers to be accessed using SSH and the specified \fBSSH_COMMAND\fP. This option uses the same syntax as the search sub\-command.
+.TP
+.B \fBSSH_COMMAND\fP
+The command that will be run against the results of a search query.
+.TP
+.B \fB\-t TRANSPORT\fP, \fB\-\-winrm\-transport TRANSPORT\fP
+The Windows Remote Management transport type: \fBssl\fP or \fBplaintext\fP.
+.TP
+.B \fB\-x USERNAME\fP, \fB\-\-winrm\-user USERNAME\fP
+The Windows Remote Management user name.
+.UNINDENT
+.sp
+For example, to find the uptime of all web servers, enter:
+.sp
+.nf
+.ft C
+$ knife winrm "role:web" "net stats srv" \-x Administrator \-P password
+.ft P
+.fi
+.sp
+Or, to force a Chef run:
+.sp
+.nf
+.ft C
+knife winrm \(aqec2\-50\-xx\-xx\-124.amazonaws.com\(aq \(aqchef\-client \-c c:/chef/client.rb\(aq \-m \-x admin \-P \(aqpassword\(aq
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: Starting Chef Run (Version 0.9.12)
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] WARN: Node ip\-0A502FFB has an empty run list.
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: Chef Run complete in 4.383966 seconds
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: cleaning the checksum cache
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: Running report handlers
+ec2\-50\-xx\-xx\-124.amazonaws.com [date] INFO: Report handlers complete
+.ft P
+.fi
+.sp
+Where in the examples above, \fB[date]\fP represents the date and time the long entry was created. For example: \fB[Fri, 04 Mar 2011 22:00:53 +0000]\fP.
+.SH AUTHOR
+Opscode, Inc.
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.
