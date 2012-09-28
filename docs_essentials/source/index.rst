@@ -863,6 +863,7 @@ H4 -- Use a Default Provider -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_resource_use_default_provider.rst
 
+
 H3 -- Lightweight Providers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_lightweight_provider.rst
