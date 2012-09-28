@@ -11,18 +11,14 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-d DOWNLOAD_DIRECTORY``, ``--dir DOWNLOAD_DIRECTORY``
+   |dir|
 
-   * - Option
-     - Description
-   * - ``-d DOWNLOAD_DIRECTORY``, ``--dir DOWNLOAD_DIRECTORY``
-     - |dir|
-   * - ``-f``, ``--force``
-     - |force directory|
-   * - ``-n``, ``--latest``
-     - |latest|
+``-f``, ``--force``
+   |force directory|
+
+``-n``, ``--latest``
+   |latest|
      
 For example, to download a cookbook named "smartmon", enter:
 

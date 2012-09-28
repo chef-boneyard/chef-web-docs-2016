@@ -11,22 +11,20 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-A ID``, ``--hp-account ID``
+   |hp-account|
 
-   * - Option
-     - Description
-   * - ``-A ID``, ``--hp-account ID``
-     - |hp-account|
-   * - ``--hp-auth URI``
-     - |hp-auth|
-   * - ``-K SECRET``, ``--hp-secret SECRET``
-     - |hp-secret|
-   * - ``-T ID``, ``--hp-tenant ID``
-     - |hp-tenant|
-   * - ``-Z ZONE``, ``--hp-zone ZONE``
-     - |hp-zone|
+``--hp-auth URI``
+   |hp-auth|
+
+``-K SECRET``, ``--hp-secret SECRET``
+   |hp-secret|
+
+``-T ID``, ``--hp-tenant ID``
+   |hp-tenant|
+
+``-Z ZONE``, ``--hp-zone ZONE``
+   |hp-zone|
 
 For example, enter:
 

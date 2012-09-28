@@ -13,24 +13,23 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a``, ``--all``
+   |all cookbooks|
 
-   * - Option
-     - Description
-   * - ``-a``, ``--all``
-     - |all cookbooks|
-   * - ``-d``, ``--include-dependencies``
-     - |include-dependencies|
-   * - ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-     - |environment cookbooks|
-   * - ``--force``
-     - |force update|
-   * - ``--freeze``
-     - |freeze|
-   * - ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
-     - |cookbook-path|
+``-d``, ``--include-dependencies``
+   |include-dependencies|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment cookbooks|
+
+``--force``
+   |force update|
+
+``--freeze``
+   |freeze|
+
+``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
+   |cookbook-path|
 
 For example:
 

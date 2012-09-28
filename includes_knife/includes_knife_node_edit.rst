@@ -11,14 +11,8 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Option
-     - Description
-   * - ``-a``, ``--all``
-     - |all|
+``-a``, ``--all``
+   |all|
 
 For example, to edit the data for a node named "node1", enter:
 

@@ -11,20 +11,17 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-A ID``, ``--openstack-access-key-id ID``
+   |openstack-access-key-id|
 
-   * - Option
-     - Description
-   * - ``-A ID``, ``--openstack-access-key-id ID``
-     - |openstack-access-key-id|
-   * - ``-K SECRET``, ``--openstack-secret-access-key SECRET``
-     - |openstack-secret-access-key|
-   * - ``--openstack-api-endpoint ENDPOINT``
-     - |openstack-api-endpoint|
-   * - ``--region REGION``
-     - |region openstack|
+``-K SECRET``, ``--openstack-secret-access-key SECRET``
+   |openstack-secret-access-key|
+
+``--openstack-api-endpoint ENDPOINT``
+   |openstack-api-endpoint|
+
+``--region REGION``
+   |region openstack|
 
 For example, to xxxxx, enter:
 

@@ -11,40 +11,47 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a ATTR``, ``--attribute ATTR``
+   |attribute ssh| The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 
-   * - Option
-     - Description
-   * - ``-a ATTR``, ``--attribute ATTR``
-     - |attribute ssh| The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
-   * - ``-f CA_TRUST_FILE``, ``--ca-trust-file CA_TRUST_FILE``
-     - |ca-trust-file|
-   * - ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
-     - |identity-file|
-   * - ``-i KEYTAB_FILE``, ``--keytab-file KEYTAB_FILE``
-     - |keytab-file|
-   * - ``-m``, ``--manual-list``
-     - |manual-list|
-   * - ``-p PORT``, ``--winrm-port PORT``
-     - |winrm-port|
-   * - ``-P PASSWORD``, ``--winrm-password PASSWORD``
-     - |winrm-password|
-   * - ``-R KERBEROS_REALM``, ``--kerberos-realm KERBEROS_REALM``
-     - |kerberos-realm|
-   * - ``--returns CODES``
-     - |returns|
-   * - ``-S KERBEROS_SERVICE``, ``--kerberos-service KERBEROS_SERVICE``
-     - |kerberos-service| 
-   * - ``SEARCH_QUERY``
-     - |SEARCH_QUERY SSH|
-   * - ``SSH_COMMAND``
-     - |SSH_COMMAND|
-   * - ``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
-     - |winrm-transport|
-   * - ``-x USERNAME``, ``--winrm-user USERNAME``
-     - |winrm-user|
+``-f CA_TRUST_FILE``, ``--ca-trust-file CA_TRUST_FILE``
+   |ca-trust-file|
+
+``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
+   |identity-file|
+
+``-i KEYTAB_FILE``, ``--keytab-file KEYTAB_FILE``
+   |keytab-file|
+
+``-m``, ``--manual-list``
+   |manual-list|
+
+``-p PORT``, ``--winrm-port PORT``
+   |winrm-port|
+
+``-P PASSWORD``, ``--winrm-password PASSWORD``
+   |winrm-password|
+
+``-R KERBEROS_REALM``, ``--kerberos-realm KERBEROS_REALM``
+   |kerberos-realm|
+
+``--returns CODES``
+   |returns|
+
+``-S KERBEROS_SERVICE``, ``--kerberos-service KERBEROS_SERVICE``
+   |kerberos-service| 
+
+``SEARCH_QUERY``
+   |SEARCH_QUERY SSH|
+
+``SSH_COMMAND``
+   |SSH_COMMAND|
+
+``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
+   |winrm-transport|
+
+``-x USERNAME``, ``--winrm-user USERNAME``
+   |winrm-user|
 
 For example, to find the uptime of all web servers, enter:
 

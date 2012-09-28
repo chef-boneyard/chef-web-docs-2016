@@ -11,18 +11,14 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-K API_KEY``, ``--rackspace-api-key API_KEY``
+   |rackspace-api-key|
 
-   * - Option
-     - Description
-   * - ``-K API_KEY``, ``--rackspace-api-key API_KEY``
-     - |rackspace-api-key|
-   * - ``-A USER_NAME``, ``--rackspace-username USER_NAME``
-     - |rackspace-username|
-   * - ``--rackspace-api-auth-url``
-     - |rackspace-api-auth-url|
+``-A USER_NAME``, ``--rackspace-username USER_NAME``
+   |rackspace-username|
+
+``--rackspace-api-auth-url``
+   |rackspace-api-auth-url|
 
 For example, to find all Rackspace instances, enter:
 

@@ -11,19 +11,16 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
+   |azure host name|
 
-   * - Option
-     - Description
-   * - ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
-     - |azure host name|
-   * - ``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
-     - |azure-pem-filename|
-   * - ``-S ID``, ``--azure-subscription-id ID``
-     - |azure-subscription-id|
-   * - ``--verify-ssl-cert``
-     - |azure verify ssl certificate|
+``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
+   |azure-pem-filename|
+
+``-S ID``, ``--azure-subscription-id ID``
+   |azure-subscription-id|
+
+``--verify-ssl-cert``
+   |azure verify ssl certificate|
 
 

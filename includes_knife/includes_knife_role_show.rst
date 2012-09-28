@@ -11,14 +11,8 @@ This argument has the following syntax::
 
 This sub-command has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Option
-     - Description
-   * - ``-a ATTR``, ``--attribute ATTR``
-     - |attribute|
+``-a ATTR``, ``--attribute ATTR``
+   |attribute|
 
 For example:
 

@@ -11,16 +11,11 @@ This sub-command has the following syntax::
 
 This sub-command has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``QUERY``
+   |SEARCH_QUERY|
 
-   * - Option
-     - Description
-   * - ``QUERY``
-     - |SEARCH_QUERY|
-   * - ``r RUN_LIST``, ``--run-list RUN_LIST``
-     - |run-list|
+``-r RUN_LIST``, ``--run-list RUN_LIST``
+   |run-list|
 
 For example, to view the status of all nodes in the organization, enter:
 

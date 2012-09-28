@@ -11,22 +11,20 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a ATTR``, ``--attribute ATTR``
+   |attribute|
 
-   * - Option
-     - Description
-   * - ``-a ATTR``, ``--attribute ATTR``
-     - |attribute|
-   * - ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-     - |environment|
-   * - ``-l``, ``--long``
-     - |long|
-   * - ``-m``, ``--medium``
-     - |medium|
-   * - ``-r``, ``--run-list``
-     - |run-list indicator|
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-l``, ``--long``
+   |long|
+
+``-m``, ``--medium``
+   |medium|
+
+``-r``, ``--run-list``
+   |run-list indicator|
 
 For example, to view all data for a node named "build", enter:
 

@@ -16,18 +16,14 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a``, ``--all``
+   |all data bags|
 
-   * - Option
-     - Description
-   * - ``-a``, ``--all``
-     - |all data bags|
-   * - ``--secret SECRET``
-     - |secret|
-   * - ``--secret-file FILE``
-     - |secret-file|
+``--secret SECRET``
+   |secret|
+
+``--secret-file FILE``
+   |secret-file|
 
 .. note::  For encrypted data bag items, use *either* ``--secret`` or ``--secret-file``, not both.
 

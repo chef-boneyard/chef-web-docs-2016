@@ -11,20 +11,18 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-A KEY``, ``--aws-access-key-id KEY``
+   |aws-access-key-id|
 
-   * - Option
-     - Description
-   * - ``-A KEY``, ``--aws-access-key-id KEY``
-     - |aws-access-key-id|
-   * - ``-K SECRET``, ``--aws-secret-access-key SECRET``
-     - |aws-secret-access-key|
-   * - ``-n``, ``--no-name``
-     - |no name tags|
-   * - ``--region REGION``
-     - |region amazon|
-   * - ``-t TAG1, TAG2``, ``--tags TAG1, TAG2``
-     - |tags list|
+``-K SECRET``, ``--aws-secret-access-key SECRET``
+   |aws-secret-access-key|
+
+``-n``, ``--no-name``
+   |no name tags|
+
+``--region REGION``
+   |region amazon|
+
+``-t TAG1, TAG2``, ``--tags TAG1, TAG2``
+   |tags list|
 

@@ -19,22 +19,20 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-b``, ``--use-current-branch``
+   |use-current-branch|
 
-   * - Option
-     - Description
-   * - ``-b``, ``--use-current-branch``
-     - |use-current-branch|
-   * - ``-B BRANCH``, ``--branch BRANCH``
-     - |branch|
-   * - ``-D``, ``--skip-dependencies``
-     - |skip-dependencies|
-   * - ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
-     - |cookbook-path|
-   * - ``COOKBOOK_VERSION``
-     - |COOKBOOK_VERSION install|
+``-B BRANCH``, ``--branch BRANCH``
+   |branch|
+
+``-D``, ``--skip-dependencies``
+   |skip-dependencies|
+
+``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
+   |cookbook-path|
+
+``COOKBOOK_VERSION``
+   |COOKBOOK_VERSION install|
 
 For example, to install the cookbook "getting-started", enter:
 

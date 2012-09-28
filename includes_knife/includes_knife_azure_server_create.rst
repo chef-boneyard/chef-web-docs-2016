@@ -11,62 +11,79 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a STORAGE_ACCOUNT_NAME``, ``--storage-account STORAGE_ACCOUNT_NAME``
+   |storage account|
 
-   * - Option
-     - Description
-   * - ``-a STORAGE_ACCOUNT_NAME``, ``--storage-account STORAGE_ACCOUNT_NAME``
-     - |storage account|
-   * - ``--bootstrap-protocol PROTOCOL``
-     - |bootstrap protocol| Default value: ``winrm``.
-   * - ``--bootstrap-version VERSION``
-     - |bootstrap-version|
-   * - ``-d DISTRO``, ``--distro DISTRO``
-     - |distro|
-   * - ``-D DESCRIPTION``
-     - |azure host description|
-   * - ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
-     - |azure host name|
-   * - ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
-     - |identity-file|
-   * - ``-I IMAGE``, ``--source-image IMAGE``
-     - |source-image|
-   * - ``-m LOCATION``, ``--service-location LOCATION``
-     - |media location|
-   * - ``-N NAME``, ``--node-name NAME``
-     - |node-name| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
-   * - ``--[no-]host-key-verify``
-     - |[no-]host-key-verify|
-   * - ``-o DISK_NAME``, ``--os-disk-name DISK_NAME``
-     - |os-disk-name|
-   * - ``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
-     - |azure-pem-filename|
-   * - ``-P PASSWORD``, ``--ssh-password PASSWORD``
-     - |ssh-password|
-   * - ``--prerelease``
-     - |prerelease|
-   * - ``-r RUN_LIST``, ``--run-list RUN_LIST``
-     - |run-list|
-   * - ``-R ROLE_NAME``, ``--role-name ROLE_NAME``
-     - |role-name|
-   * - ``-s SERVICE_NAME``, ``--hosted-service-name SERVICE_NAME``
-     - |hosted-service-name|
-   * - ``-S ID``, ``--azure-subscription-id ID``
-     - |azure-subscription-id|
-   * - ``-t PORT_LIST``, ``--tcp-endpoints PORT_LIST``
-     - |tcp-endpoints|
-   * - ``--template-file TEMPLATE``
-     - |template-file|
-   * - ``--u PORT_LIST``, ``---udp-endpoints PORT_LIST``
-     - |udp-endpoints|
-   * - ``--verify-ssl-cert``
-     - |azure verify ssl certificate|
-   * - ``-x USER_NAME``, ``--ssh-user USER_NAME``
-     - |ssh-user|
-   * - ``-z SIZE``, ``--role-size SIZE``
-     - |role-size|
+``--bootstrap-protocol PROTOCOL``
+   |bootstrap protocol| Default value: ``winrm``.
+
+``--bootstrap-version VERSION``
+   |bootstrap-version|
+
+``-d DISTRO``, ``--distro DISTRO``
+   |distro|
+
+``-D DESCRIPTION``
+   |azure host description|
+
+``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
+   |azure host name|
+
+``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
+   |identity-file|
+
+``-I IMAGE``, ``--source-image IMAGE``
+   |source-image|
+
+``-m LOCATION``, ``--service-location LOCATION``
+   |media location|
+
+``-N NAME``, ``--node-name NAME``
+   |node-name| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
+
+``--[no-]host-key-verify``
+   |[no-]host-key-verify|
+
+``-o DISK_NAME``, ``--os-disk-name DISK_NAME``
+   |os-disk-name|
+
+``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
+   |azure-pem-filename|
+
+``-P PASSWORD``, ``--ssh-password PASSWORD``
+   |ssh-password|
+``--prerelease``
+   |prerelease|
+
+``-r RUN_LIST``, ``--run-list RUN_LIST``
+   |run-list|
+
+``-R ROLE_NAME``, ``--role-name ROLE_NAME``
+   |role-name|
+
+``-s SERVICE_NAME``, ``--hosted-service-name SERVICE_NAME``
+   |hosted-service-name|
+
+``-S ID``, ``--azure-subscription-id ID``
+   |azure-subscription-id|
+
+``-t PORT_LIST``, ``--tcp-endpoints PORT_LIST``
+   |tcp-endpoints|
+
+``--template-file TEMPLATE``
+   |template-file|
+
+``--u PORT_LIST``, ``---udp-endpoints PORT_LIST``
+   |udp-endpoints|
+
+``--verify-ssl-cert``
+   |azure verify ssl certificate|
+
+``-x USER_NAME``, ``--ssh-user USER_NAME``
+   |ssh-user|
+
+``-z SIZE``, ``--role-size SIZE``
+   |role-size|
 
 For example, to provision a medium-sized |centos| machine configured as a web server in the "West US" data center, while also creating new hosted service and storage accounts, enter something like:
 

@@ -11,16 +11,11 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a``, ``--all``
+   |all cookbooks return|
 
-   * - Option
-     - Description
-   * - ``-a``, ``--all``
-     - |all cookbooks return|
-   * - ``-w``, ``--with-uri``
-     - |with-uri|
+``-w``, ``--with-uri``
+   |with-uri|
 
 For example:
 

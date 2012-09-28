@@ -11,26 +11,26 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-A ID``, ``--hp-account ID``
+   |hp-account|
 
-   * - Option
-     - Description
-   * - ``-A ID``, ``--hp-account ID``
-     - |hp-account|
-   * - ``--hp-auth URI``
-     - |hp-auth|
-   * - ``-K SECRET``, ``--hp-secret SECRET``
-     - |hp-secret|
-   * - ``-N NODE_NAME``, ``--node-name NODE_NAME``
-     - |node-name| This option only has meaning when used with the ``--purge`` option.
-   * - ``-p``, ``--purge``
-     - |purge node hp|
-   * - ``-T ID``, ``--hp-tenant ID``
-     - |hp-tenant|
-   * - ``-Z ZONE``, ``--hp-zone ZONE``
-     - |hp-zone|
+``--hp-auth URI``
+   |hp-auth|
+
+``-K SECRET``, ``--hp-secret SECRET``
+   |hp-secret|
+
+``-N NODE_NAME``, ``--node-name NODE_NAME``
+   |node-name| This option only has meaning when used with the ``--purge`` option.
+
+``-p``, ``--purge``
+   |purge node hp|
+
+``-T ID``, ``--hp-tenant ID``
+   |hp-tenant|
+
+``-Z ZONE``, ``--hp-zone ZONE``
+   |hp-zone|
 
 For example, to delete an instance named "65646", enter:
 

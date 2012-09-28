@@ -11,16 +11,11 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a``, ``--all``
+   |all cookbooks test|
 
-   * - Option
-     - Description
-   * - ``-a``, ``--all``
-     - |all cookbooks test|
-   * - ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
-     - |cookbook-path|
+``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
+   |cookbook-path|
 
 For example, to test a cookbook named "getting-started", enter:
 

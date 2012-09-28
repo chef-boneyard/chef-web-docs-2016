@@ -11,34 +11,38 @@ This sub-command has the following syntax::
 
 This sub-command has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a SSH_ATTR``, ``--attribute SSH_ATTR``
+   |attribute ssh| The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 
-   * - Option
-     - Description
-   * - ``-a SSH_ATTR``, ``--attribute SSH_ATTR``
-     - |attribute ssh|
-   * - ``-C NUM``, ``--concurrency NUM``
-     - |concurrency|
-   * - ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
-     - |ssh-gateway|
-   * - ``-i IDENTITY_FILE``, ``--identity-file IDENTIFY_FILE``
-     - |identity-file|
-   * - ``-m``, ``--manual-list``
-     - |manual-list|
-   * - ``--[no-]host-key-verify``
-     - |[no-]host-key-verify|
-   * - ``-p PORT``, ``--ssh-port PORT``
-     - |ssh-port|
-   * - ``-P PASSWORD``, ``--ssh-password PASSWORD``
-     - |ssh-password|
-   * - ``SEARCH_QUERY``
-     - |SEARCH_QUERY SSH|
-   * - ``SSH_COMMAND``
-     - |SSH_COMMAND|
-   * - ``-x USER_NAME``, ``--ssh-user USER_NAME``
-     - |ssh-user|
+``-C NUM``, ``--concurrency NUM``
+   |concurrency|
+
+``-G GATEWAY``, ``--ssh-gateway GATEWAY``
+   |ssh-gateway|
+
+``-i IDENTITY_FILE``, ``--identity-file IDENTIFY_FILE``
+   |identity-file|
+
+``-m``, ``--manual-list``
+   |manual-list|
+
+``--[no-]host-key-verify``
+   |[no-]host-key-verify|
+
+``-p PORT``, ``--ssh-port PORT``
+   |ssh-port|
+
+``-P PASSWORD``, ``--ssh-password PASSWORD``
+   |ssh-password|
+
+``SEARCH_QUERY``
+   |SEARCH_QUERY SSH|
+
+``SSH_COMMAND``
+   |SSH_COMMAND|
+
+``-x USER_NAME``, ``--ssh-user USER_NAME``
+   |ssh-user|
 
 For example, to query for all nodes that have the "webserver" role and then use |ssh| to run the command "sudo chef-client", enter:
 
