@@ -11,18 +11,14 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-f FILE``, ``--file FILE``
+   |file|
 
-   * - Option
-     - Description
-   * - ``-f FILE``, ``--file FILE``
-     - |file|
-   * - ``--force``
-     - |force|
-   * - ``COOKBOOK_VERSION``
-     - |COOKBOOK_VERSION download|
+``--force``
+   |force|
+
+``COOKBOOK_VERSION``
+   |COOKBOOK_VERSION download|
 
 For example:
 

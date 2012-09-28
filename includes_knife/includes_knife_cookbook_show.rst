@@ -11,26 +11,26 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-f FQDN``, ``--fqdn FQDN``
+   |fqdn|
 
-   * - Option
-     - Description
-   * - ``-f FQDN``, ``--fqdn FQDN``
-     - |fqdn|
-   * - ``FILE_NAME``
-     - |FILE_NAME|
-   * - ``-p PLATFORM``, ``--platform PLATFORM``
-     - |platform|
-   * - ``PART``
-     - |PART|
-   * - ``-V PLATFORM_VERSION``, ``--platform-version PLATFORM_VERSION``
-     - |platform-version|
-   * - ``COOKBOOK_VERSION``
-     - |COOKBOOK_VERSION show|
-   * - ``-w``, ``--with-uri``
-     - |with-uri|
+``FILE_NAME``
+   |FILE_NAME|
+
+``-p PLATFORM``, ``--platform PLATFORM``
+   |platform|
+
+``PART``
+   |PART|
+
+``-V PLATFORM_VERSION``, ``--platform-version PLATFORM_VERSION``
+   |platform-version|
+
+``COOKBOOK_VERSION``
+   |COOKBOOK_VERSION show|
+
+``-w``, ``--with-uri``
+   |with-uri|
      
 For example, to get the list of available versions of a cookbook named "getting-started", enter:
 

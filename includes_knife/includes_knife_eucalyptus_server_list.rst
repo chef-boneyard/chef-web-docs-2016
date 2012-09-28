@@ -11,18 +11,15 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-A ID``, ``--euca-access-key-id ID``
+   |euca-access-key-id|
 
-   * - Option
-     - Description
-   * - ``-A ID``, ``--euca-access-key-id ID``
-     - |euca-access-key-id|
-   * - ``-K SECRET``, ``--euca-secret-access-key SECRET``
-     - |euca-secret-access-key|
-   * - ``--euca-api-endpoint ENDPOINT``
-     - |euca-api-endpoint|
-   * - ``--region REGION``
-     - |region eucalyptus|
+``-K SECRET``, ``--euca-secret-access-key SECRET``
+   |euca-secret-access-key|
+
+``--euca-api-endpoint ENDPOINT``
+   |euca-api-endpoint|
+
+``--region REGION``
+   |region eucalyptus|
 

@@ -11,34 +11,38 @@ This sub-command has the following syntax::
 
 This sub-command has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a ATTR``, ``--attribute ATTR``
+   |attribute|
 
-   * - Option
-     - Description
-   * - ``-a ATTR``, ``--attribute ATTR``
-     - |attribute|
-   * - ``-b ROW``, ``-start ROW``
-     - |start|
-   * - ``-i``, ``--id-only``
-     - |id-only|
-   * - ``INDEX``
-     - |INDEX|
-   * - ``-l``, ``--long``
-     - |long|
-   * - ``-m``, ``--medium``
-     - |medium|
-   * - ``-o SORT``, ``--sort SORT``
-     - |sort|
-   * - ``-q SEARCH_QUERY``, ``--query SEARCH_QUERY``
-     - |query|
-   * - ``-r``, ``--run-list``
-     - |run-list indicator|
-   * - ``-R INT``, ``--rows INT``
-     - |rows|
-   * - ``SEARCH_QUERY``
-     - |SEARCH_QUERY|
+``-b ROW``, ``-start ROW``
+   |start|
+
+``-i``, ``--id-only``
+   |id-only|
+
+``INDEX``
+   |INDEX|
+
+``-l``, ``--long``
+   |long|
+
+``-m``, ``--medium``
+   |medium|
+
+``-o SORT``, ``--sort SORT``
+   |sort|
+
+``-q SEARCH_QUERY``, ``--query SEARCH_QUERY``
+   |query|
+
+``-r``, ``--run-list``
+   |run-list indicator|
+
+``-R INT``, ``--rows INT``
+   |rows|
+
+``SEARCH_QUERY``
+   |SEARCH_QUERY|
 
 For example, to search for the IDs of all nodes running on the |amazon ec2| platform, enter:
 

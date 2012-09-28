@@ -11,14 +11,8 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Option
-     - Description
-   * - ``-a ITEM``, ``--after ITEM``
-     - |after|
+``-a ITEM``, ``--after ITEM``
+   |after|
 
 For example, to add a role to a run list, enter:
 

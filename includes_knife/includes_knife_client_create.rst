@@ -13,16 +13,11 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a``, ``--admin``
+   |admin client| This option only works when used with |chef open server| and will have no effect when used with |chef hosted| or |chef private|.
 
-   * - Option
-     - Description
-   * - ``-a``, ``--admin``
-     - |admin client| This option only works when used with |chef open server| and will have no effect when used with |chef hosted| or |chef private|.
-   * - ``-f FILE_NAME``, ``--file FILE_NAME``
-     - |file private key|
+``-f FILE_NAME``, ``--file FILE_NAME``
+   |file private key|
 
 For example, to create a |chef client admin| with the name "exampleorg-validator" and save its private key to a file, enter:
 

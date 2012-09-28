@@ -11,50 +11,62 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-A ID``, ``--openstack-access-key-id ID``
+   |openstack-access-key-id|
 
-   * - Option
-     - Description
-   * - ``-A ID``, ``--openstack-access-key-id ID``
-     - |openstack-access-key-id|
-   * - ``--bootstrap-version VERSION``
-     - |bootstrap-version|
-   * - ``-d DISTRO``, ``--distro DISTRO``
-     - |distro|
-   * - ``-f FLAVOR``, ``--flavor FLAVOR``
-     - |flavor|
-   * - ``-G X,Y,Z``, ``--groups X,Y,Z``
-     - |groups|
-   * - ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
-     - |identity-file|
-   * - ``-I IMAGE``, ``--image IMAGE``
-     - |image|
-   * - ``-K SECRET``, ``--openstack-secret-access-key SECRET``
-     - |openstack-secret-access-key|
-   * - ``-N NAME``, ``--node-name NAME``
-     - |node-name|
-   * - ``--[no-]host-key-verify``
-     - |[no-]host-key-verify|
-   * - ``--openstack-api-endpoint ENDPOINT``
-     - |openstack-api-endpoint|
-   * - ``-P PASSWORD``, ``--ssh-password PASSWORD``
-     - |ssh-password|
-   * - ``--prerelease``
-     - |prerelease|
-   * - ``-r RUN_LIST``, ``--run-list RUN_LIST``
-     - |run-list|
-   * - ``--region REGION``
-     - |region openstack|
-   * - ``-S KEY``, ``--ssh-key KEY``
-     - |ssh-key openstack|
-   * - ``--template-file TEMPLATE``
-     - |template-file|
-   * - ``-x USERNAME``, ``--ssh-user USERNAME``
-     - |ssh-user|
-   * - ``-Z ZONE"``, ``--availability-zone ZONE``
-     - |availability-zone openstack|
+``--bootstrap-version VERSION``
+   |bootstrap-version|
+
+``-d DISTRO``, ``--distro DISTRO``
+   |distro|
+
+``-f FLAVOR``, ``--flavor FLAVOR``
+   |flavor|
+
+``-G X,Y,Z``, ``--groups X,Y,Z``
+   |groups|
+
+``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
+   |identity-file|
+
+``-I IMAGE``, ``--image IMAGE``
+   |image|
+
+``-K SECRET``, ``--openstack-secret-access-key SECRET``
+   |openstack-secret-access-key|
+
+``-N NAME``, ``--node-name NAME``
+   |node-name|
+
+``--[no-]host-key-verify``
+   |[no-]host-key-verify|
+
+``--openstack-api-endpoint ENDPOINT``
+   |openstack-api-endpoint|
+
+``-P PASSWORD``, ``--ssh-password PASSWORD``
+   |ssh-password|
+
+``--prerelease``
+   |prerelease|
+
+``-r RUN_LIST``, ``--run-list RUN_LIST``
+   |run-list|
+
+``--region REGION``
+   |region openstack|
+
+``-S KEY``, ``--ssh-key KEY``
+   |ssh-key openstack|
+
+``--template-file TEMPLATE``
+   |template-file|
+
+``-x USERNAME``, ``--ssh-user USERNAME``
+   |ssh-user|
+
+``-Z ZONE"``, ``--availability-zone ZONE``
+   |availability-zone openstack|
 
 For example, to create a new instance, enter:
 

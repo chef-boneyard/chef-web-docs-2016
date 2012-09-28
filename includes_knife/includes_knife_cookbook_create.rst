@@ -22,22 +22,20 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-c COPYRIGHT_HOLDER``, ``--copyright COPYRIGHT_HOLDER``
+   |copyright|
 
-   * - Option
-     - Description
-   * - ``-c COPYRIGHT_HOLDER``, ``--copyright COPYRIGHT_HOLDER``
-     - |copyright|
-   * - ``-e EMAIL``, ``--email EMAIL``
-     - |email|
-   * - ``-i LICENSE``, ``--license LICENSE``
-     - |license|
-   * - ``-o PATH``, ``--cookbook-path PATH``
-     - |cookbook-path create|
-   * - ``-r FORMAT``, ``--readme-format FORMAT``
-     - |readme-format|
+``-e EMAIL``, ``--email EMAIL``
+   |email|
+
+``-i LICENSE``, ``--license LICENSE``
+   |license|
+
+``-o PATH``, ``--cookbook-path PATH``
+   |cookbook-path create|
+
+``-r FORMAT``, ``--readme-format FORMAT``
+   |readme-format|
 
 The cookbook copyright, license, email, and readme format settings can be configured in a |knife rb| file or using the |knife| command prompt:
 

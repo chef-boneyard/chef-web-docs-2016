@@ -11,18 +11,14 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-A USER_NAME``, ``--terremark-username USER_NAME``
+   |terremark-username|
 
-   * - Option
-     - Description
-   * - ``-A USER_NAME``, ``--terremark-username USER_NAME``
-     - |terremark-username|
-   * - ``-K PASSWORD``, ``--terremark-password PASSWORD``
-     - |terremark-password|
-   * - ``-S SERVICE_NAME``, ``--terremark-service SERVICE_NAME``
-     - |terremark-service|
+``-K PASSWORD``, ``--terremark-password PASSWORD``
+   |terremark-password|
+
+``-S SERVICE_NAME``, ``--terremark-service SERVICE_NAME``
+   |terremark-service|
 
 For example, enter:
 

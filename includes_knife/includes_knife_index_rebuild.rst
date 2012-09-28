@@ -13,11 +13,5 @@ This sub-command has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Option
-     - Description
-   * - ``-y``, ``--yes``
-     - |yes|
+``-y``, ``--yes``
+   |yes|

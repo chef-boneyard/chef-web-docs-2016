@@ -11,18 +11,14 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-a``, ``--all``
+   |all cookbooks delete|
 
-   * - Option
-     - Description
-   * - ``-a``, ``--all``
-     - |all cookbooks delete|
-   * - ``-p``, ``--purge``
-     - |purge cookbook|
-   * - ``COOKBOOK_VERSION``
-     - |COOKBOOK_VERSION delete|
+``-p``, ``--purge``
+   |purge cookbook|
+
+``COOKBOOK_VERSION``
+   |COOKBOOK_VERSION delete|
 
 For example, to delete version "0.8" from a cookbook named "smartmon", enter:
 

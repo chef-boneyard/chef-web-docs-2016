@@ -11,30 +11,32 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``--bootstrap-proxy PROXY_URL``
+   |bootstrap-proxy|
 
-   * - Option
-     - Description
-   * - ``--bootstrap-proxy PROXY_URL``
-     - |bootstrap-proxy|
-   * - ``--bootstrap-version VERSION``
-     - |bootstrap-version|
-   * - ``-d DISTRO``, ``--distro DISTRO``
-     - |distro|
-   * - ``--N NAME``, ``--node-name NAME``
-     - |node-name|
-   * - ``--prerelease``
-     - |prerelease|
-   * - ``-r RUN_LIST``, ``--run-list RUN_LIST``
-     - |run-list|
-   * - ``-s SECRET``, ``--secret SECRET``
-     - |secret|
-   * - ``--secret-file FILE``
-     - |secret-file|
-   * - ``--template-file TEMPLATE``
-     - |template-file|
+``--bootstrap-version VERSION``
+   |bootstrap-version|
+
+``-d DISTRO``, ``--distro DISTRO``
+   |distro|
+
+``--N NAME``, ``--node-name NAME``
+   |node-name|
+
+``--prerelease``
+   |prerelease|
+
+``-r RUN_LIST``, ``--run-list RUN_LIST``
+   |run-list|
+
+``-s SECRET``, ``--secret SECRET``
+   |secret|
+
+``--secret-file FILE``
+   |secret-file|
+
+``--template-file TEMPLATE``
+   |template-file|
 
 For example:
 

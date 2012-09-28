@@ -11,16 +11,11 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``CATEGORY``
+   |CATEGORY|
 
-   * - Option
-     - Description
-   * - ``CATEGORY``
-     - |CATEGORY|
-   * - ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
-     - |cookbook-path|
+``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
+   |cookbook-path|
 
 For example:
 

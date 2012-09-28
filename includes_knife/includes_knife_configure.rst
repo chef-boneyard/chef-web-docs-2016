@@ -11,18 +11,14 @@ This sub-command has the following syntax::
 
 This sub-command has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``--client DIRECTORY``
+   |client|
 
-   * - Option
-     - Description
-   * - ``--client DIRECTORY``
-     - |client|
-   * - ``-i``, ``--initial``
-     - |initial|
-   * - ``-r REPO``, ``--repository REPO``
-     - |repository|
+``-i``, ``--initial``
+   |initial|
+
+``-r REPO``, ``--repository REPO``
+   |repository|
 
 For example, to create a |knife rb| file, enter:
 

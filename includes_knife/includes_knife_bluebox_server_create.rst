@@ -11,32 +11,35 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+``-b LB_APP``, ``--load_balancer LB_APP``
+   |load-balancer|
 
-   * - Option
-     - Description
-   * - ``-b LB_APP``, ``--load_balancer LB_APP``
-     - |load-balancer|
-   * - ``--block_startup_timeout TIME``
-     - |block-startup-timeout|
-   * - ``-d DISTRO``, ``--distro DISTRO``
-     - |distro|
-   * - ``--disable-bootstrap``
-     - |disable-bootstrap|
-   * - ``-f FLAVOR``, ``--flavor FLAVOR``
-     - |flavor|
-   * - ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
-     - |identity-file|
-   * - ``-i IMAGE``, ``--image IMAGE``
-     - |image|
-   * - ``-N NAME``, ``--node-name NAME``
-     - |node-name|
-   * - ``-P PASSWORD``, ``--ssh-password PASSWORD``
-     - |ssh-password|
-   * - ``-U KEY``, ``--username USERNAME``
-     - |username bluebox|
+``--block_startup_timeout TIME``
+   |block-startup-timeout|
+
+``-d DISTRO``, ``--distro DISTRO``
+   |distro|
+
+``--disable-bootstrap``
+   |disable-bootstrap|
+
+``-f FLAVOR``, ``--flavor FLAVOR``
+   |flavor|
+
+``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
+   |identity-file|
+
+``-i IMAGE``, ``--image IMAGE``
+   |image|
+
+``-N NAME``, ``--node-name NAME``
+   |node-name|
+
+``-P PASSWORD``, ``--ssh-password PASSWORD``
+   |ssh-password|
+
+``-U KEY``, ``--username USERNAME``
+   |username bluebox|
 
 For example, to xxxxx, enter:
 

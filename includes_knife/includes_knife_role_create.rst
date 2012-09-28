@@ -11,14 +11,8 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Option
-     - Description
-   * - ``-d DESCRIPTION``, ``--description DESCRIPTION``
-     - |description role|
+``-d DESCRIPTION``, ``--description DESCRIPTION``
+   |description role|
 
 For example, to add a role named "role1", enter:
 

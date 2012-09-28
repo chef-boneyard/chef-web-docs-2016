@@ -17,16 +17,10 @@ This sub-command has the following syntax::
 
 This sub-command has the following options:
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Option
-     - Description
-   * - ``-E CODE``, ``--exec CODE``
-     - |exec|
-   * - ``-p PATH:PATH``, ``--script-path PATH:PATH``
-     - |script-path|
+``-E CODE``, ``--exec CODE``
+   |exec|
+``-p PATH:PATH``, ``--script-path PATH:PATH``
+   |script-path|
      
 There are three ways to use ``knife exec`` to run |ruby| script files. For example:
 
