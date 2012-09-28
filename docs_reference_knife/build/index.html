@@ -503,8 +503,17 @@
 </tr>
 </tbody>
 </table>
-<p>For example, to xxxxx, enter:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>xxxxx
+<p>For example, to provision a medium-sized CentOS machine configured as a web server in the &#8220;West US&#8221; data center, while also creating new hosted service and storage accounts, enter something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife azure server create -r <span class="s2">&quot;role[webserver]&quot;</span> --service-location <span class="s2">&quot;West US&quot;</span> --ssh-user foo
+  --ssh--password password --role-name web-apache-0001 --host-name web-apache
+  --tcp-endpoints 80:80,8080:8080 --source-image name_of_source_image --role-size Medium
+</pre></div>
+</div>
+<p>To provision a medium-sized CentOS machine configured as a web server in the &#8220;West US&#8221; data center, while reusing existing hosted service and storage accounts, enter something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife azure server create -r <span class="s2">&quot;role[webserver]&quot;</span> --service-location <span class="s2">&quot;West US&quot;</span>
+  --hosted-service-name webservers --storage-account webservers-storage --ssh-user foo
+  --ssh--password password --role-name web-apache-0001 --host-name web-apache
+  --tcp-endpoints 80:80,8080:8080 --source-image name_of_source_image --role-size Medium
 </pre></div>
 </div>
 </div>
@@ -4794,6 +4803,13 @@ ec2-184-73-60-141.compute-1.amazonaws.com   <span class="o">[</span>Fri, 22 Oct 
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife terremark server list server_name -A useraccount -K password -S service_name
 </pre></div>
 </div>
+<p>To provision a new dual-core 1.0 GB Ubuntu 10.04 web server with three attached disks with sizes of &#8220;25G&#8221;, &#8220;50G&#8221;, and &#8220;50G&#8221;, enter something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife terremark server create --vcpus 2 -m 1024 -I 40 -A <span class="s1">&#39;username&#39;</span> -K <span class="s2">&quot;password&quot;</span>
+  -r <span class="s1">&#39;role[webserver]&#39;</span> -i ~/.ssh/ssh-identity-file.pem -N web-server-nginx --tcp 80,8080
+  --udp 5050 --disks 25,50,50
+</pre></div>
+</div>
+<p><strong>jamescott: TO THE ABOVE SAMPLE, PENDING REVIEW QUESTION WITH CHIRAG.</strong></p>
 </div>
 <div class="section" id="id72">
 <h3>server delete<a class="headerlink" href="#id72" title="Permalink to this headline">¶</a></h3>
@@ -5015,10 +5031,10 @@ ec2-184-73-60-141.compute-1.amazonaws.com   <span class="o">[</span>Fri, 22 Oct 
 <td>The Windows Remote Management password.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-R</span> <span class="pre">KERBEROS_REALM</span></tt>, <tt class="docutils literal"><span class="pre">--kerberos-realm</span> <span class="pre">KERBEROS_REALM</span></tt></td>
-<td>The administrative domain in which the Kerberos encryption key is located. <strong>jamescott: NEED VERIFICATION. Or is this &#8220;The administrative domain to which a user will authenticate using |kerberos|-based authentication.&#8221;?</strong></td>
+<td>The administrative domain to which a user belongs.</td>
 </tr>
 <tr class="row-even"><td><tt class="docutils literal"><span class="pre">--returns</span> <span class="pre">CODES</span></tt></td>
-<td>A comma-delimited list of return codes, which indicate success. <strong>jamescott: success of what?</strong></td>
+<td>A comma-delimited list of return codes, which indicate the success or failure for the command that was run remotely.</td>
 </tr>
 <tr class="row-odd"><td><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">KERBEROS_SERVICE</span></tt>, <tt class="docutils literal"><span class="pre">--kerberos-service</span> <span class="pre">KERBEROS_SERVICE</span></tt></td>
 <td>The service principal used during Kerberos-based authentication.</td>
