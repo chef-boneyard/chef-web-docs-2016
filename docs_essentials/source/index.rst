@@ -21,7 +21,18 @@ The following sections discuss these elements (and their various sub-components)
 * The Chef Server
 * Cookbooks
 
+CUT THE FOLLOWING OUT. BUT KEEP IT IN MIND FOR THE FUTURE.
 
+Basic Workflows (PLACEHOLDER JUST FOR IDEAS FOR NOW):
+
+* Workflow A: Cookbooks
+* Workflow B: Setup Workstations
+* Workflow C: Setup Server
+* Workflow D: Setup Nodes
+* Workflow E: Chef Runs >> tying cookbooks + server + nodes together
+* Workflow F: Maintaining Nodes
+
+These should be high-level, each with a diagram that is based on the main-diagram. The actual workflow shouldn't be more than a paragraph (with bullets = OK) and should NOT get into the weeds.
 
 H1 -- Nodes -- DONE
 =====================================================
@@ -73,16 +84,9 @@ H2 -- |ohai| -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_ohai.rst
 
-**jamescott: BELOW THIS BUT STILL WITHIN THE OHAI HEADER, COULD BE SQUEEZED DOWN A BIT AND MAYBE A SUBHEADER (OR TWO).**
-
-The primary purpose of |ohai| is to provide node data to the |chef server|. When |ohai| runs, it will collect detailed, extensible information about the node on which it is running. This data is then used to determine which node attributes will be updated during the subsequent |chef| run.
-
-When used with a |chef server|, |ohai| will report this information back to the |chef server| as ``automatic`` node attributes and will the update the details for the node object for all attributes based on attribute precedence. When configured to be standalone, |ohai| will print out the data using a |json| data blob.
-
-|ohai| is included automatically as part of every |chef client| installation and it is a required part of each node's configuration. Custom plugins for |ohai| can be created.
-
+H3 -- Automatic Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_ohai_automatic_attribute.rst
-
 
 H3 -- |ohai| Attribute List -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -91,7 +95,6 @@ The following attributes are those which are re-written with each Ohai run, so t
 .. code-block:: bash
 
    ohai$ grep -R "provides" -h lib/ohai/plugins|sed 's/^\s*//g'|sed "s/\\\"/\'/g"|sort|uniq|grep ^provides
-
 
 
 H2 -- Handlers -- DONE
@@ -301,8 +304,9 @@ There are three types of |chef| servers:
 
 H2 -- Policy
 -----------------------------------------------------
-MAYBE JUST PUT THIS IN THE INTRO SECTION OF THE CHEF SERVER? ENVIRONMENTS, DATA BAGS, AND ROLES DON'T HAVE TO BE A SUBSET OF A HEADER NAMED POLICY TO HAVE AN EFFECTIVE SET OF TOPICS ABOUT.
+MAYBE JUST PUT THIS IN THE INTRO SECTION OF THE CHEF SERVER? ENVIRONMENTS, DATA BAGS, AND ROLES DON'T HAVE TO BE A SUBSET OF A HEADER NAMED POLICY TO HAVE AN EFFECTIVE SET OF TOPICS ABOUT. PARAGRAPH INCLUDED FOR NOW.
 
+.. include:: ../../includes/includes_chef_policy.rst
 
 H2 -- Environments -- DONE
 -----------------------------------------------------
@@ -325,6 +329,44 @@ H4 -- Ruby DSL -- DONE
 H4 -- JSON -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_environment_format_json.rst
+
+H3 -- Environment Attributes -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_environment_attribute.rst
+
+H4 -- Types -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_type.rst
+
+H4 -- Precedence vs. Priority (PICK A WORD!) -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_precedence.rst
+
+H4 -- Persistence -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_persistence.rst
+
+H4 -- Automatic Attributes -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_automatic.rst
+
+H4 -- Notation -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_notation.rst
+
+H4 -- Deep Merging of Environment Attributes -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge.rst
+
+The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
+
+H5 -- Substitution -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_substitute.rst
+
+H5 -- Addition -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_add.rst
 
 H3 -- Create Environments -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -478,9 +520,51 @@ H4 -- JSON -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_role_formats_json.rst
 
-H3 -- Manage Roles -- NOT DONE
+H3 -- Role Attributes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-SMALL SECTION OF WTF IN THE OLD DOCS.
+.. include:: ../../includes/includes_chef_role_attribute.rst
+
+H4 -- Types -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_type.rst
+
+H4 -- Precedence vs. Priority (PICK A WORD!) -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_precedence.rst
+
+H4 -- Persistence -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_persistence.rst
+
+H4 -- Automatic Attributes -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_automatic.rst
+
+H4 -- Notation -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_notation.rst
+
+H4 -- Deep Merging of Role Attributes -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge.rst
+
+The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
+
+H5 -- Substitution -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_substitute.rst
+
+H5 -- Addition -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_add.rst
+
+H3 -- Manage Roles -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_role_manage.rst
+
+Deleting Environments from a Role's Run-list -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_role_manage_delete.rst
 
 
 H2 -- Node Objects
@@ -498,7 +582,20 @@ Attributes may be set on a node from the following objects:
 * Roles
 * Nodes
 
-**jamescott: need to make sure that each of cookbooks, environments, roles, and nodes has a section that explains the "how to set the attributes" part of this story.**
+**jamescott: need to make sure that each of cookbooks, environments, roles, and nodes has a section that explains the "how to set the attributes" part of this story. The five sections below should be NEUTRAL to all locations. AND THEN WHEN THEY ARE, remove them from here?**
+
+**BELOW NEEDS REWRITE**
+
+Setting Node Attributes
+
+Node attributes can be set in recipes. This use of node attributes should do done when you want to calculate a derived value, or store some data on the node that should be persisted the next time Chef runs. Use the "set" method on the node.:
+
+   node.set['some_attribute'] = "Some Value" + "Some other value"
+   node.set['some_attribute']['sub_attribute'] = "Sub attribute Value"
+
+Attributes are applied in precedence order; node attributes are automatic and have the highest precedence. As these automatic attributes will be re-written with each Ohai run - Chef doesn't provide any way to modify them. See Setting Attributes for more detail on the attribute types and precedences.
+
+**ABOVE NEEDS REWRITE**
 
 H4 -- Attribute Types -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -684,41 +781,65 @@ H1 -- Cookbooks
 =====================================================
 .. include:: ../../includes/includes_chef_cookbook.rst
 
+.. note:: A cookbook includes a readme file that is used to xxxxx.
+
+
 H2 -- Cookbooks Directory Structure -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_repository_directory_cookbooks.rst
 
 
-H2 -- Attributes
+H2 -- Cookbook Attributes -- DONE
 -----------------------------------------------------
 .. include:: ../../includes/includes_chef_cookbook_attribute.rst
 
-THE ATTRIBUTES DISCUSSION NEEDS TO BE CONSOLIDATED AS MUCH AS POSSIBLE. THERE ARE NODE ATTRIBUTES AS WELL -- SEE THE NODE TOPICS AND THE CHEF SERVER TOPICS.
-
-H3 -- Deep Merging of ROLE | ENVIRONMENT Attributes
+H3 -- When to Use Attributes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge.rst
+.. include:: ../../includes/includes_chef_cookbook_attribute_when_to_use.rst
 
-The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
-
-H4 -- Substitution
+H4 -- NODE, ENVIRONMENT, ROLE, and ATTRIBUTE FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_substitute.rst
+NO TOPIC, BUT CONSIDER THIS.
 
-H4 -- Addition
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_add.rst
-
-H3 -- xxxxx
+Types -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
+.. include:: ../../includes/includes_chef_node_attribute_type.rst
 
-H4 -- xxxxx
+Precedence vs. Priority (PICK A WORD!) -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_node_attribute_precedence.rst
+
+Persistence -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_node_attribute_persistence.rst
+
+Automatic Attributes -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_node_attribute_automatic.rst
+
+Notation -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_node_attribute_notation.rst
+
+H3 -- Attribute Files
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_attribute_file.rst
+
+H4 -- Attribute File Methods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-xxxxx
+.. include:: ../../includes/includes_chef_cookbook_attribute_file_methods.rst
 
+H4 -- Cookbook Attribute File Ordering
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_file_ordering.rst
 
+H4 -- Attribute Accessor Methods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_file_methods_accessor.rst
 
+H4 -- Reloading Attribute Files From Recipes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_file_reload_from_recipe.rst
 
 
 
@@ -863,7 +984,6 @@ H4 -- Use a Default Provider -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_cookbook_lightweight_resource_use_default_provider.rst
 
-
 H3 -- Lightweight Providers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_lightweight_provider.rst
@@ -916,6 +1036,42 @@ H3 -- Include Recipes in Recipes -- DONE
 H3 -- Cookbook Dependencies -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_recipe_cookbook_dependencies.rst
+
+
+
+H3 -- Recipe Attributes -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_cookbook_recipe_attribute.rst
+
+H4 -- Types -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_type.rst
+
+H4 -- Precedence vs. Priority (PICK A WORD!) -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_precedence.rst
+
+H4 -- Persistence -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_persistence.rst
+
+H4 -- Automatic Attributes -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_automatic.rst
+
+H4 -- Notation -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_notation.rst
+
+H4 -- Attribute Methods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_file_methods.rst
+
+H4 -- Reloading Attributes From Recipes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_cookbook_attribute_file_reload_from_recipe.rst
+
+.. include:: ../../includes/includes_chef_cookbook_attribute_file_methods_accessor.rst
 
 H3 -- Search Indexes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1043,8 +1199,6 @@ The following resources are built into |chef|:
 H3 -- Platform Providers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_provider_platform.rst
-
-
 
 
 

@@ -57,6 +57,7 @@
 </li>
 <li><a class="reference internal" href="#h2-the-chef-run-xxxxx">H2 &#8211; The Chef Run &#8211; xxxxx</a></li>
 <li><a class="reference internal" href="#h2-ohai-done">H2 &#8211; Ohai &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#h3-automatic-attributes">H3 &#8211; Automatic Attributes</a></li>
 <li><a class="reference internal" href="#h3-ohai-attribute-list-done">H3 &#8211; Ohai Attribute List &#8211; DONE</a></li>
 </ul>
 </li>
@@ -120,6 +121,17 @@
 <li><a class="reference internal" href="#h4-json-done">H4 &#8211; JSON &#8211; DONE</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#h3-environment-attributes-done">H3 &#8211; Environment Attributes &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#h4-types-done">H4 &#8211; Types &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h4-precedence-vs-priority-pick-a-word-done">H4 &#8211; Precedence vs. Priority (PICK A WORD!) &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h4-persistence-done">H4 &#8211; Persistence &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h4-automatic-attributes-done">H4 &#8211; Automatic Attributes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h4-notation-done">H4 &#8211; Notation &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h4-deep-merging-of-environment-attributes-done">H4 &#8211; Deep Merging of Environment Attributes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h5-substitution-done">H5 &#8211; Substitution &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h5-addition-done">H5 &#8211; Addition &#8211; DONE</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#h3-create-environments-done">H3 &#8211; Create Environments &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-manage-environments-done">H3 &#8211; Manage Environments &#8211; DONE</a><ul>
 <li><a class="reference internal" href="#h4-save-environment-data-in-a-data-bag-done">H4 &#8211; Save Environment Data in a Data Bag &#8211; DONE</a></li>
@@ -175,7 +187,21 @@
 <li><a class="reference internal" href="#id3">H4 &#8211; JSON &#8211; DONE</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#h3-manage-roles-not-done">H3 &#8211; Manage Roles &#8211; NOT DONE</a></li>
+<li><a class="reference internal" href="#h3-role-attributes-done">H3 &#8211; Role Attributes &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#id4">H4 &#8211; Types &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id5">H4 &#8211; Precedence vs. Priority (PICK A WORD!) &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id6">H4 &#8211; Persistence &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id7">H4 &#8211; Automatic Attributes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id8">H4 &#8211; Notation &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h4-deep-merging-of-role-attributes-done">H4 &#8211; Deep Merging of Role Attributes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id9">H5 &#8211; Substitution &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id10">H5 &#8211; Addition &#8211; DONE</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#h3-manage-roles-done">H3 &#8211; Manage Roles &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#deleting-environments-from-a-role-s-run-list-done">Deleting Environments from a Role&#8217;s Run-list &#8211; DONE</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a class="reference internal" href="#h2-node-objects">H2 &#8211; Node Objects</a><ul>
@@ -183,7 +209,7 @@
 <li><a class="reference internal" href="#h4-attribute-types-done">H4 &#8211; Attribute Types &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h4-attribute-precedence-done">H4 &#8211; Attribute Precedence &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h4-attribute-persistence-done">H4 &#8211; Attribute Persistence &#8211; DONE</a></li>
-<li><a class="reference internal" href="#h4-automatic-attributes-done">H4 &#8211; Automatic Attributes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id11">H4 &#8211; Automatic Attributes &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h4-attribute-notation-done">H4 &#8211; Attribute Notation &#8211; DONE</a></li>
 </ul>
 </li>
@@ -210,8 +236,8 @@
 <li><a class="reference internal" href="#h4-roles-in-run-lists-done">H4 &#8211; Roles in Run-lists: &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h4-nodes-done">H4 &#8211; Nodes: &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h4-clients-done">H4 &#8211; Clients: &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id4">H4 &#8211; Environments: &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id5">H4 &#8211; Data Bags: &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id12">H4 &#8211; Environments: &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id13">H4 &#8211; Data Bags: &#8211; DONE</a></li>
 </ul>
 </li>
 </ul>
@@ -222,14 +248,21 @@
 </li>
 <li><a class="reference internal" href="#h1-cookbooks">H1 &#8211; Cookbooks</a><ul>
 <li><a class="reference internal" href="#h2-cookbooks-directory-structure-done">H2 &#8211; Cookbooks Directory Structure &#8211; DONE</a></li>
-<li><a class="reference internal" href="#h2-attributes">H2 &#8211; Attributes</a><ul>
-<li><a class="reference internal" href="#h3-deep-merging-of-role-environment-attributes">H3 &#8211; Deep Merging of ROLE | ENVIRONMENT Attributes</a><ul>
-<li><a class="reference internal" href="#h4-substitution">H4 &#8211; Substitution</a></li>
-<li><a class="reference internal" href="#h4-addition">H4 &#8211; Addition</a></li>
+<li><a class="reference internal" href="#h2-cookbook-attributes-done">H2 &#8211; Cookbook Attributes &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#h3-when-to-use-attributes-done">H3 &#8211; When to Use Attributes &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#h4-node-environment-role-and-attribute-file">H4 &#8211; NODE, ENVIRONMENT, ROLE, and ATTRIBUTE FILE</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#h3-xxxxx">H3 &#8211; xxxxx</a><ul>
-<li><a class="reference internal" href="#id6">H4 &#8211; xxxxx</a></li>
+<li><a class="reference internal" href="#types-done">Types &#8211; DONE</a></li>
+<li><a class="reference internal" href="#precedence-vs-priority-pick-a-word-done">Precedence vs. Priority (PICK A WORD!) &#8211; DONE</a></li>
+<li><a class="reference internal" href="#persistence-done">Persistence &#8211; DONE</a></li>
+<li><a class="reference internal" href="#automatic-attributes-done">Automatic Attributes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#notation-done">Notation &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h3-attribute-files">H3 &#8211; Attribute Files</a><ul>
+<li><a class="reference internal" href="#h4-attribute-file-methods">H4 &#8211; Attribute File Methods</a></li>
+<li><a class="reference internal" href="#h4-cookbook-attribute-file-ordering">H4 &#8211; Cookbook Attribute File Ordering</a></li>
+<li><a class="reference internal" href="#h4-attribute-accessor-methods">H4 &#8211; Attribute Accessor Methods</a></li>
+<li><a class="reference internal" href="#h4-reloading-attribute-files-from-recipes">H4 &#8211; Reloading Attribute Files From Recipes</a></li>
 </ul>
 </li>
 </ul>
@@ -272,7 +305,7 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#h3-lightweight-providers-done">H3 &#8211; Lightweight Providers &#8211; DONE</a><ul>
-<li><a class="reference internal" href="#id7">H4 &#8211; Actions &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id14">H4 &#8211; Actions &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h4-extending-providers-done">H4 &#8211; Extending Providers &#8211; DONE</a></li>
 </ul>
 </li>
@@ -288,7 +321,17 @@
 <li><a class="reference internal" href="#h3-apply-recipes-to-run-lists-done">H3 &#8211; Apply Recipes to Run-lists &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-include-recipes-in-recipes-done">H3 &#8211; Include Recipes in Recipes &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-cookbook-dependencies-done">H3 &#8211; Cookbook Dependencies &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id8">H3 &#8211; Search Indexes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h3-recipe-attributes-done">H3 &#8211; Recipe Attributes &#8211; DONE</a><ul>
+<li><a class="reference internal" href="#id15">H4 &#8211; Types &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id16">H4 &#8211; Precedence vs. Priority (PICK A WORD!) &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id17">H4 &#8211; Persistence &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id18">H4 &#8211; Automatic Attributes &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id19">H4 &#8211; Notation &#8211; DONE</a></li>
+<li><a class="reference internal" href="#h4-attribute-methods">H4 &#8211; Attribute Methods</a></li>
+<li><a class="reference internal" href="#h4-reloading-attributes-from-recipes">H4 &#8211; Reloading Attributes From Recipes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id20">H3 &#8211; Search Indexes &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-data-bags-done">H3 &#8211; Data Bags &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-other-recipe-dsl-methods-done-deprecate">H3 &#8211; Other Recipe DSL Methods &#8211; DONE, DEPRECATE?</a></li>
 <li><a class="reference internal" href="#h3-tags-done-but-weak">H3 &#8211; Tags &#8211; DONE, BUT WEAK</a></li>
@@ -306,10 +349,10 @@
 <li><a class="reference internal" href="#h3-requirements-done">H3 &#8211; Requirements &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-variables-done">H3 &#8211; Variables &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-location-specificity-done">H3 &#8211; Location Specificity &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id9">H3 &#8211; Host Notation &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id21">H3 &#8211; Host Notation &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-transfer-frequency-done">H3 &#8211; Transfer Frequency &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-versions-done">H3 &#8211; Versions &#8211; DONE</a></li>
-<li><a class="reference internal" href="#id10">H3 &#8211; Syntax &#8211; DONE</a></li>
+<li><a class="reference internal" href="#id22">H3 &#8211; Syntax &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-operators-done">H3 &#8211; Operators &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-version-constraints-done">H3 &#8211; Version Constraints &#8211; DONE</a></li>
 <li><a class="reference internal" href="#h3-metadata-in-metadata-rb-done">H3 &#8211; Metadata (in metadata.rb) &#8211; DONE</a></li>
@@ -370,6 +413,17 @@
 <li>The Chef Server</li>
 <li>Cookbooks</li>
 </ul>
+<p>CUT THE FOLLOWING OUT. BUT KEEP IT IN MIND FOR THE FUTURE.</p>
+<p>Basic Workflows (PLACEHOLDER JUST FOR IDEAS FOR NOW):</p>
+<ul class="simple">
+<li>Workflow A: Cookbooks</li>
+<li>Workflow B: Setup Workstations</li>
+<li>Workflow C: Setup Server</li>
+<li>Workflow D: Setup Nodes</li>
+<li>Workflow E: Chef Runs &gt;&gt; tying cookbooks + server + nodes together</li>
+<li>Workflow F: Maintaining Nodes</li>
+</ul>
+<p>These should be high-level, each with a diagram that is based on the main-diagram. The actual workflow shouldn&#8217;t be more than a paragraph (with bullets = OK) and should NOT get into the weeds.</p>
 <div class="section" id="h1-nodes-done">
 <h2>H1 &#8211; Nodes &#8211; DONE<a class="headerlink" href="#h1-nodes-done" title="Permalink to this headline">¶</a></h2>
 <p>A node is a server or virtual server that is configured to be maintained by a chef-client. A node can be physical or cloud-based. A Chef organization can be comprised of any combination of physical and cloud-based nodes. The chef-client runs on each node and Ohai is used to collect data about the system so that Chef can use it. Each node keeps a cache that contains the most recent node object and all of the cookbooks that are used during configuration of the node.</p>
@@ -439,10 +493,8 @@
 <li>and other configuration details</li>
 </ul>
 <p>Ohai reports each piece of data back to the Chef server as a node attribute. Later, while Chef configures a node, these attributes are used to ensure that certain properties remain unchanged. Ohai is part of the required configuration on each node that is registered with the Chef server.</p>
-<p><strong>jamescott: BELOW THIS BUT STILL WITHIN THE OHAI HEADER, COULD BE SQUEEZED DOWN A BIT AND MAYBE A SUBHEADER (OR TWO).</strong></p>
-<p>The primary purpose of Ohai is to provide node data to the Chef server. When Ohai runs, it will collect detailed, extensible information about the node on which it is running. This data is then used to determine which node attributes will be updated during the subsequent Chef run.</p>
-<p>When used with a Chef server, Ohai will report this information back to the Chef server as <tt class="docutils literal"><span class="pre">automatic</span></tt> node attributes and will the update the details for the node object for all attributes based on attribute precedence. When configured to be standalone, Ohai will print out the data using a JSON data blob.</p>
-<p>Ohai is included automatically as part of every chef-client installation and it is a required part of each node&#8217;s configuration. Custom plugins for Ohai can be created.</p>
+<div class="section" id="h3-automatic-attributes">
+<h4>H3 &#8211; Automatic Attributes<a class="headerlink" href="#h3-automatic-attributes" title="Permalink to this headline">¶</a></h4>
 <p>An automatic attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on. Automatic attributes are detected by Ohai and are then used by Chef to ensure that these attribute are handled properly during every Chef run. The most commonly accessed automatic attributes are:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -487,6 +539,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <div class="section" id="h3-ohai-attribute-list-done">
 <h4>H3 &#8211; Ohai Attribute List &#8211; DONE<a class="headerlink" href="#h3-ohai-attribute-list-done" title="Permalink to this headline">¶</a></h4>
 <p>The following attributes are those which are re-written with each Ohai run, so they should be recognized as being unmodifiable when considering the use of attributes:</p>
@@ -1313,7 +1366,8 @@ x.split(" ").join(", ") # =&gt; "My, String"</pre>
 </table>
 <div class="section" id="h2-policy">
 <h3>H2 &#8211; Policy<a class="headerlink" href="#h2-policy" title="Permalink to this headline">¶</a></h3>
-<p>MAYBE JUST PUT THIS IN THE INTRO SECTION OF THE CHEF SERVER? ENVIRONMENTS, DATA BAGS, AND ROLES DON&#8217;T HAVE TO BE A SUBSET OF A HEADER NAMED POLICY TO HAVE AN EFFECTIVE SET OF TOPICS ABOUT.</p>
+<p>MAYBE JUST PUT THIS IN THE INTRO SECTION OF THE CHEF SERVER? ENVIRONMENTS, DATA BAGS, AND ROLES DON&#8217;T HAVE TO BE A SUBSET OF A HEADER NAMED POLICY TO HAVE AN EFFECTIVE SET OF TOPICS ABOUT. PARAGRAPH INCLUDED FOR NOW.</p>
+<p>Policy settings can be used to map the capabilities of Chef to organizational requirements. For example, custom environments can be mapped to an organization&#8217;s actual processes and workflow. Roles define server types, such as &#8220;web server&#8221; or &#8220;database server&#8221;. Certain types of data, such as passwords, user account data, and other sensitive items can be placed in data bags, which are located in a secure sub-area of Chef that can only be accessed by nodes that have the correct SSL certificates.</p>
 </div>
 <div class="section" id="h2-environments-done">
 <h3>H2 &#8211; Environments &#8211; DONE<a class="headerlink" href="#h2-environments-done" title="Permalink to this headline">¶</a></h3>
@@ -1484,6 +1538,224 @@ default_attributes "apache2" =&gt; { "listen_ports" =&gt; [ "80", "443" ] }</pre
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="section" id="h3-environment-attributes-done">
+<h4>H3 &#8211; Environment Attributes &#8211; DONE<a class="headerlink" href="#h3-environment-attributes-done" title="Permalink to this headline">¶</a></h4>
+<p>An attribute can be defined in an environment and then used to override the default settings on a node. When an environment is applied during a Chef run, these attributes are compared to the attributes that are already present on the node. When the environment attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
+<p>An environment attribute can only be set to be a default attribute or an override attribute. An environment attribute cannot be set to be a normal attribute. Use the <tt class="docutils literal"><span class="pre">default_attribute</span></tt> and <tt class="docutils literal"><span class="pre">override_attribute</span></tt> methods in the Ruby DSL file or the <tt class="docutils literal"><span class="pre">default_attributes</span></tt> and <tt class="docutils literal"><span class="pre">override_attributes</span></tt> hashes in a JSON data file.</p>
+<div class="section" id="h4-types-done">
+<h5>H4 &#8211; Types &#8211; DONE<a class="headerlink" href="#h4-types-done" title="Permalink to this headline">¶</a></h5>
+<p>There are four types of attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default</span></tt></td>
+<td>A default attribute is <strong>jamescott: &#8220;A default attribute is what?&#8221; (other than the obvious) &#8211; but what&#8217;s the difference between default an normal and how does an attribute become a &#8220;default attribute&#8221;?</strong>. A default attribute has the lowest attribute precedence. A default attribute is automatically reset each time Chef runs. A cookbook should be authored so that it uses default attributes whenever possible.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">normal</span></tt></td>
+<td>A normal attribute is an attribute that persists on the target system . A normal attribute is never reset during a Chef run. A normal attribute has a higher attribute precedence than a default attribute.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">override</span></tt></td>
+<td>An override attribute is an attribute that is specified in a recipe (or a run-list) and are often set only for specific roles or nodes. An override attribute has a higher attribute precedence than default or normal attributes. An override attribute is automatically reset each time Chef runs. A cookbook should be authored so that it uses override attributes for role-specific or node-specific values when required.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">automatic</span></tt></td>
+<td>An automatic attribute contains data that is automatically-generated by Ohai during every Chef run (all previous values are overwritten by the newly-generated values). An automatic attribute cannot be modified. An automatic attribute has the highest attribute precedence. An automatic attribute is automatically reset each time Chef runs.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="h4-precedence-vs-priority-pick-a-word-done">
+<h5>H4 &#8211; Precedence vs. Priority (PICK A WORD!) &#8211; DONE<a class="headerlink" href="#h4-precedence-vs-priority-pick-a-word-done" title="Permalink to this headline">¶</a></h5>
+<p>During a Chef run, saved attributes are retrieved from the Chef server and are merged with the attributes on the local system. The attribute type and the source of the attribute determines which attribute values have priority over others. Attribute values are applied in the following order (from low to high priority):</p>
+<ul class="simple">
+<li>Default attributes applied in an attributes file</li>
+<li>Default attributes applied in an environment</li>
+<li>Default attributes applied in a role</li>
+<li>Default attributes applied on a node directly in a recipe</li>
+<li>Normal attributes applied in an attributes file</li>
+<li>Normal attributes applied on a node directly in a recipe</li>
+<li>Override attributes applied in an attributes file</li>
+<li>Override attributes applied in a role</li>
+<li>Override attributes applied in an environment</li>
+<li>Override attributes applied on a node directly in a recipe</li>
+<li>Automatic attributes, re-generated by Ohai during each Chef run.</li>
+</ul>
+</div>
+<div class="section" id="h4-persistence-done">
+<h5>H4 &#8211; Persistence &#8211; DONE<a class="headerlink" href="#h4-persistence-done" title="Permalink to this headline">¶</a></h5>
+<p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds these attributes by based on attributes contained in cookbooks, recipes, roles, and environments, plus Ohai data that is collected about that node at the beginning of the Chef run. Normal attributes are never reset. During a Chef run, any new attributes that are passed to the chef-client are merged with the existing normal attributes on the node and any new settings are applied according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
+<p><strong>jamescott: THIS ONE NEEDS TO BE REVIEWED. SEE http://wiki.opscode.com/display/chef/Attributes AND READ &#8220;ATTRIBUTE PERSISTENCE&#8221; AND THEN READ THE ABOVE AND PROVIDE FEEDBACK.</strong></p>
+</div>
+<div class="section" id="h4-automatic-attributes-done">
+<h5>H4 &#8211; Automatic Attributes &#8211; DONE<a class="headerlink" href="#h4-automatic-attributes-done" title="Permalink to this headline">¶</a></h5>
+<p>An automatic attribute is data that must be understood, but not modified. For example, the IP address of a node, a host name, or the number of loaded kernel modules. When Chef makes changes to a system during a Chef run, automatic attributes are used to ensure that Chef does not make changes to the larger environment on which a node is running. An automatic attribute always has the highest attribute precedence. Automatic attributes are saved to the Chef server where they are indexed for search. Automatic attributes are detected by Ohai before every Chef run.</p>
+</div>
+<div class="section" id="h4-notation-done">
+<h5>H4 &#8211; Notation &#8211; DONE<a class="headerlink" href="#h4-notation-done" title="Permalink to this headline">¶</a></h5>
+<p>Attributes are a special key-value store called a mash within the context of the Ruby DSL. A mash is just a hash where the key can be either a symbol (:key) or a string (&#8220;key&#8221;).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Individuals who are new to Ruby and Chef may have an easier time using only string notation. This approach allows attributes to &#8220;be quoted&#8221; and doesn&#8217;t require learning about special cases, namespace overlap (and <tt class="docutils literal"><span class="pre">method_missing</span></tt>), character constraints, and escaping.</p>
+</div>
+</div>
+<div class="section" id="h4-deep-merging-of-environment-attributes-done">
+<h5>H4 &#8211; Deep Merging of Environment Attributes &#8211; DONE<a class="headerlink" href="#h4-deep-merging-of-environment-attributes-done" title="Permalink to this headline">¶</a></h5>
+<p>Attributes are typically stored in a recipe using a multi-level hash or array. For example, a group of attributes for web servers might be:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>But what if all of the web servers aren&#8217;t the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like above and once just like below:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>But that is not very efficient, especially since most of them are identical. The deep merge capabilities of Chef enable attributes to be layered across recipes and cookbooks. This allows an attribute to be reused across nodes, yet still provide a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named <tt class="docutils literal"><span class="pre">baseline.rb</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;baseline&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;The most basic role for all configurations&quot;</span>
+<span class="n">run_list</span> <span class="s2">&quot;recipe[baseline]&quot;</span>
+
+<span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>and then a role named <tt class="docutils literal"><span class="pre">web.rb</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;web&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;Web server config&quot;</span>
+<span class="n">run_list</span> <span class="s2">&quot;role[baseline]&quot;</span>
+
+<span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Both of these files are similar. They share the same structure. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> references the <tt class="docutils literal"><span class="pre">baseline.rb</span></tt> role. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> file only provides a value for one attribute: <tt class="docutils literal"><span class="pre">:startservers</span></tt>. When Chef compares these attributes, the deep merge feature will ensure that <tt class="docutils literal"><span class="pre">:startservers</span></tt> (and it&#8217;s value of <tt class="docutils literal"><span class="pre">30</span></tt>) will be applied to any node for which the <tt class="docutils literal"><span class="pre">web.rb</span></tt> attribute structure should be applied.</p>
+<p>This approach will allow a recipe like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_recipe</span> <span class="s2">&quot;apache2&quot;</span>
+<span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;apache&#39;</span><span class="o">][</span><span class="s1">&#39;prefork&#39;</span><span class="o">].</span><span class="n">to_hash</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and a <tt class="docutils literal"><span class="pre">run_list</span></tt> like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">run_list</span><span class="o">/</span><span class="n">web</span><span class="o">.</span><span class="n">json</span>
+<span class="p">{</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="p">:</span> <span class="o">[</span> <span class="s2">&quot;role[web]&quot;</span> <span class="o">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>to produce results like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="o">[</span><span class="no">Tue</span><span class="p">,</span> <span class="mi">16</span> <span class="no">Aug</span> <span class="mi">2011</span> <span class="mi">14</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">26</span> <span class="o">-</span><span class="mo">0700</span><span class="o">]</span> <span class="no">INFO</span><span class="p">:</span>
+         <span class="p">{</span>
+           <span class="s2">&quot;startservers&quot;</span><span class="o">=&gt;</span><span class="mi">30</span><span class="p">,</span>
+           <span class="s2">&quot;minspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">20</span><span class="p">,</span>
+           <span class="s2">&quot;maxspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">40</span><span class="p">,</span>
+           <span class="s2">&quot;serverlimit&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
+           <span class="s2">&quot;maxclients&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
+           <span class="s2">&quot;maxrequestsperchild&quot;</span><span class="o">=&gt;</span><span class="mi">10000</span>
+         <span class="p">}</span>
+</pre></div>
+</div>
+<p>Even though the <tt class="docutils literal"><span class="pre">web.rb</span></tt> file does not contain attributes and values for <tt class="docutils literal"><span class="pre">minspareservers</span></tt>, <tt class="docutils literal"><span class="pre">maxspareservers</span></tt>, <tt class="docutils literal"><span class="pre">serverlimit</span></tt>, <tt class="docutils literal"><span class="pre">maxclients</span></tt>, and <tt class="docutils literal"><span class="pre">maxrequestsperchild</span></tt>, the deep merge capabilities pulled them in.</p>
+<p>The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.</p>
+</div>
+<div class="section" id="h5-substitution-done">
+<h5>H5 &#8211; Substitution &#8211; DONE<a class="headerlink" href="#h5-substitution-done" title="Permalink to this headline">¶</a></h5>
+<p>The following examples show how the logic works for substituting an existing string using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
++
+role_or_environment 2 { :y =&gt; "3" }
+=
+{ :x =&gt; "1", :y =&gt; "3" }</pre>
+</div>
+<p>For substituting an existing boolean using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; true, :y =&gt; false }
++
+role_or_environment 2 { :y =&gt; true }
+=
+{ :x =&gt; true, :y =&gt; true }</pre>
+</div>
+<p>For substituting an existing string in an array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
++
+role_or_environment 2 [ "!merge:2", "3" ]
+=
+[ "1", "3" ]</pre>
+</div>
+<p>For substituting an array with a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2", "3" ]
++
+role_or_environment 2 { :x =&gt; "1" , :y =&gt; "2" }
+=
+{ :x =&gt; "1", :y =&gt; "3" }</pre>
+</div>
+<p>When items can&#8217;t be merged through substitution, the original data is overwritten.</p>
+</div>
+<div class="section" id="h5-addition-done">
+<h5>H5 &#8211; Addition &#8211; DONE<a class="headerlink" href="#h5-addition-done" title="Permalink to this headline">¶</a></h5>
+<p>The following examples show how the logic works for adding a string using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
++
+role_or_environment 2 { :z =&gt; "3" }
+=
+{ :x =&gt; "1", :y =&gt; "2", :z =&gt; "3" }</pre>
+</div>
+<p>For adding a string using an array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
++
+role_or_environment 2 [ "3" ]
+=
+[ "1", "2", "3" ]</pre>
+</div>
+<p>For adding a string using a multi-level hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; { :y =&gt; "2" } }
++
+role_or_environment 2 { :x =&gt; { :z =&gt; "3" } }
+=
+{ :x =&gt; { :y =&gt; "2", :z =&gt; "3" } }</pre>
+</div>
+<p>For adding a string using a multi-level array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ [ 1, 2 ] ]
++
+role_or_environment 2 [ [ 3 ] ]
+=
+[ [ 1, 2 ], [ 3 ] ]</pre>
+</div>
 </div>
 </div>
 <div class="section" id="h3-create-environments-done">
@@ -2350,9 +2622,246 @@ override_attributes "apache2" =&gt; { "max_children" =&gt; "50" }</pre>
 </table>
 </div>
 </div>
-<div class="section" id="h3-manage-roles-not-done">
-<h4>H3 &#8211; Manage Roles &#8211; NOT DONE<a class="headerlink" href="#h3-manage-roles-not-done" title="Permalink to this headline">¶</a></h4>
-<p>SMALL SECTION OF WTF IN THE OLD DOCS.</p>
+<div class="section" id="h3-role-attributes-done">
+<h4>H3 &#8211; Role Attributes &#8211; DONE<a class="headerlink" href="#h3-role-attributes-done" title="Permalink to this headline">¶</a></h4>
+<p>An attribute can be defined in a role and then used to override the default settings on a node. When a role is applied during a Chef run, these attributes are compared to the attributes that are already present on the node. When the role attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
+<p>A role attribute can only be set to be a default attribute or an override attribute. A role attribute cannot be set to be a normal attribute. Use the <tt class="docutils literal"><span class="pre">default_attribute</span></tt> and <tt class="docutils literal"><span class="pre">override_attribute</span></tt> methods in the Ruby DSL file or the <tt class="docutils literal"><span class="pre">default_attributes</span></tt> and <tt class="docutils literal"><span class="pre">override_attributes</span></tt> hashes in a JSON data file.</p>
+<div class="section" id="id4">
+<h5>H4 &#8211; Types &#8211; DONE<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
+<p>There are four types of attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default</span></tt></td>
+<td>A default attribute is <strong>jamescott: &#8220;A default attribute is what?&#8221; (other than the obvious) &#8211; but what&#8217;s the difference between default an normal and how does an attribute become a &#8220;default attribute&#8221;?</strong>. A default attribute has the lowest attribute precedence. A default attribute is automatically reset each time Chef runs. A cookbook should be authored so that it uses default attributes whenever possible.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">normal</span></tt></td>
+<td>A normal attribute is an attribute that persists on the target system . A normal attribute is never reset during a Chef run. A normal attribute has a higher attribute precedence than a default attribute.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">override</span></tt></td>
+<td>An override attribute is an attribute that is specified in a recipe (or a run-list) and are often set only for specific roles or nodes. An override attribute has a higher attribute precedence than default or normal attributes. An override attribute is automatically reset each time Chef runs. A cookbook should be authored so that it uses override attributes for role-specific or node-specific values when required.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">automatic</span></tt></td>
+<td>An automatic attribute contains data that is automatically-generated by Ohai during every Chef run (all previous values are overwritten by the newly-generated values). An automatic attribute cannot be modified. An automatic attribute has the highest attribute precedence. An automatic attribute is automatically reset each time Chef runs.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h5>H4 &#8211; Precedence vs. Priority (PICK A WORD!) &#8211; DONE<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h5>
+<p>During a Chef run, saved attributes are retrieved from the Chef server and are merged with the attributes on the local system. The attribute type and the source of the attribute determines which attribute values have priority over others. Attribute values are applied in the following order (from low to high priority):</p>
+<ul class="simple">
+<li>Default attributes applied in an attributes file</li>
+<li>Default attributes applied in an environment</li>
+<li>Default attributes applied in a role</li>
+<li>Default attributes applied on a node directly in a recipe</li>
+<li>Normal attributes applied in an attributes file</li>
+<li>Normal attributes applied on a node directly in a recipe</li>
+<li>Override attributes applied in an attributes file</li>
+<li>Override attributes applied in a role</li>
+<li>Override attributes applied in an environment</li>
+<li>Override attributes applied on a node directly in a recipe</li>
+<li>Automatic attributes, re-generated by Ohai during each Chef run.</li>
+</ul>
+</div>
+<div class="section" id="id6">
+<h5>H4 &#8211; Persistence &#8211; DONE<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
+<p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds these attributes by based on attributes contained in cookbooks, recipes, roles, and environments, plus Ohai data that is collected about that node at the beginning of the Chef run. Normal attributes are never reset. During a Chef run, any new attributes that are passed to the chef-client are merged with the existing normal attributes on the node and any new settings are applied according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
+<p><strong>jamescott: THIS ONE NEEDS TO BE REVIEWED. SEE http://wiki.opscode.com/display/chef/Attributes AND READ &#8220;ATTRIBUTE PERSISTENCE&#8221; AND THEN READ THE ABOVE AND PROVIDE FEEDBACK.</strong></p>
+</div>
+<div class="section" id="id7">
+<h5>H4 &#8211; Automatic Attributes &#8211; DONE<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<p>An automatic attribute is data that must be understood, but not modified. For example, the IP address of a node, a host name, or the number of loaded kernel modules. When Chef makes changes to a system during a Chef run, automatic attributes are used to ensure that Chef does not make changes to the larger environment on which a node is running. An automatic attribute always has the highest attribute precedence. Automatic attributes are saved to the Chef server where they are indexed for search. Automatic attributes are detected by Ohai before every Chef run.</p>
+</div>
+<div class="section" id="id8">
+<h5>H4 &#8211; Notation &#8211; DONE<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h5>
+<p>Attributes are a special key-value store called a mash within the context of the Ruby DSL. A mash is just a hash where the key can be either a symbol (:key) or a string (&#8220;key&#8221;).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Individuals who are new to Ruby and Chef may have an easier time using only string notation. This approach allows attributes to &#8220;be quoted&#8221; and doesn&#8217;t require learning about special cases, namespace overlap (and <tt class="docutils literal"><span class="pre">method_missing</span></tt>), character constraints, and escaping.</p>
+</div>
+</div>
+<div class="section" id="h4-deep-merging-of-role-attributes-done">
+<h5>H4 &#8211; Deep Merging of Role Attributes &#8211; DONE<a class="headerlink" href="#h4-deep-merging-of-role-attributes-done" title="Permalink to this headline">¶</a></h5>
+<p>Attributes are typically stored in a recipe using a multi-level hash or array. For example, a group of attributes for web servers might be:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>But what if all of the web servers aren&#8217;t the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like above and once just like below:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>But that is not very efficient, especially since most of them are identical. The deep merge capabilities of Chef enable attributes to be layered across recipes and cookbooks. This allows an attribute to be reused across nodes, yet still provide a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named <tt class="docutils literal"><span class="pre">baseline.rb</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;baseline&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;The most basic role for all configurations&quot;</span>
+<span class="n">run_list</span> <span class="s2">&quot;recipe[baseline]&quot;</span>
+
+<span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>and then a role named <tt class="docutils literal"><span class="pre">web.rb</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;web&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;Web server config&quot;</span>
+<span class="n">run_list</span> <span class="s2">&quot;role[baseline]&quot;</span>
+
+<span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Both of these files are similar. They share the same structure. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> references the <tt class="docutils literal"><span class="pre">baseline.rb</span></tt> role. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> file only provides a value for one attribute: <tt class="docutils literal"><span class="pre">:startservers</span></tt>. When Chef compares these attributes, the deep merge feature will ensure that <tt class="docutils literal"><span class="pre">:startservers</span></tt> (and it&#8217;s value of <tt class="docutils literal"><span class="pre">30</span></tt>) will be applied to any node for which the <tt class="docutils literal"><span class="pre">web.rb</span></tt> attribute structure should be applied.</p>
+<p>This approach will allow a recipe like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_recipe</span> <span class="s2">&quot;apache2&quot;</span>
+<span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;apache&#39;</span><span class="o">][</span><span class="s1">&#39;prefork&#39;</span><span class="o">].</span><span class="n">to_hash</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and a <tt class="docutils literal"><span class="pre">run_list</span></tt> like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">run_list</span><span class="o">/</span><span class="n">web</span><span class="o">.</span><span class="n">json</span>
+<span class="p">{</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="p">:</span> <span class="o">[</span> <span class="s2">&quot;role[web]&quot;</span> <span class="o">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>to produce results like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="o">[</span><span class="no">Tue</span><span class="p">,</span> <span class="mi">16</span> <span class="no">Aug</span> <span class="mi">2011</span> <span class="mi">14</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">26</span> <span class="o">-</span><span class="mo">0700</span><span class="o">]</span> <span class="no">INFO</span><span class="p">:</span>
+         <span class="p">{</span>
+           <span class="s2">&quot;startservers&quot;</span><span class="o">=&gt;</span><span class="mi">30</span><span class="p">,</span>
+           <span class="s2">&quot;minspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">20</span><span class="p">,</span>
+           <span class="s2">&quot;maxspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">40</span><span class="p">,</span>
+           <span class="s2">&quot;serverlimit&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
+           <span class="s2">&quot;maxclients&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
+           <span class="s2">&quot;maxrequestsperchild&quot;</span><span class="o">=&gt;</span><span class="mi">10000</span>
+         <span class="p">}</span>
+</pre></div>
+</div>
+<p>Even though the <tt class="docutils literal"><span class="pre">web.rb</span></tt> file does not contain attributes and values for <tt class="docutils literal"><span class="pre">minspareservers</span></tt>, <tt class="docutils literal"><span class="pre">maxspareservers</span></tt>, <tt class="docutils literal"><span class="pre">serverlimit</span></tt>, <tt class="docutils literal"><span class="pre">maxclients</span></tt>, and <tt class="docutils literal"><span class="pre">maxrequestsperchild</span></tt>, the deep merge capabilities pulled them in.</p>
+<p>The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.</p>
+</div>
+<div class="section" id="id9">
+<h5>H5 &#8211; Substitution &#8211; DONE<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h5>
+<p>The following examples show how the logic works for substituting an existing string using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
++
+role_or_environment 2 { :y =&gt; "3" }
+=
+{ :x =&gt; "1", :y =&gt; "3" }</pre>
+</div>
+<p>For substituting an existing boolean using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; true, :y =&gt; false }
++
+role_or_environment 2 { :y =&gt; true }
+=
+{ :x =&gt; true, :y =&gt; true }</pre>
+</div>
+<p>For substituting an existing string in an array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
++
+role_or_environment 2 [ "!merge:2", "3" ]
+=
+[ "1", "3" ]</pre>
+</div>
+<p>For substituting an array with a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2", "3" ]
++
+role_or_environment 2 { :x =&gt; "1" , :y =&gt; "2" }
+=
+{ :x =&gt; "1", :y =&gt; "3" }</pre>
+</div>
+<p>When items can&#8217;t be merged through substitution, the original data is overwritten.</p>
+</div>
+<div class="section" id="id10">
+<h5>H5 &#8211; Addition &#8211; DONE<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h5>
+<p>The following examples show how the logic works for adding a string using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
++
+role_or_environment 2 { :z =&gt; "3" }
+=
+{ :x =&gt; "1", :y =&gt; "2", :z =&gt; "3" }</pre>
+</div>
+<p>For adding a string using an array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
++
+role_or_environment 2 [ "3" ]
+=
+[ "1", "2", "3" ]</pre>
+</div>
+<p>For adding a string using a multi-level hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; { :y =&gt; "2" } }
++
+role_or_environment 2 { :x =&gt; { :z =&gt; "3" } }
+=
+{ :x =&gt; { :y =&gt; "2", :z =&gt; "3" } }</pre>
+</div>
+<p>For adding a string using a multi-level array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ [ 1, 2 ] ]
++
+role_or_environment 2 [ [ 3 ] ]
+=
+[ [ 1, 2 ], [ 3 ] ]</pre>
+</div>
+</div>
+</div>
+<div class="section" id="h3-manage-roles-done">
+<h4>H3 &#8211; Manage Roles &#8211; DONE<a class="headerlink" href="#h3-manage-roles-done" title="Permalink to this headline">¶</a></h4>
+<p><strong>jamescott: THIS TOPIC IS STILL A BIT OF A MESS.</strong></p>
+<p>There are several ways to manage roles:</p>
+<ul class="simple">
+<li>Knife can be used to create, edit, view, list, tag, and delete roles.</li>
+<li>The Management Console can be used to create, edit, view, list, tag, and delete roles. In addition, role attributes can be modified and roles can be moved between environments.</li>
+<li>The chef-client can be used to manage role data using the command line and JSON files (that contain a hash, the elements of which are added as role attributes). In addition, the <tt class="docutils literal"><span class="pre">run_list</span></tt> setting allows roles and/or recipes to be added to the role.</li>
+<li>Open Source Chef Server can be used to manage role data using the command line and JSON files (that contain a hash, the elements of which are added as role attributes). In addition, the <tt class="docutils literal"><span class="pre">run_list</span></tt> setting allows roles and/or recipes to be added to the role.</li>
+<li>The Chef Server API can be used to create and manage roles directly. <strong>jamescott: what?</strong></li>
+<li>The command line can also be used with JSON files and 3rd party services, such as Amazon EC2, where the JSON files can contain per-instance metadata stored in a file on-disk and then read by Chef Solo or chef-client as required. <strong>jamescott: weak statement here.</strong></li>
+<li>Chef Solo does not allow roles.</li>
+</ul>
+<p><strong>jamescott: this needs to be sync&#8217;d up for &#8220;versions&#8221; at some point in the future, i.e. &#8220;Hosted Chef Docs&#8221; should not have the bullet about Chef Solo.</strong></p>
+<p>By creating and editing files using the Ruby DSL or JSON. Role data can be dynamically generated with the Ruby DSL. Roles created and edited using files are compatible with all versions of Chef, including Chef Solo. Roles created and edited using files can be kept in version source control, which also keeps a history of what changed when. When roles are created and edited using files, they should not be managed using Knife or the Management Console, as changes will be overwritten.</p>
+<p>A run-list that is associated with a role can be edited using the Management Console. The canonical source of a role&#8217;s data is stored on the Chef server, which means that keeping role data in version source control can be challenging.</p>
+<p>When files are uploaded to a Chef server from a file and then edited using the Management Console, if the file is edited and uploaded again, the changes made in the Management Console will be lost. The same is true with Knife, in that if they are created and managed using Knife and then arbitrarily updated JSON and uploaded, that action will overwrite what has been done previously using Knife.</p>
+<p>It is strongly recommended to keep to one process and not switch back and forth. When using [version of Chef] do [action].</p>
+<div class="section" id="deleting-environments-from-a-role-s-run-list-done">
+<h5>Deleting Environments from a Role&#8217;s Run-list &#8211; DONE<a class="headerlink" href="#deleting-environments-from-a-role-s-run-list-done" title="Permalink to this headline">¶</a></h5>
+<p>When an environment is deleted, it will remain within a run-list for a role until it is removed from that run-list. If a new environment is created that has an identical name to an environment that was deleted, a run-list that contains an old environment name will use the new one.</p>
+</div>
 </div>
 </div>
 <div class="section" id="h2-node-objects">
@@ -2368,7 +2877,15 @@ override_attributes "apache2" =&gt; { "max_children" =&gt; "50" }</pre>
 <li>Roles</li>
 <li>Nodes</li>
 </ul>
-<p><strong>jamescott: need to make sure that each of cookbooks, environments, roles, and nodes has a section that explains the &#8220;how to set the attributes&#8221; part of this story.</strong></p>
+<p><strong>jamescott: need to make sure that each of cookbooks, environments, roles, and nodes has a section that explains the &#8220;how to set the attributes&#8221; part of this story. The five sections below should be NEUTRAL to all locations. AND THEN WHEN THEY ARE, remove them from here?</strong></p>
+<p><strong>BELOW NEEDS REWRITE</strong></p>
+<p>Setting Node Attributes</p>
+<p>Node attributes can be set in recipes. This use of node attributes should do done when you want to calculate a derived value, or store some data on the node that should be persisted the next time Chef runs. Use the &#8220;set&#8221; method on the node.:</p>
+<blockquote>
+<div>node.set[&#8216;some_attribute&#8217;] = &#8220;Some Value&#8221; + &#8220;Some other value&#8221;
+node.set[&#8216;some_attribute&#8217;][&#8216;sub_attribute&#8217;] = &#8220;Sub attribute Value&#8221;</div></blockquote>
+<p>Attributes are applied in precedence order; node attributes are automatic and have the highest precedence. As these automatic attributes will be re-written with each Ohai run - Chef doesn&#8217;t provide any way to modify them. See Setting Attributes for more detail on the attribute types and precedences.</p>
+<p><strong>ABOVE NEEDS REWRITE</strong></p>
 <div class="section" id="h4-attribute-types-done">
 <h5>H4 &#8211; Attribute Types &#8211; DONE<a class="headerlink" href="#h4-attribute-types-done" title="Permalink to this headline">¶</a></h5>
 <p>There are four types of attributes:</p>
@@ -2420,8 +2937,8 @@ override_attributes "apache2" =&gt; { "max_children" =&gt; "50" }</pre>
 <p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds these attributes by based on attributes contained in cookbooks, recipes, roles, and environments, plus Ohai data that is collected about that node at the beginning of the Chef run. Normal attributes are never reset. During a Chef run, any new attributes that are passed to the chef-client are merged with the existing normal attributes on the node and any new settings are applied according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
 <p><strong>jamescott: THIS ONE NEEDS TO BE REVIEWED. SEE http://wiki.opscode.com/display/chef/Attributes AND READ &#8220;ATTRIBUTE PERSISTENCE&#8221; AND THEN READ THE ABOVE AND PROVIDE FEEDBACK.</strong></p>
 </div>
-<div class="section" id="h4-automatic-attributes-done">
-<h5>H4 &#8211; Automatic Attributes &#8211; DONE<a class="headerlink" href="#h4-automatic-attributes-done" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id11">
+<h5>H4 &#8211; Automatic Attributes &#8211; DONE<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h5>
 <p>An automatic attribute is data that must be understood, but not modified. For example, the IP address of a node, a host name, or the number of loaded kernel modules. When Chef makes changes to a system during a Chef run, automatic attributes are used to ensure that Chef does not make changes to the larger environment on which a node is running. An automatic attribute always has the highest attribute precedence. Automatic attributes are saved to the Chef server where they are indexed for search. Automatic attributes are detected by Ohai before every Chef run.</p>
 </div>
 <div class="section" id="h4-attribute-notation-done">
@@ -2976,8 +3493,8 @@ puts private_ip</pre>
 </div>
 <p>where the &#8220;[0]&#8221; is the 0 (zero) index for the db_server identifier. This is because a single document is returned because the node is being searched on its unique name. The identifier <tt class="docutils literal"><span class="pre">private_ip</span></tt> will now have the value of the private IP address of the database server (<tt class="docutils literal"><span class="pre">10.40.64.202</span></tt>) and can be used in templates as a variable, among other possible uses.</p>
 </div>
-<div class="section" id="id4">
-<h5>H4 &#8211; Environments: &#8211; DONE<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id12">
+<h5>H4 &#8211; Environments: &#8211; DONE<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h5>
 <p>An environment is a way to map an organization&#8217;s real-life workflow to what can be configured and managed when using Chef server. Every Chef organization begins with a single environment called the <tt class="docutils literal"><span class="pre">_default</span></tt> environment, which cannot be modified (or deleted). Additional environments can be created, such as production, staging, testing, and development. Generally, an environment is also associated with one (or more) cookbook versions.</p>
 <p>When searching, a Chef environment (<tt class="docutils literal"><span class="pre">chef_environment</span></tt>) is treated much like an attribute. This allows search results to be limited to a specified environment by using Boolean operators and extra search terms. For example, to use Knife to search for all of the servers running CentOS in an environment named &#8220;QA&#8221;, enter the following:</p>
 <div class="highlight-bash"><div class="highlight"><pre>knife search node <span class="s2">&quot;chef_environment:QA AND platform:centos&quot;</span>
@@ -2990,8 +3507,8 @@ qa_nodes.each do |qa_node|
 end</pre>
 </div>
 </div>
-<div class="section" id="id5">
-<h5>H4 &#8211; Data Bags: &#8211; DONE<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id13">
+<h5>H4 &#8211; Data Bags: &#8211; DONE<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h5>
 <p>A data bag is a read-only global variable that is stored as JSON data and is accessible from a Chef server. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords). The contents of a data bag can also be encrypted to prevent the contents of that data bag from being compromised.</p>
 <p>Any search for a data bag (or a data bag item) must specify the name of the data bag and then provide the search query string that will be used during the search. For example, to use Knife to search within a data bag named &#8220;admin_data&#8221; across all items, except for the &#8220;admin_users&#8221; item, enter the following:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search admin_data <span class="s2">&quot;(NOT id:admin_users)&quot;</span>
@@ -3102,170 +3619,183 @@ end</pre>
 <li>Templates</li>
 <li>Metadata about recipes (including dependencies), version constraints, supported platforms, and so on</li>
 </ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A cookbook includes a readme file that is used to xxxxx.</p>
+</div>
 <div class="section" id="h2-cookbooks-directory-structure-done">
 <h3>H2 &#8211; Cookbooks Directory Structure &#8211; DONE<a class="headerlink" href="#h2-cookbooks-directory-structure-done" title="Permalink to this headline">¶</a></h3>
 <p>The <tt class="docutils literal"><span class="pre">cookbooks/</span></tt> directory is used to store the cookbooks that are used by Chef when configuring the various systems in the organization. This directory contains the cookbooks that are used to configure systems in the infrastructure with Chef. Each cookbook can be configured to contain cookbook-specific copyright, email, and license data.</p>
 </div>
-<div class="section" id="h2-attributes">
-<h3>H2 &#8211; Attributes<a class="headerlink" href="#h2-attributes" title="Permalink to this headline">¶</a></h3>
-<p>An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on node. When a cookbook is loaded during a Chef run, these attributes are compared to the attributes that are already present on the node. When the cookbook attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
-<p>THE ATTRIBUTES DISCUSSION NEEDS TO BE CONSOLIDATED AS MUCH AS POSSIBLE. THERE ARE NODE ATTRIBUTES AS WELL &#8211; SEE THE NODE TOPICS AND THE CHEF SERVER TOPICS.</p>
-<div class="section" id="h3-deep-merging-of-role-environment-attributes">
-<h4>H3 &#8211; Deep Merging of ROLE | ENVIRONMENT Attributes<a class="headerlink" href="#h3-deep-merging-of-role-environment-attributes" title="Permalink to this headline">¶</a></h4>
-<p>Attributes are typically stored in multi-level hashes or arrays. For example, a group of attributes for web servers might be:</p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
-  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
-    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
-      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
-      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">)</span>
+<div class="section" id="h2-cookbook-attributes-done">
+<h3>H2 &#8211; Cookbook Attributes &#8211; DONE<a class="headerlink" href="#h2-cookbook-attributes-done" title="Permalink to this headline">¶</a></h3>
+<p>An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on a node. When a cookbook is loaded during a Chef run, these attributes are compared to the attributes that are already present on the node. When the cookbook attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
+<div class="section" id="h3-when-to-use-attributes-done">
+<h4>H3 &#8211; When to Use Attributes &#8211; DONE<a class="headerlink" href="#h3-when-to-use-attributes-done" title="Permalink to this headline">¶</a></h4>
+<p><strong>jamescott: TECHNICALLY NOT DONE HERE. SHOULD HAVE SUBTOPIC HERE FOR EACH TYPE, NO?</strong>
+An attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on. An attribute may be unique to a specific node or it can be identical across every node in the organization. Attributes are most commonly set from a cookbook, by using Knife, or are retrieved by Ohai from each node prior to every Chef run. All attributes are indexed for search on the Chef server. Good candidates for attributes include:</p>
+<ul class="simple">
+<li>any cross-platform abstraction for an application, such as the path to a configuration file,</li>
+<li>default values for tunable settings, such as the amount of memory assigned to a process or the number of workers to spawn,</li>
+<li>anything that may need to be persisted in node data between Chef runs.</li>
+</ul>
+<p>In general, attribute precedence is set to enable cookbooks and roles to define attribute defaults, for normal attributes to define the values that should be specific for a node, and for override attributes to force a certain value, even when a node already has that value specified.</p>
+<p>One approach is to set attributes at the same precedence level by setting attributes in a cookbook&#8217;s attribute files, and then also setting the same default attributes (but with different values) using a role. The attributes set in the role will be deep merged on top of the attributes from the attribute file and the attributes set by the role will take precedence over the attributes specified in the cookbook&#8217;s attribute files.</p>
+<p>Another (much less common) approach is to set a value only if an attribute has no value. This can be done by using the <tt class="docutils literal"><span class="pre">_unless</span></tt> variants of the attribute priority methods: <tt class="docutils literal"><span class="pre">default_unless</span></tt>, <tt class="docutils literal"><span class="pre">set_unless</span></tt>, and <tt class="docutils literal"><span class="pre">override_unless</span></tt>. These variants should be use carefully because when they are used the attributes applied to nodes may become out of sync with the values in the cookbooks as these cookbooks are updated. This can create situations where two otherwise identical nodes end up having slightly different configurations. This can be a challenge to debug, so use the <tt class="docutils literal"><span class="pre">_unless</span></tt> variants carefully (and only when they are really necessary).</p>
+<div class="section" id="h4-node-environment-role-and-attribute-file">
+<h5>H4 &#8211; NODE, ENVIRONMENT, ROLE, and ATTRIBUTE FILE<a class="headerlink" href="#h4-node-environment-role-and-attribute-file" title="Permalink to this headline">¶</a></h5>
+<p>NO TOPIC, BUT CONSIDER THIS.</p>
+</div>
+</div>
+<div class="section" id="types-done">
+<h4>Types &#8211; DONE<a class="headerlink" href="#types-done" title="Permalink to this headline">¶</a></h4>
+<p>There are four types of attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default</span></tt></td>
+<td>A default attribute is <strong>jamescott: &#8220;A default attribute is what?&#8221; (other than the obvious) &#8211; but what&#8217;s the difference between default an normal and how does an attribute become a &#8220;default attribute&#8221;?</strong>. A default attribute has the lowest attribute precedence. A default attribute is automatically reset each time Chef runs. A cookbook should be authored so that it uses default attributes whenever possible.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">normal</span></tt></td>
+<td>A normal attribute is an attribute that persists on the target system . A normal attribute is never reset during a Chef run. A normal attribute has a higher attribute precedence than a default attribute.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">override</span></tt></td>
+<td>An override attribute is an attribute that is specified in a recipe (or a run-list) and are often set only for specific roles or nodes. An override attribute has a higher attribute precedence than default or normal attributes. An override attribute is automatically reset each time Chef runs. A cookbook should be authored so that it uses override attributes for role-specific or node-specific values when required.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">automatic</span></tt></td>
+<td>An automatic attribute contains data that is automatically-generated by Ohai during every Chef run (all previous values are overwritten by the newly-generated values). An automatic attribute cannot be modified. An automatic attribute has the highest attribute precedence. An automatic attribute is automatically reset each time Chef runs.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="precedence-vs-priority-pick-a-word-done">
+<h4>Precedence vs. Priority (PICK A WORD!) &#8211; DONE<a class="headerlink" href="#precedence-vs-priority-pick-a-word-done" title="Permalink to this headline">¶</a></h4>
+<p>During a Chef run, saved attributes are retrieved from the Chef server and are merged with the attributes on the local system. The attribute type and the source of the attribute determines which attribute values have priority over others. Attribute values are applied in the following order (from low to high priority):</p>
+<ul class="simple">
+<li>Default attributes applied in an attributes file</li>
+<li>Default attributes applied in an environment</li>
+<li>Default attributes applied in a role</li>
+<li>Default attributes applied on a node directly in a recipe</li>
+<li>Normal attributes applied in an attributes file</li>
+<li>Normal attributes applied on a node directly in a recipe</li>
+<li>Override attributes applied in an attributes file</li>
+<li>Override attributes applied in a role</li>
+<li>Override attributes applied in an environment</li>
+<li>Override attributes applied on a node directly in a recipe</li>
+<li>Automatic attributes, re-generated by Ohai during each Chef run.</li>
+</ul>
+</div>
+<div class="section" id="persistence-done">
+<h4>Persistence &#8211; DONE<a class="headerlink" href="#persistence-done" title="Permalink to this headline">¶</a></h4>
+<p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds these attributes by based on attributes contained in cookbooks, recipes, roles, and environments, plus Ohai data that is collected about that node at the beginning of the Chef run. Normal attributes are never reset. During a Chef run, any new attributes that are passed to the chef-client are merged with the existing normal attributes on the node and any new settings are applied according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
+<p><strong>jamescott: THIS ONE NEEDS TO BE REVIEWED. SEE http://wiki.opscode.com/display/chef/Attributes AND READ &#8220;ATTRIBUTE PERSISTENCE&#8221; AND THEN READ THE ABOVE AND PROVIDE FEEDBACK.</strong></p>
+</div>
+<div class="section" id="automatic-attributes-done">
+<h4>Automatic Attributes &#8211; DONE<a class="headerlink" href="#automatic-attributes-done" title="Permalink to this headline">¶</a></h4>
+<p>An automatic attribute is data that must be understood, but not modified. For example, the IP address of a node, a host name, or the number of loaded kernel modules. When Chef makes changes to a system during a Chef run, automatic attributes are used to ensure that Chef does not make changes to the larger environment on which a node is running. An automatic attribute always has the highest attribute precedence. Automatic attributes are saved to the Chef server where they are indexed for search. Automatic attributes are detected by Ohai before every Chef run.</p>
+</div>
+<div class="section" id="notation-done">
+<h4>Notation &#8211; DONE<a class="headerlink" href="#notation-done" title="Permalink to this headline">¶</a></h4>
+<p>Attributes are a special key-value store called a mash within the context of the Ruby DSL. A mash is just a hash where the key can be either a symbol (:key) or a string (&#8220;key&#8221;).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Individuals who are new to Ruby and Chef may have an easier time using only string notation. This approach allows attributes to &#8220;be quoted&#8221; and doesn&#8217;t require learning about special cases, namespace overlap (and <tt class="docutils literal"><span class="pre">method_missing</span></tt>), character constraints, and escaping.</p>
+</div>
+</div>
+<div class="section" id="h3-attribute-files">
+<h4>H3 &#8211; Attribute Files<a class="headerlink" href="#h3-attribute-files" title="Permalink to this headline">¶</a></h4>
+<p>An attribute file is located in the <tt class="docutils literal"><span class="pre">attributes/</span></tt> sub-directory for a cookbook. <strong>jamescott: TESTING THE NEXT SENTENCE</strong> The sub-directory in which attributes are located.</p>
+<p>When a cookbook is run against a node, the attributes contained in all attribute files are evaluated in the context of the node object. Node methods (when present) are used to set attribute values on a node. For example, the Apache cookbook contains the following attribute file (called <tt class="docutils literal"><span class="pre">default.rb</span></tt>):</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">[</span><span class="s2">&quot;apache&quot;</span><span class="o">][</span><span class="s2">&quot;dir&quot;</span><span class="o">]</span>          <span class="o">=</span> <span class="s2">&quot;/etc/apache2&quot;</span>
+<span class="n">default</span><span class="o">[</span><span class="s2">&quot;apache&quot;</span><span class="o">][</span><span class="s2">&quot;listen_ports&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span><span class="s2">&quot;443&quot;</span> <span class="o">]</span>
 </pre></div>
 </div>
-<p>But what if all of the web servers aren&#8217;t the same? What if some of the web servers required a single attribute to have a different value? You could store these settings twice, once just like above and once just like below:</p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
-  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
-    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
-      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
-      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">)</span>
+<p>The use of the node object is implicit here. The following example is equivalent to the one above:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="s2">&quot;apache&quot;</span><span class="o">][</span><span class="s2">&quot;dir&quot;</span><span class="o">]</span>          <span class="o">=</span> <span class="s2">&quot;/etc/apache2&quot;</span>
+<span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="s2">&quot;apache&quot;</span><span class="o">][</span><span class="s2">&quot;listen_ports&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span><span class="s2">&quot;443&quot;</span> <span class="o">]</span>
 </pre></div>
 </div>
-<p>But that is not very efficient, especially since most of them are the same in both places. The deep merge capabilities of Chef enable attributes to be layered. This allows attributes to be reused across nodes, yet still provide a way for certain attributes to be applied only when they are supposed to be. For example, a role named <tt class="docutils literal"><span class="pre">baseline.rb</span></tt>:</p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;baseline&quot;</span>
-<span class="n">description</span> <span class="s2">&quot;The most basic role for all configurations&quot;</span>
-<span class="n">run_list</span> <span class="s2">&quot;recipe[baseline]&quot;</span>
+<div class="section" id="h4-attribute-file-methods">
+<h5>H4 &#8211; Attribute File Methods<a class="headerlink" href="#h4-attribute-file-methods" title="Permalink to this headline">¶</a></h5>
+<p><strong>jamescott: THIS IS NOT DONE. NEED DEFINITION/LIST TABLE FOR BELOW.</strong></p>
+<p>Use the following methods within a cookbook&#8217;s attributes file or in a recipe. They correspond to the attribute type of the same name (set is an alias for normal).</p>
+<ul class="simple">
+<li>override</li>
+<li>default</li>
+<li>normal (or set)</li>
+<li>_unless</li>
+<li>attribute?</li>
+</ul>
+<p>Additionally, there are _unless methods available. See the end of this document for information on conditionally setting attributes</p>
+<p>Another handy method available related to attributes is the attribute? method. This will check for the existence of an attribute, so you can do processing in an attributes file or recipe only if a specific attribute exists.</p>
+<p>attribute?() in attributes file</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">attribute?</span><span class="p">(</span><span class="s2">&quot;ec2&quot;</span><span class="p">)</span>
+  <span class="c1"># ... set stuff related to EC2</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>attribute?() in recipe</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">attribute?</span><span class="p">(</span><span class="s2">&quot;ec2&quot;</span><span class="p">)</span>
+  <span class="c1"># ... do stuff on EC2 nodes</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>In the recipe, we need to use the method on the node object. In the attributes file, the node object is implicit. In either, we can also look for a sub-key of an attribute by chaining the attribute as methods:</p>
+<p>attribute?() in recipe</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">chef</span><span class="o">.</span><span class="n">attribute?</span><span class="p">(</span><span class="s2">&quot;webui_enabled&quot;</span><span class="p">)</span>
+  <span class="c1"># set up webui stuff</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="h4-cookbook-attribute-file-ordering">
+<h5>H4 &#8211; Cookbook Attribute File Ordering<a class="headerlink" href="#h4-cookbook-attribute-file-ordering" title="Permalink to this headline">¶</a></h5>
+<p><strong>jamescott: NOT DONE</strong></p>
+<p>When Chef loads cookbook attribute files, it does so in alphabetical order for all the cookbooks. If you need to ensure that one attribute file is loaded before another (for example, if your Rails cookbook requires that the Apache attributes are available first) you can use the include_attribute method, like so:</p>
+<p>include_attribute</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_attribute</span> <span class="s2">&quot;apache2&quot;</span>
+</pre></div>
+</div>
+<p>This loads apache/attributes/default.rb before continuing the processing of the current attribute file.</p>
+<p>The syntax for this follows the same &#8220;double colon&#8221; pattern as include_recipe, so a statement like:</p>
+<p>include_attribute</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_attribute</span> <span class="s2">&quot;rails::tunables&quot;</span>
+</pre></div>
+</div>
+<p>This loads the attributes/tunables.rb file in a rails cookbook.</p>
+</div>
+<div class="section" id="h4-attribute-accessor-methods">
+<h5>H4 &#8211; Attribute Accessor Methods<a class="headerlink" href="#h4-attribute-accessor-methods" title="Permalink to this headline">¶</a></h5>
+<p>Attribute accessor methods are automatically created and the method invocation can be used interchangeably with the keys. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">dir</span>          <span class="o">=</span> <span class="s2">&quot;/etc/apache2&quot;</span>
+<span class="n">default</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">listen_ports</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span><span class="s2">&quot;443&quot;</span> <span class="o">]</span>
+</pre></div>
+</div>
+<p>This is a matter of style and preference for how attributes are reloaded from recipes <strong>jamescott: check the wiki page here</strong>, and may be seen when &#8220;retrieving&#8221; the value of an attribute.</p>
+</div>
+<div class="section" id="h4-reloading-attribute-files-from-recipes">
+<h5>H4 &#8211; Reloading Attribute Files From Recipes<a class="headerlink" href="#h4-reloading-attribute-files-from-recipes" title="Permalink to this headline">¶</a></h5>
+<p>Attributes sometimes depend on actions taken from within recipes, so it may be necessary to reload a given attribute from within a recipe. For example: if you have an attribute that reads firewall rules, and a recipe that installs a firewall package, the firewall attributes will not be set the first time you execute the cookbook. Since <tt class="docutils literal"><span class="pre">include_attribute</span></tt> is not available from inside recipes, you will need to manually reload your <tt class="docutils literal"><span class="pre">firewall::default</span> <span class="pre">attribute</span></tt> from recipes by doing something like:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">package</span> <span class="s1">&#39;iptables&#39;</span> <span class="k">do</span>
+  <span class="n">notifies</span> <span class="ss">:create</span><span class="p">,</span> <span class="s1">&#39;ruby_block[try_firewall_again]&#39;</span><span class="p">,</span> <span class="ss">:immediately</span>
+<span class="k">end</span>
 
-<span class="n">override_attributes</span><span class="p">(</span>
-  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
-    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
-      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
-      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">)</span>
+<span class="n">ruby_block</span> <span class="s1">&#39;try_firewall_again&#39;</span> <span class="k">do</span>
+  <span class="n">block</span> <span class="k">do</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">load_attribute_by_short_filename</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;firewall&#39;</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
 </pre></div>
 </div>
-<p>and then a role named <tt class="docutils literal"><span class="pre">web.rb</span></tt>:</p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;web&quot;</span>
-<span class="n">description</span> <span class="s2">&quot;Web server config&quot;</span>
-<span class="n">run_list</span> <span class="s2">&quot;role[baseline]&quot;</span>
-
-<span class="n">override_attributes</span><span class="p">(</span>
-  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
-    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
-      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-<p>Both of these files are similar. They share the same structure. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> references the <tt class="docutils literal"><span class="pre">baseline.rb</span></tt> role. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> file only provides a value for one attribute: <tt class="docutils literal"><span class="pre">:startservers</span></tt>. When Chef compares these attributes, the deep merge feature will ensure that <tt class="docutils literal"><span class="pre">:startservers</span></tt> (and it&#8217;s value of <tt class="docutils literal"><span class="pre">30</span></tt>) will be applied to any node for which the <tt class="docutils literal"><span class="pre">web.rb</span></tt> attribute structure should be applied.</p>
-<p>This approach will allow a recipe like this:</p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_recipe</span> <span class="s2">&quot;apache2&quot;</span>
-<span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;apache&#39;</span><span class="o">][</span><span class="s1">&#39;prefork&#39;</span><span class="o">].</span><span class="n">to_hash</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>and a <tt class="docutils literal"><span class="pre">run_list</span></tt> like this:</p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="n">run_list</span><span class="o">/</span><span class="n">web</span><span class="o">.</span><span class="n">json</span>
-<span class="p">{</span>
-  <span class="s2">&quot;run_list&quot;</span><span class="p">:</span> <span class="o">[</span> <span class="s2">&quot;role[web]&quot;</span> <span class="o">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>to produce results like this:</p>
-<div class="highlight-ruby"><div class="highlight"><pre><span class="o">[</span><span class="no">Tue</span><span class="p">,</span> <span class="mi">16</span> <span class="no">Aug</span> <span class="mi">2011</span> <span class="mi">14</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">26</span> <span class="o">-</span><span class="mo">0700</span><span class="o">]</span> <span class="no">INFO</span><span class="p">:</span>
-         <span class="p">{</span>
-           <span class="s2">&quot;startservers&quot;</span><span class="o">=&gt;</span><span class="mi">30</span><span class="p">,</span>
-           <span class="s2">&quot;minspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">20</span><span class="p">,</span>
-           <span class="s2">&quot;maxspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">40</span><span class="p">,</span>
-           <span class="s2">&quot;serverlimit&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
-           <span class="s2">&quot;maxclients&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
-           <span class="s2">&quot;maxrequestsperchild&quot;</span><span class="o">=&gt;</span><span class="mi">10000</span>
-         <span class="p">}</span>
-</pre></div>
-</div>
-<p>Even though the <tt class="docutils literal"><span class="pre">web.rb</span></tt> file does not contain attributes and values for <tt class="docutils literal"><span class="pre">minspareservers</span></tt>, <tt class="docutils literal"><span class="pre">maxspareservers</span></tt>, <tt class="docutils literal"><span class="pre">serverlimit</span></tt>, <tt class="docutils literal"><span class="pre">maxclients</span></tt>, and <tt class="docutils literal"><span class="pre">maxrequestsperchild</span></tt>, the deep merge capabilities pulled them in.</p>
-<p>The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.</p>
-<div class="section" id="h4-substitution">
-<h5>H4 &#8211; Substitution<a class="headerlink" href="#h4-substitution" title="Permalink to this headline">¶</a></h5>
-<p>The following examples show how the logic works for substituting an existing string using a hash:</p>
-<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
-+
-role_or_environment 2 { :y =&gt; "3" }
-=
-{ :x =&gt; "1", :y =&gt; "3" }</pre>
-</div>
-<p>For substituting an existing boolean using a hash:</p>
-<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; true, :y =&gt; false }
-+
-role_or_environment 2 { :y =&gt; true }
-=
-{ :x =&gt; true, :y =&gt; true }</pre>
-</div>
-<p>For substituting an existing string in an array:</p>
-<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
-+
-role_or_environment 2 [ "!merge:2", "3" ]
-=
-[ "1", "3" ]</pre>
-</div>
-<p>For substituting an array with a hash:</p>
-<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2", "3" ]
-+
-role_or_environment 2 { :x =&gt; "1" , :y =&gt; "2" }
-=
-{ :x =&gt; "1", :y =&gt; "3" }</pre>
-</div>
-<p>When items can&#8217;t be merged through substitution, the original data is overwritten.</p>
-</div>
-<div class="section" id="h4-addition">
-<h5>H4 &#8211; Addition<a class="headerlink" href="#h4-addition" title="Permalink to this headline">¶</a></h5>
-<p>The following examples show how the logic works for adding a string using a hash:</p>
-<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
-+
-role_or_environment 2 { :z =&gt; "3" }
-=
-{ :x =&gt; "1", :y =&gt; "2", :z =&gt; "3" }</pre>
-</div>
-<p>For adding a string using an array:</p>
-<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
-+
-role_or_environment 2 [ "3" ]
-=
-[ "1", "2", "3" ]</pre>
-</div>
-<p>For adding a string using a multi-level hash:</p>
-<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; { :y =&gt; "2" } }
-+
-role_or_environment 2 { :x =&gt; { :z =&gt; "3" } }
-=
-{ :x =&gt; { :y =&gt; "2", :z =&gt; "3" } }</pre>
-</div>
-<p>For adding a string using a multi-level array:</p>
-<div class="highlight-python"><pre>role_or_environment 1 [ [ 1, 2 ] ]
-+
-role_or_environment 2 [ [ 3 ] ]
-=
-[ [ 1, 2 ], [ 3 ] ]</pre>
-</div>
-</div>
-</div>
-<div class="section" id="h3-xxxxx">
-<h4>H3 &#8211; xxxxx<a class="headerlink" href="#h3-xxxxx" title="Permalink to this headline">¶</a></h4>
-<p>xxxxx</p>
-<div class="section" id="id6">
-<h5>H4 &#8211; xxxxx<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h5>
-<p>xxxxx</p>
 </div>
 </div>
 </div>
@@ -4122,8 +4652,8 @@ end</pre>
 <p class="first admonition-title">Note</p>
 <p class="last">Typically, using a lightweight provider is the best (and recommended) way of handling a resource that does not already exist. If using a lightweight provider is not an option, then creating a custom provider might be the best approach. Please use the Chef IRC channel to contact us and we will help you get started.</p>
 </div>
-<div class="section" id="id7">
-<h5>H4 &#8211; Actions &#8211; DONE<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h5>
+<div class="section" id="id14">
+<h5>H4 &#8211; Actions &#8211; DONE<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h5>
 <p>Actions are defined as list of keywords in a resource:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -4321,8 +4851,130 @@ Use a JSON file to pass run-list details to Chef Solo as long as the cookbook in
 <div class="highlight-python"><pre>depends "apache2"</pre>
 </div>
 </div>
-<div class="section" id="id8">
-<h4>H3 &#8211; Search Indexes &#8211; DONE<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="h3-recipe-attributes-done">
+<h4>H3 &#8211; Recipe Attributes &#8211; DONE<a class="headerlink" href="#h3-recipe-attributes-done" title="Permalink to this headline">¶</a></h4>
+<p>NEEDS DEFINITION</p>
+<div class="section" id="id15">
+<h5>H4 &#8211; Types &#8211; DONE<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h5>
+<p>There are four types of attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default</span></tt></td>
+<td>A default attribute is <strong>jamescott: &#8220;A default attribute is what?&#8221; (other than the obvious) &#8211; but what&#8217;s the difference between default an normal and how does an attribute become a &#8220;default attribute&#8221;?</strong>. A default attribute has the lowest attribute precedence. A default attribute is automatically reset each time Chef runs. A cookbook should be authored so that it uses default attributes whenever possible.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">normal</span></tt></td>
+<td>A normal attribute is an attribute that persists on the target system . A normal attribute is never reset during a Chef run. A normal attribute has a higher attribute precedence than a default attribute.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">override</span></tt></td>
+<td>An override attribute is an attribute that is specified in a recipe (or a run-list) and are often set only for specific roles or nodes. An override attribute has a higher attribute precedence than default or normal attributes. An override attribute is automatically reset each time Chef runs. A cookbook should be authored so that it uses override attributes for role-specific or node-specific values when required.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">automatic</span></tt></td>
+<td>An automatic attribute contains data that is automatically-generated by Ohai during every Chef run (all previous values are overwritten by the newly-generated values). An automatic attribute cannot be modified. An automatic attribute has the highest attribute precedence. An automatic attribute is automatically reset each time Chef runs.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id16">
+<h5>H4 &#8211; Precedence vs. Priority (PICK A WORD!) &#8211; DONE<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h5>
+<p>During a Chef run, saved attributes are retrieved from the Chef server and are merged with the attributes on the local system. The attribute type and the source of the attribute determines which attribute values have priority over others. Attribute values are applied in the following order (from low to high priority):</p>
+<ul class="simple">
+<li>Default attributes applied in an attributes file</li>
+<li>Default attributes applied in an environment</li>
+<li>Default attributes applied in a role</li>
+<li>Default attributes applied on a node directly in a recipe</li>
+<li>Normal attributes applied in an attributes file</li>
+<li>Normal attributes applied on a node directly in a recipe</li>
+<li>Override attributes applied in an attributes file</li>
+<li>Override attributes applied in a role</li>
+<li>Override attributes applied in an environment</li>
+<li>Override attributes applied on a node directly in a recipe</li>
+<li>Automatic attributes, re-generated by Ohai during each Chef run.</li>
+</ul>
+</div>
+<div class="section" id="id17">
+<h5>H4 &#8211; Persistence &#8211; DONE<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h5>
+<p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds these attributes by based on attributes contained in cookbooks, recipes, roles, and environments, plus Ohai data that is collected about that node at the beginning of the Chef run. Normal attributes are never reset. During a Chef run, any new attributes that are passed to the chef-client are merged with the existing normal attributes on the node and any new settings are applied according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
+<p><strong>jamescott: THIS ONE NEEDS TO BE REVIEWED. SEE http://wiki.opscode.com/display/chef/Attributes AND READ &#8220;ATTRIBUTE PERSISTENCE&#8221; AND THEN READ THE ABOVE AND PROVIDE FEEDBACK.</strong></p>
+</div>
+<div class="section" id="id18">
+<h5>H4 &#8211; Automatic Attributes &#8211; DONE<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h5>
+<p>An automatic attribute is data that must be understood, but not modified. For example, the IP address of a node, a host name, or the number of loaded kernel modules. When Chef makes changes to a system during a Chef run, automatic attributes are used to ensure that Chef does not make changes to the larger environment on which a node is running. An automatic attribute always has the highest attribute precedence. Automatic attributes are saved to the Chef server where they are indexed for search. Automatic attributes are detected by Ohai before every Chef run.</p>
+</div>
+<div class="section" id="id19">
+<h5>H4 &#8211; Notation &#8211; DONE<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h5>
+<p>Attributes are a special key-value store called a mash within the context of the Ruby DSL. A mash is just a hash where the key can be either a symbol (:key) or a string (&#8220;key&#8221;).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Individuals who are new to Ruby and Chef may have an easier time using only string notation. This approach allows attributes to &#8220;be quoted&#8221; and doesn&#8217;t require learning about special cases, namespace overlap (and <tt class="docutils literal"><span class="pre">method_missing</span></tt>), character constraints, and escaping.</p>
+</div>
+</div>
+<div class="section" id="h4-attribute-methods">
+<h5>H4 &#8211; Attribute Methods<a class="headerlink" href="#h4-attribute-methods" title="Permalink to this headline">¶</a></h5>
+<p><strong>jamescott: THIS IS NOT DONE. NEED DEFINITION/LIST TABLE FOR BELOW.</strong></p>
+<p>Use the following methods within a cookbook&#8217;s attributes file or in a recipe. They correspond to the attribute type of the same name (set is an alias for normal).</p>
+<ul class="simple">
+<li>override</li>
+<li>default</li>
+<li>normal (or set)</li>
+<li>_unless</li>
+<li>attribute?</li>
+</ul>
+<p>Additionally, there are _unless methods available. See the end of this document for information on conditionally setting attributes</p>
+<p>Another handy method available related to attributes is the attribute? method. This will check for the existence of an attribute, so you can do processing in an attributes file or recipe only if a specific attribute exists.</p>
+<p>attribute?() in attributes file</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">attribute?</span><span class="p">(</span><span class="s2">&quot;ec2&quot;</span><span class="p">)</span>
+  <span class="c1"># ... set stuff related to EC2</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>attribute?() in recipe</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">attribute?</span><span class="p">(</span><span class="s2">&quot;ec2&quot;</span><span class="p">)</span>
+  <span class="c1"># ... do stuff on EC2 nodes</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>In the recipe, we need to use the method on the node object. In the attributes file, the node object is implicit. In either, we can also look for a sub-key of an attribute by chaining the attribute as methods:</p>
+<p>attribute?() in recipe</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">chef</span><span class="o">.</span><span class="n">attribute?</span><span class="p">(</span><span class="s2">&quot;webui_enabled&quot;</span><span class="p">)</span>
+  <span class="c1"># set up webui stuff</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="h4-reloading-attributes-from-recipes">
+<h5>H4 &#8211; Reloading Attributes From Recipes<a class="headerlink" href="#h4-reloading-attributes-from-recipes" title="Permalink to this headline">¶</a></h5>
+<p>Attributes sometimes depend on actions taken from within recipes, so it may be necessary to reload a given attribute from within a recipe. For example: if you have an attribute that reads firewall rules, and a recipe that installs a firewall package, the firewall attributes will not be set the first time you execute the cookbook. Since <tt class="docutils literal"><span class="pre">include_attribute</span></tt> is not available from inside recipes, you will need to manually reload your <tt class="docutils literal"><span class="pre">firewall::default</span> <span class="pre">attribute</span></tt> from recipes by doing something like:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">package</span> <span class="s1">&#39;iptables&#39;</span> <span class="k">do</span>
+  <span class="n">notifies</span> <span class="ss">:create</span><span class="p">,</span> <span class="s1">&#39;ruby_block[try_firewall_again]&#39;</span><span class="p">,</span> <span class="ss">:immediately</span>
+<span class="k">end</span>
+
+<span class="n">ruby_block</span> <span class="s1">&#39;try_firewall_again&#39;</span> <span class="k">do</span>
+  <span class="n">block</span> <span class="k">do</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">load_attribute_by_short_filename</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="s1">&#39;firewall&#39;</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Attribute accessor methods are automatically created and the method invocation can be used interchangeably with the keys. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">dir</span>          <span class="o">=</span> <span class="s2">&quot;/etc/apache2&quot;</span>
+<span class="n">default</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">listen_ports</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span><span class="s2">&quot;443&quot;</span> <span class="o">]</span>
+</pre></div>
+</div>
+<p>This is a matter of style and preference for how attributes are reloaded from recipes <strong>jamescott: check the wiki page here</strong>, and may be seen when &#8220;retrieving&#8221; the value of an attribute.</p>
+</div>
+</div>
+<div class="section" id="id20">
+<h4>H3 &#8211; Search Indexes &#8211; DONE<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h4>
 <p>Search indexes allow queries to be made for any type of data that is indexed by a Chef server, including data for a chef-client, data bags (and data bag items), environments, nodes, and roles. Chef has a defined query syntax that includes search patterns like exact, wildcard, range, and fuzzy. The search engine is based on Apache Solr and is run from a Chef server. A search is a full-text query that can be done from within a recipe or by using the <tt class="docutils literal"><span class="pre">search</span></tt> sub-command in Knife.</p>
 <p>The results of a search query can be loaded into a recipe. For example, a very simple search query (in a recipe) might look like this:</p>
 <div class="highlight-python"><pre>search(:node, "attribute:value")</pre>
@@ -4730,8 +5382,8 @@ end</pre>
 </ol>
 <p>where <tt class="docutils literal"><span class="pre">default</span></tt> does not refer to a recipe in <tt class="docutils literal"><span class="pre">default.rb</span></tt>. Templates are not split up into different directories by a recipe.</p>
 </div>
-<div class="section" id="id9">
-<h4>H3 &#8211; Host Notation &#8211; DONE<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id21">
+<h4>H3 &#8211; Host Notation &#8211; DONE<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h4>
 <p>The naming of folders within cookbook directories must literally match the host notation used for template specificity matching. For example, if a host is named <tt class="docutils literal"><span class="pre">foo.example.com</span></tt>, then the folder must be named <tt class="docutils literal"><span class="pre">host-foo.example.com</span></tt>.</p>
 <p><strong>jamescott: this is probably best to single-source, as it lives in several places. WOULD NEED TO MAKE IT MORE GENERIC FOR THIS TO WORK REALLY WELL</strong></p>
 </div>
@@ -4744,8 +5396,8 @@ end</pre>
 <p>A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as for ensuring that the correct versions of third-party components are being used or to provide an update to a cookbook that fixes previous issues or adds new improvements. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is a cookbook, from the perspective of the repository and how cookbooks are stored on the Chef server and pushed out to one (or more) nodes.</p>
 <p>A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as for ensuring that the correct versions of third-party components are being used or to provide an update to a cookbook that fixes previous issues or adds new improvements. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is a cookbook, from the perspective of the repository and how cookbooks are stored on the Chef server and pushed out to one (or more) nodes.</p>
 </div>
-<div class="section" id="id10">
-<h4>H3 &#8211; Syntax &#8211; DONE<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="id22">
+<h4>H3 &#8211; Syntax &#8211; DONE<a class="headerlink" href="#id22" title="Permalink to this headline">¶</a></h4>
 <p>A cookbook version always takes the form x.y.z, where x, y, and z are decimal numbers that are used to represent major (x), minor (y), and patch (z) versions. A two-part version (x.y) is also allowed. Alphanumeric version numbers (1.2.a3) and version numbers with more than three parts (1.2.3.4) are not allowed.</p>
 </div>
 <div class="section" id="h3-operators-done">
