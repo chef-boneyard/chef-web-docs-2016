@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Attributes are typically stored in multi-level hashes or arrays. For example, a group of attributes for web servers might be:
+Attributes are typically stored in a recipe using a multi-level hash or array. For example, a group of attributes for web servers might be:
 
 .. code-block:: ruby
 
@@ -16,7 +16,7 @@ Attributes are typically stored in multi-level hashes or arrays. For example, a 
      }
    )
 
-But what if all of the web servers aren't the same? What if some of the web servers required a single attribute to have a different value? You could store these settings twice, once just like above and once just like below:
+But what if all of the web servers aren't the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like above and once just like below:
 
 .. code-block:: ruby
 
@@ -31,7 +31,7 @@ But what if all of the web servers aren't the same? What if some of the web serv
      }
    )
 
-But that is not very efficient, especially since most of them are the same in both places. The deep merge capabilities of |chef| enable attributes to be layered. This allows attributes to be reused across nodes, yet still provide a way for certain attributes to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:
+But that is not very efficient, especially since most of them are identical. The deep merge capabilities of |chef| enable attributes to be layered across recipes and cookbooks. This allows an attribute to be reused across nodes, yet still provide a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:
 
 .. code-block:: ruby
 
