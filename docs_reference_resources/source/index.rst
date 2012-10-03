@@ -3151,6 +3151,144 @@ To untap a repository:
    end
 
 
+iis_app -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_app.rst
+
+.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_app_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_app_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create a new application:
+
+.. code-block:: ruby
+
+   iis_app "myApp" do
+     path "/v1_1"
+     application_pool "myAppPool_v1_1"
+     physical_path "#{node['iis']['docroot']}/testfu/v1_1"
+     action :add
+   end
+
+
+iis_config -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_config.rst
+
+.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_config_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_config_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To set up logging:
+
+.. code-block:: ruby
+
+   iis_config "/section:system.applicationHost/sites/siteDefaults.logfile.directory:"D:\\logs"" do
+     action :config
+   end
+
+To load an array of commands from a node:
+
+.. code-block:: ruby
+
+   cfg_cmds = node['iis']['cfg_cmd']
+   cfg_cmds.each do |cmd|
+     iis_config "#{cmd}" do
+        action :config
+     end
+   end
+
+
+iis_pool -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_pool.rst
+
+.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_pool_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_pool_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create an application pool:
+
+.. code-block:: ruby
+
+   iis_pool 'myAppPool_v1_1' do
+     runtime_version "2.0"
+     pipeline_mode "Classic"
+     action :add
+   end
+
+iis_site -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_site.rst
+
+.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_site_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_iis_site_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To stop, then delete a default site:
+
+.. code-block:: ruby
+
+   iis_site 'Default Web Site' do
+     action [:stop, :delete]
+   end
+
+To create and start a site that maps to the physical location ``C:\inetpub\wwwroot\testfu``:
+
+.. code-block:: ruby
+
+   iis_site 'Testfu Site' do
+     protocol :http
+     port 80
+     path "#{node['iis']['docroot']}/testfu"
+     action [:add,:start]
+   end
+
+To create and start a site that maps to the ``testfu.opscode.com`` domain:
+
+.. code-block:: ruby
+
+   iis_site 'Testfu Site' do
+     protocol :http
+     port 80
+     path "#{node['iis']['docroot']}/testfu"
+     host_header "testfu.opscode.com"
+     action [:add,:start]
+   end
+
+
 mysql_database
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_mysql_database.rst
