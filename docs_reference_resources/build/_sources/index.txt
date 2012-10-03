@@ -2767,6 +2767,7 @@ The following groups of lightweight resources are available in open source cookb
 * dmg
 * dynect
 * firewall
+* homebrew
 * mysql
 * pacman
 * php
@@ -2778,6 +2779,8 @@ The following groups of lightweight resources are available in open source cookb
 
 Some of the cookbooks contain more than one lightweight resource. Each lightweight resource is described individually in the following sections.
 
+**jamescott: need to move the actions and attributes and examples sections into the base INCLUDE files for each of the lightweight resources. There is no reason for them to ever not be included together, therefore. Also need to create a swap_notes file and start putting the notes there.**
+
 apt_repository
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_apt_repository.rst
@@ -2786,43 +2789,11 @@ apt_repository
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:add``
-     - |lwrp action add apt_repository|
-   * - ``:remove``
-     - |lwrp action remove apt_repository|
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``repo_name``
-     - |repo_name lwrp apt_repository|
-   * - ``uri``
-     - |uri lwrp apt_repository|
-   * - ``distribution``
-     - |distribution lwrp apt_repository|
-   * - ``components``
-     - |components lwrp apt_repository|
-   * - ``deb_src``
-     - |dev_src lwrp apt_repository|
-   * - ``keyserver``
-     - |keyserver lwrp apt_repository|
-   * - ``key``
-     - |key lwrp apt_repository|
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2850,53 +2821,11 @@ aws_ebs_volume
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - |lwrp action create aws_ebs_volume|
-   * - ``:attach``
-     - |lwrp action attach aws_ebs_volume|
-   * - ``:detach``
-     - |lwrp action detach aws_ebs_volume|
-   * - ``:snapshot``
-     - |lwrp action snapshot aws_ebs_volume|
-   * - ``:prune``
-     - |lwrp action prune aws_ebs_volume|
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``aws_access_key``
-     - |aws_access_key lwrp aws_ebs_volume|
-   * - ``aws_secret_access_key``
-     - |aws_secret_access_key lwrp aws_ebs_volume|
-   * - ``size``
-     - |size lwrp aws_ebs_volume|
-   * - ``snapshot_id``
-     - |snapshot_id lwrp aws_ebs_volume|
-   * - ``availability_zone``
-     - |availability_zone lwrp aws_ebs_volume|
-   * - ``device``
-     - |device lwrp aws_ebs_volume|
-   * - ``volume_id``
-     - |volume_id lwrp aws_ebs_volume|
-   * - ``timeout``
-     - |timeout lwrp aws_ebs_volume|
-   * - ``snapshots_to_keep``
-     - |snapshots_to_keep lwrp aws_ebs_volume|
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2918,37 +2847,11 @@ aws_elastic_ip
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:associate``
-     - |lwrp action associate aws_elastic_ip|
-   * - ``:disassociate``
-     - |lwrp action disassociate aws_elastic_ip|
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``aws_access_key``
-     - |aws_access_key lwrp aws_elastic_ip|
-   * - ``aws_secret_access_key``
-     - |aws_secret_access_key lwrp aws_elastic_ip|
-   * - ``ip``
-     - |ip lwrp aws_elastic_ip|
-   * - ``timeout``
-     - |timeout lwrp aws_elastic_ip|
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2964,43 +2867,11 @@ bluepill_service
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:start``
-     - |lwrp action start bluepill_service|
-   * - ``:stop``
-     - |lwrp action stop bluepill_service|
-   * - ``:enable``
-     - |lwrp action enable bluepill_service|
-   * - ``:disable``
-     - |lwrp action disable bluepill_service|
-   * - ``:load``
-     - |lwrp action load bluepill_service|
-   * - ``:restart``
-     - |lwrp action restart bluepill_service|
+.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``service_name``
-     - |service_name lwrp bluepill_service|
-   * - ``variables``
-     - |variables lwrp bluepill_service|
-   * - ``supports``
-     - |supports lwrp bluepill_service|
+.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3020,37 +2891,11 @@ chef_handler
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:enable``
-     - |lwrp action enable chef_handler|
-   * - ``:disable``
-     - |lwrp action disable chef_handler|
+.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``class_name``
-     - |class_name lwrp chef_handler|
-   * - ``source``
-     - |source lwrp chef_handler|
-   * - ``arguments``
-     - |arguments lwrp chef_handler|
-   * - ``supports``
-     - |supports lwrp chef_handler|
+.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3070,73 +2915,11 @@ daemontools_service
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:start``
-     - |lwrp action start daemontools_service|
-   * - ``:stop``
-     - |lwrp action stop daemontools_service|
-   * - ``:restart``
-     - |lwrp action restart daemontools_service|
-   * - ``:up``
-     - |lwrp action up daemontools_service|
-   * - ``:once``
-     - |lwrp action once daemontools_service|
-   * - ``:pause``
-     - |lwrp action pause daemontools_service|
-   * - ``:cont``
-     - |lwrp action cont daemontools_service|
-   * - ``:hup``
-     - |lwrp action hup daemontools_service|
-   * - ``:alrm``
-     - |lwrp action alrm daemontools_service|
-   * - ``:int``
-     - |lwrp action int daemontools_service|
-   * - ``:term``
-     - |lwrp action term daemontools_service|
-   * - ``:kill``
-     - |lwrp action kill daemontools_service|
-   * - ``:enable``
-     - |lwrp action enable daemontools_service|
-   * - ``:disable``
-     - |lwrp action disable daemontools_service|
+.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``service_name``
-     - |service_name lwrp daemontools_service|
-   * - ``directory``
-     - Required. |directory lwrp daemontools_service|
-   * - ``template``
-     - |template lwrp daemontools_service|
-   * - ``cookbook``
-     - |cookbook lwrp daemontools_service|
-   * - ``variables``
-     - |variables lwrp daemontools_service|
-   * - ``owner``
-     - |owner lwrp daemontools_service|
-   * - ``group``
-     - |group lwrp daemontools_service|
-   * - ``finish``
-     - |finish lwrp daemontools_service|
-   * - ``log``
-     - |log lwrp daemontools_service|
-   * - ``env``
-     - |env lwrp daemontools_service|
+.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3150,35 +2933,11 @@ djbdns_rr
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:add``
-     - |lwrp action add djbdns_rr|
+.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``fqdn``
-     - |fqdn lwrp djbdns_rr|
-   * - ``ip``
-     - Required. |ip lwrp djbdns_rr|
-   * - ``type``
-     - |type lwrp djbdns_rr|
-   * - ``cwd``
-     - |cwd lwrp djbdns_rr|
+.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3194,39 +2953,11 @@ dmg_package
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:install``
-     - |lwrp action install dmg_package|
+.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``app``
-     - |app lwrp dmg_package|
-   * - ``source``
-     - |source lwrp dmg_package|
-   * - ``destination``
-     - |destination lwrp dmg_package|
-   * - ``checksum``
-     - |checksum lwrp dmg_package|
-   * - ``volumes_dir``
-     - |volumes_dir lwrp dmg_package|
-   * - ``dmg_name``
-     - |dmg_name lwrp dmg_package|
+.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3248,49 +2979,11 @@ dynect_rr
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:delete``
-     - |lwrp action delete dynect_rr|
-   * - ``:create``
-     - |lwrp action create dynect_rr|
-   * - ``:update``
-     - |lwrp action update dynect_rr|
-   * - ``:replace``
-     - |lwrp action replace dynect_rr|
+.. include:: ../../includes_resources/includes_resource_lwrp_dynect_rr_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``record_type``
-     - |record_type lwrp dynect_rr|
-   * - ``rdata``
-     - |rdata lwrp dynect_rr|
-   * - ``ttl``
-     - |ttl lwrp dynect_rr|
-   * - ``fqdn``
-     - |fqdn lwrp dynect_rr|
-   * - ``username``
-     - |username lwrp dynect_rr|
-   * - ``customer``
-     - |customer lwrp dynect_rr|
-   * - ``password``
-     - |password lwrp dynect_rr|
-   * - ``zone``
-     - |zone lwrp dynect_rr|
+.. include:: ../../includes_resources/includes_resource_lwrp_dynect_rr_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3298,39 +2991,17 @@ Examples
 
 firewall
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_firewall.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_firewall_default.rst
 
 .. note:: This lightweight resource is part of the ``firewall`` cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:enable``
-     - |lwrp action enable firewall|
-   * - ``:disable``
-     - |lwrp action disable firewall|
-   * - ``:reset``
-     - |lwrp action reset firewall|
+.. include:: ../../includes_resources/includes_resource_lwrp_firewall_default_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``name``
-     - |name lwrp firewall|
+.. include:: ../../includes_resources/includes_resource_lwrp_firewall_default_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3344,49 +3015,69 @@ firewall_rule
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:allow``
-     - |lwrp action allow firewall_rule|
-   * - ``:deny``
-     - |lwrp action deny firewall_rule|
-   * - ``:reject``
-     - |lwrp action reject firewall_rule|
+.. include:: ../../includes_resources/includes_resource_lwrp_firewall_rule_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``name``
-     - |name lwrp firewall_rule|
-   * - ``protocol``
-     - |protocol lwrp firewall_rule|
-   * - ``port``
-     - |port lwrp firewall_rule|
-   * - ``source``
-     - |source lwrp firewall_rule|
-   * - ``destination``
-     - |destination lwrp firewall_rule|
-   * - ``position``
-     - |position lwrp firewall_rule|
+.. include:: ../../includes_resources/includes_resource_lwrp_firewall_rule_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_lwrp_firewall_rule_open_ssh.rst
 
 .. include:: ../../steps/step_chef_lwrp_firewall_rule_open_tcp.rst
+
+
+homebrew -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap.rst
+
+.. note:: This lightweight resource is part of the ``homebrew`` cookbook (http://community.opscode.com/cookbooks/homebrew).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+If |homebrew| is installed on a machine running |mac os x|, the following example will use |homebrew| to install |mysql|:
+
+.. code-block:: ruby
+
+   package "mysql" do
+     action :install
+   end
+
+To use the |homebrew| provider:
+
+.. code-block:: ruby
+
+   package "mysql" do
+     provider Chef::Provider::Package::Homebrew
+   end
+
+To tap a repository:
+
+.. code-block:: ruby
+
+   homebrew_tap "homebrew/dupes"
+
+To untap a repository:
+
+.. code-block:: ruby
+
+   homebrew_tap "homebrew/dupes" do
+     action :untap
+   end
+
 
 mysql_database
 -----------------------------------------------------
@@ -3396,41 +3087,11 @@ mysql_database
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:flush_tables_with_read_lock``
-     - |lwrp action flush_tables_with_read_lock mysql_database|
-   * - ``:unflush_tables``
-     - |lwrp action unflush_tables mysql_database|
-   * - ``:create_db``
-     - |lwrp action create_db mysql_database|
-   * - ``:query``
-     - |lwrp action query mysql_database|
+.. include:: ../../includes_resources/includes_resource_lwrp_mysql_database_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``host``
-     - |host lwrp mysql_database|
-   * - ``username``
-     - |username lwrp mysql_database|
-   * - ``password``
-     - |password lwrp mysql_database|
-   * - ``database``
-     - |database lwrp mysql_database|
+.. include:: ../../includes_resources/includes_resource_lwrp_mysql_database_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3450,41 +3111,11 @@ pacman_aur
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:build``
-     - |lwrp action build pacman_aur|
-   * - ``:install``
-     - |lwrp action install pacman_aur|
+.. include:: ../../includes_resources/includes_resource_lwrp_pacman_aur_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``package_name``
-     - |package_name lwrp pacman_aur|
-   * - ``version``
-     - |version lwrp pacman_aur|
-   * - ``builddir``
-     - |builddir lwrp pacman_aur|
-   * - ``options``
-     - |options lwrp pacman_aur|
-   * - ``pkgbuild_src``
-     - |pkgbuild_src lwrp pacman_aur|
-   * - ``patches``
-     - |patches lwrp pacman_aur|
+.. include:: ../../includes_resources/includes_resource_lwrp_pacman_aur_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3500,83 +3131,29 @@ pacman_group
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:install``
-     - |lwrp action install pacman_group|
-   * - ``:remove``
-     - |lwrp action remove pacman_group|
+.. include:: ../../includes_resources/includes_resource_lwrp_pacman_group_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``package_name``
-     - |package_name lwrp pacman_group|
-   * - ``options``
-     - |package_name lwrp pacman_group|
+.. include:: ../../includes_resources/includes_resource_lwrp_pacman_group_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_lwrp_pacman_group_base_devel.rst
 
-php_pear_channel
+php_pear
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_php_pear.rst
+.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_default.rst
 
 .. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:install``
-     - |lwrp action install php_pear|
-   * - ``:upgrade``
-     - |lwrp action upgrade php_pear|
-   * - ``:remove``
-     - |lwrp action remove php_pear|
-   * - ``:purge``
-     - |lwrp action purge php_pear|
+.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_default_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``package_name``
-     - |package_name lwrp php_pear|
-   * - ``version``
-     - |version lwrp php_pear|
-   * - ``preferred_state``
-     - |preferred_state lwrp php_pear|
-   * - ``directives``
-     - |directives lwrp php_pear|
-   * - ``options``
-     - |options lwrp php_pear|
+.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_default_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3592,7 +3169,7 @@ Examples
 
 .. include:: ../../steps/step_chef_lwrp_php_pear_upgrade.rst
 
-php_pear
+php_pear_channel
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_php_pear_channel.rst
 
@@ -3600,37 +3177,11 @@ php_pear
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:discover``
-     - |lwrp action discover php_pear_channel|
-   * - ``:add``
-     - |lwrp action add php_pear_channel|
-   * - ``:update``
-     - |lwrp action update php_pear_channel|
-   * - ``:remove``
-     - |lwrp action remove php_pear_channel|
+.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_channel_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``channel_name``
-     - |channel_name lwrp php_pear_channel|
-   * - ``channel_xml``
-     - |channel_xml lwrp php_pear_channel|
+.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_channel_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3648,41 +3199,11 @@ python_pip
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:install``
-     - |lwrp action install python_pip|
-   * - ``:upgrade``
-     - |lwrp action upgrade python_pip|
-   * - ``:remove``
-     - |lwrp action remove python_pip|
-   * - ``:purge``
-     - |lwrp action purge python_pip|
+.. include:: ../../includes_resources/includes_resource_lwrp_python_pip_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``package_name``
-     - |package_name lwrp python_pip|
-   * - ``version``
-     - |version lwrp python_pip|
-   * - ``virtualenv``
-     - |virtualenv lwrp python_pip|
-   * - ``options``
-     - |options lwrp python_pip|
+.. include:: ../../includes_resources/includes_resource_lwrp_python_pip_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3702,37 +3223,11 @@ python_virtualenv
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - |lwrp action create python_virtualenv|
-   * - ``:delete``
-     - |lwrp action delete python_virtualenv|
+.. include:: ../../includes_resources/includes_resource_lwrp_python_virtualenv_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``path``
-     - |path lwrp python_virtualenv|
-   * - ``interpreter``
-     - |interpreter lwrp python_virtualenv|
-   * - ``owner``
-     - |owner lwrp python_virtualenv|
-   * - ``group``
-     - |group lwrp python_virtualenv|
+.. include:: ../../includes_resources/includes_resource_lwrp_python_virtualenv_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3750,39 +3245,11 @@ riak_cluster
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:join``
-     - |lwrp action join riak_cluster|
-   * - ``:wait_for_ringready``
-     - |lwrp action wait_for_ringready riak_cluster|
+.. include:: ../../includes_resources/includes_resource_lwrp_riak_cluster_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``cluster_name``
-     - The name of the cluster.
-   * - ``cluster_members``
-     - |cluster_members lwrp riak_cluster|
-   * - ``node_name``
-     - |cluster_name lwrp riak_cluster|
-   * - ``timeout``
-     - |timeout lwrp name_of_resource|
-   * - ``riak_admin_path``
-     - |riak_admin_path lwrp riak_cluster|
+.. include:: ../../includes_resources/includes_resource_lwrp_riak_cluster_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3796,33 +3263,11 @@ samba_user
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - |lwrp action create samba_user|
-   * - ``:enable``
-     - |lwrp action enable samba_user|
-   * - ``:delete``
-     - |lwrp action delete samba_user|
+.. include:: ../../includes_resources/includes_resource_lwrp_samba_user_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``password``
-     - |password lwrp samba|
+.. include:: ../../includes_resources/includes_resource_lwrp_samba_user_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3836,54 +3281,17 @@ transmission_torrent_file
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - |lwrp action create transmission_torrent_file|
+.. include:: ../../includes_resources/includes_resource_lwrp_transmission_torrent_file_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``path``
-     - The path to a file.
-   * - ``torrent``
-     - |torrent lwrp transmission_torrent_file|
-   * - ``blocking``
-     - |blocking lwrp transmission_torrent_file|
-   * - ``continue_seeding``
-     - |continue_seeding lwrp transmission_torrent_file|
-   * - ``owner``
-     - |owner lwrp transmission_torrent_file|
-   * - ``group``
-     - |group lwrp transmission_torrent_file|
-   * - ``rpc_host``
-     - |rpc_host lwrp transmission_torrent_file|
-   * - ``rpc_port``
-     - |rpc_port lwrp transmission_torrent_file|
-   * - ``rpc_username``
-     - |rpc_username lwrp transmission_torrent_file|
-   * - ``rpc_password``
-     - |rpc_password lwrp transmission_torrent_file|
+.. include:: ../../includes_resources/includes_resource_lwrp_transmission_torrent_file_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso.rst
 
 .. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
-
 
 
 windows_package
@@ -3894,37 +3302,11 @@ windows_package
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:install``
-     - |lwrp action install windows_package|
-   * - ``:remove``
-     - |lwrp action remove windows_package|
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_package_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``package_name``
-     - |package_name lwrp windows_package| 
-   * - ``source``
-     - |source lwrp windows_package|
-   * - ``installer_type``
-     - |installer_type lwrp windows_package|
-   * - ``options``
-     - |options lwrp windows_package|
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_package_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3953,33 +3335,11 @@ windows_registry
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - |lwrp action create windows_registry|
-   * - ``:modify``
-     - |lwrp action modify windows_registry|
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_registry_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``key_name``
-     - |key_name lwrp windows_registry|
-   * - ``values``
-     - |values lwrp windows_registry|
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_registry_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3996,33 +3356,11 @@ windows_zipfile
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:unzip``
-     - |lwrp action unzip windows_zipfile|
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_zipfile_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This lightweight resource provider has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``path_to_location``
-     - |path_to_location lwrp windows_zipfile|
-   * - ``source``
-     - |source lwrp windows_zipfile|
-   * - ``overwrite``
-     - |overwrite lwrp windows_zipfile|
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_zipfile_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
