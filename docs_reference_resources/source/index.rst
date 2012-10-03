@@ -3289,10 +3289,6 @@ To create and start a site that maps to the ``testfu.opscode.com`` domain:
    end
 
 
-
-
-
-
 maven -- NEEDS REVIEW
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_maven.rst
@@ -3535,6 +3531,115 @@ Examples
 
 .. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
 
+windows_auto_run -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run.rst
+
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To run ``BGInfo`` at login:
+
+.. code-block:: ruby
+
+   windows_auto_run 'BGINFO' do
+     program "C:/Sysinternals/bginfo.exe"
+     args "\"C:/Sysinternals/Config.bgi\" /NOLICPROMPT /TIMER:0"
+     not_if { Registry.value_exists?(AUTO_RUN_KEY, 'BGINFO') }
+     action :create
+   end
+
+windows_batch -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_batch.rst
+
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_batch_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_batch_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To run a batch file that unzips and moves |ruby|:
+
+.. code-block:: ruby
+
+   windows_batch "unzip_and_move_ruby" do
+     code <<-EOH
+     7z.exe x #{Chef::Config[:file_cache_path]}/ruby-1.8.7-p352-i386-mingw32.7z  
+        -oC:\\source -r -y
+     xcopy C:\\source\\ruby-1.8.7-p352-i386-mingw32 C:\\ruby /e /y
+     EOH
+   end
+   
+   windows_batch "echo some env vars" do
+     code <<-EOH
+     echo %TEMP%
+     echo %SYSTEMDRIVE%
+     echo %PATH%
+     echo %WINDIR%
+     EOH
+   end
+
+windows_feature -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_feature.rst
+
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_feature_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_feature_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_feature_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To enable a node as a DHCP server:
+
+.. code-block:: ruby
+
+   windows_feature "DHCPServer" do
+     action :install
+   end
+
+To enable TFTP:
+
+.. code-block:: ruby
+
+   windows_feature "TFTP" do
+     action :install
+   end
+
+To disable Telnet client/server:
+
+.. code-block:: ruby
+
+   %w{ TelnetServer TelnetClient }.each do |feature|
+     windows_feature feature do
+       action :remove
+     end
+   end
 
 windows_package
 -----------------------------------------------------
@@ -3569,6 +3674,78 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_windows_package_remove_google_chrome.rst
 
 
+windows_path -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_path.rst
+
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_path_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_path_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To add ``Sysinternals`` to the system path:
+
+.. code-block:: ruby
+
+   windows_path 'C:\Sysinternals' do
+     action :add
+   end
+
+
+To remove |7zip| from the system path:
+
+.. code-block:: ruby
+
+   windows_path 'C:\7-Zip' do
+     action :remove
+   end
+
+
+windows_reboot -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_reboot.rst
+
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_reboot_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_reboot_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To schedule a reboot at the end of a |chef| run if a package installs:
+
+.. code-block:: ruby
+
+   windows_reboot 60 do
+     reason 'cause chef said so'
+     action :nothing
+   end
+   windows_package 'some_package' do
+     action :install
+     notifies :request, 'windows_reboot[60]'
+   end
+
+To cancel a previously-requested reboot:
+
+.. code-block:: ruby
+
+   windows_reboot 60 do
+     action :cancel
+   end
+
+
 windows_registry
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_registry.rst
@@ -3588,6 +3765,25 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_windows_registry_enable_remote_desktop.rst
 
 .. include:: ../../steps/step_chef_lwrp_windows_registry_match_proxy.rst
+
+
+windows_shortcut -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_shortcut.rst
+
+.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_shortcut_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_windows_shortcut_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
 
 
 windows_zipfile
