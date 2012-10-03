@@ -2767,6 +2767,7 @@ The following groups of lightweight resources are available in open source cookb
 * dmg
 * dynect
 * firewall
+* gunicorn
 * homebrew
 * mysql
 * pacman
@@ -3026,6 +3027,77 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_firewall_rule_open_ssh.rst
 
 .. include:: ../../steps/step_chef_lwrp_firewall_rule_open_tcp.rst
+
+
+
+
+gunicorn_config -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config.rst
+
+.. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create a configuration file with default values:
+
+.. code-block:: ruby
+
+   gunicorn_config "/etc/gunicorn/myapp.py" do
+     action :create
+   end
+
+To tweak some worker-related values:
+
+.. code-block:: ruby
+
+   gunicorn_config "/etc/gunicorn/myapp.py" do
+     worker_processes 8
+     backlog 4096
+     action :create
+   end
+
+To use the ``pre_fork`` server hook to sleep for one second before forking:
+
+.. code-block:: ruby
+
+   gunicorn_config "/etc/gunicorn/myapp.py" do
+     server_hooks({:pre_fork => 'import time;time.sleep(1)'})
+     action :create
+   end
+
+
+gunicorn_install -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install.rst
+
+.. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To install |gunicorn| to a specified virtual environment:
+
+.. code-block:: ruby
+
+   gunicorn_install "name_of_virtual_environment" do
+     action :install
+   end
 
 
 homebrew -- NEEDS REVIEW
