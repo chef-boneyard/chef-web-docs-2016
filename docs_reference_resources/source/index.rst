@@ -3289,6 +3289,38 @@ To create and start a site that maps to the ``testfu.opscode.com`` domain:
    end
 
 
+
+
+
+
+maven -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_maven.rst
+
+.. note:: This lightweight resource is part of the ``maven`` cookbook (http://community.opscode.com/cookbooks/maven).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_maven_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_maven_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To install |apache maven|:
+
+.. code-block:: ruby
+
+   maven "mysql-connector-java" do
+     group_id "mysql"
+     version "5.1.19"
+     dest "/usr/local/tomcat/lib/"
+   end
+
+
+
 mysql_database
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_mysql_database.rst
