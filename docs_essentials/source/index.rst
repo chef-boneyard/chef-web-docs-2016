@@ -354,20 +354,6 @@ H4 -- Notation -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_node_attribute_notation.rst
 
-H4 -- Deep Merging of Environment Attributes -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge.rst
-
-The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
-
-H5 -- Substitution -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_substitute.rst
-
-H5 -- Addition -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_add.rst
-
 H3 -- Create Environments -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_environment_create.rst
@@ -544,20 +530,6 @@ H4 -- Notation -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_node_attribute_notation.rst
 
-H4 -- Deep Merging of Role Attributes -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge.rst
-
-The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
-
-H5 -- Substitution -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_substitute.rst
-
-H5 -- Addition -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_deep_merge_add.rst
-
 H3 -- Manage Roles -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_role_manage.rst
@@ -617,6 +589,19 @@ H4 -- Attribute Notation -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_node_attribute_notation.rst
 
+H3 -- Deep Merging of Attributes -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes/includes_chef_node_attribute_deep_merge.rst
+
+The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
+
+H4 -- Substitution -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_deep_merge_substitute.rst
+
+H4 -- Addition -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes/includes_chef_node_attribute_deep_merge_add.rst
 
 
 H3 -- Run-lists
