@@ -3,10 +3,17 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
+<<<<<<< HEAD
 The ``install`` argument is used to install a cookbook that has been downloaded from the community site to a local git repository . This action uses the |git| version control system in conjunction with the |url cookbook| site to install community-contributed cookbooks to the local repository. Using this argument does the following:
 
   #. A new "pristine copy" branch is created in |git| for tracking the upstream.
   #. All existing versions of the cookbook are removed from the branch.
+=======
+The ``install`` argument is used to install a cookbook that has been downloaded from the community site to a local |git| repository . This action uses the |git| version control system in conjunction with the |url cookbook| site to install community-contributed cookbooks to the local repository. Using this argument does the following:
+
+  #. A new "pristine copy" branch is created in |git| for tracking the upstream.
+  #. All existing versions of a cookbook are removed from the branch.
+>>>>>>> Updated Pull Request based on feedback from Paul Mooring
   #. The cookbook is downloaded from |url cookbook| in the |tar gz| format.
   #. The downloaded cookbook is untarred and its contents are committed to |git| and a tag is created.
   #. The "pristine copy" branch is merged into the master branch.
