@@ -2860,6 +2860,89 @@ Examples
 
 .. include:: ../../steps/step_chef_lwrp_aws_elastic_ip_disassociate.rst
 
+
+
+
+
+
+
+aws_elastic_lb -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb.rst
+
+.. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
+
+|amazon aws| Credentials
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To add a load balancer to an availability zone:
+
+.. code-block:: ruby
+
+   aws_elastic_lb "elb_qa" do 
+     aws_access_key aws['aws_access_key_id'] 
+     aws_secret_access_key aws['aws_secret_access_key'] 
+     name "QA" action :register
+   end
+
+
+aws_resource_tag -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag.rst
+
+.. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
+
+|amazon aws| Credentials
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To assign tags to a node to reflect it's role and environment:
+
+.. code-block:: ruby
+
+   aws_resource_tag node['ec2']['instance_id'] do
+     aws_access_key aws['aws_access_key_id']
+     aws_secret_access_key aws['aws_secret_access_key']
+     tags({"Name" => "www.example.com app server",
+           "Environment" => node.chef_environment})
+     action :update
+   end
+
+To assign a set of tags to multiple resources, for example more than one |amazon ebs| volume in a disk set:
+
+.. code-block:: ruby
+
+   aws_resource_tag 'my awesome raid set' do
+     aws_access_key aws['aws_access_key_id']
+     aws_secret_access_key aws['aws_secret_access_key']
+     resource_id [ "vol-d0518cb2", "vol-fad31a9a", "vol-fb106a9f", "vol-74ed3b14" ]
+       tags({"Name" => "My awesome RAID disk set",
+             "Environment" => node.chef_environment})
+   end
+
+
+
 bluepill_service
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service.rst

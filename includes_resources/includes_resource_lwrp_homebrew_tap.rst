@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |lwrp homebrew tap| is used to run |homebrew| as the default package provider on |mac os x|. This lightweight provider replaces |macports|.
+The |lwrp homebrew tap| lightweight resource is used to run |homebrew| as the default package provider on |mac os x|. This lightweight provider replaces |macports|.
 
 |homebrew| requires the ``/usr/local`` directory; the user that will run the cookbook must be the owner of that directory. See the |homebrew| FAQ for more information: https://github.com/mxcl/homebrew/wiki/FAQ.
 
