@@ -3146,7 +3146,39 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_firewall_rule_open_tcp.rst
 
 
+freebsd_port_options -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options.rst
 
+.. note:: This lightweight resource is part of the ``freebsd`` cookbook (http://community.opscode.com/cookbooks/freebsd).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options_actions.rst
+
+Attributes -- NEEDS REVIEW!
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To write ``freebsd-php5-options`` out as ``/var/db/ports/php5/options``:
+
+.. code-block:: ruby
+
+   freebsd_port_options "php5" do
+     source "freebsd-php5-options.erb"
+     action :create
+   end
+
+To read default options from ``/usr/ports/lang/php5``, current options from ``/var/db/ports/php5/options`` (if that option exists), and then set ``APACHE`` options to true (leaving others unchanged):
+
+.. code-block:: ruby
+
+   freebsd_port_options "php5" do
+     options "APACHE" => true
+     action :create
+   end
 
 gunicorn_config -- NEEDS REVIEW
 -----------------------------------------------------
