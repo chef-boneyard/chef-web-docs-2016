@@ -2780,7 +2780,41 @@ The following groups of lightweight resources are available in open source cookb
 
 Some of the cookbooks contain more than one lightweight resource. Each lightweight resource is described individually in the following sections.
 
-**jamescott: need to move the actions and attributes and examples sections into the base INCLUDE files for each of the lightweight resources. There is no reason for them to ever not be included together, therefore. Also need to create a swap_notes file and start putting the notes there.**
+
+
+apt_preference -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference.rst
+
+.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To pin ``libmysqlclient16`` to version ``5.1.49-3``:
+
+.. code-block:: ruby
+
+   apt_preference "libmysqlclient16" do
+     pin "version 5.1.49-3"
+     pin_priority "700"
+   end
+
+To unpin ``libmysqlclient16``:
+
+.. code-block:: ruby
+
+   apt_preference "libmysqlclient16" do
+     action :remove
+   end
+
 
 apt_repository
 -----------------------------------------------------
