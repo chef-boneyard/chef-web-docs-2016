@@ -1,0 +1,4 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+The |lwrp freebsd port options| lightweight resource is used to set port options from within a cookbook. Port options can be set using a template or with an options hash. When port options are set using a template, specifying a source will write to the correct destination with no changes. When port options are set using an options hash, those values will be merged on top of the default and current options and the result will be written back. The options hash takes a simple option name as a key and a boolean as a value. When an option is saved to a file, it is converted to the format that |freebsd| ports expect.
