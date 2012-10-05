@@ -15,7 +15,7 @@ Working with Knife
 
 JSON Data Format
 -----------------------------------------------------
-All data is entered using a text editor in |json| format, unless the ``--no-editor`` option is entered as part of a command. JSON is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see http://www.json.org/ or http://en.wikipedia.org/wiki/JSON.
+All data is entered using a text editor in |json| format, unless the ``--disable-editing`` option is entered as part of a command. JSON is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see http://www.json.org/ or http://en.wikipedia.org/wiki/JSON.
 
 Using Quotes
 -----------------------------------------------------
@@ -59,6 +59,8 @@ The following options can be run with all |knife| sub-commands:
      - |color|
    * - ``--defaults``
      - |defaults|
+   * - ``-d``, ``--disable-editing``
+     - |disable-editing|
    * - ``-e EDITOR``, ``--editor EDITOR``
      - |editor|
    * - ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
@@ -71,8 +73,6 @@ The following options can be run with all |knife| sub-commands:
      - |key|
    * - ``--no-color``
      - |no-color|
-   * - ``-n``, ``--no-editor``
-     - |no-editor|
    * - ``--print-after``
      - |print-after|
    * - ``-s URL``, ``--server-url URL``
