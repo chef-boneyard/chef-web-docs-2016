@@ -17,11 +17,32 @@ This argument has the following options:
 ``--bootstrap-version VERSION"``
    |bootstrap-version|
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
 ``-f FLAVOR``, ``--flavor FLAVOR``
    |flavor|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
@@ -32,14 +53,23 @@ This argument has the following options:
 ``-j JSON_ATTRIBS``, ``--json-attributes``
    |json-attributes|
 
+``-k KEY``, ``--key KEY``
+   |key|
+
 ``-K API_KEY``, ``--rackspace-api-key API_KEY``
    |rackspace-api-key|
 
 ``-M JSON``, ``--rackspace-metadata JSON``
    |rackspace-metadata|
 
+``-n``, ``--disable-editing``
+   |no-editor|
+
 ``-N NAME``, ``--node-name NAME``
    |node-name|
+
+``--no-color``
+   |no-color|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
@@ -47,11 +77,17 @@ This argument has the following options:
 ``--prerelease``
    |prerelease|
 
+``--print-after``
+   |print-after|
+
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
 ``--rackspace-api-auth-url``
    |rackspace-api-auth-url|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
 
 ``-S NAME``, ``--server-name NAME``
    |server-name|
@@ -59,9 +95,20 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |template-file|
 
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|
 
+``-y``, ``--yes``
+   |yes|
 
 To launch a new Rackspace instance with the "webserver" role, enter:
 

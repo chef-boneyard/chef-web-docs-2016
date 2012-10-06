@@ -14,20 +14,50 @@ This sub-command has the following options:
 ``-a SSH_ATTR``, ``--attribute SSH_ATTR``
    |attribute ssh| The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
 ``-C NUM``, ``--concurrency NUM``
    |concurrency|
+
+``--color``
+   |color|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
 
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh-gateway|
 
+``-h``, ``--help``
+   |help|
+
 ``-i IDENTITY_FILE``, ``--identity-file IDENTIFY_FILE``
    |identity-file|
+
+``-k KEY``, ``--key KEY``
+   |key|
 
 ``-m``, ``--manual-list``
    |manual-list|
 
+``-n``, ``--disable-editing``
+   |no-editor|
+
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|
+
+``--no-color``
+   |no-color|
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|
@@ -35,14 +65,32 @@ This sub-command has the following options:
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
 
+``--print-after``
+   |print-after|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
+
 ``SEARCH_QUERY``
    |SEARCH_QUERY SSH|
 
 ``SSH_COMMAND``
    |SSH_COMMAND|
 
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
+
+``-y``, ``--yes``
+   |yes|
 
 For example, to query for all nodes that have the "webserver" role and then use |ssh| to run the command "sudo chef-client", enter:
 

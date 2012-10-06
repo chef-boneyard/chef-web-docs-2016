@@ -17,17 +17,38 @@ This argument has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
 
 ``--euca-api-endpoint ENDPOINT``
    |euca-api-endpoint|
 
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
 ``-f FLAVOR``, ``--flavor FLAVOR``
    |flavor|
 
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
 ``-G X,Y,Z``, ``--groups X,Y,Z``
    |groups|
+
+``-h``, ``--help``
+   |help|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
@@ -35,8 +56,14 @@ This argument has the following options:
 ``-I IMAGE``, ``--image IMAGE``
    |image|
 
+``-k KEY``, ``--key KEY``
+   |key|
+
 ``-K SECRET``, ``--euca-secret-access-key SECRET``
    |euca-secret-access-key|
+
+``-n``, ``--disable-editing``
+   |no-editor|
 
 ``-N NAME``, ``--node-name NAME``
    |node-name|
@@ -44,11 +71,17 @@ This argument has the following options:
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|
 
+``--no-color``
+   |no-color|
+
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
 
 ``--prerelease``
    |prerelease|
+
+``--print-after``
+   |print-after|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
@@ -56,14 +89,29 @@ This argument has the following options:
 ``--region REGION``
    |region eucalyptus|
 
+``-s URL``, ``--server-url URL``
+   |server-url|
+
 ``-S KEY``, ``--ssh-key KEY``
    |ssh-key eucalyptus|
 
 ``--template-file TEMPLATE``
    |template-file|
 
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
+
+``-y``, ``--yes``
+   |yes|
 
 ``-Z ZONE``, ``--availability-zone ZONE``
    |availability-zone eucalyptus|

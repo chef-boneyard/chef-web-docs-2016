@@ -16,8 +16,56 @@ This argument has the following options:
 ``-a``, ``--admin``
    |admin client| This option only works when used with |chef open server| and will have no effect when used with |chef hosted| or |chef private|.
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
 ``-f FILE_NAME``, ``--file FILE_NAME``
    |file private key|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
+
+``-k KEY``, ``--key KEY``
+   |key|
+
+``--no-color``
+   |no-color|
+
+``-n``, ``--disable-editing``
+   |no-editor|
+
+``--print-after``
+   |print-after|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
+
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
+``-y``, ``--yes``
+   |yes|
 
 For example, to create a |chef client admin| with the name "exampleorg-validator" and save its private key to a file, enter:
 

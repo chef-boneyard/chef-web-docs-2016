@@ -11,11 +11,44 @@ This argument has the following syntax::
 
 This argument has the following options:
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
+``COOKBOOK_VERSION``
+   |COOKBOOK_VERSION show|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
 ``-f FQDN``, ``--fqdn FQDN``
    |fqdn|
 
 ``FILE_NAME``
    |FILE_NAME|
+
+``-h``, ``--help``
+   |help|
+
+``-k KEY``, ``--key KEY``
+   |key|
+
+``--no-color``
+   |no-color|
+
+``-n``, ``--disable-editing``
+   |no-editor|
 
 ``-p PLATFORM``, ``--platform PLATFORM``
    |platform|
@@ -23,15 +56,30 @@ This argument has the following options:
 ``PART``
    |PART|
 
+``--print-after``
+   |print-after|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
+
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
 ``-V PLATFORM_VERSION``, ``--platform-version PLATFORM_VERSION``
    |platform-version|
 
-``COOKBOOK_VERSION``
-   |COOKBOOK_VERSION show|
-
 ``-w``, ``--with-uri``
    |with-uri|
-     
+
+``-y``, ``--yes``
+   |yes|
+
 For example, to get the list of available versions of a cookbook named "getting-started", enter:
 
 .. code-block:: bash

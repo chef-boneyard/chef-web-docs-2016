@@ -11,14 +11,62 @@ This argument has the following syntax::
 
 This argument has the following options:
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
 ``DATA_BAG_ITEM``
    |DATA_BAG_ITEM|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
+
+``-k KEY``, ``--key KEY``
+   |key|
+
+``--no-color``
+   |no-color|
+
+``-n``, ``--disable-editing``
+   |no-editor|
+
+``--print-after``
+   |print-after|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
 
 ``--secret SECRET``
    |secret|
 
 ``--secret-file FILE``
    |secret-file|
+
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
+``-y``, ``--yes``
+   |yes|
 
 .. note:: For encrypted data bag items, use *either* ``--secret`` or ``--secret-file``, not both.
 

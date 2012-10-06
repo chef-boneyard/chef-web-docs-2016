@@ -11,8 +11,56 @@ This argument has the following syntax::
 
 This argument has the following options:
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
+
+``-k KEY``, ``--key KEY``
+   |key|
+
+``-n``, ``--disable-editing``
+   |no-editor|
+
+``--no-color``
+   |no-color|
+
+``--print-after``
+   |print-after|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
+
+``-u USER``, ``--user USER``
+   |user|
+
 ``-w``, ``--with-uri``
    |with-uri|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
+``-y``, ``--yes``
+   |yes|
 
 For example, enter:
 

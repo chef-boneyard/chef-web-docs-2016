@@ -17,14 +17,35 @@ This argument has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
-``-D DATACENTER``, ``--linode-datacenter DATACENTER``
-   |linode-datacenter|
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
+``-D DATACENTER``, ``--linode-datacenter DATACENTER``
+   |linode-datacenter|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
 ``-f FLAVOR``, ``--linode-flavor FLAVOR``
    |linode-flavor|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
@@ -32,14 +53,23 @@ This argument has the following options:
 ``-I IMAGE``, ``--linode-image IMAGE``
    |linode-image|
 
+``-k KEY``, ``--key KEY``
+   |key|
+
 ``-k KERNEL``, ``--linode-kernel KERNEL``
    |linode-kernel|
 
 ``-L NAME``, ``--linode-node-name NAME``
    |linode-node-name| 
 
+``-n``, ``--disable-editing``
+   |no-editor|
+
 ``-N NAME``, ``--node-name NAME``
    |node-name|
+
+``--no-color``
+   |no-color|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|
@@ -50,14 +80,32 @@ This argument has the following options:
 ``--prerelease``
    |prerelease|
 
+``--print-after``
+   |print-after|
+
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
 
 ``--template-file TEMPLATE``
    |template-file|
 
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
+
+``-y``, ``--yes``
+   |yes|
 
 For example, to create a new instance, enter:
 

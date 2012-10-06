@@ -17,11 +17,32 @@ This sub-command has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
+``-c CONFIG``, ``--config CONFIG``
+     - |config|
+
+``--color``
+     - |color|
+
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh-gateway|
+
+``-h``, ``--help``
+   |help|
 
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
@@ -32,11 +53,20 @@ This sub-command has the following options:
 ``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
    |json-attributes|
 
+``-k KEY``, ``--key KEY``
+   |key|
+
+``-n``, ``--disable-editing``
+   |no-editor|
+
 ``-N NAME``, ``--node-name NAME``
    |node-name|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|
+
+``--no-color``
+   |no-color|
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|
@@ -47,17 +77,35 @@ This sub-command has the following options:
 ``--prerelease``
    |prerelease|
 
+``--print-after``
+   |print-after|
+
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
 ``--sudo``
    |sudo|
 
+``-s URL``, ``--server-url URL``
+   |server-url|
+
 ``--template-file TEMPLATE``
    |template-file|
 
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|
+
+``-y``, ``--yes``
+    |yes|
 
 For example, to pass an SSH password as part of the command:
 

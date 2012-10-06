@@ -14,8 +14,56 @@ This argument has the following options:
 ``CATEGORY``
    |CATEGORY|
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
+
+``-k KEY``, ``--key KEY``
+   |key|
+
+``--no-color``
+   |no-color|
+
+``-n``, ``--disable-editing``
+   |no-editor|
+
 ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
    |cookbook-path|
+
+``--print-after``
+   |print-after|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
+
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
+``-y``, ``--yes``
+   |yes|
 
 For example:
 

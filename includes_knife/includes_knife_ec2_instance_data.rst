@@ -16,11 +16,44 @@ This argument has the following options:
 ``-A KEY``, ``--aws-access-key-id KEY``
    |aws-access-key-id|
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
 ``-e``, ``--edit``
    |edit|
 
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
+
+``-k KEY``, ``--key KEY``
+   |key|
+
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
    |aws-secret-access-key|
+
+``--no-color``
+   |no-color|
+
+``-n``, ``--disable-editing``
+   |no-editor|
+
+``--print-after``
+   |print-after|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
@@ -28,3 +61,17 @@ This argument has the following options:
 ``--region REGION``
    |region amazon|
 
+``-s URL``, ``--server-url URL``
+   |server-url|
+
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
+``-y``, ``--yes``
+   |yes|
