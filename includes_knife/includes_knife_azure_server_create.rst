@@ -20,11 +20,32 @@ This argument has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
 ``-D DESCRIPTION``
    |azure host description|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
 
 ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
    |azure host name|
@@ -35,14 +56,23 @@ This argument has the following options:
 ``-I IMAGE``, ``--source-image IMAGE``
    |source-image|
 
+``-k KEY``, ``--key KEY``
+   |key|
+
 ``-m LOCATION``, ``--service-location LOCATION``
    |media location|
+
+``-n``, ``--disable-editing``
+   |no-editor|
 
 ``-N NAME``, ``--node-name NAME``
    |node-name| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|
+
+``--no-color``
+   |no-color|
 
 ``-o DISK_NAME``, ``--os-disk-name DISK_NAME``
    |os-disk-name|
@@ -52,8 +82,12 @@ This argument has the following options:
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
+
 ``--prerelease``
    |prerelease|
+
+``--print-after``
+   |print-after|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
@@ -64,6 +98,9 @@ This argument has the following options:
 ``-s SERVICE_NAME``, ``--hosted-service-name SERVICE_NAME``
    |hosted-service-name|
 
+``-s URL``, ``--server-url URL``
+   |server-url|
+
 ``-S ID``, ``--azure-subscription-id ID``
    |azure-subscription-id|
 
@@ -73,14 +110,26 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |template-file|
 
-``--u PORT_LIST``, ``---udp-endpoints PORT_LIST``
+``-u PORT_LIST``, ``---udp-endpoints PORT_LIST``
    |udp-endpoints|
+
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+  |verbose|
 
 ``--verify-ssl-cert``
    |azure verify ssl certificate|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
+
+``-y``, ``--yes``
+   |yes|
 
 ``-z SIZE``, ``--role-size SIZE``
    |role-size|

@@ -1,4 +1,4 @@
-.TH "KNIFE-COOKBOOK-SITE" "1" "October 04, 2012" "0.0.1" "knife-cookbook-site"
+.TH "KNIFE-COOKBOOK-SITE" "1" "October 05, 2012" "0.0.1" "knife-cookbook-site"
 .SH NAME
 knife-cookbook-site \- knife-cookbook-site
 .
@@ -57,14 +57,62 @@ knife cookbook site download COOKBOOK_NAME [COOKBOOK_VERSION] (options)
 This argument has the following options:
 .INDENT 0.0
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fBCOOKBOOK_VERSION\fP
+The version of a cookbook to be downloaded. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, Knife will prompt for a version.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
 .B \fB\-f FILE\fP, \fB\-\-file FILE\fP
 The name of the cookbook file to be downloaded.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
 .TP
 .B \fB\-\-force\fP
 Indicates that the download of a deprecated cookbook will be forced.
 .TP
-.B \fBCOOKBOOK_VERSION\fP
-The version of a cookbook to be downloaded. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, Knife will prompt for a version.
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .UNINDENT
 .sp
 For example:
@@ -123,14 +171,62 @@ Indicates that the current branch will be used.
 .B \fB\-B BRANCH\fP, \fB\-\-branch BRANCH\fP
 The name of the default branch. This will default to the master branch.
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fBCOOKBOOK_VERSION\fP
+The version of the cookbook to be installed. If a version is not specified, the most recent version of the cookbook will be installed.
+.TP
 .B \fB\-D\fP, \fB\-\-skip\-dependencies\fP
 Indicates that all cookbooks to which the installed cookbook has a dependency will not be installed.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
 .TP
 .B \fB\-o PATH:PATH\fP, \fB\-\-cookbook\-path PATH:PATH\fP
 A colon\-separated path at which cookbooks are located.
 .TP
-.B \fBCOOKBOOK_VERSION\fP
-The version of the cookbook to be installed. If a version is not specified, the most recent version of the cookbook will be installed.
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .UNINDENT
 .sp
 For example, to install the cookbook "getting\-started", enter:
@@ -190,8 +286,56 @@ knife cookbook site list
 This argument has the following options:
 .INDENT 0.0
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
 .B \fB\-w\fP, \fB\-\-with\-uri\fP
 Indicates that the corresponding URIs will be shown.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .UNINDENT
 .sp
 For example, to view a list of cookbooks at cookbooks.opscode.com server, enter:
@@ -231,7 +375,57 @@ knife cookbook site search SEARCH_QUERY (options)
 .ft P
 .fi
 .sp
-This argument does not have any options.
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
+.UNINDENT
 .sp
 For example, to search for all of the cookbooks that can be used with Apache, enter:
 .sp
@@ -281,8 +475,56 @@ This argument has the following options:
 .B \fBCATEGORY\fP
 The cookbook category: \fBDatabases\fP, \fBWeb Servers\fP, \fBProcess Management\fP, \fBMonitoring and Trending\fP, \fBProgramming Languages\fP, \fBPackage Management\fP, \fBApplications\fP, \fBNetworking\fP, \fBOperations Systems and Virtualization\fP, \fBUtilities\fP, or \fBOther\fP.
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
 .B \fB\-o PATH:PATH\fP, \fB\-\-cookbook\-path PATH:PATH\fP
 A colon\-separated path at which cookbooks are located.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .UNINDENT
 .sp
 For example:
@@ -307,8 +549,56 @@ knife cookbook site show COOKBOOK_NAME [COOKBOOK_VERSION]
 This argument has the following options:
 .INDENT 0.0
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
 .B \fBCOOKBOOK_VERSION\fP
 The version of a cookbook to be shown. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, a list of cookbook versions will be returned.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .UNINDENT
 .sp
 For example:
@@ -354,7 +644,57 @@ knife cookbook site unshare COOKBOOK_NAME
 .ft P
 .fi
 .sp
-This argument does not have any options.
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
+.UNINDENT
 .sp
 For example, to unshare a cookbook named "getting\-started", enter:
 .sp

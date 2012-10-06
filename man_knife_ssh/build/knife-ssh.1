@@ -1,4 +1,4 @@
-.TH "KNIFE-SSH" "1" "September 28, 2012" "0.0.1" "knife-ssh"
+.TH "KNIFE-SSH" "1" "October 05, 2012" "0.0.1" "knife-ssh"
 .SH NAME
 knife-ssh \- knife-ssh
 .
@@ -47,20 +47,50 @@ This sub\-command has the following options:
 .B \fB\-a SSH_ATTR\fP, \fB\-\-attribute SSH_ATTR\fP
 The attribute that is used when opening the SSH connection. The default attribute is the fully\-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
 .B \fB\-C NUM\fP, \fB\-\-concurrency NUM\fP
 The number of allowed concurrent connections.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
 .TP
 .B \fB\-G GATEWAY\fP, \fB\-\-ssh\-gateway GATEWAY\fP
 The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
 .TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
 .B \fB\-i IDENTITY_FILE\fP, \fB\-\-identity\-file IDENTIFY_FILE\fP
 The SSH identity file used for authentication. Key\-based authentication is recommended.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
 .TP
 .B \fB\-m\fP, \fB\-\-manual\-list\fP
 Indicates that a search query is a space\-separated list of servers.
 .TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
 .B \fB\-\-[no\-]host\-key\-verify\fP
 Use \fB\-\-no\-host\-key\-verify\fP to disable host key verification. Host key verification is enabled by default.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
 .TP
 .B \fB\-p PORT\fP, \fB\-\-ssh\-port PORT\fP
 The SSH port.
@@ -68,14 +98,32 @@ The SSH port.
 .B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
 The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
 .TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
 .B \fBSEARCH_QUERY\fP
 The search query used to return a list of servers to be accessed using SSH and the specified \fBSSH_COMMAND\fP. This option uses the same syntax as the search sub\-command.
 .TP
 .B \fBSSH_COMMAND\fP
 The command that will be run against the results of a search query.
 .TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
 .B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
 The SSH user name.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .UNINDENT
 .sp
 For example, to query for all nodes that have the "webserver" role and then use SSH to run the command "sudo chef\-client", enter:

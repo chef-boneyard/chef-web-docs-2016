@@ -1,4 +1,4 @@
-.TH "KNIFE-GOOGLE" "1" "September 28, 2012" "0.0.1" "knife-google"
+.TH "KNIFE-GOOGLE" "1" "October 05, 2012" "0.0.1" "knife-google"
 .SH NAME
 knife-google \- knife-google
 .
@@ -57,17 +57,35 @@ knife google server create SERVER_NAME [RUN_LIST] (options)
 This argument has the following options:
 .INDENT 0.0
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
 .B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
 Indicates that a bootstrap operation will use a template file. If this option is used the name of the template file (\fB\-\-template\-file\fP) must also be provided. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
 .TP
 .B \fB\-e IP_ADDRESS\fP, \fB\-\-external\-ip\-address IP_ADDRESS\fP
 A static IP address that is provided by Google Compute Engine.
 .TP
-.B \fB\-\-template\-file TEMPLATE\fP
-The path to the template file that will be used during a bootstrap operation.
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
 .TP
 .B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
 The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
 .TP
 .B \fB\-i PRIVATE_KEY_FILE\fP, \fB\-\-private\-key\-file PRIVATE_KEY_FILE\fP
 The file in which the SSH private key used for authentication is located.
@@ -75,8 +93,17 @@ The file in which the SSH private key used for authentication is located.
 .B \fB\-I IMAGE\fP, \fB\-\-google\-image IMAGE\fP
 The name of the virtual application template or image that will be used to create the virtual machine. Default: \fBgcompute8\-standard\fP.
 .TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
 .B \fB\-k PUBLIC_KEY_FILE\fP, \fB\-\-public\-key\-file PUBLIC_KEY_FILE\fP]
 The file in which the SSH public key used for authentication is located.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
 .TP
 .B \fB\-n NETWORK_NAME\fP, \fB\-\-network NETWORK_NAME\fP
 The name of the network in which the virtual machine will be created.
@@ -84,20 +111,41 @@ The name of the network in which the virtual machine will be created.
 .B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
 The name of the node on the Chef server.
 .TP
-.B \fB\-s SERVER_NAME\fP, \fB\-\-server\-name SERVER_NAME\fP
-The name of the server.
-.TP
 .B \fB\-p PROJECT\fP, \fB\-\-project_id PROJECT\fP
 The identifier for the Google Compute Engine project.
 .TP
 .B \fB\-P IP_ADDRESS\fP, \fB\-\-internal\-ip\-address IP_ADDRESS\fP
 A static IP address that is provided by Google Compute Engine.
 .TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
 .B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
 A comma\-separated list of roles and/or recipes to be applied.
 .TP
+.B \fB\-s SERVER_NAME\fP, \fB\-\-server\-name SERVER_NAME\fP
+The name of the server.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to the template file that will be used during a bootstrap operation.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
 .B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
 The SSH user name.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .TP
 .B \fB\-Z ZONE\fP, \fB\-\-availability\-zone ZONE\fP
 The name of the Google Compute Engine availability zone. Each availability zone is unique within a region. Default: \fBus\-east\-a\fP.
@@ -125,8 +173,56 @@ knife google server delete SERVER_NAME (options)
 This argument has the following options:
 .INDENT 0.0
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
 .B \fB\-p PROJECT_NAME\fP, \fB\-\-project\-id PROJECT_NAME\fP
 The identifier for the Google Compute Engine project.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .UNINDENT
 .sp
 For example, to delete a server named "devops01" from a project named "engineering", enter:
@@ -151,8 +247,56 @@ knife google server list (options)
 This argument has the following options:
 .INDENT 0.0
 .TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The API key that a chef\-client must provide before it can access a Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-n\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
 .B \fB\-p PROJECT_NAME\fP, \fB\-\-project\-id PROJECT_NAME\fP
 The identifier for the Google Compute Engine project.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user name for the chef\-client.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
 .UNINDENT
 .sp
 For example, to view a list of instances associated with a project named "dev\-01", enter:

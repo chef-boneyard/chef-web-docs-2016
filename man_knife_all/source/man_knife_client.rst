@@ -5,7 +5,7 @@ client
 .. include:: ../../swaps/swap_descriptions.txt
 .. include:: ../../swaps/swap_names.txt
 
-.. include:: ../../includes/includes_chef_client.rst
+.. include:: ../../includes/includes_security_chef_validator.rst
 
 .. include:: ../../includes_knife/includes_knife_client.rst
    

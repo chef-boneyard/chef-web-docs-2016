@@ -17,11 +17,60 @@ This sub-command has the following syntax::
 
 This sub-command has the following options:
 
+``-c CONFIG``, ``--config CONFIG``
+   |config|
+
+``--color``
+   |color|
+
+``--defaults``
+   |defaults|
+
+``-e EDITOR``, ``--editor EDITOR``
+   |editor|
+
 ``-E CODE``, ``--exec CODE``
    |exec|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |environment|
+
+``-F FORMAT``, ``--format FORMAT``
+   |format|
+
+``-h``, ``--help``
+   |help|
+
+``-k KEY``, ``--key KEY``
+   |key|
+
+``--no-color``
+   |no-color|
+
+``-n``, ``--disable-editing``
+   |no-editor|
+
 ``-p PATH:PATH``, ``--script-path PATH:PATH``
    |script-path|
-     
+
+``--print-after``
+   |print-after|
+
+``-s URL``, ``--server-url URL``
+   |server-url|
+
+``-u USER``, ``--user USER``
+   |user|
+
+``-v``, ``--version``
+   |version chef|
+
+``-V``, ``--verbose``
+   |verbose|
+
+``-y``, ``--yes``
+   |yes|
+
 There are three ways to use ``knife exec`` to run |ruby| script files. For example:
 
 .. code-block:: bash
