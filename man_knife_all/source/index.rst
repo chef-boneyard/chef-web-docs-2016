@@ -16,7 +16,7 @@ Working with Knife
 
 JSON Data Format
 -----------------------------------------------------
-All data is entered using a text editor in |json| format, unless the ``--no-editor`` option is entered as part of a command. JSON is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see http://www.json.org/ or http://en.wikipedia.org/wiki/JSON.
+All data is entered using a text editor in |json| format, unless the ``--disable-editing`` option is entered as part of a command. JSON is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see http://www.json.org/ or http://en.wikipedia.org/wiki/JSON.
 
 Using Quotes
 -----------------------------------------------------
