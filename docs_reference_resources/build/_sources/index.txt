@@ -2767,18 +2767,28 @@ The following groups of lightweight resources are available in open source cookb
 * dmg
 * dynect
 * firewall
+* freebsd
 * gunicorn
 * homebrew
+* iis
+* maven
 * mysql
+* nagios
 * pacman
 * php
+* powershell
 * python
+* rabbitmq
 * riak
 * samba
+* sudo
+* supervisor
 * transmission
+* users
 * webpi
 * windows
 * yum
+* zenoss
 
 Some of the cookbooks contain more than one lightweight resource. Each lightweight resource is described individually in the following sections.
 
@@ -3492,6 +3502,44 @@ Examples
 
 .. include:: ../../steps/step_chef_lwrp_mysql_database_unlock_tables.rst
 
+
+
+nagios_nrpecheck -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_nagios_nrpecheck.rst
+
+.. note:: This lightweight resource is part of the ``nagios`` cookbook (http://community.opscode.com/cookbooks/nagios).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_nagios_nrpecheck_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_nagios_nrpecheck_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To define the ``check_load`` definition:
+
+.. code-block:: ruby
+
+   nagios_nrpecheck "check_load" do
+     command "#{node['nagios']['plugin_dir']}/check_load"
+     warning_condition node['nagios']['checks']['load']['warning']
+     critical_condition node['nagios']['checks']['load']['critical']
+     action :add
+   end
+
+To remove the ``check_load`` definition:
+
+.. code-block:: ruby
+
+   nagios_nrpecheck "check_load" do
+     action :remove
+   end
+
+
 pacman_aur
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_pacman_aur.rst
@@ -3580,6 +3628,95 @@ Examples
 
 .. include:: ../../steps/step_chef_lwrp_php_pear_channel_update_main_channels.rst
 
+
+
+powershell -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_powershell.rst
+
+.. note:: This lightweight resource is part of the ``powershell`` cookbook (http://community.opscode.com/cookbooks/powershell).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_powershell_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_powershell_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To change the hostname for a computer:
+
+.. code-block:: ruby
+
+   powershell "rename hostname" do
+     code <<-EOH
+     $computer_name = Get-Content env:computername
+     $new_name = 'test-hostname'
+     $sysInfo = Get-WmiObject -Class Win32_ComputerSystem
+     $sysInfo.Rename($new_name)
+     EOH
+   end
+
+To write to an interpolated path:
+
+.. code-block:: ruby
+
+   powershell "write-to-interpolated-path" do
+     code <<-EOH
+     $stream = [System.IO.StreamWriter]"#{Chef::Config[:file_cache_path]}/powershell-test.txt"
+     $stream.WriteLine("In #{Chef::Config[:file_cache_path]}...word.")
+     $stream.close()
+     EOH
+   end
+
+To use the ``cwd`` attribute:
+
+.. code-block:: ruby
+
+   powershell "cwd-then-write" do
+     cwd Chef::Config[:file_cache_path]
+     code <<-EOH
+     $stream = [System.IO.StreamWriter] "C:/powershell-test2.txt"
+     $pwd = pwd
+     $stream.WriteLine("This is the contents of: $pwd")
+     $dirs = dir
+     foreach ($dir in $dirs) {
+       $stream.WriteLine($dir.fullname)
+     }
+     $stream.close()
+     EOH
+   end
+
+To set the ``cwd`` attribute to a |windows| environment variable:
+
+.. code-block:: ruby
+
+   powershell "cwd-to-win-env-var" do
+     cwd ENV['TEMP']
+     code <<-EOH
+     $stream = [System.IO.StreamWriter] "./temp-write-from-chef.txt"
+     $stream.WriteLine("chef on windows rox yo!")
+     $stream.close()
+     EOH
+   end
+
+To pass an environment variable to a script:
+
+.. code-block:: ruby
+
+   powershell "read-env-var" do
+     cwd Chef::Config[:file_cache_path]
+     environment ({'foo' => 'BAZ'})
+     code <<-EOH
+     $stream = [System.IO.StreamWriter] "./test-read-env-var.txt"
+     $stream.WriteLine("FOO is $env:foo")
+     $stream.close()
+     EOH
+   end
+
+
 python_pip
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_python_pip.rst
@@ -3626,6 +3763,107 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_python_virtualenv_create_ubuntu.rst
 
 
+rabbitmq_plugin -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_plugin.rst
+
+.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_plugin_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_plugin_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To enable a plugin:
+
+.. code-block:: ruby
+
+   ruby rabbitmq_plugin "rabbitmq_stomp" do 
+     action :enable 
+   end
+
+To disable a plugin:
+
+.. code-block:: ruby
+
+   rabbitmq_plugin "rabbitmq_shovel" do 
+     action :disable 
+   end
+
+rabbitmq_user -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_user.rst
+
+.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_user_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_user_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To delete a user:
+
+.. code-block:: ruby
+
+   ruby rabbitmq_user "guest" do 
+     action :delete 
+   end
+
+To add a user:
+
+.. code-block:: ruby
+
+   rabbitmq_user "nova" do 
+     password "sekret" 
+     action :add 
+   end
+
+To set the permissions for a user:
+
+.. code-block:: ruby
+
+   rabbitmq_user "nova" do 
+     vhost "/nova" 
+     permissions "\".\" \".\" \".*\"" 
+     action :set_permissions 
+   end
+
+
+rabbitmq_vhost -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_vhost.rst
+
+.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_vhost_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_vhost_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To add a virtual host:
+
+.. code-block:: ruby
+
+   ruby rabbitmq_vhost "/nova" do 
+     action :add
+   end
+
+
 riak_cluster
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_riak_cluster.rst
@@ -3662,6 +3900,120 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_lwrp_samba_user_create.rst
 
+
+
+supervisor_fcgi -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_fcgi.rst
+
+.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_fcgi_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_fcgi_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+supervisor_group -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_group.rst
+
+.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_group_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_group_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+supervisor_service -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_service.rst
+
+.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_service_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_service_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To enable a service named ``celery``:
+
+.. code-block:: ruby
+
+   ruby supervisor_service "celery" do 
+     action :enable 
+     autostart false 
+     user "nobody" 
+   end
+
+
+
+sudo -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_sudo.rst
+
+.. note:: This lightweight resource is part of the ``sudo`` cookbook (http://community.opscode.com/cookbooks/sudo).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_sudo_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_sudo_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To use the natural (default) mode:
+
+.. code-block:: ruby
+
+   sudo "tomcat" do
+     user "%tomcat" # or a username
+     runas "app_user" # or "app_user : tomcat"
+     commands ["/etc/init.d/tomcat restart"] # array of commands, will be .join(",")
+     host "ALL"
+     nopasswd false # true prepends the runas_spec with NOPASSWD
+   end
+
+To use the template mode:
+
+.. code-block:: ruby
+
+   sudo "tomcat"
+     # this template must exist in the calling cookbook
+     template "restart_tomcat.erb"
+     variables( :cmds => [ "/etc/init.d/tomcat restart" ] )
+   end
+
+With both examples, the following is be generated in ``/etc/sudoers.d/tomcat``:
+
+.. code-block:: ruby
+
+   # this file was generated by chef
+   %tomcat ALL=(app_user) /etc/init.d/tomcat restart
+
+
 transmission_torrent_file
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_transmission_torrent_file.rst
@@ -3681,6 +4033,42 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso.rst
 
 .. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
+
+
+users_manage -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_users_manage.rst
+
+.. note:: This lightweight resource is part of the ``users`` cookbook (http://community.opscode.com/cookbooks/users).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_users_manage_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_users_manage_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create users based on data bag objects that have a ``group_id`` attribute value of ``2300``:
+
+.. code-block:: ruby
+
+   users_manage "sysadmin" do 
+     group_id 2300 
+     action :create
+   end
+
+
+To remove users based on data bag objects that have a ``group_id`` attribute value of ``2300``:
+
+.. code-block:: ruby
+
+   users_manage "sysadmin" do 
+     group_id 2300 
+     action :remove
+   end
 
 
 webpi_product -- NEEDS REVIEW
@@ -4064,6 +4452,96 @@ To remove a |zenoss| repository:
    end
 
 
+zenoss_zenbatchload -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenbatchload.rst
+
+.. note:: This lightweight resource is part of the ``zenoss`` cookbook (http://community.opscode.com/cookbooks/zenoss).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenbatchload_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenbatchload_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To xxxxx:
+
+.. code-block:: ruby
+
+   xxxxx
+
+
+zenoss_zenmd -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenmd.rst
+
+.. note:: This lightweight resource is part of the ``zenoss`` cookbook (http://community.opscode.com/cookbooks/zenoss).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenmd_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenmd_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To xxxxx:
+
+.. code-block:: ruby
+
+   xxxxx
+
+
+zenoss_zenpack -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenpack.rst
+
+.. note:: This lightweight resource is part of the ``zenoss`` cookbook (http://community.opscode.com/cookbooks/zenoss).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenpack_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenpack_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To xxxxx:
+
+.. code-block:: ruby
+
+   xxxxx
+
+
+zenoss_zenpatch -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenpatch.rst
+
+.. note:: This lightweight resource is part of the ``zenoss`` cookbook (http://community.opscode.com/cookbooks/zenoss).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenpatch_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenpatch_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To xxxxx:
+
+.. code-block:: ruby
+
+   xxxxx
 
 
 
