@@ -27,7 +27,7 @@ The following options can be run with all |knife| sub-commands and plug-ins:
 ``-k KEY``, ``--key KEY``
    |key|
 
-``-n``, ``--no-editor``
+``-n``, ``--disable-editing``
    |no-editor|
 
 ``--no-color``
