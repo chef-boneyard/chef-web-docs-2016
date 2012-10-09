@@ -45,55 +45,7 @@ Each sub-command has its own set of arguments and options.
 
 Common Options
 -----------------------------------------------------
-The following options can be run with all |knife| sub-commands and plug-ins:
-
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--no-editor``
-   |no-editor|
-
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-  |verbose|
-
-``-y``, ``--yes``
-   |yes|
+.. include:: ../../includes_knife/includes_knife_common_options.rst
 
 
 bootstrap
@@ -106,8 +58,6 @@ bootstrap
 
 client
 =====================================================
-
-.. include:: ../../includes/includes_security_chef_validator.rst
 
 .. include:: ../../includes_knife/includes_knife_client.rst
    
@@ -450,6 +400,10 @@ The following plugins for |knife| are provided by |opscode|:
 azure (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_azure.rst
+
+Common Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_common_options.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

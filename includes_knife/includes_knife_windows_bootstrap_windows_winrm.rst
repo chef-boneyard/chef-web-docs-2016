@@ -17,38 +17,8 @@ This argument has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
 
 ``--N NAME``, ``--node-name NAME``
    |node-name|
@@ -56,14 +26,8 @@ This argument has the following options:
 ``--prerelease``
    |prerelease|
 
-``--print-after``
-   |print-after|
-
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
 
 ``-s SECRET``, ``--secret SECRET``
    |secret|
@@ -73,18 +37,6 @@ This argument has the following options:
 
 ``--template-file TEMPLATE``
    |template-file|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example:
 

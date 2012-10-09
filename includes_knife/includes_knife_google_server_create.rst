@@ -11,35 +11,14 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
 
 ``-e IP_ADDRESS``, ``--external-ip-address IP_ADDRESS``
    |external-ip-address|
 
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
 ``-f FLAVOR``, ``--flavor FLAVOR``
    |flavor|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
 
 ``-i PRIVATE_KEY_FILE``, ``--private-key-file PRIVATE_KEY_FILE``
    |private-key-file|    
@@ -47,17 +26,8 @@ This argument has the following options:
 ``-I IMAGE``, ``--google-image IMAGE``
    |google-image|
 
-``-k KEY``, ``--key KEY``
-   |key|
-
 ``-k PUBLIC_KEY_FILE``, ``--public-key-file PUBLIC_KEY_FILE``]
    |public-key-file|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
 
 ``-n NETWORK_NAME``, ``--network NETWORK_NAME``
    |network|
@@ -71,35 +41,17 @@ This argument has the following options:
 ``-P IP_ADDRESS``, ``--internal-ip-address IP_ADDRESS``
    |internal-ip-address|
 
-``--print-after``
-   |print-after|
-
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
 ``-s SERVER_NAME``, ``--server-name SERVER_NAME``
    |server-name| 
 
-``-s URL``, ``--server-url URL``
-   |server-url|
-
 ``--template-file TEMPLATE``
    |template-file|
 
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
-
-``-y``, ``--yes``
-   |yes|
 
 ``-Z ZONE``, ``--availability-zone ZONE``
    |availability-zone google|

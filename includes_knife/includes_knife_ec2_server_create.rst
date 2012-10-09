@@ -20,23 +20,8 @@ This argument has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
 
 ``--ebs-size SIZE``
    |ebs-size|
@@ -50,9 +35,6 @@ This argument has the following options:
 ``-f FLAVOR``, ``--flavor FLAVOR``
    |flavor|
 
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
 ``-fqdn FQDN``
    |fqdn amazon ec2|
 
@@ -61,9 +43,6 @@ This argument has the following options:
 
 ``-G X,Y,Z``, ``--groups X,Y,Z``
    |groups| Not supported when using |amazon vpc|.
-
-``-h``, ``--help``
-   |help|
 
 ``-hint HINT_NAME[=HINT_FILE]``
    |hint|
@@ -74,23 +53,14 @@ This argument has the following options:
 ``-I IMAGE``, ``--image IMAGE``
    |image|
 
-``-k KEY``, ``--key KEY``
-   |key|
-
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
    |aws-secret-access-key|
-
-``-n``, ``--disable-editing``
-   |no-editor|
 
 ``-N NAME``, ``--node-name NAME``
    |node-name|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|
-
-``--no-color``
-   |no-color|
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|
@@ -101,17 +71,11 @@ This argument has the following options:
 ``--prerelease``
    |prerelease|
 
-``--print-after``
-   |print-after|
-
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
 ``--region REGION``
    |region amazon|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
 
 ``-s SUBNET_ID``, ``--subnet SUBNET_ID``
    |subnet|
@@ -128,26 +92,14 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |template-file|
 
-``-u USER``, ``--user USER``
-   |user|
-
 ``-u USER_DATA_FILE``, ``--user-data USER_DATA_FILE``
    |user-data|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
 
 ``-w GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh-gateway|
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|
-
-``-y``, ``--yes``
-   |yes|
 
 ``-Z ZONE"``, ``--availability-zone ZONE``
    |availability-zone amazon ec2|

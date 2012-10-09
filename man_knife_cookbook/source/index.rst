@@ -9,6 +9,10 @@ cookbook
 
 .. include:: ../../includes_knife/includes_knife_cookbook.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife/includes_knife_common_options.rst
+
 bulk delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete.rst

@@ -14,68 +14,17 @@ This argument has the following options:
 ``-A ID``, ``--hp-account ID``
    |hp-account|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
 ``--hp-auth URI``
    |hp-auth|
-
-``-k KEY``, ``--key KEY``
-   |key|
 
 ``-K SECRET``, ``--hp-secret SECRET``
    |hp-secret|
 
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name| This option only has meaning when used with the ``--purge`` option.
 
-``-p``, ``--purge``
-   |purge node hp|
-
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
 ``-T ID``, ``--hp-tenant ID``
    |hp-tenant|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 ``-Z ZONE``, ``--hp-zone ZONE``
    |hp-zone|

@@ -7,6 +7,10 @@ linode (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_linode.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife/includes_knife_common_options.rst
+
 datacenter list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_linode_datacenter_list.rst

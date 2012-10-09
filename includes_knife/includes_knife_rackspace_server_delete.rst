@@ -14,65 +14,17 @@ This argument has the following options:
 ``-A USER_NAME``, ``--rackspace-username USER_NAME``
    |rackspace-username|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
 ``-K API_KEY``, ``--rackspace-api-key API_KEY``
    |rackspace-api-key|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name| This option only has meaning when used with the ``--purge`` option.
 
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
 ``-p``, ``--purge``
    |purge node rackspace|
 
-``--print-after``
-   |print-after|
-
 ``--rackspace-api-auth-url``
    |rackspace-api-auth-url|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, to delete a |rackspace| instance with an Instance ID of "12345678", enter:
 

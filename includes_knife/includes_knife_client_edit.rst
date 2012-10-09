@@ -3,61 +3,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``edit`` argument is used to edit the details of a registered |chef| client. When this argument is run, |knife| will open $EDITOR to enable editing of ENVIRONMENT attributes. When finished, |knife| will update the |chef server| with those changes. 
+The ``edit`` argument is used to edit the details of a registered |chef api client|. When this argument is run, |knife| will open |chef editor| to enable editing of the ``admin`` attribute. (None of the other attributes should be changed using this argument.) When finished, |knife| will update the |chef server| with those changes. 
 
 This argument has the following syntax::
 
    knife client edit CLIENT_NAME
 
-This argument has the following options:
-
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
-``--no-color``
-   |no-color|
-
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
+This argument does not have any argument-specific options.
 
 For example, to edit a client with the name "exampleorg-validator", enter:
 

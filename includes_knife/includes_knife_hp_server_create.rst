@@ -20,35 +20,14 @@ This argument has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
 
 ``-f FLAVOR_ID``, ``--flavor FLAVOR_ID``
    |flavor|
 
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
 ``-G X,Y,Z``, ``--groups X,Y,Z``
    |groups|
-
-``-h``, ``--help``
-   |help|
 
 ``--hp-auth URI``
    |hp-auth|
@@ -59,14 +38,8 @@ This argument has the following options:
 ``-I IMAGE_ID``, ``--image IMAGE_ID``
    |image|
 
-``-k KEY``, ``--key KEY``
-   |key|
-
 ``-K SECRET``, ``--hp-secret SECRET``
    |hp-secret|
-
-``-n``, ``--disable-editing``
-   |no-editor|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name|
@@ -74,23 +47,14 @@ This argument has the following options:
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|
 
-``--no-color``
-   |no-color|
-
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
 
 ``--prerelease``
    |prerelease|
 
-``--print-after``
-   |print-after|
-
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
 
 ``-S KEY``, ``--ssh-key KEY``
    |ssh-key hp|
@@ -101,20 +65,8 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |template-file|
 
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
-
-``-y``, ``--yes``
-   |yes|
 
 ``-Z ZONE``, ``--hp-zone ZONE``
    |hp-zone|

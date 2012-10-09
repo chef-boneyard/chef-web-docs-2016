@@ -14,29 +14,8 @@ This argument has the following options:
 ``-a ATTR``, ``--attribute ATTR``
    |attribute ssh| The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
 ``-f CA_TRUST_FILE``, ``--ca-trust-file CA_TRUST_FILE``
    |ca-trust-file|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
@@ -44,17 +23,8 @@ This argument has the following options:
 ``-i KEYTAB_FILE``, ``--keytab-file KEYTAB_FILE``
    |keytab-file|
 
-``-k KEY``, ``--key KEY``
-   |key|
-
 ``-m``, ``--manual-list``
    |manual-list|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
 
 ``-p PORT``, ``--winrm-port PORT``
    |winrm-port|
@@ -62,17 +32,11 @@ This argument has the following options:
 ``-P PASSWORD``, ``--winrm-password PASSWORD``
    |winrm-password|
 
-``--print-after``
-   |print-after|
-
 ``-R KERBEROS_REALM``, ``--kerberos-realm KERBEROS_REALM``
    |kerberos-realm|
 
 ``--returns CODES``
    |returns|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
 
 ``-S KERBEROS_SERVICE``, ``--kerberos-service KERBEROS_SERVICE``
    |kerberos-service| 
@@ -86,20 +50,8 @@ This argument has the following options:
 ``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
    |winrm-transport|
 
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
 ``-x USERNAME``, ``--winrm-user USERNAME``
    |winrm-user|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, to find the uptime of all web servers, enter:
 

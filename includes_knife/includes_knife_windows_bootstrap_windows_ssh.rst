@@ -17,44 +17,14 @@ This argument has the following options:
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
 
-``-k KEY``, ``--key KEY``
-   |key|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
 ``--N NAME``, ``--node-name NAME``
    |node-name|
-
-``--no-color``
-   |no-color|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|
@@ -65,17 +35,11 @@ This argument has the following options:
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
 
-``--print-after``
-   |print-after|
-
 ``--prerelease``
    |prerelease|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
 
 ``-s SECRET``, ``--secret SECRET``
    |secret|
@@ -86,21 +50,8 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |template-file|
 
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
-
-``-y``, ``--yes``
-   |yes|
-
 
 For example:
 

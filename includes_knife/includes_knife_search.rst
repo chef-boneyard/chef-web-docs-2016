@@ -17,35 +17,11 @@ This sub-command has the following options:
 ``-b ROW``, ``-start ROW``
    |start|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
 ``-i``, ``--id-only``
    |id-only|
 
 ``INDEX``
    |INDEX|
-
-``-k KEY``, ``--key KEY``
-   |key|
 
 ``-l``, ``--long``
    |long|
@@ -53,17 +29,8 @@ This sub-command has the following options:
 ``-m``, ``--medium``
    |medium|
 
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
 ``-o SORT``, ``--sort SORT``
    |sort|
-
-``--print-after``
-   |print-after|
 
 ``-q SEARCH_QUERY``, ``--query SEARCH_QUERY``
    |query|
@@ -74,23 +41,8 @@ This sub-command has the following options:
 ``-R INT``, ``--rows INT``
    |rows|
 
-``-s URL``, ``--server-url URL``
-   |server-url|
-
 ``SEARCH_QUERY``
    |SEARCH_QUERY|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, to search for the IDs of all nodes running on the |amazon ec2| platform, enter:
 

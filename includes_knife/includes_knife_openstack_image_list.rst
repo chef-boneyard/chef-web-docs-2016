@@ -14,62 +14,14 @@ This argument has the following options:
 ``-A ID``, ``--openstack-access-key-id ID``
    |openstack-access-key-id|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
 ``-K SECRET``, ``--openstack-secret-access-key SECRET``
    |openstack-secret-access-key|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
 
 ``--openstack-api-endpoint ENDPOINT``
    |openstack-api-endpoint|
 
-``--print-after``
-   |print-after|
-
 ``--region REGION``
    |region openstack|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, to view a list of images, enter:
 
