@@ -14,57 +14,9 @@ This argument has the following options:
 ``-A USER_NAME``, ``--rackspace-username USER_NAME``
    |rackspace-username|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
 ``-K API_KEY``, ``--rackspace-api-key API_KEY``
    |rackspace-api-key|
 
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
-``--print-after``
-   |print-after|
-
 ``--rackspace-api-auth-url``
    |rackspace-api-auth-url|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 

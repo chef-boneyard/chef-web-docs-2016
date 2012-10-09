@@ -11,56 +11,8 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
 ``-p PROJECT_NAME``, ``--project-id PROJECT_NAME``
    |project_id|
-
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, to delete a server named "devops01" from a project named "engineering", enter:
 

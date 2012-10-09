@@ -14,65 +14,17 @@ This argument has the following options:
 ``-A KEY``, ``--aws-access-key-id KEY``
    |aws-access-key-id|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
    |aws-secret-access-key|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name purge|
 
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
 ``-p``, ``--purge``
    |purge amazon ec2|
 
-``--print-after``
-   |print-after|
-
 ``--region REGION``
    |region amazon|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, to delete a node called "preprod" in an instance named "operations", enter:
 

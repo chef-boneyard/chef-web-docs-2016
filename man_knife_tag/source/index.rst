@@ -9,6 +9,10 @@ tag
 
 .. include:: ../../includes_knife/includes_knife_tag.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife/includes_knife_common_options.rst
+
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_tag_create.rst

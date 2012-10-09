@@ -17,35 +17,14 @@ This argument has the following options:
 ``--block_startup_timeout TIME``
    |block-startup-timeout|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
-
-``--defaults``
-   |defaults|
 
 ``--disable-bootstrap``
    |disable-bootstrap|
 
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
 ``-f FLAVOR``, ``--flavor FLAVOR``
    |flavor|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
 
 ``-i IMAGE``, ``--image IMAGE``
    |image|
@@ -53,41 +32,14 @@ This argument has the following options:
 ``-I IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
 
-``-k KEY``, ``--key KEY``
-   |key|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
-``--no-color``
-   |no-color|
-
 ``-N NAME``, ``--node-name NAME``
    |node-name|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
 
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
 ``-U KEY``, ``--username USERNAME``
    |username bluebox|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, to xxxxx, enter:
 

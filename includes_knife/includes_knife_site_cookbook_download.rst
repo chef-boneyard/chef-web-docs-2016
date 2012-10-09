@@ -11,62 +11,8 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
 ``COOKBOOK_VERSION``
    |COOKBOOK_VERSION download|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-f FILE``, ``--file FILE``
-   |file|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``--force``
-   |force|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example:
 

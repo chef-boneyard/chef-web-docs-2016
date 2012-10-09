@@ -46,55 +46,7 @@ Each sub-command has its own set of arguments and options.
 
 Common Options
 -----------------------------------------------------
-The following options can be run with all |knife| sub-commands:
-
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--no-editor``
-   |no-editor|
-
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
+.. include:: ../../includes_knife/includes_knife_common_options.rst
 
 Contents:
 

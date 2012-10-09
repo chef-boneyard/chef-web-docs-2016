@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``list`` argument is used to view a list of registered clients. 
+The ``list`` argument is used to view a list of registered |chef api client|. 
 
 This argument has the following syntax::
 
@@ -11,56 +11,8 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
-``--no-color``
-   |no-color|
-
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
 ``-w``, ``--with-uri``
    |with-uri|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, enter:
 
@@ -76,7 +28,8 @@ to return something similar to:
    i-12345678
    rs-123456
 
-To get the list of clients for a specific organization, use the ``-u`` and ``-k`` options:
+To verify that an |chef api client| can authenticate to the 
+|chef server| correctly, try getting a list of clients using ``-u`` and ``-k`` options to specify its name and private key:
 
 .. code-block:: bash
 

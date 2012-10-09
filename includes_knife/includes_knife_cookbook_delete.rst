@@ -14,59 +14,11 @@ This argument has the following options:
 ``-a``, ``--all``
    |all cookbooks delete|
 
-``-c CONFIG``, ``--config CONFIG``
-   |config|
-
-``--color``
-   |color|
-
 ``COOKBOOK_VERSION``
    |COOKBOOK_VERSION delete|
 
-``--defaults``
-   |defaults|
-
-``-e EDITOR``, ``--editor EDITOR``
-   |editor|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``-F FORMAT``, ``--format FORMAT``
-   |format|
-
-``-h``, ``--help``
-   |help|
-
-``-k KEY``, ``--key KEY``
-   |key|
-
-``--no-color``
-   |no-color|
-
-``-n``, ``--disable-editing``
-   |no-editor|
-
 ``-p``, ``--purge``
    |purge cookbook|
-
-``--print-after``
-   |print-after|
-
-``-s URL``, ``--server-url URL``
-   |server-url|
-
-``-u USER``, ``--user USER``
-   |user|
-
-``-v``, ``--version``
-   |version chef|
-
-``-V``, ``--verbose``
-   |verbose|
-
-``-y``, ``--yes``
-   |yes|
 
 For example, to delete version "0.8" from a cookbook named "smartmon", enter:
 

@@ -7,6 +7,10 @@ google (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_google.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife/includes_knife_common_options.rst
+
 server create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_google_server_create.rst

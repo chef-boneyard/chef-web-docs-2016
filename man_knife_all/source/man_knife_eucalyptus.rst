@@ -7,6 +7,10 @@ eucalyptus (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_eucalyptus.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife/includes_knife_common_options.rst
+
 flavor list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst
