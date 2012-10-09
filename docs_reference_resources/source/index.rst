@@ -2776,7 +2776,9 @@ The following groups of lightweight resources are available in open source cookb
 * riak
 * samba
 * transmission
+* webpi
 * windows
+* yum
 
 Some of the cookbooks contain more than one lightweight resource. Each lightweight resource is described individually in the following sections.
 
@@ -3680,6 +3682,43 @@ Examples
 
 .. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
 
+
+webpi_product -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_webpi_product.rst
+
+.. note:: This lightweight resource is part of the ``webpi`` cookbook (http://community.opscode.com/cookbooks/webpi).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_webpi_product_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_webpi_product_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To install the recommended configuration for |microsoft iis| 7:
+
+.. code-block:: ruby
+
+   webpi_product "IIS7" do
+     accept_eula true
+     action :install
+   end
+
+To install |windows powershell|  2.0:
+
+.. code-block:: ruby
+
+   webpi_product "PowerShell2" do
+     accept_eula true
+     action :install
+   end
+
+
+
 windows_auto_run -- NEEDS REVIEW
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run.rst
@@ -3954,6 +3993,75 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_windows_zipfile_unzip_remote.rst
 
 .. include:: ../../steps/step_chef_lwrp_windows_zipfile_unzip_local.rst
+
+
+yum_key -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_yum_key.rst
+
+.. note:: This lightweight resource is part of the ``yum`` cookbook (http://community.opscode.com/cookbooks/yum).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_yum_key_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_yum_key_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To add a |zenoss| |gnupg| key:
+
+.. code-block:: ruby
+
+   yum_key "RPM-GPG-KEY-zenoss" do 
+     url "http://dev.zenoss.com/yum/RPM-GPG-KEY-zenoss" 
+     action :add 
+   end
+
+To add a |zenoss| |gnupg| key:
+
+.. code-block:: ruby
+
+   yum_key "RPM-GPG-KEY-zenoss" do 
+     action :remove 
+   end
+
+yum_repository -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_yum_repository.rst
+
+.. note:: This lightweight resource is part of the ``yum`` cookbook (http://community.opscode.com/cookbooks/yum).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_yum_repository_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_yum_repository_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To add a |zenoss| repository:
+
+.. code-block:: ruby
+
+   yum_repository "zenoss" do
+     description "Zenoss Stable repo"
+     url "http://dev.zenoss.com/yum/stable/" 
+     key "RPM-GPG-KEY-zenoss" 
+     action :add 
+   end
+
+To remove a |zenoss| repository:
+
+.. code-block:: ruby
+
+   yum_repository "zenoss" do 
+     action :remove 
+   end
 
 
 
