@@ -9,6 +9,9 @@ The following options can be run with all |knife| sub-commands and plug-ins:
 ``--color``
    |color|
 
+``-d``, ``--disable-editing``
+   |no-editor|
+
 ``--defaults``
    |defaults|
 
@@ -26,9 +29,6 @@ The following options can be run with all |knife| sub-commands and plug-ins:
 
 ``-k KEY``, ``--key KEY``
    |key|
-
-``-n``, ``--disable-editing``
-   |no-editor|
 
 ``--no-color``
    |no-color|
