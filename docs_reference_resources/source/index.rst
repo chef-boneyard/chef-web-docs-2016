@@ -2758,6 +2758,7 @@ Custom resources and providers can also be created using the |lwrp| DSL. |opscod
 
 The following groups of lightweight resources are available in open source cookbooks that are provided by |opscode|:
 
+* application
 * apt
 * aws
 * bluepill
@@ -2856,6 +2857,561 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_apt_repository_add_zenoss.rst
 
 .. include:: ../../steps/step_chef_lwrp_apt_repository_remove_zenoss.rst
+
+
+
+
+application -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_base.rst
+
+.. note:: This lightweight resource is part of the ``application`` cookbook (http://community.opscode.com/cookbooks/application).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_base_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_base_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+See the application-specific lightweight resources.
+
+
+application_java_webapp -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_java_webapp.rst
+
+.. note:: This lightweight resource is part of the ``application_java`` cookbook (http://community.opscode.com/cookbooks/application_java).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_java_webapp_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_java_webapp_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+application_java_tomcat -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_java_tomcat.rst
+
+.. note:: This lightweight resource is part of the ``application_java`` cookbook (http://community.opscode.com/cookbooks/application_java).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_java_tomcat_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_java_tomcat_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create an application that needs a database connection:
+
+.. code-block:: ruby
+
+   application "my-app" do
+     path "/usr/local/my-app"
+     repository "..."
+     revision "..."
+   
+     java_webapp do
+       database_master_role "database_master"
+       database do
+         driver 'org.gjt.mm.mysql.Driver'
+         database 'name'
+         port 5678
+         username 'user'
+         password 'password'
+         max_active 1
+         max_idle 2
+         max_wait 3
+       end
+     end
+   
+     tomcat
+   end
+
+To create an application using a template:
+
+.. code-block:: ruby
+
+   application "jenkins" do
+     path "/usr/local/jenkins"
+     owner node["tomcat"]["user"]
+     group node["tomcat"]["group"]
+     repository "http://mirrors.jenkins-ci.org/war/latest/jenkins.war"
+     revision "6facd94e958ecf68ffd28be371b5efcb5584c885b5f32a906e477f5f62bdb518-1"
+   
+     java_webapp do
+       context_template "jenkins-context.xml.erb"
+     end
+   
+     tomcat
+   end
+
+To invoke a method on the database block:
+
+.. code-block:: ruby
+
+   application "my-app" do
+     path "/usr/local/my-app"
+     repository "..."
+     revision "..."
+   
+     java_webapp do
+       database_master_role "database_master"
+       database do
+         database 'name'
+         quorum 2
+         replicas %w[Huey Dewey Louie]
+       end
+     end
+   end
+
+The corresponding entries will be passed to the context template:
+
+.. code-block:: ruby
+
+   <Context docBase="<%= @war %>" path="/">
+     <!-- <%= @database['quorum'] %> -->
+     <!-- <%= @database['replicas'].join(',') %> -->
+   </Context>
+
+
+application_nginx_load_balancer -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_nginx_load_balancer.rst
+
+.. note:: This lightweight resource is part of the ``application_nginx`` cookbook (http://community.opscode.com/cookbooks/application_nginx).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_nginx_load_balancer_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_nginx_load_balancer_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create an application that needs a database connection:
+
+.. code-block:: ruby
+
+   application "my-app" do
+     path "/usr/local/my-app"
+     repository "..."
+     revision "..."
+   
+     rails do
+     end
+   
+     nginx_load_balancer do
+       only_if { node['roles'].include?('my-app_load_balancer') }
+     end
+   end
+
+Assuming you have a my-app_application_server role applied to nodes backend-0..backend-3, and a my-app_load_balancer role assigned to frontend-0..frontend-1, then nginx will be installed on the frontends, and configured like this:
+
+.. code-block:: ruby
+
+   upstream my-app {
+     server <IP of backend-0>:8000;
+     server <IP of backend-1>:8000;
+     server <IP of backend-2>:8000;
+     server <IP of backend-3>:8000;
+   }
+   
+   server {
+     listen 80;
+     server_name frontend-0;
+     location / {
+       proxy_pass http://my-app;
+     }
+   }
+
+To configure |nginx| to serve static files by setting the ``static_files`` attribute:
+
+.. code-block:: ruby
+
+   application "my-app" do
+     path "/usr/local/my-app"
+     repository "..."
+     revision "..."
+   
+     nginx_load_balancer do
+       only_if { node['roles'].include?('my-app_load_balancer') }
+       static_files "/img" => "images"
+     end
+   end
+
+which will be expanded to:
+
+.. code-block:: ruby
+
+   server {
+     listen 80;
+     server_name frontend-0;
+   
+     location /img {
+       alias /usr/local/my-app/current/images;
+     }
+   
+     location / {
+       proxy_pass http://my-app;
+     }
+   }
+
+
+application_php_mod_php_apache2 -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_php_mod_php_apache2.rst
+
+.. note:: This lightweight resource is part of the ``application_php`` cookbook (http://community.opscode.com/cookbooks/application_php).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_php_mod_php_apache2_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_php_mod_php_apache2_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create an application that needs a database connection:
+
+.. code-block:: ruby
+
+   application "phpvirtualbox" do
+     path "/usr/local/www/sites/phpvirtualbox"
+     owner node[:apache][:user]
+     group node[:apache][:user]
+     repository "..."
+     deploy_key "..."
+     revision "4_0_7"
+     packages ["php-soap"]
+   
+     php do
+       database_master_role "database_master"
+       local_settings_file "config.php"
+     end
+   
+     mod_php_apache2
+   end
+
+This will result in a ``config.php`` file getting created from a ``config.php.erb`` template that is present in the application cookbook. 
+
+To invoke a method on the database block:
+
+.. code-block:: ruby
+
+   application "my-app" do
+     path "/usr/local/my-app"
+     repository "..."
+     revision "..."
+   
+     php do
+       database_master_role "database_master"
+       database do
+         database 'name'
+         quorum 2
+         replicas %w[Huey Dewey Louie]
+       end
+     end
+   end
+
+The corresponding entries will be passed to the context template:
+
+.. code-block:: ruby
+
+   <%= @database['quorum']
+   <%= @database['replicas'].join(',') %>
+
+
+
+application_php_php -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_php_php.rst
+
+.. note:: This lightweight resource is part of the ``application_php`` cookbook (http://community.opscode.com/cookbooks/application_php).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_php_php_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_php_php_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+application_python_celery -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_celery.rst
+
+.. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_celery_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_celery_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+
+application_python_django -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_django.rst
+
+.. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_django_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_django_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+application_python_gunicorn -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_gunicorn.rst
+
+.. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_gunicorn_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_python_gunicorn_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create a sample application that needs a database connection:
+
+.. code-block:: ruby
+
+   application "packaginator" do
+     path "/srv/packaginator"
+     owner "nobody"
+     group "nogroup"
+     repository "https://github.com/coderanger/packaginator.git"
+     revision "master"
+     migrate true
+     packages ["libpq-dev", "git-core", "mercurial"]
+   
+     django do 
+       packages ["redis"]
+       requirements "requirements/mkii.txt"
+       settings_template "settings.py.erb"
+       debug true
+       collectstatic "build_static --noinput"
+       database do
+         database "packaginator"
+         engine "postgresql_psycopg2"
+         username "packaginator"
+         password "awesome_password"
+       end
+       database_master_role "packaginator_database_master"
+     end
+   end
+
+You can invoke any method on the database block:
+
+.. code-block:: ruby
+
+   application "my-app" do
+     path "/srv/packaginator"
+     repository "..."
+     revision "..."
+   
+     django do
+       database_master_role "packaginator_database_master"
+       database do
+         database 'name'
+         quorum 2
+         replicas %w[Huey Dewey Louie]
+       end
+     end
+   end
+
+The corresponding entries will be passed to the context template:
+
+.. code-block:: ruby
+
+   <%= @database['quorum']
+   <%= @database['replicas'].join(',') %>
+
+application_ruby_memcached -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_memcached.rst
+
+.. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_memcached_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_memcached_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create an application that connects to |memcached|:
+
+.. code-block:: ruby
+
+   application "my-app" do
+     path "..."
+     repository "..."
+     revision "..."
+   
+     memcached do
+       role "memcached_master"
+       options do
+         ttl 1800
+         memory 256
+       end
+     end
+   end
+
+This will generate a config/memcached.yml file:
+
+.. code-block:: ruby
+
+   production:
+     ttl: 1800
+     memory: 256
+     servers:
+       - 192.168.0.10:11211
+
+
+application_ruby_passenger_apache2 -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_passenger_apache2.rst
+
+.. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_passenger_apache2_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_passenger_apache2_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create an application that needs a database connection:
+
+.. code-block:: ruby
+
+   application "redmine" do
+     path "/usr/local/www/redmine"
+   
+     rails do 
+       database do
+         database "redmine"
+         username "redmine"
+         password "awesome_password"
+       end
+       database_master_role "redmine_database_master"
+     end
+   
+     passenger_apache2 do
+     end
+   end
+
+You can invoke any method on the database block:
+
+.. code-block:: ruby
+
+   application "my-app" do
+     path "..."
+     repository "..."
+     revision "..."
+   
+     rails do
+       database_master_role "my-app_database_master"
+       database do
+         database 'name'
+         quorum 2
+         replicas %w[Huey Dewey Louie]
+       end
+     end
+   end
+
+The corresponding entries will be passed to the context template:
+
+.. code-block:: ruby
+
+   <%= @database['quorum'] %>
+   <%= @database['replicas'].join(',') %>
+
+application_ruby_rails -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_rails.rst
+
+.. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_rails_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_rails_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
+application_ruby_unicorn -- NEEDS REVIEW
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_unicorn.rst
+
+.. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_unicorn_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_unicorn_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
 
 aws_ebs_volume
 -----------------------------------------------------
