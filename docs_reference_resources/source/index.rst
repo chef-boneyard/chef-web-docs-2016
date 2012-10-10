@@ -2762,6 +2762,7 @@ The following groups of lightweight resources are available in open source cookb
 * aws
 * bluepill
 * chef_handler
+* cloudkick -- **jamescott: DEPRECATION CANDIDATE**
 * daemontools
 * djbdns
 * dmg
@@ -3036,6 +3037,71 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_chef_handler_exceptions_only.rst
 
 .. include:: ../../steps/step_chef_lwrp_chef_handler_register.rst
+
+
+cloudkick_check -- NEEDS REVIEW -- DEPRECATE?
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_check.rst
+
+.. note:: This lightweight resource is part of the ``cloudkick`` cookbook (http://community.opscode.com/cookbooks/cloudkick).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_check_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_check_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create a |cloudkick| check on the root partition for all application servers:
+
+.. code-block:: ruby
+
+   cloudkick_check "root check" do 
+     oauth_key 'xxx' 
+     oauth_secret 'yyy' 
+     code 51 # 'DISK' details(
+       {
+         :path => '/', 
+         :fs_critical => 99, 
+         :fs_warn => 95
+       }
+       ) monitor_id 'q1234' 
+     action :create 
+   end
+
+
+cloudkick_monitor -- NEEDS REVIEW -- DEPRECATE?
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_monitor.rst
+
+.. note:: This lightweight resource is part of the ``cloudkick`` cookbook (http://community.opscode.com/cookbooks/cloudkick).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_monitor_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_monitor_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+To create a |cloudkick| monitor for all application servers:
+
+.. code-block:: ruby
+
+   cloudkick_monitor "appserver monitor" do 
+     oauth_key 'xxx' 
+     oauth_secret 'yyy' 
+     query 'tag:appserver' 
+     action :create 
+   end
+
+
+
 
 daemontools_service
 -----------------------------------------------------
