@@ -40,7 +40,7 @@ To upload a cookbook, and then prevent other users from being able to make chang
 
    $ knife cookbook upload redis --freeze
 
-To return::
+To return:
 
 .. code-block:: bash
 

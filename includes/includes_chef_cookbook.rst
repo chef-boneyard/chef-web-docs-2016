@@ -1,9 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A cookbook is the fundamental unit of distribution across |chef| organizations. Each cookbook defines an automation scenario and then contains all of the components that are required to run it, including:
+A cookbook is the fundamental unit of configuration and policy distribution in |chef|. Each cookbook defines a scenario, such as everything needed to install and configure |mysql|, and then contains all of the components that are required to support that scenario, including:
 
-* Attributes that set values on nodes
+* Attribute values that are set on nodes
 * Definitions that allow the creation of reusable collections of resources
 * File distributions
 * Libraries that extend |chef| and/or provide helpers to |ruby| code

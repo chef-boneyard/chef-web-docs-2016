@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``create`` argument is used to create a new cookbook directory, including the following directories and files:
+The ``create`` argument is used to create a new cookbook directory on the local machine, including the following directories and files:
 
   * cookbook/attributes
   * cookbook/definitions
@@ -15,6 +15,8 @@ The ``create`` argument is used to create a new cookbook directory, including th
   * cookbook/recipes/default.rb
   * cookbook/resources
   * cookbook/templates/default
+
+After the cookbook is created, it can be uploaded to the |chef server| using the ``knife upload`` argument.
 
 This argument has the following syntax::
 
