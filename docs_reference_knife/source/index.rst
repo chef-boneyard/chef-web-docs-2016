@@ -15,7 +15,7 @@ Working with Knife
 
 JSON Data Format
 -----------------------------------------------------
-All data is entered using a text editor in |json| format, unless the ``--disable-editing`` option is entered as part of a command. JSON is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see http://www.json.org/ or http://en.wikipedia.org/wiki/JSON.
+Most data is entered using a text editor in |json| format, unless the ``--disable-editing`` option is entered as part of a command. (Encrypted data bags use |yaml|, which is a superset of |json|.) |json| is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see http://www.json.org/ or http://en.wikipedia.org/wiki/JSON.
 
 Using Quotes
 -----------------------------------------------------
@@ -27,7 +27,7 @@ Sub-commands
 
 |knife| has the following sub-commands: ``bootstrap``, ``client``, ``configure``, ``cookbook``, ``cookbook site``, ``data bag``, ``environment``, ``exec``, ``index rebuild``, ``node``, ``recipe list``, ``role``, ``search``, ``ssh``, ``status``, and ``tag``.
 
-|opscode| provides the following plug-ins, which work the same as built-in sub-commands (including common options), but must be downloaded separately from |github|: ``azure``, ``bluebox``, ``ec2``, ``eucalyptus``, ``google``, ``hp``, ``linode``, ``openstack``, ``rackspace``, ``slicehost``, ``terremark``, and ``windows``.
+|opscode| provides the following plug-ins, which work the same as built-in sub-commands (including common options), but must be installed separately (using |rubygems|): ``azure``, ``bluebox``, ``ec2``, ``eucalyptus``, ``google``, ``hp``, ``linode``, ``openstack``, ``rackspace``, ``slicehost``, ``terremark``, and ``windows``.
 
 .. note:: The following sub-command runs only against the |chef open server|: ``index rebuild``.
 
