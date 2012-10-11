@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``delete`` argument is used to delete a specified cookbook or cookbook version.
+The ``delete`` argument is used to delete a specified cookbook or cookbook version on the |chef server| (and not locally).
 
 This argument has the following syntax::
 

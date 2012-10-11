@@ -5,7 +5,7 @@
 
 |knife linode|
 
-This plugin is available on |github|: https://github.com/opscode/knife-linode.
+This plugin should be installed using |rubygems|.
 
 This sub-command has the following syntax::
 
