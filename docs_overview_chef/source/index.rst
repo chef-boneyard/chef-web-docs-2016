@@ -44,8 +44,6 @@ Some important components on nodes include:
      - .. include:: ../../includes/includes_chef_client.rst
    * - .. image:: ../../images/icon_ohai.png
      - .. include:: ../../includes/includes_ohai.rst
-   * - .. image:: ../../images/icon_node_object.png
-     - .. include:: ../../includes/includes_chef_node_object.rst
 
 Other sub-elements of nodes include exception and report handlers, certificates, and attributes. An exception handler is triggered when a defined aspect of a |chef| run fails; a report handler is triggered when a defined aspect succeeds. An |ssl| certificate handshake is used between the |chef client| and the |chef server| to prevent a node from accessing data that it shouldn't. Attributes can be specified in cookbooks that override the default attributes that are present on the node.
 
@@ -159,7 +157,7 @@ Some important components of cookbooks include:
    * - .. image:: ../../images/icon_cookbook_versions.png
      - .. include:: ../../includes/includes_chef_cookbook_version.rst
 
-|chef| will run a recipe many times on the same system and will create the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, |chef| won't change anything.
+|chef| will run a recipe only when asked. When |chef| runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, |chef| won't change anything.
 
 In addition to attributes, recipes, and versions, the following items are also part of cookbooks:
 
