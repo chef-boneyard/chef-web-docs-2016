@@ -109,7 +109,7 @@ H3 -- Writing a Handler -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_handler_write.rst
 
-H4 -- Example: Send email when |Chef| run fails: -- DONE
+H4 -- Example: Send email when |Chef| run fails -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_write_example_send_email.rst
 
@@ -117,11 +117,11 @@ H3 -- Installing and Configuring a Handler -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_handler_install.rst
 
-H4 -- |lwrp chef handler|: -- DONE
+H4 -- |lwrp chef handler| -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_install_from_cookbook.rst
 
-H4 -- Manual Install: -- DONE
+H4 -- Manual Install -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_install_manual.rst
 
@@ -133,11 +133,11 @@ H3 -- Available Handlers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_handler_available.rst
 
-H4 -- |opscode|: JsonFile Handler: -- DONE
+H4 -- |opscode|: JsonFile Handler -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_available_jsonfile.rst
 
-H4 --  Community: Open Source Handlers: -- DONE
+H4 --  Community: Open Source Handlers -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes/includes_chef_handler_available_community.rst
 
