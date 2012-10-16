@@ -75,9 +75,9 @@ H4 -- |chef validator| -- DONEish
 .. include:: ../../includes/includes_security_chef_validator.rst
 
 
-H2 -- The |chef| Run -- xxxxx
+H2 -- The |chef| Run -- FIRST DRAFT
 -----------------------------------------------------
-SEE INDEX_NEW. NEEDS UPDATING AND NEW DIAGRAM. IN JAMES' QUEUE.
+.. include:: ../../includes/includes_chef_client_run.rst
 
 
 H2 -- |ohai| -- DONE
