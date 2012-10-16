@@ -4,6 +4,6 @@
 
 |chef| is comprised of three main elements: a server, one (or more) nodes, and at least one workstation. 
 
-* The |chef server| acts as a hub, ensuring that the right cookbooks are available, that the right policies are being applied, that the node object used during the previous |chef| run is available to the current |chef| run, and that all of the nodes that will be maintained by |chef| are registered and known to the |chef server|. 
-* The workstation is the location from which most of the work happens, including authoring cookbooks, synchronizing with the repository, and uploading information to the |chef server|. 
-* Each node hosts the various servers and applications in the cloud or on physical devices; each node contains a |chef client| that performs the various infrastructure automation tasks that each node requires.
+* The |chef server| acts as a hub that is available to every node in the |chef| organization. This ensures that the right cookbooks are available, that the right policies are being applied, that the node object used during the previous |chef| run is available to the current |chef| run, and that all of the nodes that will be maintained by |chef| are registered and known to the |chef server|. 
+* The workstation is the location from which cookbooks are authored, policy data (such as roles, environments, and data bags) are defined, data is synchronized with the |chef| repository, and data is uploaded to the |chef server|. 
+* Each node contains a |chef client| that performs the various infrastructure automation tasks that each node requires.

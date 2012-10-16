@@ -4,6 +4,8 @@ An Overview of |chef|
  
 .. include:: ../../swaps/swap_descriptions.txt
 .. include:: ../../swaps/swap_names.txt
+.. include:: ../../swaps/swap_http.txt
+
 
 .. include:: ../../includes/includes_chef.rst
 
@@ -45,7 +47,8 @@ Some important components on nodes include:
    * - .. image:: ../../images/icon_ohai.png
      - .. include:: ../../includes/includes_ohai.rst
 
-Other sub-elements of nodes include exception and report handlers, certificates, and attributes. An exception handler is triggered when a defined aspect of a |chef| run fails; a report handler is triggered when a defined aspect succeeds. An |ssl| certificate handshake is used between the |chef client| and the |chef server| to prevent a node from accessing data that it shouldn't. Attributes can be specified in cookbooks that override the default attributes that are present on the node.
+|chef| uses RSA public key-pairs to authenticate a |chef client| with the |chef server| every time a |chef client| needs access to data that is stored on the |chef server|. This prevents any node from accessing data that it shouldn't and ensures that only nodes that are properly registered with the |chef| server can be managed by |chef|.
+
 
 Workstations
 =====================================================
@@ -85,7 +88,7 @@ There are two types of |chef| servers:
    * - .. image:: ../../images/icon_chef_private.png
      - .. include:: ../../includes/includes_chef_private.rst
 
-       |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located within the organization's firewall. |chef private| is the same as |chef hosted|. |chef hosted| is the largest |chef private| deployment in the world.
+       |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located behind the firewall. |chef private| is the same as |chef hosted| in every other way. |chef hosted| is the largest |chef private| deployment in the world.
 
 In addition to node objects, policy, and cookbooks, a |chef server| includes:
 
@@ -161,7 +164,7 @@ Some important components of cookbooks include:
 
 In addition to attributes, recipes, and versions, the following items are also part of cookbooks:
 
-* Resources. A resource is a package, a service, a group of users, and so on. A resource tells |chef| which provider to use during a |chef| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. |chef| includes default providers that cover all of the most common scenarios.
+* Resources and providers. A resource is a package, a service, a group of users, and so on. A resource tells |chef| which provider to use during a |chef| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. |chef| includes default providers that cover all of the most common scenarios.
 * File distributions. A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
 * Definitions. A definition is used to create new resources by stringing together one (or more) existing resources.
 * Libraries. A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef| language or to implement a new class.
@@ -172,21 +175,21 @@ In addition to attributes, recipes, and versions, the following items are also p
 
 Conclusion
 =====================================================
-The key underlying principle of |chef| is that you (the user) knows best about what your environment is, what it should do, and how it should be maintained. |chef| is designed to not make assumptions about any of those things. Only the individuals on the ground---that's you and your team---understand the technical problems and what is required to solve them. Only the organization---yours---understands the human problems (skill levels, audit trails, and other internal issues) that are unique to your organization and whether any single technical solution is viable.
+The key underlying principle of |chef| is that you (the user) knows best about what your environment is, what it should do, and how it should be maintained. |chef| is designed to not make assumptions about any of those things. Only the individuals on the ground---that's you and your team---understand the technical problems and what is required to solve them. Only your team can understand the human problems (skill levels, audit trails, and other internal issues) that are unique to your organization and whether any single technical solution is viable.
 
-The idea that you know best about what should happen in your environment goes hand-in-hand with the notion that you still need help. It is rare that a single individual knows everything about a very complex problem, let alone knows all of the steps that may be required to solve them. The same is true with tools. |chef| provides help with infrastructure management. And |chef| can help solve very complicated problems. |chef| also has a large community of users who have a lot of experience solving a lot of very complex problems. That |chef| community can provide knowledge and support in areas that your organization may not have and (along with |chef|) can help your organization solve any complex problem.
+The idea that you know best about what should happen in your organization goes hand-in-hand with the notion that you still need help. It is rare that a single individual knows everything about a very complex problem, let alone knows all of the steps that may be required to solve them. The same is true with tools. |chef| provides help with infrastructure management. And |chef| can help solve very complicated problems. |chef| also has a large community of users who have a lot of experience solving a lot of very complex problems. That |chef| community can provide knowledge and support in areas that your organization may not have and (along with |chef|) can help your organization solve any complex problem.
 
 For more information ...
 -----------------------------------------------------
 For history of |chef|, where it came from and how it evolved, watch these two (short) videos:
 
-* Part one: http://www.youtube.com/watch?v=Ia2ItmjRsw8
-* Part two: http://www.youtube.com/watch?v=Ss6P92L_sCA
+* Part one: |http opscode youtube short part one|
+* Part two: |http opscode youtube short part two|
 
 For more information about |opscode|, cookbooks for |chef|, and the |chef| community:
 
-* http://www.opscode.com
-* http://community.opscode.com/cookbooks
-* http://community.opscode.com
+* |http opscode|
+* |http community|
+* |http community cookbooks|
 
 
