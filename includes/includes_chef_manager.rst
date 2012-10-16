@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |chef| manager is a web-based interface that provides users of |chef| a way to manage the following:
+The |chef| manager is a web-based interface that provides users of |chef| a way to manage the following from the |chef server|:
 
 * Nodes
 * Cookbooks and recipes
