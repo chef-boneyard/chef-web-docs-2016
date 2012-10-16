@@ -15,7 +15,7 @@ This sub-command has the following options:
    The name of a file to be used with the ``PUT`` or a ``POST`` request.
 
 ``--[no]pretty``
-   Indicates that |json| output will be pretty-print.
+   Indicates that |json| output will be |prettyprint|.
 
 ``-m METHOD``, ``--method METHOD``
    The request method: ``DELETE``, ``GET``, ``POST``, or ``PUT``.
