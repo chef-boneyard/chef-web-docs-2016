@@ -2,18 +2,20 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-**jamescott: THIS NEEDS TO BE REWRITTEN INto A SINGLE TOPIC AND TURNED INTO A DIAGRAM THAT IS BETTER THAN THE ONE CURRENTLY ON THE WIKI**
+A |chef| run is a series of steps taken by a |chef client| for the purpose of bring a node into the desired state. When a |chef client| performs a |chef| run, the following happens:
 
-When a |chef client| is run, the following happens:
+#. Get process configuration data from |client rb|.
+#. Get node configuration data from |ohai|.
+#. Authenticate to the |chef server| using an RSA private key. The the name of the node is required as part of the authentication process. This is obtained from either the ``node_name`` attribute from the |client rb| file or the |fqdn| for the node (as identified by |ohai|). If this is the first |chef| run for the node, the |chef validator| will be used to generate the RSA private key.
+#. The |chef client| pulls down the node object from the |chef server|. This node object is the same node object that was used during the previous |chef| run. If this is the first |chef| run for the node, there will not be a node object to pull down from the |chef| server.
+#. Re-build the node object. If this is the first |chef| run for the node, the node object will contain only the default run-list. For any subsequent |chef| run, the re-built node object will also contain the run-list from the previous |chef| run.
+#. Expand the run-list from the re-built node object, compiling a full and complete list of roles and recipes that will be applied to the node and placed in the specific order the roles and recipes will be applied.
+#. The |chef client| asks the |chef server| for a list of all cookbook files (including recipes, templates, resources, providers, attributes, libraries, and definitions) that will be required to do every action identified in the run-list for the re-built node object. The |chef server| provides to the |chef client| a list of all of the files. The |chef client| compares this list to the cookbook files cached on the node (from previous |chef| runs), and then pulls down a copy of every file that has changed since the previous |chef| run, along with any new files.
+#. All attributes in the re-built node object are reset. All attributes from recipes, roles, environments, |ohai| and attribute files are loaded. All attributes in the re-built node object are updated with the attribute data, and according to attribute precedence. When all of the attributes are updated, the re-built node object is complete.
+#. The |chef client| identifies each resource in the node object and builds the resource collection. All details about the node are put into a single collection. All definitions are loaded (to ensure that any pseudo-resources are available). All libraries are loaded (to ensure that all language extensions and |ruby| classes are available). All recipes are loaded and each action specified specified in recipes are identified and any |ruby| blocks within recipes are evaluated.
+#. The |chef client| configures the system based on the information that has been collected. Each resource in the resource collection is mapped to a provider. The provider examines the node, and then does the steps necessary to complete the action. Each action configures a specific part of the system. This process is also referred to as convergence.
+#. When all of the actions identified by resources in the resource collection have been done, the |chef client| updates the node object on the |chef server| with the node object that was built during this |chef| run. This makes the node object (and the data in the node object) available for search.
+#. The |chef client| checks the resource collection for the presence of exception and report handlers. If any are present, each one is processed appropriately.
+#. The |chef client| stops and waits for the next |chef| run.
 
-* A new node is built that contains existing |ohai| data, node data that is fetched from the |chef server|, attributes from recipes that are in cookbooks that will be run against the node, and current |ohai| attribute data.
-* The private key file is registered with the |chef server| by the |chef client| and authenticated. If a private key does not exist, the |chef client| will attempt to register using the |chef validator| client.
-* The |chef client| will query the |chef server| for a list of all libraries, providers, resources, attributes, definitions, and recipes that exist in a all cookbooks. This list is transferred to the local file cache on the node.
-* All details about the node are put into a single collection. All libraries from every cookbook are loaded. This ensures that all language extensions and |ruby| classes are available. All attribute files are loaded. These will be used to update node attributes, based on attribute type and precedence. All definitions are loaded (before recipes). These are used to create any pseudo-resources that may be required while the node is being configured and updated. All recipes are loaded. These are added into the resource collection, unless the recipe contains a |ruby| code block, in which case that block of |ruby| code is also evaluated.
-* The |chef client| configures the system based on the information that has been collected. Each resource in the resource collection is mapped to a provider, which then takes action on it. Each action configures a specific part of the system. This process is also referred to as convergence. After all of the actions have been taken against the entire system, the |chef client| will save the node so that its data is persisted and available for search.
-* If exception and notification handlers have been configured, the |chef client| will trigger messages for each of the handler messages that need to be sent.
-* After exception and notification handler messages have been sent (when required), the |chef client| stops and waits for the next request.
-
-**jamescott: need new image!**
-
-.. image:: ../../images/includes_overview_what_is_a_chef_run.png
+.. image:: ../../images/chef_run_legacy.png
