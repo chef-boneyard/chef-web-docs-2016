@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``raw`` argument is used to xxxxx. to the specified path on the |chef server|.
+The ``raw`` argument is used to send a REST request to the |chef server| using the |chef server. to the specified path on the |api chef server|.
 
 This sub-command has the following syntax::
 
@@ -14,8 +14,8 @@ This sub-command has the following options:
 ``-i FILE``, ``--input FILE``
    The name of a file to be used with the ``PUT`` or a ``POST`` request.
 
-``--[no]pretty``
-   Indicates that |json| output will be |prettyprint|.
+``--[no-]pretty``
+   Use ``--no-pretty`` to disable |prettyprint| output for |json|. |prettyprint| output is enabled by default.
 
 ``-m METHOD``, ``--method METHOD``
    The request method: ``DELETE``, ``GET``, ``POST``, or ``PUT``.

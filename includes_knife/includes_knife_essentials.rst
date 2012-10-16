@@ -11,12 +11,6 @@ The |knife| essentials sub-commands is a set of |knife| commands that allow a co
 
 * The context from which a command is run matters. For example, within the ``roles/`` directory, the system knows what is being worked with. Enter ``knife show base.json`` and |knife| will return the base role from the server.
 
-This plugin should be installed using |rubygems|:
-
-.. code-block:: bash
-
-   $ gem install knife-essentials
-
 This sub-command has the following syntax::
 
    knife [ARGUMENT] (options)
