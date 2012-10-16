@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``diff`` argument is used to xxxxx.
+The ``diff`` argument is used to compare the differences between files and directories. This sub-command is useful for ensuring that the files on the |chef server| are the correct files prior to an upload. Or for ensuring that multiple production environments need to have the same set of files.
 
 This sub-command has the following syntax::
 
@@ -17,14 +17,14 @@ This sub-command has the following options:
 ``--name-status``
    Indicates that only the names of files with a status of ``Added``, ``Deleted``, ``Modified``, or ``Type Changed`` will be shown.
 
-``--[no]recurse``
-   Indicates that a directory will be listed recursively. **jamescott: THIS ONE HAS A SLIGHTLY DIFFERENT ATTRIBUTE NAME THAN DOWNLOAD AND UPLOAD. BY DESIGN OR BY ACCIDENT?**
+``--[no-]recurse``
+   Use ``--no-recourse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default. **jamescott: THIS ONE HAS A SLIGHTLY DIFFERENT ATTRIBUTE NAME THAN DOWNLOAD AND UPLOAD. BY DESIGN OR BY ACCIDENT?**
 
-For example, to xxxxx:
+For example, to compare the differences between the local |chef| repository and the files that are on the |chef server|, enter:
 
 .. code-block:: bash
 
-   $ knife xxxxx
+   $ knife diff
 
 To xxxxx:
 

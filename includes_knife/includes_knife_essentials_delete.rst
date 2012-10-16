@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``delete`` argument is used to xxxxx.
+The ``delete`` argument is used to delete an object from a |chef server|.
 
 This sub-command has the following syntax::
 
@@ -11,8 +11,8 @@ This sub-command has the following syntax::
 
 This sub-command has the following options:
 
-``--[no]recurse``
-   Indicates that a directory will be listed recursively. **jamescott: THIS ONE HAS A SLIGHTLY DIFFERENT ATTRIBUTE NAME THAN DOWNLOAD AND UPLOAD. BY DESIGN OR BY ACCIDENT? THIS ONE IS ALSO THE SAME AS A COMMAND IN DIFF**
+``--[no-]recurse``
+   Use ``--no-recourse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default. **jamescott: THIS ONE HAS A SLIGHTLY DIFFERENT ATTRIBUTE NAME THAN DOWNLOAD AND UPLOAD. BY DESIGN OR BY ACCIDENT? THIS ONE IS ALSO THE SAME AS A COMMAND IN DIFF**
 
 For example, to xxxxx:
 

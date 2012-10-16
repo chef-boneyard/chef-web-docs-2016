@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``list`` argument is used to xxxxx.
+The ``list`` argument is used to view a list of objects on the |chef server|.
 
 This sub-command has the following syntax::
 
@@ -17,14 +17,14 @@ This sub-command has the following options:
 ``-R``
    Indicates that a directory's children will not be shown when a directory matches a pattern.
 
-For example, to xxxxx:
+For example, to view a list of roles on the |chef server|:
 
 .. code-block:: bash
 
-   $ knife xxxxx
+   $ knife list roles/
 
-To xxxxx:
+To view a list of roles and environments on the |chef server|:
 
 .. code-block:: bash
 
-   $ knife xxxxx
+   $ knife list roles/ environments/
