@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``delete`` argument is used to delete an object from a |chef server|.
+The ``delete`` argument is used to delete an object from a |chef server|. This sub-command works similar to ``knife cookbook delete``, ``knife data bag delete``, ``knife environment delete``, ``knife node delete``, and ``knife role delete``, but with a single verb (and a single action).
 
 This sub-command has the following syntax::
 
@@ -12,7 +12,7 @@ This sub-command has the following syntax::
 This sub-command has the following options:
 
 ``--[no-]recurse``
-   Use ``--no-recourse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default. **jamescott: THIS ONE HAS A SLIGHTLY DIFFERENT ATTRIBUTE NAME THAN DOWNLOAD AND UPLOAD. BY DESIGN OR BY ACCIDENT? THIS ONE IS ALSO THE SAME AS A COMMAND IN DIFF**
+   Use ``--no-recurse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default. **jamescott: CHANGED DELETE, DIFF, DOWNLOAD, AND UPLOAD TO BE --no-recurse. PLEASE CONFIRM THAT IS CORRECT AND THEN I CAN DELETE THIS NOTE. IF THAT IS CORRECT, ALSO TWO OF THE SUBCOMMANDS HAVE TYPOS IN THE CODE**
 
 For example, to xxxxx:
 

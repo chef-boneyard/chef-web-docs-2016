@@ -3,13 +3,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |knife| essentials sub-commands is a set of |knife| commands that allow a common set of verbs to be used while interacting with objects on the |chef server|. Some important principles behind the |knife| essentials sub-commands include:
+|knife| includes a series of sub-commands that are built around a common set of verbs: ``create``, ``delete``, ``download``, ``list``, ``show``, and ``upload``. These sub-commands allow a user of |knife| to build commands that interact with any object stored in the |chef| repository or stored on the |chef server|. Some important principles behind these sub-commands include:
 
-* Unified commands that work on everything. The verb is the most important part of the command. For example, most objects are uploaded, downloaded, viewed in a list, printed to |json|, and so on. |knife| essentials unifies these common tasks around the verb, rather than around the object.
-
-* The |chef server| behaves like a file system. When the |knife| essentials sub-commands are used, the |chef server| behaves like a mirror of the |chef| repository. The |chef server| will have objects that match the |chef| repository. Just upload and download the files on the local repository to make changes to files on the |chef server|.
-
-* The context from which a command is run matters. For example, within the ``roles/`` directory, the system knows what is being worked with. Enter ``knife show base.json`` and |knife| will return the base role from the server.
+* A single command that works with objects in the |chef| repository. The sub-commands specify the desired action with the verb, and then the object by specifying the directory in which that object resides: ``cookbooks/``, ``data_bags/``, ``environments/``, and ``roles/``. These sub-commands allow simply the syntax required for tasks because most |chef| objects can uploaded, downloaded, viewed as a list, printed to |json|, and so on. 
+* Using the |chef server| as if it were a file system, allowing the repository on the |chef server| to behave like a mirror of the |chef| repository on the workstation. The |chef server| will have the same objects as the local |chef| repository. To make changes to the files on the |chef| server, just download files from the |chef server| or upload files from the |chef| repository.
+* The context from which a command is run matters. For example, when working in the ``roles/`` directory, |knife| will know what is being worked with. Enter ``knife show base.json`` and |knife| will return the base role from the |chef server|. From the repository root, enter ``knife show roles/base.json`` to get the same result.
 
 This sub-command has the following syntax::
 
