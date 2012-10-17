@@ -382,13 +382,9 @@ list
 
 .. include:: ../../includes_knife/includes_knife_essentials.rst
 
-Common Options
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 Wildcard Matching
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_search_pattern_wildcard.rst
+.. include:: ../../includes_knife/includes_knife_essentials_wildcard.rst
 
 delete
 -----------------------------------------------------

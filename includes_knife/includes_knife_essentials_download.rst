@@ -18,19 +18,19 @@ This sub-command has the following options:
    Use ``--no-force`` to disable uploading files when an identical file is already present in the directory. Uploading files (even when identical files are already present) is enabled by default.
 
 ``--[no-]purge``
-   Use ``--no-purge`` to disable the deletion of files locally when they do not exist remotely. Deleting local files that do not exist remotely is enabled by default. **jamescott: JOHN---this one doesn't seem correct.**
+   Use ``--no-purge`` to disable the deletion of files locally when they do not exist remotely. Use ``--purge`` to delete local files and directories that do not exist on the |chef server|.
 
-``--[no-]recourse``
-   Use ``--no-recourse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default.
+``--[no-]recurse``
+   Use ``--no-recurse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default.
 
-For example, to xxxxx:
-
-.. code-block:: bash
-
-   $ knife xxxxx
-
-To xxxxx:
+For example, to download an environment named "production":
 
 .. code-block:: bash
 
-   $ knife xxxxx
+   $ knife download environments/production
+
+or, (if already in the ``environments/`` directory in the local |chef| repository):
+
+.. code-block:: bash
+
+   $ knife download production
