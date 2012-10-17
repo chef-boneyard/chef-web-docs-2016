@@ -13,7 +13,7 @@ For example, enter:
 
 .. code-block:: bash
 
-   $ knife role list 'couchdb::*'
+   $ knife recipe list 'couchdb::*'
 
 to return:
 
