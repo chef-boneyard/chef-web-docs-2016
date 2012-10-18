@@ -6,6 +6,6 @@ To transfer a file from a URL:
 
    remote_file "/tmp/testfile" do
      source "http://www.example.com/tempfiles/testfile"
-     mode "0644"
-     checksum "08da002l" # A SHA256 (or portion thereof) of the file.
+     mode 00644
+     checksum "3a7dac00b1" # A SHA256 (or portion thereof) of the file.
    end
