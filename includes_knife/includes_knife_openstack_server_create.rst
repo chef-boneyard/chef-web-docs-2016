@@ -68,11 +68,7 @@ This argument has the following options:
 ``-Z ZONE"``, ``--availability-zone ZONE``
    |availability-zone openstack|
 
-For example, to create a new instance, enter:
 
-.. code-block:: bash
-
-   $ xxxxx
 
 
 

@@ -26,8 +26,8 @@ For example, to compare the differences between the local |chef| repository and 
 
    $ knife diff
 
-To xxxxx:
+To compare the "base.json" role to a "webserver.json" role, enter:
 
 .. code-block:: bash
 
-   $ knife xxxxx
+   $ knife diff roles/base.json roles/webserver.json

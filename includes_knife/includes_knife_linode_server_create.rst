@@ -59,11 +59,7 @@ This argument has the following options:
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
 
-For example, to create a new instance, enter:
 
-.. code-block:: bash
-
-   $ xxxxx
 
 
 

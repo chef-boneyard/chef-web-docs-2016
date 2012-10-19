@@ -22,15 +22,3 @@ This sub-command has the following options:
 
 ``--[no-]recurse``
    Use ``--no-recurse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default.
-
-For example, to xxxxx:
-
-.. code-block:: bash
-
-   $ knife xxxxx
-
-To xxxxx:
-
-.. code-block:: bash
-
-   $ knife xxxxx

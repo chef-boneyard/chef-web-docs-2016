@@ -41,11 +41,7 @@ This argument has the following options:
 ``-U KEY``, ``--username USERNAME``
    |username bluebox|
 
-For example, to xxxxx, enter:
 
-.. code-block:: bash
-
-   $ xxxxx
 
 
 
