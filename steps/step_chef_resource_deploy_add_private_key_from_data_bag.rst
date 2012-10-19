@@ -22,5 +22,5 @@ Remember to convert new lines in the private key to \n when copying it to the da
    file "/tmp/private_code/.ssh/id_deploy" do
      content app['deploy_key']
      owner "ubuntu"
-     mode 0600
+     mode 00600
    end

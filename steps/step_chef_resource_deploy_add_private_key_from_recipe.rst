@@ -9,7 +9,7 @@ To add a private key to a node:
    cookbook_file "/tmp/private_code/.ssh/id_deploy" do
      source "id_deploy"
      owner "ubuntu"
-     mode 0600
+     mode 00600
    end
 
 After this has been added to a recipe, it should be able to deploy the private repository.
