@@ -56,11 +56,7 @@ This argument has the following options:
 ``-Z ZONE``, ``--availability-zone ZONE``
    |availability-zone google|
 
-For example, to create an instance, enter:
 
-.. code-block:: bash
-
-   $ xxxxx
 
 
 

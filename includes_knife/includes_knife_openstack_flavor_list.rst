@@ -23,7 +23,7 @@ This argument has the following options:
 ``--region REGION``
    |region openstack|
 
-For example, to xxxxx, enter:
+For example, enter:
 
 .. code-block:: bash
 

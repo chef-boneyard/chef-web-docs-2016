@@ -20,14 +20,3 @@ This sub-command has the following options:
 ``-m METHOD``, ``--method METHOD``
    The request method: ``DELETE``, ``GET``, ``POST``, or ``PUT``.
 
-For example, to xxxxx:
-
-.. code-block:: bash
-
-   $ knife xxxxx
-
-To xxxxx:
-
-.. code-block:: bash
-
-   $ knife xxxxx

@@ -29,9 +29,5 @@ For example, enter:
 
    $ knife terremark server list -A useraccount -K password -S service_name
 
-to return something like:
 
-.. code-block:: bash
-
-   xxxxx
 
