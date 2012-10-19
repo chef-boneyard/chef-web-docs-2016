@@ -6,5 +6,5 @@ To transfer a file in a cookbook:
 
    cookbook_file "/tmp/testfile" do
      source "testfile" # this is the value that would be inferred from the path parameter
-     mode "0644"
+     mode 00644
    end

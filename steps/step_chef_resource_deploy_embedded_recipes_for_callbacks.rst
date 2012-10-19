@@ -5,8 +5,8 @@ Using resources from within your callbacks as blocks or within callback files di
 
 .. code-block:: ruby
 
-   deploy "#{node[:tmpdir]}/deploy" do
-     repo "#{node[:tmpdir]}/gitrepo/typo/"
+   deploy "#{node['tmpdir']}/deploy" do
+     repo "#{node['tmpdir']}/gitrepo/typo/"
      environment "RAILS_ENV" => "production"
      revision "HEAD"
      action :deploy
@@ -18,13 +18,13 @@ Using resources from within your callbacks as blocks or within callback files di
        current_release = release_path
        
        directory "#{current_release}/deploy" do
-         mode "0755"
+         mode 00755
        end
      
        # creates a callback for before_symlink
        template "#{current_release}/deploy/before_symlink_callback.rb" do
          source "embedded_recipe_before_symlink.rb.erb"
-         mode "0644"
+         mode 00644
        end
       
      end
@@ -35,7 +35,7 @@ Using resources from within your callbacks as blocks or within callback files di
      restart do
        current_release = release_path
        file "#{release_path}/tmp/restart.txt" do
-         mode "0644"
+         mode 00644
        end
      end
    

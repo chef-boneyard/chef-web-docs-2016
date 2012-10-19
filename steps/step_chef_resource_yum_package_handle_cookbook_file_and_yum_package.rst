@@ -7,10 +7,10 @@ When a ``cookbook_file`` resource and a ``yum_package`` resource are both called
 
    cookbook_file "/etc/yum.repos.d/custom.repo" do
      source "custom"
-     mode "0644"
+     mode 00644
    end
    
    yum_package "only-in-custom-repo" do
      action :install
-     flush_cache [ :before ]
+     flush_cache [:before]
    end

@@ -4,4 +4,6 @@ To set the debug logging level:
 
 .. code-block:: ruby
 
-   log("a debug string") { level :debug }
+   log "a debug string" do
+     level :debug
+   end
