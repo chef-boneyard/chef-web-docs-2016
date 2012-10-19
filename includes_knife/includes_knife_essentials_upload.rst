@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``upload`` argument is used to upload objects to the |chef server| from the local repository.
+The ``upload`` sub-command is used to upload objects to the |chef server| from the local repository.
 
 This sub-command has the following syntax::
 

@@ -24,7 +24,7 @@ to return something similar to:
 
 .. code-block:: bash
 
-   exampleorg-validator
+   exampleorg
    i-12345678
    rs-123456
 
@@ -33,5 +33,5 @@ To verify that an |chef api client| can authenticate to the
 
 .. code-block:: bash
 
-   $ knife client list -u ORGNAME-validator -k .chef/ORGNAME-validator.pem
+   $ knife client list -u ORGNAME -k .chef/ORGNAME.pem
 

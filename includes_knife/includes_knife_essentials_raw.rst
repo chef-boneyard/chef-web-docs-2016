@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``raw`` argument is used to send a REST request a specified path using the |api chef server|.
+The ``raw`` sub-command is used to send a REST request a specified path using the |api chef server|.
 
 This sub-command has the following syntax::
 
