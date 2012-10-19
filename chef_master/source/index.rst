@@ -42,7 +42,7 @@ This collection represents an internal collection of all documentation for |chef
      - 
    * - 
      - 
-     - 
+     - :doc:`../docs_overview_chef/index`
      - 
    * - 
      - 
