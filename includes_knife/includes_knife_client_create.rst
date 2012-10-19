@@ -17,17 +17,17 @@ This argument has the following options:
 ``-a``, ``--admin``
    |admin client| This option only works when used with |chef open server| and will have no effect when used with |chef hosted| or |chef private|.
 
-For example, to create a |chef client admin| with the name "exampleorg-validator" and save its private key to a file, enter:
+For example, to create a |chef client admin| with the name "exampleorg" and save its private key to a file, enter:
 
 .. code-block:: bash
 
-   $ knife client create exampleorg-validator -a -f "/etc/chef/client.pem"
+   $ knife client create exampleorg -a -f "/etc/chef/client.pem"
 
 When running the ``create`` argument on |chef hosted| or |chef private|, be sure to omit the ``-a`` option:
 
 .. code-block:: bash
 
-   $ knife client create exampleorg-validator -f "/etc/chef/client.pem"
+   $ knife client create exampleorg -f "/etc/chef/client.pem"
 
 
 

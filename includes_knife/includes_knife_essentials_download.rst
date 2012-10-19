@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``download`` argument is used to download objects from the |chef server| to the local repository.
+The ``download`` sub-command is used to download objects from the |chef server| to the local repository.
 
 This sub-command has the following syntax::
 

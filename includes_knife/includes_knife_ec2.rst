@@ -7,7 +7,7 @@
 
 This plugin should be installed using |rubygems|.
 
-.. note:: This plugin requires the ``knife windows`` plugin to be present on the same machine: https://github.com/opscode/knife-windows.
+.. note:: This plugin requires the ``knife windows`` plugin to be present on the same machine.
 
 This sub-command has the following syntax::
 

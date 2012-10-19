@@ -11,11 +11,11 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
-For example, to edit a client with the name "exampleorg-validator", enter:
+For example, to edit a client with the name "exampleorg", enter:
 
 .. code-block:: bash
 
-   $ knife client edit exampleorg-validator
+   $ knife client edit exampleorg
 
 
 
