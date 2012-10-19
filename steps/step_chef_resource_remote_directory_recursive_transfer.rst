@@ -10,9 +10,9 @@ To recursively transfer a directory from a remote location:
      files_backup 10
      files_owner "root"
      files_group "root"
-     files_mode "0644"
+     files_mode 00644
      owner "nobody"
      group "nobody"
-     mode "0755"
+     mode 00755
    end
 

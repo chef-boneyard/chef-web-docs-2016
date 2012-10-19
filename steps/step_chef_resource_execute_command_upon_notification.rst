@@ -12,5 +12,5 @@ To execute a command only upon notification:
    
    template "/tmp/something.ldif" do
      source "something.ldif"
-     notifies :run, resources(:execute => "slapadd")
+     notifies :run, "execute[slapadd]"
    end
