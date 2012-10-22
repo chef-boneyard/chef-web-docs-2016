@@ -11,6 +11,6 @@ Or, to include the same search in a recipe, use a code block similar to::
 
    qa_nodes = search(:node,"chef_environment:QA")      
    qa_nodes.each do |qa_node|                          
-       # Do useful specific to qa nodes only
+       # Do useful work specific to qa nodes only
    end
 
