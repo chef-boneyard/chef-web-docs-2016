@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``:group``
      - The system group that is responsible for the checked-out code.
    * - ``:strategy``
-     - The deploy strategy: ``timestamped_deploy`` or ``deploy_revision`` (default). Use ``deploy_revision`` to ensure that the name of a release sub-directory is based on a revision identifier and puts deployed components under the destination location that is owned by the user who runs the application. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---|chef| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. Use ``timestamped_deploy`` to name a release sub-directory with a timestamp in the form of YYYYMMDDHHMMSS. For example: /my/deploy/dir/releases/20121120162342. **jamescott: WILD GUESS BASED ON DEPLOY RESOURCE**
+     - The deploy strategy: ``timestamped_deploy`` or ``deploy_revision`` (default). Use ``deploy_revision`` to ensure that the name of a release sub-directory is based on a revision identifier and puts deployed components under the destination location that is owned by the user who runs the application. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---|chef| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. Use ``timestamped_deploy`` to name a release sub-directory with a timestamp in the form of YYYYMMDDHHMMSS. For example: /my/deploy/dir/releases/20121120162342.
    * - ``:scm_provider``
      - The name of the source control management provider to be used.
    * - ``:revision``
@@ -28,7 +28,7 @@ This lightweight resource provider has the following attributes:
    * - ``:repository``
      - The name of the sub-directory in which the pristine copy of an application’s source is kept.
    * - ``:enable_submodules``
-     - |git| only. **jamescott: GIT ONLY?** Use to perform a sub-module initialization and update.
+     - |git| only. Use to perform a sub-module initialization and update.
    * - ``:environment``
      - A hash of the form ``{"ENV_VARIABLE"=>"VALUE"}``.
    * - ``:deploy_key``

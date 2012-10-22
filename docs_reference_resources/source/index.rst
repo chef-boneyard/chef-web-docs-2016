@@ -304,7 +304,7 @@ To verify a configuration and prevent an application from restarting if the conf
 
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To reload a service based on a template **jamescott: WHAT DOES THIS ACTUALLY DO?**:
+To reload a service based on a template:
 
 .. code-block:: ruby
 
@@ -910,7 +910,7 @@ erlang_call
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_erlang_call.rst
 
-.. note:: The ``erl_call`` command needs to be on the path for this resource to work properly. **jamescott: HOW DO WE KNOW IF THE erl_call COMMAND IS "ON THE PATH"?**
+.. note:: The ``erl_call`` command needs to be on the path for this resource to work properly.
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1696,7 +1696,7 @@ The |rubygems| package provider attempts to use the |rubygems| API to install |g
 
 * When a ``gem_binary`` attribute is specified (as a hash, a string, or by a .gemrc file), the provider will run that command to examine its environment settings and then again to install the |gem|.
 * When install options are specified as a string, the provider will span a |gems| command with those options when installing the |gem|.
-* The |omnibus installer| will search the PATH for a |gem| command rather than defaulting to the current |gem| environment. As part of ``enforce_path_sanity``, the ``bin`` directories area dded to the PATH, which means when there are no other proceeding |rubygems|, the installation will still be operated against it. **jamescott: THIS IS CONFUSING IN THE WIKI AND IS STILL CONFUSING HERE. JTIMBERMAN OR BMCLELLAN SHOULD REVIEW.**
+* The |omnibus installer| will search the PATH for a |gem| command rather than defaulting to the current |gem| environment. As part of ``enforce_path_sanity``, the ``bin`` directories area dded to the PATH, which means when there are no other proceeding |rubygems|, the installation will still be operated against it.
 
 Specify Options with a Hash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1818,7 +1818,7 @@ Use the following providers to use the |resource package| resource in a recipe:
    * - ``Chef::Provider::Package::EasyInstall``
      - ``easy_install_package``
      - 
-     - This is the default provider for the |python| **jamescott: PYTHON IS CORRECT?**.
+     - This is the default provider for |python|.
    * - ``Chef::Provider::Package::Freebsd``
      - ``freebsd_package``
      - 
@@ -2007,8 +2007,6 @@ Examples
 remote_file
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_remote_file.rst
-
-**jamescott: NEED NEW DESCRIPTION IN INCLUDE FILE -- THIS ONE HAS ROUTES.**
 
 .. note:: Fetching files from the ``files/`` directory in a cookbook should be done with the |resource cookbook file| resource.
 
@@ -2643,15 +2641,15 @@ Use the following providers to use the |resource user| resource in a recipe:
      - Yes
      - This is the default provider for all platforms.
    * - ``Chef::Provider::User::Pw``
-     - ``xxxxx``
+     - ``pw``
      - 
      - This is the default provider for the |freebsd| platform.
    * - ``Chef::Provider::User::Dscl``
-     - ``xxxxx``
+     - ``dscl``
      - 
      - This is the default provider for the |mac os x| platform.
    * - ``Chef::Provider::User::Windows``
-     - ``xxxxx``
+     - ``windows``
      - 
      - This is the default provider for all |windows| platforms.
 
@@ -2738,8 +2736,6 @@ Examples
 
 .. include:: ../../steps/step_chef_resource_yum_package_install_yum_repo_from_file.rst
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_yum_repo_from_package.rst
-
 
 
 
@@ -2763,7 +2759,6 @@ The following groups of lightweight resources are available in open source cookb
 * aws
 * bluepill
 * chef_handler
-* cloudkick -- **jamescott: DEPRECATION CANDIDATE**
 * daemontools
 * djbdns
 * dmg
@@ -3593,71 +3588,6 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_chef_handler_exceptions_only.rst
 
 .. include:: ../../steps/step_chef_lwrp_chef_handler_register.rst
-
-
-cloudkick_check -- NEEDS REVIEW -- DEPRECATE?
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_check.rst
-
-.. note:: This lightweight resource is part of the ``cloudkick`` cookbook (http://community.opscode.com/cookbooks/cloudkick).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_check_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_check_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create a |cloudkick| check on the root partition for all application servers:
-
-.. code-block:: ruby
-
-   cloudkick_check "root check" do 
-     oauth_key 'xxx' 
-     oauth_secret 'yyy' 
-     code 51 # 'DISK' details(
-       {
-         :path => '/', 
-         :fs_critical => 99, 
-         :fs_warn => 95
-       }
-       ) monitor_id 'q1234' 
-     action :create 
-   end
-
-
-cloudkick_monitor -- NEEDS REVIEW -- DEPRECATE?
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_monitor.rst
-
-.. note:: This lightweight resource is part of the ``cloudkick`` cookbook (http://community.opscode.com/cookbooks/cloudkick).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_monitor_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_cloudkick_monitor_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create a |cloudkick| monitor for all application servers:
-
-.. code-block:: ruby
-
-   cloudkick_monitor "appserver monitor" do 
-     oauth_key 'xxx' 
-     oauth_secret 'yyy' 
-     query 'tag:appserver' 
-     action :create 
-   end
-
-
-
 
 daemontools_service
 -----------------------------------------------------
@@ -5090,11 +5020,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To xxxxx:
-
-.. code-block:: ruby
-
-   xxxxx
+None.
 
 
 zenoss_zenmd -- NEEDS REVIEW
@@ -5113,11 +5039,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To xxxxx:
-
-.. code-block:: ruby
-
-   xxxxx
+None.
 
 
 zenoss_zenpack -- NEEDS REVIEW
@@ -5136,11 +5058,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To xxxxx:
-
-.. code-block:: ruby
-
-   xxxxx
+None.
 
 
 zenoss_zenpatch -- NEEDS REVIEW
@@ -5159,11 +5077,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To xxxxx:
-
-.. code-block:: ruby
-
-   xxxxx
+None.
 
 
 

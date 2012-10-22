@@ -1,7 +1,9 @@
 .. This is an included how-to. 
 
-To xxxxx:
+To remove the "base-devel" group:
 
 .. code-block:: ruby
 
-   pacman_group "base-devel"
+   pacman_group "base-devel" do
+     action :remove
+   end

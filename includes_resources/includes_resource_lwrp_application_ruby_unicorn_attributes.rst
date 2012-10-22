@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``:before_fork``
-     - The object that is called by the master process before executing the |unicorn| binary. **jamescott: REALLY?**
+     - The object that is called by the master process before executing the |unicorn| binary.
    * - ``:bundler``
      - Indicates whether |unicorn|
    * - ``:bundle_command``
