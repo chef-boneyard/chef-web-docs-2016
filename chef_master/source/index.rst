@@ -42,7 +42,7 @@ This collection represents an internal collection of all documentation for |chef
      - 
    * - 
      - 
-     - :doc:`../docs_overview_chef/index`
+     - :doc:`chef_overview`
      - 
    * - 
      - 
@@ -52,3 +52,24 @@ This collection represents an internal collection of all documentation for |chef
      - 
      - 
      - 
+
+
+
+
+
+
+.. Hide the TOC from this file.
+
+.. toctree::
+   :hidden:
+
+   chef_overview
+   essentials_nodes
+   essentials_workstation
+   essentials_server
+   essentials_cookbooks
+
+
+
+
+
