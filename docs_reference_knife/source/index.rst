@@ -28,11 +28,24 @@ Sub-commands
 
 |knife| has the following sub-commands: ``bootstrap``, ``client``, ``configure``, ``cookbook``, ``cookbook site``, ``data bag``, ``environment``, ``exec``, ``index rebuild``, ``node``, ``recipe list``, ``role``, ``search``, ``ssh``, ``status``, and ``tag``.
 
-|opscode| provides the following plug-ins, which work the same as built-in sub-commands (including common options), but must be installed separately (using |rubygems|): ``azure``, ``bluebox``, ``ec2``, ``eucalyptus``, ``google``, ``hp``, ``linode``, ``openstack``, ``rackspace``, ``slicehost``, ``terremark``, and ``windows``.
-
 .. note:: The following sub-command runs only against the |chef open server|: ``index rebuild``.
 
+Verb Sub-commands
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_verbs.rst
+
+|knife| has the following verb-focused sub-commands: ``delete``, ``diff``, ``download``, ``list``, ``raw``, ``show``, and ``upload``.
+
+Wildcard Search
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_verbs_wildcard.rst
+
+Plug-ins
+-----------------------------------------------------
+|opscode| provides the following plug-ins, which work the same as built-in sub-commands (including common options), but must be installed separately (using |rubygems|): ``azure``, ``bluebox``, ``ec2``, ``eucalyptus``, ``google``, ``hp``, ``linode``, ``openstack``, ``rackspace``, ``slicehost``, ``terremark``, and ``windows``.
+
 The |chef| community provides many other plugins for |knife|: http://community.opscode.com/.
+
 
 Syntax
 -----------------------------------------------------
@@ -212,6 +225,21 @@ show
 .. include:: ../../includes_knife/includes_knife_data_bag_show.rst
 
 
+delete
+=====================================================
+.. include:: ../../includes_knife/includes_knife_delete.rst
+
+
+diff
+=====================================================
+.. include:: ../../includes_knife/includes_knife_diff.rst
+
+
+download
+=====================================================
+.. include:: ../../includes_knife/includes_knife_download.rst
+
+
 environment
 =====================================================
 
@@ -252,6 +280,11 @@ exec
 index rebuild
 =====================================================
 .. include:: ../../includes_knife/includes_knife_index_rebuild.rst
+
+
+list
+=====================================================
+.. include:: ../../includes_knife/includes_knife_list.rst
 
 
 node
@@ -296,6 +329,11 @@ run_list remove
 show
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_show.rst
+
+
+raw
+=====================================================
+.. include:: ../../includes_knife/includes_knife_raw.rst
 
 
 recipe list
@@ -348,6 +386,11 @@ search
 .. include:: ../../includes_knife/includes_knife_search.rst
 
 
+show
+=====================================================
+.. include:: ../../includes_knife/includes_knife_show.rst
+
+
 ssh
 =====================================================
 .. include:: ../../includes_knife/includes_knife_ssh.rst
@@ -378,42 +421,9 @@ list
 .. include:: ../../includes_knife/includes_knife_tag_list.rst
 
 
-|knife| Essentials
-=====================================================
-
-.. include:: ../../includes_knife/includes_knife_essentials.rst
-
-Wildcard Matching
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_essentials_wildcard.rst
-
-delete
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_essentials_delete.rst
-
-diff
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_essentials_diff.rst
-
-download
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_essentials_download.rst
-
-list
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_essentials_list.rst
-
-raw
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_essentials_raw.rst
-
-show
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_essentials_show.rst
-
 upload
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_essentials_upload.rst
+=====================================================
+.. include:: ../../includes_knife/includes_knife_upload.rst
 
 
 
