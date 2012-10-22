@@ -104,7 +104,7 @@ html_theme = 'sphinxdoc'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Opscode Private Chef Documentation"
+html_title = "Opscode Chef Documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -165,7 +165,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Opscode Private Chef Documentation'
+htmlhelp_basename = 'Opscode Chef Documentation'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,7 +184,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'PrivateChef.tex', u'Private Chef',
+  ('index', 'Chef.tex', u'Chef',
    u'Opscode, Inc.', 'manual'),
 ]
 
@@ -214,7 +214,7 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'privatechef', u'Private Chef',
+    ('index', 'chef', u'Chef',
      [u'Opscode, Inc.'], 1)
 ]
 
@@ -228,8 +228,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'PrivateChef', u'Private Chef',
-   u'Opscode, Inc.', 'PrivateChef', 'Documentation for Private Chef.',
+  ('index', 'Chef', u'Chef',
+   u'Opscode, Inc.', 'Chef', 'Documentation for Chef.',
    'Miscellaneous'),
 ]
 
@@ -246,7 +246,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Opscode Private Chef Documentation'
+epub_title = u'Opscode Chef Documentation'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'
