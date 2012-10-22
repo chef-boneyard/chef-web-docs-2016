@@ -3,7 +3,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``show`` sub-command is used to view the details of one (or more) objects on the |chef server|. This sub-command works similar to ``knife cookbook show``, ``knife data bag show``, ``knife environment show``, ``knife node show``, and ``knife role show``, but with a single verb (and a single action).
+|knife show| 
+
+This sub-command works similar to ``knife cookbook show``, ``knife data bag show``, ``knife environment show``, ``knife node show``, and ``knife role show``, but with a single verb (and a single action).
 
 This sub-command has the following syntax::
 

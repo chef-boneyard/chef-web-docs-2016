@@ -6,7 +6,7 @@ Chef Docs -- Master Doc Set
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_http.txt
 
-This collection represents an internal collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
+This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
 
 .. list-table::
    :widths: 150 150 150 150
