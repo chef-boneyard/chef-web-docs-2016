@@ -9,7 +9,3 @@
 * Using the |chef server| as if it were a file system, allowing the repository on the |chef server| to behave like a mirror of the |chef| repository on the workstation. The |chef server| will have the same objects as the local |chef| repository. To make changes to the files on the |chef| server, just download files from the |chef server| or upload files from the |chef| repository.
 * The context from which a command is run matters. For example, when working in the ``roles/`` directory, |knife| will know what is being worked with. Enter ``knife show base.json`` and |knife| will return the base role from the |chef server|. From the repository root, enter ``knife show roles/base.json`` to get the same result.
 
-This sub-command has the following syntax::
-
-   knife [ARGUMENT] (options)
-
