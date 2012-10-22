@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``diff`` sub-command is used to compare the differences between files and directories on the |chef server| and in the |chef| repository. This sub-command is useful when the files on the |chef server| and in the |chef| repository need to be compared, such as when files on the |chef server| need to be verified prior to an upload or to ensure that certain files in multiple production environments are the same. This sub-command is similar to the ``git diff`` command that can be used to diff what is in the |chef| repository with what is synced to a |github| repository. 
+|knife diff|
 
 This sub-command has the following syntax::
 

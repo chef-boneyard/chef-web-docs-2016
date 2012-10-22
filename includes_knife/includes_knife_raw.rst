@@ -2,8 +2,7 @@
 .. This file describes a command or a sub-command for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-
-The ``raw`` sub-command is used to send a REST request a specified path using the |api chef server|.
+|knife raw|
 
 This sub-command has the following syntax::
 
