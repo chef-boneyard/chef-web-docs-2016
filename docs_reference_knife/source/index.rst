@@ -8,7 +8,7 @@ Knife Command Line Reference
 
 .. include:: ../../includes_knife/includes_knife.rst
 
-View the Knife Quick Reference: http://docs.opscode.com/knife/qr_knife_web.png.
+View the Knife Quick Reference: docs.opscode.com/knife/qr_knife_web.png.
 
 Working with Knife
 =====================================================
