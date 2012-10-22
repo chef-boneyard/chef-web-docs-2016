@@ -17,19 +17,19 @@ This set of topics is collection of all documentation for |chef|, including |che
      - Reference
      - Scenarios
    * - Chef Overview
-     - :doc:`essentials_nodes`
+     - Nodes
      - :doc:`knife`
      - Manage the Chef Server
    * - Set up a Workstation
-     - :doc:`essentials_workstation`
+     - Workstation
      - Resources and Providers
      - 
    * - Set up a Repository
-     - :doc:`essentials_server`
+     - Server
      - Configuration Files
      - 
    * - Hosted vs. Private
-     - :doc:`essentials_cookbooks`
+     - Cookbooks
      - Recipe DSL
      - 
    * - Just Enough Ruby for Chef
