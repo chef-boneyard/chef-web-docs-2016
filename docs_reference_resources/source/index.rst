@@ -2791,7 +2791,7 @@ Some of the cookbooks contain more than one lightweight resource. Each lightweig
 
 
 
-apt_preference -- NEEDS REVIEW
+apt_preference
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_apt_preference.rst
 
@@ -2856,7 +2856,7 @@ Examples
 
 
 
-application -- NEEDS REVIEW
+application
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_base.rst
 
@@ -2875,7 +2875,7 @@ Examples
 See the application-specific lightweight resources.
 
 
-application_java_webapp -- NEEDS REVIEW
+application_java_webapp
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_java_webapp.rst
 
@@ -2894,7 +2894,7 @@ Examples
 None.
 
 
-application_java_tomcat -- NEEDS REVIEW
+application_java_tomcat
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_java_tomcat.rst
 
@@ -2983,7 +2983,7 @@ The corresponding entries will be passed to the context template:
    </Context>
 
 
-application_nginx_load_balancer -- NEEDS REVIEW
+application_nginx_load_balancer
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_nginx_load_balancer.rst
 
@@ -3068,7 +3068,7 @@ which will be expanded to:
    }
 
 
-application_php_mod_php_apache2 -- NEEDS REVIEW
+application_php_mod_php_apache2
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_php_mod_php_apache2.rst
 
@@ -3135,7 +3135,7 @@ The corresponding entries will be passed to the context template:
 
 
 
-application_php_php -- NEEDS REVIEW
+application_php_php
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_php_php.rst
 
@@ -3154,7 +3154,7 @@ Examples
 None.
 
 
-application_python_celery -- NEEDS REVIEW
+application_python_celery
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_python_celery.rst
 
@@ -3174,7 +3174,7 @@ None.
 
 
 
-application_python_django -- NEEDS REVIEW
+application_python_django
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_python_django.rst
 
@@ -3192,7 +3192,7 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
 
-application_python_gunicorn -- NEEDS REVIEW
+application_python_gunicorn
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_python_gunicorn.rst
 
@@ -3263,7 +3263,7 @@ The corresponding entries will be passed to the context template:
    <%= @database['quorum']
    <%= @database['replicas'].join(',') %>
 
-application_ruby_memcached -- NEEDS REVIEW
+application_ruby_memcached
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_memcached.rst
 
@@ -3308,7 +3308,7 @@ This will generate a config/memcached.yml file:
        - 192.168.0.10:11211
 
 
-application_ruby_passenger_apache2 -- NEEDS REVIEW
+application_ruby_passenger_apache2
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_passenger_apache2.rst
 
@@ -3370,7 +3370,7 @@ The corresponding entries will be passed to the context template:
    <%= @database['quorum'] %>
    <%= @database['replicas'].join(',') %>
 
-application_ruby_rails -- NEEDS REVIEW
+application_ruby_rails
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_rails.rst
 
@@ -3389,7 +3389,7 @@ Examples
 None.
 
 
-application_ruby_unicorn -- NEEDS REVIEW
+application_ruby_unicorn
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_unicorn.rst
 
@@ -3464,7 +3464,7 @@ Examples
 
 
 
-aws_elastic_lb -- NEEDS REVIEW
+aws_elastic_lb
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb.rst
 
@@ -3495,7 +3495,7 @@ To add a load balancer to an availability zone:
    end
 
 
-aws_resource_tag -- NEEDS REVIEW
+aws_resource_tag
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag.rst
 
@@ -3710,7 +3710,7 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_firewall_rule_open_tcp.rst
 
 
-freebsd_port_options -- NEEDS REVIEW
+freebsd_port_options
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options.rst
 
@@ -3720,7 +3720,7 @@ Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options_actions.rst
 
-Attributes -- NEEDS REVIEW!
+Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options_attributes.rst
 
@@ -3744,7 +3744,7 @@ To read default options from ``/usr/ports/lang/php5``, current options from ``/v
      action :create
    end
 
-gunicorn_config -- NEEDS REVIEW
+gunicorn_config
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config.rst
 
@@ -3788,7 +3788,7 @@ To use the ``pre_fork`` server hook to sleep for one second before forking:
    end
 
 
-gunicorn_install -- NEEDS REVIEW
+gunicorn_install
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install.rst
 
@@ -3813,7 +3813,7 @@ To install |gunicorn| to a specified virtual environment:
    end
 
 
-homebrew -- NEEDS REVIEW
+homebrew
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap.rst
 
@@ -3864,7 +3864,7 @@ To untap a repository:
    end
 
 
-iis_app -- NEEDS REVIEW
+iis_app
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_iis_app.rst
 
@@ -3892,7 +3892,7 @@ To create a new application:
    end
 
 
-iis_config -- NEEDS REVIEW
+iis_config
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_iis_config.rst
 
@@ -3928,7 +3928,7 @@ To load an array of commands from a node:
    end
 
 
-iis_pool -- NEEDS REVIEW
+iis_pool
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_iis_pool.rst
 
@@ -3954,7 +3954,7 @@ To create an application pool:
      action :add
    end
 
-iis_site -- NEEDS REVIEW
+iis_site
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_iis_site.rst
 
@@ -4002,7 +4002,7 @@ To create and start a site that maps to the ``testfu.opscode.com`` domain:
    end
 
 
-maven -- NEEDS REVIEW
+maven
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_maven.rst
 
@@ -4056,7 +4056,7 @@ Examples
 
 
 
-nagios_nrpecheck -- NEEDS REVIEW
+nagios_nrpecheck
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_nagios_nrpecheck.rst
 
@@ -4182,7 +4182,7 @@ Examples
 
 
 
-powershell -- NEEDS REVIEW
+powershell
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_powershell.rst
 
@@ -4315,7 +4315,7 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_python_virtualenv_create_ubuntu.rst
 
 
-rabbitmq_plugin -- NEEDS REVIEW
+rabbitmq_plugin
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_plugin.rst
 
@@ -4347,7 +4347,7 @@ To disable a plugin:
      action :disable 
    end
 
-rabbitmq_user -- NEEDS REVIEW
+rabbitmq_user
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_user.rst
 
@@ -4391,7 +4391,7 @@ To set the permissions for a user:
    end
 
 
-rabbitmq_vhost -- NEEDS REVIEW
+rabbitmq_vhost
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_vhost.rst
 
@@ -4454,7 +4454,7 @@ Examples
 
 
 
-supervisor_fcgi -- NEEDS REVIEW
+supervisor_fcgi
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_supervisor_fcgi.rst
 
@@ -4473,7 +4473,7 @@ Examples
 None.
 
 
-supervisor_group -- NEEDS REVIEW
+supervisor_group
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_supervisor_group.rst
 
@@ -4492,7 +4492,7 @@ Examples
 None.
 
 
-supervisor_service -- NEEDS REVIEW
+supervisor_service
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_supervisor_service.rst
 
@@ -4520,7 +4520,7 @@ To enable a service named ``celery``:
 
 
 
-sudo -- NEEDS REVIEW
+sudo
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_sudo.rst
 
@@ -4587,7 +4587,7 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
 
 
-users_manage -- NEEDS REVIEW
+users_manage
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_users_manage.rst
 
@@ -4623,7 +4623,7 @@ To remove users based on data bag objects that have a ``group_id`` attribute val
    end
 
 
-webpi_product -- NEEDS REVIEW
+webpi_product
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_webpi_product.rst
 
@@ -4659,7 +4659,7 @@ To install |windows powershell|  2.0:
 
 
 
-windows_auto_run -- NEEDS REVIEW
+windows_auto_run
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run.rst
 
@@ -4686,7 +4686,7 @@ To run ``BGInfo`` at login:
      action :create
    end
 
-windows_batch -- NEEDS REVIEW
+windows_batch
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_batch.rst
 
@@ -4723,7 +4723,7 @@ To run a batch file that unzips and moves |ruby|:
      EOH
    end
 
-windows_feature -- NEEDS REVIEW
+windows_feature
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_feature.rst
 
@@ -4802,7 +4802,7 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_windows_package_remove_google_chrome.rst
 
 
-windows_path -- NEEDS REVIEW
+windows_path
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_path.rst
 
@@ -4836,7 +4836,7 @@ To remove |7zip| from the system path:
    end
 
 
-windows_reboot -- NEEDS REVIEW
+windows_reboot
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_reboot.rst
 
@@ -4895,7 +4895,7 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_windows_registry_match_proxy.rst
 
 
-windows_shortcut -- NEEDS REVIEW
+windows_shortcut
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_shortcut.rst
 
@@ -4935,7 +4935,7 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_windows_zipfile_unzip_local.rst
 
 
-yum_key -- NEEDS REVIEW
+yum_key
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_yum_key.rst
 
@@ -4968,7 +4968,7 @@ To add a |zenoss| |gnupg| key:
      action :remove 
    end
 
-yum_repository -- NEEDS REVIEW
+yum_repository
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_yum_repository.rst
 
@@ -5004,7 +5004,7 @@ To remove a |zenoss| repository:
    end
 
 
-zenoss_zenbatchload -- NEEDS REVIEW
+zenoss_zenbatchload
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenbatchload.rst
 
@@ -5023,7 +5023,7 @@ Examples
 None.
 
 
-zenoss_zenmd -- NEEDS REVIEW
+zenoss_zenmd
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenmd.rst
 
@@ -5042,7 +5042,7 @@ Examples
 None.
 
 
-zenoss_zenpack -- NEEDS REVIEW
+zenoss_zenpack
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenpack.rst
 
@@ -5061,7 +5061,7 @@ Examples
 None.
 
 
-zenoss_zenpatch -- NEEDS REVIEW
+zenoss_zenpatch
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenpatch.rst
 
