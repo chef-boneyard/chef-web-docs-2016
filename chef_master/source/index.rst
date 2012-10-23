@@ -1,5 +1,5 @@
 =====================================================
-Chef Docs -- Master Doc Set
+Chef Docs
 =====================================================
 
 .. include:: ../../swaps/swap_descriptions.txt
@@ -22,7 +22,7 @@ This set of topics is collection of all documentation for |chef|, including |che
      - Manage the Chef Server
    * - Set up a Workstation
      - Workstation
-     - Resources and Providers
+     - :doc:`resource`
      - 
    * - Set up a Repository
      - Server
@@ -71,4 +71,6 @@ This set of topics is collection of all documentation for |chef|, including |che
    essentials_cookbooks
 
    knife
+
+   resource
 

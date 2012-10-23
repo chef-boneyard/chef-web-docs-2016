@@ -4,6 +4,7 @@ Resources and Providers Reference
  
 .. include:: ../../swaps/swap_descriptions.txt
 .. include:: ../../swaps/swap_names.txt
+.. include:: ../../swaps/swap_notes.txt
 .. include:: ../../swaps/swap_resources.txt
 
 .. include:: ../../includes/includes_chef_cookbook_resource.rst
@@ -343,13 +344,12 @@ The following resources are included with |chef| and have native providers:
 
 * cookbook_file
 * cron
-* deploy
+* deploy (including |git| and |svn|)
 * directory
 * env
 * erlang_call
 * execute
 * file
-* git
 * group
 * http_request
 * ifconfig
@@ -367,7 +367,6 @@ The following resources are included with |chef| and have native providers:
 * scm
 * script
 * service
-* subversion
 * template
 * user
 * yum
@@ -424,111 +423,23 @@ deploy
 
 Deployment Strategies
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-In the ``deploy`` directory, a sub-directory named ``shared`` must be created. This sub-directory is where configuration and temporary files will be kept. A typical |ruby on rails| application will have ``config``, ``log``, ``pids``, and ``system`` directories within the ``shared`` directory to keep the files stored there independent of the code in the source repository. 
-
-In addition to the ``shared`` sub-directory, the deploy process will create sub-directories named ``releases`` and ``current`` (also in the ``deploy`` directory). The ``release`` directory holds (up to) five most recently deployed versions of an application. The ``current`` directory holds the currently-released version.
+.. include:: ../../includes_resources/includes_resource_deploy_strategy.rst
 
 Deployment Phases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-A deployment happens in four phases:
-
-1. Checkout. |chef| uses the |resource scm| resource to get the specified application revision, placing a clone or checkout in the sub-directory of the ``deploy`` directory named ``cached-copy``. A copy of the application is then placed in a sub-directory under ``releases``.
-2. Migrate. If a migration is to be run, |chef| symlinks the database configuration file into the checkout (``config/database.yml`` by default) and runs the migration command. For a |ruby on rails| application, the ``migration_command`` is usually set to ``rake db:migrate``.
-3. Symlink. Directories for shared and temporary files are removed from the checkout (``log``, ``tmp/pids``, and ``public/system`` by default). After this step, any needed directories (``tmp``, ``public``, and ``config`` by default) are created if they don't already exist. This step is completed by symlinking shared directories into the current ``release``, ``public/system``, ``tmp/pids``, and ``log`` directories, and then symlinking the ``release`` directory to ``current``.
-4. Restart. The application is restarted according to the restart command set in the recipe.
+.. include:: ../../includes_resources/includes_resource_deploy_strategy_phases.rst
 
 Callbacks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-In-between each step in a deployment process, callbacks can be run using arbitrary |ruby| code. All callbacks support embedded recipes given in a block, but each callback assumes a shell command (instead of a deploy hook filename) when given a string.
-
-The following callback types are available:
-
-* ``before_migrate``
-* ``before_symlink``
-* ``before_restart``
-* ``after_restart``
-* ``restart_command``
-
-Each of these callback types can be used in one of three ways:
-
-* To pass a block
-* To specify a file
-* To do neither; |chef| will look for a callback file named after one of the callback types (``before_migrate.rb``, for example) and if the file exists, to evaluate it as if it were a specified file.
-
-Within a callback, there are two ways to get access to information about the deployment:
-
-* ``release_path`` can be used to get the path to the current release.
-* ``new_resource`` can be used to access the deploy resource, including environment variables that have been set there. (``new_resource`` is a preferred approach over using the ``@configuration`` variable.)
-
-Both of these options must be available at the top-level within the callback, along with any assigned values that will be used later in the callback.
-
-For example, to pass a block:
-
-.. code-block:: ruby
-
-   deploy_revision "/deploy/dir/" do
-     # other attributes
-     # ...
-     
-     before_migrate do
-       # release_path is the path to the timestamp dir 
-       # for the current release
-       current_release = release_path
-        
-       # Create a local variable for the node so we'll have access to
-       # the attributes
-       deploy_node = node
-       
-       # A local variable with the deploy resource.
-       deploy_resource = new_resource
-        
-       python do
-         cwd current_release
-         user "myappuser"
-         code<<-PYCODE
-           # Woah, callbacks in python!
-           # ...
-           # current_release, deploy_node, and deploy_resource are all available
-           # within the deploy hook now.
-         PYCODE
-       end
-     end
-   end
-
-Files are searched relative to the current release. The code in the file is evaluated exactly as if the code had been put in a block. To specify a file:
-
-.. code-block:: ruby
-
-   deploy "/deploy/dir/" do
-     # ...
-      
-     before_migrate "callbacks/do_this_before_migrate.rb"
-   end
+.. include:: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst
 
 Custom Application Layouts
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-The |resource deploy| resource expects an application to be structured like a |ruby on rails| application, but the layout can be modified to meet custom requirements as needed.
-
-The following custom application layouts are available:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Layout
-     - Description
-   * - ``symlink_before_migrate``
-     - |layout symlink_before_migrate resource deploy|
-   * - ``purge_before_symlink``
-     - |layout purge_before_symlink resource deploy|
-   * - ``create_dirs_before_symlink``
-     - |layout create_dirs_before_symlink resource deploy|
-   * - ``symlinks``
-     - |layout symlinks resource deploy|
+.. include:: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst
 
 Starting Over
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|chef| uses a cache file to keep track of the order in which each revision of an application is deployed. Ifa re-deployment must be forced---by deleting the deployed code from a node, for example---the cache file must be deleted as well. The cache file is located in the default configuration at |path chef deploy cache file|.
+.. include:: ../../includes_resources/includes_resource_deploy_strategy_start_over.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -602,7 +513,7 @@ env
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_env.rst
 
-.. note:: On |unix|-based systems, the best way to manipulate environment keys is with the ENV variable in |ruby|; however, this approach does not have the same "permanent" effect as using the ``env`` resource.
+.. note:: |note env resource variable on unix|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -625,7 +536,7 @@ erlang_call
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_erlang_call.rst
 
-.. note:: The ``erl_call`` command needs to be on the path for this resource to work properly.
+.. note:: |note erlang_call resource must be on path|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -648,7 +559,7 @@ execute
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_execute.rst
 
-.. note:: Use the |resource script| resource to execute a script using a specific interpreter (|ruby|, |python|, |perl|, |csh|, or |bash|).
+.. note:: |note execute resource intepreter|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -675,7 +586,7 @@ file
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_file.rst
 
-.. note:: Other resources should be used to manage files that are not present on a node. Use |resource cookbook file| when copying a file from a cookbook, |resource template| when using a template, and |resource remote file| when transferring files from remote locations.
+.. note:: |note file resource use other resources|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -896,60 +807,19 @@ package
 
 Gem Package Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The |rubygems| package provider attempts to use the |rubygems| API to install |gems| without spawning a new process, whenever possible. A |gems| command to install will be spawned under the following conditions:
-
-* When a ``gem_binary`` attribute is specified (as a hash, a string, or by a .gemrc file), the provider will run that command to examine its environment settings and then again to install the |gem|.
-* When install options are specified as a string, the provider will span a |gems| command with those options when installing the |gem|.
-* The |omnibus installer| will search the PATH for a |gem| command rather than defaulting to the current |gem| environment. As part of ``enforce_path_sanity``, the ``bin`` directories area dded to the PATH, which means when there are no other proceeding |rubygems|, the installation will still be operated against it.
+.. include:: ../../includes_resources/includes_resource_package_options.rst
 
 Specify Options with a Hash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-If an explicit ``gem_binary`` parameter is not being used with the ``gem_package`` resource, it is preferable to provide the install options as a hash. This approach allows the provider to install the |gem| without needing to spawn an external |gem| process. 
-
-The following |rubygems| options are available for inclusion within a hash and are passed to the |rubygems| DependencyInstaller:
-
-* ``:env_shebang``
-* ``:force``
-* ``:format_executable``
-* ``:ignore_dependencies``
-* ``:prerelease``
-* ``:security_policy``
-* ``:wrappers``
-
-For more information about these options, see the |rubygems| documentation: http://rubygems.rubyforge.org/rubygems-update/Gem/DependencyInstaller.html. 
-
-To install a gem with a hash of options
-
-.. code-block:: ruby
-
-   gem_package("bundler") do
-     options(:prerelease => true, :format_executable => false)
-   end
+.. include:: ../../includes_resources/includes_resource_package_options_hash.rst
 
 Specify Options with a String
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-When using an explicit ``gem_binary``, options must be passed as a string. When not using an explicit ``gem_binary``, |chef| is forced to spawn a |gems| process to install the |gems| (which uses more system resources) when options are passed as a string. String options are passed verbatim to the |gems| command and should be specified just as if they were passed on a command line. For example, ``--prerelease`` for a pre-release gem.
-
-To install a gem with an options string:
-
-.. code-block:: ruby
-
-   gem_package("nokogiri") do
-     gem_binary("/opt/ree/bin/gem")
-     options("--prerelease --no-format-executable")
-   end
+.. include:: ../../includes_resources/includes_resource_package_options_string.rst
 
 Specify Options with a .gemrc File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Options can be specified in a .gemrc file. By default the ``gem_package`` resource will use the |ruby| interface to install |gems| which will ignore the .gemrc file. The ``gem_package`` resource can be forced to use the |gems| command instead (and to read the .gemrc file) by adding the ``gem_binary`` attribute to a code block:
-
-To require a .gemrc file to be used during install:
-
-.. code-block:: ruby
-
-   gem_package("nokogiri") do
-     gem_binary "gem"
-   end
+.. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1040,7 +910,7 @@ remote_file
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_remote_file.rst
 
-.. note:: Fetching files from the ``files/`` directory in a cookbook should be done with the |resource cookbook file| resource.
+.. note:: |note remote_file resource fetch from files directory|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1109,7 +979,7 @@ scm
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_scm.rst
 
-.. note:: This resource is often used in conjunction with the |resource deploy| resource.
+.. note:: |note scm resource use with resource deploy|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1244,7 +1114,7 @@ yum
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_yum.rst
 
-.. note:: Support for using file names to install packages (as in ``yum_package "/bin/sh"``) is not available because the volume of data required to parse for this is excessive.
+.. note:: |note yum resource using file names|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
