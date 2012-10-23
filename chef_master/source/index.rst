@@ -16,10 +16,10 @@ This set of topics is collection of all documentation for |chef|, including |che
      - Chef Essentials
      - Reference
      - Scenarios
-   * - Chef Overview
+   * - :doc:`chef_overview`
      - Nodes
      - :doc:`knife`
-     - Manage the Chef Server
+     - 
    * - Set up a Workstation
      - Workstation
      - :doc:`resource`
@@ -42,7 +42,7 @@ This set of topics is collection of all documentation for |chef|, including |che
      - 
    * - 
      - 
-     - :doc:`chef_overview`
+     - 
      - 
    * - 
      - 
