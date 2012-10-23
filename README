@@ -1,30 +1,33 @@
 This is the readme for chef-docs.
 
-Notes about this repository (for reading an HTML build)
--- Browse to the build directory under the docs_ or man_ output you want to view
--- Open the index.html file in a browser
-
 Notes about this repository (for building your own local copy):
 
--- All documents will be in the folders that begin with docs_
--- All documents have dependencies on files that exist in images, includes, swaps, and steps folders
--- All documents build using Sphinx; build the index file at the root of any docs_ or man_ folder
+-- All documents will be in the folders that begin with chef_ (for top-level, release-level document sets), docs_ (for targeted docs and/or reference sets), and man_ (for man page outputs)
+-- All documents may have dependencies on files that exist in images/, includes/, swaps/, and steps/ directories
+-- All documents build using Sphinx; build the index file at the root of any folder
 -- Lots of substitutions are present in these files; build the files to see the substitutions
+
+Notes about the includes folders:
+
+-- includes_knife: this is where the actual documentation for Knife lives. From here, these topics end up in the various man_ outputs, the docs_reference_knife (a large, standalone, single-page reference for Knife), and will be included in the chef_ folders
+-- includes_resources: the actual documentation for the core resources in Chef, and also ~80 lightweight resources that are in Opscode-maintained cookbooks
 
 Notes about the swaps folders:
 
--- swap_descriptions: a list of descriptions that exist across the Chef documents, located here to ensure that the same description exists in the same way across all Chef documents
+-- swap_descriptions: a list of descriptions that exist across the Chef documents, located here to ensure that the same description exists in the same way across all Chef documents and to promote parity of descriptions across the various outputs
 -- swap_names: a list of proper names (Opscode and 3rd party) to help ensure that these names are used consistently across all documents, and to track names that may require copyright/trademark notation in the future
 -- swap_resources: a list of descriptions that apply specifically to resources, eventually to be merged and combined with swap_descriptions
 
 The following documents are in the repository:
 
+-- Chef Master: the "everything" doc set that will be the initial root for docs.opscode.com
 -- Chef Overview: docs_overview_chef
--- Chef Essentials: docs_essentials << DRAFT COMPLETE. Will probably change a lot as it's reviewed. Also, "What is a Chef Run?" is still in the queue (by design).
+-- Chef Essentials: docs_essentials << DRAFT COMPLETE. Will probably change a lot as it's reviewed and may well be broken down into essentials_nodes, essentials_cookbooks, essentials_workstation, essentials_server types of groupings. Also, "What is a Chef Run?" is still in the queue (by design).
 -- Chef Cookbooks Site API: docs_reference_cookbooks_site
 -- Knife Command Line Reference: docs_reference_knife
 -- Knife Man Page References: man_knife_ ... all is every sub-command and plugin in the same man page; overview is the introduction to Knife and the common options; the other names map to the corresponding plugin or sub-command.
 -- Resources and Providers Reference: docs_reference_resources
-
+-- Recipe DSL: docs_reference_dsl_recipe << a placeholder, for now.
+-- Quick Reference (quick_reference) contains the image files used for the Quick Reference cards (Knife, currently)
 
 
