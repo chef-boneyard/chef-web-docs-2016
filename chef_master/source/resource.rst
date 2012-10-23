@@ -22,61 +22,61 @@ Resources and Providers
    * - Resource
      - Description
    * - :doc:`resource_cookbook_file`
-     - .. include:: ../../includes_resources/includes_resource_cookbook_file.rst
+     - |resource desc cookbook_file|
    * - :doc:`resource_cron`
-     - .. include:: ../../includes_resources/includes_resource_cron.rst
+     - |resource desc cron|
    * - :doc:`resource_deploy`
-     - .. include:: ../../includes_resources/includes_resource_deploy.rst
+     - |resource desc deploy|
    * - :doc:`resource_directory`
-     - .. include:: ../../includes_resources/includes_resource_directory.rst
+     - |resource desc directory|
    * - :doc:`resource_env`
-     - .. include:: ../../includes_resources/includes_resource_env.rst
+     - |resource desc env|
    * - :doc:`resource_erlang_call`
-     - .. include:: ../../includes_resources/includes_resource_erlang_call.rst
+     - |resource desc erlang_call|
    * - :doc:`resource_execute`
-     - .. include:: ../../includes_resources/includes_resource_execute.rst
+     - |resource desc execute|
    * - :doc:`resource_file`
-     - .. include:: ../../includes_resources/includes_resource_file.rst
+     - |resource desc file|
    * - :doc:`resource_group`
-     - .. include:: ../../includes_resources/includes_resource_group.rst
+     - |resource desc group|
    * - :doc:`resource_http_request`
-     - .. include:: ../../includes_resources/includes_resource_http_request.rst
+     - |resource desc http_request|
    * - :doc:`resource_ifconfig`
-     - .. include:: ../../includes_resources/includes_resource_ifconfig.rst
+     - |resource desc ifconfig|
    * - :doc:`resource_link`
-     - .. include:: ../../includes_resources/includes_resource_link.rst
+     - |resource desc link|
    * - :doc:`resource_log`
-     - .. include:: ../../includes_resources/includes_resource_log.rst
+     - |resource desc log|
    * - :doc:`resource_mdadm`
-     - .. include:: ../../includes_resources/includes_resource_mdadm.rst
+     - |resource desc mdadm|
    * - :doc:`resource_mount`
-     - .. include:: ../../includes_resources/includes_resource_mount.rst
+     - |resource desc mount|
    * - :doc:`resource_ohai`
-     - .. include:: ../../includes_resources/includes_resource_ohai.rst
+     - |resource desc ohai|
    * - :doc:`resource_package`
-     - .. include:: ../../includes_resources/includes_resource_package.rst
+     - |resource desc package|
    * - :doc:`resource_powershell_script`
-     - .. include:: ../../includes_resources/includes_resource_powershell_script.rst
+     - |resource desc powershell_script|
    * - :doc:`resource_remote_directory`
-     - .. include:: ../../includes_resources/includes_resource_remote_directory.rst
+     - |resource desc remote_directory|
    * - :doc:`resource_remote_file`
-     - .. include:: ../../includes_resources/includes_resource_remote_file.rst
+     - |resource desc remote_file|
    * - :doc:`resource_route`
-     - .. include:: ../../includes_resources/includes_resource_route.rst
+     - |resource desc route|
    * - :doc:`resource_ruby_block`
-     - .. include:: ../../includes_resources/includes_resource_ruby_block.rst
+     - |resource desc ruby_block|
    * - :doc:`resource_scm`
-     - .. include:: ../../includes_resources/includes_resource_scm.rst
+     - |resource desc scm|
    * - :doc:`resource_script`
-     - .. include:: ../../includes_resources/includes_resource_script.rst
+     - |resource desc script|
    * - :doc:`resource_service`
-     - .. include:: ../../includes_resources/includes_resource_service.rst
+     - |resource desc service|
    * - :doc:`resource_template`
-     - .. include:: ../../includes_resources/includes_resource_template.rst
+     - |resource desc template|
    * - :doc:`resource_user`
-     - .. include:: ../../includes_resources/includes_resource_user.rst
+     - |resource desc user|
    * - :doc:`resource_yum`
-     - .. include:: ../../includes_resources/includes_resource_yum.rst
+     - |resource desc yum|
 
 
 .. toctree::
