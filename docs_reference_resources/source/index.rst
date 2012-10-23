@@ -380,66 +380,15 @@ cookbook_file
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create cookbook_file|
-   * - ``:create_if_missing``
-     - |resource action create_if_missing cookbook_file|
-   * - ``:delete``
-     - |resource action delete cookbook_file|
+.. include:: ../../includes_resources/includes_resource_cookbook_file_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``backup``
-     - |backup resource cookbook_file|
-   * - ``group``
-     - |group resource cookbook_file|
-   * - ``mode``
-     - |mode resource cookbook_file|
-   * - ``rights``
-     - |windows| only. |rights resource cookbook_file|
-   * - ``inherits``
-     - |inherits resource cookbook_file|
-   * - ``owner``
-     - |owner resource cookbook_file|
-   * - ``path``
-     - |path resource cookbook_file|
-   * - ``source``
-     - |source resource cookbook_file|
-   * - ``cookbook``
-     - |cookbook resource cookbook_file|
+.. include:: ../../includes_resources/includes_resource_cookbook_file_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource cookbook file| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::CookbookFile``
-     - ``cookbook_file``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_cookbook_file_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -452,68 +401,15 @@ cron
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create cron|
-   * - ``:delete``
-     - |resource action delete cron|
+.. include:: ../../includes_resources/includes_resource_cron_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``minute``
-     - |minute resource cron|
-   * - ``hour``
-     - |hour resource cron|
-   * - ``day``
-     - |day resource cron|
-   * - ``month``
-     - |month resource cron|
-   * - ``weekday``
-     - |weekday resource cron|
-   * - ``command``
-     - |command resource cron|
-   * - ``user``
-     - |user resource cron|
-   * - ``mailto``
-     - |mailto resource cron|
-   * - ``path``
-     - |path resource cron|
-   * - ``home``
-     - |home resource cron|
-   * - ``shell``
-     - |shell resource cron|
+.. include:: ../../includes_resources/includes_resource_cron_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource cron| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Cron``
-     - ``cron``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_cron_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -636,112 +532,15 @@ Starting Over
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:deploy``
-     - Default. |resource action deploy deploy|
-   * - ``:force_deploy``
-     - |resource action force_deploy deploy|
-   * - ``:rollback``
-     - |resource action rollback deploy|
+.. include:: ../../includes_resources/includes_resource_deploy_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``deploy_to``
-     - |deploy_to resource deploy|
-   * - ``repository``
-     - |repository resource deploy|
-   * - ``repo``
-     - |repo resource deploy|
-   * - ``revision``
-     - |revision resource deploy|
-   * - ``branch``
-     - The alias for the revision.
-   * - ``user``
-     - |user resource deploy|
-   * - ``group``
-     - |group resource deploy|
-   * - ``svn_username``
-     - |svn_username resource deploy|
-   * - ``svn_password``
-     - |svn_password resource deploy|
-   * - ``svn_arguments``
-     - |svn_arguments resource deploy|
-   * - ``shallow_clone``
-     - |shallow_clone resource deploy|
-   * - ``enable_submodules``
-     - |enable_submodules resource deploy|
-   * - ``remote``
-     - |remote resource deploy|
-   * - ``ssh_wrapper``
-     - |ssh_wrapper resource deploy|
-   * - ``git_ssh_wrapper``
-     - |git_ssh_wrapper resource deploy|
-   * - ``scm_provider``
-     - |scm_provider resource deploy|
-   * - ``repository_cache``
-     - |repository_cache resource deploy|
-   * - ``environment``
-     - |environment resource deploy|
-   * - ``purge_before_symlink``
-     - |purge_before_symlink resource deploy|
-   * - ``create_dirs_before_symlink``
-     - |create_dirs_before_symlink resource deploy|
-   * - ``symlinks``
-     - |symlinks resource deploy|
-   * - ``symlink_before_migrate``
-     - |symlink_before_migrate resource deploy|
-   * - ``migrate``
-     - |migrate resource deploy|
-   * - ``migration_command``
-     - |migration_command resource deploy|
-   * - ``restart_command``
-     - |restart_command resource deploy|
-   * - ``rollback_on_error``
-     - |rollback_on_error resource deploy|
-   * - ``before_migrate``
-     - |before_migrate resource deploy|
-   * - ``before_symlink``
-     - |before_symlink resource deploy|
-   * - ``before_restart``
-     - |before_restart resource deploy|
-   * - ``after_restart``
-     - |after_restart resource deploy|
+.. include:: ../../includes_resources/includes_resource_deploy_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The |resource deploy| resource providers are used to determine whether to deploy based on whether the release directory in which the deployment is to be made actually exists. Use the following providers to use the |resource deploy| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Deploy::TimstampedDeploy``
-     - ``timestamped_deploy``. See below for more information.
-     - Yes
-     - This is the default provider for all platforms. 
-   * - ``Chef::Provider::Deploy::Revision``
-     - ``deploy_revision``, ``deploy_branch``
-     - 
-     -  See below for more information.
+.. include:: ../../includes_resources/includes_resource_deploy_providers.rst
 
 ``timestamped_deploy``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -778,60 +577,15 @@ directory
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create directory|
-   * - ``:delete``
-     - |resource action delete directory|
+.. include:: ../../includes_resources/includes_resource_directory_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``group``
-     - |group resource directory|
-   * - ``mode``
-     - |mode resource directory|
-   * - ``rights``
-     - |rights resource directory|
-   * - ``inherits``
-     - |inherits resource directory|
-   * - ``owner``
-     - |owner resource directory|
-   * - ``path``
-     - |path resource directory|
-   * - ``recursive``
-     - |recursive resource directory|
+.. include:: ../../includes_resources/includes_resource_directory_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource directory| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Directory``
-     - ``directory``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_directory_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -852,54 +606,15 @@ env
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create env|
-   * - ``:delete``
-     - |resource action delete env|
-   * - ``:modify``
-     - |resource action modify env|
+.. include:: ../../includes_resources/includes_resource_env_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``key_name``
-     - |key_name resource directory|
-   * - ``value``
-     - |value resource directory|
-   * - ``delim``
-     - |delim resource directory|
+.. include:: ../../includes_resources/includes_resource_env_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource env| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Env::Windows``
-     - ``env``
-     - Yes
-     - This is the default provider for all |windows| platforms.
+.. include:: ../../includes_resources/includes_resource_env_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -914,56 +629,15 @@ erlang_call
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:run``
-     - Default. |resource action run erlang|
-   * - ``:nothing``
-     - |resource action nothing erlang|
+.. include:: ../../includes_resources/includes_resource_erlang_call_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``code``
-     - |code resource erlang_call|
-   * - ``cookie``
-     - |cookie resource erlang_call|
-   * - ``distributed``
-     - |distributed resource directory|
-   * - ``name_type``
-     - |name_type resource directory|
-   * - ``node_name``
-     - |node_name resource directory|
+.. include:: ../../includes_resources/includes_resource_erlang_call_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource erlang call| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::ErlCall``
-     - ``erl_call``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_erlang_call_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -978,66 +652,15 @@ execute
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:run``
-     - Default. |resource action run execute|
-   * - ``:nothing``
-     - |resource action nothing execute|
+.. include:: ../../includes_resources/includes_resource_execute_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``command``
-     - |command resource execute|
-   * - ``creates``
-     - |creates resource execute|
-   * - ``cwd``
-     - |cwd resource execute|
-   * - ``environment``
-     - |environment resource execute|
-   * - ``group``
-     - |group resource execute|
-   * - ``path``
-     - |path resource execute|
-   * - ``returns``
-     - |returns resource execute|
-   * - ``timeout``
-     - |timeout resource execute|
-   * - ``user``
-     - |user resource execute|
-   * - ``umask``
-     - |umask resource execute|
+.. include:: ../../includes_resources/includes_resource_execute_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource execute| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Execute``
-     - ``execute``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_execute_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1056,66 +679,15 @@ file
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create file|
-   * - ``:create_if_missing``
-     - |resource action create_if_missing file|
-   * - ``:delete``
-     - Default. |resource action delete file|
-   * - ``:touch``
-     - |resource action touch file|
+.. include:: ../../includes_resources/includes_resource_file_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``path``
-     - |path resource file|
-   * - ``backup``
-     - |backup resource file|
-   * - ``group``
-     - |group resource file|
-   * - ``mode``
-     - |mode resource file|
-   * - ``rights``
-     - |rights resource file|
-   * - ``inherits``
-     - |inherits resource file|
-   * - ``owner``
-     - |owner resource file|	
-   * - ``content``
-     - |content resource file|
+.. include:: ../../includes_resources/includes_resource_file_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource file| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::File``
-     - ``file``
-     - Yes
-     - This is the default provider for all platforms. 
+.. include:: ../../includes_resources/includes_resource_file_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1134,76 +706,15 @@ group
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create group|
-   * - ``:remove``
-     - |resource action remove group|
-   * - ``:modify``
-     - |resource action modify group|
-   * - ``:manage``
-     - |resource action manage group|
+.. include:: ../../includes_resources/includes_resource_group_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``group_name``
-     - |group_name resource group|
-   * - ``gid``
-     - |gid resource group|
-   * - ``members``
-     - |members resource group|
-   * - ``append``
-     - |append resource group|
-   * - ``system``
-     - |system resource group|
+.. include:: ../../includes_resources/includes_resource_group_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following providers to use the |resource group| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Group::Dscl``
-     - 
-     - 
-     - This is the default provider for the |mac os x| platform.
-   * - ``Chef::Provider::Group::Gpasswd``
-     - 
-     - Yes
-     - This is the default provider for all platforms except |mac os x|, |freebsd|, |solaris|, and |windows|, which have their own dedicated providers.
-   * - ``Chef::Provider::Group::Pw``
-     - 
-     - Yes
-     - This is the default provider for the |freebsd| platform.
-   * - ``Chef::Provider::Group::Usermod``
-     - 
-     - 
-     - This is the default provider for the |solaris| platform.
-   * - ``Chef::Provider::Group::Windows``
-     - 
-     - 
-     - This is the default provider for the |windows| platform.
+.. include:: ../../includes_resources/includes_resource_group_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1216,60 +727,15 @@ http_request
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:get``
-     - Default. |resource action get http_request|
-   * - ``:put``
-     - |resource action put http_request|
-   * - ``:post``
-     - |resource action post http_request|
-   * - ``:delete``
-     - |resource action delete http_request|
-   * - ``:head``
-     - |resource action head http_request|
-   * - ``:options``
-     - |resource action options http_request|
+.. include:: ../../includes_resources/includes_resource_http_request_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``url``
-     - |url resource http_request|
-   * - ``message``
-     - |message resource http_request|
-   * - ``headers``
-     - |headers resource http_request|
+.. include:: ../../includes_resources/includes_resource_http_request_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource http request| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::HttpRequest``
-     - ``http_request``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_http_request_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1284,74 +750,15 @@ ifconfig
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:add``
-     - Default. |resource action add ifconfig|
-   * - ``:delete``
-     - |resource action delete ifconfig|
-   * - ``:enable``
-     - |resource action enable ifconfig|
-   * - ``:disable``
-     - |resource action disable ifconfig|
+.. include:: ../../includes_resources/includes_resource_ifconfig_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``target``
-     - |target resource ifconfig|
-   * - ``device``
-     - |device resource ifconfig|
-   * - ``hwaddr``
-     - |hwaddr resource ifconfig|
-   * - ``inet_addr``
-     - |inet_addr resource ifconfig|
-   * - ``bcast``
-     - |bcast resource ifconfig|
-   * - ``mask``
-     - |mask resource ifconfig|
-   * - ``mtu``
-     - |mtu resource ifconfig|
-   * - ``metric``
-     - |metric resource ifconfig|
-   * - ``onboot``
-     - |onboot resource ifconfig|
-   * - ``network``
-     - |network resource ifconfig|
-   * - ``bootproto``
-     - |bootproto resource ifconfig|
-   * - ``onparent``
-     - |onparent resource ifconfig|
+.. include:: ../../includes_resources/includes_resource_ifconfig_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource ifconfig| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Ifconfig``
-     - ``ifconfig``
-     - Yes
-     - This is the default provider for all platforms. Currently, this provider only writes out a start-up configuration file for the interface on Red Hat-based platforms (it writes to /etc/sysconfig/network-scripts/ifcfg-#{device_name}). 
+.. include:: ../../includes_resources/includes_resource_ifconfig_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1364,56 +771,15 @@ link
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create link|
-   * - ``:delete``
-     - |resource action delete link|
+.. include:: ../../includes_resources/includes_resource_link_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``target_file``
-     - |target_file resource link|
-   * - ``to``
-     - |to resource link|
-   * - ``link_type``
-     - |link_type resource link|
-   * - ``owner``
-     - |owner resource link|
-   * - ``group``
-     - |group resource link|
+.. include:: ../../includes_resources/includes_resource_link_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource link| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Link``
-     - ``link``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_link_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1430,46 +796,15 @@ log
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:write``
-     - Default. |resource action write log|
+.. include:: ../../includes_resources/includes_resource_log_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``level``
-     - |level resource log|
+.. include:: ../../includes_resources/includes_resource_log_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource log| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Log::ChefLog``
-     - ``log``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_log_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1484,56 +819,15 @@ mdadm
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create mdadm|
-   * - ``:assemble``
-     - |resource action assemble mdadm|
-   * - ``:stop``
-     - |resource action stop mdadm|
+.. include:: ../../includes_resources/includes_resource_mdadm_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``raid_device``
-     - |raid_device resource mdadm|
-   * - ``devices``
-     - |devices resource mdadm|
-   * - ``level``
-     - |level resource mdadm|
-   * - ``chunk``
-     - |chunk resource mdadm|
+.. include:: ../../includes_resources/includes_resource_mdadm_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource mdadm| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Mdadm``
-     - ``mdadm``
-     - Yes
-     - This is the default provider for the |linux| platform. 
+.. include:: ../../includes_resources/includes_resource_mdadm_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1546,74 +840,15 @@ mount
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:mount``
-     - Default. |resource action mount mount|
-   * - ``:umount``
-     - |resource action umount mount|
-   * - ``:remount``
-     - |resource action remount mount|
-   * - ``:enable``
-     - |resource action enable mount|
-   * - ``:disable``
-     - |resource action disable mount|
-
-.. note:: Order matters when passing multiple actions. For example: ``action [:mount, :enable]`` ensures that the file system is mounted before it is enabled.
+.. include:: ../../includes_resources/includes_resource_mount_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``mount_point``
-     - |mount_point resource mount|
-   * - ``device``
-     - |device resource mount|
-   * - ``device_type``
-     - |device_type resource mount|
-   * - ``fstype``
-     - |fstype resource mount|
-   * - ``options``
-     - |options resource mount|
-   * - ``dump``
-     - |dump resource mount|
-   * - ``pass``
-     - |pass resource mount|
-   * - ``supports``
-     - |supports resource mount|
+.. include:: ../../includes_resources/includes_resource_mount_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following providers to use the |resource mount| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Mount``
-     - ``mount``
-     - Yes
-     - This is the default provider for all platforms, except for |windows|.
-   * - ``Chef::Provider::Mount::Windows``
-     - ``mount``
-     - Yes
-     - This is the default provider for the |windows| platform.
+.. include:: ../../includes_resources/includes_resource_mount_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1638,46 +873,15 @@ ohai
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:reload``
-     - Default. |resource action reload ohai|
+.. include:: ../../includes_resources/includes_resource_ohai_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``plugin``
-     - |plugin resource ohai|
+.. include:: ../../includes_resources/includes_resource_ohai_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource ohai| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Ohai``
-     - ``ohai``
-     - Yes
-     - This is the default provider for all platforms. 
+.. include:: ../../includes_resources/includes_resource_ohai_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1749,108 +953,15 @@ To require a .gemrc file to be used during install:
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:install``
-     - Default. |resource action install package|
-   * - ``:upgrade``
-     - |resource action upgrade package|
-   * - ``:remove``
-     - |resource action remove package|
-   * - ``:purge``
-     - |resource action purge package|
+.. include:: ../../includes_resources/includes_resource_package_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``package_name``
-     - |package_name resource package|
-   * - ``version``
-     - |version resource package|
-   * - ``response_file``
-     - |response_file resource package|
-   * - ``source``
-     - |source resource package|
-   * - ``options``
-     - |options resource package|
-   * - ``gem_binary``
-     - |gem_binary resource package|
-   * - ``arch``
-     - |arch resource package|
-   * - ``flush_cache``
-     - |flush_cache resource package|
-   * - ``allow_downgrade``
-     - |allow_downgrade resource package|
+.. include:: ../../includes_resources/includes_resource_package_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following providers to use the |resource package| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Package::Apt``
-     - ``apt_package``
-     - Yes
-     - This is the default provider for the |debian| and |ubuntu| platforms.
-   * - ``Chef::Provider::Package::Dpkg``
-     - ``dpkg_package``
-     - 
-     - This is the default provider for the |debian dkpg| platform. Can be used with the ``options`` attribute.
-   * - ``Chef::Provider::Package::EasyInstall``
-     - ``easy_install_package``
-     - 
-     - This is the default provider for |python|.
-   * - ``Chef::Provider::Package::Freebsd``
-     - ``freebsd_package``
-     - 
-     - This is the default provider for the |freebsd| platform.
-   * - ``Chef::Provider::Package::Macports``
-     - ``macports_package``
-     - 
-     - This is the default provider for the |mac os x| platform.
-   * - ``Chef::Provider::Package::Portage``
-     - ``portage_package``
-     - 
-     - This is the default provider for the |gentoo| platform. Can be used with the ``options`` attribute.
-   * - ``Chef::Provider::Package::Rpm``
-     - ``rpm_package``
-     - 
-     - This is the default provider for the |rpm| platform. Can be used with the ``options`` attribute.
-   * - ``Chef::Provider::Package::Rubygems``
-     - ``gem_package``
-     - 
-     - This is the default provider for packages that are only included in recipes. |gem_package provider package|
-   * - ``Chef::Provider::Package::Rubygems``
-     - ``chef_gem``
-     - 
-     - This is the default provider for when installing a gem only for |chef| resources. |chef_gem provider package|
-   * - ``Chef::Provider::Package::Yum``
-     - ``yum_package``
-     - 
-     - This is the default provider for the |redhat| and |centos| platforms.
-   * - ``Chef::Provider::Package::Zypper``
-     - ``zypper_package``
-     - 
-     - This is the default provider for the |suse| platform.
+.. include:: ../../includes_resources/includes_resource_package_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1883,52 +994,15 @@ powershell_script
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:run``
-     - Default. |resource action run powershell_script|
+.. include:: ../../includes_resources/includes_resource_powershell_script_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``command``
-     - |command resource powershell_script|
-   * - ``code``
-     - |code resource powershell_script|
-   * - ``interpreter``
-     - |interpreter resource powershell_script|
-   * - ``flags``
-     - |flags resource powershell_script|
+.. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource powershell script| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::PowershellScript``
-     - ``powershell``
-     - Yes
-     - This is the default provider for all platforms. 
+.. include:: ../../includes_resources/includes_resource_powershell_script_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1947,57 +1021,15 @@ remote_directory
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource does not have any actions.
+.. include:: ../../includes_resources/includes_resource_directory_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``cookbook``
-     - |cookbook resource remote_directory|
-   * - ``files_backup``
-     - |files_backup resource remote_directory|
-   * - ``files_owner``
-     - |files_owner resource remote_directory|
-   * - ``files_group``
-     - |files_group resource remote_directory|
-   * - ``files_mode``
-     - |files_mode resource remote_directory|
-   * - ``rights``
-     - |rights resource remote_directory|
-   * - ``inherits``
-     - |inherits resource remote_directory|
-   * - ``path``
-     - |path resource remote_directory|
-   * - ``source``
-     - |source resource remote_directory|
-   * - ``purge``
-     - |purge resource remote_directory|
-   * - ``overwrite``
-     - |overwrite resource remote_directory|
+.. include:: ../../includes_resources/includes_resource_directory_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource remote directory| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Directory::RemoteDirectory``
-     - ``remote_directory``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_directory_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2012,64 +1044,15 @@ remote_file
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create remote_file|
-   * - ``:create_if_missing``
-     - |resource action create_if_missing remote_file|
+.. include:: ../../includes_resources/includes_resource_remote_file_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``path``
-     - |path resource remote_file|
-   * - ``backup``
-     - |backup resource remote_file|
-   * - ``group``
-     - |group resource remote_file|
-   * - ``mode``
-     - |mode resource remote_file|
-   * - ``rights``
-     - |rights resource remote_file|
-   * - ``inherits``
-     - |inherits resource remote_file|
-   * - ``owner``
-     - |owner resource remote_file|
-   * - ``source``
-     - |source resource remote_file|
-   * - ``checksum``
-     - |checksum resource remote_file|
+.. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource remote file| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::File::RemoteFile``
-     - ``remote_file``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_remote_file_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2084,54 +1067,15 @@ route
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:add``
-     - Default. |resource action add route|
-   * - ``:delete``
-     - |resource action delete route|
+.. include:: ../../includes_resources/includes_resource_route_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``target``
-     - |target resource route|
-   * - ``netmask``
-     - |netmask resource route|
-   * - ``gateway``
-     - |gateway resource route|
-   * - ``device``
-     - |device resource route|
+.. include:: ../../includes_resources/includes_resource_route_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource route| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Route``
-     - ``route``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_route_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2146,46 +1090,15 @@ ruby_block
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create ruby_block|
+.. include:: ../../includes_resources/includes_resource_ruby_block_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``block``
-     - |block resource ruby_block|
+.. include:: ../../includes_resources/includes_resource_ruby_block_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource ruby block| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::RubyBlock``
-     - ``ruby_block``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_ruby_block_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2200,84 +1113,15 @@ scm
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:sync``
-     - Default. |resource action sync scm|
-   * - ``:checkout``
-     - |resource action checkout scm|
-   * - ``:export``
-     - |resource action export scm|
-   * - ``:force_export``
-     - |svn| only. |resource action force_export scm|
+.. include:: ../../includes_resources/includes_resource_scm_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``destination``
-     - |destination resource scm|
-   * - ``repository``
-     - |repository resource scm|
-   * - ``revision``
-     - |revision resource scm|
-   * - ``reference``
-     - |reference resource scm|
-   * - ``user``
-     - |user resource scm|
-   * - ``group``
-     - |group resource scm|
-   * - ``svn_username``
-     - |svn_username resource scm|
-   * - ``svn_password``
-     - |svn_password resource scm|
-   * - ``svn_arguments``
-     - |svn_arguments resource scm|
-   * - ``svn_info_args``
-     - |svn_info_args resource scm|
-   * - ``depth``
-     - |depth resource scm|
-   * - ``enable_submodules``
-     - |enable_submodules resource scm|
-   * - ``remote``
-     - |remote resource scm|
-   * - ``additional_remotes``
-     - |additional_remotes resource scm|
-   * - ``ssh_wrapper``
-     - |ssh_wrapper resource scm|
+.. include:: ../../includes_resources/includes_resource_scm_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following providers to use the |resource scm| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Git``
-     - ``git``
-     - 
-     - This provider works only with |git|.
-   * - ``Chef::Provider::Subversion``
-     - ``subversion``
-     - 
-     - This provider work only with |svn|.
+.. include:: ../../includes_resources/includes_resource_scm_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2294,68 +1138,15 @@ script
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:run``
-     - Default. |resource action run script|
+.. include:: ../../includes_resources/includes_resource_script_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``command``
-     - |command resource script|
-   * - ``code``
-     - |code resource script|
-   * - ``interpreter``
-     - |interpreter resource script|
-   * - ``flags``
-     - |flags resource script|
+.. include:: ../../includes_resources/includes_resource_script_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following providers to use the |resource script| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Resource::Script::Bash``
-     - ``bash``
-     - 
-     - This is the provider used for the |bash| command interpreter.
-   * - ``Chef::Resource::Script::Csh``
-     - ``csh``
-     - 
-     - This is the provider used for the |csh| command interpreter.
-   * - ``Chef::Resource::Script::Perl``
-     - ``perl``
-     - 
-     - This is the provider used for the |perl| command interpreter.
-   * - ``Chef::Resource::Script::Python``
-     - ``python``
-     - 
-     - This is the provider used for the |python| command interpreter.
-   * - ``Chef::Resource::Script::Ruby``
-     - ``ruby``
-     - 
-     - This is the provider used for the |ruby| command interpreter.
+.. include:: ../../includes_resources/includes_resource_script_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2370,104 +1161,15 @@ service
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:enable``
-     - |resource action export service|
-   * - ``:disable``
-     - |resource action disable service|
-   * - ``:nothing``
-     - Default. |resource action nothing service|
-   * - ``:start``
-     - |resource action start service|
-   * - ``:stop``
-     - |resource action stop service|
-   * - ``:restart``
-     - |resource action restart service|
-   * - ``:reload``
-     - |resource action reload service|
+.. include:: ../../includes_resources/includes_resource_service_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``service_name``
-     - |service_name resource service|
-   * - ``pattern``
-     - |pattern resource service|
-   * - ``start_command``
-     - |start_command resource service|
-   * - ``stop_command``
-     - |stop_command resource service|
-   * - ``status_command``
-     - |status_command resource service|
-   * - ``restart_command``
-     - |restart_command action write service|
-   * - ``reload_command``
-     - |reload_command resource service|
-   * - ``supports``
-     - |supports resource service|
+.. include:: ../../includes_resources/includes_resource_service_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following providers to use the |resource service| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::Service::Init``
-     - ``service``
-     - Yes
-     - This is the default provider for all platforms, unless there is a specific provider for a specific platform (see the other entries in this table).
-   * - ``Chef::Provider::Service::Init::Debian``
-     - 
-     - 
-     - This is the default provider for the |debian| and |ubuntu| platforms.
-   * - ``Chef::Provider::Service::Upstart``
-     - 
-     - 
-     - This is the default provider for the |upstart| platform.
-   * - ``Chef::Provider::Service::Init::Freebsd``
-     - 
-     - 
-     - This is the default provider for the |freebsd| platform.
-   * - ``Chef::Provider::Service::Init::Gentoo``
-     - 
-     - 
-     - This is the default provider for the |gentoo| platform.
-   * - ``Chef::Provider::Service::Init::Redhat``
-     - 
-     - 
-     - This is the default provider for the |redhat| and |centos| platforms.
-   * - ``Chef::Provider::Service::Solaris``
-     - 
-     - 
-     - This is the default provider for the |solaris| platform.
-   * - ``Chef::Provider::Service::Windows``
-     - 
-     - 
-     - This is the default provider for the |windows| platform.
-   * - ``Chef::Provider::Service::Macosx``
-     - 
-     - 
-     - This is the default provider for the |mac os x| platform.
+.. include:: ../../includes_resources/includes_resource_service_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2488,68 +1190,15 @@ template
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create template|
-   * - ``:create_if_missing``
-     - |resource action create_if_missing template|
+.. include:: ../../includes_resources/includes_resource_template_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``backup``
-     - |backup resource template|
-   * - ``cookbook``
-     - |cookbook resource template|
-   * - ``path``
-     - |path resource template|
-   * - ``source``
-     - |source resource template|
-   * - ``group``
-     - |group resource template|
-   * - ``mode``
-     - |mode resource template|
-   * - ``rights``
-     - |rights resource template|
-   * - ``inherits``
-     - |inherits resource template|
-   * - ``owner``
-     - |owner resource template|
-   * - ``variables``
-     - |variables resource template|
-   * - ``local``
-     - |local resource template|
+.. include:: ../../includes_resources/includes_resource_template_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following provider to use the |resource template| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::File::Template``
-     - ``template``
-     - Yes
-     - This is the default provider for all platforms.
+.. include:: ../../includes_resources/includes_resource_template_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2566,55 +1215,11 @@ user
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:create``
-     - Default. |resource action create user|
-   * - ``:remove``
-     - |resource action remove user|
-   * - ``:modify``
-     - |resource action modify user|
-   * - ``:manage``
-     - |resource action manage user|
-   * - ``:lock``
-     - |resource action lock user|
-   * - ``:unlock``
-     - |resource action unlock user|
+.. include:: ../../includes_resources/includes_resource_user_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``username``
-     - |username resource user|
-   * - ``comment``
-     - |comment resource user|
-   * - ``uid``
-     - |uid resource user|
-   * - ``gid``
-     - |gid resource user|
-   * - ``home``
-     - |home resource user|
-   * - ``shell``
-     - |shell resource user|
-   * - ``password``
-     - |password resource user|
-   * - ``system``
-     - |system resource user|
-   * - ``supports``
-     - |supports resource user|
+.. include:: ../../includes_resources/includes_resource_user_attributes.rst
 
 Supported Features
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2626,32 +1231,7 @@ Password Shadow Hash
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use the following providers to use the |resource user| resource in a recipe:
-
-.. list-table::
-   :widths: 130 80 40 250
-   :header-rows: 1
-
-   * - Long name
-     - Short name
-     - Default?
-     - Notes
-   * - ``Chef::Provider::User::Useradd``
-     - ``user``
-     - Yes
-     - This is the default provider for all platforms.
-   * - ``Chef::Provider::User::Pw``
-     - ``pw``
-     - 
-     - This is the default provider for the |freebsd| platform.
-   * - ``Chef::Provider::User::Dscl``
-     - ``dscl``
-     - 
-     - This is the default provider for the |mac os x| platform.
-   * - ``Chef::Provider::User::Windows``
-     - ``windows``
-     - 
-     - This is the default provider for all |windows| platforms.
+.. include:: ../../includes_resources/includes_resource_user_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2668,49 +1248,15 @@ yum
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following actions:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Action
-     - Description
-   * - ``:install``
-     - Default. |resource action install yum|
-   * - ``:upgrade``
-     - |resource action upgrade yum|
-   * - ``:remove``
-     - |resource action remove yum|
+.. include:: ../../includes_resources/includes_resource_yum_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource has the following has the following attributes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``package_name``
-     - |package_name resource yum|
-   * - ``version``
-     - |version resource yum|
-   * - ``source``
-     - |source resource yum|
-   * - ``options``
-     - |options resource yum|
-   * - ``arch``
-     - |arch resource yum|
-   * - ``flush_cache``
-     - |flush_cache resource yum|
-   * - ``allow_downgrade``
-     - |allow_downgrade resource yum|
+.. include:: ../../includes_resources/includes_resource_yum_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This resource does not have any providers.
+.. include:: ../../includes_resources/includes_resource_yum_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
