@@ -7,3 +7,5 @@
 * The |chef server| acts as a hub that is available to every node in the |chef| organization. This ensures that the right cookbooks are available, that the right policies are being applied, that the node object used during the previous |chef| run is available to the current |chef| run, and that all of the nodes that will be maintained by |chef| are registered and known to the |chef server|. 
 * The workstation is the location from which cookbooks are authored, policy data (such as roles, environments, and data bags) are defined, data is synchronized with the |chef| repository, and data is uploaded to the |chef server|. 
 * Each node contains a |chef client| that performs the various infrastructure automation tasks that each node requires.
+
+Cookbooks are also a very important element of |chef| and will be treated as a separate component (alongside the server, nodes, and the workstation) across the documentation. In general, the cookbooks are authored and managed from the workstation, moved to the |chef| server, and then are pulled down to nodes by the |chef client| during each |chef| run.
