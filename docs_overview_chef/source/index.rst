@@ -9,7 +9,7 @@ An Overview of |chef|
 
 .. include:: ../../includes/includes_chef.rst
 
-The following diagram shows the relationships between the various elements of a |chef| organization, including the nodes, the server, and the workstations. These elements work together to provide |chef| the information and instruction that it needs so that it can do its job.
+The following diagram shows the relationships between the various elements of a |chef| organization, including the nodes, the server, and the workstations. These elements work together to provide |chef| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
 .. image:: ../../images/overview_chef_draft.png
 

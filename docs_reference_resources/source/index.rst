@@ -26,14 +26,7 @@ Actions
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-For example:
-
-.. code-block:: ruby
-
-   service "memcached" do
-     action :nothing
-     supports :status => true, :start => true, :stop => true, :restart => true
-   end
+.. include:: ../../steps/step_chef_common_action_nothing.rst
 
 Attributes
 -----------------------------------------------------
@@ -41,41 +34,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Using ``ignore_failure``:
+.. include:: ../../steps/step_chef_common_attribute_ignore_failure.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_common_attribute_provider_and_supports.rst
 
-   gem_package "syntax" do
-     action :install
-     ignore_failure true
-   end
+.. include:: ../../steps/step_chef_common_attribute_provider.rst
 
-Using ``provider``:
-
-.. code-block:: ruby
-
-   package "some_package" do
-     provider Chef::Provider::Package::Rubygems
-   end
-
-Using ``supports``:
-
-.. code-block:: ruby
-
-   service "apache" do
-     supports :restart => true, :reload => true
-     action :enable
-   end
-
-Using ``provider`` and ``supports``:
-
-.. code-block:: ruby
-
-   service "some_service" do
-     provider Chef::Provider::Service::Upstart
-     supports :status => true, :restart => true, :reload => true
-     action [ :enable, :start ]
-   end
+.. include:: ../../steps/step_chef_common_attribute_supports.rst
 
 Conditional Execution
 -----------------------------------------------------
@@ -91,84 +56,21 @@ Arguments
 
 ``not_if`` Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following three examples show how to use a string or a |ruby| block to create ``/tmp/somefile``, but not if the ``/etc/passwd`` already exists.
+.. include:: ../../steps/step_chef_common_not_if_create_temp_file.rst
 
-To execute a string:
+.. include:: ../../steps/step_chef_common_not_if_execute_ruby_block_with_curly_braces.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_common_not_if_execute_ruby_block.rst
 
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-     not_if "test -f /etc/passwd"
-   end
- 
-To execute a |ruby| block:
-
-.. code-block:: ruby
-
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-     not_if do
-       File.exists?("/etc/passwd")
-     end
-   end
- 
-To execute a |ruby| block using curly braces:
-
-.. code-block:: ruby
-
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-     not_if {File.exists?("/etc/passwd")}
-   end
-
-The next example shows how to create ``/tmp/somefile``, but not if the node has the attribute ``some_value`` using |ruby| and curly braces (that specify the node attribute):
-
-.. code-block:: ruby
-
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-     not_if { node[:some_value] }
-   end
+.. include:: ../../steps/step_chef_common_not_if_execute_string.rst
 
 ``only_if`` Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following two examples will create ``/tmp/somefile`` only if ``/etc/passwd`` exists using a string or a |ruby| block.
+.. include:: ../../steps/step_chef_common_only_if_create_temp_file.rst
 
-To execute a string:
+.. include:: ../../steps/step_chef_common_only_if_execute_ruby_block.rst
 
-.. code-block:: ruby
-
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-     only_if "test -f /etc/passwd"
-   end
-
-To execute a |ruby| block:
-
-.. code-block:: ruby
-
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-     not_if do ! File.exists?("/etc/passwd") end
-   end
- 
-The following example will create ``tmp/somefile``, but only if the node has the attribute ``some_value`` using |ruby| and curly braces (that specify the node attribute):
-
-.. code-block:: ruby
-
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-     only_if { node[:some_value] }
-   end
-
+.. include:: ../../steps/step_chef_common_only_if_execute_string.rst
 
 Notifications
 -----------------------------------------------------
@@ -182,144 +84,36 @@ Notifies Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_notifies.rst
 
-For example, if you need to restart the |apache| service when you modify a template that configures |apache|, use ``:restart``:
-
-.. code-block:: ruby
-
-   template "/etc/www/configures-apache.conf" do
-     notifies :restart, "service[apache]"
-   end
-
-By default, notifications are ``:delayed``, that is they are queued up as they are triggered, and then executed at the very end of a |chef| run. To run an action immediately, use ``:immediately``:
-
-.. code-block:: ruby
-
-   template "/etc/nagios3/configures-nagios.conf" do
-     # other parameters
-     notifies :run, "execute[test-nagios-config]", :immediately
-   end
- 
-To verify a configuration and prevent an application from restarting if the configuration is broken, use ``:nothing``:
-
-.. code-block:: ruby
-
-   execute "test-nagios-config" do
-     command "nagios3 --verify-config"
-     action :nothing
-   end
-
-To send notifications to multiple resources, just use multiple attributes. Multiple attributes will get sent to the notified resources in the order specified.
-
-.. code-block:: ruby
-
-   template "/etc/netatalk/netatalk.conf" do
-     notifies :restart, "service[afpd]", :immediately
-     notifies :restart, "service[cnid]", :immediately
-   end
- 
-   service "afpd"
-   service "cnid"
-
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To reload a service:
+.. include:: ../../steps/step_chef_common_notifies_syntax_delay_notifications_until_end_of_run.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_common_notifies_syntax_enable_service_after_restart_or_reload.rst
 
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-     notifies :reload, "service[apache]"
-   end
+.. include:: ../../steps/step_chef_common_notifies_syntax_notify_multiple_resources.rst
 
-To enable a service after restarting or reloading it:
+.. include:: ../../steps/step_chef_common_notifies_syntax_ordered_notification_of_resources.rst
 
-.. code-block:: ruby
- 
-   service "apache" do
-     supports :restart => true, :reload => true
-     action :enable
-   end
+.. include:: ../../steps/step_chef_common_notifies_syntax_prevent_restart_if_config_is_broken.rst
 
-To notify multiple resources:
+.. include:: ../../steps/step_chef_common_notifies_syntax_reload_service.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_common_notifies_syntax_restart_service_when_template_is_modified.rst
 
-   template "/etc/chef/server.rb" do
-     source "server.rb.erb"
-     owner "root"
-     group "root"
-     mode "644"
-     notifies :restart, "service[chef-solr]", :delayed
-     notifies :restart, "service[chef-solr-indexer]", :delayed
-     notifies :restart, "service[chef-server]", :delayed
-   end
+.. include:: ../../steps/step_chef_common_notifies_syntax_send_notification_to_multiple_resources.rst
 
-To notify multiple resources and create a sequence of ordered notifications:
-
-.. code-block:: ruby
-
-   execute 'foo' do
-     command '...'
-     notifies :run, 'template[baz]', :immediately
-     notifies :install, 'package[bar]', :immediately
-     notifies :run, 'execute[final]', :immediately
-   end
-   
-   template 'baz' do
-     ...
-     notifies :run, 'execute[restart_baz]', :immediately
-   end
-   
-   package 'bar'
-   
-   execute 'restart_baz'
-   
-   execute 'final' do
-     command '...'
-   end
-
-where the sequencing will be in the following order: ``execute 'foo'``, ``template 'baz'``, ``execute [restart_baz]``, ``package 'bar'``, and ``execute 'final'``.
 
 Subscribes Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_subscribes.rst
 
-The notification timings for ``subscribes`` work in the same manner as ``notifies``, so the following code should achieve the same results:
-
-.. code-block:: ruby
-
-   template "/etc/nagios3/configures-nagios.conf" do
-     # other parameters
-   end
- 
-To verify a configuration and prevent an application from restarting if the configuration is broken, use ``:nothing``:
-
-.. code-block:: ruby
-
-   execute "test-nagios-config" do
-     command "nagios3 --verify-config"
-     action :nothing
-     subscribes :run, resources(:template => "/etc/nagios3/configures-nagios.conf"), :immediately
-   end
-
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To reload a service based on a template:
+.. include:: ../../steps/step_chef_common_subscribes_syntax_notification_timings.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_common_subscribes_syntax_prevent_restart_if_config_is_broken.rst
 
-   template "/tmp/somefile" do
-     mode "0644"
-     source "somefile.erb"
-   end
-
-   service "apache" do
-     supports :restart => true, :reload => true
-     action :enable
-     subscribes :reload, resources("template[/tmp/somefile]"), :immediately
-   end
-
+.. include:: ../../steps/step_chef_common_subscribes_syntax_reload_service_using_template.rst
 
 Relative Paths
 -----------------------------------------------------
@@ -327,14 +121,9 @@ Relative Paths
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-For example:
+.. include:: ../../steps/step_chef_common_relative_paths.rst
 
-.. code-block:: ruby
 
-   template "#{ENV['HOME']}/chef-getting-started.txt" do
-     source "chef-getting-started.txt.erb"
-     mode "0644"
-   end
 
 
 

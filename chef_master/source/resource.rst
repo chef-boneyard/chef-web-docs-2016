@@ -21,6 +21,8 @@ Resources and Providers
 
    * - Resource
      - Description
+   * - :doc:`resource_common`
+     - All resources share a set of common actions, attributes, conditional executions, notifications, and relative path options.
    * - :doc:`resource_cookbook_file`
      - |resource desc cookbook_file|
    * - :doc:`resource_cron`
@@ -82,6 +84,7 @@ Resources and Providers
 .. toctree::
    :hidden:
 
+   resource_common
    resource_cookbook_file
    resource_cron
    resource_deploy
