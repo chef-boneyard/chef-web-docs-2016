@@ -7,7 +7,7 @@ The ``show`` argument is used to display information about the specified environ
 
 This argument has the following syntax::
 
-   knife environment show ENVIRONMENT_NAME
+   knife environment show ENVIRONMENT_NAME (options)
 
 This argument does not have any argument-specific options.
 
