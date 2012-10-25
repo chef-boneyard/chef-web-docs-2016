@@ -3,14 +3,16 @@ Nodes
 ===================================
 
 .. include:: ../../swaps/swap_descriptions.txt
-.. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_http.txt
+.. include:: ../../swaps/swap_names.txt
+.. include:: ../../swaps/swap_notes.txt
+.. include:: ../../swaps/swap_resources.txt
 
-.. include:: ../../includes/includes_chef_node.rst
+.. include:: ../../includes_node/includes_node.rst
 
-.. include:: ../../includes/includes_chef_node_name.rst
+.. include:: ../../includes_node/includes_node_name.rst
 
-.. include:: ../../includes/includes_chef_node_manage.rst
+.. include:: ../../includes_node/includes_node_manage.rst
 
 The following sections discuss these elements (and their various sub-components) in more detail:
 
@@ -21,9 +23,9 @@ The following sections discuss these elements (and their various sub-components)
 
 Cloud vs. Physical Nodes
 =====================================================
-.. include:: ../../includes/includes_chef_node_cloud.rst
+.. include:: ../../includes_node/includes_node_cloud.rst
 
-.. include:: ../../includes/includes_chef_node_physical.rst
+.. include:: ../../includes_node/includes_node_physical.rst
 
 
 |chef client|
@@ -32,7 +34,7 @@ Cloud vs. Physical Nodes
 
 |ssl| Certificates
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_node_certificate.rst
+.. include:: ../../includes_node/includes_node_certificate.rst
 
 **jamescott: someone needs to explain how the security works between the node and the server. I know it uses SSL and that signed headers + private/public keys are used. This (probably) needs to be excised from the Chef Essentials docs and moved into a Chef Security collection of topics. Or something.**
 

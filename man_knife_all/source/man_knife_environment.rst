@@ -5,7 +5,7 @@ environment
 .. include:: ../../swaps/swap_descriptions.txt
 .. include:: ../../swaps/swap_names.txt
 
-.. include:: ../../includes/includes_chef_environment.rst
+.. include:: ../../includes_environment/includes_environment.rst
 
 .. include:: ../../includes_knife/includes_knife_environment.rst
 

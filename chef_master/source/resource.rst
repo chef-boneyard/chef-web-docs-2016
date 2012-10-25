@@ -9,11 +9,11 @@ Resources and Providers
 .. include:: ../../swaps/swap_resources.txt
 
 
-.. include:: ../../includes/includes_chef_cookbook_resource.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
 
-.. include:: ../../includes/includes_chef_cookbook_provider.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
-.. include:: ../../includes/includes_chef_cookbook_provider_platform.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
 
 .. list-table::
    :widths: 150 450

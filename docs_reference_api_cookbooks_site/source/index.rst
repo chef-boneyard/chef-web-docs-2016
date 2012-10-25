@@ -12,7 +12,7 @@ Cookbooks Site API
 
 /cookbooks
 =====================================================
-.. include:: ../../includes_cookbooks/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_cookbooks.rst
 
@@ -46,7 +46,7 @@ GET
 
 /search
 =====================================================
-.. include:: ../../includes/includes_chef_search.rst
+.. include:: ../../includes_search/includes_search.rst
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_search.rst
 

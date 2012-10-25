@@ -46,7 +46,7 @@ PUT -- DONE
 
 /cookbooks
 =====================================================
-.. include:: ../../includes/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks.rst
 
@@ -65,7 +65,7 @@ GET
 
 /cookbooks/COOKBOOK_NAME/COOKBOOK_VERSION
 =====================================================
-.. include:: ../../includes/includes_chef_cookbook_version.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version.rst
 
@@ -83,7 +83,7 @@ PUT
 
 /data -- DONE
 =====================================================
-.. include:: ../../includes/includes_chef_data_bag.rst
+.. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags.rst
 
@@ -111,7 +111,7 @@ POST -- DONE
 
 /data/DATA_BAG_NAME/DATA_BAG_ITEM -- DONE
 =====================================================
-.. include:: ../../includes/includes_chef_data_bag_item.rst
+.. include:: ../../includes_data_bag/includes_data_bag_item.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item.rst
 
@@ -130,7 +130,7 @@ PUT -- DONE
 
 /nodes -- NOT DONE
 =====================================================
-.. include:: ../../includes/includes_chef_node.rst
+.. include:: ../../includes_node/includes_node.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes.rst
 
@@ -200,7 +200,7 @@ PUT -- NOT DONE
 
 /environments -- NOT DONE
 =====================================================
-.. include:: ../../includes/includes_chef_environment.rst
+.. include:: ../../includes_environment/includes_environment.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments.rst
 
@@ -256,7 +256,7 @@ GET -- NOT DONE
 
 /search -- DONE
 =====================================================
-.. include:: ../../includes/includes_chef_search.rst
+.. include:: ../../includes_search/includes_search.rst
 
 includes_api_chef_server_endpoint_search.rst
 
@@ -269,7 +269,7 @@ GET -- DONE
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index.rst
 
-.. include:: ../../includes/includes_chef_search_query_syntax.rst
+.. include:: ../../includes_search/includes_search_query_syntax.rst
 
 GET -- DONE
 -----------------------------------------------------
