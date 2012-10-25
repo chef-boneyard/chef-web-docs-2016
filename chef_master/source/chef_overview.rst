@@ -3,13 +3,15 @@ An Overview of |chef|
 =====================================================
  
 .. include:: ../../swaps/swap_descriptions.txt
-.. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_http.txt
+.. include:: ../../swaps/swap_names.txt
+.. include:: ../../swaps/swap_notes.txt
+.. include:: ../../swaps/swap_resources.txt
 
 
 .. include:: ../../includes/includes_chef.rst
 
-The following diagram shows the relationships between the various elements of a |chef| organization, including the nodes, the server, and the workstations. These elements work together to provide |chef| the information and instruction that it needs so that it can do its job.
+The following diagram shows the relationships between the various elements of a |chef| organization, including the nodes, the server, and the workstations. These elements work together to provide |chef| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
 .. image:: ../../images/overview_chef_draft.png
 
@@ -19,7 +21,7 @@ The following sections discuss these elements (and their various components) in 
 
 Nodes
 =====================================================
-.. include:: ../../includes/includes_chef_node.rst
+.. include:: ../../includes_node/includes_node.rst
 
 There are two types of nodes that |chef| can manage:
 
@@ -30,9 +32,9 @@ There are two types of nodes that |chef| can manage:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_node_cloud.png
-     - .. include:: ../../includes/includes_chef_node_cloud.rst
+     - .. include:: ../../includes_node/includes_node_cloud.rst
    * - .. image:: ../../images/icon_node_physical.png
-     - .. include:: ../../includes/includes_chef_node_physical.rst
+     - .. include:: ../../includes_node/includes_node_physical.rst
 
 Some important components on nodes include:
 
@@ -99,13 +101,13 @@ In addition to node objects, policy, and cookbooks, a |chef server| includes:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_search.png
-     - .. include:: ../../includes/includes_chef_search.rst
+     - .. include:: ../../includes_search/includes_search.rst
    * - .. image:: ../../images/icon_manager.png
      - .. include:: ../../includes/includes_chef_manager.rst
 
 Node Objects
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_node_object.rst
+.. include:: ../../includes_node/includes_node_object.rst
 
 Some important node objects include:
 
@@ -116,9 +118,9 @@ Some important node objects include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_node_attribute.png
-     - .. include:: ../../includes/includes_chef_node_attribute.rst
+     - .. include:: ../../includes_node/includes_node_attribute.rst
    * - .. image:: ../../images/icon_run_lists.png
-     - .. include:: ../../includes/includes_chef_node_run_list.rst
+     - .. include:: ../../includes_node/includes_node_run_list.rst
 
 Policy
 -----------------------------------------------------
@@ -135,13 +137,13 @@ Some important aspects of policy include:
    * - .. image:: ../../images/icon_roles.png
      - .. include:: ../../includes/includes_chef_role.rst
    * - .. image:: ../../images/icon_data_bags.png
-     - .. include:: ../../includes/includes_chef_data_bag.rst
+     - .. include:: ../../includes_data_bag/includes_data_bag.rst
    * - .. image:: ../../images/icon_environments.png
-     - .. include:: ../../includes/includes_chef_environment.rst
+     - .. include:: ../../includes_environment/includes_environment.rst
 
 Cookbooks
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 |chef| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chef| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
@@ -154,11 +156,11 @@ Some important components of cookbooks include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_cookbook_attributes.png
-     - .. include:: ../../includes/includes_chef_cookbook_attribute.rst
+     - .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
    * - .. image:: ../../images/icon_cookbook_recipes.png
-     - .. include:: ../../includes/includes_chef_cookbook_recipe.rst
+     - .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
    * - .. image:: ../../images/icon_cookbook_versions.png
-     - .. include:: ../../includes/includes_chef_cookbook_version.rst
+     - .. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
 
 |chef| will run a recipe only when asked. When |chef| runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, |chef| won't change anything.
 

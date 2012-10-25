@@ -5,7 +5,7 @@ node
 .. include:: ../../swaps/swap_descriptions.txt
 .. include:: ../../swaps/swap_names.txt
 
-.. include:: ../../includes/includes_chef_node.rst
+.. include:: ../../includes_node/includes_node.rst
 
 .. include:: ../../includes_knife/includes_knife_node.rst
 

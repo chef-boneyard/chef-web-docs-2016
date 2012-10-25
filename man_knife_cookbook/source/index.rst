@@ -5,7 +5,7 @@ cookbook
 .. include:: ../../swaps/swap_descriptions.txt
 .. include:: ../../swaps/swap_names.txt
 
-.. include:: ../../includes/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 .. include:: ../../includes_knife/includes_knife_cookbook.rst
 

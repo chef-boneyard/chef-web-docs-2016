@@ -13,7 +13,7 @@ The actions, attributes, conditional executions, notifications, and relative pat
 
 Actions
 =====================================================
-.. include:: ../../includes/includes_chef_cookbook_resource_common_actions.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_actions.rst
 
 Examples
 -----------------------------------------------------
@@ -21,7 +21,7 @@ Examples
 
 Attributes
 =====================================================
-.. include:: ../../includes/includes_chef_cookbook_resource_common_attributes.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -35,15 +35,15 @@ Examples
 
 Conditional Execution
 =====================================================
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_attributes.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_attributes.rst
 
 Arguments
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_arguments.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
 
 ``not_if`` Examples
 -----------------------------------------------------
@@ -65,15 +65,15 @@ Arguments
 
 Notifications
 =====================================================
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications.rst
 
 Notifications Timers
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_timers.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_timers.rst
 
 Notifies Syntax
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_notifies.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_notifies.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -96,7 +96,7 @@ Examples
 
 Subscribes Syntax
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_subscribes.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_subscribes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -108,7 +108,7 @@ Examples
 
 Relative Paths
 =====================================================
-.. include:: ../../includes/includes_chef_cookbook_resource_common_relative_paths.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_relative_paths.rst
 
 Examples
 -----------------------------------------------------

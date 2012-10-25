@@ -3,4 +3,4 @@
 
 **jamescott: check this one!**
 
-.. include:: ../../includes/includes_chef_search_data_bag.rst
+.. include:: ../../includes_search/includes_search_data_bag.rst

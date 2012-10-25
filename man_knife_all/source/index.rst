@@ -62,6 +62,9 @@ Contents:
    man_knife_cookbook_site
    man_knife_cookbook
    man_knife_data_bag
+   man_knife_delete
+   man_knife_diff
+   man_knife_download
    man_knife_ec2
    man_knife_environment
    man_knife_eucalyptus
@@ -70,15 +73,19 @@ Contents:
    man_knife_hp
    man_knife_index_rebuild
    man_knife_linode
+   man_knife_list
    man_knife_node
    man_knife_openstack
    man_knife_rackspace
+   man_knife_raw
    man_knife_recipe_list
    man_knife_role
    man_knife_search
+   man_knife_show
    man_knife_ssh
    man_knife_status
    man_knife_tag
+   man_knife_upload
    man_knife_terremark
    man_knife_windows   
 

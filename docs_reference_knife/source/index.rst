@@ -112,7 +112,7 @@ configure
 cookbook
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 .. include:: ../../includes_knife/includes_knife_cookbook.rst
 
@@ -196,7 +196,7 @@ unshare
 data bag
 =====================================================
 
-.. include:: ../../includes/includes_chef_data_bag.rst
+.. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_knife/includes_knife_data_bag.rst
 
@@ -243,7 +243,7 @@ download
 environment
 =====================================================
 
-.. include:: ../../includes/includes_chef_environment.rst
+.. include:: ../../includes_environment/includes_environment.rst
 
 .. include:: ../../includes_knife/includes_knife_environment.rst
 
@@ -290,7 +290,7 @@ list
 node
 =====================================================
 
-.. include:: ../../includes/includes_chef_node.rst
+.. include:: ../../includes_node/includes_node.rst
 
 .. include:: ../../includes_knife/includes_knife_node.rst
 
@@ -381,7 +381,7 @@ show
 search
 =====================================================
 
-.. include:: ../../includes/includes_chef_search.rst
+.. include:: ../../includes_search/includes_search.rst
 
 .. include:: ../../includes_knife/includes_knife_search.rst
 
