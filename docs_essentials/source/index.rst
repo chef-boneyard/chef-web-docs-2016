@@ -608,7 +608,7 @@ H3 -- Run-lists
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_node_run_list.rst
 
-.. include:: ../../includes/includes_chef_cookbook_recipe.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe.rst
 
 .. include:: ../../includes/includes_chef_role.rst
 
@@ -764,7 +764,7 @@ H2 -- Manager (Management Console) -- DONE
 
 H1 -- Cookbooks
 =====================================================
-.. include:: ../../includes/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook.rst
 
 .. note:: A cookbook includes a readme file that is used to xxxxx.
 
@@ -776,11 +776,11 @@ H2 -- Cookbooks Directory Structure -- DONE
 
 H2 -- Cookbook Attributes -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_attribute.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute.rst
 
 H3 -- When to Use Attributes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_attribute_when_to_use.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_when_to_use.rst
 
 H4 -- NODE, ENVIRONMENT, ROLE, and ATTRIBUTE FILE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -808,69 +808,69 @@ Notation -- DONE
 
 H3 -- Attribute Files
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_attribute_file.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_file.rst
 
 H4 -- Attribute File Methods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_file_methods.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_file_methods.rst
 
 H4 -- Cookbook Attribute File Ordering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_file_ordering.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_file_ordering.rst
 
 H4 -- Attribute Accessor Methods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_file_methods_accessor.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_file_methods_accessor.rst
 
 H4 -- Reloading Attribute Files From Recipes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_file_reload_from_recipe.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_file_reload_from_recipe.rst
 
 
 
 H2 -- Definitions -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_definition.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_definition.rst
 
 H3 -- Definition Syntax -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_definition_syntax.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_definition_syntax.rst
 
 H3 -- Scenario: Create a new resource -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_definition_scenario_create_resource.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_definition_scenario_create_resource.rst
 
 H3 -- Scenario: Many recipes, one definition -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_definition_scenario_many_recipes_one_definition.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_definition_scenario_many_recipes_one_definition.rst
 
 H3 -- Scenario: Virtual hosts -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_definition_scenario_virtaul_hosts.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_definition_scenario_virtaul_hosts.rst
 
 H2 -- File Distributions -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_file_distribution.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_file_distribution.rst
 
 H3 -- Syntax(?) -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_file_distribution_syntax.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_file_distribution_syntax.rst
 
 H3 -- File Specificity -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_file_distribution_file_specificity.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_file_distribution_file_specificity.rst
 
 H3 -- Host Notation -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_file_distribution_host_notation.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_file_distribution_host_notation.rst
 
 H3 -- File Transfers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_file_distribution_file_transfers.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_file_distribution_file_transfers.rst
 
 H2 -- Libraries -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_library.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_library.rst
 
 A library can be used to:
 
@@ -883,7 +883,7 @@ A library can be used to:
 
 H3 -- Library Syntax -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_library_syntax.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_library_syntax.rst
 
 H3 -- Scenario: Attributes stored in file -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -903,15 +903,15 @@ H3 -- Scenario: Creating a namespace -- DONE
 
 H2 -- Lightweight Resources and Providers -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_lightweight.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight.rst
 
 H3 -- File Locations -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_lightweight_file_locations.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_file_locations.rst
 
 H3 -- Lightweight Resources -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_lightweight_resource.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_resource.rst
 
 H4 -- Common Functionality for all Lightweight Resources -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -919,78 +919,78 @@ The attributes and actions in this section apply to all lightweight resources.
 
 H5 -- Actions -- DONE, NEEDS TO BE H5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_resource_common_actions.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_actions.rst
 
 H5 -- Attributes -- DONE, NEEDS TO BE H5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_resource_common_attributes.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_attributes.rst
 
 H5 -- Conditional Execution -- DONE, NEEDS TO BE H5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_conditional.rst
 
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_attributes.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_conditional_attributes.rst
 
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_arguments.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_conditional_arguments.rst
 
 H5 -- Notifications -- DONE, NEEDS TO BE H5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_notifications.rst
 
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_timers.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_notifications_timers.rst
 
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_notifies.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_notifications_syntax_notifies.rst
 
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_subscribes.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_notifications_syntax_subscribes.rst
 
 H5 -- Relative Paths -- DONE, NEEDS TO BE H5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_resource_common_relative_paths.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_relative_paths.rst
 
 H4 -- Actions -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_actions.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_resource_actions.rst
 
 H4 -- Attributes and Validation Parameters -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_attributes.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_resource_attributes.rst
 
-.. include:: ../../includes/includes_chef_cookbook_resource_common_validation_parameters.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_validation_parameters.rst
 
 H4 -- Syntax -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_syntax.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_resource_syntax.rst
 
 H4 -- Compare Platform and Lightweight Resources -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_compared_to_platform_resource.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_resource_compared_to_platform_resource.rst
 
 H4 -- Use a Default Provider -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_lightweight_resource_use_default_provider.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_resource_use_default_provider.rst
 
 H3 -- Lightweight Providers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_lightweight_provider.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_provider.rst
 
 H4 -- Actions -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_lightweight_provider_actions.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_provider_actions.rst
 
 H4 -- Extending Providers -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_lightweight_provider_extend.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_provider_extend.rst
 
 H3 -- Example: Create Lightweight Provider and Resource -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_lightweight_example.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_example.rst
 
 
 
 
 H2 -- Metadata -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_metadata.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_metadata.rst
 
 .. note:: **jamescott: remove this? find out if this is true. for the most part it's best to not refer too much to future functionality that does not yet exist, at least not from within the "core documentation" -- if we want to talk about this stuff, use dedicated topics.** In the future, metadata will be used as part of an automated system for discovering and installing cookbooks.
 
@@ -1000,7 +1000,7 @@ H3 -- |metadata rb| -- DONE
 
 H3 -- Error Messages -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_metadata_error_messages.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_metadata_error_messages.rst
 
 
 
@@ -1008,25 +1008,25 @@ H3 -- Error Messages -- DONE
 
 H2 -- Recipes -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_recipe.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe.rst
 
 H3 -- Apply Recipes to Run-lists -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_recipe_apply_to_run_lists.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_apply_to_run_lists.rst
 
 H3 -- Include Recipes in Recipes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_recipe_include_in_recipe.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_include_in_recipe.rst
 
 H3 -- Cookbook Dependencies -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_recipe_cookbook_dependencies.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_cookbook_dependencies.rst
 
 
 
 H3 -- Recipe Attributes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_recipe_attribute.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_attribute.rst
 
 H4 -- Types -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -1050,39 +1050,39 @@ H4 -- Notation -- DONE
 
 H4 -- Attribute Methods
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_file_methods.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_file_methods.rst
 
 H4 -- Reloading Attributes From Recipes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_attribute_file_reload_from_recipe.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_file_reload_from_recipe.rst
 
-.. include:: ../../includes/includes_chef_cookbook_attribute_file_methods_accessor.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute_file_methods_accessor.rst
 
 H3 -- Search Indexes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_search.rst
 
-.. include:: ../../includes/includes_chef_cookbook_recipe_search_indexes.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_search_indexes.rst
 
 H3 -- Data Bags -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_data_bag.rst
 
-.. include:: ../../includes/includes_chef_cookbook_recipe_data_bags.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_data_bags.rst
 
 H3 -- Other Recipe DSL Methods -- DONE, DEPRECATE?
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_recipe_dsl.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_dsl.rst
 
 H3 -- Tags -- DONE, BUT WEAK
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes/includes_chef_tags.rst
 
-.. include:: ../../includes/includes_chef_cookbook_recipe_tags.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_tags.rst
 
 H3 -- |ruby| in Recipes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_recipe_use_ruby.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_use_ruby.rst
 
 .. include:: ../../steps/step_chef_recipe_assign_value_to_variable.rst
 
@@ -1098,7 +1098,7 @@ H3 -- |ruby| in Recipes -- DONE
 
 H3 -- Exceptions and Logging -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_recipe_exceptions_and_logging.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe_exceptions_and_logging.rst
 
 
 
@@ -1106,13 +1106,13 @@ H3 -- Exceptions and Logging -- DONE
 
 H2 - Resources and Providers -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource.rst
 
-.. include:: ../../includes/includes_chef_cookbook_provider.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_provider.rst
 
 H3 -- Resources Syntax -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_resource_syntax.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_syntax.rst
 
 H3 -- Platform Resources -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1183,81 +1183,81 @@ The following resources are built into |chef|:
 
 H3 -- Platform Providers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_provider_platform.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_provider_platform.rst
 
 
 
 H2 -- Templates -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_template.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_template.rst
 
 .. note:: |chef| uses |erubis| for templates, which is a fast, secure, and extensible implementation of embedded |ruby|. |erubis| should be familiar to members of the |ruby on rails|, |merb|, or |puppet| communities. For more information about |erubis|, see: http://www.kuwata-lab.com/erubis/.
 
 H3 -- Requirements -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_template_requirements.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_template_requirements.rst
 
 H3 -- Variables -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_template_variables.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_template_variables.rst
 
 H3 -- Location Specificity -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_template_location_specificity.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_template_location_specificity.rst
 
 H3 -- Host Notation -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_template_host_notation.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_template_host_notation.rst
 
 H3 -- Transfer Frequency -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_template_transfer_frequency.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_template_transfer_frequency.rst
 
 H3 -- Versions -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_version.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version.rst
 
-.. include:: ../../includes/includes_chef_cookbook_version.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version.rst
 
 H3 -- Syntax -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_version_syntax.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_syntax.rst
 
 H3 -- Operators -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_version_operators.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_operators.rst
 
 H3 -- Version Constraints -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_version_constraints.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_constraints.rst
 
 H3 -- Metadata (in metadata.rb) -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_metadata.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_metadata.rst
 
-.. include:: ../../includes/includes_chef_cookbook_version_metadata.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_metadata.rst
 
 H3 -- Environments -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_version_environments.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_environments.rst
 
 H3 -- Run-list Items -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_version_run_list_items.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_run_list_items.rst
 
 H4 -- Freezing Versions -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_version_freezing.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_freezing.rst
 
 H3 -- Version Control Strategies -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_version_control_strategies.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_control_strategies.rst
 
 H4 -- Branch Tracking -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_version_control_strategies_branch.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_control_strategies_branch.rst
 
 H4 -- Maximum Version Control -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_cookbook_version_control_strategies_maximum.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_version_control_strategies_maximum.rst
 

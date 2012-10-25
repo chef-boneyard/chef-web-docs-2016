@@ -7,7 +7,7 @@ cookbook site
 .. include:: ../../swaps/swap_http.txt
 
 
-.. include:: ../../includes/includes_api_cookbooks_site.rst
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_site.rst
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook.rst
 
