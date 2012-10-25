@@ -7,11 +7,11 @@ Resources and Providers Reference
 .. include:: ../../swaps/swap_notes.txt
 .. include:: ../../swaps/swap_resources.txt
 
-.. include:: ../../includes/includes_chef_cookbook_resource.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource.rst
 
-.. include:: ../../includes/includes_chef_cookbook_provider.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_provider.rst
 
-.. include:: ../../includes/includes_chef_cookbook_provider_platform.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_provider_platform.rst
 
 This reference describes each of the resources available in the |chef| library, including the list of actions available for the resource, the attributes that can be used, the providers that will do the work (and the provider's shortcut resource name), and examples of using each resource.
 
@@ -22,7 +22,7 @@ The attributes and actions in this section apply to all resources.
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_actions.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_actions.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -30,7 +30,7 @@ Examples
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_attributes.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -44,15 +44,15 @@ Examples
 
 Conditional Execution
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_conditional.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_attributes.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_conditional_attributes.rst
 
 Arguments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_resource_common_conditional_arguments.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_conditional_arguments.rst
 
 ``not_if`` Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -74,15 +74,15 @@ Arguments
 
 Notifications
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_notifications.rst
 
 Notifications Timers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_timers.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_notifications_timers.rst
 
 Notifies Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_notifies.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_notifications_syntax_notifies.rst
 
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -105,7 +105,7 @@ Examples
 
 Subscribes Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_cookbook_resource_common_notifications_syntax_subscribes.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_notifications_syntax_subscribes.rst
 
 Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -117,7 +117,7 @@ Examples
 
 Relative Paths
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook_resource_common_relative_paths.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_resource_common_relative_paths.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -951,11 +951,11 @@ Lightweight Resources and Providers
 
 Custom resources and providers can also be created using the |lwrp| DSL. |opscode| provides several cookbooks that define some commonly used |lwrp|. To use the lightweight resources provided by |opscode| the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.
 
-.. include:: ../../includes/includes_chef_cookbook_lightweight_resource.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_resource.rst
 
-.. include:: ../../includes/includes_chef_cookbook_lightweight_provider.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_provider.rst
 
-.. include:: ../../includes/includes_chef_cookbook_lightweight_file_locations.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook_lightweight_file_locations.rst
 
 The following groups of lightweight resources are available in open source cookbooks that are provided by |opscode|:
 

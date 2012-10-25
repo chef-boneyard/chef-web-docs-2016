@@ -7,7 +7,7 @@ cookbook
 .. include:: ../../swaps/swap_http.txt
 
 
-.. include:: ../../includes/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook.rst
 
 .. include:: ../../includes_knife/includes_knife_cookbook.rst
 

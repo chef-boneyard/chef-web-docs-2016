@@ -3,8 +3,9 @@ Chef Docs
 =====================================================
 
 .. include:: ../../swaps/swap_descriptions.txt
-.. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_http.txt
+.. include:: ../../swaps/swap_names.txt
+.. include:: ../../swaps/swap_notes.txt
 
 This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
 

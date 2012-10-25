@@ -112,7 +112,7 @@ configure
 cookbook
 =====================================================
 
-.. include:: ../../includes/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook.rst
 
 .. include:: ../../includes_knife/includes_knife_cookbook.rst
 
@@ -160,7 +160,7 @@ upload
 cookbook site
 =====================================================
 
-.. include:: ../../includes/includes_api_cookbooks_site.rst
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_site.rst
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook.rst
 

@@ -141,7 +141,7 @@ Some important aspects of policy include:
 
 Cookbooks
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_cookbook.rst
+.. include:: ../../includes_cookbooks/includes_chef_cookbook.rst
 
 |chef| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chef| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
@@ -154,11 +154,11 @@ Some important components of cookbooks include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_cookbook_attributes.png
-     - .. include:: ../../includes/includes_chef_cookbook_attribute.rst
+     - .. include:: ../../includes_cookbooks/includes_chef_cookbook_attribute.rst
    * - .. image:: ../../images/icon_cookbook_recipes.png
-     - .. include:: ../../includes/includes_chef_cookbook_recipe.rst
+     - .. include:: ../../includes_cookbooks/includes_chef_cookbook_recipe.rst
    * - .. image:: ../../images/icon_cookbook_versions.png
-     - .. include:: ../../includes/includes_chef_cookbook_version.rst
+     - .. include:: ../../includes_cookbooks/includes_chef_cookbook_version.rst
 
 |chef| will run a recipe only when asked. When |chef| runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, |chef| won't change anything.
 
