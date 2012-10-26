@@ -1,44 +1,19 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The DELETE method is used to XXXXX.
+The DELETE method is used to delete a cookbook version.
 
 This method has no parameters.
-
-OR
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-   * - ``xxxxx``
-     - xxxxx.
-   * - ``xxxxx``
-     - xxxxx.
 
 **Request**
 
 .. code-block:: ruby
 
-   XXXXX
-
-with a request body that looks something like:
-
-.. code-block:: ruby
-
-   xxxxx
-
-where ``xxxxx`` will xxxxx.
+   DELETE /cookbooks/COOKBOOK_NAME/COOKBOOK_VERSION
 
 **Response**
 
-The response will return something like the following:
-
-.. code-block:: ruby
-
-   xxxxx
+This method has no response body.
 
 .. list-table::
    :widths: 200 300
@@ -47,9 +22,10 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. The xxxxx.
-   * - ``400``
-     - The request was unsuccessful. The xxxxx. For example:
-       ::
-
-          xxxxx
+     - |response code 200 ok|
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|
+   * - ``404``
+     - |response code 404 not found|

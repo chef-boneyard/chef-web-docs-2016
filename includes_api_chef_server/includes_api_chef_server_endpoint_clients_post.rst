@@ -13,7 +13,7 @@ This method has no parameters.
 
 with a request body that looks something like:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "name": "name_of_API_client",
@@ -26,7 +26,7 @@ where ``name_of_API_client`` is the name of the |chef api client| to be created 
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "uri": "http://localhost:4000/clients/monkeypants",
@@ -42,10 +42,10 @@ Store the private key in a safe place. It will be required later (along with the
    * - Response Code
      - Description
    * - ``201``
-     - The |chef api client| was created.
+     - |response code 201 created|
    * - ``401``
-     - Unauthorized. The user which made the request is not a recognized user.
+     - |response code 401 unauthorized|
    * - ``403``
-     - Forbidden. The user which made the request is not authorized to create a |chef api client|.
+     - |response code 403 forbidden|
    * - ``409``
-     - Conflict. The |chef api client| already exists.
+     - |response code 409 conflict|

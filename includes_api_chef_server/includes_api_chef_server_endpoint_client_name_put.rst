@@ -13,7 +13,7 @@ This method has no parameters.
 
 with a request body that looks something like:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "name": "monkeypants",
@@ -27,7 +27,7 @@ where ``private_key`` (when ``true``) will generate a new RSA private key for th
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "name": "monkeypants",
@@ -42,10 +42,10 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful.
+     - |response code 200 ok|
    * - ``401``
-     - Unauthorized. The user which made the request is not a recognized user.
+     - |response code 401 unauthorized|
    * - ``403``
-     - Forbidden. The user which made the request is not authorized to update the |chef api client|.
+     - |response code 403 forbidden|
    * - ``404``
-     - Not found. The |chef api client| does not exist.
+     - |response code 404 not found|

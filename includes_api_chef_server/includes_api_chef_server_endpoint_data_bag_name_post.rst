@@ -13,7 +13,7 @@ This method has no parameters.
 
 with a request body that looks something like:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "id": "adam",
@@ -33,10 +33,10 @@ This method has no response body.
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful.
+     - |response code 200 ok|
    * - ``401``
-     - Unauthorized. The user which made the request is not allowed to create the data bag item.
+     - |response code 401 unauthorized|
    * - ``404``
-     - Not found. The data bag in which the data bag item is to be created does not exist.
+     -  |response code 404 not found|
    * - ``409``
-     - Conflict. The data bag already exists.
+     - |response code 409 conflict|

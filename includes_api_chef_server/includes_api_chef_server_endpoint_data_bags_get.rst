@@ -15,7 +15,7 @@ This method has no parameters.
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "users": "http://localhost:4000/data/users",
@@ -31,4 +31,4 @@ shown as a list of key:value pairs, where (in the example above) ``users`` and `
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful.
+     - |response code 200 ok|

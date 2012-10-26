@@ -1,36 +1,40 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The POST method is used to XXXXX.
+The POST method is used to create a new role on the |chef server|.
 
 This method has no parameters.
-
-OR
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-   * - ``xxxxx``
-     - xxxxx.
-   * - ``xxxxx``
-     - xxxxx.
 
 **Request**
 
 .. code-block:: ruby
 
-   XXXXX
+   POST /roles
+
+with a request body that looks something like:
+
+.. code-block:: javascript
+
+   {
+     "name": "webserver",
+     "chef_type": "role",
+     "json_class": "Chef::Role",
+     "default_attributes": {},
+     "description": "A webserver",
+     "run_list": [
+       "recipe[unicorn]",
+       "recipe[apache2]"
+     ],
+     "override_attributes": {}
+   }
 
 **Response**
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
-   xxxxx
+   { "uri": "http://localhost:4000/roles/webserver" }
 
 .. list-table::
    :widths: 200 300
@@ -38,10 +42,7 @@ The response will return something like the following:
 
    * - Response Code
      - Description
-   * - ``200``
-     - The request was successful. The xxxxx.
-   * - ``400``
-     - The request was unsuccessful. The xxxxx. For example:
-       ::
-
-          xxxxx
+   * - ``201``
+     - |response code 200 ok|
+   * - ``409``
+     - |response code 409 conflict|

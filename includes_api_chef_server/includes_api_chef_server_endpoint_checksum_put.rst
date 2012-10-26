@@ -24,6 +24,6 @@ This method has no response body.
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful.
+     - |response code 200 ok|
    * - ``400``
-     - The contents of the file do not have the correct checksum.
+     - |response code 400 checksum|

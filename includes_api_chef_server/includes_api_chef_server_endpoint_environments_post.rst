@@ -1,36 +1,36 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The POST method is used to XXXXX.
+The POST method is used to create a new environment.
 
 This method has no parameters.
-
-OR
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-   * - ``xxxxx``
-     - xxxxx.
-   * - ``xxxxx``
-     - xxxxx.
 
 **Request**
 
 .. code-block:: ruby
 
-   XXXXX
+   POST /environments
+
+with a request body that looks something like:
+
+.. code-block:: javascript
+
+   {
+     "name": "dev",
+     "attributes": {},
+     "json_class": "Chef::Environment",
+     "description": "",
+     "cookbook_versions": {},
+     "chef_type": "environment"
+   }
 
 **Response**
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
-   xxxxx
+   { "uri": "http://localhost:4000/environments/dev" }
 
 .. list-table::
    :widths: 200 300
@@ -38,10 +38,7 @@ The response will return something like the following:
 
    * - Response Code
      - Description
-   * - ``200``
-     - The request was successful. The xxxxx.
-   * - ``400``
-     - The request was unsuccessful. The xxxxx. For example:
-       ::
-
-          xxxxx
+   * - ``201``
+     - |response code 201 created|
+   * - ``409``
+     - |response code 409 conflict|

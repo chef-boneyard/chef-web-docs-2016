@@ -32,7 +32,7 @@ OR
 
 The response contains the total number of rows that match the request and will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
     "total": 1,
@@ -57,6 +57,6 @@ The response contains the total number of rows that match the request and will r
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful.
+     - |response code 200 ok|
    * - ``404``
-     - Not found. The search index does not exist.
+     - |response code 404 not found|

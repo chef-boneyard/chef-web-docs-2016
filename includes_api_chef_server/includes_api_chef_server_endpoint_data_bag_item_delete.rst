@@ -17,7 +17,7 @@ This method has no request body.
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "id": "adam",
@@ -33,8 +33,8 @@ where the key-value pairs represent the last state of the data bag item.
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful.
+     - |response code 200 ok|
    * - ``401``
-     - Unauthorized. The user which made the request is not allowed to delete the data bag item.
+     - |response code 401 unauthorized|
    * - ``404``
-     - Not found. The data bag item does not exist.
+     - |response code 404 not found|

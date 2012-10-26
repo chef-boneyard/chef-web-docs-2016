@@ -1,36 +1,48 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The POST method is used to XXXXX.
+The POST method is used to return a hash of the cookbooks and cookbook versions (including all dependencies) that are required by the run_list array. Version constraints may be specified using the ``@`` symbol after the cookbook name as a delimiter.
 
 This method has no parameters.
-
-OR
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Parameter
-     - Description
-   * - ``xxxxx``
-     - xxxxx.
-   * - ``xxxxx``
-     - xxxxx.
 
 **Request**
 
 .. code-block:: ruby
 
-   XXXXX
+   POST /environments/:environment_id/cookbook_versions
+
+with a request body that looks something like:
+
+.. code-block:: javascript
+
+   rest.post_rest("environments/_default/cookbook_versions", 
+     {:run_list => 
+       [
+         "zed@0.0.1",
+         "bar",
+         "mysql",
+         "gem",
+         "nginx@0.99.2",
+         "cron",
+         "foo"
+       ] 
+     }).keys
+     => [
+          "mysql",
+          "runit",
+          "zed",
+          "cron",
+          "openssl",
+          "gem",
+          "nginx",
+          "foo",
+          "bar",
+          "build-essential"
+        ]
 
 **Response**
 
-The response will return something like the following:
-
-.. code-block:: ruby
-
-   xxxxx
+This method has no response body.
 
 .. list-table::
    :widths: 200 300
@@ -39,9 +51,4 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. The xxxxx.
-   * - ``400``
-     - The request was unsuccessful. The xxxxx. For example:
-       ::
-
-          xxxxx
+     - |response code 200 ok|

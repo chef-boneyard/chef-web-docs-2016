@@ -17,7 +17,7 @@ This method has no request body.
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "node": "http://localhost:4000/search/node",
@@ -33,4 +33,4 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful.
+     - |response code 200 ok|
