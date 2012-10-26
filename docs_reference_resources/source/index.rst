@@ -1770,7 +1770,7 @@ Examples
 
 chef_handler
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_handler.rst
+.. include:: ../../includes_handler/includes_handler.rst
 
 .. include:: ../../includes_resources/includes_resource_lwrp_chef_handler.rst
 

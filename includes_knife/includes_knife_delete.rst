@@ -13,5 +13,4 @@ This sub-command has the following syntax::
 This sub-command has the following options:
 
 ``--[no-]recurse``
-   Use ``--no-recurse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default. **jamescott: CHANGED DELETE, DIFF, DOWNLOAD, AND UPLOAD TO BE --no-recurse. PLEASE CONFIRM THAT IS CORRECT AND THEN I CAN DELETE THIS NOTE. IF THAT IS CORRECT, ALSO TWO OF THE SUBCOMMANDS HAVE TYPOS IN THE CODE**
-
+   Use ``--no-recurse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default.

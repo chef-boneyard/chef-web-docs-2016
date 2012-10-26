@@ -65,13 +65,15 @@ Common Options
 bootstrap
 =====================================================
 
-.. include:: ../../includes/includes_chef_bootstrap.rst
+.. include:: ../../includes_chef/includes_chef_bootstrap.rst
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
 
 client
 =====================================================
+
+.. include:: ../../includes_security/includes_security_chef_validator.rst
 
 .. include:: ../../includes_knife/includes_knife_client.rst
    
@@ -345,7 +347,7 @@ recipe list
 role
 =====================================================
 
-.. include:: ../../includes/includes_chef_role.rst
+.. include:: ../../includes_role/includes_role.rst
 
 .. include:: ../../includes_knife/includes_knife_role.rst
 
@@ -404,7 +406,7 @@ status
 tag
 =====================================================
 
-.. include:: ../../includes/includes_chef_tags.rst
+.. include:: ../../includes_chef/includes_chef_tags.rst
 
 .. include:: ../../includes_knife/includes_knife_tag.rst
 

@@ -17,5 +17,5 @@ This sub-command has the following options:
    Use ``--no-pretty`` to disable |prettyprint| output for |json|. |prettyprint| output is enabled by default.
 
 ``-m METHOD``, ``--method METHOD``
-   The request method: ``DELETE``, ``GET``, ``POST``, or ``PUT``.
+   The request method: ``DELETE``, ``GET``, ``POST``, or ``PUT``. Default value: ``GET``.
 

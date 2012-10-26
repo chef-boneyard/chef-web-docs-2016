@@ -30,7 +30,7 @@ Cloud vs. Physical Nodes
 
 |chef client|
 =====================================================
-.. include:: ../../includes/includes_chef_client.rst
+.. include:: ../../includes_chef/includes_chef_client.rst
 
 |ssl| Certificates
 -----------------------------------------------------
@@ -40,11 +40,11 @@ Cloud vs. Physical Nodes
 
 Signed Headers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_security_signed_header_authentication.rst
+.. include:: ../../includes_security/includes_security_signed_header_authentication.rst
 
 |chef validator|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_security_chef_validator.rst
+.. include:: ../../includes_security/includes_security_chef_validator.rst
 
 
 The |chef| Run
@@ -54,60 +54,56 @@ SEE INDEX_NEW. NEEDS UPDATING AND NEW DIAGRAM. IN JAMES' QUEUE.
 
 |ohai|
 =====================================================
-.. include:: ../../includes/includes_ohai.rst
+.. include:: ../../includes_ohai/includes_ohai.rst
 
 Automatic Attributes
 -----------------------------------------------------
-.. include:: ../../includes/includes_ohai_automatic_attribute.rst
+.. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
 
 |ohai| Attribute List
 -----------------------------------------------------
-The following attributes are those which are re-written with each Ohai run, so they should be recognized as being unmodifiable when considering the use of attributes:
-
-.. code-block:: bash
-
-   ohai$ grep -R "provides" -h lib/ohai/plugins|sed 's/^\s*//g'|sed "s/\\\"/\'/g"|sort|uniq|grep ^provides
+.. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
 Handlers
 =====================================================
-.. include:: ../../includes/includes_chef_handler.rst
+.. include:: ../../includes_handler/includes_handler.rst
 
 Handler Properties
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_handler_properties.rst
+.. include:: ../../includes_handler/includes_handler_properties.rst
 
 Writing a Handler
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_handler_write.rst
+.. include:: ../../includes_handler/includes_handler_write.rst
 
 Example: Send email when a |Chef| run fails
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_write_example_send_email.rst
+.. include:: ../../includes_handler/includes_handler_write_example_send_email.rst
 
 Installing and Configuring a Handler
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_handler_install.rst
+.. include:: ../../includes_handler/includes_handler_install.rst
 
 |lwrp chef handler|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_install_from_cookbook.rst
+.. include:: ../../includes_handler/includes_handler_install_from_cookbook.rst
 
 Manual Install
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_install_manual.rst
+.. include:: ../../includes_handler/includes_handler_install_manual.rst
 
 Distributing Handlers
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_handler_distribute.rst
+.. include:: ../../includes_handler/includes_handler_distribute.rst
 
 Available Handlers
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_handler_available.rst
+.. include:: ../../includes_handler/includes_handler_available.rst
 
 |opscode|: JsonFile Handler
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_available_jsonfile.rst
+.. include:: ../../includes_handler/includes_handler_available_jsonfile.rst
 
 Community: Open Source Handlers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_available_community.rst
+.. include:: ../../includes_handler/includes_handler_available_community.rst
