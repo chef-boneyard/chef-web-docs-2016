@@ -28,9 +28,9 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. The cookbook was posted to the |api cookbooks site|.
+     - |response code 200 ok| The cookbook was posted to the |api cookbooks site|.
    * - ``400``
-     - The request was unsuccessful. The cookbook was not posted to the |api cookbooks site|. For example:
+     - |response code 400 unsuccessful| The cookbook was not posted to the |api cookbooks site|. For example:
        ::
 
           {

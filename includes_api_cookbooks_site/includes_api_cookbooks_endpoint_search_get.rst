@@ -57,4 +57,4 @@ The response will return a list of cookbooks by name and description and will re
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. One or more cookbooks were returned as a result of the search query.
+     - |response code 200 ok| One or more cookbooks were returned as a result of the search query.

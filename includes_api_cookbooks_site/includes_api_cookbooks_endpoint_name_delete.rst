@@ -30,9 +30,9 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. The cookbook was deleted.
+     - |response code 200 ok| The cookbook was deleted.
    * - ``400``
-     - The request was unsuccessful. The requested cookbook does not exist. For example:
+     - |response code 400 unsuccessful| The requested cookbook does not exist. For example:
        ::
 
           {

@@ -51,9 +51,9 @@ If a cookbook is deprecated, that status is noted by the ``deprecated`` field (b
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. The requested cookbook exists.
+     - |response code 200 ok| The requested cookbook exists.
    * - ``400``
-     - The request was unsuccessful. The requested cookbook does not exist. For example:
+     - |response code 400 unsuccessful| The requested cookbook does not exist. For example:
        ::
 
           {

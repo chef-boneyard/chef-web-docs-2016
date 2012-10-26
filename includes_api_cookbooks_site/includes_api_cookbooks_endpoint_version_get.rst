@@ -41,9 +41,9 @@ The response will return details for a cookbook version, including the license u
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. The requested cookbook exists.
+     - |response code 200 ok| The requested cookbook exists.
    * - ``400``
-     - The request was unsuccessful. The requested cookbook does not exist. For example:
+     - |response code 400 unsuccessful| The requested cookbook does not exist. For example:
        ::
 
           {
