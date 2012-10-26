@@ -40,7 +40,7 @@ This set of topics is collection of all documentation for |chef|, including |che
      - 
    * - System Requirements
      - 
-     - Chef Server API
+     - :doc:`api_chef_server`
      - 
    * - 
      - 
@@ -76,4 +76,4 @@ This set of topics is collection of all documentation for |chef|, including |che
 
    resource
 
-
+   api_chef_server
