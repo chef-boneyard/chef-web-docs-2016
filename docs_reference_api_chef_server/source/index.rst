@@ -12,7 +12,7 @@ Chef Server API
 
 /clients -- DONE
 =====================================================
-.. include:: ../../includes/includes_chef_client.rst
+.. include:: ../../includes_chef/includes_chef_client.rst
 
 .. note:: |note api chef server manage clients with knife|
 
@@ -170,7 +170,7 @@ GET -- NOT DONE
 
 /roles -- NOT DONE
 =====================================================
-.. include:: ../../includes/includes_chef_role.rst
+.. include:: ../../includes_role/includes_role.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles.rst
 

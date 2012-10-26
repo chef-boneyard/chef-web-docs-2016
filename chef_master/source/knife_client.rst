@@ -8,6 +8,7 @@ client
 .. include:: ../../swaps/swap_notes.txt
 .. include:: ../../swaps/swap_resources.txt
 
+.. include:: ../../includes_security/includes_security_chef_validator.rst
 
 .. include:: ../../includes_knife/includes_knife_client.rst
    

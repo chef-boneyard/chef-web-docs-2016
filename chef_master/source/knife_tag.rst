@@ -8,7 +8,7 @@ tag
 .. include:: ../../swaps/swap_notes.txt
 .. include:: ../../swaps/swap_resources.txt
 
-.. include:: ../../includes/includes_chef_tags.rst
+.. include:: ../../includes_chef/includes_chef_tags.rst
 
 .. include:: ../../includes_knife/includes_knife_tag.rst
 

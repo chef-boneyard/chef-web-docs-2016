@@ -6,13 +6,13 @@ Chef Essentials
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_resources.txt
 
-.. include:: ../../includes/includes_chef.rst
+.. include:: ../../includes_chef/includes_chef.rst
 
 The following diagram shows the relationships between the various components of a |chef| deployment, including the nodes, server, and workstations, and the various elements that work together to provide |chef| the information that it needs to automate the infrastructure in your environment.
 
 .. image:: ../../images/overview_chef_draft.png
 
-.. include:: ../../includes/includes_chef_key_elements.rst
+.. include:: ../../includes_chef/includes_chef_key_elements.rst
 
 The following sections discuss these elements (and their various sub-components) in more detail:
  
@@ -58,7 +58,7 @@ H2 -- Cloud vs. Physical Nodes -- DONE
 
 H2 -- |chef client| -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_client.rst
+.. include:: ../../includes_chef/includes_chef_client.rst
 
 H3 -- |ssl| Certificates -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -68,78 +68,74 @@ H3 -- |ssl| Certificates -- DONE
 
 H4 -- Signed Headers -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_security_signed_header_authentication.rst
+.. include:: ../../includes_security/includes_security_signed_header_authentication.rst
 
 H4 -- |chef validator| -- DONEish
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_security_chef_validator.rst
+.. include:: ../../includes_security/includes_security_chef_validator.rst
 
 
 H2 -- The |chef| Run -- FIRST DRAFT
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_client_run.rst
+.. include:: ../../includes_chef/includes_chef_client_run.rst
 
 
 H2 -- |ohai| -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_ohai.rst
+.. include:: ../../includes_ohai/includes_ohai.rst
 
 H3 -- Automatic Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_ohai_automatic_attribute.rst
+.. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
 
 H3 -- |ohai| Attribute List -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following attributes are those which are re-written with each Ohai run, so they should be recognized as being unmodifiable when considering the use of attributes:
-
-.. code-block:: bash
-
-   ohai$ grep -R "provides" -h lib/ohai/plugins|sed 's/^\s*//g'|sed "s/\\\"/\'/g"|sort|uniq|grep ^provides
+.. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
 
 H2 -- Handlers -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_handler.rst
+.. include:: ../../includes_handler/includes_handler.rst
 
 H3 -- Handler Properties -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_properties.rst
+.. include:: ../../includes_handler/includes_handler_properties.rst
 
 H3 -- Writing a Handler -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_write.rst
+.. include:: ../../includes_handler/includes_handler_write.rst
 
 H4 -- Example: Send email when |Chef| run fails -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_handler_write_example_send_email.rst
+.. include:: ../../includes_handler/includes_handler_write_example_send_email.rst
 
 H3 -- Installing and Configuring a Handler -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_install.rst
+.. include:: ../../includes_handler/includes_handler_install.rst
 
 H4 -- |lwrp chef handler| -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_handler_install_from_cookbook.rst
+.. include:: ../../includes_handler/includes_handler_install_from_cookbook.rst
 
 H4 -- Manual Install -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_handler_install_manual.rst
+.. include:: ../../includes_handler/includes_handler_install_manual.rst
 
 H3 -- Distributing Handlers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_distribute.rst
+.. include:: ../../includes_handler/includes_handler_distribute.rst
 
 H3 -- Available Handlers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_handler_available.rst
+.. include:: ../../includes_handler/includes_handler_available.rst
 
 H4 -- |opscode|: JsonFile Handler -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_handler_available_jsonfile.rst
+.. include:: ../../includes_handler/includes_handler_available_jsonfile.rst
 
 H4 --  Community: Open Source Handlers -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_handler_available_community.rst
+.. include:: ../../includes_handler/includes_handler_available_community.rst
 
 
 
@@ -148,7 +144,7 @@ H4 --  Community: Open Source Handlers -- DONE
 
 H1 -- Workstations -- DONE
 =====================================================
-.. include:: ../../includes/includes_chef_workstation.rst
+.. include:: ../../includes_workstation/includes_workstation.rst
 
 The following sections discuss these elements (and their various sub-components) in more detail:
 
@@ -158,25 +154,25 @@ The following sections discuss these elements (and their various sub-components)
 
 H2 -- Repository -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_repository.rst
+.. include:: ../../includes_repository/includes_repository.rst
 
 H3 -- Directory Structure -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_repository_directory.rst
+.. include:: ../../includes_repository/includes_repository_directory.rst
 
 H4 -- certificates/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_repository_directory_certificates.rst
+.. include:: ../../includes_repository/includes_repository_directory_certificates.rst
 
 .. include:: ../../steps/step_repository_certificate_generate.rst
 
 H4 -- .chef/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_repository_directory_chef.rst
+.. include:: ../../includes_repository/includes_repository_directory_chef.rst
 
 H4 -- config/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_repository_directory_config.rst
+.. include:: ../../includes_repository/includes_repository_directory_config.rst
 
 The |chef| repository uses two configuration files: ``rake.rb`` (required) and ``knife.rb`` (optional):
 
@@ -187,15 +183,15 @@ The |chef| repository uses two configuration files: ``rake.rb`` (required) and `
    * - File
      - Description
    * - knife.rb
-     - .. include:: ../../includes/includes_config_rb_knife.rst
+     - .. include:: ../../includes_config/includes_config_rb_knife.rst
    * - rake.rb
-     - .. include:: ../../includes/includes_config_rb_rake.rst
+     - .. include:: ../../includes_config/includes_config_rb_rake.rst
 
-       .. include:: ../../includes/includes_rake_tasks_included_in_chef_libraries.rst
+       .. include:: ../../includes_chef/includes_rake_tasks_included_in_chef_libraries.rst
 
 H4 -- cookbooks/ -- DONE -- THIS IS THE COOKBOOK CACHE!
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_repository_directory_cookbooks.rst
+.. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
 .. include:: ../../steps/step_repository_cookbooks_configure_settings.rst
 
@@ -207,13 +203,13 @@ H4 -- cookbooks/ -- DONE -- THIS IS THE COOKBOOK CACHE!
 
 **jamescott: BELOW IS THE COOKBOOK CACHED DESCRIPTION. COMPARE THIS BELOW TO WHAT IS ABOVE AND INTEGRATE, REWRITE, MAKE NECESSARY CHANGES**
 
-../../includes/includes_chef_node_cookbook_cached.rst
+../../includes_node/includes_node_cookbook_cached.rst
 
 **jamescott: We need to say something about the fact that the cookbooks are uploaded to the Chef server and are then (from there) propagated across nodes when and where required (and cached on each of the nodes, refreshed as required).**
 
 H4 -- data_bags/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_repository_directory_data_bags.rst
+.. include:: ../../includes_repository/includes_repository_directory_data_bags.rst
 
 .. include:: ../../steps/step_repository_data_bags_add_subdirectory.rst
 
@@ -221,13 +217,13 @@ H4 -- data_bags/ -- DONE
 
 H4 -- environments/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_repository_directory_environments.rst
+.. include:: ../../includes_repository/includes_repository_directory_environments.rst
 
 .. include:: ../../steps/step_repository_roles_upload_environment.rst
 
 H4 -- roles/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_repository_directory_roles.rst 
+.. include:: ../../includes_repository/includes_repository_directory_roles.rst 
 
 .. include:: ../../steps/step_repository_roles_upload_role.rst
 
@@ -254,21 +250,21 @@ H2 -- Knife -- DONE
 
 H3 -- Sub-commands -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_knife_subcommand.rst
+.. include:: ../../includes_knife/includes_knife_subcommand.rst
 
 H3 -- Plugins -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_knife_plugin.rst
+.. include:: ../../includes_knife/includes_knife_plugin.rst
 
 H2 -- Ruby -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_ruby.rst
+.. include:: ../../includes_ruby/includes_ruby.rst
 
-.. include:: ../../includes/includes_ruby_dsl.rst
+.. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
 H3 -- Just Enough Ruby for Chef -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_ruby_just_enough.rst
+.. include:: ../../includes_ruby/includes_ruby_just_enough.rst
 
 
 
@@ -278,7 +274,7 @@ H3 -- Just Enough Ruby for Chef -- DONE
 
 H1 -- The Chef Server
 =====================================================
-.. include:: ../../includes/includes_chef_server.rst
+.. include:: ../../includes_chef/includes_chef_server.rst
 
 There are three types of |chef| servers:
 
@@ -289,15 +285,15 @@ There are three types of |chef| servers:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_chef_hosted.png
-     - .. include:: ../../includes/includes_chef_hosted.rst
+     - .. include:: ../../includes_chef/includes_chef_hosted.rst
 
        |chef hosted| evolved out of a need for an infrastructure management tool to be built around the notion of API primitives. By using an API to talk to a cloud provider (such as |amazon vpc|, |windows azure|, or |rackspace|), it allows the freedom to think of those primitives as building blocks. |chef hosted| evolved out of this idea. |chef| only needs to know about the desired state, how it should get there, and what the proper functionality of that desired state should be.
    * - .. image:: ../../images/icon_chef_private.png
-     - .. include:: ../../includes/includes_chef_private.rst
+     - .. include:: ../../includes_chef/includes_chef_private.rst
 
        |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located within the organization's firewall. |chef private| is the same as |chef hosted|. |chef hosted| is the largest |chef private| deployment in the world.
    * - NEED IMAGE FOR CHEF OPEN SERVER
-     - .. include:: ../../includes/includes_chef_open_source.rst
+     - .. include:: ../../includes_chef/includes_chef_open_source.rst
 
        |chef open server| is an open source version of the |chef server| that contains much of the same functionality as either |chef hosted| or |chef private|, but does not include support directly from |opscode|. **jamescott: AND?????**
 
@@ -306,7 +302,7 @@ H2 -- Policy
 -----------------------------------------------------
 MAYBE JUST PUT THIS IN THE INTRO SECTION OF THE CHEF SERVER? ENVIRONMENTS, DATA BAGS, AND ROLES DON'T HAVE TO BE A SUBSET OF A HEADER NAMED POLICY TO HAVE AN EFFECTIVE SET OF TOPICS ABOUT. PARAGRAPH INCLUDED FOR NOW.
 
-.. include:: ../../includes/includes_chef_policy.rst
+.. include:: ../../includes_chef/includes_chef_policy.rst
 
 H2 -- Environments -- DONE
 -----------------------------------------------------
@@ -322,7 +318,7 @@ H3 -- Environment Formats -- DONE
 
 H4 -- Ruby DSL -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_ruby_dsl.rst
+.. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
 .. include:: ../../includes_environment/includes_environment_format_ruby.rst
 
@@ -490,25 +486,25 @@ H3 -- Use Data Bags with |chef solo| -- DONE?
 
 H2 -- Roles -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_role.rst
+.. include:: ../../includes_role/includes_role.rst
 
 H3 -- Role Formats -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_role_formats.rst
+.. include:: ../../includes_role/includes_role_formats.rst
 
 H4 -- Ruby DSL -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_ruby_dsl.rst
+.. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
-.. include:: ../../includes/includes_chef_role_formats_ruby.rst
+.. include:: ../../includes_role/includes_role_formats_ruby.rst
 
 H4 -- JSON -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_role_formats_json.rst
+.. include:: ../../includes_role/includes_role_formats_json.rst
 
 H3 -- Role Attributes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_role_attribute.rst
+.. include:: ../../includes_role/includes_role_attribute.rst
 
 H4 -- Types -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -532,11 +528,11 @@ H4 -- Notation -- DONE
 
 H3 -- Manage Roles -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_role_manage.rst
+.. include:: ../../includes_role/includes_role_manage.rst
 
 Deleting Environments from a Role's Run-list -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes/includes_chef_role_manage_delete.rst
+.. include:: ../../includes_role/includes_role_manage_delete.rst
 
 
 H2 -- Node Objects
@@ -610,7 +606,7 @@ H3 -- Run-lists
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
 
-.. include:: ../../includes/includes_chef_role.rst
+.. include:: ../../includes_role/includes_role.rst
 
 H4 -- xxxxx
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -720,7 +716,7 @@ H4 -- Clients: -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **jamescott: need to check this for chef-client vs. NODE issues**
 
-.. include:: ../../includes/includes_chef_client.rst
+.. include:: ../../includes_chef/includes_chef_client.rst
 
 .. include:: ../../includes_search/includes_search_client.rst
 
@@ -751,7 +747,7 @@ THIS IS THE TOPIC THAT NEEDS TO BE ABOUT THE FOLLOWING:
 
 H2 -- Manager (Management Console) -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_manager.rst
+.. include:: ../../includes_chef/includes_chef_manager.rst
 
 **jamescott: My understanding is that the Chef 11 UI may be different and that I am going to wait until I see it to re-do that specific part of the helpz.**
 
@@ -771,7 +767,7 @@ H1 -- Cookbooks
 
 H2 -- Cookbooks Directory Structure -- DONE
 -----------------------------------------------------
-.. include:: ../../includes/includes_chef_repository_directory_cookbooks.rst
+.. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
 
 H2 -- Cookbook Attributes -- DONE
@@ -996,7 +992,7 @@ H2 -- Metadata -- DONE
 
 H3 -- |metadata rb| -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_config_rb_metadata.rst
+.. include:: ../../includes_config/includes_config_rb_metadata.rst
 
 H3 -- Error Messages -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1076,7 +1072,7 @@ H3 -- Other Recipe DSL Methods -- DONE, DEPRECATE?
 
 H3 -- Tags -- DONE, BUT WEAK
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes/includes_chef_tags.rst
+.. include:: ../../includes_chef/includes_chef_tags.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
 
@@ -1125,61 +1121,61 @@ The following resources are built into |chef|:
    * - Resource
      - Description
    * - |resource cookbook file|
-     - .. include:: ../../includes_resources/includes_resource_cookbook_file.rst
+     - |resource desc cookbook_file|
    * - |resource cron|
-     - .. include:: ../../includes_resources/includes_resource_cron.rst
+     - |resource desc cron|
    * - |resource deploy|
-     - .. include:: ../../includes_resources/includes_resource_deploy.rst
+     - |resource desc deploy|
    * - |resource directory|
-     - .. include:: ../../includes_resources/includes_resource_directory.rst
+     - |resource desc directory|
    * - |resource env|
-     - .. include:: ../../includes_resources/includes_resource_env.rst
+     - |resource desc env|
    * - |resource erlang call|
-     - .. include:: ../../includes_resources/includes_resource_erlang_call.rst
+     - |resource desc erlang_call|
    * - |resource execute|
-     - .. include:: ../../includes_resources/includes_resource_execute.rst
+     - |resource desc execute|
    * - |resource file|
-     - .. include:: ../../includes_resources/includes_resource_file.rst
+     - |resource desc file|
    * - |resource group|
-     - .. include:: ../../includes_resources/includes_resource_group.rst
+     - |resource desc group|
    * - |resource http request|
-     - .. include:: ../../includes_resources/includes_resource_http_request.rst
+     - |resource desc http_request|
    * - |resource ifconfig|
-     - .. include:: ../../includes_resources/includes_resource_ifconfig.rst
+     - |resource desc ifconfig|
    * - |resource link|
-     - .. include:: ../../includes_resources/includes_resource_link.rst
+     - |resource desc link|
    * - |resource log|
-     - .. include:: ../../includes_resources/includes_resource_log.rst
+     - |resource desc log|
    * - |resource mdadm|
-     - .. include:: ../../includes_resources/includes_resource_mdadm.rst
+     - |resource desc mdadm|
    * - |resource mount|
-     - .. include:: ../../includes_resources/includes_resource_mount.rst
+     - |resource desc mount|
    * - |resource ohai|
-     - .. include:: ../../includes_resources/includes_resource_ohai.rst
+     - |resource desc ohai|
    * - |resource package|
-     - .. include:: ../../includes_resources/includes_resource_package.rst       
+     - |resource desc package|     
    * - |resource powershell script|
-     - .. include:: ../../includes_resources/includes_resource_powershell_script.rst
+     - |resource desc powershell_script|
    * - |resource remote directory|
-     - .. include:: ../../includes_resources/includes_resource_directory.rst
+     - |resource desc remote_directory|
    * - |resource remote file|
-     - .. include:: ../../includes_resources/includes_resource_remote_file.rst
+     - |resource desc remote_file|
    * - |resource route|
-     - .. include:: ../../includes_resources/includes_resource_route.rst
+     - |resource desc route|
    * - |resource ruby block|
-     - .. include:: ../../includes_resources/includes_resource_ruby_block.rst
+     - |resource desc ruby_block|
    * - |resource scm|
-     - .. include:: ../../includes_resources/includes_resource_scm.rst
+     - |resource desc scm|
    * - |resource script|
-     - .. include:: ../../includes_resources/includes_resource_script.rst
+     - |resource desc script|
    * - |resource service|
-     - .. include:: ../../includes_resources/includes_resource_service.rst
+     - |resource desc service|
    * - |resource template|
-     - .. include:: ../../includes_resources/includes_resource_template.rst
+     - |resource desc template|
    * - |resource user|
-     - .. include:: ../../includes_resources/includes_resource_user.rst
+     - |resource desc user|
    * - |resource yum package|
-     - .. include:: ../../includes_resources/includes_resource_yum.rst
+     - |resource desc yum|
 
 H3 -- Platform Providers -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

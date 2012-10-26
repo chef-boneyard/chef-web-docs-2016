@@ -9,7 +9,7 @@ role
 .. include:: ../../swaps/swap_resources.txt
 
 
-.. include:: ../../includes/includes_chef_role.rst
+.. include:: ../../includes_role/includes_role.rst
 
 .. include:: ../../includes_knife/includes_knife_role.rst
 
