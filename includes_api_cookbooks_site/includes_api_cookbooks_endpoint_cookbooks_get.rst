@@ -68,4 +68,4 @@ The response will return the name of the cookbook, a description, URI, the name 
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. One or more cookbooks were returned as a result of the search query.
+     - |response code 200 ok| One or more cookbooks were returned as a result of the search query.
