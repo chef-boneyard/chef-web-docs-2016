@@ -15,7 +15,7 @@ This method has no parameters.
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "chef-webui": "http://localhost:4000/clients/chef-webui",
@@ -30,4 +30,4 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful.
+     - |response code 200 ok|

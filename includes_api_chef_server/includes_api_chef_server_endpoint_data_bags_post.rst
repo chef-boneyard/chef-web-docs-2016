@@ -13,7 +13,7 @@ This method has no parameters.
 
 with a request body that contains the key:value pair for the data bag and looks something like:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
      "name": "users"
@@ -25,7 +25,7 @@ where (in the example above) ``name`` is the key and "users" is the value.
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {
       "uri" => "http://localhost:4000/data/users"
@@ -38,8 +38,8 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``201``
-     - Created. The request was successful.
+     - |response code 201 created|
    * - ``401``
-     - Conflict. The data bag already exists.
+     - |response code 401 conflict|
    * - ``409``
-     - Unauthorized. The user which made the request is not authorized to create a data bag.
+     - |response code 409 unauthorized|

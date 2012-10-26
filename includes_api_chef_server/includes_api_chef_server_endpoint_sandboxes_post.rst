@@ -13,7 +13,7 @@ This method has no parameters.
 
 with a request body that looks something like:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {"checksums": {
      "385ea5490c86570c7de71070bce9384a":null,
@@ -26,7 +26,7 @@ with a request body that looks something like:
 
 The response will return something like the following:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {"uri":
     "https://api.opscode.com/organizations/testorg/sandboxes/eff7b6f8b3ef44c6867216662d5eeb5f",
@@ -54,6 +54,6 @@ The response will return something like the following:
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. A hash that maps each checksum to a hash that contains a boolean ``needs_upload`` field and a URL if ``needs_upload`` is set to ``true``.
+     - |response code 200 ok| A hash that maps each checksum to a hash that contains a boolean ``needs_upload`` field and a URL if ``needs_upload`` is set to ``true``.
    * - ``400``
-     - Bad request. The request was unsuccessful. The payload does not contain a well-formed ``checksums`` parameter that is a hash containing a key for each checksum.
+     - |response code 400 bad request| The payload does not contain a well-formed ``checksums`` parameter that is a hash containing a key for each checksum.

@@ -13,7 +13,7 @@ This method has no parameters.
 
 with a request body that looks something like:
 
-.. code-block:: ruby
+.. code-block:: javascript
 
    {"is_completed":true}
 
@@ -28,8 +28,8 @@ This method has no response body.
    * - Response Code
      - Description
    * - ``200``
-     - The request was successful. All checksums have been uploaded and the contents have the proper checksums.
+     - |response code 200 ok|
    * - ``400``
-     - Bad request. The sandbox has already been committed. Or one (or more) of the checksums were not properly uploaded.
+     - |response code 400 bad request|
    * - ``404``
-     - Not found. The sandbox does not exist.
+     - |response code 404 not found|
