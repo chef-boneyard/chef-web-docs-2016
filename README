@@ -2,28 +2,35 @@ This is the readme for chef-docs.
 
 Notes about this repository (for building your own local copy):
 
--- All documents will be in the folders that begin with chef_ (for top-level, release-level document sets), docs_ (for targeted docs and/or reference sets), and man_ (for man page outputs)
+-- All document deliverables will be in the folders that begin with chef_ (for top-level, release-level document sets), docs_ (for targeted docs and/or reference sets), and man_ (for man page outputs)
 -- All documents may have dependencies on files that exist in images/, includes/, swaps/, and steps/ directories
 -- All documents build using Sphinx; build the index file at the root of any folder
--- Lots of substitutions are present in these files; build the files to see the substitutions
+-- Lots of substitutions are present in these files; build the files to see the substitutions. Follow the paths in the source to find the root locations.
+-- This repository will be versioned according to the version of the various Chef releases over time.
 
 Notes about the includes folders:
 
--- includes_knife: this is where the actual documentation for Knife lives. From here, these topics end up in the various man_ outputs, the docs_reference_knife (a large, standalone, single-page reference for Knife), and will be included in the chef_ folders
--- includes_resources: the actual documentation for the core resources in Chef, and also ~80 lightweight resources that are in Opscode-maintained cookbooks
+-- They should be semantic to what they contain, i.e. "includes_knife" contains all of the files about Knife and "includes_resources" contains all of the files about Resources (and Providers). The "includes_chef" folder is still pending some changes (some of the files in this folder will be moved out at some point soon).
+-- Includes files comprise about 90% of the content that ends up in the actual built files. It is done this way to keep the actual source content in as few actual files as possible (in this case -- 1 file), but still be able to provide that file in any location or any build as required or needed.
 
 Notes about the swaps folders:
+Be careful when making changes to the swaps_ files and make sure any changes made there are the right changes for wherever that string ends up in the docs.
 
 -- swap_descriptions: a list of descriptions that exist across the Chef documents, located here to ensure that the same description exists in the same way across all Chef documents and to promote parity of descriptions across the various outputs
 -- swap_names: a list of proper names (Opscode and 3rd party) to help ensure that these names are used consistently across all documents, and to track names that may require copyright/trademark notation in the future
 -- swap_resources: a list of descriptions that apply specifically to resources, eventually to be merged and combined with swap_descriptions
+-- swap_notes: a list of notes that apply across the doc set. While many notes are specific to topics, some notes may live in many places. It's just better to consolidate them early, rather than wonder where they might be hiding later.
+-- swap_http: a list of links to publicly-accessible URLs that are included in the docs.
+
+
 
 The following documents are in the repository:
 
--- Chef Master: the "everything" doc set that will be the initial root for docs.opscode.com
+-- Chef Master: the "everything" doc set that will be the initial root for docs.opscode.com and will (over time) attempt to include every doc in this repository, in part for doc validation purposes.
 -- Chef Overview: docs_overview_chef
--- Chef Essentials: docs_essentials << DRAFT COMPLETE. Will probably change a lot as it's reviewed and may well be broken down into essentials_nodes, essentials_cookbooks, essentials_workstation, essentials_server types of groupings. Also, "What is a Chef Run?" is still in the queue (by design).
--- Chef Cookbooks Site API: docs_reference_cookbooks_site
+-- Chef Essentials: docs_essentials << DRAFT COMPLETE. Will probably change a lot as it's reviewed and may well be broken down into essentials_nodes, essentials_cookbooks, essentials_workstation, essentials_server types of groupings. Also, "What is a Chef Run?" is now in a draft state.
+-- Chef Cookbooks Site API: docs_reference_api_cookbooks_site
+-- Chef Server API: docs_reference_api_chef_server << IN PROGRESS
 -- Knife Command Line Reference: docs_reference_knife
 -- Knife Man Page References: man_knife_ ... all is every sub-command and plugin in the same man page; overview is the introduction to Knife and the common options; the other names map to the corresponding plugin or sub-command.
 -- Resources and Providers Reference: docs_reference_resources
