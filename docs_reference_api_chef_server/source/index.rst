@@ -10,7 +10,7 @@ Chef Server API
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst
 
-/clients -- DONE
+/clients
 =====================================================
 .. include:: ../../includes_chef/includes_chef_client.rst
 
@@ -18,29 +18,29 @@ Chef Server API
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients.rst
 
-GET -- DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients_get.rst
 
-POST -- DONE
+POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_clients_post.rst
 
 
 
-/clients/CLIENT_NAME -- DONE
+/clients/CLIENT_NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name.rst
 
-DELETE -- DONE
+DELETE
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_delete.rst
 
-GET -- DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_get.rst
 
-PUT -- DONE
+PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_put.rst
 
@@ -81,54 +81,54 @@ PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_put.rst
 
-/data -- DONE
+/data
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags.rst
 
-GET -- DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_get.rst
 
-POST -- DONE
+POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_post.rst
 
 
-/data/DATA_BAG_NAME -- DONE
+/data/DATA_BAG_NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name.rst
 
-GET -- DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_get.rst
 
-POST -- DONE
+POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_post.rst
 
 
-/data/DATA_BAG_NAME/DATA_BAG_ITEM -- DONE
+/data/DATA_BAG_NAME/DATA_BAG_ITEM
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag_item.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item.rst
 
-DELETE -- DONE
+DELETE
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_delete.rst
 
-GET -- DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_get.rst
 
-PUT -- DONE
+PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_put.rst
 
 
-/nodes -- NOT DONE
+/nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
 
@@ -138,37 +138,37 @@ GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes_get.rst
 
-POST -- NOT DONE
+POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes_post.rst
 
 
-/nodes/NODE_NAME -- NOT DONE
+/nodes/NODE_NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name.rst
 
-DELETE -- NOT DONE
+DELETE
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_delete.rst
 
-GET -- NOT DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_get.rst
 
-PUT -- NOT DONE
+PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_put.rst
 
-/nodes/NODE_NAME/cookbooks -- NOT DONE
+/nodes/NODE_NAME/cookbooks
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_node.rst
 
-GET -- NOT DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_node_get.rst
 
 
-/roles -- NOT DONE
+/roles
 =====================================================
 .. include:: ../../includes_role/includes_role.rst
 
@@ -178,11 +178,11 @@ GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_get.rst
 
-POST -- NOT DONE
+POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_post.rst
 
-/roles/ROLE_NAME -- NOT DONE
+/roles/ROLE_NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name.rst
 
@@ -190,92 +190,92 @@ DELETE
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_delete.rst
 
-GET -- NOT DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_get.rst
 
-PUT -- NOT DONE
+PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_put.rst
 
-/environments -- NOT DONE
+/environments
 =====================================================
 .. include:: ../../includes_environment/includes_environment.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments.rst
 
-GET -- NOT DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_get.rst
 
-POST -- NOT DONE
+POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_post.rst
 
 
-/environments/ENVIRONMENT_NAME -- NOT DONE
+/environments/ENVIRONMENT_NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name.rst
 
-DELETE -- NOT DONE
+DELETE
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_delete.rst
 
-GET -- NOT DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_get.rst
 
-PUT -- NOT DONE
+PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_put.rst
 
-/environments/:environment_id/cookbooks -- NOT DONE
+/environments/:environment_id/cookbooks
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks.rst
 
-GET -- NOT DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst
 
 
-/environments/:environment_id/cookbook_versions -- NOT DONE
-===========================================================
+/environments/:environment_id/cookbook_versions
+=====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version.rst
 
-POST -- NOT DONE
+POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst
 
-/environments/:environment_id/cookbooks/COOKBOOK_NAME -- NOT DONE
-=================================================================
+/environments/:environment_id/cookbooks/COOKBOOK_NAME
+=====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name.rst
 
-GET -- NOT DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst
 
-/search -- DONE
+/search
 =====================================================
 .. include:: ../../includes_search/includes_search.rst
 
 includes_api_chef_server_endpoint_search.rst
 
-GET -- DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_search_get.rst
 
 
-/search/INDEX -- DONE
+/search/INDEX
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index.rst
 
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
-GET -- DONE
+GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst
 
-/sandboxes -- DONE
+/sandboxes
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes.rst
 
@@ -283,18 +283,18 @@ POST -- DONE
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes_post.rst
 
-/sandboxes/SANDBOX_ID -- DONE
+/sandboxes/SANDBOX_ID
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandbox_id.rst
 
-PUT -- DONE
+PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandbox_id_put.rst
 
-/sandboxes/SANDBOX_ID/CHECKSUM -- DONE
+/sandboxes/SANDBOX_ID/CHECKSUM
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_checksum.rst
 
-PUT -- DONE
+PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_checksum_put.rst
