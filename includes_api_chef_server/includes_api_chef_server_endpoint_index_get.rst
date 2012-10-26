@@ -3,10 +3,6 @@
 
 The GET method is used to return all of the data that matches the query in the GET request.
 
-This method has no parameters.
-
-OR
-
 .. list-table::
    :widths: 200 300
    :header-rows: 1
