@@ -3,7 +3,9 @@ Chef Essentials
 =====================================================
  
 .. include:: ../../swaps/swap_descriptions.txt
+.. include:: ../../swaps/swap_http.txt
 .. include:: ../../swaps/swap_names.txt
+.. include:: ../../swaps/swap_notes.txt
 .. include:: ../../swaps/swap_resources.txt
 
 .. include:: ../../includes_chef/includes_chef.rst
@@ -63,8 +65,6 @@ H2 -- |chef client| -- DONE
 H3 -- |ssl| Certificates -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_certificate.rst
-
-**jamescott: someone needs to explain how the security works between the node and the server. I know it uses SSL and that signed headers + private/public keys are used. This (probably) needs to be excised from the Chef Essentials docs and moved into a Chef Security collection of topics. Or something.**
 
 H4 -- Signed Headers -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -205,8 +205,6 @@ H4 -- cookbooks/ -- DONE -- THIS IS THE COOKBOOK CACHE!
 
 ../../includes_node/includes_node_cookbook_cached.rst
 
-**jamescott: We need to say something about the fact that the cookbooks are uploaded to the Chef server and are then (from there) propagated across nodes when and where required (and cached on each of the nodes, refreshed as required).**
-
 H4 -- data_bags/ -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_data_bags.rst
@@ -229,12 +227,7 @@ H4 -- roles/ -- DONE
 
 H3 -- Create the |chef| Repository -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-There are two ways to create a |chef| repository: 
-
-* Clone the |opscode| repository for |chef| from |github|
-* Download the repository as a |tar gz| file and place it into local version source control.
-
-.. note:: |opscode| strongly recommends using some type of version control tool to manage the source code in the |chef| repository. We use |git| for everything, including for cookbooks. If another version source control system is preferred over |git| (such as |svn|, |mercurial|, or |bazaar|) that is just fine.
+.. include:: ../../includes_repository/includes_repository_create.rst
 
 H4 -- Clone -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -294,8 +287,6 @@ There are three types of |chef| servers:
        |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located within the organization's firewall. |chef private| is the same as |chef hosted|. |chef hosted| is the largest |chef private| deployment in the world.
    * - NEED IMAGE FOR CHEF OPEN SERVER
      - .. include:: ../../includes_chef/includes_chef_open_source.rst
-
-       |chef open server| is an open source version of the |chef server| that contains much of the same functionality as either |chef hosted| or |chef private|, but does not include support directly from |opscode|. **jamescott: AND?????**
 
 
 H2 -- Policy
@@ -618,9 +609,7 @@ H2 -- Search -- DONE
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search.rst
 
-Many of the examples in this section use |knife|, but the search indexes and search query syntax can be used in many locations, including recipes, xxxxx, xxxxx, and xxxxx. 
-
-**jamescott: This article needs to evolve into being the definitive topic on search. including: What is search? What can be searched? How do you search? Where can search queries be located?**
+Many of the examples in this section use |knife|, but the search indexes and search query syntax can be used in many locations, including from within recipes and when using the |api chef server|.
 
 H3 -- Search Indexes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -640,7 +629,8 @@ H3 -- Keys (or Field Names) -- DONE
 
 .. include:: ../../steps/step_search_key_wildcard_asterisk.rst
 
-Nested Fields:
+H4 -- Nested Fields -- DONE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: ../../includes_search/includes_search_key_nested.rst
 
@@ -698,7 +688,7 @@ H3 -- Special Characters -- DONE
 
 H3 -- Search Targets -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Searches can be made against roles (in run-lists), nodes, clients, environments, and data bags.
+.. include:: ../../includes_search/includes_search_targets.rst
 
 H4 -- Roles in Run-lists: -- DONE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -868,14 +858,9 @@ H2 -- Libraries -- DONE
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_library.rst
 
-A library can be used to:
-
-* Access attributes that are stored in files
-* Do basic programming techniques, such as a loop 
-* Create a custom namespace that can be called directly from any |chef| recipe (which also helps keep the ``Chef::Recipe`` namespace clean)
-* Connect to a database
-* Talk to an LDAP provider
-* Do anything that can be done with |ruby|
+H3 -- Using Libraries -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_library_common_uses.rst
 
 H3 -- Library Syntax -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1187,7 +1172,7 @@ H2 -- Templates -- DONE
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
 
-.. note:: |chef| uses |erubis| for templates, which is a fast, secure, and extensible implementation of embedded |ruby|. |erubis| should be familiar to members of the |ruby on rails|, |merb|, or |puppet| communities. For more information about |erubis|, see: http://www.kuwata-lab.com/erubis/.
+.. note:: |note cookbook template erubis|
 
 H3 -- Requirements -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
