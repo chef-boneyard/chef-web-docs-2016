@@ -36,7 +36,7 @@ This set of topics is collection of all documentation for |chef|, including |che
      - 
    * - Just Enough Ruby for Chef
      - 
-     - Cookbooks Site API
+     - :doc:`api_cookbooks_site`
      - 
    * - System Requirements
      - 
@@ -77,3 +77,4 @@ This set of topics is collection of all documentation for |chef|, including |che
    resource
 
    api_chef_server
+   api_cookbooks_site
