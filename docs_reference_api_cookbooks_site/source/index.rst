@@ -24,7 +24,7 @@ GET
 -----------------------------------------------------
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_cookbooks_get.rst
 
-/cookbooks/[NAME]
+/cookbooks/COOKBOOK_NAME
 =====================================================
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name.rst
 
@@ -36,7 +36,7 @@ GET
 -----------------------------------------------------
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name_get.rst
 
-/cookbooks/[VERSION]
+/cookbooks/COOKBOOK_VERSION
 =====================================================
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_version.rst
 
