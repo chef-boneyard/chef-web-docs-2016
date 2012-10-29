@@ -35,7 +35,7 @@ This set of topics is collection of all documentation for |chef|, including |che
      - Recipe DSL
      - 
    * - Just Enough Ruby for Chef
-     - 
+     - :doc:`essentials_search`
      - :doc:`api_cookbooks_site`
      - 
    * - System Requirements
@@ -71,6 +71,7 @@ This set of topics is collection of all documentation for |chef|, including |che
    essentials_workstation
    essentials_server
    essentials_cookbooks
+   essentials_search
 
    knife
 
