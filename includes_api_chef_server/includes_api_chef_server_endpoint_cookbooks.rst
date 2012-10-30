@@ -2,6 +2,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-In order to minimize storage and the amount of time required to iterate in the modify-upload-test cycle, cookbooks only require that files with checksums the system has not yet seen be uploaded. To accomplish this, a cookbook version's component files (each with its own particular checksum) are uploaded using the sandbox API. These checksums are then used in the version's manifest in records that include the component file's description (name, specificity, etc.), as well as its checksum and a URL from which to retrieve the file's contents. This is why you will see only the files that you have updated get uploaded when doing a "knife cookbook upload COOKBOOK_NAME".
+When a cookbook is uploaded, only files that are new or updated will be included. This approach minimizes the amount of storage and time that is required during the modify-upload-test cycle. To keep track of which files have already been uploaded, |chef| uses a checksum and assigns a checksum to each file. These checksums are used in the cookbook version manifest, alongside the same records that store the file description (name, specificity, and so on), as well as the checksum and the URL from which the file's contents can be retrieved. 
 
 The /cookbooks endpoint has the following methods: GET.
