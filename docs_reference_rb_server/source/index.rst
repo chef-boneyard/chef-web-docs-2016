@@ -10,19 +10,6 @@ server.rb
 
 .. include:: ../../includes_config/includes_config_rb_server.rst
 
-The |server rb| configuration file is used to xxxxx. It is associated with the following executables:
-
-* chef-solo
-* chef-client
-* chef-server
-* chef-server-webui
-* chef-solr
-* chef-solr-indexer
-* chef-solr-rebuild
-* knife
-
-.. note:: chef-client, chef-server, chef-server-webui, chef-solr, and chef-solr-indexer can be run as a daemon.
-
 Settings
 ==========================================================================
 This configuration file has the following settings:
