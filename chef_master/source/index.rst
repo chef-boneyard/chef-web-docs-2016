@@ -35,7 +35,7 @@ Chef Docs
 This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
 
 .. list-table::
-   :widths: 150 150 150 150
+   :widths: 200 200 200 200
    :header-rows: 1
 
    * - Getting Started
@@ -52,7 +52,7 @@ This set of topics is collection of all documentation for |chef|, including |che
      - 
    * - Set up a Repository
      - Server
-     - Configuration Files
+     - :doc:`config`
      - 
    * - Hosted vs. Private
      - Cookbooks
@@ -100,6 +100,8 @@ This set of topics is collection of all documentation for |chef|, including |che
    knife
 
    resource
+
+   config
 
    api_chef_server
    api_cookbooks_site

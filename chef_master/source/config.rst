@@ -1,7 +1,7 @@
 =====================================================
-client.rb
+Configuration Files
 =====================================================
- 
+
 .. include:: ../../swaps/swap_desc_a.txt
 .. include:: ../../swaps/swap_desc_b.txt
 .. include:: ../../swaps/swap_desc_c.txt
@@ -32,12 +32,42 @@ client.rb
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_config/includes_config_rb_client.rst
 
-Settings
-==========================================================================
+CONFIG FILE OVERVIEW
 
-.. include:: ../../includes_config/includes_config_rb_client_settings.rst
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Sub-command
+     - Description
+   * - :doc:`config_rb_client`
+     - xxxxx
+   * - :doc:`config_rb_knife`
+     - xxxxx
+   * - :doc:`config_rb_metadata`
+     - xxxxx
+   * - :doc:`config_rb_server`
+     - xxxxx
+   * - :doc:`config_rb_solo`
+     - xxxxx
+   * - :doc:`config_rb_solr`
+     - xxxxx
+
+
+
+.. toctree::
+   :hidden:
+
+   config_rb_client
+   config_rb_knife
+   config_rb_metadata
+   config_rb_server
+   config_rb_solo
+   config_rb_solr
+
+
+
 
 
 
