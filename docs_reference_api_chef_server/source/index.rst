@@ -130,6 +130,63 @@ PUT
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_put.rst
 
 
+/environments
+=====================================================
+.. include:: ../../includes_environment/includes_environment.rst
+
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_get.rst
+
+POST
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_post.rst
+
+
+/environments/ENVIRONMENT_NAME
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name.rst
+
+DELETE
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_delete.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_get.rst
+
+PUT
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_put.rst
+
+/environments/:environment_id/cookbooks
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst
+
+
+/environments/:environment_id/cookbook_versions
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version.rst
+
+POST
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst
+
+/environments/:environment_id/cookbooks/COOKBOOK_NAME
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst
+
+
 /nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
@@ -200,82 +257,6 @@ PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_put.rst
 
-/environments
-=====================================================
-.. include:: ../../includes_environment/includes_environment.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments.rst
-
-GET
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_get.rst
-
-POST
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_post.rst
-
-
-/environments/ENVIRONMENT_NAME
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name.rst
-
-DELETE
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_delete.rst
-
-GET
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_get.rst
-
-PUT
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_put.rst
-
-/environments/:environment_id/cookbooks
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks.rst
-
-GET
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst
-
-
-/environments/:environment_id/cookbook_versions
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version.rst
-
-POST
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst
-
-/environments/:environment_id/cookbooks/COOKBOOK_NAME
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name.rst
-
-GET
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst
-
-/search
-=====================================================
-.. include:: ../../includes_search/includes_search.rst
-
-includes_api_chef_server_endpoint_search.rst
-
-GET
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_search_get.rst
-
-
-/search/INDEX
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index.rst
-
-.. include:: ../../includes_search/includes_search_query_syntax.rst
-
-GET
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst
 
 /sandboxes
 =====================================================
@@ -300,3 +281,25 @@ PUT
 PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_checksum_put.rst
+
+
+/search
+=====================================================
+.. include:: ../../includes_search/includes_search.rst
+
+includes_api_chef_server_endpoint_search.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_search_get.rst
+
+
+/search/INDEX
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index.rst
+
+.. include:: ../../includes_search/includes_search_query_syntax.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst
