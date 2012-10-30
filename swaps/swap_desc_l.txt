@@ -1,0 +1,113 @@
+.. Description strings that begin with the letter L.
+.. The pattern is |lxxxx| replace:: string.
+.. 
+.. 
+
+.. L
+.. 
+
+.. |latest| replace:: Indicates that the most recent version of a cookbook will be downloaded.
+.. |layout create_dirs_before_symlink resource deploy| replace:: Use this layout to create directories that need to exist in the release before the symlink step. For example, in the context of a rails app, ``.gitignore`` may be used to keep tempfiles out of a repository and to prevent the ``tmp/`` directory from being part of checked out code. The symlink step will create a symlink from ``shared/pids`` to ``RELEASE/tmp/pids``. Since this behavior would fail if the ``RELEASE/tmp`` directory did not exist, that directory must be created for the deployment to proceed. It is not necessary to create directories that will be symlinked in the symlink step, such as ``log/``, as these do not rely on the existence of other directories in the release. Directories that already exist will be overwritten. Default value: ``["tmp", "public", "config"]``.
+.. |layout purge_before_symlink resource deploy| replace:: Use this layout to remove directories before the production copy from a shared directory is symlinked in. ``purge_before_symlink`` is an array of directories that are removed before symlink setup. Default value: ``["log", "tmp/pids", "public/system"]``.
+.. |layout symlink_before_migrate resource deploy| replace:: Use this layout to link required configuration files into place so they can be available during a migration step. ``symlink_before_migrate`` is a hash that maps files in the shared directory to files in the current release. Use ``symlink_before_migrate({})`` or ``symlink_before_migrate nil`` instead of ``symlink_before_migrate {}`` because the ``{}`` is interpreted as a block rather than an empty hash. Default value: ``{"config/database.yml" => "config/database.yml"}``.
+.. |layout symlinks resource deploy| replace:: Use this layout to map files and directories during the main symlinking step. ``symlinks`` is a hash that maps files and directories from their locations in the shared directory to locations in the release directory. Default value: ``{"system" => "public/system", "pids" => "tmp/pids", "log" => "log"}``.
+
+.. |level resource log| replace:: The level of logging that |chef| will display. |chef| uses the ``mixlib-log`` (https://github.com/opscode/mixlib-log) to handle logging behavior. Options (in order of priority): ``:debug``, ``:info``, ``:warn``, ``:error``, and ``:fatal``. Default value: ``:info``.
+.. |level resource mdadm| replace:: The |raid| level. Default value: ``1``.
+
+.. |license| replace:: The type of license under which a cookbook is distributed: ``apachev2``, ``gplv2``, ``gplv3``, ``mit``, or ``none`` (default). This option will place the appropriate license notice in the pre-created files. Be aware of the licenses for files inside of a cookbook and be sure to follow any restrictions they describe.
+.. |link_type resource link| replace:: The type of link: ``:symbolic`` or ``:hard``. Default value: ``symbolic``.
+.. |linode-api-key| replace:: The |linode| API key.
+.. |linode-datacenter| replace:: The datacenter for the |linode| server.
+.. |linode-flavor| replace:: The flavor of the |linode| server.
+.. |linode-image| replace:: The image for the |linode| server.
+.. |linode-kernel| replace:: The kernel for the |linode| server.
+.. |linode-node-name| replace:: The name of the node in the |linode| environment.
+
+.. |load-balancer| replace:: The load balancing application to which a server should be added.
+.. |local resource template| replace:: Indicates whether a template is already present on the node. Default value: ``false``.
+.. |log lwrp daemontools_service| replace:: Indicates whether a service has a custom logging script. Default value: ``nil``.
+.. |log_level| replace:: The level of logging that will be stored in a log file: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``.
+.. |log_location| replace:: The location in which log file output files will be saved. If this location is set to something other than ``STDOUT``, standard output logging will still be performed (otherwise there would be no output other than to a file). Default value: ``STDOUT``.
+.. |logfile| replace:: The location in which the log file will be located. The default location is ``STDOUT``.
+.. |long| replace:: Display long output when searching nodes while using the default summary format.
+.. |long description| replace:: A longer description that ideally contains full instructions on the proper use of a cookbook, including definitions, libraries, dependencies, and so on. There are two ways to use this field: with the contents embedded in the field itself or with the contents pulled from a file at a specified path, such as a README.rdoc located at the top of a cookbook directory.
+
+.. |lwrp action add apt_repository| replace:: Use to add a new repository.
+.. |lwrp action add djbdns_rr| replace:: Use to add a new resource record to |tinydns|.
+.. |lwrp action add php_pear_channel| replace:: Use to add a channel to the channel list. Typically, this is used only for private channels. Public channels should be added using the ``:discover`` action.
+.. |lwrp action allow firewall_rule| replace:: Use to set a rule that allows incoming traffic.
+.. |lwrp action alrm daemontools_service| replace:: Use to send the ``ALRM`` signal. The following command is used: ``svc -a``.
+.. |lwrp action associate aws_elastic_ip| replace:: Use to associate the specified IP address with a node.
+.. |lwrp action attach aws_ebs_volume| replace:: Use to attach an existing volume to a node.
+.. |lwrp action build pacman_aur| replace:: Use to build a package using the information stored in a |archlinux pkgbuild| script.
+.. |lwrp action cont daemontools_service| replace:: Use to send the ``CONT`` signal. The following command is used: ``svc -c``.
+.. |lwrp action create aws_ebs_volume| replace:: Use to create a new |amazon ebs| volume. This action will only make the API call to create a new volume, which will get a random volume identifier that is generated by |amazon ec2|. This identifier can be attached in the same resource by specifying the actions as an array.
+.. |lwrp action create dynect_rr| replace:: Use to create a record.
+.. |lwrp action create python_virtualenv| replace:: Use to create a virtual |python| environment.
+.. |lwrp action create samba_user| replace:: Use to create a user.
+.. |lwrp action create transmission_torrent_file| replace:: Use to download a file using the |bittorrent| protocol.
+.. |lwrp action create windows_registry| replace:: Use to create a registry key with the provided values.
+.. |lwrp action create_db mysql_database| replace:: Use to create a database.
+.. |lwrp action delete dynect_rr| replace:: Use to delete a record.
+.. |lwrp action delete python_virtualenv| replace:: Use to delete a virtual |python| environment.
+.. |lwrp action delete samba_user| replace:: Use to enable a user.
+.. |lwrp action deny firewall_rule| replace:: Use to set a rule that denies incoming traffic.
+.. |lwrp action detach aws_ebs_volume| replace:: Use to detach the specified volume from a node.
+.. |lwrp action disable bluepill_service| replace:: Use to disable a service by removing a pill link.
+.. |lwrp action disable chef_handler| replace:: Use to disable the |chef| handler for the current |chef| run on the current node.
+.. |lwrp action disable daemontools_service| replace:: Use to disable a service by removing the link to the service directory.
+.. |lwrp action disable firewall| replace:: Use to disable a firewall. Rules will be de-activated and the node will be put into an unprotected state.
+.. |lwrp action disassociate aws_elastic_ip| replace:: Use to disassociate the specified IP address from a node.
+.. |lwrp action discover php_pear_channel| replace:: Use to initialize a channel from its server.
+.. |lwrp action enable bluepill_service| replace:: Use to enable a service by adding a pill link.
+.. |lwrp action enable chef_handler| replace:: Use to enable the |chef| handler for the current |chef| run on the current node.
+.. |lwrp action enable daemontools_service| replace:: Use to enable a service by setting up the service directory and link.
+.. |lwrp action enable firewall| replace:: Use to enable a firewall. Rules that have been defined for that firewall will be activated.
+.. |lwrp action enable samba_user| replace:: Use to delete a user.
+.. |lwrp action flush_tables_with_read_lock mysql_database| replace:: Use to flush tables with a read lock. This action should be used only when performing replication.
+.. |lwrp action hup daemontools_service| replace:: Use to send the ``HUP`` signal. The following command is used: ``svc -h``.
+.. |lwrp action install dmg_package| replace:: Use to install an application. (There is no ``:uninstall`` action because on in the |mac os x| environment, uninstalling an application only requires it being dragged to the trash can.)
+.. |lwrp action install pacman_aur| replace:: Use to install a package that has been built with the ``:build`` action.
+.. |lwrp action install pacman_group| replace:: Use to install a group.
+.. |lwrp action install php_pear| replace:: Use to install a |pear| package. If a version is provided, use to install that version.
+.. |lwrp action install python_pip| replace:: Use to install a |python pip| package. If a version is provided, use to install that version.
+.. |lwrp action install windows_package| replace:: Use to install a package.
+.. |lwrp action int daemontools_service| replace:: Use to send the ``INT`` signal. The following command is used: ``svc -i``.
+.. |lwrp action join riak_cluster| replace:: Use to join a local node to a cluster.
+.. |lwrp action kill daemontools_service| replace:: Use to send the ``KILL`` signal. The following command is used: ``svc -k``.
+.. |lwrp action load bluepill_service| replace:: Use to load a service's pill to |bluepill|.
+.. |lwrp action modify windows_registry| replace:: Use to modify an existing registry key with the provided values.
+.. |lwrp action once daemontools_service| replace:: Use to start a service. The service does not restart if it stops. The following command is used: ``svc -o``.
+.. |lwrp action pause daemontools_service| replace:: Use to send the ``STOP`` signal to pause a service. The following command is used: ``svc -p``.
+.. |lwrp action prune aws_ebs_volume| replace:: Use to prune older snapshots from a node.
+.. |lwrp action purge php_pear| replace:: Use to purge a |pear| package. This is identical in behavior to the ``:remove`` action.
+.. |lwrp action purge python_pip| replace:: Use to purge a |python pip| package. This is identical in behavior to the ``:remove`` action.
+.. |lwrp action query mysql_database| replace:: Use to query a database.
+.. |lwrp action reject firewall_rule| replace:: Use to set a rule that rejects incoming traffic.
+.. |lwrp action remove apt_repository| replace:: Use to delete a repository.
+.. |lwrp action remove pacman_group| replace:: Use to remove a group.
+.. |lwrp action remove php_pear| replace:: Use to remove a |pear| package.
+.. |lwrp action remove php_pear_channel| replace:: Use to remove a channel from the channel list.
+.. |lwrp action remove python_pip| replace:: Use to remove a |python pip| package.
+.. |lwrp action remove windows_package| replace:: Use to remove a package.
+.. |lwrp action replace dynect_rr| replace:: Use to replace an existing record.
+.. |lwrp action reset firewall| replace:: Use to reset a firewall. Rules will be de-activated and the node will be put into the default state. This action does not enable or disable a firewall.
+.. |lwrp action restart bluepill_service| replace:: Use to restart a service.
+.. |lwrp action restart daemontools_service| replace:: Use to restart a service using the ``TERM`` signal. The following command is used: ``svc -t``.
+.. |lwrp action snapshot aws_ebs_volume| replace:: Use to create a snapshot of the volume.
+.. |lwrp action start bluepill_service| replace:: Use to start a service.
+.. |lwrp action start daemontools_service| replace:: Use to start a service. If the service stops, restart it. The following command is used: ``svc -u``.
+.. |lwrp action stop bluepill_service| replace:: Use to stop a service.
+.. |lwrp action stop daemontools_service| replace:: Use to stop a service using the ``STOP`` signal. The following command is used: ``svc -p``.
+.. |lwrp action term daemontools_service| replace:: Use to send the ``TERM`` signal. The following command is used: ``svc -t``.
+.. |lwrp action unflush_tables mysql_database| replace:: Use to unflush tables. This action should be used only when performing replication.
+.. |lwrp action unzip windows_zipfile| replace:: Use to unzip a compressed file.
+.. |lwrp action up daemontools_service| replace:: Use to start a service. If the service stops, restart it. The following command is used: ``svc -u``.
+.. |lwrp action update dynect_rr| replace:: Use to update an existing record.
+.. |lwrp action update php_pear_channel| replace:: Use to update an existing channel.
+.. |lwrp action upgrade php_pear| replace:: Use to upgrade a |pear| package. If a version is provided, use to upgrade to that version.
+.. |lwrp action upgrade python_pip| replace:: Use to upgrade a |python pip| package. If a version is provided, use to upgrade to that version.
+.. |lwrp action wait_for_ringready riak_cluster| replace:: Use to wait for cluster membership to converge ("all nodes in the cluster agree on the ring state") before joining a local node to a cluster.
+
+

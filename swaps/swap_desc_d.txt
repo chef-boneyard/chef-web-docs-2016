@@ -1,0 +1,45 @@
+.. Description strings that begin with the letter D.
+.. The pattern is |dxxxx| replace:: string.
+.. 
+.. 
+
+.. D
+.. 
+
+.. |DATA_BAG_ITEM| replace:: The name of a specific item within a data bag.
+.. |data_bag_path| replace:: The location from which a data bag is loaded to |chef|. Default value: ``/var/chef/databags``.
+.. |database lwrp mysql_database| replace:: The name of the database to be created. This attribute can be used only with the ``create_db action``.
+.. |day resource cron| replace:: The day of month at which the |cron| entry should run (1 - 31). Default value: ``*``.
+
+.. |defaults| replace:: Indicates that |knife| will use the default value, instead of asking a user to provide one.
+.. |delim resource directory| replace:: The delimiter that is used to separate multiple values for a single key.
+.. |deploy_to resource deploy| replace:: The "meta root" for the application.
+.. |deploy_revision provider deploy| replace:: The ``deploy_revision`` provider is the recommended provider, even if it is not listed as the default. The ``deploy_revision`` provider is used to ensure that the name of a release sub-directory is based on a revision identifier. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---|chef| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. When the ``deploy_revision`` provider is given an exact revision to deploy, it will behave in an idempotent manner. The ``deploy_revision`` provider results in deployed components under the destination location that is owned by the user who runs the application. This is sometimes an issue for certain workflows. If issues arise, consider the following: incorporate changing permissions to the desired end state from within a recipe; add a ``before_restart`` block to fix up the permissions; have an unprivileged user (for example: ``opscode``) be the owner of the ``deploy`` directory and another unprivileged user (for example: ``opscodeapp``) run the application. Most often, this is the solution that works best. When using the ``deploy_revision`` provider, and when the deploy fails for any reason, and when the same code is used to re-deploy, the action should be set manually to ``:force_deploy``. Forcing the re-deploy will remove the old release directory, after which the deploy can proceed as usual. (Forcing a re-deploy over the current release can cause some downtime.) Deployed revisions are stored in ``(file_cache_path)/revision-deploys/(deploy_path)``.
+.. |depth resource scm| replace:: |git| only. The number of past revisions that will be included in the |git| shallow clone. Default value: ``nil`` (full clone).
+.. |description cookbook| replace:: A short description of a cookbook and its functionality.
+.. |description recipe| replace:: A description for a recipe, mostly for cosmetic value within the |chef server| user interface.
+.. |description role| replace:: The description of the role. This value will populate the description field for the role on the |chef server|.
+.. |description environment| replace:: The description of the environment. This value will populate the description field for the environment on the |chef server|.
+.. |destination lwrp dmg_package| replace:: The directory to which the ``.app`` directory is copied. Default value: ``/Applications``.
+.. |destination lwrp firewall_rule| replace:: The IP address or subnet to which traffic is routed.
+.. |destination resource scm| replace:: The path to the location to which the source will be cloned, checked out, or exported.
+.. |dev_src lwrp apt_repository| replace:: Indicates whether the ``deb-src`` source repository is added. Default value: ``false``.
+.. |device lwrp aws_ebs_volume| replace:: The local block device to be attached to an |amazon ebs| volume.
+.. |device resource ifconfig| replace:: The network interface to be configured. Default value: ``nil``.
+.. |device resource mount| replace:: Required for ``:umount`` and ``:remout`` actions (for the purpose of checking the mount command output for presence). The special block device or remote node, a label, or a uuid to be mounted. Default value: ``nil``.
+.. |device resource route| replace:: The network interface to which the route applies.
+.. |device_type resource mount| replace:: The type of device: ``:device``, ``:label``, or ``:uuid``. Default value: ``:device``.
+.. |devices resource mdadm| replace:: An array of devices to include in the |raid| array.
+
+.. |dir| replace:: The directory into which a cookbook will be downloaded.
+.. |directives lwrp php_pear| replace:: Extra extension directives (or settings) for a |pecl|. On most platforms, these directives are rendered into the extension's .ini file.
+.. |directory lwrp daemontools_service| replace:: The directory in which the service is set up.
+.. |disable-bootstrap| replace:: Indicates that the bootstrap process should be disabled.
+.. |distributed resource directory| replace:: Indicates that a node is a distributed |erlang| node. Default value: ``false``.
+.. |distribution lwrp apt_repository| replace:: The short name for the distribution. For example: ``lucid``.
+.. |distro| replace:: The template file to be used during a bootstrap operation. Use this option if the specific location of the template file is unknown. The following distributions are supported: ``chef-full`` (the default bootstrap), ``centos5-gems``, ``fedora13-gems``, ``ubuntu10.04-gems``, ``ubuntu10.04-apt``, and ``ubuntu12.04-gems``. If this option is used, |knife| will search for the template file in the following order: a ``bootstrap/`` folder in the current working directory, a ``bootstrap/`` folder in the |chef| repository, a ``bootstrap/`` folder in ``~/.chef/``, or a bootstrap file shipped with |chef|. Do not use the ``--template-file`` option when ``--distro`` is specified.
+
+.. |dmg_name lwrp dmg_package| replace:: The name of the |apple disk image| (if it is not the same as the ``app`` attribute or if the name of the application contains spaces). Default value: ``nil``.
+
+.. |dump resource mount| replace:: The dump frequency (in days) used while creating a file systems table (fstab) entry. Default value: ``0``.
+
