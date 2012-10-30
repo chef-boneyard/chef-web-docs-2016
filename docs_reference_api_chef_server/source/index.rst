@@ -14,7 +14,7 @@ Chef Server API
 
 /clients
 =====================================================
-.. include:: ../../includes_chef/includes_chef_client.rst
+|api chef server clients|
 
 .. note:: |note api chef server manage clients with knife|
 
