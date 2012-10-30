@@ -7,7 +7,7 @@ This method has no parameters.
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    DELETE /environments/ENVIRONMENT_NAME
 

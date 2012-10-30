@@ -7,7 +7,7 @@ This method has no parameters.
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    PUT /cookbooks/COOKBOOK_NAME/COOKBOOK_VERSION
 

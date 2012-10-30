@@ -7,7 +7,7 @@ This method has no parameters.
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    POST /environments/:environment_id/cookbook_versions
 

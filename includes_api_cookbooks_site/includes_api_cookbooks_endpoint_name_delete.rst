@@ -9,7 +9,7 @@ This method has no parameters.
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    DELETE /cookbooks/cookbook_name
 

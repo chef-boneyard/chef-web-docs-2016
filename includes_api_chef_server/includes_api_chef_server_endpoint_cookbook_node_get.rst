@@ -5,7 +5,7 @@ The GET method is used to return a complete list of cookbook attributes, definit
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /nodes/NODE_NAME/cookbooks
 

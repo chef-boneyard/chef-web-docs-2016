@@ -20,7 +20,7 @@ The GET method is used to return all of the data that matches the query in the G
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /search/INDEX
 
