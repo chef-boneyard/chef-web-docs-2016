@@ -7,7 +7,7 @@ This method has no parameters.
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /data/DATA_BAG_NAME/DATA_BAG_ITEM
 

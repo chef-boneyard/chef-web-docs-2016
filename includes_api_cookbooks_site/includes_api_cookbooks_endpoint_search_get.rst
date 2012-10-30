@@ -20,7 +20,7 @@ The GET method is used to get a list of cookbooks that match a search query.
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /search?q=SEARCH_QUERY
 

@@ -18,7 +18,7 @@ The GET method is used to get a listing of the available cookbooks..
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /cookbooks?start=START&items=ITEMS
 

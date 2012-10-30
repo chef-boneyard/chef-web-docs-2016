@@ -15,7 +15,7 @@ The GET method is used to return a hash of all cookbooks and cookbook versions.
 
 **Request**
 
-.. code-block:: ruby
+.. code-block:: xml
 
    GET /cookbooks
 
