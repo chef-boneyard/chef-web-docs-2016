@@ -46,11 +46,9 @@ Nodes
 =====================================================
 .. include:: ../../includes_search/includes_search_node.rst
 
-Clients
+API Clients
 =====================================================
-**jamescott: need to check this for chef-client vs. NODE issues**
-
-.. include:: ../../includes_chef/includes_chef_client.rst
+.. include:: ../../includes_chef/includes_chef_api_client.rst
 
 .. include:: ../../includes_search/includes_search_client.rst
 
