@@ -33,7 +33,7 @@ Configuration Files
 .. include:: ../../swaps/swap_notes.txt
 
 
-CONFIG FILE OVERVIEW
+|chef| relies on |ruby| files to provide configuration details and settings to various components. The files are written using a |ruby| DSL that specifies each setting and its value. Some values are specified as strings, others as integers, floats, hashes, or arrays. In the following sections, the settings are listed alphabetically, with a description of the setting and (in most cases) the available options and values.
 
 .. list-table::
    :widths: 150 450
