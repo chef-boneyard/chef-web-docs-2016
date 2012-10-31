@@ -12,7 +12,7 @@
      - Description
    * - |chef api client|
      - |api client description|
-   * - "data bags"
+   * - "data bags, by name"
      - |data bag description|
    * - environments
      - |environment description|
