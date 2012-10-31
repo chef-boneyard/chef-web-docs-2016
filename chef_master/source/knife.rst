@@ -35,6 +35,8 @@ Knife
 
 .. include:: ../../includes_knife/includes_knife.rst
 
+|knife| includes the following sub-commands:
+
 .. list-table::
    :widths: 150 450
    :header-rows: 1
