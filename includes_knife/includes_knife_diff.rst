@@ -5,6 +5,8 @@
 
 |knife diff|
 
+This sub-command is useful when the files on the |chef server| and in the |chef| repository need to be compared, such as when files on the |chef server| need to be verified prior to an upload or to ensure that certain files in multiple production environments are the same. This sub-command is similar to the ``git diff`` command that can be used to diff what is in the |chef| repository with what is synced to a |github| repository.
+
 This sub-command has the following syntax::
 
    knife diff [PATTERN...] (options)
