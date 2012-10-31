@@ -42,17 +42,17 @@ CONFIG FILE OVERVIEW
    * - Sub-command
      - Description
    * - :doc:`config_rb_client`
-     - xxxxx
+     - |config rb client|
    * - :doc:`config_rb_knife`
-     - xxxxx
+     - |config rb knife|
    * - :doc:`config_rb_metadata`
-     - xxxxx
+     - |config rb metadata|
    * - :doc:`config_rb_server`
-     - xxxxx
+     - |config rb server|
    * - :doc:`config_rb_solo`
-     - xxxxx
+     - |config rb solo|
    * - :doc:`config_rb_solr`
-     - xxxxx
+     - |config rb solr|
 
 
 
