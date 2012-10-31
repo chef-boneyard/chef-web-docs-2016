@@ -39,6 +39,8 @@ Resources and Providers
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
 
+|chef| includes the following resources (each provider is discussed within the context of its associated resource):
+
 .. list-table::
    :widths: 150 450
    :header-rows: 1
