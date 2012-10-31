@@ -36,6 +36,10 @@ search
 
 .. include:: ../../includes_knife/includes_knife_search.rst
 
+.. include:: ../../includes_knife/includes_knife_search_options.rst
+
+.. include:: ../../includes_knife/includes_knife_search_examples.rst
+
 Common Options
 =====================================================
 .. include:: ../../includes_knife/includes_knife_common_options.rst

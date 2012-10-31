@@ -639,6 +639,10 @@ H3 -- Search Indexes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_index.rst
 
+.. include:: ../../includes_knife/includes_knife_search.rst
+
+.. include:: ../../includes_knife/includes_knife_search_examples.rst
+
 H3 -- Search Query Syntax -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_query_syntax.rst
