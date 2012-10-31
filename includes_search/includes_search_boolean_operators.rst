@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A Boolean operator can be used to make a search query more specific by ensuring that certain terms are included in the results, excluded from the results, or not included even when other aspects of the query match:
+|search operator| |chef| searches can use the following Boolean operators:
 
 .. list-table::
    :widths: 200 300

@@ -34,7 +34,7 @@ Search Targets
 
 .. include:: ../../includes_search/includes_search_targets.rst
 
-H4 -- Roles in Run-lists: -- DONE
+Roles in Run-lists
 =====================================================
 .. include:: ../../includes_search/includes_search_role.rst
 
@@ -42,11 +42,11 @@ H4 -- Roles in Run-lists: -- DONE
 
 .. include:: ../../steps/step_search_target_role_expanded.rst
 
-H4 -- Nodes: -- DONE
+Nodes
 =====================================================
 .. include:: ../../includes_search/includes_search_node.rst
 
-H4 -- Clients: -- DONE
+Clients
 =====================================================
 **jamescott: need to check this for chef-client vs. NODE issues**
 
@@ -54,13 +54,13 @@ H4 -- Clients: -- DONE
 
 .. include:: ../../includes_search/includes_search_client.rst
 
-H4 -- Environments: -- DONE
+Environments
 =====================================================
 .. include:: ../../includes_environment/includes_environment.rst
 
 .. include:: ../../includes_search/includes_search_environment.rst
 
-H4 -- Data Bags: -- DONE
+Data Bags
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 

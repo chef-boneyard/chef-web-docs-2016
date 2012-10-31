@@ -40,7 +40,7 @@ Keys (or Field Names)
 
 .. include:: ../../steps/step_search_key_wildcard_asterisk.rst
 
-H4 -- Nested Fields -- DONE
+Nested Fields
 =====================================================
 
 .. include:: ../../includes_search/includes_search_key_nested.rst

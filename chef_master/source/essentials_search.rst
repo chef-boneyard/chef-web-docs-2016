@@ -44,19 +44,19 @@ Many of the examples in this section use |knife|, but the search indexes and sea
    * - Method
      - Description
    * - :doc:`essentials_search_indexes`
-     - xxxxx
+     - |search index|
    * - :doc:`essentials_search_query_syntax`
-     - xxxxx
+     - |search query syntax|
    * - :doc:`essentials_search_keys`
-     - xxxxx
+     - |search key|
    * - :doc:`essentials_search_patterns`
-     - xxxxx
+     - |search pattern|
    * - :doc:`essentials_search_boolean_operators`
-     - xxxxx
+     - |search operator|
    * - :doc:`essentials_search_special_characters`
-     - xxxxx
+     - |search special character|
    * - :doc:`essentials_search_targets`
-     - xxxxx
+     - |search target|
 
 
 .. toctree::

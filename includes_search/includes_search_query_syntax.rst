@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A search query has the following syntax::
+|search query syntax| A search query has the following syntax::
 
    key:search_pattern
 
