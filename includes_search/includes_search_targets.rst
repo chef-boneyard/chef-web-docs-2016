@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Searches can be made against roles (in run-lists), nodes, clients, environments, and data bags.
+|search target|
