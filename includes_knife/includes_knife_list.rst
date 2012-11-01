@@ -30,3 +30,9 @@ To view a list of roles and environments on the |chef server|:
 .. code-block:: bash
 
    $ knife list roles/ environments/
+
+To view a list of absolutely everything on the |chef server|:
+
+.. code-block:: bash
+
+   $ knife list -R /
