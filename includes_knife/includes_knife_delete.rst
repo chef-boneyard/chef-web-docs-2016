@@ -12,5 +12,5 @@ This sub-command has the following syntax::
 
 This sub-command has the following options:
 
-``--[no-]recurse``
-   Use ``--no-recurse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default.
+``--recurse``
+   Use ``--recurse`` to delete directories recursively.  Default: ``--no-recurse``
