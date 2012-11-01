@@ -1021,70 +1021,6 @@ Some of the cookbooks contain more than one lightweight resource. Each lightweig
 
 
 
-apt_preference
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference.rst
-
-.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To pin ``libmysqlclient16`` to version ``5.1.49-3``:
-
-.. code-block:: ruby
-
-   apt_preference "libmysqlclient16" do
-     pin "version 5.1.49-3"
-     pin_priority "700"
-   end
-
-To unpin ``libmysqlclient16``:
-
-.. code-block:: ruby
-
-   apt_preference "libmysqlclient16" do
-     action :remove
-   end
-
-
-apt_repository
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository.rst
-
-.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_cloudkick.rst
-
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_opscode_list_alternate.rst
-
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_opscode_list.rst
-
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_ppa_list.rst
-
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_zenoss.rst
-
-.. include:: ../../steps/step_chef_lwrp_apt_repository_remove_zenoss.rst
-
-
-
 
 application
 -----------------------------------------------------
@@ -1636,6 +1572,56 @@ Attributes
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
+
+
+apt_preference
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference.rst
+
+.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_lwrp_apt_preference_pin.rst
+
+.. include:: ../../steps/step_chef_lwrp_apt_preference_unpin.rst
+
+
+apt_repository
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository.rst
+
+.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_lwrp_apt_repository_add_cloudkick.rst
+
+.. include:: ../../steps/step_chef_lwrp_apt_repository_add_opscode_list_alternate.rst
+
+.. include:: ../../steps/step_chef_lwrp_apt_repository_add_opscode_list.rst
+
+.. include:: ../../steps/step_chef_lwrp_apt_repository_add_ppa_list.rst
+
+.. include:: ../../steps/step_chef_lwrp_apt_repository_add_zenoss.rst
+
+.. include:: ../../steps/step_chef_lwrp_apt_repository_remove_zenoss.rst
 
 
 aws_ebs_volume
@@ -2873,19 +2859,6 @@ Attributes
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 None.
-
-
-
-
-
-
-
-
-   
-
-
-
-
 
 
 
