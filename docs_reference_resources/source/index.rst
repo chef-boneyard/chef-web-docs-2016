@@ -1714,15 +1714,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To add a load balancer to an availability zone:
-
-.. code-block:: ruby
-
-   aws_elastic_lb "elb_qa" do 
-     aws_access_key aws['aws_access_key_id'] 
-     aws_secret_access_key aws['aws_secret_access_key'] 
-     name "QA" action :register
-   end
+.. include:: ../../steps/step_chef_lwrp_aws_elastic_lb_add.rst
 
 
 aws_resource_tag
@@ -1745,29 +1737,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To assign tags to a node to reflect it's role and environment:
+.. include:: ../../steps/step_chef_lwrp_aws_resource_tag_assign_to_node.rst
 
-.. code-block:: ruby
-
-   aws_resource_tag node['ec2']['instance_id'] do
-     aws_access_key aws['aws_access_key_id']
-     aws_secret_access_key aws['aws_secret_access_key']
-     tags({"Name" => "www.example.com app server",
-           "Environment" => node.chef_environment})
-     action :update
-   end
-
-To assign a set of tags to multiple resources, for example more than one |amazon ebs| volume in a disk set:
-
-.. code-block:: ruby
-
-   aws_resource_tag 'my awesome raid set' do
-     aws_access_key aws['aws_access_key_id']
-     aws_secret_access_key aws['aws_secret_access_key']
-     resource_id [ "vol-d0518cb2", "vol-fad31a9a", "vol-fb106a9f", "vol-74ed3b14" ]
-       tags({"Name" => "My awesome RAID disk set",
-             "Environment" => node.chef_environment})
-   end
+.. include:: ../../steps/step_chef_lwrp_aws_resource_tag_assign_to_resources.rst
 
 
 
@@ -1956,23 +1928,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To write ``freebsd-php5-options`` out as ``/var/db/ports/php5/options``:
+.. include:: ../../steps/step_chef_lwrp_freebsd_port_options_read.rst
 
-.. code-block:: ruby
-
-   freebsd_port_options "php5" do
-     source "freebsd-php5-options.erb"
-     action :create
-   end
-
-To read default options from ``/usr/ports/lang/php5``, current options from ``/var/db/ports/php5/options`` (if that option exists), and then set ``APACHE`` options to true (leaving others unchanged):
-
-.. code-block:: ruby
-
-   freebsd_port_options "php5" do
-     options "APACHE" => true
-     action :create
-   end
+.. include:: ../../steps/step_chef_lwrp_freebsd_port_options_write.rst
 
 gunicorn_config
 -----------------------------------------------------
@@ -1990,32 +1948,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create a configuration file with default values:
+.. include:: ../../steps/step_chef_lwrp_gunicorn_config_create.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_gunicorn_config_edit_values.rst
 
-   gunicorn_config "/etc/gunicorn/myapp.py" do
-     action :create
-   end
-
-To tweak some worker-related values:
-
-.. code-block:: ruby
-
-   gunicorn_config "/etc/gunicorn/myapp.py" do
-     worker_processes 8
-     backlog 4096
-     action :create
-   end
-
-To use the ``pre_fork`` server hook to sleep for one second before forking:
-
-.. code-block:: ruby
-
-   gunicorn_config "/etc/gunicorn/myapp.py" do
-     server_hooks({:pre_fork => 'import time;time.sleep(1)'})
-     action :create
-   end
+.. include:: ../../steps/step_chef_lwrp_gunicorn_config_sleep_before_fork.rst
 
 
 gunicorn_install
@@ -2034,13 +1971,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To install |gunicorn| to a specified virtual environment:
-
-.. code-block:: ruby
-
-   gunicorn_install "name_of_virtual_environment" do
-     action :install
-   end
+step_chef_lwrp_gunicorn_install_virtual_env.rst
 
 
 homebrew
@@ -2063,35 +1994,13 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-If |homebrew| is installed on a machine running |mac os x|, the following example will use |homebrew| to install |mysql|:
+.. include:: ../../steps/step_chef_lwrp_homebrew_install_mysql.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_homebrew_tap_repository.rst
 
-   package "mysql" do
-     action :install
-   end
+.. include:: ../../steps/step_chef_lwrp_homebrew_untap_repository.rst
 
-To use the |homebrew| provider:
-
-.. code-block:: ruby
-
-   package "mysql" do
-     provider Chef::Provider::Package::Homebrew
-   end
-
-To tap a repository:
-
-.. code-block:: ruby
-
-   homebrew_tap "homebrew/dupes"
-
-To untap a repository:
-
-.. code-block:: ruby
-
-   homebrew_tap "homebrew/dupes" do
-     action :untap
-   end
+.. include:: ../../steps/step_chef_lwrp_homebrew_use_provider.rst
 
 
 iis_app
@@ -2110,16 +2019,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create a new application:
-
-.. code-block:: ruby
-
-   iis_app "myApp" do
-     path "/v1_1"
-     application_pool "myAppPool_v1_1"
-     physical_path "#{node['iis']['docroot']}/testfu/v1_1"
-     action :add
-   end
+.. include:: ../../steps/step_chef_lwrp_iis_app_create.rst
 
 
 iis_config
