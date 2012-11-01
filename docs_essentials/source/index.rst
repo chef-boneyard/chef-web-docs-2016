@@ -629,25 +629,27 @@ xxxxx
 
 
 
-H2 -- Search -- DONE
+Search -- docs_essentials_search
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search.rst
 
 Many of the examples in this section use |knife|, but the search indexes and search query syntax can be used in many locations, including from within recipes and when using the |api chef server|.
 
-H3 -- Search Indexes -- DONE
+Search Indexes -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_index.rst
 
+Using Knife to Search -- docs_essentials_search
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_knife/includes_knife_search.rst
 
 .. include:: ../../includes_knife/includes_knife_search_examples.rst
 
-H3 -- Search Query Syntax -- DONE
+Search Query Syntax -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
-H3 -- Keys (or Field Names) -- DONE
+Keys (or Field Names) -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_key.rst
 
@@ -657,7 +659,7 @@ H3 -- Keys (or Field Names) -- DONE
 
 .. include:: ../../steps/step_search_key_wildcard_asterisk.rst
 
-H4 -- Nested Fields -- DONE
+Nested Fields -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: ../../includes_search/includes_search_key_nested.rst
@@ -666,11 +668,11 @@ H4 -- Nested Fields -- DONE
 
 .. include:: ../../steps/step_search_key_nested_range.rst
 
-H3 -- Search Patterns -- DONE
+Search Patterns -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_pattern.rst
 
-H4 -- Exact Matching -- DONE
+Exact Matching -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_pattern_exact.rst
 
@@ -678,7 +680,7 @@ H4 -- Exact Matching -- DONE
 
 .. include:: ../../steps/step_search_pattern_exact_key_and_item_string.rst
 
-H4 -- Wildcard Matching -- DONE
+Wildcard Matching -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_pattern_wildcard.rst
 
@@ -686,7 +688,7 @@ H4 -- Wildcard Matching -- DONE
 
 .. include:: ../../steps/step_search_pattern_wildcard_node_contains.rst
 
-H4 -- Range Matching -- DONE
+Range Matching -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_pattern_range.rst
 
@@ -694,13 +696,13 @@ H4 -- Range Matching -- DONE
 
 .. include:: ../../steps/step_search_pattern_range_exclusive.rst
 
-H4 -- Fuzzy Matching -- DONE
+Fuzzy Matching -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_pattern_fuzzy.rst
 
 .. include:: ../../steps/step_search_pattern_fuzzy.rst
 
-H3 -- Boolean Operators -- DONE
+Boolean Operators -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_boolean_operators.rst
 
@@ -710,15 +712,15 @@ H3 -- Boolean Operators -- DONE
 
 .. include:: ../../steps/step_search_boolean_and.rst
 
-H3 -- Special Characters -- DONE
+Special Characters -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_special_characters.rst
 
-H3 -- Search Targets -- DONE
+Search Targets -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_targets.rst
 
-H4 -- Roles in Run-lists: -- DONE
+Roles in Run-lists: -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_role.rst
 
@@ -726,27 +728,29 @@ H4 -- Roles in Run-lists: -- DONE
 
 .. include:: ../../steps/step_search_target_role_expanded.rst
 
-H4 -- Nodes: -- DONE
+Nodes: -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_node.rst
 
-H4 -- API Clients -- DONE
+API Clients -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_chef/includes_chef_api_client.rst
 
 .. include:: ../../includes_search/includes_search_client.rst
 
-H4 -- Environments: -- DONE
+Environments: -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_environment/includes_environment.rst
 
 .. include:: ../../includes_search/includes_search_environment.rst
 
-H4 -- Data Bags: -- DONE
+Data Bags: -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_search/includes_search_data_bag.rst
+
+
 
 H2 -- Cookbooks (Uploaded) -- PLACEHOLDER
 -----------------------------------------------------
