@@ -2,7 +2,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef repo| contains several directories, each with a README file that describes what it is for and how to use that directory when managing systems with |chef|. The directories are:
+The |chef repo| contains several directories, each with a README file that describes what it is for and how to use that directory when managing systems with |chef|. 
+
+.. note:: This document describes the default directory that is present in most |chef| repositories.
+
+The sub-directories in the |chef| repository are:
 
 .. list-table::
    :widths: 200 300

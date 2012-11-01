@@ -974,13 +974,13 @@ Examples
 Lightweight Resources and Providers
 =====================================================
 
-Custom resources and providers can also be created using the |lwrp| DSL. |opscode| provides several cookbooks that define some commonly used |lwrp|. To use the lightweight resources provided by |opscode| the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.
-
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
+
+Custom resources and providers can also be created using the |lwrp| DSL. |opscode| provides several cookbooks that define some commonly used |lwrp|. To use the lightweight resources provided by |opscode| the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.
 
 The following groups of lightweight resources are available in open source cookbooks that are provided by |opscode|:
 

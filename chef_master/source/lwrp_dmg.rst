@@ -1,5 +1,5 @@
 =====================================================
-Chef Docs
+dns
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
@@ -32,80 +32,32 @@ Chef Docs
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-This page is a work in progress. Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
+xxxxx
 
-.. list-table::
-   :widths: 200 200 200 200
-   :header-rows: 1
+dmg_package
+=====================================================
+.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package.rst
 
-   * - Getting Started
-     - Chef Essentials
-     - Reference
-     - Scenarios
-   * - :doc:`chef_overview`
-     - Nodes
-     - :doc:`knife`
-     - 
-   * - Set up a Workstation
-     - Workstation
-     - :doc:`resource`
-     - 
-   * - Set up a Repository
-     - Server
-     - :doc:`lwrp`
-     - 
-   * - 
-     - Cookbooks
-     - :doc:`config`
-     - 
-   * - Just Enough Ruby for Chef
-     - :doc:`essentials_search`
-     - Recipe DSL
-     - 
-   * - 
-     - 
-     - :doc:`api_cookbooks_site`
-     - 
-   * - 
-     - 
-     - :doc:`api_chef_server`
-     - 
-   * - 
-     - 
-     - 
-     - 
-   * - 
-     - 
-     - 
-     - 
+.. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
 
+.. note:: This lightweight resource is part of the ``dmg`` cookbook (http://community.opscode.com/cookbooks/dmg).
 
+Actions
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package_actions.rst
 
+Attributes
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package_attributes.rst
 
+Examples
+-----------------------------------------------------
+.. include:: ../../steps/step_chef_lwrp_dmg_package_install_google_chrome.rst
 
+.. include:: ../../steps/step_chef_lwrp_dmg_package_already_downloaded_app.rst
 
-.. Hide the TOC from this file.
+.. include:: ../../steps/step_chef_lwrp_dmg_package_install_dropbox.rst
 
-.. toctree::
-   :hidden:
+.. include:: ../../steps/step_chef_lwrp_dmg_package_macirssi.rst
 
-   chef_overview
-
-   essentials_nodes
-   essentials_workstation
-   essentials_server
-   essentials_cookbooks
-   essentials_search
-
-   knife
-
-   resource
-   lwrp
-
-   config
-
-   api_chef_server
-   api_cookbooks_site
-
-
-
+.. include:: ../../steps/step_chef_lwrp_dmg_package_install_tunnelblick.rst

@@ -1,5 +1,5 @@
 =====================================================
-Chef Docs
+daemontools
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
@@ -32,80 +32,22 @@ Chef Docs
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-This page is a work in progress. Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
+xxxxx
 
-.. list-table::
-   :widths: 200 200 200 200
-   :header-rows: 1
+daemontools_service
+=====================================================
+.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service.rst
 
-   * - Getting Started
-     - Chef Essentials
-     - Reference
-     - Scenarios
-   * - :doc:`chef_overview`
-     - Nodes
-     - :doc:`knife`
-     - 
-   * - Set up a Workstation
-     - Workstation
-     - :doc:`resource`
-     - 
-   * - Set up a Repository
-     - Server
-     - :doc:`lwrp`
-     - 
-   * - 
-     - Cookbooks
-     - :doc:`config`
-     - 
-   * - Just Enough Ruby for Chef
-     - :doc:`essentials_search`
-     - Recipe DSL
-     - 
-   * - 
-     - 
-     - :doc:`api_cookbooks_site`
-     - 
-   * - 
-     - 
-     - :doc:`api_chef_server`
-     - 
-   * - 
-     - 
-     - 
-     - 
-   * - 
-     - 
-     - 
-     - 
+.. note:: This lightweight resource is part of the ``daemontools`` cookbook (http://community.opscode.com/cookbooks/daemontools).
 
+Actions
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service_actions.rst
 
+Attributes
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service_attributes.rst
 
-
-
-
-.. Hide the TOC from this file.
-
-.. toctree::
-   :hidden:
-
-   chef_overview
-
-   essentials_nodes
-   essentials_workstation
-   essentials_server
-   essentials_cookbooks
-   essentials_search
-
-   knife
-
-   resource
-   lwrp
-
-   config
-
-   api_chef_server
-   api_cookbooks_site
-
-
-
+Examples
+-----------------------------------------------------
+.. include:: ../../steps/step_chef_lwrp_daemontools_service_setup_directory.rst
