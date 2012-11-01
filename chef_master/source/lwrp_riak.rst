@@ -32,7 +32,7 @@ riak
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
+|cookbook name riak|
 
 riak_cluster
 =====================================================

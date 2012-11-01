@@ -32,7 +32,7 @@ chef_handler
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
+|cookbook name chef_handler|
 
 chef_handler
 =====================================================
