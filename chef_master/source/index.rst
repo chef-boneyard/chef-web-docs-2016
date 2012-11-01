@@ -52,23 +52,23 @@ This page is a work in progress. Opscode is in the process of moving content fro
      - 
    * - Set up a Repository
      - Server
-     - :doc:`config`
+     - Lightweight Resources
      - 
-   * - Hosted vs. Private
+   * - 
      - Cookbooks
-     - Recipe DSL
+     - :doc:`config`
      - 
    * - Just Enough Ruby for Chef
      - :doc:`essentials_search`
-     - :doc:`api_cookbooks_site`
-     - 
-   * - System Requirements
-     - 
-     - :doc:`api_chef_server`
+     - Recipe DSL
      - 
    * - 
      - 
+     - :doc:`api_cookbooks_site`
      - 
+   * - 
+     - 
+     - :doc:`api_chef_server`
      - 
    * - 
      - 

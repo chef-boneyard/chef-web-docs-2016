@@ -2138,24 +2138,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To set up logging:
+.. include:: ../../steps/step_chef_lwrp_iis_config_load_array_of_commands.rst
 
-.. code-block:: ruby
-
-   iis_config "/section:system.applicationHost/sites/siteDefaults.logfile.directory:"D:\\logs"" do
-     action :config
-   end
-
-To load an array of commands from a node:
-
-.. code-block:: ruby
-
-   cfg_cmds = node['iis']['cfg_cmd']
-   cfg_cmds.each do |cmd|
-     iis_config "#{cmd}" do
-        action :config
-     end
-   end
+.. include:: ../../steps/step_chef_lwrp_iis_config_set_up_logging.rst
 
 
 iis_pool
@@ -2174,15 +2159,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create an application pool:
-
-.. code-block:: ruby
-
-   iis_pool 'myAppPool_v1_1' do
-     runtime_version "2.0"
-     pipeline_mode "Classic"
-     action :add
-   end
+.. include:: ../../steps/step_chef_lwrp_iis_pool_create.rst
 
 iis_site
 -----------------------------------------------------
@@ -2200,36 +2177,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To stop, then delete a default site:
+.. include:: ../../steps/step_chef_lwrp_iis_site_start_and_map_to_domain.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_iis_site_start_and_map_to_location.rst
 
-   iis_site 'Default Web Site' do
-     action [:stop, :delete]
-   end
-
-To create and start a site that maps to the physical location ``C:\inetpub\wwwroot\testfu``:
-
-.. code-block:: ruby
-
-   iis_site 'Testfu Site' do
-     protocol :http
-     port 80
-     path "#{node['iis']['docroot']}/testfu"
-     action [:add,:start]
-   end
-
-To create and start a site that maps to the ``testfu.opscode.com`` domain:
-
-.. code-block:: ruby
-
-   iis_site 'Testfu Site' do
-     protocol :http
-     port 80
-     path "#{node['iis']['docroot']}/testfu"
-     host_header "testfu.opscode.com"
-     action [:add,:start]
-   end
+.. include:: ../../steps/step_chef_lwrp_iis_site_stop.rst
 
 
 maven
@@ -2248,15 +2200,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To install |apache maven|:
-
-.. code-block:: ruby
-
-   maven "mysql-connector-java" do
-     group_id "mysql"
-     version "5.1.19"
-     dest "/usr/local/tomcat/lib/"
-   end
+.. include:: ../../steps/step_chef_lwrp_maven_install.rst
 
 
 
@@ -2302,24 +2246,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To define the ``check_load`` definition:
+.. include:: ../../steps/step_chef_lwrp_nagios_nrpecheck_define.rst
 
-.. code-block:: ruby
-
-   nagios_nrpecheck "check_load" do
-     command "#{node['nagios']['plugin_dir']}/check_load"
-     warning_condition node['nagios']['checks']['load']['warning']
-     critical_condition node['nagios']['checks']['load']['critical']
-     action :add
-   end
-
-To remove the ``check_load`` definition:
-
-.. code-block:: ruby
-
-   nagios_nrpecheck "check_load" do
-     action :remove
-   end
+.. include:: ../../steps/step_chef_lwrp_nagios_nrpecheck_remove.rst
 
 
 pacman_aur
@@ -2428,75 +2357,15 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To change the hostname for a computer:
+.. include:: ../../steps/step_chef_lwrp_powershell_change_hostname.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_powershell_pass_env_variable.rst
 
-   powershell "rename hostname" do
-     code <<-EOH
-     $computer_name = Get-Content env:computername
-     $new_name = 'test-hostname'
-     $sysInfo = Get-WmiObject -Class Win32_ComputerSystem
-     $sysInfo.Rename($new_name)
-     EOH
-   end
+.. include:: ../../steps/step_chef_lwrp_powershell_set_cwd_attribute.rst
 
-To write to an interpolated path:
+.. include:: ../../steps/step_chef_lwrp_powershell_use_cwd.rst
 
-.. code-block:: ruby
-
-   powershell "write-to-interpolated-path" do
-     code <<-EOH
-     $stream = [System.IO.StreamWriter]"#{Chef::Config[:file_cache_path]}/powershell-test.txt"
-     $stream.WriteLine("In #{Chef::Config[:file_cache_path]}...word.")
-     $stream.close()
-     EOH
-   end
-
-To use the ``cwd`` attribute:
-
-.. code-block:: ruby
-
-   powershell "cwd-then-write" do
-     cwd Chef::Config[:file_cache_path]
-     code <<-EOH
-     $stream = [System.IO.StreamWriter] "C:/powershell-test2.txt"
-     $pwd = pwd
-     $stream.WriteLine("This is the contents of: $pwd")
-     $dirs = dir
-     foreach ($dir in $dirs) {
-       $stream.WriteLine($dir.fullname)
-     }
-     $stream.close()
-     EOH
-   end
-
-To set the ``cwd`` attribute to a |windows| environment variable:
-
-.. code-block:: ruby
-
-   powershell "cwd-to-win-env-var" do
-     cwd ENV['TEMP']
-     code <<-EOH
-     $stream = [System.IO.StreamWriter] "./temp-write-from-chef.txt"
-     $stream.WriteLine("chef on windows rox yo!")
-     $stream.close()
-     EOH
-   end
-
-To pass an environment variable to a script:
-
-.. code-block:: ruby
-
-   powershell "read-env-var" do
-     cwd Chef::Config[:file_cache_path]
-     environment ({'foo' => 'BAZ'})
-     code <<-EOH
-     $stream = [System.IO.StreamWriter] "./test-read-env-var.txt"
-     $stream.WriteLine("FOO is $env:foo")
-     $stream.close()
-     EOH
-   end
+.. include:: ../../steps/step_chef_lwrp_powershell_write_to_interpolated_path.rst
 
 
 python_pip
@@ -2561,21 +2430,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To enable a plugin:
+.. include:: ../../steps/step_chef_lwrp_rabbitmq_plugin_enable.rst
 
-.. code-block:: ruby
-
-   ruby rabbitmq_plugin "rabbitmq_stomp" do 
-     action :enable 
-   end
-
-To disable a plugin:
-
-.. code-block:: ruby
-
-   rabbitmq_plugin "rabbitmq_shovel" do 
-     action :disable 
-   end
+.. include:: ../../steps/step_chef_lwrp_rabbitmq_plugin_disable.rst
 
 rabbitmq_user
 -----------------------------------------------------
@@ -2593,32 +2450,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To delete a user:
+.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_add.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_delete.rst
 
-   ruby rabbitmq_user "guest" do 
-     action :delete 
-   end
-
-To add a user:
-
-.. code-block:: ruby
-
-   rabbitmq_user "nova" do 
-     password "sekret" 
-     action :add 
-   end
-
-To set the permissions for a user:
-
-.. code-block:: ruby
-
-   rabbitmq_user "nova" do 
-     vhost "/nova" 
-     permissions "\".\" \".\" \".*\"" 
-     action :set_permissions 
-   end
+.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_set_permissions.rst
 
 
 rabbitmq_vhost
@@ -2637,13 +2473,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To add a virtual host:
-
-.. code-block:: ruby
-
-   ruby rabbitmq_vhost "/nova" do 
-     action :add
-   end
+.. include:: ../../steps/step_chef_lwrp_rabbitmq_vhost_add.rst
 
 
 riak_cluster
@@ -2681,6 +2511,27 @@ Attributes
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_lwrp_samba_user_create.rst
+
+
+sudo
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_lwrp_sudo.rst
+
+.. note:: This lightweight resource is part of the ``sudo`` cookbook (http://community.opscode.com/cookbooks/sudo).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_sudo_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_lwrp_sudo_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_lwrp_sudo_mode_default.rst
+
+.. include:: ../../steps/step_chef_lwrp_sudo_mode_template.rst
 
 
 
@@ -2738,62 +2589,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To enable a service named ``celery``:
-
-.. code-block:: ruby
-
-   ruby supervisor_service "celery" do 
-     action :enable 
-     autostart false 
-     user "nobody" 
-   end
+.. include:: ../../steps/step_chef_lwrp_supervisor_service_enable.rst
 
 
-
-sudo
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_sudo.rst
-
-.. note:: This lightweight resource is part of the ``sudo`` cookbook (http://community.opscode.com/cookbooks/sudo).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_sudo_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_sudo_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To use the natural (default) mode:
-
-.. code-block:: ruby
-
-   sudo "tomcat" do
-     user "%tomcat" # or a username
-     runas "app_user" # or "app_user : tomcat"
-     commands ["/etc/init.d/tomcat restart"] # array of commands, will be .join(",")
-     host "ALL"
-     nopasswd false # true prepends the runas_spec with NOPASSWD
-   end
-
-To use the template mode:
-
-.. code-block:: ruby
-
-   sudo "tomcat"
-     # this template must exist in the calling cookbook
-     template "restart_tomcat.erb"
-     variables( :cmds => [ "/etc/init.d/tomcat restart" ] )
-   end
-
-With both examples, the following is be generated in ``/etc/sudoers.d/tomcat``:
-
-.. code-block:: ruby
-
-   # this file was generated by chef
-   %tomcat ALL=(app_user) /etc/init.d/tomcat restart
 
 
 transmission_torrent_file
@@ -2833,24 +2631,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create users based on data bag objects that have a ``group_id`` attribute value of ``2300``:
+.. include:: ../../steps/step_chef_lwrp_users_manage_create.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_users_manage_remove.rst
 
-   users_manage "sysadmin" do 
-     group_id 2300 
-     action :create
-   end
-
-
-To remove users based on data bag objects that have a ``group_id`` attribute value of ``2300``:
-
-.. code-block:: ruby
-
-   users_manage "sysadmin" do 
-     group_id 2300 
-     action :remove
-   end
 
 
 webpi_product
@@ -2869,23 +2653,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To install the recommended configuration for |microsoft iis| 7:
+.. include:: ../../steps/step_chef_lwrp_webpi_product_install_powershell.rst
 
-.. code-block:: ruby
-
-   webpi_product "IIS7" do
-     accept_eula true
-     action :install
-   end
-
-To install |windows powershell|  2.0:
-
-.. code-block:: ruby
-
-   webpi_product "PowerShell2" do
-     accept_eula true
-     action :install
-   end
+.. include:: ../../steps/step_chef_lwrp_webpi_product_install_iis.rst
 
 
 
@@ -2905,16 +2675,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To run ``BGInfo`` at login:
-
-.. code-block:: ruby
-
-   windows_auto_run 'BGINFO' do
-     program "C:/Sysinternals/bginfo.exe"
-     args "\"C:/Sysinternals/Config.bgi\" /NOLICPROMPT /TIMER:0"
-     not_if { Registry.value_exists?(AUTO_RUN_KEY, 'BGINFO') }
-     action :create
-   end
+.. include:: ../../steps/step_chef_lwrp_windows_auto_run_at_login.rst
 
 windows_batch
 -----------------------------------------------------
@@ -2932,26 +2693,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To run a batch file that unzips and moves |ruby|:
-
-.. code-block:: ruby
-
-   windows_batch "unzip_and_move_ruby" do
-     code <<-EOH
-     7z.exe x #{Chef::Config[:file_cache_path]}/ruby-1.8.7-p352-i386-mingw32.7z  
-        -oC:\\source -r -y
-     xcopy C:\\source\\ruby-1.8.7-p352-i386-mingw32 C:\\ruby /e /y
-     EOH
-   end
-   
-   windows_batch "echo some env vars" do
-     code <<-EOH
-     echo %TEMP%
-     echo %SYSTEMDRIVE%
-     echo %PATH%
-     echo %WINDIR%
-     EOH
-   end
+.. include:: ../../steps/step_chef_lwrp_windows_batch_run.rst
 
 windows_feature
 -----------------------------------------------------
@@ -2973,31 +2715,10 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To enable a node as a DHCP server:
+.. include:: ../../steps/step_chef_lwrp_windows_feature_enable.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_windows_feature_disable.rst
 
-   windows_feature "DHCPServer" do
-     action :install
-   end
-
-To enable TFTP:
-
-.. code-block:: ruby
-
-   windows_feature "TFTP" do
-     action :install
-   end
-
-To disable Telnet client/server:
-
-.. code-block:: ruby
-
-   %w{ TelnetServer TelnetClient }.each do |feature|
-     windows_feature feature do
-       action :remove
-     end
-   end
 
 windows_package
 -----------------------------------------------------
@@ -3048,22 +2769,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To add ``Sysinternals`` to the system path:
+.. include:: ../../steps/step_chef_lwrp_windows_path_add.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_windows_path_remove.rst
 
-   windows_path 'C:\Sysinternals' do
-     action :add
-   end
-
-
-To remove |7zip| from the system path:
-
-.. code-block:: ruby
-
-   windows_path 'C:\7-Zip' do
-     action :remove
-   end
 
 
 windows_reboot
@@ -3082,26 +2791,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To schedule a reboot at the end of a |chef| run if a package installs:
+.. include:: ../../steps/step_chef_lwrp_windows_reboot_schedule.rst
 
-.. code-block:: ruby
-
-   windows_reboot 60 do
-     reason 'cause chef said so'
-     action :nothing
-   end
-   windows_package 'some_package' do
-     action :install
-     notifies :request, 'windows_reboot[60]'
-   end
-
-To cancel a previously-requested reboot:
-
-.. code-block:: ruby
-
-   windows_reboot 60 do
-     action :cancel
-   end
+.. include:: ../../steps/step_chef_lwrp_windows_reboot_cancel.rst
 
 
 windows_registry
@@ -3181,22 +2873,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To add a |zenoss| |gnupg| key:
+.. include:: ../../steps/step_chef_lwrp_yum_key_add.rst
 
-.. code-block:: ruby
+.. include:: ../../steps/step_chef_lwrp_yum_key_remove.rst
 
-   yum_key "RPM-GPG-KEY-zenoss" do 
-     url "http://dev.zenoss.com/yum/RPM-GPG-KEY-zenoss" 
-     action :add 
-   end
-
-To add a |zenoss| |gnupg| key:
-
-.. code-block:: ruby
-
-   yum_key "RPM-GPG-KEY-zenoss" do 
-     action :remove 
-   end
 
 yum_repository
 -----------------------------------------------------
@@ -3214,24 +2894,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-To add a |zenoss| repository:
+.. include:: ../../steps/step_chef_lwrp_yum_repository_add.rst
 
-.. code-block:: ruby
-
-   yum_repository "zenoss" do
-     description "Zenoss Stable repo"
-     url "http://dev.zenoss.com/yum/stable/" 
-     key "RPM-GPG-KEY-zenoss" 
-     action :add 
-   end
-
-To remove a |zenoss| repository:
-
-.. code-block:: ruby
-
-   yum_repository "zenoss" do 
-     action :remove 
-   end
+.. include:: ../../steps/step_chef_lwrp_yum_repository_remove.rst
 
 
 zenoss_zenbatchload
