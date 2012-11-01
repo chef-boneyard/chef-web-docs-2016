@@ -32,7 +32,7 @@ freebsd
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
+|cookbook name freebsd|
 
 freebsd_port_options
 =====================================================

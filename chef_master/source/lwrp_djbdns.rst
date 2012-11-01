@@ -32,7 +32,7 @@ djbdns
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
+|cookbook name djbdns|
 
 djbdns_rr
 =====================================================

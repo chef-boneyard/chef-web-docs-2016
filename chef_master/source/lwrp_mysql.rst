@@ -32,7 +32,7 @@ mysql_database
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
+|cookbook name mysql|
 
 mysql_database
 =====================================================

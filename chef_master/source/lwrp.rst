@@ -47,67 +47,67 @@ Lightweight Resources
    * - Resource
      - Description
    * - :doc:`lwrp_apt`
-     - xxxxx
+     - |cookbook name apt|
    * - :doc:`lwrp_aws`
-     - xxxxx
+     - |cookbook name aws|
    * - :doc:`lwrp_bluepill`
-     - xxxxx
+     - |cookbook name bluepill|
    * - :doc:`lwrp_chef_handler`
-     - xxxxx
+     - |cookbook name chef_handler|
    * - :doc:`lwrp_daemontools`
-     - xxxxx
+     - |cookbook name daemontools|
    * - :doc:`lwrp_djbdns`
-     - xxxxx
+     - |cookbook name djbdns|
    * - :doc:`lwrp_dmg`
-     - xxxxx
+     - |cookbook name dmg|
    * - :doc:`lwrp_dynect`
-     - xxxxx
+     - |cookbook name dynect|
    * - :doc:`lwrp_firewall`
-     - xxxxx
+     - |cookbook name firewall|
    * - :doc:`lwrp_freebsd`
-     - xxxxx
+     - |cookbook name freebsd|
    * - :doc:`lwrp_gunicorn`
-     - xxxxx
+     - |cookbook name gunicorn|
    * - :doc:`lwrp_homebrew`
-     - xxxxx
+     - |cookbook name homebrew|
    * - :doc:`lwrp_iis`
-     - xxxxx
+     - |cookbook name iis|
    * - :doc:`lwrp_maven`
-     - xxxxx
+     - |cookbook name maven|
    * - :doc:`lwrp_mysql`
-     - xxxxx
+     - |cookbook name mysql|
    * - :doc:`lwrp_nagios`
-     - xxxxx
+     - |cookbook name nagios|
    * - :doc:`lwrp_pacman`
-     - xxxxx
+     - |cookbook name pacman|
    * - :doc:`lwrp_php`
-     - xxxxx
+     - |cookbook name php|
    * - :doc:`lwrp_powershell`
-     - xxxxx
+     - |cookbook name powershell|
    * - :doc:`lwrp_python`
-     - xxxxx
+     - |cookbook name python|
    * - :doc:`lwrp_rabbitmq`
-     - xxxxx
+     - |cookbook name rabbitmq|
    * - :doc:`lwrp_riak`
-     - xxxxx
+     - |cookbook name riak|
    * - :doc:`lwrp_samba`
-     - xxxxx
+     - |cookbook name samba|
    * - :doc:`lwrp_sudo`
-     - xxxxx
+     - |cookbook name sudo|
    * - :doc:`lwrp_supervisor`
-     - xxxxx
+     - |cookbook name supervisor|
    * - :doc:`lwrp_transmission`
-     - xxxxx
+     - |cookbook name transmission|
    * - :doc:`lwrp_users`
-     - xxxxx
+     - |cookbook name users|
    * - :doc:`lwrp_webpi`
-     - xxxxx
+     - |cookbook name webpi|
    * - :doc:`lwrp_windows`
-     - xxxxx
+     - |cookbook name windows|
    * - :doc:`lwrp_yum`
-     - xxxxx
+     - |cookbook name yum|
    * - :doc:`lwrp_zenoss`
-     - xxxxx
+     - |cookbook name zenoss|
 
 .. toctree::
    :hidden:

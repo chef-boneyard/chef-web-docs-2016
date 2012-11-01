@@ -32,7 +32,7 @@ aws
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
+|cookbook name aws|
 
 |amazon aws| Credentials
 =====================================================
