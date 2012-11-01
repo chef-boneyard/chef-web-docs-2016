@@ -14,10 +14,10 @@ This sub-command has the following syntax::
 This sub-command has the following options:
 
 ``-d``
-   Indicates that a directory's children will not be shown when a directory matches a pattern.
+   |d knife list|
 
 ``-R``
-   Indicates that directories will be listed recursively.
+   |r knife list|
 
 For example, to view a list of roles on the |chef server|:
 

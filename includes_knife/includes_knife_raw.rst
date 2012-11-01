@@ -11,11 +11,11 @@ This sub-command has the following syntax::
 This sub-command has the following options:
 
 ``-i FILE``, ``--input FILE``
-   The name of a file to be used with the ``PUT`` or a ``POST`` request.
+   |input file| 
 
 ``--[no-]pretty``
-   Use ``--no-pretty`` to disable |prettyprint| output for |json|. |prettyprint| output is enabled by default.
+   |no-pretty|
 
 ``-m METHOD``, ``--method METHOD``
-   The request method: ``DELETE``, ``GET``, ``POST``, or ``PUT``. Default value: ``GET``.
+   |method request type|
 

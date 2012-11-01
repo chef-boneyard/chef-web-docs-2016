@@ -13,4 +13,4 @@ This sub-command has the following syntax::
 This sub-command has the following options:
 
 ``--recurse``
-   Use ``--recurse`` to delete directories recursively.  Default: ``--no-recurse``
+   |no recurse delete|

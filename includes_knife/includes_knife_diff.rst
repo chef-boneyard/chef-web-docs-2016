@@ -5,7 +5,7 @@
 
 |knife diff|
 
-This sub-command is useful when the files on the |chef server| and in the |chef| repository need to be compared, such as when files on the |chef server| need to be verified prior to an upload or to ensure that certain files in multiple production environments are the same. This sub-command is similar to the ``git diff`` command that can be used to diff what is in the |chef| repository with what is synced to a |github| repository.
+This sub-command is useful when the files on the |chef server| and in the |chef| repository need to be compared, such as when files on the |chef server| need to be verified prior to an upload or to ensure that certain files in multiple production environments are the same. This sub-command is similar to the ``git diff`` command that can be used to diff what is in the |chef| repository with what is synced to a |github| repository. This sub-command is useful when used in conjunction with ``knife download`` and ``knife upload``.
 
 This sub-command has the following syntax::
 
@@ -14,13 +14,13 @@ This sub-command has the following syntax::
 This sub-command has the following options:
 
 ``--name-only``
-   Indicates that only the names of modified files will be shown.
+   |name only|
 
 ``--name-status``
-   Indicates that only the names of files with a status of ``Added``, ``Deleted``, ``Modified``, or ``Type Changed`` will be shown.
+   |name status|
 
 ``--no-recurse``
-   Use ``--no-recurse`` to disable listing a directory recursively. Default: ``--recurse``
+   |no recurse diff|
 
 For example, to compare the differences between the local |chef| repository and the files that are on the |chef server|, enter:
 
@@ -53,4 +53,4 @@ to return something like:
    node-lb/.gitignore
    node-lb/Rakefile
 
-Commands often used in conjunction with knife diff are knife download and knife upload.
+

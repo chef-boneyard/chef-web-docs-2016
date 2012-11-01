@@ -5,7 +5,7 @@
 
 |knife download|
 
-This sub-command will bring roles, cookbooks, etc. down from the Chef server to your current working directory.  It can be useful in backing up the server, inspecting its state, and extracting out-of-process changes people have made to a Chef server (such as if they bypassed source control).
+This sub-command will download roles, cookbooks, environments, nodes, and data bags from the |chef server| to your current working directory. It can be used to back up data on the |chef server|, inspect the state of one or more files, or to extract out-of-process changes users may have made to files on the |chef server|, such as if a user made a change that bypassed version source control. This sub-command is often used in conjunction with ``knife diff``, which can be used to see exactly what changes will be downloaded, and then ``knife upload``, which does the opposite of ``knife download``.
 
 This sub-command has the following syntax::
 
@@ -14,16 +14,16 @@ This sub-command has the following syntax::
 This sub-command has the following options:
 
 ``-n``, ``--dry-run``
-   Indicates that no action is taken and that results are only printed out.
+   |dry_run|
 
 ``--purge``
-   Use ``--purge`` to delete local files and directories that do not exist on the |chef server|.  By default, if a role, cookbook, etc. does not exist on the Chef server, the local file for said role will be left alone and NOT deleted.  Default: ``--no-purge``
+   |purge knife download|
 
 ``--no-recurse``
-   Use ``--no-recurse`` to disable downloading a directory recursively.  Default: ``--recurse``
+   |no recurse download|
 
 ``--force``
-   Use ``--force`` to download files even when the file on the hard drive is identical to the object on the server (role, cookbook, etc.).  By default, files are compared to see if they have equivalent content, and local files are only overwritten if they are different.  Default: ``--no-force``
+   |force knife download|
 
 For example, to download an environment named "production":
 
@@ -64,5 +64,3 @@ or, from any directory:
 .. code-block:: bash
 
    $ knife download /
-
-Related commands include knife diff, which can be used to see exactly what changes will be downloaded, and knife upload, which does the reverse of a download.

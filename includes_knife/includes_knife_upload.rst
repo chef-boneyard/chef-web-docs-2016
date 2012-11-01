@@ -5,7 +5,7 @@
 
 |knife upload|
 
-This sub-command will upload roles, cookbooks, etc. from your local chef repository filesystem (ED. that ought to be a link) to the Chef server.  It is often used to deploy changes to a Chef server.
+This sub-command will upload roles, cookbooks, environments, and data bags to the |chef server| from your current working directory in the |chef| repository. This sub-command is often used in conjunction with ``knife diff``, which can be used to see exactly what changes will be uploaded, and then ``knife download``, which does the opposite of ``knife upload``.
 
 This sub-command has the following syntax::
 
@@ -14,16 +14,16 @@ This sub-command has the following syntax::
 This sub-command has the following options:
 
 ``-n``, ``--dry-run``
-   Indicates that no action is taken and that results are only printed out.
+   |dry_run|
 
 ``--purge``
-   Use ``--purge`` to delete roles, cookbooks, etc. from the Chef server if their corresponding files do not exist in the chef repository (ED. that ought to be a link).  By default, such objects are left alone and NOT purged.  Default: ``--no-purge``
+   |purge knife upload|
 
-``--no-recurse``
-   Use ``--no-recurse`` to disable uploading a directory recursively.  Default: ``--recurse``
+``--recurse``
+   |no recurse upload|
 
 ``--force``
-   Use ``--force`` to upload roles, cookbooks, etc. even if the file in the directory is identical (by default, no POST or PUT is performed unless an actual change would be made).  Default: ``--no-force``
+   |force knife upload|
 
 For example, to upload an environment named "production":
 
@@ -64,5 +64,3 @@ or, from any directory:
 .. code-block:: bash
 
    $ knife download /
-
-Related commands include knife diff, which can be used to see exactly what changes will be uploaded, and knife download, which does the reverse of a upload.

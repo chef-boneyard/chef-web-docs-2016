@@ -36,6 +36,9 @@ The following options can be run with all |knife| sub-commands and plug-ins:
 ``--print-after``
    |print-after|
 
+``--repo-mode MODE``
+   |repo_mode|
+
 ``-s URL``, ``--server-url URL``
    |server-url|
 
