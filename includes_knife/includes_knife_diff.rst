@@ -19,8 +19,8 @@ This sub-command has the following options:
 ``--name-status``
    Indicates that only the names of files with a status of ``Added``, ``Deleted``, ``Modified``, or ``Type Changed`` will be shown.
 
-``--[no-]recurse``
-   Use ``--no-recurse`` to disable listing a directory recursively. Listing a directory recursively is enabled by default.
+``--no-recurse``
+   Use ``--no-recurse`` to disable listing a directory recursively. Default: ``--recurse``
 
 For example, to compare the differences between the local |chef| repository and the files that are on the |chef server|, enter:
 
@@ -52,3 +52,5 @@ to return something like:
    node-lb/files/default/wildcard.node.com.key
    node-lb/.gitignore
    node-lb/Rakefile
+
+Commands often used in conjunction with knife diff are knife download and knife upload.
