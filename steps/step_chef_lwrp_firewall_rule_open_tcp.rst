@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To open standard http port to tcp traffic only; insert as first rule; enable firewall
+To open the standard HTTP port to TCP traffic only, insert as the first rule, and then enable the firewall:
 
 .. code-block:: ruby
 
