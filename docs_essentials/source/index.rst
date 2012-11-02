@@ -104,15 +104,15 @@ H2 -- The |chef| Run -- FIRST DRAFT
 .. include:: ../../includes_chef/includes_chef_client_run.rst
 
 
-H2 -- |ohai| -- DONE
+|ohai| -- docs_ohai
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai.rst
 
-H3 -- Automatic Attributes
+Automatic Attributes -- docs_ohai
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
 
-H3 -- |ohai| Attribute List -- DONE
+|ohai| Attribute List -- docs_ohai
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
