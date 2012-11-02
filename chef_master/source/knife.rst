@@ -43,6 +43,10 @@ Knife
 
    * - Sub-command
      - Description
+   * - :doc:`knife_using`
+     - |knife| runs from a management workstation and sits in-between a |chef| server and an organization’s infrastructure.
+   * - :doc:`knife_common_options`
+     - There are many options that are available for all |knife| sub-commands.
    * - :doc:`knife_bootstrap`
      - |knife bootstrap|
    * - :doc:`knife_client`
@@ -108,6 +112,8 @@ Knife
 .. toctree::
    :hidden:
 
+   knife_using
+   knife_common_options
    knife_bootstrap
    knife_client
    knife_configure
