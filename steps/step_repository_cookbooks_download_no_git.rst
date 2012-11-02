@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To download a cookbook when |git| is not used for version source controlrun the following command:
+To download a cookbook when |git| is not used for version source control, run the following command:
 
 .. code-block:: bash
 

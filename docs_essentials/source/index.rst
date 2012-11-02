@@ -176,25 +176,27 @@ The following sections discuss these elements (and their various sub-components)
 * Knife
 * Ruby
 
-H2 -- Repository -- DONE
+Repository -- docs_essentials_search
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository.rst
 
-H3 -- Directory Structure -- DONE
+Directory Structure -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_repository/includes_repository_directory.rst
 
-H4 -- certificates/ -- DONE
+.. include:: ../../includes_repository/includes_repository_directory_structure.rst
+
+certificates/ -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_certificates.rst
 
 .. include:: ../../steps/step_repository_certificate_generate.rst
 
-H4 -- .chef/ -- DONE
+.chef/ -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_chef.rst
 
-H4 -- config/ -- DONE
+config/ -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_config.rst
 
@@ -213,7 +215,7 @@ The |chef| repository uses two configuration files: ``rake.rb`` (required) and `
 
        .. include:: ../../includes_chef/includes_rake_tasks_included_in_chef_libraries.rst
 
-H4 -- cookbooks/ -- DONE -- THIS IS THE COOKBOOK CACHE!
+cookbooks/ -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
@@ -225,11 +227,7 @@ H4 -- cookbooks/ -- DONE -- THIS IS THE COOKBOOK CACHE!
 
 .. include:: ../../steps/step_repository_cookbooks_download_no_git.rst
 
-**jamescott: BELOW IS THE COOKBOOK CACHED DESCRIPTION. COMPARE THIS BELOW TO WHAT IS ABOVE AND INTEGRATE, REWRITE, MAKE NECESSARY CHANGES**
-
-../../includes_node/includes_node_cookbook_cached.rst
-
-H4 -- data_bags/ -- DONE
+data_bags/ -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_data_bags.rst
 
@@ -237,29 +235,31 @@ H4 -- data_bags/ -- DONE
 
 .. include:: ../../steps/step_repository_data_bags_upload_data_bag_item.rst
 
-H4 -- environments/ -- DONE
+environments/ -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_environments.rst
 
 .. include:: ../../steps/step_repository_roles_upload_environment.rst
 
-H4 -- roles/ -- DONE
+roles/ -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_roles.rst 
 
 .. include:: ../../steps/step_repository_roles_upload_role.rst
 
-H3 -- Create the |chef| Repository -- DONE
+Create the |chef| Repository -- docs_essentials_search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_repository/includes_repository_create.rst
 
-H4 -- Clone -- DONE
+Clone -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../steps/step_repository_create_clone.rst
 
-H4 -- Download -- DONE
+Download -- docs_essentials_search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../steps/step_repository_create_download.rst
+
+
 
 H2 -- Knife -- DONE
 -----------------------------------------------------

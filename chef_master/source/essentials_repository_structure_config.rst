@@ -1,5 +1,5 @@
 =====================================================
-Chef Docs
+config/
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
@@ -32,84 +32,20 @@ Chef Docs
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-This page is a work in progress. Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
+.. include:: ../../includes_repository/includes_repository_directory_config.rst
+
+The |chef| repository uses two configuration files: ``rake.rb`` (required) and ``knife.rb`` (optional):
 
 .. list-table::
-   :widths: 200 200 200 200
+   :widths: 60 420
    :header-rows: 1
 
-   * - Getting Started
-     - Chef Essentials
-     - Reference
-     - Scenarios
-   * - :doc:`chef_overview`
-     - Nodes
-     - :doc:`knife`
-     - 
-   * - Set up a Workstation
-     - Workstation
-     - :doc:`resource`
-     - 
-   * - Set up a Repository
-     - Server
-     - :doc:`lwrp`
-     - 
-   * - 
-     - Cookbooks
-     - :doc:`config`
-     - 
-   * - :doc:`just_enough_ruby_for_chef`
-     - :doc:`essentials_repository`
-     - Recipe DSL
-     - 
-   * - 
-     - 
-     - :doc:`api_cookbooks_site`
-     - 
-   * - 
-     - :doc:`essentials_search`
-     - :doc:`api_chef_server`
-     - 
-   * - 
-     - 
-     - 
-     - 
-   * - 
-     - 
-     - 
-     - 
+   * - File
+     - Description
+   * - knife.rb
+     - .. include:: ../../includes_config/includes_config_rb_knife.rst
+   * - rake.rb
+     - .. include:: ../../includes_config/includes_config_rb_rake.rst
 
-
-
-
-
-
-.. Hide the TOC from this file.
-
-.. toctree::
-   :hidden:
-
-   chef_overview
-
-   essentials_nodes
-   essentials_workstation
-   essentials_server
-   essentials_cookbooks
-
-   essentials_search
-   essentials_repository
-
-   just_enough_ruby_for_chef
-
-   knife
-
-   resource
-   lwrp
-
-   config
-
-   api_chef_server
-   api_cookbooks_site
-
-
+       .. include:: ../../includes_chef/includes_rake_tasks_included_in_chef_libraries.rst
 

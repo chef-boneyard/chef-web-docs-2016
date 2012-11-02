@@ -1,5 +1,5 @@
 =====================================================
-Chef Docs
+cookbooks/
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
@@ -32,84 +32,12 @@ Chef Docs
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-This page is a work in progress. Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
+.. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
-.. list-table::
-   :widths: 200 200 200 200
-   :header-rows: 1
+.. include:: ../../steps/step_repository_cookbooks_configure_settings.rst
 
-   * - Getting Started
-     - Chef Essentials
-     - Reference
-     - Scenarios
-   * - :doc:`chef_overview`
-     - Nodes
-     - :doc:`knife`
-     - 
-   * - Set up a Workstation
-     - Workstation
-     - :doc:`resource`
-     - 
-   * - Set up a Repository
-     - Server
-     - :doc:`lwrp`
-     - 
-   * - 
-     - Cookbooks
-     - :doc:`config`
-     - 
-   * - :doc:`just_enough_ruby_for_chef`
-     - :doc:`essentials_repository`
-     - Recipe DSL
-     - 
-   * - 
-     - 
-     - :doc:`api_cookbooks_site`
-     - 
-   * - 
-     - :doc:`essentials_search`
-     - :doc:`api_chef_server`
-     - 
-   * - 
-     - 
-     - 
-     - 
-   * - 
-     - 
-     - 
-     - 
+.. include:: ../../steps/step_repository_cookbooks_create.rst
 
+.. include:: ../../steps/step_repository_cookbooks_download_git.rst
 
-
-
-
-
-.. Hide the TOC from this file.
-
-.. toctree::
-   :hidden:
-
-   chef_overview
-
-   essentials_nodes
-   essentials_workstation
-   essentials_server
-   essentials_cookbooks
-
-   essentials_search
-   essentials_repository
-
-   just_enough_ruby_for_chef
-
-   knife
-
-   resource
-   lwrp
-
-   config
-
-   api_chef_server
-   api_cookbooks_site
-
-
-
+.. include:: ../../steps/step_repository_cookbooks_download_no_git.rst
