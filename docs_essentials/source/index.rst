@@ -248,7 +248,7 @@ roles/ -- docs_essentials_search
 .. include:: ../../steps/step_repository_roles_upload_role.rst
 
 Create the |chef| Repository -- docs_essentials_search
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_repository/includes_repository_create.rst
 
 Clone -- docs_essentials_search
