@@ -63,6 +63,8 @@ Wildcard Search
 
 Plug-ins
 -----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_plugin.rst
+
 .. include:: ../../includes_knife/includes_knife_using_plugins.rst
 
 Syntax

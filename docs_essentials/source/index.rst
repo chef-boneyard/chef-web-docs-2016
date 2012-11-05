@@ -176,27 +176,27 @@ The following sections discuss these elements (and their various sub-components)
 * Knife
 * Ruby
 
-Repository -- docs_essentials_search
+Repository -- docs_essentials_repository
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository.rst
 
-Directory Structure -- docs_essentials_search
+Directory Structure -- docs_essentials_repository
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_repository/includes_repository_directory.rst
 
 .. include:: ../../includes_repository/includes_repository_directory_structure.rst
 
-certificates/ -- docs_essentials_search
+certificates/ -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_certificates.rst
 
 .. include:: ../../steps/step_repository_certificate_generate.rst
 
-.chef/ -- docs_essentials_search
+.chef/ -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_chef.rst
 
-config/ -- docs_essentials_search
+config/ -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_config.rst
 
@@ -215,7 +215,7 @@ The |chef| repository uses two configuration files: ``rake.rb`` (required) and `
 
        .. include:: ../../includes_chef/includes_rake_tasks_included_in_chef_libraries.rst
 
-cookbooks/ -- docs_essentials_search
+cookbooks/ -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
@@ -227,7 +227,7 @@ cookbooks/ -- docs_essentials_search
 
 .. include:: ../../steps/step_repository_cookbooks_download_no_git.rst
 
-data_bags/ -- docs_essentials_search
+data_bags/ -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_data_bags.rst
 
@@ -235,27 +235,27 @@ data_bags/ -- docs_essentials_search
 
 .. include:: ../../steps/step_repository_data_bags_upload_data_bag_item.rst
 
-environments/ -- docs_essentials_search
+environments/ -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_environments.rst
 
 .. include:: ../../steps/step_repository_roles_upload_environment.rst
 
-roles/ -- docs_essentials_search
+roles/ -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_roles.rst 
 
 .. include:: ../../steps/step_repository_roles_upload_role.rst
 
-Create the |chef| Repository -- docs_essentials_search
-++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Create the |chef| Repository -- docs_essentials_repository
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_repository/includes_repository_create.rst
 
-Clone -- docs_essentials_search
+Clone -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../steps/step_repository_create_clone.rst
 
-Download -- docs_essentials_search
+Download -- docs_essentials_repository
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../steps/step_repository_create_download.rst
 
@@ -272,6 +272,8 @@ H3 -- Sub-commands -- DONE
 H3 -- Plugins -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_plugin.rst
+
+.. include:: ../../includes_knife/includes_knife_using_plugins.rst
 
 H2 -- Ruby -- DONE
 -----------------------------------------------------
