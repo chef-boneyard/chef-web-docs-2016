@@ -60,3 +60,10 @@ To view the run list for a node named "dev", enter:
 
    $ knife node show dev -r
 
+To view information in |json| format, use the ``-F`` common option as part of the command like this:
+
+.. code-block:: bash
+
+   $ knife node show i-12345678 -F json
+
+Other formats available include ``text``, ``yaml``, and ``pp``.

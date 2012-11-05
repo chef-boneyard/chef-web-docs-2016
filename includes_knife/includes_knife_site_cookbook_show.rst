@@ -42,3 +42,10 @@ to return something like:
       http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/0_8_0
       http://cookbooks.opscode.com/api/v1/cookbooks/haproxy/versions/0_7_0 
 
+To view information in |json| format, use the ``-F`` common option as part of the command like this:
+
+.. code-block:: bash
+
+   $ knife cookbook site show haproxy -F json
+
+Other formats available include ``text``, ``yaml``, and ``pp``.

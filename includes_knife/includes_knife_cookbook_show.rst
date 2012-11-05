@@ -95,3 +95,11 @@ If the cookbook is frozen, something like the following is returned:
 .. code-block:: bash
 
    frozen?:        true
+
+To view information in |json| format, use the ``-F`` common option as part of the command like this:
+
+.. code-block:: bash
+
+   $ knife cookbook show getting-started -F json
+
+Other formats available include ``text``, ``yaml``, and ``pp``.
