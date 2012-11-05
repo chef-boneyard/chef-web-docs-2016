@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``host``
+   * - ``:host``
      - |host lwrp mysql_database|
-   * - ``username``
+   * - ``:username``
      - |username lwrp mysql_database|
-   * - ``password``
+   * - ``:password``
      - |password lwrp mysql_database|
-   * - ``database``
+   * - ``:database``
      - |database lwrp mysql_database|

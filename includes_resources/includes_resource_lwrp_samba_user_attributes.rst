@@ -9,5 +9,5 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``password``
+   * - ``:password``
      - |password lwrp samba|

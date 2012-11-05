@@ -9,11 +9,12 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``command``
-     - |command resource powershell_script|
-   * - ``code``
+   * - ``:code``
      - |code resource powershell_script|
-   * - ``interpreter``
-     - |interpreter resource powershell_script|
-   * - ``flags``
+   * - ``:command``
+     - |command resource powershell_script|
+   * - ``:flags``
      - |flags resource powershell_script|
+   * - ``:interpreter``
+     - |interpreter resource powershell_script|
+

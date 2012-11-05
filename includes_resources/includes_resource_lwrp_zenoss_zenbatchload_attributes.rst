@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``devices``
+   * - ``:devices``
      - 
-   * - ``groups``
+   * - ``:groups``
      - 
-   * - ``locations``
+   * - ``:locations``
      - 
-   * - ``systems``
+   * - ``:systems``
      - 

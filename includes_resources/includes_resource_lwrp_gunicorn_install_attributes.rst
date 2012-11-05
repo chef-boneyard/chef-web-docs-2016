@@ -9,5 +9,5 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``virtualenv``
+   * - ``:virtualenv``
      - The name of the virtual environment.

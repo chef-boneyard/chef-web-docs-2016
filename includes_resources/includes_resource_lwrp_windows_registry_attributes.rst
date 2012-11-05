@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``key_name``
+   * - ``:key_name``
      - |key_name lwrp windows_registry|
-   * - ``values``
+   * - ``:values``
      - |values lwrp windows_registry|

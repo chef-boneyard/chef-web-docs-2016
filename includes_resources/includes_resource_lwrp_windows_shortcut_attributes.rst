@@ -9,13 +9,13 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``arguments``
+   * - ``:arguments``
      - The command-line arguments associate with a shortcut.
-   * - ``cwd``
+   * - ``:cwd``
      - The current working directory.
-   * - ``description``
+   * - ``:description``
      - A description of the shortcut.
-   * - ``name``
+   * - ``:name``
      - The name of the shortcut.
-   * - ``target``
+   * - ``:target``
      - The unique identifier for the object the shortcut will link to.

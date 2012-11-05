@@ -9,23 +9,23 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``command``
+   * - ``:command``
      - |command resource execute|
-   * - ``creates``
+   * - ``:creates``
      - |creates resource execute|
-   * - ``cwd``
+   * - ``:cwd``
      - |cwd resource execute|
-   * - ``environment``
+   * - ``:environment``
      - |environment resource execute|
-   * - ``group``
+   * - ``:group``
      - |group resource execute|
-   * - ``path``
+   * - ``:path``
      - |path resource execute|
-   * - ``returns``
+   * - ``:returns``
      - |returns resource execute|
-   * - ``timeout``
+   * - ``:timeout``
      - |timeout resource execute|
-   * - ``user``
+   * - ``:user``
      - |user resource execute|
-   * - ``umask``
+   * - ``:umask``
      - |umask resource execute|

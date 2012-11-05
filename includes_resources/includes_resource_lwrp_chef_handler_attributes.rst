@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``class_name``
+   * - ``:class_name``
      - |class_name lwrp chef_handler|
-   * - ``source``
+   * - ``:source``
      - |source lwrp chef_handler|
-   * - ``arguments``
+   * - ``:arguments``
      - |arguments lwrp chef_handler|
-   * - ``supports``
+   * - ``:supports``
      - |supports lwrp chef_handler|

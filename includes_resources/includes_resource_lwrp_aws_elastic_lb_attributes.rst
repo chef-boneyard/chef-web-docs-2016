@@ -9,9 +9,9 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``aws_access_key``
+   * - ``:aws_access_key``
      - |aws_access_key lwrp aws_elastic_lb|
-   * - ``aws_secret_access_key``
+   * - ``:aws_secret_access_key``
      - |aws_secret_access_key lwrp aws_elastic_lb|
-   * - ``name``
+   * - ``:name``
      - Required. The name of the load balancer.

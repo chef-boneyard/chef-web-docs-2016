@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``channel_name``
+   * - ``:channel_name``
      - |channel_name lwrp php_pear_channel|
-   * - ``channel_xml``
+   * - ``:channel_xml``
      - |channel_xml lwrp php_pear_channel|

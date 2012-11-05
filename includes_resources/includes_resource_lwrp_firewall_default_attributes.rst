@@ -9,5 +9,5 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``name``
+   * - ``:name``
      - |name lwrp firewall|

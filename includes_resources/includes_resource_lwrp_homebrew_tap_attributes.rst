@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``name``
+   * - ``:name``
      - The name of a formula repository located on |github|.
-   * - ``tapped``
+   * - ``:tapped``
      - Indicates that a formula repository is tapped.

@@ -9,13 +9,13 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``cookbook``
+   * - ``:cookbook``
      - The name of the cookbook in which the ``authorized_keys`` template is located.
-   * - ``data_bag``
+   * - ``:data_bag``
      - The object to be searched.
-   * - ``group_id``
+   * - ``:group_id``
      - The numeric identifier for a group.
-   * - ``group_name``
+   * - ``:group_name``
      - The name of a group. This value defaults to the name of the resource if left empty.
-   * - ``search_group``
+   * - ``:search_group``
      - The name of the group to be searched. This value defaults to the name of the resource if left empty.

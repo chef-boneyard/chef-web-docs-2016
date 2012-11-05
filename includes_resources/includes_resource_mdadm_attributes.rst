@@ -9,11 +9,11 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``raid_device``
-     - |raid_device resource mdadm|
-   * - ``devices``
-     - |devices resource mdadm|
-   * - ``level``
-     - |level resource mdadm|
-   * - ``chunk``
+   * - ``:chunk``
      - |chunk resource mdadm|
+   * - ``:devices``
+     - |devices resource mdadm|
+   * - ``:level``
+     - |level resource mdadm|
+   * - ``:raid_device``
+     - |raid_device resource mdadm|

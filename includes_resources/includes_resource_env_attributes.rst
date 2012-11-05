@@ -9,9 +9,9 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``key_name``
+   * - ``:key_name``
      - |key_name resource directory|
-   * - ``value``
+   * - ``:value``
      - |value resource directory|
-   * - ``delim``
+   * - ``:delim``
      - |delim resource directory|

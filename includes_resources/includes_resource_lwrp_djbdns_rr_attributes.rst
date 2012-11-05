@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``fqdn``
-     - |fqdn lwrp djbdns_rr|
-   * - ``ip``
-     - Required. |ip lwrp djbdns_rr|
-   * - ``type``
-     - |type lwrp djbdns_rr|
-   * - ``cwd``
+   * - ``:cwd``
      - |cwd lwrp djbdns_rr|
+   * - ``:fqdn``
+     - |fqdn lwrp djbdns_rr|
+   * - ``:ip``
+     - Required. |ip lwrp djbdns_rr|
+   * - ``:type``
+     - |type lwrp djbdns_rr|

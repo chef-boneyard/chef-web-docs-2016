@@ -9,21 +9,21 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``username``
+   * - ``:username``
      - |username resource user|
-   * - ``comment``
+   * - ``:comment``
      - |comment resource user|
-   * - ``uid``
+   * - ``:uid``
      - |uid resource user|
-   * - ``gid``
+   * - ``:gid``
      - |gid resource user|
-   * - ``home``
+   * - ``:home``
      - |home resource user|
-   * - ``shell``
+   * - ``:shell``
      - |shell resource user|
-   * - ``password``
+   * - ``:password``
      - |password resource user|
-   * - ``system``
+   * - ``:system``
      - |system resource user|
-   * - ``supports``
+   * - ``:supports``
      - |supports resource user|

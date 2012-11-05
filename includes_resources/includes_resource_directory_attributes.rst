@@ -9,17 +9,17 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``group``
+   * - ``:group``
      - |group resource directory|
-   * - ``mode``
+   * - ``:mode``
      - |mode resource directory|
-   * - ``rights``
+   * - ``:rights``
      - |rights resource directory|
-   * - ``inherits``
+   * - ``:inherits``
      - |inherits resource directory|
-   * - ``owner``
+   * - ``:owner``
      - |owner resource directory|
-   * - ``path``
+   * - ``:path``
      - |path resource directory|
-   * - ``recursive``
+   * - ``:recursive``
      - |recursive resource directory|

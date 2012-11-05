@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``svnpatch``
+   * - ``:svnpatch``
      -  
-   * - ``ticket``
+   * - ``:ticket``
      - 

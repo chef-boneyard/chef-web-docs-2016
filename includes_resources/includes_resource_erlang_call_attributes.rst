@@ -9,13 +9,13 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``code``
+   * - ``:code``
      - |code resource erlang_call|
-   * - ``cookie``
+   * - ``:cookie``
      - |cookie resource erlang_call|
-   * - ``distributed``
+   * - ``:distributed``
      - |distributed resource directory|
-   * - ``name_type``
+   * - ``:name_type``
      - |name_type resource directory|
-   * - ``node_name``
+   * - ``:node_name``
      - |node_name resource directory|

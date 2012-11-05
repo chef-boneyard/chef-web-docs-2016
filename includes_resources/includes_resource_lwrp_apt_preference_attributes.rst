@@ -9,9 +9,9 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``package_name``
+   * - ``:package_name``
      - The name of the packaage
-   * - ``pin``
+   * - ``:pin``
      - The package version or repository to be pinned.
-   * - ``pin_priority``
+   * - ``:pin_priority``
      - The priority for the package version or repository, in comparison to the priority for other versions of the same package or repository. The higher value will have the higher priority.

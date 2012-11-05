@@ -9,9 +9,9 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``group_name``
+   * - ``:group_name``
      - The name of the group.
-   * - ``priority``
+   * - ``:priority``
      - A priority value assigned to the group.
-   * - ``programs``
+   * - ``:programs``
      -  An array of program names. Programs that are listed will become members of the group. Default value: ``[]``.

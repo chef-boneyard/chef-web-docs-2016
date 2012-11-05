@@ -9,17 +9,17 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``package_name``
-     - |package_name resource yum|
-   * - ``version``
-     - |version resource yum|
-   * - ``source``
-     - |source resource yum|
-   * - ``options``
-     - |options resource yum|
-   * - ``arch``
-     - |arch resource yum|
-   * - ``flush_cache``
-     - |flush_cache resource yum|
-   * - ``allow_downgrade``
+   * - ``:allow_downgrade``
      - |allow_downgrade resource yum|
+   * - ``:arch``
+     - |arch resource yum|
+   * - ``:flush_cache``
+     - |flush_cache resource yum|
+   * - ``:options``
+     - |options resource yum|
+   * - ``:package_name``
+     - |package_name resource yum|
+   * - ``:source``
+     - |source resource yum|
+   * - ``:version``
+     - |version resource yum|

@@ -9,15 +9,15 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``name``
+   * - ``:name``
      - |name lwrp firewall_rule|
-   * - ``protocol``
+   * - ``:protocol``
      - |protocol lwrp firewall_rule|
-   * - ``port``
+   * - ``:port``
      - |port lwrp firewall_rule|
-   * - ``source``
+   * - ``:source``
      - |source lwrp firewall_rule|
-   * - ``destination``
+   * - ``:destination``
      - |destination lwrp firewall_rule|
-   * - ``position``
+   * - ``:position``
      - |position lwrp firewall_rule|
