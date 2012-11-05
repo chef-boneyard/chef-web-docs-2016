@@ -10,7 +10,7 @@ There are four types of attributes:
    * - Attribute Type
      - Description
    * - ``default``
-     - A default attribute is **jamescott: "A default attribute is what?" (other than the obvious) -- but what's the difference between default an normal and how does an attribute become a "default attribute"?**. A default attribute has the lowest attribute precedence. A default attribute is automatically reset each time |chef| runs. A cookbook should be authored so that it uses default attributes whenever possible.
+     - A default attribute has the lowest attribute precedence. A default attribute is automatically reset each time |chef| runs. A cookbook should be authored so that it uses default attributes whenever possible.
    * - ``normal``
      - A normal attribute is an attribute that persists on the target system . A normal attribute is never reset during a |chef| run. A normal attribute has a higher attribute precedence than a default attribute.
    * - ``override``

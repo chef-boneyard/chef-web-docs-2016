@@ -329,7 +329,7 @@ H3 -- The _default Environment -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_environment/includes_environment_default.rst
 
-H3 -- Environment Formats -- DONE
+H3 -- Environment Data Formats -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_environment/includes_environment_format.rst
 
@@ -501,54 +501,54 @@ H3 -- Use Data Bags with |chef solo| -- DONE?
 .. include:: ../../includes_data_bag/includes_data_bag_chef_solo.rst
 
 
-H2 -- Roles -- DONE
+Roles -- essentials_roles
 -----------------------------------------------------
 .. include:: ../../includes_role/includes_role.rst
 
-H3 -- Role Formats -- DONE
+Role Data Formats -- essentials_roles
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_role/includes_role_formats.rst
 
-H4 -- Ruby DSL -- DONE
+Ruby DSL -- essentials_roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
 .. include:: ../../includes_role/includes_role_formats_ruby.rst
 
-H4 -- JSON -- DONE
+JSON -- essentials_roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_role/includes_role_formats_json.rst
 
-H3 -- Role Attributes -- DONE
+Role Attributes -- essentials_roles
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_role/includes_role_attribute.rst
 
-H4 -- Types -- DONE
+Types -- essentials_roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_type.rst
 
-H4 -- Precedence vs. Priority (PICK A WORD!) -- DONE
+Precedence -- essentials_roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-H4 -- Persistence -- DONE
+Persistence -- essentials_roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
-H4 -- Automatic Attributes -- DONE
+Automatic Attributes -- essentials_roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_automatic.rst
 
-H4 -- Notation -- DONE
+Notation -- essentials_roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_notation.rst
 
-H3 -- Manage Roles -- DONE
+Manage Roles -- essentials_roles
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_role/includes_role_manage.rst
 
-Deleting Environments from a Role's Run-list -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Deleting Environments from a Role's Run-list -- essentials_roles
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_role/includes_role_manage_delete.rst
 
 

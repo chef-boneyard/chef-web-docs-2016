@@ -61,7 +61,7 @@ Domain-specific |ruby| attributes:
 
        would apply the ``apache2`` recipe first, then the ``apache2::mod_ssl`` recipe, and then the ``role[monitor]`` recipe.
 
-A |ruby| DSL file for each role must exist in the (jamescott: PATH) roles subdirectory of the |chef| repository. (If the repository does not have this subdirectory, then create it.) Each |ruby| file should have the .rb suffix. The complete roles |ruby| has the following syntax::
+A |ruby| DSL file for each role must exist in the ``roles/`` subdirectory of the |chef| repository. (If the repository does not have this subdirectory, then create it using |knife|.) Each |ruby| file should have the .rb suffix. The complete roles |ruby| has the following syntax::
 
    name "role_name"
    description "role_description"
@@ -69,8 +69,6 @@ A |ruby| DSL file for each role must exist in the (jamescott: PATH) roles subdir
    env_run_lists "name" => ["recipe[name]"], "environment_name" => ["recipe[name::attribute]"]
    default_attributes "node" => { "attribute" => [ "value", "value", "etc." ] }
    override_attributes "node" => { "attribute" => [ "value", "value", "etc." ] }
-
-**jamescott: need to verify the base syntax above.**
 
 where both default and override attributes are optional and at least one run-list (with at least one run-list item) is specified. For example, a role named "webserver" that has a run-list that defines actions for three different roles, and for certain roles takes extra steps (such as the "apache2" role listening on ports 80 and 443)::
 

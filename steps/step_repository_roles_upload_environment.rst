@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To upload an environment to the |chef server|rRun the following command:
+To upload an environment to the |chef server|, run the following command:
 
 .. code-block:: bash
 

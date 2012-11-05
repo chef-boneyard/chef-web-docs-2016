@@ -3,6 +3,5 @@
 
 At the beginning of a |chef| run, all default, override, and automatic attributes are reset. |chef| rebuilds these attributes by based on attributes contained in cookbooks, recipes, roles, and environments, plus |ohai| data that is collected about that node at the beginning of the |chef| run. Normal attributes are never reset. During a |chef| run, any new attributes that are passed to the |chef client| are merged with the existing normal attributes on the node and any new settings are applied according to attribute precedence. At the conclusion of the |chef| run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next |chef| run.
 
-**jamescott: THIS ONE NEEDS TO BE REVIEWED. SEE http://wiki.opscode.com/display/chef/Attributes AND READ "ATTRIBUTE PERSISTENCE" AND THEN READ THE ABOVE AND PROVIDE FEEDBACK.**
 
 
