@@ -32,5 +32,8 @@ Just Enough Ruby for |chef|
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
+.. include:: ../../includes_ruby/includes_ruby.rst
+
+.. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
 .. include:: ../../includes_ruby/includes_ruby_just_enough.rst
