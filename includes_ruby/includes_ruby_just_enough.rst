@@ -129,11 +129,11 @@ Here is a quick rundown of some basic |ruby| commands.::
 
 In addition, see the following:
 
-* http://www.ruby-lang.org/en/documentation/
-* http://blog.loftninjas.org/2011/02/16/the-power-of-chef-and-ruby/
-* http://mislav.uniqpath.com/poignant-guide/
-* http://www.rubycentral.com/book/
-* http://www.ruby-doc.org/stdlib/
+* |http ruby lang org|
+* |http opscode blog btm ruby|
+* |http codeacademy ruby|
+* |http rubycentral book|
+* |http ruby doc org|
 
 
 
