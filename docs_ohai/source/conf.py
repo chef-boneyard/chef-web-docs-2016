@@ -35,10 +35,10 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'ohai'
 
 # General information about the project.
-project = u'Essentials :: Search'
+project = u'Essentials :: Ohai'
 copyright = u'2012, Opscode, Inc.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -104,7 +104,7 @@ html_theme = 'sphinxdoc'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Essentials :: Search"
+html_title = "Essentials :: Ohai"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -165,7 +165,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Essentials :: Search'
+htmlhelp_basename = 'Essentials :: Ohai'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,7 +184,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Essentials :: Search.tex', u'Essentials :: Search',
+  ('index', 'Essentials :: Ohai.tex', u'Essentials :: Ohai',
    u'Opscode, Inc.', 'manual'),
 ]
 
@@ -214,7 +214,7 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'Essentials :: Search', u'Essentials :: Search',
+    ('index', 'Essentials :: Ohai', u'Essentials :: Ohai',
      [u'Opscode, Inc.'], 1)
 ]
 
@@ -228,8 +228,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Essentials :: Search', u'Essentials :: Search',
-   u'Opscode, Inc.', 'Essentials :: Search', 'Essentials :: Search',
+  ('index', 'Essentials :: Ohai', u'Essentials :: Ohai',
+   u'Opscode, Inc.', 'Essentials :: Ohai', 'Essentials :: Ohai',
    'Miscellaneous'),
 ]
 
@@ -246,7 +246,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Essentials :: Search'
+epub_title = u'Essentials :: Ohai'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'
