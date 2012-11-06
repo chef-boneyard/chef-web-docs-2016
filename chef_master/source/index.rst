@@ -32,79 +32,28 @@ Chef Docs
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-This page is a work in progress. Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
+.. note:: This page is a work in progress because Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
+
 
 .. list-table::
-   :widths: 200 200 200 200
+   :widths: 200 600
    :header-rows: 1
 
+   * - Topics
+     - Links
    * - Getting Started
-     - Chef Essentials
-     - Reference
-     - Scenarios
-   * - :doc:`chef_overview`
-     - Nodes
-     - :doc:`knife`
-     - 
-   * - Set up a Workstation
-     - Workstation
-     - :doc:`resource`
-     - 
-   * - Set up a Repository
-     - Server
-     - :doc:`lwrp`
-     - 
-   * - 
-     - Cookbooks
-     - :doc:`config`
-     - 
-   * - :doc:`just_enough_ruby_for_chef`
-     - :doc:`essentials_repository`
-     - Recipe DSL
-     - 
-   * - 
-     - 
-     - :doc:`api_cookbooks_site`
-     - 
-   * - 
-     - :doc:`essentials_search`
-     - :doc:`api_chef_server`
-     - 
-   * - 
-     - :doc:`essentials_environments`
-     - :doc:`ohai`
-     - 
-   * - 
-     - :doc:`essentials_roles`
-     - 
-     - 
-   * - 
-     - :doc:`essentials_data_bags`
-     - 
-     - 
-   * - 
-     - :doc:`essentials_chef_client`
-     - 
-     - 
-   * - 
-     - :doc:`essentials_cookbook_libraries`
-     - 
-     - 
-   * - 
-     - :doc:`essentials_cookbook_metadata`
-     - 
-     - 
-   * - 
-     - :doc:`essentials_cookbook_resources`
-     - 
-     - 
-   * - 
-     - :doc:`essentials_cookbook_templates`
-     - 
-     - 
-   * - 
-     - :doc:`essentials_cookbook_versions`
-     - 
+     - Read :doc:`chef_overview`. If you want to know more about |ruby| or learn :doc:`just_enough_ruby_for_chef`. Set up a workstation. Set up a repository.
+   * - Nodes
+     - Learn about the :doc:`essentials_chef_client`, 
+   * - Workstations
+     - Learn about :doc:`essentials_repository`.
+   * - The Chef Server
+     - Learn about :doc:`essentials_roles`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, and :doc:`essentials_search`.
+   * - Cookbooks
+     - Learn about :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, and :doc:`essentials_cookbook_versions`.
+   * - References
+     - Detailed reference topics for :doc:`knife`, :doc:`resource`, :doc:`lwrp`, :doc:`api_cookbooks_site`, :doc:`api_chef_server`, :doc:`ohai`, and :doc:`config`.
+   * - Scenarios
      - 
 
 .. Hide the TOC from this file.
