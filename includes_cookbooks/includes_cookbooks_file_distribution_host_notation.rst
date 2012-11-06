@@ -3,5 +3,3 @@
 
 The naming of folders within cookbook directories must literally match the host notation used for file specificity matching. For example, if a host is named ``foo.example.com``, then the folder must be named ``host-foo.example.com``.
 
-**jamescott: this is probably best to single-source, as it lives in several places.**
-

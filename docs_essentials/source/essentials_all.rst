@@ -831,59 +831,63 @@ H3 -- Definition Syntax -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition_syntax.rst
 
-H3 -- Scenario: Create a new resource -- DONE
+Example: Create a new resource -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_create_resource.rst
 
-H3 -- Scenario: Many recipes, one definition -- DONE
+Example: Many recipes, one definition -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_many_recipes_one_definition.rst
 
-H3 -- Scenario: Virtual hosts -- DONE
+Example: Virtual hosts -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_virtaul_hosts.rst
 
-H2 -- File Distributions -- DONE
+
+
+File Distributions
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution.rst
 
-H3 -- Syntax(?) -- DONE
+Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_syntax.rst
 
-H3 -- File Specificity -- DONE
+File Specificity
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
 
-H3 -- Host Notation -- DONE
+Host Notation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_host_notation.rst
 
-H3 -- File Transfers -- DONE
+File Transfers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_transfers.rst
 
-H2 -- Libraries -- DONE
+
+
+Libraries
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_library.rst
 
-H3 -- Using Libraries -- DONE
+Using Libraries
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_library_common_uses.rst
 
-H3 -- Library Syntax -- DONE
+Library Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_library_syntax.rst
 
-H3 -- Scenario: Attributes stored in file -- DONE
+Example: Attributes stored in file
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_cookbooks_library_store_attributes_in_file.rst
 
-H3 -- Scenario: Loop over customer records -- DONE
+Example: Loop over customer records
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_cookbooks_library_loop_over_records.rst
 
-H3 -- Scenario: Creating a namespace -- DONE
+Example: Creating a namespace
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_cookbooks_library_create_namespace.rst
 
