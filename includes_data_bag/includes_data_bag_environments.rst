@@ -1,7 +1,6 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-**jamescott: the following contents in this section are IDENTICAL to what is in the essentials_environments topic. This either needs to be better-consolidated or INCLUDED.**
 
 Values that are stored in a data bag are global to the organization and are available to any environment. There are two main strategies that can be used to store per-environment data within a data bag: by using a top-level key that corresponds to the environment or by using separate items for each environment.
 

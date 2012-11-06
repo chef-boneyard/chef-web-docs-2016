@@ -399,103 +399,103 @@ Searching Environments
 .. include:: ../../includes_search/includes_search_environment.rst
 
 
-H2 -- Data Bags
+Data Bags
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
-H3 -- Storing Data Bags -- DONE?
+Storing Data Bags
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_store.rst
 
-H4 -- Directory Structure -- DONE?
+Directory Structure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_directory_structure.rst
 
-H4 -- Data Bag Items -- DONE?
+Data Bag Items
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_item.rst
 
-H3 -- Create Data Bags -- DONE?
+Create Data Bags
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_create.rst
 
-H4 -- Using Knife -- DONE?
+Using Knife
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_create_knife.rst
 
-H4 -- Manually -- DONE?
+Manually
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_create_manual.rst
 
-H3 -- Encrypting Data Bags -- DONE?
+Encrypting Data Bags
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_encryption.rst
 
-H4 -- Knife Options for Encryption -- DONE?
+Knife Options for Encryption
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_knife_options.rst
 
-H4 -- Scenario: Create an encrypted data bag item -- DONE?
+Scenario: Create an encrypted data bag item
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_encrypt.rst
 
-H4 -- Scenario: Verify that a data bag item is encrypted -- DONE?
+Scenario: Verify that a data bag item is encrypted
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_verify.rst
 
-H4 -- Scenario: Decrypt an encrypted data bag item -- DONE?
+Scenario: Decrypt an encrypted data bag item
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_decrypt.rst
 
-H4 -- Scenario: Storing encryption keys on nodes -- DONE?
+Scenario: Storing encryption keys on nodes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_store_on_nodes.rst
 
-H4 -- Example -- DONE?
+Example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_example.rst
 
-H3 -- Use Data Bags in Recipes -- DONE?
+Use Data Bags in Recipes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_recipes.rst
 
-H4 -- Scenario: Loading a Data Bag Item using the Recipe DSL -- DONE?
+Scenario: Loading a Data Bag Item using the Recipe DSL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_recipes_load_using_recipe_dsl.rst
 
-H4 -- Scenario: Creating and Editing Data Bag within a Recipe -- DONE?
+Scenario: Creating and Editing Data Bag within a Recipe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_recipes_edit_within_recipe.rst
 
-H4 -- Scenario: Access Encrypted Data from a Recipe -- DONE?
+Scenario: Access Encrypted Data from a Recipe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_recipes_access_encrypted_data.rst
 
-H4 -- Scenario: Create a user for each item in a data bag -- DONE?
+Scenario: Create a user for each item in a data bag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_recipes_create_users.rst
 
-H3 -- Using Search -- DONE?
+Using Search
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_search.rst
 
-H4 -- Search Syntax -- DONE?
+Search Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_search_syntax.rst
 
-H4 -- Accessing Data Bags using Search Indexes -- DONE?
+Accessing Data Bags using Search Indexes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_search_indexes.rst
 
-H4 -- Example -- DONE?
+Example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_search_example.rst
 
-H3 -- Use Data Bags with Environments -- DONE?
+Use Data Bags with Environments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_environments.rst
 
-H3 -- Use Data Bags with |chef solo| -- DONE?
+Use Data Bags with |chef solo|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_chef_solo.rst
 

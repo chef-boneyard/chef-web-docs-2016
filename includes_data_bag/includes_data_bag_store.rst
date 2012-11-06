@@ -9,8 +9,6 @@ When the |chef| repository is cloned from |github|, the following occurs:
 
 The ``data_bags`` directory can be placed under version source control.
 
-**jamescott: the following seems *really* out of place.**
-
 When deploying from a private repository using a data bag, use the ``deploy_key`` option to ensure the private key is present:
 
 .. code-block:: ruby

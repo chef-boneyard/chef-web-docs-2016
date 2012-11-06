@@ -35,8 +35,6 @@ Knife
 
 .. include:: ../../includes_knife/includes_knife.rst
 
-|knife| includes the following sub-commands:
-
 .. list-table::
    :widths: 150 450
    :header-rows: 1
@@ -47,6 +45,15 @@ Knife
      - |knife| runs from a management workstation and sits in-between a |chef| server and an organization’s infrastructure.
    * - :doc:`knife_common_options`
      - There are many options that are available for all |knife| sub-commands.
+
+|knife| includes the following sub-commands:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Sub-command
+     - Description
    * - :doc:`knife_bootstrap`
      - |knife bootstrap|
    * - :doc:`knife_client`
