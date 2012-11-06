@@ -1,6 +1,6 @@
 BUILDDIR = build
 S3BUCKET = chef-docs
-S3OPTIONS = --delete-removed --acl-public --cf-invalidate --exclude='.doctrees/*' --exclude='chef/.doctrees/*'
+S3OPTIONS = --delete-removed --acl-public --cf-invalidate --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs
 
 clean:
 	rm -r $(BUILDDIR)
