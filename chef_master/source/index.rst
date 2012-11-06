@@ -82,7 +82,10 @@ This page is a work in progress. Opscode is in the process of moving content fro
      - :doc:`essentials_data_bags`
      - 
      - 
-
+   * - 
+     - :doc:`essentials_chef_client`
+     - 
+     - 
 
 
 
@@ -99,6 +102,7 @@ This page is a work in progress. Opscode is in the process of moving content fro
    essentials_server
    essentials_cookbooks
 
+   essentials_chef_client
    essentials_data_bags
    essentials_environments
    essentials_roles

@@ -82,21 +82,23 @@ H2 -- Cloud vs. Physical Nodes -- DONE
 .. include:: ../../includes_node/includes_node_physical.rst
 
 
-H2 -- |chef client| -- DONE
+|chef client|
 -----------------------------------------------------
 .. include:: ../../includes_chef/includes_chef_client.rst
 
-H3 -- |ssl| Certificates -- DONE
+|chef validator|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_security/includes_security_chef_validator.rst
+
+|ssl| Certificates
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_certificate.rst
 
-H4 -- Signed Headers -- DONE
+Signed Header Authentication
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_security/includes_security_signed_header_authentication.rst
 
-H4 -- |chef validator| -- DONEish
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_security/includes_security_chef_validator.rst
+
 
 
 H2 -- The |chef| Run -- FIRST DRAFT
