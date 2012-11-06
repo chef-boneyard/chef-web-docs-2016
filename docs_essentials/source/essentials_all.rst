@@ -104,15 +104,15 @@ H2 -- The |chef| Run -- FIRST DRAFT
 .. include:: ../../includes_chef/includes_chef_client_run.rst
 
 
-|ohai| -- docs_ohai
+|ohai|
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai.rst
 
-Automatic Attributes -- docs_ohai
+Automatic Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
 
-|ohai| Attribute List -- docs_ohai
+|ohai| Attribute List
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
@@ -176,27 +176,27 @@ The following sections discuss these elements (and their various sub-components)
 * Knife
 * Ruby
 
-Repository -- docs_essentials_repository
+Repository
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository.rst
 
-Directory Structure -- docs_essentials_repository
+Directory Structure
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_repository/includes_repository_directory.rst
 
 .. include:: ../../includes_repository/includes_repository_directory_structure.rst
 
-certificates/ -- docs_essentials_repository
+certificates/
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_certificates.rst
 
 .. include:: ../../steps/step_repository_certificate_generate.rst
 
-.chef/ -- docs_essentials_repository
+.chef/
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_chef.rst
 
-config/ -- docs_essentials_repository
+config/
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_config.rst
 
@@ -215,7 +215,7 @@ The |chef| repository uses two configuration files: ``rake.rb`` (required) and `
 
        .. include:: ../../includes_chef/includes_rake_tasks_included_in_chef_libraries.rst
 
-cookbooks/ -- docs_essentials_repository
+cookbooks/
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
@@ -227,7 +227,7 @@ cookbooks/ -- docs_essentials_repository
 
 .. include:: ../../steps/step_repository_cookbooks_download_no_git.rst
 
-data_bags/ -- docs_essentials_repository
+data_bags/
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_data_bags.rst
 
@@ -235,27 +235,27 @@ data_bags/ -- docs_essentials_repository
 
 .. include:: ../../steps/step_repository_data_bags_upload_data_bag_item.rst
 
-environments/ -- docs_essentials_repository
+environments/
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_environments.rst
 
 .. include:: ../../steps/step_repository_roles_upload_environment.rst
 
-roles/ -- docs_essentials_repository
+roles/
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_repository/includes_repository_directory_roles.rst 
 
 .. include:: ../../steps/step_repository_roles_upload_role.rst
 
-Create the |chef| Repository -- docs_essentials_repository
+Create the |chef| Repository
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_repository/includes_repository_create.rst
 
-Clone -- docs_essentials_repository
+Clone
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../steps/step_repository_create_clone.rst
 
-Download -- docs_essentials_repository
+Download
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../steps/step_repository_create_download.rst
 
@@ -275,14 +275,13 @@ H3 -- Plugins -- DONE
 
 .. include:: ../../includes_knife/includes_knife_using_plugins.rst
 
-H2 -- Ruby -- DONE
+
+Just Enough Ruby for Chef
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby.rst
 
 .. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
-H3 -- Just Enough Ruby for Chef -- DONE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ruby/includes_ruby_just_enough.rst
 
 
@@ -321,81 +320,81 @@ MAYBE JUST PUT THIS IN THE INTRO SECTION OF THE CHEF SERVER? ENVIRONMENTS, DATA 
 
 .. include:: ../../includes_chef/includes_chef_policy.rst
 
-H2 -- Environments -- DONE
+Environments
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment.rst
 
-H3 -- The _default Environment -- DONE
+The _default Environment
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_environment/includes_environment_default.rst
 
-H3 -- Environment Data Formats -- DONE
+Environment Data Formats
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_environment/includes_environment_format.rst
 
-H4 -- Ruby DSL -- DONE
+Ruby DSL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
 .. include:: ../../includes_environment/includes_environment_format_ruby.rst
 
-H4 -- JSON -- DONE
+JSON
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_environment/includes_environment_format_json.rst
 
-H3 -- Environment Attributes -- DONE
+Environment Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_environment/includes_environment_attribute.rst
 
-H4 -- Types -- DONE
+Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_type.rst
 
-H4 -- Precedence vs. Priority (PICK A WORD!) -- DONE
+Precedence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-H4 -- Persistence -- DONE
+Persistence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
-H4 -- Automatic Attributes -- DONE
+Automatic Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_automatic.rst
 
-H4 -- Notation -- DONE
+Notation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_notation.rst
 
-H3 -- Create Environments -- DONE
+Create Environments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_environment/includes_environment_create.rst
 
-H3 -- Manage Environments -- DONE
+Manage Environments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_environment/includes_environment_manage.rst
 
-H4 -- Save Environment Data in a Data Bag -- DONE
+Save Environment Data in a Data Bag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst
 
-H4 -- Override Environment Attributes in Roles - DONE
+Override Environment Attributes in Roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_environment/includes_environment_manage_override_in_roles.rst
 
-H4 -- Set the Environment for a Node -- DONE
+Set the Environment for a Node
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_environment/includes_environment_manage_set_on_node.rst
 
-H4 -- Move Nodes Between Environments -- DONE
+Move Nodes Between Environments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_environment/includes_environment_manage_move_nodes_between.rst
 
-H4 -- Set Per-environment Run-lists in Roles -- DONE
+Set Per-environment Run-lists in Roles
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_environment/includes_environment_manage_per_environment_run_lists.rst
 
-H4 -- Searching Environments -- DONE
+Searching Environments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_environment.rst
 
@@ -501,53 +500,53 @@ H3 -- Use Data Bags with |chef solo| -- DONE?
 .. include:: ../../includes_data_bag/includes_data_bag_chef_solo.rst
 
 
-Roles -- essentials_roles
+Roles
 -----------------------------------------------------
 .. include:: ../../includes_role/includes_role.rst
 
-Role Data Formats -- essentials_roles
+Role Data Formats
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_role/includes_role_formats.rst
 
-Ruby DSL -- essentials_roles
+Ruby DSL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
 .. include:: ../../includes_role/includes_role_formats_ruby.rst
 
-JSON -- essentials_roles
+JSON
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_role/includes_role_formats_json.rst
 
-Role Attributes -- essentials_roles
+Role Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_role/includes_role_attribute.rst
 
-Types -- essentials_roles
+Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_type.rst
 
-Precedence -- essentials_roles
+Precedence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-Persistence -- essentials_roles
+Persistence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
-Automatic Attributes -- essentials_roles
+Automatic Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_automatic.rst
 
-Notation -- essentials_roles
+Notation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_notation.rst
 
-Manage Roles -- essentials_roles
+Manage Roles
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_role/includes_role_manage.rst
 
-Deleting Environments from a Role's Run-list -- essentials_roles
+Deleting Environments from a Role's Run-list
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_role/includes_role_manage_delete.rst
 
@@ -631,27 +630,27 @@ xxxxx
 
 
 
-Search -- docs_essentials_search
+Search
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search.rst
 
 Many of the examples in this section use |knife|, but the search indexes and search query syntax can be used in many locations, including from within recipes and when using the |api chef server|.
 
-Search Indexes -- docs_essentials_search
+Search Indexes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_index.rst
 
-Using Knife to Search -- docs_essentials_search
+Using Knife to Search
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_knife/includes_knife_search.rst
 
 .. include:: ../../includes_knife/includes_knife_search_examples.rst
 
-Search Query Syntax -- docs_essentials_search
+Search Query Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
-Keys (or Field Names) -- docs_essentials_search
+Keys (or Field Names)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_key.rst
 
@@ -661,7 +660,7 @@ Keys (or Field Names) -- docs_essentials_search
 
 .. include:: ../../steps/step_search_key_wildcard_asterisk.rst
 
-Nested Fields -- docs_essentials_search
+Nested Fields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. include:: ../../includes_search/includes_search_key_nested.rst
@@ -670,11 +669,11 @@ Nested Fields -- docs_essentials_search
 
 .. include:: ../../steps/step_search_key_nested_range.rst
 
-Search Patterns -- docs_essentials_search
+Search Patterns
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_pattern.rst
 
-Exact Matching -- docs_essentials_search
+Exact Matching
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_pattern_exact.rst
 
@@ -682,7 +681,7 @@ Exact Matching -- docs_essentials_search
 
 .. include:: ../../steps/step_search_pattern_exact_key_and_item_string.rst
 
-Wildcard Matching -- docs_essentials_search
+Wildcard Matching
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_pattern_wildcard.rst
 
@@ -690,7 +689,7 @@ Wildcard Matching -- docs_essentials_search
 
 .. include:: ../../steps/step_search_pattern_wildcard_node_contains.rst
 
-Range Matching -- docs_essentials_search
+Range Matching
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_pattern_range.rst
 
@@ -698,13 +697,13 @@ Range Matching -- docs_essentials_search
 
 .. include:: ../../steps/step_search_pattern_range_exclusive.rst
 
-Fuzzy Matching -- docs_essentials_search
+Fuzzy Matching
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_pattern_fuzzy.rst
 
 .. include:: ../../steps/step_search_pattern_fuzzy.rst
 
-Boolean Operators -- docs_essentials_search
+Boolean Operators
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_boolean_operators.rst
 
@@ -714,15 +713,15 @@ Boolean Operators -- docs_essentials_search
 
 .. include:: ../../steps/step_search_boolean_and.rst
 
-Special Characters -- docs_essentials_search
+Special Characters
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_special_characters.rst
 
-Search Targets -- docs_essentials_search
+Search Targets
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search_targets.rst
 
-Roles in Run-lists: -- docs_essentials_search
+Roles in Run-lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_role.rst
 
@@ -730,11 +729,11 @@ Roles in Run-lists: -- docs_essentials_search
 
 .. include:: ../../steps/step_search_target_role_expanded.rst
 
-Nodes: -- docs_essentials_search
+Nodes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_search/includes_search_node.rst
 
-API Clients -- docs_essentials_search
+API Clients
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_chef/includes_chef_api_client.rst
 
@@ -746,7 +745,7 @@ Environments: -- docs_essentials_search
 
 .. include:: ../../includes_search/includes_search_environment.rst
 
-Data Bags: -- docs_essentials_search
+Data Bags
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
