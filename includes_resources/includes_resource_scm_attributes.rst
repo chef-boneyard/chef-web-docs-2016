@@ -21,21 +21,39 @@ This resource has the following has the following attributes:
      - |user resource scm|
    * - ``:group``
      - |group resource scm|
-   * - ``:svn_username``
-     - |svn_username resource scm|
-   * - ``:svn_password``
-     - |svn_password resource scm|
-   * - ``:svn_arguments``
-     - |svn_arguments resource scm|
-   * - ``:svn_info_args``
-     - |svn_info_args resource scm|
+
+The following attributes are for use with |git| only:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``:additional_remotes``
+     - |additional_remotes resource|
    * - ``:depth``
      - |depth resource scm|
    * - ``:enable_submodules``
-     - |enable_submodules resource scm|
+     - |enable_submodules resource|
    * - ``:remote``
-     - |remote resource scm|
-   * - ``:additional_remotes``
-     - |additional_remotes resource scm|
+     - |remote resource|
    * - ``:ssh_wrapper``
-     - |ssh_wrapper resource scm|
+     - |ssh_wrapper resource|
+
+The following attributes are for use with |svn| only:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``:svn_username``
+     - |svn_username resource|
+   * - ``:svn_password``
+     - |svn_password resource|
+   * - ``:svn_arguments``
+     - |svn_arguments resource|
+   * - ``:svn_info_args``
+     - |svn_info_args resource|

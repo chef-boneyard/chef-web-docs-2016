@@ -23,12 +23,8 @@ This resource has the following has the following attributes:
      - |create_dirs_before_symlink resource deploy|
    * - ``:deploy_to``
      - |deploy_to resource deploy|
-   * - ``:enable_submodules``
-     - |enable_submodules resource deploy|
    * - ``:environment``
      - |environment resource deploy|
-   * - ``:git_ssh_wrapper``
-     - |git_ssh_wrapper resource deploy|
    * - ``:group``
      - |group resource deploy|
    * - ``:migrate``
@@ -37,8 +33,6 @@ This resource has the following has the following attributes:
      - |migration_command resource deploy|
    * - ``:purge_before_symlink``
      - |purge_before_symlink resource deploy|
-   * - ``:remote``
-     - |remote resource deploy|
    * - ``:repo``
      - |repo resource deploy|
    * - ``:repository``
@@ -53,16 +47,6 @@ This resource has the following has the following attributes:
      - |rollback_on_error resource deploy|
    * - ``:scm_provider``
      - |scm_provider resource deploy|
-   * - ``:shallow_clone``
-     - |shallow_clone resource deploy|
-   * - ``:ssh_wrapper``
-     - |ssh_wrapper resource deploy|
-   * - ``:svn_arguments``
-     - |svn_arguments resource deploy|
-   * - ``:svn_password``
-     - |svn_password resource deploy|
-   * - ``:svn_username``
-     - |svn_username resource deploy|
    * - ``:symlinks``
      - |symlinks resource deploy|
    * - ``:symlink_before_migrate``
@@ -70,11 +54,37 @@ This resource has the following has the following attributes:
    * - ``:user``
      - |user resource deploy|
 
+The following attributes are for use with |git| only:
 
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
 
+   * - Attribute
+     - Description
+   * - ``:enable_submodules``
+     - |enable_submodules resource|
+   * - ``:git_ssh_wrapper``
+     - |git_ssh_wrapper|
+   * - ``:remote``
+     - |remote resource| Default value: ``origin``.
+   * - ``:shallow_clone``
+     - |shallow_clone resource|
+   * - ``:ssh_wrapper``
+     - |ssh_wrapper resource|
 
+The following attributes are for use with |svn| only:
 
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
 
-
-
+   * - Attribute
+     - Description
+   * - ``:svn_arguments``
+     - |svn_arguments resource|
+   * - ``:svn_password``
+     - |svn_password resource|
+   * - ``:svn_username``
+     - |svn_username resource|
 
