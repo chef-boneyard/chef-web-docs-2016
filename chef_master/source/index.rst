@@ -87,9 +87,21 @@ This page is a work in progress. Opscode is in the process of moving content fro
      - 
      - 
    * - 
-     - :doc:`essentials_node_object`
      - 
      - 
+     - 
+   * - 
+     - 
+     - 
+     - 
+   * - 
+     - 
+     - 
+     - 
+   * - 
+     - :doc:`essentials_cookbook_resources`
+     - :doc:`essentials_cookbook_templates`
+     - :doc:`essentials_cookbook_versions`
 
 
 
@@ -112,6 +124,10 @@ This page is a work in progress. Opscode is in the process of moving content fro
    essentials_roles
    essentials_search
    essentials_repository
+
+   essentials_cookbook_resources
+   essentials_cookbook_templates
+   essentials_cookbook_versions
 
    just_enough_ruby_for_chef
 

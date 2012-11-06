@@ -6,7 +6,7 @@ To use a template, two things must happen:
 1. A template resource must be added to a recipe
 2. An |erb| template must be added to a cookbook
 
-For example, the following template file and template resource settings can be used to manage a configuration file named ``/etc/sudoers``. Within a cookbook that uses |sudo|, the following resource could be added to ``recipes/default.rb`` **(jamescott: SWAP/PATH)**::
+For example, the following template file and template resource settings can be used to manage a configuration file named |path etc sudoers|. Within a cookbook that uses |sudo|, the following resource could be added to |path recipes default rb|::
 
    template "/etc/sudoers" do
      source "sudoers.erb"
@@ -19,8 +19,6 @@ For example, the following template file and template resource settings can be u
      })
    end
    
-**jamescott: it would be ideal if we could put some explanation around what this resource does.** 
-
 And then create a template called ``sudoers.erb`` and save it to ``templates/default/sudoers.erb``::
 
    #
@@ -46,9 +44,7 @@ And then create a template called ``sudoers.erb`` and save it to ``templates/def
    %<%= group %> ALL=(ALL) <%= "NOPASSWD:" if @passwordless %>ALL
    <% end -%>
 
-**jamescott: it would be ideal if we could put some explanation around what this template does.** 
-
-And then set the default attributes in ``attributes/default.rb`` **(jamescott: NEED PATH/SWAP)**::
+And then set the default attributes in |path attributes default rb|::
 
    default["authorization"]["sudo"]["groups"] = [ "sysadmin","wheel","admin" ]
    default["authorization"]["sudo"]["users"]  = [ "jerry","greg"]

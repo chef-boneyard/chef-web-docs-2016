@@ -1094,17 +1094,17 @@ H3 -- Exceptions and Logging -- DONE
 
 
 
-H2 - Resources and Providers -- DONE
+Resources and Providers
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
-H3 -- Resources Syntax -- DONE
+Resources Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst
 
-H3 -- Platform Resources -- DONE
+Platform Resources
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following resources are built into |chef|:
 
@@ -1171,83 +1171,83 @@ The following resources are built into |chef|:
    * - |resource yum package|
      - |resource desc yum|
 
-H3 -- Platform Providers -- DONE
+Platform Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
 
 
 
-H2 -- Templates -- DONE
+Templates
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
 
 .. note:: |note cookbook template erubis|
 
-H3 -- Requirements -- DONE
+Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_requirements.rst
 
-H3 -- Variables -- DONE
+Variables
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_variables.rst
 
-H3 -- Location Specificity -- DONE
+Location Specificity
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_location_specificity.rst
 
-H3 -- Host Notation -- DONE
+Host Notation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_host_notation.rst
 
-H3 -- Transfer Frequency -- DONE
+Transfer Frequency
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_transfer_frequency.rst
 
-H3 -- Versions -- DONE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Versions
+-----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
-
-H3 -- Syntax -- DONE
+Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_syntax.rst
 
-H3 -- Operators -- DONE
+Operators
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_operators.rst
 
-H3 -- Version Constraints -- DONE
+Version Constraints
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_constraints.rst
 
-H3 -- Metadata (in metadata.rb) -- DONE
+Metadata (in metadata.rb)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_metadata.rst
 
-H3 -- Environments -- DONE
+Environments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_environments.rst
 
-H3 -- Run-list Items -- DONE
+Run-list Items
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_run_list_items.rst
 
-H4 -- Freezing Versions -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Freezing Versions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_freezing.rst
 
-H3 -- Version Control Strategies -- DONE
+Version Control Strategies
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_control_strategies.rst
 
-H4 -- Branch Tracking -- DONE
+Branch Tracking
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_control_strategies_branch.rst
 
-H4 -- Maximum Version Control -- DONE
+Maximum Version Control
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_version_control_strategies_maximum.rst
 
