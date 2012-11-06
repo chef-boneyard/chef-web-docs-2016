@@ -86,7 +86,10 @@ This page is a work in progress. Opscode is in the process of moving content fro
      - :doc:`essentials_chef_client`
      - 
      - 
-
+   * - 
+     - :doc:`essentials_node_object`
+     - 
+     - 
 
 
 
@@ -103,6 +106,7 @@ This page is a work in progress. Opscode is in the process of moving content fro
    essentials_cookbooks
 
    essentials_chef_client
+   essentials_node_object
    essentials_data_bags
    essentials_environments
    essentials_roles

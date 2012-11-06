@@ -553,72 +553,51 @@ Deleting Environments from a Role's Run-list
 .. include:: ../../includes_role/includes_role_manage_delete.rst
 
 
-H2 -- Node Objects
+Node Objects
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_object.rst
 
-H3 -- Node Attributes -- DONE
+Node Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute.rst
 
-Attributes may be set on a node from the following objects:
+.. include:: ../../includes_node/includes_node_object_set.rst
 
-* Cookbooks
-* Environments
-* Roles
-* Nodes
-
-**jamescott: need to make sure that each of cookbooks, environments, roles, and nodes has a section that explains the "how to set the attributes" part of this story. The five sections below should be NEUTRAL to all locations. AND THEN WHEN THEY ARE, remove them from here?**
-
-**BELOW NEEDS REWRITE**
-
-Setting Node Attributes
-
-Node attributes can be set in recipes. This use of node attributes should do done when you want to calculate a derived value, or store some data on the node that should be persisted the next time Chef runs. Use the "set" method on the node.:
-
-   node.set['some_attribute'] = "Some Value" + "Some other value"
-   node.set['some_attribute']['sub_attribute'] = "Sub attribute Value"
-
-Attributes are applied in precedence order; node attributes are automatic and have the highest precedence. As these automatic attributes will be re-written with each Ohai run - Chef doesn't provide any way to modify them. See Setting Attributes for more detail on the attribute types and precedences.
-
-**ABOVE NEEDS REWRITE**
-
-H4 -- Attribute Types -- DONE
+Attribute Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_type.rst
 
-H4 -- Attribute Precedence -- DONE
+Attribute Precedence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-H4 -- Attribute Persistence -- DONE
+Attribute Persistence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
-H4 -- Automatic Attributes -- DONE
+Automatic Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_automatic.rst
 
-H4 -- Attribute Notation -- DONE
+Attribute Notation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_notation.rst
 
-H3 -- Deep Merging of Attributes -- DONE
+Deep Merging of Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_deep_merge.rst
 
 The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
 
-H4 -- Substitution -- DONE
+Substitution
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst
 
-H4 -- Addition -- DONE
+Addition
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_node/includes_node_attribute_deep_merge_add.rst
 
-
-H3 -- Run-lists
+Run-lists
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_run_list.rst
 
@@ -626,9 +605,6 @@ H3 -- Run-lists
 
 .. include:: ../../includes_role/includes_role.rst
 
-H4 -- xxxxx
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-xxxxx
 
 
 
