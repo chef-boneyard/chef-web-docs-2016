@@ -1,7 +1,7 @@
 =====================================================
-Cookbook File Distributions
+Definitions
 =====================================================
- 
+
 .. include:: ../../swaps/swap_desc_a.txt
 .. include:: ../../swaps/swap_desc_b.txt
 .. include:: ../../swaps/swap_desc_c.txt
@@ -32,22 +32,24 @@ Cookbook File Distributions
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition.rst
 
-Syntax
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_syntax.rst
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
 
-File Specificity
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
-
-Host Notation
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_host_notation.rst
-
-File Transfers
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_transfers.rst
+   * - Method
+     - Description
+   * - :doc:`essentials_cookbook_definitions_syntax`
+     - A definition has a resource name, at least one argument, and a hash.
+   * - Examples
+     - :doc:`essentials_cookbook_definitions_example_create_resource`, :doc:`essentials_cookbook_definitions_example_one_definition`, :doc:`essentials_cookbook_definitions_example_virtual_hosts`
 
 
+.. toctree::
+   :hidden:
+
+   essentials_cookbook_definitions_syntax
+   essentials_cookbook_definitions_example_create_resource
+   essentials_cookbook_definitions_example_one_definition
+   essentials_cookbook_definitions_example_virtual_hosts

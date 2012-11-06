@@ -1,5 +1,5 @@
 =====================================================
-Resources and Providers
+Cookbook Resources and Providers
 =====================================================
  
 .. include:: ../../swaps/swap_desc_a.txt

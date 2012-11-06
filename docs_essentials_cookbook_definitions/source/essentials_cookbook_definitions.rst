@@ -1,5 +1,5 @@
 =====================================================
-Cookbook File Distributions
+Cookbook Definitions
 =====================================================
  
 .. include:: ../../swaps/swap_desc_a.txt
@@ -32,22 +32,21 @@ Cookbook File Distributions
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition.rst
 
-Syntax
+Definition Syntax
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_syntax.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition_syntax.rst
 
-File Specificity
+Example: Create a new resource
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_create_resource.rst
 
-Host Notation
+Example: Many recipes, one definition
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_host_notation.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_many_recipes_one_definition.rst
 
-File Transfers
+Example: Virtual hosts
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_transfers.rst
-
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_virtaul_hosts.rst
 
