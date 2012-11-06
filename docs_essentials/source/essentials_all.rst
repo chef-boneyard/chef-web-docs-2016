@@ -978,17 +978,15 @@ H3 -- Example: Create Lightweight Provider and Resource -- DONE
 
 
 
-H2 -- Metadata -- DONE
+Metadata
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
 
-.. note:: **jamescott: remove this? find out if this is true. for the most part it's best to not refer too much to future functionality that does not yet exist, at least not from within the "core documentation" -- if we want to talk about this stuff, use dedicated topics.** In the future, metadata will be used as part of an automated system for discovering and installing cookbooks.
-
-H3 -- |metadata rb| -- DONE
+|metadata rb|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_config/includes_config_rb_metadata.rst
 
-H3 -- Error Messages -- DONE
+Error Messages
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_metadata_error_messages.rst
 
@@ -1011,8 +1009,6 @@ H3 -- Include Recipes in Recipes -- DONE
 H3 -- Cookbook Dependencies -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_cookbook_dependencies.rst
-
-
 
 H3 -- Recipe Attributes -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
