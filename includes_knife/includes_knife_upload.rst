@@ -3,9 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife upload|
-
-This sub-command will upload roles, cookbooks, environments, and data bags to the |chef server| from your current working directory in the |chef| repository. This sub-command is often used in conjunction with ``knife diff``, which can be used to see exactly what changes will be uploaded, and then ``knife download``, which does the opposite of ``knife upload``.
+|knife upload| This sub-command will . This sub-command is often used in conjunction with ``knife diff``, which can be used to see exactly what changes will be uploaded, and then ``knife download``, which does the opposite of ``knife upload``.
 
 This sub-command has the following syntax::
 
