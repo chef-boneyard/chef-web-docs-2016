@@ -11,12 +11,12 @@
    * - Search Index Name
      - Description
    * - |chef api client|
-     - |api client description|
-   * - "data bags, by name"
-     - |data bag description|
-   * - environments
+     - ``client``
+   * - ``DATA_BAG_NAME``
+     - |data bag description| The name of the search index is the name of the data bag. For example, if the name of the data bag was "admins" then a corresponding search query might look something like ``search(:admins, "*:*")``.
+   * - ``environment``
      - |environment description|
-   * - nodes
+   * - ``node``
      - |node description|
-   * - roles
+   * - ``role``
      - |role description|
