@@ -51,7 +51,6 @@ Libraries
 .. toctree::
    :hidden:
 
-   essentials_cookbook_libraries_common_uses
    essentials_cookbook_libraries_syntax
    essentials_cookbook_libraries_example_create_namespace
    essentials_cookbook_libraries_example_extend_recipe
