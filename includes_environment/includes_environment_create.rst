@@ -4,10 +4,10 @@
 An environment can be created in five different ways:
 
 * Creating a |ruby| file in the environments sub-directory of the |chef| repository and then pushing it to the |chef server|.
-* Creating a |json| file directly in the |chef| repository (**jamescott: where?**) and then pushing it to the |chef server| (**jamescott: HOW?**).
+* Creating a |json| file directly in the |chef| repository and then pushing it to the |chef server|.
 * Using |knife|.
 * Using the Management Console (in |chef hosted|, |chef private|, or |chef open server|).
 * Using the |chef server| REST API.
 
-Once an environment exists on the |chef server|, a node can be associated with that environment using the ``chef_environment`` method. (**jamescott: method?**)
+Once an environment exists on the |chef server|, a node can be associated with that environment using the ``chef_environment`` method. 
 

@@ -9,5 +9,5 @@ Once created, an environment can be managed in several ways:
 
 These workflows are mutually exclusive: only the most recent environment changes will be kept on the |chef server|, regardless of the source of those changes. All previous changes are overwritten when environment data is updated.
 
-The settings for environments can be modified and environments can be integrated into the larger |chef| infrastructure by associating them with nodes, using recipes to call specific environment settings, and so on. (**jamescott: this could be a better lead-in**)
+The settings for environments can be modified and environments can be integrated into the larger |chef| infrastructure by associating them with nodes, using recipes to call specific environment settings, and so on.
 
