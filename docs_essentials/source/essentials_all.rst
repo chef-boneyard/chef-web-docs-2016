@@ -714,7 +714,7 @@ API Clients
 
 .. include:: ../../includes_search/includes_search_client.rst
 
-Environments: -- docs_essentials_search
+Environments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_environment/includes_environment.rst
 
@@ -746,12 +746,9 @@ H1 -- Cookbooks
 .. note:: A cookbook includes a readme file.
 
 
-H2 -- Cookbooks Directory Structure -- DONE
+Cookbooks Directory Structure
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
-
-
-
 
 Cookbook Attributes
 -----------------------------------------------------
