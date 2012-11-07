@@ -71,23 +71,33 @@ Chef Documentation
    :hidden:
 
    chef_overview
+   just_enough_ruby_for_chef
+
+   knife
+   resource
+   lwrp
+   config
+   api_chef_server
+   api_cookbooks_site
 
    essentials_nodes
-   essentials_workstation
-   essentials_server
-   essentials_cookbooks
-
-   essentials_handlers
-   essentials_nodes_chef_run
    essentials_chef_client
+   ohai
+   essentials_nodes_chef_run
+   essentials_handlers
+
+   essentials_workstation
+   essentials_repository
+   essentials_knife
+
+   essentials_server
    essentials_node_object
    essentials_data_bags
    essentials_environments
    essentials_roles
    essentials_search
-   essentials_repository
-   essentials_knife
 
+   essentials_cookbooks
    essentials_cookbook_attribute_files
    essentials_cookbook_directory
    essentials_cookbook_definitions
@@ -100,17 +110,6 @@ Chef Documentation
    essentials_cookbook_templates
    essentials_cookbook_versions
 
-   just_enough_ruby_for_chef
 
-   knife
 
-   resource
-   lwrp
-
-   config
-
-   api_chef_server
-   api_cookbooks_site
-
-   ohai
 
