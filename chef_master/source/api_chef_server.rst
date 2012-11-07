@@ -44,51 +44,51 @@ Chef Server API
    * - Method
      - Description
    * - :doc:`api_chef_server_clients`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_clients_name`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_cookbooks`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_cookbooks_name`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_cookbooks_version`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_data_bag`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_data_bag_item`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_data_bag_name`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_environments`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_environments_cookbook_name`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_environments_cookbook_version`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_environments_cookbooks`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_environments_name`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_nodes`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_nodes_cookbook`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_nodes_name`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_roles`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_roles_name`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_sandboxes`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_sandboxes_checksum`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_sandboxes_id`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_search`
-     - xxxxx
+     - 
    * - :doc:`api_chef_server_search_index`
-     - xxxxx
+     - 
 
 
 .. toctree::

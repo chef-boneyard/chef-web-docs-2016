@@ -44,13 +44,13 @@ Cookbooks Site API
    * - Method
      - Description
    * - :doc:`api_cookbooks_site_cookbooks`
-     - xxxxx
+     - 
    * - :doc:`api_cookbooks_site_cookbooks_name`
-     - xxxxx
+     - 
    * - :doc:`api_cookbooks_site_cookbooks_version`
-     - xxxxx
+     - 
    * - :doc:`api_cookbooks_site_search`
-     - xxxxx
+     - 
 
 
 
