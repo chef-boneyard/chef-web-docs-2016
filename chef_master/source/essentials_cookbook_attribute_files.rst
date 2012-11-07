@@ -42,8 +42,6 @@ Attribute Files
 
    * - Method
      - Description
-   * - :doc:`essentials_cookbook_attribute_files_file_methods`
-     - Methods are available to set attribute precedence in a cookbook.
    * - :doc:`essentials_cookbook_attribute_files_ordering`
      - When |chef| loads cookbook attribute files, it does so in alphabetical order for all the cookbooks.
    * - :doc:`essentials_cookbook_attribute_files_accessor_methods`
@@ -69,13 +67,14 @@ Attribute Files
      - An automatic attribute is data that must be understood by |chef|, but not modified.
    * - :doc:`essentials_cookbook_attribute_files_attribute_notation`
      - Attributes are a special key-value store called a mash within the context of the |ruby| DSL.
+   * - :doc:`essentials_cookbook_attribute_files_attribute_methods`
+     - Methods are available to set attribute precedence in a cookbook.
 
 
 .. toctree::
    :hidden:
 
    essentials_cookbook_attribute_files_accessor_methods
-   essentials_cookbook_attribute_files_file_methods
    essentials_cookbook_attribute_files_ordering
    essentials_cookbook_attribute_files_reload
    essentials_cookbook_attribute_files_attribute_types
@@ -83,3 +82,4 @@ Attribute Files
    essentials_cookbook_attribute_files_attribute_precedence
    essentials_cookbook_attribute_files_attribute_automatic
    essentials_cookbook_attribute_files_attribute_notation
+   essentials_cookbook_attribute_files_attribute_methods
