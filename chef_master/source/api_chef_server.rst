@@ -41,7 +41,7 @@ Chef Server API
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Endpoint
      - Description
    * - :doc:`api_chef_server_clients`
      - 
