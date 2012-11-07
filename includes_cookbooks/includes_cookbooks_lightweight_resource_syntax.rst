@@ -16,7 +16,7 @@ where ``:action_name`` defines each action and ``:attribute_name`` defines each 
 
    actions :foo, :bar
 
-specifies a list of allowed actions for a resource that includes "foo" and "bar". Typically, the names of actions correspond to methods that are available to the provider that will implement the actions. For example, an action named ``:foo`` would correspond to a method named ``action_foo``. If more than one action is listed, the additional actions will append to (and not overwrite) the list of allowed actions. **jamescott: I have no idea what the previous sentence actually means. Anyone?**
+specifies a list of allowed actions for a resource that includes "foo" and "bar". Typically, the names of actions correspond to methods that are available to the provider that will implement the actions. For example, an action named ``:foo`` would correspond to a method named ``action_foo``. If more than one action is listed, the additional actions will append to (and not overwrite) the list of allowed actions.
 
 For attributes, the validation rules are optional. For example, using only the attribute keyword:
 

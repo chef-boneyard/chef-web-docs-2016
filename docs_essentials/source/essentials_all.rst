@@ -872,41 +872,40 @@ Example: Creating a namespace
 
 
 
-
-H2 -- Lightweight Resources and Providers -- DONE
+Lightweight Resources and Providers
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight.rst
 
-H3 -- File Locations -- DONE
+File Locations
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
 
-H3 -- Lightweight Resources -- DONE
+Lightweight Resources
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
 
-H4 -- Common Functionality for all Lightweight Resources -- DONE
+Common Functionality for all Lightweight Resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The attributes and actions in this section apply to all lightweight resources.
 
-H5 -- Actions -- DONE, NEEDS TO BE H5
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Actions**
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_actions.rst
 
-H5 -- Attributes -- DONE, NEEDS TO BE H5
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Attributes**
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_attributes.rst
 
-H5 -- Conditional Execution -- DONE, NEEDS TO BE H5
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Conditional Execution**
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_attributes.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
 
-H5 -- Notifications -- DONE, NEEDS TO BE H5
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Notifications**
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_timers.rst
@@ -915,46 +914,46 @@ H5 -- Notifications -- DONE, NEEDS TO BE H5
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_subscribes.rst
 
-H5 -- Relative Paths -- DONE, NEEDS TO BE H5
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Relative Paths**
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_relative_paths.rst
 
-H4 -- Actions -- DONE
+Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_syntax.rst
+
+**Actions**
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_actions.rst
 
-H4 -- Attributes and Validation Parameters -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Attributes and Validation Parameters**
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_attributes.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_validation_parameters.rst
 
-H4 -- Syntax -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_syntax.rst
-
-H4 -- Compare Platform and Lightweight Resources -- DONE
+Compare Platform and Lightweight Resources
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_compared_to_platform_resource.rst
 
-H4 -- Use a Default Provider -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_use_default_provider.rst
-
-H3 -- Lightweight Providers -- DONE
+Lightweight Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider.rst
 
-H4 -- Actions -- DONE
+Actions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider_actions.rst
 
-H4 -- Extending Providers -- DONE
+Extending Providers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider_extend.rst
 
-H3 -- Example: Create Lightweight Provider and Resource -- DONE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Use a Default Provider
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_use_default_provider.rst
+
+Example: Create Lightweight Provider and Resource
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_example.rst
 
 

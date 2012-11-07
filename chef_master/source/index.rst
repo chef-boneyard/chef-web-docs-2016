@@ -50,7 +50,7 @@ Chef Docs
    * - The Chef Server
      - Learn about :doc:`essentials_roles`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, and :doc:`essentials_search`.
    * - Cookbooks
-     - Learn about :doc:`essentials_cookbook_attribute_files`, :doc:`essentials_cookbook_definitions`, :doc:`essentials_cookbook_files`, :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, and :doc:`essentials_cookbook_versions`.
+     - Learn about :doc:`essentials_cookbook_attribute_files`, :doc:`essentials_cookbook_definitions`, :doc:`essentials_cookbook_files`, :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_lwrp`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, and :doc:`essentials_cookbook_versions`.
    * - References
      - Detailed reference topics for :doc:`knife`, :doc:`resource`, :doc:`lwrp`, :doc:`api_cookbooks_site`, :doc:`api_chef_server`, :doc:`ohai`, and :doc:`config`.
    * - Scenarios
@@ -80,6 +80,7 @@ Chef Docs
    essentials_cookbook_definitions
    essentials_cookbook_files
    essentials_cookbook_libraries
+   essentials_cookbook_lwrp
    essentials_cookbook_metadata
    essentials_cookbook_resources
    essentials_cookbook_templates
