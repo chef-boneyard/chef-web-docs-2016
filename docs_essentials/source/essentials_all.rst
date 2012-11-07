@@ -292,7 +292,7 @@ Just Enough Ruby for Chef
 
 
 
-H1 -- The Chef Server
+The Chef Server
 =====================================================
 .. include:: ../../includes_chef/includes_chef_server.rst
 
@@ -312,14 +312,11 @@ There are three types of |chef| servers:
      - .. include:: ../../includes_chef/includes_chef_private.rst
 
        |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located within the organization's firewall. |chef private| is the same as |chef hosted|. |chef hosted| is the largest |chef private| deployment in the world.
-   * - NEED IMAGE FOR CHEF OPEN SERVER
+   * - 
      - .. include:: ../../includes_chef/includes_chef_open_source.rst
 
-
-H2 -- Policy
+Policy
 -----------------------------------------------------
-MAYBE JUST PUT THIS IN THE INTRO SECTION OF THE CHEF SERVER? ENVIRONMENTS, DATA BAGS, AND ROLES DON'T HAVE TO BE A SUBSET OF A HEADER NAMED POLICY TO HAVE AN EFFECTIVE SET OF TOPICS ABOUT. PARAGRAPH INCLUDED FOR NOW.
-
 .. include:: ../../includes_chef/includes_chef_policy.rst
 
 Environments
@@ -730,25 +727,10 @@ Data Bags
 .. include:: ../../includes_search/includes_search_data_bag.rst
 
 
-
-H2 -- Cookbooks (Uploaded) -- PLACEHOLDER
------------------------------------------------------
-../../includes/includes_chef_node_cookbook_cached.rst
-
-**jamescott: We need to say something about the fact that the cookbooks are uploaded to the Chef server and are then (from there) propagated across nodes when and where required (and cached on each of the nodes, refreshed as required).**
-
-THIS IS THE TOPIC THAT NEEDS TO BE ABOUT THE FOLLOWING:
-
-* HOW COOKBOOKS GET TO THE SERVER
-* WHAT HAPPENS TO COOKBOOKS ONCE THEY ARE THERE
-* ETC.
-
-
-H2 -- Manager (Management Console) -- DONE
+Manager (Management Console)
 -----------------------------------------------------
 .. include:: ../../includes_chef/includes_chef_manager.rst
 
-**jamescott: My understanding is that the Chef 11 UI may be different and that I am going to wait until I see it to re-do that specific part of the helpz.**
 
 
 
@@ -761,7 +743,7 @@ H1 -- Cookbooks
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-.. note:: A cookbook includes a readme file that is used to xxxxx.
+.. note:: A cookbook includes a readme file.
 
 
 H2 -- Cookbooks Directory Structure -- DONE
