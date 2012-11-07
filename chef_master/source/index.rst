@@ -43,11 +43,9 @@ Chef Documentation
    * - Topics
      - Links
    * - Getting Started
-     - Read :doc:`chef_overview`. If you want to know more about |ruby| or learn :doc:`just_enough_ruby_for_chef`. Set up a workstation. Set up a repository.
+     - Read :doc:`chef_overview`. Learn about |ruby| and read :doc:`just_enough_ruby_for_chef`.
    * - References
-     - Detailed reference topics for :doc:`knife`, :doc:`resource`, :doc:`lwrp`, :doc:`api_cookbooks_site`, :doc:`api_chef_server`, and :doc:`config`.
-   * - Scenarios
-     - 
+     - Read detailed reference topics for :doc:`knife`, :doc:`resource`, :doc:`lwrp`, :doc:`api_cookbooks_site`, :doc:`api_chef_server`, and :doc:`config`.
 
 .. include:: ../../includes_chef/includes_chef_key_elements.rst
 
