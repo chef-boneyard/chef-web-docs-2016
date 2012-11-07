@@ -48,7 +48,7 @@ Chef Docs
    * - Workstations
      - Learn about :doc:`essentials_repository`.
    * - The Chef Server
-     - Learn about :doc:`essentials_roles`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, and :doc:`essentials_search`.
+     - Learn about :doc:`essentials_node_object`, :doc:`essentials_roles`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, and :doc:`essentials_search`.
    * - Cookbooks
      - Learn about :doc:`essentials_cookbook_attribute_files`, :doc:`essentials_cookbook_definitions`, :doc:`essentials_cookbook_files`, :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_lwrp`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, and :doc:`essentials_cookbook_versions`.
    * - References
