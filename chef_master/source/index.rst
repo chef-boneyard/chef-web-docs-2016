@@ -46,7 +46,7 @@ Chef Documentation
    * - Nodes
      - Learn about the :doc:`essentials_chef_client`, 
    * - Workstations
-     - Learn about :doc:`essentials_repository`.
+     - Learn about :doc:`essentials_repository` and :doc:`essentials_knife`.
    * - The Chef Server
      - Learn about :doc:`essentials_node_object`, :doc:`essentials_roles`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, and :doc:`essentials_search`.
    * - Cookbooks
@@ -75,6 +75,7 @@ Chef Documentation
    essentials_roles
    essentials_search
    essentials_repository
+   essentials_knife
 
    essentials_cookbook_attribute_files
    essentials_cookbook_directory
