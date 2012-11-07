@@ -3,8 +3,6 @@
 
 The following handlers are available in the |chef| open source community:
 
-**jamescott: each of these needs to be researched and better described. ALSO -- need a standard naming convention for the names of the plugins. Some have their "github" path, whereas others have branded/friendly names. PICK ONE.**
-
 .. list-table::
    :widths: 200 300
    :header-rows: 1

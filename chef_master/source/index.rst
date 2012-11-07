@@ -58,7 +58,7 @@ Chef Documentation
    * - Topics
      - Links
    * - Nodes
-     - Learn about :doc:`essentials_nodes`, :doc:`ohai`, :doc:`essentials_nodes_chef_run`, and the :doc:`essentials_chef_client`, 
+     - Learn about :doc:`essentials_nodes`, :doc:`ohai`, :doc:`essentials_handlers`, :doc:`essentials_nodes_chef_run`, and the :doc:`essentials_chef_client`, 
    * - Workstations
      - Learn about  :doc:`essentials_workstation`, :doc:`essentials_repository` and :doc:`essentials_knife`.
    * - The Chef Server
@@ -79,6 +79,7 @@ Chef Documentation
    essentials_server
    essentials_cookbooks
 
+   essentials_handlers
    essentials_nodes_chef_run
    essentials_chef_client
    essentials_node_object

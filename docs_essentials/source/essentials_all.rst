@@ -47,19 +47,6 @@ The following sections discuss these elements (and their various sub-components)
 * The Chef Server
 * Cookbooks
 
-CUT THE FOLLOWING OUT. BUT KEEP IT IN MIND FOR THE FUTURE.
-
-Basic Workflows (PLACEHOLDER JUST FOR IDEAS FOR NOW):
-
-* Workflow A: Cookbooks
-* Workflow B: Setup Workstations
-* Workflow C: Setup Server
-* Workflow D: Setup Nodes
-* Workflow E: Chef Runs >> tying cookbooks + server + nodes together
-* Workflow F: Maintaining Nodes
-
-These should be high-level, each with a diagram that is based on the main-diagram. The actual workflow shouldn't be more than a paragraph (with bullets = OK) and should NOT get into the weeds.
-
 Nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
@@ -119,47 +106,47 @@ Automatic Attributes
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
 
-H2 -- Handlers -- DONE
+Exception and Report Handlers
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler.rst
 
-H3 -- Handler Properties -- DONE
+Handler Properties
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_properties.rst
 
-H3 -- Writing a Handler -- DONE
+Writing a Handler
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_write.rst
 
-H4 -- Example: Send email when |Chef| run fails -- DONE
+Example: Send email when |Chef| run fails
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_write_example_send_email.rst
 
-H3 -- Installing and Configuring a Handler -- DONE
+Installing and Configuring a Handler
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_install.rst
 
-H4 -- |lwrp chef handler| -- DONE
+|lwrp chef handler|
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_install_from_cookbook.rst
 
-H4 -- Manual Install -- DONE
+Manual Install
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_install_manual.rst
 
-H3 -- Distributing Handlers -- DONE
+Distributing Handlers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_distribute.rst
 
-H3 -- Available Handlers -- DONE
+Available Handlers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_available.rst
 
-H4 -- |opscode|: JsonFile Handler -- DONE
+|opscode|: JsonFile Handler
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_available_jsonfile.rst
 
-H4 --  Community: Open Source Handlers -- DONE
+Community: Open Source Handlers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_available_community.rst
 
