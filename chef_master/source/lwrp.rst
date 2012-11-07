@@ -44,7 +44,7 @@ Lightweight Resources
    :widths: 150 450
    :header-rows: 1
 
-   * - Resource
+   * - Cookbook
      - Description
    * - :doc:`lwrp_apt`
      - |cookbook name apt|
