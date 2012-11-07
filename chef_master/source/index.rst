@@ -34,6 +34,7 @@ Chef Documentation
 
 .. note:: This page is a work in progress because Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
 
+.. include:: ../../includes_chef/includes_chef.rst
 
 .. list-table::
    :widths: 200 600
@@ -43,18 +44,28 @@ Chef Documentation
      - Links
    * - Getting Started
      - Read :doc:`chef_overview`. If you want to know more about |ruby| or learn :doc:`just_enough_ruby_for_chef`. Set up a workstation. Set up a repository.
-   * - Nodes
-     - Learn about the :doc:`essentials_chef_client`, 
-   * - Workstations
-     - Learn about :doc:`essentials_repository` and :doc:`essentials_knife`.
-   * - The Chef Server
-     - Learn about :doc:`essentials_node_object`, :doc:`essentials_roles`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, and :doc:`essentials_search`.
-   * - Cookbooks
-     - Learn about :doc:`essentials_cookbook_directory`, :doc:`essentials_cookbook_attribute_files`, :doc:`essentials_cookbook_definitions`, :doc:`essentials_cookbook_files`, :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_lwrp`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_recipes`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, and :doc:`essentials_cookbook_versions`.
    * - References
-     - Detailed reference topics for :doc:`knife`, :doc:`resource`, :doc:`lwrp`, :doc:`api_cookbooks_site`, :doc:`api_chef_server`, :doc:`ohai`, and :doc:`config`.
+     - Detailed reference topics for :doc:`knife`, :doc:`resource`, :doc:`lwrp`, :doc:`api_cookbooks_site`, :doc:`api_chef_server`, and :doc:`config`.
    * - Scenarios
      - 
+
+.. include:: ../../includes_chef/includes_chef_key_elements.rst
+
+.. list-table::
+   :widths: 200 600
+   :header-rows: 1
+
+   * - Topics
+     - Links
+   * - Nodes
+     - Learn about :doc:`essentials_nodes`, :doc:`ohai`, and the :doc:`essentials_chef_client`, 
+   * - Workstations
+     - Learn about  :doc:`essentials_workstation`, :doc:`essentials_repository` and :doc:`essentials_knife`.
+   * - The Chef Server
+     - Learn about  :doc:`essentials_server`, :doc:`essentials_node_object`, :doc:`essentials_roles`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, and :doc:`essentials_search`.
+   * - Cookbooks
+     - Learn about  :doc:`essentials_cookbooks`, :doc:`essentials_cookbook_directory`, :doc:`essentials_cookbook_attribute_files`, :doc:`essentials_cookbook_definitions`, :doc:`essentials_cookbook_files`, :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_lwrp`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_recipes`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, and :doc:`essentials_cookbook_versions`.
+
 
 .. Hide the TOC from this file.
 

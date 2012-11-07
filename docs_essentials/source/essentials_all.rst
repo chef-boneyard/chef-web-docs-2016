@@ -60,7 +60,7 @@ Basic Workflows (PLACEHOLDER JUST FOR IDEAS FOR NOW):
 
 These should be high-level, each with a diagram that is based on the main-diagram. The actual workflow shouldn't be more than a paragraph (with bullets = OK) and should NOT get into the weeds.
 
-H1 -- Nodes -- DONE
+Nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
 
@@ -75,7 +75,7 @@ The following sections discuss these elements (and their various sub-components)
 * The |chef| run
 * Ohai
 
-H2 -- Cloud vs. Physical Nodes -- DONE
+Cloud vs. Physical Nodes
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_cloud.rst
 
@@ -101,7 +101,7 @@ Signed Header Authentication
 
 
 
-H2 -- The |chef| Run -- FIRST DRAFT
+The |chef| Run
 -----------------------------------------------------
 .. include:: ../../includes_chef/includes_chef_client_run.rst
 
@@ -262,16 +262,15 @@ Download
 .. include:: ../../steps/step_repository_create_download.rst
 
 
-
-H2 -- Knife -- DONE
+Knife
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife.rst
 
-H3 -- Sub-commands -- DONE
+Sub-commands
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_subcommand.rst
 
-H3 -- Plugins -- DONE
+Plugins
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_plugin.rst
 

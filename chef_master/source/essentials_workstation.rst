@@ -32,4 +32,4 @@ Workstations
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
+.. include:: ../../includes_workstation/includes_workstation.rst

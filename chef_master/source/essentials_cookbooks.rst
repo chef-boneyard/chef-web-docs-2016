@@ -32,4 +32,6 @@ Cookbooks
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
+.. include:: ../../includes_cookbooks/includes_cookbooks.rst
+
+.. note:: A cookbook includes a readme file.
