@@ -769,77 +769,73 @@ H2 -- Cookbooks Directory Structure -- DONE
 .. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
 
-H2 -- Cookbook Attributes -- DONE
+
+
+Cookbook Attributes
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
 
-H3 -- When to Use Attributes -- DONE
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file.rst
+
+When to Use Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_when_to_use.rst
 
-H4 -- NODE, ENVIRONMENT, ROLE, and ATTRIBUTE FILE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-NO TOPIC, BUT CONSIDER THIS.
+Attribute File Methods
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
 
-Types -- DONE
+Cookbook Attribute File Ordering
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_ordering.rst
+
+Attribute Accessor Methods
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
+
+Reloading Attribute Files From Recipes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_reload_from_recipe.rst
+
+Types
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_type.rst
 
-Precedence vs. Priority (PICK A WORD!) -- DONE
+Precedence
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-Persistence -- DONE
+Persistence
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
-Automatic Attributes -- DONE
+Automatic Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_automatic.rst
 
-Notation -- DONE
+Notation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_notation.rst
 
-H3 -- Attribute Files
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file.rst
-
-H4 -- Attribute File Methods
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
-
-H4 -- Cookbook Attribute File Ordering
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_ordering.rst
-
-H4 -- Attribute Accessor Methods
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
-
-H4 -- Reloading Attribute Files From Recipes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_reload_from_recipe.rst
 
 
-
-H2 -- Definitions -- DONE
+Definitions
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition.rst
 
-H3 -- Definition Syntax -- DONE
+Definition Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition_syntax.rst
 
-Example: Create a new resource -- DONE
+Example: Create a new resource
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_create_resource.rst
 
-Example: Many recipes, one definition -- DONE
+Example: Many recipes, one definition
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_many_recipes_one_definition.rst
 
-Example: Virtual hosts -- DONE
+Example: Virtual hosts
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_virtaul_hosts.rst
 
