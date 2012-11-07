@@ -9,4 +9,3 @@ Or to trigger a fatal exception::
 
    Chef::Log.fatal('something bad')
 
-**jamescott: seems like this is best as "just noted" in this section and CONSOLIDATED under essentials_exception_and_report_handlers. YEAH, DO THAT**

@@ -27,38 +27,3 @@ where ``::default_recipe`` is implied (and does not need to be specified). On a 
      ]
    }
 
-**jamescott: LOOKS LIKE BIFURCATION FOR CHEF SERVER AND CHEF SOLO IS REQUIRED HERE**
-
-**jamescott: CHEF SERVER AND CHEF CLIENT BELOW**
-Use |knife| to add the recipe to the node's run-list. For example:
-
-.. code-block:: bash
-
-   $ knife node run list add NODENAME "recipe[apache2]"
-
-More than one recipe can to be added:
-
-.. code-block:: bash
-
-   % knife node run list add NODENAME "recipe[apache2],recipe[mysql],role[ssh]"
-      run_list:
-         recipe[apache2]
-         recipe[mysql]
-         role[ssh]
-
-**jamescott: CHEF SERVER AND CHEF CLIENT ABOVE**
-
-**jamescott: CHEF SOLO BELOW**
-Use a JSON file to pass run-list details to |chef solo| as long as the cookbook in which the recipe is located is available to the system on which |chef solo| is running. For example, a JSON file named "dna.json" contains the following details::
-
-   {
-     "run_list": ["recipe[apache2]"]
-   }
-
-To add the run-list to the node, enter the following::
-
-.. code-block:: bash
-
-   $ sudo chef-solo -j /etc/chef/dna.json
-
-**jamescott: CHEF SOLO ABOVE**

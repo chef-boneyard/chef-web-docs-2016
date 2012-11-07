@@ -168,7 +168,7 @@ H4 --  Community: Open Source Handlers -- DONE
 
 
 
-H1 -- Workstations -- DONE
+Workstations
 =====================================================
 .. include:: ../../includes_workstation/includes_workstation.rst
 
@@ -739,7 +739,7 @@ Manager (Management Console)
 
 
 
-H1 -- Cookbooks
+Cookbooks
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
@@ -759,10 +759,6 @@ Cookbook Attributes
 When to Use Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_when_to_use.rst
-
-Attribute File Methods
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
 
 Cookbook Attribute File Ordering
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -795,6 +791,10 @@ Automatic Attributes
 Notation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_node/includes_node_attribute_notation.rst
+
+Attribute Methods
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
 
 
 
@@ -972,79 +972,85 @@ Error Messages
 
 
 
-H2 -- Recipes -- DONE
+Recipes
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
 
-H3 -- Apply Recipes to Run-lists -- DONE
+Apply Recipes to Run-lists
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_apply_to_run_lists.rst
 
-H3 -- Include Recipes in Recipes -- DONE
+|chef server|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_apply_to_run_lists_chef_server.rst
+
+|chef solo|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_apply_to_run_lists_chef_solo.rst
+
+Include Recipes in Recipes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_include_in_recipe.rst
 
-H3 -- Cookbook Dependencies -- DONE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_cookbook_dependencies.rst
-
-H3 -- Recipe Attributes -- DONE
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_attribute.rst
-
-H4 -- Types -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_node/includes_node_attribute_type.rst
-
-H4 -- Precedence vs. Priority (PICK A WORD!) -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_node/includes_node_attribute_precedence.rst
-
-H4 -- Persistence -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_node/includes_node_attribute_persistence.rst
-
-H4 -- Automatic Attributes -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_node/includes_node_attribute_automatic.rst
-
-H4 -- Notation -- DONE
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_node/includes_node_attribute_notation.rst
-
-H4 -- Attribute Methods
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
-
-H4 -- Reloading Attributes From Recipes
+Reloading Attributes From Recipes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_reload_from_recipe.rst
 
+Accessor Methods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
 
-H3 -- Search Indexes -- DONE
+Cookbook Dependencies
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_cookbook_dependencies.rst
+
+Recipe Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_attribute.rst
+
+Types
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_node/includes_node_attribute_type.rst
+
+Precedence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
+
+Persistence
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_node/includes_node_attribute_persistence.rst
+
+Automatic Attributes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_node/includes_node_attribute_automatic.rst
+
+Notation
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_node/includes_node_attribute_notation.rst
+
+Attribute Methods
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
+
+Use Search Results in a Recipe
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_search/includes_search.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_search_indexes.rst
 
-H3 -- Data Bags -- DONE
+Use Data Bags in a Recipe
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst
 
-H3 -- Other Recipe DSL Methods -- DONE, DEPRECATE?
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_dsl.rst
-
-H3 -- Tags -- DONE, BUT WEAK
+Tags
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_chef/includes_chef_tags.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
 
-H3 -- |ruby| in Recipes -- DONE
+Use |ruby| in Recipes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_use_ruby.rst
 
@@ -1060,7 +1066,7 @@ H3 -- |ruby| in Recipes -- DONE
 
 .. include:: ../../steps/step_chef_recipe_loop_over_hash_of_package_names.rst
 
-H3 -- Exceptions and Logging -- DONE
+Exceptions and Logging
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_exceptions_and_logging.rst
 
