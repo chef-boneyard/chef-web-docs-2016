@@ -26,7 +26,7 @@ import sys, os
 extensions = ['sphinx.ext.todo']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_templates', '../../_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -91,7 +91,7 @@ pygments_style = 'emacs'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinxdoc'
+html_theme = 'opscode'
 #html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
