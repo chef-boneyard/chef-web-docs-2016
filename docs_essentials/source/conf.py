@@ -26,7 +26,7 @@ import sys, os
 extensions = ['sphinx.ext.todo']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_templates', '../../_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -38,8 +38,8 @@ source_suffix = '.rst'
 master_doc = 'essentials_all'
 
 # General information about the project.
-project = u'Chef Overview'
-copyright = u'2012, Opscode, Inc.'
+project = u'Chef Essentials'
+copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -91,7 +91,7 @@ pygments_style = 'emacs'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinxdoc'
+html_theme = 'opscode'
 #html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -100,18 +100,18 @@ html_theme = 'sphinxdoc'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Chef Overview"
+html_title = "Chef Essentials"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "../../images/opscode_html_logo.png"
+html_logo = "../../images/opscode_chef_html_logo.jpg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
@@ -165,7 +165,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Chef Overview'
+htmlhelp_basename = 'Chef Essentials'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,7 +184,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Chef Overview.tex', u'Chef Overview',
+  ('index', 'Chef Essentials.tex', u'Chef Essentials',
    u'Opscode, Inc.', 'manual'),
 ]
 
@@ -214,7 +214,7 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'Chef Overview', u'Chef Overview',
+    ('index', 'Chef Essentials', u'Chef Essentials',
      [u'Opscode, Inc.'], 1)
 ]
 
@@ -246,7 +246,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Chef Overview'
+epub_title = u'Chef Essentials'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'

@@ -26,7 +26,7 @@ import sys, os
 extensions = ['sphinx.ext.todo']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_templates', '../../_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -91,7 +91,7 @@ pygments_style = 'emacs'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinxdoc'
+html_theme = 'opscode'
 #html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -100,7 +100,7 @@ html_theme = 'sphinxdoc'
 #html_theme_options = {}
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = []
+html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -111,7 +111,7 @@ html_title = "Essentials :: Search"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "../../images/opscode_html_logo.png"
+html_logo = "../../images/opscode_chef_html_logo.jpg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
