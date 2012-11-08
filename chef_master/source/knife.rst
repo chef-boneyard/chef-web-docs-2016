@@ -46,7 +46,7 @@ Knife
    * - :doc:`knife_common_options`
      - There are many options that are available for all |knife| sub-commands.
 
-|knife| includes the following sub-commands:
+|knife| includes the following sub-commands: 
 
 .. list-table::
    :widths: 150 450
