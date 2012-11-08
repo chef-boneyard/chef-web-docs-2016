@@ -11,7 +11,7 @@ to return::
 
    Syntax OK
 
-Here is a quick rundown of some basic |ruby| commands.::
+Here is a quick rundown of some basic |ruby| commands::
 
    # anything after # is a comment.
     

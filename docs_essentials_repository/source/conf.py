@@ -26,7 +26,7 @@ import sys, os
 extensions = ['sphinx.ext.todo']
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_templates', '../../_templates']
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -111,7 +111,7 @@ html_title = "Essentials :: Repository"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "../../images/opscode_html_logo.png"
+html_logo = "../../images/opscode_chef_html_logo.jpg"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
