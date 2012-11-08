@@ -28,7 +28,7 @@ extensions = ['sphinx.ext.todo']
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates', '../../_templates']
 
-# The suffix of source filenames. 
+# The suffix of source filenames.
 source_suffix = '.rst'
 
 # The encoding of source files.
@@ -38,7 +38,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Chef Documentation'
+project = u'Chef Docs'
 copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -104,7 +104,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Chef Documentation"
+html_title = "Chef"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -125,18 +125,22 @@ html_static_path = ['_static']
 
 # If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
 # using the given strftime format.
-html_last_updated_fmt = '%b %d, %Y'
+#html_last_updated_fmt = '%b %d, %Y'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {
+   '**': ['localtoc.html', 'relations.html'],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
-#html_additional_pages = {}
+html_additional_pages = {
+    'search': 'opscode_search.html',
+}
 
 # If false, no module index is generated.
 #html_domain_indices = True
@@ -148,7 +152,7 @@ html_last_updated_fmt = '%b %d, %Y'
 #html_split_index = True
 
 # If true, links to the reST sources are added to the pages.
-html_show_sourcelink = False
+#html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
@@ -165,7 +169,7 @@ html_show_copyright = True
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Chef Documentation'
+htmlhelp_basename = 'Chef Docs'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,7 +188,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Chef.tex', u'Chef',
+  ('index', 'Chef Docs.tex', u'Chef Docs',
    u'Opscode, Inc.', 'manual'),
 ]
 
@@ -214,7 +218,7 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'chef', u'Chef',
+    ('index', 'Chef Docs', u'Chef Docs',
      [u'Opscode, Inc.'], 1)
 ]
 
@@ -228,8 +232,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Chef', u'Chef',
-   u'Opscode, Inc.', 'Chef', 'Documentation for Chef.',
+  ('index', 'Chef Docs', u'Chef Docs',
+   u'Opscode, Inc.', 'Chef Docs', 'Chef Docs',
    'Miscellaneous'),
 ]
 
@@ -246,7 +250,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Chef Documentation'
+epub_title = u'Chef Docs'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'
