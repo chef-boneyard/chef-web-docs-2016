@@ -11,13 +11,13 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:name``
+   * - ``name``
      - The name of the monitor.
-   * - ``:notes``
+   * - ``notes``
      - Optional. Notes about the monitor.
-   * - ``:oauth_key``
+   * - ``oauth_key``
      - The |oauth| key used to authenticate to the |cloudkick| API.
-   * - ``:oauth_secret``
+   * - ``oauth_secret``
      - The |oauth| secret used to authenticate to the |cloudkick| API.
-   * - ``:query``
+   * - ``query``
      - A node-based query that identifies one (or more) targets to which the monitor will be applied. If this attribute is unspecified, it will default to the name of the node.

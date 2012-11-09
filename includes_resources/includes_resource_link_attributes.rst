@@ -9,14 +9,14 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:group``
+   * - ``group``
      - |group resource link|
-   * - ``:link_type``
+   * - ``link_type``
      - |link_type resource link|
-   * - ``:owner``
+   * - ``owner``
      - |owner resource link|
-   * - ``:target_file``
+   * - ``target_file``
      - |target_file resource link|
-   * - ``:to``
+   * - ``to``
      - |to resource link|
 

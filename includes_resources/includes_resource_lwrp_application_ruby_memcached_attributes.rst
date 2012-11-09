@@ -9,5 +9,5 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:role``
+   * - ``role``
      - The name of a role. During a |chef| run, a search will be performed to find a node with the same name as this value in the same environment as the current role. If a node is found, it's IP address will be used when rendering the ``memcached.yml`` file.

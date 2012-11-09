@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:package_name``
+   * - ``package_name``
      - |package_name lwrp windows_package| 
-   * - ``:source``
+   * - ``source``
      - |source lwrp windows_package|
-   * - ``:installer_type``
+   * - ``installer_type``
      - |installer_type lwrp windows_package|
-   * - ``:options``
+   * - ``options``
      - |options lwrp windows_package|

@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:reason``
+   * - ``reason``
      - The reason for a reboot. Default value: ``Opscode Chef initiated reboot``.
-   * - ``:timeout``
+   * - ``timeout``
      - The delay (in seconds) to wait before proceeding with a requested reboot. Default value: ``60``.

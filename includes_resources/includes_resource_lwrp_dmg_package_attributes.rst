@@ -9,15 +9,15 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:app``
+   * - ``app``
      - |app lwrp dmg_package|
-   * - ``:checksum``
+   * - ``checksum``
      - |checksum lwrp dmg_package|
-   * - ``:destination``
+   * - ``destination``
      - |destination lwrp dmg_package|
-   * - ``:dmg_name``
+   * - ``dmg_name``
      - |dmg_name lwrp dmg_package|
-   * - ``:source``
+   * - ``source``
      - |source lwrp dmg_package|
-   * - ``:volumes_dir``
+   * - ``volumes_dir``
      - |volumes_dir lwrp dmg_package|

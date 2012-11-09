@@ -9,21 +9,21 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:backup``
+   * - ``backup``
      - |backup resource cookbook_file|
-   * - ``:group``
+   * - ``group``
      - |group resource cookbook_file|
-   * - ``:mode``
+   * - ``mode``
      - |mode resource cookbook_file|
-   * - ``:rights``
+   * - ``rights``
      - |windows| only. |rights resource cookbook_file|
-   * - ``:inherits``
+   * - ``inherits``
      - |inherits resource cookbook_file|
-   * - ``:owner``
+   * - ``owner``
      - |owner resource cookbook_file|
-   * - ``:path``
+   * - ``path``
      - |path resource cookbook_file|
-   * - ``:source``
+   * - ``source``
      - |source resource cookbook_file|
-   * - ``:cookbook``
+   * - ``cookbook``
      - |cookbook resource cookbook_file|

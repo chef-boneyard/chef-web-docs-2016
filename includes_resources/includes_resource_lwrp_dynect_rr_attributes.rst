@@ -9,19 +9,19 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:record_type``
+   * - ``record_type``
      - |record_type lwrp dynect_rr|
-   * - ``:rdata``
+   * - ``rdata``
      - |rdata lwrp dynect_rr|
-   * - ``:ttl``
+   * - ``ttl``
      - |ttl lwrp dynect_rr|
-   * - ``:fqdn``
+   * - ``fqdn``
      - |fqdn lwrp dynect_rr|
-   * - ``:username``
+   * - ``username``
      - |username lwrp dynect_rr|
-   * - ``:customer``
+   * - ``customer``
      - |customer lwrp dynect_rr|
-   * - ``:password``
+   * - ``password``
      - |password lwrp dynect_rr|
-   * - ``:zone``
+   * - ``zone``
      - |zone lwrp dynect_rr|

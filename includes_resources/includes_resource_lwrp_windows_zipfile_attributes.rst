@@ -9,9 +9,9 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:path_to_location``
+   * - ``path_to_location``
      - |path_to_location lwrp windows_zipfile|
-   * - ``:source``
+   * - ``source``
      - |source lwrp windows_zipfile|
-   * - ``:overwrite``
+   * - ``overwrite``
      - |overwrite lwrp windows_zipfile|

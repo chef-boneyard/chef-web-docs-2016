@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:server_aliases``
+   * - ``server_aliases``
      - An array of server aliases.
-   * - ``:webapp_template``
+   * - ``webapp_template``
      - The template to render the virtual host configuration. Default value: ``php.conf.erb``.

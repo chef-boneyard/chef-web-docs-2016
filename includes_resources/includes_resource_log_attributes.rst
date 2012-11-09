@@ -9,5 +9,5 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:level``
+   * - ``level``
      - |level resource log|

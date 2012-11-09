@@ -9,25 +9,25 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:cookbook``
+   * - ``cookbook``
      - |cookbook resource remote_directory|
-   * - ``:files_backup``
+   * - ``files_backup``
      - |files_backup resource remote_directory|
-   * - ``:files_group``
+   * - ``files_group``
      - |files_group resource remote_directory|
-   * - ``:files_mode``
+   * - ``files_mode``
      - |files_mode resource remote_directory|
-   * - ``:files_owner``
+   * - ``files_owner``
      - |files_owner resource remote_directory|
-   * - ``:inherits``
+   * - ``inherits``
      - |inherits resource remote_directory|
-   * - ``;path``
+   * - ``path``
      - |path resource remote_directory|
-   * - ``:overwrite``
+   * - ``overwrite``
      - |overwrite resource remote_directory|
-   * - ``:purge``
+   * - ``purge``
      - |purge resource remote_directory|
-   * - ``:rights``
+   * - ``rights``
      - |rights resource remote_directory|
-   * - ``:source``
+   * - ``source``
      - |source resource remote_directory|

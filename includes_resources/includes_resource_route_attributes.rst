@@ -9,11 +9,11 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:target``
+   * - ``target``
      - |target resource route|
-   * - ``:netmask``
+   * - ``netmask``
      - |netmask resource route|
-   * - ``:gateway``
+   * - ``gateway``
      - |gateway resource route|
-   * - ``:device``
+   * - ``device``
      - |device resource route|

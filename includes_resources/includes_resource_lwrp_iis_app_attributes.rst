@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:app_name``
+   * - ``app_name``
      - The name of the application.
-   * - ``:application_pool``
+   * - ``application_pool``
      - The application pool to which an application belongs.
-   * - ``:path``
+   * - ``path``
      - The virtual path to the location where the application resides.
-   * - ``:physical_path``
+   * - ``physical_path``
      - The physical path to the location where the application resides.

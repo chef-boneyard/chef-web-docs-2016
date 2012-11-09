@@ -9,17 +9,17 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:before_fork``
+   * - ``before_fork``
      - The object that is called by the master process before executing the |unicorn| binary.
-   * - ``:bundler``
+   * - ``bundler``
      - Indicates whether |unicorn|
-   * - ``:bundle_command``
+   * - ``bundle_command``
      - 
-   * - ``:port``
+   * - ``port``
      - 
-   * - ``:preload_app``
+   * - ``preload_app``
      - Indicates whether an application is loaded before a worker process is forked. Default value: ``false``.
-   * - ``:worker_processes``
+   * - ``worker_processes``
      - The number of allowed worker processes.
-   * - ``:worker_timeout``
+   * - ``worker_timeout``
      - The amount of time (in seconds) before a worker process times out.

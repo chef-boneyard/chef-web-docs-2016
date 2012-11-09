@@ -9,21 +9,21 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:address``
+   * - ``address``
      - 
-   * - ``:command``
+   * - ``command``
      - 
-   * - ``:description``
+   * - ``description``
      - 
-   * - ``:location``
+   * - ``location``
      - 
-   * - ``:modular_plugins``
+   * - ``modular_plugins``
      - 
-   * - ``:name``
+   * - ``name``
      - 
-   * - ``:properties``
+   * - ``properties``
      - 
-   * - ``:templates``
+   * - ``templates``
      - 
-   * - ``:users``
+   * - ``users``
      - 

@@ -9,25 +9,25 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:backup``
+   * - ``backup``
      - |backup resource template|
-   * - ``:cookbook``
+   * - ``cookbook``
      - |cookbook resource template|
-   * - ``:path``
+   * - ``path``
      - |path resource template|
-   * - ``:source``
+   * - ``source``
      - |source resource template|
-   * - ``:group``
+   * - ``group``
      - |group resource template|
-   * - ``:mode``
+   * - ``mode``
      - |mode resource template|
-   * - ``:rights``
+   * - ``rights``
      - |rights resource template|
-   * - ``:inherits``
+   * - ``inherits``
      - |inherits resource template|
-   * - ``:owner``
+   * - ``owner``
      - |owner resource template|
-   * - ``:variables``
+   * - ``variables``
      - |variables resource template|
-   * - ``:local``
+   * - ``local``
      - |local resource template|

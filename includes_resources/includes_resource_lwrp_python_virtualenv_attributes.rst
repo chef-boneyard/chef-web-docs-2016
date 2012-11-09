@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:path``
+   * - ``path``
      - |path lwrp python_virtualenv|
-   * - ``:interpreter``
+   * - ``interpreter``
      - |interpreter lwrp python_virtualenv|
-   * - ``:owner``
+   * - ``owner``
      - |owner lwrp python_virtualenv|
-   * - ``:group``
+   * - ``group``
      - |group lwrp python_virtualenv|

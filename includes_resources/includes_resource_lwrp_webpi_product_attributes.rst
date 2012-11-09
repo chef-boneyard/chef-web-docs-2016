@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:accept_eula``
+   * - ``accept_eula``
      - Indicates that |microsoft webplcmdline| will auto-accept end-user license agreements. Default value: ``false``.
-   * - ``:product_id``
+   * - ``product_id``
      - The identifier of the product to be installed.

@@ -9,13 +9,13 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:command``
+   * - ``command``
      - The command to be executed (including the path). If this value is not specified, ``node['nagios']['plugin']['plugin_dir']/command_name`` is used.
-   * - ``:command_name``
+   * - ``command_name``
      - The name of the |nagios nrpe| check. This must be referenced in the commands.cfg template.
-   * - ``:critical_condition``
+   * - ``critical_condition``
      - A string that is passed to the command using the ``-c`` flag.
-   * - ``:parameters``
+   * - ``parameters``
      - One (or more) additional parameters that are passed to the command.
-   * - ``:warning_condition``
+   * - ``warning_condition``
      - A string that is passed to the command using the ``-w`` flag.

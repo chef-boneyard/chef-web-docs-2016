@@ -9,9 +9,9 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:args``
+   * - ``args``
      - The arguments for a program.
-   * - ``:name``
+   * - ``name``
      - The name of a value to be stored in the |windows| registry.
-   * - ``:program``
+   * - ``program``
      - The program to be run.

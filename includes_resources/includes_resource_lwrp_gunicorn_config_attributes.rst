@@ -9,34 +9,34 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:backlog``
+   * - ``backlog``
      - The maximum number of pending connections. Default value: ``2048``.
-   * - ``:cookbook``
+   * - ``cookbook``
      - The cookbook in which a template file is located. Default value: ``gunicorn`` (the ``gunicorn`` cookbook).
-   * - ``:group``
+   * - ``group``
      - A string or identifier for the group owner of a configuration file.
-   * - ``:listen``
+   * - ``listen``
      - The socket to bind. This value must be a string in the form: ``HOST``, ``HOST:PORT``, or ``unix:PATH``. Default value: ``0.0.0.0:8000`` which will listen on port 8000 for all interfaces.
-   * - ``:owner``
+   * - ``owner``
      - A string or identifier for the owner for a configuration file.
-   * - ``:path``
+   * - ``path``
      - The path to the location in which the configuration file will be created.
-   * - ``:pid``
+   * - ``pid``
      - The file name for the process identifier (PID) file. Default value: `` `` (no file).
-   * - ``:preload_app``
+   * - ``preload_app``
      - Indicates whether application code should be loaded before worker processes are forked. Default value: ``false``.
-   * - ``:server_hooks``
+   * - ``server_hooks``
      - A hash with values that are rendered as |gunicorn| server hook functions named after the hash item's key name. Default value: ``{}`` (no server hooks).
-   * - ``:template``
+   * - ``template``
      - The template to use when rendering a configuration file. Default value: ``gunicorn.py.erb`` (included as part of the ``gunicorn`` cookbook).
-   * - ``:worker_class``
+   * - ``worker_class``
      - The type of workers to use. Default value: ``sync``.
-   * - ``:worker_keepalive``
+   * - ``worker_keepalive``
      - The amount of time (in seconds) to wait for requests on a keep-alive connection. Default value: ``2``.
-   * - ``:worker_max_requests``
+   * - ``worker_max_requests``
      - The maximum number of requests a worker will process before restarting. Default value: ``0`` (which disables worker restarts).
-   * - ``:worker_processes``
+   * - ``worker_processes``
      - The number of worker processes available to handle requests. Default value: ``4``.
-   * - ``:worker_timeout``
+   * - ``worker_timeout``
      - The amount of time (in seconds) to wait before a worker is killed and restarted. Default value: ``60``.
 

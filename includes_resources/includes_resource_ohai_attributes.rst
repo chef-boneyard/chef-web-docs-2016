@@ -9,5 +9,5 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:plugin``
+   * - ``plugin``
      - |plugin resource ohai|

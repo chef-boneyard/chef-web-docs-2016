@@ -9,49 +9,49 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:after_restart``
+   * - ``after_restart``
      - |after_restart resource deploy|
-   * - ``:before_migrate``
+   * - ``before_migrate``
      - |before_migrate resource deploy|
-   * - ``:before_restart``
+   * - ``before_restart``
      - |before_restart resource deploy|
-   * - ``:before_symlink``
+   * - ``before_symlink``
      - |before_symlink resource deploy|
-   * - ``:branch``
+   * - ``branch``
      - The alias for the revision.
-   * - ``:create_dirs_before_symlink``
+   * - ``create_dirs_before_symlink``
      - |create_dirs_before_symlink resource deploy|
-   * - ``:deploy_to``
+   * - ``deploy_to``
      - |deploy_to resource deploy|
-   * - ``:environment``
+   * - ``environment``
      - |environment resource deploy|
-   * - ``:group``
+   * - ``group``
      - |group resource deploy|
-   * - ``:migrate``
+   * - ``migrate``
      - |migrate resource deploy|
-   * - ``:migration_command``
+   * - ``migration_command``
      - |migration_command resource deploy|
-   * - ``:purge_before_symlink``
+   * - ``purge_before_symlink``
      - |purge_before_symlink resource deploy|
-   * - ``:repo``
+   * - ``repo``
      - |repo resource deploy|
-   * - ``:repository``
+   * - ``repository``
      - |repository resource deploy|
-   * - ``:repository_cache``
+   * - ``repository_cache``
      - |repository_cache resource deploy|
-   * - ``:restart_command``
+   * - ``restart_command``
      - |restart_command resource deploy|
-   * - ``:revision``
+   * - ``revision``
      - |revision resource deploy|
-   * - ``:rollback_on_error``
+   * - ``rollback_on_error``
      - |rollback_on_error resource deploy|
-   * - ``:scm_provider``
+   * - ``scm_provider``
      - |scm_provider resource deploy|
-   * - ``:symlinks``
+   * - ``symlinks``
      - |symlinks resource deploy|
-   * - ``:symlink_before_migrate``
+   * - ``symlink_before_migrate``
      - |symlink_before_migrate resource deploy|
-   * - ``:user``
+   * - ``user``
      - |user resource deploy|
 
 The following attributes are for use with |git| only:
@@ -62,15 +62,15 @@ The following attributes are for use with |git| only:
 
    * - Attribute
      - Description
-   * - ``:enable_submodules``
+   * - ``enable_submodules``
      - |enable_submodules resource|
-   * - ``:git_ssh_wrapper``
+   * - ``git_ssh_wrapper``
      - |git_ssh_wrapper|
-   * - ``:remote``
+   * - ``remote``
      - |remote resource| Default value: ``origin``.
-   * - ``:shallow_clone``
+   * - ``shallow_clone``
      - |shallow_clone resource|
-   * - ``:ssh_wrapper``
+   * - ``ssh_wrapper``
      - |ssh_wrapper resource|
 
 The following attributes are for use with |svn| only:
@@ -81,10 +81,10 @@ The following attributes are for use with |svn| only:
 
    * - Attribute
      - Description
-   * - ``:svn_arguments``
+   * - ``svn_arguments``
      - |svn_arguments resource|
-   * - ``:svn_password``
+   * - ``svn_password``
      - |svn_password resource|
-   * - ``:svn_username``
+   * - ``svn_username``
      - |svn_username resource|
 

@@ -9,9 +9,9 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:service_name``
+   * - ``service_name``
      - |service_name lwrp bluepill_service|
-   * - ``:variables``
+   * - ``variables``
      - |variables lwrp bluepill_service|
-   * - ``:supports``
+   * - ``supports``
      - |supports lwrp bluepill_service|

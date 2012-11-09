@@ -9,69 +9,69 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:autostart``
+   * - ``autostart``
      - Indicates if a program starts automatically when |python supervisor| is started.
-   * - ``:autorestart``
+   * - ``autorestart``
      - Indicates if a process is never auto-restarted (``false``), restarted when a program exits with an unknown exit code (``unexpected``), or unconditionally restarted (``true``).
-   * - ``:command``
+   * - ``command``
      - A command that is run when the program starts.
-   * - ``:directory``
+   * - ``directory``
      - The path to a directory in which a temporary chdir will occur.
-   * - ``:environment``
+   * - ``environment``
      - A list of key-value pairs in the form of ``KEY=val1,KEY2=val2`` that will be placed in the environment for a child process.
-   * - ``:exitcodes``
+   * - ``exitcodes``
      - A list of expected exit codes for a program.
-   * - ``:numprocs``
+   * - ``numprocs``
      - The number of instances that will be started by |python supervisor|.
-   * - ``:numprocs_start``
+   * - ``numprocs_start``
      - An integer offset that is used to compute the number at which ``numprocs`` starts.
-   * - ``:priority``
+   * - ``priority``
      - The relative priority of the program for start and shutdown ordering.
-   * - ``:process_name``
+   * - ``process_name``
      - A |python| string expression that is used to compose the supervisor process name for a process.
-   * - ``:program_name``
+   * - ``program_name``
      - The name of the program.
-   * - ``:redirect_stderr``
+   * - ``redirect_stderr``
      - Indicates that the STDERR output for a process is sent back to |python supervisor| using STDOUT.
-   * - ``:serverurl``
+   * - ``serverurl``
      - The URL passed in the environment to the sub-process process.
-   * - ``:socket``
+   * - ``socket``
      - The |fcgi| socket for a program.
-   * - ``:socket_mode``
+   * - ``socket_mode``
      - A parameter that specifies the permission mode. |unix| only.
-   * - ``:socket_owner``
+   * - ``socket_owner``
      - The user and group for a |fcgi| socket. |unix| only.
-   * - ``:startretries``
+   * - ``startretries``
      - The number of serial failure attempts |python supervisor| will allow when attempting to start a program before giving up.
-   * - ``:startsecs``
+   * - ``startsecs``
      - The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.
-   * - ``:stopsignal``
+   * - ``stopsignal``
      - The signal used to kill a program when a stop is requested: ``TERM``, ``HUP``, ``INT``, ``QUIT``, ``KILL``, ``USR1``, or ``USR2``.
-   * - ``:stopwaitsecs``
+   * - ``stopwaitsecs``
      - The amount of time (in seconds) to wait (after ``stopsignal``) before a ``SIGKILL`` message is sent.
-   * - ``:stderr_capture_maxbytes``
+   * - ``stderr_capture_maxbytes``
      - The maximum number of bytes written to capture for ``stderr_logfile``.
-   * - ``:stderr_events_enabled``
+   * - ``stderr_events_enabled``
      - Indicates whether events are omitted from ``stderr_logfile``.
-   * - ``:stderr_logfile``
+   * - ``stderr_logfile``
      - The location of the STDERR logfile.
-   * - ``:stderr_logfile_backups``
+   * - ``stderr_logfile_backups``
      - The number of ``stderr_logfile`` backups to keep.
-   * - ``:stderr_logfile_maxbytes``
+   * - ``stderr_logfile_maxbytes``
      - The maximum size (in bytes) that may be consumed by ``stderr_logfile`` before it is rotated.
-   * - ``:stdout_capture_maxbytes``
+   * - ``stdout_capture_maxbytes``
      - The maximum number of bytes written to capture for ``stdout_logfile``.
-   * - ``:stdout_events_enabled``
+   * - ``stdout_events_enabled``
      - Indicates whether events are omitted from ``stdout_logfile``.
-   * - ``:stdout_logfile``
+   * - ``stdout_logfile``
      - The location of the STDOUT logfile.
-   * - ``:stdout_logfile_backups``
+   * - ``stdout_logfile_backups``
      - The number of ``stdout_logfile`` backups to keep.
-   * - ``:stdout_logfile_maxbytes``
+   * - ``stdout_logfile_maxbytes``
      - The maximum size (in bytes) that may be consumed by ``stdout_logfile`` before it is rotated.
-   * - ``:umask``
+   * - ``umask``
      - An octal number that represents the umask of a process.
-   * - ``:user``
+   * - ``user``
      - The |unix| user account that runs the program.
 
 

@@ -9,23 +9,23 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:application_port``
+   * - ``application_port``
      - The port on which the application server will run. Default value: ``8080``.
-   * - ``:application_server_role``
+   * - ``application_server_role``
      - The name of a role. During a |chef| run, a search will be performed to application servers. Default value: ``#{application name}_application_server``.
-   * - ``:port``
+   * - ``port``
      - The port to which |nginx| will bind. Default value: ``80``.
-   * - ``:server_name``
+   * - ``server_name``
      - The virtual host name for a server. Defaults to the node |fqdn|.
-   * - ``:ssl``
+   * - ``ssl``
      - Indicates whether |ssl| is being used. Default value: ``false``.
-   * - ``:ssl_certificate``
+   * - ``ssl_certificate``
      - The |ssl| certificate.
-   * - ``:ssl_certificate_key``
+   * - ``ssl_certificate_key``
      - The |ssl| certificate key.
-   * - ``:static_files``
+   * - ``static_files``
      - A hash that maps URLs to files. Default value: ``{}``.
-   * - ``:template``
+   * - ``template``
      - The name of a template that will be rendered to create a context file. Default value: ``load_balancer.conf.erb`` (from this cookbook).
 
 

@@ -9,11 +9,11 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:command``
+   * - ``command``
      - |command resource script|
-   * - ``:code``
+   * - ``code``
      - |code resource script|
-   * - ``:interpreter``
+   * - ``interpreter``
      - |interpreter resource script|
-   * - ``:flags``
+   * - ``flags``
      - |flags resource script|

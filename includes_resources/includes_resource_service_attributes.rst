@@ -9,19 +9,19 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:pattern``
+   * - ``pattern``
      - |pattern resource service|
-   * - ``:reload_command``
+   * - ``reload_command``
      - |reload_command resource service|
-   * - ``:restart_command``
+   * - ``restart_command``
      - |restart_command action write service|
-   * - ``:service_name``
+   * - ``service_name``
      - |service_name resource service|
-   * - ``:start_command``
+   * - ``start_command``
      - |start_command resource service|
-   * - ``:status_command``
+   * - ``status_command``
      - |status_command resource service|
-   * - ``:stop_command``
+   * - ``stop_command``
      - |stop_command resource service|
-   * - ``:supports``
+   * - ``supports``
      - |supports resource service|

@@ -9,17 +9,17 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:components``
+   * - ``components``
      - |components lwrp apt_repository|
-   * - ``:deb_src``
+   * - ``deb_src``
      - |dev_src lwrp apt_repository|
-   * - ``:distribution``
+   * - ``distribution``
      - |distribution lwrp apt_repository|
-   * - ``:key``
+   * - ``key``
      - |key lwrp apt_repository|
-   * - ``:keyserver``
+   * - ``keyserver``
      - |keyserver lwrp apt_repository|
-   * - ``:repo_name``
+   * - ``repo_name``
      - |repo_name lwrp apt_repository|
-   * - ``:uri``
+   * - ``uri``
      - |uri lwrp apt_repository|

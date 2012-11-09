@@ -9,17 +9,17 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:current_options``
+   * - ``current_options``
      - 
-   * - ``:default_options``
+   * - ``default_options``
      - 
-   * - ``:file_writer``
+   * - ``file_writer``
      - 
-   * - ``:full_path``
+   * - ``full_path``
      - 
-   * - ``:name``
+   * - ``name``
      - The name of the port for which a port options file will be modified.
-   * - ``:options``
+   * - ``options``
      - A hash with the option name as the key and a boolean value. For example: ``"APACHE" => true``.
-   * - ``:source``
+   * - ``source``
      - A template that is used to create the port options file. For example: ``source "freebsd-php5-options.erb"``.

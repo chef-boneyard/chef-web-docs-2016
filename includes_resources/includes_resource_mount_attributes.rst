@@ -9,19 +9,19 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:device``
+   * - ``device``
      - |device resource mount|
-   * - ``:device_type``
+   * - ``device_type``
      - |device_type resource mount|
-   * - ``:dump``
+   * - ``dump``
      - |dump resource mount|
-   * - ``:fstype``
+   * - ``fstype``
      - |fstype resource mount|
-   * - ``:mount_point``
+   * - ``mount_point``
      - |mount_point resource mount|
-   * - ``:options``
+   * - ``options``
      - |options resource mount|
-   * - ``:pass``
+   * - ``pass``
      - |pass resource mount|
-   * - ``:supports``
+   * - ``supports``
      - |supports resource mount|

@@ -9,23 +9,23 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:path``
+   * - ``path``
      - The path to a file.
-   * - ``:torrent``
+   * - ``torrent``
      - |torrent lwrp transmission_torrent_file|
-   * - ``:blocking``
+   * - ``blocking``
      - |blocking lwrp transmission_torrent_file|
-   * - ``:continue_seeding``
+   * - ``continue_seeding``
      - |continue_seeding lwrp transmission_torrent_file|
-   * - ``:owner``
+   * - ``owner``
      - |owner lwrp transmission_torrent_file|
-   * - ``:group``
+   * - ``group``
      - |group lwrp transmission_torrent_file|
-   * - ``:rpc_host``
+   * - ``rpc_host``
      - |rpc_host lwrp transmission_torrent_file|
-   * - ``:rpc_port``
+   * - ``rpc_port``
      - |rpc_port lwrp transmission_torrent_file|
-   * - ``:rpc_username``
+   * - ``rpc_username``
      - |rpc_username lwrp transmission_torrent_file|
-   * - ``:rpc_password``
+   * - ``rpc_password``
      - |rpc_password lwrp transmission_torrent_file|

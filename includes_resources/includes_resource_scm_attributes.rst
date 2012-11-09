@@ -9,17 +9,17 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:destination``
+   * - ``destination``
      - |destination resource scm|
-   * - ``:repository``
+   * - ``repository``
      - |repository resource scm|
-   * - ``:revision``
+   * - ``revision``
      - |revision resource scm|
-   * - ``:reference``
+   * - ``reference``
      - |reference resource scm|
-   * - ``:user``
+   * - ``user``
      - |user resource scm|
-   * - ``:group``
+   * - ``group``
      - |group resource scm|
 
 The following attributes are for use with |git| only:
@@ -30,15 +30,15 @@ The following attributes are for use with |git| only:
 
    * - Attribute
      - Description
-   * - ``:additional_remotes``
+   * - ``additional_remotes``
      - |additional_remotes resource|
-   * - ``:depth``
+   * - ``depth``
      - |depth resource scm|
-   * - ``:enable_submodules``
+   * - ``enable_submodules``
      - |enable_submodules resource|
-   * - ``:remote``
+   * - ``remote``
      - |remote resource|
-   * - ``:ssh_wrapper``
+   * - ``ssh_wrapper``
      - |ssh_wrapper resource|
 
 The following attributes are for use with |svn| only:
@@ -49,11 +49,11 @@ The following attributes are for use with |svn| only:
 
    * - Attribute
      - Description
-   * - ``:svn_username``
+   * - ``svn_username``
      - |svn_username resource|
-   * - ``:svn_password``
+   * - ``svn_password``
      - |svn_password resource|
-   * - ``:svn_arguments``
+   * - ``svn_arguments``
      - |svn_arguments resource|
-   * - ``:svn_info_args``
+   * - ``svn_info_args``
      - |svn_info_args resource|

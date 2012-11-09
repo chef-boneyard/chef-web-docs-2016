@@ -9,13 +9,13 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:group_name``
+   * - ``group_name``
      - |group_name resource group|
-   * - ``:gid``
+   * - ``gid``
      - |gid resource group|
-   * - ``:members``
+   * - ``members``
      - |members resource group|
-   * - ``:append``
+   * - ``append``
      - |append resource group|
-   * - ``:system``
+   * - ``system``
      - |system resource group|

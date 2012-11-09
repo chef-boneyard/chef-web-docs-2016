@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:password``
+   * - ``password``
      - The password for the user.
-   * - ``:permissions``
+   * - ``permissions``
      - One (or more) permissions that will be set.
-   * - ``:user``
+   * - ``user``
      - The name of the user.
-   * - ``:vhost``
+   * - ``vhost``
      - The name of the virtual host.

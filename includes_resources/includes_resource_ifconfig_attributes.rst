@@ -9,27 +9,27 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:bcast``
+   * - ``bcast``
      - |bcast resource ifconfig|
-   * - ``:bootproto``
+   * - ``bootproto``
      - |bootproto resource ifconfig|
-   * - ``:device``
+   * - ``device``
      - |device resource ifconfig|
-   * - ``:hwaddr``
+   * - ``hwaddr``
      - |hwaddr resource ifconfig|
-   * - ``:inet_addr``
+   * - ``inet_addr``
      - |inet_addr resource ifconfig|
-   * - ``:mask``
+   * - ``mask``
      - |mask resource ifconfig|
-   * - ``:metric``
+   * - ``metric``
      - |metric resource ifconfig|
-   * - ``:mtu``
+   * - ``mtu``
      - |mtu resource ifconfig|
-   * - ``:network``
+   * - ``network``
      - |network resource ifconfig|
-   * - ``:onboot``
+   * - ``onboot``
      - |onboot resource ifconfig|
-   * - ``:onparent``
+   * - ``onparent``
      - |onparent resource ifconfig|
-   * - ``:target``
+   * - ``target``
      - |target resource ifconfig|

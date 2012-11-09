@@ -9,21 +9,21 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:aws_access_key``
+   * - ``aws_access_key``
      - |aws_access_key lwrp aws_ebs_volume|
-   * - ``:aws_secret_access_key``
+   * - ``aws_secret_access_key``
      - |aws_secret_access_key lwrp aws_ebs_volume|
-   * - ``:size``
+   * - ``size``
      - |size lwrp aws_ebs_volume|
-   * - ``:snapshot_id``
+   * - ``snapshot_id``
      - |snapshot_id lwrp aws_ebs_volume|
-   * - ``:availability_zone``
+   * - ``availability_zone``
      - |availability_zone lwrp aws_ebs_volume|
-   * - ``:device``
+   * - ``device``
      - |device lwrp aws_ebs_volume|
-   * - ``:volume_id``
+   * - ``volume_id``
      - |volume_id lwrp aws_ebs_volume|
-   * - ``:timeout``
+   * - ``timeout``
      - |timeout lwrp aws_ebs_volume|
-   * - ``:snapshots_to_keep``
+   * - ``snapshots_to_keep``
      - |snapshots_to_keep lwrp aws_ebs_volume|

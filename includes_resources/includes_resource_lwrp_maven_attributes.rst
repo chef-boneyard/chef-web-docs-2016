@@ -9,19 +9,19 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:artifact_id``
+   * - ``artifact_id``
      - The identifier for an artifact. If this value is not specified, the name of the resource will be used as the identifier.
-   * - ``:dest``
+   * - ``dest``
      - The folder in which the |jar| file and its dependencies will be located.
-   * - ``:group_id``
+   * - ``group_id``
      - The group identifier for an artifact.
-   * - ``:mode``
+   * - ``mode``
      - An integer value for file permissions. Default value: ``0644``.
-   * - ``:owner``
+   * - ``owner``
      - The owner of the artifact files. Default value: ``root``.
-   * - ``:packaging``
+   * - ``packaging``
      - The type of package. Default value: ``jar``.
-   * - ``:repositories``
+   * - ``repositories``
      - An array of |apache maven| repositories. Default value: ``["http://repo1.maven.apache.org/maven2"]``.
-   * - ``:version``
+   * - ``version``
      - The version of an artifact.

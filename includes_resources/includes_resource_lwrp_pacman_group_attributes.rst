@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:package_name``
+   * - ``package_name``
      - |package_name lwrp pacman_group|
-   * - ``:options``
+   * - ``options``
      - |package_name lwrp pacman_group|

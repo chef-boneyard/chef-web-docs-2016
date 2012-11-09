@@ -9,7 +9,7 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:key``
+   * - ``key``
      - The name of a |gnupg| key to install.
-   * - ``:url``
+   * - ``url``
      - The URL from which a |gnupg| key is downloaded.

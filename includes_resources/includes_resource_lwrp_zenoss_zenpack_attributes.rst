@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:exists``
+   * - ``exists``
      - 
-   * - ``:package``
+   * - ``package``
      - 
-   * - ``:py_version``
+   * - ``py_version``
      - 
-   * - ``:version``
+   * - ``version``
      - 

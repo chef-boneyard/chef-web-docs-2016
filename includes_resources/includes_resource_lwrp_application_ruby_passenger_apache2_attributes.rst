@@ -9,9 +9,9 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:params``
+   * - ``params``
      - A hash of extra parameters that will be passed to a template file.
-   * - ``:server_aliases``
+   * - ``server_aliases``
      - An array of server aliases.
-   * - ``:webapp_template``
+   * - ``webapp_template``
      - The template used to render the virtual host configuration file. Default value: ``#{application name}.conf.erb``.

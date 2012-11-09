@@ -9,17 +9,17 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:config``
+   * - ``config``
      - 
-   * - ``:template``
+   * - ``template``
      - 
-   * - ``:django``
+   * - ``django``
      - 
-   * - ``:celeryd``
+   * - ``celeryd``
      - 
-   * - ``:celerybeat``
+   * - ``celerybeat``
      - 
-   * - ``:celerycam``
+   * - ``celerycam``
      - 
-   * - ``:camera_class``
+   * - ``camera_class``
      - 

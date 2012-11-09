@@ -9,21 +9,21 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:path``
+   * - ``path``
      - |path resource remote_file|
-   * - ``:backup``
+   * - ``backup``
      - |backup resource remote_file|
-   * - ``:group``
+   * - ``group``
      - |group resource remote_file|
-   * - ``:mode``
+   * - ``mode``
      - |mode resource remote_file|
-   * - ``:rights``
+   * - ``rights``
      - |rights resource remote_file|
-   * - ``:inherits``
+   * - ``inherits``
      - |inherits resource remote_file|
-   * - ``:owner``
+   * - ``owner``
      - |owner resource remote_file|
-   * - ``:source``
+   * - ``source``
      - |source resource remote_file|
-   * - ``:checksum``
+   * - ``checksum``
      - |checksum resource remote_file|

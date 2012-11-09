@@ -9,13 +9,13 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``:package_name``
+   * - ``package_name``
      - |package_name lwrp php_pear|
-   * - ``:version``
+   * - ``version``
      - |version lwrp php_pear|
-   * - ``:preferred_state``
+   * - ``preferred_state``
      - |preferred_state lwrp php_pear|
-   * - ``:directives``
+   * - ``directives``
      - |directives lwrp php_pear|
-   * - ``:options``
+   * - ``options``
      - |options lwrp php_pear|

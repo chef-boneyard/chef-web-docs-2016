@@ -9,7 +9,7 @@ This lightweight resource provider has the following actions:
 
    * - Action
      - Description
-   * - ``:build``
+   * - ``build``
      - |lwrp action build pacman_aur|
-   * - ``:install``
+   * - ``install``
      - |lwrp action install pacman_aur|
