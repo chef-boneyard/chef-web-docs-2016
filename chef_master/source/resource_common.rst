@@ -1,5 +1,5 @@
 =====================================================
-Common Functionality for all Resources 
+Common Functionality 
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
