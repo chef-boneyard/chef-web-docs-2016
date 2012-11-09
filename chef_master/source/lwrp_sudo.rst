@@ -34,6 +34,8 @@ sudo
 
 |cookbook name sudo|
 
+The ``sudo`` cookbook contains the following lightweight resource: ``sudo``.
+
 sudo
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_sudo.rst

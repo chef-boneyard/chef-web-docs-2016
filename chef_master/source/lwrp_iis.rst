@@ -34,6 +34,8 @@ iis
 
 |cookbook name iis|
 
+The ``iis`` cookbook contains the following lightweight resources: ``iis_app``, ``iis_config``, ``iis_pool``, and ``iis_site``.
+
 iis_app
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_iis_app.rst

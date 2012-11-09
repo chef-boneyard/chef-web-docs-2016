@@ -34,6 +34,8 @@ dynect
 
 |cookbook name dynect|
 
+The ``dynect`` cookbook contains the following lightweight resource: ``dynect_rr``.
+
 dynect_rr
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_dynect_rr.rst

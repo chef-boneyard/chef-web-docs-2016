@@ -34,6 +34,8 @@ pacman
 
 |cookbook name pacman|
 
+The ``pacman`` cookbook contains the following lightweight resources: ``pacman_aur`` and ``pacman_group``.
+
 pacman_aur
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_pacman_aur.rst

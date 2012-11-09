@@ -34,6 +34,8 @@ nagios
 
 |cookbook name nagios|
 
+The ``nagios`` cookbook contains the following lightweight resource: ``nagios_nrpecheck``.
+
 nagios_nrpecheck
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_nagios_nrpecheck.rst

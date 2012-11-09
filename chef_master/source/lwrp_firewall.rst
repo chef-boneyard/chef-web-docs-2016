@@ -34,6 +34,8 @@ firewall
 
 |cookbook name firewall|
 
+The ``firewall`` cookbook contains the following lightweight resources: ``firewall`` and ``firewall_rule``.
+
 firewall
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_firewall_default.rst

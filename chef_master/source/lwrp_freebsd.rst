@@ -34,6 +34,8 @@ freebsd
 
 |cookbook name freebsd|
 
+The ``freebsd`` cookbook contains the following lightweight resource: ``freebsd_port_options``.
+
 freebsd_port_options
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options.rst

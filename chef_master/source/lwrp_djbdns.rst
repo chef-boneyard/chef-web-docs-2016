@@ -34,6 +34,8 @@ djbdns
 
 |cookbook name djbdns|
 
+The ``djbdns`` cookbook contains the following lightweight resource: ``djbdns_rr``.
+
 djbdns_rr
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr.rst

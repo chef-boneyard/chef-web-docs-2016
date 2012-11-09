@@ -34,6 +34,8 @@ chef_handler
 
 |cookbook name chef_handler|
 
+The ``chef_handler`` cookbook contains the following lightweight resource: ``chef_handler``.
+
 chef_handler
 =====================================================
 .. include:: ../../includes_handler/includes_handler.rst

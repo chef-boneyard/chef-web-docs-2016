@@ -34,6 +34,8 @@ riak
 
 |cookbook name riak|
 
+The ``riak`` cookbook contains the following lightweight resource: ``riak_cluster``.
+
 riak_cluster
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_riak_cluster.rst

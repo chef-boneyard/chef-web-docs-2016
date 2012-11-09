@@ -34,6 +34,8 @@ mysql_database
 
 |cookbook name mysql|
 
+The ``mysql_database`` cookbook contains the following lightweight resource: ``mysql_database``.
+
 mysql_database
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_mysql_database.rst

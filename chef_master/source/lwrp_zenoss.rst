@@ -34,6 +34,8 @@ zenoss
 
 |cookbook name zenoss|
 
+The ``zenoss`` cookbook contains the following lightweight resources: ``zenoss_zenbatchload``, ``zenoss_zenmd``, ``zenoss_zenpack``, and ``zenoss_zenpatch``.
+
 zenoss_zenbatchload
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_zenoss_zenbatchload.rst

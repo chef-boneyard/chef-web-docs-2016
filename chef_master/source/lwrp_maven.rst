@@ -34,6 +34,8 @@ maven
 
 |cookbook name maven|
 
+The ``maven`` cookbook contains the following lightweight resource: ``maven``.
+
 maven
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_maven.rst

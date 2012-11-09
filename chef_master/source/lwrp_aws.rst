@@ -34,6 +34,8 @@ aws
 
 |cookbook name aws|
 
+The ``aws`` cookbook contains the following lightweight resources: ``aws_ebs_volume``, ``aws_elastic_ip``, ``aws_elastic_lb``, and ``aws_resource_tag``.
+
 |amazon aws| Credentials
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst

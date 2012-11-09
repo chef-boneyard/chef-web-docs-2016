@@ -34,6 +34,8 @@ samba
 
 |cookbook name samba|
 
+The ``samba`` cookbook contains the following lightweight resource: ``samba_user``.
+
 samba_user
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_samba_user.rst

@@ -1,7 +1,7 @@
 =====================================================
-bluepill
+chef-client Command Line Reference
 =====================================================
-
+ 
 .. include:: ../../swaps/swap_desc_a.txt
 .. include:: ../../swaps/swap_desc_b.txt
 .. include:: ../../swaps/swap_desc_c.txt
@@ -32,28 +32,13 @@ bluepill
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-|cookbook name bluepill|
+.. include:: ../../includes_chef/includes_chef_client.rst
 
-The ``bluepill`` cookbook contains the following lightweight resource: ``bluepill_service``.
+.. include:: ../../includes_chef_client/includes_chef_client.rst
 
-bluepill_service
-=====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service.rst
+.. note:: .. include:: ../../includes_config/includes_config_rb_client.rst
 
-.. note:: This lightweight resource is part of the ``bluepill`` cookbook (http://community.opscode.com/cookbooks/bluepill).
-
-Actions
+Options
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service_actions.rst
+.. include:: ../../includes_chef_client/includes_chef_client_options.rst
 
-Attributes
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service_attributes.rst
-
-Examples
------------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_blupill_service.rst
-
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_resource.rst
-
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_resource_template.rst

@@ -34,6 +34,8 @@ webpi
 
 |cookbook name webpi|
 
+The ``webpi`` cookbook contains the following lightweight resource: ``webpi_product``.
+
 webpi_product
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_webpi_product.rst

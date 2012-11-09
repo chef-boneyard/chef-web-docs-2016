@@ -34,6 +34,8 @@ powershell
 
 |cookbook name powershell|
 
+The ``powershell`` cookbook contains the following lightweight resource: ``powershell``.
+
 powershell
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_powershell.rst

@@ -47,7 +47,7 @@ Chef Topics
    * - Essentials
      - :doc:`essentials_chef_client`, :doc:`essentials_cookbook_attribute_files`, :doc:`essentials_cookbook_definitions`, :doc:`essentials_cookbook_files`, :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_lwrp`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_recipes`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, :doc:`essentials_cookbook_versions`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, :doc:`essentials_handlers`, :doc:`essentials_node_object`, :doc:`essentials_repository`, :doc:`essentials_roles`, :doc:`essentials_search`, 
    * - Reference
-     - :doc:`knife`, :doc:`ohai`, :doc:`resources`
+     - :doc:`chef_client`, :doc:`knife`, :doc:`ohai`, :doc:`resources`
    * - Config Files
      - :doc:`client_rb`, :doc:`knife_rb`, :doc:`metadata_rb`, :doc:`server_rb`, :doc:`solo_rb`, :doc:`solr_rb`
    * - APIs and DSLs
@@ -60,6 +60,7 @@ Chef Topics
 .. toctree::
    :hidden:
 
+   chef_client
    chef_overview
    chef_server_api
    client_rb

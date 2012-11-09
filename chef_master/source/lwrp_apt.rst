@@ -34,6 +34,8 @@ apt
 
 |cookbook name apt|
 
+The ``apt`` cookbook contains the following lightweight resources: ``apt_preference`` and ``apt_repository``.
+
 apt_preference
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_apt_preference.rst

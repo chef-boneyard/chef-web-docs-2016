@@ -34,6 +34,8 @@ rabbitmq
 
 |cookbook name rabbitmq|
 
+The ``rabbitmq`` cookbook contains the following lightweight resources: ``rabbitmq_plugin``, ``rabbitmq_user``, and ``rabbitmq_vhost``.
+
 rabbitmq_plugin
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_plugin.rst

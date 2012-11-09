@@ -133,7 +133,7 @@ This configuration file has the following settings:
      - |pid_file| For example:
        ::
  
-          ``pid_file "/tmp/executable.pid"``
+          ``pid_file "/tmp/chef-client.pid"``
    * - ``rest_timeout``
      - |rest_timeout| For example:
        ::

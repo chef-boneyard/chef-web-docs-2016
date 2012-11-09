@@ -34,6 +34,8 @@ homebrew
 
 |cookbook name homebrew|
 
+The ``homebrew`` cookbook contains the following lightweight resource: ``homebrew``.
+
 homebrew
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap.rst

@@ -34,6 +34,8 @@ transmission
 
 |cookbook name transmission|
 
+The ``transmission`` cookbook contains the following lightweight resource: ``transmission_torrent_file``.
+
 transmission_torrent_file
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_transmission_torrent_file.rst

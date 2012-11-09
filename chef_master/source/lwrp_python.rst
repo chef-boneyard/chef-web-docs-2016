@@ -34,6 +34,8 @@ python
 
 |cookbook name python|
 
+The ``python`` cookbook contains the following lightweight resources: ``python_pip`` and ``python_virtualenv``.
+
 python_pip
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_python_pip.rst

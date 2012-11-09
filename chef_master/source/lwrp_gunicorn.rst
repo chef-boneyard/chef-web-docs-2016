@@ -34,6 +34,8 @@ gunicorn
 
 |cookbook name gunicorn|
 
+The ``gunicorn`` cookbook contains the following lightweight resources: ``gunicorn_config`` and ``gunicorn_install``.
+
 gunicorn_config
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config.rst

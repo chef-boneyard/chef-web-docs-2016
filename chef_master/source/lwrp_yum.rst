@@ -34,6 +34,8 @@ yum
 
 |cookbook name yum|
 
+The ``yum`` cookbook contains the following lightweight resources: ``yum_key`` and ``yum_repository``.
+
 yum_key
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_yum_key.rst

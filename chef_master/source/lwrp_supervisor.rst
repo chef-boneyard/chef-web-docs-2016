@@ -34,6 +34,8 @@ supervisor
 
 |cookbook name supervisor|
 
+The ``supervisor`` cookbook contains the following lightweight resources: ``supervisor_fcgi``, ``supervisor_group``, and ``supervisor_service``.
+
 supervisor_fcgi
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_supervisor_fcgi.rst

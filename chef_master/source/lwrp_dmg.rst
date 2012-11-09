@@ -1,5 +1,5 @@
 =====================================================
-dns
+dmg
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
@@ -33,6 +33,8 @@ dns
 .. include:: ../../swaps/swap_notes.txt
 
 |cookbook name dmg|
+
+The ``dmg`` cookbook contains the following lightweight resource: ``dmg_package``.
 
 dmg_package
 =====================================================

@@ -34,6 +34,8 @@ daemontools
 
 |cookbook name daemontools|
 
+The ``daemontools`` cookbook contains the following lightweight resource: ``daemontools_service``.
+
 daemontools_service
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service.rst

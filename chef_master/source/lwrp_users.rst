@@ -34,6 +34,8 @@ users
 
 |cookbook name users|
 
+The ``users`` cookbook contains the following lightweight resource: ``users_manage``.
+
 users_manage
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_users_manage.rst

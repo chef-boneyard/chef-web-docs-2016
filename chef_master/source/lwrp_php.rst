@@ -34,6 +34,8 @@ php
 
 |cookbook name php|
 
+The ``php`` cookbook contains the following lightweight resources: ``php_pear`` and ``php_pear_channel``.
+
 php_pear
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_php_pear_default.rst

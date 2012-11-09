@@ -34,6 +34,9 @@ windows
 
 |cookbook name windows|
 
+The ``windows`` cookbook contains the following lightweight resources: ``windows_auto_run``, ``windows_batch``, ``windows_feature``, ``windows_package``, ``windows_path``, ``windows_reboot``, ``windows_registry``, ``windows_shortcut``, and ``windows_zipfile``.
+
+
 windows_auto_run
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run.rst
@@ -52,6 +55,7 @@ Examples
 -----------------------------------------------------
 .. include:: ../../steps/step_chef_lwrp_windows_auto_run_at_login.rst
 
+
 windows_batch
 =====================================================
 .. include:: ../../includes_resources/includes_resource_lwrp_windows_batch.rst
@@ -69,6 +73,7 @@ Attributes
 Examples
 -----------------------------------------------------
 .. include:: ../../steps/step_chef_lwrp_windows_batch_run.rst
+
 
 windows_feature
 =====================================================
@@ -147,7 +152,6 @@ Examples
 .. include:: ../../steps/step_chef_lwrp_windows_path_add.rst
 
 .. include:: ../../steps/step_chef_lwrp_windows_path_remove.rst
-
 
 
 windows_reboot
