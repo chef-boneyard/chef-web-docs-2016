@@ -13,10 +13,7 @@ master:
 
 docs:
 	mkdir -p $(BUILDDIR)/chef/
-	for sdir in docs_reference_knife docs_reference_resources; do \
-		rm -rf $(BUILDDIR)/chef/.doctrees;\
-		sphinx-build $$sdir/source $(BUILDDIR)/chef/;\
-	done
+	sphinx-build docs_all/source $(BUILDDIR)/chef/
 
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
