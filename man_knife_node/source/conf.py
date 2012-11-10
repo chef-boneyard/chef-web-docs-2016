@@ -214,8 +214,8 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'knife-node', u'knife-node',
-     [u'Opscode, Inc.'], 1)
+    ('index', 'knife-node', u'Man page for knife-node.',
+     [u'Opscode'], 1)
 ]
 
 # If true, show URL addresses after external links.
