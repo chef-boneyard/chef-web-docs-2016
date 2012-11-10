@@ -45,7 +45,7 @@ Chef Topics
    * - Getting Started
      - :doc:`chef_overview`, :doc:`just_enough_ruby_for_chef`
    * - Essentials
-     - :doc:`essentials_chef_client`, :doc:`essentials_cookbook_attribute_files`, :doc:`essentials_cookbook_definitions`, :doc:`essentials_cookbook_files`, :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_lwrp`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_recipes`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, :doc:`essentials_cookbook_versions`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, :doc:`essentials_handlers`, :doc:`essentials_node_object`, :doc:`essentials_repository`, :doc:`essentials_roles`, :doc:`essentials_search`, 
+     - :doc:`essentials_chef_client`, :doc:`essentials_cookbook_attribute_files`, :doc:`essentials_cookbook_definitions`, :doc:`essentials_cookbook_files`, :doc:`essentials_cookbook_libraries`, :doc:`essentials_cookbook_lwrp`, :doc:`essentials_cookbook_metadata`, :doc:`essentials_cookbook_recipes`, :doc:`essentials_cookbook_resources`, :doc:`essentials_cookbook_templates`, :doc:`essentials_cookbook_versions`, :doc:`essentials_data_bags`, :doc:`essentials_environments`, :doc:`essentials_handlers`, :doc:`essentials_node_object`, :doc:`essentials_repository`, :doc:`essentials_roles`, :doc:`essentials_search`
    * - Reference
      - :doc:`chef_client`, :doc:`knife`, :doc:`ohai`, :doc:`resources`
    * - Config Files
