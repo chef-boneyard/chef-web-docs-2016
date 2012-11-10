@@ -1,6 +1,6 @@
 BUILDDIR = build
 S3BUCKET = chef-docs
-S3OPTIONS = --delete-removed --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs
+S3OPTIONS = --delete-removed --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs  --add-header "Cache-Control: 900"
 
 clean:
 	rm -r $(BUILDDIR)
