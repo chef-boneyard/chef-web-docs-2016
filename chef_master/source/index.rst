@@ -1,5 +1,5 @@
 =====================================================
-Chef Documentcccc ation
+Chef Documentation
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
@@ -109,7 +109,3 @@ Chef Documentcccc ation
    essentials_cookbook_resources
    essentials_cookbook_templates
    essentials_cookbook_versions
-
-
-
-
