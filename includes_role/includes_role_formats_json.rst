@@ -1,7 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The JSON format for environments maps directly to the domain-specific |ruby| format: same settings, attributes, and values, and a similar structure and organization. For example::
+The JSON format for environments maps directly to the domain-specific |ruby| format: same settings, attributes, and values, and a similar structure and organization. For example:
+
+.. code-block:: javascript
 
    {
      "name": "webserver",

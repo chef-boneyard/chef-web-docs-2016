@@ -12,7 +12,9 @@ For example, a cookbook that has a directory structure like this::
       ubuntu
       default
 
-would be matched in the same order. For a node named "foo.example.com" and resource named ``sudoers.erb``, matching would occur in the following order::
+would be matched in the same order. For a node named "foo.example.com" and resource named ``sudoers.erb``, matching would occur in the following order:
+
+.. code-block:: ruby
 
    host-foo.example.com/sudoers.erb
    ubuntu-8.04/sudoers.erb
@@ -23,9 +25,9 @@ If the ``sudoers.rb`` resource was placed under the ``files/host-foo.example.com
 
 So, the rule distilled:
 
-1. host-node[:fqdn]
-2. node[:platform]-node[:platform_version]
-3. node[:platform]
-4. default
+#. host-node[:fqdn]
+#. node[:platform]-node[:platform_version]
+#. node[:platform]
+#. default
 
 where ``default`` does not refer to a recipe in ``default.rb``. Templates are not split up into different directories by a recipe.

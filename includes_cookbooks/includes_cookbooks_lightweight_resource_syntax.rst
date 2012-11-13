@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A lightweight resource is an abstract interface that specifies one (or more) actions that can be taken, one (or more) attributes, and then for each attribute a validation rule that defines how each attribute can be applied. The syntax for a lightweight resource is:
+A lightweight resource is an abstract interface that specifies one (or more) actions that can be taken, one (or more) attributes, and then for each attribute, a validation rule that defines how each attribute can be applied. The syntax for a lightweight resource is:
 
 .. code-block:: ruby
 

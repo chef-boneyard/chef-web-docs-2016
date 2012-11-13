@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-When Chef loads cookbook attribute files, it does so in alphabetical order for all the cookbooks. If you need to ensure that one attribute file is loaded before another (for example, if your Rails cookbook requires that the Apache attributes are available first) you can use the include_attribute method, like so:
+When Chef loads cookbook attribute files, it does so in alphabetical order for all the cookbooks. If you need to ensure that one attribute file is loaded before another (for example, if your Rails cookbook requires that the Apache attributes are available first), you can use the include_attribute method, like so:
 
 include_attribute
 

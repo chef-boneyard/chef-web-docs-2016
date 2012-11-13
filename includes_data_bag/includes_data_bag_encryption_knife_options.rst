@@ -3,8 +3,6 @@
 
 |knife| can encrypt and decrypt data when the ``knife data bag`` sub-command is run with the ``create``, ``edit``, ``from file``, or ``show`` arguments and the following options:
 
-This argument has the following options:
-
 .. list-table::
    :widths: 200 300
    :header-rows: 1

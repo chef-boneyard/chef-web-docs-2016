@@ -3,8 +3,6 @@
 
 The DELETE method is used to delete a cookbook. 
 
-(**jamescott: the Wiki is blank. IF this method is valid, then I just **WILD GUESSED** below at what that might look like. IF this method is invalid, then ... remove!**)
-
 This method has no parameters.
 
 **Request**

@@ -1,11 +1,15 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-An environment can use version constraints to specify a list of allowed cookbook versions by specifying the cookbook's name along with the version constraint. For example::
+An environment can use version constraints to specify a list of allowed cookbook versions by specifying the cookbook's name, along with the version constraint. For example:
+
+.. code-block:: ruby
 
    cookbook "apache2", "~> 1.2.3"
 
-Or::
+Or:
+
+.. code-block:: ruby
 
    cookbook "runit", "= 4.2.0"
 

@@ -4,7 +4,7 @@
 A definition has three components:
 
 * A resource name
-* One (or more) arguments that are used to to define a parameter and set its default value; if a default value is not specified, it is assumed to be ``nil``
+* One (or more) arguments that are used to define a parameter and set its default value; if a default value is not specified, it is assumed to be ``nil``
 * A hash that is used within a definition to provide access to parameters and their values
 
 The parameter values that are provided are used as the default values, in case a value is not provided when the resource is invoked.

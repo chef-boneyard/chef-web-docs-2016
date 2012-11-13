@@ -5,9 +5,9 @@ When the contents of a data bag are encrypted, they will not be readable until t
 
 .. code-block:: bash
 
-   knife data bag create passwords mysql
+   $ knife data bag create passwords mysql
 
-where "passwords" is the name of the data bag, "mysql" is the name of the data bag item. This will return something similar to: 
+where "passwords" is the name of the data bag and "mysql" is the name of the data bag item. This will return something similar to: 
 
 .. code-block:: javascript
 

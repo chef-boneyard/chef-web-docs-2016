@@ -7,27 +7,39 @@ Any search for a data bag (or a data bag item) must specify the name of the data
 
    $ knife search admin_data "(NOT id:admin_users)" 
 
-Or, to include the same search query in a recipe, use a code block similar to (**jamescott: the following code sample is probably wrong**)::
+Or, to include the same search query in a recipe, use a code block similar to:
+
+.. code-block:: ruby
 
    search(:admin_data, "NOT id:admin_users")
 
-It may not be possible to know which data bag items will be needed. It may be necessary to load everything in a data bag (but not know what "everything" is). Using a search query is the ideal way to deal with that ambiguity, yet still ensure that all of the required data is returned. The following examples show how a recipe can use a series of search queries to search within a data bag named "admins". For example, to find every administrator::
+It may not be possible to know which data bag items will be needed. It may be necessary to load everything in a data bag (but not know what "everything" is). Using a search query is the ideal way to deal with that ambiguity, yet still ensure that all of the required data is returned. The following examples show how a recipe can use a series of search queries to search within a data bag named "admins". For example, to find every administrator:
+
+.. code-block:: ruby
 
    search(:admins, "*:*")
 
-Or to search for an administrator named "charlie"::
+Or to search for an administrator named "charlie":
+
+.. code-block:: ruby
 
    search(:admins, "id:charlie")
 
-Or to search for an administrator with a group identifier of "ops"::
+Or to search for an administrator with a group identifier of "ops":
+
+.. code-block:: ruby
 
    search(:admins, "gid:ops")
 
-Or to search for an administrator whose name begins with the letter "c"::
+Or to search for an administrator whose name begins with the letter "c":
+
+.. code-block:: ruby
 
    search(:admins, "id:c*")
 
-Data bag items that are returned by a search query can be used as if they were a hash. For example::
+Data bag items that are returned by a search query can be used as if they were a hash. For example:
+
+.. code-block:: ruby
 
    charlie = search(:admins, "id:charlie").first
    # => variable 'charlie' is set to the charlie data bag item
@@ -36,7 +48,9 @@ Data bag items that are returned by a search query can be used as if they were a
    charlie["shell"]
    # => "/bin/zsh"
 
-The following recipe can be used to create a user for each administrator by loading all of the items from the "admins" data bag, looping through each admin in the data bag, and then creating a user resource so that each of those admins exist::
+The following recipe can be used to create a user for each administrator by loading all of the items from the "admins" data bag, looping through each admin in the data bag, and then creating a user resource so that each of those admins exist:
+
+.. code-block:: ruby
 
    admins = data_bag('admins')
    
@@ -55,7 +69,9 @@ The following recipe can be used to create a user for each administrator by load
 
    end
 
-And then the same recipe, modified to load administrators using a search query (and using an array to store the results of the search query):: 
+And then the same recipe, modified to load administrators using a search query (and using an array to store the results of the search query):
+
+.. code-block:: ruby
 
    admins = []
 

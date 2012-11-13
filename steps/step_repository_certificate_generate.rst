@@ -14,7 +14,7 @@ To generate a certificate for a monitoring server:
       $ cp certificates/monitoring.example.com* cookbooks/COOKBOOK_NAME/files/default
 
    where ``COOKBOOK_NAME`` is the name of the cookbook that will use the certificate.
-3. And then in the recipe for each cookbook, create a ``cookbook_file`` resource to configure a resource that puts them in-place on the destination server:
+3. And then in the recipe for each cookbook, create a ``cookbook_file`` resource to configure a resource that puts them in place on the destination server:
 
    .. code-block:: javascript
    

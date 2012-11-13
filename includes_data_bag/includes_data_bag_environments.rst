@@ -4,7 +4,9 @@
 
 Values that are stored in a data bag are global to the organization and are available to any environment. There are two main strategies that can be used to store per-environment data within a data bag: by using a top-level key that corresponds to the environment or by using separate items for each environment.
 
-A data bag that is storing a top-level key for an environment might look something like this::
+A data bag that is storing a top-level key for an environment might look something like this:
+
+.. code-block:: javascript
 
    {
      "id": "some_data_bag_item",
@@ -16,7 +18,9 @@ A data bag that is storing a top-level key for an environment might look somethi
      }
    }
 
-When using the data bag in a recipe, that data can be accessed from a recipe using code similar to::
+When using the data bag in a recipe, that data can be accessed from a recipe using code similar to:
+
+.. code-block:: ruby
 
    bag_item[node.chef_environment]["some_other_key"]
 

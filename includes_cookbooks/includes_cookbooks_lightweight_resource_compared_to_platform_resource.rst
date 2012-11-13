@@ -72,7 +72,7 @@ The following example uses the |resource file| resource to show the difference b
      end
    end
 
-The above code is simple, traditional |ruby|--no magic at all. A number of getter/setter methods are created and inputs are validated against criteria, like regular expressions, strings, true/false, and so on. The lightweight resource looks like this:
+The preceding code is simple, traditional |ruby|. A number of getter/setter methods are created and inputs are validated against criteria, like regular expressions, strings, true/false, and so on. The lightweight resource looks like this:
 
 .. code-block:: ruby
 
@@ -85,4 +85,4 @@ The above code is simple, traditional |ruby|--no magic at all. A number of gette
    attribute :path,     :kind_of => String
    attribute :checksum, :regex => /^[a-zA-Z0-9]{64}$/
 
-Hopefully this shows the similarities and differences between resources and lightweight resources. The lightweight resources are easier to write and understand, plus they can offer much the same (if not identical) functionality as the more complex resources that are built into |chef|.
+What this shows are the similarities and differences between resources and lightweight resources. The lightweight resources are easier to write and understand, plus they can offer much the same (if not identical) functionality as the more complex resources that are built into |chef|.

@@ -16,7 +16,7 @@ Attributes are typically stored in cookbooks and recipes, roles, and environment
      }
    )
 
-But what if all of the web servers aren't the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like above and once just like below:
+But what if all of the web servers are not the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like the preceding example and once just like the following:
 
 .. code-block:: ruby
 
@@ -31,7 +31,7 @@ But what if all of the web servers aren't the same? What if some of the web serv
      }
    )
 
-But that is not very efficient, especially since most of them are identical. The deep merge capabilities of |chef| allows attributes to be layered across recipes and cookbooks, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:
+But that is not very efficient, especially because most of them are identical. The deep merge capabilities of |chef| allows attributes to be layered across recipes and cookbooks, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:
 
 .. code-block:: ruby
 
@@ -68,7 +68,7 @@ and then a role named ``web.rb``:
 
 Both of these files are similar. They share the same structure. When an attribute is of the same type of data, such as  a hash or an array, the contents are merged. This is true even with different levels of precedence, such as default and override attributes. If the attribute is of a different data type, it is overwritten at higher levels of precedence.
 
-For example, the ``web.rb`` references the ``baseline.rb`` role. The ``web.rb`` file only provides a value for one attribute: ``:startservers``. When |chef| compares these attributes, the deep merge feature will ensure that ``:startservers`` (and it's value of ``30``) will be applied to any node for which the ``web.rb`` attribute structure should be applied.
+For example, the ``web.rb`` references the ``baseline.rb`` role. The ``web.rb`` file only provides a value for one attribute: ``:startservers``. When |chef| compares these attributes, the deep merge feature will ensure that ``:startservers`` (and its value of ``30``) will be applied to any node for which the ``web.rb`` attribute structure should be applied.
 
 This approach will allow a recipe like this:
 

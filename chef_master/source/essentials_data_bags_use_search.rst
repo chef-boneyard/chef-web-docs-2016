@@ -38,7 +38,7 @@ Search Syntax
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag_search_syntax.rst
 
-Accessing Data Bags using Search Indexes
+Accessing Data Bags Using Search Indexes
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag_search_indexes.rst
 

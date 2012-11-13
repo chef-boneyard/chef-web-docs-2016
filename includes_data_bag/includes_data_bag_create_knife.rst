@@ -7,13 +7,15 @@
 
    $ knife data bag create DATA_BAG_NAME (DATA_BAG_ITEM)
 
-As long as a file is in the correct directory structure |knife| will be able to find the data bag and data bag item with only the name. For example:
+As long as a file is in the correct directory structure, |knife| will be able to find the data bag and data bag item with only the name of the data bag and data bag item. For example:
 
 .. code-block:: bash
 
    $ knife data bag from file BAG_NAME ITEM_NAME.json
 
-will load the following file::
+will load the following file:
+
+.. code-block:: javascript
 
    data_bags/BAG_NAME/ITEM_NAME.json
 
@@ -27,4 +29,4 @@ In some cases, such as when |knife| is not being run from the root directory for
 
 .. code-block:: bash
 
-   knife data bag from file BAG_NAME /path/to/file/ITEM_NAME.json
+   $ knife data bag from file BAG_NAME /path/to/file/ITEM_NAME.json

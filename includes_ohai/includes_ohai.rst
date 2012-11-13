@@ -10,6 +10,6 @@
 * Kernel data
 * Host names
 * Fully qualified domain names
-* and other configuration details
+* Other configuration details
 
-Later, while |chef| configures the node object during each |chef| run, these attributes are used by the |chef client| to ensure that certain properties remain unchanged. (These properties are also referred to as ``automatic`` attributes.) |ohai| is part of the required configuration on each node that is registered with the |chef server|.
+When |chef| configures the node object during each |chef| run, these attributes are used by the |chef client| to ensure that certain properties remain unchanged. (These properties are also referred to as ``automatic`` attributes.) |ohai| is part of the required configuration on each node that is registered with the |chef server|.

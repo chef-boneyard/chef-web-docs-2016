@@ -33,4 +33,4 @@ For substituting an array with a hash::
    =
    { :x => "1", :y => "3" }
 
-When items can't be merged through substitution, the original data is overwritten.
+When items cannot be merged through substitution, the original data is overwritten.

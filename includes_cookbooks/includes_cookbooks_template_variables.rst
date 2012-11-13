@@ -19,7 +19,9 @@ Using a |ruby| expression is the most common approach because this is how all va
 
 When a template is rendered, |ruby| expressions and statements are evaluated by |chef|. The variables listed in the resource's variables attribute and the node object are identified. |chef| then passes these variables to the template, where they will be accessible as instance variables within the template; a node object can be accessed just as if it were part of a recipe, using the same node.
 
-For example, a simple template resource like this::
+For example, a simple template resource like this:
+
+.. code-block:: ruby
 
    node[:fqdn] = "latte"
    template "/tmp/foo" do
@@ -29,11 +31,15 @@ For example, a simple template resource like this::
      })
    end
 
-And a simple |erb| template like this::
+And a simple |erb| template like this:
+
+.. code-block:: ruby
 
    The node <%= node[:fqdn] %> thinks the x-men <%= @x_men %>
 
-Would render something like::
+Would render something like:
+
+.. code-block:: ruby
 
    The node latte thinks the x-men are keen
 

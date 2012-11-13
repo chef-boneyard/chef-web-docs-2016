@@ -7,7 +7,9 @@ When searching, a |chef| environment (``chef_environment``) is treated much like
 
    knife search node "chef_environment:QA AND platform:centos"
 
-Or, to include the same search in a recipe, use a code block similar to::
+Or, to include the same search in a recipe, use a code block similar to:
+
+.. code-block:: ruby
 
    qa_nodes = search(:node,"chef_environment:QA")      
    qa_nodes.each do |qa_node|                          

@@ -1,14 +1,14 @@
 .. This is an included how-to. 
 
-To search, using fuzzy results, enter the following:
+To use a fuzzy search pattern enter something similar to:
 
 .. code-block:: bash
 
    $ knife search client "name:boo~"
    
-where ``boo~`` defines the fuzzy search pattern. Something like the following will be returned:
+where ``boo~`` defines the fuzzy search pattern. This will return something similar to:
 
-.. code-block:: bash
+.. code-block:: javascript
 
    {
      "total": 1,

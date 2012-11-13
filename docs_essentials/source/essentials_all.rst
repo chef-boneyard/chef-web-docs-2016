@@ -118,7 +118,7 @@ Writing a Handler
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_write.rst
 
-Example: Send email when |Chef| run fails
+Example: Send email when the |Chef| run fails
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_handler/includes_handler_write_example_send_email.rst
 
@@ -468,7 +468,7 @@ Search Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_search_syntax.rst
 
-Accessing Data Bags using Search Indexes
+Accessing Data Bags Using Search Indexes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_data_bag/includes_data_bag_search_indexes.rst
 

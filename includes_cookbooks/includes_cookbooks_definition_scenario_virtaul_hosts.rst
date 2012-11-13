@@ -13,4 +13,4 @@ The virtual host on the |apache 2| server is only one per node, which can create
      docroot "/srv/www/blog_site"
    end
 
-When |chef| processes a recipe that contains this definition, it will find the ``web_app`` resource and will attempt to recognize it as a resource. Assuming that the |opscode| |apache 2| cookbook is available, then the resources contained within that cookbook will be found and loaded, replacing the definition.
+When |chef| processes a recipe that contains this definition, it will find the ``web_app`` resource and will attempt to recognize it as a resource. Assuming that the |opscode| |apache 2| cookbook is available, the resources contained within that cookbook will be found and loaded, replacing the definition.

@@ -7,7 +7,7 @@ This command has the following syntax::
 
    chef-client OPTION VALUE OPTION VALUE ...
 
-This sub-command has the following options:
+This command has the following options:
 
 ``-c CONFIG``, ``--config CONFIG``
    |config chef-client|               

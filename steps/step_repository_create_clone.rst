@@ -12,4 +12,4 @@ To clone the |chef| repository from |github|:
 
       $ git clone git://github.com/opscode/chef-repo.git
 
-3. (Optional) After the repository is cloned, the history of that repository can be wiped out be removing the ".git" directory, which allows the initialization of a new repository or to move the |chef| repository into another version source control system, such as |svn|, |mercurial|, or |bazaar|.
+3. (Optional) After the repository is cloned, the history of that repository can be wiped out by removing the ".git" directory, which allows the initialization of a new repository or to move the |chef| repository into another version source control system, such as |svn|, |mercurial|, or |bazaar|.

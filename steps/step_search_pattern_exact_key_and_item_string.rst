@@ -6,7 +6,7 @@ To search in a specific data bag using a string to find any matching data bag it
 
    $ knife search admins 'comment:"Charlie the Unicorn"'
    
-where ``comment`` is the name of the data bag and ``Charlie the Unicorn`` is the string that will be used during the search. Something like the following will be returned:
+where ``comment`` is the name of the data bag and ``Charlie the Unicorn`` is the string that will be used during the search. Something similar to the following will be returned:
 
 .. code-block:: bash
 

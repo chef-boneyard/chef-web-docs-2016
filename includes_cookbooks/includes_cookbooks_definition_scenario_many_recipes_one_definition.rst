@@ -28,4 +28,4 @@ Data can be passed to a definition from more than one recipe. For example, when 
      t.variables[:aliases][params[:name]] << [ params[:recipients] ]
    end
 
-.. note:: This example was provided by |opscode| community member "Mithrandir". Thank you!
+.. note:: The preceding example was provided by |opscode| community member "Mithrandir". Thank you!

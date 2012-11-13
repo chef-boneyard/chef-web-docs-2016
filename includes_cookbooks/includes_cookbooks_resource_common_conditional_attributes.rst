@@ -10,6 +10,6 @@ The following attributes can be used to define a conditional execution for a res
    * - Attribute
      - Description
    * - ``not_if``
-     - Indicates whether this resource should not be applied. If ``true``, this action should not be performed. If ``false`` this action should always be performed.
+     - Indicates whether this resource should not be applied. If ``true``, this action should not be performed. If ``false``, this action should always be performed.
    * - ``only_if``
-     - Indicates whether only this resource is applied. If ``true``, this action should always be performed. If ``false`` this action should never be performed.
+     - Indicates whether only this resource is applied. If ``true``, this action should always be performed. If ``false``, this action should never be performed.

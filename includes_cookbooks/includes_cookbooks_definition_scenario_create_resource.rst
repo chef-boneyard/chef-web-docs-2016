@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A definition file creates a new resource apache_site:
+A definition file creates a new resource, ``apache_site``:
 
 .. code-block:: ruby
 
@@ -28,7 +28,7 @@ A definition file creates a new resource apache_site:
      end
    end
 
-Once created, the definition can be utilized by placing it in a recipe:
+Once created, the definition can be used by placing it in a recipe:
 
 .. code-block:: ruby
 
@@ -43,7 +43,7 @@ Once created, the definition can be utilized by placing it in a recipe:
      enable false
    end
 
-The attributes of the new ``apache_site`` resource are made accessible via the params hash. Within the context of a |chef| run, the definition will be replaced by all the resources that are specified within the definition. For example, in the ``enabled`` case, the definition will be expanded to:
+The attributes of the new ``apache_site`` resource are made accessible with the params hash. Within the context of a |chef| run, the definition will be replaced by all the resources that are specified within the definition. For example, in the ``enabled`` case, the definition will be expanded to:
 
 .. code-block:: ruby
 

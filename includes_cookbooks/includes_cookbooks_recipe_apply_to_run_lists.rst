@@ -9,7 +9,9 @@ A recipe must be assigned to a run-list using the appropriate name, as defined b
          default.rb
          mod_ssl.rb
 
-There are two recipes: a default recipe (that has the same name as the cookbook) and a recipe named mod_ssl. The syntax that applies a recipe to a run-list is like this::
+There are two recipes: a default recipe (that has the same name as the cookbook) and a recipe named mod_ssl. The syntax that applies a recipe to a run-list is similar to:
+
+.. code-block:: ruby
 
    {
      "run_list": [
@@ -18,7 +20,9 @@ There are two recipes: a default recipe (that has the same name as the cookbook)
      ]
    }
 
-where ``::default_recipe`` is implied (and does not need to be specified). On a node, these recipes can be assigned to a node's run-list like this::
+where ``::default_recipe`` is implied (and does not need to be specified). On a node, these recipes can be assigned to a node's run-list similar to:
+
+.. code-block:: ruby
 
    {
      "run_list": [

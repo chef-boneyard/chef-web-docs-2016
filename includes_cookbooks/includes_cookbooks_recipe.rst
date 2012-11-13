@@ -3,7 +3,7 @@
 
 A recipe is the most fundamental configuration element within the |chef| environment. A recipe:
 
-* Is authored using |ruby|, which is a programming language designed to read and behave in a predictable manner.
+* Is authored using |ruby|, which is a programming language designed to read and behave in a predictable manner
 * Is mostly a collection of resources in a |ruby| syntax with some helper code around it
 * Must define everything that is required to configure part of a system
 * Must be stored in a cookbook

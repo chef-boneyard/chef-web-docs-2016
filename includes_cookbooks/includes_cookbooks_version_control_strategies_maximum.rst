@@ -5,25 +5,33 @@ Using a maximum version control strategy is required when everything needs to be
 
 The typical workflow with a maximum version control strategy includes:
 
-1. Bumping the version number as appropriate.
-2. Making changes to a cookbook.
-3. Uploading and testing a cookbook.
-4. Moving a tested cookbook to production.
+#. Bumping the version number as appropriate.
+#. Making changes to a cookbook.
+#. Uploading and testing a cookbook.
+#. Moving a tested cookbook to production.
 
-For example, to bump the version number::
+For example, to bump a version number, first make changes to the cookbook, and then upload and test it. Repeat this process as required, and then upload it using a |knife| command similar to:
 
-   knife cookbook upload my-app
+.. code-block:: bash
 
-Make changes to the cookbook, upload and test it, repeating the process as required. When the cookbook is finished, move those changes to the production environment and use the ``--freeze`` option to prevent others from making further changes::
+   $ knife cookbook upload my-app
 
-   knife cookbook upload  my-app -E production --freeze
+When the cookbook is finished, move those changes to the production environment and use the ``--freeze`` option to prevent others from making further changes:
 
-Then modify the environment so that it prefers the newly-uploaded version::
+.. code-block:: bash
+
+   $ knife cookbook upload  my-app -E production --freeze
+
+Then modify the environment so that it prefers the newly uploaded version:
+
+.. code-block:: bash
 
   (vim|emacs|mate|ed) YOUR_REPO/environments/production.rb
 
-Upload the updated environment::
+Upload the updated environment:
 
-   knife environment from file production.rb
+.. code-block:: bash
+
+   $ knife environment from file production.rb
 
 And then deploy the new cookbook version.

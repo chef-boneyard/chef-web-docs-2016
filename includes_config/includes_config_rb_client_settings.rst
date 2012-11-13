@@ -120,7 +120,7 @@ This configuration file has the following settings:
  
           ``no_proxy "*.vmware.com,10.*"``
    * - ``node_name``
-     - |node_name| **jamescott: WHATEVER IS HERE IS THE NODE NAME. OPSCODE SUGGESTS LEAVING THIS BLANK AND LETTING OHAI COLLECT THE FQDN IS THE BEST APPROACH.** For example:
+     - |node_name| In general, leaving this setting blank and letting |ohai| assign the |fqdn| of the node as the ``node_name`` during each |chef| run is the recommended approach. For example:
        ::
  
           ``node_name``

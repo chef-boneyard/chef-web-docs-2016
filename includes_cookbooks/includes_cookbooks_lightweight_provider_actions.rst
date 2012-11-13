@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Actions are defined as list of keywords in a resource: 
+Actions are defined as a list of keywords in a resource: 
 
 .. list-table::
    :widths: 60 420

@@ -9,7 +9,7 @@ A node can be searched from a recipe by using the following syntax::
 
 A wildcard can be used to replace characters within the search query.
 
-|chef| saves expanded lists of roles (all of the roles that apply to a node, including nested roles) and recipes to the role and recipe attributes on a node. This allows searching within nodes that run a given recipe, even if that recipe is included by a role.
+|chef| saves expanded lists of roles (all of the roles that apply to a node, including nested roles) and recipes to the role and recipe attributes on a node. The expanded lists of roles allows for searching within nodes that run a given recipe, even if that recipe is included by a role.
 
 .. note:: The ``recipes`` field is updated each time the |chef client| is run; changes to a run-list will not affect ``recipes`` until the next time the |chef client| is run on the node.
 
@@ -34,7 +34,7 @@ A wildcard can be used to replace characters within the search query.
        
        where ``recipes`` (plural!) indicates to search within an expanded run-list. 
 
-If you just want to use each result of the search and don't care about the aggregate result you can provide a code block to the search method. Each result will be passed to the block in turn::
+If you just want to use each result of the search and don't care about the aggregate result you can provide a code block to the search method. Each result is then passed to the block::
 
    # Print every node matching the search pattern
    search(:node, "*:*") do |matching_node|

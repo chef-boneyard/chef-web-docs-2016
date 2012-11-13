@@ -34,6 +34,8 @@ Node Objects
 
 .. include:: ../../includes_node/includes_node_object.rst
 
+.. include:: ../../includes_node/includes_node_attribute.rst
+
 .. list-table::
    :widths: 150 450
    :header-rows: 1
@@ -44,8 +46,6 @@ Node Objects
      - Attributes can be layered across cookbooks (and recipes), roles, and environments so that they can be re-used across nodes.
    * - :doc:`essentials_node_object_run_lists`
      - A run-list is an ordered list of roles and/or recipes that are run in an exact order and that is always specific to the node on which it runs.
-
-.. include:: ../../includes_node/includes_node_attribute.rst
 
 .. include:: ../../includes_node/includes_node_object_set.rst
 

@@ -127,7 +127,7 @@ Here is a quick rundown of some basic |ruby| commands::
    x.split(" ").join(", ") # => "My, String"
 
 
-In addition, see the following:
+To learn more about |ruby|, see the following:
 
 * |http ruby lang org|
 * |http opscode blog btm ruby|

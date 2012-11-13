@@ -6,7 +6,7 @@ To search in a specific data bag for a specific data bag item, enter the followi
 
    $ knife search admins 'id:charlie'
    
-where ``id`` is the name of the data bag and ``charlie`` is the name of the data bag item. Something like the following will be returned:
+where ``id`` is the name of the data bag and ``charlie`` is the name of the data bag item. Something similar to the following will be returned:
 
 .. code-block:: bash
 

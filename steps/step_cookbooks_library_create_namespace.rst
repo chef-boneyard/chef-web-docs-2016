@@ -37,7 +37,7 @@ A database can contain a list of virtual hosts that are used by customers. A cus
      end
    end
 
-.. note:: This example was provided by |opscode| community member "Arjuna (fujin)". Thank you!
+.. note:: The preceding was provided by |opscode| community member "Arjuna (fujin)". Thank you!
 
 After the custom namespace is created, it could then be used in a recipe, like this::
 
