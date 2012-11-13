@@ -36,23 +36,11 @@ Chef Topics
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-.. list-table::
-   :widths: 200 600
-   :header-rows: 1
-
-   * - Topics
-     - Links
-   * - Getting Started
-     - :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef`
-   * - Essentials
-     - :doc:`essentials_chef_client` | :doc:`essentials_cookbook_attribute_files` | :doc:`essentials_cookbook_definitions` | :doc:`essentials_cookbook_files` | :doc:`essentials_cookbook_libraries` | :doc:`essentials_cookbook_lwrp` | :doc:`essentials_cookbook_metadata` | :doc:`essentials_cookbook_recipes` | :doc:`essentials_cookbook_resources` | :doc:`essentials_cookbook_templates` | :doc:`essentials_cookbook_versions` | :doc:`essentials_data_bags` | :doc:`essentials_environments` | :doc:`essentials_handlers` | :doc:`essentials_node_object` | :doc:`essentials_repository` | :doc:`essentials_roles` | :doc:`essentials_search`
-   * - Reference
-     - :doc:`chef_client` | :doc:`knife` | :doc:`ohai` | :doc:`resources`
-   * - Config Files
-     - :doc:`client_rb` | :doc:`knife_rb` | :doc:`metadata_rb` | :doc:`server_rb` | :doc:`solo_rb` | :doc:`solr_rb`
-   * - APIs and DSLs
-     - :doc:`chef_server_api` | :doc:`cookbooks_site_api`
-
+* **Getting Started**: :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef`
+* **Essentials**: :doc:`essentials_chef_client` | :doc:`essentials_cookbook_attribute_files` | :doc:`essentials_cookbook_definitions` | :doc:`essentials_cookbook_files` | :doc:`essentials_cookbook_libraries` | :doc:`essentials_cookbook_lwrp` | :doc:`essentials_cookbook_metadata` | :doc:`essentials_cookbook_recipes` | :doc:`essentials_cookbook_resources` | :doc:`essentials_cookbook_templates` | :doc:`essentials_cookbook_versions` | :doc:`essentials_data_bags` | :doc:`essentials_environments` | :doc:`essentials_handlers` | :doc:`essentials_node_object` | :doc:`essentials_repository` | :doc:`essentials_roles` | :doc:`essentials_search`
+* **Reference**: :doc:`chef_client` | :doc:`knife` | :doc:`ohai` | :doc:`resources`
+* **Config Files**: :doc:`client_rb` | :doc:`knife_rb` | :doc:`metadata_rb` | :doc:`server_rb` | :doc:`solo_rb` | :doc:`solr_rb`
+* **APIs and DSLs**: :doc:`chef_server_api` | :doc:`cookbooks_site_api`
 
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
