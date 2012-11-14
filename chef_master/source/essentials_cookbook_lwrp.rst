@@ -1,5 +1,5 @@
 =====================================================
-Lightweight Resources and Providers
+About Lightweight Resources and Providers
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
