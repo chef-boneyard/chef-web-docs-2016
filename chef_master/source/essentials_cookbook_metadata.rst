@@ -1,5 +1,5 @@
 =====================================================
-About Metadata
+About Cookbook Metadata
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
