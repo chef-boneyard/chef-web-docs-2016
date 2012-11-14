@@ -37,7 +37,7 @@ Chef Documentation
 .. include:: ../../includes_chef/includes_chef.rst
 
 * **Getting Started**: :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef`
-* **References**: :doc:`knife` | :doc:`resource` | :doc:`lwrp` | :doc:`api_cookbooks_site`, :doc:`api_chef_server` | the :doc:`chef_client` executable | :doc:`config`
+* **References**: :doc:`resource` | :doc:`knife` | :doc:`plugin_knife` | :doc:`lwrp` | :doc:`api_cookbooks_site`, :doc:`api_chef_server` | the :doc:`chef_client` executable | :doc:`config`
 
 .. include:: ../../includes_chef/includes_chef_key_elements.rst
 
@@ -57,6 +57,7 @@ Chef Documentation
 
    chef_client
    knife
+   plugin_knife
    resource
    lwrp
    config

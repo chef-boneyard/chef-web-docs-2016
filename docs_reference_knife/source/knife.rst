@@ -460,18 +460,16 @@ The following plugins for |knife| are provided by |opscode|:
 * linode
 * openstack
 * rackspace
-* rackspace
 * terremark
 * windows
 
+Common Options
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_common_options.rst
 
 azure (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_azure.rst
-
-Common Options
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_common_options.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
