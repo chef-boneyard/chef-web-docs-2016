@@ -223,6 +223,12 @@ Only 4 levels of headers are supported (title, H2, H3, and H4). If, in the rare 
      << this is a hard return
    content, as normally authored.
 
+What an "H5 header" link looks like after it's built:
+
+**Header**
+
+content, as normally authored.
+
 
 Lists and Tables
 =====================================================
