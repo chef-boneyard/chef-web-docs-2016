@@ -32,21 +32,61 @@ Style Guide
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
-
 The |opscode| style guide is just a limited subset of the full capabilities of Sphinx. If it's not listed here, we're not using it.
+
+All of the documents built by Sphinx for Chef can be found at docs.opscode.com.
 
 Basic Documentation Template
 =====================================================
-xxxxx
+All documents must have a title, must refer to any files that provide inline text replacement (swaps files), and a body.
+
+Topic Titles
+-----------------------------------------------------
+Each topic can have a single topic title. What it looks like as reST:: 
+
+   =====================================================
+   header name goes here
+   =====================================================
+
+This is the only section header that requires the structure above and below the header.
 
 Swaps Header
 -----------------------------------------------------
-xxxxx
+The swaps header ensures that all of the swap strings are available to the topic at build time. For example::
+
+      .. include:: ../../swaps/swap_desc_a.txt
+      .. include:: ../../swaps/swap_desc_b.txt
+      .. include:: ../../swaps/swap_desc_c.txt
+      .. include:: ../../swaps/swap_desc_d.txt
+      .. include:: ../../swaps/swap_desc_e.txt
+      .. include:: ../../swaps/swap_desc_f.txt
+      .. include:: ../../swaps/swap_desc_g.txt
+      .. include:: ../../swaps/swap_desc_h.txt
+      .. include:: ../../swaps/swap_desc_i.txt
+      .. include:: ../../swaps/swap_desc_j.txt
+      .. include:: ../../swaps/swap_desc_k.txt
+      .. include:: ../../swaps/swap_desc_l.txt
+      .. include:: ../../swaps/swap_desc_m.txt
+      .. include:: ../../swaps/swap_desc_n.txt
+      .. include:: ../../swaps/swap_desc_o.txt
+      .. include:: ../../swaps/swap_desc_p.txt
+      .. include:: ../../swaps/swap_desc_q.txt
+      .. include:: ../../swaps/swap_desc_r.txt
+      .. include:: ../../swaps/swap_desc_s.txt
+      .. include:: ../../swaps/swap_desc_t.txt
+      .. include:: ../../swaps/swap_desc_u.txt
+      .. include:: ../../swaps/swap_desc_v.txt
+      .. include:: ../../swaps/swap_desc_w.txt
+      .. include:: ../../swaps/swap_desc_x.txt
+      .. include:: ../../swaps/swap_desc_y.txt
+      .. include:: ../../swaps/swap_desc_z.txt
+      .. include:: ../../swaps/swap_http.txt
+      .. include:: ../../swaps/swap_names.txt
+      .. include:: ../../swaps/swap_notes.txt
 
 Body
 -----------------------------------------------------
-xxxxx
+The body of the topic contains anything else needed for the topic. Often, a topic contains an include file (or three), and then some topics contain sub-headers. Most of the topics that are published to docs.opscode.com contain a series of includes files. But some topics, like An Overview of Chef, include original content alongside the includes files. It just depends on what the topic requires.
 
 Example
 -----------------------------------------------------
@@ -142,17 +182,6 @@ Section headers create structure in a document. When section headers are part of
 Sphinx allows many different conventions for how headers can exist in documents and looks for consistency to determine which ones go where. The width of the header must be equal to (or longer) than the length of the text in the header and (ideally) the same width for headers are used everywhere. (Having everything the same width can help spot the headers during reviews or when trying to find bugs in topics. The following sections describe the section header pattern that Opscode is using for topic titles, H1s, H2s, H3s, H4s, and the occasional H5.
 
 .. note:: As a general rule, try to limit the number of header levels to no more than 2 within a topic. There can be exceptions, of course, and especially if the document is very large, but remember that HTML TOC structures usually have width limitations (on the display side) and the more structure within a TOC, the harder it can be for users to figure out what's in it.
-
-Topic Titles
------------------------------------------------------
-Each topic can have a single topic title. What it looks like as reST:: 
-
-   =====================================================
-   header name goes here
-   =====================================================
-
-This is the only section header that requires the structure above and below the header.
-
 
 H1
 -----------------------------------------------------
@@ -287,31 +316,69 @@ What the list table looks like after it's built::
 
 Inline Markup
 =====================================================
-xxxxx
+Adding emphasis within text strings can be done using **bold**, *italics*, and ``code strings``.
 
 Bold
 -----------------------------------------------------
-xxxxx. What it looks like as reST:: 
+Use two asterisks (*) to mark a text string as **bold**. What it looks like as reST:: 
 
    **text goes here**
 
 Italics
 -----------------------------------------------------
-xxxxx. What it looks like as reST:: 
+Use a single asterisk (*) to mark a text string as *italics*. What it looks like as reST:: 
 
-   xxxxx
+   *text goes here*
 
-Code Elements and other Application Values
+Code Strings
 -----------------------------------------------------
-xxxxx. What it looks like as reST:: 
+Sometimes the name of a method or database field needs to be used inline in a paragraph. Use two backquotes (`) to mark certain strings as code within a regular string of text. What it looks like as reST:: 
 
    ``code goes here``
 
+What it looks like in a paragraph:
+
+Sometimes if an API ``method`` or database ``table`` needs to be referred to in a paragraph, it's useful to apply a style to that ``item`` so that readers can tell that it's special.
+
+Links
+=====================================================
+Links are ways to get users to other useful topics.
+
+Internal
+-----------------------------------------------------
+An internal link is one that resolves to another topic that is built by Sphinx. What it looks like as reST:: 
+
+   :doc:`essentials_nodes`
+
+where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. If this isn't formatted correctly, Sphinx will let you know.
+
+External
+-----------------------------------------------------
+An external link points to something that does not live on docs.opscode.com. An external link requires an HTTP address. In general, it's better to spell out the HTTP address fully, in case the topic is printed out. What an external link looks like as reST:: 
+
+   http://www.codecademy.com/tracks/ruby
+
+What an external link looks like after it's built:
+
+"A great tool for learning Ruby is http://www.codecademy.com/tracks/ruby."
+
+
+TOC Trees
+=====================================================
+A TOC tree defines all of the topics that are children of this topic. In Sphinx outputs, the Previous and Next patterns use this topic structure to determine these links. In addition, a visible TOC will use the structure defined by the ``toctree`` directive. In general, Opscode is not using the visible TOC tree, but they still need to be present in the topics to keep Sphinx happy. What the hidden ``toctree`` looks like as reST:: 
+
+   .. toctree::
+      :hidden:
+   
+      chef_overview
+      just_enough_ruby_for_chef
+      ...
+
 Code Blocks
 =====================================================
-xxxxx. There are many options here, especially if Pygments is part of your Sphinx environment. The most common code block styles are shown below, but there are many lexers available.
+Code blocks are used to show code samples, such as those for Ruby, JSON, and command-line strings. There are many options here, especially if Pygments is part of your Sphinx environment. The most common code block styles are shown below, but there are many lexers available.
 
-http://pygments.org/docs/lexers/#lexers-for-other-languages
+.. note:: For more information about all of the code styles that Pygments supports, see: http://pygments.org/docs/lexers/#lexers-for-other-languages.
 
 Ruby
 -----------------------------------------------------
@@ -319,7 +386,15 @@ Use this approach to show code blocks that use Ruby. What it looks like as reST:
 
    .. code-block:: ruby
 
-   xxxxx
+      default["apache"]["dir"]          = "/etc/apache2"
+      default["apache"]["listen_ports"] = [ "80","443" ]
+
+and what it looks like after it's built:
+
+.. code-block:: ruby
+
+   default["apache"]["dir"]          = "/etc/apache2"
+   default["apache"]["listen_ports"] = [ "80","443" ]
 
 Bash
 -----------------------------------------------------
@@ -327,29 +402,43 @@ Use this approach to show code blocks that use any type of shell command, such a
 
    .. code-block:: bash
 
-   xxxxx
+      $ knife data bag create admins
+
+and what it looks like after it's built:
+
+.. code-block:: bash
+
+   $ knife data bag create admins
 
 Javascript (and JSON)
 -----------------------------------------------------
-Use this approach to show code blocks that use any type of Javascript, including any JSON code sample. What it looks like as reST:: 
+Use this approach to show code blocks that use any type of JavaScript, including any JSON code sample. What it looks like as reST:: 
 
-   .. code-block:: json
+   .. code-block:: javascript
+   
+      {
+         "id": "charlie",
+         "uid": 1005,
+         "gid":"ops",
+         "shell":"/bin/zsh",
+         "comment":"Crazy Charlie"
+      }
 
-   xxxxx
+and what it looks like after it's built:
 
-Other Code Samples
------------------------------------------------------
-xxxxx. What it looks like as reST:: 
+.. code-block:: javascript
 
-   xxxxx
-
-What it looks like after it's built::
-
-   xxxxx
+   {
+      "id": "charlie",
+      "uid": 1005,
+      "gid":"ops",
+      "shell":"/bin/zsh",
+      "comment":"Crazy Charlie"
+   }
 
 Literal
 -----------------------------------------------------
-These should be used sparingly, but sometimes there is a need for a block of text that doesn't fit neatly into one of the options available for ``code-block``. What it looks like as reST:: 
+These should be used sparingly, but sometimes there is a need for a block of text that doesn't fit neatly into one of the options available for ``code-block``, such as showing a directory structure, basic syntax, or pseudocode. What it looks like as reST:: 
 
    a preceding paragraph that ends with a double colon::
 
@@ -359,70 +448,18 @@ These should be used sparingly, but sometimes there is a need for a block of tex
         complete the block of text.
       end.
 
-Links
-=====================================================
-xxxxx
-
-Internal
------------------------------------------------------
-xxxxx. What it looks like as reST:: 
-
-   xxxxx
-
-What it looks like after it's built::
-
-   xxxxx
-
-External
------------------------------------------------------
-xxxxx. What it looks like as reST:: 
-
-   xxxxx
-
-What it looks like after it's built::
-
-   xxxxx
-
-Sphinx Directives
-=====================================================
-xxxxx
-
-TOC Trees
------------------------------------------------------
-xxxxx. What it looks like as reST:: 
-
-   xxxxx
-
-What it looks like after it's built::
-
-   xxxxx
-
-Code Blocks
------------------------------------------------------
-xxxxx. What it looks like as reST:: 
-
-   xxxxx
-
-What it looks like after it's built::
-
-   xxxxx
-
 Includes
 -----------------------------------------------------
-xxxxx. What it looks like as reST:: 
+An includes file is a way to use a path to pull content into a topic at build time. This allows the contents of a topic to be sourced in one location, yet used within any deliverable that requires it. What it looks like as reST:: 
 
-   xxxxx
+   .. include:: ../../includes_chef/includes_chef.rst
 
-What it looks like after it's built::
+What it looks like after it's built:
 
-   xxxxx
+.. include:: ../../includes_chef/includes_chef.rst
 
 Inline Replacements
 =====================================================
-xxxxx
-
-Swap Files
------------------------------------------------------
 A swap file is a file that contains short strings of information that are replaced at build time. Mostly, these are definitions of command-line options, descriptions of settings in |ruby| files, and other short descriptions that may live in more than one place across the doc set.
 
 They are grouped by letter (for definition strings, a-z), grouped by names (for product name and other formal names), for notes, and for HTTP links. These should only be included when it's certain that, should the swap replacement need to change later, that that change is exactly what is wanted in that location later.
@@ -460,46 +497,48 @@ In general, notes and warnings are not the ideal way to present information. Bef
 
 Notes
 -----------------------------------------------------
-Use sparingly, but much more often than a warning. A note sometimes works best when they are consistently used across a wide set of topics. See the What it looks like as reST:: 
+Use sparingly, but much more often than a warning. A note sometimes works best when they are consistently used across a wide set of topics. Some people just read docs looking for notes and images and steps. Notes shouldn't be used in a way that discourages people from reading the docs. If something is really important, the best place for it is a location that gives it a spot in the TOC, with its own topic title, and so on.
+
+See the What it looks like as reST:: 
 
    .. note:: this is a note.
 
-What it looks like after it's built:
+What a note looks like after it's built:
 
 .. note:: this is a note.
 
 Warnings
 -----------------------------------------------------
-Use sparingly, so that when the user sees a warning it is appropriate. A warning really should be a "Hey, if you do this, you might break your environment." type of situation. What it looks like as reST:: 
+Use sparingly, so that when the user sees a warning it registers appropriately. A warning really should be a "Hey, if you do this, you might break your environment." type of situation. What it looks like as reST:: 
 
    .. warning:: this is a warning.
 
-What it looks like after it's built::
+What a warning looks like after it's built:
 
-.. warning:: this is a warning.
+.. warning:: this is a warning. if you do this, your hard drive will be deleted.
 
 Images
 =====================================================
-xxxxx. What it looks like as reST::
+Images are useful and can be better at telling readers what is going on than actual text. What it looks like as reST::
 
-   xxxxx
+   .. image:: ../../images/icon_node_cloud.png
 
-What it looks like after it's built::
+What an image looks like after it's built:
 
-   xxxxx
+.. image:: ../../images/icon_node_cloud.png
 
-chef-docs Repository on Github
+Doc Repositories
 =====================================================
-xxxxx
+There are two document repositories for Chef, one that contains the docs and another that contains image files for quick references.
 
-Naming Patterns
+chef-docs
 -----------------------------------------------------
-xxxxx
+All of the documentation for Chef can be found here:
 
-quick-reference Repository on Github
-=====================================================
-xxxxx
+https://github.com/opscode/chef-docs
 
-Knife
+quick-reference
 -----------------------------------------------------
-xxxxx
+Two large PNG images (front and back) and a smaller single-page image for a Knife Quick Reference can be found here:
+
+https://github.com/opscode/quick-reference
