@@ -32,12 +32,6 @@ Syntax
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-xxxxx
-
-xxxxx
-
-xxxxx
-
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_syntax.rst
 
 Actions
