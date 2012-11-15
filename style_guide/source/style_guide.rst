@@ -527,11 +527,11 @@ Images
 =====================================================
 Images are useful and can be better at telling readers what is going on than actual text. What it looks like as reST::
 
-   .. image:: ../../images/icon_node_cloud.png
+   .. image:: ../../images/icon_chef_client.png
 
 What an image looks like after it's built:
 
-.. image:: ../../images/icon_node_cloud.png
+.. image:: ../../images/icon_chef_client.png
 
 Doc Repositories
 =====================================================
