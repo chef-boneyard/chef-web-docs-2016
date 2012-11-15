@@ -333,7 +333,7 @@ Environment Attributes
 
 Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_node/includes_node_attribute_type.rst
+.. include:: ../../includes_environment/includes_environment_attribute_type.rst
 
 Precedence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
