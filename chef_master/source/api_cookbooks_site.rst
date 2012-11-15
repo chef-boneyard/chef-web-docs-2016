@@ -37,21 +37,12 @@ Cookbooks Site API
 
 .. note:: |note api cookbooks site using knife|
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+The |api cookbooks site| has the following endpoints:
 
-   * - Endpoint
-     - Description
-   * - :doc:`api_cookbooks_site_cookbooks`
-     - 
-   * - :doc:`api_cookbooks_site_cookbooks_name`
-     - 
-   * - :doc:`api_cookbooks_site_cookbooks_version`
-     - 
-   * - :doc:`api_cookbooks_site_search`
-     - 
-
+* :doc:`api_cookbooks_site_cookbooks`
+* :doc:`api_cookbooks_site_cookbooks_name`
+* :doc:`api_cookbooks_site_cookbooks_version`
+* :doc:`api_cookbooks_site_search`
 
 
 .. toctree::

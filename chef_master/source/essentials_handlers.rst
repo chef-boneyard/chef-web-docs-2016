@@ -1,5 +1,5 @@
 =====================================================
-Exception and Report Handlers
+About Exception and Report Handlers
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt

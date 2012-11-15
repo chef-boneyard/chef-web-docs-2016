@@ -37,58 +37,31 @@ Chef Server API
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+The |api chef server| has the following endpoints:
 
-   * - Endpoint
-     - Description
-   * - :doc:`api_chef_server_clients`
-     - 
-   * - :doc:`api_chef_server_clients_name`
-     - 
-   * - :doc:`api_chef_server_cookbooks`
-     - 
-   * - :doc:`api_chef_server_cookbooks_name`
-     - 
-   * - :doc:`api_chef_server_cookbooks_version`
-     - 
-   * - :doc:`api_chef_server_data_bag`
-     - 
-   * - :doc:`api_chef_server_data_bag_item`
-     - 
-   * - :doc:`api_chef_server_data_bag_name`
-     - 
-   * - :doc:`api_chef_server_environments`
-     - 
-   * - :doc:`api_chef_server_environments_cookbook_name`
-     - 
-   * - :doc:`api_chef_server_environments_cookbook_version`
-     - 
-   * - :doc:`api_chef_server_environments_cookbooks`
-     - 
-   * - :doc:`api_chef_server_environments_name`
-     - 
-   * - :doc:`api_chef_server_nodes`
-     - 
-   * - :doc:`api_chef_server_nodes_cookbook`
-     - 
-   * - :doc:`api_chef_server_nodes_name`
-     - 
-   * - :doc:`api_chef_server_roles`
-     - 
-   * - :doc:`api_chef_server_roles_name`
-     - 
-   * - :doc:`api_chef_server_sandboxes`
-     - 
-   * - :doc:`api_chef_server_sandboxes_checksum`
-     - 
-   * - :doc:`api_chef_server_sandboxes_id`
-     - 
-   * - :doc:`api_chef_server_search`
-     - 
-   * - :doc:`api_chef_server_search_index`
-     - 
+* :doc:`api_chef_server_clients`
+* :doc:`api_chef_server_clients_name`
+* :doc:`api_chef_server_cookbooks`
+* :doc:`api_chef_server_cookbooks_name`
+* :doc:`api_chef_server_cookbooks_version`
+* :doc:`api_chef_server_data_bag`
+* :doc:`api_chef_server_data_bag_item`
+* :doc:`api_chef_server_data_bag_name`
+* :doc:`api_chef_server_environments`
+* :doc:`api_chef_server_environments_cookbook_name`
+* :doc:`api_chef_server_environments_cookbook_version`
+* :doc:`api_chef_server_environments_cookbooks`
+* :doc:`api_chef_server_environments_name`
+* :doc:`api_chef_server_nodes`
+* :doc:`api_chef_server_nodes_cookbook`
+* :doc:`api_chef_server_nodes_name`
+* :doc:`api_chef_server_roles`
+* :doc:`api_chef_server_roles_name`
+* :doc:`api_chef_server_sandboxes`
+* :doc:`api_chef_server_sandboxes_checksum`
+* :doc:`api_chef_server_sandboxes_id`
+* :doc:`api_chef_server_search`
+* :doc:`api_chef_server_search_index`
 
 
 .. toctree::
