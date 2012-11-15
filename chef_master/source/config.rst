@@ -1,5 +1,5 @@
 =====================================================
-Configuration Files
+About Configuration Files
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
