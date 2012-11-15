@@ -38,8 +38,8 @@ source_suffix = '.rst'
 master_doc = 'essentials_chef_client'
 
 # General information about the project.
-project = u'Essentials :: chef-client'
-copyright = u'2012, Opscode, Inc.'
+project = u'chef-client'
+copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -104,7 +104,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Essentials :: chef-client"
+html_title = "chef-client"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -116,7 +116,7 @@ html_logo = "../../images/opscode_chef_html_logo.jpg"
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = None
+html_favicon = "opscode.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -151,10 +151,10 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = False
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -165,7 +165,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Essentials :: chef-client'
+htmlhelp_basename = 'chef-client'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,7 +184,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Essentials :: chef-client.tex', u'Essentials :: chef-client',
+  ('index', 'chef-client.tex', u'chef-client',
    u'Opscode, Inc.', 'manual'),
 ]
 
@@ -214,7 +214,7 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'Essentials :: chef-client', u'Essentials :: chef-client',
+    ('index', 'chef-client', u'chef-client',
      [u'Opscode, Inc.'], 1)
 ]
 
@@ -228,8 +228,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Essentials :: chef-client', u'Essentials :: chef-client',
-   u'Opscode, Inc.', 'Essentials :: chef-client', 'Essentials :: chef-client',
+  ('index', 'chef-client', u'chef-client',
+   u'Opscode, Inc.', 'chef-client', 'chef-client',
    'Miscellaneous'),
 ]
 
@@ -246,7 +246,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Essentials :: chef-client'
+epub_title = u'chef-client'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'

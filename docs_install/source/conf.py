@@ -38,8 +38,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Chef Install Documentation'
-copyright = u'2012, Opscode, Inc.'
+project = u'Install Chef'
+copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -91,7 +91,7 @@ pygments_style = 'emacs'
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'sphinxdoc'
+html_theme = 'opscode'
 #html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -104,7 +104,7 @@ html_theme = 'sphinxdoc'
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Chef Install Documentation"
+html_title = "Install Chef"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -116,7 +116,7 @@ html_logo = "../../images/opscode_html_logo.png"
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = None
+html_favicon = "opscode.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -132,11 +132,15 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {
+   '**': ['localtoc.html', 'relations.html'],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
-#html_additional_pages = {}
+html_additional_pages = {
+    'search': 'opscode_search.html',
+}
 
 # If false, no module index is generated.
 #html_domain_indices = True
@@ -151,10 +155,10 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = False
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -229,7 +233,7 @@ man_pages = [
 #  dir menu entry, description, category)
 texinfo_documents = [
   ('index', 'Install Chef', u'Install Chef',
-   u'Opscode, Inc.', 'Install Chef', 'Documentation for installing Chef.',
+   u'Opscode, Inc.', 'Install Chef', 'Install Chef',
    'Miscellaneous'),
 ]
 
@@ -246,7 +250,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Chef Install Documentation'
+epub_title = u'Install Chef'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'

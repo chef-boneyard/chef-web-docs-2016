@@ -38,8 +38,8 @@ source_suffix = '.rst'
 master_doc = 'essentials_cookbook_files'
 
 # General information about the project.
-project = u'Essentials :: Cookbook File Definition'
-copyright = u'2012, Opscode, Inc.'
+project = u'Cookbook File Definition'
+copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -104,7 +104,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Essentials :: Cookbook File Definition"
+html_title = "Cookbook File Definition"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -116,7 +116,7 @@ html_logo = "../../images/opscode_chef_html_logo.jpg"
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-#html_favicon = None
+html_favicon = "opscode.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -132,11 +132,15 @@ html_static_path = ['_static']
 #html_use_smartypants = True
 
 # Custom sidebar templates, maps document names to template names.
-#html_sidebars = {}
+html_sidebars = {
+   '**': ['localtoc.html', 'relations.html'],
+}
 
 # Additional templates that should be rendered to pages, maps page names to
 # template names.
-#html_additional_pages = {}
+html_additional_pages = {
+    'search': 'opscode_search.html',
+}
 
 # If false, no module index is generated.
 #html_domain_indices = True
@@ -151,10 +155,10 @@ html_static_path = ['_static']
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-#html_show_sphinx = False
+html_show_sphinx = False
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-#html_show_copyright = True
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -165,7 +169,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Essentials :: Cookbook File Definition'
+htmlhelp_basename = 'Cookbook File Definition'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -184,7 +188,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Essentials :: Cookbook File Definition.tex', u'Essentials :: Cookbook File Definition',
+  ('index', 'Cookbook File Definition.tex', u'Cookbook File Definition',
    u'Opscode, Inc.', 'manual'),
 ]
 
@@ -214,7 +218,7 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'Essentials :: Cookbook File Definition', u'Essentials :: Cookbook File Definition',
+    ('index', 'Cookbook File Definition', u'Cookbook File Definition',
      [u'Opscode, Inc.'], 1)
 ]
 
@@ -228,8 +232,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Essentials :: Cookbook File Definition', u'Essentials :: Cookbook File Definition',
-   u'Opscode, Inc.', 'Essentials :: Cookbook File Definition', 'Essentials :: Cookbook File Definition',
+  ('index', 'Cookbook File Definition', u'Cookbook File Definition',
+   u'Opscode, Inc.', 'Cookbook File Definition', 'Cookbook File Definition',
    'Miscellaneous'),
 ]
 
@@ -246,7 +250,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Essentials :: Cookbook File Definition'
+epub_title = u'Cookbook File Definition'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'
