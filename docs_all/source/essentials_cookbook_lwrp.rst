@@ -34,11 +34,11 @@ Lightweight Resources and Providers
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight.rst
 
-H3 -- File Locations -- DONE
+File Locations
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
 
-H3 -- Lightweight Resources -- DONE
+Lightweight Resources
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
 

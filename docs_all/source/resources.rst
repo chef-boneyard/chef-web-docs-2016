@@ -79,7 +79,7 @@ Arguments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
 
-``not_if`` Examples
+not_if Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_common_not_if_create_temp_file.rst
 
@@ -89,7 +89,7 @@ Arguments
 
 .. include:: ../../steps/step_chef_common_not_if_execute_string.rst
 
-``only_if`` Examples
+only_if Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_common_only_if_create_temp_file.rst
 
@@ -267,11 +267,11 @@ Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_providers.rst
 
-``timestamped_deploy``
+timestamped_deploy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |timestamped_deploy provider deploy|
 
-``deploy_revision`` and ``deploy_branch``
+deploy_revision and deploy_branch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 |deploy_revision provider deploy|
 
