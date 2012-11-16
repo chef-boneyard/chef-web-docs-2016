@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To run a bash script:
+To run a |bash| script:
 
 .. code-block:: ruby
 

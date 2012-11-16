@@ -1,7 +1,6 @@
 .. This is an included how-to. 
 
-To use embedded recipes for callbacks:
-Using resources from within your callbacks as blocks or within callback files distributed with your application's source code
+Using resources from within your callbacks as blocks or within callback files distributed with your application's source code. To use embedded recipes for callbacks:
 
 .. code-block:: ruby
 

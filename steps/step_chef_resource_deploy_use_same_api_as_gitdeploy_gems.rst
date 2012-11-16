@@ -1,7 +1,6 @@
 .. This is an included how-to. 
 
-To use the same API when using the ``git-deploy`` |gems|:
-Any recipes using the git-deploy gem can continue using the same API
+Any recipes using the ``git-deploy`` |gem| can continue using the same API. To include this behavior in a recipe, do something like the following:
 
 .. code-block:: ruby
 

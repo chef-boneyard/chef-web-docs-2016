@@ -1,7 +1,6 @@
 .. This is an included how-to. 
 
-To customize the application layout:
-The layout of the application matches a Rails app by default, but you can customize it to fit your needs
+The layout of the application matches a Rails app by default, but you can customize it to fit your needs. To customize the application layout:
 
 .. code-block:: ruby
 

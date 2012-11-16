@@ -1,18 +1,25 @@
 .. This is an included how-to. 
 
-To deploy without symlinking to shared:
-When deploying non-rails code and you don't want any symlinks to the shared folder, use parentheses or Hash.new to avoid an ambiguity in Ruby
+To deploy without creating symbolic links to a shared folder:
 
 .. code-block:: ruby
 
    deploy "/my/apps/dir/deploy" do
-     # OTHER PARAMETERS
-     # ...
-    
-     # THIS DOESN'T WORK, the {} gets parsed as a code block:
      symlinks {}
-     # Instead, use parentheses:
+   end
+
+When deploying code that is not |ruby on rails| and symbolic links to a shared folder are not wanted, use parentheses () or ``Hash.new`` to avoid ambiguity. For example, using parentheses:
+
+.. code-block:: ruby
+
+   deploy "/my/apps/dir/deploy" do
      symlinks({})
-     # Or create your hash by calling new instead of using a literal:
+   end
+
+or using ``Hash.new``:
+
+.. code-block:: ruby
+
+   deploy "/my/apps/dir/deploy" do
      symlinks Hash.new
    end

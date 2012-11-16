@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To write a recipe that uses an SSH wrapper:
+To write a recipe that uses an |ssh| wrapper:
 
 1. Create a file in the ``cookbooks/COOKBOOK_NAME/files/default`` directory that is named ``wrap-ssh4git.sh`` and which contains the following:
 

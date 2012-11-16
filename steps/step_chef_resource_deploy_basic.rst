@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Basic attribute usage
+Basic attribute usage:
 
 .. code-block:: ruby
 

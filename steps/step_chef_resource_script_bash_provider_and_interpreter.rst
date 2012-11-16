@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use a bash provider and interpreter to run the same script:
+To use a |bash| provider and interpreter to run the same script:
 
 .. code-block:: ruby
 
