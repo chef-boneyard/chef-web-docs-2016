@@ -14,13 +14,13 @@ This configuration file has the following settings:
        ::
 
           attribute 'pets/cat/name',
-          :display_name => "Cat Name",
-          :description => "The name of your cat",
-          :choice => \[ 'kitty kitty', 'peanut', 'einstein', 'honey' \],
-          :type => "string",
-          :required => "recommended",
-          :recipes => \[ 'cats::eat' \],
-          :default => "kitty kitty"
+           :display_name => "Cat Name",
+           :description => "The name of your cat",
+           :choice => \[ 'kitty kitty', 'peanut', 'einstein', 'honey' \],
+           :type => "string",
+           :required => "recommended",
+           :recipes => \[ 'cats::eat' \],
+           :default => "kitty kitty"
 
    * - ``conflicts``
      - |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named "docs":
@@ -52,24 +52,27 @@ This configuration file has the following settings:
        ::
 
           grouping 'pets/cat',
-          :title => "Cat Options",
-          :description => "Describe your cat using the options below"
+           :title => "Cat Options",
+           :description => "Describe your cat using the options below"
    * - ``licensing``
      - |license| For example:
        ::
 
           license 'Apache v2.0'
 
+       or:
        ::
 
           license 'GPL v3'
 
+       or:
        ::
-
+ 
           license 'MIT'
 
+       or:
        ::
-
+ 
           license 'Proprietary - All Rights Reserved'
    * - ``long_description``
      - |long description| For example, to embed the long description within the field itself:
@@ -84,8 +87,8 @@ This configuration file has the following settings:
           
           Debian or Ubuntu preferred.
           
-          Red Hat/CentOS and Fedora can be used but will be converted to a Debian/Ubuntu style
-          Apache as it's far easier to manage with chef. 
+          Red Hat/CentOS and Fedora can be used but will be converted to a
+          Debian/Ubuntu style Apache as it's far easier to manage with Chef. 
           
           = ATTRIBUTES:
           
@@ -102,7 +105,9 @@ This configuration file has the following settings:
        Or to read the contents from a specified file:
        ::
 
-          long_description IO.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
+          long_description IO.read(File.join
+            (File.dirname(__FILE__), 'README.rdoc')
+          )
    * - ``maintainer``
      - |maintainer| For example:
        ::
