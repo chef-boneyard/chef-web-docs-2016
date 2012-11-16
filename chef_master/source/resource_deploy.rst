@@ -66,11 +66,11 @@ Providers
 =====================================================
 .. include:: ../../includes_resources/includes_resource_deploy_providers.rst
 
-``timestamped_deploy``
+timestamped_deploy
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |timestamped_deploy provider deploy|
 
-``deploy_revision`` and ``deploy_branch``
+deploy_revision and deploy_branch
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |deploy_revision provider deploy|
 

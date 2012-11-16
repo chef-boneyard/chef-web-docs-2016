@@ -102,20 +102,6 @@ About Knife
      - |knife upload|
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .. toctree::
    :hidden:
 
