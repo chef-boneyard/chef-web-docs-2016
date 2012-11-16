@@ -68,10 +68,6 @@ Download .pem files and |knife rb|
 ----------------------------------------
 .. include:: ../../steps/step_install_workstation_validation_files_download.rst
 
-**jamescott: THIS SECTION NEEDS TO BE BIFURCATED FOR CHEF HOSTED/PRIVATE AND CHEF OPEN SERVER. UNIQUE DOCS FOR UNIQUE APPS. HOSTED/PRIVATE ABOVE, CHEF OPEN BELOW. GROUPED TOGETHER FOR NOW.**
-
-.. include:: ../../steps/step_install_workstation_validation_files_chef_open_server.rst
-
 Select the |omnibus installer|
 ----------------------------------------
 .. include:: ../../steps/step_install_workstation_select_omnibus_installer.rst
@@ -99,13 +95,6 @@ Move files to the .chef directory
 Verify the |chef| install
 ----------------------------------------
 .. include:: ../../steps/step_install_workstation_verify.rst
-
-
-For Machines Running |windows|
-=====================================================
-Different from the others because it's Windows.
-
-**jamescott: TBD. STILL WORKING ON THIS ONE.**
 
 Bootstrapping Your First Node
 =====================================================

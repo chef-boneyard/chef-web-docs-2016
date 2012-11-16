@@ -37,13 +37,25 @@ Chef Documentation
 .. include:: ../../includes_chef/includes_chef.rst
 
 * **Getting Started**: :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef`
+
+
+
 * **References**: :doc:`resource` | :doc:`knife` | :doc:`plugin_knife` | :doc:`lwrp` | :doc:`api_cookbooks_site`, :doc:`api_chef_server` | the :doc:`chef_client` executable | :doc:`config`
 
-.. include:: ../../includes_chef/includes_chef_key_elements.rst
+
 
 * **Nodes**: :doc:`essentials_nodes` | :doc:`ohai` | :doc:`essentials_handlers` | :doc:`essentials_nodes_chef_run` | :doc:`essentials_chef_client`
+
+
+
 * **Workstations**: :doc:`essentials_workstation` | :doc:`essentials_repository` | :doc:`essentials_knife`
+
+
+
 * **The Chef Server**: :doc:`essentials_server` | :doc:`essentials_node_object` | :doc:`essentials_roles` | :doc:`essentials_data_bags` | :doc:`essentials_environments` | :doc:`essentials_search`
+
+
+
 * **Cookbooks**: :doc:`essentials_cookbooks` | :doc:`essentials_cookbook_directory` | :doc:`essentials_cookbook_attribute_files` | :doc:`essentials_cookbook_definitions` | :doc:`essentials_cookbook_files` | :doc:`essentials_cookbook_libraries` | :doc:`essentials_cookbook_lwrp` | :doc:`essentials_cookbook_metadata` | :doc:`essentials_cookbook_recipes` | :doc:`essentials_cookbook_resources` | :doc:`essentials_cookbook_templates` | :doc:`essentials_cookbook_versions`
 
 
