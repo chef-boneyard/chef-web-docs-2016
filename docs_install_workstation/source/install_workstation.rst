@@ -49,7 +49,7 @@ System Requirements
 
 In addition, a |chef| workstation must be able to connect to a |chef server| (|chef hosted|, |chef private|, or |chef open server|), access to three generated files (two validation files that contain private keys and one configuration file), plus the ability to clone the |chef repo| repository from |github|.
 
-For Machines Running |linux|, |unix|, or |mac os x|
+Install Chef
 =====================================================
 The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac os x| are identical:
 
