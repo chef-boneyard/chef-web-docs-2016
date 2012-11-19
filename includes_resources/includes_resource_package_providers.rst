@@ -18,7 +18,7 @@ Use the following providers to use the |resource package| resource in a recipe:
    * - ``Chef::Provider::Package::Dpkg``
      - ``dpkg_package``
      - 
-     - This is the default provider for the |debian dkpg| platform. Can be used with the ``options`` attribute.
+     - This is the default provider for the |debian dpkg| platform. Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::EasyInstall``
      - ``easy_install_package``
      - 
