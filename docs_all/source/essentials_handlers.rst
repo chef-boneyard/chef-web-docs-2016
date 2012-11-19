@@ -66,11 +66,11 @@ Available Handlers
 =====================================================
 .. include:: ../../includes_handler/includes_handler_available.rst
 
-|opscode|: JsonFile Handler
+JsonFile Handler
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_available_jsonfile.rst
 
-Community: Open Source Handlers
+Open Source Handlers
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_available_community.rst
 
