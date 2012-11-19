@@ -32,7 +32,7 @@ gunicorn
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-|cookbook name gunicorn|
+|gunicorn desc| |cookbook name gunicorn|
 
 The ``gunicorn`` cookbook contains the following lightweight resources: ``gunicorn_config`` and ``gunicorn_install``.
 

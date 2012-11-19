@@ -1920,6 +1920,8 @@ Examples
 
 gunicorn_config
 -----------------------------------------------------
+|gunicorn desc|
+
 .. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config.rst
 
 .. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
@@ -1943,6 +1945,8 @@ Examples
 
 gunicorn_install
 -----------------------------------------------------
+|gunicorn desc|
+
 .. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install.rst
 
 .. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
