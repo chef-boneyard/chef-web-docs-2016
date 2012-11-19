@@ -375,8 +375,8 @@ This configuration file has the following settings:
        ::
  
           [date] INFO: *** Chef 0.10.6.rc.1 ***
-          [date] INFO: Setting the run_list to ["recipe[a-verbose-logging]"]  
-                       from JSON
+          [date] INFO: Setting the run_list 
+                       to ["recipe[a-verbose-logging]"] from JSON
           [date] INFO: Run List is [recipe[a-verbose-logging]]
           [date] INFO: Run List expands to [a-verbose-logging]
           [date] INFO: Starting Chef Run for some_node
@@ -399,8 +399,8 @@ This configuration file has the following settings:
        ::
 
           [date] INFO: *** Chef 0.10.6.rc.1 ***
-          [date] INFO: Setting the run_list to ["recipe[a-verbose-logging]"]  
-                       from JSON
+          [date] INFO: Setting the run_list 
+                       to ["recipe[a-verbose-logging]"] from JSON
           [date] INFO: Run List is [recipe[a-verbose-logging]]
           [date] INFO: Run List expands to [a-verbose-logging]
           [date] INFO: Starting Chef Run for some_node

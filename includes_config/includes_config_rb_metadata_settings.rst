@@ -16,7 +16,11 @@ This configuration file has the following settings:
           attribute 'pets/cat/name',
            :display_name => "Cat Name",
            :description => "The name of your cat",
-           :choice => \[ 'kitty kitty', 'peanut', 'einstein', 'honey' \],
+           :choice => \[ 
+             'kitty kitty', 
+             'peanut', 
+             'einstein', 
+             'honey' \],
            :type => "string",
            :required => "recommended",
            :recipes => \[ 'cats::eat' \],
@@ -87,12 +91,14 @@ This configuration file has the following settings:
           
           Debian or Ubuntu preferred.
           
-          Red Hat/CentOS and Fedora can be used but will be converted to a
-          Debian/Ubuntu style Apache as it's far easier to manage with Chef. 
+          Red Hat/CentOS and Fedora can be used but will be converted to 
+          a Debian/Ubuntu style Apache as it's far easier to manage 
+          with Chef. 
           
           = ATTRIBUTES:
           
-          The file attributes/apache.rb contains the following attribute types:
+          The file attributes/apache.rb contains the following attribute 
+          types:
           
           * platform specific locations and settings.
           * general settings
@@ -143,7 +149,7 @@ This configuration file has the following settings:
      - |description recipe| For example:
        ::
 
-          recipe "cats::sleep", "For something crazy, like 20 hours a day."
+          recipe "cats::sleep", "For a crazy 20 hours a day."
 
        Or:
        ::
