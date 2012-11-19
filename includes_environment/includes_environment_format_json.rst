@@ -30,7 +30,7 @@ The |json| format has two additional settings:
    * - Setting
      - Description
    * - ``chef_type``
-     - |json dsl chef type|
+     - |json dsl environment chef type|
    * - ``json_class``
-     - |json dsl json class|
+     - |json dsl environment json class|
 
