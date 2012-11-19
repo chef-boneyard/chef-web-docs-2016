@@ -4,7 +4,7 @@
 Use the following providers to use the |resource package| resource in a recipe:
 
 .. list-table::
-   :widths: 130 80 40 250
+   :widths: 150 80 320
    :header-rows: 1
 
    * - Long name
