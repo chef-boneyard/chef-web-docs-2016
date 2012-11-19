@@ -24,7 +24,11 @@ This example describes a simple handler that sends an email when a |chef| run fa
        # Join the backtrace lines. Coerce to an array just in case.
        message << Array(backtrace).join("\n")
        
-       Pony.mail(:to => @to_address, :from => @from_address, :subject => subject, :body => message)
+       Pony.mail(
+         :to => @to_address, 
+         :from => @from_address, 
+         :subject => subject, 
+         :body => message)
          
        end
      end
