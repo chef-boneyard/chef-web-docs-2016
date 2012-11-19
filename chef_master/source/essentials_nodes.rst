@@ -38,8 +38,6 @@ Node Names
 =====================================================
 .. include:: ../../includes_node/includes_node_name.rst
 
-The the name of a node is required as part of the authentication process to the |chef server|. The name of a node is obtained from the ``node_name`` attribute in the |client rb| file or by |ohai|. If |ohai| obtains the name of a node, it is typically the |fully qualified domain name| name of the node (which is always unique within an organization).
-
 Manage Nodes
 =====================================================
 .. include:: ../../includes_node/includes_node_manage.rst
