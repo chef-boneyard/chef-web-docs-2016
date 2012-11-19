@@ -54,7 +54,7 @@ Role Attributes
 
 Types
 -----------------------------------------------------
-.. include:: ../../includes_roles/includes_roles_attribute_type.rst
+.. include:: ../../includes_role/includes_role_attribute_type.rst
 
 Precedence
 -----------------------------------------------------
