@@ -141,16 +141,17 @@ html_sidebars = {
 #html_additional_pages = {}
 
 # If false, no module index is generated.
-#html_domain_indices = True
+html_domain_indices = False
 
 # If false, no index is generated.
-#html_use_index = True
+html_use_index = False
 
 # If true, the index is split into individual pages for each letter.
-#html_split_index = True
+html_split_index = False
 
-# If true, links to the reST sources are added to the pages.
-#html_show_sourcelink = True
+# If true, links to the reST sources are added to the pages. Leave this one as True 
+# for the style guide, in case people want to see the reST used in the style guide.
+html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
