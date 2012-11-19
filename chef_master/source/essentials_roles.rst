@@ -55,7 +55,7 @@ About Roles
    * - Method
      - Description
    * - :doc:`essentials_roles_attributes_types`
-     - There are four types of attributes: ``default``, ``normal``, ``override``, and ``automatic``.
+     - There are two types of attributes that can be used with roles: ``default`` and ``override``.
    * - :doc:`essentials_roles_attributes_persistence`
      - During a |chef| run, saved attributes are retrieved from the |chef server| and are merged with the attributes on the local system.
    * - :doc:`essentials_roles_attributes_precedence`

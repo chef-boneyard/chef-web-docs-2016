@@ -509,7 +509,7 @@ Role Attributes
 
 Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_node/includes_node_attribute_type.rst
+.. include:: ../../includes_roles/includes_roles_attribute_type.rst
 
 Precedence
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
