@@ -129,7 +129,7 @@ This configuration file has the following settings:
      - |node_name| In general, leaving this setting blank and letting |ohai| assign the |fqdn| of the node as the ``node_name`` during each |chef| run is the recommended approach. For example:
        ::
  
-          node_name
+          node_name "mynode.example.com"
    * - ``node_path``
      - |node_path| For example:
        ::

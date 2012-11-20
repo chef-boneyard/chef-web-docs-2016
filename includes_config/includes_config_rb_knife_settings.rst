@@ -51,7 +51,7 @@ This configuration file has the following settings:
      - |node_name| For example:
        ::
  
-          node_name 0.0.0.0
+          node_name "mynode.example.com"
    * - ``validation_client_name``
      - |validation_client_name| For example:
        ::

@@ -84,7 +84,7 @@ This configuration file has the following settings:
      - |node_name| For example:
        ::
  
-          node_name 0.0.0.0
+          node_name "mynode.example.com"
    * - ``node_path``
      - |node_path| For example:
        ::
