@@ -41,7 +41,7 @@ Install Chef on a Workstation
 
 Follow the steps below to use the |omnibus installer| to set up a workstation on a machine running |unix|, |linux|, |mac os x|, or |windows|. When finished, a workstation will be configured to connect to a |chef server| and (optionally) can be configured to act as a |chef client|, used to set up a |chef client| on an external machine (or virtual machine) using a ``knife bootstrap`` operation, and used to manage cookbooks, organization settings (like roles, environments, and data bags).
 
-.. note:: If you want to install |chef| and try it out without having to install |chef server| on a physical machine, sign up for |chef hosted|: http://www.opscode.com/hosted-chef/. The first five nodes are free of charge. Once you have signed up you can continue with the installation process. You can decide to use another type of |chef server| later if you want to.
+.. note:: |note install trial for hosted|
 
 System Requirements
 =====================================================
@@ -96,7 +96,7 @@ Verify the |chef| install
 ----------------------------------------
 .. include:: ../../steps/step_install_workstation_verify.rst
 
+
 Bootstrapping Your First Node
 =====================================================
-
 .. include:: ../../steps/step_install_workstation_bootstrap_default.rst
