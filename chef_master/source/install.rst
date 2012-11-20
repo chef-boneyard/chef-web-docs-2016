@@ -45,7 +45,7 @@ The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac 
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Steps
      - Description
    * - :doc:`install_system_requirements`
      - System requirements for Chef.
