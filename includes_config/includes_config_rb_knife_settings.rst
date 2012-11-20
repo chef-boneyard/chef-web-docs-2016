@@ -10,36 +10,6 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``amqp_consumer_id``
-     - |amqp_consumer_id| For example:
-       ::
- 
-          amqp_consumer_id "default"
-   * - ``amqp_host``
-     - |amqp_host| For example:
-       ::
- 
-          amqp_host 0.0.0.0
-   * - ``amqp_pass``
-     - |amqp_pass| For example:
-       ::
- 
-          amqp_pass 12345678
-   * - ``amqp_port``
-     - |amqp_port| For example:
-       ::
- 
-          amqp_port 1234
-   * - ``amqp_user``
-     - |amqp_user| For example:
-       ::
- 
-          amqp_user adamjacobs
-   * - ``amqp_vhost``
-     - |amqp_vhost| For example:
-       ::
- 
-          amqp_vhost "/chef"
    * - ``authorized_openid_identifiers``
      - |authorized_openid_identifiers| For example:
        ::
