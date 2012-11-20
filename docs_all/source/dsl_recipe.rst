@@ -71,10 +71,6 @@ Accessor Methods
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
 
-Cookbook Dependencies
------------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_cookbook_dependencies.rst
-
 
 Recipe DSL Methods
 =====================================================
