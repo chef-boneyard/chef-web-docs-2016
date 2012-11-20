@@ -48,10 +48,10 @@ This configuration file has the following settings:
             "/var/chef/site-cookbooks" 
           ]
    * - ``node_name``
-     - |node_name| For example:
+     - |node_name| This is typically also the same name as the computer from which |knife| is run. This is typically also the same name as the computer from which |knife| is run. For example:
        ::
  
-          node_name "mynode.example.com"
+          node_name "jtimberman2012"
    * - ``validation_client_name``
      - |validation_client_name| For example:
        ::
