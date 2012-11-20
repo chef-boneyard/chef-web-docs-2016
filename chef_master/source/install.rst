@@ -42,31 +42,31 @@ Follow the steps below to use the |omnibus installer| to set up a workstation on
 The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac os x| are identical. See the following sections for more information about each step. 
 
 .. list-table::
-   :widths: 150 450
+   :widths: 50 550
    :header-rows: 1
 
    * - Steps
      - Description
-   * - :doc:`install_system_requirements`
-     - System requirements for Chef.
-   * - :doc:`install_step_files_download`
-     - Download .pem files and |knife rb|.
-   * - :doc:`install_step_installer_select`
-     - Select the |omnibus installer|.
-   * - :doc:`install_step_installer_run`
-     - Run the |omnibus installer|.
-   * - :doc:`install_step_install_git`
-     - Install |git|.
-   * - :doc:`install_step_directory_clone`
-     - Clone the |chef| repository.
-   * - :doc:`install_step_directory_create`
-     - Create the .chef directory.
-   * - :doc:`install_step_files_move`
-     - Move files to the .chef directory.
-   * - :doc:`install_step_verify`
-     - Verify the |chef| install.
-   * - :doc:`install_step_verify`
-     - Bootstrap your first node.
+   * - 1.
+     - :doc:`install_system_requirements`
+   * - 2.
+     - :doc:`install_step_files_download`
+   * - 3.
+     - :doc:`install_step_installer_select`
+   * - 4.
+     - :doc:`install_step_installer_run`
+   * - 5.
+     - :doc:`install_step_install_git`
+   * - 6.
+     - :doc:`install_step_directory_clone`
+   * - 7.
+     - :doc:`install_step_directory_create`
+   * - 8.
+     - :doc:`install_step_files_move`
+   * - 9.
+     - :doc:`install_step_verify`
+   * - 10.
+     - :doc:`install_step_verify`
 
 .. toctree::
    :hidden:
