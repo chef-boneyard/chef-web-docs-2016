@@ -65,6 +65,12 @@ This configuration file has the following settings:
 
 The following settings are used by the KNIFE BOOTSTRAP sub-command:
 
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
    * - ``knife[:bootstrap_proxy]``
      - |bootstrap-proxy|
    * - ``knife[:bootstrap_version]``
@@ -76,6 +82,12 @@ The following settings are used by the KNIFE BOOTSTRAP sub-command:
 
 The following settings are used by the KNIFE SSH sub-command:
 
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
    * - ``knife[:ssh_port]``
      - |ssh-port|
 
