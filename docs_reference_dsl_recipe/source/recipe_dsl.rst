@@ -37,7 +37,7 @@ Recipe DSL
 
 Work with the Recipe DSL
 =====================================================
-In addition to recipe-specific methods, since the |dsl recipe| is a |ruby| DSL, then anything that can be done using |ruby| can also be done in a recipe, including ``if`` and ``case`` statements, using the ``include?`` |ruby| method, including recipes in recipes, and checking for dependencies.
+Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |ruby| can also be done in a recipe, including ``if`` and ``case`` statements, using the ``include?`` |ruby| method, including recipes in recipes, and checking for dependencies.
 
 Use Ruby
 -----------------------------------------------------
@@ -55,7 +55,7 @@ include? Method
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ruby/includes_ruby_method_include.rst
 
-Array Syntax Shortcut
+Array Shortcut Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ruby/includes_ruby_shortcut_array.rst
 
@@ -78,7 +78,7 @@ Cookbook Dependencies
 
 Recipe DSL Methods
 =====================================================
-The following sections describe methods that are part of the |dsl recipe|.
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method.rst
 
 attribute?
 -----------------------------------------------------

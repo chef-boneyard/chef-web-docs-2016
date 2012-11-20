@@ -36,7 +36,7 @@ Chef Documentation
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-* **Getting Started**: :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef`
+* **Getting Started**: :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef` | :doc:`install`
 
 
 
@@ -66,6 +66,7 @@ Chef Documentation
 
    chef_overview
    just_enough_ruby_for_chef
+   install
 
    chef_client
    knife
