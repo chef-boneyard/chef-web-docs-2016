@@ -3,7 +3,7 @@
 
 A ``case`` statement can be used to handle a situation where there are a lot of conditions. Use the ``when`` statement for each condition, as many as are required.
 
-For example, using a ``case`` statement with the ``platform`` method:
+For example, using a ``case`` statement with the ``platform`` node attribute:
 
 .. code-block:: ruby
 
@@ -14,7 +14,7 @@ For example, using a ``case`` statement with the ``platform`` method:
      # do redhat/centos/fedora things
    end
 
-For example, using a ``case`` statement with the ``platform_family`` method:
+For example, using a ``case`` statement with the ``platform_family`` node attribute:
 
 .. code-block:: ruby
 
