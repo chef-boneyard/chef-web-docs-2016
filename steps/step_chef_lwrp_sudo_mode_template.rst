@@ -10,7 +10,7 @@ To use the template mode, do something like:
      variables( :cmds => [ "/etc/init.d/tomcat restart" ] )
    end
 
-to generate the following in ``/etc/sudoers.d/tomcat``:
+which will generate something like the following in ``/etc/sudoers.d/tomcat``:
 
 .. code-block:: ruby
 

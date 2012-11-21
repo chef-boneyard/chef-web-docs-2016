@@ -12,7 +12,7 @@ To use the natural (default) mode, do something like:
      nopasswd false # true prepends the runas_spec with NOPASSWD
    end
 
-to generate the following in ``/etc/sudoers.d/tomcat``:
+which will generate something like the following in ``/etc/sudoers.d/tomcat``:
 
 .. code-block:: ruby
 
