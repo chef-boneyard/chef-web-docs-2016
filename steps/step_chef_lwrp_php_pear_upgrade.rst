@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To upgrade a pear
+To upgrade a |pear|:
 
 .. code-block:: ruby
 

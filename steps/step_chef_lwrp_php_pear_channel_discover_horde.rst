@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To discover the horde channel
+To discover a channel named "pear.horde.org":
 
 .. code-block:: ruby
 

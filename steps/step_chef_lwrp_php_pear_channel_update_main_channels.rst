@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To update the main channels
+To update the main channels:
 
 .. code-block:: ruby
 
@@ -8,9 +8,7 @@ To update the main channels
      action :update
    end
 
-^^%%&&abovebelowabovebelow
-
-To update the main channels
+or:
 
 .. code-block:: ruby
 
