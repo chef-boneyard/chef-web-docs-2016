@@ -5,9 +5,11 @@ The results of a search query can be loaded into a recipe. For example, a very s
 
    search(:node, "attribute:value")
 
-A search query can be assigned to variables and then used elsewhere in a recipe. For example, to search for all nodes that have a role assignment named "webserver", and then render a template which includes those role assignments::
+A search query can be assigned to variables and then used elsewhere in a recipe. For example, to search for all nodes that have a role assignment named "webserver", and then render a template which includes those role assignments:
 
-   webservers = search(:node, "role:webserver")::
+.. code-block:: ruby
+
+   webservers = search(:node, "role:webserver")
    
    template "/tmp/list_of_webservers" do
      source "list_of_webservers.erb"
