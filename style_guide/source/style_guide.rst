@@ -454,6 +454,16 @@ These should be used sparingly, but sometimes there is a need for a block of tex
         complete the block of text.
       end.
 
+and what it looks like after it's built:
+
+.. code-block:: javascript
+
+   a block of literal text indented three spaces
+     with more
+     text as required to
+     complete the block of text.
+   end.
+
 Includes
 -----------------------------------------------------
 An includes file is a way to use a path to pull content into a topic at build time. This allows the contents of a topic to be sourced in one location, yet used within any deliverable that requires it. What it looks like as reST:: 
