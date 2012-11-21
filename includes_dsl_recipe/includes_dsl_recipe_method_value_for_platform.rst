@@ -5,9 +5,32 @@ The ``value_for_platform`` method can be used in a recipe to use a hash to selec
 
 .. code-block:: ruby
 
-   value_for_platform( ["platform"] => { ["version"] => value })
+   value_for_platform( ["platform"] => { ["version"] => value } )
 
-where ``"platform"`` is a comma-separated list, each specifying a platform, such as |redhat|, |suse|, or |fedora|, ``version`` specifies the version of that platform, and ``value`` specifies the value that will be used if the node's platform matches the ``value_for_platform`` method. For example, the following will set the ``package_name`` |ruby| variable to "httpd" for the |redhat| family of distributions and to "apache2" for the |debian| family of distributions:
+where ``"platform"`` can be a comma-separated list, each specifying a platform, such as |redhat|, |suse|, or |fedora|, ``version`` specifies the version of that platform, and ``value`` specifies the value that will be used if the node's platform matches the ``value_for_platform`` method. If each value only has a single platform, then the syntax is like the following:
+
+.. code-block:: ruby
+
+   value_for_platform(
+     "platform" => { "version" => "value" },
+     "platform" => { "version" => "value" },
+     "platform" => "value"
+   )
+
+but when each value has more than one platform, the syntax changes to:
+
+.. code-block:: ruby
+
+   value_for_platform(
+     ["platform", "platform", "platform", "platform" ] => {
+      "version" => "value"
+     },
+     ["platform", "platform"] => {
+      "version" => "value"
+     }
+   )
+
+For example, the following will set the ``package_name`` |ruby| variable to "httpd" for the |redhat| family of distributions and to "apache2" for the |debian| family of distributions:
 
 .. code-block:: ruby
 
