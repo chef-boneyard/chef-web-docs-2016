@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``resources`` method can be used in a recipe to look up a resource in the resource collection. The preferred syntax for the ``resources`` method is as follows:
+The ``resources`` method can be used in a recipe to look up a resource in the resource collection. If the ``resource`` method's return value is the resource that it finds in the resource collection. The preferred syntax for the ``resources`` method is as follows:
 
 .. code-block:: ruby
 
