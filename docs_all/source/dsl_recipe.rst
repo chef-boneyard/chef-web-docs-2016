@@ -39,7 +39,7 @@ Work with the Recipe DSL
 =====================================================
 Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |ruby| can also be done in a recipe, including ``if`` and ``case`` statements, using the ``include?`` |ruby| method, including recipes in recipes, and checking for dependencies.
 
-Use Ruby
+Use Ruby in Recipes
 -----------------------------------------------------
 Common |ruby| techniques can be used with the |dsl recipe| methods.
 
