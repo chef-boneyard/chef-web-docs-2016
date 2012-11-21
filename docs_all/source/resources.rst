@@ -61,11 +61,11 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_common_attribute_ignore_failure.rst
 
-.. include:: ../../steps/step_chef_common_attribute_provider_and_supports.rst
-
 .. include:: ../../steps/step_chef_common_attribute_provider.rst
 
 .. include:: ../../steps/step_chef_common_attribute_supports.rst
+
+.. include:: ../../steps/step_chef_common_attribute_provider_and_supports.rst
 
 Conditional Execution
 -----------------------------------------------------
