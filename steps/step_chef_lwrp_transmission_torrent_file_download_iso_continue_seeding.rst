@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To download an |iso| and then continue seeding:
+To download an |iso| file and then continue seeding:
 
 .. code-block:: ruby
 
