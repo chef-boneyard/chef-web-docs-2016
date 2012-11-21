@@ -5,9 +5,9 @@ The ``platform?`` method can be used in a recipe to ensure that certain actions 
 
 .. code-block:: ruby
 
-   platform?("parameter")
+   platform?("parameter", "parameter")
 
-where each ``"parameter"`` is a comma-separated list, each specifying a platform, such as |redhat|, |centos|, or |fedora|. The ``platform?`` method is typically used with an ``if``, ``elseif``, or ``case`` statement that contains |ruby| code that is specific for the platform, if detected. For example:
+where ``"parameter"`` is a comma-separated list, each specifying a platform, such as |redhat|, |centos|, or |fedora|. The ``platform?`` method is typically used with an ``if``, ``elseif``, or ``case`` statement that contains |ruby| code that is specific for the platform, if detected. For example:
 
 .. code-block:: ruby
 
