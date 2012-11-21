@@ -50,3 +50,4 @@ Array Syntax Shortcut
 =====================================================
 .. include:: ../../includes_ruby/includes_ruby_shortcut_array.rst
 
+.. include:: ../../steps/step_chef_lwrp_windows_feature_disable.rst
