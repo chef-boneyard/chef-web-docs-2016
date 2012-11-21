@@ -39,34 +39,19 @@ Follow the steps below to use the |omnibus installer| to set up a workstation on
 
 .. note:: |note install trial for hosted|
 
-The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac os x| are identical. See the following sections for more information about each step. 
+The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac os x| are identical. See the following sections for more information about each step.
 
-.. list-table::
-   :widths: 50 550
-   :header-rows: 1
+#. :doc:`install_system_requirements`
+#. :doc:`install_step_files_download`
+#. :doc:`install_step_installer_select`
+#. :doc:`install_step_installer_run`
+#. :doc:`install_step_install_git`
+#. :doc:`install_step_directory_clone`
+#. :doc:`install_step_directory_create`
+#. :doc:`install_step_files_move`
+#. :doc:`install_step_verify`
+#. :doc:`install_step_bootstrap`
 
-   * - Steps
-     - Description
-   * - 1.
-     - :doc:`install_system_requirements`
-   * - 2.
-     - :doc:`install_step_files_download`
-   * - 3.
-     - :doc:`install_step_installer_select`
-   * - 4.
-     - :doc:`install_step_installer_run`
-   * - 5.
-     - :doc:`install_step_install_git`
-   * - 6.
-     - :doc:`install_step_directory_clone`
-   * - 7.
-     - :doc:`install_step_directory_create`
-   * - 8.
-     - :doc:`install_step_files_move`
-   * - 9.
-     - :doc:`install_step_verify`
-   * - 10.
-     - :doc:`install_step_verify`
 
 .. toctree::
    :hidden:
