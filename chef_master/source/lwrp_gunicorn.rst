@@ -75,4 +75,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-step_chef_lwrp_gunicorn_install_virtual_env.rst
+.. include:: ../../steps/step_chef_lwrp_gunicorn_install_virtual_env.rst
