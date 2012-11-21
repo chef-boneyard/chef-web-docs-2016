@@ -5,7 +5,9 @@ A recipe can include one (or more) recipes found in other cookbooks by using the
 
    include_recipe "recipe"
 
-For example::
+For example:
+
+.. code-block:: ruby
 
    include_recipe "apache2::mod_ssl"
 

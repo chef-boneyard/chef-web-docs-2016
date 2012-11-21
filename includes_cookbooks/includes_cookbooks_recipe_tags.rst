@@ -1,21 +1,29 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Tags can be added and remove. Machines can be checked to see if they already have a specific tag. To use tags in your recipe simply add the following::
+Tags can be added and remove. Machines can be checked to see if they already have a specific tag. To use tags in your recipe simply add the following:
+
+.. code-block:: ruby
 
    tag('mytag')
 
-To test if a machine is tagged, add the following::
+To test if a machine is tagged, add the following:
+
+.. code-block:: ruby
 
    tagged?('mytag')
 
 to return ``true`` or ``false``. ``tagged?`` can also use an array as an argument.
 
-To remove a tag::
+To remove a tag:
+
+.. code-block:: ruby
 
    untag('mytag')
 
-For example::
+For example:
+
+.. code-block:: ruby
 
    tag("machine") 
     
@@ -29,7 +37,9 @@ For example::
       Chef::Log.info("I has no tagz") 
    end
 
-Will return something like this::
+Will return something like this:
+
+.. code-block:: bash
 
    [Thu, 22 Jul 2010 18:01:45 +0000] INFO: Hey I'm machine 
    [Thu, 22 Jul 2010 18:01:45 +0000] INFO: I has no tagz
