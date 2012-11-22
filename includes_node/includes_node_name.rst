@@ -7,4 +7,4 @@ The the name of a node is required as part of the authentication process to the 
 
 The name of a node can be obtained from the ``node_name`` attribute in the |client rb| file or by allowing |ohai| to collect this data during the |chef| run. When |ohai| collects this data during the |chef| run, it uses the |fully qualified domain name| name of the node (which is always unique within an organization) as the name of the node. 
 
-Using the |fully qualified domain name| as the node name, and then allowing |ohai| to collect this information during each |chef| run, is the recommended approach and the easiest way to ensure that the node name for all nodes in the |chef| organization are unique.
+Using the |fully qualified domain name| as the node name, and then allowing |ohai| to collect this information during each |chef| run, is the recommended approach and the easiest way to ensure that the names of all nodes across the |chef| organization are unique.
