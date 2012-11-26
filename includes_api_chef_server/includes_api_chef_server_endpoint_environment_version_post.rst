@@ -24,17 +24,32 @@ with a request body that looks something like:
        "nginx@0.99.2",
        "cron",
        "foo"
-     ] 
+     ]
    }
+
+where ``@x.x.x`` represents a constraint for a cookbook version.
 
 **Response**
 
-The response will return something like the following:
+The response will return a list of cookbooks that are required by the run-list array contained in the request. The cookbooks that are returned are often the latest versions of each cookbook. Depending on constraints in the request or on dependencies a cookbook may have for specific cookbook versions, a request may not always return the latest cookbook version for each cookbook.
+
+A response looks something like the following:
 
 .. code-block:: javascript
 
-
-
+   {
+     "mysql": "1.2.2",
+     "runit": "2.0.0",
+     "zed": "0.0.1",
+     "cron": "10.1.0",
+     "openssl": "3.1.4",
+     "gem": "0.9.9",
+     "nginx": "0.99.2",
+     "foo":
+     "0.0.1",
+     "bar": "0.5.0",
+     "build-essential": "0.4.2"
+   }
 
 .. list-table::
    :widths: 200 300
@@ -44,3 +59,13 @@ The response will return something like the following:
      - Description
    * - ``200``
      - |response code 200 ok|
+   * - ``400``
+     - |response code 400 bad request|
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|
+   * - ``404``
+     - |response code 404 not found|
+   * - ``412``
+     - |response code 412 cookbook version|

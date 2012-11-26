@@ -32,3 +32,7 @@ shown as a list of key:value pairs, where (in the example above) ``users`` and `
      - Description
    * - ``200``
      - |response code 200 ok|
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|

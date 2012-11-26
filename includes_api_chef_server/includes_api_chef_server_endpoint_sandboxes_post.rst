@@ -57,3 +57,7 @@ The response will return something like the following:
      - |response code 200 ok| A hash that maps each checksum to a hash that contains a boolean ``needs_upload`` field and a URL if ``needs_upload`` is set to ``true``.
    * - ``400``
      - |response code 400 bad request| The payload does not contain a well-formed ``checksums`` parameter that is a hash containing a key for each checksum.
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|

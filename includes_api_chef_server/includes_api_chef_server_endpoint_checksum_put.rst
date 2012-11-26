@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-**THIS TOPIC IS NOT INCLUDED IN THE DOCS.**
+**THIS ENDPOINT IS NOT PART OF THE CHEF API. IT IS AN IMPLEMENTATION DETAIL OF LOCAL COOKBOOK STORAGE. THIS TOPIC IS NOT INCLUDED IN THE PUBLISHED DOCS.**
 
 The PUT method is used to add a checksum to a sandbox.
 
@@ -29,3 +29,7 @@ This method has no response body.
      - |response code 200 ok|
    * - ``400``
      - |response code 400 checksum|
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|

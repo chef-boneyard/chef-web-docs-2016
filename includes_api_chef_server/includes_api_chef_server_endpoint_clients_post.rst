@@ -43,6 +43,8 @@ Store the private key in a safe place. It will be required later (along with the
      - Description
    * - ``201``
      - |response code 201 created|
+   * - ``400``
+     - |response code 400 bad request|
    * - ``401``
      - |response code 401 unauthorized|
    * - ``403``

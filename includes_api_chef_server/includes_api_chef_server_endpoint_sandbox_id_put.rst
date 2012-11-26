@@ -31,5 +31,9 @@ This method has no response body.
      - |response code 200 ok|
    * - ``400``
      - |response code 400 bad request|
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|
    * - ``404``
      - |response code 404 not found|

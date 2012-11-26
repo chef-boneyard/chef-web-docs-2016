@@ -56,5 +56,5 @@ The response will return something like the following:
      - |response code 200 ok|
    * - ``401``
      - |response code 401 unauthorized|
-   * - ``401``
+   * - ``403``
      - |response code 403 forbidden|

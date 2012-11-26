@@ -36,5 +36,7 @@ where the key-value pairs represent the last state of the data bag item.
      - |response code 200 ok|
    * - ``401``
      - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|
    * - ``404``
      - |response code 404 not found|

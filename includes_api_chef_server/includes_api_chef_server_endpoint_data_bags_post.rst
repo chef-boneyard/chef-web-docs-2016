@@ -39,7 +39,11 @@ The response will return something like the following:
      - Description
    * - ``201``
      - |response code 201 created|
+   * - ``400``
+     - |response code 400 bad request|
    * - ``401``
-     - |response code 401 conflict|
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|
    * - ``409``
      - |response code 409 unauthorized|

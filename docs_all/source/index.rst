@@ -44,7 +44,7 @@ Chef Topics
 * **APIs and DSLs:** :doc:`chef_server_api` | :doc:`cookbooks_site_api` | :doc:`dsl_recipe`
 
 
-.. Hide the TOC from this file. Just keep these alphabetized please. 
+.. Hide the TOC from this file. Just keep these alphabetized please.  
 
 .. toctree::
    :hidden:

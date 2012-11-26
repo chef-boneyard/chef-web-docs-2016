@@ -54,5 +54,9 @@ The response contains the total number of rows that match the request and will r
      - Description
    * - ``200``
      - |response code 200 ok|
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|
    * - ``404``
      - |response code 404 not found|

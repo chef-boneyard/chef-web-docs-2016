@@ -34,5 +34,9 @@ The response will return the |json| for the environment that was deleted, someth
      - Description
    * - ``200``
      - |response code 200 ok|
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|
    * - ``404``
      - |response code 404 not found|

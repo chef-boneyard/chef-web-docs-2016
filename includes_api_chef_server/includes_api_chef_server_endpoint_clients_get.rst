@@ -31,3 +31,7 @@ The response will return something like the following:
      - Description
    * - ``200``
      - |response code 200 ok|
+   * - ``401``
+     - |response code 401 unauthorized|
+   * - ``403``
+     - |response code 403 forbidden|
