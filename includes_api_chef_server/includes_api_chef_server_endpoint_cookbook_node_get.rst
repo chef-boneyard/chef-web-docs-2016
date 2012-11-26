@@ -72,9 +72,13 @@ The response will return something like the following:
      - Description
    * - ``200``
      - |response code 200 ok|
+   * - ``400``
+     - |response code 400 bad request|
    * - ``401``
      - |response code 401 unauthorized|
    * - ``403``
      - |response code 403 forbidden|
    * - ``404``
      - |response code 404 not found|
+   * - ``412``
+     - |response code 412 cookbook version|
