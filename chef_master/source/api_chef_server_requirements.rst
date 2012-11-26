@@ -35,12 +35,8 @@ Chef Server API
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server.rst
 
-Requirements
-=====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst
 
-Endpoints
-=====================================================
 The |api chef server| has the following endpoints:
 
 * :doc:`api_chef_server_clients`
@@ -86,7 +82,6 @@ The |api chef server| has the following endpoints:
    api_chef_server_nodes
    api_chef_server_nodes_cookbook
    api_chef_server_nodes_name
-   api_chef_server_requirements
    api_chef_server_roles
    api_chef_server_roles_name
    api_chef_server_sandboxes

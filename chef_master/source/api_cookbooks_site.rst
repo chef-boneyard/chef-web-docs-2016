@@ -37,6 +37,8 @@ Cookbooks Site API
 
 .. note:: |note api cookbooks site using knife|
 
+Endpoints
+=====================================================
 The |api cookbooks site| has the following endpoints:
 
 * :doc:`api_cookbooks_site_cookbooks`

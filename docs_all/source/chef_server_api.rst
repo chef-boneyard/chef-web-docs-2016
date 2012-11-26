@@ -34,6 +34,8 @@ Chef Server API
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server.rst
 
+Requirements
+=====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst
 
 /clients
