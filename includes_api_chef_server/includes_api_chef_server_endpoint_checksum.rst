@@ -3,4 +3,4 @@
 
 **THIS TOPIC IS NOT INCLUDED IN THE DOCS.** 
 
-The /sandboxes/SANDBOX_ID/CHECKSUM endpoint has the following methods: PUT.
+The /sandboxes/ID/CHECKSUM endpoint has the following methods: PUT.

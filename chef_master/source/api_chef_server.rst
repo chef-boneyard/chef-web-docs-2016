@@ -85,7 +85,6 @@ The |api chef server| has the following endpoints:
    api_chef_server_roles
    api_chef_server_roles_name
    api_chef_server_sandboxes
-   api_chef_server_sandboxes_checksum
    api_chef_server_sandboxes_id
    api_chef_server_search
    api_chef_server_search_index

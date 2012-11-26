@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /clients/CLIENT_NAME
+   GET /clients/NAME
 
 **Response**
 

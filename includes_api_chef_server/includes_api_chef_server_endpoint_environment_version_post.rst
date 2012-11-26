@@ -9,40 +9,32 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /environments/ENVIRONMENT_NAME/cookbook_versions
+   POST /environments/NAME/cookbook_versions
 
 with a request body that looks something like:
 
 .. code-block:: javascript
 
-   rest.post_rest("environments/_default/cookbook_versions", 
-     {:run_list => 
-       [
-         "zed@0.0.1",
-         "bar",
-         "mysql",
-         "gem",
-         "nginx@0.99.2",
-         "cron",
-         "foo"
-       ] 
-     }).keys
-     => [
-          "mysql",
-          "runit",
-          "zed",
-          "cron",
-          "openssl",
-          "gem",
-          "nginx",
-          "foo",
-          "bar",
-          "build-essential"
-        ]
+   {
+     "run_list": [
+       "zed@0.0.1",
+       "bar",
+       "mysql",
+       "gem",
+       "nginx@0.99.2",
+       "cron",
+       "foo"
+     ] 
+   }
 
 **Response**
 
-This method has no response body.
+The response will return something like the following:
+
+.. code-block:: javascript
+
+
+
 
 .. list-table::
    :widths: 200 300

@@ -54,7 +54,7 @@ POST
 
 
 
-/clients/CLIENT_NAME
+/clients/NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name.rst
 
@@ -81,7 +81,7 @@ GET
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_get.rst
 
 
-/cookbooks/COOKBOOK_NAME
+/cookbooks/NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name.rst
 
@@ -89,7 +89,7 @@ GET
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name_get.rst
 
-/cookbooks/COOKBOOK_NAME/COOKBOOK_VERSION
+/cookbooks/NAME/VERSION
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
 
@@ -122,7 +122,7 @@ POST
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_post.rst
 
 
-/data/DATA_BAG_NAME
+/data/NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name.rst
 
@@ -135,7 +135,7 @@ POST
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_post.rst
 
 
-/data/DATA_BAG_NAME/DATA_BAG_ITEM
+/data/NAME/ITEM
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag_item.rst
 
@@ -169,7 +169,7 @@ POST
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_post.rst
 
 
-/environments/ENVIRONMENT_NAME
+/environments/NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name.rst
 
@@ -185,7 +185,7 @@ PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_name_put.rst
 
-/environments/:environment_id/cookbooks
+/environments/NAME/cookbooks
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks.rst
 
@@ -194,7 +194,7 @@ GET
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst
 
 
-/environments/:environment_id/cookbook_versions
+/environments/NAME/cookbook_versions
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version.rst
 
@@ -202,7 +202,7 @@ POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_version_post.rst
 
-/environments/:environment_id/cookbooks/COOKBOOK_NAME
+/environments/NAME/cookbooks/NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name.rst
 
@@ -226,7 +226,7 @@ POST
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes_post.rst
 
 
-/nodes/NODE_NAME
+/nodes/NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name.rst
 
@@ -242,7 +242,7 @@ PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_put.rst
 
-/nodes/NODE_NAME/cookbooks
+/nodes/NAME/cookbooks
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_node.rst
 
@@ -265,7 +265,7 @@ POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_roles_post.rst
 
-/roles/ROLE_NAME
+/roles/NAME
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name.rst
 
@@ -290,7 +290,7 @@ POST
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes_post.rst
 
-/sandboxes/SANDBOX_ID
+/sandboxes/ID
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandbox_id.rst
 

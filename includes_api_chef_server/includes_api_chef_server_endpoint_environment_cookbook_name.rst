@@ -1,4 +1,4 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The /environments/ENVIRONMENT_NAME/cookbooks/COOKBOOK_NAME endpoint has the following methods: GET.
+The /environments/NAME/cookbooks/NAME endpoint has the following methods: GET.

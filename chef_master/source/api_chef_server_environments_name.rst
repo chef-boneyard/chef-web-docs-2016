@@ -1,5 +1,5 @@
 =====================================================
-/environments/ENVIRONMENT_NAME
+/environments/NAME
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt

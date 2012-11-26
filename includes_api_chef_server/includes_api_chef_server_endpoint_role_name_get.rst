@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /roles/ROLE_NAME
+   GET /roles/NAME
 
 **Response**
 

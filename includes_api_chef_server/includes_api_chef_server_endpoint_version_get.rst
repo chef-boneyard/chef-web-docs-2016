@@ -9,9 +9,9 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /cookbooks/COOKBOOK_NAME/COOKBOOK_VERSION
+   GET /cookbooks/NAME/VERSION
 
-where ``COOKBOOK_VERSION`` can be ``_latest`` in order to float to head.
+where ``VERSION`` can be ``_latest`` in order to float to head.
 
 **Response**
 

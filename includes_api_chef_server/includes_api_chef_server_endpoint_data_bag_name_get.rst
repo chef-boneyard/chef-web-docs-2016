@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   GET /data/DATA_BAG_NAME
+   GET /data/NAME
 
 **Response**
 

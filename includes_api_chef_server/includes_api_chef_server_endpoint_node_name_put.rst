@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /nodes/NODE_NAME
+   PUT /nodes/NAME
 
 
 with a request body that looks something like:

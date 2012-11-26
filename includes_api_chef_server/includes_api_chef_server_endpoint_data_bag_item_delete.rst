@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   DELETE /data/DATA_BAG_NAME/DATA_BAG_ITEM
+   DELETE /data/NAME/ITEM
 
 This method has no request body.
 

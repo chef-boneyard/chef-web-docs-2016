@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   DELETE /clients/CLIENT_NAME
+   DELETE /clients/NAME
 
 This method has no request body.
 

@@ -1,5 +1,5 @@
 =====================================================
-/nodes/NODE_NAME/cookbooks
+/nodes/NAME/cookbooks
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt

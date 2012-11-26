@@ -16,7 +16,7 @@ The GET method is used to return a hash that contains a key-value pair that corr
 
 .. code-block:: xml
 
-   GET /cookbooks/COOKBOOK_NAME
+   GET /cookbooks/NAME
 
 **Response**
 

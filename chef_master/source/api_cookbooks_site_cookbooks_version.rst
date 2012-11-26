@@ -1,5 +1,5 @@
 =====================================================
-/cookbooks/COOKBOOK_VERSION
+/cookbooks/VERSION
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt

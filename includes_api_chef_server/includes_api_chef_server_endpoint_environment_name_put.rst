@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /environments/ENVIRONMENT_NAME
+   PUT /environments/NAME
 
 with a request body that contains the updated |json| for the environment and looks something like:
 

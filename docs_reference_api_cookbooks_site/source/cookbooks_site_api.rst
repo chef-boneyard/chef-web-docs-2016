@@ -50,7 +50,7 @@ GET
 -----------------------------------------------------
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_cookbooks_get.rst
 
-/cookbooks/COOKBOOK_NAME
+/cookbooks/NAME
 =====================================================
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name.rst
 
@@ -62,7 +62,7 @@ GET
 -----------------------------------------------------
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name_get.rst
 
-/cookbooks/COOKBOOK_VERSION
+/cookbooks/VERSION
 =====================================================
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_version.rst
 

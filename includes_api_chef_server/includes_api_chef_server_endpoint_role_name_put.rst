@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /roles/ROLE_NAME
+   PUT /roles/NAME
 
 with a request body that looks something like:
 

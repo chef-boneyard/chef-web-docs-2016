@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /data/DATA_BAG_NAME
+   POST /data/NAME
 
 with a request body that looks something like:
 

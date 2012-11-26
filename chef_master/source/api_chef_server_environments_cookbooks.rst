@@ -1,5 +1,5 @@
 =====================================================
-/environments/:environment_id/cookbooks
+/environments/NAME/cookbooks
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt

@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   DELETE /cookbooks/COOKBOOK_NAME/COOKBOOK_VERSION
+   DELETE /cookbooks/NAME/VERSION
 
 **Response**
 

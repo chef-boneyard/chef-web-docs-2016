@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /clients/CLIENT_NAME
+   PUT /clients/NAME
 
 with a request body that looks something like:
 
