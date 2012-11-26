@@ -16,7 +16,7 @@ The GET method is used to return a hash of key-value pairs for the requested coo
 
 .. code-block:: xml
 
-   GET /environments/:environment_id/cookbooks/COOKBOOK_NAME
+   GET /environments/ENVIRONMENT_NAME/cookbooks/COOKBOOK_NAME
 
 **Response**
 

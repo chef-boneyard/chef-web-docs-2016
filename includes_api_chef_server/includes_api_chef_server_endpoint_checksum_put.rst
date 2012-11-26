@@ -11,7 +11,7 @@ This method has no parameters.
 
    PUT /sandboxes/SANDBOX_ID/CHECKSUM
 
-where ``CHECKSUM`` is the file which contains the checksum.
+where ``CHECKSUM`` is the file in which a checksum is located.
 
 **Response**
 

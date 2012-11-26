@@ -16,7 +16,7 @@ The GET method is used to get a list of cookbooks and cookbook versions that are
 
 .. code-block:: xml
 
-   GET /environments/:environment_id/cookbooks
+   GET /environments/ENVIRONMENT_NAME/cookbooks
 
 **Response**
 

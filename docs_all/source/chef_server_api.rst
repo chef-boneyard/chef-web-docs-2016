@@ -298,14 +298,6 @@ PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandbox_id_put.rst
 
-/sandboxes/SANDBOX_ID/CHECKSUM
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_checksum.rst
-
-PUT
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_checksum_put.rst
-
 
 /search
 =====================================================
