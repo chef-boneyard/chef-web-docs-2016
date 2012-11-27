@@ -49,6 +49,8 @@ The response will return something like the following:
      "kernel_version": {"linux": "1.2.3"},
    }
 
+**Example**
+
 For example, if a node has the following:
 
 .. code-block:: javascript
