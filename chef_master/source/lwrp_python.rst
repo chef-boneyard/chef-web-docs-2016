@@ -38,17 +38,17 @@ The ``python`` cookbook contains the following lightweight resources: ``python_p
 
 python_pip
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_python_pip.rst
+.. include:: ../../includes_lwrp/includes_lwrp_python_pip.rst
 
 .. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_python_pip_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_python_pip_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_python_pip_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_python_pip_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -62,17 +62,17 @@ Examples
 
 python_virtualenv
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_python_virtualenv.rst
+.. include:: ../../includes_lwrp/includes_lwrp_python_virtualenv.rst
 
 .. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_python_virtualenv_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_python_virtualenv_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_python_virtualenv_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_python_virtualenv_attributes.rst
 
 Examples
 -----------------------------------------------------

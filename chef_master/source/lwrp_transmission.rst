@@ -38,17 +38,17 @@ The ``transmission`` cookbook contains the following lightweight resource: ``tra
 
 transmission_torrent_file
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_transmission_torrent_file.rst
+.. include:: ../../includes_lwrp/includes_lwrp_transmission_torrent_file.rst
 
 .. note:: This lightweight resource is part of the ``transmission`` cookbook (http://community.opscode.com/cookbooks/transmission).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_transmission_torrent_file_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_transmission_torrent_file_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_transmission_torrent_file_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_transmission_torrent_file_attributes.rst
 
 Examples
 -----------------------------------------------------

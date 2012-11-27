@@ -38,17 +38,17 @@ The ``apt`` cookbook contains the following lightweight resources: ``apt_prefere
 
 apt_preference
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_preference.rst
 
 .. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_preference_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_preference_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -59,17 +59,17 @@ Examples
 
 apt_repository
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_repository.rst
 
 .. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_repository_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_repository_attributes.rst
 
 Examples
 -----------------------------------------------------

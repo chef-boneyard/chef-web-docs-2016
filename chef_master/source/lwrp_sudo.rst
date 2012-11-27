@@ -38,17 +38,17 @@ The ``sudo`` cookbook contains the following lightweight resource: ``sudo``.
 
 sudo
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_sudo.rst
+.. include:: ../../includes_lwrp/includes_lwrp_sudo.rst
 
 .. note:: This lightweight resource is part of the ``sudo`` cookbook (http://community.opscode.com/cookbooks/sudo).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_sudo_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_sudo_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_sudo_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_sudo_attributes.rst
 
 Examples
 -----------------------------------------------------

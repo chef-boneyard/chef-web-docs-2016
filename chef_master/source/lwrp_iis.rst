@@ -38,17 +38,17 @@ The ``iis`` cookbook contains the following lightweight resources: ``iis_app``, 
 
 iis_app
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_app.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_app.rst
 
 .. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_app_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_app_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_app_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_app_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -57,17 +57,17 @@ Examples
 
 iis_config
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_config.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_config.rst
 
 .. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_config_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_config_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_config_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_config_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -78,17 +78,17 @@ Examples
 
 iis_pool
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_pool.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_pool.rst
 
 .. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_pool_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_pool_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_pool_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_pool_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -96,17 +96,17 @@ Examples
 
 iis_site
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_site.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_site.rst
 
 .. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_site_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_site_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_iis_site_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_iis_site_attributes.rst
 
 Examples
 -----------------------------------------------------

@@ -38,17 +38,17 @@ The ``djbdns`` cookbook contains the following lightweight resource: ``djbdns_rr
 
 djbdns_rr
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr.rst
+.. include:: ../../includes_lwrp/includes_lwrp_djbdns_rr.rst
 
 .. note:: This lightweight resource is part of the ``djbdns`` cookbook (http://community.opscode.com/cookbooks/djbdns).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_djbdns_rr_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_djbdns_rr_attributes.rst
 
 Examples
 -----------------------------------------------------

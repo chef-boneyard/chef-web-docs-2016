@@ -242,14 +242,6 @@ PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_put.rst
 
-/nodes/NAME/cookbooks
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_node.rst
-
-GET
------------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_node_get.rst
-
 
 /roles
 =====================================================

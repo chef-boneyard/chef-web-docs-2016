@@ -38,17 +38,17 @@ The ``php`` cookbook contains the following lightweight resources: ``php_pear`` 
 
 php_pear
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_default.rst
+.. include:: ../../includes_lwrp/includes_lwrp_php_pear_default.rst
 
 .. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_default_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_php_pear_default_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_default_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_php_pear_default_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -66,17 +66,17 @@ Examples
 
 php_pear_channel
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_channel.rst
+.. include:: ../../includes_lwrp/includes_lwrp_php_pear_channel.rst
 
 .. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_channel_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_php_pear_channel_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_php_pear_channel_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_php_pear_channel_attributes.rst
 
 Examples
 -----------------------------------------------------

@@ -38,17 +38,17 @@ The ``rabbitmq`` cookbook contains the following lightweight resources: ``rabbit
 
 rabbitmq_plugin
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_plugin.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_plugin.rst
 
 .. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_plugin_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_plugin_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_plugin_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_plugin_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -58,17 +58,17 @@ Examples
 
 rabbitmq_user
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_user.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_user.rst
 
 .. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_user_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_user_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_user_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_user_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -81,17 +81,17 @@ Examples
 
 rabbitmq_vhost
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_vhost.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_vhost.rst
 
 .. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_vhost_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_vhost_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_rabbitmq_vhost_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_vhost_attributes.rst
 
 Examples
 -----------------------------------------------------

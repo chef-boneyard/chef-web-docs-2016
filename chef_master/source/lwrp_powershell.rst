@@ -38,17 +38,17 @@ The ``powershell`` cookbook contains the following lightweight resource: ``power
 
 powershell
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_powershell.rst
+.. include:: ../../includes_lwrp/includes_lwrp_powershell.rst
 
 .. note:: This lightweight resource is part of the ``powershell`` cookbook (http://community.opscode.com/cookbooks/powershell).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_powershell_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_powershell_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_powershell_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_powershell_attributes.rst
 
 Examples
 -----------------------------------------------------

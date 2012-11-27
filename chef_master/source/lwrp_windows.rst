@@ -39,17 +39,17 @@ The ``windows`` cookbook contains the following lightweight resources: ``windows
 
 windows_auto_run
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_auto_run.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_auto_run_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_auto_run_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_auto_run_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -58,17 +58,17 @@ Examples
 
 windows_batch
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_batch.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_batch.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_batch_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_batch_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_batch_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_batch_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -77,21 +77,21 @@ Examples
 
 windows_feature
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_feature.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_feature.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_feature_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_feature_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_feature_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_feature_attributes.rst
 
 Providers
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_feature_providers.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_feature_providers.rst
 
 Examples
 -----------------------------------------------------
@@ -102,17 +102,17 @@ Examples
 
 windows_package
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_package.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_package.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_package_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_package_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_package_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_package_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -135,17 +135,17 @@ Examples
 
 windows_path
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_path.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_path.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_path_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_path_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_path_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_path_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -156,17 +156,17 @@ Examples
 
 windows_reboot
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_reboot.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_reboot.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_reboot_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_reboot_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_reboot_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_reboot_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -177,17 +177,17 @@ Examples
 
 windows_registry
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_registry.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_registry.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_registry_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_registry_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_registry_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_registry_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -198,17 +198,17 @@ Examples
 
 windows_shortcut
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_shortcut.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_shortcut.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_shortcut_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_shortcut_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_shortcut_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_shortcut_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -217,17 +217,17 @@ None.
 
 windows_zipfile
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_zipfile.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_zipfile.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_zipfile_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_zipfile_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_windows_zipfile_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_windows_zipfile_attributes.rst
 
 Examples
 -----------------------------------------------------

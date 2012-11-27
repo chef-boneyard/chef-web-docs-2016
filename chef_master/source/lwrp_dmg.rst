@@ -38,7 +38,7 @@ The ``dmg`` cookbook contains the following lightweight resource: ``dmg_package`
 
 dmg_package
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dmg_package.rst
 
 .. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
 
@@ -46,11 +46,11 @@ dmg_package
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dmg_package_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dmg_package_attributes.rst
 
 Examples
 -----------------------------------------------------

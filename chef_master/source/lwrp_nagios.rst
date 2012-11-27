@@ -38,17 +38,17 @@ The ``nagios`` cookbook contains the following lightweight resource: ``nagios_nr
 
 nagios_nrpecheck
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_nagios_nrpecheck.rst
+.. include:: ../../includes_lwrp/includes_lwrp_nagios_nrpecheck.rst
 
 .. note:: This lightweight resource is part of the ``nagios`` cookbook (http://community.opscode.com/cookbooks/nagios).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_nagios_nrpecheck_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_nagios_nrpecheck_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_nagios_nrpecheck_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_nagios_nrpecheck_attributes.rst
 
 Examples
 -----------------------------------------------------

@@ -38,17 +38,17 @@ The ``webpi`` cookbook contains the following lightweight resource: ``webpi_prod
 
 webpi_product
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_webpi_product.rst
+.. include:: ../../includes_lwrp/includes_lwrp_webpi_product.rst
 
 .. note:: This lightweight resource is part of the ``webpi`` cookbook (http://community.opscode.com/cookbooks/webpi).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_webpi_product_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_webpi_product_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_webpi_product_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_webpi_product_attributes.rst
 
 Examples
 -----------------------------------------------------

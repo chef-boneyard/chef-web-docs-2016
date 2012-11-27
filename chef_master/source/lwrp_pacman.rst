@@ -38,17 +38,17 @@ The ``pacman`` cookbook contains the following lightweight resources: ``pacman_a
 
 pacman_aur
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_pacman_aur.rst
+.. include:: ../../includes_lwrp/includes_lwrp_pacman_aur.rst
 
 .. note:: This lightweight resource is part of the ``pacman`` cookbook (http://community.opscode.com/cookbooks/pacman).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_pacman_aur_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_pacman_aur_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_pacman_aur_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_pacman_aur_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -58,17 +58,17 @@ Examples
 
 pacman_group
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_pacman_group.rst
+.. include:: ../../includes_lwrp/includes_lwrp_pacman_group.rst
 
 .. note:: This lightweight resource is part of the ``pacman`` cookbook (http://community.opscode.com/cookbooks/pacman).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_pacman_group_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_pacman_group_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_pacman_group_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_pacman_group_attributes.rst
 
 Examples
 -----------------------------------------------------

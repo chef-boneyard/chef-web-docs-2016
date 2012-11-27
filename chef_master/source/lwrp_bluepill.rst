@@ -38,17 +38,17 @@ The ``bluepill`` cookbook contains the following lightweight resource: ``bluepil
 
 bluepill_service
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service.rst
+.. include:: ../../includes_lwrp/includes_lwrp_bluepill_service.rst
 
 .. note:: This lightweight resource is part of the ``bluepill`` cookbook (http://community.opscode.com/cookbooks/bluepill).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_bluepill_service_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_bluepill_service_attributes.rst
 
 Examples
 -----------------------------------------------------

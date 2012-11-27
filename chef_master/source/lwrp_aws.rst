@@ -38,21 +38,21 @@ The ``aws`` cookbook contains the following lightweight resources: ``aws_ebs_vol
 
 |amazon aws| Credentials
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_credentials.rst
 
 aws_ebs_volume
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_ebs_volume.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_ebs_volume_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_ebs_volume_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -64,17 +64,17 @@ Examples
 
 aws_elastic_ip
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_ip.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_ip_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_ip_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -85,17 +85,17 @@ Examples
 
 aws_elastic_lb
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_lb.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_lb_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_lb_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -104,17 +104,17 @@ Examples
 
 aws_resource_tag
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_resource_tag.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_resource_tag_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_resource_tag_attributes.rst
 
 Examples
 -----------------------------------------------------

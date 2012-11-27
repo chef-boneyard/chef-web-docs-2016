@@ -38,17 +38,17 @@ The ``users`` cookbook contains the following lightweight resource: ``users_mana
 
 users_manage
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_users_manage.rst
+.. include:: ../../includes_lwrp/includes_lwrp_users_manage.rst
 
 .. note:: This lightweight resource is part of the ``users`` cookbook (http://community.opscode.com/cookbooks/users).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_users_manage_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_users_manage_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_users_manage_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_users_manage_attributes.rst
 
 Examples
 -----------------------------------------------------

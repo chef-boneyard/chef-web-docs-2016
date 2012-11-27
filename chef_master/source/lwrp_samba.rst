@@ -38,17 +38,17 @@ The ``samba`` cookbook contains the following lightweight resource: ``samba_user
 
 samba_user
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_samba_user.rst
+.. include:: ../../includes_lwrp/includes_lwrp_samba_user.rst
 
 .. note:: This lightweight resource is part of the ``samba`` cookbook (http://community.opscode.com/cookbooks/samba).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_samba_user_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_samba_user_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_samba_user_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_samba_user_attributes.rst
 
 Examples
 -----------------------------------------------------

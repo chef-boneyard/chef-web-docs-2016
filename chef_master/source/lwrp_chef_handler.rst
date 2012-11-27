@@ -40,17 +40,17 @@ chef_handler
 =====================================================
 .. include:: ../../includes_handler/includes_handler.rst
 
-.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler.rst
+.. include:: ../../includes_lwrp/includes_lwrp_chef_handler.rst
 
 .. note:: This lightweight resource is part of the ``chef_handler`` cookbook (http://community.opscode.com/cookbooks/chef_handler).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst
 
 Examples
 -----------------------------------------------------

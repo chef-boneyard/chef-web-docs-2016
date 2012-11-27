@@ -38,17 +38,17 @@ The ``daemontools`` cookbook contains the following lightweight resource: ``daem
 
 daemontools_service
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service.rst
+.. include:: ../../includes_lwrp/includes_lwrp_daemontools_service.rst
 
 .. note:: This lightweight resource is part of the ``daemontools`` cookbook (http://community.opscode.com/cookbooks/daemontools).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_daemontools_service_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_daemontools_service_attributes.rst
 
 Examples
 -----------------------------------------------------

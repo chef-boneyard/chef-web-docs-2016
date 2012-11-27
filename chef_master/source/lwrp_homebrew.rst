@@ -38,21 +38,21 @@ The ``homebrew`` cookbook contains the following lightweight resource: ``homebre
 
 homebrew
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap.rst
+.. include:: ../../includes_lwrp/includes_lwrp_homebrew_tap.rst
 
 .. note:: This lightweight resource is part of the ``homebrew`` cookbook (http://community.opscode.com/cookbooks/homebrew).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_homebrew_tap_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_homebrew_tap_attributes.rst
 
 Providers
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_homebrew_tap_providers.rst
+.. include:: ../../includes_lwrp/includes_lwrp_homebrew_tap_providers.rst
 
 Examples
 -----------------------------------------------------

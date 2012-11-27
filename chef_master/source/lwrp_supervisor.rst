@@ -38,17 +38,17 @@ The ``supervisor`` cookbook contains the following lightweight resources: ``supe
 
 supervisor_fcgi
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_fcgi.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_fcgi.rst
 
 .. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_fcgi_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_fcgi_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_fcgi_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_fcgi_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -57,17 +57,17 @@ None.
 
 supervisor_group
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_group.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_group.rst
 
 .. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_group_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_group_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_group_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_group_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -76,17 +76,17 @@ None.
 
 supervisor_service
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_service.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_service.rst
 
 .. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_service_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_service_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_supervisor_service_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_supervisor_service_attributes.rst
 
 Examples
 -----------------------------------------------------

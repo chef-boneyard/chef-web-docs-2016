@@ -38,17 +38,17 @@ The ``mysql_database`` cookbook contains the following lightweight resource: ``m
 
 mysql_database
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_mysql_database.rst
+.. include:: ../../includes_lwrp/includes_lwrp_mysql_database.rst
 
 .. note:: This lightweight resource is part of the ``mysql`` cookbook (http://community.opscode.com/cookbooks/mysql).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_mysql_database_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_mysql_database_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_mysql_database_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_mysql_database_attributes.rst
 
 Examples
 -----------------------------------------------------

@@ -38,17 +38,17 @@ The ``yum`` cookbook contains the following lightweight resources: ``yum_key`` a
 
 yum_key
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_yum_key.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_key.rst
 
 .. note:: This lightweight resource is part of the ``yum`` cookbook (http://community.opscode.com/cookbooks/yum).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_yum_key_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_key_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_yum_key_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_key_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -59,17 +59,17 @@ Examples
 
 yum_repository
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_yum_repository.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_repository.rst
 
 .. note:: This lightweight resource is part of the ``yum`` cookbook (http://community.opscode.com/cookbooks/yum).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_yum_repository_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_repository_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_yum_repository_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_repository_attributes.rst
 
 Examples
 -----------------------------------------------------

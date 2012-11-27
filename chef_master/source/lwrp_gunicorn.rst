@@ -38,17 +38,17 @@ The ``gunicorn`` cookbook contains the following lightweight resources: ``gunico
 
 gunicorn_config
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_config.rst
 
 .. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_config_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_config_attributes.rst
 
 Examples
 -----------------------------------------------------
@@ -61,17 +61,17 @@ Examples
 
 gunicorn_install
 =====================================================
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_install.rst
 
 .. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_install_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_install_attributes.rst
 
 Examples
 -----------------------------------------------------
