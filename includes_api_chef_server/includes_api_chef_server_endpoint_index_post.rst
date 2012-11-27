@@ -47,6 +47,21 @@ The response will return something like the following:
      "kernel_version": {"linux": "1.2.3"},
    }
 
+For example, if a node has the following:
+
+.. code-block:: javascript
+
+   { 
+     'x' => 'foo', 
+     'kernel' => { 'a' => 1, 'foo' => 'bar', 'version' => [ 1, 2, 3 ] }
+   }
+
+it will return something like:
+
+.. code-block:: javascript
+
+   { 'kernel_version' => [ 1, 2, 3 ] }
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1
