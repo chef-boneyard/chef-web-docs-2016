@@ -19,16 +19,4 @@ All data bags are stored in the ``data_bags`` directory of the |chef| repository
             |_standard_packages.json
             |_global_shell_settings.json
 
-where ``_admins``, ``_db_users``, ``_db_config``, ``_standard_packages``, and ``_global_shell_settings`` are the names of individual data bags and all of the files that end with ``.json`` are the individual data bag items. When using |knife|, using the following syntax:
-
-.. code-block:: bash
-
-   $ knife data bag argument DATA_BAG_NAME [DATA_BAG_ITEM] (options)
-
-where ``argument`` is one of ``create``, ``delete``, or ``edit``, ``DATA_BAG_NAME`` is the name of the data bag, and ``DATA_BAG_ITEM`` is the name of the data bag item. 
-
-For example, to edit the data bag item (from the above example) named ``_sarah.json``, use the following |knife| command:
-
-.. code-block:: bash
-
-   $ knife data bag edit db_users sarah
+where ``_admins``, ``_db_users``, ``_db_config``, ``_standard_packages``, and ``_global_shell_settings`` are the names of individual data bags and all of the files that end with ``.json`` are the individual data bag items. 
