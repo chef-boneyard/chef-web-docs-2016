@@ -28,6 +28,8 @@ with a request body that contains the updated |json| for the environment and loo
 
 The response will return the updated environment.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

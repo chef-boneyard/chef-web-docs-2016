@@ -15,6 +15,8 @@ This method has no parameters.
 
 This method has no response body.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

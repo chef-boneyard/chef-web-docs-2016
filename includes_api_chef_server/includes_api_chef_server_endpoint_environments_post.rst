@@ -32,6 +32,8 @@ The response will return something like the following:
 
    { "uri": "http://localhost:4000/environments/dev" }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

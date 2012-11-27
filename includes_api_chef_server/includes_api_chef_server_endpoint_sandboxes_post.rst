@@ -47,6 +47,8 @@ The response will return something like the following:
     "sandbox_id"=>"eff7b6f8b3ef44c6867216662d5eeb5f"
    }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

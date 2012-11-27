@@ -26,6 +26,8 @@ The response will return the |json| for the environment that was deleted, someth
      "chef_type": "environment"
    }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

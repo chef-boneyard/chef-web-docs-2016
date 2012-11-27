@@ -31,6 +31,8 @@ with a request body that looks something like:
 
 The response will return the |json| for the updated role.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

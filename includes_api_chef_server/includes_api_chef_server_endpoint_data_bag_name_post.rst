@@ -26,6 +26,8 @@ where ``id`` is required.
 
 This method has no response body.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

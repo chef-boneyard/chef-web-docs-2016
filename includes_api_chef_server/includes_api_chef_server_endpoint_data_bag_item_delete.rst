@@ -26,6 +26,8 @@ The response will return something like the following:
 
 where the key-value pairs represent the last state of the data bag item.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

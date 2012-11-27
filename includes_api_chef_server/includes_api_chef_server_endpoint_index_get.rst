@@ -3,6 +3,8 @@
 
 The GET method is used to return all of the data that matches the query in the GET request.
 
+This method has the following parameters:
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1
@@ -45,6 +47,8 @@ The response contains the total number of rows that match the request and will r
        }
      ]
    }
+
+**Response Codes**
 
 .. list-table::
    :widths: 200 300

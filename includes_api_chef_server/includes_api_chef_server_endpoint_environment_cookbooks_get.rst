@@ -3,6 +3,8 @@
 
 The GET method is used to get a list of cookbooks and cookbook versions that are available to the specified environment.
 
+This method has the following parameters:
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1
@@ -44,6 +46,8 @@ The response will return something like the following:
        ]
      }
    }
+
+**Response Codes**
 
 .. list-table::
    :widths: 200 300

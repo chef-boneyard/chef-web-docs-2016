@@ -21,6 +21,8 @@ The response will return something like the following:
      "latte": "http://localhost:4000/nodes/latte"
    }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

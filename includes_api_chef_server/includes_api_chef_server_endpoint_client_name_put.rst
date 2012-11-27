@@ -35,6 +35,8 @@ The response will return something like the following:
      "admin": true
    }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

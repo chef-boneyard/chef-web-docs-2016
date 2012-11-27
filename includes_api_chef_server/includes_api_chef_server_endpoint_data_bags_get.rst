@@ -24,6 +24,8 @@ The response will return something like the following:
 
 shown as a list of key:value pairs, where (in the example above) ``users`` and ``applications`` are the keys and "http://localhost:4000/data/foo" are the values.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

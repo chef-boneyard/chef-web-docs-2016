@@ -19,6 +19,8 @@ where ``CHECKSUM`` is the file in which a checksum is located.
 
 This method has no response body.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

@@ -26,6 +26,8 @@ The response will return something like the following:
      "users": "http://localhost:4000/search/users"
    }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

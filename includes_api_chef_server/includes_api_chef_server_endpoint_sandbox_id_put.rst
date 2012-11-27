@@ -21,6 +21,8 @@ with a request body that looks something like:
 
 This method has no response body.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

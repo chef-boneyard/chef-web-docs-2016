@@ -4,6 +4,8 @@
 
 The POST method is used to return partial search results.
 
+This method has the following parameters:
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1
@@ -61,6 +63,8 @@ it will return something like:
 .. code-block:: javascript
 
    { 'kernel_version' => [ 1, 2, 3 ] }
+
+**Response Codes**
 
 .. list-table::
    :widths: 200 300

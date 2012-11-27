@@ -35,6 +35,8 @@ The response will return something like the following:
 
 Store the private key in a safe place. It will be required later (along with the client name) to access the |chef server| when using the |api chef server|.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

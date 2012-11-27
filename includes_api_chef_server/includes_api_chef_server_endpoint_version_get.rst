@@ -101,6 +101,8 @@ The response will return something like the following:
      "chef_type": "cookbook_version"
    }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

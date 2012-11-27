@@ -97,6 +97,8 @@ where the ``checksum`` values must have already been uploaded to the |chef serve
 
 This method has no response body.
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

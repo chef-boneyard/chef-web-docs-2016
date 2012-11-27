@@ -3,6 +3,8 @@
 
 The GET method is used to return a hash that contains a key-value pair that corresponds to the specified cookbook, with a URL for the cookbook and for each version of the cookbook.
 
+This method has the following parameters:
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1
@@ -35,6 +37,8 @@ The response will return something like the following:
        ]
      }
    }
+
+**Response Codes**
 
 .. list-table::
    :widths: 200 300

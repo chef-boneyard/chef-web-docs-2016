@@ -21,6 +21,8 @@ The response will return something like the following:
       "adam": "http://localhost:4000/data/users/adam"
    }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1

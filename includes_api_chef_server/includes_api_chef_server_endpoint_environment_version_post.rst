@@ -51,6 +51,8 @@ A response looks something like the following:
      "build-essential": "0.4.2"
    }
 
+**Response Codes**
+
 .. list-table::
    :widths: 200 300
    :header-rows: 1
