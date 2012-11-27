@@ -1024,17 +1024,17 @@ Some of the cookbooks contain more than one lightweight resource. Each lightweig
 
 application
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_base.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_base.rst
 
 .. note:: This lightweight resource is part of the ``application`` cookbook (http://community.opscode.com/cookbooks/application).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_base_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_base_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_base_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_base_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1043,17 +1043,17 @@ See the application-specific lightweight resources.
 
 application_java_webapp
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_java_webapp.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_java_webapp.rst
 
 .. note:: This lightweight resource is part of the ``application_java`` cookbook (http://community.opscode.com/cookbooks/application_java).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_java_webapp_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_java_webapp_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_java_webapp_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_java_webapp_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1062,17 +1062,17 @@ None.
 
 application_java_tomcat
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_java_tomcat.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_java_tomcat.rst
 
 .. note:: This lightweight resource is part of the ``application_java`` cookbook (http://community.opscode.com/cookbooks/application_java).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_java_tomcat_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_java_tomcat_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_java_tomcat_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_java_tomcat_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1151,17 +1151,17 @@ The corresponding entries will be passed to the context template:
 
 application_nginx_load_balancer
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_nginx_load_balancer.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_nginx_load_balancer.rst
 
 .. note:: This lightweight resource is part of the ``application_nginx`` cookbook (http://community.opscode.com/cookbooks/application_nginx).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_nginx_load_balancer_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_nginx_load_balancer_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_nginx_load_balancer_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_nginx_load_balancer_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1236,17 +1236,17 @@ which will be expanded to:
 
 application_php_mod_php_apache2
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_php_mod_php_apache2.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_php_mod_php_apache2.rst
 
 .. note:: This lightweight resource is part of the ``application_php`` cookbook (http://community.opscode.com/cookbooks/application_php).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_php_mod_php_apache2_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_php_mod_php_apache2_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_php_mod_php_apache2_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_php_mod_php_apache2_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1303,17 +1303,17 @@ The corresponding entries will be passed to the context template:
 
 application_php_php
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_php_php.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_php_php.rst
 
 .. note:: This lightweight resource is part of the ``application_php`` cookbook (http://community.opscode.com/cookbooks/application_php).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_php_php_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_php_php_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_php_php_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_php_php_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1322,17 +1322,17 @@ None.
 
 application_python_celery
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_celery.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_celery.rst
 
 .. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_celery_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_celery_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_celery_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_celery_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1342,17 +1342,17 @@ None.
 
 application_python_django
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_django.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_django.rst
 
 .. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_django_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_django_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_django_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_django_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1360,17 +1360,17 @@ None.
 
 application_python_gunicorn
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_gunicorn.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_gunicorn.rst
 
 .. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_gunicorn_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_gunicorn_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_python_gunicorn_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_python_gunicorn_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1431,17 +1431,17 @@ The corresponding entries will be passed to the context template:
 
 application_ruby_memcached
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_memcached.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_memcached.rst
 
 .. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_memcached_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_memcached_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_memcached_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_memcached_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1476,17 +1476,17 @@ This will generate a config/memcached.yml file:
 
 application_ruby_passenger_apache2
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_passenger_apache2.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2.rst
 
 .. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_passenger_apache2_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_passenger_apache2_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1538,17 +1538,17 @@ The corresponding entries will be passed to the context template:
 
 application_ruby_rails
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_rails.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails.rst
 
 .. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_rails_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_rails_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1557,17 +1557,17 @@ None.
 
 application_ruby_unicorn
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_unicorn.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_unicorn.rst
 
 .. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_unicorn_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_unicorn_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_application_ruby_unicorn_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_unicorn_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1576,17 +1576,17 @@ None.
 
 apt_preference
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_preference.rst
 
 .. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_preference_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_preference_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_preference_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1597,17 +1597,17 @@ Examples
 
 apt_repository
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_repository.rst
 
 .. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_repository_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_apt_repository_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_apt_repository_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1626,21 +1626,21 @@ Examples
 
 aws_ebs_volume
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_ebs_volume.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_credentials.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_ebs_volume_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_ebs_volume_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_ebs_volume_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1652,21 +1652,21 @@ Examples
 
 aws_elastic_ip
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_ip.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_credentials.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_ip_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_ip_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_ip_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1682,21 +1682,21 @@ Examples
 
 aws_elastic_lb
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_lb.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_credentials.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_lb_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_elastic_lb_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_lb_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1705,21 +1705,21 @@ Examples
 
 aws_resource_tag
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_resource_tag.rst
 
 .. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_credentials.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_credentials.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_resource_tag_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_aws_resource_tag_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_aws_resource_tag_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1731,17 +1731,17 @@ Examples
 
 bluepill_service
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service.rst
+.. include:: ../../includes_lwrp/includes_lwrp_bluepill_service.rst
 
 .. note:: This lightweight resource is part of the ``bluepill`` cookbook (http://community.opscode.com/cookbooks/bluepill).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_bluepill_service_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_bluepill_service_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_bluepill_service_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1755,17 +1755,17 @@ chef_handler
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler.rst
 
-.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler.rst
+.. include:: ../../includes_lwrp/includes_lwrp_chef_handler.rst
 
 .. note:: This lightweight resource is part of the ``chef_handler`` cookbook (http://community.opscode.com/cookbooks/chef_handler).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_chef_handler_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1779,17 +1779,17 @@ Examples
 
 daemontools_service
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service.rst
+.. include:: ../../includes_lwrp/includes_lwrp_daemontools_service.rst
 
 .. note:: This lightweight resource is part of the ``daemontools`` cookbook (http://community.opscode.com/cookbooks/daemontools).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_daemontools_service_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_daemontools_service_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_daemontools_service_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1797,17 +1797,17 @@ Examples
 
 djbdns_rr
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr.rst
+.. include:: ../../includes_lwrp/includes_lwrp_djbdns_rr.rst
 
 .. note:: This lightweight resource is part of the ``djbdns`` cookbook (http://community.opscode.com/cookbooks/djbdns).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_djbdns_rr_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_djbdns_rr_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_djbdns_rr_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1815,7 +1815,7 @@ Examples
 
 dmg_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dmg_package.rst
 
 .. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
 
@@ -1823,11 +1823,11 @@ dmg_package
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dmg_package_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_dmg_package_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dmg_package_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1843,17 +1843,17 @@ Examples
 
 dynect_rr
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_dynect_rr.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dynect_rr.rst
 
 .. note:: This lightweight resource is part of the ``dynect`` cookbook (http://community.opscode.com/cookbooks/dynect). The ``dynect_rest`` |ruby| |gem| is required.
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_dynect_rr_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dynect_rr_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_dynect_rr_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_dynect_rr_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1861,17 +1861,17 @@ Examples
 
 firewall
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_firewall_default.rst
+.. include:: ../../includes_lwrp/includes_lwrp_firewall_default.rst
 
 .. note:: This lightweight resource is part of the ``firewall`` cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_firewall_default_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_firewall_default_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_firewall_default_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_firewall_default_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1879,17 +1879,17 @@ Examples
 
 firewall_rule
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_firewall_rule.rst
+.. include:: ../../includes_lwrp/includes_lwrp_firewall_rule.rst
 
 .. note:: This lightweight resource is part of the ``firewall`` cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_firewall_rule_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_firewall_rule_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_firewall_rule_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_firewall_rule_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1900,17 +1900,17 @@ Examples
 
 freebsd_port_options
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options.rst
+.. include:: ../../includes_lwrp/includes_lwrp_freebsd_port_options.rst
 
 .. note:: This lightweight resource is part of the ``freebsd`` cookbook (http://community.opscode.com/cookbooks/freebsd).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_freebsd_port_options_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_freebsd_port_options_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_freebsd_port_options_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1922,17 +1922,17 @@ gunicorn_config
 -----------------------------------------------------
 |gunicorn desc|
 
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_config.rst
 
 .. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_config_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_config_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_config_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1947,17 +1947,17 @@ gunicorn_install
 -----------------------------------------------------
 |gunicorn desc|
 
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_install.rst
 
 .. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_install_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_lwrp_gunicorn_install_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_gunicorn_install_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
