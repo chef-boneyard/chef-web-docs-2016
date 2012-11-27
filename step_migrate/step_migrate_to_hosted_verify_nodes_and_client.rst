@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Verify that the new |hosted chef| organization does not have any nodes and that just the validator client is present. Run the following |knife| commands:
+Verify that the new |chef hosted| organization does not have any nodes and that just the validator client is present. Run the following |knife| commands:
 
 .. code-block:: bash
 
