@@ -52,4 +52,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_samba_user_create.rst
+.. include:: ../../step_lwrp/step_lwrp_samba_user_create.rst

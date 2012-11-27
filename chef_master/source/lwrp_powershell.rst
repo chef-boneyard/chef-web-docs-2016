@@ -52,12 +52,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_powershell_change_hostname.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_change_hostname.rst
 
-.. include:: ../../steps/step_chef_lwrp_powershell_pass_env_variable.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_pass_env_variable.rst
 
-.. include:: ../../steps/step_chef_lwrp_powershell_set_cwd_attribute.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_set_cwd_attribute.rst
 
-.. include:: ../../steps/step_chef_lwrp_powershell_use_cwd.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_use_cwd.rst
 
-.. include:: ../../steps/step_chef_lwrp_powershell_write_to_interpolated_path.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_write_to_interpolated_path.rst

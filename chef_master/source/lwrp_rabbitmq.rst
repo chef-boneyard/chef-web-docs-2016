@@ -52,9 +52,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_plugin_enable.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_plugin_enable.rst
 
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_plugin_disable.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_plugin_disable.rst
 
 rabbitmq_user
 =====================================================
@@ -72,11 +72,11 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_add.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_delete.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_delete.rst
 
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_set_permissions.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_set_permissions.rst
 
 
 rabbitmq_vhost
@@ -95,4 +95,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_vhost_add.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_vhost_add.rst

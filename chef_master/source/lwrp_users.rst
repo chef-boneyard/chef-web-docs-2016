@@ -52,6 +52,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_users_manage_create.rst
+.. include:: ../../step_lwrp/step_lwrp_users_manage_create.rst
 
-.. include:: ../../steps/step_chef_lwrp_users_manage_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_users_manage_remove.rst

@@ -52,17 +52,17 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_apc_pecl.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_apc_pecl.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_horde_beta.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_horde_beta.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_mongodb_pecl.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_mongodb_pecl.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_specific_version.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_specific_version.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_yaml.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_yaml.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_upgrade.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_upgrade.rst
 
 php_pear_channel
 =====================================================
@@ -80,8 +80,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_php_pear_channel_discover_horde.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_channel_discover_horde.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_channel_download_then_add.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_channel_download_then_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_channel_update_main_channels.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_channel_update_main_channels.rst

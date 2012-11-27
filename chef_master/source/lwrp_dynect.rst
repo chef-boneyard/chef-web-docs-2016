@@ -52,4 +52,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_dynect_rr_create_record.rst
+.. include:: ../../step_lwrp/step_lwrp_dynect_rr_create_record.rst

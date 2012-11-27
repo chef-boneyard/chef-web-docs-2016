@@ -1590,9 +1590,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_apt_preference_pin.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_preference_pin.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_preference_unpin.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_preference_unpin.rst
 
 
 apt_repository
@@ -1611,17 +1611,17 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_cloudkick.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_cloudkick.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_opscode_list_alternate.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_opscode_list_alternate.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_opscode_list.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_opscode_list.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_ppa_list.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_ppa_list.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_zenoss.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_zenoss.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_remove_zenoss.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_remove_zenoss.rst
 
 
 aws_ebs_volume
@@ -1644,11 +1644,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_aws_ebs_volume_create_volume_attach_to_node.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_create_volume_attach_to_node.rst
 
-.. include:: ../../steps/step_chef_lwrp_aws_ebs_volume_create_volume_from_existing_snapshot.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_create_volume_from_existing_snapshot.rst
 
-.. include:: ../../steps/step_chef_lwrp_aws_ebs_volume_prune_snapshots.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_prune_snapshots.rst
 
 aws_elastic_ip
 -----------------------------------------------------
@@ -1670,9 +1670,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_aws_elastic_ip_associate.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_elastic_ip_associate.rst
 
-.. include:: ../../steps/step_chef_lwrp_aws_elastic_ip_disassociate.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_elastic_ip_disassociate.rst
 
 
 
@@ -1700,7 +1700,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_aws_elastic_lb_add.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_elastic_lb_add.rst
 
 
 aws_resource_tag
@@ -1723,9 +1723,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_aws_resource_tag_assign_to_node.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_resource_tag_assign_to_node.rst
 
-.. include:: ../../steps/step_chef_lwrp_aws_resource_tag_assign_to_resources.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_resource_tag_assign_to_resources.rst
 
 
 
@@ -1745,11 +1745,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_blupill_service.rst
+.. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_blupill_service.rst
 
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_resource.rst
+.. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_resource.rst
 
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_resource_template.rst
+.. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_resource_template.rst
 
 chef_handler
 -----------------------------------------------------
@@ -1769,13 +1769,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_chef_handler_enable_cloudkickhandler.rst
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
 
-.. include:: ../../steps/step_chef_lwrp_chef_handler_enable_during_compile.rst
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst
 
-.. include:: ../../steps/step_chef_lwrp_chef_handler_exceptions_only.rst
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst
 
-.. include:: ../../steps/step_chef_lwrp_chef_handler_register.rst
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_register.rst
 
 daemontools_service
 -----------------------------------------------------
@@ -1793,7 +1793,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_daemontools_service_setup_directory.rst
+.. include:: ../../step_lwrp/step_lwrp_daemontools_service_setup_directory.rst
 
 djbdns_rr
 -----------------------------------------------------
@@ -1811,7 +1811,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_djbdns_rr_configure_for_tinydns.rst
+.. include:: ../../step_lwrp/step_lwrp_djbdns_rr_configure_for_tinydns.rst
 
 dmg_package
 -----------------------------------------------------
@@ -1831,15 +1831,15 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_dmg_package_install_google_chrome.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_install_google_chrome.rst
 
-.. include:: ../../steps/step_chef_lwrp_dmg_package_already_downloaded_app.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_already_downloaded_app.rst
 
-.. include:: ../../steps/step_chef_lwrp_dmg_package_install_dropbox.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_install_dropbox.rst
 
-.. include:: ../../steps/step_chef_lwrp_dmg_package_macirssi.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_macirssi.rst
 
-.. include:: ../../steps/step_chef_lwrp_dmg_package_install_tunnelblick.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_install_tunnelblick.rst
 
 dynect_rr
 -----------------------------------------------------
@@ -1857,7 +1857,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_dynect_rr_create_record.rst
+.. include:: ../../step_lwrp/step_lwrp_dynect_rr_create_record.rst
 
 firewall
 -----------------------------------------------------
@@ -1875,7 +1875,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_firewall_enable.rst
+.. include:: ../../step_lwrp/step_lwrp_firewall_enable.rst
 
 firewall_rule
 -----------------------------------------------------
@@ -1893,9 +1893,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_firewall_rule_open_ssh.rst
+.. include:: ../../step_lwrp/step_lwrp_firewall_rule_open_ssh.rst
 
-.. include:: ../../steps/step_chef_lwrp_firewall_rule_open_tcp.rst
+.. include:: ../../step_lwrp/step_lwrp_firewall_rule_open_tcp.rst
 
 
 freebsd_port_options
@@ -1914,9 +1914,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_freebsd_port_options_read.rst
+.. include:: ../../step_lwrp/step_lwrp_freebsd_port_options_read.rst
 
-.. include:: ../../steps/step_chef_lwrp_freebsd_port_options_write.rst
+.. include:: ../../step_lwrp/step_lwrp_freebsd_port_options_write.rst
 
 gunicorn_config
 -----------------------------------------------------
@@ -1936,11 +1936,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_gunicorn_config_create.rst
+.. include:: ../../step_lwrp/step_lwrp_gunicorn_config_create.rst
 
-.. include:: ../../steps/step_chef_lwrp_gunicorn_config_edit_values.rst
+.. include:: ../../step_lwrp/step_lwrp_gunicorn_config_edit_values.rst
 
-.. include:: ../../steps/step_chef_lwrp_gunicorn_config_sleep_before_fork.rst
+.. include:: ../../step_lwrp/step_lwrp_gunicorn_config_sleep_before_fork.rst
 
 
 gunicorn_install
@@ -1961,7 +1961,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_gunicorn_install_virtual_env.rst
+.. include:: ../../step_lwrp/step_lwrp_gunicorn_install_virtual_env.rst
 
 
 homebrew
@@ -1984,13 +1984,13 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_homebrew_install_mysql.rst
+.. include:: ../../step_lwrp/step_lwrp_homebrew_install_mysql.rst
 
-.. include:: ../../steps/step_chef_lwrp_homebrew_tap_repository.rst
+.. include:: ../../step_lwrp/step_lwrp_homebrew_tap_repository.rst
 
-.. include:: ../../steps/step_chef_lwrp_homebrew_untap_repository.rst
+.. include:: ../../step_lwrp/step_lwrp_homebrew_untap_repository.rst
 
-.. include:: ../../steps/step_chef_lwrp_homebrew_use_provider.rst
+.. include:: ../../step_lwrp/step_lwrp_homebrew_use_provider.rst
 
 
 iis_app
@@ -2009,7 +2009,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_iis_app_create.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_app_create.rst
 
 
 iis_config
@@ -2028,9 +2028,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_iis_config_load_array_of_commands.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_config_load_array_of_commands.rst
 
-.. include:: ../../steps/step_chef_lwrp_iis_config_set_up_logging.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_config_set_up_logging.rst
 
 
 iis_pool
@@ -2049,7 +2049,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_iis_pool_create.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_pool_create.rst
 
 iis_site
 -----------------------------------------------------
@@ -2067,11 +2067,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_iis_site_start_and_map_to_domain.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_domain.rst
 
-.. include:: ../../steps/step_chef_lwrp_iis_site_start_and_map_to_location.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_location.rst
 
-.. include:: ../../steps/step_chef_lwrp_iis_site_stop.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_site_stop.rst
 
 
 maven
@@ -2090,7 +2090,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_maven_install.rst
+.. include:: ../../step_lwrp/step_lwrp_maven_install.rst
 
 
 
@@ -2110,13 +2110,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_mysql_database_create_database.rst
+.. include:: ../../step_lwrp/step_lwrp_mysql_database_create_database.rst
 
-.. include:: ../../steps/step_chef_lwrp_mysql_database_flush_tables.rst
+.. include:: ../../step_lwrp/step_lwrp_mysql_database_flush_tables.rst
 
-.. include:: ../../steps/step_chef_lwrp_mysql_database_query_database.rst
+.. include:: ../../step_lwrp/step_lwrp_mysql_database_query_database.rst
 
-.. include:: ../../steps/step_chef_lwrp_mysql_database_unlock_tables.rst
+.. include:: ../../step_lwrp/step_lwrp_mysql_database_unlock_tables.rst
 
 
 
@@ -2136,9 +2136,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_nagios_nrpecheck_define.rst
+.. include:: ../../step_lwrp/step_lwrp_nagios_nrpecheck_define.rst
 
-.. include:: ../../steps/step_chef_lwrp_nagios_nrpecheck_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_nagios_nrpecheck_remove.rst
 
 
 pacman_aur
@@ -2157,9 +2157,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_pacman_aur_use_simple_package.rst
+.. include:: ../../step_lwrp/step_lwrp_pacman_aur_use_simple_package.rst
 
-.. include:: ../../steps/step_chef_lwrp_pacman_aur_use_custom_package.rst
+.. include:: ../../step_lwrp/step_lwrp_pacman_aur_use_custom_package.rst
 
 pacman_group
 -----------------------------------------------------
@@ -2177,7 +2177,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_pacman_group_base_devel.rst
+.. include:: ../../step_lwrp/step_lwrp_pacman_group_base_devel.rst
 
 php_pear
 -----------------------------------------------------
@@ -2195,17 +2195,17 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_apc_pecl.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_apc_pecl.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_horde_beta.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_horde_beta.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_mongodb_pecl.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_mongodb_pecl.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_specific_version.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_specific_version.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_install_yaml.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_install_yaml.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_upgrade.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_upgrade.rst
 
 php_pear_channel
 -----------------------------------------------------
@@ -2223,11 +2223,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_php_pear_channel_discover_horde.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_channel_discover_horde.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_channel_download_then_add.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_channel_download_then_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_php_pear_channel_update_main_channels.rst
+.. include:: ../../step_lwrp/step_lwrp_php_pear_channel_update_main_channels.rst
 
 
 
@@ -2247,15 +2247,15 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_powershell_change_hostname.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_change_hostname.rst
 
-.. include:: ../../steps/step_chef_lwrp_powershell_pass_env_variable.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_pass_env_variable.rst
 
-.. include:: ../../steps/step_chef_lwrp_powershell_set_cwd_attribute.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_set_cwd_attribute.rst
 
-.. include:: ../../steps/step_chef_lwrp_powershell_use_cwd.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_use_cwd.rst
 
-.. include:: ../../steps/step_chef_lwrp_powershell_write_to_interpolated_path.rst
+.. include:: ../../step_lwrp/step_lwrp_powershell_write_to_interpolated_path.rst
 
 
 python_pip
@@ -2274,13 +2274,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_python_pip_install_gunicorn.rst
+.. include:: ../../step_lwrp/step_lwrp_python_pip_install_gunicorn.rst
 
-.. include:: ../../steps/step_chef_lwrp_python_pip_install_specific_pip.rst
+.. include:: ../../step_lwrp/step_lwrp_python_pip_install_specific_pip.rst
 
-.. include:: ../../steps/step_chef_lwrp_python_pip_target_virtualenv.rst
+.. include:: ../../step_lwrp/step_lwrp_python_pip_target_virtualenv.rst
 
-.. include:: ../../steps/step_chef_lwrp_python_pip_use_with_core_package_resource.rst
+.. include:: ../../step_lwrp/step_lwrp_python_pip_use_with_core_package_resource.rst
 
 python_virtualenv
 -----------------------------------------------------
@@ -2299,9 +2299,9 @@ Attributes
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-.. include:: ../../steps/step_chef_lwrp_python_virtualenv_create_python.rst
+.. include:: ../../step_lwrp/step_lwrp_python_virtualenv_create_python.rst
 
-.. include:: ../../steps/step_chef_lwrp_python_virtualenv_create_ubuntu.rst
+.. include:: ../../step_lwrp/step_lwrp_python_virtualenv_create_ubuntu.rst
 
 
 rabbitmq_plugin
@@ -2320,9 +2320,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_plugin_enable.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_plugin_enable.rst
 
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_plugin_disable.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_plugin_disable.rst
 
 rabbitmq_user
 -----------------------------------------------------
@@ -2340,11 +2340,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_add.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_delete.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_delete.rst
 
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_user_set_permissions.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_set_permissions.rst
 
 
 rabbitmq_vhost
@@ -2363,7 +2363,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_rabbitmq_vhost_add.rst
+.. include:: ../../step_lwrp/step_lwrp_rabbitmq_vhost_add.rst
 
 
 riak_cluster
@@ -2382,7 +2382,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_riak_cluster_add_to_cluster.rst
+.. include:: ../../step_lwrp/step_lwrp_riak_cluster_add_to_cluster.rst
 
 samba_user
 -----------------------------------------------------
@@ -2400,7 +2400,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_samba_user_create.rst
+.. include:: ../../step_lwrp/step_lwrp_samba_user_create.rst
 
 
 sudo
@@ -2419,9 +2419,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_sudo_mode_default.rst
+.. include:: ../../step_lwrp/step_lwrp_sudo_mode_default.rst
 
-.. include:: ../../steps/step_chef_lwrp_sudo_mode_template.rst
+.. include:: ../../step_lwrp/step_lwrp_sudo_mode_template.rst
 
 
 
@@ -2479,7 +2479,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_supervisor_service_enable.rst
+.. include:: ../../step_lwrp/step_lwrp_supervisor_service_enable.rst
 
 
 
@@ -2500,9 +2500,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso.rst
+.. include:: ../../step_lwrp/step_lwrp_transmission_torrent_file_download_iso.rst
 
-.. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
+.. include:: ../../step_lwrp/step_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
 
 
 users_manage
@@ -2521,9 +2521,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_users_manage_create.rst
+.. include:: ../../step_lwrp/step_lwrp_users_manage_create.rst
 
-.. include:: ../../steps/step_chef_lwrp_users_manage_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_users_manage_remove.rst
 
 
 
@@ -2543,9 +2543,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_webpi_product_install_powershell.rst
+.. include:: ../../step_lwrp/step_lwrp_webpi_product_install_powershell.rst
 
-.. include:: ../../steps/step_chef_lwrp_webpi_product_install_iis.rst
+.. include:: ../../step_lwrp/step_lwrp_webpi_product_install_iis.rst
 
 
 
@@ -2565,7 +2565,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_windows_auto_run_at_login.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_auto_run_at_login.rst
 
 windows_batch
 -----------------------------------------------------
@@ -2583,7 +2583,7 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_windows_batch_run.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_batch_run.rst
 
 windows_feature
 -----------------------------------------------------
@@ -2605,9 +2605,9 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_windows_feature_enable.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_feature_enable.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_feature_disable.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_feature_disable.rst
 
 
 windows_package
@@ -2626,21 +2626,21 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_putty.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_putty.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_7zip.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_7zip.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_remove_7zip.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_remove_7zip.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_notepad_plusplus.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_notepad_plusplus.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_firefox.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_firefox.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_vlc.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_vlc.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_google_chrome.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_google_chrome.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_remove_google_chrome.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_remove_google_chrome.rst
 
 
 windows_path
@@ -2659,9 +2659,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_windows_path_add.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_path_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_path_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_path_remove.rst
 
 
 
@@ -2681,9 +2681,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_windows_reboot_schedule.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_reboot_schedule.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_reboot_cancel.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_reboot_cancel.rst
 
 
 windows_registry
@@ -2702,9 +2702,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_windows_registry_enable_remote_desktop.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_registry_enable_remote_desktop.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_registry_match_proxy.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_registry_match_proxy.rst
 
 
 windows_shortcut
@@ -2742,9 +2742,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_windows_zipfile_unzip_remote.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_remote.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_zipfile_unzip_local.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_local.rst
 
 
 yum_key
@@ -2763,9 +2763,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_yum_key_add.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_key_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_yum_key_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_key_remove.rst
 
 
 yum_repository
@@ -2784,9 +2784,9 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_yum_repository_add.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_repository_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_yum_repository_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_repository_remove.rst
 
 
 zenoss_zenbatchload

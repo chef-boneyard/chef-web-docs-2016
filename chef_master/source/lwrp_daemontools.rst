@@ -52,4 +52,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_daemontools_service_setup_directory.rst
+.. include:: ../../step_lwrp/step_lwrp_daemontools_service_setup_directory.rst

@@ -52,4 +52,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_maven_install.rst
+.. include:: ../../step_lwrp/step_lwrp_maven_install.rst

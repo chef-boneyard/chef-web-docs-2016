@@ -54,12 +54,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_dmg_package_install_google_chrome.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_install_google_chrome.rst
 
-.. include:: ../../steps/step_chef_lwrp_dmg_package_already_downloaded_app.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_already_downloaded_app.rst
 
-.. include:: ../../steps/step_chef_lwrp_dmg_package_install_dropbox.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_install_dropbox.rst
 
-.. include:: ../../steps/step_chef_lwrp_dmg_package_macirssi.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_macirssi.rst
 
-.. include:: ../../steps/step_chef_lwrp_dmg_package_install_tunnelblick.rst
+.. include:: ../../step_lwrp/step_lwrp_dmg_package_install_tunnelblick.rst

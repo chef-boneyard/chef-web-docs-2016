@@ -52,9 +52,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_pacman_aur_use_simple_package.rst
+.. include:: ../../step_lwrp/step_lwrp_pacman_aur_use_simple_package.rst
 
-.. include:: ../../steps/step_chef_lwrp_pacman_aur_use_custom_package.rst
+.. include:: ../../step_lwrp/step_lwrp_pacman_aur_use_custom_package.rst
 
 pacman_group
 =====================================================
@@ -72,4 +72,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_pacman_group_base_devel.rst
+.. include:: ../../step_lwrp/step_lwrp_pacman_group_base_devel.rst

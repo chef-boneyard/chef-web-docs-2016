@@ -52,7 +52,7 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_iis_app_create.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_app_create.rst
 
 
 iis_config
@@ -71,9 +71,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_iis_config_load_array_of_commands.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_config_load_array_of_commands.rst
 
-.. include:: ../../steps/step_chef_lwrp_iis_config_set_up_logging.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_config_set_up_logging.rst
 
 
 iis_pool
@@ -92,7 +92,7 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_iis_pool_create.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_pool_create.rst
 
 iis_site
 =====================================================
@@ -110,8 +110,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_iis_site_start_and_map_to_domain.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_domain.rst
 
-.. include:: ../../steps/step_chef_lwrp_iis_site_start_and_map_to_location.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_location.rst
 
-.. include:: ../../steps/step_chef_lwrp_iis_site_stop.rst
+.. include:: ../../step_lwrp/step_lwrp_iis_site_stop.rst

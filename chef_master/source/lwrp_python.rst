@@ -52,13 +52,13 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_python_pip_install_gunicorn.rst
+.. include:: ../../step_lwrp/step_lwrp_python_pip_install_gunicorn.rst
 
-.. include:: ../../steps/step_chef_lwrp_python_pip_install_specific_pip.rst
+.. include:: ../../step_lwrp/step_lwrp_python_pip_install_specific_pip.rst
 
-.. include:: ../../steps/step_chef_lwrp_python_pip_target_virtualenv.rst
+.. include:: ../../step_lwrp/step_lwrp_python_pip_target_virtualenv.rst
 
-.. include:: ../../steps/step_chef_lwrp_python_pip_use_with_core_package_resource.rst
+.. include:: ../../step_lwrp/step_lwrp_python_pip_use_with_core_package_resource.rst
 
 python_virtualenv
 =====================================================
@@ -76,6 +76,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_python_virtualenv_create_python.rst
+.. include:: ../../step_lwrp/step_lwrp_python_virtualenv_create_python.rst
 
-.. include:: ../../steps/step_chef_lwrp_python_virtualenv_create_ubuntu.rst
+.. include:: ../../step_lwrp/step_lwrp_python_virtualenv_create_ubuntu.rst

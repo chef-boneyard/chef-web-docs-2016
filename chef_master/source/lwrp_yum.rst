@@ -52,9 +52,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_yum_key_add.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_key_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_yum_key_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_key_remove.rst
 
 
 yum_repository
@@ -73,6 +73,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_yum_repository_add.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_repository_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_yum_repository_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_repository_remove.rst

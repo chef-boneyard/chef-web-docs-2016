@@ -56,11 +56,11 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_lwrp_aws_ebs_volume_create_volume_attach_to_node.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_create_volume_attach_to_node.rst
 
-.. include:: ../../steps/step_chef_lwrp_aws_ebs_volume_create_volume_from_existing_snapshot.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_create_volume_from_existing_snapshot.rst
 
-.. include:: ../../steps/step_chef_lwrp_aws_ebs_volume_prune_snapshots.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_prune_snapshots.rst
 
 aws_elastic_ip
 =====================================================
@@ -78,9 +78,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_aws_elastic_ip_associate.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_elastic_ip_associate.rst
 
-.. include:: ../../steps/step_chef_lwrp_aws_elastic_ip_disassociate.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_elastic_ip_disassociate.rst
 
 
 aws_elastic_lb
@@ -99,7 +99,7 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_aws_elastic_lb_add.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_elastic_lb_add.rst
 
 
 aws_resource_tag
@@ -118,6 +118,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_aws_resource_tag_assign_to_node.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_resource_tag_assign_to_node.rst
 
-.. include:: ../../steps/step_chef_lwrp_aws_resource_tag_assign_to_resources.rst
+.. include:: ../../step_lwrp/step_lwrp_aws_resource_tag_assign_to_resources.rst

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Example: template resource in the example recipe
+To use the ``template`` resource in a recipe:
 
 .. code-block:: ruby
 

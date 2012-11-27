@@ -53,7 +53,7 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_windows_auto_run_at_login.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_auto_run_at_login.rst
 
 
 windows_batch
@@ -72,7 +72,7 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_windows_batch_run.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_batch_run.rst
 
 
 windows_feature
@@ -95,9 +95,9 @@ Providers
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_windows_feature_enable.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_feature_enable.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_feature_disable.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_feature_disable.rst
 
 
 windows_package
@@ -116,21 +116,21 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_putty.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_putty.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_7zip.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_7zip.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_remove_7zip.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_remove_7zip.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_notepad_plusplus.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_notepad_plusplus.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_firefox.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_firefox.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_vlc.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_vlc.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_install_google_chrome.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_install_google_chrome.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_package_remove_google_chrome.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_package_remove_google_chrome.rst
 
 
 windows_path
@@ -149,9 +149,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_windows_path_add.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_path_add.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_path_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_path_remove.rst
 
 
 windows_reboot
@@ -170,9 +170,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_windows_reboot_schedule.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_reboot_schedule.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_reboot_cancel.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_reboot_cancel.rst
 
 
 windows_registry
@@ -191,9 +191,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_windows_registry_enable_remote_desktop.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_registry_enable_remote_desktop.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_registry_match_proxy.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_registry_match_proxy.rst
 
 
 windows_shortcut
@@ -231,6 +231,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_windows_zipfile_unzip_remote.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_remote.rst
 
-.. include:: ../../steps/step_chef_lwrp_windows_zipfile_unzip_local.rst
+.. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_local.rst

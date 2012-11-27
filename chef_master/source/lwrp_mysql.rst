@@ -52,10 +52,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_mysql_database_create_database.rst
+.. include:: ../../step_lwrp/step_lwrp_mysql_database_create_database.rst
 
-.. include:: ../../steps/step_chef_lwrp_mysql_database_flush_tables.rst
+.. include:: ../../step_lwrp/step_lwrp_mysql_database_flush_tables.rst
 
-.. include:: ../../steps/step_chef_lwrp_mysql_database_query_database.rst
+.. include:: ../../step_lwrp/step_lwrp_mysql_database_query_database.rst
 
-.. include:: ../../steps/step_chef_lwrp_mysql_database_unlock_tables.rst
+.. include:: ../../step_lwrp/step_lwrp_mysql_database_unlock_tables.rst

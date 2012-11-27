@@ -52,11 +52,11 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_gunicorn_config_create.rst
+.. include:: ../../step_lwrp/step_lwrp_gunicorn_config_create.rst
 
-.. include:: ../../steps/step_chef_lwrp_gunicorn_config_edit_values.rst
+.. include:: ../../step_lwrp/step_lwrp_gunicorn_config_edit_values.rst
 
-.. include:: ../../steps/step_chef_lwrp_gunicorn_config_sleep_before_fork.rst
+.. include:: ../../step_lwrp/step_lwrp_gunicorn_config_sleep_before_fork.rst
 
 
 gunicorn_install
@@ -75,4 +75,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_gunicorn_install_virtual_env.rst
+.. include:: ../../step_lwrp/step_lwrp_gunicorn_install_virtual_env.rst

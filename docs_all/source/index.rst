@@ -43,7 +43,6 @@ Chef Topics
 * **Config Files:** :doc:`client_rb` | :doc:`knife_rb` | :doc:`metadata_rb` | :doc:`server_rb` | :doc:`solo_rb` | :doc:`solr_rb`
 * **APIs and DSLs:** :doc:`chef_server_api` | :doc:`cookbooks_site_api` | :doc:`dsl_recipe`
 
-
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
 .. toctree::

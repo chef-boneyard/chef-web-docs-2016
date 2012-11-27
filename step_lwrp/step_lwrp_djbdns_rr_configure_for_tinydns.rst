@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-In the example, the node[:djbdns][:tinydns_internal_dir] is the djbdns cookbook attribute for the default location where the internal tinydns service is configured.
+To add an entry using the ``node[:djbdns][:tinydns_internal_dir]`` |djbdns| cookbook attribute for the default location where the internal ``tinydns`` service is configured:
 
 .. code-block:: ruby
 

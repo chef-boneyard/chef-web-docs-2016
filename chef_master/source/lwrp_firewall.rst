@@ -52,7 +52,7 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_firewall_enable.rst
+.. include:: ../../step_lwrp/step_lwrp_firewall_enable.rst
 
 firewall_rule
 =====================================================
@@ -70,6 +70,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_firewall_rule_open_ssh.rst
+.. include:: ../../step_lwrp/step_lwrp_firewall_rule_open_ssh.rst
 
-.. include:: ../../steps/step_chef_lwrp_firewall_rule_open_tcp.rst
+.. include:: ../../step_lwrp/step_lwrp_firewall_rule_open_tcp.rst

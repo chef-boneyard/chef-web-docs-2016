@@ -52,6 +52,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_webpi_product_install_powershell.rst
+.. include:: ../../step_lwrp/step_lwrp_webpi_product_install_powershell.rst
 
-.. include:: ../../steps/step_chef_lwrp_webpi_product_install_iis.rst
+.. include:: ../../step_lwrp/step_lwrp_webpi_product_install_iis.rst

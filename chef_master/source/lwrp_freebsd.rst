@@ -52,6 +52,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_freebsd_port_options_read.rst
+.. include:: ../../step_lwrp/step_lwrp_freebsd_port_options_read.rst
 
-.. include:: ../../steps/step_chef_lwrp_freebsd_port_options_write.rst
+.. include:: ../../step_lwrp/step_lwrp_freebsd_port_options_write.rst

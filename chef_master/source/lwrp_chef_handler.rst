@@ -54,10 +54,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_chef_handler_enable_cloudkickhandler.rst
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
 
-.. include:: ../../steps/step_chef_lwrp_chef_handler_enable_during_compile.rst
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst
 
-.. include:: ../../steps/step_chef_lwrp_chef_handler_exceptions_only.rst
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst
 
-.. include:: ../../steps/step_chef_lwrp_chef_handler_register.rst
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_register.rst

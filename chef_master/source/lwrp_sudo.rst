@@ -52,6 +52,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_sudo_mode_default.rst
+.. include:: ../../step_lwrp/step_lwrp_sudo_mode_default.rst
 
-.. include:: ../../steps/step_chef_lwrp_sudo_mode_template.rst
+.. include:: ../../step_lwrp/step_lwrp_sudo_mode_template.rst

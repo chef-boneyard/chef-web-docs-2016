@@ -90,4 +90,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_supervisor_service_enable.rst
+.. include:: ../../step_lwrp/step_lwrp_supervisor_service_enable.rst

@@ -52,6 +52,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso.rst
+.. include:: ../../step_lwrp/step_lwrp_transmission_torrent_file_download_iso.rst
 
-.. include:: ../../steps/step_chef_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
+.. include:: ../../step_lwrp/step_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst

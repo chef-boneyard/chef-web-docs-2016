@@ -52,9 +52,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_apt_preference_pin.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_preference_pin.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_preference_unpin.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_preference_unpin.rst
 
 
 apt_repository
@@ -73,14 +73,14 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_cloudkick.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_cloudkick.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_opscode_list_alternate.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_opscode_list_alternate.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_opscode_list.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_opscode_list.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_ppa_list.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_ppa_list.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_add_zenoss.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_zenoss.rst
 
-.. include:: ../../steps/step_chef_lwrp_apt_repository_remove_zenoss.rst
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_remove_zenoss.rst

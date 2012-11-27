@@ -52,8 +52,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_blupill_service.rst
+.. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_blupill_service.rst
 
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_resource.rst
+.. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_resource.rst
 
-.. include:: ../../steps/step_chef_lwrp_bluepill_service_use_resource_template.rst
+.. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_resource_template.rst

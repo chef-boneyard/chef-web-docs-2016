@@ -52,4 +52,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_djbdns_rr_configure_for_tinydns.rst
+.. include:: ../../step_lwrp/step_lwrp_djbdns_rr_configure_for_tinydns.rst

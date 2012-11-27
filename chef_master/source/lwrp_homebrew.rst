@@ -56,10 +56,10 @@ Providers
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_homebrew_install_mysql.rst
+.. include:: ../../step_lwrp/step_lwrp_homebrew_install_mysql.rst
 
-.. include:: ../../steps/step_chef_lwrp_homebrew_tap_repository.rst
+.. include:: ../../step_lwrp/step_lwrp_homebrew_tap_repository.rst
 
-.. include:: ../../steps/step_chef_lwrp_homebrew_untap_repository.rst
+.. include:: ../../step_lwrp/step_lwrp_homebrew_untap_repository.rst
 
-.. include:: ../../steps/step_chef_lwrp_homebrew_use_provider.rst
+.. include:: ../../step_lwrp/step_lwrp_homebrew_use_provider.rst

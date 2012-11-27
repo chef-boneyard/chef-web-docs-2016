@@ -52,6 +52,6 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_nagios_nrpecheck_define.rst
+.. include:: ../../step_lwrp/step_lwrp_nagios_nrpecheck_define.rst
 
-.. include:: ../../steps/step_chef_lwrp_nagios_nrpecheck_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_nagios_nrpecheck_remove.rst

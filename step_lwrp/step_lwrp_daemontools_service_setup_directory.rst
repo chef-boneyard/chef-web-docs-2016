@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Example: The following example will set up /etc/sv/chef-client directory, /etc/sv/chef-client/run script from the specified template, and the /etc/sv/chef-client/log/run script.
+To set up the ``/etc/sv/chef-client`` directory, ``/etc/sv/chef-client/run`` script from the specified template, and the ``/etc/sv/chef-client/log/run`` script:
 
 .. code-block:: ruby
 

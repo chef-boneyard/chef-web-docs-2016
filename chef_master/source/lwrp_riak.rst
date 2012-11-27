@@ -52,4 +52,4 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_lwrp_riak_cluster_add_to_cluster.rst
+.. include:: ../../step_lwrp/step_lwrp_riak_cluster_add_to_cluster.rst
