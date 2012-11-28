@@ -13,10 +13,4 @@ This argument does not have any argument-specific options.
 
 **Examples**
 
-To delete tags named "denver" and "phoenix", enter:
-
-.. code-block:: bash
-
-   $ knife tag delete node denver phoenix
-
-Type ``Y`` to confirm a deletion.
+.. include:: ../../step_knife/step_knife_tag_delete.rst

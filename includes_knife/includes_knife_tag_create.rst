@@ -13,8 +13,4 @@ This argument does not have any argument-specific options.
 
 **Examples**
 
-To create tags named "seattle", "portland", and "vancouver", enter:
-
-.. code-block:: bash
-
-   $ knife tag create node seattle portland vancouver
+.. include:: ../../step_knife/step_knife_tag_create.rst
