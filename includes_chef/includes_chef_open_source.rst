@@ -1,4 +1,4 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef open server| is an open source version of the |chef server| that contains much of the same functionality as either |chef hosted| or |chef private|, but does not include support directly from |opscode|.
+|chef open server| is an open source version of the |chef server| that contains much of the same functionality as |chef hosted|, but requires that each instance be configured and managed locally, including performing data migrations, applying updates to |chef open server|, and ensuring that the |chef open server| scales as the local infrastructure it is supporting grows. |chef open server| includes support from the |chef| community, but does not include support directly from |opscode|.

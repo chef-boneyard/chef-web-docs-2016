@@ -2,13 +2,7 @@
 
 Register your existing servers with |chef hosted|. Use a custom |knife| bootstrap template to populate the nodes with the correct configuration file and validation certificate, delete the existing client certificate, and then run the |chef client| to register the node as a new API client for |chef hosted|.
 
-**FIX**
-
-If nodes are running a Microsoft Windows platform, you will need to use the Knife Windows Bootstrap and modify the template for the Windows platform. Be sure to remove the client.pem file, typically c:\chef\client.pem.
-
-Note This assumes, as above, that your Hosted Chef organization has no data for these nodes. The run list will be empty. We will populate that from the backed up node data in a later step. It is important to bootstrap the nodes at this stage before restoring the backup, in order to avoid creating a permissions issue.
-
-**FIX**
+If nodes are running on the |windows| platform, the ``knife bootstrap`` sub-command must be used and the template must be modified for the |windows| platform. Be sure to remove the ``client.pem`` file, typically located at ``c:\chef\client.pem``. This also assumes that the |chef hosted| organization does not have any data for nodes that will run on the |windows| platform and that the run list is empty. (The run-list will be re-populated from backed-up data.) It is important to bootstrap the nodes at this stage before restoring the backup, in order to avoid creating a permissions issue.
 
 Save the following script as ``.chef/bootstrap/migration.erb`` within the |chef| repository. If the |client rb| file has been modified, this script will also need to be modified.
 
