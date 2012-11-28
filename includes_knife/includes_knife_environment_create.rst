@@ -14,6 +14,8 @@ This argument has the following options:
 ``-d DESCRIPTION``, ``--description DESCRIPTION``
    |description environment|
 
+**Examples**
+
 For example:
 
 .. code-block:: bash

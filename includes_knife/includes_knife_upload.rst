@@ -23,42 +23,21 @@ This sub-command has the following options:
 ``--force``
    |force knife upload|
 
-For example, to upload an environment named "production":
+**Examples**
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_upload_repository.rst
 
-   $ knife upload environments/production.json
+.. include:: ../../step_knife/step_knife_upload_directory_cookbooks.rst
 
-or, (if already in the ``environments/`` directory in the local |chef| repository):
+.. include:: ../../step_knife/step_knife_upload_directory_environments.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_upload_directory_environment.rst
 
-   $ knife upload production.json
+.. include:: ../../step_knife/step_knife_upload_directory_roles.rst
 
-To upload all roles, go to the top level:
+.. include:: ../../step_knife/step_knife_upload_directory_cookbooks_and_role.rst
 
-.. code-block:: bash
 
-   $ knife upload roles
 
-   or, from anywhere:
 
-   $ knife upload /roles
 
-To upload cookbooks starting with the word "apache" as well as the "webserver" role, go to the top level and do:
-
-.. code-block:: bash
-
-   $ knife upload cookbooks/apache\* roles/webserver.json
-
-To upload everything in the entire repository, go to the top level directory and type:
-
-.. code-block:: bash
-
-   $ knife upload
-
-or, from any directory:
-
-.. code-block:: bash
-
-   $ knife upload /

@@ -28,6 +28,8 @@ This argument has the following options:
 ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
    |cookbook-path|
 
+**Examples**
+
 For example:
 
 .. code-block:: bash

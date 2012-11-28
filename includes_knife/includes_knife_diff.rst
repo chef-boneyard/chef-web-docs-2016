@@ -20,6 +20,8 @@ This sub-command has the following options:
 ``--no-recurse``
    |no recurse diff|
 
+**Examples**
+
 For example, to compare the differences between the local |chef| repository and the files that are on the |chef server|, enter:
 
 .. code-block:: bash

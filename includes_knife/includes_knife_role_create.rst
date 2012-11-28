@@ -14,6 +14,8 @@ This argument has the following options:
 ``-d DESCRIPTION``, ``--description DESCRIPTION``
    |description role|
 
+**Examples**
+
 For example, to add a role named "role1", enter:
 
 .. code-block:: bash

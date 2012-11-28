@@ -17,6 +17,8 @@ This argument has the following options:
 ``-w``, ``--with-uri``
    |with-uri|
 
+**Examples**
+
 For example:
 
 .. code-block:: bash

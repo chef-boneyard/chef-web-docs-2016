@@ -11,8 +11,10 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
-For example:
+**Examples**
+
+To create tags named "seattle", "portland", and "vancouver", enter:
 
 .. code-block:: bash
 
-   $ knife tag create node tag1 tag2 tag3
+   $ knife tag create node seattle portland vancouver

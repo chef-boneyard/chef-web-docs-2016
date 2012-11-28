@@ -23,6 +23,8 @@ This argument has the following options:
 ``--region REGION``
    |region openstack|
 
+**Examples**
+
 For example, to delete a server named "qa-test-01", enter:
 
 .. code-block:: bash

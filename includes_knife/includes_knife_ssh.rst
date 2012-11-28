@@ -44,6 +44,8 @@ This sub-command has the following options:
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
 
+**Examples**
+
 For example, to query for all nodes that have the "webserver" role and then use |ssh| to run the command "sudo chef-client", enter:
 
 .. code-block:: bash

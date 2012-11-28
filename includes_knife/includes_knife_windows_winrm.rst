@@ -53,6 +53,8 @@ This argument has the following options:
 ``-x USERNAME``, ``--winrm-user USERNAME``
    |winrm-user|
 
+**Examples**
+
 For example, to find the uptime of all web servers, enter:
 
 .. code-block:: bash

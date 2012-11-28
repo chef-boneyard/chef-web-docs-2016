@@ -19,7 +19,9 @@ This argument has the following options:
 
 ``-N``, ``--latest``
    |latest|
- 
+
+**Examples**
+
 For example, to download a cookbook named "smartmon", enter:
 
 .. code-block:: bash

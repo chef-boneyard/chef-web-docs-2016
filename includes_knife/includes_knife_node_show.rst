@@ -23,6 +23,8 @@ This argument has the following options:
 ``-r``, ``--run-list``
    |run-list indicator|
 
+**Examples**
+
 For example, to view all data for a node named "build", enter:
 
 .. code-block:: bash

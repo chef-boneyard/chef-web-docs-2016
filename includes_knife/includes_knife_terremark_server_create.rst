@@ -20,6 +20,8 @@ This argument has the following options:
 ``-S SERVICE``, ``--terremark-service SERVICE``
    |terremark-service|
 
+**Examples**
+
 For example, to create a new instance, enter:
 
 .. code-block:: bash

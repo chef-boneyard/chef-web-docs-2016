@@ -26,6 +26,8 @@ This argument has the following options:
 ``--rackspace-api-auth-url``
    |rackspace-api-auth-url|
 
+**Examples**
+
 For example, to delete a |rackspace| instance with an Instance ID of "12345678", enter:
 
 .. code-block:: bash

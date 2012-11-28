@@ -20,6 +20,8 @@ This sub-command has the following options:
 ``-r REPO``, ``--repository REPO``
    |repository|
 
+**Examples**
+
 For example, to create a |knife rb| file, enter:
 
 .. code-block:: bash

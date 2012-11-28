@@ -62,6 +62,8 @@ This argument has the following options:
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|
 
+**Examples**
+
 To launch a new Rackspace instance with the "webserver" role, enter:
 
 .. code-block:: bash

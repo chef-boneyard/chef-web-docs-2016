@@ -13,6 +13,8 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
+**Examples**
+
 For example, to delete a node called "dev", enter:
 
 .. code-block:: bash

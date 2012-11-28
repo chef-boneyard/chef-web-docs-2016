@@ -23,6 +23,8 @@ This argument has the following options:
 ``--region REGION``
    |region openstack|
 
+**Examples**
+
 For example, to view a list of images, enter:
 
 .. code-block:: bash

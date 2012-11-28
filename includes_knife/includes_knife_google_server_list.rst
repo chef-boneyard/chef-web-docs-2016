@@ -14,6 +14,8 @@ This argument has the following options:
 ``-p PROJECT_NAME``, ``--project-id PROJECT_NAME``
    |project_id|
 
+**Examples**
+
 For example, to view a list of instances associated with a project named "dev-01", enter:
 
 .. code-block:: bash

@@ -23,6 +23,8 @@ This argument has the following options:
 ``--verify-ssl-cert``
    |azure verify ssl certificate|
 
+**Examples**
+
 For example, to view the details for a role named "admin", enter:
 
 .. code-block:: bash

@@ -29,6 +29,8 @@ This argument has the following options:
 ``-Z ZONE``, ``--hp-zone ZONE``
    |hp-zone|
 
+**Examples**
+
 For example, to delete an instance named "65646", enter:
 
 .. code-block:: bash

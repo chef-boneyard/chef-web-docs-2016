@@ -11,8 +11,10 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
-For example, to view the tags for a single node, enter:
+**Examples**
+
+For example, to view the tags for a node named "devops_prod1", enter:
 
 .. code-block:: bash
 
-   $ knife tag list node
+   $ knife tag list devops_prod1

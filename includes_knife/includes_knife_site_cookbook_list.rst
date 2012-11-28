@@ -14,6 +14,8 @@ This argument has the following options:
 ``-w``, ``--with-uri``
    |with-uri|
 
+**Examples**
+
 For example, to view a list of cookbooks at |url cookbook| server, enter:
 
 .. code-block:: bash

@@ -17,6 +17,8 @@ This sub-command has the following options:
 ``-R``
    |r knife list|
 
+**Examples**
+
 For example, to view a list of roles on the |chef server|:
 
 .. code-block:: bash

@@ -14,6 +14,8 @@ This argument has the following options:
 ``-a``, ``--all``
    |all|
 
+**Examples**
+
 For example, to edit the data for a node named "node1", enter:
 
 .. code-block:: bash

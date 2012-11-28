@@ -22,6 +22,8 @@ This argument has the following options:
 
 .. note:: For encrypted data bag items, use *either* ``--secret`` or ``--secret-file``, not both.
 
+**Examples**
+
 For example, to create a data bag named "admins", enter:
 
 .. code-block:: bash

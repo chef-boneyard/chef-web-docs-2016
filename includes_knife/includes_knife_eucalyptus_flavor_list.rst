@@ -23,6 +23,8 @@ This argument has the following options:
 ``--region REGION``
    |region eucalyptus|
 
+**Examples**
+
 For example, enter:
 
 .. code-block:: bash

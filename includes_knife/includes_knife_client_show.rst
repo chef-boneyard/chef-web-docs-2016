@@ -14,6 +14,8 @@ This argument has the following options:
 ``-a ATTR``, ``--attribute ATTR``
    |attribute|
 
+**Examples**
+
 For example, to view a client named "testclient", enter:
 
 .. code-block:: bash

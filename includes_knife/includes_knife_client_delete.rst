@@ -11,6 +11,8 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
+**Examples**
+
 For example, to delete a client with the name "client_foo", enter:
 
 .. code-block:: bash

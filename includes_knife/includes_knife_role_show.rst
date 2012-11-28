@@ -14,6 +14,8 @@ This argument has the following options:
 ``-a ATTR``, ``--attribute ATTR``
    |attribute|
 
+**Examples**
+
 For example:
 
 .. code-block:: bash

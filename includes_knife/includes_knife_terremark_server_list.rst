@@ -23,6 +23,8 @@ This argument has the following options:
 ``-S SERVICE_NAME``, ``--terremark-service SERVICE_NAME``
    |terremark-service|
 
+**Examples**
+
 For example, enter:
 
 .. code-block:: bash

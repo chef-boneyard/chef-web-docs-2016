@@ -74,9 +74,13 @@ Register nodes with |chef hosted|
 -----------------------------------------------------
 .. include:: ../../step_migrate/step_migrate_to_hosted_register.rst
 
-Upload data to |chef hosted|
+Upload Data
 -----------------------------------------------------
 .. include:: ../../step_migrate/step_migrate_to_hosted_upload_data.rst
+
+Using Knife
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife/step_knife_upload_repository.rst
 
 Run the |chef client| on all nodes
 -----------------------------------------------------

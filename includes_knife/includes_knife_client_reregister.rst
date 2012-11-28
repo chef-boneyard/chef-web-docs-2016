@@ -16,6 +16,8 @@ This argument has the following options:
 ``-f FILE_NAME``, ``--file FILE_NAME``
    |file private key|
 
+**Examples**
+
 For example, to regenerate the RSA key pair for a client named "testclient" and save it to a file named "rsa_key", enter:
 
 .. code-block:: bash

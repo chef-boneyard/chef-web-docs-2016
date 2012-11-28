@@ -23,6 +23,8 @@ This sub-command has the following options:
 ``-p PATH:PATH``, ``--script-path PATH:PATH``
    |script-path|
 
+**Examples**
+
 There are three ways to use ``knife exec`` to run |ruby| script files. For example:
 
 .. code-block:: bash

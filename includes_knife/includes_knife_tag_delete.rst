@@ -11,10 +11,12 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
-For example:
+**Examples**
+
+To delete tags named "denver" and "phoenix", enter:
 
 .. code-block:: bash
 
-   $ knife tag delete node tag1 tag2 tag3
+   $ knife tag delete node denver phoenix
 
 Type ``Y`` to confirm a deletion.

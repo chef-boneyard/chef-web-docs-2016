@@ -9,6 +9,8 @@ This sub-command has the following syntax::
 
    knife recipe list REGEX
 
+**Examples**
+
 For example, enter:
 
 .. code-block:: bash

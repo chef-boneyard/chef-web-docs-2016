@@ -11,6 +11,8 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
+**Examples**
+
 For example, to search for all of the cookbooks that can be used with |apache|, enter:
 
 .. code-block:: bash

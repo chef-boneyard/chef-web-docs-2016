@@ -26,6 +26,8 @@ This argument has the following options:
 ``--region REGION``
    |region amazon|
 
+**Examples**
+
 For example, to delete a node called "preprod" in an instance named "operations", enter:
 
 .. code-block:: bash

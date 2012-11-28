@@ -38,6 +38,8 @@ This argument has the following options:
 ``--template-file TEMPLATE``
    |template-file|
 
+**Examples**
+
 For example:
 
 .. code-block:: bash

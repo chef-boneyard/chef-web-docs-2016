@@ -86,6 +86,8 @@ This argument has the following options:
 ``-z SIZE``, ``--role-size SIZE``
    |role-size|
 
+**Examples**
+
 For example, to provision a medium-sized |centos| machine configured as a web server in the "West US" data center, while also creating new hosted service and storage accounts, enter something like:
 
 .. code-block:: bash

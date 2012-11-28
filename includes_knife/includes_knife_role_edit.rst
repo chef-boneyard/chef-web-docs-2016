@@ -11,6 +11,8 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
+**Examples**
+
 For example, to edit the data for a role named "role1", enter:
 
 .. code-block:: bash

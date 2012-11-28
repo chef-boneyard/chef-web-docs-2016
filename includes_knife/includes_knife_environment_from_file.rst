@@ -11,13 +11,15 @@ This argument has the following syntax::
 
 This argument does not have any argument-specific options.
 
+**Examples**
+
 For example:
 
 .. code-block:: bash
 
    $ knife environment create devops from file "path to file"
 
-Or:
+or:
 
 .. code-block:: bash
 

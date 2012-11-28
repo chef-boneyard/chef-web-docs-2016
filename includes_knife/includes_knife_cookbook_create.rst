@@ -48,6 +48,8 @@ The cookbook copyright, license, email, and readme format settings can be config
    cookbook_email "your_email"
    readme_format "md"
 
+**Examples**
+
 For example, to create a cookbook named "my_cookbook" with copyright, email, license, and readme format options specified, enter:
 
 .. code-block:: bash

@@ -14,6 +14,8 @@ This argument has the following options:
 ``-w``, ``--with-uri``
    |with-uri|
 
+**Examples**
+
 For example, to view a list of data bags on the |chef server|, enter:
 
 .. code-block:: bash

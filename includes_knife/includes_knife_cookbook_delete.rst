@@ -20,6 +20,8 @@ This argument has the following options:
 ``-p``, ``--purge``
    |purge cookbook|
 
+**Examples**
+
 For example, to delete version "0.8" from a cookbook named "smartmon", enter:
 
 .. code-block:: bash

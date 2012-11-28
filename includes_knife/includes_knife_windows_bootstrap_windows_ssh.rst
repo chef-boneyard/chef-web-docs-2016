@@ -53,6 +53,8 @@ This argument has the following options:
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|
 
+**Examples**
+
 For example:
 
 .. code-block:: bash

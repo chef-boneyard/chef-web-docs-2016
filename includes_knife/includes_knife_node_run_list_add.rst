@@ -14,6 +14,8 @@ This argument has the following options:
 ``-a ITEM``, ``--after ITEM``
    |after|
 
+**Examples**
+
 For example, to add a role to a run list, enter:
 
 .. code-block:: bash

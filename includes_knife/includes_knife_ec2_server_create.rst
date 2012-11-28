@@ -104,6 +104,8 @@ This argument has the following options:
 ``-Z ZONE"``, ``--availability-zone ZONE``
    |availability-zone amazon ec2|
 
+**Examples**
+
 For example, to launch a new Amazon EC2 instance with the "webserver" role, enter:
 
 .. code-block:: bash

@@ -71,6 +71,8 @@ This argument has the following options:
 ``-Z ZONE``, ``--hp-zone ZONE``
    |hp-zone|
 
+**Examples**
+
 For example, to provision a server and then perform a bootstrap operation (using |ssh|), enter:
 
 .. code-block:: bash

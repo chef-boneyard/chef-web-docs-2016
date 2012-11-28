@@ -17,6 +17,8 @@ This sub-command has the following options:
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
+**Examples**
+
 For example, to view the status of all nodes in the organization, enter:
 
 .. code-block:: bash

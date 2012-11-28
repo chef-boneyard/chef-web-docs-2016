@@ -17,6 +17,8 @@ This argument has the following options:
 ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
    |cookbook-path|
 
+**Examples**
+
 For example, to generate metadata for all cookbooks:
 
 .. code-block:: bash

@@ -32,6 +32,8 @@ This argument has the following options:
 ``-w``, ``--with-uri``
    |with-uri|
 
+**Examples**
+
 For example, to get the list of available versions of a cookbook named "getting-started", enter:
 
 .. code-block:: bash

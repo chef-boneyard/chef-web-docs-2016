@@ -14,6 +14,8 @@ This argument has the following options:
 ``-w``, ``--with-uri``
    |with-uri|
 
+**Examples**
+
 For example, to view a list of roles on the |chef server| and display the URI for each role returned, enter:
 
 .. code-block:: bash

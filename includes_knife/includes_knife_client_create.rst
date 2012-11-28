@@ -17,6 +17,8 @@ This argument has the following options:
 ``-a``, ``--admin``
    |admin client| This option only works when used with |chef open server| and will have no effect when used with |chef hosted| or |chef private|.
 
+**Examples**
+
 For example, to create a |chef client admin| with the name "exampleorg" and save its private key to a file, enter:
 
 .. code-block:: bash

@@ -14,6 +14,8 @@ This argument has the following options:
 ``-p PROJECT_NAME``, ``--project-id PROJECT_NAME``
    |project_id|
 
+**Examples**
+
 For example, to delete a server named "devops01" from a project named "engineering", enter:
 
 .. code-block:: bash

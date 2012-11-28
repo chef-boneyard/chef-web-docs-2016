@@ -11,6 +11,8 @@ This sub-command has the following syntax::
 
 This argument does not have any argument-specific options.
 
+**Examples**
+
 For example, to show all cookbooks in the ``cookbooks/`` directory:
 
 .. code-block:: bash

@@ -23,6 +23,8 @@ This sub-command has the following options:
 ``--force``
    |force knife download|
 
+**Examples**
+
 For example, to download an environment named "production":
 
 .. code-block:: bash

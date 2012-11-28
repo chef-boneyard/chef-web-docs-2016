@@ -14,6 +14,8 @@ This argument has the following options:
 ``COOKBOOK_VERSION``
    |COOKBOOK_VERSION download|
 
+**Examples**
+
 For example:
 
 .. code-block:: bash

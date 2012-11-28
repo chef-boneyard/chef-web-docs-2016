@@ -20,6 +20,8 @@ This argument has the following options:
 ``--rackspace-api-auth-url``
    |rackspace-api-auth-url|
 
+**Examples**
+
 For example, to find all Rackspace instances, enter:
 
 .. code-block:: bash

@@ -26,6 +26,8 @@ This argument has the following options:
 ``-Z ZONE``, ``--hp-zone ZONE``
    |hp-zone|
 
+**Examples**
+
 For example, enter:
 
 .. code-block:: bash

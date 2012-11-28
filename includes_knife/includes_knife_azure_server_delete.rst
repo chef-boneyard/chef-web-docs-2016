@@ -32,6 +32,8 @@ This argument has the following options:
 ``--verify-ssl-cert``
    |azure verify ssl certificate|
 
+**Examples**
+
 For example, to delete an instance named "devops12", enter:
 
 .. code-block:: bash

@@ -26,6 +26,8 @@ This argument has the following options:
 ``--region REGION``
    |region eucalyptus|
 
+**Examples**
+
 For example, to delete an instance named "devops2012", enter:
 
 .. code-block:: bash

@@ -14,6 +14,8 @@ This argument has the following options:
 ``DATA_BAG_ITEM``
    |DATA_BAG_ITEM|
 
+**Examples**
+
 For example:
 
 .. code-block:: bash
