@@ -22,7 +22,7 @@ to return something like:
      ]
    }
 
-Or, to find all of the computers running on the |windows| platform and are associated with a role named "jenkins", enter:
+Or, to find all of the computers running on the |windows| platform that are associated with a role named "jenkins", enter:
 
 .. code-block:: bash
 
