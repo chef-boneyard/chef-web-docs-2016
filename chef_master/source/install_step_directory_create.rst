@@ -32,4 +32,4 @@ Create the .chef directory
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../steps/step_install_workstation_chef_directory_create.rst
+.. include:: ../../step_install/step_install_workstation_chef_directory_create.rst

@@ -32,4 +32,4 @@ Verify the |chef| install
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../steps/step_install_workstation_verify.rst
+.. include:: ../../step_install/step_install_workstation_verify.rst

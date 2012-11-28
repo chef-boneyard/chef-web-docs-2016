@@ -32,4 +32,4 @@ Download .pem files and |knife rb|
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../steps/step_install_workstation_validation_files_download.rst
+.. include:: ../../step_install/step_install_workstation_validation_files_download.rst

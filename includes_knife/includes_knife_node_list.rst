@@ -16,16 +16,5 @@ This argument has the following options:
 
 **Examples**
 
-For example, enter:
-
-.. code-block:: bash
-
-   $ knife node list
-
-to return:
-
-.. code-block:: bash
-
-   i-12345678
-   rs-123456
+.. include:: ../../step_knife/step_knife_node_list_all.rst
 

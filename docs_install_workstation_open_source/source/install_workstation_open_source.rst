@@ -66,37 +66,37 @@ See the following sections for more information about each step.
 
 Download .pem files and |knife rb|
 -----------------------------------------------------
-.. include:: ../../steps/step_install_workstation_validation_files_chef_open_server.rst
+.. include:: ../../step_install/step_install_workstation_validation_files_chef_open_server.rst
 
 Select the |omnibus installer|
 -----------------------------------------------------
-.. include:: ../../steps/step_install_workstation_select_omnibus_installer.rst
+.. include:: ../../step_install/step_install_workstation_select_omnibus_installer.rst
 
 Run the |omnibus installer|
 -----------------------------------------------------
-.. include:: ../../steps/step_install_workstation_omnibus.rst
+.. include:: ../../step_install/step_install_workstation_omnibus.rst
 
 Install |git|
 -----------------------------------------------------
-.. include:: ../../steps/step_install_workstation_git_install.rst
+.. include:: ../../step_install/step_install_workstation_git_install.rst
 
 Clone the |chef| repository
 -----------------------------------------------------
-.. include:: ../../steps/step_install_workstation_git_clone_chef_repo.rst
+.. include:: ../../step_install/step_install_workstation_git_clone_chef_repo.rst
 
 Create the .chef directory
 -----------------------------------------------------
-.. include:: ../../steps/step_install_workstation_chef_directory_create.rst
+.. include:: ../../step_install/step_install_workstation_chef_directory_create.rst
 
 Move files to the .chef directory
 -----------------------------------------------------
-.. include:: ../../steps/step_install_workstation_chef_directory_move_files.rst
+.. include:: ../../step_install/step_install_workstation_chef_directory_move_files.rst
 
 Verify the |chef| install
 -----------------------------------------------------
-.. include:: ../../steps/step_install_workstation_verify.rst
+.. include:: ../../step_install/step_install_workstation_verify.rst
 
 Bootstrapping Your First Node
 =====================================================
 
-.. include:: ../../steps/step_install_workstation_bootstrap_default.rst
+.. include:: ../../step_install/step_install_workstation_bootstrap_default.rst

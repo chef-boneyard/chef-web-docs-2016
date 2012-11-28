@@ -32,4 +32,4 @@ Clone the |chef| repository
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../steps/step_install_workstation_git_clone_chef_repo.rst
+.. include:: ../../step_install/step_install_workstation_git_clone_chef_repo.rst

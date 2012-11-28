@@ -16,24 +16,9 @@ This argument has the following options:
 
 **Examples**
 
-For example, enter:
+.. include:: ../../step_knife/step_knife_client_list_all.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_client_list_authenticate.rst
 
-   $ knife client list
 
-to return something similar to:
-
-.. code-block:: bash
-
-   exampleorg
-   i-12345678
-   rs-123456
-
-To verify that an |chef api client| can authenticate to the 
-|chef server| correctly, try getting a list of clients using ``-u`` and ``-k`` options to specify its name and private key:
-
-.. code-block:: bash
-
-   $ knife client list -u ORGNAME -k .chef/ORGNAME.pem
 

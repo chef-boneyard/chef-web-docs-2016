@@ -25,42 +25,15 @@ This sub-command has the following options:
 
 **Examples**
 
-For example, to download an environment named "production":
+.. include:: ../../step_knife/step_knife_download_repository.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_download_directory_cookbooks.rst
 
-   $ knife download environments/production.json
+.. include:: ../../step_knife/step_knife_download_directory_environments.rst
 
-or, (if already in the ``environments/`` directory in the local |chef| repository):
+.. include:: ../../step_knife/step_knife_download_directory_environment.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_download_directory_roles.rst
 
-   $ knife download production.json
+.. include:: ../../step_knife/step_knife_download_directory_cookbooks_and_role.rst
 
-To download all roles, go to the top level:
-
-.. code-block:: bash
-
-   $ knife download roles
-
-   or, from anywhere:
-
-   $ knife download /roles
-
-To download cookbooks starting with the word "apache" as well as the "webserver" role, go to the top level and do:
-
-.. code-block:: bash
-
-   $ knife download cookbooks/apache\* roles/webserver.json
-
-To download everything in the entire repository, go to the top level directory and type:
-
-.. code-block:: bash
-
-   $ knife download
-
-or, from any directory:
-
-.. code-block:: bash
-
-   $ knife download /

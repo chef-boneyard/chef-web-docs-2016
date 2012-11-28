@@ -32,4 +32,4 @@ Select the |omnibus installer|
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../steps/step_install_workstation_select_omnibus_installer.rst
+.. include:: ../../step_install/step_install_workstation_select_omnibus_installer.rst
