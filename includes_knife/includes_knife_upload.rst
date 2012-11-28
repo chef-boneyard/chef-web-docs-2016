@@ -61,4 +61,4 @@ or, from any directory:
 
 .. code-block:: bash
 
-   $ knife download /
+   $ knife upload /
