@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A resource must be defined before another resource may subscribe to it. The basic syntax of a ``subscribes`` notification is:
+The basic syntax of a ``subscribes`` notification is:
 
 .. code-block:: ruby
 
