@@ -17,5 +17,5 @@ For example:
 
 .. code-block:: bash
 
-   $ knife node from file 'path to JSON file'
+   $ knife node from file "path to JSON file"
 

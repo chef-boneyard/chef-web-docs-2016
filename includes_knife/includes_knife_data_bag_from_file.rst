@@ -29,14 +29,14 @@ This argument has the following options:
 
 **Examples**
 
-For example, to create a data bag from a specified path:
+To create a data bag on the |chef server| from a file:
 
 .. code-block:: bash
 
-   $ knife data bag from file /path/to JSON/file
+   $ knife data bag from file "path to JSON file"
 
 To create a data bag named "devops_data" that contains encrypted data, enter:
 
 .. code-block:: bash
 
-   $ knife data bag from file devops_data --secret-file /path/to/decryption/file
+   $ knife data bag from file devops_data --secret-file "path to decryption file"

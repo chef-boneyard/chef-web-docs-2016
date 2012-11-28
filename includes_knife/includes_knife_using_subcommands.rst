@@ -5,5 +5,5 @@
 
 |knife| has the following sub-commands: ``bootstrap``, ``client``, ``configure``, ``cookbook``, ``cookbook site``, ``data bag``, ``environment``, ``exec``, ``index rebuild``, ``node``, ``recipe list``, ``role``, ``search``, ``ssh``, ``status``, and ``tag``.
 
-.. note:: The following sub-command runs only against the |chef open server|: ``index rebuild``.
+.. note:: The following sub-command runs only against the |chef open server| server: ``index rebuild``.
 

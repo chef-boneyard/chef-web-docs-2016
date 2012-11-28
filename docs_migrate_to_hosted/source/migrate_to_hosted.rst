@@ -74,15 +74,31 @@ Register nodes with |chef hosted|
 -----------------------------------------------------
 .. include:: ../../step_migrate/step_migrate_to_hosted_register.rst
 
-Upload Data
+Upload Data -- DONE
 -----------------------------------------------------
-.. include:: ../../step_migrate/step_migrate_to_hosted_upload_data.rst
+To restore the data (including run-lists and node attributes) that was being used with |chef open server| server, it must be uploaded to the |chef hosted| server. There are two options: use the ``backup_restore`` |knife| plugin or use the ``knife upload`` sub-command.
 
-Using Knife
+Using the ``backup_restore`` Knife Plugin -- DONE
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_backuprestore_install.rst
+
+.. include:: ../../step_knife_plugin/step_knife_plugin_backuprestore_run.rst
+
+Using Knife -- DONE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_upload.rst
+
 .. include:: ../../step_knife/step_knife_upload_repository.rst
 
-Run the |chef client| on all nodes
+.. include:: ../../step_knife/step_knife_upload_directory.rst
+
+If only data for specific data bags, environments, nodes, and roles should be uploaded, use the ``from file`` arguments for the ``knife data bag``, ``knife environment``, ``knife node``, and ``knife role`` sub-commands. The path used for the ``from file`` argument must be the path to backed-up data bag, environment, node, or role. 
+
+A cookbook can be uploaded individually using the ``upload`` argument for the ``knife cookbook`` sub-command.
+
+Run every |chef client| -- DONE
 -----------------------------------------------------
-.. include:: ../../step_migrate/step_migrate_to_hosted_run_chef_client.rst
+After all of the nodes are registered with the |chef hosted| server and all of the data has been restored to the |chef hosted| server, the last step is to kick off a |chef| run on each of the nodes. The easiest way to do that is to use the ``knife ssh`` sub-command and issue a ``sudo chef-client`` command to all of the nodes that will be managed by the |chef hosted| server.
+
+.. include:: ../../step_knife/step_knife_ssh_run_chef_client_on_all_nodes.rst
 

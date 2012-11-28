@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-There are several ways to manage roles: 
+There are several ways to manage roles:
 
 * |knife| can be used to create, edit, view, list, tag, and delete roles.
 * The |management console| can be used to create, edit, view, list, tag, and delete roles. In addition, role attributes can be modified and roles can be moved between environments.

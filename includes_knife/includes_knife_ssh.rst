@@ -52,6 +52,8 @@ For example, to query for all nodes that have the "webserver" role and then use 
 
    $ knife ssh "role:webserver" "sudo chef-client"
 
+.. include:: ../../step_knife/step_knife_ssh_run_chef_client_on_all_nodes.rst
+
 To upgrade all nodes, enter:
 
 .. code-block:: bash

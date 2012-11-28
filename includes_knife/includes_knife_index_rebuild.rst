@@ -5,7 +5,7 @@
 
 |knife index rebuild|
 
-.. note:: This sub-command ONLY works when run against the |chef open server| and will not run against any other flavor of |chef|, including |chef hosted| and |chef private|.
+.. note:: This sub-command ONLY works when run against the |chef open server| server and will not run against any other flavor of |chef|, including |chef hosted| and |chef private|.
 
 This sub-command has the following syntax::
 

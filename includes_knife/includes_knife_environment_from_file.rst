@@ -17,12 +17,12 @@ For example:
 
 .. code-block:: bash
 
-   $ knife environment create devops from file "path to file"
+   $ knife environment create devops from file "path to JSON file"
 
 or:
 
 .. code-block:: bash
 
-   $ knife environment edit devops from file "path to file"
+   $ knife environment edit devops from file "path to JSON file"
 
 
