@@ -243,6 +243,15 @@ PUT
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_put.rst
 
 
+/principals
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_get.rst
+
+
 /roles
 =====================================================
 .. include:: ../../includes_role/includes_role.rst
