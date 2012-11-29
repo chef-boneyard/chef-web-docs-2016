@@ -29,15 +29,14 @@ where
 
 .. note:: The ``deploy`` resource is the most popular resource available in |chef|. It is also the most complex, having the most attributes, two providers (and where the recommended provider is not the default provider), plus the added complexity of being able to use callbacks and custom application layouts.
 
-For example, the following will deploy to a folder named "/value/for/root" and will apply the attribute values specified.
+For example, the following will deploy to a folder named "/value/for/NAME" and will apply the attribute values specified.
 
 .. code-block:: ruby
 
-   ROOT_NAME = '/value/for/root'
-   deploy_revision ROOT_NAME do
-     deploy_to         ROOT_NAME
+   NAME = '/value/for/NAME'
+   deploy_revision NAME do
+     deploy_to         NAME
      repo              'ssh://name-of-git-repo/repos/repo.git'
-     revision          node['root_name_in_git']['revision_tag']
      migrate           false
      purge_before_symlink %w{one two folder/three}
      create_dirs_before_symlink []
@@ -53,7 +52,6 @@ For example, the following will deploy to a folder named "/value/for/root" and w
      notifies :restart, "service[bar]"
    end
 
-* The revision that is being deployed is stored in |git| and will use the |ssh| wrapper located in the user's home directory. The ``revision`` specifies the version of the application in the |git| repository
 * Because an action is not explicitly specified, |chef| will use the default action: ``:deploy``
 * The ``purge_before_symlink`` application layout is an array of paths that will be cleared before the ``symlink`` application layout is run
 * The ``create_dirs_before_symlink`` application layout is empty
