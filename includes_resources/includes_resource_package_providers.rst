@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use the following providers to use the |resource package| resource in a recipe:
+The following providers are available. Use the short name to use the provider in a recipe:
 
 .. list-table::
    :widths: 150 80 320
