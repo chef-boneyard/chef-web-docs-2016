@@ -20,7 +20,7 @@ This resource has the following has the following attributes:
    * - ``branch``
      - The alias for the revision.
    * - ``create_dirs_before_symlink``
-     - |create_dirs_before_symlink resource deploy|
+     - |create_dirs_before_symlink resource deploy| |layout create_dirs_before_symlink resource deploy|
    * - ``deploy_to``
      - |deploy_to resource deploy|
    * - ``environment``
@@ -32,7 +32,7 @@ This resource has the following has the following attributes:
    * - ``migration_command``
      - |migration_command resource deploy|
    * - ``purge_before_symlink``
-     - |purge_before_symlink resource deploy|
+     - |purge_before_symlink resource deploy| |layout purge_before_symlink resource deploy|
    * - ``repo``
      - |repo resource deploy|
    * - ``repository``
@@ -48,9 +48,9 @@ This resource has the following has the following attributes:
    * - ``scm_provider``
      - |scm_provider resource deploy|
    * - ``symlinks``
-     - |symlinks resource deploy|
+     - |symlinks resource deploy| |layout symlinks resource deploy|
    * - ``symlink_before_migrate``
-     - |symlink_before_migrate resource deploy|
+     - |symlink_before_migrate resource deploy| |layout symlink_before_migrate resource deploy|
    * - ``user``
      - |user resource deploy|
 

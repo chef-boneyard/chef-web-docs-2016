@@ -46,6 +46,10 @@ Providers
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_providers.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_cookbook_file_syntax.rst
+
 Examples
 =====================================================
 .. include:: ../../steps/step_chef_resource_cookbook_file_transfer_a_file.rst

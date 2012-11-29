@@ -74,6 +74,10 @@ deploy_revision and deploy_branch
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |deploy_revision provider deploy|
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_deploy_syntax.rst
+
 Examples
 =====================================================
 
