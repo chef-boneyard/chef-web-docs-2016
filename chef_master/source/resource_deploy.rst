@@ -76,9 +76,7 @@ deploy_revision and deploy_branch
 
 Examples
 =====================================================
-.. include:: ../../steps/step_chef_resource_deploy_add_private_key_from_data_bag.rst
 
-.. include:: ../../steps/step_chef_resource_deploy_add_private_key_from_recipe.rst
 
 .. include:: ../../steps/step_chef_resource_deploy_basic.rst
 
