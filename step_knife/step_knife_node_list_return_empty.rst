@@ -6,9 +6,7 @@ To verify the list of nodes that are registered with the |chef server|, enter:
 
    $ knife node list
 
-to return something similar to:
-
-.. code-block:: bash
+No nodes should be returned.
 
    
 
