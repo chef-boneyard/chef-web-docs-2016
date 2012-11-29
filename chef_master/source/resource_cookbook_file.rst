@@ -34,6 +34,10 @@ cookbook_file
 
 .. include:: ../../includes_resources/includes_resource_cookbook_file.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_cookbook_file_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_actions.rst
@@ -45,10 +49,6 @@ Attributes
 Providers
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_providers.rst
-
-Syntax
-=====================================================
-.. include:: ../../includes_resources/includes_resource_cookbook_file_syntax.rst
 
 Examples
 =====================================================

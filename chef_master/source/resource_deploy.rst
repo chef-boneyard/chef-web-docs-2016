@@ -34,6 +34,10 @@ deploy
 
 .. include:: ../../includes_resources/includes_resource_deploy.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_deploy_syntax.rst
+
 Deployment Strategies
 =====================================================
 .. include:: ../../includes_resources/includes_resource_deploy_strategy.rst
@@ -73,10 +77,6 @@ timestamped_deploy
 deploy_revision and deploy_branch
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |deploy_revision provider deploy|
-
-Syntax
-=====================================================
-.. include:: ../../includes_resources/includes_resource_deploy_syntax.rst
 
 Examples
 =====================================================
