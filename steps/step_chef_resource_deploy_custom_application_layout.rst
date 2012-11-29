@@ -20,7 +20,9 @@ The layout of the application matches a Rails app by default, but you can custom
      symlink_before_migrate  "config/database.yml" => "config/database.yml"
       
      # If your app has extra files in the shared folder, specify them here
-     symlinks  "system" => "public/system", "pids" => "tmp/pids", "log" => "log",
+     symlinks  "system" => "public/system", 
+               "pids" => "tmp/pids", 
+               "log" => "log",
                "deploy/before_migrate.rb" => "deploy/before_migrate.rb",
                "deploy/before_symlink.rb" => "deploy/before_symlink.rb",
                "deploy/before_restart.rb" => "deploy/before_restart.rb",
