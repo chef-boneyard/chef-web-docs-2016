@@ -29,7 +29,7 @@ where
 
 .. note:: The ``deploy`` resource is the most popular resource available in |chef|. It is also the most complex, having the most attributes, two providers (and where the recommended provider is not the default provider), plus the added complexity of being able to use callbacks and custom application layouts.
 
-For example, the following will deploy to a folder named "/value/for/NAME" and will apply the attribute values specified.
+For example, the following will deploy to a folder named "/value/for/application" and will apply the attribute values specified.
 
 .. code-block:: ruby
 
