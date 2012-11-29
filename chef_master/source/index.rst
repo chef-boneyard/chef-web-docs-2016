@@ -40,7 +40,7 @@ Chef Documentation
 
 
 
-* **References**: :doc:`resource` | :doc:`knife` | :doc:`plugin_knife` | :doc:`lwrp` | :doc:`api_cookbooks_site` |  :doc:`api_chef_server` | the :doc:`chef_client` executable | :doc:`config` | :doc:`dsl_recipe` 
+* **References**: :doc:`resource` | :doc:`knife` | :doc:`plugin_knife` | :doc:`lwrp` | :doc:`api_cookbooks_site` |  :doc:`api_chef_server` | the :doc:`chef_client` executable | :doc:`config` | :doc:`dsl_recipe`
 
 
 
