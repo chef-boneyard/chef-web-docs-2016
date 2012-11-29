@@ -8,10 +8,15 @@ The syntax for the ``cookbook_file`` resource is as follows:
    cookbook_file "name" do
      attribute "value"
      ...
-     :action
+     action :action
    end
 
-where ``cookbook_file`` tells |chef| to use the ``CookbookFile`` provider during the |chef| run, ``"name"`` is the destination path and file name on the node, and ``attribute`` is zero (or more) the available attributes. Note that the ``path`` attribute defaults to name (unless specified), and that the ``cookbook`` attribute defaults to the current cookbook; often, neither of these attributes need to be specified. The ``:action`` is the step that the resource will ask the provider to take during the |chef| run.
+where 
+
+* ``cookbook_file`` tells |chef| to use the ``CookbookFile`` provider during the |chef| run
+* ``"name"`` is the destination path and file name on the node, and ``attribute`` is zero (or more) the available attributes
+* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* Note that the ``path`` attribute defaults to name (unless specified) and that the ``cookbook`` attribute defaults to the current cookbook; often, neither of these attributes need to be specified
 
 For example, the following will create a cookbook file in a location named "/tmp/cookbook_test_file", but only if the cookbook is not already there. The file is located in "/tmp/test" in the current cookbook. Backups will not be kept.
 
