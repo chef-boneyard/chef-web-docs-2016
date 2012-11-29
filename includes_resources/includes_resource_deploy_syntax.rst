@@ -33,9 +33,8 @@ For example, the following will deploy to a folder named "/value/for/NAME" and w
 
 .. code-block:: ruby
 
-   NAME = '/value/for/NAME'
-   deploy_revision NAME do
-     deploy_to         NAME
+   deploy_revision "application" do
+     deploy_to         "/path/to/application"
      repo              'ssh://name-of-git-repo/repos/repo.git'
      migrate           false
      purge_before_symlink %w{one two folder/three}
