@@ -1,5 +1,5 @@
 =====================================================
-/principals
+/principals/NAME
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
@@ -32,9 +32,9 @@
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name.rst
 
 GET
 =====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_get.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name_get.rst
 

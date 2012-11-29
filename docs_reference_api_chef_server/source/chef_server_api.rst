@@ -243,13 +243,13 @@ PUT
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name_put.rst
 
 
-/principals
+/principals/NAME
 =====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name.rst
 
 GET
 -----------------------------------------------------
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_get.rst
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_principals_name_get.rst
 
 
 /roles
