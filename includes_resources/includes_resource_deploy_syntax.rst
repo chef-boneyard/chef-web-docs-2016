@@ -15,7 +15,7 @@ The syntax for the ``deploy`` resource is as follows:
      purge_before_symlink
      create_dirs_before_symlink
      symlink
-     :action
+     action :action
    end
 
 where
@@ -25,7 +25,7 @@ where
 * ``attribute`` is zero (or more) the available attributes.
 * ``callback`` is additional |ruby| code that is used to pass a block or to specify a file, and then access information about the deployment
 * ``custom_application_layout`` is used to link configuration files, remove directories, create directories, or map files and directories during the deployment process
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run.
+* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
 
 .. note:: The ``deploy`` resource is the most popular resource available in |chef|. It is also the most complex, having the most attributes, two providers (and where the recommended provider is not the default provider), plus the added complexity of being able to use callbacks and custom application layouts.
 
