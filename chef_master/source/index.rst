@@ -36,7 +36,7 @@ Chef Documentation
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-* **Getting Started**: :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef` | :doc:`install`
+* **Getting Started**: :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef` | :doc:`install` 
 
 
 
