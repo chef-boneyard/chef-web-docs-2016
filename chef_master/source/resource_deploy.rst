@@ -50,7 +50,7 @@ Callbacks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst
 
-Custom Application Layouts
+Custom Layouts
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst
 
