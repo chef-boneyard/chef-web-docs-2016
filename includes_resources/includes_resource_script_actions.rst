@@ -11,3 +11,5 @@ This resource has the following has the following actions:
      - Description
    * - ``:run``
      - Default. |resource action run script|
+   * - ``:nothing``
+     - |resource action nothing execute|

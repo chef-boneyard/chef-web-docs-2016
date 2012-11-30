@@ -13,7 +13,25 @@ This resource has the following has the following attributes:
      - |command resource script|
    * - ``code``
      - |code resource script|
-   * - ``interpreter``
-     - |interpreter resource script|
+   * - ``creates``
+     - |creates resource execute|
+   * - ``cwd``
+     - |cwd resource execute|
+   * - ``environment``
+     - |environment resource execute|
    * - ``flags``
      - |flags resource script|
+   * - ``group``
+     - |group resource execute|
+   * - ``interpreter``
+     - |interpreter resource script|
+   * - ``path``
+     - |path resource execute|
+   * - ``returns``
+     - |returns resource execute|
+   * - ``timeout``
+     - |timeout resource execute|
+   * - ``user``
+     - |user resource execute|
+   * - ``umask``
+     - |umask resource execute|
