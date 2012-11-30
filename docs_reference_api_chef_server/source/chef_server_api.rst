@@ -282,6 +282,22 @@ PUT
 -----------------------------------------------------
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_put.rst
 
+/roles/NAME/environments
+=====================================================
+.. include:: .. ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environments.rst
+
+GET
+-----------------------------------------------------
+.. include:: .. ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environments_get.rst
+
+/roles/NAME/environments/NAME
+=====================================================
+.. include:: .. ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environments_name.rst
+
+GET
+-----------------------------------------------------
+.. include:: .. ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environments_name_get.rst
+
 
 /sandboxes
 =====================================================
