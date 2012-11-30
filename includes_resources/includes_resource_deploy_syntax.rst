@@ -27,8 +27,6 @@ where
 * ``purge_before_symlink``, ``create_dirs_before_symlink``, and ``symlink`` are attributes that are typically used to link configuration files, remove directories, create directories, or map files and directories during the deployment process
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run
 
-.. note:: The ``deploy`` resource is the most popular resource available in |chef|. It is also the most complex, having the most attributes, two providers (and where the recommended provider is not the default provider), plus the added complexity of being able to use callbacks and custom application layouts.
-
 The following is an example of how the ``deploy_revision`` resource can work when used in a recipe. In this example, an application will be deployed to a folder named "/path/to/application":
 
 .. code-block:: ruby
@@ -56,6 +54,6 @@ The following is an example of how the ``deploy_revision`` resource can work whe
 * The ``create_dirs_before_symlink`` attribute is empty, which is different from the default
 * The ``symlinks`` attribute is creating three symbolic links
 * The ``before_restart`` callback is being used to add custom actions that will occur at the end of the deployment process, but before any services have been notified
-* At the end, the recipe is using the ``notifies`` notification to alert two services (named "foo" and "bar") that they should restart
+* At the end, the recipe is using the ``notifies`` attribute---a common attribute available to all resources in |chef|---to alert two services (named "foo" and "bar") that they should restart.
 
 
