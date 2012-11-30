@@ -275,13 +275,13 @@ Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_providers.rst
 
-``timestamped_deploy``
+timestamped_deploy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|timestamped_deploy provider deploy|
+.. include:: ../../includes_resources/includes_resource_deploy_providers_timestamped_deploy.rst
 
-``deploy_revision`` and ``deploy_branch``
+deploy_revision
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-|deploy_revision provider deploy|
+.. include:: ../../includes_resources/includes_resource_deploy_providers_deploy_resource.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
