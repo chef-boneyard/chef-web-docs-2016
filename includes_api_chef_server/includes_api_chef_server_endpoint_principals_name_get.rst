@@ -11,6 +11,16 @@ This method has no parameters.
 
    GET /principals/NAME
 
+with a request body that looks something like:
+
+.. code-block:: javascript
+
+   {
+     "name": "normal_user",
+     "type": "client",
+     "public_key": true,
+   }
+
 **Response**
 
 The response will return something like the following for a user:

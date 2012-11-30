@@ -30,7 +30,12 @@ The response will return something like the following:
 
    {
      "uri": "http://localhost:4000/clients/monkeypants",
-     "private_key": "RSA PRIVATE KEY"
+     "private_key": "-----BEGIN PRIVATE KEY-----\n
+                   MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyVPW9YXa5PR0rgEW1updSxygB\n
+                   wmVpDnHurgQ7/gbh+PmY49EZsfrZSbKgSKy+rxdsVoSoU+krYtHvYIwVfr2tk0FP\n
+                   nhAWJaFH654KpuCNG6x6iMLtzGO1Ma/VzHnFqoOeSCKHXDhmHwJAjGDTPAgCJQiI\n
+                   eau6cDNJRiJ7j0/xBwIDAQAB\n
+                   -----END PRIVATE KEY-----"
    }
 
 Store the private key in a safe place. It will be required later (along with the client name) to access the |chef server| when using the |api chef server|.

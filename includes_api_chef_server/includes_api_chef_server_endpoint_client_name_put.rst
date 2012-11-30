@@ -31,7 +31,12 @@ The response will return something like the following:
 
    {
      "name": "monkeypants",
-     "private_key": "RSA PRIVATE KEY",
+     "private_key": "-----BEGIN PRIVATE KEY-----\n
+                   MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyVPW9YXa5PR0rgEW1updSxygB\n
+                   wmVpDnHurgQ7/gbh+PmY49EZsfrZSbKgSKy+rxdsVoSoU+krYtHvYIwVfr2tk0FP\n
+                   nhAWJaFH654KpuCNG6x6iMLtzGO1Ma/VzHnFqoOeSCKHXDhmHwJAjGDTPAgCJQiI\n
+                   eau6cDNJRiJ7j0/xBwIDAQAB\n
+                   -----END PRIVATE KEY-----"
      "admin": true
    }
 
