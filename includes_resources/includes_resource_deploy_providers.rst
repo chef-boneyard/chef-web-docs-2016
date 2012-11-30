@@ -14,5 +14,5 @@ The |resource deploy| resource providers are used to determine whether to deploy
      - ``timestamped_deploy``. See below for more information.
      - This is the default provider for all platforms. 
    * - ``Chef::Provider::Deploy::Revision``
-     - ``deploy_revision``
+     - ``deploy_revision``, ``deploy_branch``
      -  See below for more information.
