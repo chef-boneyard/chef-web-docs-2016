@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 The GET method returns a list of the environments that have
-environment-specific run lists in the given role as |json|.
+environment-specific run-lists in the given role as |json| data.
 
 This method has no parameters.
 
