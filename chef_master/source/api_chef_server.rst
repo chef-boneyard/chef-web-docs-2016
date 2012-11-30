@@ -60,6 +60,8 @@ The |api chef server| has the following endpoints:
 * :doc:`api_chef_server_nodes_name`
 * :doc:`api_chef_server_roles`
 * :doc:`api_chef_server_roles_name`
+* :doc:`api_chef_server_roles_name_environments`
+* :doc:`api_chef_server_roles_name_environments_name`
 * :doc:`api_chef_server_sandboxes`
 * :doc:`api_chef_server_sandboxes_id`
 * :doc:`api_chef_server_search`
@@ -88,6 +90,8 @@ The |api chef server| has the following endpoints:
    api_chef_server_requirements
    api_chef_server_roles
    api_chef_server_roles_name
+   api_chef_server_roles_name_environments
+   api_chef_server_roles_name_environments_name
    api_chef_server_sandboxes
    api_chef_server_sandboxes_id
    api_chef_server_search
