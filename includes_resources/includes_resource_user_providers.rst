@@ -14,11 +14,11 @@ The following providers are available. Use the short name to use the provider in
      - ``user``
      - This is the default provider for all platforms.
    * - ``Chef::Provider::User::Pw``
-     - ``pw``
+     - ``user``
      - This is the default provider for the |freebsd| platform.
    * - ``Chef::Provider::User::Dscl``
-     - ``dscl``
+     - ``user``
      - This is the default provider for the |mac os x| platform.
    * - ``Chef::Provider::User::Windows``
-     - ``windows``
+     - ``user``
      - This is the default provider for all |windows| platforms.
