@@ -82,16 +82,16 @@ Examples
 =====================================================
 
 
-.. include:: ../../steps/step_chef_resource_deploy_basic.rst
+.. include:: ../../step_resource/step_resource_deploy_basic.rst
 
-.. include:: ../../steps/step_chef_resource_deploy_custom_application_layout.rst
+.. include:: ../../step_resource/step_resource_deploy_custom_application_layout.rst
 
-.. include:: ../../steps/step_chef_resource_deploy_embedded_recipes_for_callbacks.rst
+.. include:: ../../step_resource/step_resource_deploy_embedded_recipes_for_callbacks.rst
 
-.. include:: ../../steps/step_chef_resource_deploy_private_git_repo_using_application_cookbook.rst
+.. include:: ../../step_resource/step_resource_deploy_private_git_repo_using_application_cookbook.rst
 
-.. include:: ../../steps/step_chef_resource_deploy_recipe_uses_ssh_wrapper.rst
+.. include:: ../../step_resource/step_resource_deploy_recipe_uses_ssh_wrapper.rst
 
-.. include:: ../../steps/step_chef_resource_deploy_use_same_api_as_gitdeploy_gems.rst
+.. include:: ../../step_resource/step_resource_deploy_use_same_api_as_gitdeploy_gems.rst
 
-.. include:: ../../steps/step_chef_resource_deploy_without_symlink_to_shared.rst
+.. include:: ../../step_resource/step_resource_deploy_without_symlink_to_shared.rst
