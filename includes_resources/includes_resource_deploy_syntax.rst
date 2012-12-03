@@ -5,7 +5,7 @@ The syntax for using the |resource deploy| resource in a recipe is as follows:
 
 .. code-block:: ruby
 
-   resource "name" do
+   deploy "name" do
      attribute "value"
      ...
      callback do
@@ -20,9 +20,9 @@ The syntax for using the |resource deploy| resource in a recipe is as follows:
 
 where
 
-* ``resource`` is either ``timestamped_deploy`` or ``deploy_revision``, which tells |chef| to use the ``Deploy::TimestampedDeploy`` or ``Deploy::Revision`` providers during the |chef| run
+* ``deploy`` is the default way to use the |resource deploy| resource in a recipe, but could be either ``timestamped_deploy`` or ``deploy_revision``, depending on the recipe. Each of these tells |chef| to use the ``Deploy::TimestampedDeploy`` or ``Deploy::Revision`` providers during the |chef| run
 * ``"name"`` is the path to the location in which the deployment steps will occur
-* ``attribute`` is zero (or more) the available attributes.
+* ``attribute`` is zero (or more) the available attributes
 * ``callback`` is additional |ruby| code that is used to pass a block or to specify a file, and then access information about the deployment
 * ``purge_before_symlink``, ``create_dirs_before_symlink``, and ``symlink`` are attributes that are typically used to link configuration files, remove directories, create directories, or map files and directories during the deployment process
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run

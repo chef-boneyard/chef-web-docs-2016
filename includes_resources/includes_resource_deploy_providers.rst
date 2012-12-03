@@ -10,9 +10,12 @@ The |resource deploy| resource providers are used to determine whether to deploy
    * - Long name
      - Short name
      - Notes
+   * - ``Chef::Provider::Deploy``
+     - ``deploy``
+     - When this short name is used, |chef| will determine the provider during the |chef| run.
    * - ``Chef::Provider::Deploy::TimestampedDeploy``
-     - ``timestamped_deploy``. See below for more information.
-     - This is the default provider for all platforms. 
+     - ``timestamped_deploy``
+     - This is the default provider for all platforms. See below for more information.
    * - ``Chef::Provider::Deploy::Revision``
      - ``deploy_revision``, ``deploy_branch``
      -  See below for more information.
