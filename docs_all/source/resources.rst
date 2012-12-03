@@ -243,11 +243,11 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_syntax.rst
 
-Deployment Strategies
+Deploy Strategies
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_strategy.rst
 
-Deployment Phases
+Deploy Phases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_phases.rst
 
@@ -285,21 +285,35 @@ deploy_revision
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the |resource deploy| resource.
 
-
-.. include:: ../../step_resource/step_resource_deploy_basic.rst
+**Modify the layout of a Ruby on Rails application**
 
 .. include:: ../../step_resource/step_resource_deploy_custom_application_layout.rst
 
+**Use resources within callbacks**
+
 .. include:: ../../step_resource/step_resource_deploy_embedded_recipes_for_callbacks.rst
+
+**Deploy from a private git repository without using the application cookbook**
 
 .. include:: ../../step_resource/step_resource_deploy_private_git_repo_using_application_cookbook.rst
 
+**Use an SSH wrapper**
+
 .. include:: ../../step_resource/step_resource_deploy_recipe_uses_ssh_wrapper.rst
+
+**Use the same API for all recipes using the same gem**
 
 .. include:: ../../step_resource/step_resource_deploy_use_same_api_as_gitdeploy_gems.rst
 
+**Deploy without creating symbolic links to a shared folder**
+
 .. include:: ../../step_resource/step_resource_deploy_without_symlink_to_shared.rst
+
+**Clear a layout modifier attribute**
+
+.. include:: ../../step_resource/step_resource_deploy_clear_layout_modifiers.rst
 
 
 directory
