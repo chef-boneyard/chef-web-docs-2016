@@ -16,7 +16,20 @@ Using the default attribute values that |chef| provides is the recommended basel
      ...
    end
 
-In some cases, it may be preferable to ensure that one (or more) of these layout modifiers do not pass symbolic linking information to a node during the |chef| run. Because each of these layout modifiers are a hash, the ``clear`` instance method can be used to clear out these values.
+and then what these layout modifiers look like if they were empty:
+
+.. code-block:: ruby
+
+   deploy "name" do
+     ...
+     symlink_before_migrate       nil
+     create_dirs_before_symlink   []
+     purge_before_symlink         []
+     symlinks                     nil
+     ...
+   end
+
+In most cases, using the empty values for the layout modifiers will prevent |chef| from passing symbolic linking information to a node during the |chef| run. However, in some cases, it may be preferable to ensure that one (or more) of these layout modifiers do not pass any symbolic linking information to a node during the |chef| run at all. Because each of these layout modifiers are a hash, the ``clear`` instance method can be used to clear out these values.
 
 To clear the default values for a layout modifier:
 
@@ -31,7 +44,7 @@ To clear the default values for a layout modifier:
      ...
    end
 
-
+In general, use this approach carefully and only after it is determined that nil or empty values won't provide the expected result.
 
 
 
