@@ -76,9 +76,9 @@ The following resources are built into |chef|:
      - |resource desc package|     
    * - |resource powershell script|
      - |resource desc powershell_script|
-   * - |resource remote directory|
+   * - |resource remote_directory|
      - |resource desc remote_directory|
-   * - |resource remote file|
+   * - |resource remote_file|
      - |resource desc remote_file|
    * - |resource route|
      - |resource desc route|

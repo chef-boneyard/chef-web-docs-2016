@@ -32,19 +32,19 @@ remote_directory
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_resources/includes_resource_directory.rst
+.. include:: ../../includes_resources/includes_resource_remote_directory.rst
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_directory_actions.rst
+.. include:: ../../includes_resources/includes_resource_remote_directory_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_directory_attributes.rst
+.. include:: ../../includes_resources/includes_resource_remote_directory_attributes.rst
 
 Providers
 =====================================================
-.. include:: ../../includes_resources/includes_resource_directory_providers.rst
+.. include:: ../../includes_resources/includes_resource_remote_directory_providers.rst
 
 Examples
 =====================================================
