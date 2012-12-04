@@ -22,7 +22,7 @@ This resource has the following has the following attributes:
    * - ``create_dirs_before_symlink``
      - |create_dirs_before_symlink|
    * - ``deploy_to``
-     - |deploy_to resource deploy|
+     - |deploy_to|
    * - ``environment``
      - |environment resource deploy|
    * - ``group``
