@@ -251,6 +251,10 @@ Deploy Phases
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_phases.rst
 
+**Deploy Cache File**
+
+.. include:: ../../includes_resources/includes_resource_deploy_strategy_start_over.rst
+
 Callbacks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst
@@ -258,10 +262,6 @@ Callbacks
 Layout Modifiers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst
-
-Starting Over
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_deploy_strategy_start_over.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -306,6 +306,14 @@ The following examples show how to use the |resource deploy| resource.
 **Use an SSH wrapper**
 
 .. include:: ../../step_resource/step_resource_deploy_recipe_uses_ssh_wrapper.rst
+
+**Use a callback to include a file that will be passed as a code block**
+
+.. include:: ../../step_resource/step_resource_deploy_use_callback_to_include_code_from_file.rst
+
+**Use a callback to pass a code block**
+
+.. include:: ../../step_resource/step_resource_deploy_use_callback_to_pass_python.rst
 
 **Use the same API for all recipes using the same gem**
 
