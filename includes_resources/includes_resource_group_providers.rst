@@ -10,30 +10,33 @@ The following providers are available. Use the short name to use the provider in
    * - Long name
      - Short name
      - Notes
+   * - ``Chef::Provider::Group``
+     - group
+     - When this short name is used, |chef| will determine the correct provider during the |chef| run.
    * - ``Chef::Provider::Group::Aix``
      - group
-     - This is the default provider for the |ibm aix| platform.
+     - The provider that is used with the |ibm aix| platform.
    * - ``Chef::Provider::Group::Dscl``
      - group
-     - This is the default provider for the |mac os x| platform.
+     - The provider that is used with the |mac os x| platform.
    * - ``Chef::Provider::Group::Gpasswd``
      - group
-     - This is the default provider for all platforms except |mac os x|, |freebsd|, |solaris|, and |windows|, which have their own dedicated providers.
+     - The provider that is used with the |gpasswd| command.
    * - ``Chef::Provider::Group::Groupadd``
      - group
-     - This is the default provider for the |groupadd| command.
+     - The provider that is used with the |groupadd| command.
    * - ``Chef::Provider::Group::Groupmod``
      - group
-     - This is the default provider for the |groupmod| command.
+     - The provider that is used with the |groupmod| command.
    * - ``Chef::Provider::Group::Pw``
      - group
-     - This is the default provider for the |freebsd| platform.
+     - The provider that is used with the |freebsd| platform.
    * - ``Chef::Provider::Group::Suse``
      - group
-     - This is the default provider for the xxxxx platform.
+     - The provider that is used with the |suse| platform.
    * - ``Chef::Provider::Group::Usermod``
      - group
-     - This is the default provider for the |solaris| platform.
+     - The provider that is used with the |solaris| platform.
    * - ``Chef::Provider::Group::Windows``
      - group
-     - This is the default provider for the |windows| platform.
+     - The provider that is used with the |windows| platform.

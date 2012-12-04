@@ -12,28 +12,28 @@ The following providers are available. Use the short name to use the provider in
      - Notes
    * - ``Chef::Provider::Service::Init``
      - ``service``
-     - This is the default provider for all platforms, unless there is a specific provider for a specific platform (see the other entries in this table).
+     - When this short name is used, |chef| will determine the correct provider during the |chef| run.
    * - ``Chef::Provider::Service::Init::Debian``
-     - 
-     - This is the default provider for the |debian| and |ubuntu| platforms.
+     - ``service``
+     - The provider that is used with the |debian| and |ubuntu| platforms.
    * - ``Chef::Provider::Service::Upstart``
-     - 
-     - This is the default provider for the |upstart| platform.
+     - ``service``
+     - The provider that is used with the |upstart| platform.
    * - ``Chef::Provider::Service::Init::Freebsd``
-     - 
-     - This is the default provider for the |freebsd| platform.
+     - ``service``
+     - The provider that is used with the |freebsd| platform.
    * - ``Chef::Provider::Service::Init::Gentoo``
-     - 
-     - This is the default provider for the |gentoo| platform.
+     - ``service``
+     - The provider that is used with the |gentoo| platform.
    * - ``Chef::Provider::Service::Init::Redhat``
-     - 
-     - This is the default provider for the |redhat| and |centos| platforms.
+     - ``service``
+     - The provider that is used with the |redhat| and |centos| platforms.
    * - ``Chef::Provider::Service::Solaris``
-     - 
-     - This is the default provider for the |solaris| platform.
+     - ``service``
+     - The provider that is used with the |solaris| platform.
    * - ``Chef::Provider::Service::Windows``
-     - 
-     - This is the default provider for the |windows| platform.
+     - ``service``
+     - The provider that is used with the |windows| platform.
    * - ``Chef::Provider::Service::Macosx``
-     - 
-     - This is the default provider for the |mac os x| platform.
+     - ``service``
+     - The provider that is used with the |mac os x| platform.

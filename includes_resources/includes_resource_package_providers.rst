@@ -10,48 +10,51 @@ The following providers are available. Use the short name to use the provider in
    * - Long name
      - Short name
      - Notes
+   * - ``Chef::Provider::Package``
+     - ``package``
+     - When this short name is used, |chef| will determine the correct provider during the |chef| run.
    * - ``Chef::Provider::Package::Apt``
      - ``apt_package``
-     - This is the default provider for the |debian| and |ubuntu| platforms.
+     - The provider that is used with the |debian| and |ubuntu| platforms.
    * - ``Chef::Provider::Package::Dpkg``
      - ``dpkg_package``
-     - This is the default provider for the |debian dpkg| platform. Can be used with the ``options`` attribute.
+     - The provider that is used with the |debian dpkg| platform. Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::EasyInstall``
      - ``easy_install_package``
-     - This is the default provider for |python|.
+     - The provider that is used with |python| platform.
    * - ``Chef::Provider::Package::Freebsd``
      - ``freebsd_package``
-     - This is the default provider for the |freebsd| platform.
+     - The provider that is used with the |freebsd| platform.
    * - ``Chef::Provider::Package::Ips``
      - ``ips_package``
-     - This is the default provider for the |ips| platform.
+     - The provider that is used with the |ips| platform.
    * - ``Chef::Provider::Package::Macports``
      - ``macports_package``
-     - This is the default provider for the |mac os x| platform.
+     - The provider that is used with the |mac os x| platform.
    * - ``Chef::Provider::Package::Pacman``
      - ``pacman_package``
-     - This is the default provider for the |pacman| platform.
+     - The provider that is used with the |pacman| platform.
    * - ``Chef::Provider::Package::Portage``
      - ``portage_package``
-     - This is the default provider for the |gentoo| platform. Can be used with the ``options`` attribute.
+     - The provider that is used with the |gentoo| platform. Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::Rpm``
      - ``rpm_package``
-     - This is the default provider for the |rpm| platform. Can be used with the ``options`` attribute.
+     - The provider that is used with the |rpm| platform. Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::Rubygems``
      - ``gem_package``
-     - This is the default provider for packages that are only included in recipes. |gem_package provider package|
+     - The provider that is used with packages that are only included in recipes. |gem_package provider package|
    * - ``Chef::Provider::Package::Rubygems``
      - ``chef_gem``
-     - This is the default provider for when installing a gem only for |chef| resources. |chef_gem provider package|
+     - The provider that is used when a |gem| is installed only for |chef| resources. |chef_gem provider package|
    * - ``Chef::Provider::Package::Smartos``
      - ``smartos_package``
-     - This is the default provider for the |smartos| platform.
+     - The provider that is used with the |smartos| platform.
    * - ``Chef::Provider::Package::Solaris``
      - ``solaris_package``
-     - This is the default provider for the |solaris| platform.
+     - The provider that is used with the |solaris| platform.
    * - ``Chef::Provider::Package::Yum``
      - ``yum_package``
-     - This is the default provider for the |redhat| and |centos| platforms.
+     - The provider that is used with the |redhat| and |centos| platforms.
    * - ``Chef::Provider::Package::Zypper``
      - ``package``
-     - This is the default provider for the |suse| platform.
+     - The provider that is used with the |suse| platform.

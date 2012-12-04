@@ -12,4 +12,4 @@ The following providers are available. Use the short name to use the provider in
      - Notes
    * - ``Chef::Provider::Ifconfig``
      - ``ifconfig``
-     - This is the default provider for all platforms. Currently, this provider only writes out a start-up configuration file for the interface on Red Hat-based platforms (it writes to /etc/sysconfig/network-scripts/ifcfg-#{device_name}). 
+     - The default provider for all platforms. Currently, this provider only writes out a start-up configuration file for the interface on Red Hat-based platforms (it writes to /etc/sysconfig/network-scripts/ifcfg-#{device_name}). 

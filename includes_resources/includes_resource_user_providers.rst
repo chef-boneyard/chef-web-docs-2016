@@ -12,13 +12,13 @@ The following providers are available. Use the short name to use the provider in
      - Notes
    * - ``Chef::Provider::User::Useradd``
      - ``user``
-     - This is the default provider for all platforms.
+     - The default provider for the |resource user| resource.
    * - ``Chef::Provider::User::Pw``
      - ``user``
-     - This is the default provider for the |freebsd| platform.
+     - The provider that is used with the |freebsd| platform.
    * - ``Chef::Provider::User::Dscl``
      - ``user``
-     - This is the default provider for the |mac os x| platform.
+     - The provider that is used with the |mac os x| platform.
    * - ``Chef::Provider::User::Windows``
      - ``user``
-     - This is the default provider for all |windows| platforms.
+     - The provider that is used with all |windows| platforms.

@@ -12,7 +12,7 @@ The following providers are available. Use the short name to use the provider in
      - Notes
    * - ``Chef::Provider::Mount``
      - ``mount``
-     - This is the default provider for all platforms, except for |windows|.
+     - The default provider for all platforms, except for |windows|.
    * - ``Chef::Provider::Mount::Windows``
      - ``mount``
-     - This is the default provider for the |windows| platform.
+     - The default provider for the |windows| platform.

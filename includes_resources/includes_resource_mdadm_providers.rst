@@ -12,4 +12,4 @@ The following providers are available. Use the short name to use the provider in
      - Notes
    * - ``Chef::Provider::Mdadm``
      - ``mdadm``
-     - This is the default provider for the |linux| platform. 
+     - The default provider for the |linux| platform. 

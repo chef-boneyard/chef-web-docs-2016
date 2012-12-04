@@ -10,18 +10,21 @@ The following providers are available. Use the short name to use the provider in
    * - Long name
      - Short name
      - Notes
+   * - ``Chef::Resource::Script``
+     - ``script``
+     - When this short name is used, |chef| will determine the correct provider during the |chef| run.
    * - ``Chef::Resource::Script::Bash``
      - ``bash``
-     - This is the provider used for the |bash| command interpreter.
+     - The provider that is used with the |bash| command interpreter.
    * - ``Chef::Resource::Script::Csh``
      - ``csh``
-     - This is the provider used for the |csh| command interpreter.
+     - The provider that is used with the |csh| command interpreter.
    * - ``Chef::Resource::Script::Perl``
      - ``perl``
-     - This is the provider used for the |perl| command interpreter.
+     - The provider that is used with the |perl| command interpreter.
    * - ``Chef::Resource::Script::Python``
      - ``python``
-     - This is the provider used for the |python| command interpreter.
+     - The provider that is used with the |python| command interpreter.
    * - ``Chef::Resource::Script::Ruby``
      - ``ruby``
-     - This is the provider used for the |ruby| command interpreter.
+     - The provider that is used with the |ruby| command interpreter.

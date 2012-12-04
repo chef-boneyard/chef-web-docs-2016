@@ -12,4 +12,4 @@ The following providers are available. Use the short name to use the provider in
      - Notes
    * - ``Chef::Provider::HttpRequest``
      - ``http_request``
-     - This is the default provider for all platforms.
+     - The default provider for all platforms.
