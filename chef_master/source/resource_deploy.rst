@@ -71,15 +71,15 @@ Providers
 .. include:: ../../includes_resources/includes_resource_deploy_providers.rst
 
 deploy_branch
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_providers_deploy_branch.rst
 
 deploy_revision
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_providers_deploy_resource.rst
 
 timestamped_deploy
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_providers_timestamped_deploy.rst
 
 Examples
