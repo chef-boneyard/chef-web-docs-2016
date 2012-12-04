@@ -32,7 +32,7 @@ Chef Server
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_chef/includes_chef_server.rst
+.. include:: ../../includes_chef_server/includes_chef_server.rst
 
 There are three types of |chef| servers:
 
