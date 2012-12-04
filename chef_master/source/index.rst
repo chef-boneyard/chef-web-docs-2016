@@ -64,6 +64,10 @@ Chef Documentation
 .. toctree::
    :hidden:
 
+
+   ctl_chef_server_chef11
+   install_server_chef11
+
    chef_overview
    just_enough_ruby_for_chef
    install

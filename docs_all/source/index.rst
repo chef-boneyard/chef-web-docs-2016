@@ -51,6 +51,7 @@ Chef Topics
    chef_client
    chef_overview
    chef_server_api
+   ctl_chef_server_chef11
    client_rb
    cookbooks_site_api
    dsl_recipe
