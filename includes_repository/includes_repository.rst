@@ -12,7 +12,5 @@ The |chef| repository is the location in which the following data objects are st
 
 The |chef| repository is located on a workstation and should be synchronized with a version control system, such as |git|. All of the data in the |chef| repository should be treated like source code. 
 
-The |chef| repository can be cloned directly from |github| or it can be downloaded from |github| as a |tar gz| file, and then associated with another version source control system, such as |svn|, |mercurial|, or |bazaar|.
-
 |knife| is used to upload data to the |chef server| from the |chef| repository. Once uploaded, that data is used by |chef| to manage all of the nodes that are registered with the |chef server| and to ensure that the correct cookbooks, environments, roles, and other settings are applied to nodes correctly. 
 
