@@ -72,6 +72,7 @@ Chef Topics
    essentials_repository
    essentials_roles
    essentials_search
+   install_server_chef11
    install_workstation
    install_workstation_open_source
    just_enough_ruby_for_chef
