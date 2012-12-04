@@ -278,9 +278,9 @@ Just Enough Ruby for Chef
 
 
 
-The Chef Server
+The Chef Server 
 =====================================================
-.. include:: ../../includes_chef/includes_chef_server.rst
+.. include:: ../../includes_chef_server/includes_chef_server.rst
 
 There are three types of |chef| servers:
 
@@ -1116,9 +1116,9 @@ The following resources are built into |chef|:
      - |resource desc package|     
    * - |resource powershell script|
      - |resource desc powershell_script|
-   * - |resource remote directory|
+   * - |resource remote_directory|
      - |resource desc remote_directory|
-   * - |resource remote file|
+   * - |resource remote_file|
      - |resource desc remote_file|
    * - |resource route|
      - |resource desc route|

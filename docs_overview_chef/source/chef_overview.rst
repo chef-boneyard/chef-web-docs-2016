@@ -97,7 +97,7 @@ Some important components of workstations include:
 
 Chef Server
 =====================================================
-.. include:: ../../includes_chef/includes_chef_server.rst
+.. include:: ../../includes_chef_server/includes_chef_server.rst
 
 There are three types of |chef| servers:
 
