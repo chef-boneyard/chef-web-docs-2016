@@ -9,7 +9,6 @@ The following callback types are available:
 * ``before_symlink``
 * ``before_restart``
 * ``after_restart``
-* ``restart_command``
 
 Each of these callback types can be used in one of three ways:
 
