@@ -20,7 +20,7 @@ The syntax for using the |resource deploy| resource in a recipe is as follows:
 
 where
 
-* ``deploy`` is the default way to use the |resource deploy| resource in a recipe, but could be either ``timestamped_deploy``, ``deploy_revision``, or ``deploy_branch``, depending on the recipe. Each of these tells |chef| to use the ``Deploy::TimestampedDeploy`` or ``Deploy::Revision`` providers during the |chef| run
+* ``deploy`` is the default way to use the |resource deploy| resource in a recipe, but could be either ``timestamped_deploy``, ``deploy_revision``, or ``deploy_branch``, depending on the recipe.
 * ``"name"`` is the path to the location in which the deployment steps will occur
 * ``attribute`` is zero (or more) the available attributes
 * ``callback`` is additional |ruby| code that is used to pass a block or to specify a file, and then access information about the deployment
