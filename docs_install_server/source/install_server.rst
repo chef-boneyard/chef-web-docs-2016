@@ -39,10 +39,5 @@ Install the Chef Server
 
 .. include:: ../../includes_install/includes_install_omnibus_server.rst
 
-System Requirements
-=====================================================
-.. include:: ../../includes_chef_server/includes_chef_server_system_requirements.rst
 
-Install the Chef Server
-=====================================================
-.. include:: ../../step_install/step_install_server_omnibus.rst
+
