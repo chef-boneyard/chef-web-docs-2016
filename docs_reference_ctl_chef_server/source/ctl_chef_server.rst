@@ -32,7 +32,7 @@ chef-server-ctl Command Line Reference
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_chef_server/includes_chef_server.rst
+.. include:: ../../includes_chef_server/includes_chef_server.rst 
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server.rst
 

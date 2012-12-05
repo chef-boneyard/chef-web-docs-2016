@@ -41,19 +41,21 @@ Chef Topics
 * **Install Chef:** :doc:`install_workstation` | :doc:`install_workstation_open_source` | :doc:`migrate_to_hosted`
 * **Reference:** :doc:`chef_client` | :doc:`knife` | :doc:`ohai` | :doc:`resources`
 * **Config Files:** :doc:`client_rb` | :doc:`knife_rb` | :doc:`metadata_rb` | :doc:`server_rb` | :doc:`solo_rb` | :doc:`solr_rb`
-* **APIs and DSLs:** :doc:`chef_server_api` | :doc:`cookbooks_site_api` | :doc:`dsl_recipe` 
+* **APIs and DSLs:** :doc:`api_chef_server` | :doc:`api_cookbooks_site` | :doc:`dsl_recipe` 
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
 .. toctree::
    :hidden:
 
+   ctl_chef_server_chef11
+   install_server_chef11
+
    chef_client
    chef_overview
-   chef_server_api
-   ctl_chef_server_chef11
+   api_chef_server
+   api_cookbooks_site
    client_rb
-   cookbooks_site_api
    dsl_recipe
    essentials_chef_client
    essentials_cookbook_attribute_files
@@ -73,7 +75,6 @@ Chef Topics
    essentials_repository
    essentials_roles
    essentials_search
-   install_server_chef11
    install_workstation
    install_workstation_open_source
    just_enough_ruby_for_chef
