@@ -107,3 +107,5 @@ Chef Documentation
    essentials_cookbook_resources
    essentials_cookbook_templates
    essentials_cookbook_versions
+
+   images
