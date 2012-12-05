@@ -15,19 +15,19 @@ This command has the following options:
 ``reconfigure``
    Use to reconfigure the |chef server|. This option will read from the |path chef server chef server rb| file and apply that configuration to the |chef server|. Any time changes are made to the |chef server rb| file, the |chef server ctl| command should be run with this option.
 
-``restart``, ``restart [SERVICE_NAME]``
+``restart [SERVICE_NAME]``
    Use to restart all enabled services or to restart a single service.
 
-``start``, ``start [SERVICE_NAME]``
+``start [SERVICE_NAME]``
    Use to start all enabled services or to start a single service.
 
-``status``, ``status [SERVICE_NAME]``
+``status [SERVICE_NAME]``
    Use to view the status of all services or to view the status of a single service.
 
-``stop``, ``stop [SERVICE_NAME]``
+``stop [SERVICE_NAME]``
    Use to stop all enabled services or to stop a single service.
 
-``tail``, ``tail [SERVICE_NAME]``
+``tail [SERVICE_NAME]``
    Use to follow the |chef server| logs for all services or for a single service.
 
 ``test``, ``test --all``
