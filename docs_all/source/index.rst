@@ -48,9 +48,11 @@ Chef Topics
 .. toctree::
    :hidden:
 
+   install_server
+   ctl_chef_server
+
    chef_client
    chef_overview
-   ctl_chef_server
    api_chef_server
    api_cookbooks_site
    client_rb
@@ -73,7 +75,6 @@ Chef Topics
    essentials_repository
    essentials_roles
    essentials_search
-   install_server
    install_workstation
    install_workstation_open_source
    just_enough_ruby_for_chef
