@@ -34,11 +34,13 @@ Vagrant-based Self Contained Demo Environment
 
 The easiest way to take Chef 11 Server for a spin is using the Berksfile and Vagrantfile the chef-server cookbook. The only requirements for standing up a virtualized Chef Server are Ruby (>= 1.9.1), Rubygems (>= 1.3.6), and VirtualBox:
 
-* gem install bundler --no-ri --no-rdoc
-* git clone git://github.com/opscode-cookbooks/chef-server.git
-* cd chef-server
-* bundle install
-* bundle exec vagrant up
+.. code-block:: bash
+
+   gem install bundler --no-ri --no-rdoc
+   git clone git://github.com/opscode-cookbooks/chef-server.git   
+   cd chef-server
+   bundle install   
+   bundle exec vagrant up
 
 If you need help installing any of the prerequisites take a look at Jamie Winsor's excellent blog post on the subject.
 
