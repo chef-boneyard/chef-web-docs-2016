@@ -8,10 +8,6 @@ The |omnibus installer| is used to set up a |chef server|. The |omnibus installe
 Known Issues
 ===========================================
 
-#. The web interface is not available.
-#. CouchDB is not installed (but is no longer needed)
 #. ``knife client reregister`` does not work.  The current workaround for this is to delete and then re-create the client.
-#. ``knife index rebuild`` is not implemented.
-#. The chef-server tests have an intermittent failure for the test ``Cookbooks API endpoint PUT /cookbooks/<name>/<version> [update] for checksums changing some different checksums should succeed``.
 
 
