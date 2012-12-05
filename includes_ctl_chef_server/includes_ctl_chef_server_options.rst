@@ -30,7 +30,7 @@ This command has the following options:
 ``tail [SERVICE_NAME]``
    Use to follow the |chef server| logs for all services or for a single service.
 
-``test``, ``test --all``
+``test --all``
    Use to execute |chef pedant|, an integration test suite for the |chef server| installation. By default, only a subset of the available test are run. Add the ``--all`` flag to run the full test suite.
 
 **Examples**
