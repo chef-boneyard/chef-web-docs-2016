@@ -50,7 +50,7 @@ The running Chef-Server components are accessible from the host machine using th
 
 * Web UI: https://33.33.33.10/
 * Version Manifest: https://33.33.33.10/version
-* Chef Server API (routing requires X-OPS-USERID HTTP header being properly set): https://33.33.33.10/
+* Chef Server API (routing requires X-Ops-Userid HTTP header being properly set): https://33.33.33.10/
 
 
 Reporting Issues
