@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |resource deploy| resource is based on |capistrano|, a utility and framework for executing commands in parallel on multiple remote machines via |ssh|. The |resource deploy| resource in |chef| is designed to perform a similar functionality and results as the ``deploy`` and ``deploy:migration`` tasks do for |capistrano|.
+The |resource deploy| resource is modeled after |capistrano|, a utility and framework for executing commands in parallel on multiple remote machines via |ssh|. The |resource deploy| resource in |chef| is designed to perform a similar functionality and results as the ``deploy`` and ``deploy:migration`` tasks do for |capistrano|.
 
 .. Kept, but commented out.
 .. .. list-table::
