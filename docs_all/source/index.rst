@@ -48,7 +48,7 @@ Chef Topics
 .. toctree::
    :hidden:
 
-   install_server
+   install_server 
    ctl_chef_server
 
    chef_client
