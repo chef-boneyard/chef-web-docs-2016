@@ -32,7 +32,7 @@ Chef Documentation
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. note:: This page is a work in progress because Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is a collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|. 
+.. note:: This page is a work in progress because Opscode is in the process of moving content from wiki.opscode.com to here. This set of topics is a collection of all documentation for |chef|, including |chef hosted|, |chef private|, and |chef open server|.
 
 .. include:: ../../includes_chef/includes_chef.rst
 

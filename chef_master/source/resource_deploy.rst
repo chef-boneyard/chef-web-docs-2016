@@ -34,6 +34,8 @@ deploy
 
 .. include:: ../../includes_resources/includes_resource_deploy.rst
 
+.. include:: ../../includes_resources/includes_resource_deploy_capistrano.rst
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_deploy_syntax.rst
@@ -53,6 +55,8 @@ Deploy Cache File
 Callbacks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst
+
+.. include:: ../../includes_resources/includes_resource_deploy_capistrano_callbacks.rst
 
 Layout Modifiers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

@@ -239,6 +239,8 @@ deploy
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_deploy.rst
 
+.. include:: ../../includes_resources/includes_resource_deploy_capistrano.rst
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_syntax.rst
@@ -247,17 +249,19 @@ Deploy Strategies
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_deploy_strategy.rst
 
-Deploy Phases
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_deploy_strategy_phases.rst
-
 **Deploy Cache File**
 
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_start_over.rst
 
+Deploy Phases
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources/includes_resource_deploy_strategy_phases.rst
+
 Callbacks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst
+
+.. include:: ../../includes_resources/includes_resource_deploy_capistrano_callbacks.rst
 
 Layout Modifiers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
