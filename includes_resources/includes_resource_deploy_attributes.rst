@@ -10,13 +10,13 @@ This resource has the following has the following attributes:
    * - Attribute
      - Description
    * - ``after_restart``
-     - |after_restart resource deploy|
+     - |after_restart| Default value: ``deploy/after_restart.rb``.
    * - ``before_migrate``
-     - |before_migrate resource deploy|
+     - |before_migrate| Default value: ``deploy/before_migrate.rb``.
    * - ``before_restart``
-     - |before_restart resource deploy|
+     - |before_restart| Default value: ``deploy/before_restart.rb``.
    * - ``before_symlink``
-     - |before_symlink resource deploy|
+     - |before_symlink| Default value: ``deploy/before_symlink.rb``.
    * - ``branch``
      - The alias for the revision.
    * - ``create_dirs_before_symlink``

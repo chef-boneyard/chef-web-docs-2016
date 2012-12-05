@@ -5,10 +5,20 @@ In-between each step in a deployment process, callbacks can be run using arbitra
 
 The following callback types are available:
 
-* ``before_migrate``
-* ``before_symlink``
-* ``before_restart``
-* ``after_restart``
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Callback
+     - Description
+   * - ``after_restart``
+     - |after_restart| Default value: ``deploy/after_restart.rb``.
+   * - ``before_migrate``
+     - |before_migrate| Default value: ``deploy/before_migrate.rb``.
+   * - ``before_restart``
+     - |before_restart| Default value: ``deploy/before_restart.rb``.
+   * - ``before_symlink``
+     - |before_symlink| Default value: ``deploy/before_symlink.rb``.
 
 Each of these callback types can be used in one of three ways:
 
