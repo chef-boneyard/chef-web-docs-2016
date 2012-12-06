@@ -48,8 +48,10 @@ Chef Topics
 .. toctree::
    :hidden:
 
-   install_server 
+   chef_pedant
    ctl_chef_server
+   install_server
+
 
    chef_client
    chef_overview
