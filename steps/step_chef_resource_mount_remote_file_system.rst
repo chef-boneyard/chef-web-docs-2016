@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To mount a remote file system:
+.. To mount a remote file system:
 
 .. code-block:: ruby
 

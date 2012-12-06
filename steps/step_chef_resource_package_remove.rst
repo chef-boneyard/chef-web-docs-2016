@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To remove a package:
+.. To remove a package:
 
 .. code-block:: ruby
 

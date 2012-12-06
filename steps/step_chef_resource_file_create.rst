@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a file:
+.. To create a file:
 
 .. code-block:: ruby
 

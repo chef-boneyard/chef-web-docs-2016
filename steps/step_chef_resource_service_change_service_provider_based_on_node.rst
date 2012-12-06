@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To change a service provider depending on a node's platform:
+.. To change a service provider depending on a node's platform:
 
 .. code-block:: ruby
 

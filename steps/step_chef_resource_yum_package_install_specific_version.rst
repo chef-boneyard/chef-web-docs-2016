@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a specific version (even if it is older than the version currently installed):
+.. To install a specific version (even if it is older than the version currently installed):
 
 .. code-block:: ruby
 

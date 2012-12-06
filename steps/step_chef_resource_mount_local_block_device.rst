@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To mount a local block device:
+.. To mount a local block device:
 
 .. code-block:: ruby
 

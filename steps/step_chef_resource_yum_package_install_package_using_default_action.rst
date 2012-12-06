@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install the same package using the default action:
+.. To install the same package using the default action:
 
 .. code-block:: ruby
 

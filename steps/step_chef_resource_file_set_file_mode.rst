@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To set a file mode:
+.. To set a file mode:
 
 .. code-block:: ruby
 

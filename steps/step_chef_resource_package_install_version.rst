@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a specific package version:
+.. To install a specific package version:
 
 .. code-block:: ruby
 

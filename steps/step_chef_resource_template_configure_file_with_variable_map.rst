@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To configure a file from a template with a variable map:
+.. To configure a file from a template with a variable map:
 
 .. code-block:: ruby
 

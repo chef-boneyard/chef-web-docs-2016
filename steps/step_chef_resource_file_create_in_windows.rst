@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a file in |windows|:
+.. To create a file in |windows|:
 
 .. code-block:: ruby
 

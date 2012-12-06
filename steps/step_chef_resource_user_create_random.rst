@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a random user:
+.. To create a random user:
 
 .. code-block:: ruby
 

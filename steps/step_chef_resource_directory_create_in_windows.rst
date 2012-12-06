@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a directory in |windows|:
+.. To create a directory in |windows|:
 
 .. code-block:: ruby
 

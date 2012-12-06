@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To transfer a file in a cookbook:
+.. To transfer a file in a cookbook:
 
 .. code-block:: ruby
 

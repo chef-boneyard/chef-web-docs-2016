@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a symbolic link:
+.. To create a symbolic link:
 
 .. code-block:: ruby
 

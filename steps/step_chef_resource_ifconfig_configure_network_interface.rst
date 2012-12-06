@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To configure a network interface:
+.. To configure a network interface:
 
 .. code-block:: ruby
 

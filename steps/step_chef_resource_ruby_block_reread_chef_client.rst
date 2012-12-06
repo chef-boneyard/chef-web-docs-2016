@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To re-read the |chef client| configuration during a |chef| run:
+.. To re-read the |chef client| configuration during a |chef| run:
 
 .. code-block:: ruby
 

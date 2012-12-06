@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add a host route:
+.. To add a host route:
 
 .. code-block:: ruby
 

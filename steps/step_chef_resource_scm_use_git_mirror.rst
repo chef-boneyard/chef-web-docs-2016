@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the |git| mirror:
+.. To use the |git| mirror:
 
 .. code-block:: ruby
 

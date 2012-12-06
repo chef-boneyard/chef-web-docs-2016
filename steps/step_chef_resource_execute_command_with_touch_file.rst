@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To execute a command with a touch file running only once:
+.. To execute a command with a touch file running only once:
 
 .. code-block:: ruby
 

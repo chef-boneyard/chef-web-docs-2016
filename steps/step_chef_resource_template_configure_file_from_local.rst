@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To configure a file from a local template:
+.. To configure a file from a local template:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To recursively transfer a directory from a remote location:
+.. To recursively transfer a directory from a remote location:
 
 .. code-block:: ruby
 

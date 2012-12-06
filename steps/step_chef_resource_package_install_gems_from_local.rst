@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a |gems| file from the local file system:
+.. To install a |gems| file from the local file system:
 
 .. code-block:: ruby
 

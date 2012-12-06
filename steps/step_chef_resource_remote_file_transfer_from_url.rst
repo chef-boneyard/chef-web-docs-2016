@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To transfer a file from a URL:
+.. To transfer a file from a URL:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the change working directory (``cwd``) attribute:
+.. To use the change working directory (``cwd``) attribute:
 
 .. code-block:: ruby
 

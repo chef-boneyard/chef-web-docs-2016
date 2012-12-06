@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To run an entry if a folder exists:
+.. To run an entry if a folder exists:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To run a command on an |erlang| node:
+.. To run a command on an |erlang| node:
 
 .. code-block:: ruby
 

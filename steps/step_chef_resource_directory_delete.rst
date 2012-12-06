@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To delete a directory:
+.. To delete a directory:
 
 .. code-block:: ruby
 

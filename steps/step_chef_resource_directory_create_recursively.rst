@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a directory recursively:
+.. To create a directory recursively:
 
 .. code-block:: ruby
 

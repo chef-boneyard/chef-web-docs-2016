@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To reload |ohai|:
+.. To reload |ohai|:
 
 .. code-block:: ruby
 

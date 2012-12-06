@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To upgrade a package
+.. To upgrade a package
 
 .. code-block:: ruby
 

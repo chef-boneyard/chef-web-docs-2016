@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a package with options:
+.. To install a package with options:
 
 .. code-block:: ruby
 

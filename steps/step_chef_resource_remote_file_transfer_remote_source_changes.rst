@@ -1,6 +1,6 @@
 .. This is an included how-to.
 
-To transfer a file only if the remote source has changed (using the |resource http request| resource):
+.. To transfer a file only if the remote source has changed (using the |resource http request| resource):
 
 .. code-block:: ruby
 

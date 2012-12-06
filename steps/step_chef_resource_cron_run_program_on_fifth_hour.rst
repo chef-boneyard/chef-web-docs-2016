@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To run a program on the fifth hour of the day:
+.. To run a program on the fifth hour of the day:
 
 .. code-block:: ruby
 

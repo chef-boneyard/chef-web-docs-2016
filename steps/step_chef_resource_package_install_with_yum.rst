@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a |yum| package with a specified architecture:
+.. To install a |yum| package with a specified architecture:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a specific architecture:
+.. To install a specific architecture:
 
 .. code-block:: ruby
 

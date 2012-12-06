@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To remove a file:
+.. To remove a file:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To get the latest version of |couch db|:
+.. To get the latest version of |couch db|:
 
 .. code-block:: ruby
 

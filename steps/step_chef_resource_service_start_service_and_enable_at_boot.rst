@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To start the service when it is not running and enable it so that it starts at system boot time:
+.. To start the service when it is not running and enable it so that it starts at system boot time:
 
 .. code-block:: ruby
 

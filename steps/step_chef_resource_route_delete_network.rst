@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To delete a network route:
+.. To delete a network route:
 
 .. code-block:: ruby
 

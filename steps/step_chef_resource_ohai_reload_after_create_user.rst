@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To reload |ohai| configuration after a new user is created:
+.. To reload |ohai| configuration after a new user is created:
 
 .. code-block:: ruby
 

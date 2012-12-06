@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a package using a specific provider:
+.. To install a package using a specific provider:
 
 .. code-block:: ruby
 

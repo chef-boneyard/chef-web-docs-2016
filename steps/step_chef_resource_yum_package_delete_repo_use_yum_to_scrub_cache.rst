@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To delete a repository while using |yum| to scrub the cache to avoid issues:
+.. To delete a repository while using |yum| to scrub the cache to avoid issues:
 
 .. code-block:: ruby
 
@@ -15,4 +15,4 @@ To delete a repository while using |yum| to scrub the cache to avoid issues:
      notifies :create, "ruby_block[reload-internal-yum-cache]", :immediately
    end
 
-.. note:: The previous two examples are thanks to gaffneyc @ https://gist.github.com/918711.
+.. note:: The previous example is thanks to gaffneyc @ https://gist.github.com/918711.

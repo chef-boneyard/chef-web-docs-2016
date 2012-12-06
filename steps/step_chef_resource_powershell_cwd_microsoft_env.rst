@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To change the working directory to a |windows| environment variable:
+.. To change the working directory to a |windows| environment variable:
 
 .. code-block:: ruby
 

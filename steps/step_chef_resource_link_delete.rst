@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To delete a link
+.. To delete a link
 
 .. code-block:: ruby
 

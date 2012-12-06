@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To mount a non-block file system
+.. To mount a non-block file system
 
 .. code-block:: ruby
 

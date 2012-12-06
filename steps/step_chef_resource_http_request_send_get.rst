@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To send a GET request:
+.. To send a GET request:
 
 .. code-block:: ruby
 

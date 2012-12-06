@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To execute a command with an environment variable:
+.. To execute a command with an environment variable:
 
 .. code-block:: ruby
 

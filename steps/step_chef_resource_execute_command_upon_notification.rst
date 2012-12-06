@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To execute a command only upon notification:
+.. To execute a command only upon notification:
 
 .. code-block:: ruby
 

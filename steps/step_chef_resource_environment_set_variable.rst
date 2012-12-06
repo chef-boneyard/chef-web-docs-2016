@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To set an environment variable:
+.. To set an environment variable:
 
 .. code-block:: ruby
 

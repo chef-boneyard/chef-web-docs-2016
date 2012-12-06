@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To mount a remote file system and add it to the file systems table:
+.. To mount a remote file system and add it to the file systems table:
 
 .. code-block:: ruby
 

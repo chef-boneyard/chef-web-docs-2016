@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a directory:
+.. To create a directory:
 
 .. code-block:: ruby
 

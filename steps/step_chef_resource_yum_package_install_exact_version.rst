@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install an exact version: 
+.. To install an exact version: 
 
 .. code-block:: ruby
 

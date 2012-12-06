@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create and assemble a |raid| 1 array from two disks with a 64k chunks size:
+.. To create and assemble a |raid| 1 array from two disks with a 64k chunks size:
 
 .. code-block:: ruby
 

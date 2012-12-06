@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a minimum version: 
+.. To install a minimum version: 
 
 .. code-block:: ruby
 

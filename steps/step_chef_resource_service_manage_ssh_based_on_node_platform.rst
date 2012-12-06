@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To manage the |ssh| service, named depending on the platform of the node:
+.. To manage the |ssh| service, named depending on the platform of the node:
 
 .. code-block:: ruby
 

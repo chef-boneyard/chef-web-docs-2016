@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To mount a labeled file system:
+.. To mount a labeled file system:
 
 .. code-block:: ruby
 

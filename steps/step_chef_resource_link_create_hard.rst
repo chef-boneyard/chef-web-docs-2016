@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a hard link:
+.. To create a hard link:
 
 .. code-block:: ruby
 
