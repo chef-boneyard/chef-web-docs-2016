@@ -52,8 +52,8 @@ The following examples show how to use the |resource script| resource.
 
 **Use a named provider to run a script**
 
-.. include:: ../../steps/step_chef_resource_script_bash_provider_and_interpreter.rst
+.. include:: ../../step_resource/step_resource_script_bash_provider_and_interpreter.rst
 
 **Run a script**
 
-.. include:: ../../steps/step_chef_resource_script_bash_script.rst
+.. include:: ../../step_resource/step_resource_script_bash_script.rst

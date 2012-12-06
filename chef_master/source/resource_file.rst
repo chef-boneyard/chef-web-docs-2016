@@ -54,20 +54,20 @@ The following examples show how to use the |resource file| resource.
 
 **Create a file**
 
-.. include:: ../../steps/step_chef_resource_file_create.rst
+.. include:: ../../step_resource/step_resource_file_create.rst
 
 **Create a file in Microsoft Windows**
 
-.. include:: ../../steps/step_chef_resource_file_create_in_windows.rst
+.. include:: ../../step_resource/step_resource_file_create_in_windows.rst
 
 **Remove a file**
 
-.. include:: ../../steps/step_chef_resource_file_remove.rst
+.. include:: ../../step_resource/step_resource_file_remove.rst
 
 **Set file modes**
 
-.. include:: ../../steps/step_chef_resource_file_set_file_mode.rst
+.. include:: ../../step_resource/step_resource_file_set_file_mode.rst
 
 **Delete a repository using yum to scrub the cache**
 
-.. include:: ../../steps/step_chef_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
+.. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst

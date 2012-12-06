@@ -52,8 +52,8 @@ The following examples show how to use the |resource route| resource.
 
 **Add a host route**
 
-.. include:: ../../steps/step_chef_resource_route_add_host.rst
+.. include:: ../../step_resource/step_resource_route_add_host.rst
 
 **Delete a network route**
 
-.. include:: ../../steps/step_chef_resource_route_delete_network.rst
+.. include:: ../../step_resource/step_resource_route_delete_network.rst

@@ -54,8 +54,8 @@ The following examples show how to use the |resource remote_file| resource.
 
 **Transfer a file from a URL**
 
-.. include:: ../../steps/step_chef_resource_remote_file_transfer_from_url.rst
+.. include:: ../../step_resource/step_resource_remote_file_transfer_from_url.rst
 
 **Transfer a file only when the source has changed**
 
-.. include:: ../../steps/step_chef_resource_remote_file_transfer_remote_source_changes.rst
+.. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst

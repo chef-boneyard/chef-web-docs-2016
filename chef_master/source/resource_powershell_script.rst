@@ -52,16 +52,16 @@ The following examples show how to use the |resource powershell script| resource
 
 **Write to an interpolated path**
 
-.. include:: ../../steps/step_chef_resource_powershell_write_to_interpolated_path.rst
+.. include:: ../../step_resource/step_resource_powershell_write_to_interpolated_path.rst
 
 **Change the working directory**
 
-.. include:: ../../steps/step_chef_resource_powershell_cwd.rst
+.. include:: ../../step_resource/step_resource_powershell_cwd.rst
 
 **Change the working directory in Microsoft Windows**
 
-.. include:: ../../steps/step_chef_resource_powershell_cwd_microsoft_env.rst
+.. include:: ../../step_resource/step_resource_powershell_cwd_microsoft_env.rst
 
 **Pass an environment variable to a script**
 
-.. include:: ../../steps/step_chef_resource_powershell_pass_env_to_script.rst
+.. include:: ../../step_resource/step_resource_powershell_pass_env_to_script.rst

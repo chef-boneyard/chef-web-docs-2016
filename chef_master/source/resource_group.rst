@@ -52,4 +52,4 @@ The following examples show how to use the |resource group| resource.
 
 **Append users to groups**
 
-.. include:: ../../steps/step_chef_resource_group_append_user.rst
+.. include:: ../../step_resource/step_resource_group_append_user.rst

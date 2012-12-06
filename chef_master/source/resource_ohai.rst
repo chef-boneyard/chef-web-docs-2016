@@ -52,8 +52,8 @@ The following examples show how to use the |resource ohai| resource.
 
 **Reload Ohai**
 
-.. include:: ../../steps/step_chef_resource_ohai_reload.rst
+.. include:: ../../step_resource/step_resource_ohai_reload.rst
 
 **Reload Ohai after a new user is created**
 
-.. include:: ../../steps/step_chef_resource_ohai_reload_after_create_user.rst
+.. include:: ../../step_resource/step_resource_ohai_reload_after_create_user.rst

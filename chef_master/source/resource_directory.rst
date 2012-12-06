@@ -52,16 +52,16 @@ The following examples show how to use the |resource directory| resource.
 
 **Create a directory**
 
-.. include:: ../../steps/step_chef_resource_directory_create.rst
+.. include:: ../../step_resource/step_resource_directory_create.rst
 
 **Create a directory in Microsoft Windows**
 
-.. include:: ../../steps/step_chef_resource_directory_create_in_windows.rst
+.. include:: ../../step_resource/step_resource_directory_create_in_windows.rst
 
 **Create a directory recursively**
 
-.. include:: ../../steps/step_chef_resource_directory_create_recursively.rst
+.. include:: ../../step_resource/step_resource_directory_create_recursively.rst
 
 **Delete a directory**
 
-.. include:: ../../steps/step_chef_resource_directory_delete.rst
+.. include:: ../../step_resource/step_resource_directory_delete.rst

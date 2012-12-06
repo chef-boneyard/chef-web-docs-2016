@@ -52,12 +52,12 @@ The following examples show how to use the |resource template| resource.
 
 **Configure a file from a template**
 
-.. include:: ../../steps/step_chef_resource_template_configure_file.rst
+.. include:: ../../step_resource/step_resource_template_configure_file.rst
 
 **Configure a file from a local template**
 
-.. include:: ../../steps/step_chef_resource_template_configure_file_from_local.rst
+.. include:: ../../step_resource/step_resource_template_configure_file_from_local.rst
 
 **Configure a file using a variable map**
 
-.. include:: ../../steps/step_chef_resource_template_configure_file_with_variable_map.rst
+.. include:: ../../step_resource/step_resource_template_configure_file_with_variable_map.rst

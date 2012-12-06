@@ -52,4 +52,4 @@ The following examples show how to use the |resource mdadm| resource.
 
 **Create and assemble a RAID 1 array**
 
-.. include:: ../../steps/step_chef_resource_mdadm_assemble_raid_array.rst
+.. include:: ../../step_resource/step_resource_mdadm_assemble_raid_array.rst

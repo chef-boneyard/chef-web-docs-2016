@@ -52,8 +52,8 @@ The following examples show how to use the |resource cron| resource.
 
 **Run a program at a specified interval**
 
-.. include:: ../../steps/step_chef_resource_cron_run_program_on_fifth_hour.rst
+.. include:: ../../step_resource/step_resource_cron_run_program_on_fifth_hour.rst
 
 **Run an entry if a folder exists**
 
-.. include:: ../../steps/step_chef_resource_cron_run_entry_when_folder_exists.rst
+.. include:: ../../step_resource/step_resource_cron_run_entry_when_folder_exists.rst

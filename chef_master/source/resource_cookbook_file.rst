@@ -56,12 +56,12 @@ The following examples show how to use the |resource cookbook file| resource.
 
 **Transfer a file**
 
-.. include:: ../../steps/step_chef_resource_cookbook_file_transfer_a_file.rst
+.. include:: ../../step_resource/step_resource_cookbook_file_transfer_a_file.rst
 
 **Handle cookbook_file and yum_package resources in the same recipe**
 
-.. include:: ../../steps/step_chef_resource_yum_package_handle_cookbook_file_and_yum_package.rst
+.. include:: ../../step_resource/step_resource_yum_package_handle_cookbook_file_and_yum_package.rst
 
 **Install repositories from a file, trigger a command, and force the internal cache to reload**
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_yum_repo_from_file.rst
+.. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst

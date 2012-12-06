@@ -54,4 +54,4 @@ The following examples show how to use the |resource env| resource.
 
 **Set an environment variable**
 
-.. include:: ../../steps/step_chef_resource_environment_set_variable.rst
+.. include:: ../../step_resource/step_resource_environment_set_variable.rst

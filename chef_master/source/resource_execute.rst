@@ -54,20 +54,20 @@ The following examples show how to use the |resource execute| resource.
 
 **Run a command upon notification**
 
-.. include:: ../../steps/step_chef_resource_execute_command_upon_notification.rst
+.. include:: ../../step_resource/step_resource_execute_command_upon_notification.rst
 
 **Run a touch file only once while running a command**
 
-.. include:: ../../steps/step_chef_resource_execute_command_with_touch_file.rst
+.. include:: ../../step_resource/step_resource_execute_command_with_touch_file.rst
 
 **Run a command which requires an environment variable**
 
-.. include:: ../../steps/step_chef_resource_execute_command_with_variable.rst
+.. include:: ../../step_resource/step_resource_execute_command_with_variable.rst
 
 **Delete a repository using yum to scrub the cache**
 
-.. include:: ../../steps/step_chef_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
+.. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
 
 **Install repositories from a file, trigger a command, and force the internal cache to reload**
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_yum_repo_from_file.rst
+.. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst

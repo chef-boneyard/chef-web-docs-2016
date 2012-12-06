@@ -209,7 +209,19 @@ Syntax
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_cookbook_file_transfer_a_file.rst
+The following examples show how to use the |resource cookbook file| resource.
+
+**Transfer a file**
+
+.. include:: ../../step_resource/step_resource_cookbook_file_transfer_a_file.rst
+
+**Handle cookbook_file and yum_package resources in the same recipe**
+
+.. include:: ../../step_resource/step_resource_yum_package_handle_cookbook_file_and_yum_package.rst
+
+**Install repositories from a file, trigger a command, and force the internal cache to reload**
+
+.. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
 
 
 cron
@@ -230,9 +242,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_cron_run_program_on_fifth_hour.rst
+The following examples show how to use the |resource cron| resource.
 
-.. include:: ../../steps/step_chef_resource_cron_run_entry_when_folder_exists.rst
+**Run a program at a specified interval**
+
+.. include:: ../../step_resource/step_resource_cron_run_program_on_fifth_hour.rst
+
+**Run an entry if a folder exists**
+
+.. include:: ../../step_resource/step_resource_cron_run_entry_when_folder_exists.rst
 
 
 deploy
@@ -351,13 +369,23 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_directory_create.rst
+The following examples show how to use the |resource directory| resource.
 
-.. include:: ../../steps/step_chef_resource_directory_create_in_windows.rst
+**Create a directory**
 
-.. include:: ../../steps/step_chef_resource_directory_create_recursively.rst
+.. include:: ../../step_resource/step_resource_directory_create.rst
 
-.. include:: ../../steps/step_chef_resource_directory_delete.rst
+**Create a directory in Microsoft Windows**
+
+.. include:: ../../step_resource/step_resource_directory_create_in_windows.rst
+
+**Create a directory recursively**
+
+.. include:: ../../step_resource/step_resource_directory_create_recursively.rst
+
+**Delete a directory**
+
+.. include:: ../../step_resource/step_resource_directory_delete.rst
 
 
 env
@@ -380,7 +408,11 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_environment_set_variable.rst
+The following examples show how to use the |resource env| resource.
+
+**Set an environment variable**
+
+.. include:: ../../step_resource/step_resource_environment_set_variable.rst
 
 
 erlang_call
@@ -403,7 +435,11 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_erlang_call_run_command_on_node.rst
+The following examples show how to use the |resource erlang call| resource.
+
+**Run a command**
+
+.. include:: ../../step_resource/step_resource_erlang_call_run_command_on_node.rst
 
 
 execute
@@ -426,11 +462,27 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_execute_command_upon_notification.rst
+The following examples show how to use the |resource execute| resource.
 
-.. include:: ../../steps/step_chef_resource_execute_command_with_touch_file.rst
+**Run a command upon notification**
 
-.. include:: ../../steps/step_chef_resource_execute_command_with_variable.rst
+.. include:: ../../step_resource/step_resource_execute_command_upon_notification.rst
+
+**Run a touch file only once while running a command**
+
+.. include:: ../../step_resource/step_resource_execute_command_with_touch_file.rst
+
+**Run a command which requires an environment variable**
+
+.. include:: ../../step_resource/step_resource_execute_command_with_variable.rst
+
+**Delete a repository using yum to scrub the cache**
+
+.. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
+
+**Install repositories from a file, trigger a command, and force the internal cache to reload**
+
+.. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
 
 
 file
@@ -453,13 +505,27 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_file_create.rst
+The following examples show how to use the |resource file| resource.
 
-.. include:: ../../steps/step_chef_resource_file_create_in_windows.rst
+**Create a file**
 
-.. include:: ../../steps/step_chef_resource_file_remove.rst
+.. include:: ../../step_resource/step_resource_file_create.rst
 
-.. include:: ../../steps/step_chef_resource_file_set_file_mode.rst
+**Create a file in Microsoft Windows**
+
+.. include:: ../../step_resource/step_resource_file_create_in_windows.rst
+
+**Remove a file**
+
+.. include:: ../../step_resource/step_resource_file_remove.rst
+
+**Set file modes**
+
+.. include:: ../../step_resource/step_resource_file_set_file_mode.rst
+
+**Delete a repository using yum to scrub the cache**
+
+.. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
 
 
 group
@@ -480,7 +546,11 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_group_append_user.rst
+The following examples show how to use the |resource group| resource.
+
+**Append users to groups**
+
+.. include:: ../../step_resource/step_resource_group_append_user.rst
 
 
 http_request
@@ -501,9 +571,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_http_request_send_get.rst
+The following examples show how to use the |resource http request| resource.
 
-.. include:: ../../steps/step_chef_resource_http_request_send_post.rst
+**Send a GET request**
+
+.. include:: ../../step_resource/step_resource_http_request_send_get.rst
+
+**Send a POST request**
+
+.. include:: ../../step_resource/step_resource_http_request_send_post.rst
 
 
 ifconfig
@@ -524,7 +600,11 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_ifconfig_configure_network_interface.rst
+The following examples show how to use the |resource ifconfig| resource.
+
+**Configure a network interface**
+
+.. include:: ../../step_resource/step_resource_ifconfig_configure_network_interface.rst
 
 
 link
@@ -545,11 +625,19 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_link_create_symbolic.rst
+The following examples show how to use the |resource link| resource.
 
-.. include:: ../../steps/step_chef_resource_link_create_hard.rst
+**Create symbolic links**
 
-.. include:: ../../steps/step_chef_resource_link_delete.rst
+.. include:: ../../step_resource/step_resource_link_create_symbolic.rst
+
+**Create hard links**
+
+.. include:: ../../step_resource/step_resource_link_create_hard.rst
+
+**Delete links**
+
+.. include:: ../../step_resource/step_resource_link_delete.rst
 
 
 log
@@ -570,9 +658,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_log_set_info.rst
+The following examples show how to use the |resource log| resource.
 
-.. include:: ../../steps/step_chef_resource_log_set_debug.rst
+**Set default logging level**
+
+.. include:: ../../step_resource/step_resource_log_set_info.rst
+
+**Set debug logging level**
+
+.. include:: ../../step_resource/step_resource_log_set_debug.rst
 
 
 mdadm
@@ -593,7 +687,11 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_mdadm_assemble_raid_array.rst
+The following examples show how to use the |resource mdadm| resource.
+
+**Create and assemble a RAID 1 array**
+
+.. include:: ../../step_resource/step_resource_mdadm_assemble_raid_array.rst
 
 
 mount
@@ -614,19 +712,35 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_mount_labeled_file_system.rst
+The following examples show how to use the |resource mount| resource.
 
-.. include:: ../../steps/step_chef_resource_mount_local_block_device.rst
+**Mount a labeled file system**
 
-.. include:: ../../steps/step_chef_resource_mount_nonblock_file_system.rst
+.. include:: ../../step_resource/step_resource_mount_labeled_file_system.rst
 
-.. include:: ../../steps/step_chef_resource_mount_remote_file_system_add_to_fstab.rst
+**Mount a local block drive**
 
-.. include:: ../../steps/step_chef_resource_mount_remote_file_system.rst
+.. include:: ../../step_resource/step_resource_mount_local_block_device.rst
 
-.. include:: ../../steps/step_chef_resource_mount_remote_windows_folder.rst
+**Mount a non-block file system**
 
-.. include:: ../../steps/step_chef_resource_mount_unmount_remote_windows_drive.rst
+.. include:: ../../step_resource/step_resource_mount_nonblock_file_system.rst
+
+**Mount and add to the file systems table**
+
+.. include:: ../../step_resource/step_resource_mount_remote_file_system_add_to_fstab.rst
+
+**Mount a remote file system**
+
+.. include:: ../../step_resource/step_resource_mount_remote_file_system.rst
+
+**Mount a remote folder in Microsoft Windows**
+
+.. include:: ../../step_resource/step_resource_mount_remote_windows_folder.rst
+
+**Unmount a remote folder in Microsoft Windows**
+
+.. include:: ../../step_resource/step_resource_mount_unmount_remote_windows_drive.rst
 
 
 ohai
@@ -647,9 +761,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_ohai_reload.rst
+The following examples show how to use the |resource ohai| resource.
 
-.. include:: ../../steps/step_chef_resource_ohai_reload_after_create_user.rst
+**Reload Ohai**
+
+.. include:: ../../step_resource/step_resource_ohai_reload.rst
+
+**Reload Ohai after a new user is created**
+
+.. include:: ../../step_resource/step_resource_ohai_reload_after_create_user.rst
 
 
 package
@@ -686,27 +806,51 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_package_install_gems_for_chef_recipe.rst
+The following examples show how to use the |resource package| resource.
 
-.. include:: ../../steps/step_chef_resource_package_install_gems_from_local.rst
+**Install a gems file for use in recipes**
 
-.. include:: ../../steps/step_chef_resource_package_install_version.rst
+.. include:: ../../step_resource/step_resource_package_install_gems_for_chef_recipe.rst
 
-.. include:: ../../steps/step_chef_resource_package_install_with_options.rst
+**Install a gems file from the local file system**
 
-.. include:: ../../steps/step_chef_resource_package_install_with_response_file.rst
+.. include:: ../../step_resource/step_resource_package_install_gems_from_local.rst
 
-.. include:: ../../steps/step_chef_resource_package_install_with_specific_provider.rst
+**Install a package**
 
-.. include:: ../../steps/step_chef_resource_package_install_with_yum.rst
+.. include:: ../../step_resource/step_resource_package_install.rst
 
-.. include:: ../../steps/step_chef_resource_package_install.rst
+**Install a package version**
 
-.. include:: ../../steps/step_chef_resource_package_purge.rst
+.. include:: ../../step_resource/step_resource_package_install_version.rst
 
-.. include:: ../../steps/step_chef_resource_package_remove.rst
+**Install a package with options**
 
-.. include:: ../../steps/step_chef_resource_package_upgrade.rst
+.. include:: ../../step_resource/step_resource_package_install_with_options.rst
+
+**Install a package with a response_file**
+
+.. include:: ../../step_resource/step_resource_package_install_with_response_file.rst
+
+**Install a package using a specific provider**
+
+.. include:: ../../step_resource/step_resource_package_install_with_specific_provider.rst
+
+**Install a specified architecture using a named provider**
+
+.. include:: ../../step_resource/step_resource_package_install_with_yum.rst
+
+**Purge a package**
+
+.. include:: ../../step_resource/step_resource_package_purge.rst
+
+**Remove a package**
+
+.. include:: ../../step_resource/step_resource_package_remove.rst
+
+**Upgrade a package**
+
+.. include:: ../../step_resource/step_resource_package_upgrade.rst
 
 
 powershell_script
@@ -727,13 +871,23 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_powershell_write_to_interpolated_path.rst
+The following examples show how to use the |resource powershell script| resource.
 
-.. include:: ../../steps/step_chef_resource_powershell_cwd_microsoft_env.rst
+**Write to an interpolated path**
 
-.. include:: ../../steps/step_chef_resource_powershell_cwd.rst
+.. include:: ../../step_resource/step_resource_powershell_write_to_interpolated_path.rst
 
-.. include:: ../../steps/step_chef_resource_powershell_pass_env_to_script.rst
+**Change the working directory**
+
+.. include:: ../../step_resource/step_resource_powershell_cwd.rst
+
+**Change the working directory in Microsoft Windows**
+
+.. include:: ../../step_resource/step_resource_powershell_cwd_microsoft_env.rst
+
+**Pass an environment variable to a script**
+
+.. include:: ../../step_resource/step_resource_powershell_pass_env_to_script.rst
 
 
 remote_directory
@@ -754,7 +908,11 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_remote_directory_recursive_transfer.rst
+The following examples show how to use the |resource remote_directory| resource.
+
+**Recursively transfer a directory from a remote location**
+
+.. include:: ../../step_resource/step_resource_remote_directory_recursive_transfer.rst
 
 
 remote_file
@@ -777,9 +935,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_remote_file_transfer_from_url.rst
+The following examples show how to use the |resource remote_file| resource.
 
-.. include:: ../../steps/step_chef_resource_remote_file_transfer_remote_source_changes.rst
+**Transfer a file from a URL**
+
+.. include:: ../../step_resource/step_resource_remote_file_transfer_from_url.rst
+
+**Transfer a file only when the source has changed**
+
+.. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst
 
 
 route
@@ -800,9 +964,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_route_add_host.rst
+The following examples show how to use the |resource route| resource.
 
-.. include:: ../../steps/step_chef_resource_route_delete_network.rst
+**Add a host route**
+
+.. include:: ../../step_resource/step_resource_route_add_host.rst
+
+**Delete a network route**
+
+.. include:: ../../step_resource/step_resource_route_delete_network.rst
 
 
 ruby_block
@@ -823,7 +993,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_ruby_block_reread_chef_client.rst
+The following examples show how to use the |resource ruby block| resource.
+
+**Re-read configuration data**
+
+.. include:: ../../step_resource/step_resource_ruby_block_reread_chef_client.rst
+
+**Install repositories from a file, trigger a command, and force the internal cache to reload**
+
+.. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
 
 
 scm
@@ -846,11 +1024,19 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_scm_get_latest_version.rst
+The following examples show how to use the |resource scm| resource.
 
-.. include:: ../../steps/step_chef_resource_scm_use_git_mirror.rst
+**Get the latest version of an application**
 
-.. include:: ../../steps/step_chef_resource_scm_use_different_branches.rst
+.. include:: ../../step_resource/step_resource_scm_get_latest_version.rst
+
+**Use the git mirror**
+
+.. include:: ../../step_resource/step_resource_scm_use_git_mirror.rst
+
+**Use different branches**
+
+.. include:: ../../step_resource/step_resource_scm_use_different_branches.rst
 
 
 script
@@ -871,9 +1057,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_script_bash_provider_and_interpreter.rst
+The following examples show how to use the |resource script| resource.
 
-.. include:: ../../steps/step_chef_resource_script_bash_script.rst
+**Use a named provider to run a script**
+
+.. include:: ../../step_resource/step_resource_script_bash_provider_and_interpreter.rst
+
+**Run a script**
+
+.. include:: ../../step_resource/step_resource_script_bash_script.rst
 
 
 service
@@ -894,15 +1086,27 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_service_start_service_and_enable_at_boot.rst
+The following examples show how to use the |resource service| resource.
 
-.. include:: ../../steps/step_chef_resource_service_start_service.rst
+**Start a service**
 
-.. include:: ../../steps/step_chef_resource_service_process_table_has_different_value.rst
+.. include:: ../../step_resource/step_resource_service_start_service.rst
 
-.. include:: ../../steps/step_chef_resource_service_manage_ssh_based_on_node_platform.rst
+**Start a service, enable it**
 
-.. include:: ../../steps/step_chef_resource_service_change_service_provider_based_on_node.rst
+.. include:: ../../step_resource/step_resource_service_start_service_and_enable_at_boot.rst
+
+**Use a pattern**
+
+.. include:: ../../step_resource/step_resource_service_process_table_has_different_value.rst
+
+**Manage a service, depending on the node platform**
+
+.. include:: ../../step_resource/step_resource_service_manage_ssh_based_on_node_platform.rst
+
+**Change a service provider, depending on the node platform**
+
+.. include:: ../../step_resource/step_resource_service_change_service_provider_based_on_node.rst
 
 
 template
@@ -923,11 +1127,19 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_template_configure_file.rst
+The following examples show how to use the |resource template| resource.
 
-.. include:: ../../steps/step_chef_resource_template_configure_file_from_local.rst
+**Configure a file from a template**
 
-.. include:: ../../steps/step_chef_resource_template_configure_file_with_variable_map.rst
+.. include:: ../../step_resource/step_resource_template_configure_file.rst
+
+**Configure a file from a local template**
+
+.. include:: ../../step_resource/step_resource_template_configure_file_from_local.rst
+
+**Configure a file using a variable map**
+
+.. include:: ../../step_resource/step_resource_template_configure_file_with_variable_map.rst
 
 
 user
@@ -956,9 +1168,15 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_user_create_random.rst
+The following examples show how to use the |resource user| resource.
 
-.. include:: ../../steps/step_chef_resource_user_create_system.rst
+**Create a random user**
+
+.. include:: ../../step_resource/step_resource_user_create_random.rst
+
+**Create a system user**
+
+.. include:: ../../step_resource/step_resource_user_create_system.rst
 
 
 yum
@@ -981,27 +1199,43 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
+The following examples show how to use the |resource yum package| resource.
 
-.. include:: ../../steps/step_chef_resource_yum_package_handle_cookbook_file_and_yum_package.rst
+**Install an exact version**
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_exact_version.rst
+.. include:: ../../step_resource/step_resource_yum_package_install_exact_version.rst
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_minimum_version.rst
+**Install a minimum version**
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_package_using_default_action.rst
+.. include:: ../../step_resource/step_resource_yum_package_install_minimum_version.rst
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_package.rst
+**Install a minimum version using the default action**
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_partial_minimum_version.rst
+.. include:: ../../step_resource/step_resource_yum_package_install_package_using_default_action.rst
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_specific_architecture.rst
+**To install a package**
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_specific_version_release.rst
+.. include:: ../../step_resource/step_resource_yum_package_install_package.rst
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_specific_version.rst
+**To install a partial minimum version**
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_yum_repo_from_file.rst
+.. include:: ../../step_resource/step_resource_yum_package_install_partial_minimum_version.rst
+
+**To install a specific architecture**
+
+.. include:: ../../step_resource/step_resource_yum_package_install_specific_architecture.rst
+
+**To install a specific version-release**
+
+.. include:: ../../step_resource/step_resource_yum_package_install_specific_version_release.rst
+
+**To install a specific version (even when older than the current)**
+
+.. include:: ../../step_resource/step_resource_yum_package_install_specific_version.rst
+
+**Handle cookbook_file and yum_package resources in the same recipe**
+
+.. include:: ../../step_resource/step_resource_yum_package_handle_cookbook_file_and_yum_package.rst
 
 
 

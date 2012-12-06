@@ -52,28 +52,28 @@ The following examples show how to use the |resource mount| resource.
 
 **Mount a labeled file system**
 
-.. include:: ../../steps/step_chef_resource_mount_labeled_file_system.rst
+.. include:: ../../step_resource/step_resource_mount_labeled_file_system.rst
 
 **Mount a local block drive**
 
-.. include:: ../../steps/step_chef_resource_mount_local_block_device.rst
+.. include:: ../../step_resource/step_resource_mount_local_block_device.rst
 
 **Mount a non-block file system**
 
-.. include:: ../../steps/step_chef_resource_mount_nonblock_file_system.rst
+.. include:: ../../step_resource/step_resource_mount_nonblock_file_system.rst
 
 **Mount and add to the file systems table**
 
-.. include:: ../../steps/step_chef_resource_mount_remote_file_system_add_to_fstab.rst
+.. include:: ../../step_resource/step_resource_mount_remote_file_system_add_to_fstab.rst
 
 **Mount a remote file system**
 
-.. include:: ../../steps/step_chef_resource_mount_remote_file_system.rst
+.. include:: ../../step_resource/step_resource_mount_remote_file_system.rst
 
 **Mount a remote folder in Microsoft Windows**
 
-.. include:: ../../steps/step_chef_resource_mount_remote_windows_folder.rst
+.. include:: ../../step_resource/step_resource_mount_remote_windows_folder.rst
 
 **Unmount a remote folder in Microsoft Windows**
 
-.. include:: ../../steps/step_chef_resource_mount_unmount_remote_windows_drive.rst
+.. include:: ../../step_resource/step_resource_mount_unmount_remote_windows_drive.rst
