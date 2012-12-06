@@ -12,3 +12,5 @@
 * The installation of |chef| on management workstations
 * Searching of indexed data on the |chef server|
 
+.. note:: |note knife quick reference|
+
