@@ -50,8 +50,16 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource scm| resource.
+
+**Get the latest version of an application**
+
 .. include:: ../../steps/step_chef_resource_scm_get_latest_version.rst
 
+**Use the git mirror**
+
 .. include:: ../../steps/step_chef_resource_scm_use_git_mirror.rst
+
+**Use different branches**
 
 .. include:: ../../steps/step_chef_resource_scm_use_different_branches.rst

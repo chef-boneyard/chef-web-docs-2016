@@ -48,4 +48,12 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource ruby block| resource.
+
+**Re-read configuration data**
+
 .. include:: ../../steps/step_chef_resource_ruby_block_reread_chef_client.rst
+
+**Install repositories from a file, trigger a command, and force the internal cache to reload**
+
+.. include:: ../../steps/step_chef_resource_yum_package_install_yum_repo_from_file.rst

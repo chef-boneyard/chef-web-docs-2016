@@ -48,8 +48,16 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource link| resource.
+
+**Create symbolic links**
+
 .. include:: ../../steps/step_chef_resource_link_create_symbolic.rst
 
+**Create hard links**
+
 .. include:: ../../steps/step_chef_resource_link_create_hard.rst
+
+**Delete links**
 
 .. include:: ../../steps/step_chef_resource_link_delete.rst

@@ -48,6 +48,12 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource log| resource.
+
+**Set default logging level**
+
 .. include:: ../../steps/step_chef_resource_log_set_info.rst
+
+**Set debug logging level**
 
 .. include:: ../../steps/step_chef_resource_log_set_debug.rst

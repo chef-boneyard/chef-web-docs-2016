@@ -50,4 +50,8 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource erlang call| resource.
+
+**Run a command**
+
 .. include:: ../../steps/step_chef_resource_erlang_call_run_command_on_node.rst

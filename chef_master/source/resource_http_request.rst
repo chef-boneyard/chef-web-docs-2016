@@ -48,6 +48,12 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource http request| resource.
+
+**Send a GET request**
+
 .. include:: ../../steps/step_chef_resource_http_request_send_get.rst
+
+**Send a POST request**
 
 .. include:: ../../steps/step_chef_resource_http_request_send_post.rst

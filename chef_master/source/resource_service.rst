@@ -48,12 +48,24 @@ Providers
 
 Examples
 =====================================================
-.. include:: ../../steps/step_chef_resource_service_start_service_and_enable_at_boot.rst
+The following examples show how to use the |resource service| resource.
+
+**Start a service**
 
 .. include:: ../../steps/step_chef_resource_service_start_service.rst
 
+**Start a service, enable it**
+
+.. include:: ../../steps/step_chef_resource_service_start_service_and_enable_at_boot.rst
+
+**Use a pattern**
+
 .. include:: ../../steps/step_chef_resource_service_process_table_has_different_value.rst
 
+**Manage a service, depending on the node platform**
+
 .. include:: ../../steps/step_chef_resource_service_manage_ssh_based_on_node_platform.rst
+
+**Change a service provider, depending on the node platform**
 
 .. include:: ../../steps/step_chef_resource_service_change_service_provider_based_on_node.rst

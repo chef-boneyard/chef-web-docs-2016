@@ -50,24 +50,40 @@ Providers
 
 Examples
 =====================================================
-.. include:: ../../steps/step_chef_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
+The following examples show how to use the |resource yum package| resource.
 
-.. include:: ../../steps/step_chef_resource_yum_package_handle_cookbook_file_and_yum_package.rst
+**Install an exact version**
 
 .. include:: ../../steps/step_chef_resource_yum_package_install_exact_version.rst
 
+**Install a minimum version**
+
 .. include:: ../../steps/step_chef_resource_yum_package_install_minimum_version.rst
+
+**Install a minimum version using the default action**
 
 .. include:: ../../steps/step_chef_resource_yum_package_install_package_using_default_action.rst
 
+**To install a package**
+
 .. include:: ../../steps/step_chef_resource_yum_package_install_package.rst
+
+**To install a partial minimum version**
 
 .. include:: ../../steps/step_chef_resource_yum_package_install_partial_minimum_version.rst
 
+**To install a specific architecture**
+
 .. include:: ../../steps/step_chef_resource_yum_package_install_specific_architecture.rst
+
+**To install a specific version-release**
 
 .. include:: ../../steps/step_chef_resource_yum_package_install_specific_version_release.rst
 
+**To install a specific version (even when older than the current)**
+
 .. include:: ../../steps/step_chef_resource_yum_package_install_specific_version.rst
 
-.. include:: ../../steps/step_chef_resource_yum_package_install_yum_repo_from_file.rst
+**Handle cookbook_file and yum_package resources in the same recipe**
+
+.. include:: ../../steps/step_chef_resource_yum_package_handle_cookbook_file_and_yum_package.rst

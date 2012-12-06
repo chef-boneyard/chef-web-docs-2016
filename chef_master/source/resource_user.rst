@@ -56,6 +56,12 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource user| resource.
+
+**Create a random user**
+
 .. include:: ../../steps/step_chef_resource_user_create_random.rst
+
+**Create a system user**
 
 .. include:: ../../steps/step_chef_resource_user_create_system.rst

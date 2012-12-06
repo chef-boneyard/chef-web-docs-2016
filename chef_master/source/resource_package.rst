@@ -64,24 +64,48 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource package| resource.
+
+**Install a gems file for use in recipes**
+
 .. include:: ../../steps/step_chef_resource_package_install_gems_for_chef_recipe.rst
+
+**Install a gems file from the local file system**
 
 .. include:: ../../steps/step_chef_resource_package_install_gems_from_local.rst
 
-.. include:: ../../steps/step_chef_resource_package_install_version.rst
-
-.. include:: ../../steps/step_chef_resource_package_install_with_options.rst
-
-.. include:: ../../steps/step_chef_resource_package_install_with_response_file.rst
-
-.. include:: ../../steps/step_chef_resource_package_install_with_specific_provider.rst
-
-.. include:: ../../steps/step_chef_resource_package_install_with_yum.rst
+**Install a package**
 
 .. include:: ../../steps/step_chef_resource_package_install.rst
 
+**Install a package version**
+
+.. include:: ../../steps/step_chef_resource_package_install_version.rst
+
+**Install a package with options**
+
+.. include:: ../../steps/step_chef_resource_package_install_with_options.rst
+
+**Install a package with a response_file**
+
+.. include:: ../../steps/step_chef_resource_package_install_with_response_file.rst
+
+**Install a package using a specific provider**
+
+.. include:: ../../steps/step_chef_resource_package_install_with_specific_provider.rst
+
+**Install a specified architecture using a named provider**
+
+.. include:: ../../steps/step_chef_resource_package_install_with_yum.rst
+
+**Purge a package**
+
 .. include:: ../../steps/step_chef_resource_package_purge.rst
 
+**Remove a package**
+
 .. include:: ../../steps/step_chef_resource_package_remove.rst
+
+**Upgrade a package**
 
 .. include:: ../../steps/step_chef_resource_package_upgrade.rst

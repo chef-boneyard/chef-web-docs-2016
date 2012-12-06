@@ -48,4 +48,8 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource remote_directory| resource.
+
+**Recursively transfer a directory from a remote location**
+
 .. include:: ../../steps/step_chef_resource_remote_directory_recursive_transfer.rst

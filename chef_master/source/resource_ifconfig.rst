@@ -48,4 +48,8 @@ Providers
 
 Examples
 =====================================================
+The following examples show how to use the |resource ifconfig| resource.
+
+**Configure a network interface**
+
 .. include:: ../../steps/step_chef_resource_ifconfig_configure_network_interface.rst
