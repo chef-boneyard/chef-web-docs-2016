@@ -17,14 +17,6 @@ For substituting an existing boolean using a hash::
    =
    { :x => true, :y => true }
 
-For substituting an existing string in an array::
-
-   role_or_environment 1 [ "1", "2" ]
-   +
-   role_or_environment 2 [ "!merge:2", "3" ]
-   =
-   [ "1", "3" ]
-
 For substituting an array with a hash::
 
    role_or_environment 1 [ "1", "2", "3" ]
