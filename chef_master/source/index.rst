@@ -64,6 +64,8 @@ Chef Documentation
 .. toctree::
    :hidden:
 
+   resource_windows_registry
+
    chef_overview
    just_enough_ruby_for_chef
    install
