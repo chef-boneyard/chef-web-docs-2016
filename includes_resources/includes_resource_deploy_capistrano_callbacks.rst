@@ -4,41 +4,13 @@
 
 If you are familiar with |capistrano|, the following examples should help you know when to use the various callbacks that are available in |chef|. If you are not familiar with |capistrano|, then follow the semantic names of these callbacks to help you determine when to use each of the callbacks within a recipe that is built with the |resource deploy| resource.
 
-The following example shows how |capistrano| does a ``deploy`` process, and then where the callbacks in |chef| fit within the process that is used by the |resource deploy| resource::
+The following example shows where callbacks in |chef| fit in relation to the steps taken by the ``deploy`` process in |capistrano|:
 
-   capistrano                      Chef
-   --------------------------      --------------------------
-     deploy                          deploy
-   
-       update                   
-   
-         update code            
-   
-           finalize_update
-                                       before_symlink
-         create_symlink                
-                                       before_restart
-       restart                  
-                                       after_restart
+.. image:: ../../images/includes_resource_deploy_strategy_callbacks_example1.png
 
-and then the following example shows the ``deploy:migrations`` process::
+and the following example shows the same comparison, but with the ``deploy:migrations`` process:
 
-   capistrano                      Chef
-   --------------------------      --------------------------
-     deploy:migrations               deploy
-   
-       update                   
-   
-         update code            
-   
-           finalize_update     
-                                       before_migrate
-         migrate
-                                       before_symlink
-         create_symlink                
-                                       before_restart
-       restart                  
-                                       after_restart
+.. image:: ../../images/includes_resource_deploy_strategy_callbacks_example2.png
 
 
 
