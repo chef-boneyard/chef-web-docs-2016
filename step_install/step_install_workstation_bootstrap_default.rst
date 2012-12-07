@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-Once the workstation is configured, it can be used to install |chef| on one (or more) nodes across the organization using a |knife| bootstrap operation. ``knife bootstrap`` will SSH onto the target machine and do what is needed so that ``chef-client`` will run on the node. It will install chef client if necessary, generate keys, and register the client and node with the chef server. The bootstrap operation requires the IP address or FQDN of the target system, the SSH credentials (username, password or identity file) for an account that has root access to the node, and (if the operating system is not |ubuntu|) the operating system running on the target system.
+Once the workstation is configured, it can be used to install |chef| on one (or more) nodes across the organization using a |knife| bootstrap operation. ``knife bootstrap`` will |ssh| onto the target machine and do what is needed so that ``chef-client`` will run on the node. It will install the |chef client| if necessary, generate keys, and register the |chef client| and node with the |chef server|. The bootstrap operation requires the IP address or |fully qualified domain name| of the target system, the |ssh| credentials (username, password or identity file) for an account that has root access to the node, and (if the operating system is not |ubuntu|) the operating system running on the target system.
 
 To install |chef| on a node using ``knife bootstrap``:
 
