@@ -890,6 +890,46 @@ The following examples show how to use the |resource powershell script| resource
 .. include:: ../../step_resource/step_resource_powershell_pass_env_to_script.rst
 
 
+
+
+
+registry
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_user.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_windows_registry_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_windows_registry_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_windows_registry_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_windows_registry_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the |resource windows_registry| resource.
+
+**Create a registry key**
+
+.. include:: ../../step_resource/step_resource_windows_registry_create_key.rst
+
+**Delete a registry key**
+
+.. include:: ../../step_resource/step_resource_windows_registry_delete_key.rst
+
+
+
+
+
+
 remote_directory
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_remote_directory.rst
