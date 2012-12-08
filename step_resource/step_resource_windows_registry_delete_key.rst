@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To delete a registry key:
+.. To delete a registry key:
 
 .. code-block:: ruby
 
