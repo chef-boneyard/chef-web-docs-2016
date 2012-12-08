@@ -4,7 +4,6 @@ To use different branches, depending on the environment of the node:
 
 .. code-block:: ruby
 
-   using_different_branches_in_git
    if node.chef_environment == "QA"
       branch_name = "staging"
    else

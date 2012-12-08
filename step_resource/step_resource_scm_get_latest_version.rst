@@ -4,7 +4,6 @@
 
 .. code-block:: ruby
 
-   grab_couchdb_from_svn
    subversion "CouchDB Edge" do
      repository "http://svn.apache.org/repos/asf/couchdb/trunk"
      revision "HEAD"
