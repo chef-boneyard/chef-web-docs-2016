@@ -24,7 +24,7 @@ where
 * ``"name"`` is the path to the location in which the deployment steps will occur
 * ``attribute`` is zero (or more) of the attributes available for this resource
 * ``callback`` represents additional |ruby| code that is used to pass a block or to specify a file, and then provide additional information to |chef| at specific times during the deployment process
-* ``purge_before_symlink``, ``create_dirs_before_symlink``, and ``symlink`` are attributes that are typically used to link configuration files, remove directories, create directories, or map files and directories during the deployment process
+* ``purge_before_symlink``, ``create_dirs_before_symlink``, and ``symlink`` are attributes that are used to link configuration files, remove directories, create directories, or map files and directories during the deployment process
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run
 
 The following is an example of how the ``deploy_revision`` resource can work when used in a recipe. In this example, an application will be deployed to a folder named "/path/to/application":
