@@ -9,23 +9,23 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``service_name``
-     - |service_name lwrp daemontools_service|
-   * - ``directory``
-     - Required. |directory lwrp daemontools_service|
-   * - ``template``
-     - |template lwrp daemontools_service|
    * - ``cookbook``
      - |cookbook lwrp daemontools_service|
-   * - ``variables``
-     - |variables lwrp daemontools_service|
-   * - ``owner``
-     - |owner lwrp daemontools_service|
-   * - ``group``
-     - |group lwrp daemontools_service|
-   * - ``finish``
-     - |finish lwrp daemontools_service|
-   * - ``log``
-     - |log lwrp daemontools_service|
+   * - ``directory``
+     - Required. |directory lwrp daemontools_service|
    * - ``env``
      - |env lwrp daemontools_service|
+   * - ``finish``
+     - |finish lwrp daemontools_service|
+   * - ``group``
+     - |group lwrp daemontools_service|
+   * - ``log``
+     - |log lwrp daemontools_service|
+   * - ``owner``
+     - |owner lwrp daemontools_service|
+   * - ``service_name``
+     - |service_name lwrp daemontools_service|
+   * - ``template``
+     - |template lwrp daemontools_service|
+   * - ``variables``
+     - |variables for template| Default value: ``{}``.

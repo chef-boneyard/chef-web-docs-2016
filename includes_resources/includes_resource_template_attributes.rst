@@ -13,21 +13,21 @@ This resource has the following has the following attributes:
      - |backup resource template|
    * - ``cookbook``
      - |cookbook resource template|
-   * - ``path``
-     - |path resource template|
-   * - ``source``
-     - |source resource template|
    * - ``group``
      - |group resource template|
-   * - ``mode``
-     - |mode resource template|
-   * - ``rights``
-     - |rights resource template|
    * - ``inherits``
      - |inherits resource template|
-   * - ``owner``
-     - |owner resource template|
-   * - ``variables``
-     - |variables resource template|
    * - ``local``
      - |local resource template|
+   * - ``mode``
+     - |mode resource template|
+   * - ``owner``
+     - |owner resource template|
+   * - ``path``
+     - |path resource template|
+   * - ``rights``
+     - |rights resource template|
+   * - ``source``
+     - |source resource template|
+   * - ``variables``
+     - |variables for template|

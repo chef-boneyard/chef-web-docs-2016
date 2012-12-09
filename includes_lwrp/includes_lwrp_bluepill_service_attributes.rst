@@ -11,7 +11,7 @@ This lightweight resource provider has the following attributes:
      - Description
    * - ``service_name``
      - |service_name lwrp bluepill_service|
-   * - ``variables``
-     - |variables lwrp bluepill_service|
    * - ``supports``
      - |supports lwrp bluepill_service|
+   * - ``variables``
+     - |variables for template|
