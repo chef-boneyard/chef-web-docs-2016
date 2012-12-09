@@ -48,6 +48,8 @@ The following is an example of how the ``deploy_revision`` resource can work whe
      notifies :restart, "service[bar]"
    end
 
+For the example shown above:
+
 * Because an action is not explicitly specified, |chef| will use the default action: ``:deploy``
 * The ``purge_before_symlink`` application layout is an array of paths that will be cleared before the ``symlinks`` attribute is run
 * The ``create_dirs_before_symlink`` attribute is empty, which is different from the default
