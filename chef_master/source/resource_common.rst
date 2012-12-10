@@ -41,7 +41,7 @@ Actions
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_common_action_nothing.rst
+.. include:: ../../step_resource/step_resource_service_use_nothing_action.rst
 
 Attributes
 =====================================================
@@ -49,13 +49,23 @@ Attributes
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_common_attribute_ignore_failure.rst
+The following examples show how to use custom attributes in a recipe.
 
-.. include:: ../../steps/step_chef_common_attribute_provider.rst
+**Use the ignore_failure common attribute**
 
-.. include:: ../../steps/step_chef_common_attribute_supports.rst
+.. include:: ../../step_resource/step_resource_package_use_ignore_failure_attribute.rst
 
-.. include:: ../../steps/step_chef_common_attribute_provider_and_supports.rst
+**Use the provider common attribute**
+
+.. include:: ../../step_resource/step_resource_package_use_provider_attribute.rst
+
+**Use the supports common attribute**
+
+.. include:: ../../step_resource/step_resource_service_use_supports_attribute.rst
+
+**Use the supports and providers common attributes**
+
+.. include:: ../../step_resource/step_resource_service_use_provider_and_supports_attributes.rst
 
 Conditional Execution
 =====================================================
@@ -71,21 +81,21 @@ Arguments
 
 not_if Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_common_not_if_create_temp_file.rst
+.. include:: ../../step_resource/step_resource_template_add_file_not_if_attribute_has_value.rst
 
-.. include:: ../../steps/step_chef_common_not_if_execute_ruby_block_with_curly_braces.rst
+.. include:: ../../step_resource/step_resource_template_add_file_not_if_ruby.rst
 
-.. include:: ../../steps/step_chef_common_not_if_execute_ruby_block.rst
+.. include:: ../../step_resource/step_resource_template_add_file_not_if_ruby_with_curly_braces.rst
 
-.. include:: ../../steps/step_chef_common_not_if_execute_string.rst
+.. include:: ../../step_resource/step_resource_template_add_file_not_if_string.rst
 
 only_if Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_common_only_if_create_temp_file.rst
+.. include:: ../../step_resource/step_resource_template_add_file_only_if_attribute_has_value.rst
 
-.. include:: ../../steps/step_chef_common_only_if_execute_ruby_block.rst
+.. include:: ../../step_resource/step_resource_template_add_file_only_if_ruby.rst
 
-.. include:: ../../steps/step_chef_common_only_if_execute_string.rst
+.. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
 
 Notifications
 =====================================================
@@ -101,21 +111,43 @@ Notifies Syntax
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_common_notifies_syntax_delay_notifications_until_end_of_run.rst
+The following examples show how to use the ``notifies`` notification in a recipe.
 
-.. include:: ../../steps/step_chef_common_notifies_syntax_enable_service_after_restart_or_reload.rst
+**Delay notifications**
 
-.. include:: ../../steps/step_chef_common_notifies_syntax_notify_multiple_resources.rst
+.. include:: ../../step_resource/step_resource_template_notifies_delay.rst
 
-.. include:: ../../steps/step_chef_common_notifies_syntax_ordered_notification_of_resources.rst
+**Notify immediately**
 
-.. include:: ../../steps/step_chef_common_notifies_syntax_prevent_restart_if_config_is_broken.rst
+.. include:: ../../step_resource/step_resource_template_notifies_run_immediately.rst
 
-.. include:: ../../steps/step_chef_common_notifies_syntax_reload_service.rst
+**Enable a service after a restart or reload**
 
-.. include:: ../../steps/step_chef_common_notifies_syntax_restart_service_when_template_is_modified.rst
+.. include:: ../../step_resource/step_resource_service_notifies_enable_after_restart_or_reload.rst
 
-.. include:: ../../steps/step_chef_common_notifies_syntax_send_notification_to_multiple_resources.rst
+**Notify multiple resources**
+
+.. include:: ../../step_resource/step_resource_template_notifies_multiple_resources.rst
+
+**Notify in a specific order**
+
+.. include:: ../../step_resource/step_resource_execute_notifies_specific_order.rst
+
+**Restart when a configuration is broken**
+
+.. include:: ../../step_resource/step_resource_execute_notifies_prevent_restart_if_config_is_broken.rst
+
+**Reload a service**
+
+.. include:: ../../step_resource/step_resource_template_notifies_reload_service.rst
+
+**Restart a service when a template is modified**
+
+.. include:: ../../step_resource/step_resource_template_notifies_restart_service_when_template_modified.rst
+
+**Send notifications to multiple resources**
+
+.. include:: ../../step_resource/step_resource_template_notifies_send_notifications_to_multiple_resources.rst
 
 
 Subscribes Syntax
@@ -124,11 +156,15 @@ Subscribes Syntax
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_common_subscribes_syntax_notification_timings.rst
+The following examples show how to use the ``subscribes`` notification in a recipe.
 
-.. include:: ../../steps/step_chef_common_subscribes_syntax_prevent_restart_if_config_is_broken.rst
+**Prevent restart and reconfigure if configuration is broken**
 
-.. include:: ../../steps/step_chef_common_subscribes_syntax_reload_service_using_template.rst
+.. include:: ../../step_resource/step_resource_execute_subscribes_prevent_restart_and_reconfigure.rst
+
+**Reload a service using a template**
+
+.. include:: ../../step_resource/step_resource_service_subscribes_reload_using_template.rst
 
 Relative Paths
 =====================================================
@@ -136,4 +172,4 @@ Relative Paths
 
 Examples
 -----------------------------------------------------
-.. include:: ../../steps/step_chef_common_relative_paths.rst
+.. include:: ../../step_resource/step_resource_template_use_relative_paths.rst

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To verify a configuration and prevent an application from restarting if the configuration is broken, use ``:nothing``:
+.. To verify a configuration and prevent an application from restarting if the configuration is broken, use ``:nothing``:
 
 .. code-block:: ruby
 

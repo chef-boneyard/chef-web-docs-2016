@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To enable a service after restarting or reloading it:
+.. To enable a service after restarting or reloading it:
 
 .. code-block:: ruby
  

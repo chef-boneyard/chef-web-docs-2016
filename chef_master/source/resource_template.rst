@@ -61,3 +61,55 @@ The following examples show how to use the |resource template| resource.
 **Configure a file using a variable map**
 
 .. include:: ../../step_resource/step_resource_template_configure_file_with_variable_map.rst
+
+**Use the ``not_if`` condition**
+
+.. include:: ../../step_resource/step_resource_template_add_file_not_if_attribute_has_value.rst
+
+.. include:: ../../step_resource/step_resource_template_add_file_not_if_ruby.rst
+
+.. include:: ../../step_resource/step_resource_template_add_file_not_if_ruby_with_curly_braces.rst
+
+.. include:: ../../step_resource/step_resource_template_add_file_not_if_string.rst
+
+**Use the ``only_if`` condition**
+
+.. include:: ../../step_resource/step_resource_template_add_file_only_if_attribute_has_value.rst
+
+.. include:: ../../step_resource/step_resource_template_add_file_only_if_ruby.rst
+
+.. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
+
+**Use a relative path**
+
+.. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
+
+**Delay notifications**
+
+.. include:: ../../step_resource/step_resource_template_notifies_delay.rst
+
+**Notify immediately**
+
+.. include:: ../../step_resource/step_resource_template_notifies_run_immediately.rst
+
+**Notify multiple resources**
+
+.. include:: ../../step_resource/step_resource_template_notifies_multiple_resources.rst
+
+**Reload a service**
+
+.. include:: ../../step_resource/step_resource_template_notifies_reload_service.rst
+
+**Restart a service when a template is modified**
+
+.. include:: ../../step_resource/step_resource_template_notifies_restart_service_when_template_modified.rst
+
+**Send notifications to multiple resources**
+
+.. include:: ../../step_resource/step_resource_template_notifies_send_notifications_to_multiple_resources.rst
+
+
+
+
+
+

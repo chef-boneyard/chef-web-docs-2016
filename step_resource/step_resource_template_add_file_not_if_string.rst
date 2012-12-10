@@ -1,6 +1,7 @@
 .. This is an included how-to. 
 
-The following example shows how to use a string to create ``/tmp/somefile``, but not if the ``/etc/passwd`` already exists:
+
+The following example shows how to use the ``not_if`` condition to create a file based on a template and using a string to specify the condition:
 
 .. code-block:: ruby
 

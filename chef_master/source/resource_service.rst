@@ -62,6 +62,18 @@ The following examples show how to use the |resource service| resource.
 
 .. include:: ../../step_resource/step_resource_service_process_table_has_different_value.rst
 
+**Use the :nothing common action**
+
+.. include:: ../../step_resource/step_resource_service_use_nothing_action.rst
+
+**Use the supports common attribute**
+
+.. include:: ../../step_resource/step_resource_service_use_supports_attribute.rst
+
+**Use the supports and providers common attributes**
+
+.. include:: ../../step_resource/step_resource_service_use_provider_and_supports_attributes.rst
+
 **Manage a service, depending on the node platform**
 
 .. include:: ../../step_resource/step_resource_service_manage_ssh_based_on_node_platform.rst
@@ -69,3 +81,11 @@ The following examples show how to use the |resource service| resource.
 **Change a service provider, depending on the node platform**
 
 .. include:: ../../step_resource/step_resource_service_change_service_provider_based_on_node.rst
+
+**Reload a service using a template**
+
+.. include:: ../../step_resource/step_resource_service_subscribes_reload_using_template.rst
+
+**Enable a service after a restart or reload**
+
+.. include:: ../../step_resource/step_resource_service_notifies_enable_after_restart_or_reload.rst

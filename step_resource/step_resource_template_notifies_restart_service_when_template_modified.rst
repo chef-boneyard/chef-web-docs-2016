@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-For example, if you need to restart the |apache| service when you modify a template that configures |apache|, use ``:restart``:
+.. To restart a resource when a template is modified, use the ``:restart`` attribute for ``notifies``:
 
 .. code-block:: ruby
 

@@ -109,3 +109,11 @@ The following examples show how to use the |resource package| resource.
 **Upgrade a package**
 
 .. include:: ../../step_resource/step_resource_package_upgrade.rst
+
+**Use the ignore_failure common attribute**
+
+.. include:: ../../step_resource/step_resource_package_use_ignore_failure_attribute.rst
+
+**Use the provider common attribute**
+
+.. include:: ../../step_resource/step_resource_package_use_provider_attribute.rst

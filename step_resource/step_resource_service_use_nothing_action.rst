@@ -1,6 +1,7 @@
 .. This is an included how-to. 
 
-For example:
+
+.. To use the ``:nothing`` common action in a recipe:
 
 .. code-block:: ruby
 

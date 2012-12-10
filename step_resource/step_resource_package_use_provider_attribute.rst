@@ -1,6 +1,7 @@
 .. This is an included how-to. 
 
-Using ``provider``:
+
+.. To use the ``:provider`` common attribute in a recipe:
 
 .. code-block:: ruby
 

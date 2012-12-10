@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To reload a service:
+.. To reload a service:
 
 .. code-block:: ruby
 

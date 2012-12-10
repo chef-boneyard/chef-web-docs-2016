@@ -1,6 +1,7 @@
 .. This is an included how-to. 
 
-To verify a configuration and prevent an application from restarting if the configuration is broken, use ``:nothing``:
+
+Use the ``:nothing`` common action to prevent an application from restarting, and then use the ``subscribes`` notification to ask the broken configuration to be reconfigured immediately:
 
 .. code-block:: ruby
 

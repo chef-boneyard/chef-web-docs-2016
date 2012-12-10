@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Using ``provider`` and ``supports``:
+.. To use the ``provider`` and ``supports`` common attributes in a recipe:
 
 .. code-block:: ruby
 

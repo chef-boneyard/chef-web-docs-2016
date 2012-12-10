@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To notify multiple resources:
+.. To notify multiple resources:
 
 .. code-block:: ruby
 

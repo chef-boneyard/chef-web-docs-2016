@@ -1,6 +1,7 @@
 .. This is an included how-to. 
 
-Using ``ignore_failure``:
+
+.. To use the ``ignore_failure`` common attribute in a recipe:
 
 .. code-block:: ruby
 

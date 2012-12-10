@@ -71,3 +71,15 @@ The following examples show how to use the |resource execute| resource.
 **Install repositories from a file, trigger a command, and force the internal cache to reload**
 
 .. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
+
+**Prevent restart and reconfigure if configuration is broken**
+
+.. include:: ../../step_resource/step_resource_execute_subscribes_prevent_restart_and_reconfigure.rst
+
+**Notify in a specific order**
+
+.. include:: ../../step_resource/step_resource_execute_notifies_specific_order.rst
+
+**Restart when a configuration is broken**
+
+.. include:: ../../step_resource/step_resource_execute_notifies_prevent_restart_if_config_is_broken.rst

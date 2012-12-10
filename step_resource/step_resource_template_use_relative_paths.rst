@@ -1,11 +1,12 @@
 .. This is an included how-to. 
 
-To use a relative path:
+
+.. To use a relative path:
 
 .. code-block:: ruby
 
    template "#{ENV['HOME']}/chef-getting-started.txt" do
      source "chef-getting-started.txt.erb"
-     mode "0644"
+     mode 00644
    end
 

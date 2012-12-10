@@ -1,6 +1,7 @@
 .. This is an included how-to. 
 
-The following example uses a string to create ``/tmp/somefile``, but only if ``/etc/passwd`` exists:
+
+The following example shows how to use the ``only_if`` condition to create a file based on a template and using a string to specify the condition:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To notify multiple resources and create a sequence of ordered notifications:
+To notify multiple resources, and then have these resources run in a certain order, do something like the following:
 
 .. code-block:: ruby
 
@@ -24,5 +24,5 @@ To notify multiple resources and create a sequence of ordered notifications:
      command '...'
    end
 
-where the sequencing will be in the following order: ``execute 'foo'``, ``template 'baz'``, ``execute [restart_baz]``, ``package 'bar'``, and ``execute 'final'``.
+where the sequencing will be in the same order as the resources are listed in the recipe: ``execute 'foo'``, ``template 'baz'``, ``execute [restart_baz]``, ``package 'bar'``, and ``execute 'final'``.
 
