@@ -41,6 +41,10 @@ Actions
 
 Examples
 -----------------------------------------------------
+The following examples show how to use common actions in a recipe.
+
+**Use the :nothing action**
+
 .. include:: ../../step_resource/step_resource_service_use_nothing_action.rst
 
 Attributes
@@ -49,7 +53,7 @@ Attributes
 
 Examples
 -----------------------------------------------------
-The following examples show how to use custom attributes in a recipe.
+The following examples show how to use common attributes in a recipe.
 
 **Use the ignore_failure common attribute**
 
