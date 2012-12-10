@@ -29,7 +29,7 @@ where
 * ``"name"`` is the path to the registry
 * ``attribute`` is zero (or more) of the attributes available for this resource
 * ``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified.
-* ``:type`` represents the values available for registry keys in |windows|. |values resource windows_registry types|
+* |values resource windows_registry types|
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run
 
 The following is an example of how the |resource windows_registry| resource can work when used in a recipe. In this example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a mulit-string value named "foo bar":

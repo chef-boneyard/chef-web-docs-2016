@@ -6,7 +6,7 @@ The following example shows how to use a |ruby| block (with curly braces) to cre
 .. code-block:: ruby
 
    template "/tmp/somefile" do
-     mode "0644"
+     mode 00644
      source "somefile.erb"
      not_if {File.exists?("/etc/passwd")}
    end

@@ -5,7 +5,7 @@ The following example shows how to use a string to create ``/tmp/somefile``, but
 .. code-block:: ruby
 
    template "/tmp/somefile" do
-     mode "0644"
+     mode 00644
      source "somefile.erb"
      not_if "test -f /etc/passwd"
    end

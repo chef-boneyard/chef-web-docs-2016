@@ -5,7 +5,7 @@ The following example shows how to use a |ruby| block to create ``/tmp/somefile`
 .. code-block:: ruby
 
    template "/tmp/somefile" do
-     mode "0644"
+     mode 00644
      source "somefile.erb"
      not_if do
        File.exists?("/etc/passwd")

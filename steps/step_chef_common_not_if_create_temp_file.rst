@@ -5,7 +5,7 @@ The next example shows how to create ``/tmp/somefile``, but not if the node has 
 .. code-block:: ruby
 
    template "/tmp/somefile" do
-     mode "0644"
+     mode 00644
      source "somefile.erb"
      not_if { node[:some_value] }
    end

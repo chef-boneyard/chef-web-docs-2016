@@ -5,7 +5,7 @@ The following example uses a string to create ``/tmp/somefile``, but only if ``/
 .. code-block:: ruby
 
    template "/tmp/somefile" do
-     mode "0644"
+     mode 00644
      source "somefile.erb"
      only_if "test -f /etc/passwd"
    end
