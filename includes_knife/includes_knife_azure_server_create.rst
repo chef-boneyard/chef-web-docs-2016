@@ -27,6 +27,9 @@ This argument has the following options:
    |azure host description|
 
 ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
+   |host-name|
+
+``--host_name HOST_NAME``
    |azure host name|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
@@ -47,7 +50,7 @@ This argument has the following options:
 ``-o DISK_NAME``, ``--os-disk-name DISK_NAME``
    |os-disk-name|
 
-``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
+``-p FILE_NAME``, ``--azure-mgmt-cert FILE_NAME``
    |azure-pem-filename|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``

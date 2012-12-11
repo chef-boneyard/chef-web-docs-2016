@@ -14,7 +14,7 @@ This argument has the following options:
 ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
    |azure host name|
 
-``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
+``-p FILE_NAME``, ``--azure-mgmt-cert FILE_NAME``
    |azure-pem-filename|
 
 ``-S ID``, ``--azure-subscription-id ID``

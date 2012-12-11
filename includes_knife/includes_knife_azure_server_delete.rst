@@ -17,7 +17,7 @@ This argument has the following options:
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name purge| This must be used with the ``-p`` (purge) option.
 
-``-p FILE_NAME``, ``--azure-pem-filename FILE_NAME``
+``-p FILE_NAME``, ``--azure-mgmt-cert FILE_NAME``
    |azure-pem-filename|
 
 ``-P``, ``--purge``
