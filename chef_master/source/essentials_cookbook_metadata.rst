@@ -40,7 +40,7 @@ About Cookbook Metadata
 
    * - Method
      - Description
-   * - :doc:`essentials_cookbook_metadata_rb`
+   * - :doc:`config_rb_metadata`
      - Metadata is stored in a file called |metadata rb| that lives at the top of each cookbook’s directory.
    * - :doc:`essentials_cookbook_metadata_error_messages`
      - If dependencies are not specified in the cookbook's |metadata rb| file, an error message will be generated.
@@ -48,5 +48,4 @@ About Cookbook Metadata
 .. toctree::
    :hidden:
 
-   essentials_cookbook_metadata_rb
    essentials_cookbook_metadata_error_messages
