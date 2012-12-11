@@ -17,3 +17,27 @@ docs:
 
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
+
+
+
+
+gettext:
+	sphinx-build -b gettext docs_all/source build/locale-all
+	sphinx-build -b gettext chef_master/source build/locale-master
+	@echo
+	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
+
+epub:
+	sphinx-build -b epub docs_all/source build/epub-all
+	sphinx-build -b epub chef_master/source build/epub-master
+	@echo
+	@echo "Build finished. The epub file is in $(BUILDDIR)/epub."
+
+
+text:
+	sphinx-build -b text docs_all/source build/text-all
+	sphinx-build -b text docs_all/source build/text-all
+	@echo
+	@echo "Build finished. The text files are in $(BUILDDIR)/text."
+
+
