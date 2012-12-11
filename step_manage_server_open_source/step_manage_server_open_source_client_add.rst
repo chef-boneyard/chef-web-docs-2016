@@ -2,7 +2,7 @@
 
 To create a client:
 
-#. Log on to the ****Management Console**** and click the **Clients** tab.
+#. Log on to the **Management Console** and click the **Clients** tab.
 #. Click **Create** in the sub-navigation menu.
 
 .. image:: ../../images/includes_manage_server_open_source_clients_create_1.png

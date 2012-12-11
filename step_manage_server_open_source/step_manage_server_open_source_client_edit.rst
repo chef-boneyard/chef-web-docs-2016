@@ -2,7 +2,7 @@
 
 To edit a client:
 
-#. Log on to the ****Management Console**** and click the **Clients** tab.
+#. Log on to the **Management Console** and click the **Clients** tab.
 #. Next to the name of the client you want to edit, click the **Edit** link.
 
 .. image:: ../../images/includes_manage_server_open_source_clients_edit_1.png
