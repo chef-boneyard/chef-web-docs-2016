@@ -1,5 +1,5 @@
 =====================================================
-chef-client Command Line Reference
+chef-client Reference
 =====================================================
  
 .. include:: ../../swaps/swap_desc_a.txt
