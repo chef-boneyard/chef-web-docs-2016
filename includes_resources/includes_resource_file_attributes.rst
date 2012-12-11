@@ -9,19 +9,19 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``path``
-     - |path resource file|
    * - ``backup``
      - |backup resource file|
-   * - ``group``
-     - |group resource file|
-   * - ``mode``
-     - |octal mode|
-   * - ``rights``
-     - |rights resource file|
-   * - ``inherits``
-     - |inherits resource file|
-   * - ``owner``
-     - |owner resource file|	
    * - ``content``
      - |content resource file|
+   * - ``group``
+     - |group resource file|
+   * - ``inherits``
+     - |inherits resource file|
+   * - ``mode``
+     - |octal mode|
+   * - ``owner``
+     - |owner resource file|	
+   * - ``path``
+     - |path resource file|
+   * - ``rights``
+     - |rights resource file|

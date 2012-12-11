@@ -9,10 +9,10 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``command``
-     - |command resource script|
    * - ``code``
      - |code resource script|
+   * - ``command``
+     - |command resource script|
    * - ``creates``
      - |creates resource execute|
    * - ``cwd``

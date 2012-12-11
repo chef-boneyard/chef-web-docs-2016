@@ -11,19 +11,19 @@ This resource has the following has the following attributes:
      - Description
    * - ``backup``
      - |backup resource cookbook_file|
+   * - ``cookbook``
+     - |cookbook resource cookbook_file|
    * - ``group``
      - |group resource cookbook_file|
-   * - ``mode``
-     - |octal mode|
-   * - ``rights``
-     - |windows| only. |rights resource cookbook_file|
    * - ``inherits``
      - |inherits resource cookbook_file|
+   * - ``mode``
+     - |octal mode|
    * - ``owner``
      - |owner resource cookbook_file|
    * - ``path``
      - |path resource cookbook_file|
+   * - ``rights``
+     - |windows| only. |rights resource cookbook_file|
    * - ``source``
      - |source resource cookbook_file|
-   * - ``cookbook``
-     - |cookbook resource cookbook_file|

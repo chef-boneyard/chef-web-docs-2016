@@ -9,25 +9,25 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``minute``
-     - |minute resource cron|
-   * - ``hour``
-     - |hour resource cron|
-   * - ``day``
-     - |day resource cron|
-   * - ``month``
-     - |month resource cron|
-   * - ``weekday``
-     - |weekday resource cron|
    * - ``command``
      - |command resource cron|
-   * - ``user``
-     - |user resource cron|
-   * - ``mailto``
-     - |mailto resource cron|
-   * - ``path``
-     - |path resource cron|
+   * - ``day``
+     - |day resource cron|
    * - ``home``
      - |home resource cron|
+   * - ``hour``
+     - |hour resource cron|
+   * - ``mailto``
+     - |mailto resource cron|
+   * - ``minute``
+     - |minute resource cron|
+   * - ``month``
+     - |month resource cron|
+   * - ``path``
+     - |path resource cron|
    * - ``shell``
      - |shell resource cron|
+   * - ``user``
+     - |user resource cron|
+   * - ``weekday``
+     - |weekday resource cron|

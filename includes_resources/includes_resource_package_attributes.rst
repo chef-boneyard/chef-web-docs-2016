@@ -9,21 +9,21 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``package_name``
-     - |package_name resource package|
-   * - ``version``
-     - |version resource package|
-   * - ``response_file``
-     - |response_file resource package|
-   * - ``source``
-     - |source resource package|
-   * - ``options``
-     - |options resource package|
-   * - ``gem_binary``
-     - |gem_binary resource package|
+   * - ``allow_downgrade``
+     - |allow_downgrade resource package|
    * - ``arch``
      - |arch resource package|
    * - ``flush_cache``
      - |flush_cache resource package|
-   * - ``allow_downgrade``
-     - |allow_downgrade resource package|
+   * - ``gem_binary``
+     - |gem_binary resource package|
+   * - ``options``
+     - |options resource package|
+   * - ``package_name``
+     - |package_name resource package|
+   * - ``response_file``
+     - |response_file resource package|
+   * - ``source``
+     - |source resource package|
+   * - ``version``
+     - |version resource package|

@@ -11,16 +11,17 @@ This resource has the following has the following attributes:
      - Description
    * - ``destination``
      - |destination resource scm|
+   * - ``group``
+     - |group resource scm|
+   * - ``reference``
+     - |reference resource scm|
    * - ``repository``
      - |repository resource scm|
    * - ``revision``
      - |revision resource scm|
-   * - ``reference``
-     - |reference resource scm|
    * - ``user``
      - |user resource scm|
-   * - ``group``
-     - |group resource scm|
+
 
 The following attributes are for use with |git| only:
 
@@ -49,11 +50,11 @@ The following attributes are for use with |svn| only:
 
    * - Attribute
      - Description
-   * - ``svn_username``
-     - |svn_username resource|
-   * - ``svn_password``
-     - |svn_password resource|
    * - ``svn_arguments``
      - |svn_arguments resource|
    * - ``svn_info_args``
      - |svn_info_args resource|
+   * - ``svn_password``
+     - |svn_password resource|
+   * - ``svn_username``
+     - |svn_username resource|

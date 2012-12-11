@@ -9,21 +9,21 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``path``
-     - |path resource remote_file|
    * - ``backup``
      - |backup resource remote_file|
-   * - ``group``
-     - |group resource remote_file|
-   * - ``mode``
-     - |octal mode|
-   * - ``rights``
-     - |rights resource remote_file|
-   * - ``inherits``
-     - |inherits resource remote_file|
-   * - ``owner``
-     - |owner resource remote_file|
-   * - ``source``
-     - |source resource remote_file|
    * - ``checksum``
      - |checksum resource remote_file|
+   * - ``group``
+     - |group resource remote_file|
+   * - ``inherits``
+     - |inherits resource remote_file|
+   * - ``mode``
+     - |octal mode|
+   * - ``owner``
+     - |owner resource remote_file|
+   * - ``path``
+     - |path resource remote_file|
+   * - ``rights``
+     - |rights resource remote_file|
+   * - ``source``
+     - |source resource remote_file|

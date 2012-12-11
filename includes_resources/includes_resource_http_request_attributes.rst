@@ -9,9 +9,9 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
-   * - ``url``
-     - |url resource http_request|
-   * - ``message``
-     - |message resource http_request|
    * - ``headers``
      - |headers resource http_request|
+   * - ``message``
+     - |message resource http_request|
+   * - ``url``
+     - |url resource http_request|

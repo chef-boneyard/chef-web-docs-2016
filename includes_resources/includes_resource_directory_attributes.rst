@@ -11,15 +11,15 @@ This resource has the following has the following attributes:
      - Description
    * - ``group``
      - |group resource directory|
-   * - ``mode``
-     - |octal mode|
-   * - ``rights``
-     - |rights resource directory|
    * - ``inherits``
      - |inherits resource directory|
+   * - ``mode``
+     - |octal mode|
    * - ``owner``
      - |owner resource directory|
    * - ``path``
      - |path resource directory|
    * - ``recursive``
      - |recursive resource directory|
+   * - ``rights``
+     - |rights resource directory|

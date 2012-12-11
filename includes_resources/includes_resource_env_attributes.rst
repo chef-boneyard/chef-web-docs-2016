@@ -9,9 +9,10 @@ This resource has the following has the following attributes:
 
    * - Attribute
      - Description
+   * - ``delim``
+     - |delim resource directory|
    * - ``key_name``
      - |key_name resource directory|
    * - ``value``
      - |value resource directory|
-   * - ``delim``
-     - |delim resource directory|
+
