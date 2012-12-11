@@ -37,7 +37,7 @@ To run the |omnibus installer|:
 #. After |chef| has been installed, the following folder structure will be present on the local machine::
 
       /opt
-         /opscode
+         /chef
             /bin
             /embedded
                /bin
