@@ -54,7 +54,7 @@ To install |chef| on a node using ``knife bootstrap``:
 
       $ knife client show name_of_client
 
-   where ``name_of_client`` is the name of the client node that was just bootstrapped. The |chef server| return something similar to:
+   where ``name_of_client`` is the name of the client node that was just bootstrapped. The |chef server| will return something similar to:
 
    .. code-block:: bash
 
