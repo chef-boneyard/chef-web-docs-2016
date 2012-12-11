@@ -16,7 +16,7 @@ This resource has the following has the following attributes:
    * - ``group``
      - |group resource file|
    * - ``mode``
-     - |mode resource file|
+     - |octal mode|
    * - ``rights``
      - |rights resource file|
    * - ``inherits``

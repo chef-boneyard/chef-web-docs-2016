@@ -12,7 +12,7 @@ This resource has the following has the following attributes:
    * - ``group``
      - |group resource directory|
    * - ``mode``
-     - |mode resource directory|
+     - |octal mode|
    * - ``rights``
      - |rights resource directory|
    * - ``inherits``

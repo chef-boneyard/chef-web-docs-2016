@@ -20,7 +20,7 @@ This resource has the following has the following attributes:
    * - ``local``
      - |local resource template|
    * - ``mode``
-     - |mode resource template|
+     - |octal mode|
    * - ``owner``
      - |owner resource template|
    * - ``path``

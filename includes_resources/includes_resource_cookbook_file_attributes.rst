@@ -14,7 +14,7 @@ This resource has the following has the following attributes:
    * - ``group``
      - |group resource cookbook_file|
    * - ``mode``
-     - |mode resource cookbook_file|
+     - |octal mode|
    * - ``rights``
      - |windows| only. |rights resource cookbook_file|
    * - ``inherits``
