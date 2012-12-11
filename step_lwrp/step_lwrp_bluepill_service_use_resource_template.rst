@@ -4,7 +4,7 @@ To use the ``template`` resource in a recipe:
 
 .. code-block:: ruby
 
-   template "/etc/bluepill/my_app" do
+   template "/etc/bluepill/my_app.pill" do
      source "my_app.pill.erb"
    end
    my_app.pill.erb
