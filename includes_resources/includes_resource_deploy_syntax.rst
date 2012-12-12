@@ -6,7 +6,7 @@ The syntax for using the |resource deploy| resource in a recipe is as follows:
 .. code-block:: ruby
 
    deploy "name" do
-     attributes "see attributes section below"
+     attribute "value" # see attributes section below
      ...
      callback do
        # callback, including release_path or new_resource

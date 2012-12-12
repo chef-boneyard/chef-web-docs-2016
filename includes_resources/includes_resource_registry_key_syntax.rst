@@ -6,7 +6,7 @@ The syntax for using the |resource windows_registry| resource in a recipe is as 
 .. code-block:: ruby
 
    registry_key "name" do
-     attributes "see attributes section below"
+     attribute "value" # see attributes section below
      ...
      values [{
        :name => "name",

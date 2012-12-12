@@ -1,5 +1,5 @@
 =====================================================
-registry
+registry_key
 =====================================================
 
 .. include:: ../../swaps/swap_desc_a.txt
@@ -32,23 +32,23 @@ registry
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_resources/includes_resource_windows_registry.rst
+.. include:: ../../includes_resources/includes_resource_registry_key.rst
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_windows_registry_syntax.rst
+.. include:: ../../includes_resources/includes_resource_registry_key_syntax.rst
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_windows_registry_actions.rst
+.. include:: ../../includes_resources/includes_resource_registry_key_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_windows_registry_attributes.rst
+.. include:: ../../includes_resources/includes_resource_registry_key_attributes.rst
 
 Providers
 =====================================================
-.. include:: ../../includes_resources/includes_resource_windows_registry_providers.rst
+.. include:: ../../includes_resources/includes_resource_registry_key_providers.rst
 
 Examples
 =====================================================
@@ -56,8 +56,8 @@ The following examples show how to use the |resource windows_registry| resource.
 
 **Create a registry key**
 
-.. include:: ../../step_resource/step_resource_windows_registry_create_key.rst
+.. include:: ../../step_resource/step_resource_registry_key_create.rst
 
 **Delete a registry key**
 
-.. include:: ../../step_resource/step_resource_windows_registry_delete_key.rst
+.. include:: ../../step_resource/step_resource_registry_key_delete.rst
