@@ -15,7 +15,7 @@ This argument has the following options:
    |username bluelock|
 
 ``-K PASSWORD``, ``--bluelock-password PASSWORD``
-   |username password|
+   |password bluelock|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name purge|

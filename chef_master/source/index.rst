@@ -64,7 +64,7 @@ Chef Documentation
 .. toctree::
    :hidden:
 
-   resource_windows_registry
+   resource_registry_key
    dsl_recipe_method_registry_data_exists
    dsl_recipe_method_registry_get_subkeys
    dsl_recipe_method_registry_get_values

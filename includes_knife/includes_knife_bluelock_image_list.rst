@@ -15,4 +15,4 @@ This argument has the following options:
    |username bluelock|
 
 ``-K PASSWORD``, ``--bluelock-password PASSWORD``
-   |username password|
+   |password bluelock|

@@ -24,7 +24,7 @@ This argument has the following options:
    |image|
 
 ``-K PASSWORD``, ``--bluelock-password PASSWORD``
-   |username password|
+   |password bluelock|
 
 ``-m MEMORY``, ``--memory MEMORY``
    |memory mb|
