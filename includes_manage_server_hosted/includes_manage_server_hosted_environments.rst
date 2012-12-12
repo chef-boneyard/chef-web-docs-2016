@@ -23,6 +23,16 @@ In order to create an environment:
 
 Note: You need create permissions on the global environments level to create an environment.
 
+Delete
+=====================================================
+1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+2. Click Environments on the main navigation menu.
+
+3. Click on the delete link next to the environment you want to delete.
+
+Note: You need delete permissions on the environment to delete it.
+
 Edit
 =====================================================
 1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
@@ -120,15 +130,7 @@ Move a Node to an Environment
 
 Note: You need update permissions on the node to edit it.
 
-Delete
-=====================================================
-1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
 
-2. Click Environments on the main navigation menu.
-
-3. Click on the delete link next to the environment you want to delete.
-
-Note: You need delete permissions on the environment to delete it.
 
 
 

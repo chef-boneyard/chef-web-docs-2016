@@ -3,36 +3,6 @@
 
 The **Management Console** allows users to create, read, update, and delete nodes. You can also manage nodes with the command line tool Knife.
 
-List
-=====================================================
-In order to list nodes in your organization:
-
-1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
-
-2. Click Nodes on the main navigation menu.
-
-   .. image:: ../../images/step_manage_server_hosted_node_list.jpg
-
-Note: If a specific environment is selected on the top of the page, then only the nodes in that environment will be shown. You also need list permissions on the global nodes level to list the nodes.
-
-View
-=====================================================
-Viewing a node shows the recipes and roles in the node's run list, as well as the node's attributes.
-
-In order to view a specific node:
-
-1. Login to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
-
-2. Click on the Nodes tab.
-
-3. Click on the name of the node you want to view.
-
-On this page you can see the roles and recipes in the node's run list, as well as an expandable tree view of the JSON attributes on the node.
-
-   .. image:: ../../images/step_manage_server_hosted_node_view.jpg
-
-Note: You need read permissions on the node to view it.
-
 Add
 =====================================================
 The node create page lists all available recipes and roles in the organization, and allows you to include these in the run list of the node you are creating. There is also a JSON editor for editing, adding and removing the node's attributes.
@@ -55,7 +25,34 @@ In order to create a node through the Management Console:
 
 Note: You need create permissions on the global nodes level to create a node.
 
-Edit
+
+Check Status
+=====================================================
+Node status such as platform, FQDN, IP Address, up time, last check-in time, and run list can be checked on the Management Console.
+
+In order to check node status:
+
+1. Log in to the Hosted Chef Management Console.
+
+2. Click Status tab.
+
+
+Delete
+=====================================================
+In order to delete a node:
+
+1. Login to the Hosted Chef Management Console and select an organization.
+
+2. Click on the Nodes tab.
+
+2. Click the Delete link next to the name of the node you want to delete, and click OK on the confirmation message box. Or, click the link of the node to view its details, and click Delete on the sub navigation menu.
+
+Note: You need delete permissions on the node to delete it. If you don't have this permission, you may not see a Delete link or tab.
+
+
+
+
+Edit Node
 =====================================================
 1. Login to the Hosted Chef Management Console and select an organization.
 
@@ -75,11 +72,8 @@ Edit
 
 Note: You need update permissions on the node to edit it.
 
-Move Node to Environment
-=====================================================
-You can move the node to an environment with the drop down box on the top of this page. More information on this can be found on the Managing Environments page.
 
-Modify Attributes
+Edit Attributes
 =====================================================
 To modify the Attributes of a node, such that they override the values of the included recipe or role, you can use the Editor or Source tabs on this page. With the Editor tab you can edit the attributes by selecting the location on the tree and adding the details. You can use the Source tab to paste in JSON directly.
 
@@ -105,27 +99,49 @@ Source Tab
 
 2. Click the Create Node or Save Node button to save the node.
 
-Delete
+List
 =====================================================
-In order to delete a node:
+In order to list nodes in your organization:
 
-1. Login to the Hosted Chef Management Console and select an organization.
+1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+2. Click Nodes on the main navigation menu.
+
+   .. image:: ../../images/step_manage_server_hosted_node_list.jpg
+
+Note: If a specific environment is selected on the top of the page, then only the nodes in that environment will be shown. You also need list permissions on the global nodes level to list the nodes.
+
+
+Move Node to Environment
+=====================================================
+You can move the node to an environment with the drop down box on the top of this page. More information on this can be found on the Managing Environments page.
+
+
+View
+=====================================================
+Viewing a node shows the recipes and roles in the node's run list, as well as the node's attributes.
+
+In order to view a specific node:
+
+1. Login to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
 
 2. Click on the Nodes tab.
 
-2. Click the Delete link next to the name of the node you want to delete, and click OK on the confirmation message box. Or, click the link of the node to view its details, and click Delete on the sub navigation menu.
+3. Click on the name of the node you want to view.
 
-Note: You need delete permissions on the node to delete it. If you don't have this permission, you may not see a Delete link or tab.
+On this page you can see the roles and recipes in the node's run list, as well as an expandable tree view of the JSON attributes on the node.
 
-Check Status
-=====================================================
-Node status such as platform, FQDN, IP Address, up time, last check-in time, and run list can be checked on the Management Console.
+   .. image:: ../../images/step_manage_server_hosted_node_view.jpg
 
-In order to check node status:
+Note: You need read permissions on the node to view it.
 
-1. Log in to the Hosted Chef Management Console.
 
-2. Click Status tab.
+
+
+
+
+
+
 
 
 
