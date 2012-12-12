@@ -6,7 +6,7 @@ The syntax for using the |resource cookbook file| resource in a recipe is as fol
 .. code-block:: ruby
 
    cookbook_file "name" do
-     attribute "value"
+     attributes "see attributes section below"
      ...
      action :action
    end

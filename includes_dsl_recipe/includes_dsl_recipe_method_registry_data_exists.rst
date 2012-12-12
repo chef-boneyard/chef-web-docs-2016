@@ -15,7 +15,7 @@ The syntax for the ``registry_data_exists?`` method is as follows:
      architecture = :machine
    )
 
-where ``"key_path"`` is the path to the registry key and ``value`` is a hash that contains the name, type, and value of the registry setting.
+where ``"key_path"`` is the path to the registry key, ``value`` is a hash that contains the name, type, and value of the registry setting, and ``architecture`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``.
 
 For example, the following will xxxxx:
 

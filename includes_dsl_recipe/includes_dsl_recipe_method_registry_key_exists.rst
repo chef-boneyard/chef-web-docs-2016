@@ -11,7 +11,7 @@ The syntax for the ``registry_key_exists?`` method is as follows:
 
    registry_key_exists?(key_path, architecture = :machine)
 
-where ``"key_path"`` is the path to the registry key.
+where ``"key_path"`` is the path to the registry key and ``architecture`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``.
 
 For example, the following will xxxxx:
 
