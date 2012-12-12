@@ -18,13 +18,13 @@ Copy the template to the |chef| repository in the ``.chef/bootstrap`` directory:
       lib/chef/knife/bootstrap/ubuntu12.04-gems.erb ~/chef-repo/.chef/
       bootstrap/ubuntu12.04-gems-mine.erb
 
-Modify the template with your favorite editor, then use it with the ``-d`` or ``--distro`` option in the ``knife bootstrap`` or any of the |knife| plug-ins that support cloud computing.
+Modify the template with any editor, then use it with the ``-d`` or ``--distro`` option in the ``knife bootstrap`` operation, or use any of the |knife| plug-ins that support cloud computing.
 
 .. code-block:: bash
 
    $ knife bootstrap 192.168.1.100 -r 'role[webserver]' -d ubuntu12.04-gems-mine
 
-Alternatively, an example bootstrap template can be found in the chef source repository. Copy the template to ``~/.chef-repo/.chef/bootstrap/ubuntu12.04-apt.erb`` and modify to suit your environment.
+Alternatively, an example bootstrap template can be found in the |chef| source repository. Copy the template to ``~/.chef-repo/.chef/bootstrap/ubuntu12.04-apt.erb`` and modify the template appropriately.
 
 
 
