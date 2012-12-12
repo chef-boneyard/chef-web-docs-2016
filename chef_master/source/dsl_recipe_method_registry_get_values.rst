@@ -32,6 +32,4 @@ registry_get_values Method
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry.rst
-
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst
