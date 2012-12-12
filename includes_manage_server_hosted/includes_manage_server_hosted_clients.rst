@@ -11,36 +11,6 @@ Anyone in possession of a client's private key can do anything on your Hosted Ch
 
 You can also manage clients with the command line tool Knife.
 
-List
-=====================================================
-In order to see a list of the clients in the organization:
-
-1. Log in to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
-
-2. Select the Clients tab and you will see a list similar to this:
-
-   .. image:: ../../images/step_manage_server_hosted_client_list.jpg
-
-Note: You need list permissions on the global clients level to list the clients.
-
-Delete
-=====================================================
-In order to delete a client:
-
-1. Log in to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
-
-2. Select the Clients tab
-
-3. Click on the delete link next to the client you want to delete.
-
-Do not delete the validator client, which will be named ORGANIZATION-validator or you will be unable to authenticate new nodes until you recreate the validator key.
-
-   .. image:: ../../images/step_manage_server_hosted_client_delete.jpg
-
-This will prevent that client from authenticating to Hosted Chef.
-
-Note: You need delete permissions on the client to delete it.
-
 Add
 =====================================================
 New clients are typically created by chef-client when it first connects to Hosted Chef, so there is no need in that case to manually create a new client.
@@ -60,6 +30,38 @@ If you need to manually create one, you can follow these steps:
    .. image:: ../../images/step_manage_server_hosted_client_add_2.jpg
 
 Note: You need create permissions on the global clients level to create a client.
+
+Delete
+=====================================================
+In order to delete a client:
+
+1. Log in to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+2. Select the Clients tab
+
+3. Click on the delete link next to the client you want to delete.
+
+Do not delete the validator client, which will be named ORGANIZATION-validator or you will be unable to authenticate new nodes until you recreate the validator key.
+
+   .. image:: ../../images/step_manage_server_hosted_client_delete.jpg
+
+This will prevent that client from authenticating to Hosted Chef.
+
+Note: You need delete permissions on the client to delete it.
+
+List
+=====================================================
+In order to see a list of the clients in the organization:
+
+1. Log in to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+2. Select the Clients tab and you will see a list similar to this:
+
+   .. image:: ../../images/step_manage_server_hosted_client_list.jpg
+
+Note: You need list permissions on the global clients level to list the clients.
+
+
 
 Regenerate Private Key
 =====================================================

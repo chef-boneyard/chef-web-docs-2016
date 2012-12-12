@@ -9,17 +9,6 @@ The **Management Console** allows users to create, read, update, and delete data
 
 The Hosted Chef Management Console can be used to manage your data bags:
 
-List
-=====================================================
-To list data bags in your organization:
-
-1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
-
-2. Click Data bags on the main navigation menu.
-
-   .. image:: ../../images/step_manage_server_hosted_data_bag_list.jpg
-
-Note: You need the list permission on the global data bag level to see the list of data bags.
 
 Add
 =====================================================
@@ -31,17 +20,17 @@ Add
 
 Note: You need the create permission on the global data bag level to create new data bags.
 
-View
+Delete
 =====================================================
-To view or edit a specific data bag:
+To delete a data bag:
 
 1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
 
 2. Click Databags on the main navigation menu.
 
-3. Click on the specific data bag you want to view or edit.
+3. Click the Delete link next to the name of the data bag you want to delete, and click OK on the confirmation message box. Or, click the link of the data bag to view its details, and click Delete on the sub navigation menu.
 
-   .. image:: ../../images/step_manage_server_hosted_data_bag_view.jpg
+Note: You need delete permissions on a data bag to delete it. If you don't have this permission, you will not see a Delete link or tab.
 
 Edit
 =====================================================
@@ -55,18 +44,36 @@ To view or edit a specific data bag:
 
 4. On the following page you can create items in the data bag.
 
-
-Delete
+List
 =====================================================
-To delete a data bag:
+To list data bags in your organization:
+
+1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+2. Click Data bags on the main navigation menu.
+
+   .. image:: ../../images/step_manage_server_hosted_data_bag_list.jpg
+
+Note: You need the list permission on the global data bag level to see the list of data bags.
+
+
+
+View
+=====================================================
+To view or edit a specific data bag:
 
 1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
 
 2. Click Databags on the main navigation menu.
 
-3. Click the Delete link next to the name of the data bag you want to delete, and click OK on the confirmation message box. Or, click the link of the data bag to view its details, and click Delete on the sub navigation menu.
+3. Click on the specific data bag you want to view or edit.
 
-Note: You need delete permissions on a data bag to delete it. If you don't have this permission, you will not see a Delete link or tab.
+   .. image:: ../../images/step_manage_server_hosted_data_bag_view.jpg
+
+
+
+
+
 
 Data Bag Items
 =====================================================
@@ -120,7 +127,17 @@ You can also add contents to the data bag item by editing the json with further 
 
 2. Click Create Databag Item button to save the data bag item when you are done.
 
+Delete Data Bag Items
+-----------------------------------------------------
+To delete a data bag item in a specific data bag:
 
+1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+2. Click Databags on the main navigation menu.
+
+3. Click the Delete link next to the name of the data bag item you want to delete, and click OK on the confirmation message box. Or, click the link of the data bag item to view its details, and click Delete on the sub navigation menu.
+
+Note: If you do not see a Delete link or tab, you do not have delete permissions on the parent data bag.
 
 
 Edit Data Bag Items
@@ -151,17 +168,7 @@ View Data Bag Items
 
    .. image:: ../../images/step_manage_server_hosted_data_bag_view.jpg
 
-Delete Data Bag Items
------------------------------------------------------
-To delete a data bag item in a specific data bag:
 
-1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
-
-2. Click Databags on the main navigation menu.
-
-3. Click the Delete link next to the name of the data bag item you want to delete, and click OK on the confirmation message box. Or, click the link of the data bag item to view its details, and click Delete on the sub navigation menu.
-
-Note: If you do not see a Delete link or tab, you do not have delete permissions on the parent data bag.
 
 
 

@@ -10,10 +10,9 @@ The Hosted Chef Management Console allows users with grant permissions to view a
 
 Permissions on the global level of an object type determines whether you are able to create new objects of this type and whether you can view the list of the objects of this type (for example, creating new groups and listing groups). Permissions on the object level determines whether you are able to do anything with that specific object (for example, showing, editing, or deleting the "foobar" group).
 
-For more information on how permissions work, and default permissions see the Hosted Chef Authorization page.
 
 Manage Global Permissions
------------------------------------------------------
+=====================================================
 Note: Roles are used here as an example, but it works the same way for Nodes, Cookbooks, Databags, Clients, and Groups. The permissions on Databag Items are inherited from their parent Databags.
 
 In order to view and update the global level permissions on an object type (Roles in this case):
@@ -27,7 +26,7 @@ In order to view and update the global level permissions on an object type (Role
    .. image:: ../../images/step_manage_server_hosted_permission_global.jpg
 
 Manage Object Permissions 
------------------------------------------------------
+=====================================================
 In order to view and update the object-level permissions on a specific object (a role, in this example):
 
 1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
@@ -40,7 +39,7 @@ In order to view and update the object-level permissions on a specific object (a
 
    .. image:: ../../images/step_manage_server_hosted_permission_object.jpg
 
-Updating permissions for the billing admin
+Update Permissions for Billing Admin
 =====================================================
 You can also change who is the billing admin, the users that are able to see and edit the billing information on the account:
 

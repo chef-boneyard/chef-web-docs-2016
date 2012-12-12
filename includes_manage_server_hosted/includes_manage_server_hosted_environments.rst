@@ -3,7 +3,39 @@
 
 The **Management Console** allows users to create, read, update, delete environments, and to select a specific environment to view nodes and cookbooks in that environment.
 
+Add
+=====================================================
+The environment creation page allows you to create a new environment and set its cookbook version constraints and attributes.
 
+In order to create an environment:
+
+1. Log on to the Hosted Chef Management Console and navigate to the Environments tab.
+
+2. Click Create on the sub navigation bar.
+
+3. Give the environment a name and an optional description
+
+4. If necessary, add any cookbook version constraints by selecting the cookbook name, operator, and entering the version number in the format of x.y or x.y.z, and then click add.
+
+5. If necessary, add environment attributes in the JSON attribute editor. More information on using the JSON editor can be found in the next section.
+
+6. Click Create Environment.
+
+Note: You need create permissions on the global environments level to create an environment.
+
+Edit
+=====================================================
+1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+2. Click Environments on the main navigation menu.
+
+3. Click on the edit link next to the name of the environment you want to edit.
+
+4. On this page you can add any cookbook version constraints by selecting the cookbook name, operator, and entering the version number in the format of x.y or x.y.z, and then click add. You can also edit the Attributes, which is described further below.
+
+5. Click the Create Environment or Update Environment button when you are done to save the environment.
+
+Note: You need update permissions on the environment to edit it.
 
 
 List
@@ -38,39 +70,9 @@ For instance, to view nodes in the environment you could click on the Node tab a
 
 Note: You need read permissions on the environment to view it.
 
-Add
-=====================================================
-The environment creation page allows you to create a new environment and set its cookbook version constraints and attributes.
 
-In order to create an environment:
 
-1. Log on to the Hosted Chef Management Console and navigate to the Environments tab.
 
-2. Click Create on the sub navigation bar.
-
-3. Give the environment a name and an optional description
-
-4. If necessary, add any cookbook version constraints by selecting the cookbook name, operator, and entering the version number in the format of x.y or x.y.z, and then click add.
-
-5. If necessary, add environment attributes in the JSON attribute editor. More information on using the JSON editor can be found in the next section.
-
-6. Click Create Environment.
-
-Note: You need create permissions on the global environments level to create an environment.
-
-Edit
-=====================================================
-1. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
-
-2. Click Environments on the main navigation menu.
-
-3. Click on the edit link next to the name of the environment you want to edit.
-
-4. On this page you can add any cookbook version constraints by selecting the cookbook name, operator, and entering the version number in the format of x.y or x.y.z, and then click add. You can also edit the Attributes, which is described further below.
-
-5. Click the Create Environment or Update Environment button when you are done to save the environment.
-
-Note: You need update permissions on the environment to edit it.
 
 Edit Default and Override Attributes
 =====================================================

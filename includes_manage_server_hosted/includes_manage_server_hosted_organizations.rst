@@ -5,7 +5,7 @@ The **Management Console** allows users to manage organizations.
 
 
 
-Selecting an Organization to Use
+Select Organization
 =====================================================
 A user is allowed to be associated with multiple organizations. When there are multiple orgs, you can select which organization to use from the list of associated organizations in the Hosted Chef Management Console. Subsequent actions will be scoped to that organization.
 
@@ -21,7 +21,7 @@ To see which organization is currently selected, or to view the list of associat
 
 
 
-Creating an Organization
+Add
 =====================================================
 In order to create a new organization:
 
@@ -51,7 +51,7 @@ In order to create a new organization:
 
 If you will be using Knife, be sure to download the User's Private Key as well.
 
-Adding or Removing a User from an Org
+Manage Users
 =====================================================
 If you want other users to be able to access the organization with Knife or the REST API, you will need to add them to the organization with the correct permissions so they are authorized to make changes to it.
 
