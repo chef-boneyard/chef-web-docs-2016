@@ -58,9 +58,9 @@ The following examples show how to use the |resource windows_registry| resource.
 
 .. include:: ../../step_resource/step_resource_registry_key_create.rst
 
-**Delete a registry key**
+**Delete a registry key value**
 
-.. include:: ../../step_resource/step_resource_registry_key_delete.rst
+.. include:: ../../step_resource/step_resource_registry_key_delete_value.rst
 
 **Delete a registry key and its subkeys, recursively**
 
