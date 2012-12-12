@@ -11,7 +11,9 @@ The syntax for the ``registry_get_subkeys`` method is as follows:
 
    registry_get_subkeys(key_path, architecture = :machine)
 
-where ``"key_path"`` is the path to the registry key and ``architecture`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``.
+where ``"key_path"`` is the path to the registry key and ``architecture`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``. 
+
+.. note:: The ``architecture`` attribute should only specify ``:x86_64`` or ``:i386`` when it is necessary to write 32-bit (``:i386``) or 64-bit (``:x86_64``) values on a 64-bit machine. ``architecture`` will default to ``:machine`` unless a specific value is given.
 
 For example, the following will xxxxx:
 
