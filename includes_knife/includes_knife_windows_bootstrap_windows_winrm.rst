@@ -21,7 +21,7 @@ This argument has the following options:
    |distro|
 
 ``--N NAME``, ``--node-name NAME``
-   |node-name|
+   |node-name cloud|
 
 ``--prerelease``
    |prerelease|

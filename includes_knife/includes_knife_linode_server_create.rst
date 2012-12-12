@@ -39,7 +39,7 @@ This argument has the following options:
    |linode-node-name| 
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name|
+   |node-name cloud|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|

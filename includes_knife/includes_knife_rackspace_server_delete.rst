@@ -18,7 +18,7 @@ This argument has the following options:
    |rackspace-api-key|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node-name| This option only has meaning when used with the ``--purge`` option.
+   |node-name purge|
 
 ``-p``, ``--purge``
    |purge node rackspace|

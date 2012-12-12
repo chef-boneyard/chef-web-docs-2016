@@ -36,7 +36,7 @@ This argument has the following options:
    |openstack-secret-access-key|
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name|
+   |node-name cloud|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|

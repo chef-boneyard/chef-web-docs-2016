@@ -33,7 +33,7 @@ This sub-command has the following options:
    |json-attributes|
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name|
+   |node-name cloud|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|

@@ -33,7 +33,7 @@ This argument has the following options:
    |identity-file|
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name|
+   |node-name cloud|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|

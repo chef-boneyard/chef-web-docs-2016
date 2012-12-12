@@ -39,7 +39,7 @@ This argument has the following options:
    |rackspace-metadata|
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name|
+   |node-name cloud|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|

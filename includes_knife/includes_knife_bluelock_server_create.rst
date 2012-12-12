@@ -30,7 +30,7 @@ This argument has the following options:
    |memory mb|
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name|
+   |node-name cloud|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|

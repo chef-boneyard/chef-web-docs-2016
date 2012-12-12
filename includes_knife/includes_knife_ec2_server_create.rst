@@ -57,7 +57,7 @@ This argument has the following options:
    |aws-secret-access-key|
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name|
+   |node-name cloud|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify|

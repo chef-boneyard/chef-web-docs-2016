@@ -33,7 +33,7 @@ This argument has the following options:
    |network|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node-name|
+   |node-name cloud|
 
 ``-p PROJECT``, ``--project_id PROJECT``
    |project_id|
