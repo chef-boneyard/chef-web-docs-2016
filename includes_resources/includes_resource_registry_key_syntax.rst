@@ -40,7 +40,7 @@ The following is an example of how the |resource windows_registry| resource can 
      values [{
        :name => "NewRegistryKeyValue",
        :type => :multi_string,
-       :value => foo\0bar\0\0
+       :data => foo\0bar\0\0
      }]
      action :create
    end

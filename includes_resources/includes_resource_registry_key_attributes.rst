@@ -16,5 +16,7 @@ This resource has the following has the following attributes:
    * - ``recursive``
      - |recursive resource windows_registry|
    * - ``values``
-     - |values resource windows_registry| |values resource windows_registry types|
+     - |values resource windows_registry|
+       
+       |values resource windows_registry types|
 
