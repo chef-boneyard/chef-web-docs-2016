@@ -16,7 +16,7 @@ This resource has the following has the following attributes:
    * - ``recursive``
      - |recursive resource windows_registry|
 
-       .. note:: Be careful when using the ``:delete_key`` action with the ``recursive`` attribute. This will delete the registry key and all of its subkeys and all of the values associated with them. This cannot be undone by |chef|.
+       .. note:: |note registry_key resource recursive|
    * - ``values``
      - |values resource windows_registry|
        
