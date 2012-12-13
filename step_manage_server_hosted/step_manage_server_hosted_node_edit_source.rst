@@ -3,8 +3,8 @@
 To xxxxx:
 
 
-#. Enter the JSON body in the editor, and click the Load JSON from source button: 
+#. Enter the JSON body in the editor, and click the **Load JSON from source** button: 
 
    .. image:: ../../images/step_manage_server_hosted_node_edit_source.jpg
 
-#. Click the Create Node or Save Node button to save the node.
+#. Click the **Create Node or Save Node** button to save the node.

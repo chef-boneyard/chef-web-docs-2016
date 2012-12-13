@@ -5,9 +5,9 @@ Note: In order to view the details of a specific group, you need read permission
 
 In order to view a specific group in your organization:
 
-#. Log in to the Hosted Chef Management Console and select the appropriate organization if the user is associated to more than one.
+#. Log in to the **Management Console** and select the appropriate organization if the user is associated to more than one.
 
-#. Click Groups on the main navigation menu.
+#. Click **Groups** on the main navigation menu.
 
 #. Click the name of the specific group you want to view.
 

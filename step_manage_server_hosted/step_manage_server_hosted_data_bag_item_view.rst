@@ -1,10 +1,10 @@
 .. This is an included how-to. 
 
-To xxxxx:
+To view a data bag item:
 
-#. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+#. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
-#. Click Databags on the main navigation menu.
+#. Click **Databags** on the main navigation menu.
 
 #. Click on the specific data bag that contains the data bag item you want to view.
 

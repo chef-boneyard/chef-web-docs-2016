@@ -7,18 +7,18 @@ The node create page lists all available recipes and roles in the organization, 
 
 A node is also created the first time you run chef-client, or when you use Knife Bootstrap commands.
 
-In order to create a node through the Management Console:
+To create a node:
 
-#. Login to the Hosted Chef Management Console and select an organization.
+#. Login to the **Management Console** and select an organization.
 
-#. Click on the Nodes tab.
+#. Click on the **Nodes** tab.
 
-#. Click Create on the sub navigation bar.
+#. Click **Create** on the sub navigation bar.
 
    .. image:: ../../images/step_manage_server_hosted_node_add.png
 
-#. Give the node a name and select an Environment for the node.
+#. Give the node a name and select an **Environment** for the node.
 
-#. Edit the node, further information is in the next section. Click Create Node to save the new node when you are done.
+#. Edit the node, further information is in the next section. Click **Create Node** to save the new node when you are done.
 
 Note: You need create permissions on the global nodes level to create a node.

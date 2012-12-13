@@ -5,6 +5,6 @@ Node status such as platform, FQDN, IP Address, up time, last check-in time, and
 
 In order to check node status:
 
-#. Log in to the Hosted Chef Management Console.
+#. Log in to the **Management Console**.
 
-#. Click Status tab.
+#. Click **Status** tab.

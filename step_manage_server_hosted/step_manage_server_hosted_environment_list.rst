@@ -3,9 +3,9 @@
 
 To list environments in your organization:
 
-#. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+#. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
-#. Click Environments on the main navigation menu.
+#. Click **Environments** on the main navigation menu.
 
    .. image:: ../../images/step_manage_server_hosted_environment_list.png
 

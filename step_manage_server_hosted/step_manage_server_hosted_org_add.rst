@@ -3,11 +3,11 @@
 
 In order to create a new organization:
 
-#. Log in to the Hosted Chef Management Console using your existing username.
+#. Log in to the **Management Console** using your existing username.
 
-#. Go to the Organizations page. If you do not have an organization associated with your user, you are on that page automatically. Otherwise, click the Organizations link on the upper right corner.
+#. Go to the **Organizations** page. If you do not have an organization associated with your user, you are on that page automatically. Otherwise, click the **Organizations** link on the upper right corner.
 
-#. On the Organizations page, click Create.
+#. On the **Organizations** page, click **Create**.
 
    .. image:: ../../images/step_manage_server_hosted_org_add_1.png
 
@@ -21,8 +21,8 @@ In order to create a new organization:
 
    .. image:: ../../images/step_manage_server_hosted_org_add_3.png
 
-#. Download your validation key and a sample Knife configuration file. You need to use the validation key to register new clients using this organization. The Knife configuration file allows you to start using Chef's command-line tool, Knife, immediately.
+#. Download your validation key and a sample Knife configuration file. You need to use the validation key to register new clients using this organization. The Knife configuration file allows you to start using |knife| --- the command line tool for |chef| --- immediately.
 
    .. image:: ../../images/step_manage_server_hosted_org_add_4.jpg
 
-If you will be using Knife, be sure to download the User's Private Key as well.
+If you will be using |knife|, be sure to download the user's private key as well.

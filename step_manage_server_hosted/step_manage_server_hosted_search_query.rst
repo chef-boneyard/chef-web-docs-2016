@@ -4,16 +4,16 @@ You can search through the Search Indexes including Environments, Clients, Roles
 
 For example, if you want to search a client whose name is "foobar":
 
-#. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+#. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
-#. Click on the Search tab on the main navigation menu.
+#. Click on the **Search** tab on the main navigation menu.
 
 #. In the text box under the "Client" search index, enter "clientname:foobar" and click on the Search client button.
 
    .. image:: ../../images/step_manage_server_hosted_search_index_1.png
 
-The results will look like this if there is a client named "foobar":
+   The results will look like this if there is a client named "foobar":
 
    .. image:: ../../images/step_manage_server_hosted_search_index_2.png
 
-If you leave the search box empty, it returns all the objects of that type. Searching for Environments, Data Bags, Nodes, and Roles work the same way.
+   If you leave the search box empty, it returns all the objects of that type. Searching for Environments, Data Bags, Nodes, and Roles work the same way.

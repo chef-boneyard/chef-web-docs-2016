@@ -5,9 +5,9 @@ Viewing a node shows the recipes and roles in the node's run list, as well as th
 
 In order to view a specific node:
 
-#. Login to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+#. Login to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
-#. Click on the Nodes tab.
+#. Click on the **Nodes** tab.
 
 #. Click on the name of the node you want to view.
 
