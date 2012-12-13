@@ -12,3 +12,5 @@ From the My Profile page of the account management tool, you can update the deta
 #. Make the desired changes and press "Save". If your save was successful, you should see the following information:
 
    .. image:: ../../images/step_manage_server_hosted_user_details_2.png
+
+

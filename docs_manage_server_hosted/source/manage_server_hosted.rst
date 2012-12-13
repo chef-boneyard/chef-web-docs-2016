@@ -77,7 +77,7 @@ Manage API Clients
 
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_clients.rst
 
-Add
+Create
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_client_add.rst
 
@@ -112,7 +112,7 @@ List
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_cookbook_list.rst
 
-View
+Show
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_cookbook_view.rst
 
@@ -123,7 +123,7 @@ Manage Data Bags
 
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_data_bags.rst
 
-Add
+Create
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_data_bag_add.rst
 
@@ -139,7 +139,7 @@ List
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_data_bag_list.rst
 
-View
+Show
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_data_bag_view.rst
 
@@ -147,7 +147,7 @@ Data Bag Items
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_item.rst
 
-Add
+Create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_data_bag_item_add.rst
 
@@ -167,7 +167,7 @@ Edit
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_data_bag_item_edit.rst
 
-View 
+Show 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_data_bag_item_view.rst
 
@@ -178,7 +178,7 @@ Manage Environments
 
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_environments.rst
 
-Add
+Create
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_environment_add.rst
 
@@ -210,7 +210,7 @@ Move Node
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_environment_move_node.rst
 
-View
+Show
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_environment_view.rst
 
@@ -239,7 +239,7 @@ Remove User from Group
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_group_user_remove.rst
 
-View
+Show
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_group_view.rst
 
@@ -248,7 +248,7 @@ Manage Nodes
 =====================================================
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_nodes.rst
 
-Add
+Create
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_node_add.rst
 
@@ -286,7 +286,7 @@ Move Node to Environment
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_node_move.rst
 
-View
+Show
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_node_view.rst
 
@@ -295,7 +295,7 @@ Manage Organizations
 =====================================================
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_organizations.rst
 
-Add
+Create
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_org_add.rst
 
@@ -348,7 +348,7 @@ Manage Roles
 
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_roles.rst
 
-Add
+Create
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_role_add.rst
 
@@ -376,14 +376,52 @@ List
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_role_list.rst
 
-View
+Show
 -----------------------------------------------------
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_role_view.rst
+
+
+
+
+
+
 
 
 Manage Users
 =====================================================
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_users.rst
+
+
+
+
+
+Use Hosted Chef???
+
+Log In    step_manage_server_hosted_user_login
+
+Passwords   
+
+Your Opscode user account is shared across the Opscode Platform, the Hosted Chef Management Console, the Community Site, and http://www.opscode.com/support. You can update your name, twitter account information, geographic information, email address, profile image, and communication preferences. Information on changing this data or your password can be found on the Managing your Opscode User Account page.
+
+  Change Password    step_manage_server_hosted_user_password_change
+  Recover Password     step_manage_server_hosted_user_password_recover
+
+Private Keys   
+
+This section explains how to download and use your private key, which is used to authenticate with Knife or directly via the REST APIs. For security purposes, Opscode does not keep a copy of this private key. We keep only the corresponding public key to verify your requests. Your private key is like a password or bank PIN number, so keep it safe.
+
+You can also find information on downloading the organization key and knife config file on the Setup Opscode User and Organization page.
+
+  Download   step_manage_server_hosted_user_private_key_download
+  Use   step_manage_server_hosted_user_private_key_use
+  Regenerate   step_manage_server_hosted_user_regenerate_private_key
+
+View Account Details   step_manage_server_hosted_user_details
+
+
+
+
+
 
 Log In
 -----------------------------------------------------
@@ -393,27 +431,13 @@ Change the Default Password
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_user_change_password.rst
 
-Use the Bootstrap Recipe
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_manage_server_hosted/step_manage_server_hosted_user_bootstrap.rst
 
-Manage User Accounts
------------------------------------------------------
-Users are managed from the users tab:
 
-.. image:: ../../images/includes_manage_server_open_source_user_manage.jpg
 
-Add
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_manage_server_hosted/step_manage_server_hosted_user_add.rst
 
-Delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_manage_server_hosted/step_manage_server_hosted_user_delete.rst
 
-Edit
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_manage_server_hosted/step_manage_server_hosted_user_edit.rst
+
+
 
 
 Search
