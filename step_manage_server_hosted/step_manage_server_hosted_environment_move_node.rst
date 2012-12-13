@@ -1,5 +1,7 @@
 .. This is an included how-to. 
 
+.. note:: You need update permissions on the node to edit it.
+
 To move a node:
 
 #. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
@@ -14,4 +16,3 @@ To move a node:
 
 #. Click on the **Save Node** button.
 
-Note: You need update permissions on the node to edit it.

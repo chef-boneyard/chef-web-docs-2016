@@ -3,9 +3,3 @@
 
 The **Management Console** allows users to create, read, update, and delete data bags and data bag items.
 
-
-
-
-
-The Hosted Chef Management Console can be used to manage your data bags:
-

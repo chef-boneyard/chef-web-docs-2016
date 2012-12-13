@@ -1,7 +1,6 @@
 .. This is an included how-to. 
 
-
-.. warning:: Canceling your subscription to |chef hosted| will cut off your access to the |api chef hosted| and your data.
+.. warning:: Canceling your subscription to |chef hosted| will cut off your access to the |api chef server| and your data.
 
 From the **View/Edit Plan** page of the **Account Management** tool, you can cancel your organization's subscription to |chef hosted|.
 

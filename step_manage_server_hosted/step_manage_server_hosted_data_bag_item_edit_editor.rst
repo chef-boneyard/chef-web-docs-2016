@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To xxxxx:
+To edit a data bag item:
 
 #. Expand the **Data Attributes** tree on the left and click "id".
 

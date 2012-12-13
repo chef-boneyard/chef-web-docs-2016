@@ -1,5 +1,6 @@
 .. This is an included how-to. 
 
+.. note:: You need list permissions on the global environments level to see the list of environments.
 
 To list environments in your organization:
 
@@ -9,4 +10,3 @@ To list environments in your organization:
 
    .. image:: ../../images/step_manage_server_hosted_environment_list.png
 
-Note: You need list permissions on the global environments level to see the list of environments.

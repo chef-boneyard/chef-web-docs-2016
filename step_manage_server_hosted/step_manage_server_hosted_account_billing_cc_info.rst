@@ -1,6 +1,5 @@
 .. This is an included how-to. 
 
-
 The **Billing Information** section of the **Billing Page** page shows you the information about the credit card you have on file. If no credit card is on file, you can use the **Add Credit Card** button to add a credit card.
 
 .. image:: ../../images/step_manage_server_hosted_account_billing_cc_info_1.png

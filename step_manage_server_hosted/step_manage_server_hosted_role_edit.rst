@@ -1,5 +1,7 @@
 .. This is an included how-to. 
 
+.. note:: You need update permissions on the role to edit it.
+
 To edit a role:
 
 #. Login to the **Management Console** and navigate to the **Roles** tab.
@@ -14,8 +16,6 @@ To edit a role:
 
    .. image:: ../../images/step_manage_server_hosted_role_edit_2.png
 
-The **Active Run List** panel on the right shows the current active run list for the environment selected with the drop down box at the top of the page. If the ``None`` or ``_default``environments are selected it shows the default run list. If you've selected an environment that does not have a specific run list yet it will also show the default run list. If you edit the run list while an environment is selected at the top of the page, your changes will be saved as a run list specific for nodes in that environment.
+   The **Active Run List** panel on the right shows the current active run list for the environment selected with the drop down box at the top of the page. If the ``None`` or ``_default`` environments are selected it shows the default run list. If you've selected an environment that does not have a specific run list yet it will also show the default run list. If you edit the run list while an environment is selected at the top of the page, your changes will be saved as a run list specific for nodes in that environment.
 
 #. Click **Save Role** to save.
-
-Note: You need update permissions on the role to edit it.

@@ -1,9 +1,10 @@
 .. This is an included how-to. 
 
+.. note:: You need read permissions on the role to view it.
 
 Viewing a role shows the recipes and roles included in the role, as well as a tree view of the attributes associated with the role.
 
-In order to view a specific role:
+To view a specific role:
 
 #. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
@@ -13,4 +14,3 @@ In order to view a specific role:
 
    .. image:: ../../images/step_manage_server_hosted_role_view.png
 
-Note: You need read permissions on the role to view it.

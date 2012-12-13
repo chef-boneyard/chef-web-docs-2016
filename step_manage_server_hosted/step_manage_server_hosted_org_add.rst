@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-In order to create a new organization:
+To create a new organization:
 
 #. Log in to the **Management Console** using your existing username.
 

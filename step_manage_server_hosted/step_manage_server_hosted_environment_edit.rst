@@ -1,5 +1,7 @@
 .. This is an included how-to. 
 
+.. note:: You need update permissions on the environment to edit it.
+
 To edit an environment:
 
 #. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
@@ -12,4 +14,3 @@ To edit an environment:
 
 #. Click the **Create Environment or Update Environment** button when you are done to save the environment.
 
-Note: You need update permissions on the environment to edit it.

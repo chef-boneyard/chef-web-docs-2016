@@ -1,5 +1,7 @@
 .. This is an included how-to. 
 
+.. note:: You need create permissions on the parent data bag in order to create a new item within it.
+
 To create a data bag item in a specific data bag:
 
 #. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
@@ -12,4 +14,4 @@ To create a data bag item in a specific data bag:
 
 #. Click the **Source** tab in the JSON editor to edit the data bag item directly, or use the tree view on the left and the **Editor** tab to add and edit keys and values. Further directions on these two methods are below. You should not delete the "id" key as this contains the name of the data bag item.
 
-Note: You need create permissions on the parent data bag in order to create a new item within it.
+

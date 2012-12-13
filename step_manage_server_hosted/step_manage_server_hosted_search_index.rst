@@ -2,7 +2,7 @@
 
 More information on searching can be found on the Search page. You can also use the command line tool |knife| to search.
 
-In order to see the list of search indexes:
+To see the list of search indexes:
 
 #. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 

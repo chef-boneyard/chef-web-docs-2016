@@ -1,5 +1,7 @@
 .. This is an included how-to. 
 
+.. note:: You need create permissions on the global clients level to create a client.
+
 New clients are typically created by the |chef client| when it first connects to |chef hosted|, so there is no need in that case to manually create a new client.
 
 If you need to manually create one, you can follow these steps:
@@ -16,5 +18,4 @@ If you need to manually create one, you can follow these steps:
 
    .. image:: ../../images/step_manage_server_hosted_client_add_2.png
 
-Note: You need create permissions on the global clients level to create a client.
 

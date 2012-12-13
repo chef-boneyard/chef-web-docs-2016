@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To xxxxx:
+To edit an environment attribute:
 
 #. Enter the JSON body in the editor, and click the Load JSON from source button: 
 

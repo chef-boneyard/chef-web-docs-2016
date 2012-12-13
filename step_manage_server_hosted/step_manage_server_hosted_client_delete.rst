@@ -1,6 +1,8 @@
 .. This is an included how-to. 
 
-In order to delete a client:
+.. note:: You need delete permissions on the client to delete it.
+
+To delete a client:
 
 #. Log in to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
@@ -12,4 +14,4 @@ In order to delete a client:
 
    This will prevent that client from authenticating to Hosted Chef.
 
-Note: You need delete permissions on the client to delete it.
+

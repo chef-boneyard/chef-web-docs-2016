@@ -1,7 +1,6 @@
 .. This is an included how-to. 
 
-To xxxxx:
-
+To edit the source JSON for a node:
 
 #. Enter the JSON body in the editor, and click the **Load JSON from source** button: 
 

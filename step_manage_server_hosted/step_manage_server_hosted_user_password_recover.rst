@@ -1,7 +1,5 @@
 .. This is an included how-to. 
 
-
-
 If you lose your password, you can recover it using the email address currently associated with your account.
 
 #. Go to the **Account Management** site (https://www.opscode.com/account).

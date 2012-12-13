@@ -1,7 +1,6 @@
 .. This is an included how-to. 
 
-
-Note: In order to edit a specific group, you need update permissions on that group. Refer to the Managing Permissions article for more information about how to retrieve and update permissions.
+.. note:: In order to edit a specific group, you need update permissions on that group. Refer to the Managing Permissions article for more information about how to retrieve and update permissions.
 
 To edit a specific group in your organization:
 
@@ -15,6 +14,6 @@ This will direct you to a page where you can select which users, clients, and gr
 
    .. image:: ../../images/step_manage_server_hosted_group_edit.png
 
-Note: If you don't see an **Edit** link or tab, you don't have update permissions on that group.
+   If you don't see an **Edit** link or tab, you don't have update permissions on that group.
 
 #. Select the users and groups you want, and click **Save Group**.

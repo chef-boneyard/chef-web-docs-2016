@@ -1,5 +1,6 @@
 .. This is an included how-to. 
 
+.. note:: You need create permissions on the global roles level to create new roles.
 
 The role create page allows you to create a role. You can add recipes and roles to the run list. There is also a JSON editor for editing, adding and removing JSON attributes associated with the role.
 
@@ -16,5 +17,3 @@ To add a role:
 #. When you have finished editing the role, click **Create Role** to save the new role.
 
 If you selected a custom environment and need the run list setup differently with another environment, you can now change the environment and edit the run list. If an environment is selected from the drop down at the top of the page, you will only see the run_list and attributes specific to this environment. You can see the default run list and attributes by selecting ``None`` or ``_default`` from the drop-down.
-
-Note: You need create permissions on the global roles level to create new roles.

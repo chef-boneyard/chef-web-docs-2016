@@ -5,7 +5,7 @@ The private key for the organization is also referred to as the validation key a
 
 You can also download a default |knife| config on the same page.
 
-In order to download the private key and the |knife rb| file:
+To download the private key and the |knife rb| file:
 
 #. Log into the **Management Console**.
 

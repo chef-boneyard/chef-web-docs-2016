@@ -1,9 +1,10 @@
 .. This is an included how-to. 
 
+.. note:: You need read permissions on the node to view it.
 
 Viewing a node shows the recipes and roles in the node's run list, as well as the node's attributes.
 
-In order to view a specific node:
+To view a specific node:
 
 #. Login to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
@@ -14,6 +15,3 @@ In order to view a specific node:
 On this page you can see the roles and recipes in the node's run list, as well as an expandable tree view of the JSON attributes on the node.
 
    .. image:: ../../images/step_manage_server_hosted_node_view.png
-
-Note: You need read permissions on the node to view it.
-

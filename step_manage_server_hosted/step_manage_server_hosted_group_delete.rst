@@ -1,5 +1,7 @@
 .. This is an included how-to. 
 
+.. note:: If you don't see a **Delete** link or tab, you don't have delete permissions on that group. You cannot delete admins, users, and clients groups.
+
 To delete a specific group in your organization:
 
 #. Log in to the **Management Console** and select the appropriate organization if the user is associated to more than one.
@@ -10,4 +12,4 @@ To delete a specific group in your organization:
 
 #. Click **OK** on the confirmation message box.
 
-Note: If you don't see a **Delete** link or tab, you don't have delete permissions on that group. You cannot delete admins, users, and clients groups.
+ 

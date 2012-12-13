@@ -1,6 +1,8 @@
 .. This is an included how-to. 
 
-In order to regenerate a client's private key:
+.. note:: You need update permissions on the client to recreate this key.
+
+To regenerate a client's private key:
 
 #. Log in to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
@@ -12,5 +14,5 @@ In order to regenerate a client's private key:
 
    Your new private key will start downloading. Save this key! There is no way for |opscode| to recover the key if you lose it, though you can generate a new key again.
 
-Note: You need update permissions on the client to recreate this key.
+
 

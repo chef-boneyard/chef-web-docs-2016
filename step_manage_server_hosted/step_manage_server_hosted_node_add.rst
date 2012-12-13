@@ -1,7 +1,6 @@
 .. This is an included how-to. 
 
-To xxxxx:
-
+.. note:: You need create permissions on the global nodes level to create a node.
 
 The node create page lists all available recipes and roles in the organization, and allows you to include these in the run list of the node you are creating. There is also a JSON editor for editing, adding and removing the node's attributes.
 
@@ -21,4 +20,3 @@ To create a node:
 
 #. Edit the node, further information is in the next section. Click **Create Node** to save the new node when you are done.
 
-Note: You need create permissions on the global nodes level to create a node.

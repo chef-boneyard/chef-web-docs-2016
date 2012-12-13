@@ -1,9 +1,10 @@
 .. This is an included how-to. 
 
+.. note:: You need create permissions on the global environments level to create an environment.
 
 The environment creation page allows you to create a new environment and set its cookbook version constraints and attributes.
 
-In order to create an environment:
+To create an environment:
 
 #. Log on to the **Management Console** and navigate to the **Environments** tab.
 
@@ -17,4 +18,4 @@ In order to create an environment:
 
 #. Click **Create Environment**.
 
-Note: You need create permissions on the global environments level to create an environment.
+ 

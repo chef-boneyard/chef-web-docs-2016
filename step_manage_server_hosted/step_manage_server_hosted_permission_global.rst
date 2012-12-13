@@ -4,7 +4,7 @@
 
 Note: Roles are used here as an example, but it works the same way for Nodes, Cookbooks, Databags, Clients, and Groups. The permissions on Databag Items are inherited from their parent Databags.
 
-In order to view and update the global level permissions on an object type (Roles in this case):
+To view and update the global level permissions on an object type (Roles in this case):
 
 #. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 

@@ -2,5 +2,3 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 The **Management Console** allows users to create, read, update, and delete roles.
-
- 

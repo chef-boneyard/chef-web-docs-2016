@@ -1,6 +1,8 @@
 .. This is an included how-to. 
 
-To xxxxx:
+.. note:: You need update permissions on the node to edit it.
+
+To edit a node:
 
 #. Login to the **Management Console** and select an organization.
 
@@ -18,4 +20,3 @@ To xxxxx:
 
 #. Click **Save Node** to save.
 
-Note: You need update permissions on the node to edit it.

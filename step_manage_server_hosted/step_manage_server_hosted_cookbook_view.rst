@@ -1,5 +1,7 @@
 .. This is an included how-to. 
 
+.. note:: You need read permissions on the specific cookbook in order to view the details of the cookbook.
+
 To view the contents of a specific cookbook:
 
 #. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
@@ -12,4 +14,3 @@ To view the contents of a specific cookbook:
 
 #. Click on **Library Files**, **Attribute Files**, **Definition Files**, **Recipe Files**, or **Template Files** to view the contents of the cookbook. If you do not see one of these links, the cookbook does not have files of that type.
 
-Note: You need read permissions on the specific cookbook in order to view the details of the cookbook.

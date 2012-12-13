@@ -1,6 +1,8 @@
 .. This is an included how-to. 
 
-In order to view a specific environment:
+.. note:: You need read permissions on the environment to view it.
+
+To view a specific environment:
 
 #. Log on to the **Management Console** and select an organization to use if you are associated with multiple organizations.
 
@@ -16,4 +18,3 @@ In order to view a specific environment:
 
    For instance, to view nodes in the environment you could click on the **Node** tab after selecting environment from the drop down. To view data for all environments select **None** from the drop down. This can also get set by clicking on the **Select** link next to an environment on the **Environments** tab.
 
-Note: You need read permissions on the environment to view it.

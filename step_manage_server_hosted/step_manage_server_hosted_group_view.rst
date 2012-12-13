@@ -1,9 +1,8 @@
 .. This is an included how-to. 
 
+.. note:: In order to view the details of a specific group, you need read permissions on that group. Refer to the Managing Permissions article for more information about how to retrieve and update permissions.
 
-Note: In order to view the details of a specific group, you need read permissions on that group. Refer to the Managing Permissions article for more information about how to retrieve and update permissions.
-
-In order to view a specific group in your organization:
+To view a specific group in your organization:
 
 #. Log in to the **Management Console** and select the appropriate organization if the user is associated to more than one.
 
