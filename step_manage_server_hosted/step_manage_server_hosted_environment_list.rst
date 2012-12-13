@@ -1,7 +1,12 @@
 .. This is an included how-to. 
 
-To xxxxx:
 
-#. xxxxx
-#. xxxxx
-#. xxxxx
+To list environments in your organization:
+
+#. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+#. Click Environments on the main navigation menu.
+
+   .. image:: ../../images/step_manage_server_hosted_environment_list.png
+
+Note: You need list permissions on the global environments level to see the list of environments.

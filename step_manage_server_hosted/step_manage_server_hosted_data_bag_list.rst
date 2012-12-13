@@ -1,7 +1,11 @@
 .. This is an included how-to. 
 
-To xxxxx:
+To list data bags in your organization:
 
-#. xxxxx
-#. xxxxx
-#. xxxxx
+#. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+#. Click Data bags on the main navigation menu.
+
+   .. image:: ../../images/step_manage_server_hosted_data_bag_list.png
+
+Note: You need the list permission on the global data bag level to see the list of data bags.

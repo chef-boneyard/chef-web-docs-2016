@@ -1,7 +1,11 @@
 .. This is an included how-to. 
 
-To xxxxx:
+To list roles in your organization:
 
-#. xxxxx
-#. xxxxx
-#. xxxxx
+#. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+#. Click Roles on the main navigation menu.
+
+   .. image:: ../../images/step_manage_server_hosted_role_list.png
+
+Note: You need list permissions on the global roles level to see the list of roles.

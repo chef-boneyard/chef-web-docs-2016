@@ -6,7 +6,7 @@ The **Management Console** allows users to manage users and user accounts.
 
 
 Editing your User Profile and Changing your User Password
-=====================================================
+==========================================================
 Your Opscode user account is shared across the Opscode Platform, the Hosted Chef Management Console, the Community Site, and http://www.opscode.com/support. You can update your name, twitter account information, geographic information, email address, profile image, and communication preferences. Information on changing this data or your password can be found on the Managing your Opscode User Account page.
 
 Downloading and Using your Private Key
@@ -124,60 +124,4 @@ Log into the Account Management Tool
 In order to update your account information you'll need to login to the account management tool
 
 1. Go to the Account Management site (https://www.opscode.com/account) and login using your existing username.
-
-
-
-User Details
-=====================================================
-From the My Profile page of the account management tool, you can update the details about your Opscode User account.
-
-Go to the Account Management site (https://www.opscode.com/account) and login using your existing username.
-Go to the My Profile page by clicking on My Profile in the navigation bar.
-On the My Profile page, you can edit any of the following:
-First, Middle, and Last name
-Twitter and IRC Usernames
-Email Address
-Email Notification Settings for the Opscode Community Site
-
-   .. image:: ../../images/step_manage_server_hosted_user_details_1.jpg
-
-Make the desired changes and press "Save"
-If your save was successful, you should see the following information:
-
-   .. image:: ../../images/step_manage_server_hosted_user_details_2.jpg
-
-Changing your Password
-=====================================================
-From the Change Password page of the Account Management tool, you can reset your user's current password.
-
-Go to the Account Management site (https://www.opscode.com/account) and login using your existing username.
-Go to the Change Password page by clicking on Change Password in the navigation bar.
-Enter your old password and your new password.
-Click "Change Password"
-
-   .. image:: ../../images/step_manage_server_hosted_user_password_change.jpg
-
-Recovering a Lost Password
-=====================================================
-If you lose your password, you can recover it using the email address currently associated with your account.
-
-Go to the Account Management site (https://www.opscode.com/account).
-Click "Recover Password" on the right hand side of the screen.
-You will be redirected to a password reset page. Enter your email address and press submit.
-Follow the directions that are sent in the email you will recieve.
-
-   .. image:: ../../images/step_manage_server_hosted_user_password_recover.jpg
-
-Regenerate Private Key
-=====================================================
-The Change Password section of the Account management tool, also allows you to regenerate your private key. This private key is what you use to make authenticated API requests when working with Staging:Knife.
-
-Go to the Account Management site (https://www.opscode.com/account) and login using your existing username.
-Go to the Change Password page by clicking on Change Password in the navigation bar.
-Click "Get a new key"
-Your new key will now download. Please save this in a safe location.
-
-   .. image:: ../../images/step_manage_server_hosted_user_regenerate_private_key.jpg
-
-
 

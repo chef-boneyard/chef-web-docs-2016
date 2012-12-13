@@ -1,8 +1,12 @@
 .. This is an included how-to. 
 
-To xxxxx:
 
-#. xxxxx
-#. xxxxx
-#. xxxxx
+To view or edit a specific data bag:
 
+#. Log on to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+#. Click Databags on the main navigation menu.
+
+#. Click on the specific data bag you want to view or edit.
+
+   .. image:: ../../images/step_manage_server_hosted_data_bag_view.png

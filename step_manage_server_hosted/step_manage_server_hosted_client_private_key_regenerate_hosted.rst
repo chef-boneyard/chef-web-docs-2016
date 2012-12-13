@@ -1,7 +1,15 @@
 .. This is an included how-to. 
 
-To xxxxx:
+In order to regenerate a client's private key:
 
-#. xxxxx
-#. xxxxx
-#. xxxxx
+#. Log in to the Hosted Chef Management Console and select an organization to use if you are associated with multiple organizations.
+
+#. Select the Clients tab
+
+#. Click on the regenerate private key link next to the client whose key you want to regenerate:
+
+   .. image:: ../../images/step_manage_server_hosted_client_private_key_regenerate_hosted.png
+
+Note: You need update permissions on the client to recreate this key.
+
+Your new private key will start downloading. Save this key! There is no way for Opscode to recover the key if you lose it, though you can generate a new key again.

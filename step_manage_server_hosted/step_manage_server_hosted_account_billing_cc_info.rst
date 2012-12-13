@@ -1,13 +1,16 @@
 .. This is an included how-to. 
 
-To xxxxx:
 
-.. code-block:: ruby
+The Billing Information section of the Billing Page page shows you the information about the credit card you have on file. If no credit card is on file, you can use the "Add Credit Card" button to add a credit card.
 
-   xxxxx
+.. image:: ../../images/step_manage_server_hosted_account_billing_cc_info_1.png
 
+Enter your billing information in the form that appears and click the update button.
 
-#. xxxxxx
-#. xxxxxx
-#. xxxxxx
-#. xxxxxx
+.. image:: ../../images/step_manage_server_hosted_account_billing_cc_info_2.png
+
+If you have previously entered your billing information, a summary of that information will appear:
+
+.. image:: ../../images/step_manage_server_hosted_account_billing_cc_info_2.png
+
+You can also update your billing information by clicking the Edit button.

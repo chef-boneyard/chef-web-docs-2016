@@ -1,13 +1,6 @@
 .. This is an included how-to. 
 
-To xxxxx:
 
-.. code-block:: ruby
+From the View/Edit Plan page of the Account Management tool, you can change your organization's subscription to Hosted Chef. Selecting your desired plan will update your subscription and you will be charged according to the billing information currently on file.
 
-   xxxxx
-
-
-#. xxxxxx
-#. xxxxxx
-#. xxxxxx
-#. xxxxxx
+.. image:: ../../images/step_manage_server_hosted_account_billing_plan.png
