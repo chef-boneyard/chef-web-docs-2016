@@ -74,6 +74,8 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
    * - :doc:`dsl_recipe_method_value_for_platform_family`
      - Use in a recipe to check for a value for a platform family.
 
+.. The following recipe DSL methods can be used with |windows| registry keys. The order in which they should be used within a recipe: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and ``get_subkeys``.
+
 .. toctree::
    :hidden:
 
