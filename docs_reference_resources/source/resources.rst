@@ -337,6 +337,8 @@ Callbacks
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst
 
+**Callbacks and Capistrano**
+
 .. include:: ../../includes_resources/includes_resource_deploy_capistrano_callbacks.rst
 
 Layout Modifiers
