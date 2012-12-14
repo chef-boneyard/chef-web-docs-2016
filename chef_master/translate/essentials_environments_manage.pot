@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-12-13 14:05\n"
+"POT-Creation-Date: 2012-12-13 19:47\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,137 +17,137 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/essentials_environments_manage.rst:3
-# 1854e10489fd46c6a69f5423cbc244c0
+# 82aba41ae47f48e3b3f2b24b3b4bf00a
 msgid "Manage Environments"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage.rst:4
-# 7c145d8f7576431da8cac042d4018de5
+# 03e57e654ebe4d8d930e6ce31feffe0a
 msgid "Once created, an environment can be managed in several ways:"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage.rst:6
-# 46d4984cc5d945ecae7cf80f5b171ad1
+# 6b8c825107bb4eca8d951578b8d56571
 msgid "Using |knife|, using the ``-E ENVIRONMENT_NAME`` option for the ``knife cookbook upload`` sub-command and argument."
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage.rst:7
-# d5d12a5d387b4f76adeda620da5aacf9
+# e6e9de719cb04450b0c32af47cfa34f4
 msgid "Using the Management Console (in |chef hosted|, |chef private|, or |chef open server|)."
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage.rst:8
-# fb006d4aa4fd4f2f845934b2e98c0017
+# 9cfba154d47a4f5b8972e91ba3dffa2e
 msgid "Using |ruby| or |json| files that are stored in a version source control system and pushed to the |chef server|. This approach allows dynamically generated environment data (using |ruby|)."
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage.rst:10
-# 8d027f91c7e84f3b9e880d1daaabf343
+# 7bc620a1d7024969a722ad528c208ff0
 msgid "These workflows are mutually exclusive: only the most recent environment changes will be kept on the |chef server|, regardless of the source of those changes. All previous changes are overwritten when environment data is updated."
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage.rst:12
-# 469538091b3340fc97b3e66b0b29f07f
+# a34c533b15934283a7069c16aea9bad7
 msgid "The settings for environments can be modified and environments can be integrated into the larger |chef| infrastructure by associating them with nodes, using recipes to call specific environment settings, and so on."
 msgstr ""
 
 #: ../source/essentials_environments_manage.rst:39
-# e62ea5838f534cfe9f229f6f81fe9183
+# 58c83b6b2acd44a89c1805fb1fdf4d8c
 msgid "Save Environment Data in a Data Bag"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst:4
-# f6331ec33b8a4a9d9eeeb2a035b5c5bb
+# 782420eda8864a03888de37587f057cb
 msgid "Values that are stored in a data bag are global to the organization and are available to any environment. There are two main strategies that can be used to store per-environment data within a data bag: by using a top-level key that corresponds to the environment or by using separate items for each environment."
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst:6
-# 6ac252ea0d3f4fbd824f672ab44e1fa7
+# 659c1fd56ecd45f19a7885fd6211e357
 msgid "A data bag that is storing a top-level key for an environment might look something like this::"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst:18
-# 29dd167533854fa4825dd88f05670c43
+# 3a309a23af044a0282867df0cb67d61c
 msgid "When using the data bag in a recipe, that data can be accessed from a recipe using code similar to::"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst:22
-# 1b6fd8602e9b4670ac9805a197e57001
+# c601315d3d2b44b99779becd9dcb14ab
 msgid "The other approach is to use separate items for each environment. Depending on the amount of data, it may all fit nicely within a single item. If this is the case, then creating different items for each environment may be a simple approach to providing per-environment values within a data bag. However, this approach is more time-consuming and may not scale to very large environments or when the data must be stored in many data bag items."
 msgstr ""
 
 #: ../source/essentials_environments_manage.rst:43
-# f12a1e38c7aa44f082422eacc1df6e70
+# 58e876225060466998db69d8d4cce932
 msgid "Override Environment Attributes in Roles"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_override_in_roles.rst:4
-# 1b2531344cf24fdb9850d944cdb27641
+# 6286b37bab2740d1a66bffc37c697e2e
 msgid "Environment attributes that are used with roles can be overridden. Typically, this is done by using attribute precedence, but sometimes it may be necessary to ensure that specific attributes are used based on the presence of specific environments. This type of scenario is best addressed in using a recipe that relies on a top-level key that is stored in a data bag. For example, to retrieve a value from a data bag based on a specific environment::"
 msgstr ""
 
 #: ../source/essentials_environments_manage.rst:47
-# 4a028fd73188459c957e36e74f006b18
+# 24d285ca3b304970a5701f3affafaf5a
 msgid "Set the Environment for a Node"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_set_on_node.rst:4
-# 5732ad84ad5d490bb5423e0ec05bfd55
+# 3b7b4cfeb87849fbb2342639090c208f
 msgid "A node is considered to be associated with an environment when the ``chef_environment`` attribute is set. The ``chef_environment`` attribute cannot be set with normal or override attributes (i.e. in a role) because it is actually a method. It must be set explicitly using the ``knife edit`` or ``knife exec`` sub-commands, or by using one of the following methods:"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_set_on_node.rst:6
-# d58acb21b06a4af89fc24a6e544325da
+# 7bf6f9aaea20477e8bb56d0274bf2ca7
 msgid "By editing the ``chef_environment`` directly using |knife| or a management console."
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_set_on_node.rst:7
-# 3d5643109e7f47c5b67d481784127c4e
+# 7d663063866f4390ab523e0a6b3e33cc
 msgid "By editing the ``environment`` configuration details in the |knife rb| file and then using the ``knife bootstrap`` subcommand to boostrap the changes to the specified environment."
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_set_on_node.rst:8
-# 1352c938c87e412aae7dfda4089bcae1
+# d35c6d4cd49b48e09fdd6b50ccbd24a1
 msgid "By setting the ``environment`` configuration entry in the |chef client| configuration file (by default: /etc/chef/client.rb). When the |chef client| runs, it will pick up the value and then set the ``chef_environment`` attribute of the node."
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_set_on_node.rst:9
-# 824faefa7ce1469ca1b6e7504212fc9a
+# 86c953214b2642b1bc52b4992011a968
 msgid "By calling the ``node.chef_environment(\"node_name\")`` object and then using ``node.save`` to update the ``chef_environment`` with the attribute specified by ``node_name``. (The ``chef_environment`` attribute cannot be accessed using the typical attribute sequence: ``node[:attribute_name]``.)"
 msgstr ""
 
 #: ../source/essentials_environments_manage.rst:51
-# cd0cbdeb1b1a4ccc866ec85c484de9cb
+# 7060e5168b67409187ea060a99f0091f
 msgid "Move Nodes Between Environments"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_move_nodes_between.rst:4
-# 018900f5b0344aa3b199c63d74ae29ca
+# 58883b075f884d889a3ee0502b792b89
 msgid "Nodes can be moved between environments, such as from a \"dev\" to a \"production\" environment by using the ``knife exec`` sub-command in |knife|. For example::"
 msgstr ""
 
 #: ../source/essentials_environments_manage.rst:55
-# 63c5392c7dcd44519d34399e4e33da05
+# f6da9997a25e43539d339e72f5c3e3fd
 msgid "Set Per-environment Run-lists in Roles"
 msgstr ""
 
 #: ../../includes_environment/includes_environment_manage_per_environment_run_lists.rst:4
-# 66f2e6bff0bb45efbe5034cdb5f54370
+# 92f4e683f6b24520bb682821d527a7da
 msgid "A per-environment run-list is a run-list that is associated with a role and a specific environment. More than one environment can be specified in a role, but each specific environment may be associated with only one run-list. If a run-list is not specified, the default run-list will be used. For example::"
 msgstr ""
 
 #: ../source/essentials_environments_manage.rst:59
-# 6e45827832824e0280ff9c4b3a71853e
+# 7b70da7f08fc4b7d93a8a38193be824d
 msgid "Searching Environments"
 msgstr ""
 
 #: ../../includes_search/includes_search_environment.rst:4
-# 00296d9eb23e4d3c9f53809db1f01607
+# 5440d57af92a4020866200c06542ebdd
 msgid "When searching, a |chef| environment (``chef_environment``) is treated much like an attribute. This allows search results to be limited to a specified environment by using Boolean operators and extra search terms. For example, to use |knife| to search for all of the servers running |centos| in an environment named \"QA\", enter the following:"
 msgstr ""
 
 #: ../../includes_search/includes_search_environment.rst:10
-# 4bcce90f66aa4a099b410c0512c4bc07
+# 352359c568ca45b8a396cb2f9c8c19aa
 msgid "Or, to include the same search in a recipe, use a code block similar to:"
 msgstr ""
 
