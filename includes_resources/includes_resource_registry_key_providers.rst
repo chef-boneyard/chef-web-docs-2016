@@ -11,5 +11,5 @@ The following providers are available. Use the short name to use the provider in
      - Short name
      - Notes
    * - ``Chef::Provider::Windows::Registry``
-     - ``registry``
+     - ``registry_key``
      - The default provider for the |windows| platform.

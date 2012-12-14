@@ -36,7 +36,7 @@ The following is an example of how the |resource windows_registry| resource can 
 
 .. code-block:: ruby
 
-   registry "HKEY_LOCAL_MACHINE\...\System" do
+   registry_key "HKEY_LOCAL_MACHINE\...\System" do
      values [{
        :name => "NewRegistryKeyValue",
        :type => :multi_string,

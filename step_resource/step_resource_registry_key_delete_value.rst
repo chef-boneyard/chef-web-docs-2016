@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   registry "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" do
+   registry_key "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" do
      values [{
        :name => "NoAutoRebootWithLoggedOnUsers",
        :type => :dword
