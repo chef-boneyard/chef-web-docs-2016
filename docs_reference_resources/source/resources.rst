@@ -1296,7 +1296,7 @@ The following examples show how to use the |resource user| resource.
 .. include:: ../../step_resource/step_resource_user_create_system.rst
 
 
-yum
+yum_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_yum.rst
 
