@@ -22,7 +22,7 @@ where
 
 * ``deploy`` tells |chef| to use either the ``Deploy::Revision`` or ``Deploy::Timestamped`` provider during the |chef| run. More specific short names---``timestamped_deploy``, ``deploy_revision``, or ``deploy_branch``---can be used instead of the ``deploy`` short name.
 * ``"name"`` is the path to the location in which the deployment steps will occur
-* ``attribute`` is zero (or more) of the attributes available for this resource
+* ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``callback`` represents additional |ruby| code that is used to pass a block or to specify a file, and then provide additional information to |chef| at specific times during the deployment process
 * ``purge_before_symlink``, ``create_dirs_before_symlink``, and ``symlink`` are attributes that are used to link configuration files, remove directories, create directories, or map files and directories during the deployment process
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run

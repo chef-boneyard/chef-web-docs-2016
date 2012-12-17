@@ -27,7 +27,7 @@ where
 
 * ``registry_key`` tells |chef| to use the ``Windows::Registry`` provider during the |chef| run
 * ``"name"`` is the path to the registry
-* ``attribute`` is zero (or more) of the attributes available for this resource
+* ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified.
 * |values resource windows_registry types|
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run
