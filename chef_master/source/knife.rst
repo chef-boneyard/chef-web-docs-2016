@@ -130,6 +130,7 @@ About Knife
    knife_status
    knife_tag
    knife_upload
+   knife_user
 
 
 
