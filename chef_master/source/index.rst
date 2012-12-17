@@ -64,17 +64,7 @@ Chef Documentation
 
 .. toctree::
    :hidden:
-
-   resource_registry_key
-   dsl_recipe_method_registry_data_exists
-   dsl_recipe_method_registry_get_subkeys
-   dsl_recipe_method_registry_get_values
-   dsl_recipe_method_registry_has_subkeys
-   dsl_recipe_method_registry_key_exists
-   dsl_recipe_method_registry_value_exists
    
-   
-
    chef_overview
    just_enough_ruby_for_chef
    install
@@ -122,3 +112,12 @@ Chef Documentation
    manage_server_hosted 
 
    images
+
+
+   resource_registry_key
+   dsl_recipe_method_registry_data_exists
+   dsl_recipe_method_registry_get_subkeys
+   dsl_recipe_method_registry_get_values
+   dsl_recipe_method_registry_has_subkeys
+   dsl_recipe_method_registry_key_exists
+   dsl_recipe_method_registry_value_exists
