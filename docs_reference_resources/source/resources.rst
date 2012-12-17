@@ -959,19 +959,19 @@ registry
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_windows_registry_syntax.rst
+.. include:: ../../includes_resources/includes_resource_registry_key_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_windows_registry_actions.rst
+.. include:: ../../includes_resources/includes_resource_registry_key_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_windows_registry_attributes.rst
+.. include:: ../../includes_resources/includes_resource_registry_key_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_windows_registry_providers.rst
+.. include:: ../../includes_resources/includes_resource_registry_key_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -979,14 +979,15 @@ The following examples show how to use the |resource windows_registry| resource.
 
 **Create a registry key**
 
-.. include:: ../../step_resource/step_resource_windows_registry_create_key.rst
+.. include:: ../../step_resource/step_resource_registry_key_create.rst
 
-**Delete a registry key**
+**Delete a registry key value**
 
-.. include:: ../../step_resource/step_resource_windows_registry_delete_key.rst
+.. include:: ../../step_resource/step_resource_registry_key_delete_value.rst
 
+**Delete a registry key and its subkeys, recursively**
 
-
+.. include:: ../../step_resource/step_resource_registry_key_delete_recursively.rst
 
 
 
@@ -1298,21 +1299,21 @@ The following examples show how to use the |resource user| resource.
 
 yum_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_yum.rst
+.. include:: ../../includes_resources/includes_resource_yum_package.rst
 
 .. note:: |note yum resource using file names|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_actions.rst
+.. include:: ../../includes_resources/includes_resource_yum_package_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_attributes.rst
+.. include:: ../../includes_resources/includes_resource_yum_package_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_providers.rst
+.. include:: ../../includes_resources/includes_resource_yum_package_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

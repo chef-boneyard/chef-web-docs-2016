@@ -1257,21 +1257,21 @@ The following examples show how to use the |resource user| resource.
 
 yum_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_yum.rst
+.. include:: ../../includes_resources/includes_resource_yum_package.rst
 
 .. note:: |note yum resource using file names|
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_actions.rst
+.. include:: ../../includes_resources/includes_resource_yum_package_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_attributes.rst
+.. include:: ../../includes_resources/includes_resource_yum_package_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_providers.rst
+.. include:: ../../includes_resources/includes_resource_yum_package_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
