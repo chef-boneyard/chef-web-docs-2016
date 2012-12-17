@@ -32,14 +32,13 @@ About Resources and Providers
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
+.. note:: If you want to see all of the information about |chef| resources in a single document, see: http://docs.opscode.com/chef/resources.html. (This document also includes all of the lightweight resources that exist in |opscode|-maintained cookbooks.)
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
-
-.. note:: If you want to see all of the |chef| resources in a single document, see: http://docs.opscode.com/chef/resources.html. (This document also includes all of the lightweight resources that exist in |opscode|-maintained cookbooks.)
 
 |chef| includes the following resources (each provider is discussed within the context of its associated resource):
 
