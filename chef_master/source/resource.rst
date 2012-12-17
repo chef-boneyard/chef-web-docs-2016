@@ -39,7 +39,7 @@ About Resources and Providers
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
 
-.. note:: If you want to see all of the |chef| resources and the lightweight resources that are available in |opscode|-maintained cookbooks, see: http://docs.opscode.com/chef/resources.html.
+.. note:: If you want to see all of the |chef| resources in a single document, see: http://docs.opscode.com/chef/resources.html. (This document also includes all of the lightweight resources that exist in |opscode|-maintained cookbooks.)
 
 |chef| includes the following resources (each provider is discussed within the context of its associated resource):
 
