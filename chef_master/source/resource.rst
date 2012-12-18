@@ -32,7 +32,7 @@ About Resources and Providers
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. note:: If you want to see all of the information about |chef| resources in a single document, see: http://docs.opscode.com/chef/resources.html. (This document also includes all of the lightweight resources that exist in |opscode|-maintained cookbooks.)
+.. note:: If you want to see all of the information about |chef| resources in a single document, see: http://docs.opscode.com/chef/resources.html. (This document also includes all of the lightweight resources that exist in |opscode|-maintained cookbooks.) If you want to read topics about individual resources, keep reading down this page (all of the individual resources are listed in a table just below). If you want to read topics about individual resources, see: http://docs.opscode.com/lwrp.html.
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
 
