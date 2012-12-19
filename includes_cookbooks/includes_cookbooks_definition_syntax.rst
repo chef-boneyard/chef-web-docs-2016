@@ -17,7 +17,7 @@ The basic syntax of a definition:
      params_hash
    end
 
-For example, a definition named ``apache_site`` with an parameter called ``action`` with an argument for ``enable do`` would look something like:
+For example, a definition named ``apache_site`` with an parameter called ``action`` with an argument for ``enable`` would look something like:
 
 .. code-block:: ruby
 
