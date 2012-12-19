@@ -22,7 +22,7 @@ For example, a definition named ``apache_site`` with an parameter called ``actio
 .. code-block:: ruby
 
    define :apache_site, :action => :enable do
-     if params[:enable]
+     if params[:action] == :enable
         ...
      else
         ...
