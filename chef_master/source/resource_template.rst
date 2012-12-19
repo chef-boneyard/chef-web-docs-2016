@@ -80,6 +80,10 @@ The following examples show how to use the |resource template| resource.
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
 
+**Use a whitespace array (``%w``)**
+
+.. include:: ../../step_resource/step_resource_template_use_whitespace_array.rst
+
 **Use a relative path**
 
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
@@ -107,6 +111,18 @@ The following examples show how to use the |resource template| resource.
 **Send notifications to multiple resources**
 
 .. include:: ../../step_resource/step_resource_template_notifies_send_notifications_to_multiple_resources.rst
+
+**Execute a command using a template**
+
+.. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Set an IP address using variables and a template**
+
+.. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
+
+**Add a rule to an IP table**
+
+.. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst
 
 
 

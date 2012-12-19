@@ -57,3 +57,7 @@ The following examples show how to use the |resource script| resource.
 **Run a script**
 
 .. include:: ../../step_resource/step_resource_script_bash_script.rst
+
+**Install a file from a remote location using bash**
+
+.. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst

@@ -93,6 +93,10 @@ not_if Examples
 
 .. include:: ../../step_resource/step_resource_template_add_file_not_if_string.rst
 
+**Install a file from a remote location using bash**
+
+.. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
+
 only_if Examples
 -----------------------------------------------------
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_attribute_has_value.rst

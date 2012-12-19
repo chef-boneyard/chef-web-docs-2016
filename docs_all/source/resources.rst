@@ -113,6 +113,10 @@ The following examples show how to use ``not_if`` as a condition in a recipe:
 
 .. include:: ../../step_resource/step_resource_template_add_file_not_if_string.rst
 
+**Install a file from a remote location using bash**
+
+.. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
+
 only_if Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following examples show how to use ``only_if`` as a condition in a recipe:
@@ -309,6 +313,14 @@ The following examples show how to use the |resource cron| resource.
 **Run an entry if a folder exists**
 
 .. include:: ../../step_resource/step_resource_cron_run_entry_when_folder_exists.rst
+
+**Run every Saturday, 8:00 AM**
+
+.. include:: ../../step_resource/step_resource_cron_run_every_saturday.rst
+
+**Run only in November**
+
+.. include:: ../../step_resource/step_resource_cron_run_only_in_november.rst
 
 
 deploy
@@ -542,6 +554,15 @@ The following examples show how to use the |resource execute| resource.
 **Install repositories from a file, trigger a command, and force the internal cache to reload**
 
 .. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
+
+**Execute a command using a template**
+
+.. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Add a rule to an IP table**
+
+.. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst
+
 
 
 file
@@ -1004,6 +1025,9 @@ The following examples show how to use the |resource remote_file| resource.
 
 .. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst
 
+**Install a file from a remote location using bash**
+
+.. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
 
 route
 -----------------------------------------------------
@@ -1126,6 +1150,9 @@ The following examples show how to use the |resource script| resource.
 
 .. include:: ../../step_resource/step_resource_script_bash_script.rst
 
+**Install a file from a remote location using bash**
+
+.. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
 
 service
 -----------------------------------------------------
@@ -1166,6 +1193,19 @@ The following examples show how to use the |resource service| resource.
 **Change a service provider, depending on the node platform**
 
 .. include:: ../../step_resource/step_resource_service_change_service_provider_based_on_node.rst
+
+**Set an IP address using variables and a template**
+
+.. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
+
+**Use a crom timer to manage a service**
+
+.. include:: ../../step_resource/step_resource_service_use_variable.rst
+
+**Restart a service, and then notify a different service**
+
+.. include:: ../../step_resource/step_resource_service_restart_and_notify.rst
+
 
 
 template
@@ -1218,6 +1258,23 @@ The following examples show how to use the |resource template| resource.
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
 
+**Use a whitespace array (``%w``)**
+
+.. include:: ../../step_resource/step_resource_template_use_whitespace_array.rst
+
+**Set an IP address using variables and a template**
+
+.. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
+
+**Execute a command using a template**
+
+.. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Add a rule to an IP table**
+
+.. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst
+
+
 user
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_user.rst
@@ -1253,6 +1310,11 @@ The following examples show how to use the |resource user| resource.
 **Create a system user**
 
 .. include:: ../../step_resource/step_resource_user_create_system.rst
+
+**Create a system user with a variable**
+
+.. include:: ../../step_resource/step_resource_user_create_system_user_with_variable.rst
+
 
 
 yum_package

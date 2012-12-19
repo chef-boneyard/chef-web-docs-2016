@@ -57,3 +57,11 @@ The following examples show how to use the |resource cron| resource.
 **Run an entry if a folder exists**
 
 .. include:: ../../step_resource/step_resource_cron_run_entry_when_folder_exists.rst
+
+**Run every Saturday, 8:00 AM**
+
+.. include:: ../../step_resource/step_resource_cron_run_every_saturday.rst
+
+**Run only in November**
+
+.. include:: ../../step_resource/step_resource_cron_run_only_in_november.rst

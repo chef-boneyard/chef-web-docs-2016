@@ -83,3 +83,11 @@ The following examples show how to use the |resource execute| resource.
 **Restart when a configuration is broken**
 
 .. include:: ../../step_resource/step_resource_execute_notifies_prevent_restart_if_config_is_broken.rst
+
+**Execute a command using a template**
+
+.. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Add a rule to an IP table**
+
+.. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst

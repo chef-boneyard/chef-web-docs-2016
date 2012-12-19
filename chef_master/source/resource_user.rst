@@ -65,3 +65,7 @@ The following examples show how to use the |resource user| resource.
 **Create a system user**
 
 .. include:: ../../step_resource/step_resource_user_create_system.rst
+
+**Create a system user with a variable**
+
+.. include:: ../../step_resource/step_resource_user_create_system_user_with_variable.rst

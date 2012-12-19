@@ -89,3 +89,15 @@ The following examples show how to use the |resource service| resource.
 **Enable a service after a restart or reload**
 
 .. include:: ../../step_resource/step_resource_service_notifies_enable_after_restart_or_reload.rst
+
+**Set an IP address using variables and a template**
+
+.. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
+
+**Use a crom timer to manage a service**
+
+.. include:: ../../step_resource/step_resource_service_use_variable.rst
+
+**Restart a service, and then notify a different service**
+
+.. include:: ../../step_resource/step_resource_service_restart_and_notify.rst
