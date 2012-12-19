@@ -4,7 +4,7 @@ The following is an example of how to install the ``foo123`` module for |nginx|.
 
 * Declares three variables
 * Gets the |nginx| file from a remote location
-* Installs the file using |bash| to the path specified by the ``echo_src_filepath`` variable
+* Installs the file using |bash| to the path specified by the ``src_filepath`` variable
 
 .. code-block:: ruby
 
