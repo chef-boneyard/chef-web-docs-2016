@@ -1,0 +1,222 @@
+.TH "KNIFE-GOOGLE" "1" "December 20, 2012" "0.0.1" "knife-google"
+.SH NAME
+knife-google \- Man page for knife-google.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+Google Compute Engine is a cloud hosting platform that offers scalable and flexible virtual machine computing. The \fBgoogle\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Google Compute Engine.
+.sp
+This plugin should be installed using RubyGems.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife google [ARGUMENT] (options)
+.ft P
+.fi
+.SH COMMON OPTIONS
+.sp
+The following options can be run with all Knife sub\-commands and plug\-ins:
+.INDENT 0.0
+.TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-d\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment. When this option is added to a command, the command will run only against the named environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The private key that Knife will use to sign requests made by the API client to the Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-\-repo\-mode MODE\fP
+The layout of the local repository. The \fBdefault\fP repository includes cookbooks, data bags, environments, and roles. The \fBeverything\fP repository adds nodes, API client, and users. Default value: \fBdefault\fP.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+A user name that Knife will use to sign requests made by the API client to the Chef server. If this option is used, be sure to ensure that the user name matches the private key or authentication will fail.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
+.UNINDENT
+.SH SERVER CREATE
+.sp
+The \fBserver create\fP argument is used to create a new Google Compute Engine cloud instance. This will provision a new image in Google Compute Engine, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef\-client and communicate with a Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server create SERVER_NAME [RUN_LIST] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+The template file to be used during a bootstrap operation. Use this option if the specific location of the template file is unknown. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP. If this option is used, Knife will search for the template file in the following order: a \fBbootstrap/\fP folder in the current working directory, a \fBbootstrap/\fP folder in the Chef repository, a \fBbootstrap/\fP folder in \fB~/.chef/\fP, or a bootstrap file shipped with Chef. Do not use the \fB\-\-template\-file\fP option when \fB\-\-distro\fP is specified.
+.TP
+.B \fB\-e IP_ADDRESS\fP, \fB\-\-external\-ip\-address IP_ADDRESS\fP
+A static IP address that is provided by Google Compute Engine.
+.TP
+.B \fB\-f FLAVOR\fP, \fB\-\-flavor FLAVOR\fP
+The name of the flavor that identifies the hardware configuration of the server, including disk space, memory capacity, and CPU priority.
+.TP
+.B \fB\-i PRIVATE_KEY_FILE\fP, \fB\-\-private\-key\-file PRIVATE_KEY_FILE\fP
+The file in which the SSH private key used for authentication is located.
+.TP
+.B \fB\-I IMAGE\fP, \fB\-\-google\-image IMAGE\fP
+The name of the virtual application template or image that will be used to create the virtual machine. Default: \fBgcompute8\-standard\fP.
+.TP
+.B \fB\-k PUBLIC_KEY_FILE\fP, \fB\-\-public\-key\-file PUBLIC_KEY_FILE\fP]
+The file in which the SSH public key used for authentication is located.
+.TP
+.B \fB\-n NETWORK_NAME\fP, \fB\-\-network NETWORK_NAME\fP
+The name of the network in which the virtual machine will be created.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node.
+.TP
+.B \fB\-p PROJECT\fP, \fB\-\-project_id PROJECT\fP
+The identifier for the Google Compute Engine project.
+.TP
+.B \fB\-P IP_ADDRESS\fP, \fB\-\-internal\-ip\-address IP_ADDRESS\fP
+A static IP address that is provided by Google Compute Engine.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-s SERVER_NAME\fP, \fB\-\-server\-name SERVER_NAME\fP
+The name of the server.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to a template file that will be used during a bootstrap operation. Do not use the \fB\-\-distro\fP option when \fB\-\-template\-file\fP is specified.
+.TP
+.B \fB\-x USER_NAME\fP, \fB\-\-ssh\-user USER_NAME\fP
+The SSH user name.
+.TP
+.B \fB\-Z ZONE\fP, \fB\-\-availability\-zone ZONE\fP
+The name of the Google Compute Engine availability zone. Each availability zone is unique within a region. Default: \fBus\-east\-a\fP.
+.UNINDENT
+.SH SERVER DELETE
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Google Compute Engine cloud. To find a specific cloud instance, use the \fBknife google server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server delete SERVER_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-p PROJECT_NAME\fP, \fB\-\-project\-id PROJECT_NAME\fP
+The identifier for the Google Compute Engine project.
+.UNINDENT
+.sp
+\fBExamples\fP
+.sp
+For example, to delete a server named "devops01" from a project named "engineering", enter:
+.sp
+.nf
+.ft C
+$ knife google server delete devops1 engineering
+.ft P
+.fi
+.SH SERVER LIST
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Google Compute Engine account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife google server list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-p PROJECT_NAME\fP, \fB\-\-project\-id PROJECT_NAME\fP
+The identifier for the Google Compute Engine project.
+.UNINDENT
+.sp
+\fBExamples\fP
+.sp
+For example, to view a list of instances associated with a project named "dev\-01", enter:
+.sp
+.nf
+.ft C
+$ knife google server list \-p dev\-01
+.ft P
+.fi
+.SH AUTHOR
+Opscode
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.
