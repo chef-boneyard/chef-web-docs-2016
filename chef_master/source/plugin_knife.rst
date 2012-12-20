@@ -47,6 +47,8 @@ There are many :doc:`knife_common_options` that are available for use with all |
      - |knife azure|
    * - :doc:`plugin_knife_bluebox`
      - |knife bluebox|
+   * - :doc:`plugin_knife_bluelock`
+     - |knife bluelock|
    * - :doc:`plugin_knife_ec2`
      - |knife ec2|
    * - :doc:`plugin_knife_eucalyptus`
