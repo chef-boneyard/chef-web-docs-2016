@@ -37,7 +37,7 @@ A Quick Overview of |chef|
 
 The following diagram shows the relationships between the various elements of a |chef| organization, including the nodes, the server, and the workstations. These elements work together to provide |chef| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
-.. image:: ../../images/overview_chef_draft.png
+.. image:: ../../images/overview_chef_quick.png
 
 .. include:: ../../includes_chef/includes_chef_key_elements.rst
 
@@ -58,6 +58,8 @@ Knife
 Repository
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository.rst
+
+|github| is the most common location to store a |chef| repository that is used with a |chef hosted| account.
 
 The Hosted Chef Server
 =====================================================
