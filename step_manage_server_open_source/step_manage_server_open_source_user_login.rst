@@ -2,7 +2,7 @@
 
 When logging in for the first time, use the default credentials
 
-.. image:: ../../images/includes_manage_server_open_source_user_login.jpg
+.. image:: ../../images/step_manage_server_open_source_user_login.jpg
 
 .. list-table::
    :widths: 60 420

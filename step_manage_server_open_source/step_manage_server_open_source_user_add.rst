@@ -2,4 +2,4 @@
 
 To create a new user, click **Create** on the **Users** page, then fill in the user's name and password. Tick the box if the new user will be an administrator, then hit the **Create** button.
 
-.. image:: ../../images/includes_manage_server_open_source_user_create.jpg
+.. image:: ../../images/step_manage_server_open_source_user_create.jpg
