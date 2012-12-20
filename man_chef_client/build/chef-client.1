@@ -1,0 +1,162 @@
+.TH "CHEF-CLIENT" "1" "December 20, 2012" "0.0.1" "chef-client"
+.SH NAME
+chef-client \- Man page for chef-client.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+A chef\-client is an agent that runs locally on every node that is registered with the Chef server. When a chef\-client is run, it will perform all of the steps that are required to bring the node into the expected state, including:
+.INDENT 0.0
+.IP \(bu 2
+Registering, and the authenticating the node with the Chef server
+.IP \(bu 2
+Building the node object
+.IP \(bu 2
+Synchronizing cookbooks
+.IP \(bu 2
+Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies
+.IP \(bu 2
+Taking the appropriate and required actions to configure the node
+.IP \(bu 2
+Looking for exceptions and notifications, handling each as required
+.UNINDENT
+.sp
+The chef\-client executable can be run as a command\-line tool.
+.IP Note
+A client.rb file is used to specify the configuration details for the following executable: chef\-client. This file is the default configuration file and is loaded every time the chef\-client executable is run. The chef\-client executable can be run as a daemon. The configuration file is located at: /etc/chef/client.rb.
+.RE
+.SH OPTIONS
+.sp
+This command has the following syntax:
+.sp
+.nf
+.ft C
+chef\-client OPTION VALUE OPTION VALUE ...
+.ft P
+.fi
+.sp
+This command has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-d\fP, \fB\-\-daemonize\fP
+Indicates that the executable will be run as a daemon. This option is only available on machines that run in UNIX or Linux environments. For machines that are running Microsoft Windows that require similar functionality, use the \fBchef\-client::service\fP recipe in the \fBchef\-client\fP cookbook: \fI\%http://community.opscode.com/cookbooks/chef-client\fP. This will install a chef\-client service under Microsoft Windows using the Windows Service Wrapper.
+.TP
+.B \fB\-E ENVIRONMENT_NAME\fP, \fB\-\-environment ENVIRONMENT_NAME\fP
+The name of the environment.
+.TP
+.B \fB\-g GROUP\fP, \fB\-\-group GROUP\fP
+The group that owns a process. This is required when starting any executable as a daemon.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for the chef\-client.
+.TP
+.B \fB\-i SECONDS\fP, \fB\-\-interval SECONDS\fP
+The interval at which the chef\-client is run. This value is configured for the chef\-client application run time, rather than in the Chef::Config. Default value: \fB1800\fP.
+.TP
+.B \fB\-j JSON_ATTRIBS\fP, \fB\-\-json\-attributes JSON_ATTRIBS\fP
+Use to override attributes that are set from other locations, such as from within a cookbook or by a role. The value must be entered as JSON data.
+.TP
+.B \fB\-k KEY_FILE\fP, \fB\-\-client\-key KEY_FILE\fP
+The location of the file which contains the client key. Default value: \fB/etc/chef/client.pem\fP.
+.TP
+.B \fB\-K KEY_FILE\fP, \fB\-\-validation_key KEY_FILE\fP
+The location of the file which contains the key used when a chef\-client is registered with a Chef server. A validation key is signed using the \fBvalidation_client_name\fP for authentication. Default value: \fB/etc/chef/validation.pem\fP.
+.TP
+.B \fB\-l LEVEL\fP, \fB\-\-log_level LEVEL\fP
+The level of logging that will be stored in a log file: \fBdebug\fP, \fBinfo\fP, \fBwarn\fP, \fBerror\fP, or \fBfatal\fP.
+.TP
+.B \fB\-L LOGLOCATION\fP, \fB\-\-logfile c\fP
+The location in which log file output files will be saved. If this location is set to something other than \fBSTDOUT\fP, standard output logging will still be performed (otherwise there would be no output other than to a file). Default value: \fBSTDOUT\fP. This is recommended when starting any executable as a daemon.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node.
+.TP
+.B \fB\-\-once\fP
+Indicates that the chef\-client is run once and that interval and splay options are cancelled.
+.TP
+.B \fB\-o RUN_LIST_ITEM\fP, \fB\-\-override\-runlist RUN_LIST_ITEM\fP
+Replace current run list with specified items
+.TP
+.B \fB\-P PID_FILE\fP, \fB\-\-pid PID_FILE\fP
+The location in which a process identification number (pid) is saved. An executable, when started as a daemon, will write the pid to the specified file. Default value: \fB/tmp/name\-of\-executable.pid\fP.
+.TP
+.B \fB\-s SECONDS\fP, \fB\-\-splay SECONDS\fP
+A number (in seconds) to add to the \fBinterval\fP that is used to determine the frequency of chef\-client runs. This number can help prevent server load when there are many clients running at the same time. Default value: \fBnil\fP.
+.TP
+.B \fB\-S CHEF_SERVER_URL\fP, \fB\-\-server CHEF_SERVER_URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+The user that owns a process. This is required when starting any executable as a daemon.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.UNINDENT
+.sp
+A chef\-client that is running as a daemon can be woken up and started by sending the process a \fBSIGUSR1\fP. For example, to trigger a Chef run on a machine running Linux:
+.sp
+.nf
+.ft C
+$ sudo killall \-USR1 chef\-client
+.ft P
+.fi
+.sp
+To find the process manually, and then start a Chef run, enter something like:
+.sp
+.nf
+.ft C
+$ ps auxw|grep chef\-client
+.ft P
+.fi
+.sp
+to return something like:
+.sp
+.nf
+.ft C
+root           66066   0.9  0.0  2488880    264 s001  S+   10:26AM   0:03.05
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby /usr/bin/chef\-client \-i 3600 \-s 20
+.ft P
+.fi
+.sp
+and then enter:
+.sp
+.nf
+.ft C
+$ sudo kill \-USR1 66066
+.ft P
+.fi
+.SH AUTHOR
+Opscode
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.
