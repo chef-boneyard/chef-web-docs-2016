@@ -3142,6 +3142,8 @@ Examples
 
 windows_registry
 -----------------------------------------------------
+.. warning:: This lightweight resource is being replaced by a resource for |chef 11|. See: http://docs.opscode.com/resource_registry_key.html for preview details about the resource. Also, six helper methods for registry keys will be added to the Recipe DSL. These will be called: ``registry_data_exists?``, ``registry_get_subkeys``, ``registry_get_values``, ``registry_has_subkeys?``, ``registry_key_exists?``, and ``registry_value_exists?``.
+
 .. include:: ../../includes_lwrp/includes_lwrp_windows_registry.rst
 
 .. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
