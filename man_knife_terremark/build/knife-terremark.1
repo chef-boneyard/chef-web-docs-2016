@@ -1,0 +1,210 @@
+.TH "KNIFE-TERREMARK" "1" "December 20, 2012" "0.0.1" "knife-terremark"
+.SH NAME
+knife-terremark \- Man page for knife-terremark.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+Terremark is a cloud hosting platform that provides cloud, IT infrastructure, and managed hosting services. The \fBterremark\fP sub\-command is used to manage API\-driven cloud servers that are hosted by Terremark.
+.sp
+This plugin should be installed using RubyGems.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife terremark [ARGUMENT] (options)
+.ft P
+.fi
+.SH COMMON OPTIONS
+.sp
+The following options can be run with all Knife sub\-commands and plug\-ins:
+.INDENT 0.0
+.TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-d\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment. When this option is added to a command, the command will run only against the named environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The private key that Knife will use to sign requests made by the API client to the Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-\-repo\-mode MODE\fP
+The layout of the local repository. The \fBdefault\fP repository includes cookbooks, data bags, environments, and roles. The \fBeverything\fP repository adds nodes, API client, and users. Default value: \fBdefault\fP.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+A user name that Knife will use to sign requests made by the API client to the Chef server. If this option is used, be sure to ensure that the user name matches the private key or authentication will fail.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
+.UNINDENT
+.SH SERVER CREATE
+.sp
+The \fBserver create\fP argument is used to create a new Terremark instance.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife terremark server create SERVER_NAME [RUN_LIST] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-terremark\-username USER_NAME\fP
+A user name with permission to access a Terremark service.
+.TP
+.B \fB\-K PASSWORD\fP, \fB\-\-terremark\-password PASSWORD\fP
+The password for the Terremark service.
+.TP
+.B \fB\-S SERVICE\fP, \fB\-\-terremark\-service SERVICE\fP
+The name of the Terremark service.
+.UNINDENT
+.sp
+\fBExamples\fP
+.sp
+For example, to create a new instance, enter:
+.sp
+.nf
+.ft C
+$ knife terremark server list server_name \-A useraccount \-K password \-S service_name
+.ft P
+.fi
+.sp
+To provision a new dual\-core 1.0 GB Ubuntu 10.04 web server with three attached disks with sizes of "25G", "50G", and "50G", enter something like:
+.sp
+.nf
+.ft C
+$ knife terremark server create \-\-vcpus 2 \-m 1024 \-I 40 \-A \(aqusername\(aq \-K "password"
+  \-r \(aqrole[webserver]\(aq \-i ~/.ssh/ssh\-identity\-file.pem \-N web\-server\-nginx \-\-tcp 80,8080
+  \-\-udp 5050 \-\-disks 25,50,50
+.ft P
+.fi
+.SH SERVER DELETE
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Terremark cloud. To find a specific cloud instance, use the \fBknife terremark server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife terremark server delete SERVER_ID
+.ft P
+.fi
+.sp
+This argument does not have any argument\-specific options.
+.sp
+\fBExamples\fP
+.sp
+For example, to delete an instance with an identifier of "abcdefg", enter:
+.sp
+.nf
+.ft C
+$ knife terremark server delete abcdefg
+.ft P
+.fi
+.SH SERVER LIST
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Terremark account. The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife terremark server list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-terremark\-username USER_NAME\fP
+A user name with permission to access a Terremark service.
+.TP
+.B \fB\-K PASSWORD\fP, \fB\-\-terremark\-password PASSWORD\fP
+The password for the Terremark service.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-S SERVICE_NAME\fP, \fB\-\-terremark\-service SERVICE_NAME\fP
+The name of the Terremark service.
+.UNINDENT
+.sp
+\fBExamples\fP
+.sp
+For example, enter:
+.sp
+.nf
+.ft C
+$ knife terremark server list \-A useraccount \-K password \-S service_name
+.ft P
+.fi
+.SH AUTHOR
+Opscode
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.
