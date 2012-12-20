@@ -55,23 +55,23 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
 
    * - Methods
      - Description
-   * - :doc:`dsl_recipe_method_attribute`
+   * - :doc:`attribute? </dsl_recipe_method_attribute>`
      - Use in a recipe to include an attribute.
-   * - :doc:`dsl_recipe_method_data_bag`
+   * - :doc:`data_bag, data_bag_item </dsl_recipe_method_data_bag>`
      - Use in a recipe to include a data bag or data bag item.
-   * - :doc:`dsl_recipe_method_platform`
+   * - :doc:`platform? </dsl_recipe_method_platform>`
      - Use in a recipe to check for the platform.
-   * - :doc:`dsl_recipe_method_platform_family`
+   * - :doc:`platform_family? </dsl_recipe_method_platform_family>`
      - Use in a recipe to check for the platform family.
-   * - :doc:`dsl_recipe_method_resources`
+   * - :doc:`resources </dsl_recipe_method_resources>`
      - Use in a recipe to include a resource.
-   * - :doc:`dsl_recipe_method_search`
+   * - :doc:`search </dsl_recipe_method_search>`
      - Use in a recipe to include search results.
-   * - :doc:`dsl_recipe_method_tag`
+   * - :doc:`tag, tagged?, untag </dsl_recipe_method_tag>`
      - Use in a recipe to use and apply tags.
-   * - :doc:`dsl_recipe_method_value_for_platform`
+   * - :doc:`value_for_platform </dsl_recipe_method_value_for_platform>`
      - Use in a recipe to check for a value for a platform.
-   * - :doc:`dsl_recipe_method_value_for_platform_family`
+   * - :doc:`value_for_platform_family </dsl_recipe_method_value_for_platform_family>`
      - Use in a recipe to check for a value for a platform family.
 
 .. The following recipe DSL methods can be used with |windows| registry keys. The order in which they should be used within a recipe: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and ``get_subkeys``.

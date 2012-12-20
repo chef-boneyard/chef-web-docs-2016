@@ -52,6 +52,7 @@ The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac 
 #. :doc:`install_step_verify`
 #. :doc:`install_step_bootstrap`
 
+.. note:: If you would like all of these steps on a single page, see: http://docs.opscode.com/chef/install_workstation.html.
 
 .. toctree::
    :hidden:
