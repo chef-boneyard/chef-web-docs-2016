@@ -37,7 +37,10 @@
 
 .. |arch resource package| replace:: An attribute for the ``yum_package`` provider that is used to specify the architecture of the package that is being installed or upgraded. Default value: ``nil``.
 .. |arch resource yum| replace:: The architecture of the package that will be installed or upgraded. (This value can also be passed as part of the package name.) Default value: ``nil``. This attribute is only available for the ``yum_package`` resource.
-.. |architecture resource windows_registry| replace:: The architecture of the node for which keys will be created or deleted. Possible values: ``:i386`` (for nodes with a 32-bit registry), ``:x86_64`` (for nodes with a 64-bit registry), and ``:machine`` (to have |chef| determine the architecture during the |chef| run). Default value: ``:machine``.
+.. |architecture resource registry_key| replace:: The architecture of the node for which keys will be created or deleted. Possible values: ``:i386`` (for nodes with a 32-bit registry), ``:x86_64`` (for nodes with a 64-bit registry), and ``:machine`` (to have |chef| determine the architecture during the |chef| run). Default value: ``:machine``.
+
+
+.. |architecture resource registry_key machine| replace:: In order to read or write 32-bit registry keys on 64-bit machines running |windows|, the ``architecture`` attribute must be set to ``:i386``. The ``:x86_64`` value can be used to force writing to a 64-bit registry location, but this value is less useful than the default (``:machine``) because |chef| will return an exception if ``:x86_64`` is used and the machine turns out to be a 32-bit machine (whereas with ``:machine``, |chef| will be able to access the registry key on the 32-bit machine).
 
 .. |arguments lwrp chef_handler| replace:: An array of arguments that are passed to the initializer for the handler class.
 

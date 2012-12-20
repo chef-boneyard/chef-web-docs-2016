@@ -65,3 +65,7 @@ The following examples show how to use the |resource windows_registry| resource.
 **Delete a registry key and its subkeys, recursively**
 
 .. include:: ../../step_resource/step_resource_registry_key_delete_recursively.rst
+
+**Use re-directed keys**
+
+.. include:: ../../step_resource/step_resource_registry_key_redirect.rst

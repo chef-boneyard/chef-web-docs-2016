@@ -1009,6 +1009,9 @@ The following examples show how to use the |resource windows_registry| resource.
 
 .. include:: ../../step_resource/step_resource_registry_key_delete_recursively.rst
 
+**Use re-directed keys**
+
+.. include:: ../../step_resource/step_resource_registry_key_redirect.rst
 
 
 remote_directory

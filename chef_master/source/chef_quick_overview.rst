@@ -35,13 +35,11 @@ A Quick Overview of |chef|
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-The following diagram shows the relationships between the various elements of a |chef| organization, including the nodes, the server, and the workstations. These elements work together to provide |chef| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
+The following diagram shows the relationships between the various elements of a very simple |chef| organization, including the |chef hosted| server, a workstations, the |chef| repository, and some simple nodes that exist either in |virtualbox| or |amazon aws|.
 
 .. image:: ../../images/overview_chef_quick.png
 
-.. include:: ../../includes_chef/includes_chef_key_elements.rst
-
-The following sections discuss these elements (and their various components) in more detail.
+The following sections discuss these elements in a bit more detail.
 
 Nodes
 =====================================================
