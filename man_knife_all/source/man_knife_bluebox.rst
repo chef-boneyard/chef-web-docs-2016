@@ -34,10 +34,6 @@ bluebox (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_bluebox.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 images list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_bluebox_images_list.rst

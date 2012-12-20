@@ -34,10 +34,6 @@ windows (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_windows.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 bootstrap windows ssh
 =====================================================
 .. include:: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst

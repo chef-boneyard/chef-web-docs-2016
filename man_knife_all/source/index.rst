@@ -83,6 +83,7 @@ Contents:
 
    man_knife_azure
    man_knife_bluebox
+   man_knife_bluelock
    man_knife_bootstrap
    man_knife_client
    man_knife_configure

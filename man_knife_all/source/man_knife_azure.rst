@@ -34,10 +34,6 @@ azure (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_azure.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 image list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_azure_image_list.rst

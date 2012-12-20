@@ -36,10 +36,6 @@ node
 
 .. include:: ../../includes_knife/includes_knife_node.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 bulk delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_bulk_delete.rst

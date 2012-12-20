@@ -34,10 +34,6 @@ ec2 (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_ec2.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 instance data
 =====================================================
 .. include:: ../../includes_knife/includes_knife_ec2_instance_data.rst
