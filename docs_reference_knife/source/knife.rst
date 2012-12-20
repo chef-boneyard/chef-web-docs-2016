@@ -466,6 +466,7 @@ The following plugins for |knife| are provided by |opscode|:
 
 * azure
 * bluebox
+* bluelock
 * ec2
 * eucalyptus
 * google
@@ -524,6 +525,27 @@ server delete
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_bluebox_server_list.rst
+
+
+bluelock (plug-in)
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_bluelock.rst
+
+images list
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_bluelock_images_list.rst
+
+server create
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_bluelock_server_create.rst
+
+server delete
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_bluelock_server_delete.rst
+
+server list
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_bluelock_server_list.rst
 
 
 ec2 (plug-in)
