@@ -28,6 +28,10 @@
 
 .. |note registry_key resource recursive| replace:: Be careful when using the ``:delete_key`` action with the ``recursive`` attribute. This will delete the registry key and all of its subkeys and all of the values associated with them. This cannot be undone by |chef|.
 
+.. |note registry_key architecture| replace:: The ``ARCHITECTURE`` attribute should only specify ``:x86_64`` or ``:i386`` when it is necessary to write 32-bit (``:i386``) or 64-bit (``:x86_64``) values on a 64-bit machine. ``ARCHITECTURE`` will default to ``:machine`` unless a specific value is given.
+
+.. |note registry_key not_if only_if| replace:: This method can be used in recipes and from within the ``not_if`` and ``only_if`` blocks in resources. This method is not designed to create or modify a registry setting. If a registry setting needs to be modified, use the |resource windows_registry| resource.
+
 .. |note remote_file resource fetch from files directory| replace:: Fetching files from the ``files/`` directory in a cookbook should be done with the |resource cookbook file| resource.
 
 .. |note scm resource use with resource deploy| replace:: This resource is often used in conjunction with the |resource deploy| resource.

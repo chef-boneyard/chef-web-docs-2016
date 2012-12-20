@@ -11,6 +11,8 @@ This resource has the following has the following attributes:
      - Description
    * - ``architecture``
      - |architecture resource windows_registry|
+
+       .. note:: |note registry_key architecture|
    * - ``key``
      - |key_name resource windows_registry| This attribute defaults to the ``name`` of the resource if not specified.
    * - ``recursive``
