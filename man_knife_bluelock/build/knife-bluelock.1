@@ -1,0 +1,232 @@
+.TH "KNIFE-BLUELOCK" "1" "December 20, 2012" "0.0.1" "knife-bluelock"
+.SH NAME
+knife-bluelock \- Man page for knife-bluelock.
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.\" Man page generated from reStructuredText.
+.
+.sp
+Bluelock is a VMware vCloud Datacenter service provider that provides mid\-size and large enterprises flexible IT infrastructure solutions that are hosted in the public cloud.
+.sp
+This plugin should be installed using RubyGems.
+.sp
+This sub\-command has the following syntax:
+.sp
+.nf
+.ft C
+knife bluelock [ARGUMENT] (options)
+.ft P
+.fi
+.SH COMMON OPTIONS
+.sp
+The following options can be run with all Knife sub\-commands and plug\-ins:
+.INDENT 0.0
+.TP
+.B \fB\-c CONFIG\fP, \fB\-\-config CONFIG\fP
+The configuration file to use.
+.TP
+.B \fB\-\-color\fP
+Indicates that colored output will be used.
+.TP
+.B \fB\-d\fP, \fB\-\-disable\-editing\fP
+Indicates that $EDITOR will not be opened; data will be accepted as\-is.
+.TP
+.B \fB\-\-defaults\fP
+Indicates that Knife will use the default value, instead of asking a user to provide one.
+.TP
+.B \fB\-e EDITOR\fP, \fB\-\-editor EDITOR\fP
+The $EDITOR that is used for all interactive commands.
+.TP
+.B \fB\-E ENVIRONMENT\fP, \fB\-\-environment ENVIRONMENT\fP
+The name of the Chef server environment. When this option is added to a command, the command will run only against the named environment.
+.TP
+.B \fB\-F FORMAT\fP, \fB\-\-format FORMAT\fP
+The output format: \fBsummary\fP (default), \fBtext\fP, \fBjson\fP, \fByaml\fP, and \fBpp\fP.
+.TP
+.B \fB\-h\fP, \fB\-\-help\fP
+Shows help for Knife or for a sub\-command.
+.TP
+.B \fB\-k KEY\fP, \fB\-\-key KEY\fP
+The private key that Knife will use to sign requests made by the API client to the Chef server.
+.TP
+.B \fB\-\-no\-color\fP
+Indicates that color will not be used in the output.
+.TP
+.B \fB\-\-print\-after\fP
+Indicates that data will be shown after a destructive operation.
+.TP
+.B \fB\-\-repo\-mode MODE\fP
+The layout of the local repository. The \fBdefault\fP repository includes cookbooks, data bags, environments, and roles. The \fBeverything\fP repository adds nodes, API client, and users. Default value: \fBdefault\fP.
+.TP
+.B \fB\-s URL\fP, \fB\-\-server\-url URL\fP
+The URL for the Chef server.
+.TP
+.B \fB\-u USER\fP, \fB\-\-user USER\fP
+A user name that Knife will use to sign requests made by the API client to the Chef server. If this option is used, be sure to ensure that the user name matches the private key or authentication will fail.
+.TP
+.B \fB\-v\fP, \fB\-\-version\fP
+Shows the version of Chef.
+.TP
+.B \fB\-V\fP, \fB\-\-verbose\fP
+Set for more verbose outputs. Use \fB\-VV\fP for maximum verbosity.
+.TP
+.B \fB\-y\fP, \fB\-\-yes\fP
+Indicates that "yes" will be the response to all confirmation prompts (and that Knife will not ask a user for confirmation).
+.UNINDENT
+.SH IMAGES LIST
+.sp
+The \fBimages list\fP argument is used to view a list of images that are running on servers that are hosted by Bluelock, including returning a list of each server (and server ID). The results may show instances that are not currently managed by the Chef server.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluelock images list
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-bluelock\-username USER_NAME\fP
+The user name for the Bluelock account.
+.TP
+.B \fB\-K PASSWORD\fP, \fB\-\-bluelock\-password PASSWORD\fP
+The password for the Bluelock account.
+.UNINDENT
+.SH SERVER CREATE
+.sp
+The \fBserver create\fP argument is used to create a new Bluelock cloud instance. A comma\-separated run\-list of roles and/or recipes must be specified.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluelock server create NAME [RUN_LIST...] (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-bluelock\-username USER_NAME\fP
+The user name for the Bluelock account.
+.TP
+.B \fB\-d DISTRO\fP, \fB\-\-distro DISTRO\fP
+The template file to be used during a bootstrap operation. Use this option if the specific location of the template file is unknown. The following distributions are supported: \fBchef\-full\fP (the default bootstrap), \fBcentos5\-gems\fP, \fBfedora13\-gems\fP, \fBubuntu10.04\-gems\fP, \fBubuntu10.04\-apt\fP, and \fBubuntu12.04\-gems\fP. If this option is used, Knife will search for the template file in the following order: a \fBbootstrap/\fP folder in the current working directory, a \fBbootstrap/\fP folder in the Chef repository, a \fBbootstrap/\fP folder in \fB~/.chef/\fP, or a bootstrap file shipped with Chef. Do not use the \fB\-\-template\-file\fP option when \fB\-\-distro\fP is specified.
+.TP
+.B \fB\-\-[no\-]enable\-firewall\fP
+Indicates whether to install a firewall with which public network access can be controlled. Default value: \fBfalse\fP.
+.TP
+.B \fB\-i IMAGE\fP, \fB\-\-bluelock\-image IMAGE\fP
+The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
+.TP
+.B \fB\-K PASSWORD\fP, \fB\-\-bluelock\-password PASSWORD\fP
+The password for the Bluelock account.
+.TP
+.B \fB\-m MEMORY\fP, \fB\-\-memory MEMORY\fP
+The amount of memory, in megabytes. Possible values: \fB512\fP, \fB1024\fP, \fB1536\fP, \fB2048\fP, \fB4096\fP, \fB8192\fP, \fB12288\fP, or \fB16384\fP.
+.TP
+.B \fB\-N NAME\fP, \fB\-\-node\-name NAME\fP
+The name of the node.
+.TP
+.B \fB\-P PASSWORD\fP, \fB\-\-ssh\-password PASSWORD\fP
+The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.
+.TP
+.B \fB\-r RUN_LIST\fP, \fB\-\-run\-list RUN_LIST\fP
+A comma\-separated list of roles and/or recipes to be applied.
+.TP
+.B \fB\-S NAME\fP, \fB\-\-server\-name NAME\fP
+The name of the server.
+.TP
+.B \fB\-T X,Y,Z\fP, \fB\-\-tcp X,Y,Z\fP
+A comma\-separated list of local and public TCP ports that will be available.
+.TP
+.B \fB\-\-template\-file TEMPLATE\fP
+The path to a template file that will be used during a bootstrap operation. Do not use the \fB\-\-distro\fP option when \fB\-\-template\-file\fP is specified.
+.TP
+.B \fB\-U X,Y,Z\fP, \fB\-\-udp X,Y,Z\fP
+A comma\-separated list of local and public UDP ports that will be available.
+.TP
+.B \fB\-vcpus VCPUS\fP
+The number of virtual CPUs that are available per virtual machine. Possible values: \fB1\fP, \fB2\fP, \fB4\fP, or \fB8\fP.
+.UNINDENT
+.SH SERVER DELETE
+.sp
+The \fBserver delete\fP argument is used to delete one or more instances that are running in the Bluelock cloud. A block represents the on\-demand virtual computing resource; a hostname is specific to a block. To find a specific cloud instance, use the \fBknife bluelock server list\fP argument. Use the \fBknife node delete\fP and \fBknife client delete\fP sub\-commands to delete associated node and client objects (if required).
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluelock server delete SERVER_NAME (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-bluelock\-username USER_NAME\fP
+The user name for the Bluelock account.
+.TP
+.B \fB\-K PASSWORD\fP, \fB\-\-bluelock\-password PASSWORD\fP
+The password for the Bluelock account.
+.TP
+.B \fB\-N NODE_NAME\fP, \fB\-\-node\-name NODE_NAME\fP
+The name of the node to be deleted, if different from the server name. This must be used with the \fB\-\-purge\fP option.
+.TP
+.B \fB\-p\fP, \fB\-\-purge\fP
+Indicates that all corresponding nodes on the Chef server will be destroyed, in addition to the Bluelock node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the \fB\-\-node\-name\fP option to specify the correct name for the node.
+.UNINDENT
+.SH SERVER LIST
+.sp
+The \fBserver list\fP argument is used to find instances that are associated with a Bluelock account.
+.sp
+This argument has the following syntax:
+.sp
+.nf
+.ft C
+knife bluelock server list (options)
+.ft P
+.fi
+.sp
+This argument has the following options:
+.INDENT 0.0
+.TP
+.B \fB\-A USER_NAME\fP, \fB\-\-bluelock\-username USER_NAME\fP
+The user name for the Bluelock account.
+.TP
+.B \fB\-K PASSWORD\fP, \fB\-\-bluelock\-password PASSWORD\fP
+The password for the Bluelock account.
+.UNINDENT
+.SH AUTHOR
+Opscode
+.SH COPYRIGHT
+2012, Opscode, Inc
+.\" Generated by docutils manpage writer.
+.
