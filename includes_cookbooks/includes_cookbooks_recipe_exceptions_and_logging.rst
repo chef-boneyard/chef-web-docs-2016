@@ -11,5 +11,5 @@ Or to trigger a fatal exception:
 
 .. code-block:: ruby
 
-   Chef::Log.fatal('something bad')
+   Chef::Log.fatal!('something bad')
 
