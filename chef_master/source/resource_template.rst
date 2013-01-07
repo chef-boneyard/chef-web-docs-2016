@@ -124,6 +124,10 @@ The following examples show how to use the |resource template| resource.
 
 .. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst
 
+**Apply proxy settings consistently across a Chef organization**
+
+.. include:: ../../step_resource/step_resource_template_consistent_proxy_settings.rst
+
 
 
 
