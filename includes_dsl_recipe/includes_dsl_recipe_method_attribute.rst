@@ -7,7 +7,7 @@ The ``attribute?`` method can be used in a recipe to ensure that certain actions
 
    attribute?("name_of_attribute")
 
-For example:
+For example: 
 
 .. code-block:: ruby
 
