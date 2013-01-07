@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The PUT method is used to commit files that are in a sandbox to their final location so that changes to cookbooks will not require re-uploading the same data.
+The PUT method is used to update a specific user. If values are not specified for the PUT method, the |chef server| will use the existing values rather than assign default values.
 
 This method has no parameters.
 
@@ -9,13 +9,15 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /sandboxes/ID
+   PUT /user/NAME
 
 with a request body that looks something like:
 
 .. code-block:: javascript
 
-   {"is_completed":true}
+   xxxxx
+
+where ``xxxxx`` is xxxxx.
 
 **Response**
 
@@ -23,18 +25,7 @@ The response will return something like the following:
 
 .. code-block:: javascript
 
-   {
-     "guid": guid,
-     "name": guid,
-     "checksums":
-       {"385ea5490c86570c7de71070bce9384a":
-       {"url":
-         "https://s3.amazonaws.com/opscode-platform-production-data/organization-(...)",
-         "needs_upload":true}
-     },
-     "create_time": <get an example of time format>,
-     "is_completed": true
-   }
+   xxxxx
 
 **Response Codes**
 
@@ -46,8 +37,6 @@ The response will return something like the following:
      - Description
    * - ``200``
      - |response code 200 ok|
-   * - ``400``
-     - |response code 400 bad request|
    * - ``401``
      - |response code 401 unauthorized|
    * - ``403``

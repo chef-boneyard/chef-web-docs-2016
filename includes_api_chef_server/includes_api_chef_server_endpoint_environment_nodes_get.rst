@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The POST method is used to create a new data bag on the |chef server|.
+The GET method is used to return a node.
 
 This method has no parameters.
 
@@ -9,17 +9,9 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   POST /data
+   GET /environments/NAME/nodes
 
-with a request body that contains the key:value pair for the data bag and looks something like:
-
-.. code-block:: javascript
-
-   {
-     "name": "users"
-   }
-
-where (in the example above) ``name`` is the key and "users" is the value.
+where the first instance of ``NAME`` is the name of the environment, and the second instance is the name of the node.
 
 **Response**
 
@@ -27,11 +19,7 @@ The response will return something like the following:
 
 .. code-block:: javascript
 
-   {
-      "chef_type" => "xxxxx"
-      "data_bag" => "xxxxx"
-      "id" => "xxxxx"
-   }
+   xxxxx
 
 **Response Codes**
 
@@ -41,13 +29,11 @@ The response will return something like the following:
 
    * - Response Code
      - Description
-   * - ``201``
-     - |response code 201 created|
-   * - ``400``
-     - |response code 400 bad request|
+   * - ``200``
+     - |response code 200 ok|
    * - ``401``
      - |response code 401 unauthorized|
    * - ``403``
      - |response code 403 forbidden|
-   * - ``409``
-     - |response code 409 unauthorized|
+   * - ``404``
+     - |response code 404 not found|

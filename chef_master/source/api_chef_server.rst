@@ -52,10 +52,13 @@ The |api chef server| has the following endpoints:
 * :doc:`api_chef_server_data_bag_item`
 * :doc:`api_chef_server_data_bag_name`
 * :doc:`api_chef_server_environments`
+* :doc:`api_chef_server_environments_name`
 * :doc:`api_chef_server_environments_cookbook_name`
 * :doc:`api_chef_server_environments_cookbook_version`
 * :doc:`api_chef_server_environments_cookbooks`
-* :doc:`api_chef_server_environments_name`
+* :doc:`api_chef_server_environments_node`
+* :doc:`api_chef_server_environments_recipe`
+* :doc:`api_chef_server_environments_role`
 * :doc:`api_chef_server_nodes`
 * :doc:`api_chef_server_nodes_name`
 * :doc:`api_chef_server_roles`
@@ -66,6 +69,7 @@ The |api chef server| has the following endpoints:
 * :doc:`api_chef_server_sandboxes_id`
 * :doc:`api_chef_server_search`
 * :doc:`api_chef_server_search_index`
+* :doc:`api_chef_server_user`
 
 
 .. toctree::
@@ -84,6 +88,9 @@ The |api chef server| has the following endpoints:
    api_chef_server_environments_cookbook_version
    api_chef_server_environments_cookbooks
    api_chef_server_environments_name
+   api_chef_server_environments_node
+   api_chef_server_environments_recipe
+   api_chef_server_environments_role
    api_chef_server_nodes
    api_chef_server_nodes_name
    api_chef_server_principals_name
@@ -96,6 +103,7 @@ The |api chef server| has the following endpoints:
    api_chef_server_sandboxes_id
    api_chef_server_search
    api_chef_server_search_index
+   api_chef_server_user
 
 
 

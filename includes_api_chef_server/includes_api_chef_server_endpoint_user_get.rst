@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The DELETE method is used to delete a cookbook version.
+The GET method is used to return the details for a user.
 
 This method has no parameters.
 
@@ -9,11 +9,15 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   DELETE /cookbooks/NAME/VERSION
+   GET /users
 
 **Response**
 
-This method has no response body. Unused ``checksum`` values will be garbage collected.
+The response will return something like the following:
+
+.. code-block:: javascript
+
+   xxxxx
 
 **Response Codes**
 
@@ -29,5 +33,3 @@ This method has no response body. Unused ``checksum`` values will be garbage col
      - |response code 401 unauthorized|
    * - ``403``
      - |response code 403 forbidden|
-   * - ``404``
-     - |response code 404 not found|

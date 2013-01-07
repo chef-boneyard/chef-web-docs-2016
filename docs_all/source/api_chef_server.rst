@@ -213,6 +213,33 @@ GET
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbook_name_get.rst
 
 
+/environments/NAME/nodes
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_nodes.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_nodes_get.rst
+
+
+/environments/NAME/recipes
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_recipes.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_recipes_get.rst
+
+
+/environments/NAME/roles/NAME
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_roles.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_roles_get.rst
+
+
 /nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
@@ -343,3 +370,26 @@ POST
 .. include:: ../../includes_search/includes_search_partial.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst
+
+
+/user
+=====================================================
+.. include:: ../../includes_chef/includes_chef_user.rst
+
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user.rst
+
+DELETE
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_delete.rst
+
+GET
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_get.rst
+
+POST
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_post.rst
+
+PUT
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_user_put.rst

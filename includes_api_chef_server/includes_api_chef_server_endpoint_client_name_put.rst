@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The PUT method is used to update a specific |chef api client|.
+The PUT method is used to update a specific |chef api client|. If values are not specified for the PUT method, the |chef server| will use the existing values rather than assign default values.
 
 This method has no parameters.
 

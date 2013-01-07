@@ -38,17 +38,16 @@ A response looks something like the following:
 .. code-block:: javascript
 
    {
-     "mysql": "1.2.2",
-     "runit": "2.0.0",
-     "zed": "0.0.1",
-     "cron": "10.1.0",
-     "openssl": "3.1.4",
-     "gem": "0.9.9",
-     "nginx": "0.99.2",
-     "foo":
-     "0.0.1",
-     "bar": "0.5.0",
-     "build-essential": "0.4.2"
+     "mysql": "cookbook_name" "1.2.2",
+     "runit": "cookbook_name" "2.0.0",
+     "zed": "cookbook_name" "0.0.1",
+     "cron": "cookbook_name" "10.1.0",
+     "openssl": "cookbook_name" "3.1.4",
+     "gem": "cookbook_name" "0.9.9",
+     "nginx": "cookbook_name" "0.99.2",
+     "foo": "cookbook_name"  "0.0.1",
+     "bar": "cookbook_name" "0.5.0",
+     "build-essential": "cookbook_name" "0.4.2"
    }
 
 **Response Codes**
