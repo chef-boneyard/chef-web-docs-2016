@@ -119,8 +119,6 @@ rst_prolog = """
 .. include:: ../../swaps/swap_notes.txt
 """
 
-
-
 # -- Options for HTML output ---------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
