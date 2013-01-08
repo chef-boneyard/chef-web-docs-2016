@@ -63,3 +63,7 @@ The following examples show how to use the |resource script| resource.
 **Install a file from a remote location using bash**
 
 .. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
+
+**Install an application from github using bash**
+
+.. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst

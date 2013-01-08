@@ -65,3 +65,11 @@ The following examples show how to use the |resource scm| resource.
 **Use different branches**
 
 .. include:: ../../step_resource/step_resource_scm_use_different_branches.rst
+
+**Install an application from github using bash**
+
+.. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
+
+**Upgrade packages from github**
+
+.. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst

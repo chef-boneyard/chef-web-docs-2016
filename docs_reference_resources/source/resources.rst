@@ -1139,6 +1139,26 @@ The following examples show how to use the |resource ruby block| resource.
 
 .. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
 
+**Use an if statement with the platform recipe DSL method**
+
+.. include:: ../../step_resource/step_resource_ruby_block_if_statement_use_with_platform.rst
+
+**Stash a file in a data bag**
+
+.. include:: ../../step_resource/step_resource_ruby_block_stash_file_in_data_bag.rst
+
+**Update the /etc/hosts file**
+
+.. include:: ../../step_resource/step_resource_ruby_block_update_etc_host.rst
+
+**Set environment variables**
+
+.. include:: ../../step_resource/step_resource_ruby_block_use_variables_to_set_env_variables.rst
+
+**Set JAVA_HOME**
+
+.. include:: ../../step_resource/step_resource_ruby_block_use_variables_to_set_java_home.rst
+
 
 scm
 -----------------------------------------------------
@@ -1174,6 +1194,14 @@ The following examples show how to use the |resource scm| resource.
 
 .. include:: ../../step_resource/step_resource_scm_use_different_branches.rst
 
+**Install an application from github using bash**
+
+.. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
+
+**Upgrade packages from github**
+
+.. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst
+
 
 script
 -----------------------------------------------------
@@ -1206,6 +1234,10 @@ The following examples show how to use the |resource script| resource.
 **Install a file from a remote location using bash**
 
 .. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
+
+**Install an application from github using bash**
+
+.. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
 
 
 service
