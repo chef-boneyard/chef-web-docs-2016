@@ -65,3 +65,12 @@ The following examples show how to use the |resource remote_file| resource.
 **Install a file from a remote location using bash**
 
 .. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
+
+**Store certain settings**
+
+.. include:: ../../step_resource/step_resource_remote_file_store_certain_settings.rst
+
+**Use the platform_family? method**
+
+.. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+

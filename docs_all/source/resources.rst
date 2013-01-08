@@ -567,6 +567,10 @@ The following examples show how to use the |resource execute| resource.
 
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
 
+**Use the platform_family? method**
+
+.. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
 file
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_file.rst
@@ -1035,6 +1039,14 @@ The following examples show how to use the |resource remote_file| resource.
 
 .. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
 
+**Store certain settings**
+
+.. include:: ../../step_resource/step_resource_remote_file_store_certain_settings.rst
+
+**Use the platform_family? method**
+
+.. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
 route
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_route.rst
@@ -1191,6 +1203,10 @@ The following examples show how to use the |resource script| resource.
 **Install an application from github using bash**
 
 .. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
+
+**Store certain settings**
+
+.. include:: ../../step_resource/step_resource_remote_file_store_certain_settings.rst
 
 service
 -----------------------------------------------------

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to use the |resource ruby_block| resource to stash a |bittorrent| file in a data bag so that it can be distributed to nodes in the organization.
+The following example shows how to use the |resource ruby block| resource to stash a |bittorrent| file in a data bag so that it can be distributed to nodes in the organization.
 
 .. code-block:: ruby
 

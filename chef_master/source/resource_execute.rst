@@ -97,3 +97,7 @@ The following examples show how to use the |resource execute| resource.
 **Stop a service, do stuff, and then restart it**
 
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
+
+**Use the platform_family? method**
+
+.. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
