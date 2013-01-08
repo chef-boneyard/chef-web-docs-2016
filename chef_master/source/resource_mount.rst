@@ -77,3 +77,7 @@ The following examples show how to use the |resource mount| resource.
 **Unmount a remote folder in Microsoft Windows**
 
 .. include:: ../../step_resource/step_resource_mount_unmount_remote_windows_drive.rst
+
+**Stop a service, do stuff, and then restart it**
+
+.. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst

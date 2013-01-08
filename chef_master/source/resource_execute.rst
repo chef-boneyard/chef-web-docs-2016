@@ -91,3 +91,7 @@ The following examples show how to use the |resource execute| resource.
 **Add a rule to an IP table**
 
 .. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst
+
+**Stop a service, do stuff, and then restart it**
+
+.. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst

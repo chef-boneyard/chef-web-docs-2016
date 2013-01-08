@@ -565,6 +565,10 @@ The following examples show how to use the |resource execute| resource.
 
 .. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst
 
+**Stop a service, do stuff, and then restart it**
+
+.. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
+
 file
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_file.rst
@@ -821,6 +825,10 @@ The following examples show how to use the |resource mount| resource.
 **Unmount a remote folder in Microsoft Windows**
 
 .. include:: ../../step_resource/step_resource_mount_unmount_remote_windows_drive.rst
+
+**Stop a service, do stuff, and then restart it**
+
+.. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
 
 
 ohai
@@ -1251,6 +1259,10 @@ The following examples show how to use the |resource service| resource.
 **Restart a service, and then notify a different service**
 
 .. include:: ../../step_resource/step_resource_service_restart_and_notify.rst
+
+**Stop a service, do stuff, and then restart it**
+
+.. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
 
 
 template
