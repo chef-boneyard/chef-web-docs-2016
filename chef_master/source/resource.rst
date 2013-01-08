@@ -40,6 +40,8 @@ About Resources and Providers
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
 
+Common Functionality
+-----------------------------------------------------
 All resources share a set of common actions, attributes, conditional executions, notifications, and relative path options.
 
 .. list-table::
@@ -59,6 +61,8 @@ All resources share a set of common actions, attributes, conditional executions,
    * - :doc:`Relative Paths </resource_common_relative_paths>`
      - The ``#{ENV['HOME']}`` relative path can be used with any resource.
 
+|chef| Resources
+-----------------------------------------------------
 |chef| includes the following resources (each provider is discussed within the context of its associated resource):
 
 .. list-table::
