@@ -48,6 +48,8 @@ Providers
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource script| resource.
 
 **Use a named provider to run a script**

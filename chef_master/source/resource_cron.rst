@@ -48,6 +48,8 @@ Providers
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource cron| resource.
 
 **Run a program at a specified interval**

@@ -64,6 +64,8 @@ Providers
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource package| resource.
 
 **Install a gems file for use in recipes**

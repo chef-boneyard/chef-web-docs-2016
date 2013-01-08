@@ -90,6 +90,8 @@ timestamped_deploy
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource deploy| resource.
 
 **Modify the layout of a Ruby on Rails application**

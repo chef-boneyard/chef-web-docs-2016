@@ -48,6 +48,8 @@ Providers
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource ruby block| resource.
 
 **Re-read configuration data**

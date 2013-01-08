@@ -56,6 +56,8 @@ Providers
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource user| resource.
 
 **Create a random user**

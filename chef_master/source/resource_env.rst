@@ -50,6 +50,8 @@ Providers
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource env| resource.
 
 **Set an environment variable**

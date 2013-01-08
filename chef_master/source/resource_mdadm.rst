@@ -48,6 +48,8 @@ Providers
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource mdadm| resource.
 
 **Create and assemble a RAID 1 array**

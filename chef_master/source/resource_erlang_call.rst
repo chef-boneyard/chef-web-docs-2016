@@ -50,6 +50,8 @@ Providers
 
 Examples
 =====================================================
+|generic resource statement|
+
 The following examples show how to use the |resource erlang call| resource.
 
 **Run a command**

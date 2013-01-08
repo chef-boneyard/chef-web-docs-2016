@@ -48,7 +48,7 @@ Providers
 
 Examples
 =====================================================
-The following examples show how to use the |resource service| resource.
+|generic resource statement|
 
 **Start a service**
 
