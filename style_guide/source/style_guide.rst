@@ -358,6 +358,14 @@ An internal link is one that resolves to another topic that is built by Sphinx. 
 
 where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. If this isn't formatted correctly, Sphinx will let you know.
 
+Internal, with short link names
+-----------------------------------------------------
+An internal link is one that resolves to another topic that is built by Sphinx. Sometimes it's better to have the name of the link that displays be as short as possible (and different from the actual title of the topic). What it looks like as reST:: 
+
+   :doc:`Actions </resource_common_actions>`
+
+where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. ``Actions`` represents the short name that will display on the page in which this internal link is located, and then ``resource_common_actions`` is the filename and is contained within brackets (< >). If this isn't formatted correctly, Sphinx will let you know.
+
 External
 -----------------------------------------------------
 An external link points to something that does not live on docs.opscode.com. An external link requires an HTTP address. In general, it's better to spell out the HTTP address fully, in case the topic is printed out. What an external link looks like as reST:: 
@@ -558,3 +566,70 @@ quick-reference
 Two large PNG images (front and back) and a smaller single-page image for a Knife Quick Reference can be found here:
 
 https://github.com/opscode/quick-reference
+
+Localization
+=====================================================
+Sphinx supports localization into many languages.
+
+.pot files
+-----------------------------------------------------
+.pot files are used by localization teams as an intermediate step in-between the native English content and the localized content. Opscode needs to build the .pot files so that localization teams can feed them into their tools as part of their localization process.
+
+The .pot file is built using much the same process as a regular Sphinx content build. For example, a regular content build:
+
+.. code-block:: bash
+
+   sphinx-build -b html /path/to/source /path/to/build
+
+and then for the .pot files:
+
+.. code-block:: bash
+
+   sphinx-build -b gettext /path/to/source /path/to/translate
+
+with the very important difference of the ``/build`` vs. ``/translate`` folders for the output.
+
+.pot files should be checked into the github repository like every other source file and even though they are output of the source files, should be treated as if they are source files.
+
+Custom Configuration Settings (conf.py)
+=====================================================
+Every Sphinx build has a configuration file.
+
+rst_prolog
+-----------------------------------------------------
+Opscode has added this configuration setting to every conf.py file to help streamline the inclusion of files at the beginning of the build process and to help support localization efforts. This setting is added to the general configuration settings and looks like this:
+
+.. code-block:: python
+
+   # A string of reStructuredText that will be included at the beginning of every source file that is read.
+   rst_prolog = """
+   .. include:: ../../swaps/swap_desc_a.txt
+   .. include:: ../../swaps/swap_desc_b.txt
+   .. include:: ../../swaps/swap_desc_c.txt
+   .. include:: ../../swaps/swap_desc_d.txt
+   .. include:: ../../swaps/swap_desc_e.txt
+   .. include:: ../../swaps/swap_desc_f.txt
+   .. include:: ../../swaps/swap_desc_g.txt
+   .. include:: ../../swaps/swap_desc_h.txt
+   .. include:: ../../swaps/swap_desc_i.txt
+   .. include:: ../../swaps/swap_desc_j.txt
+   .. include:: ../../swaps/swap_desc_k.txt
+   .. include:: ../../swaps/swap_desc_l.txt
+   .. include:: ../../swaps/swap_desc_m.txt
+   .. include:: ../../swaps/swap_desc_n.txt
+   .. include:: ../../swaps/swap_desc_o.txt
+   .. include:: ../../swaps/swap_desc_p.txt
+   .. include:: ../../swaps/swap_desc_q.txt
+   .. include:: ../../swaps/swap_desc_r.txt
+   .. include:: ../../swaps/swap_desc_s.txt
+   .. include:: ../../swaps/swap_desc_t.txt
+   .. include:: ../../swaps/swap_desc_u.txt
+   .. include:: ../../swaps/swap_desc_v.txt
+   .. include:: ../../swaps/swap_desc_w.txt
+   .. include:: ../../swaps/swap_desc_x.txt
+   .. include:: ../../swaps/swap_desc_y.txt
+   .. include:: ../../swaps/swap_desc_z.txt
+   .. include:: ../../swaps/swap_http.txt
+   .. include:: ../../swaps/swap_names.txt
+   .. include:: ../../swaps/swap_notes.txt
+   """
