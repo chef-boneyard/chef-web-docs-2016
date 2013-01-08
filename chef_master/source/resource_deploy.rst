@@ -62,8 +62,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource deploy| resource.
-
 **Modify the layout of a Ruby on Rails application**
 
 .. include:: ../../step_resource/step_resource_deploy_custom_application_layout.rst

@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource remote_directory| resource.
-
 **Recursively transfer a directory from a remote location**
 
 .. include:: ../../step_resource/step_resource_remote_directory_recursive_transfer.rst

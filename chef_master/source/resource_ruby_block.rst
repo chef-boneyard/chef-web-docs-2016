@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource ruby block| resource.
-
 **Re-read configuration data**
 
 .. include:: ../../step_resource/step_resource_ruby_block_reread_chef_client.rst

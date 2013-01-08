@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource directory| resource.
-
 **Create a directory**
 
 .. include:: ../../step_resource/step_resource_directory_create.rst

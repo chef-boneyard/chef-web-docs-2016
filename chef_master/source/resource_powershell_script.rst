@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource powershell script| resource.
-
 **Write to an interpolated path**
 
 .. include:: ../../step_resource/step_resource_powershell_write_to_interpolated_path.rst

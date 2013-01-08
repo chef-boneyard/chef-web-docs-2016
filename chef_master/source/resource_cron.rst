@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource cron| resource.
-
 **Run a program at a specified interval**
 
 .. include:: ../../step_resource/step_resource_cron_run_program_on_fifth_hour.rst

@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource log| resource.
-
 **Set default logging level**
 
 .. include:: ../../step_resource/step_resource_log_set_info.rst

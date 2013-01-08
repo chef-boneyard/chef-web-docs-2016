@@ -22,8 +22,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource execute| resource.
-
 **Run a command upon notification**
 
 .. include:: ../../step_resource/step_resource_execute_command_upon_notification.rst

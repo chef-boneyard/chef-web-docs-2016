@@ -22,8 +22,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource remote_file| resource.
-
 **Transfer a file from a URL**
 
 .. include:: ../../step_resource/step_resource_remote_file_transfer_from_url.rst

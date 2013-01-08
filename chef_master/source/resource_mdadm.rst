@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource mdadm| resource.
-
 **Create and assemble a RAID 1 array**
 
 .. include:: ../../step_resource/step_resource_mdadm_assemble_raid_array.rst

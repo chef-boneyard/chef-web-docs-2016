@@ -22,8 +22,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource yum package| resource.
-
 **Install an exact version**
 
 .. include:: ../../step_resource/step_resource_yum_package_install_exact_version.rst

@@ -36,8 +36,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource package| resource.
-
 **Install a gems file for use in recipes**
 
 .. include:: ../../step_resource/step_resource_package_install_gems_for_chef_recipe.rst

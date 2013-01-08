@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource http request| resource.
-
 **Send a GET request**
 
 .. include:: ../../step_resource/step_resource_http_request_send_get.rst

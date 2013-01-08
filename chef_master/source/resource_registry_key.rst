@@ -24,8 +24,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource windows_registry| resource.
-
 **Create a registry key**
 
 .. include:: ../../step_resource/step_resource_registry_key_create.rst

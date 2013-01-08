@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource ohai| resource.
-
 **Reload Ohai**
 
 .. include:: ../../step_resource/step_resource_ohai_reload.rst

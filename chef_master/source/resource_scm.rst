@@ -22,8 +22,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource scm| resource.
-
 **Get the latest version of an application**
 
 .. include:: ../../step_resource/step_resource_scm_get_latest_version.rst

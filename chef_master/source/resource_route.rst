@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource route| resource.
-
 **Add a host route**
 
 .. include:: ../../step_resource/step_resource_route_add_host.rst

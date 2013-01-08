@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource template| resource.
-
 **Configure a file from a template**
 
 .. include:: ../../step_resource/step_resource_template_configure_file.rst

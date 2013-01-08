@@ -24,8 +24,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource cookbook file| resource.
-
 **Transfer a file**
 
 .. include:: ../../step_resource/step_resource_cookbook_file_transfer_a_file.rst

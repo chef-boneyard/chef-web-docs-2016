@@ -20,8 +20,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-The following examples show how to use the |resource script| resource.
-
 **Use a named provider to run a script**
 
 .. include:: ../../step_resource/step_resource_script_bash_provider_and_interpreter.rst
