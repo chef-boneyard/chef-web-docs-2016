@@ -4,6 +4,10 @@ user
 
 .. include:: ../../includes_resources/includes_resource_user.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_user_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_user_actions.rst
