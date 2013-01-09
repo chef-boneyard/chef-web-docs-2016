@@ -1341,6 +1341,10 @@ template
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_template.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_template_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_actions.rst
