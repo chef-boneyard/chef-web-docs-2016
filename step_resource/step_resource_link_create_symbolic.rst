@@ -4,7 +4,6 @@
 
 .. code-block:: ruby
 
-   # ln -s /etc/passwd /tmp/passwd
    link "/tmp/passwd" do
      to "/etc/passwd"
    end

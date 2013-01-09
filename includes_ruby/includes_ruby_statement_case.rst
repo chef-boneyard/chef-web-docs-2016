@@ -25,3 +25,8 @@ For example, using a ``case`` statement with the ``platform_family`` node attrib
      # do things on RHEL platforms (redhat, centos, scientific, etc)
    end
 
+
+.. future example: step_resource_package_install_package_on_platform
+.. future example: step_resource_package_use_case_statement
+.. future example: step_resource_service_manage_ssh_based_on_node_platform
+

@@ -163,6 +163,10 @@ The following examples show how to use the ``notifies`` notification in a recipe
 
 .. include:: ../../step_resource/step_resource_service_restart_and_notify.rst
 
+**Notify when a remote source changes**
+
+.. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst
+
 Subscribes Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_subscribes.rst
@@ -178,6 +182,10 @@ The following examples show how to use the ``subscribes`` notification in a reci
 **Reload a service using a template**
 
 .. include:: ../../step_resource/step_resource_service_subscribes_reload_using_template.rst
+
+**Stash a file in a data bag**
+
+.. include:: ../../step_resource/step_resource_ruby_block_stash_file_in_data_bag.rst
 
 Relative Paths
 -----------------------------------------------------

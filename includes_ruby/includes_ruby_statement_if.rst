@@ -14,5 +14,13 @@ For example, using an ``if`` statement with the ``platform`` node attribute:
 
 
 .. future example: step_resource_ruby_block_reload_configuration
+.. future example: step_resource_ruby_block_run_specific_blocks_on_specific_platforms
+.. future example: step_resource_mount_mysql
+.. future example: step_resource_package_install_sudo_configure_etc_sudoers
 .. future example: step_resource_ruby_block_if_statement_use_with_platform
+.. future example: step_resource_remote_file_transfer_remote_source_changes
+.. future example: step_resource_remote_file_use_platform_family
+.. future example: step_resource_scm_use_different_branches
+.. future example: step_resource_service_stop_do_stuff_start
+
 

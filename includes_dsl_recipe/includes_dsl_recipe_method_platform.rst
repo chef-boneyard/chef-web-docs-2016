@@ -39,3 +39,8 @@ or:
      # do bsd things
    end
 
+
+
+.. future example: step_resource_ruby_block_if_statement_use_with_platform
+.. future example: step_resource_ruby_block_run_specific_blocks_on_specific_platforms
+
