@@ -155,6 +155,13 @@ The following examples show how to use the ``notifies`` notification in a recipe
 
 .. include:: ../../step_resource/step_resource_template_notifies_send_notifications_to_multiple_resources.rst
 
+**Execute a command using a template**
+
+.. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Restart a service, and then notify a different service**
+
+.. include:: ../../step_resource/step_resource_service_restart_and_notify.rst
 
 Subscribes Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -446,7 +453,9 @@ The following examples show how to use the |resource directory| resource.
 
 .. include:: ../../step_resource/step_resource_directory_set_permissions_for_specific_node.rst
 
+**Reload the configuration**
 
+.. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
 
 env
 -----------------------------------------------------
@@ -1213,6 +1222,10 @@ The following examples show how to use the |resource ruby block| resource.
 **Run specific blocks of Ruby code on specific platforms**
 
 .. include:: ../../step_resource/step_resource_ruby_block_run_specific_ruby_blocks_on_specific_platforms.rst
+
+**Reload the configuration**
+
+.. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
 
 
 scm

@@ -52,6 +52,13 @@ The following examples show how to use the ``notifies`` notification in a recipe
 
 .. include:: ../../step_resource/step_resource_template_notifies_send_notifications_to_multiple_resources.rst
 
+**Execute a command using a template**
+
+.. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Restart a service, and then notify a different service**
+
+.. include:: ../../step_resource/step_resource_service_restart_and_notify.rst
 
 Subscribes Syntax
 =====================================================

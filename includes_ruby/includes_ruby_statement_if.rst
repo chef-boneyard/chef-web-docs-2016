@@ -11,3 +11,8 @@ For example, using an ``if`` statement with the ``platform`` node attribute:
      # do ubuntu things
    end
 
+
+
+.. future example: step_resource_ruby_block_reload_configuration
+.. future example: step_resource_ruby_block_if_statement_use_with_platform
+

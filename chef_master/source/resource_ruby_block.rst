@@ -51,3 +51,7 @@ Examples
 **Run specific blocks of Ruby code on specific platforms**
 
 .. include:: ../../step_resource/step_resource_ruby_block_run_specific_ruby_blocks_on_specific_platforms.rst
+
+**Reload the configuration**
+
+.. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst

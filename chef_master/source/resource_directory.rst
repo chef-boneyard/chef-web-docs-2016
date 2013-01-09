@@ -43,3 +43,7 @@ Examples
 **Set directory permissions for a specific type of node**
 
 .. include:: ../../step_resource/step_resource_directory_set_permissions_for_specific_node.rst
+
+**Reload the configuration**
+
+.. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
