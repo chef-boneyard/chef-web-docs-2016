@@ -87,3 +87,27 @@ Examples
 **Use the provider common attribute**
 
 .. include:: ../../step_resource/step_resource_package_use_provider_attribute.rst
+
+**Avoid unnecessary string interpolation**
+
+.. include:: ../../step_resource/step_resource_package_avoid_unnecessary_string_interpolation.rst
+
+**Install a package in a platform**
+
+.. include:: ../../step_resource/step_resource_package_install_package_on_platform.rst
+
+**Install sudo, then configure /etc/sudoers/ file**
+
+.. include:: ../../step_resource/step_resource_package_install_sudo_configure_etc_sudoers.rst
+
+**Use a case statement to specify the platform**
+
+.. include:: ../../step_resource/step_resource_package_use_case_statement.rst
+
+**Use symbols to reference attributes**
+
+.. include:: ../../step_resource/step_resource_package_use_symbols_to_reference_attributes.rst
+
+**Use a whitespace array to simply a recipe**
+
+.. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst

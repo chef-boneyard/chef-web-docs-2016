@@ -617,6 +617,10 @@ The following examples show how to use the |resource file| resource.
 
 .. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
 
+**Use the contents of a data bag in a recipe**
+
+.. include:: ../../step_resource/step_resource_file_use_data_bag.rst
+
 
 group
 -----------------------------------------------------
@@ -945,6 +949,30 @@ The following examples show how to use the |resource package| resource.
 **Upgrade a package**
 
 .. include:: ../../step_resource/step_resource_package_upgrade.rst
+
+**Avoid unnecessary string interpolation**
+
+.. include:: ../../step_resource/step_resource_package_avoid_unnecessary_string_interpolation.rst
+
+**Install a package in a platform**
+
+.. include:: ../../step_resource/step_resource_package_install_package_on_platform.rst
+
+**Install sudo, then configure /etc/sudoers/ file**
+
+.. include:: ../../step_resource/step_resource_package_install_sudo_configure_etc_sudoers.rst
+
+**Use a case statement to specify the platform**
+
+.. include:: ../../step_resource/step_resource_package_use_case_statement.rst
+
+**Use symbols to reference attributes**
+
+.. include:: ../../step_resource/step_resource_package_use_symbols_to_reference_attributes.rst
+
+**Use a whitespace array to simply a recipe**
+
+.. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst
 
 
 powershell_script
