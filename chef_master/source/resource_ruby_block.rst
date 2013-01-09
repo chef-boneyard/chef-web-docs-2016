@@ -47,3 +47,7 @@ Examples
 **Set JAVA_HOME**
 
 .. include:: ../../step_resource/step_resource_ruby_block_use_variables_to_set_java_home.rst
+
+**Run specific blocks of Ruby code on specific platforms**
+
+.. include:: ../../step_resource/step_resource_ruby_block_run_specific_ruby_blocks_on_specific_platforms.rst

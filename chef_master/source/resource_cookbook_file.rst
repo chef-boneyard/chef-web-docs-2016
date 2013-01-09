@@ -35,3 +35,11 @@ Examples
 **Install repositories from a file, trigger a command, and force the internal cache to reload**
 
 .. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
+
+**Use a case statement**
+
+.. include:: ../../step_resource/step_resource_cookbook_file_use_case_statement.rst
+
+**Use the data_bag_item method in the recipe DSL**
+
+.. include:: ../../step_resource/step_resource_cookbook_file_use_data_bag.rst

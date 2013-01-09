@@ -51,3 +51,8 @@ Examples
 **Stop a service, do stuff, and then restart it**
 
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
+
+**If a node doesn't have MySQL, install MySQL**
+
+.. include:: ../../step_resource/step_resource_mount_mysql.rst
+

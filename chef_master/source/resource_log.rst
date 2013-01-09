@@ -27,3 +27,7 @@ Examples
 **Set debug logging level**
 
 .. include:: ../../step_resource/step_resource_log_set_debug.rst
+
+**Create log entry when the contents of a data bag are used**
+
+.. include:: ../../step_resource/step_resource_log_set_debug.rst

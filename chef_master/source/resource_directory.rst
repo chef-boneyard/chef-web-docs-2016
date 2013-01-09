@@ -35,3 +35,11 @@ Examples
 **Delete a directory**
 
 .. include:: ../../step_resource/step_resource_directory_delete.rst
+
+**Set directory permissions using a variable**
+
+.. include:: ../../step_resource/step_resource_directory_set_permissions_with_variable.rst
+
+**Set directory permissions for a specific type of node**
+
+.. include:: ../../step_resource/step_resource_directory_set_permissions_for_specific_node.rst

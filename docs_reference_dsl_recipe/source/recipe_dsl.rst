@@ -65,13 +65,41 @@ The following examples show how the ``data_bag`` and ``data_bag_item`` methods c
 
 .. include:: ../../step_resource/step_resource_file_use_data_bag.rst
 
+**Create log entry when the contents of a data bag are used**
+
+.. include:: ../../step_resource/step_resource_log_set_debug.rst
+
+**Use the data_bag_item method with the cookbook_file resource**
+
+.. include:: ../../step_resource/step_resource_cookbook_file_use_data_bag.rst
+
 platform?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform.rst
 
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how the ``platform?`` method can be used in a recipe.
+
+**Use an if statement with the platform recipe DSL method**
+
+.. include:: ../../step_resource/step_resource_ruby_block_if_statement_use_with_platform.rst
+
+**Run specific blocks of Ruby code on specific platforms**
+
+.. include:: ../../step_resource/step_resource_ruby_block_run_specific_ruby_blocks_on_specific_platforms.rst
+
 platform_family?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_family.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how the ``platform_family?`` method can be used in a recipe.
+
+**Use the platform_family? method**
+
+.. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
 
 resources
 -----------------------------------------------------
@@ -82,6 +110,14 @@ search
 .. include:: ../../includes_search/includes_search.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_search_indexes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how the ``search`` method can be used in a recipe.
+
+**Use the search recipe DSL method to find users**
+
+.. include:: ../../step_resource/step_resource_execute_use_search_dsl_method.rst
 
 tag, tagged?, and untag
 -----------------------------------------------------

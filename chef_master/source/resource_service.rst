@@ -64,7 +64,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
 
-**Use a crom timer to manage a service**
+**Use a cron timer to manage a service**
 
 .. include:: ../../step_resource/step_resource_service_use_variable.rst
 
@@ -75,3 +75,11 @@ Examples
 **Stop a service, do stuff, and then restart it**
 
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
+
+**If a node doesn't have MySQL, install MySQL**
+
+.. include:: ../../step_resource/step_resource_mount_mysql.rst
+
+**Control a service using the execute resource**
+
+.. include:: ../../step_resource/step_resource_execute_control_a_service.rst

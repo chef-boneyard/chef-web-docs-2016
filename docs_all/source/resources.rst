@@ -255,6 +255,14 @@ The following examples show how to use the |resource cookbook file| resource.
 
 .. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
 
+**Use a case statement**
+
+.. include:: ../../step_resource/step_resource_cookbook_file_use_case_statement.rst
+
+**Use the data_bag_item method in the recipe DSL**
+
+.. include:: ../../step_resource/step_resource_cookbook_file_use_data_bag.rst
+
 
 cron
 -----------------------------------------------------
@@ -428,6 +436,14 @@ The following examples show how to use the |resource directory| resource.
 
 .. include:: ../../step_resource/step_resource_directory_delete.rst
 
+**Set directory permissions using a variable**
+
+.. include:: ../../step_resource/step_resource_directory_set_permissions_with_variable.rst
+
+**Set directory permissions for a specific type of node**
+
+.. include:: ../../step_resource/step_resource_directory_set_permissions_for_specific_node.rst
+
 
 env
 -----------------------------------------------------
@@ -540,6 +556,19 @@ The following examples show how to use the |resource execute| resource.
 **Use the platform_family? method**
 
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
+**If a node doesn't have MySQL, install MySQL**
+
+.. include:: ../../step_resource/step_resource_mount_mysql.rst
+
+**Control a service using the execute resource**
+
+.. include:: ../../step_resource/step_resource_execute_control_a_service.rst
+
+**Use the search recipe DSL method to find users**
+
+.. include:: ../../step_resource/step_resource_execute_use_search_dsl_method.rst
+
 
 file
 -----------------------------------------------------
@@ -728,6 +757,10 @@ The following examples show how to use the |resource log| resource.
 
 .. include:: ../../step_resource/step_resource_log_set_debug.rst
 
+**Create log entry when the contents of a data bag are used**
+
+.. include:: ../../step_resource/step_resource_log_set_debug.rst
+
 
 mdadm
 -----------------------------------------------------
@@ -805,6 +838,10 @@ The following examples show how to use the |resource mount| resource.
 **Stop a service, do stuff, and then restart it**
 
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
+
+**If a node doesn't have MySQL, install MySQL**
+
+.. include:: ../../step_resource/step_resource_mount_mysql.rst
 
 
 ohai
@@ -1126,6 +1163,10 @@ The following examples show how to use the |resource ruby block| resource.
 
 .. include:: ../../step_resource/step_resource_ruby_block_use_variables_to_set_java_home.rst
 
+**Run specific blocks of Ruby code on specific platforms**
+
+.. include:: ../../step_resource/step_resource_ruby_block_run_specific_ruby_blocks_on_specific_platforms.rst
+
 
 scm
 -----------------------------------------------------
@@ -1254,7 +1295,7 @@ The following examples show how to use the |resource service| resource.
 
 .. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
 
-**Use a crom timer to manage a service**
+**Use a cron timer to manage a service**
 
 .. include:: ../../step_resource/step_resource_service_use_variable.rst
 
@@ -1265,6 +1306,14 @@ The following examples show how to use the |resource service| resource.
 **Stop a service, do stuff, and then restart it**
 
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
+
+**If a node doesn't have MySQL, install MySQL**
+
+.. include:: ../../step_resource/step_resource_mount_mysql.rst
+
+**Control a service using the execute resource**
+
+.. include:: ../../step_resource/step_resource_execute_control_a_service.rst
 
 template
 -----------------------------------------------------
