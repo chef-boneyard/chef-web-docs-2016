@@ -4,6 +4,10 @@ http_request
 
 .. include:: ../../includes_resources/includes_resource_http_request.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_http_request_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_http_request_actions.rst

@@ -283,6 +283,10 @@ cron
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_cron.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_cron_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cron_actions.rst
@@ -418,6 +422,10 @@ The following examples show how to use the |resource deploy| resource.
 directory
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_directory.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_directory_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -595,6 +603,10 @@ file
 
 .. note:: |note file resource use other resources|
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_file_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_file_actions.rst
@@ -640,6 +652,10 @@ group
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_group.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_group_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_group_actions.rst
@@ -664,6 +680,10 @@ The following examples show how to use the |resource group| resource.
 http_request
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_http_request.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_http_request_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -810,6 +830,10 @@ mount
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_mount.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_mount_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_mount_actions.rst
@@ -895,6 +919,10 @@ The following examples show how to use the |resource ohai| resource.
 package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_syntax.rst
 
 Gem Package Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1038,6 +1066,10 @@ remote_directory
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_remote_directory.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_remote_directory_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_directory_actions.rst
@@ -1068,6 +1100,10 @@ remote_file
 .. include:: ../../includes_resources/includes_resource_remote_file.rst
 
 .. note:: |note remote_file resource fetch from files directory|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_remote_file_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1138,6 +1174,10 @@ ruby_block
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_ruby_block.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_ruby_block_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ruby_block_actions.rst
@@ -1196,6 +1236,10 @@ scm
 
 .. note:: |note scm resource use with resource deploy|
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_scm_actions.rst
@@ -1236,6 +1280,10 @@ The following examples show how to use the |resource scm| resource.
 script
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_script.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

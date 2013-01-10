@@ -4,6 +4,10 @@ cron
 
 .. include:: ../../includes_resources/includes_resource_cron.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_cron_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cron_actions.rst

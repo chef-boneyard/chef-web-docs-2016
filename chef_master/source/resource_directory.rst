@@ -4,6 +4,10 @@ directory
 
 .. include:: ../../includes_resources/includes_resource_directory.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_directory_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_directory_actions.rst

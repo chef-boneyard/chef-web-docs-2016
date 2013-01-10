@@ -4,6 +4,10 @@ mount
 
 .. include:: ../../includes_resources/includes_resource_mount.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_mount_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_mount_actions.rst

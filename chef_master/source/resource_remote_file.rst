@@ -6,6 +6,10 @@ remote_file
 
 .. note:: |note remote_file resource fetch from files directory|
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_remote_file_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_remote_file_actions.rst

@@ -4,6 +4,10 @@ package
 
 .. include:: ../../includes_resources/includes_resource_package.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_syntax.rst
+
 Gem Package Options
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_options.rst

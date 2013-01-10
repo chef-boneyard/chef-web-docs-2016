@@ -4,6 +4,10 @@ remote_directory
 
 .. include:: ../../includes_resources/includes_resource_remote_directory.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_remote_directory_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_remote_directory_actions.rst

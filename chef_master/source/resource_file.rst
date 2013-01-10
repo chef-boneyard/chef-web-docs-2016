@@ -6,6 +6,10 @@ file
 
 .. note:: |note file resource use other resources|
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_file_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_file_actions.rst

@@ -4,6 +4,10 @@ group
 
 .. include:: ../../includes_resources/includes_resource_group.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_group_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_group_actions.rst

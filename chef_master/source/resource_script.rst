@@ -4,6 +4,10 @@ script
 
 .. include:: ../../includes_resources/includes_resource_script.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_script_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_script_actions.rst

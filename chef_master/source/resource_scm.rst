@@ -6,6 +6,10 @@ scm
 
 .. note:: |note scm resource use with resource deploy|
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_scm_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_scm_actions.rst
