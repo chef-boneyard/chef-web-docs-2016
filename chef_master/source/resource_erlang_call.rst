@@ -6,6 +6,10 @@ erlang_call
 
 .. note:: |note erlang_call resource must be on path|
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_erlang_call_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_erlang_call_actions.rst

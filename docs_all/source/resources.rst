@@ -478,6 +478,10 @@ env
 
 .. note:: |note env resource variable on unix|
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_env_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_env_actions.rst
@@ -505,6 +509,10 @@ erlang_call
 
 .. note:: |note erlang_call resource must be on path|
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_erlang_call_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_erlang_call_actions.rst
@@ -531,6 +539,10 @@ execute
 .. include:: ../../includes_resources/includes_resource_execute.rst
 
 .. note:: |note execute resource intepreter|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_execute_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -714,6 +726,10 @@ ifconfig
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_ifconfig.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_ifconfig_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_ifconfig_actions.rst
@@ -738,6 +754,10 @@ The following examples show how to use the |resource ifconfig| resource.
 link
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_link.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_link_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -772,6 +792,10 @@ log
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_log.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_log_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_log_actions.rst
@@ -804,6 +828,10 @@ The following examples show how to use the |resource log| resource.
 mdadm
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_mdadm.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_mdadm_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -890,6 +918,10 @@ The following examples show how to use the |resource mount| resource.
 ohai
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_ohai.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_ohai_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1029,6 +1061,10 @@ powershell_script
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_powershell_script.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_powershell_script_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_powershell_script_actions.rst
@@ -1144,6 +1180,10 @@ The following examples show how to use the |resource remote_file| resource.
 route
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_route.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_route_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

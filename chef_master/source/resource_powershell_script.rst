@@ -4,6 +4,10 @@ powershell_script
 
 .. include:: ../../includes_resources/includes_resource_powershell_script.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_powershell_script_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_powershell_script_actions.rst

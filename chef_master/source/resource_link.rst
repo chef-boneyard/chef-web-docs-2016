@@ -4,6 +4,10 @@ link
 
 .. include:: ../../includes_resources/includes_resource_link.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_link_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_link_actions.rst

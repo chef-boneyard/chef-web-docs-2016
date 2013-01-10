@@ -4,6 +4,10 @@ log
 
 .. include:: ../../includes_resources/includes_resource_log.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_log_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_log_actions.rst

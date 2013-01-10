@@ -4,6 +4,10 @@ mdadm
 
 .. include:: ../../includes_resources/includes_resource_mdadm.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_mdadm_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_mdadm_actions.rst

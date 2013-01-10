@@ -6,6 +6,10 @@ execute
 
 .. note:: |note execute resource intepreter|
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_execute_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_execute_actions.rst

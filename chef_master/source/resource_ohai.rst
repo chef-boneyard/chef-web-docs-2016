@@ -4,6 +4,10 @@ ohai
 
 .. include:: ../../includes_resources/includes_resource_ohai.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_ohai_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_ohai_actions.rst

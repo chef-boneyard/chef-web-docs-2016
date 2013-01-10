@@ -6,6 +6,10 @@ env
 
 .. note:: |note env resource variable on unix|
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_env_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_env_actions.rst

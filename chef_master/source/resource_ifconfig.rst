@@ -4,6 +4,10 @@ ifconfig
 
 .. include:: ../../includes_resources/includes_resource_ifconfig.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_ifconfig_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_ifconfig_actions.rst

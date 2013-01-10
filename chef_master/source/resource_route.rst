@@ -4,6 +4,10 @@ route
 
 .. include:: ../../includes_resources/includes_resource_route.rst
 
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_route_syntax.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_route_actions.rst
