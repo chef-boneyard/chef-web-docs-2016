@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to create a system user using a variable called ``user_home`` where the matching nodes have a group identifier that is the same as the node ,and the login shell is ``/bin/bash``:
+The following example shows how to create a system user using a variable called ``user_home`` where the matching nodes have a group identifier that is the same as the node, and the login shell is ``/bin/bash``:
 
 .. code-block:: ruby
 

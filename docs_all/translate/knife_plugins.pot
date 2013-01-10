@@ -1,0 +1,2336 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Topics package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Topics 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-09 17:07\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/knife_plugins.rst:34
+# 2bbb3b4bc7df4e56a8402d7bb0b3b1b7
+msgid "Knife Plug-ins Reference"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_plugin.rst:5
+# 4f65a1c890e8433ebcee20a56d3d94b5
+msgid "A |knife| plugin is a set of one (or more) sub-commands that can be added to |knife| to support additional functionality that is not built-in to the base set of |knife| sub-commands. Many of the |knife| plugins are built by members of the |opscode| community and several of them are built and maintained by |opscode|. A |knife| plugin is installed to the |path knife plugins| directory, from where it can be run just like any other |knife| sub-command."
+msgstr ""
+
+#: ../source/knife_plugins.rst:39
+# c14d78b6b1264b3db1a8240dbdbbcc9b
+msgid "Working with Knife"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_using.rst:4
+# 2e3c781201304fc99e6ebfb3bac2d766
+msgid "|knife| runs from a management workstation and sits in-between a |chef server| and an organization's infrastructure. |knife| interacts with a |chef server| by using the same REST API that is used by a |chef client|. Role-based authentication controls (RBAC) can be used to authorize changes when |knife| is run with |chef hosted| or |chef private|. |knife| is configured during workstation setup, but subsequent modifications can be made using the |knife rb| configuration file."
+msgstr ""
+
+#: ../source/knife_plugins.rst:43
+# 9d6e120742ae4b83afe9d5f62d0a5d35
+msgid "JSON Data Format"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_using_json.rst:4
+# 81f948b7cb9b41a0b995feef0dae9695
+msgid "Most data is entered using a text editor in |json| format, unless the ``--disable-editing`` option is entered as part of a command. (Encrypted data bags use |yaml|, which is a superset of |json|.) |json| is a common, language-independent data format that provides a simple text representation of arbitrary data structures. For more information about JSON, see http://www.json.org/ or http://en.wikipedia.org/wiki/JSON."
+msgstr ""
+
+#: ../source/knife_plugins.rst:47
+# bbf5b909add3487191a6bb75cb477bf0
+msgid "Using Quotes"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_using_quotes.rst:4
+# c4ed2391c523462bbdcf6d2fc10402bb
+msgid "Values can be entered with double quotes (\" \") or single quotes (' '), but this should be done consistently."
+msgstr ""
+
+#: ../source/knife_plugins.rst:51
+# f45d183a3b7b4221bb5e374ce28b9471
+msgid "Wildcard Search"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:6
+# 1cea267411b946fea1277c2b59970c99
+msgid "A wildcard matching pattern can be used for substring matches that replace zero (or more) characters. There are two types of wildcard patterns:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:8
+# 2f83ae5f70524fc0bd34c8497db72df2
+msgid "A question mark (”?”) can be used to replace exactly one character (as long as that character is not the first character)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:9
+# fc5f5545488745eb9489fd4bfca9a0f5
+msgid "An asterisk (“*”) can be used to replace any number of characters (including zero)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:11
+# 747728c395764df0968e5fe7d1c8d99c
+msgid "Wildcard patterns must be escaped (using a backslash) so that the wildcard itself can reach the |chef server|. If they are not escaped, the wildcard is expanded into the actual filenames and |knife| will not know the wildcard was intended to be used. For example, if the |chef server| has data bags named ``aardvarks``, ``anagrams``, and ``arp_tables``, but the local file system only has ``aardvarks`` and ``anagrams``, escaping vs. not escaping the wildcard pattern will yield different results:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:17
+# 0dc44bc5c13d40c8acf168589ed3904c
+msgid "asks the |chef server| for everything starting with the letter \"a\" and will return:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:23
+# 139ded5c98564fddbb1c1dff7666bcc1
+msgid "But, the following:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:29
+# 770a202e718f44d998ed0926e8ba0219
+msgid "will return:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:35
+# 7b5261555408404ea830694b45398421
+msgid "Which is the same as entering:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_verbs_wildcard.rst:41
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:37
+#: ../../includes_knife/includes_knife_hp_image_list.rst:37
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:40
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:37
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:31
+# e42ee69e3cc7462fb63763128e3d359a
+# b9a345542a82482ba7ff304e97db90e6
+# e513f04202204276a01f11a68458a8d2
+# 3ba92ac7689741f98c0050bb84d8830e
+# ccc06e508e0146ada57c9281eb2bee7f
+# 87d07ede47d449adafbe419184b82084
+msgid "to return:"
+msgstr ""
+
+#: ../source/knife_plugins.rst:55
+# 6a5777736ac14f34a8fd3fccab0e6d63
+msgid "Plug-ins"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_using_plugins.rst:4
+# b65e1cf966dd4e0a9d99f1dc0e46a99f
+msgid "|opscode| provides the following plug-ins, which work the same as built-in sub-commands (including common options), but must be installed separately (using |rubygems|): ``azure``, ``bluebox``, ``ec2``, ``eucalyptus``, ``google``, ``hp``, ``linode``, ``openstack``, ``rackspace``, ``slicehost``, ``terremark``, and ``windows``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_using_plugins.rst:6
+# 7092e40f39594aceb6df7b4f26b9e378
+msgid "The |chef| community provides many other plugins for |knife|: http://community.opscode.com/."
+msgstr ""
+
+#: ../source/knife_plugins.rst:59
+# b93120c3864a4981b9ad6d9458791e61
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_using_syntax.rst:4
+# ac698a03facb4fd2964a17ec095f9aaa
+msgid "All |knife| sub-commands have the following syntax::"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_using_syntax.rst:8
+# c64642ce02384366976caa0b0fa8abbd
+msgid "Each sub-command has its own set of arguments and options."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_using_syntax.rst:10
+# 93048688f5b84bd1a64b3c2c45b5bfab
+msgid "All syntax examples in this document show variables in ALL_CAPS. For example ``-u PORT_LIST`` (where PORT_LIST is a comma-separated list of local and public UDP ports) or ``-F FORMAT`` (where FORMAT determines the output format, either ``summary``, ``text``, ``json``, ``yaml``, or ``pp``). These variables often require specific values that are unique to your organization's |chef| environment."
+msgstr ""
+
+#: ../source/knife_plugins.rst:63
+# eb04bb88df464a0aa4022a2099f3f9aa
+msgid "Common Options"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:4
+# d49b14f6185448289f573ab2cdba7354
+msgid "The following options can be run with all |knife| sub-commands and plug-ins:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:7
+# 579413d0cb294e43a1be8947bab13f52
+msgid "|config|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:10
+# 8707ecd0bd854a0ea294c7e0c1bfda8b
+msgid "|color|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:13
+# c8eb7d4216264384af014edb43aa9692
+msgid "|no-editor|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:16
+# 2c432afe90984b898ab80694068729f1
+msgid "|defaults|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:19
+# ea4e0a388b0c497e93a0768756daa0e1
+msgid "|editor|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:22
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:18
+# 352e3a4b36934e3db6a1f26006154fd4
+# cd716d988b8f47b5b536de0f8fc21203
+msgid "|environment|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:25
+# a58b44b72aa94f3b824b1827e318868b
+msgid "|format|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:28
+# 3911bd71636b4ad8b79058ea5bd73848
+msgid "|help|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:31
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:21
+# 057c9f3a198f4ef397917638594201e2
+# 1a24389384d34b699e9a31314af81c9e
+msgid "|key|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:34
+# 5db890e0249c4da6882e7600fd69e454
+msgid "|no-color|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:37
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:21
+# 63645fc86d7a4c2db6c6c36b9e173817
+# a09931611af64597bfbc2d5a51a00daa
+msgid "|print-after|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:40
+# 14ecaef019bb4f0d8b2ef2c513be01d2
+msgid "|repo_mode|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:43
+# 8823659be1f9480d91e0eaef90458a66
+msgid "|server-url|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:46
+# 4689bebcde8e462082cd2e7646f8d795
+msgid "|user|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:49
+# 4ecb4bd9bc8d41efbc77ec6fdbf05f99
+msgid "|version chef|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:52
+# 609fd12d8792415482f2d78f62276f88
+msgid "|verbose|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_common_options.rst:55
+# 1d62aaf07bd04c4a8db7001fcf1f86e1
+msgid "|yes|"
+msgstr ""
+
+#: ../source/knife_plugins.rst:67
+# 47feb6840ebb4a90993e1503a8c7a3d9
+msgid "Plugins"
+msgstr ""
+
+#: ../source/knife_plugins.rst:69
+# 183f247421e24c5fa5abe46349842833
+msgid "The following plugins for |knife| are provided by |opscode|:"
+msgstr ""
+
+#: ../source/knife_plugins.rst:71
+# 1b0dcd817c5d428bba310dd89e9eae2f
+msgid "azure"
+msgstr ""
+
+#: ../source/knife_plugins.rst:72
+# 4044ef38bda84131af15e5c798412153
+msgid "bluebox"
+msgstr ""
+
+#: ../source/knife_plugins.rst:73
+# ee8f8c3aedef4119ab78cb34cd9f5719
+msgid "ec2"
+msgstr ""
+
+#: ../source/knife_plugins.rst:74
+# 020fb9d22c9044f6b5f5ede2e9ab5409
+msgid "eucalyptus"
+msgstr ""
+
+#: ../source/knife_plugins.rst:75
+# 691708020b8748c3bb34a100a132b73f
+msgid "google"
+msgstr ""
+
+#: ../source/knife_plugins.rst:76
+# cdbd7a661b74478ab74f2efe15cd324e
+msgid "hp"
+msgstr ""
+
+#: ../source/knife_plugins.rst:77
+# aa098540fff947d0a4d74e7ca9809ac4
+msgid "linode"
+msgstr ""
+
+#: ../source/knife_plugins.rst:78
+# b19461be76aa4d52a6cd1d01cb529ea8
+msgid "openstack"
+msgstr ""
+
+#: ../source/knife_plugins.rst:79
+#: ../source/knife_plugins.rst:80
+# 07a33f3e2696457d91fd335a44056865
+# 27608bd3553b4799bd78f2395cfd3798
+msgid "rackspace"
+msgstr ""
+
+#: ../source/knife_plugins.rst:81
+# 8a31684961a249e3812d7422c7da6fba
+msgid "terremark"
+msgstr ""
+
+#: ../source/knife_plugins.rst:82
+# 97ec2ed99def42c19b246e77aaa69734
+msgid "windows"
+msgstr ""
+
+#: ../source/knife_plugins.rst:86
+# b46fb024792d49bcb790acd616a60bed
+msgid "azure (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure.rst:6
+# 15230371b4134685bcdfe803bcf9fa51
+msgid "|knife azure|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure.rst:8
+# 697a097f1cf348378ed4f717481b8ccf
+msgid "|knife azure certificate|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure.rst:10
+#: ../../includes_knife/includes_knife_bluebox.rst:8
+#: ../../includes_knife/includes_knife_ec2.rst:8
+#: ../../includes_knife/includes_knife_eucalyptus.rst:8
+#: ../../includes_knife/includes_knife_google.rst:8
+#: ../../includes_knife/includes_knife_hp.rst:8
+#: ../../includes_knife/includes_knife_linode.rst:8
+#: ../../includes_knife/includes_knife_openstack.rst:8
+#: ../../includes_knife/includes_knife_rackspace.rst:8
+#: ../../includes_knife/includes_knife_terremark.rst:8
+#: ../../includes_knife/includes_knife_windows.rst:8
+# f82c44cff23d4e4d9fa6647a121898ae
+# cf863db89c8a4fbdb67ffec3332c5a3e
+# 0a656ef4bd344ade97b0deb6d49ebe75
+# 26400f7a8f2643fc86ed291830564f4c
+# dad0282716784deaaab4ef7ac196d561
+# 8cc45a8cf1ed42dd97e51f2a1663d7aa
+# 58b48d39527541e59838912f34c116d7
+# e5989444d9384a2a9ed46192ea4ddc6f
+# cd989371409940f0ab59337eca410aba
+# 73f87c87d3f94d069f16155d1ea15c45
+# cb5e5405b131422a96b9a3666f50c036
+msgid "This plugin should be installed using |rubygems|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure.rst:12
+#: ../../includes_knife/includes_knife_ec2.rst:10
+# 42746a85c3464d3e8e1f3755b97050e1
+# db7e3202493a43538f819b2ef2c9d37c
+msgid "This plugin requires the ``knife windows`` plugin to be present on the same machine."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure.rst:14
+#: ../../includes_knife/includes_knife_bluebox.rst:10
+#: ../../includes_knife/includes_knife_ec2.rst:12
+#: ../../includes_knife/includes_knife_eucalyptus.rst:10
+#: ../../includes_knife/includes_knife_google.rst:10
+#: ../../includes_knife/includes_knife_hp.rst:10
+#: ../../includes_knife/includes_knife_linode.rst:10
+#: ../../includes_knife/includes_knife_openstack.rst:10
+#: ../../includes_knife/includes_knife_rackspace.rst:10
+#: ../../includes_knife/includes_knife_terremark.rst:10
+# f34cfbda9a124f0797efffe7de72daa8
+# dae9e39208df4b3ab8cdeca6617687a8
+# 1830448c60a64bd1b4922b66e17a4250
+# 0aeadb793e374488aa5b3ea2323a8cae
+# 1ade0bc7c690497aaa9c4f4e9022c7da
+# 4d84e18a1b264e4c9698c69b6db2a858
+# e50de1bcb339428b9750c9d938343aa8
+# 6cad2248d9b64f60b2934ebdae633b1b
+# 4a2ad2de72064a499b050ee11ea6abc5
+# 0da68222d037433ba4c086f9807a7203
+msgid "This sub-command has the following syntax::"
+msgstr ""
+
+#: ../source/knife_plugins.rst:90
+#: ../source/knife_plugins.rst:161
+#: ../source/knife_plugins.rst:203
+#: ../source/knife_plugins.rst:232
+#: ../source/knife_plugins.rst:269
+#: ../source/knife_plugins.rst:294
+# 9b746d4e694c41bc8b8632b6dc81fe05
+# 68d26dfbaaf147cdb9bf1c2421a9ab6b
+# 8aba88edd6dd43af80ea2d984740b7ea
+# 07cd0aa9466a43359bacf43deb219f5f
+# 34b88b4c4bbc4fbba9929c477b62d58f
+# 49b2a7b0a52e43839b777d15b6483b76
+msgid "image list"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_image_list.rst:6
+# 2c24ce0ceeed43b1af4b0d84932d1120
+msgid "The ``image list`` argument is used to get a list of images that exist in a |windows azure| environment. Any image in this list may be used for provisioning."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_image_list.rst:8
+#: ../../includes_knife/includes_knife_azure_server_create.rst:8
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:8
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:8
+#: ../../includes_knife/includes_knife_azure_server_list.rst:8
+#: ../../includes_knife/includes_knife_bluebox_images_list.rst:8
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:8
+#: ../../includes_knife/includes_knife_bluebox_server_delete.rst:8
+#: ../../includes_knife/includes_knife_bluebox_server_list.rst:8
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:10
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:8
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:8
+#: ../../includes_knife/includes_knife_ec2_server_list.rst:8
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:8
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:8
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:8
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:8
+#: ../../includes_knife/includes_knife_eucalyptus_server_list.rst:8
+#: ../../includes_knife/includes_knife_google_server_create.rst:8
+#: ../../includes_knife/includes_knife_google_server_delete.rst:8
+#: ../../includes_knife/includes_knife_google_server_list.rst:8
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:8
+#: ../../includes_knife/includes_knife_hp_image_list.rst:8
+#: ../../includes_knife/includes_knife_hp_server_create.rst:8
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:8
+#: ../../includes_knife/includes_knife_hp_server_list.rst:8
+#: ../../includes_knife/includes_knife_linode_datacenter_list.rst:8
+#: ../../includes_knife/includes_knife_linode_flavor_list.rst:8
+#: ../../includes_knife/includes_knife_linode_image_list.rst:8
+#: ../../includes_knife/includes_knife_linode_kernel_list.rst:8
+#: ../../includes_knife/includes_knife_linode_server_create.rst:8
+#: ../../includes_knife/includes_knife_linode_server_delete.rst:8
+#: ../../includes_knife/includes_knife_linode_server_list.rst:8
+#: ../../includes_knife/includes_knife_linode_server_reboot.rst:8
+#: ../../includes_knife/includes_knife_linode_stackscript_list.rst:8
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:8
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:8
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:8
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:8
+#: ../../includes_knife/includes_knife_openstack_server_list.rst:8
+#: ../../includes_knife/includes_knife_rackspace_flavor_list.rst:8
+#: ../../includes_knife/includes_knife_rackspace_image_list.rst:8
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:8
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:8
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:8
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:8
+#: ../../includes_knife/includes_knife_terremark_server_delete.rst:8
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:8
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:8
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:8
+#: ../../includes_knife/includes_knife_windows_winrm.rst:8
+# 5bbfb2e2020941aeb6766631ba359dc2
+# 3a7ddd5d6fc14e91ac7c2dfaadd071eb
+# f84fcd4329bb4de1b71f2a87a81d1914
+# f67ef3c6f7bb477f9cae309e304b6b55
+# e5028cf4e61d423f92febb3463cefac6
+# c7b513c4c97f46eba45e6b0064897ad2
+# b4760450d0174164bfc64660d0f9cf29
+# 8c330d9bb7a8443686e3cd68e9bef615
+# 66381fe6377640ce865aeb57431dc347
+# b2787d59eafa4f06bd5b57cd16ffa566
+# 5939fbdabc6843e4a1f25c2dab84545c
+# ac3feac3f93047469aebdffd6811e110
+# 7d00bfcc7e7f4ca685f009d55c5f876f
+# f3453c96ff4c47069dc44cac89fa572c
+# fa07412ecfde418dba884f1213cbfdd8
+# 167c800df49c4fffba94656368c2d5dd
+# 0e05e62373b54f38ac9a7c305ff55cd4
+# f76b620600474858b4c7dace5e1852f7
+# fcbddeb3842b4e6f837d4f7421665bba
+# 6fc00718317845c4b94e3f9a09dccc0e
+# ecea12401f90463599f4b02ccb6d01a7
+# e4312238aada4e2e8bd12049e0654315
+# 8b742cb741b04352ab4525ab9df703b1
+# c9a5038ac0eb479fad4e569557cdc1a3
+# 63bb49dec8e2487983c481c8aec326ff
+# a1ce4472238b4f8bb3b62c358684300a
+# 0a18582ff52f4f7f89c59812912c6af6
+# fce206839ca94334862ad52cf340f073
+# a43b88b7ce4744ef9f98410f3f061d0b
+# 0fed4d6d2dc241fd8048a00c823842ff
+# 3955dc667e7e489894c394840eb633e7
+# 57de74fed1484c93aeec1e428a5dc5bf
+# c7a023941e8d45c5800ef132810a00f1
+# e45d5b4056c345ad9378950ef7fdd121
+# e28e2bad61c14057aaee332203ae52dc
+# 3d877ef4450f433cb5d0589d6408dcc9
+# b33147561d6d4f228e1c6eec2606689e
+# 8ecff5d4c2bd40198c6c29a065a63663
+# 0f0dcaecdd22482ab3b20c83cd025f12
+# 912995a68f8d4394adf3931698a01d71
+# ec8dd339dd564e9aa6f952b1942e51c4
+# d55b7adc4eb8473999cece90ce95e470
+# 992801fe34174aada9e16ffb142f5d41
+# c574541d367f4676b232cbdef386540e
+# 6bf84258f81e44edbf7284b5e8f1f6d6
+# 557e6f0c7dbb4294895fd93a9111fed3
+# 55739ac98cc4403fa7890dec1e718c88
+# ae1978a8031448939e1fc08b232d29c1
+# 18a4f780593e446fbc0cac9115f91011
+# 58fb6a18e58648b88de054380aa8290f
+# 46e555b40cc943b7bc4de4c2b76a75ff
+msgid "This argument has the following syntax::"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_image_list.rst:12
+#: ../../includes_knife/includes_knife_azure_server_create.rst:12
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:12
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:12
+#: ../../includes_knife/includes_knife_azure_server_list.rst:12
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:12
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:14
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:12
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:12
+#: ../../includes_knife/includes_knife_ec2_server_list.rst:12
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:12
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:12
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:12
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:12
+#: ../../includes_knife/includes_knife_eucalyptus_server_list.rst:12
+#: ../../includes_knife/includes_knife_google_server_create.rst:12
+#: ../../includes_knife/includes_knife_google_server_delete.rst:12
+#: ../../includes_knife/includes_knife_google_server_list.rst:12
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:12
+#: ../../includes_knife/includes_knife_hp_image_list.rst:12
+#: ../../includes_knife/includes_knife_hp_server_create.rst:12
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:12
+#: ../../includes_knife/includes_knife_hp_server_list.rst:12
+#: ../../includes_knife/includes_knife_linode_datacenter_list.rst:12
+#: ../../includes_knife/includes_knife_linode_flavor_list.rst:12
+#: ../../includes_knife/includes_knife_linode_image_list.rst:12
+#: ../../includes_knife/includes_knife_linode_kernel_list.rst:12
+#: ../../includes_knife/includes_knife_linode_server_create.rst:12
+#: ../../includes_knife/includes_knife_linode_server_delete.rst:12
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:12
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:12
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:12
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:12
+#: ../../includes_knife/includes_knife_openstack_server_list.rst:12
+#: ../../includes_knife/includes_knife_rackspace_flavor_list.rst:12
+#: ../../includes_knife/includes_knife_rackspace_image_list.rst:12
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:12
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:12
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:12
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:12
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:12
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:12
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:12
+#: ../../includes_knife/includes_knife_windows_winrm.rst:12
+# 3ea32a67ab7a40a7bd7f1955ea7bb57a
+# e2538e4c5b0c4f1fa49c3d0e36a5a5e4
+# 779eec1a869e4fdca31dfd72cf6decd5
+# ef5d78247ebf4cb2ace261b85d237d3d
+# 045bc92ce47349779fbd693a0c14d754
+# b6529674f35440ab8a41040364923dc0
+# d601fed455dc472f87ccfe365d30a3c0
+# 52e2836dbd9b4620a8997a22578efed7
+# 5e8acdd1f3924009aa69d45b3cf6d53d
+# a9d2c4f9b79347e79f4922588694317b
+# db7ac504197e4369bb5f5908adca0687
+# b859e8908b534515bcae5e018b0e23b0
+# dcc8b3f970c7413da7f49a3c68ae1008
+# ae803b816e5d4760aaa2a60b05eec84a
+# fbdbece8526547479927e95821391c8c
+# 43530339d105423197f9e798a074e8df
+# 95c1c4ae2b584eda88e05fc6b58feb6d
+# ba7151e0b7a340ffa5cf8fcebfef1297
+# c18cc3f53af048f1b9bb4ef78ec3563b
+# 9478c13da8b440e3936ef82e45d522b5
+# da16e9d95bfc49fc8fb7bf0a5da263fd
+# 7496c675e507491ba79da8424abee669
+# ce8edd8eec2a49adb82dbce61974d6b5
+# ace00329e7ab4ff59b99d223d6e30b3a
+# 69fbbf0500c741b59a7144f0b5cbf98b
+# 2903ceacc8af441e8c384b5433fe0949
+# 0076c0fc3eda40e5850fa85b2e4551ec
+# f81df5b479454a25bcd74e2eb07e1c7a
+# 0b1e76da8ea44a4e9f12b21b9a2cec3a
+# 69a951e20d22483aa146e3984ff016a2
+# abe7bc79d60146279ddbdadf269ab7c0
+# 4a2f7eb0538947d6aed5e2b2a6a247fa
+# 28f58b44064d4cd6b18c7eb65edb5682
+# b4a292d0eca443d09436b29f521fcef1
+# 588f4f9f75ab48d894a9aa07ae39beec
+# e682189def654753bef014e9e597c250
+# 6de9013fcdb8442aa6ce37b82c5d25a0
+# 240fe067e5d349198cb2cb234007d75f
+# c90203a0ae5643fe97c6a6f98182ec72
+# c324ae8b3a8a4dfe9eef5a05650a2236
+# 62331d7567894a4d889f3dfefac6bcb2
+# 18ec6b5c649d4c909a13f488d990a8ac
+# 2f263edd43ba400bb509b02f02242d15
+# bcb3b61306ff4f0a87a21f79fe0520af
+msgid "This argument has the following options:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_image_list.rst:15
+#: ../../includes_knife/includes_knife_azure_server_create.rst:33
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:15
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:15
+#: ../../includes_knife/includes_knife_azure_server_list.rst:15
+# 9fca94ee15e64a36a6c29c23914ed568
+# 44b48ff8879f4628bf5c46c6ea1b35c0
+# 44ed4b10460e41748d8916026227cf7a
+# 01c67fa7fc32483eaba8b201ee0e03b0
+# 903571cedbb4458099d584a09d4073ea
+msgid "|azure host name|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_image_list.rst:18
+#: ../../includes_knife/includes_knife_azure_server_create.rst:54
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:21
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:18
+#: ../../includes_knife/includes_knife_azure_server_list.rst:18
+# cb8f1f01d7fd48d8b2e1b51a3fa33ae8
+# a9d14529eed94a7cbb55011c954be2f8
+# 506e01f8874c4b2fb873fc85248d335f
+# 3325e75b615d450fb6775891989b3fba
+# 045e5df24bea43c1a99c5d8c1e3aa79e
+msgid "|azure-pem-filename|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_image_list.rst:21
+#: ../../includes_knife/includes_knife_azure_server_create.rst:72
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:30
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:21
+#: ../../includes_knife/includes_knife_azure_server_list.rst:21
+# e147abb39d9b4bdaa2a63b3a598af4fe
+# e0bc3bb101e64458ba3c5d802f1b89d6
+# 33aee7d5be284066a40d13f4d5153c71
+# cf052a4c184b40d783d14e10fe4a85a5
+# ea8d81abe07a428b8edff56b36f2ecc8
+msgid "|azure-subscription-id|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_image_list.rst:24
+#: ../../includes_knife/includes_knife_azure_server_create.rst:84
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:33
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:24
+#: ../../includes_knife/includes_knife_azure_server_list.rst:24
+# e20a0a92d06442ba8d82fd37a3b8e08c
+# cafd0642d8054c5998ac90bfe0d85c3f
+# 19e544c5383448dc8d46b44266d89119
+# 3fb4cd1f45e04bb6af861af5c2a0d7e6
+# 909611723b5a48c1a4b4eb5fb317969d
+msgid "|azure verify ssl certificate|"
+msgstr ""
+
+#: ../source/knife_plugins.rst:94
+#: ../source/knife_plugins.rst:119
+#: ../source/knife_plugins.rst:140
+#: ../source/knife_plugins.rst:165
+#: ../source/knife_plugins.rst:182
+#: ../source/knife_plugins.rst:207
+#: ../source/knife_plugins.rst:240
+#: ../source/knife_plugins.rst:273
+#: ../source/knife_plugins.rst:298
+#: ../source/knife_plugins.rst:315
+# e56f3d9bbbb848b8ac87d38504dbf210
+# d21084cf2a3045fc9467f182f599237c
+# 4ac5bd17bea946db9b116312039c7316
+# 32ba722216704f1f9898cc6ef12e5f5b
+# f6f250e7ab1149d5a7524f1cd24a7b5a
+# 68c48864d16f4e089f70f88b7e083bca
+# 634eb5ae5f90476997e0fe1a2de41ec8
+# 9747f1abd13b450b87b5819971123595
+# 251af4595a9c4cef8a4f9ec5646eca85
+# c12b0d5d6953493b8262e921efdd47c6
+msgid "server create"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:6
+# 89764e4701e9485e86457686beb09066
+msgid "The ``server create`` argument is used to create a new |windows azure| cloud instance. This will provision a new image in |windows azure|, perform a |chef| bootstrap (using the |ssh| protocol), and then install |chef| on the target system so that it can be run as a |chef client| and communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:15
+# 21d28a1a70b141b58e8a4de21e2e75f1
+msgid "|storage account|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:18
+# 4acecbafc35f4bffb3d4c43b28a324f6
+msgid "|bootstrap protocol| Default value: ``winrm``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:21
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:21
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:18
+#: ../../includes_knife/includes_knife_hp_server_create.rst:21
+#: ../../includes_knife/includes_knife_linode_server_create.rst:18
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:18
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:18
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:18
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:18
+# 31305edc8bd748c89e532b7feb7fb3a9
+# fb96c4100105429ab1ff95bb2681bbae
+# 114496ac5f654d33ad5948ed2025a00d
+# 5ab91aa5405644218e43f54780f508a8
+# 3d64d9e587bc44729d545bd681cb9f20
+# 9c08aeab74ac44598a8b5114b417b5d6
+# 1d0ecb8a637f4e07b35d114b0199e9d1
+# 43a7dcf474194140b0718cdda7ada3c2
+# 5ff23a0e09bc4f46a68e4741b54aad44
+msgid "|bootstrap-version|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:24
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:21
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:24
+#: ../../includes_knife/includes_knife_google_server_create.rst:15
+#: ../../includes_knife/includes_knife_hp_server_create.rst:24
+#: ../../includes_knife/includes_knife_linode_server_create.rst:21
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:21
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:21
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:21
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:21
+# a230f4b312bc4ef3adac00d8505ee48f
+# 458064bb881646ec99a7ea60b438d894
+# a552a83da34a4b0db993724ebf958df2
+# 197cd9ed023742b1be0f3f662719631f
+# 04835f2583f8480c975588ca3052cbc2
+# cca14f1e65494be8868fcade07f5cf28
+# 082428a1be96442eb0b89065a025e7f8
+# 7d5f69fa2e894fd9afabae59e3d408e5
+# cc6dc84b5ef745628c2150d37874a028
+# 68f9f630aa0b402988dd71b4f3e28739
+msgid "|distro|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:27
+# 4d43c00f9ac0419ab75a133f20738d84
+msgid "|azure host description|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:30
+# 97b313293d06442287dcac30fb8b0a72
+msgid "|host-name|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:36
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:33
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:51
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:30
+#: ../../includes_knife/includes_knife_hp_server_create.rst:36
+#: ../../includes_knife/includes_knife_linode_server_create.rst:30
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:30
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:27
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:24
+#: ../../includes_knife/includes_knife_windows_winrm.rst:21
+# a0d8f64560e2430ba6e02d8140852979
+# b5a3748097314fc8a75abbaf9141d78b
+# 8803727539fb4f509f8cabd174e822a5
+# 17a3738bb7d24e7889ba82756bb34bb8
+# d599555033954d48a7eb5bbc87b54f78
+# 21a6434a9be64137a6a4082f7cbaac80
+# 7cba748f49574e2691c73c8034ca0736
+# 45694c3eef5c49e2a1690afbc1e0ed3a
+# 2222540bfa264616ad1922f1c8999102
+# ced2f1e335664244bdf876ce603cae3d
+msgid "|identity-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:39
+# ba949a501a63405bb80bb1d293f427ff
+msgid "|source-image|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:42
+# d8fff22cf23b4c458d06b822f8c8cf07
+msgid "|media location|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:45
+# f666731622d14ca09b47aefeb533f32e
+msgid "|node-name cloud| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:48
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:63
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:42
+#: ../../includes_knife/includes_knife_hp_server_create.rst:48
+#: ../../includes_knife/includes_knife_linode_server_create.rst:45
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:42
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:30
+# f8a87323cb084e5694f80f5c2c8853a9
+# 6919ace3eeb148539ed66ba2b8c635ea
+# 939da93e5cbb4071be7e7957e0e14123
+# 1456d3f6faaa4c03b415329c096c6d79
+# f51f29817a514491b0ae272bb4267827
+# 1f25718a7009435d8a49cff541cfd081
+# a06afcddb99249599988a57003cdbb15
+msgid "|[no-]host-key-verify|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:51
+# 73435167e225433c80afad6039a295f7
+msgid "|os-disk-name|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:57
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:39
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:69
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:45
+#: ../../includes_knife/includes_knife_hp_server_create.rst:51
+#: ../../includes_knife/includes_knife_linode_server_create.rst:48
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:48
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:45
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:36
+# 00229498cc5b4874b1e433df3a1f3fb1
+# 49b305f0b26c447e85d497de80737246
+# 51da4d6121b34ebab0071065691a485a
+# da7fe24359cf41a5bc8c3c3d8c55cc2c
+# 41850558737a4d928236b625f1f6c905
+# d550ba135a074477ab1298d67aa4df7d
+# 045916f1d7194ebcae1a6b1bb692c9f1
+# daf09ff5797c45bda8ce0daef2b58550
+# 02476674135545ee9996950920b674ae
+msgid "|ssh-password|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:60
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:72
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:48
+#: ../../includes_knife/includes_knife_hp_server_create.rst:54
+#: ../../includes_knife/includes_knife_linode_server_create.rst:51
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:51
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:48
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:39
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:27
+# 54d8796473b548998bf3723f6cbd0bd8
+# d27c36ee2dcb4911be4de800d6d0c0ba
+# c856435aa9604b06b22d3de93e0fc7b3
+# 54758ed542ce47768ac8a97dee6a070f
+# 0a73544de9e44cafa9ab51bdc66f71d7
+# 8556bcb811664d9493e4a5005fc4c3ab
+# 61e324b0d4ae4fca959d1e353f0bc6a2
+# 0570deac5e144be6a46346ded6edaf25
+# 4b38f0726c6342ba9606242c35da9198
+msgid "|prerelease|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:63
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:26
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:75
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:51
+#: ../../includes_knife/includes_knife_google_server_create.rst:45
+#: ../../includes_knife/includes_knife_hp_server_create.rst:57
+#: ../../includes_knife/includes_knife_linode_server_create.rst:54
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:54
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:51
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:42
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:30
+# dde091ae00d2414aa6052aae80f39e20
+# f968c10767d54fd5b83111801cc2decf
+# 1a7f494bbe974d87a25ed5334fcf1aca
+# ed15f320d2f34ca1b917b978c421ef05
+# 5087d8d31d7948d1a4cfe2107f5eb231
+# 4b9bd8e2f4a14217b43976477ac4eca6
+# ad181c058d824c91a16d6ad02ca0cd3e
+# 53d2221ea83b477fb9a1ff3e3965c4ed
+# c07940e10d2d47deb0e77cfdd6d41444
+# a194d44447df4397b86c81f04ce4c394
+# 2c7ad2b99907440daf79269cff8c3eae
+msgid "|run-list|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:66
+# ce1eef762f6743fc8fc78036dd61b77d
+msgid "|role-name|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:69
+# 989d125a674541b4b44a901fcdabb221
+msgid "|hosted-service-name|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:75
+# a8de68bc2cbb4546b49b161ab568a350
+msgid "|tcp-endpoints|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:78
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:93
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:60
+#: ../../includes_knife/includes_knife_google_server_create.rst:51
+#: ../../includes_knife/includes_knife_hp_server_create.rst:66
+#: ../../includes_knife/includes_knife_linode_server_create.rst:57
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:63
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:60
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:51
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:39
+# 5192043de3d54610a5501486be1d371c
+# 0c42e8748d2a4d7e844b729c121e014e
+# b148d1f4f55a4da6a08df6f29dbee002
+# dea2614467dc4932b143927e6e2be9ca
+# ccd8f94319084e5fa1a9294e325c488d
+# 25c8b40791d7417f8379db06077f0963
+# b33007b4914849cc8a1f885aeefb6c8d
+# e722fb402c54437c84c6485bde755c0a
+# 4780c8b6bc8542848b2ae120866d4771
+# 20bab84ced474e659eb94c25b86155a0
+msgid "|template-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:81
+# fde083a732174f2f9983c9c5ff617984
+msgid "|udp-endpoints|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:87
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:102
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:63
+#: ../../includes_knife/includes_knife_google_server_create.rst:54
+#: ../../includes_knife/includes_knife_hp_server_create.rst:69
+#: ../../includes_knife/includes_knife_linode_server_create.rst:60
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:66
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:63
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:54
+# aaac3f7ffe0a4ebf9421920e254da833
+# f46b6bab3edb40a38d22ab4cbd3d7cd3
+# 856c5b8a59cd4e3b9d5f45b950dcf3b1
+# 65a9466c0639490a8b4a21a45fb5f2b9
+# 371a2c90efc84e50961c4d338e1815e4
+# ab50896e869f455db9d7b4edb57cf39e
+# fb48871719a144f3b54e403d74c92497
+# df0aa54c4fb1413a9c2c6f74d3fe4e76
+# c3a6fb4f7fa24e98bd662790ad558da7
+msgid "|ssh-user|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:90
+# de5b1d04913a41538f3acfdeed629172
+msgid "|role-size|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:92
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:35
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:26
+#: ../../includes_knife/includes_knife_bluebox_server_delete.rst:14
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:107
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:29
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:26
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:29
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:29
+#: ../../includes_knife/includes_knife_google_server_delete.rst:17
+#: ../../includes_knife/includes_knife_google_server_list.rst:17
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:29
+#: ../../includes_knife/includes_knife_hp_image_list.rst:29
+#: ../../includes_knife/includes_knife_hp_server_create.rst:74
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:32
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:26
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:26
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:26
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:65
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:29
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:23
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:23
+#: ../../includes_knife/includes_knife_terremark_server_delete.rst:14
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:26
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:56
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:41
+#: ../../includes_knife/includes_knife_windows_winrm.rst:56
+# 72fda94b684644bf92673d30e114472a
+# 283ae9660e9d4865b0d93c23fd8ea75e
+# 713d0188b6c84930b41513c9928735d1
+# 7934a05a28464448a2e40bc89112809e
+# 35c2544138864fe995669fb832264779
+# 89e8ed61acb34e8780d5ae58663a64c8
+# 33b59eed8efc44d18533efd35870f0ee
+# f6d0d134a3c34ac8bb564b8b24603708
+# a846c8b287d348188abbd2f3298d1474
+# 9a52ecc43bd349ac8119f9f2f6d21d88
+# 6655263f17794a5e8c5182493f0b7c73
+# fe11dae8d15b464393c0a35ed04b7581
+# 98fa7f0f10bc49b7afa9bcc858b93547
+# 79c0825188334894bad3e936d3ac0acc
+# bca3d7eca959465d9e9e5b3a3eb65d2e
+# 735503fb8a58401e9bd5f169e791f225
+# 51244a9aebd444fcb1d9f4966049e02c
+# c03351133ded4014a39f04a0832e13eb
+# c1ba5ea2256d481087341e8c7c2a2276
+# 1967b92ec8444c06821bd7d8b0452789
+# 38d2bccbef9f434e8ee3f39a7f5f645c
+# 1e460de586ba43a7ba51d4df5c611587
+# 7e7320d905da47d7bbd7eb18e048afff
+# b018f8aaa8f94c49add2318ada3cb1cf
+# cc77d0acfdb04365b2b14eea3351b4c1
+# 0968d71d1bcd47338af221808998cc39
+# 80522356667748fe882736a43bd53d02
+msgid "**Examples**"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:94
+# 7adf4a517b9f48689967e99f86bbde12
+msgid "For example, to provision a medium-sized |centos| machine configured as a web server in the \"West US\" data center, while also creating new hosted service and storage accounts, enter something like:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_create.rst:102
+# 1635c6690d4947a685fd6ee8e63723ea
+msgid "To provision a medium-sized |centos| machine configured as a web server in the \"West US\" data center, while reusing existing hosted service and storage accounts, enter something like:"
+msgstr ""
+
+#: ../source/knife_plugins.rst:98
+#: ../source/knife_plugins.rst:123
+#: ../source/knife_plugins.rst:144
+#: ../source/knife_plugins.rst:169
+#: ../source/knife_plugins.rst:186
+#: ../source/knife_plugins.rst:211
+#: ../source/knife_plugins.rst:244
+#: ../source/knife_plugins.rst:277
+#: ../source/knife_plugins.rst:302
+#: ../source/knife_plugins.rst:319
+# e9e09f53c3cf44639f9ba0e6d1ed2b8c
+# cf3755d9665446c0993e88e4b9a2464b
+# a4eadfe943bd464884d913ffc12ae54a
+# 092b9d1355d4422794320e9fe621a25e
+# b3f7f41dbf51467bb705cf339d24d31a
+# a152c61de63b48b18e035832a9d82390
+# 5e12a21733cb4076b45f8ae8e3915e7f
+# a9e5b53293334594b689b731a3da2854
+# aa88d2924ab943c1b7b864d1268d8697
+# fec6fffaea054b34922eec161541c2af
+msgid "server delete"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:6
+# 3fddb9bda5c744489c81d71de4ec1857
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |windows azure| cloud. To find a specific cloud instance, use ``knife azure server list``. Use the ``--purge`` option to delete all associated node and client objects from the |chef server| or use the ``knife node delete`` and ``knife client delete`` sub-commands to delete specific node and client objects."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:18
+# f69bfe5308a244acb137a965d427c4cc
+msgid "|node-name purge| This must be used with the ``-p`` (purge) option."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:24
+# 0f067cb6a01e4b9fa271c75e0365505b
+msgid "|purge windows azure|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:27
+# 0026f2d676e0467bb01f523002767155
+msgid "|purge os disk windows azure|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_delete.rst:37
+# 94a61f4177d6402982952572fcbde5b6
+msgid "For example, to delete an instance named \"devops12\", enter:"
+msgstr ""
+
+#: ../source/knife_plugins.rst:102
+# bfa335051d4741919fa703debbe9d19c
+msgid "server describe"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:6
+# f9905e0e182344f89c857ec39f17eb04
+msgid "The ``server describe`` argument is used to view a detailed description of one or more roles that exist in a |windows azure| cloud instance. For each specified role name, information such as status, size, hosted service name, deployment name, ports (open, local, public) and IP are displayed."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_describe.rst:28
+# 3b0265f8eaf8463ba94a7fec60e557d4
+msgid "For example, to view the details for a role named \"admin\", enter:"
+msgstr ""
+
+#: ../source/knife_plugins.rst:106
+#: ../source/knife_plugins.rst:127
+#: ../source/knife_plugins.rst:148
+#: ../source/knife_plugins.rst:173
+#: ../source/knife_plugins.rst:190
+#: ../source/knife_plugins.rst:215
+#: ../source/knife_plugins.rst:248
+#: ../source/knife_plugins.rst:281
+#: ../source/knife_plugins.rst:306
+#: ../source/knife_plugins.rst:323
+# 35b68fdbd020493a97079f9659610992
+# 69cf8e98e39d4647890428685420e2bd
+# 1347f296eda84ee99061f09f6316cf10
+# c04ff25ef7144dfaa8993d0aa3ab5edd
+# ca4f2b7356d54678beca76177760b9ea
+# f7ee920293d34e1788ef888495ae94c3
+# 79368381b2c9465ba912b33da78d616c
+# b8edee87bbf34709ad8bc820f4c6f38f
+# 410bb56133e044ed9b3313de3232144c
+# be4dead738974cebb42cb42155d07fe8
+msgid "server list"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_azure_server_list.rst:6
+# 4093ff72522f4b84862f9091c3a191f5
+msgid "The ``server list`` argument is used to find instances that are associated with a |windows azure| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../source/knife_plugins.rst:111
+# 4d20a06ac947489191ead0f44bb8c8a5
+msgid "bluebox (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox.rst:6
+# f9cac105c99642fbba1195e294adbe75
+msgid "|knife bluebox|"
+msgstr ""
+
+#: ../source/knife_plugins.rst:115
+# bbb17a589ebb4b9884a9f55368031618
+msgid "images list"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_images_list.rst:6
+# 5758f639b6a94b6aa16b4da74b70983f
+msgid "The ``images list`` argument is used to view a list of images that are running on servers that are hosted by |bluebox|, including returning a list of each server (and server ID). The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_images_list.rst:12
+#: ../../includes_knife/includes_knife_bluebox_server_delete.rst:12
+#: ../../includes_knife/includes_knife_bluebox_server_list.rst:12
+#: ../../includes_knife/includes_knife_linode_server_list.rst:12
+#: ../../includes_knife/includes_knife_linode_server_reboot.rst:12
+#: ../../includes_knife/includes_knife_linode_stackscript_list.rst:12
+#: ../../includes_knife/includes_knife_terremark_server_delete.rst:12
+# b7fe1446b9fe4cc49b280c4a9aed8250
+# 37af87592c474406bb409247b1edfb3b
+# fce00a327351445a836878d0830c1d7e
+# eabbc3c0ebfb4effb9c156f2e61307b1
+# 9c67ff96e4214882a5182d2e48ce95aa
+# 6dae07e2d339452da057f0f815088b61
+# 0505a341df37413a99ab11eb34a27928
+msgid "This argument does not have any argument-specific options."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:6
+# dda7ef5c1a2f430d96d4d4efc58902bb
+msgid "The ``server create`` argument is used to create a new |bluebox| cloud instance. A comma-separated run-list of roles and/or recipes must be specified."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:15
+# dcf35d78b9584eb88440ba980b0ca2bb
+msgid "|load-balancer|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:18
+# 5eade21147de450ebb86c3d39c1c3f06
+msgid "|block-startup-timeout|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:24
+# fd7f09939423492fb4751bdcce3d6b88
+msgid "|disable-bootstrap|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:27
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:36
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:24
+#: ../../includes_knife/includes_knife_google_server_create.rst:21
+#: ../../includes_knife/includes_knife_hp_server_create.rst:27
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:24
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:24
+# 8b794c238c264766929be7a6c6cfe799
+# f47fc71c34c6400387031c8cdfe0c959
+# b9b4a2283b854d859455b492404054d9
+# 4779d21115374462b0cc90098466b5f0
+# 716ff25eb9314123ad897259dcc1f455
+# 43881fb6ddc648f69a85c944acf8cbb5
+# 854f38edc60b4543af4b7147e3653bda
+msgid "|flavor|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:30
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:54
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:33
+#: ../../includes_knife/includes_knife_hp_server_create.rst:39
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:33
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:30
+# b1965b3abd8d4e81adc343d3ac2146e3
+# e2f5fb9a6e504cefaf4c2496af7a58a4
+# e41e3e0fbe494ce1afd4a6e747ef9e74
+# 15162c9237c54a9f808c9358760ad364
+# 1f1eb0e9bed04718a4dc403289d30f0e
+# 7471f8025c384e56a39254618154af1e
+msgid "|image|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:36
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:60
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:39
+#: ../../includes_knife/includes_knife_google_server_create.rst:36
+#: ../../includes_knife/includes_knife_hp_server_create.rst:45
+#: ../../includes_knife/includes_knife_linode_server_create.rst:42
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:39
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:42
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:27
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:24
+# 98879c6cd673476b8fd899ffa0c58db0
+# 575c4a1accf44ac3afb4ae5308c95da5
+# fae86559317f46e5bece1ff821fecaeb
+# 2bcfc0bbbfd4419f93bf24f5d4c85bd6
+# 45b391e5c0e143d5aae2949cef6dc8cf
+# 8e0c16383441416a8d4baf67f976ecb1
+# 400dc0e4da284770bd3f87abddbd2754
+# dc317d9a32244856b8bb151a41ddb595
+# 22e1e08b47f14206b4ee433d053ae56e
+# a9470a37a7f249b495f606de89933e0d
+msgid "|node-name cloud|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_create.rst:42
+# 943f9a5a60664ae18d0aa0e9bec6e022
+msgid "|username bluebox|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_delete.rst:6
+# 033540e24e1445c08effdd673c7579d1
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |bluebox| cloud. A block represents the on-demand virtual computing resource; a hostname is specific to a block. To find a specific cloud instance, use the ``knife bluebox server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_delete.rst:16
+# 9fa2d65302ff4d2aa5e2f729402d56b4
+msgid "For example, to delete an instance at block \"12345\" with a hostname of \"dev\", enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_bluebox_server_list.rst:6
+# 8c70c740b010478293ab6b15d39c93d0
+msgid "The ``server list`` argument is used to find instances that are associated with a |bluebox| account."
+msgstr ""
+
+#: ../source/knife_plugins.rst:132
+# 624f46d7fef74e69964274506acc2560
+msgid "ec2 (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2.rst:6
+# 0dfd6e6b4b6746a1aaac61ea417b95ba
+msgid "|knife ec2|"
+msgstr ""
+
+#: ../source/knife_plugins.rst:136
+# 8fbf11aca1734674afcd5a2e8a663098
+msgid "instance data"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:6
+# 640701eeb7d64288b16ab93543a97a25
+msgid "The ``instance data`` argument is used to generate instance metadata used with custom |opscode| |amazon ami|. This process will read the validation certificate and |chef server| URL from the |knife| configuration file (|path knife rb|) and will output the data in JSON format."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:8
+# 112801255d3b43da99d0aa5c56a10652
+msgid "Using this sub-command is an older way of launching |amazon ec2| instances for |chef| and should be considered deprecated. Using the ``server create`` sub-command is preferred (and more flexible). Although this sub-command will remain, the |opscode| custom |amazon ami| are out of date."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:17
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:15
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:15
+#: ../../includes_knife/includes_knife_ec2_server_list.rst:15
+# 982d6c88836a4ee28b6b5da36a514c6f
+# 7aea27e98fd940c3929db78e33c24c7a
+# 9365ba0a28bf4ed9bd75143037a9a334
+# 67fd42d53b24496cad78b84b034a30c0
+msgid "|aws-access-key-id|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:20
+# be98c60ed3864502bff6aec33e86e219
+msgid "|edit|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:23
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:57
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:18
+# 7149d61a1fae4558bead79921bcee330
+# 3158348cf11d406abd068558bcd0ba1a
+# 9e1bcba1f1284afc9a34b1bf67224756
+msgid "|aws-secret-access-key|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_instance_data.rst:29
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:78
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:27
+#: ../../includes_knife/includes_knife_ec2_server_list.rst:21
+# 48b0ad6284d442c9a9e021cf854cd646
+# 184628fee04444f3b201e494e80716ea
+# d28492d20f8e4632aec5626ed223b6de
+# 4607f06c960943d085aa6b9adb9ff8e1
+msgid "|region amazon|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:6
+# a4a4186b2b0d4f50a67aae5b2ab09696
+msgid "The ``server create`` argument is used to create a new |amazon ec2| cloud instance. This will provision a new image in |amazon ec2|, perform a |chef| bootstrap (using the |ssh| protocol), and then install |chef| on the target system so that it can be run as a |chef client| and communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:18
+# 0023297392b1492c80cbcf2b543d953f
+msgid "|bootstrap protocol|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:27
+# 9fcda7a2779149b8a9a6f43f884d9d0d
+msgid "|ebs-size|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:30
+# 420e3c652b37496f961b59ad43c183e4
+msgid "|ebs-no-delete-on-term|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:33
+# a80302bd64c34f33a4397e597114bda4
+msgid "|ephemeral device|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:39
+# 1d55c9f514174aad84fbfa5821d6ab5c
+msgid "|fqdn amazon ec2|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:42
+# c8fa3adeb0364761a6b31475fbdd6a77
+msgid "|group ids| Required when using |amazon vpc|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:45
+# 11545b5aa24e4c4387de2e657dbd471c
+msgid "|groups| Not supported when using |amazon vpc|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:48
+# 432177ccbf3440d1b14c4bb8e5e28230
+msgid "|hint|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:66
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:33
+# 14380db78a454f38b6089e2cca0c086f
+# 9edc49d603f54cd4b9aa5c36da7bc1ec
+msgid "|ssh-port|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:81
+# 903a896b6fd5498590f0f3c55d6177ff
+msgid "|subnet|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:84
+# 78a74f723c7e4d3989bd691df499708f
+msgid "|ssh-key amazon ec2|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:87
+# 4963eed76bf1454e81fa0e8085e88c5e
+msgid "|attribute ssh| This should be an |amazon ec2| server attribute."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:90
+# 9ad9926a34e64d5bbeb9b851448026cc
+msgid "|tags|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:96
+# 2a5a6d59409d4f0bbbd7f540754dbe64
+msgid "|user-data|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:99
+# 08fd7ba209b54ceeb1d69de07fd25a71
+msgid "|ssh-gateway|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:105
+# 91b720115f23495e92691b98458441f4
+msgid "|availability-zone amazon ec2|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:109
+# 1f14131f115f4a64a0196ed88a6e4d9a
+msgid "For example, to launch a new Amazon EC2 instance with the \"webserver\" role, enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_create.rst:115
+# 178c5bffc8c74c8ea2fd18d5718cfd43
+msgid "To launch a new Amazon EC2 instance with multiple roles, enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:6
+# d455f787759d422eac68705f8171cc6f
+msgid "The ``server delete`` argument is used to delete one or more nodes that are running in the |amazon ec2| cloud. To find a specific cloud instance, use the ``knife ec2 server list`` argument. Use the ``--purge`` option to delete all associated node and client objects from the |chef server| or use the ``knife node delete`` and ``knife client delete`` sub-commands to delete specific node and client objects."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:21
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:24
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:21
+# 04afc7b83a4a4ca6b11239a201feea32
+# 5deeded7949d4ab581365bf2f75ee158
+# f497f64c07a64fb9978d2f1258c86d25
+msgid "|node-name purge|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:24
+# 9c3d9c45d9f04e52939607069e0bd722
+msgid "|purge amazon ec2|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_delete.rst:31
+# 29284cb4bb2342b1938dbd617befefae
+msgid "For example, to delete a node called \"preprod\" in an instance named \"operations\", enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_list.rst:6
+# ead92f11b5994b1c99d51beb3ac02afb
+msgid "The ``server list`` argument is used to find instances that are associated with a |amazon ec2| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_list.rst:18
+# de22dafb31f9407684abec5750cc0d9e
+msgid "|no name tags|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_ec2_server_list.rst:24
+# 40dd70639cfa49389b8330073d29819b
+msgid "|tags list|"
+msgstr ""
+
+#: ../source/knife_plugins.rst:153
+# eb58d55ff534417ea77e8919acf7707a
+msgid "eucalyptus (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus.rst:6
+# 3300e4fa445d45dd87d69b3101c21b40
+msgid "|knife eucalyptus|"
+msgstr ""
+
+#: ../source/knife_plugins.rst:157
+#: ../source/knife_plugins.rst:199
+#: ../source/knife_plugins.rst:228
+#: ../source/knife_plugins.rst:265
+#: ../source/knife_plugins.rst:290
+# 0ba08ccb98b34f06a94ec15849bfc935
+# a057cf52540e47818c57a7642f176eb8
+# f08b5ce1dd77464d97c0f51cb18287cc
+# edfb79af3e0a4995adff3eaf3c79759e
+# 707207d4c5f04e06a51c6a79a7a10a98
+msgid "flavor list"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:6
+# 7dda9445157042cb811fa82992aa0e5e
+msgid "The ``flavor list`` argument is used to get a list of servers from the |eucalyptus| environment, listed by ID, architecture, RAM, and disks, and cores."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:15
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:15
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:15
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:15
+#: ../../includes_knife/includes_knife_eucalyptus_server_list.rst:15
+# 69e1b5055ee04f62bf5ccf5c756ef4a3
+# 8e1291d1f23c457081aa15580df79274
+# a6d07f9f2e4a40d4a3b58ed43b3804a9
+# f55814d7220b4c738b4ec1417e95e99c
+# 4e5255c032b74670984ef5b71581022c
+msgid "|euca-access-key-id|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:18
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:21
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:21
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:18
+#: ../../includes_knife/includes_knife_eucalyptus_server_list.rst:18
+# 685d85ed702c49d3b308334584af66b7
+# c2d1f7bf80eb4542b15208e77ef86bdc
+# 583ff7eb22f54a079361a7f12acf3fd2
+# 8cfe259e36ea4914a794bacb27efcc2e
+# ce746416f5104b36832994063982afbf
+msgid "|euca-api-endpoint|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:21
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:24
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:36
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:24
+#: ../../includes_knife/includes_knife_eucalyptus_server_list.rst:21
+# d796fcf864dc4afb91eb6a08070a0f22
+# 164421031d2f4b99a8c953b1392091ae
+# 9fef4837a3c447119fe0308f702a6450
+# 3f4c3bd252e940ea92b577750c764efe
+# f77878be1f1d480393af419b483e4505
+msgid "|euca-secret-access-key|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:24
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:27
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:54
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:27
+#: ../../includes_knife/includes_knife_eucalyptus_server_list.rst:24
+# 19946d6f17bd42699c5fc102ab6a28a2
+# 7b6b8869ff9742d990f5220ef9812888
+# ec807d5992c84fa88c1b847e37344cb6
+# 12603d442442429ca86bded19ca349d9
+# 2adbd27e89fb48d99ab4b976ad6c70b2
+msgid "|region eucalyptus|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst:28
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:31
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:31
+#: ../../includes_knife/includes_knife_hp_image_list.rst:31
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:28
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:28
+# d2e0339454d54b7aa6cd1f5d1c3fbf99
+# c0e339aa2d8249b6bd1c36c391626cc1
+# 17521b4bab954eecac3a12a494140143
+# d002c79728a044469e4e9524354e652b
+# 113e5031b24d459da9db8a9cfc51ed70
+# 3639bd16395c41dbb20332bfe8e1bd14
+msgid "For example, enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_image_list.rst:6
+# cdaf2c4374074343b903195d744bbd20
+msgid "The ``image list`` argument is used to list of images from the |eucalyptus| environment, listed by ID, kernel ID, architecture, and location."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:6
+# ba6d94a2706646b185e580ed3c86a6b4
+msgid "The ``server create`` argument is used to create a new |eucalyptus| cloud instance. This will provision a new image in |eucalyptus|, perform a |chef| bootstrap (using the |ssh| protocol), and then install |chef| on the target system so that it can be run as a |chef client| and communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:27
+#: ../../includes_knife/includes_knife_hp_server_create.rst:30
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:27
+# d5dce1721af04572bee70f105b6678da
+# bf7d6caa1e634e24acfc1b51ba3bd49d
+# f358ed9663a74a4cb175137973a28643
+msgid "|groups|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:57
+# 48c70cff29954d8686060f471ef82552
+msgid "|ssh-key eucalyptus|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_server_create.rst:66
+# 328a3db1dda64517b6bebf4481f2446c
+msgid "|availability-zone eucalyptus|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:6
+# 3734b800edaa4e9b8981415846e1ca4f
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |eucalyptus| cloud. To find a specific cloud instance, use the ``knife eucalyptus server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst:31
+# 76357ab533b0487da588be8f40f25b83
+msgid "For example, to delete an instance named \"devops2012\", enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_eucalyptus_server_list.rst:6
+# b2cc2e72ce9043ff9562cae0627638a6
+msgid "The ``server list`` argument is used to find instances that are associated with a |eucalyptus| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../source/knife_plugins.rst:178
+# d5d3c6017d0140679ece71281c509695
+msgid "google (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google.rst:6
+# cd72acf2a72949da96c61fd9e7316bc4
+msgid "|knife google|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:6
+# 7ecd1fd9645d4be8827501e48498d630
+msgid "The ``server create`` argument is used to create a new |google compute engine| cloud instance. This will provision a new image in |google compute engine|, perform a |chef| bootstrap (using the |ssh| protocol), and then install |chef| on the target system so that it can be run as a |chef client| and communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:18
+# 7136e50c39804ea790502b6c42dd7eeb
+msgid "|external-ip-address|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:24
+# 595eb3c0ebdf4324993ff7c3d2ab9ba9
+msgid "|private-key-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:27
+# cacedeec2a9043acb0dea91c33f771d6
+msgid "|google-image|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:30
+# a21563040966497ab3e2e3627cc67924
+msgid "|public-key-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:33
+# 0fb14e82948d472ab40326065e308ca1
+msgid "|network|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:39
+#: ../../includes_knife/includes_knife_google_server_delete.rst:15
+#: ../../includes_knife/includes_knife_google_server_list.rst:15
+# d6b83a81a94c4a5ab8bff11269f9007e
+# 0af5a6eafb8b4a8d9906c9ea34d24fb8
+# 8e64aacb59424d5daff872a97f83909e
+msgid "|project_id|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:42
+# cf7d1cf3ba414a11b12fccfac7a3b037
+msgid "|internal-ip-address|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:48
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:57
+# 3ea85dc9b477400f825a41f17a056760
+# e7d28abbf49347369b53b89d0602430e
+msgid "|server-name|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_create.rst:57
+# b351416498a8429c8a696fe8142d2a7e
+msgid "|availability-zone google|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_delete.rst:6
+# 00ce5533007b4c2c9749635b343a6734
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |google compute engine| cloud. To find a specific cloud instance, use the ``knife google server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_delete.rst:19
+# 6bd972ee48c14637988d45e8d06a59f6
+msgid "For example, to delete a server named \"devops01\" from a project named \"engineering\", enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_list.rst:6
+# fc52b9a3a8c44e23a6a30b16b455d2a4
+msgid "The ``server list`` argument is used to find instances that are associated with a |google compute engine| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_google_server_list.rst:19
+# 33589a87e727490fb83abec14e59dd56
+msgid "For example, to view a list of instances associated with a project named \"dev-01\", enter:"
+msgstr ""
+
+#: ../source/knife_plugins.rst:195
+# 691c9daa66af49778715a239507080db
+msgid "hp (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp.rst:6
+# 66914ba1fb3a4a9d99830a68d454a9d9
+msgid "|knife hp|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:6
+# aacc0a388c5345b6987130df85b9b4af
+msgid "The ``flavor list`` argument is used to get a list of servers from the |hp cloud| environment, listed by ID, name, cores, RAM, and disk size."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:15
+#: ../../includes_knife/includes_knife_hp_image_list.rst:15
+#: ../../includes_knife/includes_knife_hp_server_create.rst:15
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:15
+#: ../../includes_knife/includes_knife_hp_server_list.rst:15
+# bdbaf4cea172485ab8739f56e2025c37
+# 84b6e884dde043719b7a96186522b1e6
+# 0a831c3e89cf43639b7152b2815c5e9e
+# 7e35fbbf9d4a485c88bb77e539196cc0
+# 7f412cf15d7d4028b9e0e5a81ccdf06e
+msgid "|hp-account|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:18
+#: ../../includes_knife/includes_knife_hp_image_list.rst:18
+#: ../../includes_knife/includes_knife_hp_server_create.rst:33
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:18
+#: ../../includes_knife/includes_knife_hp_server_list.rst:18
+# f8f2e022d9334d0289eb8af7ced6a8d0
+# 434dc9d4a80540148ed8305d34e357dd
+# 87e09eb7ad5a4cd688ba1712d5dfd789
+# 239c7594617a40edae527c1d27065a5d
+# 5a5c472a04f7465db8f2b0c772cb5fc5
+msgid "|hp-auth|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:21
+#: ../../includes_knife/includes_knife_hp_image_list.rst:21
+#: ../../includes_knife/includes_knife_hp_server_create.rst:42
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:21
+#: ../../includes_knife/includes_knife_hp_server_list.rst:21
+# a366101570e44bbdb3469eed39d7cd1f
+# f4f84c1c3ed7416791adece924bade52
+# 91438a4d25244588b931c5d164a04ee1
+# 3ad788f3a2814915b44739046456c49b
+# 8f7f76e8f0d64910be0865af7a08870b
+msgid "|hp-secret|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:24
+#: ../../includes_knife/includes_knife_hp_image_list.rst:24
+#: ../../includes_knife/includes_knife_hp_server_create.rst:63
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:27
+#: ../../includes_knife/includes_knife_hp_server_list.rst:24
+# 560645955c7947b5abf184ee7c44a13f
+# 4948d0b0a9ae47f18758d7364e3fc650
+# e9255c26eb6b4988ab3b06bf33a845fe
+# 7022d2992f084018ba87885aa4c32113
+# 2e42a0c9923a46e4bc791b07c558da26
+msgid "|hp-tenant|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_flavor_list.rst:27
+#: ../../includes_knife/includes_knife_hp_image_list.rst:27
+#: ../../includes_knife/includes_knife_hp_server_create.rst:72
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:30
+#: ../../includes_knife/includes_knife_hp_server_list.rst:27
+# cdc6cc7d76a94676b98a8e8fc41b8b74
+# 0a4811ed508e43a58cd32066915b4f20
+# f81193d378764cde93fa8f6c4987d334
+# 77a285eccf6d46988067987248426ed2
+# ab9b518094fc4b51a51248349a962e7c
+msgid "|hp-zone|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_image_list.rst:6
+# 8541e98042fa4ea8bfcccab5c713d3bb
+msgid "The ``image list`` argument is used to list of images from the |hp cloud| environment, listed by ID and name."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_server_create.rst:6
+# bbe4896334c94c58a636ebb21aee2f6d
+msgid "The ``server create`` argument is used to create a new |hp cloud| cloud instance. This will provision a new image in |hp cloud|, perform a |chef| bootstrap (using the |ssh| protocol), and then install |chef| on the target system so that it can be run as a |chef client| and communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_server_create.rst:18
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:15
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:15
+# 4071901ae40f4f6cb748c09196ad097c
+# f5ce7782be584d6ba06dfc00f3404067
+# 08a5ad0598f348fd8bd0b3d94208d22e
+msgid "|bootstrap-proxy|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_server_create.rst:60
+# 360675caba1b4a05bdb78e5426b03e5a
+msgid "|ssh-key hp|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_server_create.rst:76
+# 6fd31be03c6a4e04992edf788b9ade95
+msgid "For example, to provision a server and then perform a bootstrap operation (using |ssh|), enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_server_create.rst:82
+# f5e92802f2194eb99c4c860fbc4e488f
+msgid "to return something like:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:6
+# d22a56e59a394c6d9ee0bb4f148d02d6
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |hp cloud| cloud. To find a specific cloud instance, use the ``knife hp server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_server_delete.rst:34
+# d21bcb1c37494ff7a26183be4e517fdc
+msgid "For example, to delete an instance named \"65646\", enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_hp_server_list.rst:6
+# 334029e23cfb4e009a95d6b7595c6017
+msgid "The ``server list`` argument is used to find instances that are associated with an |hp cloud| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../source/knife_plugins.rst:220
+# 5d52f080b13b424aafbc4cd610f4ce95
+msgid "linode (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode.rst:6
+# 49bd1556cb114da5b6ed9f0d440057e8
+msgid "|knife linode|"
+msgstr ""
+
+#: ../source/knife_plugins.rst:224
+# 6de14ac69b1544d3ae678e5b10593ea3
+msgid "datacenter list"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_datacenter_list.rst:6
+# 6cfe46052a5243b980bdba03cbe2f35e
+msgid "The ``datacenter list`` argument is used to view a list of available data centers, listed by data center ID and location."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_datacenter_list.rst:15
+#: ../../includes_knife/includes_knife_linode_flavor_list.rst:15
+#: ../../includes_knife/includes_knife_linode_image_list.rst:15
+#: ../../includes_knife/includes_knife_linode_kernel_list.rst:15
+#: ../../includes_knife/includes_knife_linode_server_create.rst:15
+#: ../../includes_knife/includes_knife_linode_server_delete.rst:15
+# 37c418c2881046a1b3db3bb5ed17c604
+# 646aec981f2b421da0f7b45f23c7218c
+# 621d6a70fb564fc2a3273eecdf689f71
+# e835dce5c02846828cf0398477cf7d80
+# 631f58e8eda64ecf9728aca979838190
+# 4fb48730be3d48eaa54320ad50d38910
+msgid "|linode-api-key|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_flavor_list.rst:6
+# 1b14e2d291d246b58ec0ec6daf2c6ef4
+msgid "The ``flavor list`` argument is used to get a list of servers from the |linode| environment, listed by ID, name, RAM, disk, and Price."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_image_list.rst:6
+# aaecf6caa26f428ca6bbc0accea18eb4
+msgid "The ``image list`` argument is used to list of images from the |linode| environment, listed by ID, name, bits, and image size."
+msgstr ""
+
+#: ../source/knife_plugins.rst:236
+# fa3272ffcacd47bf8fdddb18355b1ef8
+msgid "kernel list"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_kernel_list.rst:6
+# 24cbbaca021d4dc1947244e9dbaf17ac
+msgid "The ``kernel list`` argument is used to view a list of available kernels, listed by ID and name."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_create.rst:6
+# c5c91c21829f4910bd4291b2a215732b
+msgid "The ``server create`` argument is used to create a new |linode| cloud instance. This will provision a new image in |linode|, perform a |chef| bootstrap (using the |ssh| protocol), and then install |chef| on the target system so that it can be run as a |chef client| and communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_create.rst:24
+# 0ca2fda435b743e4afd20d86682bd4cc
+msgid "|linode-datacenter|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_create.rst:27
+# 480bc1ae720346cdae0e5b50d9017403
+msgid "|linode-flavor|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_create.rst:33
+# 35edcea545cc4b2295f514ce0f2b2dbc
+msgid "|linode-image|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_create.rst:36
+# f8e56c34c27f48b7850d94bc25303c92
+msgid "|linode-kernel|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_create.rst:39
+# 1f2464b2085f44799e7f8bdaf5aa8606
+msgid "|linode-node-name|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_delete.rst:6
+# 105aa56025764ff6bf5d7ce37f2d4059
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |linode| cloud. To find a specific cloud instance, use the ``knife linode server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_list.rst:6
+# 6ccd1044c0864d519c0d23bc4511a432
+msgid "The ``server list`` argument is used to find instances that are associated with a |linode| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../source/knife_plugins.rst:252
+# 7897629b869345379ce9878f4584679b
+msgid "server reboot"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_server_reboot.rst:6
+# ceca8befcb254c548ea16923abef9c0b
+msgid "The ``server reboot`` argument is used to reboot all of the servers in a |linode| environment."
+msgstr ""
+
+#: ../source/knife_plugins.rst:256
+# 9efc676f05f442b99c67be739f67df9c
+msgid "stackscript list"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_linode_stackscript_list.rst:6
+# 89c5780cd85b4ca99e3d3408d62c8580
+msgid "|linode stackscripts| are customized distribution templates. This argument is used to view a list of |linode stackscripts| that are currently being used."
+msgstr ""
+
+#: ../source/knife_plugins.rst:261
+# 2b1e637653e8403f82b841d5cd7c0b2d
+msgid "openstack (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack.rst:6
+# 528695f81cbe4cc7803aec1815af1d43
+msgid "|knife openstack|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:6
+# c50fb96765c94e01868179e91da77216
+msgid "The ``flavor list`` argument is used to show a list of flavors in an |openstack| environment, including details such as ID, name, architecture, RAM, disk, and cores."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:15
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:15
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:15
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:15
+#: ../../includes_knife/includes_knife_openstack_server_list.rst:15
+# 2a2600a3e1ea4bb79ff82f1b77e16bbf
+# f6a8b8237bb5428faa979e8da3f1f11e
+# 725bed677b6f4ab98420552e58a3ac88
+# 797200bec0ce4f2f91650301e6069733
+# 7d741a6854494cea8f003dc28c3b16ff
+msgid "|openstack-access-key-id|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:18
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:18
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:36
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:18
+#: ../../includes_knife/includes_knife_openstack_server_list.rst:18
+# 7c07946417e542d79f722f7062af2ed7
+# d37e495addfc44baad5b43afdacea286
+# 639df7ba4f734ae2b45b02d3a4bf0968
+# 4f31363f89cf4593a12e692c69990803
+# dbc1d2ee21bc4d8aa9d1302a63fdb8e2
+msgid "|openstack-secret-access-key|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:21
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:21
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:45
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:21
+#: ../../includes_knife/includes_knife_openstack_server_list.rst:21
+# d38e6bb7496e483d88bc790b409ff482
+# 3564b92c0a904ab4bb38cb1ffb1a2fc3
+# 581c6089435f486d8d1283c99fe386ac
+# ebef1aaa052c47b285a38c9a052e23aa
+# 71dd29c48cc546d18fabaa5c634026f8
+msgid "|openstack-api-endpoint|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_flavor_list.rst:24
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:24
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:57
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:24
+#: ../../includes_knife/includes_knife_openstack_server_list.rst:24
+# 1f5d2aee861f4b89a3f36eed06d080de
+# ce0dbcf258ed426880f62b6f4ed9886e
+# d7cffa33f72a4b5d82f83cc8e4da7fd2
+# f78b841535a2482c9e4f03f9db8737eb
+# fe5031b5436b4a8392d266201e6d18ec
+msgid "|region openstack|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:6
+# e441eb37885545a1bfe484f2a277fd81
+msgid "The ``image list`` argument is used to show a list of images in an |openstack| environment, including details such as ID, kernel ID, architecture, root store, name, and location."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_image_list.rst:28
+# 5809447483224752912e43f507b0bd5b
+msgid "For example, to view a list of images, enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:6
+# 65372850162e4bb397a1535965685721
+msgid "The ``server create`` argument is used to create a new |openstack| cloud instance."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:60
+# c4769622d87041998939d6e68756e5d7
+msgid "|ssh-key openstack|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_server_create.rst:69
+# 1f5c9a02c0ec4570811171a7b1687844
+msgid "|availability-zone openstack|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:6
+# 1d204a91a04042ddabb327487e71cf7a
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |openstack| cloud. To find a specific cloud instance, use the ``knife openstack server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_server_delete.rst:28
+# 9a7855495b124c7daf3a0e151d8b0fa8
+msgid "For example, to delete a server named \"qa-test-01\", enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_openstack_server_list.rst:6
+# e7fd5af74e564eacb1a1d3a833623ba5
+msgid "The ``server list`` argument is used to find instances that are associated with an |openstack| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../source/knife_plugins.rst:286
+# 4e6ae4e592a24863ac7736d87da240a8
+msgid "rackspace (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace.rst:6
+# e8527035b8064eda9919b42f49ff0a2f
+msgid "|knife rackspace|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_flavor_list.rst:6
+# 2bf6f2bc524947dda8de87df49571641
+msgid "The ``flavor list`` argument is used to view a list of flavors that are running on servers that are associated with a |rackspace| account, including the server ID, server name, architecture, RAM, and disk. The results may show flavor that are not currently managed by the Chef Server."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_flavor_list.rst:15
+#: ../../includes_knife/includes_knife_rackspace_image_list.rst:15
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:15
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:15
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:15
+# c8034fdb2254486696f1ce1bcfb95973
+# b2f7e8ec89ec480ebefa08d3dccd547b
+# fdfef408982a4d67834bbdc26fe657a5
+# 7f51e803741a400ebbc4145b5886a721
+# 8b6f53a82bb94c8394d824a9a04a46d9
+msgid "|rackspace-username|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_flavor_list.rst:18
+#: ../../includes_knife/includes_knife_rackspace_image_list.rst:18
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:36
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:18
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:18
+# afcf6142194c49d6a2e3aa8bfffac4b1
+# b27a86ea4dee41c88e7e188828dd4fde
+# b873d98ac3a04d5e95596237a2542a21
+# b1f50e75dff34121b2b8065ec3123815
+# 0f73192c14cb421b9bfc751a98ba2aa3
+msgid "|rackspace-api-key|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_flavor_list.rst:21
+#: ../../includes_knife/includes_knife_rackspace_image_list.rst:21
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:54
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:27
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:21
+# 67137feb0c8c45dcb1b5edd5b78722f6
+# 648badcab39549e5b3da9fd7d7b4e3d5
+# 6d4907da288d47d18537b2b1892f55f4
+# ea14ca24d67e4228b82a051f9a3966e6
+# 22e2b0e8752e4bd180214e5f6a4662c3
+msgid "|rackspace-api-auth-url|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_image_list.rst:6
+# dcc476aa0f13426ebb49715788b83c50
+msgid "The ``image list`` argument is used to view a list of images that are running on servers that are hosted at a |rackspace| cloud services, including returning a list of each server (and server ID)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:6
+# 486a8233fad64dd7968dd50884493e21
+msgid "The ``server create`` argument is used to create a new |rackspace| cloud instance. This will provision a new image in |rackspace|, perform a |chef| bootstrap (using the |ssh| protocol), and then install |chef| on the target system so that it can be run as a |chef client| and communicate with a |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:33
+# 219cd1d6884d45c197aeba072ccdef6d
+msgid "|json-attributes|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:39
+# 11cebaea648f4550b1a402a57ca5efd2
+msgid "|rackspace-metadata|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:67
+# 9f9c97e5df214c1184fbed12dad0e1b2
+msgid "To launch a new Rackspace instance with the \"webserver\" role, enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_create.rst:73
+# cb0eaf199d414912b757933029439eac
+msgid "To launch a new Rackspace instance with multiple roles, enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:6
+# c51f2d1d06db4c62b7eed4a4d05ad78b
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |rackspace| cloud. The corresponding node on the |chef| server can also be deleted with the same action. To find a specific cloud instance, use the ``knife rackspace server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:24
+# 061db48919f04a8981de88cb58ca3afb
+msgid "|purge node rackspace|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:31
+# 59b31c86946a4a4483f31e2d70ad018d
+msgid "For example, to delete a |rackspace| instance with an Instance ID of \"12345678\", enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_delete.rst:50
+# 08a73dae9cdc4103b22ae6ddfe9d6567
+msgid "Confirm the deletion:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:6
+# 02d881eac1b745268db8f302874fc8ed
+msgid "The ``server list`` argument is used to find instances that are associated with a |rackspace| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_rackspace_server_list.rst:25
+# 04e4cb68b17342989b5e195702a9f6b5
+msgid "For example, to find all Rackspace instances, enter:"
+msgstr ""
+
+#: ../source/knife_plugins.rst:311
+# 04bd580694654ebea6c5eb73ed56e16d
+msgid "terremark (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark.rst:6
+# 6c510018776a4e19a09bda1ae67cae6a
+msgid "|knife terremark|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:6
+# ff072fa05c88491fb6853ac6121ef583
+msgid "The ``server create`` argument is used to create a new |terremark| instance."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:15
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:15
+# 26219b524e064c4abf6a8fd9778c517e
+# b9427aa78aad4391a9ca03a260161230
+msgid "|terremark-username|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:18
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:18
+# f4be422f8cf64d4b925e2adc22a6119a
+# 7a4ca73f4e7244b49c635a396ce2ac9a
+msgid "|terremark-password|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:21
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:24
+# 76debc54defb44ffa4850241823c7106
+# a804e7420d564bd98fe37c4927fa1915
+msgid "|terremark-service|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:25
+# cb429ada56394666a7ec434a39fc3424
+msgid "For example, to create a new instance, enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_create.rst:31
+# 7a3c7f9cb74946c3aa02726cae49fa73
+msgid "To provision a new dual-core 1.0 GB |ubuntu| 10.04 web server with three attached disks with sizes of \"25G\", \"50G\", and \"50G\", enter something like:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_delete.rst:6
+# 1d6b039a682442a4a38fa05b482d54c2
+msgid "The ``server delete`` argument is used to delete one or more instances that are running in the |terremark| cloud. To find a specific cloud instance, use the ``knife terremark server list`` argument. Use the ``knife node delete`` and ``knife client delete`` sub-commands to delete associated node and client objects (if required)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_delete.rst:16
+# 0c073d786ce6432a81e69022631919d4
+msgid "For example, to delete an instance with an identifier of \"abcdefg\", enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_terremark_server_list.rst:6
+# 7d0784e89e7540869992a3f1ae17d501
+msgid "The ``server list`` argument is used to find instances that are associated with a |terremark| account. The results may show instances that are not currently managed by the |chef server|."
+msgstr ""
+
+#: ../source/knife_plugins.rst:328
+# bcc24438f29a4b4ba4f610b15db0e089
+msgid "windows (plug-in)"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows.rst:6
+# 9caf919c4a7e41ef97a156952e8b6fd1
+msgid "|knife windows|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows.rst:10
+# f3628a2d6bc047f2a4b1ee3bc3c75c41
+msgid "This sub-command has the following syntax when connecting to one (or more) machines that run |windows|::"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows.rst:14
+# 3398521d38d04bb79e5f0b666d6a9aa9
+msgid "And the following syntax when performing a bootstrap::"
+msgstr ""
+
+#: ../source/knife_plugins.rst:332
+# cbbbe1b5b90248c5ab43ded3e5495f03
+msgid "bootstrap windows ssh"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:6
+# 22abd342f6aa4a31a7b7fc7bb5b456aa
+msgid "The ``bootstrap windows ssh`` argument is used to bootstrap |chef| installations in a |windows| environment, using a command shell that is native to |windows|."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:45
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:33
+# da560d38ea464bddb358a1c8eb64bd88
+# 9ef7e471f6fe4dcbbc31c0b6ec7be727
+msgid "|secret|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:48
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:36
+# 55f1eac17b3148f59f075bc7a17f13ee
+# cfa30a1638ce4e5a85119fab965902a5
+msgid "|secret-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst:58
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:43
+# 6edb3428233a4804be0b27ca6f8321c6
+# 08c91b04c51242498262e08846e2d498
+msgid "For example:"
+msgstr ""
+
+#: ../source/knife_plugins.rst:336
+# 9e93ee6af68144b0b82c27525de5392d
+msgid "bootstrap windows winrm"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst:6
+# ff6f6e89d14b481bbe36e231bc9f518a
+msgid "The ``bootstrap windows winrm`` argument is used to bootstrap |chef| installations in a |windows| environment, using |windows remote management| and the |ws management| protocol for communication. This argument requires the |fully qualified domain name| of the host machine to be specified."
+msgstr ""
+
+#: ../source/knife_plugins.rst:340
+# 52a920177d3e4261833b0a874df58da2
+msgid "winrm"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:6
+# 463e5305e3ff43959b2fbae750459776
+msgid "The ``winrm`` argument is used to create a connection to one or more remote machines. As each connection is created, a password must be provided. This argument uses the same syntax as the ``search`` sub-command."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:15
+# 7c89457d3ba64e1aa36f743909a71a1d
+msgid "|attribute ssh| The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:18
+# 01b004efcd9a476f9bcc8813570865f9
+msgid "|ca-trust-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:24
+# 5c6da6a065f3427594e0f7a28657d5dd
+msgid "|keytab-file|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:27
+# 33c34b4081284483ac964bd3fd794968
+msgid "|manual-list|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:30
+# 9f1fd419bdad47688af0e8fbdada2c32
+msgid "|winrm-port|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:33
+# a8e06cab30944db88cfc65c884626e36
+msgid "|winrm-password|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:36
+# 120b2444027c478b83b0478d38e33027
+msgid "|kerberos-realm|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:39
+# 5994a78a89654f55a37ba763dee81947
+msgid "|returns|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:42
+# 7d3a9daebea24c5b8f5272d1ee67d8f9
+msgid "|kerberos-service|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:45
+# 6585b1bd01624e069d6b49543f1669f9
+msgid "|SEARCH_QUERY SSH|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:48
+# 3533f498604949d8a261a25e9f76a21f
+msgid "|SSH_COMMAND|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:51
+# 81a6bd872f7743df807047989e112ce2
+msgid "|winrm-transport|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:54
+# 107cd70dcae34beaa2427b663f62b32e
+msgid "|winrm-user|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:58
+# 411053ca4cce4acea8894ff90a84f503
+msgid "For example, to find the uptime of all web servers, enter:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:64
+# 96f076aa37d143a68b1110fc358d7f54
+msgid "Or, to force a |chef| run:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_windows_winrm.rst:76
+# 87e6943d056648c58c8b45e23edb6351
+msgid "Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Fri, 04 Mar 2011 22:00:53 +0000]``."
+msgstr ""
+
