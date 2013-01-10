@@ -1324,6 +1324,10 @@ service
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_service.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_service_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_service_actions.rst
