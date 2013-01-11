@@ -5,8 +5,8 @@ The ``deploy_revision`` provider is the recommended provider, even if it is not 
 
 The ``deploy_revision`` provider results in deployed components under the destination location that is owned by the user who runs the application. This is sometimes an issue for certain workflows. If issues arise, consider the following: 
 
-* Incorporate changing permissions to the desired end state from within a recipe; 
-* Add a ``before_restart`` block to fix up the permissions; 
-* Have an unprivileged user (for example: ``opscode``) be the owner of the ``deploy`` directory and another unprivileged user (for example: ``opscodeapp``) run the application. Most often, this is the solution that works best. 
+* Incorporate changing permissions to the desired end state from within a recipe
+* Add a ``before_restart`` block to fix up the permissions
+* Have an unprivileged user (for example: ``opscode``) be the owner of the ``deploy`` directory and another unprivileged user (for example: ``opscodeapp``) run the application. Most often, this is the solution that works best
 
 When using the ``deploy_revision`` provider, and when the deploy fails for any reason, and when the same code is used to re-deploy, the action should be set manually to ``:force_deploy``. Forcing the re-deploy will remove the old release directory, after which the deploy can proceed as usual. (Forcing a re-deploy over the current release can cause some downtime.) Deployed revisions are stored in ``(file_cache_path)/revision-deploys/(deploy_path)``.

@@ -373,7 +373,7 @@ deploy_branch
 
 deploy_revision
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_deploy_providers_deploy_resource.rst
+.. include:: ../../includes_resources/includes_resource_deploy_providers_deploy_revision.rst
 
 timestamped_deploy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

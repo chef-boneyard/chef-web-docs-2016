@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example will run at 8:00 PM, every weekday (Monday through Friday), but only in November:
+The following example shows a schedule that will run at 8:00 PM, every weekday (Monday through Friday), but only in November:
 
 .. code-block:: ruby
 

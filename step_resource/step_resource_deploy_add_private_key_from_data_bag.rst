@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-If you only want people who have access to your Chef organization to get access to this key, you could add it to an encrypted data bag instead. You could also add the repository, deploy_to, etc to the data bag if desired as well.
+If you only want people who have access to your |chef| organization to get access to this key, you could add it to an encrypted data bag instead. You could also add the repository, deploy_to, etc., to the data bag if desired as well.
 
 To add a private key to a node:
 

@@ -24,11 +24,11 @@ Each of these callback types can be used in one of three ways:
 
 * To pass a block of code, such as |ruby| or |python|
 * To specify a file
-* To do neither; |chef| will look for a callback file named after one of the callback types (``before_migrate.rb``, for example) and if the file exists, to evaluate it as if it were a specified file.
+* To do neither; |chef| will look for a callback file named after one of the callback types (``before_migrate.rb``, for example) and if the file exists, to evaluate it as if it were a specified file
 
 Within a callback, there are two ways to get access to information about the deployment:
 
-* ``release_path`` can be used to get the path to the current release.
-* ``new_resource`` can be used to access the deploy resource, including environment variables that have been set there. (``new_resource`` is a preferred approach over using the ``@configuration`` variable.)
+* ``release_path`` can be used to get the path to the current release
+* ``new_resource`` can be used to access the deploy resource, including environment variables that have been set there (using ``new_resource`` is a preferred approach over using the ``@configuration`` variable)
 
 Both of these options must be available at the top-level within the callback, along with any assigned values that will be used later in the callback.

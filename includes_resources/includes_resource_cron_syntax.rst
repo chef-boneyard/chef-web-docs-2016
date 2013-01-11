@@ -3,8 +3,6 @@
 
 The syntax for using the |resource cron| resource in a recipe is as follows:
 
-The syntax for the ``cron`` resource is as follows:
-
 .. code-block:: ruby
 
    cron "name" do
