@@ -13,7 +13,7 @@ The basic syntax of a definition:
 
 .. code-block:: ruby
 
-   define :resource_name, :parameter => :argument, :parameter => :argument
+   define :resource_name, :parameter => :argument, :parameter => :argument do
      params_hash
    end
 
