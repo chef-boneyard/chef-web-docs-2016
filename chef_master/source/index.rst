@@ -83,7 +83,8 @@ Chef Documentation
 
    images
 
-   chef_quick_overview 
+   chef_quick_overview
+   resource_batch
    resource_registry_key
    dsl_recipe_method_registry_data_exists
    dsl_recipe_method_registry_get_subkeys
