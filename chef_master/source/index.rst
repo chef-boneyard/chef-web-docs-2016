@@ -10,25 +10,25 @@ Chef Documentation
 
 
 
-* **References**: :doc:`resource` | :doc:`knife` | :doc:`plugin_knife` | :doc:`lwrp` | :doc:`api_cookbooks_site` |  :doc:`api_chef_server` | the :doc:`chef_client` executable | :doc:`config` | :doc:`dsl_recipe`
+* **References**: :doc:`Resources and Providers </resource>` | :doc:`Knife </knife>` | :doc:`Knife Plug-ins </plugin_knife>` | :doc:`Lightweight Resources </lwrp>` | :doc:`api_cookbooks_site` |  :doc:`api_chef_server` | :doc:`chef-client </chef_client>` | :doc:`Configuration Files </config>` | :doc:`dsl_recipe`
 
 
 
-* **Nodes**: :doc:`essentials_nodes` | :doc:`ohai` | :doc:`essentials_handlers` | :doc:`essentials_nodes_chef_run` | :doc:`essentials_chef_client`
+* **Nodes**: :doc:`About Nodes </essentials_nodes>` | :doc:`Ohai </ohai>` | :doc:`Exception and Report Handlers </essentials_handlers>` | :doc:`essentials_nodes_chef_run` | :doc:`essentials_chef_client`
 
 
 
-* **Workstations**: :doc:`essentials_workstation` | :doc:`essentials_repository` | :doc:`essentials_knife`
+* **Workstations**: :doc:`About Workstations </essentials_workstation>` | :doc:`Repository </essentials_repository>` | :doc:`essentials_knife`
 
 
 
-* **The Chef Server**: :doc:`essentials_server` | :doc:`essentials_node_object` | :doc:`essentials_roles` | :doc:`essentials_data_bags` | :doc:`essentials_environments` | :doc:`essentials_search`
+* **The Chef Server**: :doc:`About the Chef Server </essentials_server>` | :doc:`Node Objects </essentials_node_object>` | :doc:`Roles </essentials_roles>` | :doc:`Data Bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Search </essentials_search>`
 
 
 
-* **Cookbooks**: :doc:`essentials_cookbooks` | :doc:`essentials_cookbook_directory` | :doc:`essentials_cookbook_attribute_files` | :doc:`essentials_cookbook_definitions` | :doc:`essentials_cookbook_files` | :doc:`essentials_cookbook_libraries` | :doc:`essentials_cookbook_lwrp` | :doc:`essentials_cookbook_metadata` | :doc:`essentials_cookbook_recipes` | :doc:`essentials_cookbook_resources` | :doc:`essentials_cookbook_templates` | :doc:`essentials_cookbook_versions`
+* **Cookbooks**: :doc:`essentials_cookbooks` | :doc:`essentials_cookbook_directory` | :doc:`Attributes </essentials_cookbook_attribute_files>` | :doc:`Definitions </essentials_cookbook_definitions>` | :doc:`Files </essentials_cookbook_files>` | :doc:`Libraries </essentials_cookbook_libraries>` | :doc:`Lightweight Resources </essentials_cookbook_lwrp>` | :doc:`Metadata </essentials_cookbook_metadata>` | :doc:`Recipes </essentials_cookbook_recipes>` | :doc:`Resources and Providers </essentials_cookbook_resources>` | :doc:`Cookbook Templates </essentials_cookbook_templates>` | :doc:`Cookbook Versions </essentials_cookbook_versions>`
 
-* **Manage Chef:** :doc:`manage_server_hosted`
+* **Manage Chef:** :doc:`Hosted Chef </manage_server_hosted>`
 
 .. Hide the TOC from this file.
 

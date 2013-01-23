@@ -12,7 +12,7 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
 
    * - Approach
      - Description
-   * - :doc:`dsl_recipe_use_ruby`
+   * - :doc:`Use Ruby </dsl_recipe_use_ruby>`
      - Common Ruby techniques can be used with the Recipe DSL methods, including ``if`` and ``case`` statements.
    * - :doc:`dsl_recipe_include_recipes`
      - A recipe can include one (or more) recipes found in other cookbooks by using the ``include_recipe`` keyword. 
