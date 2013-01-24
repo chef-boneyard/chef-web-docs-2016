@@ -67,31 +67,8 @@ This command has the following options:
    |version chef|                    
 
 
-A |chef client| that is running as a daemon can be woken up and started by sending the process a ``SIGUSR1``. For example, to trigger a |chef| run on a machine running |linux|:
-
-.. code-block:: bash
-
-   $ sudo killall -USR1 chef-client
 
 
-To find the process manually, and then start a |chef| run, enter something like:
-
-.. code-block:: bash
-
-   $ ps auxw|grep chef-client
-
-to return something like:
-
-.. code-block:: bash
-
-   root           66066   0.9  0.0  2488880    264 s001  S+   10:26AM   0:03.05
-   /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby /usr/bin/chef-client -i 3600 -s 20
-
-and then enter:
-
-.. code-block:: bash
-
-   $ sudo kill -USR1 66066
 
 
 
