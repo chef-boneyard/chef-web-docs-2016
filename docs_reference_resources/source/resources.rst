@@ -825,6 +825,9 @@ The following examples show how to use the |resource log| resource.
 
 .. include:: ../../step_resource/step_resource_log_set_debug.rst
 
+**Add a message to a log file**
+
+.. include:: ../../step_resource/step_resource_log_add_message.rst
 
 mdadm
 -----------------------------------------------------
