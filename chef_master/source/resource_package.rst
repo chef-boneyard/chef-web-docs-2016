@@ -16,13 +16,25 @@ Specify Options with a Hash
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_hash.rst
 
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_hash_options.rst
+
 Specify Options with a String
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_string.rst
 
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_options_string.rst
+
 Specify Options with a .gemrc File
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
+
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst
 
 Actions
 =====================================================

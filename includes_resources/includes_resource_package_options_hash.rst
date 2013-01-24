@@ -15,10 +15,4 @@ The following |rubygems| options are available for inclusion within a hash and a
 
 For more information about these options, see the |rubygems| documentation: http://rubygems.rubyforge.org/rubygems-update/Gem/DependencyInstaller.html. 
 
-To install a gem with a hash of options
 
-.. code-block:: ruby
-
-   gem_package "bundler" do
-     options(:prerelease => true, :format_executable => false)
-   end
