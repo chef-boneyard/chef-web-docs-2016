@@ -15,7 +15,7 @@ The following example shows how to add a rule named "test_rule" to an IP table u
      action :nothing
    end
 
-   template( "/etc/file_name.local" ) do
+   template "/etc/file_name.local" do
      source "routing/file_name.local.erb"
      notifies :run, 'execute[test_rule]', :delayed
    end

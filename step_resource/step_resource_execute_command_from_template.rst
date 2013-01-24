@@ -10,7 +10,7 @@ The following example shows how to set up IPv4 packet forwarding using the |reso
      action :nothing
    end
    
-   template( "/etc/file_name.conf" ) do
+   template "/etc/file_name.conf" do
      source "routing/file_name.conf.erb"
      notifies :run, 'execute[forward_ipv4]', :delayed
    end
