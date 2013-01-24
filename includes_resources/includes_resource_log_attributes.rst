@@ -11,3 +11,5 @@ This resource has the following has the following attributes:
      - Description
    * - ``level``
      - |level resource log|
+   * - ``message``
+     - |message resource log|
