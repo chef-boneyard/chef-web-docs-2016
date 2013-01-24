@@ -19,6 +19,6 @@ To install a gem with a hash of options
 
 .. code-block:: ruby
 
-   gem_package("bundler") do
+   gem_package "bundler" do
      options(:prerelease => true, :format_executable => false)
    end
