@@ -1,5 +1,5 @@
 =====================================================
-erlang_call
+erl_call
 =====================================================
 
 .. include:: ../../includes_resources/includes_resource_erlang_call.rst

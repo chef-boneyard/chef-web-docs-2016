@@ -504,7 +504,7 @@ The following examples show how to use the |resource env| resource.
 .. include:: ../../step_resource/step_resource_environment_set_variable.rst
 
 
-erlang_call
+erl_call
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_erlang_call.rst
 
