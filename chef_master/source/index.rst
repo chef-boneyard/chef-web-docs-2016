@@ -92,3 +92,4 @@ Chef Documentation
    dsl_recipe_method_registry_has_subkeys
    dsl_recipe_method_registry_key_exists
    dsl_recipe_method_registry_value_exists
+   index_alt
