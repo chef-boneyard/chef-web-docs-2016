@@ -51,7 +51,7 @@ The recipe will be similar to the following:
      )
    end
 
-where:  For 
+where: 
 
 * the ``search`` method in the recipe DSL is used to find the first node that is the database master (of which there should only be one)
 * the ``:adapter`` attribute may also require an attribute to have been set on a role, which then determines the correct adapter

@@ -1518,7 +1518,7 @@ The following examples show how to use the |resource template| resource.
 
 .. include:: ../../step_resource/step_resource_template_consistent_proxy_settings.rst
 
-**Get settings from a local file**
+**Get template settings from a local file**
 
 .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
 
