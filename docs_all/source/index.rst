@@ -56,6 +56,7 @@ Chef Topics
    knife_rb
    knife
    knife_plugins
+   lwrps
    manage_server_hosted
    manage_server_open_source
    metadata_rb
