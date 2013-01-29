@@ -28,8 +28,8 @@ The server
 =====================================================
 * **The basics:** Hosted Chef vs. Private Chef vs. Open Source Chef
 * **The node object:** about | run-lists | deep merge | attributes
-* **Search:** about | indexes | query syntax | keys | targets
-* **Policy:** about | data bags | environments | roles
+* **Search:** :doc:`about </essentials_search>` | :doc:`indexes </essentials_search_indexes>` | :doc:`keys (field names) </essentials_search_keys>` | :doc:`operators </essentials_search_boolean_operators>` | :doc:`patterns </essentials_search_patterns>` | :doc:`query syntax </essentials_search_query_syntax>` | :doc:`special characters </essentials_search_special_characters>` | :doc:`targets </essentials_search_targets>`
+* **Policy:** :doc:`about </essentials_policy>` | :doc:`data bags </essentials_data_bags>` | :doc:`environments </essentials_environments>` | :doc:`roles </essentials_roles>`
 * **Configure:** Hosted Chef | Private Chef | Open Source Chef
 * **Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
 * **Manage:** Hosted Chef | Private Chef | Open Source Chef
@@ -41,10 +41,10 @@ The server
 
 The nodes
 =====================================================
-* **The basics:** overview | chef-client | the Chef run | ohai
-* **Configure:** bootstrap | exceptions and reports
+* **The basics:** :doc:`about </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`the Chef run </essentials_nodes_chef_run>` | :doc:`ohai </ohai>`
+* **Configure:** :doc:`install Chef on a node (bootstrap) </install_step_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`exception and report handlers </essentials_handlers>`
 * **Settings:** :doc:`client.rb </config_rb_client>`
-* **Tools:** :doc:`chef-client </chef_client>`
+* **Tools:** :doc:`chef-client (executable) </chef_client>`
 
 
 

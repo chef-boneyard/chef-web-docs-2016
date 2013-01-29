@@ -63,6 +63,7 @@ Chef Documentation
    essentials_knife
 
    essentials_server
+   essentials_policy
    essentials_node_object
    essentials_data_bags
    essentials_environments
