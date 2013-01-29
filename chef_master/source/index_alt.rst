@@ -6,7 +6,7 @@ Everything you need to know about Chef ...
 
 Getting Started
 =====================================================
-* **From the beginning:** overview (long) | overview (short)
+* **From the beginning:** :doc:`overview (long) </chef_overview>` | :doc:`overview (short) </chef_quick_overview>`
 * **Using Ruby:** Just Enough Ruby for Chef
 * **Tutorial:** part 1 | part 2 | part 3 | part 4
 * **Common scenarios:** scenario | scenario | scenario
