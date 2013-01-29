@@ -8,7 +8,7 @@ All resources share a set of common actions, attributes, conditional executions,
    :widths: 160 440
    :header-rows: 1
 
-   * - Common Item
+   * - Common Functionality
      - Description
    * - :doc:`resource_common_actions`
      - The ``:nothing`` action can be used with any resource or lightweight resource.
