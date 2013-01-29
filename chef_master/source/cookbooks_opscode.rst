@@ -12,9 +12,9 @@ The following cookbooks are authored and maintained by |opscode|:
    :widths: 150 450
    :header-rows: 1
 
-   * - Resource
+   * - Cookbook
      - Description
-   * - :doc:`cookbooks_opscode_chef_handler`
+   * - :doc:`chef_handler </cookbooks_opscode_chef_handler>`
      - |cookbook name chef_handler|
 
 

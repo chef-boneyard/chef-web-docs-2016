@@ -18,6 +18,8 @@ chef_handler
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler.rst
 
+.. note:: This cookbook is available from |github|: https://github.com/opscode-cookbooks/chef_handler.
+
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_attributes.rst
