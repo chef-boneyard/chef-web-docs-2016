@@ -17,7 +17,10 @@ The workstation
 * **The basics:** overview | repository
 * **Knife:** about | common options --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`index rebuild </knife_index_rebuild>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` --- **Single page:** `Knife Reference <http://docs.opscode.com/chef/knife.html>`_ | `Knife Quick Reference (image) <http://docs.opscode.com/_images/qr_knife_web.png>`_
 * **Plugins:** about | common options --- **Commands:** :doc:`azure </plugin_knife_azure>` | :doc:`bluebox </plugin_knife_bluebox>` | :doc:`bluelock </plugin_knife_bluelock>` | :doc:`ec2 </plugin_knife_ec2>` | :doc:`eucalyptus </plugin_knife_eucalyptus>` | :doc:`google </plugin_knife_google>` | :doc:`hp </plugin_knife_hp>` | :doc:`linode </plugin_knife_linode>` | :doc:`openstack </plugin_knife_openstack>` | :doc:`rackspace </plugin_knife_rackspace>` | :doc:`terremark </plugin_knife_terremark>` | :doc:`windows </plugin_knife_windows>` --- **Single page:** `Knife Plugins Reference <http://docs.opscode.com/chef/knife_plugins.html>`_
-* **Configure:** install | sync repository | knife.rb | metadata.rb
+* **Configure:** install | sync repository | :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
+
+
+
 
 The server
 =====================================================
@@ -25,16 +28,21 @@ The server
 * **The node object:** about | run-lists | deep merge | attributes
 * **Search:** about | indexes | query syntax | keys | targets
 * **Policy:** about | data bags | environments | roles
-* **Configure:** Hosted Chef | Private Chef | Open Source Chef | server.rb | solo.rb | solr.rb
+* **Configure:** Hosted Chef | Private Chef | Open Source Chef | :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
 * **Manage:** Hosted Chef | Private Chef | Open Source Chef
 * **APIs:** cookbooks site | chef server
 * **Tools:** private-chef-ctl | orgmapper 
 
+
+
+
 The nodes
 =====================================================
 * **The basics:** overview | chef-client | the Chef run | ohai
-* **Configure:** bootstrap | exceptions and reports | client.rb
-* **Tools:** chef-client | 
+* **Configure:** bootstrap | exceptions and reports | :doc:`client.rb </config_rb_client>`
+* **Tools:** chef-client |
+
+
 
 Cookbooks
 =====================================================
