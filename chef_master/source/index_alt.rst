@@ -7,19 +7,19 @@ Everything you need to know about Chef ...
 Getting Started
 =====================================================
 * **From the beginning:** :doc:`overview (long) </chef_overview>` | :doc:`overview (short) </chef_quick_overview>`
-* **Key concepts:** workstation | server | nodes | cookbooks | resources | knife | etc
+* **Key concepts:** :doc:`workstation </essentials_workstation>` | :doc:`server </essentials_server>` | :doc:`nodes </essentials_nodes>` | :doc:`cookbooks </essentials_cookbooks>` | :doc:`resources and providers </essentials_cookbook_resources>` | :doc:`about </knife>`
 * **Using Ruby:** Just Enough Ruby for Chef
 * **Tutorial:** Part 1 | Part 2 | Part 3 | Part 4
 * **Quick starts:** aws | ubuntu | bootstrap | etc
-* **Common scenarios:** scenario | scenario | scenario
+* **Common scenarios:** :doc:`install Chef on a workstation </install>` | scenario | scenario
 * **Advanced scenarios:** scenario | scenario | scenario
 
 The workstation
 =====================================================
-* **The basics:** overview | repository
-* **Knife:** :doc:`about </knife>` | :doc:`common options </knife_common_options>` | :doc:`using </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`index rebuild </knife_index_rebuild>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` --- **Single page:** `Knife Reference <http://docs.opscode.com/chef/knife.html>`_ | `Knife Quick Reference (image) <http://docs.opscode.com/_images/qr_knife_web.png>`_
+* **The basics:** :doc:`overview </essentials_workstation>` | :doc:`repository </essentials_repository>` | :doc:`about </knife>`
+* **Knife:** :doc:`about </knife>` | :doc:`common options </knife_common_options>` | :doc:`working with </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`index rebuild </knife_index_rebuild>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` --- **Single page:** `Knife Reference <http://docs.opscode.com/chef/knife.html>`_ | `Knife Quick Reference (image) <http://docs.opscode.com/_images/qr_knife_web.png>`_
 * **Plugins:** :doc:`about </plugin_knife>` | :doc:`common options </knife_common_options>` --- **Commands:** :doc:`azure </plugin_knife_azure>` | :doc:`bluebox </plugin_knife_bluebox>` | :doc:`bluelock </plugin_knife_bluelock>` | :doc:`ec2 </plugin_knife_ec2>` | :doc:`eucalyptus </plugin_knife_eucalyptus>` | :doc:`google </plugin_knife_google>` | :doc:`hp </plugin_knife_hp>` | :doc:`linode </plugin_knife_linode>` | :doc:`openstack </plugin_knife_openstack>` | :doc:`rackspace </plugin_knife_rackspace>` | :doc:`terremark </plugin_knife_terremark>` | :doc:`windows </plugin_knife_windows>` --- **Single page:** `Knife Plugins Reference <http://docs.opscode.com/chef/knife_plugins.html>`_
-* **Configure:** install | sync repository
+* **Configure:** :doc:`install </install>` | :doc:`create and sync repository </essentials_repository_create>`
 * **Settings:** :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
 
 
