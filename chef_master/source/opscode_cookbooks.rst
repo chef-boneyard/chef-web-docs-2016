@@ -14,7 +14,7 @@ The following cookbooks are authored and maintained by |opscode|:
 
    * - Cookbook
      - Description
-   * - :doc:`chef_handler </cookbooks_opscode_chef_handler>`
+   * - :doc:`chef_handler </opscode_cookbooks_chef_handler>`
      - |cookbook name chef_handler|
 
 
