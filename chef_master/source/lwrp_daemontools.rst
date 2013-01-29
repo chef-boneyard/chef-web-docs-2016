@@ -1,5 +1,5 @@
 =====================================================
-daemontools
+daemontools Lightweight Resource
 =====================================================
 
 |cookbook name daemontools|

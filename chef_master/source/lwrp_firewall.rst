@@ -1,5 +1,5 @@
 =====================================================
-firewall
+firewall Lightweight Resource
 =====================================================
 
 |cookbook name firewall|

@@ -1,5 +1,5 @@
 =====================================================
-mysql_database
+mysql_database Lightweight Resource
 =====================================================
 
 |cookbook name mysql|

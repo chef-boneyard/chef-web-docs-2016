@@ -1,5 +1,5 @@
 =====================================================
-transmission
+transmission Lightweight Resource
 =====================================================
 
 |cookbook name transmission|

@@ -1,5 +1,5 @@
 =====================================================
-powershell
+powershell Lightweight Resource
 =====================================================
 
 |cookbook name powershell|

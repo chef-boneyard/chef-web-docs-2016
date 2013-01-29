@@ -49,6 +49,9 @@ Chef Documentation
    api_cookbooks_site
    dsl_recipe
 
+
+   cookbooks_opscode
+
    essentials_nodes
    essentials_chef_client
    ohai

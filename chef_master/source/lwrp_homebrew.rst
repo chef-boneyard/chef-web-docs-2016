@@ -1,5 +1,5 @@
 =====================================================
-homebrew
+homebrew Lightweight Resource
 =====================================================
 
 |cookbook name homebrew|

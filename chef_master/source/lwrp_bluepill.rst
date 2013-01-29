@@ -1,5 +1,5 @@
 =====================================================
-bluepill
+bluepill Lightweight Resource
 =====================================================
 
 |cookbook name bluepill|

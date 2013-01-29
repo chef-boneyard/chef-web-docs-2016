@@ -1,5 +1,5 @@
 =====================================================
-gunicorn
+gunicorn Lightweight Resource
 =====================================================
 
 |gunicorn desc| |cookbook name gunicorn|

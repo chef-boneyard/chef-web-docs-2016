@@ -1,0 +1,28 @@
+=====================================================
+Cookbooks Authored and Maintained by Opscode
+=====================================================
+
+.. include:: ../../includes_chef/includes_chef_cookbooks_opscode.rst
+
+Cookbooks
+=====================================================
+The following cookbooks are authored and maintained by |opscode|:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Resource
+     - Description
+   * - :doc:`cookbooks_opscode_chef_handler`
+     - |cookbook name chef_handler|
+
+
+
+.. toctree::
+   :hidden:
+
+   cookbooks_opscode_chef_handler
+
+
+

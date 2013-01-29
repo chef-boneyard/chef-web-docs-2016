@@ -1,5 +1,5 @@
 =====================================================
-chef_handler
+chef_handler Lightweight Resource
 =====================================================
 
 |cookbook name chef_handler|
