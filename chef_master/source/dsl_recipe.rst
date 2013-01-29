@@ -1,5 +1,5 @@
 =====================================================
-Recipe DSL
+About the Recipe DSL
 =====================================================
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe.rst

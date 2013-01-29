@@ -8,7 +8,7 @@ About Knife
    :widths: 150 450
    :header-rows: 1
 
-   * - Sub-command
+   * - Topic
      - Description
    * - :doc:`knife_using`
      - |knife| runs from a management workstation and sits in-between a |chef| server and an organization’s infrastructure.
