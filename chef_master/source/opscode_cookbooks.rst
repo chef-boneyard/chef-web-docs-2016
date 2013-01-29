@@ -22,7 +22,7 @@ The following cookbooks are authored and maintained by |opscode|:
 .. toctree::
    :hidden:
 
-   cookbooks_opscode_chef_handler
+   opscode_cookbooks_chef_handler
 
 
 

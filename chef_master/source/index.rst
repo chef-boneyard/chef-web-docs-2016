@@ -10,7 +10,7 @@ Chef Documentation
 
 
 
-* **References**: :doc:`Resources and Providers </resource>` | :doc:`Knife </knife>` | :doc:`Knife Plug-ins </plugin_knife>` | :doc:`Lightweight Resources </lwrp>` | :doc:`api_cookbooks_site` |  :doc:`api_chef_server` | :doc:`chef-client </chef_client>` | :doc:`Configuration Files </config>` | :doc:`dsl_recipe` | :doc:`cookbooks_opscode`
+* **References**: :doc:`Resources and Providers </resource>` | :doc:`Knife </knife>` | :doc:`Knife Plug-ins </plugin_knife>` | :doc:`Lightweight Resources </lwrp>` | :doc:`api_cookbooks_site` |  :doc:`api_chef_server` | :doc:`chef-client </chef_client>` | :doc:`Configuration Files </config>` | :doc:`dsl_recipe` | :doc:`opscode_cookbooks`
 
 
 
@@ -50,7 +50,7 @@ Chef Documentation
    dsl_recipe
 
 
-   cookbooks_opscode
+   opscode_cookbooks
 
    essentials_nodes
    essentials_chef_client
