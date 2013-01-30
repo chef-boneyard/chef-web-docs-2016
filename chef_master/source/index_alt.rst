@@ -19,8 +19,8 @@ The Chef community
 * **Cookbooks:** cookbook | cookbook | etc
 * **Knife plugins:** plugin | plugin | plugin
 * **Discussions:** lists.opscode.com | ?????
-* **Tools:**  food fight | food critic | etc
-* **Learning:**  berkshelf | spiceweasel | etc
+* **Learning:**  food fight | food critic | etc
+* **Tools:**  berkshelf | spiceweasel | etc
 
 The workstation
 =====================================================
