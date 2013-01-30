@@ -215,7 +215,7 @@ Because encrypted data bag items are implemented as a client-side layer on top o
 
 
 Non-recipe Files evaluation now includes cookbook dependencies
------------------------------------------------------
+---------------------------------------------------------------
 Non-Recipe Files are Evaluated in an Order Based on Run List Plus Cookbook Dependencies.
 In Chef 10.x and lower, library, attribute, LWRP, and resource definition files are loaded in undefined order (based on the order given by ruby's Hash implementation, which differs based on version and vendor patching). In Chef 11, these files are loaded according to the following logic:
 
@@ -283,50 +283,50 @@ Chef Server
 The following items are new for Chef 11 server and/or are changes from Chef 10.x.
 
 The /clients endpoint returns JSON with a JSON class for edit (PUT) operations
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-------------------------------------------------------------------------------
 In Chef 0.8-10.x, the server's response to a PUT to /clients/:client_name does not include the json_class key, though other calls, such as GET, do include this key. The client-side JSON implementation in Chef uses the presence of the json_class key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain Hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the ruby 'json' library must be modified to accept a Chef::ApiClient or a Hash.
 
 This change breaks the knife client reregister command in Chef 10.16.2 and earlier. Forward compatibility is introduced in 10.18.0.
 
 The admin and validator flags are exclusive
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 In Chef 11, clients may not be both admins and validators at the same time. In the current alpha release, you can set the admin flag on the validator but it has no effect. In a future release, you may receive an error when attempting to set the validator flag on a client, or when attempting to create a client with both flags set.
 
 .. note:: Exact behavior may change before release or in a minor version release after 11.0.0.
 
 Strict checking of top-level JSON keys
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 All API endpoints that process requests to create or update a Chef object validate that the JSON sent by the client does not contain unknown top-level keys. A 400 error response will be returned if unknown top-level keys are encountered.
 
 Creating an empty sandbox is now a 400 error
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 Sandboxes are used as part of the protocol for uploading cookbook content. An empty sandbox cannot be used for anything. Creating such a sandbox may indicate a logic error in client code and is (mildly) wasteful of server resources.
 
 Error messages included in server error responses have changed
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------------------------------
 As part of the move to Erchef, error messages have been made more consistent. Code depending on specific error message text may be broken by these changes.
 
 Some error codes have changes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 In a number of cases, erchef returns a more specific error status than the Chef 10 server. For example, returning 400 instead of 500 for some bad request data situations.
 
 The chef-server cookbook has been completely rewritten to support an omnibus Chef Server install
 
 knife reindex is not supported in Chef 11 Server
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 You can trigger a reindex of Chef object data using chef-server-ctl reindex while logged into the Chef Server box. The knife command is still present in the Chef 11 client for use with a Chef 10 server.
 
 OpenId support has been removed
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 Support for OpenID is no longer in |chef|.
 
 
 The Ruby server code has been removed
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 As part of the move to Erchef, the Ruby API server code along with classes not needed by the client-side of Chef have been removed from the main chef repository.
 
 knife cookbook delete --purge is ignored by Chef 11 Server
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------------
 In Chef 11, the server keeps track of which cookbooks use a given piece of cookbook content (via checksum). When a cookbook version is deleted, associated content will be deleted if not referenced by another cookbook version object. Therefore, there is no need for a purge operation when using the Chef 11 Server.
 
 
@@ -339,7 +339,7 @@ Other Notable Changes
 Changes that are not expected to be breaking, but are notable improvements.
 
 Output Formatters are the Default Output when Running in the Console
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+---------------------------------------------------------------------
 In Chef 11, when output is to a TTY, Chef will automatically use output formatters to display information about what it's doing. To accommodate this, the default log level is now "auto", which evaluates to "warn" when running with a TTY (so log messages will not obscure the output formatter output), and "info" when running without a TTY (so you get important information about changes being made to the system when output formatters are not active).
 
 If you prefer one type of output over the other, you can force Chef to use output formatters or logger output with --force-formatter or --force-logger.
@@ -351,7 +351,7 @@ Inline Compile Mode for Lightweight Resources
 In Chef 11, there is an optional "inline compilation" mode for LWRPs, which is intended to make notifications work correctly for LWRP resources.
 
 Without Inline Compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 When not using inline compilation (it is disabled by default), any resources created in a light-weight provider's action blocks are inserted into the top level resource collection after the light-weight resource it belongs to. For example, given a resource collection like this:
 
 * top_level_resource_one
@@ -373,22 +373,22 @@ With Inline Compilation
 Inline compilation is enabled by calling ``use_inline_resources`` at the top of your light-weight provider file. When this is enabled, the code in your action block is executed in a self contained chef client run, with its own compile and converge phase. If any embedded resources have been updated, the top-level LWRP resource is marked as updated, and any notifications set on it will be triggered normally. Within the embedded chef run, resources in the top-level resource collection are invisible to the embedded resources, so embedded resources are not able to notify resources in the top-level resource collection.
 
 LWRP Class Hierarchy Changes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 In Chef 11, LWRP resources now inherit from a LWRPBase resource instead of directly inheriting from Chef::Resource. Likewise, LWRP providers inherit from a LWRPBase provider instead of Chef:: Provider. This should not impact existing LWRP code.
 
 Partial Support in Templates
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 Partials can be used in templates. See here:
 
 CHEF-3249 - Chef support for template partials - FIX COMMITTED
 https://github.com/opscode/chef/pull/498
  
 chef-apply
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 There is now a chef-apply RECIPE command that will run a single Chef recipe with no JSON/run_list/config file required.
 
 Miscellaneous
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 
 * Locking is used to prevent simultaneous runs on Unix-like systems
 * ``knife search`` assumes node search when the object type is omitted.
