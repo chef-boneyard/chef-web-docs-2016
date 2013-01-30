@@ -10,6 +10,7 @@ Getting Started
 * **Key concepts:** :doc:`workstation </essentials_workstation>` | :doc:`server </essentials_server>` | :doc:`nodes </essentials_nodes>` | :doc:`cookbooks </essentials_cookbooks>` | :doc:`resources and providers </essentials_cookbook_resources>` | :doc:`about </knife>`
 * **Using Ruby:** Just Enough Ruby for Chef
 * **Tutorial:** Part 1 | Part 2 | Part 3 | Part 4
+* **Community resources:** berkshelf | cookbooks | food fight | food critic | plugins | etc
 * **Quick starts:** aws | ubuntu | bootstrap | etc
 * **Common scenarios:** :doc:`install Chef on a workstation </install>` | scenario | scenario
 * **Advanced scenarios:** scenario | scenario | scenario
