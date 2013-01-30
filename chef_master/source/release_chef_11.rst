@@ -131,7 +131,7 @@ Chef::REST#run_request Removed
 The ``Chef::REST#run_request`` method is removed. Use ``api_request`` or ``streaming_request`` for low-level access, or (better) use the higher-level ``GET``, ``PUT``, ``POST``, ``DELETE``, and ``HEAD`` methods.
 
 
-Delayed Notifications Run after Converge Fails
+Delayed Notifications Changes
 -----------------------------------------------------
 In |chef 10x| and lower, delayed notifications are lost when Chef does not converge successfully.
 
@@ -144,7 +144,7 @@ This fixes addresses the following scenario:
 
 In |chef 11|, delayed notifications will run after |chef| fails, and will be executed even if other delayed notifications fail. Conversely, if |chef| fails to configure a service and a restart action has been queued for that service, the service will be restarted and will probably be broken.
 
-Only One Notification can be specified to notifies
+Single Notifies for Notification
 -----------------------------------------------------
 Previously you could specify multiple notifications in a single call to notifies with code like this:
 
@@ -163,15 +163,10 @@ Instead of the above, just put multiple calls to notifies in your resource decla
      notifies :run, "execute[another-thing]"
    end
 
-node.run_state Replaced by RunContext#loaded_recipes
+
+Changes for Data Bag Encryption
 -----------------------------------------------------
-xxxxx
-
-
-
-Format Change for Encrypted Data Bag Items
------------------------------------------------------
-In |chef 10x|, objects in encrypted data bag items are serialized to YAML before being encrypted. Unfortunately, discrepancies between YAML engines in different versions of ruby (in particular, 1.8.7 and 1.9.3) may cause silent corruption of serialized data when decrypting the data bag (the version stored on the Chef server is untouched and can be correctly deserialized with the same ruby version that was used to create it, however).
+In |chef 10x|, objects in encrypted data bag items are serialized to |yaml| before being encrypted. Unfortunately, discrepancies between |yaml| engines in different versions of |ruby| (in particular, 1.8.7 and 1.9.3) may cause silent corruption of serialized data when decrypting the data bag (the version stored on the |chef server| is untouched and can be correctly deserialized with the same |ruby| version that was used to create it, however).
 
 Because the corruption is silent, there is no way for |chef| to detect it; furthermore, all workaround possibilities we've investigated have severe limitations. Additionally, we wanted to modify the encrypted data bag item format to support using a random initialization vector each time a value is encrypted, which provides protection against some forms of cryptanalysis. In order to solve these issues, we've implemented a new encrypted data bag item format:
 
@@ -200,24 +195,22 @@ How to Upgrade
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Before upgrading chef on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version 10.18.0 or above. Once your |chef client| fleet is upgraded, you can start using |chef 11| on your workstation (the box you create/update encrypted data bag items on).
 
-In order to get the benefits of improved security with the new data bag item format, it's recommended that you re-upload all of your encrypted data bag items once you've migrated to compatible versions of chef-client. To migrate your data bag items, simply edit them with knife data bag edit or upload them with knife data bag from file, whichever you normally do. |chef 11|will automatically upload your data bag items in the new format.
+In order to get the benefits of improved security with the new data bag item format, it's recommended that you re-upload all of your encrypted data bag items once you've migrated to compatible versions of |chef client|. To migrate your data bag items, simply edit them with ``knife data bag edit`` or upload them with ``knife data bag from file``, whichever you normally do. |chef 11| will automatically upload your data bag items in the new format.
 
 Chef Server Versions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Because encrypted data bag items are implemented as a client-side layer on top of regular data bag items, the format change is transparent to the server. You can begin using |chef 11| data bags even if your server is version |chef 10x|.
 
 
-Non-recipe Files evaluation now includes cookbook dependencies
+Non-recipe File Evaluation Includes Dependencies
 ---------------------------------------------------------------
-Non-Recipe Files are Evaluated in an Order Based on Run List Plus Cookbook Dependencies.
-In |chef 10x| and lower, library, attribute, LWRP, and resource definition files are loaded in undefined order (based on the order given by ruby's Hash implementation, which differs based on version and vendor patching). In |chef 11|, these files are loaded according to the following logic:
+In |chef 10x| and lower, library, attribute, lightweight resource, and resource definition files are loaded in undefined order (based on the order given by the |ruby| Hash implementation, which differs based on version and vendor patching). In |chef 11|, these files are loaded according to the following logic:
 
 * The expanded run_list is converted into a list of cookbooks in the same order
 * Each cookbook's dependencies are inserted into the cookbook list before the cookbook that depends on them.
 * Duplicates are removed
 
-For |chef client| users, there should be no negative impacts from this change, as the 
-previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef 10x|, all non-recipe files from all cookbooks in the cookbook path were loaded).
+For |chef client| users, there should be no negative impacts from this change, as the previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef 10x|, all non-recipe files from all cookbooks in the cookbook path were loaded).
 
 
 Knife Configuration Parameter Changes
@@ -225,7 +218,7 @@ Knife Configuration Parameter Changes
 In |chef 10x|, it is difficult and error-prone to ensure that configuration parameters are applied in the right order. Configuration should be applied in the following order:
 
 #. Default values
-#. Values set in knife.rb
+#. Values set in |knife rb|
 #. Values passed by command line option
 
 Because of the way the the ``mixlib-cli`` library is implemented, it is difficult to determine which values are defaults and which values are user-supplied command line options. |chef 11| takes advantage of a new mode for ``mixlib-cli`` that keeps default values separate from user-supplied values. In the configuration process, |knife| automatically applies config:
@@ -277,9 +270,9 @@ The following items are new for |chef 11| server and/or are changes from |chef 1
 
 The /clients endpoint returns JSON with a JSON class for edit (PUT) operations
 -------------------------------------------------------------------------------
-In Chef 0.8-10.x, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation in |chef| uses the presence of the ``json_class`` key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash.
+In |chef| 0.8-10.x, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation in |chef| uses the presence of the ``json_class`` key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash.
 
-This change breaks the knife client reregister command in |chef| 10.16.2 and earlier. Forward compatibility is introduced in |chef| 10.18.0.
+This change breaks the ``knife client reregister`` command in |chef| 10.16.2 and earlier. Forward compatibility is introduced in |chef| 10.18.0.
 
 The admin and validator flags are exclusive
 -----------------------------------------------------
