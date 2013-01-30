@@ -92,6 +92,8 @@ Chef Documentation
    chef_overview_server_open_source
    chef_overview_server_private
 
+   release_chef_11
+
    chef_quick_overview
    resource_batch
    resource_registry_key
