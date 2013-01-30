@@ -5,8 +5,8 @@ An open source distributed version control system called |git| must be installed
 
 To install |git|:
 
-1. Go to the following URL: https://help.github.com/articles/set-up-git.
+#. Go to the following URL: https://help.github.com/articles/set-up-git.
    
-2. Follow the directions, install |git| (http://git-scm.com/downloads), and then complete the remaining configuration steps on that page. 
+#. Follow the directions, install |git| (http://git-scm.com/downloads), and then complete the remaining configuration steps on that page. 
 
 .. note:: It is not necessary to create or fork a repository in order to clone the |chef| repository from |github|.

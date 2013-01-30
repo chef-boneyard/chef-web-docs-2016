@@ -11,7 +11,7 @@ Where ``ORGANIZATION`` and ``USER`` represent strings that are unique to each |c
 
 To create the |chef repo hidden| directory:
 
-1. In a command window, enter the following:
+#. In a command window, enter the following:
 
    .. code-block:: bash
 
@@ -19,7 +19,7 @@ To create the |chef repo hidden| directory:
 
    .. note:: ``sudo`` is not always required, but it often is.
 
-3. After the |chef repo hidden| directory has been created, the following folder structure will be present on the local machine::
+#. After the |chef repo hidden| directory has been created, the following folder structure will be present on the local machine::
 
       chef-repo/
          .chef/        << the hidden directory

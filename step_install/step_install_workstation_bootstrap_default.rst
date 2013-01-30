@@ -5,7 +5,7 @@ Once the workstation is configured, it can be used to install |chef| on one (or 
 
 To install |chef| on a node using ``knife bootstrap``:
 
-1. In a command window, enter the following:
+#. In a command window, enter the following:
 
    .. code-block:: bash
 
@@ -13,7 +13,7 @@ To install |chef| on a node using ``knife bootstrap``:
 
    where ``123.45.6.789`` is the IP address or the FQDN for the node.
 
-2. While the bootstrap operation is running, the command window will show something like the following:
+#. While the bootstrap operation is running, the command window will show something like the following:
 
    .. code-block:: bash
 
@@ -48,7 +48,7 @@ To install |chef| on a node using ``knife bootstrap``:
       123.45.6.789 [Fri, 07 Sep 2012 11:05:19 -0700] INFO: Report handlers complete
       123.45.6.789
 
-3. When the bootstrap operation is finished, enter the following command:
+#. When the bootstrap operation is finished, enter the following command:
 
    .. code-block:: bash
 
