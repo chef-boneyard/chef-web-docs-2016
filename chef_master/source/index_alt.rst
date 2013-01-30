@@ -16,11 +16,11 @@ Getting Started
 
 The Chef community
 =====================================================
+* **Workflow:**  berkshelf | librarian-chef | spiceweasel | etc
+* **Development tools:**  test-kitchen | food critic | cucumber-chef | chef-workflow
+* **Discussion:** lists.opscode.com | community.opscode.com/chat | foodfight show
+* **Plugins:** knife | report handlers | spice | ridley
 * **Cookbooks:** cookbook | cookbook | etc
-* **Knife plugins:** plugin | plugin | plugin
-* **Discussions:** lists.opscode.com | ?????
-* **Learning:**  food fight | food critic | etc
-* **Tools:**  berkshelf | spiceweasel | etc
 
 The workstation
 =====================================================
