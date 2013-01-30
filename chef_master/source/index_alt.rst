@@ -24,16 +24,15 @@ The workstation
 
 
 
-The server
+The Chef server
 =====================================================
-* **The basics:** Hosted Chef vs. Private Chef vs. Open Source Chef
-* **The node object:** about | run-lists | deep merge | attributes
+* **The basics:** :doc:`about </chef_overview_server>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
+* **The node object:** :doc:`about </essentials_node_object>` | :doc:`run-lists </essentials_node_object_run_lists>` | :doc:`deep merge </essentials_node_object_deep_merge>`
 * **Search:** :doc:`about </essentials_search>` | :doc:`indexes </essentials_search_indexes>` | :doc:`keys (field names) </essentials_search_keys>` | :doc:`operators </essentials_search_boolean_operators>` | :doc:`patterns </essentials_search_patterns>` | :doc:`query syntax </essentials_search_query_syntax>` | :doc:`special characters </essentials_search_special_characters>` | :doc:`targets </essentials_search_targets>`
 * **Policy:** :doc:`about </essentials_policy>` | :doc:`data bags </essentials_data_bags>` | :doc:`environments </essentials_environments>` | :doc:`roles </essentials_roles>`
-* **Configure:** Hosted Chef | Private Chef | Open Source Chef
 * **Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
-* **Manage:** Hosted Chef | Private Chef | Open Source Chef
-* **APIs:** cookbooks site | chef server
+* **Manage:** :doc:`Hosted Chef </manage_server_hosted>` | Private Chef | Open Source Chef
+* **APIs:** :doc:`cookbooks site </api_cookbooks_site>` | :doc:`chef server </api_chef_server>`
 * **Tools:** private-chef-ctl | orgmapper 
 
 

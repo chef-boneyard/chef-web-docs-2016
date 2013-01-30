@@ -87,6 +87,11 @@ Chef Documentation
 
    images
 
+   chef_overview_server
+   chef_overview_server_hosted
+   chef_overview_server_open_source
+   chef_overview_server_private
+
    chef_quick_overview
    resource_batch
    resource_registry_key
