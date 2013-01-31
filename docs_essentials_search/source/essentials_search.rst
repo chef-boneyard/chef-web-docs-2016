@@ -20,6 +20,10 @@ Search Query Syntax
 =====================================================
 .. include:: ../../includes_search/includes_search_query_syntax.rst
 
+Partial Search Queries
+=====================================================
+.. include:: ../../includes_search/includes_search_partial.rst
+
 Keys (or Field Names)
 =====================================================
 .. include:: ../../includes_search/includes_search_key.rst

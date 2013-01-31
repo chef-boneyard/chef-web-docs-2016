@@ -16,6 +16,8 @@ Many of the examples in this section use |knife|, but the search indexes and sea
      - |search index|
    * - :doc:`essentials_search_query_syntax`
      - |search query syntax|
+   * - :doc:`essentials_search_partial`
+     - |search partial|
    * - :doc:`essentials_search_keys`
      - |search key|
    * - :doc:`essentials_search_patterns`
@@ -38,6 +40,7 @@ Many of the examples in this section use |knife|, but the search indexes and sea
    essentials_search_boolean_operators
    essentials_search_special_characters
    essentials_search_targets
+   essentials_search_partial
 
 
 
