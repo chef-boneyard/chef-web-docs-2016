@@ -70,6 +70,11 @@ This configuration file has the following settings:
        ::
  
           json_attribs nil
+   * - ``lockfile``
+     - |lockfile| For example:
+       ::
+ 
+          lockfile nil
    * - ``log_level``
      - |log_level| For example:
        ::
