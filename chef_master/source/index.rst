@@ -34,7 +34,7 @@ The Chef server
 * **Search:** :doc:`About search </essentials_search>` | :doc:`Indexes </essentials_search_indexes>` | :doc:`Keys (field names) </essentials_search_keys>` | :doc:`Operators </essentials_search_boolean_operators>` | :doc:`Partial search queries </essentials_search_partial>` | :doc:`Patterns </essentials_search_patterns>` | :doc:`Query syntax </essentials_search_query_syntax>` | :doc:`Special characters </essentials_search_special_characters>` | :doc:`Targets </essentials_search_targets>`
 * **Policy:** :doc:`About policy </essentials_policy>` | :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
 * **Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
-* **Manage:** :doc:`Hosted Chef </manage_server_hosted>` | Private Chef | Open Source Chef
+* **Manage:** :doc:`Hosted Chef </manage_server_hosted>`
 * **APIs:** :doc:`Cookbooks site </api_cookbooks_site>` | :doc:`Chef server </api_chef_server>`
 * **Tools:** private-chef-ctl | :doc:`orgmapper </orgmapper>` 
 
