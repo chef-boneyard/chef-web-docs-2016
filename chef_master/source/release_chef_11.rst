@@ -214,7 +214,7 @@ For |chef client| users, there should be no negative impacts from this change, a
 
 .. code-block:: bash
 
-  FATAL: Chef::Exceptions::CookbookNotFound: Cookbook runit not found. If you're loading runit from another cookbook, make sure you configure the dependency in your metadata
+   FATAL: Chef::Exceptions::CookbookNotFound: Cookbook runit not found. If you're loading runit from another cookbook, make sure you configure the dependency in your metadata
 
 
 
