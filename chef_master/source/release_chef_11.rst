@@ -213,21 +213,21 @@ In |chef 10x| and lower, library, attribute, lightweight resource, and resource 
 For |chef client| users, there should be no negative impacts from this change, as the previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef 10x|, all non-recipe files from all cookbooks in the cookbook path were loaded).
 
 
-Changes to Behavior of remote_file Resource
+Remote File Mirror Support May Break Subclasses	
 ---------------------------------------------------------------
-When using the ``remote_file`` resource multiple URLs can be passed as ``*args`` or as an array. |chef| converts multiple URLs to an array (internally). Users of the ``remote_file`` resource will not affected by this change, unless something like the following is done:
+In |chef 11|, |resource remote file| now supports fetching files from a list of mirrors. As a result, the ``source`` parameter of the |resource remote_file| resource is now an array. Any library code that subclasses the |resource remote_file| resource---for example to provide S3 support---will likely need to be updated to support or workaround this change. To effectively revert the change so that the ``source`` parameter is a string, add code like this to your resource:
 
 .. code-block:: ruby
 
-   r = remote_file "/tmp/foo" do
-     source "https://server.org/file"
+   def source(args=nil)
+     set_or_return(:source, args, :kind_of=>String)
    end
-   
-   if r.source == "https://server.org/file"
-     # etc.
-   end  
 
-This change only affects the ``remote_file`` resource when library code sub-classes the ``remote_file`` resource.
+   def after_created
+     true
+   end
+
+Alternatively, you can update the provider to handle the case that the ``source`` parameter is an array.
 
 
 Knife Configuration Parameter Changes
