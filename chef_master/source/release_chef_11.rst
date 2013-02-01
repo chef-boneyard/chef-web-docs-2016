@@ -271,8 +271,10 @@ Further information is available in the ticket: CHEF-3497 - Allow |knife rb| to 
 
 Remote File Mirror Support May Break Subclasses	
 ---------------------------------------------------------------
-In |chef 11|, |resource remote_file| now supports fetching files from a list of mirrors. As a result, the ``source`` parameter of the |resource remote_file| resource is now an array. Any library code that subclasses the |resource remote_file| resource---for example to provide S3 support---will likely need to be updated to support or workaround this change. To effectively revert the change so that the ``source`` parameter is a string, add code like this to your resource:
+In |chef 11|, |resource remote_file| now supports fetching files from a list of mirrors. As a result, the ``source`` parameter of the |resource remote_file| resource is internally stored as an array. This change is transparent to users of the |resource remote_file| resource; however, any library code that subclasses the |resource remote_file| resource---for example, to provide |amazon s3| support---will likely need to be updated to support and/or work around this change. 
 
+To effectively revert the change so that the ``source`` parameter is a string, add code like this to your resource:
+	
 .. code-block:: ruby
 
    def source(args=nil)
