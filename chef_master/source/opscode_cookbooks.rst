@@ -16,13 +16,15 @@ The following cookbooks are authored and maintained by |opscode|:
      - Description
    * - :doc:`chef_handler </opscode_cookbooks_chef_handler>`
      - |cookbook name chef_handler|
-
+   * - :doc:`supervisor </opscode_cookbooks_supervisor>`
+     - |cookbook name supervisor|
 
 
 .. toctree::
    :hidden:
 
    opscode_cookbooks_chef_handler
+   opscode_cookbooks_supervisor
 
 
 
