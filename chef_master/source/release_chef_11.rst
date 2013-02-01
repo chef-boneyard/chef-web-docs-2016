@@ -210,7 +210,13 @@ In |chef 10x| and lower, library, attribute, lightweight resource, and resource 
 * Each cookbook's dependencies are inserted into the cookbook list before the cookbook that depends on them.
 * Duplicates are removed
 
-For |chef client| users, there should be no negative impacts from this change, as the previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef 10x|, all non-recipe files from all cookbooks in the cookbook path were loaded).
+For |chef client| users, there should be no negative impacts from this change, as the previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef 10x|, all non-recipe files from all cookbooks in the cookbook path were loaded). Additionally, |chef solo| users will now see ``CookbookNotFound`` errors when a cookbook is listed as a dependency in the metadata but not present on disk. The error message will look like this:
+
+.. code-block:: bash
+
+  FATAL: Chef::Exceptions::CookbookNotFound: Cookbook runit not found. If you're loading runit from another cookbook, make sure you configure the dependency in your metadata
+
+
 
 Knife Configuration Parameter Changes
 -----------------------------------------------------
