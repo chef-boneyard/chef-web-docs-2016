@@ -36,7 +36,7 @@ The Chef server
 * **Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
 * **Manage:** :doc:`Hosted Chef </manage_server_hosted>` | Private Chef | Open Source Chef
 * **APIs:** :doc:`Cookbooks site </api_cookbooks_site>` | :doc:`Chef server </api_chef_server>`
-* **Tools:** private-chef-ctl | orgmapper 
+* **Tools:** private-chef-ctl | :doc:`orgmapper </orgmapper>` 
 
 
 The nodes
@@ -115,6 +115,8 @@ Cookbooks
    manage_server_hosted 
 
    images
+
+   orgmapper
 
    chef_overview_server
    chef_overview_server_hosted
