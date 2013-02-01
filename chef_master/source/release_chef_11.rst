@@ -263,6 +263,22 @@ Default values must be managed manually until support for |chef 10x| is removed,
 
 Further information is available in the ticket: CHEF-3497 - Allow |knife rb| to implicitly provide all |knife| related options - FIX COMMITTED
 
+Remote File Mirror Support May Break Subclasses
+-----------------------------------------------
+
+In |chef 11|, |remote file| now supports fetching files from a list of mirrors. As a result, the ``source`` parameter of the remote file resource is now an Array. Any library code that subclasses remote file, for example to provide S3 support, will likely need to be updated to support or workaround this change. To effectively revert the change so that the ``source`` parameter is a String, add code like this to your resource:
+
+.. code-block:: ruby
+
+    def source(args=nil)
+      set_or_return(:source, args, :kind_of=>String)
+    end
+
+    def after_created
+      true
+    end
+
+Alternatively, you can update the provider to handle the case that the ``source`` parameter is an Array.
 
 Chef Server
 =====================================================
