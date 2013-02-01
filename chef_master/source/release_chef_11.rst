@@ -215,7 +215,7 @@ For |chef client| users, there should be no negative impacts from this change, a
 
 Changes to Behavior of remote_file Resource
 ---------------------------------------------------------------
-When using the ``remote_file`` resource multiple URLs can be passed as ``*args`` or as an array. |chef| converts multiple URLs to an array (internally). Users of the ``remote_file`` resource are not affected by this change, unless something like the following is done:
+When using the ``remote_file`` resource multiple URLs can be passed as ``*args`` or as an array. |chef| converts multiple URLs to an array (internally). Users of the ``remote_file`` resource will not affected by this change, unless something like the following is done:
 
 .. code-block:: ruby
 
@@ -227,7 +227,7 @@ When using the ``remote_file`` resource multiple URLs can be passed as ``*args``
      # etc.
    end  
 
-This change doesn't affect the typical use of the ``remote_file`` resource; this change only affects the ``remote_file`` resource when library code sub-classes the ``remote_file`` resource.
+This change only affects the ``remote_file`` resource when library code sub-classes the ``remote_file`` resource.
 
 
 Knife Configuration Parameter Changes
