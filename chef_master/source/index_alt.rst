@@ -13,7 +13,7 @@ Getting Started
 * **Quick starts:** aws | ubuntu | bootstrap | etc
 * **Common scenarios:** :doc:`install Chef on a workstation </install>` | scenario | scenario
 * **Advanced scenarios:** scenario | scenario | scenario
-* **What's new:** :doc:`Chef 11.0 </release_chef_11>`
+* **What's new:** :doc:`Chef 11.0 </breaking_changes_chef_11>`
 
 The Chef community
 =====================================================
