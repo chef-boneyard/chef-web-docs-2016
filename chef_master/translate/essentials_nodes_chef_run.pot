@@ -1,0 +1,93 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-31 18:22\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_nodes_chef_run.rst:34
+# 0f9ffa2d05214a7aa2091182bde40b62
+msgid "The |chef| Run"
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:5
+# db54bcc7801c4a0f8795d3a1676b534e
+msgid "A |chef| run is a series of steps taken by a |chef client| for the purpose of bring a node into the desired state. When a |chef client| performs a |chef| run, the following happens:"
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:7
+# d74001d85f1a47e980a64558516d8d1c
+msgid "Get process configuration data from |client rb|."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:8
+# f63d4391977c48b6a38a2b8a4b65226a
+msgid "Get node configuration data from |ohai|."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:9
+# e676331ac54645788f9f0fdaa8f283f6
+msgid "Authenticate to the |chef server| using an RSA private key. The the name of a node is required as part of the authentication process to the |chef server|. The name of a node is obtained from the ``node_name`` attribute in the |client rb| file or by |ohai|. If |ohai| obtains the name of a node, it is typically the |fully qualified domain name| name of the node (which is always unique within an organization). If this is the first |chef| run for a node, the |chef validator| will be used to generate the RSA private key."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:10
+# 71014918d1084747a12dc5a707f93e1f
+msgid "The |chef client| pulls down the node object from the |chef server|. This node object is the same node object that was used during the previous |chef| run. If this is the first |chef| run for the node, there will not be a node object to pull down from the |chef| server."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:11
+# 1e7bb963ba2b456786feca9154fd4302
+msgid "Re-build the node object. If this is the first |chef| run for the node, the node object will contain only the default run-list. For any subsequent |chef| run, the re-built node object will also contain the run-list from the previous |chef| run."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:12
+# d2acd38ad54d46ea88233b7369c23198
+msgid "Expand the run-list from the re-built node object, compiling a full and complete list of roles and recipes that will be applied to the node and placed in the specific order the roles and recipes will be applied."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:13
+# 2196f58f4e43496abb50d9ec5221e33e
+msgid "The |chef client| asks the |chef server| for a list of all cookbook files (including recipes, templates, resources, providers, attributes, libraries, and definitions) that will be required to do every action identified in the run-list for the re-built node object. The |chef server| provides to the |chef client| a list of all of the files. The |chef client| compares this list to the cookbook files cached on the node (from previous |chef| runs), and then pulls down a copy of every file that has changed since the previous |chef| run, along with any new files."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:14
+# 0c1c92a2f6e548789cd9ffea6bb13ed4
+msgid "All attributes in the re-built node object are reset. All attributes from recipes, roles, environments, |ohai| and attribute files are loaded. All attributes in the re-built node object are updated with the attribute data, and according to attribute precedence. When all of the attributes are updated, the re-built node object is complete."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:15
+# c30e601c32ce4e4cb45c412967fff785
+msgid "The |chef client| identifies each resource in the node object and builds the resource collection. All details about the node are put into a single collection. All definitions are loaded (to ensure that any pseudo-resources are available). All libraries are loaded (to ensure that all language extensions and |ruby| classes are available). All recipes are loaded and each action specified specified in recipes are identified and any |ruby| blocks within recipes are evaluated."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:16
+# 86bdf846784241c39f3ca458ea7ad3ab
+msgid "The |chef client| configures the system based on the information that has been collected. Each resource in the resource collection is mapped to a provider. The provider examines the node, and then does the steps necessary to complete the action. Each action configures a specific part of the system. This process is also referred to as convergence."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:17
+# 35c220b20a1148fb93528e7b1b52c8b2
+msgid "When all of the actions identified by resources in the resource collection have been done, the |chef client| updates the node object on the |chef server| with the node object that was built during this |chef| run. This makes the node object (and the data in the node object) available for search."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:18
+# d67c118a6fce4c9fb39c5707d6165ff5
+msgid "The |chef client| checks the resource collection for the presence of exception and report handlers. If any are present, each one is processed appropriately."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_client_run.rst:19
+# b77b934cfecb48b6b71319ee1a024bb4
+msgid "The |chef client| stops and waits for the next |chef| run."
+msgstr ""
+
