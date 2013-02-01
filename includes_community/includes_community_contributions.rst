@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Here are some of the contributions that have been made to |chef| by the |chef| community:
+Here are some contributions from the |chef| community:
 
 * **Workflow:**  `Berkshelf <http://berkshelf.com/>`_ | `Librarian <https://github.com/applicationsonline/librarian>`_ | `Spiceweasel <https://github.com/mattray/spiceweasel>`_
 * **Development tools:**  `test-kitchen <https://github.com/opscode/test-kitchen>`_ | `Food Critic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `Cookbooks <http://community.opscode.com/cookbooks>`_
