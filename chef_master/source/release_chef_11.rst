@@ -213,6 +213,23 @@ In |chef 10x| and lower, library, attribute, lightweight resource, and resource 
 For |chef client| users, there should be no negative impacts from this change, as the previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef 10x|, all non-recipe files from all cookbooks in the cookbook path were loaded).
 
 
+Changes to Behavior of remote_file Resource
+---------------------------------------------------------------
+When using the ``remote_file`` resource multiple URLs can be passed as ``*args`` or as an array. |chef| converts multiple URLs to an array (internally). Users of the ``remote_file`` resource are not affected by this change, unless something like the following is done:
+
+.. code-block:: ruby
+
+   r = remote_file "/tmp/foo" do
+     source "https://server.org/file"
+   end
+   
+   if r.source == "https://server.org/file"
+     # etc.
+   end  
+
+This change doesn't affect the typical use of the ``remote_file`` resource; this change only affects the ``remote_file`` resource when library code sub-classes the ``remote_file`` resource.
+
+
 Knife Configuration Parameter Changes
 -----------------------------------------------------
 In |chef 10x|, it is difficult and error-prone to ensure that configuration parameters are applied in the right order. Configuration should be applied in the following order:
