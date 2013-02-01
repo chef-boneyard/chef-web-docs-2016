@@ -49,6 +49,7 @@ Chef Documentation
    api_cookbooks_site
    dsl_recipe
 
+   community
 
    opscode_cookbooks
 

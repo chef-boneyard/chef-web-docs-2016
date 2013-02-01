@@ -14,6 +14,8 @@ About Ohai
      - An automatic attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on.
    * - :doc:`ohai_attributes_list`
      - Some attributes are re-written by |ohai| during every |chef| run.
+   * - :doc:`community_plugin_ohai`
+     - There are many plugins available for |ohai| that are authored by members of the |chef| community.
 
 .. toctree::
    :hidden:

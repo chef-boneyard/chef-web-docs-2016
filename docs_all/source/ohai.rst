@@ -12,4 +12,8 @@ Automatic Attributes
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
+Community Plugins
+=====================================================
+.. include:: ../../includes_ohai/includes_ohai_plugins.rst
+
 

@@ -17,10 +17,14 @@ Getting Started
 
 The Chef community
 =====================================================
-* **Workflow:**  berkshelf | librarian-chef | spiceweasel | etc
-* **Development tools:**  test-kitchen | food critic | cucumber-chef | chef-workflow | cookbooks (Opscode, community)
-* **Discussion:** lists.opscode.com | community.opscode.com/chat | foodfight show
-* **Plugins:** knife | report handlers | spice | ridley
+* **Workflow:**  `Berkshelf <http://berkshelf.com/>`_ | `Librarian <https://github.com/applicationsonline/librarian>`_ | `Spiceweasel <https://github.com/mattray/spiceweasel>`_
+* **Development tools:**  `test-kitchen <https://github.com/opscode/test-kitchen>`_ | `Food Critic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `Cookbooks <http://community.opscode.com/cookbooks>`_
+* **Discussion:** :doc:`lists.opscode.com </community_lists>` | `Food Fight Show <http://foodfightshow.org/>`_ --- **Chat channels:** `chef <http://community.opscode.com/chat/chef>`_ | `chef-hacking <http://community.opscode.com/chat/chef-hacking>`_ | `openstack-chef <http://community.opscode.com/chat/openstack-chef>`_
+* **Plugins:** :doc:`Chef </community_plugin_chef>` | :doc:`Knife </community_plugin_knife>` | :doc:`Ohai </community_plugin_ohai>` | :doc:`Report handlers </community_plugin_report_handler>` | `Ridley <https://github.com/reset/ridley>`_
+
+
+
+
 
 The workstation
 =====================================================
