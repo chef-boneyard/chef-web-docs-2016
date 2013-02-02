@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Topics package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Topics 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-02 14:57\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_cookbook_files.rst:34
+# 9d47904f647c41d4b68acee118ba99bd
+msgid "Cookbook File Distributions"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution.rst:4
+# db99dca349e54bf9b186c360c5545b2b
+msgid "A file distribution is a resource that tells a cookbook how to distribute one (or more) files to servers, including by node, by platform, and by file version."
+msgstr ""
+
+#: ../source/essentials_cookbook_files.rst:39
+# 68c4309b797c48678217e65993051b01
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_syntax.rst:4
+# 7d4f33b2cb9345d7b7152198d3498072
+msgid "The |resource cookbook file| resource defines a file distribution. For example, the following |resource cookbook file| details::"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_syntax.rst:13
+# 46a3bd40f4834f9da144609eb05fb2e3
+msgid "would create the ``/usr/local/bin/apache2_module_conf_generate.pl`` from the ``apache2_module_conf_generate.pl`` file contained in the cookbook that is most specific to the node that is executing the recipe."
+msgstr ""
+
+#: ../source/essentials_cookbook_files.rst:43
+# ac91a01cc221451eb38bea4499babf44
+msgid "File Specificity"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:5
+# 06d7548c6fdf4caabf84658db90ce65d
+msgid "A cookbook will frequently be designed to work across many platforms and will often be required to distribute a specific file to a specific platform. A cookbook can be designed to support distributing files across platforms, but ensuring that the right file ends up on each system. For example, a cookbook may have a directory structure like this::"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:14
+# 9407d224b35241fb95f56e406af06828
+msgid "and a cookbook_file resource like this:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:25
+# 00b8f91e89594f45965bb7662353b2c5
+msgid "would be matched in the same order as the cookbook directory structure. For a node named \"foo.example.com\" that is running |ubuntu| 10.04, the second item would be the matching item and the location to which the file identified in the cookbook_resource would be distributed:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:35
+# 157e09392ba44bd49e81190ac87edc90
+msgid "If the ``apache_module_conf_generate.pl`` file was located in the cookbook directory under ``files/host-foo.example.com/``, the specified file(s) would only be copied to the machine with the domain name foo.example.com."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:37
+# 9b0bd2a71e9b494b84b78a456bcf8b73
+msgid "So, the pattern for file specificity is as follows:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:39
+# 4f227562a438431c86bc7a56d90b3f5f
+msgid "host-node[:fqdn]"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:40
+# a113e1291829415aa7f603236691fe44
+msgid "node[:platform]-node[:platform_version]"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:41
+# 85ec089cb3f74136bcda3cb44752d7d7
+msgid "node[:platform]-version_components: The version string is split on decimals and searched from greatest specificity to least; for example, if the location from the last rule was centos-5.7.1, then centos-5.7 and centos-5 would also be searched."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:42
+# e37aff63cf9d43e4a382d5e5dd679433
+msgid "node[:platform]"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst:43
+# 2aaf85c31e8a4073b24f51e378359a3e
+msgid "default"
+msgstr ""
+
+#: ../source/essentials_cookbook_files.rst:47
+# 2a63d15ab23f42e9b438f841bc8f7bb3
+msgid "Host Notation"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_host_notation.rst:4
+# 08aa6c1482e74a7fbfc0a4cc80548ae0
+msgid "The naming of folders within cookbook directories must literally match the host notation used for file specificity matching. For example, if a host is named ``foo.example.com``, the folder must be named ``host-foo.example.com``."
+msgstr ""
+
+#: ../source/essentials_cookbook_files.rst:51
+# a6cc2e19da4b49dc9b55e7aa9ef787d9
+msgid "File Transfers"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_transfers.rst:4
+# 625f20e204be49a4ba9f91a443f25081
+msgid "When a cookbook_file resource is run, the |chef client| will calculate the checksum of each local file and then compare this against the checksum for that same file as it currently exists in the cookbook on the |chef server|. If the checksums match, that file is not transferred. Even though a cookbook may contain many files, only files that require an update are transferred from the |chef server| to a |chef client|."
+msgstr ""
+

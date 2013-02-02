@@ -1,0 +1,388 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Topics package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Topics 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-02 14:57\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_node_object.rst:34
+# 375b470e57fe4cc0bc40974af38ea9b0
+msgid "Node Objects"
+msgstr ""
+
+#: ../../includes_node/includes_node_object.rst:4
+# bb3d6b6d91af439d9395c4fe9e89f48c
+msgid "For |chef|, two important aspects of nodes are groups of attributes and run-lists. An attribute is a specific piece of data about the node, such as a network interface, a file system, the number of clients a service running on a node is capable of accepting, and so on. A run-list is an ordered list of recipes and/or roles that are run in an exact order. The node object consists of the run-list and node attributes, which is a |json| file that is stored on the |chef server|. The |chef client| gets a copy of the node object from the |chef server| during each |chef| run and places an updated copy on the |chef server| at the end of each |chef| run."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:39
+# 120987771985412b947af95a4138b20d
+msgid "Node Attributes"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute.rst:4
+# 99c1959ecef943169e9d2fc22f7db7d0
+msgid "An attribute is a specific detail about a node, such as an IP address, a host name, a desired application setting, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on. Attributes can be maintained in a variety of ways, such as by re-loading a cookbook (that contains new attributes), by using |knife|, or by using JSON data. During a |chef| run, the |chef client| gets attributes from |ohai|, the node object on the |chef server|, roles, recipes, and environments. These attributes are compared and then updated based on attribute precedence rules that are defined for each attribute. At the end of a |chef| run, the |chef client| will save the node object (and all of its attributes) to the |chef server| so they can be indexed for search."
+msgstr ""
+
+#: ../../includes_node/includes_node_object_set.rst:4
+# 0348471749634993badc8bfe7c9e5248
+msgid "Attributes for node objects can be set by cookbooks (and recipes), environments, roles, and by the node itself. When a node attribute is set from a recipe, use the ``node.set`` method:"
+msgstr ""
+
+#: ../../includes_node/includes_node_object_set.rst:11
+# f2d71104d019482f9514504ba34055e2
+msgid "This approach is most useful when a value needs to be calculated or when data needs to be stored on the node so that it persists for the next |chef| run."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:45
+# 657cf7c675a8450d9deaa0da89ece335
+msgid "Attribute Types"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:4
+# e488d14fdc9245bcb48fd438b9523117
+msgid "There are four types of attributes:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:10
+# b617de1980dd47e780dd149006fad75b
+msgid "Attribute Type"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:11
+# a3423f84786d46b78ca707c0cd2e2163
+msgid "Description"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:12
+# 6fb76fb85b76458caaff331bcd7cbb5f
+msgid "``default``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:13
+# 4cc8cd568aaf43e2874cd5b1f0206427
+msgid "A default attribute has the lowest attribute precedence. A default attribute is automatically reset each time |chef| runs. A cookbook should be authored so that it uses default attributes whenever possible."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:14
+# ec31c7bb19334a5b99dbb9fa963f698c
+msgid "``normal``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:15
+# bd890aaae1a94e37b42b6db91ecc2316
+msgid "A normal attribute is an attribute that persists on the target system. A normal attribute is never reset during a |chef| run. A normal attribute has a higher attribute precedence than a default attribute."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:16
+# c5caa60f206e475cb43e0deaf2bdb802
+msgid "``override``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:17
+# 8b15dad2a82b482994f4c5d9fdf92ff6
+msgid "An override attribute is an attribute that is specified in a recipe (or a run-list) and are often set only for specific roles or nodes. An override attribute has a higher attribute precedence than default or normal attributes. An override attribute is automatically reset each time |chef| runs. A cookbook should be authored so that it uses override attributes for role-specific or node-specific values when required."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:18
+# 6a9919d31d9b4c5193577129dc7f792b
+msgid "``automatic``"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_type.rst:19
+# 77976a794dad4a7c9876685238ade359
+msgid "An automatic attribute contains data that is automatically generated by |ohai| during every |chef| run (all previous values are overwritten by the newly generated values). An automatic attribute cannot be modified. An automatic attribute has the highest attribute precedence. An automatic attribute is automatically reset each time |chef| runs."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:49
+# 423b488b54384938891a73e1b1bce936
+msgid "Attribute Precedence"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:4
+# d403d318778d48cf8a783ab2f5049f63
+msgid "During a |chef| run, saved attributes are retrieved from the |chef server| and are merged with the attributes on the local system. The attribute type and the source of the attribute determines which attribute values have priority over others. Attribute values are applied in the following order (from low to high priority):"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:6
+# 644795927c8e4d63ba63ba7c01f80112
+msgid "Default attributes applied in an attributes file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:7
+# bf424b262ad74d76b6b5b889a50f3a8d
+msgid "Default attributes applied in an environment"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:8
+# f9b469c8d57e480fad745c66cd027e37
+msgid "Default attributes applied in a role"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:9
+# 23a0982a65624dc68f8dc7ad69c99892
+msgid "Default attributes applied on a node directly in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:10
+# 91590551cc3f43558b86025b0dea609d
+msgid "Normal attributes applied in an attributes file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:11
+# ed51b4653a814a3d87ade879e00c1ef2
+msgid "Normal attributes applied on a node directly in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:12
+# 7af08f1a92ab43ae9b508fc43dbdd6b4
+msgid "Override attributes applied in an attributes file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:13
+# 962875c68905449db8e85bc88d83aeb2
+msgid "Override attributes applied in a role"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:14
+# 1942d8459b054c4d8bd4dbb2ae76a548
+msgid "Override attributes applied in an environment"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:15
+# a133c9dd6edd4582938891ba3c7c0cf8
+msgid "Override attributes applied on a node directly in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:16
+# c6dee92f253145ba8c07cff60360de9f
+msgid "Automatic attributes, re-generated by |ohai| during each |chef| run"
+msgstr ""
+
+#: ../source/essentials_node_object.rst:53
+# 526462e192e14acbaafb7fc131435afd
+msgid "Attribute Persistence"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_persistence.rst:4
+# 0b80f7c861694eec82421cfb59e249bf
+msgid "At the beginning of a |chef| run, all default, override, and automatic attributes are reset. |chef| rebuilds these attributes based on attributes contained in cookbooks, recipes, roles, and environments, plus |ohai| data that is collected about that node at the beginning of the |chef| run. Normal attributes are never reset. During a |chef| run, any new attributes that are passed to the |chef client| are merged with the existing normal attributes on the node and any new settings are applied according to attribute precedence. At the conclusion of the |chef| run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next |chef| run."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:57
+# 0656065ce4404874a7c9ead6b8521b7b
+msgid "Automatic Attributes"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_automatic.rst:4
+# 6860b455593c46ffbfca6fe153aebb16
+msgid "An automatic attribute is data that must be understood, but not modified. For example, the IP address of a node, a host name, or the number of loaded kernel modules. When |chef| makes changes to a system during a |chef| run, automatic attributes are used to ensure that |chef| does not make changes to the larger environment on which a node is running. An automatic attribute always has the highest attribute precedence. Automatic attributes are saved to the |chef server| where they are indexed for search. Automatic attributes are detected by |ohai| before every |chef| run."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:61
+# 983013351fa145e9a73a42046dbbbf1b
+msgid "Attribute Notation"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_notation.rst:4
+# 45f7644d5ab24635b1012468157e1d18
+msgid "Attributes are a special key-value store (called a |ruby mash|) within the context of the |ruby| DSL. A |ruby mash| is just a |hash| where the key can be either a symbol (:key) or a string (\"key\")."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_notation.rst:6
+# bc068eb03b0f4e528425954bdfb5e106
+msgid "Individuals who are new to |ruby| and |chef| may have an easier time using only string notation. This approach allows attributes to \"be quoted\" and does not require learning about special cases, namespace overlap (and ``method_missing``), character constraints, and escaping."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:65
+# cb436045691240e5b3257bfe23db9f74
+msgid "Deep Merging of Attributes"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:4
+# 83789bfe4bee41c1b3f115fed2415145
+msgid "Attributes are typically stored in cookbooks and recipes, roles, and environments. These attributes are rolled-up to the node level during a |chef| run. For example, a recipe can store attributes using a multi-level hash or array; a group of attributes for web servers might be:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:19
+# cb5705327ff34db48f233e3a1aad00d3
+msgid "But what if all of the web servers are not the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like the preceding example and once just like the following:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:34
+# f23b32ce6e3b47dcbf85a5484660d5ac
+msgid "But that is not very efficient, especially because most of them are identical. The deep merge capabilities of |chef| allows attributes to be layered across recipes and cookbooks, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:53
+# 9679e37dd70b4486a97e4a3d03d9f5eb
+msgid "and then a role named ``web.rb``:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:69
+# 9e337707df624308a31e3126a2526821
+msgid "Both of these files are similar. They share the same structure. When an attribute is of the same type of data, such as  a hash or an array, the contents are merged. This is true even with different levels of precedence, such as default and override attributes. If the attribute is of a different data type, it is overwritten at higher levels of precedence."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:71
+# 42fb9a5b33524019bcd8456b6ab0178d
+msgid "For example, the ``web.rb`` references the ``baseline.rb`` role. The ``web.rb`` file only provides a value for one attribute: ``:startservers``. When |chef| compares these attributes, the deep merge feature will ensure that ``:startservers`` (and its value of ``30``) will be applied to any node for which the ``web.rb`` attribute structure should be applied."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:73
+# b37905b12ecb4e6fadcebefe7fb7b609
+msgid "This approach will allow a recipe like this:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:80
+# eacbc92aad1f4e968fb98e3806fa2260
+msgid "and a ``run_list`` like this:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:89
+# 538c52d5c24048e6af51cc35b6bec0b5
+msgid "to produce results like this:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:103
+# 30b49c8e6b3c45e0a41face4d87f91f0
+msgid "Even though the ``web.rb`` file does not contain attributes and values for ``minspareservers``, ``maxspareservers``, ``serverlimit``, ``maxclients``, and ``maxrequestsperchild``, the deep merge capabilities pulled them in."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:68
+# 1f81594a055e477691cb91db41c1a2a3
+msgid "The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:71
+# 4713b03fb22145e18abd779887e24df3
+msgid "Substitution"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:4
+# 2dfa87d754a84c38aa80c24671c67e41
+msgid "The following examples show how the logic works for substituting an existing string using a hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:12
+# d6a47259f3054f03af2178b1b1fad80c
+msgid "For substituting an existing boolean using a hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:20
+# a64ed30e4d1d4647802e68163df17dd4
+msgid "For substituting an array with a hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:28
+# ef6c8296da2c47f79d5afd7351703749
+msgid "When items cannot be merged through substitution, the original data is overwritten."
+msgstr ""
+
+#: ../source/essentials_node_object.rst:75
+# 93ffe90681834d2b830246cd56276c4d
+msgid "Addition"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_add.rst:4
+# 8287e54b807f41139c3e3be282080b3e
+msgid "The following examples show how the logic works for adding a string using a hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_add.rst:12
+# 4d87afc95659457185d1414cea16cba6
+msgid "For adding a string using an array::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_add.rst:20
+# 0a8d6c4c66ca4a23887b5a16c390515e
+msgid "For adding a string using a multi-level hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_add.rst:28
+# 673c57fe3dbc41e98d63455da0fd334a
+msgid "For adding a string using a multi-level array::"
+msgstr ""
+
+#: ../source/essentials_node_object.rst:79
+# 8142d836e3444a8ca555c3443d951683
+msgid "Run-lists"
+msgstr ""
+
+#: ../../includes_node/includes_node_run_list.rst:4
+# 7b6d02215e054a67978763bdc260f161
+msgid "A run-list is an ordered list of roles and/or recipes that are run in an exact order. A run-list is always specific to the node on which it runs, though it is possible for many nodes to have run-lists that are similar or even identical. The items within a run-list are maintained using |knife| and are uploaded to the |chef server| and stored as part of the node object for each node. |chef| always configures a node in the exact order specified by its run-list and will never run the same recipe twice."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:4
+# 0bbef0db6bc6496b86282a6c6e6cb766
+msgid "A recipe is the most fundamental configuration element within the |chef| environment. A recipe:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:6
+# e6af2000c55b490bb219e631324da5d9
+msgid "Is authored using |ruby|, which is a programming language designed to read and behave in a predictable manner"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:7
+# 4f6b4387ed5349e495e76902d9bd9fea
+msgid "Is mostly a collection of resources in a |ruby| syntax with some helper code around it"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:8
+# a60ffab6ee434b878acf30217f35121f
+msgid "Must define everything that is required to configure part of a system"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:9
+# 2f3d9e56ded74fe5975b2bba5852a6d2
+msgid "Must be stored in a cookbook"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:10
+# 4b6d875a2a9e461eab407961215e3306
+msgid "May be included in a recipe"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:11
+# 29455f864a9e4c9eb032e9a7469e8d6d
+msgid "May use the results of a search query and read the contents of a data bag (including an encrypted data bag)"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:12
+# f58ae5f276804249840ac70db3a97b21
+msgid "May have a dependency on one (or more) recipes"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:13
+# 4778b8521d5a477e80064cec10c88d81
+msgid "May be tagged to facilitate the creation of arbitrary groupings that exist outside of the normal naming conventions an organization may have"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:14
+# de60009c8dca411f86e06eafe8155116
+msgid "Must be added to a run-list before it can be used by |chef|"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe.rst:15
+# cf9763c5334d49baacfa5e8320421124
+msgid "Is always executed in the same order as listed in a run-list"
+msgstr ""
+
+#: ../../includes_role/includes_role.rst:4
+# 97f8ade8b9144811935b9f3b0a43274c
+msgid "|role description| Each role consists of zero (or more) attributes and a run list. Each node can have zero (or more) roles assigned to it. When a role is run against a node, the configuration details of that node are compared against the attributes of the role, and then the contents of that role's run list are applied to the node's configuration details. When a |chef client| runs, it merges its own attributes and run lists with those contained within each assigned role."
+msgstr ""
+

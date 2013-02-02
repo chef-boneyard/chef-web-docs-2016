@@ -1,0 +1,381 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Topics package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Topics 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-02 14:57\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/migrate_to_hosted.rst:34
+# 227511db1cf94a19970cee731c218e45
+msgid "Migrate to |chef hosted| from |chef open server|"
+msgstr ""
+
+#: ../../includes_chef/includes_chef_open_source.rst:4
+# a237527452ce429ca39d11c561376950
+msgid "|chef open server| is an open source version of the |chef server| that contains much of the same functionality as |chef hosted|, but requires that each instance be configured and managed locally, including performing data migrations, applying updates to the |chef open server| server, and ensuring that the |chef open server| server scales as the local infrastructure it is supporting grows. |chef open server| includes support from the |chef| community, but does not include support directly from |opscode|."
+msgstr ""
+
+#: ../../includes_chef/includes_chef_hosted.rst:4
+# c86071f65bf8431baf7c051394d84a81
+msgid "|chef hosted| is a version of a |chef server| that is hosted by |opscode|. |chef hosted| is cloud-based, scalable, and available (24x7/365), with resource-based access control. |chef hosted| has all of the automation capabilities of |chef|, but without requiring it to be set up and managed from behind the firewall."
+msgstr ""
+
+#: ../../includes_migrate/includes_migrate_to_hosted.rst:4
+# c3a2ea6fad4449a6a145f4816a13d833
+msgid "Migrating from using |chef open server| to |chef hosted| can be done in a few simple steps. Two custom |knife| plugins can be installed to help with the export of data from the |chef open server| and the import of that data to the |chef hosted| server. Keep using the same repository or start a new one. Once the |chef hosted| server is ready to go, nodes can be registered with |chef hosted|, bootstrapped (to run the |chef client|), and then be configured and managed by |chef|."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:42
+# d3390556c22d493a9c9680cb0146054c
+msgid "Follow the steps below to migrate from an |chef open server| to |chef hosted|."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:45
+# fb0f35a7d3de40268f415c51f002eb74
+msgid "System Requirements"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:46
+# 53533719b1714d59b6d7d12da8886854
+msgid "|chef hosted| does not have system requirements other than each node that will be configured by |chef| must be able to communicate with the |chef hosted| server and that each workstation that will be used to manage and configure the organization (such as by using |knife| to upload cookbooks) must also be able to communicate with the |chef hosted| server. Both nodes and workstations, once properly configured and registered with the |chef server|, are also referred to as |chef api client|."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:49
+# 594e0a581a184db9a1a4256eb957846a
+msgid "Migrate to |chef hosted|"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:50
+# f26784cfa45f428c9c1fbd0f940cd83a
+msgid "The steps for migrating to |chef hosted| from an instance of |chef open server| are:"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:52
+# a0099f621e0b4ea38b0a129e4bd8a84d
+msgid "Backup data from |chef open server|"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:53
+#: ../source/migrate_to_hosted.rst:84
+# ce3cd3ac9abf43ad85d19a76c8753d30
+# ff7ab8e1cc8543358b6aad21b1ad2c12
+msgid "Choose an organization"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:54
+#: ../source/migrate_to_hosted.rst:90
+# a2624728157a4bf5bbeffc538c436fce
+# 4156fe526ebc4b5a88d14f86f415ba03
+msgid "Choose a repository"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:55
+#: ../source/migrate_to_hosted.rst:96
+# 23f4892400b84ae5a3faf4a3e3e32064
+# aaebec02794c487c97303b3920928ea4
+msgid "Verify nodes and API clients"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:56
+#: ../source/migrate_to_hosted.rst:108
+# 3619a32a6ba24118a0d65423b426aca6
+# ad446a4e31ba468bb7d6b6b292c3f4ac
+msgid "Register nodes with |chef hosted|"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:57
+# b96cb52545ad4578a60483fbbf37f592
+msgid "Upload data to |chef hosted|"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:58
+# dc303a6804f14207bdc6f8bd39a0200e
+msgid "Run the |chef client| on all nodes"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:60
+# 685bbbc85df64809bbfa027a2715e9b1
+msgid "See the following sections for more information about each step."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:63
+# f267bf8aeb6b49c78bd62dcd6dd36c6c
+msgid "Backup Data"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:64
+# 77424928f5744a55b28ad36250158e80
+msgid "To back up the data (including run-lists and node attributes) that is being used with |chef open server| server, it must be exported from the |chef open server| server so that it can be uploaded to the |chef hosted| server. Use the ``backup_export`` |knife| plugin to perform this task."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:67
+# c79cbbe152dc431c999a4b9a9560936b
+msgid "Using ``backup_export``"
+msgstr ""
+
+#: ../../step_knife_plugin/step_knife_plugin_backup_export_install.rst:3
+# b90ef654f9614b3db83a10a85b57854b
+msgid "To install the ``backup_export`` |knife| plugin, browse to the |chef| repository and enter:"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:70
+# f32a154ecafe46c8944939eae7331f58
+msgid "Use the ``knife backup export`` sub-command to export all data bags, environments, nodes, and roles that are stored on the |chef server|. These are saved as |json| files within the ``.chef/chef_server_backup`` directory."
+msgstr ""
+
+#: ../../step_knife_plugin/step_knife_plugin_backup_export_run.rst:4
+# aeeb965c6daa437d91cb3ff8321c0904
+msgid "To export data from the |chef open server| server using the ``backup_export`` |knife| plugin, enter:"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:75
+#: ../source/migrate_to_hosted.rst:156
+# 0ab474baffe34c80af2bd67a44b98afd
+# ba52e3e770d143fcb939699fddb525dd
+msgid "Using Knife"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:76
+# a9d99812a2bc4925a679c578b2048493
+msgid "|knife download|"
+msgstr ""
+
+#: ../../step_knife/step_knife_download_repository.rst:3
+# 1f8dc24bfd6649a295e77e998adc1c11
+msgid "To download the entire |chef| repository from the |chef server|, browse to the top level of the |chef| repository and enter:"
+msgstr ""
+
+#: ../../step_knife/step_knife_download_repository.rst:9
+#: ../../step_knife/step_knife_download_directory.rst:9
+#: ../../step_knife/step_knife_upload_repository.rst:9
+#: ../../step_knife/step_knife_upload_directory.rst:9
+# 9751de9fed454157bcc72ed52756e39a
+# 1c552f7132394b9ba8335eecacca0d73
+# 31981c3f78074d6e84ca0504c7dfaa4b
+# c09b7cce6656433ea89e0d95673a536a
+msgid "or from anywhere in the |chef| repository, enter:"
+msgstr ""
+
+#: ../../step_knife/step_knife_download_directory.rst:3
+# 8f517fb6f12b450dbe9fd803f899f2f9
+msgid "To download a single directory in the |chef| repository from the |chef server|, browse to the top level of the |chef| repository and enter:"
+msgstr ""
+
+#: ../../step_knife/step_knife_download_directory.rst:15
+#: ../../step_knife/step_knife_upload_directory.rst:15
+# b7d69436b49646d8af73099beebf8615
+# a1d7763b7b454d2d9b1e76d76ad6f34f
+msgid "where ``name_of_directory`` is the name of a directory in the |chef| repository, such as ``roles``, ``environments``, or ``cookbooks``."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:85
+# 8a2f07310b4240b1873d8cae318c2f27
+msgid "Sign up for |chef hosted| and create an organization."
+msgstr ""
+
+#: ../../step_install/step_install_workstation_validation_files_download.rst:4
+# 2704a8fc3ac94db8a474273b9975cbf1
+msgid "The |chef server| provides three files that must be in the |chef| repository and are required when connecting to the |chef server|. For |chef hosted| and |chef private|, log on and download the following files:"
+msgstr ""
+
+#: ../../step_install/step_install_workstation_validation_files_download.rst:6
+# 397ee07973be4c99b48817c45844d51f
+msgid "|knife rb|. This configuration file can be downloaded from the |menu chef organizations| page."
+msgstr ""
+
+#: ../../step_install/step_install_workstation_validation_files_download.rst:7
+# f4ee3c0bffbe409db563374ae5879529
+msgid "|organization pem|. This private key can be downloaded from the |menu chef organizations| page."
+msgstr ""
+
+#: ../../step_install/step_install_workstation_validation_files_download.rst:8
+# bb91258afac14c9a8b048aae4a46e514
+msgid "|user pem|. This private key an be downloaded from the |menu chef change password| section of the |menu chef account management| page."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:91
+# 68e4c3a87b9847289ce465c9e3f2e7c0
+msgid "The |chef| repository used with |chef hosted| can be the same repository as the one used with |chef open server|. Or, a brand new repository can be created using the data that was exported from the |chef open server| server."
+msgstr ""
+
+#: ../../step_install/step_install_workstation_chef_directory_move_files.rst:4
+# 1b6aad48435545d0b2764864bf142a38
+msgid "The |knife rb|, |organization pem|, and |user pem| files must be moved to the |chef repo hidden| directory after they are downloaded from the |chef server|."
+msgstr ""
+
+#: ../../step_install/step_install_workstation_chef_directory_move_files.rst:6
+# 34d40cb90b2f43849f2fe95cbc0cb4dd
+msgid "To move files to the |chef repo hidden| directory:"
+msgstr ""
+
+#: ../../step_install/step_install_workstation_chef_directory_move_files.rst:8
+# ba87779165034dae9879e27b91aa730c
+msgid "In a command window, enter each of the following:"
+msgstr ""
+
+#: ../../step_install/step_install_workstation_chef_directory_move_files.rst:14
+# f1281ddac7b344a489fb3e8a78254124
+msgid "and:"
+msgstr ""
+
+#: ../../step_install/step_install_workstation_chef_directory_move_files.rst:20
+# 8eb0d030848440e9a908a12ae98373e9
+msgid "and"
+msgstr ""
+
+#: ../../step_install/step_install_workstation_chef_directory_move_files.rst:26
+# ad21591ebc1a460198503396831dd97c
+msgid "where ``/path/to/`` represents the path to the location in which these three files were placed after they were downloaded."
+msgstr ""
+
+#: ../../step_install/step_install_workstation_chef_directory_move_files.rst:28
+# 82adde318fc14b6180af2979d2e57dbc
+msgid "Verify that the files are in the |chef repo hidden| folder."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:97
+# e6add31e9ff741e28107b22162868e93
+msgid "The new |chef hosted| organization should not have any registered nodes and should have only a single |chef api client|: |chef validator|. The presence of nodes and API clients can be verified using the ``list`` arguments for the ``knife node`` and ``knife client`` sub-commands."
+msgstr ""
+
+#: ../../step_knife/step_knife_node_list_return_empty.rst:3
+# 3364d912d33c4d908f3332f066a58084
+msgid "To verify the list of nodes that are registered with the |chef server|, enter:"
+msgstr ""
+
+#: ../../step_knife/step_knife_node_list_return_empty.rst:9
+# 7e0a15d5744b4ad496422f42999ebafd
+msgid "No nodes should be returned."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:101
+# 29cfcb5bd9ce4b72b7d59f18abbd87a8
+msgid "No nodes should be listed."
+msgstr ""
+
+#: ../../step_knife/step_knife_client_list_return_only_validator.rst:3
+# b91c46953e594d4d87909b9ab890e553
+msgid "To verify the |chef api client| list for the |chef| server, enter:"
+msgstr ""
+
+#: ../../step_knife/step_knife_client_list_return_only_validator.rst:9
+# f4285c1fadfd42d49e9486f3fe99558b
+msgid "to return something similar to:"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:105
+# c5ba00e9fcc74b0785f028e70a25a56a
+msgid "The only client that should be listed is the organization's validator client."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:109
+# 455f8f12b16749118740ba63f54eb382
+msgid "Each node that will be managed by |chef| must be registered with the |chef hosted| server. A custom migration template can be used with the ``knife bootstrap`` sub-command to populate all of the nodes with the correct configuration file and validation certificate."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:112
+# a0fe3cd68afe49d0bfab22b6726daeee
+msgid "The Migration Template"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:113
+# 5eec4803f2a7480597ebcaf2944fdcce
+msgid "A migration script is used to register each of the nodes for |chef hosted|. Save the following script as ``.chef/bootstrap/migration.erb`` within the |chef| repository. If the |client rb| file has been modified, this script will also need to be modified."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:140
+# 786388bc5d9343f8a1a6e41560835bb2
+msgid "Bootstrapping Nodes"
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_migrate_to_hosted.rst:3
+# 8df4b6241aea43e2acd9f0b5a3927c29
+msgid "To register nodes with |chef hosted|, run the following bootstrap command on every node:"
+msgstr ""
+
+#: ../../step_knife/step_knife_bootstrap_migrate_to_hosted.rst:9
+# 9c28c3090eec4a8da65a1fc6ccf5aaa3
+msgid "The exact command will depend on how the actual environment is configured on each node. For example, to bootstrap and register a node that is running |ubuntu|, enter something like:"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:143
+# f4d4aa72b3104d458eca476d90a52db5
+msgid "If nodes are running on the |windows| platform, the ``knife bootstrap`` sub-command must be used and the template must be modified for the |windows| platform. Be sure to remove the ``client.pem`` file, typically located at ``c:\\chef\\client.pem``. This also assumes that the |chef hosted| organization does not have any data for nodes that will run on the |windows| platform and that the run list is empty. (The run-list will be re-populated from backed-up data.) It is important to bootstrap the nodes at this stage before restoring the backup, in order to avoid creating a permissions issue."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:146
+# 104c929158084d829d3206e63f808a09
+msgid "Upload Data"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:147
+# bfd0bce91f5344e5a80cbe8243b0f2b4
+msgid "To restore the data (including run-lists and node attributes) that was being used with |chef open server| server, it must be uploaded to the |chef hosted| server. There are two options: use the ``backup_restore`` |knife| plugin or use the ``knife upload`` sub-command."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:150
+# 65ef2e6affb84684a56990af7df4cb75
+msgid "Using ``backup_restore``"
+msgstr ""
+
+#: ../../step_knife_plugin/step_knife_plugin_backup_restore_install.rst:3
+# 83a2d575c1f94969998e4a645046714c
+msgid "To install the ``backup_restore`` |knife| plugin, browse to the |chef| repository and enter:"
+msgstr ""
+
+#: ../../step_knife_plugin/step_knife_plugin_backup_restore_run.rst:4
+# e275d61fa2e64b13b1507cd3c28b2698
+msgid "To restore data to the |chef hosted| server using the ``backup_restore`` |knife| plugin, enter:"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:157
+# 5c5efc1261a74c5f943f86da780a05bd
+msgid "|knife upload|"
+msgstr ""
+
+#: ../../step_knife/step_knife_upload_repository.rst:3
+# 70fa2dd012014d748564c50e056e2d05
+msgid "To upload the entire |chef| repository to the |chef server|, browse to the top level of the |chef| repository and enter:"
+msgstr ""
+
+#: ../../step_knife/step_knife_upload_directory.rst:3
+# 0652fd7705384db8997b27d09db13ff7
+msgid "To upload a single directory in the |chef| repository to the |chef server|, browse to the top level of the |chef| repository and enter:"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:163
+# ac53eaee8baa49e8a4e759c8bab9c447
+msgid "If only data for specific data bags, environments, nodes, and roles should be uploaded, use the ``from file`` arguments for the ``knife data bag``, ``knife environment``, ``knife node``, and ``knife role`` sub-commands. The path used for the ``from file`` argument must be the path to backed-up data bag, environment, node, or role."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:165
+# e8e1ae9ff15548e0a53d2e85d50bebef
+msgid "A cookbook can be uploaded individually using the ``upload`` argument for the ``knife cookbook`` sub-command."
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:168
+# 02a222e07a5f40c193df4571eca86fb8
+msgid "Run every |chef client|"
+msgstr ""
+
+#: ../source/migrate_to_hosted.rst:169
+# 1b0c9a2d63834b698e1b19b2c444b29d
+msgid "After all of the nodes are registered with the |chef hosted| server and all of the data has been restored to the |chef hosted| server, the last step is to kick off a |chef| run on each of the nodes. The easiest way to do that is to use the ``knife ssh`` sub-command and issue a ``sudo chef-client`` command to all of the nodes that will be managed by the |chef hosted| server."
+msgstr ""
+
+#: ../../step_knife/step_knife_ssh_run_chef_client_on_all_nodes.rst:3
+# 45d968968a624b97bb7650e32ecf4a9c
+msgid "To run the |chef client| on all nodes, enter:"
+msgstr ""
+
