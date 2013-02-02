@@ -1,5 +1,5 @@
 =====================================================
-Directory Structure
+Cookbooks Directory
 =====================================================
 
 .. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
