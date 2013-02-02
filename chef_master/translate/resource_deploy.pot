@@ -1,0 +1,1005 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-02 14:51\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_deploy.rst:34
+# 8aeffa07611f4b90aa62e8c3b138c202
+msgid "deploy"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy.rst:4
+# 630d1129c1b64e08b74df08fc04efdbd
+msgid "|resource desc deploy| It is one of the most popular resources available in |chef| and is also the most complex, having the most attributes, multiple providers, the added complexity of callbacks, plus four attributes that support layout modifications from within a recipe."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_capistrano.rst:4
+# ed7ab9ee54f948978d8cfcb86a387ec2
+msgid "The |resource deploy| resource is modeled after |capistrano|, a utility and framework for executing commands in parallel on multiple remote machines via |ssh|. The |resource deploy| resource in |chef| is designed to behave in a way that is similar to the ``deploy`` and ``deploy:migration`` tasks in |capistrano|."
+msgstr ""
+
+#: ../source/resource_deploy.rst:41
+# 49bc3c47e403489084810d38f2cb79ea
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:4
+# bc8c132f010d4c86979a626ada6637dd
+msgid "The syntax for using the |resource deploy| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:21
+# 6a3b6c3c8b96492299da6351cc902b90
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:23
+# 14e8457fd7ba47be9ea1d4598c9fdd4c
+msgid "``deploy`` tells |chef| to use either the ``Deploy::Revision`` or ``Deploy::Timestamped`` provider during the |chef| run. More specific short names---``timestamped_deploy``, ``deploy_revision``, or ``deploy_branch``---can be used instead of the ``deploy`` short name."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:24
+# a7505efc48814251b18d32ccffdbfeca
+msgid "``\"name\"`` is the path to the location in which the deployment steps will occur"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:25
+# 4a5adaa9028e41aa9a66446b801b4266
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:26
+# 39d67876206b45f4b5915097dbbd8123
+msgid "``callback`` represents additional |ruby| code that is used to pass a block or to specify a file, and then provide additional information to |chef| at specific times during the deployment process"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:27
+# 9fee20e3a6f34b5196043cf92c8012cb
+msgid "``purge_before_symlink``, ``create_dirs_before_symlink``, and ``symlink`` are attributes that are used to link configuration files, remove directories, create directories, or map files and directories during the deployment process"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:28
+# fd5a643a3703401097779c8c983d483d
+msgid "``:action`` is the step that the resource will ask the provider to take during the |chef| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:30
+# bc7da7a8166b44bba4ee53a6286ff325
+msgid "The following is an example of how the ``deploy_revision`` resource can work when used in a recipe. In this example, an application will be deployed to a folder named \"/path/to/application\":"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:51
+# 14ce85f4aa9c4d69ae9663081f1dbf47
+msgid "For the example shown above:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:53
+# 9ff339b1063a47a9a3322bcad049c26c
+msgid "Because an action is not explicitly specified, |chef| will use the default action: ``:deploy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:54
+# e49444ff819a4052bb081514f09dca64
+msgid "The ``purge_before_symlink`` application layout is an array of paths that will be cleared before the ``symlinks`` attribute is run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:55
+# 2a5e8e47521541558207d473ba8cff81
+msgid "The ``create_dirs_before_symlink`` attribute is empty, which is different from the default"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:56
+# 0ea36c845b3f45db855951d90c6ba003
+msgid "The ``symlinks`` attribute is creating three symbolic links"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:57
+# 4b610140855f4533ab9bd126956ff7f8
+msgid "The ``before_restart`` callback is being used to add custom actions that will occur at the end of the deployment process, but before any services have been notified"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_syntax.rst:58
+# 33d2d53bf0d54f27b0cb1bda68902470
+msgid "At the end, the recipe is using the ``notifies`` attribute---a common attribute available to all resources in |chef|---to alert two services (named \"foo\" and \"bar\") that they should restart."
+msgstr ""
+
+#: ../source/resource_deploy.rst:45
+# ac3b25b6dd6d4660a07b34cb2e4a188b
+msgid "Deploy Strategies"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy.rst:4
+# 716e44ed8d6c4eca9394c22f38985a7f
+msgid "In the ``deploy`` directory, a sub-directory named ``shared`` must be created. This sub-directory is where configuration and temporary files will be kept. A typical |ruby on rails| application will have ``config``, ``log``, ``pids``, and ``system`` directories within the ``shared`` directory to keep the files stored there independent of the code in the source repository."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy.rst:6
+# a992e00aa5594696b08e3bcc44f32ebd
+msgid "In addition to the ``shared`` sub-directory, the deploy process will create sub-directories named ``releases`` and ``current`` (also in the ``deploy`` directory). The ``release`` directory holds (up to) five most recently deployed versions of an application. The ``current`` directory holds the currently-released version."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy.rst:8
+# 32f42a7f5e774474835e7e7615b870e9
+msgid "For example::"
+msgstr ""
+
+#: ../source/resource_deploy.rst:49
+# b340e6d6cdfe424c8806a7cccdf925eb
+msgid "Deploy Phases"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_phases.rst:4
+# e7265a0530a24564bb63a8c70d0221a4
+msgid "A deployment happens in four phases:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_phases.rst:6
+# e1accfe7f5724310953bdb4efae5956b
+msgid "**Checkout**---|chef| uses the |resource scm| resource to get the specified application revision, placing a clone or checkout in the sub-directory of the ``deploy`` directory named ``cached-copy``. A copy of the application is then placed in a sub-directory under ``releases``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_phases.rst:7
+# c3d9e903c1dd4367811c87fc6086e8f4
+msgid "**Migrate**---If a migration is to be run, |chef| symlinks the database configuration file into the checkout (``config/database.yml`` by default) and runs the migration command. For a |ruby on rails| application, the ``migration_command`` is usually set to ``rake db:migrate``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_phases.rst:8
+# c3bf8e14d91749dba65d70951d6183d3
+msgid "**Symlink**---Directories for shared and temporary files are removed from the checkout (``log``, ``tmp/pids``, and ``public/system`` by default). After this step, any needed directories (``tmp``, ``public``, and ``config`` by default) are created if they don't already exist. This step is completed by symlinking shared directories into the current ``release``, ``public/system``, ``tmp/pids``, and ``log`` directories, and then symlinking the ``release`` directory to ``current``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_phases.rst:9
+# 31964cb741134a7b9c02bfc92bd00dee
+msgid "**Restart**---The application is restarted according to the restart command set in the recipe."
+msgstr ""
+
+#: ../source/resource_deploy.rst:53
+# 52ecb9815afc45c687b9ba8d3f7ae8d8
+msgid "Deploy Cache File"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_start_over.rst:4
+# c7fd572689cb484da123b69cab785b14
+msgid "|chef| uses a cache file to keep track of the order in which each revision of an application is deployed. If a re-deployment must be forced---by deleting the deployed code from a node, for example---the cache file must be deleted as well. The cache file is located in the default configuration at |path chef deploy cache file|."
+msgstr ""
+
+#: ../source/resource_deploy.rst:57
+# ecf039d688574cf2a3aeb407e1071a79
+msgid "Callbacks"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:4
+# ce63f4b161e74249b4871ad62141e64e
+msgid "In-between each step in a deployment process, callbacks can be run using arbitrary |ruby| code, including recipes. All callbacks support embedded recipes given in a block, but each callback assumes a shell command (instead of a deploy hook filename) when given a string."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:6
+# 801c705183a04212acdc28b8d049f1ca
+msgid "The following callback types are available:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:12
+# e94e12033f044566a4694c46bb33dc89
+msgid "Callback"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:13
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:11
+#: ../../includes_resources/includes_resource_deploy_actions.rst:11
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:11
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:64
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:83
+# 574901d60ce6416f8c7331d7e3343880
+# 1f23bf4a7cad4b3b84dd181b6357334e
+# d54427309960478fb59ad06da9a74980
+# 0f5568471e914136bceb683d097da00d
+# f8e5cf045f154259b645fca4ae2278e4
+# e45d5bb7418f48d28adb4795f6167cd6
+msgid "Description"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:14
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:12
+# 1fd759b0018644708cc7885050393534
+# ad119d0ef16e4c0383e6be481cefbe9d
+msgid "``after_restart``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:15
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:13
+# 0c31e882f8e04bc5ab6237700bbe314c
+# 852822617d3b4f2b897b543420642678
+msgid "|after_restart| Default value: ``deploy/after_restart.rb``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:16
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:14
+# 87437c9281024004b01134c5b15fef69
+# bfb61e4739554c209d4b010ff564a453
+msgid "``before_migrate``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:17
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:15
+# 39fe21823f274d5396813a3146ad129d
+# 9af3153b8ca24bb0b5fc0f3afad2c712
+msgid "|before_migrate| Default value: ``deploy/before_migrate.rb``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:18
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:16
+# f3b10810f8a24544915229163034dea3
+# 5fd1abbd871f4e46a3a7ea86ffe9824b
+msgid "``before_restart``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:19
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:17
+# 6d2d9cd73d184669a6a9ec1b69f17abd
+# 9cb560ba7b1849b5a0b6cbf71dc3a0ff
+msgid "|before_restart| Default value: ``deploy/before_restart.rb``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:20
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:18
+# 6eb6cfe9d33e40629dd792c67fc2f524
+# 8dd6c64cd4bb44e482e5d3f9828dc596
+msgid "``before_symlink``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:21
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:19
+# d34978e6cc124350a439b9c147efbf0e
+# 53f2178745894461b6615153df6257ad
+msgid "|before_symlink| Default value: ``deploy/before_symlink.rb``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:23
+# ab1552ea4d1946b7abe8b1550f68cb61
+msgid "Each of these callback types can be used in one of three ways:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:25
+# d2a3f7aed2374830afa4ef4b0c69c47c
+msgid "To pass a block of code, such as |ruby| or |python|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:26
+# 7d0deb98d95047219c2cf407217240fb
+msgid "To specify a file"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:27
+# 8755a26148c841f59a3737524e7f43bf
+msgid "To do neither; |chef| will look for a callback file named after one of the callback types (``before_migrate.rb``, for example) and if the file exists, to evaluate it as if it were a specified file"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:29
+# 898bf1ad99ac4bb882c65a829ca998c1
+msgid "Within a callback, there are two ways to get access to information about the deployment:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:31
+# 18173aceeac247fdbdc2794b90af8c8e
+msgid "``release_path`` can be used to get the path to the current release"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:32
+# b2a163ad090d4b7ebb18fa413d4232f2
+msgid "``new_resource`` can be used to access the deploy resource, including environment variables that have been set there (using ``new_resource`` is a preferred approach over using the ``@configuration`` variable)"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_callbacks.rst:34
+# e298a4e83d7b449182e38b2852712a1e
+msgid "Both of these options must be available at the top-level within the callback, along with any assigned values that will be used later in the callback."
+msgstr ""
+
+#: ../source/resource_deploy.rst:60
+# 61ec49f9b5154a18b834f0565895a7f0
+msgid "**Callbacks and Capistrano**"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_capistrano_callbacks.rst:5
+# f86cc579679048a085909d8ff911f932
+msgid "If you are familiar with |capistrano|, the following examples should help you know when to use the various callbacks that are available in |chef|. If you are not familiar with |capistrano|, then follow the semantic names of these callbacks to help you determine when to use each of the callbacks within a recipe that is built with the |resource deploy| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_capistrano_callbacks.rst:7
+# 6227c559982c4282b12a9232519e0e8c
+msgid "The following example shows where callbacks in |chef| fit in relation to the steps taken by the ``deploy`` process in |capistrano|:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_capistrano_callbacks.rst:11
+# f6c6e21f210d42f6bbf2277bc671aad0
+msgid "and the following example shows the same comparison, but with the ``deploy:migrations`` process:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:65
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:10
+# fa1919d93d8447ba86864b4cfcdd532d
+# 4b4c940c35714d43a4b4360776eb4097
+msgid "Layout Modifiers"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:4
+# d5ec9b48e6ed4ee595b36e4d454b1122
+msgid "The |resource deploy| resource expects an application to be structured like a |ruby on rails| application, but the layout can be modified to meet custom requirements as needed. Use the following attributes within a recipe to modify the layout of a recipe that is using the |resource deploy| resource:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:12
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:22
+# 92f646d16f874979be4a91a6dccd1183
+# 6c39dfb02d014c11b314562822058df3
+msgid "``create_dirs_before_symlink``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:13
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:23
+# e5749c5f14684be08ea5b1bf91e77750
+# b10e7323589b497abede5a0f08918a6b
+msgid "|create_dirs_before_symlink|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:14
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:34
+# cf2eaa5bbd8e422685b23569d6f0d9dd
+# a2a1a9a91595498caeb709ffc297c73c
+msgid "``purge_before_symlink``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:15
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:35
+# 70a47ca9eaa344988cedd36a5c3012ba
+# 800f4df9c091426ab600a87c73859e50
+msgid "|purge_before_symlink|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:16
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:52
+# e4e852dba51040f38574e9a4cab374d3
+# fd528cc9ae6e4f5aa0e12dc90e5181a7
+msgid "``symlink_before_migrate``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:17
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:53
+# 9531a30460a14f52830648e35374a9df
+# 1b87185381cb4e43aad2518784d38c70
+msgid "|symlink_before_migrate|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:18
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:50
+# 220120517a414177be031626b243e5c1
+# b5ec7c06ac3648a8b5fff1e7a32b1b64
+msgid "``symlinks``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_strategy_layouts.rst:19
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:51
+# 094591ca2d4c49c58f0bb789045758d6
+# 8b28144a32334db1b75c8187ca09f0d2
+msgid "|symlinks|"
+msgstr ""
+
+#: ../source/resource_deploy.rst:69
+# 847a26a08a9e40cbac967d0910782dc3
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_actions.rst:4
+# 43df3840dcb14f43b9d8e6a32cc438f8
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_actions.rst:10
+# 556ba224e67b4649b1495cecc3fe3983
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_actions.rst:12
+# 6cd9e93b8bba4adb9e9067e25b8d1ca9
+msgid "``:deploy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_actions.rst:13
+# 5da571c7310f4d55a1584a82d7aa310a
+msgid "Default. |resource action deploy deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_actions.rst:14
+# 446eb26d462142e79271eb4dbffaba1d
+msgid "``:force_deploy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_actions.rst:15
+# fb24f8bdab4544b89e6614fdae10d708
+msgid "|resource action force_deploy deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_actions.rst:16
+# cf81118a9c7e43fb8e2fcc08a7d5e15c
+msgid "``:rollback``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_actions.rst:17
+# 72a6e2daca214ed2ad6f042344b4d5b0
+msgid "|resource action rollback deploy|"
+msgstr ""
+
+#: ../source/resource_deploy.rst:73
+# 38e9929dcebe4c62bab549c858a93ed2
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:4
+# df9b6b915f8a4640a4417011abb31d6b
+msgid "This resource has the following has the following attributes:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:10
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:63
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:82
+# 8361b4c92d5048239cee62aa2d7c7a35
+# 26baa7b896fa4dd2bbd65eced5dda695
+# 4d502da1165d4df5935dcbe061b08bd1
+msgid "Attribute"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:20
+# 6d12919596ed43dfb4bb9b51f12cac61
+msgid "``branch``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:21
+# 641188ddff11439e928f2809e4e409cb
+msgid "The alias for the revision."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:24
+# 8f8b5f320e4a41678eba53c49eb96752
+msgid "``deploy_to``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:25
+# 4f9ce7f2bf894e93ac808af448e33984
+msgid "|deploy_to|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:26
+# 28e07f4b34c249908eb78b63f8d789dc
+msgid "``environment``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:27
+# 44e912afeb84496b95e56eacbe54194e
+msgid "|environment resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:28
+# 831d4a84720a4fa9a5c44ce9a8c9e262
+msgid "``group``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:29
+# 6034d7039b264881be9e72a7246dd65c
+msgid "|group resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:30
+# 105b54a076d8494aa6980c250e78af29
+msgid "``migrate``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:31
+# 39d1b79aa41b4cdbb03ed8343f10c866
+msgid "|migrate resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:32
+# 92b45750264646578356b8d4e5f0cc6e
+msgid "``migration_command``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:33
+# 1cb3c460f7a145e2945f2261a3acf57a
+msgid "|migration_command resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:36
+# fbd3a838f58f4d389aa35e8765922dc6
+msgid "``repo``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:37
+# 5a89fc8bfb684daabe44ba74d3477e60
+msgid "|repo resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:38
+# 39b1fbc4e45e4a1face88802eb700cca
+msgid "``repository``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:39
+# 611862a4e70140b49d00fb74ac429c15
+msgid "|repository resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:40
+# 2555353105804067bf5714a1fd657d47
+msgid "``repository_cache``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:41
+# bfc54a4579f44f35a96a878f5ee8fcc1
+msgid "|repository_cache resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:42
+# 0c18b346b63a44b3ad5c6ad407961851
+msgid "``restart_command``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:43
+# f9a35e15b41645debc37bb5256312d69
+msgid "|restart_command resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:44
+# 9c96370c949b49f2ab82f069b40a3aa7
+msgid "``revision``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:45
+# 23d6d1e44bfb43cdbad5727e76219193
+msgid "|revision resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:46
+# b8b9eb6f88874f89b5bc091ee8ef4290
+msgid "``rollback_on_error``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:47
+# 8d94e09e7a84454b8d682013010f8177
+msgid "|rollback_on_error resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:48
+# 2bf8d64bc9664330b74a0d47c781122b
+msgid "``scm_provider``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:49
+# bfc3878a23604b9da909a8d43ab024bb
+msgid "|scm_provider resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:54
+# 1114c7dd02fe45b0a51a6e615bcf181b
+msgid "``user``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:55
+# 2fa7518272b249a2b14faf058ca7d053
+msgid "|user resource deploy|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:57
+# 7a5671833066413caeba5ec242220d95
+msgid "The following attributes are for use with |git| only:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:65
+# 50cf5e5188a04f78a203fe48324f049f
+msgid "``enable_submodules``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:66
+# 87c681d9e5c64e858b85897c73a0f7c2
+msgid "|enable_submodules resource|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:67
+# cf2b4a4a11ec467984c9612568d4be50
+msgid "``git_ssh_wrapper``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:68
+# de3f226159d0433fbc26f7d2cbc3645b
+msgid "|git_ssh_wrapper|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:69
+# 78e9b1d526744122bfde91f3e9f3c28f
+msgid "``remote``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:70
+# a2288976df074403936e4b9c70651877
+msgid "|remote resource| Default value: ``origin``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:71
+# 8ab2c95bb23c45d99a02cf4f9de3c516
+msgid "``shallow_clone``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:72
+# 253593a97b5947acb71106e6e853286b
+msgid "|shallow_clone resource|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:73
+# aedd93da4b2446d5a5647d346dbc013e
+msgid "``ssh_wrapper``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:74
+# b39e852b0b7041b48ff0e02c53e1507d
+msgid "|ssh_wrapper resource|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:76
+# e2c1328970d14044bcd88bbb8d0a73ff
+msgid "The following attributes are for use with |svn| only:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:84
+# 4a504f1af312450db678d122540aeaa4
+msgid "``svn_arguments``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:85
+# 6013afc54f544b38abd199bef742216f
+msgid "|svn_arguments resource|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:86
+# e3edacc5376148f590e7ef02554b77c5
+msgid "``svn_password``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:87
+# 19dd5ae0941e45fabd7352d1f027902b
+msgid "|svn_password resource|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:88
+# 55c0b8cd4d01448a96ee0ea94e451d5f
+msgid "``svn_username``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:89
+# af8444aeaec14ad69f8d8c3255397d13
+msgid "|svn_username resource|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_attributes.rst:91
+# a6e44dfb06e8493eb6168bedf43d92fd
+msgid "For example:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:77
+# 85092e09a83e4f8d880099453096aee6
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:4
+# fb58e8510faf4a02a397fa2015288cf5
+msgid "The |resource deploy| resource providers are used to determine whether to deploy based on whether the release directory in which the deployment is to be made actually exists. The following providers are available. Use the short name to use the provider in a recipe:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:10
+# 7cfee83e79534708b57d292e5e06e25d
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:11
+# 160a76ce83eb41b48802161ee15ccc71
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:12
+# a87140b972d4493bb0751bdce262bb0e
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:13
+# 0d5da2683eb94101ac2e396dcba4c8a4
+msgid "``Chef::Provider::Deploy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:14
+# 3e1d0ec9d4a14b0abc4c4db25ecf603f
+msgid "``deploy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:15
+# 4db61c78b9644ddf843767696dc955c9
+msgid "When this short name is used, |chef| will determine the correct provider during the |chef| run."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:16
+#: ../../includes_resources/includes_resource_deploy_providers.rst:19
+# 78535ac8cd4e4849810b4d07883e3f6f
+# bb3f0f5ecbda48389e9e419f17ff8bc4
+msgid "``Chef::Provider::Deploy::Revision``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:17
+# 05727d6569c24b5e9c90cd7ef2f0611a
+msgid "``deploy_branch``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:18
+#: ../../includes_resources/includes_resource_deploy_providers.rst:21
+# 50a3b25769884d40b87be019eaddc247
+# 3c958bde42c04ec59fb8b05472dfae69
+msgid "See below for more information."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:20
+# bf5ce7c5b8c643578f6d8298fd2e9a2d
+msgid "``deploy_revision``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:22
+# cb1d7e43f3304c8e8d70dba9eeff7d67
+msgid "``Chef::Provider::Deploy::TimestampedDeploy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:23
+# 73bf77f74a8d453e8b3fe601f39373fb
+msgid "``timestamped_deploy``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers.rst:24
+# 3981607696de4bdbb2b8c907f95d63be
+msgid "The default provider for all platforms. See below for more information."
+msgstr ""
+
+#: ../source/resource_deploy.rst:81
+# 00af7c2903ab44728105f0c5e8ec010b
+msgid "deploy_branch"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers_deploy_branch.rst:5
+# a44d114b8f38472f8eae52af96683784
+msgid "The ``deploy_branch`` resource is used in the same way as the ``deploy_resource`` resource. It uses the ``Deploy::Revision`` provider and has uses the same set of actions and attributes."
+msgstr ""
+
+#: ../source/resource_deploy.rst:85
+# c4a57952872f4b44a29ad004dad47ab8
+msgid "deploy_revision"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers_deploy_revision.rst:4
+# 510958756b7e43dab0b5a5b10b1cadd7
+msgid "The ``deploy_revision`` provider is the recommended provider, even if it is not listed as the default. The ``deploy_revision`` provider is used to ensure that the name of a release sub-directory is based on a revision identifier. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---|chef| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. When the ``deploy_revision`` provider is given an exact revision to deploy, it will behave in an idempotent manner."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers_deploy_revision.rst:6
+# d1d54b2af6ac4eb685a5732addd7ff77
+msgid "The ``deploy_revision`` provider results in deployed components under the destination location that is owned by the user who runs the application. This is sometimes an issue for certain workflows. If issues arise, consider the following:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers_deploy_revision.rst:8
+# d88648a9c2874e18ab1077a666cfa357
+msgid "Incorporate changing permissions to the desired end state from within a recipe"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers_deploy_revision.rst:9
+# f05f3031234143d6989c2c900605cb77
+msgid "Add a ``before_restart`` block to fix up the permissions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers_deploy_revision.rst:10
+# 0c22d10dbcca4b2398a9aff19328a78a
+msgid "Have an unprivileged user (for example: ``opscode``) be the owner of the ``deploy`` directory and another unprivileged user (for example: ``opscodeapp``) run the application. Most often, this is the solution that works best"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers_deploy_revision.rst:12
+# 674fe421d86544adbac9a549cda60f33
+msgid "When using the ``deploy_revision`` provider, and when the deploy fails for any reason, and when the same code is used to re-deploy, the action should be set manually to ``:force_deploy``. Forcing the re-deploy will remove the old release directory, after which the deploy can proceed as usual. (Forcing a re-deploy over the current release can cause some downtime.) Deployed revisions are stored in ``(file_cache_path)/revision-deploys/(deploy_path)``."
+msgstr ""
+
+#: ../source/resource_deploy.rst:89
+# 180511c93be34bb6a46d3c62f3dbb42d
+msgid "timestamped_deploy"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy_providers_timestamped_deploy.rst:4
+# 2fefb6aa1d4241d9a798c1113f8bcf6e
+msgid "The ``timestamped_deploy`` provider is the default |resource deploy| provider. It is used to name release directories with a timestamp in the form of ``YYYYMMDDHHMMSS``. For example: ``/my/deploy/dir/releases/20121120162342``. The |resource deploy| resource will determine whether or not to deploy code based on the existence of the release directory in which it is attempting to deploy. Because the timestamp is different for every |chef| run, the ``timestamped_deploy`` provider is not idempotent. When the ``timestamped_deploy`` provider is used, it requires that the action setting on a resource be managed manually in order to prevent unintended continuous deployment."
+msgstr ""
+
+#: ../source/resource_deploy.rst:93
+# 92c74556bc5943aca66c7efe2cb000ec
+msgid "Examples"
+msgstr ""
+
+#: ../source/resource_deploy.rst:94
+# 127974407ee5436bab5f8c0d4f9dc261
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/resource_deploy.rst:96
+# eaf0460a45b8472393da1621eddf22b7
+msgid "**Modify the layout of a Ruby on Rails application**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_custom_application_layout.rst:3
+# b8ab663e587643459cc109e1555a85e6
+msgid "The layout of the application matches a Rails app by default, but you can customize it to fit your needs. To customize the application layout:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:100
+# 314707f780da446d84bbe5205cd73f1d
+msgid "**Use resources within callbacks**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_embedded_recipes_for_callbacks.rst:3
+# b6fa6a946b5a43889a3da1455bf26d9a
+msgid "Using resources from within your callbacks as blocks or within callback files distributed with your application's source code. To use embedded recipes for callbacks:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:104
+# aecdaa29627b4598a59c6a34f676171d
+msgid "**Deploy from a private git repository without using the application cookbook**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_private_git_repo_using_application_cookbook.rst:3
+# db7a16e88baa4fc5b593741308d80af2
+msgid "To deploy from a private |git| repository without using the application cookbook, first ensure that:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_private_git_repo_using_application_cookbook.rst:5
+# 53322ae6e6e74c97af05e4104ecacd92
+msgid "the private key does not have a passphrase, as this will pause a |chef| run to wait for input"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_private_git_repo_using_application_cookbook.rst:6
+# 6d47688ef16c4c30a7ae59e3f760aae0
+msgid "an |ssh| wrapper is being used"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_private_git_repo_using_application_cookbook.rst:7
+# 6ab38a26ab0646bc806c789ad4e932a8
+msgid "a private key has been added to the node"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_private_git_repo_using_application_cookbook.rst:9
+# 50b28bbb0ea14a75a732750307d96e79
+msgid "and then use code like the following to remove a passphrase from a private key:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:108
+# f15647312874436f947d22e01eb90d8e
+msgid "**Use an SSH wrapper**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_recipe_uses_ssh_wrapper.rst:3
+# 0a20abf1e7d34797b3f7e187781f8e66
+msgid "To write a recipe that uses an |ssh| wrapper:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_recipe_uses_ssh_wrapper.rst:5
+# 425f827ba6bb455ca6ec683d14562091
+msgid "Create a file in the ``cookbooks/COOKBOOK_NAME/files/default`` directory that is named ``wrap-ssh4git.sh`` and which contains the following:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_recipe_uses_ssh_wrapper.rst:12
+# 2431661368254f9cb7ef22ad86cfefc2
+msgid "Set up the cookbook file."
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_recipe_uses_ssh_wrapper.rst:13
+# 066ffb9a252d43adab5dbe68b09661eb
+msgid "Add a recipe to the cookbook file similar to the following:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_recipe_uses_ssh_wrapper.rst:36
+# 54c3cfb1d25245459b2742421fc6bcab
+msgid "This will deploy the |git| repository at ``git@github.com:acctname/private-repo.git`` in the ``/tmp/private_code`` directory."
+msgstr ""
+
+#: ../source/resource_deploy.rst:112
+# 2fbc9647d62341fb925fe931ab5cd1f7
+msgid "**Use a callback to include a file that will be passed as a code block**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_use_callback_to_include_code_from_file.rst:3
+# c8333e99213b4a60a40096bfb26ce277
+msgid "The code in a file that is included in a recipe using a callback is evaluated exactly as if the code had been put in the recipe as a block. Files are searched relative to the current release."
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_use_callback_to_include_code_from_file.rst:5
+# da234779ff3240dba19d6db4a7603032
+msgid "To specify a file that contains code to be used as a block:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:116
+# af7fa17d9c06425bb22e3989f0068bae
+msgid "**Use a callback to pass a code block**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_use_callback_to_pass_python.rst:3
+# 199dab5bfe884abb94013c1932870764
+msgid "To pass a block of |python| code before a migration is run:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:120
+# 73a599b0ea0f439ea4264cf6d50cfd5f
+msgid "**Use the same API for all recipes using the same gem**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_use_same_api_as_gitdeploy_gems.rst:3
+# 0cfb49a285a84b27bb682c0d00be6cd5
+msgid "Any recipes using the ``git-deploy`` |gem| can continue using the same API. To include this behavior in a recipe, do something like the following:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:124
+# c3b02f9de8e44e02addaa4a7f30a78e7
+msgid "**Deploy without creating symbolic links to a shared folder**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_without_symlink_to_shared.rst:3
+# 3829ea9b137041599a4c0aa27c5efd5e
+msgid "To deploy without creating symbolic links to a shared folder:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_without_symlink_to_shared.rst:11
+# fbd254b2c62d42cd9f0b5bb778b96d2d
+msgid "When deploying code that is not |ruby on rails| and symbolic links to a shared folder are not wanted, use parentheses () or ``Hash.new`` to avoid ambiguity. For example, using parentheses:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_without_symlink_to_shared.rst:19
+# bfe8ab7579a04c5b94df1a7719b844b3
+msgid "or using ``Hash.new``:"
+msgstr ""
+
+#: ../source/resource_deploy.rst:128
+# 6c9919e9b94b4fceb230c91d5478fdcf
+msgid "**Clear a layout modifier attribute**"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_clear_layout_modifiers.rst:3
+# 680d0828cf7b423486b08208bd92e91d
+msgid "Using the default attribute values that |chef| provides is the recommended baseline when working with recipes. Then, depending on what each node requires, these default values can be overridden with node-, role-, environment-, and cookbook-specific values. The |resource deploy| resource has four layout modifiers: ``create_dirs_before_symlink``, ``purge_before_symlink``, ``symlink_before_migrate``, and ``symlinks``. These are |ruby| hashes that behave as attributes of the |resource deploy| resource. When these layout modifiers are used in a recipe, they appear similar to the following:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_clear_layout_modifiers.rst:19
+# 33d22e1f1cb845d9bd363142796854e7
+msgid "and then what these layout modifiers look like if they were empty:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_clear_layout_modifiers.rst:32
+# fbcd4d263a924bf1892a01a931074f3f
+msgid "In most cases, using the empty values for the layout modifiers will prevent |chef| from passing symbolic linking information to a node during the |chef| run. However, in some cases, it may be preferable to ensure that one (or more) of these layout modifiers do not pass any symbolic linking information to a node during the |chef| run at all. Because each of these layout modifiers are a hash, the ``clear`` instance method can be used to clear out these values."
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_clear_layout_modifiers.rst:34
+# bf774dd1ade8491a883db71ec13b3312
+msgid "To clear the default values for a layout modifier:"
+msgstr ""
+
+#: ../../step_resource/step_resource_deploy_clear_layout_modifiers.rst:47
+# 29f2c2566476428daa3e730fb26f9251
+msgid "In general, use this approach carefully and only after it is determined that nil or empty values won't provide the expected result."
+msgstr ""
+
