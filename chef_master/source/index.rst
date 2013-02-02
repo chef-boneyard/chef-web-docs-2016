@@ -5,7 +5,7 @@ Everything you need to know about Chef ...
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 
-Getting Started
+Getting started
 =====================================================
 * **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
 * **Key concepts:** :doc:`The workstation </essentials_workstation>` | :doc:`The server </essentials_server>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`Resources and providers </essentials_cookbook_resources>` | :doc:`Knife </knife>`
