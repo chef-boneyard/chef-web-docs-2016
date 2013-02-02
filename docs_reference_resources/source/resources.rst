@@ -2740,6 +2740,24 @@ Examples
 .. include:: ../../step_lwrp/step_lwrp_iis_config_set_up_logging.rst
 
 
+iis_module
+-----------------------------------------------------
+.. include:: ../../includes_lwrp/includes_lwrp_iis_module.rst
+
+.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_lwrp/includes_lwrp_iis_module_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_lwrp/includes_lwrp_iis_module_attributes.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_lwrp/step_lwrp_iis_module_add.rst
+
 iis_pool
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_pool.rst

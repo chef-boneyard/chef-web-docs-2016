@@ -45,44 +45,19 @@ Examples
 
 **Register the Chef::Handler::JsonFile handler**
 
-.. code-block:: ruby
-
-   chef_handler "Chef::Handler::JsonFile" do
-     source "chef/handler/json_file"
-     arguments :path => '/var/chef/reports'
-     action :enable
-   end
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_register.rst
 
 **Register the Chef::Handler::JsonFile handler during the compile phase**
 
-.. code-block:: ruby
-
-   chef_handler "Chef::Handler::JsonFile" do
-     source "chef/handler/json_file"
-     arguments :path => '/var/chef/reports'
-     action :nothing
-   end.run_action(:enable)
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst
 
 **Handle exceptions only**
 
-.. code-block:: ruby
-
-   chef_handler "Chef::Handler::JsonFile" do
-     source "chef/handler/json_file"
-     arguments :path => '/var/chef/reports'
-     supports :exception => true
-     action :enable
-   end
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst
 
 **Enable the CloudkickHandler**
 
-.. code-block:: ruby
-
-   chef_handler "CloudkickHandler" do
-     source "#{node['chef_handler']['handler_path']}/cloudkick_handler.rb"
-     arguments [node['cloudkick']['oauth_key'], node['cloudkick']['oauth_secret']]
-     action :enable
-   end
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
 
 
 

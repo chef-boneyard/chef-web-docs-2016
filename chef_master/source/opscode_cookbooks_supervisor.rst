@@ -14,40 +14,40 @@ Lightweight Resources
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
 
-fcgi LWRP
------------------------------------------------------
+fcgi
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_fcgi.rst
 
 Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_fcgi_actions.rst
 
 Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_fcgi_attributes.rst
 
-group LWRP
------------------------------------------------------
+group
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_group.rst
 
 Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_group_actions.rst
 
 Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_group_attributes.rst
 
-service LWRP
------------------------------------------------------
+service
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_service.rst
 
 Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_service_actions.rst
 
 Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_service_attributes.rst
 
 Usage
@@ -75,13 +75,7 @@ Examples
 
 **Enable the celery service**
 
-.. code-block:: ruby
-
-   supervisor_service "celery" do
-     action :enable
-     autostart false
-     user "nobody"
-   end
+.. include:: ../../step_lwrp/step_lwrp_supervisor_service_enable.rst
 
 
 
