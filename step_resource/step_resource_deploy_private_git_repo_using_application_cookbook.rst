@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To deploy from a private |git| repositopry without using the application cookbook, first ensure that:
+To deploy from a private |git| repository without using the application cookbook, first ensure that:
 
 * the private key does not have a passphrase, as this will pause a |chef| run to wait for input
 * an |ssh| wrapper is being used
