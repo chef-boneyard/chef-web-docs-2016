@@ -18,6 +18,8 @@ The following cookbooks are authored and maintained by |opscode|:
      - |cookbook name chef_handler|
    * - :doc:`supervisor </opscode_cookbooks_iis>`
      - |cookbook name iis|
+   * - :doc:`supervisor </opscode_cookbooks_python>`
+     - |cookbook name python|
    * - :doc:`supervisor </opscode_cookbooks_supervisor>`
      - |cookbook name supervisor|
 
@@ -27,6 +29,7 @@ The following cookbooks are authored and maintained by |opscode|:
 
    opscode_cookbooks_chef_handler
    opscode_cookbooks_iis
+   opscode_cookbooks_python
    opscode_cookbooks_supervisor
 
 
