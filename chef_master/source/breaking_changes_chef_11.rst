@@ -36,7 +36,7 @@ Even with this change, please take a moment to consider if a cookbook should be 
 
 attribute="value" required
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following example is longer valid:
+The following example is no longer valid:
 
 .. code-block:: ruby
 

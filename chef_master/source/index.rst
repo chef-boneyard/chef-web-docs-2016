@@ -29,7 +29,7 @@ The workstation
 
 The Chef server
 =====================================================
-* **The basics:** :doc:`About the server </chef_overview_server>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
+* **The basics:** :doc:`About the server </chef_overview_server>` | :doc:`Erchef </essentials_server_erchef>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
 * **The node object:** :doc:`About node objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep merge </essentials_node_object_deep_merge>`
 * **Search:** :doc:`About search </essentials_search>` | :doc:`Indexes </essentials_search_indexes>` | :doc:`Keys (field names) </essentials_search_keys>` | :doc:`Operators </essentials_search_boolean_operators>` | :doc:`Partial search queries </essentials_search_partial>` | :doc:`Patterns </essentials_search_patterns>` | :doc:`Query syntax </essentials_search_query_syntax>` | :doc:`Special characters </essentials_search_special_characters>` | :doc:`Targets </essentials_search_targets>`
 * **Policy:** :doc:`About policy </essentials_policy>` | :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
@@ -92,6 +92,7 @@ Cookbooks
    essentials_knife
 
    essentials_server
+   essentials_server_erchef
    essentials_policy
    essentials_node_object
    essentials_data_bags
