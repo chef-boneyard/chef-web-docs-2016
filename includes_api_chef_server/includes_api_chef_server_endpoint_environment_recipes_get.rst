@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The GET method is used to return a recipe.
+The GET method is used to return a list of recipes available to a given environment.
 
 This method has no parameters.
 
@@ -19,7 +19,22 @@ The response will return something like the following:
 
 .. code-block:: javascript
 
-   xxxxx
+   [
+     "ant",
+     "apache2",
+     "apache2::mod_auth_openid",
+     "apache2::mod_authnz_ldap",
+     "apt",
+     "aws",
+     "capistrano",
+     "chef",
+     "chef::bootstrap_client",
+     "chef-client::config",
+     "chef-client",
+     ...
+   ]
+
+The list of recipes will be the default recipes for a given cookbook. If an environment has multiple versions of a cookbook that matches its constraints, only the recipes from the latest version of that cookbook will be reported.
 
 **Response Codes**
 
