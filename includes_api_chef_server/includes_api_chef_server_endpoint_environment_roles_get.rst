@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The GET method is used to return the name of a role.
+The GET method is used to return the ``run_list`` attribute of the role (when the name of the environment is ``_default``) or to return ``env_run_lists[environment_name]`` (for non-default environments).
 
 This method has no parameters.
 
@@ -19,7 +19,16 @@ The response will return something like the following:
 
 .. code-block:: javascript
 
-   xxxxx
+   {
+     "run_list": [
+       "recipe[recipe_name]",
+       "role[role_name]",
+       "recipe[recipe_name]",
+       "role[role_name]",
+       "recipe[recipe_name]",
+       "role[role_name]"
+     ]
+   }
 
 **Response Codes**
 
