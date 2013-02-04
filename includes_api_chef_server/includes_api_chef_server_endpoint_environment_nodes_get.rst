@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The GET method is used to return a node.
+The GET method is used to return a list of nodes in a given environment.
 
 This method has no parameters.
 
@@ -19,7 +19,11 @@ The response will return something like the following:
 
 .. code-block:: javascript
 
-   xxxxx
+   {
+     "blah": "https://api.opscode.com/org/directory/nodes/blah",
+     "boxer": "https://api.opscode.com/org/directory/nodes/boxer",
+     "blarrrrgh": "https://api.opscode.com/org/directory/nodes/blarrrrgh"
+   }
 
 **Response Codes**
 
