@@ -4,6 +4,8 @@
 The GET method returns the named role's environment-specific run-list
 for the named environment as |json| data.
 
+.. note:: The behavior of this endpoint is identical to ``GET /environments/NAME/roles/NAME``.
+
 This method has no parameters.
 
 **Request**

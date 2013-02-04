@@ -3,6 +3,8 @@
 
 The GET method is used to return the ``run_list`` attribute of the role (when the name of the environment is ``_default``) or to return ``env_run_lists[environment_name]`` (for non-default environments).
 
+.. note:: The behavior of this endpoint is identical to ``GET /roles/NAME/environments/NAME``.
+
 This method has no parameters.
 
 **Request**
