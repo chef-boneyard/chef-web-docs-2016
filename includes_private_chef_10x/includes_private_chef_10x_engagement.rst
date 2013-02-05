@@ -1,8 +1,6 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Engagement Overview
-
 Congratulations on your purchase of Private Chef! This document serves as your guide to working with |opscode| to install a fully functioning and supported Private Chef environment.
 
 Each Private Chef installation is a little different. In order to accommodate this reality, each installation is coordinated and performed by our Consulting group.

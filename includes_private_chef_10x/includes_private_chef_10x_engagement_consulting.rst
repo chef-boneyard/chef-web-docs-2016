@@ -26,7 +26,6 @@ Your primary point of contact should be empowered to make decisions on behalf of
 * Fax Number
 * Preferred Instant Messaging Name (on Skype, Google, or MSN)
 
-
 This information should be sent via email to consulting@opscode.com.
 
 Each point of contact will receive an email inviting them to join the |opscode| Client Portal, and will then have access to the project we’re using to manage your |chef private| installation. Login information will be included in this email.
