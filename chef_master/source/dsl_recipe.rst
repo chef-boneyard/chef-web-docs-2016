@@ -44,7 +44,38 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
    * - :doc:`value_for_platform_family </dsl_recipe_method_value_for_platform_family>`
      - Use in a recipe to check for a value for a platform family.
 
-.. The following recipe DSL methods can be used with |windows| registry keys. The order in which they should be used within a recipe: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and ``get_subkeys``.
+The following recipe DSL methods can be used with |windows| registry keys.
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Methods
+     - Description
+   * -  :doc:`registry_data_exists? </dsl_recipe_method_registry_data_exists>`
+     - Find out if a registry key contains data.
+   * - :doc:`registry_get_subkeys </dsl_recipe_method_registry_get_subkeys>`
+     - Get a list of sub-keys for a registry setting.
+   * - :doc:`registry_get_values </dsl_recipe_method_registry_get_values>`
+     - Get values (name, type, and data) for a given registry key.
+   * - :doc:`registry_has_subkeys? </dsl_recipe_method_registry_has_subkeys>`
+     - Find out if a registry key has one (or more) sub-keys.
+   * - :doc:`registry_key_exists? </dsl_recipe_method_registry_key_exists>`
+     - Find out if a registry key exists.
+   * - :doc:`registry_value_exists? </dsl_recipe_method_registry_value_exists>`
+     - Find out if a registry key has values set (name, type, and data).
+
+.. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+
 
 .. toctree::
    :hidden:
