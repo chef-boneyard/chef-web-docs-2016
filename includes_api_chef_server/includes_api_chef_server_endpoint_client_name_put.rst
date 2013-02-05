@@ -53,7 +53,7 @@ The response will return something like the following:
    * - ``200``
      - |response code 200 ok|
    * - ``201``
-     - |response code 201 ok| (This response code is only returned when the client is renamed.)
+     - |response code 201 created| (This response code is only returned when the client is renamed.)
    * - ``401``
      - |response code 401 unauthorized|
    * - ``403``

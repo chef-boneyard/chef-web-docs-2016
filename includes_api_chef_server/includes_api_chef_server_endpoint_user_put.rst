@@ -53,7 +53,7 @@ If a new private key was generated, both the private and public keys are returne
    * - ``200``
      - |response code 200 ok|
    * - ``201``
-     - |response code 201 ok| (This response code is only returned when the user is renamed.)
+     - |response code 201 created| (This response code is only returned when the user is renamed.)
    * - ``401``
      - |response code 401 unauthorized|
    * - ``403``

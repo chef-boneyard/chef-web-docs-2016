@@ -6,15 +6,36 @@ Chef Topics
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-* **Getting Started:** :doc:`chef_overview` | :doc:`just_enough_ruby_for_chef`
-* **Essentials:** :doc:`essentials_chef_client` | :doc:`essentials_cookbook_attribute_files` | :doc:`essentials_cookbook_definitions` | :doc:`essentials_cookbook_files` | :doc:`essentials_cookbook_libraries` | :doc:`essentials_cookbook_lwrp` | :doc:`essentials_cookbook_metadata` | :doc:`essentials_cookbook_recipes` | :doc:`essentials_cookbook_resources` | :doc:`essentials_cookbook_templates` | :doc:`essentials_cookbook_versions` | :doc:`essentials_data_bags` | :doc:`essentials_environments` | :doc:`essentials_handlers` | :doc:`essentials_node_object` | :doc:`essentials_repository` | :doc:`essentials_roles` | :doc:`essentials_search`
-* **Install Chef:** :doc:`install_workstation` | :doc:`install_workstation_open_source` | :doc:`migrate_to_hosted`
-* **Manage Chef:** :doc:`manage_server_hosted` | :doc:`manage_server_open_source`
-* **Reference:** :doc:`chef-client </chef_client>` | :doc:`Knife </knife>` | :doc:`Knife Plug-ins </knife_plugins>` | :doc:`ohai` |  :doc:`Resources and Providers </resources>` | :doc:`Lightweight Resources </lwrps>` | :doc:`Cookbooks Maintained by Opscode </cookbooks_opscode>`
-* **Config Files:** :doc:`client_rb` | :doc:`knife_rb` | :doc:`metadata_rb` | :doc:`server_rb` | :doc:`solo_rb` | :doc:`solr_rb`
-* **APIs and DSLs:** :doc:`api_chef_server` | :doc:`api_cookbooks_site` | :doc:`dsl_recipe` 
+Getting started
+=====================================================
+:doc:`Chef Overview </chef_overview>` | :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
+Essentials
+=====================================================
+* **Cookbooks:** :doc:`Attribute files </essentials_cookbook_attribute_files>` | :doc:`Definitions </essentials_cookbook_definitions>` | :doc:`Files </essentials_cookbook_files>` | :doc:`Libraries </essentials_cookbook_libraries>` | :doc:`Lightweight resources </essentials_cookbook_lwrp>` | :doc:`Metadata </essentials_cookbook_metadata>` | :doc:`Recipes </essentials_cookbook_recipes>` | :doc:`Resources and providers </essentials_cookbook_resources>` | :doc:`Templates </essentials_cookbook_templates>` | :doc:`Versions </essentials_cookbook_versions>`
+* **Policy:** :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
+* **Search:** :doc:`Search </essentials_search>`
+* **Nodes and Workstations:** :doc:`chef-client </essentials_chef_client>` | :doc:`Exception and report handlers </essentials_handlers>` | :doc:`The node object </essentials_node_object>` | :doc:`The repository </essentials_repository>`
 
+Install and Migrate
+=====================================================
+:doc:`Install the Workstation </install_workstation>` | :doc:`Install the Open Source Workstation </install_workstation_open_source>` | :doc:`Migrate from Open Source Chef to Hosted Chef </migrate_to_hosted>`
+
+Manage the Chef Server
+=====================================================
+:doc:`Hosted Chef </manage_server_hosted>` | :doc:`Open Source Chef </manage_server_open_source>`
+
+References
+=====================================================
+:doc:`chef-client </chef_client>` (executable) | :doc:`Knife </knife>` | :doc:`Knife Plug-ins </knife_plugins>` | :doc:`Ohai </ohai>` | :doc:`Resources and Providers </resources>` | :doc:`Lightweight Resources </lwrps>` | :doc:`Cookbooks Maintained by Opscode </cookbooks_opscode>`
+
+Configuration Files
+=====================================================
+:doc:`client.rb </client_rb>` | :doc:`knife.rb </knife_rb>` | :doc:`metadata.rb </metadata_rb>` | :doc:`server.rb </server_rb>` | :doc:`solo.rb </solo_rb>` | :doc:`solr.rb </solr_rb>`
+
+APIs and DSLs
+=====================================================
+:doc:`Chef Server API </api_chef_server>` | :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Recipe DSL </dsl_recipe>`
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
