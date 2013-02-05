@@ -35,7 +35,7 @@ Knife Plugins
    * - knife-crawl
      - Adds the ability to display the roles that are included recursively within a role and (optionally) all of the roles that include it. Download this plugin: https://github.com/jgoulah/knife-crawl.
    * - knife-ec2-amis-ubuntu
-     - Adds the ability to retrieve a list of released |ubuntu| |amazon ami|. Download this plugin: `<xxxxx>`_.
+     - Adds the ability to retrieve a list of released |ubuntu| |amazon ami|. Download this plugin: `<https://rubygems.org/gems/ubuntu_ami>`_.
    * - knife-env-diff
      - Adds the ability to diff the cookbook versions for two (or more) environments. Download this plugin: https://github.com/jgoulah/knife-env-diff.
    * - knife-esx
@@ -45,7 +45,7 @@ Knife Plugins
    * - knife-flip
      - Adds improvements to ``knife-set-environment`` with added functionality and failsafes. Download this plugin: https://github.com/jonlives/knife-flip.
    * - knife-gandi
-     - Adds the ability to create, bootstrap, and manage servers on the |gandi| hosting platform. Download this plugin: `<xxxxx>`_.
+     - Adds the ability to create, bootstrap, and manage servers on the |gandi| hosting platform. Download this plugin: `<https://rubygems.org/gems/knife-gandi>`_.
    * - knife-gather
      - Adds the ability to collate multi-line output from parallel ``knife ssh`` outputs into one section per host. Download this plugin: https://github.com/lnxchk/Gather.
    * - knife-github-cookbooks
@@ -73,7 +73,7 @@ Knife Plugins
    * - knife-role-copy
      - Adds the ability to get data from a role, and then set up a new role using that data (as long as the new role doesn't have the same name as an existing role). Download this plugin: https://github.com/benjaminws/knife_role_copy.
    * - knife-rvc
-     - Integrates a subset of |knife| functionality with |ruby rvc|. Download this plugin: `<xxxxx>`_.
+     - Integrates a subset of |knife| functionality with |ruby rvc|. Download this plugin: `<https://github.com/dougm/rvc-knife>`_.
    * - knife-santoku
      - Adds the ability to build processes around |chef|. Download this plugin: https://github.com/knuckolls/knife-santoku.
    * - knife-server
@@ -81,7 +81,7 @@ Knife Plugins
    * - knife-set-environment
      - Adds the ability to set a node environment. Download this plugin: https://gist.github.com/961827.
    * - knife-solo
-     - Adds support for bootstrapping and running |chef solo|, search, and data bags. Download this plugin: `<xxxxx>`_.
+     - Adds support for bootstrapping and running |chef solo|, search, and data bags. Download this plugin: `<https://rubygems.org/gems/knife-solo>`_.
    * - knife-slapchop
      - Adds the ability create and tag clusters of |amazon ec2| nodes with a multi-threading bootstrap process. Download this plugin: https://github.com/kryptek/knife-slapchop.
    * - knife-spork

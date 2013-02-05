@@ -21,11 +21,11 @@ Chef Plugins
    * - chef-hatch-repo
      - Adds a |knife| plugin and a |vagrant| provisioner that can launch a self-managed |chef server| in a virtual machine or |amazon ec2|. Download this plugin: https://github.com/xdissent/chef-hatch-repo.
    * - chef-irc-snitch
-     - Adds an exception handler for |chef| runs. Download this plugin: `<xxxxx>`_.
+     - Adds an exception handler for |chef| runs. Download this plugin: `<https://rubygems.org/gems/chef-irc-snitch>`_.
    * - chef-jenkins
      - Adds the ability to use |jenkins| to drive continuous deployment and synchronization of |chef| environments from a |git| repository. Download this plugin: https://github.com/adamhjk/chef-jenkins.
    * - chef-rundeck
-     - Adds a resource endpoint for |rundeck|. Download this plugin: `<xxxxx>`_.
+     - Adds a resource endpoint for |rundeck|. Download this plugin: `<http://rubygems.org/gems/chef-rundeck>`_.
    * - chef-solo-search
      - Adds a cookbook library that enables searching of data bags when using |chef solo|. Download this plugin: https://github.com/edelight/chef-solo-search.
    * - chef-trac-hacks
