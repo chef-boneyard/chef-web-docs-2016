@@ -32,7 +32,7 @@ The response will return something like the following:
      ]
    }
 
-If the environment and/or role exists, but the environment does not have a specific ``run_list`` for that environment, then the ``_default`` run-list is returned.
+|chef| will pick up the ``_default`` run-list is the environment is null.
 
 **Response Codes**
 
