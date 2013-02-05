@@ -40,24 +40,27 @@ Attributes
 
 Usage
 -----------------------------------------------------
-The following sections describe the usage options that are available in this cookbook:
+The following sections describe the usage options that are available in this cookbook.
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+default
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_default.rst
 
-   * - Usage
-     - Description
-   * - ``default``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_default.rst
-   * - ``package``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_package.rst
-   * - ``pip``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_pip.rst
-   * - ``source``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_source.rst
-   * - ``virtualenv``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_virtualenv.rst
+package
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_package.rst
+
+pip
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_pip.rst
+
+source
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_source.rst
+
+virtualenv
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_python_usage_virtualenv.rst
 
 Examples
 -----------------------------------------------------

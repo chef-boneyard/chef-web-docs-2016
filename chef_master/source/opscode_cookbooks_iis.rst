@@ -76,18 +76,15 @@ Attributes
 
 Usage
 -----------------------------------------------------
-The following sections describe the usage options that are available in this cookbook:
+The following sections describe the usage options that are available in this cookbook.
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+default
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_iis_usage_default.rst
 
-   * - Usage
-     - Description
-   * - ``default``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_iis_usage_default.rst
-   * - ``mod_*``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_iis_usage_mod.rst
+mod_*
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_iis_usage_mod.rst
 
 Examples
 -----------------------------------------------------

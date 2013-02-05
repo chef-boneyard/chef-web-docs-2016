@@ -26,18 +26,15 @@ Attributes
 
 Usage
 -----------------------------------------------------
-The following sections describe the usage options that are available in this cookbook:
+The following sections describe the usage options that are available in this cookbook.
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+default
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_usage_default.rst
 
-   * - Usage
-     - Description
-   * - ``default``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_usage_default.rst
-   * - ``json_file``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_usage_json_file.rst
+json_file
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_usage_json_file.rst
 
 Examples
 -----------------------------------------------------

@@ -52,22 +52,23 @@ Attributes
 
 Usage
 -----------------------------------------------------
-The following sections describe the usage options that are available in this cookbook:
+The following sections describe the usage options that are available in this cookbook.
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+default
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_supervisor_usage_default.rst
 
-   * - Usage
-     - Description
-   * - ``default``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_supervisor_usage_default.rst
-   * - ``fcgi``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_supervisor_usage_fcgi.rst
-   * - ``group``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_supervisor_usage_group.rst
-   * - ``service``
-     - .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_supervisor_usage_service.rst
+fcgi
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_supervisor_usage_fcgi.rst
+
+group
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_supervisor_usage_group.rst
+
+service
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_supervisor_usage_service.rst
 
 Examples
 -----------------------------------------------------
