@@ -8,7 +8,7 @@ Everything you need to know about Chef ...
 Getting started
 =====================================================
 * **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
-* **Key concepts:** :doc:`The workstation </essentials_workstation>` | :doc:`The server </essentials_server>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`Resources and providers </essentials_cookbook_resources>` | :doc:`Knife </knife>`
+* **Key concepts:** :doc:`The workstation </essentials_workstation>` | :doc:`The server </essentials_server>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`About resources and providers </resource>` | :doc:`Knife </knife>`
 * **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 * **What's new:** :doc:`Chef 11.0 </breaking_changes_chef_11>`
 
