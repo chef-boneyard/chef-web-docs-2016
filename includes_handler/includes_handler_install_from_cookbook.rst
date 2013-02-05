@@ -5,7 +5,7 @@
 
 .. code-block:: ruby
 
-   chef_hander "MyOrganization::EmailMe" do
+   chef_handler "MyOrganization::EmailMe" do
      source "/var/chef/handlers/email_me"
      action :enable
    end
