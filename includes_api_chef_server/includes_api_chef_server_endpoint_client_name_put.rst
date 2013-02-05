@@ -3,6 +3,8 @@
 
 The PUT method is used to update a specific |chef api client|. If values are not specified for the PUT method, the |chef server| will use the existing values rather than assign default values.
 
+.. note:: PUT supports renames. If ``PUT /user/foo`` is requested with { "name: "bar""}, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``.
+
 This method has no parameters.
 
 **Request**
@@ -50,9 +52,13 @@ The response will return something like the following:
      - Description
    * - ``200``
      - |response code 200 ok|
+   * - ``201``
+     - |response code 201 ok| (This response code is only returned when the client is renamed.)
    * - ``401``
      - |response code 401 unauthorized|
    * - ``403``
      - |response code 403 forbidden|
    * - ``404``
      - |response code 404 not found|
+   * - ``409``
+     - |response code 409 unauthorized| (This response code is only returned when a client is renamed, but a client already exists with that name.)

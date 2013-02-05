@@ -17,7 +17,9 @@ The response will return something like the following:
 
 .. code-block:: javascript
 
-   xxxxx
+   {
+     "name": "Robert Forster",
+   }
 
 **Response Codes**
 

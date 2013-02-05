@@ -13,11 +13,13 @@ This method has no parameters.
 
 **Response**
 
-The response will return xxxxx, similar to:
+The response will return something similar to:
 
 .. code-block:: javascript
 
-   xxxxx
+   {
+     "name": "Grant McLennan",
+   }
 
 **Response Codes**
 
