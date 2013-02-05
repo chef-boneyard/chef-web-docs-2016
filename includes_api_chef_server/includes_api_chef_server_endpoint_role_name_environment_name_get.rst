@@ -1,10 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The GET method returns the named role's environment-specific run-list
-for the named environment as |json| data.
-
-.. note:: The behavior of this endpoint is identical to ``GET /environments/NAME/roles/NAME``.
+The GET method returns the environment-specific run-list (``env_run_lists[environment_name]``) for a role.
 
 This method has no parameters.
 
