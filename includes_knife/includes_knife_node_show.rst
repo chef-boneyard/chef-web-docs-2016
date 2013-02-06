@@ -69,3 +69,36 @@ To view information in |json| format, use the ``-F`` common option as part of th
    $ knife node show i-12345678 -F json
 
 Other formats available include ``text``, ``yaml``, and ``pp``.
+
+To show basic information about a node, truncated and nicely formatted:
+
+.. code-block:: bash
+
+   knife node show <node_name>
+
+To show all information about a node, nicely formatted:
+
+.. code-block:: bash
+
+   knife node show -l <node_name>
+
+To view node information in raw |json|, use the ``-l`` or ``--long`` option:
+
+.. code-block:: bash
+
+   knife node show -l -F json <node_name>
+
+and/or:
+
+.. code-block:: bash
+
+   knife node show -l --format=json <node_name>
+
+To list a single node attribute:
+
+.. code-block:: bash
+
+   knife node show <node_name> -a <attribute_name>
+
+where ``<attribute_name>`` is something like kernel or platform. (This doesn't work for nested attributes like ``node[kernel][machine]`` because ``knife node show`` doesn't understand nested attributes.)
+
