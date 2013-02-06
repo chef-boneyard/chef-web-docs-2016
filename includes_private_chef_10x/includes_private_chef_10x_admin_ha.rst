@@ -4,7 +4,7 @@
 
 High Availability
 
-Private Chef can operate in a High Availability configuration that provides automated failover for the stateful components in the systems architecture. The architecture has servers split into two segments, the front-end and back-end. The front-end servers handle API and Web UI requests, while the back-end handles data storage and retrieval, which consists of:
+|chef private| can operate in a High Availability configuration that provides automated failover for the stateful components in the systems architecture. The architecture has servers split into two segments, the front-end and back-end. The front-end servers handle API and Web UI requests, while the back-end handles data storage and retrieval, which consists of:
 
 * couchdb
 * postgresql
@@ -21,7 +21,7 @@ Under the hood, we achieve this failover through:
 
 .. image:: ha-topology
 
-The front-end servers require load-balancers provided by the customer. Opscode recommends:
+The front-end servers require load-balancers provided by the customer. |opscode| recommends:
 
 * Hardware load-balancers (such as F5 or NetScaler)
 * SSL off-loading
@@ -31,13 +31,14 @@ The front-end servers require load-balancers provided by the customer. Opscode r
 
 
 Scalability
-
+============================
 Front-end scalability is achieved through horizontally scaling the number of front-end servers.
 
-Back-end scalability is achieved through vertically scaling the back-end servers - more memory, CPU, and faster disks will all contribute to getting more throughput from the back-end servers. Faster disks, and dedicated 10G NICs will all increase both the reliability of DRBD and the responsiveness of Private Chef.
+Back-end scalability is achieved through vertically scaling the back-end servers - more memory, CPU, and faster disks will all contribute to getting more throughput from the back-end servers. Faster disks, and dedicated 10G NICs will all increase both the reliability of DRBD and the responsiveness of 
+|chef private|.
 
 Failover and Recovery
-
+============================
 When the Primary server in the cluster fails, the VRRP heartbeat will stop. At this point the Backup will begin transitioning to the Primary state, which involves:
 
 #. Assigning the Virtual IP Address, and sending a proxy-arp.
@@ -47,7 +48,7 @@ When the Primary server in the cluster fails, the VRRP heartbeat will stop. At t
 Note that the first step is transitioning the Virtual IP Address, which means traffic will be flowing to the Backup while it transitions to Primary.
 
 Graceful Transitions
-
+============================
 The keepalived service manages the VRRP and cluster transitions. It should be running on both the Primary and Backup servers. To transition from the Primary to the Backup, simply run the following on the Primary:
 
 .. code-block:: bash
@@ -65,24 +66,26 @@ Meanwhile, the backup will be undergoing the same steps as listed above.
 
 
 DRBD
+============================
+|drbd| is used as part of the HA deployment of |chef private|. More information about DRBD is available from the DRBD website, http://www.drbd.org.
 
 Split Brains (yum)
-
-“Split brain” is a concept of clustered computing systems in which the cluster loses its heartbeat communication channel and becomes two unconnected pieces. Recovery from a split-brain is a complex issue and different clustering software packages use different methods.
+----------------------------
+"Split brain" is a concept of clustered computing systems in which the cluster loses its heartbeat communication channel and becomes two unconnected pieces. Recovery from a split-brain is a complex issue and different clustering software packages use different methods.
 
 Failures happen, so completely preventing split-brain is not an absolute possibility. However, it is possible to alleviate some of the issues that crop up in split-brain scenarios by maxing out the heartbeat network bandwidth and optimizing transfer protocols.
 
 DRBD is a shared-nothing system; data is replicated between hosts over a dedicated network link rather than stored on a central NAS or SAN that all hosts connect to. The most critical issue in HA storage is loss or corruption of data. Maximizing the amount of data that can be passed over the wire while all systems are up and running correctly minimizes the chance that something will be lost or unrecoverable if a host goes down.
 
-At any given time, only one drbd host has userland access to the data; this host is referred to as the “Primary”. The other host runs the drbd daemon but cannot mount the storage into the filesystem. It receives information from the Primary and replicates disk actions on its local copy of the storage, but the partition looks like it doesn’t have a filesystem to the “mount” command.
+At any given time, only one drbd host has userland access to the data; this host is referred to as the Primary. The other host runs the |drbd| daemon but cannot mount the storage into the filesystem. It receives information from the Primary and replicates disk actions on its local copy of the storage, but the partition looks like it doesn’t have a filesystem to the ``mount`` command.
 
-DRBD’s approach to split-brain situations is to degrade all partners still alive to “Secondary” status and wait for manual intervention. This is called “auto-fencing”, with a goal of minimizing the potential for damage to your data. When you lose one of the partners in your HA pair, a bit of manual intervention is required to ensure that the disks aren’t in a bad state and can be brought back up. The scenarios are discussed below, as well as suggestions for diagnosing and recovering from each scenario.
+DRBD’s approach to split-brain situations is to degrade all partners still alive to Secondary status and wait for manual intervention. This is called auto-fencing, with a goal of minimizing the potential for damage to your data. When you lose one of the partners in your HA pair, a bit of manual intervention is required to ensure that the disks aren’t in a bad state and can be brought back up. The scenarios are discussed below, as well as suggestions for diagnosing and recovering from each scenario.
 
 Split-brain Handlers
+----------------------------
+|drbd| configuration allows for custom handlers when a split-brain event happens. The basic handler sends a notification email to a configurable email address so the issue can be investigated.
 
-DRBD’s configuration allows for custom handlers when a split-brain event happens. The basic handler sends a notification email to a configurable email address so the issue can be investigated.
-
-Private Chef’s drbd.conf file specifies other built-in actions that will be taken in certain fault scenarios:
+The ``drbd.conf`` used with |chef private| file specifies other built-in actions that will be taken in certain fault scenarios:
 
 .. code-block:: bash
 
@@ -92,19 +95,19 @@ Private Chef’s drbd.conf file specifies other built-in actions that will be ta
 
 What these mean:
 
-* after-sb-0pri: split-brain has been detected, and neither node is Primary. The action “discard-younger-primary” will roll back changes made on the last host to have been Primary.
-* after-sb-1pri: split-brain has been detected, and only one node thought it was Primary when the split-brain happened. In this configuration, “discard-secondary” will continue operations on the Primary and assume the Secondary was lost.
-* after-sb-2pri: split-brain has been detected, and at the time both nodes thought they were Primary. In this instance, “call-pri-lost-after-sb” will try to apply the “discard-younger-primary” from the 0pri configuration to determine which host should be Primary. The other host takes action to become Secondary.
+* after-sb-0pri: ``split-brain`` has been detected, and neither node is Primary. The action ``discard-younger-primary`` will roll back changes made on the last host to have been Primary.
+* after-sb-1pri: ``split-brain`` has been detected, and only one node thought it was Primary when the ``split-brain`` happened. In this configuration, ``discard-secondary`` will continue operations on the Primary and assume the Secondary was lost.
+* after-sb-2pri: ``split-brain`` has been detected, and at the time both nodes thought they were Primary. In this instance, ``call-pri-lost-after-sb`` will try to apply the ``discard-younger-primary`` from the ``0pri`` configuration to determine which host should be Primary. The other host takes action to become Secondary.
 
 Assumptions
-
+----------------------------
 * Back-end processes running on two hosts BE1 and BE2
 * Back-end is using keepalived and a dedicated network interface for heartbeat
 * Back-end is using drbd for file redundancy
-* BE1 is the current drbd “Primary” and the Private Chef “master”
-* BE2 is the current drbd “Secondary” and the Private Chef “backup”
+* BE1 is the current drbd Primary and the Private Chef master
+* BE2 is the current drbd Secondary and the Private Chef backup
 
-When both nodes are up and behaving as expected, the contents of /proc/drbd on the Primary will look like this:
+When both nodes are up and behaving as expected, the contents of ``/proc/drbd`` on the Primary will look like this:
 
 .. code-block:: bash
 
@@ -122,12 +125,12 @@ On the Secondary, the status will look similar to this:
  0: cs:Connected ro:Secondary/Primary ds:UpToDate/UpToDate C r-----
        ns:0 nr:48 dw:48 dr:0 al:0 bm:2 lo:0 pe:0 ua:0 ap:0 ep:1 wo:b oos:0
 
-More information about the fields in this file is available at the drbd.org website: http://www.drbd.org/users-guide/ch-admin.html . On each host, its own status is reported first, then the status of its remote partner.
+More information about the fields in this file is available at the drbd.org website: http://www.drbd.org/users-guide/ch-admin.html. On each host, its own status is reported first, then the status of its remote partner.
 
 
 
 Failure Scenarios
-
+============================
 The following four common scenarios are discussed:
 
 #. BE2 fails gracefully (all data is synced)
@@ -138,7 +141,7 @@ The following four common scenarios are discussed:
 
 
 Scenarios 1 and 2
-
+----------------------------
 When the acting backup server fails, drbd on the master will continue to function in Primary mode, whether the drbd on the Secondary was shutdown gracefully or became unavailable unexpectedly. Verify this by running drbdadm role pc0 on the primary:
 
 .. code-block:: bash
@@ -197,7 +200,7 @@ If the Secondary host is lost completely, a new host can be installed in its pla
 
 
 Scenario 3
-
+----------------------------
 Trouble starts when the drbd Primary is the host that becomes unavailable. The drbd process on the Secondary makes no assumptions about whether or not it should automatically take over, based on the split-brain configurations in the drbd.conf file.
 
 Basically, what this means is that when the Primary becomes unavailable to the Secondary without an explicit takeover being initiated, the Secondary will assume that it itself is the wrong, split-brained host, and is the one unconnected and incorrect. It will take no automatic action.
@@ -242,7 +245,7 @@ drbd on BE1 will sync to BE2 and become the clean Secondary.
 
 
 Scenario 4
-
+----------------------------
 So far, the scenarios we have looked at have not created any data loss. When the hosts in the HA pair are synced, either can be lost and the data will be safe.
 
 If you get to a situation in which the Primary host, BE1, is lost and unrecoverable but the last status of the drbd pair was reporting that the Secondary node was in an “Inconsistent” state, you are going to lose some data. The drbd status on the remaining host, BE2, looks like this:
@@ -275,7 +278,7 @@ Running a fast network between the BE1 and BE2 hosts, and keeping it full thrott
 
 
 Scenario 5
-
+----------------------------
 Sometimes drbd hedges its bets, and puts both nodes in a pair into Secondary mode. When this happens, you can look at the contents of /proc/drbd on both hosts and see if either of them is showing out of sync. If they are both “oos:0”, just pick one and promote it to Primary with the above drbdadm primary pc0 command. If one or both of the hosts is out of sync, choose the one with the lower amount of oos and promote it to Primary.
 
 If the chosen node won’t promote, run the following commands on the other host to reset its disk state:
@@ -289,6 +292,7 @@ That will tell drbd to abandon what is on the node and start over, and should al
 
 
 More Info
-More information about DRBD is available from the DRBD website, http://www.drbd.org.
+============
+
 
 
