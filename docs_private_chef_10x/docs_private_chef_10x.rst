@@ -279,11 +279,98 @@ User Management
 
 High Availability
 -----------------------------------------------------
-.. include:: ../../xxxxx/xxxxx.rst
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha.rst
+
+Scalability
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scalability.rst
+
+Failover and Recovery
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_failover.rst
+
+Graceful Transitions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_transitions.rst
+
+DRBD
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_drbd.rst
+
+Split Brains (yum)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_drbd_split_brain.rst
+
+Split-brain Handlers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_drbd_handlers.rst
+
+Assumptions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_drbd_assumptions.rst
+
+Failure Scenarios
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario.rst
+
+Scenarios 1 and 2
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario_1and2.rst
+
+Scenario 3
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario_3.rst
+
+Scenario 4
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario_4.rst
+
+Scenario 5
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario_5.rst
 
 orgmapper
 -----------------------------------------------------
-.. include:: ../../xxxxx/xxxxx.rst
+|orgmapper desc|
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use |orgmapper|:
+
+**Start orgmapper**
+
+.. include:: ../../step_orgmapper/step_orgmapper_start.rst
+
+**Find users in an organization**
+
+.. include:: ../../step_orgmapper/step_orgmapper_find_user_by_org.rst
+
+**Find organizations for a user**
+
+.. include:: ../../step_orgmapper/step_orgmapper_find_org_by_user.rst
+
+**Find a user name based on email address**
+
+.. include:: ../../step_orgmapper/step_orgmapper_find_user_by_email.rst
+
+**Associate a user to an organization**
+
+.. include:: ../../step_orgmapper/step_orgmapper_associate_user_to_org.rst
+
+**Add a user to organization's admin group**
+
+.. include:: ../../step_orgmapper/step_orgmapper_add_user_to_admin_group.rst
+
+**Remove a user from organization's admin group**
+
+.. include:: ../../step_orgmapper/step_orgmapper_remove_user_from_admin_group.rst
+
+**Delete a user**
+
+.. include:: ../../step_orgmapper/step_orgmapper_delete_user.rst
+
+
+
 
 Upgrade Private Chef
 -----------------------------------------------------
