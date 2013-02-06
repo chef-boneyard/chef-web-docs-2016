@@ -39,7 +39,7 @@ The Chef server
 * **Tools:** private-chef-ctl | :doc:`orgmapper </orgmapper>` 
 
 
-The nodes 
+The nodes
 =====================================================
 * **The basics:** :doc:`About nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The Chef run </essentials_nodes_chef_run>` | :doc:`Ohai </ohai>`
 * **Configure:** :doc:`Install Chef on a node (bootstrap) </install_step_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Exception and report handlers </essentials_handlers>`
