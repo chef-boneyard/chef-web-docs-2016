@@ -12,10 +12,13 @@ Getting started
 
 Essentials
 =====================================================
-* **Cookbooks:** :doc:`Attribute files </essentials_cookbook_attribute_files>` | :doc:`Definitions </essentials_cookbook_definitions>` | :doc:`Files </essentials_cookbook_files>` | :doc:`Libraries </essentials_cookbook_libraries>` | :doc:`Lightweight resources </essentials_cookbook_lwrp>` | :doc:`Metadata </essentials_cookbook_metadata>` | :doc:`Recipes </essentials_cookbook_recipes>` | :doc:`Resources and providers </essentials_cookbook_resources>` | :doc:`Templates </essentials_cookbook_templates>` | :doc:`Versions </essentials_cookbook_versions>`
-* **Policy:** :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
-* **Search:** :doc:`Search </essentials_search>`
-* **Nodes and Workstations:** :doc:`chef-client </essentials_chef_client>` | :doc:`Exception and report handlers </essentials_handlers>` | :doc:`The node object </essentials_node_object>` | :doc:`The repository </essentials_repository>`
+**Cookbooks:** :doc:`Attribute files </essentials_cookbook_attribute_files>` | :doc:`Definitions </essentials_cookbook_definitions>` | :doc:`Files </essentials_cookbook_files>` | :doc:`Libraries </essentials_cookbook_libraries>` | :doc:`Lightweight resources </essentials_cookbook_lwrp>` | :doc:`Metadata </essentials_cookbook_metadata>` | :doc:`Recipes </essentials_cookbook_recipes>` | :doc:`Resources and providers </essentials_cookbook_resources>` | :doc:`Templates </essentials_cookbook_templates>` | :doc:`Versions </essentials_cookbook_versions>`
+
+**Policy:** :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
+
+**Search:** :doc:`Search </essentials_search>`
+
+**Nodes and Workstations:** :doc:`chef-client </essentials_chef_client>` | :doc:`Exception and report handlers </essentials_handlers>` | :doc:`The node object </essentials_node_object>` | :doc:`The repository </essentials_repository>`
 
 Install and Migrate
 =====================================================
