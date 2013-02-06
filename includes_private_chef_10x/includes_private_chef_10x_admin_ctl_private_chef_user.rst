@@ -3,7 +3,6 @@
 
 The following commands are available for user management:
 
-
 .. list-table::
    :widths: 60 420
    :header-rows: 1
