@@ -44,7 +44,7 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
    * - :doc:`value_for_platform_family </dsl_recipe_method_value_for_platform_family>`
      - Use in a recipe to check for a value for a platform family.
 
-The following recipe DSL methods can be used with |windows| registry keys.
+The following recipe DSL methods can be used to interact with |windows| registry keys.
 
 .. list-table::
    :widths: 150 450
