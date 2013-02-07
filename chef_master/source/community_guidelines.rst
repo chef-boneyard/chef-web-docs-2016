@@ -2,7 +2,7 @@
 Chef Community Guidelines
 =====================================================
 
-The |chef| community is made up of a mixture of professionals and volunteers from all over the world who work together to make |chef| better, including mentoring, teaching, and connecting with other members of the |chef| community.
+The |chef| community is a mixture of professionals and volunteers who come from all over the world and work together to make |chef| better, including mentoring, teaching, and connecting with other members of the |chef| community.
 
 Diversity is one of our biggest strengths, but sometimes it creates challenges with communication among members of the |chef| community. 
 
