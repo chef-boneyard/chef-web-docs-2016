@@ -1,5 +1,5 @@
 =====================================================
-Chef Community Code of Conduct
+Chef Community Guidelines
 =====================================================
 
 The |chef| community is made up of a mixture of professionals and volunteers from all over the world who work together to make |chef| better, including mentoring, teaching, and connecting with other members of the |chef| community.
