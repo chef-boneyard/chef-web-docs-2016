@@ -25,7 +25,7 @@ The previous list applies to all forms of communication: IRC, the mailing list, 
 * People may not understand jokes, sarcasm, and oblique references in the same way that you do. So remember that and be kind to the other members of the |chef| community.
 * Sexist, racist, or exclusionary jokes are not welcome in the |chef| community.
 
-The strength of the |chef| community comes from all of the people in it, their wide range of backgrounds, and the unique contributions everyone makes. Let's us keep working together, learning from our mistakes, and making the |chef| community as awesome as it is and can be.
+The strength of the |chef| community comes from all of the people in it, their wide range of backgrounds, and the unique contributions everyone makes. Let's keep working together, learning from our mistakes, and making the |chef| community as awesome as it is and can be.
 
 (Inspired by the `Speak Up! <http://speakup.io/coc.html>`_ project.)
 
