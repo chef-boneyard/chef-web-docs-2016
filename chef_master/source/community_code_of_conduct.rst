@@ -2,7 +2,7 @@
 Chef Community Code of Conduct
 =====================================================
 
-The |chef| community is made up of a mixture of professionals and volunteers from all over the world who work together on every aspect of the mission, including mentorship, teaching, and connecting people.
+The |chef| community is made up of a mixture of professionals and volunteers from all over the world who work together to make |chef| better, including mentoring, teaching, and connecting with other members of the |chef| community.
 
 Diversity is one of our biggest strengths, but sometimes it creates challenges with communication among members of the |chef| community. 
 
