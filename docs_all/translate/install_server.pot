@@ -1,0 +1,183 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Topics package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Topics 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-06 18:08\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/install_server.rst:34
+# 51660cff6a734c0b82d9953aa4e8fb04
+msgid "Install the Chef Server"
+msgstr ""
+
+#: ../../includes_chef/includes_chef.rst:5
+# 2b59a06db9094385a0f794736008d535
+msgid "|chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. |chef| relies on abstract definitions (known as cookbooks and recipes) that are written in |ruby| and are managed like source code. Each definition describes how a specific part of your infrastructure should be built and managed. |chef| then applies those definitions to servers and applications, as specified, resulting in a fully automated infrastructure. When a new server comes online, the only thing that |chef| needs to know is which cookbooks and recipes to apply."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server.rst:5
+# 14c4e15cf45545b78692294ee6d6f268
+msgid "The |chef server| acts as a hub, ensuring that the right cookbooks are used, that the right policies are applied, that all of the node objects are up-to-date, and that all of the nodes that will be maintained are registered and known to the |chef server|. The |chef server| distributes configuration details (such as recipes, templates, and file distributions) to every node within the organization. |chef| then does as much of the configuration work as possible on the nodes themselves (and not on the |chef server|). This scalable approach distributes the configuration effort throughout the organization."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:4
+# 17c5589031d643cdb2a3d15ec2aac00b
+msgid "The |omnibus installer| is used to set up a |chef server|. The |omnibus installer| separates the installation of the |chef server| from the configuration. The |omnibus installer| uses a single command to install the |chef server| and all of its dependencies, including |erlang|, |ruby|, |rabbitmq|, |nginx|, and |postgresql|. The |omnibus installer| puts everything into a unique directory (/etc/chef-server/) so that the |chef server| will not interfere with other applications that may be running on the target machine. Once installed, the |chef server| a single configuration step."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:6
+# df6f97bdbc354c7e96b548127db5723f
+msgid "|opscode| has created a small project called ``chef-server-demo`` that will enable the creation of a self-contained |chef server| within a |virtualbox| virtual machine on your system. This is the best way to install and preview the new version of the |chef server|. Download the ``chef-server-demo`` from here: https://github.com/opscode/chef-server-demo."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:9
+# 7fde90361b604c59b45e6c89cbe64b7c
+msgid "System Requirements"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:10
+# 89b9b89d596f48d8b97d904a895c023a
+msgid "The |chef server| provides an |omnibus installer| for the following operating systems and versions:"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:12
+# 9256a129f59646feaa43c335f80478ff
+msgid "|centos| 5 (64-bit only), 6 (32-bit and 64-bit versions)"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:13
+# c1b2f786868149af9666de4539cc0c65
+msgid "|ubuntu| 10.04, 11.04, 12.04 (both 32-bit and 64-bit versions)"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:16
+# 6c046be0b9f34d429747e77945c78b6a
+msgid "Chef 11 Server Cookbook"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:18
+# 056a7267311a4f0cab25e6aec70b95a3
+msgid "The easiest way to retrieve the appropriate alpha build for your system is to use the recently updated chef-server cookbook."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:20
+# edacf547a1bf47ee888250fba62413d3
+msgid "The default recipe in this cookbook:"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:22
+# 238948f2ef66428bab9c53b7ae43d4d6
+msgid "Retrieves and installs the appropriate platform-specific chef-server Omnibus package."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:23
+# 19f3dbcfd3b44ba5a4a7de6f5557757e
+msgid "Creates the initial /etc/chef-server/chef-server.rb file."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:24
+# 9c11c95fe641441e80be90903e0d8249
+msgid "Performs initial system configuration via chef-server-ctl reconfigure."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:26
+# 83016626cfc44cdbbf2bc2d2c37e826f
+msgid "Omnibus package selection is done based on the following logic:"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:28
+# 68417646ae064c9bbcd46e63a7d7bf1a
+msgid "If a value has been provided, the chef-server Omnibus package is fetched from ``node['chef-server']['package_file']``."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:30
+# 9237d679823241bc86dd69592fb51f2f
+msgid "If ``node['chef-server']['package_file']`` is unset (ie nil or empty string), the candidate package is retrieved from the Omnitruck REST API based on ``node['chef-server']['version']`` AND the node platform, ``platform_version`` and architecture. By default the latest package is installed."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:33
+# 01aaffb1ee3d4f13987fa34cd3fd664a
+msgid "Vagrant-based Self Contained Demo Environment"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:35
+# 44082a05f1d44f7c8066b4b1262e3ab6
+msgid "The easiest way to take Chef 11 Server for a spin is using the Berksfile and Vagrantfile the chef-server cookbook. The only requirements for standing up a virtualized Chef Server are Ruby (>= 1.9.1), Rubygems (>= 1.3.6), and VirtualBox:"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:45
+# f0b7df236edc4ce49f0af61cbd8f83df
+msgid "If you need help installing any of the prerequisites take a look at Jamie Winsor's excellent blog post on the subject."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:47
+# b08e0dd7c63c453983afba95d05c5faa
+msgid "You can easily SSH into the running VM using the vagrant ssh command. The VM can easily be stopped and deleted with the vagrant destroy command. Please see the official Vagrant documentation for a more in depth explanation of available commands."
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:49
+# d9ffb19b6ea54a88b6051bf80f882dfa
+msgid "The running Chef-Server components are accessible from the host machine using the following URLs:"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:51
+# 3b64113b15404b2597f0cf7db06851e9
+msgid "Web UI: https://33.33.33.10/"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:52
+# c0ece70897c342f88ad16aba63c38046
+msgid "Version Manifest: https://33.33.33.10/version"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:53
+# 531824cf7a21483fa4845a2cd8d84e4b
+msgid "Chef Server API (routing requires X-Ops-Userid HTTP header being properly set): https://33.33.33.10/"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:57
+# b6a5be41703140bbb8812efe49885c78
+msgid "Reporting Issues"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:59
+# cb62207c20844bca9260d30c3bda75ae
+msgid "If you find a bug in a Chef 11 Server Alpha, please open a ticket in the tickets.opscode.com with the following fields set so that it can be found and addressed before release:"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:61
+# 77f30813ccd546d38d77b63394668283
+msgid "Project: Chef"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:62
+# dd702323dda244869d15fa70a6774604
+msgid "Component: Chef Server"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:63
+# 19613319264d4e5fa089d5d926b8b686
+msgid "Affects Versions: 11.0.0"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:66
+# 5707edf5ce004fa68c46e4e415c34113
+msgid "Known Issues"
+msgstr ""
+
+#: ../../includes_install/includes_install_omnibus_server.rst:68
+# 32a0d23788f7435dba1b936f33793595
+msgid "``knife client reregister`` does not work.  The current workaround for this is to delete and then re-create the client."
+msgstr ""
+
