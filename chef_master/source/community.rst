@@ -9,6 +9,7 @@ The Chef Community
 .. toctree::
    :hidden:
 
+   community_code_of_conduct
    community_lists
    community_plugin_chef
    community_plugin_knife
