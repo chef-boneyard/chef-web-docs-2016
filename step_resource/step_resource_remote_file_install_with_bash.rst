@@ -9,7 +9,7 @@ The following is an example of how to install the ``foo123`` module for |nginx|.
 .. code-block:: ruby
 
    src_filename = "foo123-nginx-module-v#{node['nginx']['foo123']['version']}.tar.gz"
-   src_filepath = "#{Chef::Config['file_cache_path']}/#{foo123_src_filename}"
+   src_filepath = "#{Chef::Config['file_cache_path']}/#{src_filename}"
    extract_path = "#{Chef::Config['file_cache_path']}/nginx_foo123_module/#{node['nginx']['foo123']['checksum']}"
    
    remote_file src_filepath do
