@@ -4,11 +4,11 @@ Chef Community Guidelines
 
 The |chef| community is a mixture of professionals and volunteers who come from all over the world and work together to make |chef| better, including mentoring, teaching, and connecting with other members of the |chef| community.
 
-Diversity is one of our biggest strengths, but sometimes it creates challenges with communication among members of the |chef| community. 
+Diversity is one of our biggest strengths, but it can also bring increased communication challenges at times. 
 
-To that end, a few ground rules should help everyone communicate better as they are working with other members of the |chef| community. These rules apply equally to founders, mentors, those who submit new features and pull requests, and to anyone who is seeking help and guidance.
+To that end, as you are working with other members of the |chef| community, please keep in mind the following guidelines, which apply equally to founders, mentors, those who submit new features and pull requests, and to anyone who is seeking help and guidance.
 
-The following list isn't exhaustive; take it in the spirit in which it's intended---a guide to help all of us communicate better in a way that makes it easier for the |chef| community to work together:
+The following list isn't exhaustive; it is intended to help all of us communicate well so that the |chef| community can work better  together:
 
 * **Be welcoming, friendly, and patient.**
 * **Be considerate.**

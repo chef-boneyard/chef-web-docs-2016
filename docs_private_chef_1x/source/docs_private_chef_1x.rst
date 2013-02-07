@@ -209,14 +209,154 @@ Installation
 
 Prerequisites
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+The following prerequisites apply to every installation of |chef private|.
+
+Download |chef private|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_download.rst
+
+Supported Operating Systems
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_supported.rst
+
+Configuring the Operating System
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Before installing |chef private|, ensure that each system has the following installed and configured:
+
+Host names and FQDNs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_host_name_fqdn.rst
+
+NTP
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_ntp.rst
+
+Mail Relay
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_mail_relay.rst
+
+|cron|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_cron.rst
+
+|git|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_git.rst
+
+|redhat| and |centos| Dependencies
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_redhat_centosrst.rst
+
+|apache qpid|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_apache_qpid.rst
+
+Required Users
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_required_users.rst
 
 Standalone
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone.rst
+
+System Requirements
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_requirements_system.rst
+
+Firewall Requirements
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_requirements_firewall.rst
+
+Put the Package on the Server
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_put_package_on_server.rst
+
+Install the Package
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_install_package.rst
+
+Configure |chef private|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_configure.rst
+
+Success!
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_success.rst
 
 Tiered
 -----------------------------------------------------
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+System Requirements
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Network Requirements
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Load Balancing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/xxxx.rst
+
+Firewalls
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/xxxx.rst
+
+Create the private-chef.rb file
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Set the topology
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/xxxx.rst
+
+Add a server entry for the back-end
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/xxxx.rst
+
+Add server entries for the front-end
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/xxxx.rst
+
+Set the api_fqdn
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/xxxx.rst
+
+private-chef.rb example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/xxxx.rst
+
+Place the package on the servers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Put private-chef.rb on the bootstrap server
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Install |chef private| on the bootstrap server
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Configure the bootstrap server
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Copy /etc/opscode to the front-end servers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Install the package on front-end servers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Configure |chef private| on front-end servers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Success!
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/xxxxx.rst
 
 High Availability
