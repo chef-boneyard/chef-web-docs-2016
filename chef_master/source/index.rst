@@ -136,3 +136,4 @@ Cookbooks
    dsl_recipe_method_registry_key_exists
    dsl_recipe_method_registry_value_exists
 
+   code_of_conduct
