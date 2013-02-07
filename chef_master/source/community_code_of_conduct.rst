@@ -27,7 +27,7 @@ The previous list applies to all forms of communication: IRC, the mailing list, 
 
 The strength of the |chef| community comes from all of the people in it, their wide range of backgrounds, and the unique contributions we all make. Let's us keep working together, learning from our mistakes, and making the |chef| community as awesome as it is and can be.
 
-(Original text courtesy of the `Speak Up! <http://speakup.io/coc.html>`_ project.)
+(Inspired by the `Speak Up! <http://speakup.io/coc.html>`_ project.)
 
 
 
