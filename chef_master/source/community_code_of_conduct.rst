@@ -17,7 +17,7 @@ The following list isn't exhaustive; take it in the spirit in which it's intende
 * **Be careful in the words that you choose.**
 * **When we disagree, let's all work together to understand why.**
 
-Remember that:
+The previous list applies to all forms of communication: IRC, the mailing list, the issue tracker, and any other forum that is used by the |chef| community. Please keep in mind that:
 
 * Your work will be used by other people, and you in turn will depend on the work of others.
 * Decisions that you make will often affect others in the |chef| community.
