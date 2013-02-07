@@ -2,21 +2,30 @@
 Chef Community Code of Conduct
 =====================================================
 
-Like the technical community as a whole, the |chef| team and community is made up of a mixture of professionals and volunteers from all over the world, working on every aspect of the mission, including mentorship, teaching and connecting people.
+The |chef| community is made up of a mixture of professionals and volunteers from all over the world, working together on every aspect of the mission, including mentorship, teaching, and connecting people.
 
-Diversity is one of our biggest strengths, but it can sometimes lead to communication issues and unhappiness. To that end, we have a few ground rules that we ask people to adhere to when they're participating within the |chef| community and project. These rules apply equally to founders, mentors, and to those seeking help and guidance.
+Diversity is one of our biggest strengths, but sometimes it creates challenges with communication among members of the |chef| community. 
 
-This isn't an exhaustive list of things that you can't do. Rather, take it in the spirit in which it's intended---a guide to make it easier to enrich all of us and the technical communities in which we all participate.
+To that end, a few ground rules should help everyone communicate better as they are working with other members of the |chef| community. These rules apply equally to founders, mentors, those who submit new features and pull requests, and to anyone who is seeking help and guidance.
 
-This code of conduct applies to all forms of communication: IRC, the mailing list, the issue tracker, and any other forums that are used by the |chef| community for communication.
+The following list isn't exhaustive; take it in the spirit in which it's intended---a guide to help all of us communicate better in a way that makes it easier for the |chef| community to work together:
 
-* Be welcoming, friendly, and patient.
-* Be considerate. Your work will be used by other people, and you in turn will depend on the work of others. Any decision you take will affect users and colleagues, and you should take those consequences into account when making decisions.
-* Be respectful. Not all of us will agree all the time, but disagreement is no excuse for poor behavior and poor manners. We might all experience some frustration now and then, but we cannot allow that frustration to turn into a personal attack. It's important to remember that a community where people feel uncomfortable or threatened is not a productive one. Members of the |chef| community should be respectful when dealing with other members, but also when dealing with people outside the |chef| community.
-* Be careful in the words that you choose. Remember that sexist, racist, and other exclusionary jokes can be offensive to those around you. Be kind to others. Do not insult or put down other participants. Behave professionally. Remember that harassment and sexist, racist, or exclusionary jokes are not appropriate for within the |chef| community.
-* When we disagree, we try to understand why. Disagreements, both social and technical, happen all the time and the |chef| community is no exception. It is important that we resolve disagreements and differing views constructively. Remember that we're different. 
+* **Be welcoming, friendly, and patient.**
+* **Be considerate.**
+* **Be respectful.**
+* **Be professional.**
+* **Be careful in the words that you choose.**
+* **When we disagree, let's all work together to understand why.**
 
-The strength of the |chef| community comes from all of the people and their wide range of backgrounds. Different people have different perspectives on issues. Being unable to understand why someone holds a viewpoint doesn't mean that they're wrong. Don't forget that it is human to err and blaming each other doesn't get us anywhere, rather offer to help resolving issues and to help learn from mistakes.
+Remember that:
+
+* Your work will be used by other people, and you in turn will depend on the work of others.
+* Decisions that you make will often affect others in the |chef| community.
+* Disagreements happen, but should not be an excuse for poor behavior and bad manners. When disagreements do happen, let's work together to solve them effectively and in a way that ensures that everyone understands what the disagreement was.
+* People may not understand jokes, sarcasm, and oblique references in the same way that you do. So remember that and be kind to the other members of the |chef| community.
+* Sexist, racist, or exclusionary jokes are not welcome in the |chef| community.
+
+The strength of the |chef| community comes from all of the people in it, their wide range of backgrounds, and the unique contributions we all make. Let's us keep working together, learning from our mistakes, and making the |chef| community as awesome as it is and can be.
 
 (Original text courtesy of the `Speak Up! <http://speakup.io/coc.html>`_ project.)
 
