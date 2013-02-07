@@ -285,79 +285,79 @@ Success!
 
 Tiered
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered.rst
 
 System Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_system_requirements.rst
 
 Network Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+|chef private| has the following network requirements for a tiered installation:
 
 Load Balancing
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/xxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_network_load_balance.rst
 
 Firewalls
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/xxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_network_firewalls.rst
 
 Create the private-chef.rb file
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb.rst
 
 Set the topology
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/xxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_set_topology.rst
 
 Add a server entry for the back-end
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/xxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_add_backend.rst
 
 Add server entries for the front-end
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/xxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_add_frontend.rst
 
 Set the api_fqdn
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/xxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_set_api_fqdn.rst
 
 private-chef.rb example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/xxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_example.rst
 
 Place the package on the servers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_add_package_to_server.rst
 
 Put private-chef.rb on the bootstrap server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_put_private_chef_rb_on_bootstrap.rst
 
 Install |chef private| on the bootstrap server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_install_private_chef_on_bootstrap.rst
 
 Configure the bootstrap server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_config_bootstrap.rst
 
 Copy /etc/opscode to the front-end servers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_copy_etc_opscode.rst
 
 Install the package on front-end servers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_install_package_on_front_end.rst
 
 Configure |chef private| on front-end servers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_config_front_end.rst
 
 Success!
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_success.rst
 
 High Availability
 -----------------------------------------------------
