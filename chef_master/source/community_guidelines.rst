@@ -23,7 +23,7 @@ The previous list applies to all forms of communication: IRC, the mailing list, 
 * Decisions that you make will often affect others in the |chef| community.
 * Disagreements happen, but should not be an excuse for poor behavior and bad manners. When disagreements do happen, let's work together to solve them effectively and in a way that ensures that everyone understands what the disagreement was.
 * People may not understand jokes, sarcasm, and oblique references in the same way that you do. So remember that and be kind to the other members of the |chef| community.
-* Sexist, racist, or exclusionary jokes are not welcome in the |chef| community.
+* Sexist, racist, or exclusionary comments are not welcome in the |chef| community.
 
 The strength of the |chef| community comes from all of the people in it, their wide range of backgrounds, and the unique contributions everyone makes. Let's keep working together, learning from our mistakes, and making the |chef| community as awesome as it can be.
 
