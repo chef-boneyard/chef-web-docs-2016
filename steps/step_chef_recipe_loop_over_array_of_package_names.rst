@@ -9,10 +9,3 @@ To loop over an array of package names by platform:
    ["apache2", "apache2-mpm"].each do |p|
      package p
    end
-
-
-
-
-
-
-
