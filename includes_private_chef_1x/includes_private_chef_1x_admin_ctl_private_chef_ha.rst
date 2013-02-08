@@ -3,7 +3,6 @@
 
 The following commands are available for |private chef| deployments that are using the HA architecture:
 
-
 .. list-table::
    :widths: 60 420
    :header-rows: 1

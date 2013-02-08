@@ -34,7 +34,7 @@ Speeding up initial synchronization on |redhat| and |centos| 6:
 
    $ drbdadm disk-options --resync-rate=1100M pc0
 
-Speeding up initial synchronization on |ubnuntu|:
+Speeding up initial synchronization on |ubuntu|:
 
 .. code-block:: bash
 

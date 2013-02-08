@@ -8,29 +8,3 @@ The following four common scenarios are discussed:
 #. BE1 fails gracefully (all data is synced)
 #. BE1 hard fails badly (unsynced data)
 #. Both hosts are up as Secondary, and Private Chef is unhappy
-
-Scenarios 1 and 2
-----------------------------
-
-
-
-Scenario 3
-----------------------------
-
-
-
-Scenario 4
-----------------------------
-
-
-
-Scenario 5
-----------------------------
-
-
-
-More Info
-============
-
-
-

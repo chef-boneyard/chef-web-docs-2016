@@ -4,24 +4,6 @@ Private Chef 10.x Documentation
 
 .. include:: ../../includes_private_chef_1x/includes_private_chef_10x.rst
 
-TEMPLATE
-=====================================================
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
-
-H3
------------------------------------------------------
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
-
-H4
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
-
-H4
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
-
-
-
 
 Engagement
 =====================================================
@@ -33,35 +15,35 @@ The following sections describe how |opscode| consulting works from the initial 
 
 Initial Engagement
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_consulting_initial.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_initial.rst
 
 Login to the Project Portal
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_consulting_login.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_login.rst
 
 Use the Project Portal
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_consulting_project.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_project.rst
 
 Messages
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_consulting_project_messages.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_project_messages.rst
 
 To-Dos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_consulting_project_todos.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_project_todos.rst
 
 Writeboards
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_consulting_project_writeboards.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_project_writeboards.rst
 
 During the Engagement
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_consulting_during.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_during.rst
 
 Finishing the Engagement
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_consulting_finished.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_finished.rst
 
 Pre-installation Steps
 -----------------------------------------------------
@@ -69,23 +51,23 @@ This section details what needs to be done before your consultants arrive on-sit
 
 Questionnaire
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_preinstall_questions.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_questions.rst
 
 Server and Network Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_preinstall_server_and_network.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_server_and_network.rst
 
 Install
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_preinstall_install.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_install.rst
 
 SSL
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_preinstall_ssl.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_ssl.rst
 
 Review
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_preinstall_review.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_review.rst
 
 Onsite Installation
 -----------------------------------------------------
@@ -121,7 +103,7 @@ Walkthrough of Support Process
 
 Acceptance
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_engagement_acceptance.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_acceptance.rst
 
 
 
@@ -130,19 +112,19 @@ Acceptance
 
 Architecture
 =====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture.rst
 
 Standalone
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_standalone.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone.rst
 
 Hosts
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_standalone_hosts.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone_hosts.rst
 
 Backup
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_standalone_backup.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone_backup.rst
 
 Scaling
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -150,55 +132,55 @@ Scaling
 
 Tiered
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_tiered.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_tiered.rst
 
 Hosts
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_tiered_hosts.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_tiered_hosts.rst
 
 Backup
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_tiered_backup.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_tiered_backup.rst
 
 Scaling
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_tiered_scaling.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_tiered_scaling.rst
 
 High Availability
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_ha.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_ha.rst
 
 Hosts
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_ha_hosts.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_ha_hosts.rst
 
 Backup
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_ha_backup.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_ha_backup.rst
 
 Scaling
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_ha_scaling.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_ha_scaling.rst
 
 Modifications
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_modifications.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_modifications.rst
 
 SAN-backed
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_modifications_san.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_modifications_san.rst
 
 Scaling
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_modifications_scaling.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_modifications_scaling.rst
 
 Where is MySQL?
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_modifications_mysql.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_modifications_mysql.rst
 
 But X-technology is better!
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_architecture_modifications_xtechnology.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_modifications_xtechnology.rst
 
 
 
@@ -360,7 +342,6 @@ Success!
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_success.rst
 
 
-
 High Availability
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha.rst
@@ -417,89 +398,84 @@ private-chef.rb example
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_example.rst
 
-xxxxx
+Add package to server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_add_package_to_server.rst
 
-xxxxx
+Add private-chef.rb to /etc/opscode
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_copy_etc_opscode.rst
 
-xxxxx
+Install |chef private| on backend
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_install_package_on_backend.rst
 
-xxxxx
+Install |drbd| on back-end servers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_install_drbd_on_backend.rst
 
-xxxxx
+Configure |drbd| on the back-end bootstrap server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_drbd_for_bootstrap.rst
 
-xxxxx
+Copy configuration to non-bootstrap server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_copy_config_to_non_bootstrap_backend.rst
 
-xxxxx
+Configure |drbd| on non-bootstrap server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_drbd_for_non_bootstrap_backend.rst
 
-xxxxx
+Set bootstrap server to be the primary server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_set_bootstrap_primary_for_drbd.rst
 
-xxxxx
+Mount the file system on the |drbd| server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_create_filesystem_on_drbd.rst
 
-xxxxx
+Monitor the |drbd| server for initial synchronization
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_monitor_device_sync.rst
 
-xxxxx
+Configure |chef private| on the bootstrap server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_private_chef_on_bootstrap.rst
 
-xxxxx
+Configure |chef private| on the non-bootstrap server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_non_bootstrap_backend.rst
 
-xxxxx
+Copy /etc/opscode to the front-end servers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_copy_etc_opscode_to_frontend.rst
 
-xxxxx
+Install |chef private| on the front-end servers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_install_private_chef_on_frontend.rst
 
-xxxxx
+Configure |chef private| on the front-end servers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
-
-xxxxx
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
-
-xxxxx
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
-
-xxxxx
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_private_chef_on_frontend.rst
 
 Success!
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_success.rst
 
+Using GRE Tunnels
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_gre_tunnels.rst
+
+
 Create Users
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_create_user.rst
 
+
 Create the Organization
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_create_org.rst
+
 
 Configure AD / LDAP
 -----------------------------------------------------
@@ -540,6 +516,7 @@ Verify the Configuration
 Success!
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_adldap_success.rst
+
 
 
 
@@ -585,43 +562,43 @@ backend_vip
 
 private-chef-ctl
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ctl_private_chef_ha.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_ha.rst
 
 General Commands
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ctl_private_chef_general.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_general.rst
 
 HA Commands
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ctl_private_chef_ha.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_ha.rst
 
 Services Commands
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ctl_private_chef_services.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_services.rst
 
 Reading the status line
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ctl_private_chef_services_read_status_line.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_services_read_status_line.rst
 
 Logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ctl_private_chef_services_read_status_line_service_logs.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_services_read_status_line_service_logs.rst
 
 Services in HA deployments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ctl_private_chef_services_read_status_line_on_ha.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_services_read_status_line_on_ha.rst
 
 User Commands
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ctl_private_chef_user.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_user.rst
 
 Logs
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs.rst
 
 View Logs
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_view.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_view.rst
 
 Services
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -629,116 +606,118 @@ The following services used by |chef private| generate log files:
 
 couchdb
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_couchdb.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_couchdb.rst
 
 fcgiwrap
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_fcgiwrap.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_fcgiwrap.rst
 
 nagios
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_nagios.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_nagios.rst
 
 nginx
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_nginx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_nginx.rst
 
 Read Nginx Access Logs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_nginx_read_logs.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_nginx_read_logs.rst
 
 nrpe
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_nrpe.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_nrpe.rst
 
 opscode-account
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_account.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_account.rst
 
 opscode-authz
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_authz.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_authz.rst
 
 opscode-certificate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_certificate.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_certificate.rst
 
 opscode-chef
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_chef.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_chef.rst
 
 opscode-erchef
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_erchef.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_erchef.rst
 
 opscode-expander
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_expander_reindexer.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_expander_reindexer.rst
 
 opscode-expander-reindexer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_expander.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_expander.rst
 
 opscode-org-creator
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_org_creator.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_org_creator.rst
 
 opscode-solr
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_solr.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_solr.rst
 
 opscode-webui
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_opscode_webui.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_webui.rst
 
 phpfpm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_phpfpm.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_phpfpm.rst
 
 postgresql
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_postgresql.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_postgresql.rst
 
 rabbitmq
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_rabbitmq.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_rabbitmq.rst
 
 redis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_logs_services_redis.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_redis.rst
 
 
 User Management
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_user_management.rst
+
+THIS ONE STILL NEEDS TO BE BROKEN DOWN
 
 High Availability
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha.rst
 
 Scalability
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_scalability.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_scalability.rst
 
 Failover and Recovery
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_failover.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_failover.rst
 
 Graceful Transitions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_transitions.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_transitions.rst
 
 DRBD
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_drbd.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_drbd.rst
 
 Split Brains (yum)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_drbd_split_brain.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_drbd_split_brain.rst
 
 Split-brain Handlers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_drbd_handlers.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_drbd_handlers.rst
 
 Assumptions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -746,23 +725,23 @@ Assumptions
 
 Failure Scenarios
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_scenario.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_scenario.rst
 
 Scenarios 1 and 2
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_scenario_1and2.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_scenario_1and2.rst
 
 Scenario 3
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_scenario_3.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_scenario_3.rst
 
 Scenario 4
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_scenario_4.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_scenario_4.rst
 
 Scenario 5
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_scenario_5.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_scenario_5.rst
 
 orgmapper
 -----------------------------------------------------
@@ -806,7 +785,7 @@ The following examples show how to use |orgmapper|:
 
 Upgrade Private Chef
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_upgrade.rst
+There are two upgrade scenarios for |chef private|: standalone and high availability.
 
 Standalone Upgrade
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

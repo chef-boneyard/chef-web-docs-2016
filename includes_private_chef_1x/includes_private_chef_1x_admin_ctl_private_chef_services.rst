@@ -3,7 +3,6 @@
 
 The following commands are available for managing services that are used by |chef private|:
 
-
 .. list-table::
    :widths: 60 420
    :header-rows: 1

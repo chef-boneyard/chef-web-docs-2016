@@ -8,9 +8,9 @@ For example, on |chef private| Installation engagements, a Writeboard is created
 To access a Writeboard:
 
 #. Click the Writeboards tab.
-   .. image:: project_portal_writeboard_tab
+   .. image:: ../../images/project_portal_writeboard_tab.png
 #. Select the Writeboard you wish to view or edit.
-   .. image:: project_portal_select_writeboard
+   .. image:: ../../images/project_portal_select_writeboard.png
 #. Once viewing the Writeboard, you can click the Edit this page button to edit, or simply scroll to view the document.
-   .. image:: project_portal_edit_writeboard
+   .. image:: ../../images/project_portal_edit_writeboard.png
 

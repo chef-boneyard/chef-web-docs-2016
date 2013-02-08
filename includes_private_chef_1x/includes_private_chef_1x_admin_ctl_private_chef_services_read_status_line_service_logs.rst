@@ -5,7 +5,7 @@ A typical status line for a running service on a non-high availability private c
 
 .. code-block:: bash
 
-    run: opscode-solr: (pid 1486) 7819s; run: log: (pid 1485) 7819s
+   run: opscode-solr: (pid 1486) 7819s; run: log: (pid 1485) 7819s
 
 * The first segment, run, describes the state the supervisor is attempting to keep the process in. Most commonly, this is either run (when the service should be up and running) or down, meaning the service should be stopped.
 * The second segment is the service name itself - in this case, opscode-solr.

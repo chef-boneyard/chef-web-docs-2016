@@ -8,6 +8,6 @@ Most often, you will be accessing the To-Do tab to either review a particular ph
 To access the To-Do lists:
 
 #. Click the To-Dos tab.
-   .. image:: project_portal_todo_tab
+   .. image:: ../../images/project_portal_todo_tab.png
 #. From here, you can easily view all of the active To-Do lists. To cross off an item, simply click the checkbox.
-   .. image:: project_portal_todo_click
+   .. image:: ../../images/project_portal_todo_click.png

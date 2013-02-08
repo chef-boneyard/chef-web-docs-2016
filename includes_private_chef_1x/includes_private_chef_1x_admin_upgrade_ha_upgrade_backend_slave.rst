@@ -3,13 +3,13 @@
 
 Once the ``/etc/opscode`` files have been copied over to the backend slave from the master, the backend slave may be updated.
 
-On RedHat RPM based systems run rpm with the appropriate upgrade flags and with the new RPM to be installed:
+On |redhat| |rpm| based systems run |rpm| with the appropriate upgrade flags and with the new |rpm| to be installed:
 
 .. code-block:: bash
 
    $ rpm -Uvh private-chef-1.1.10-1.el6.x86_64.rpm
 
-On |ubuntu| or |debian| deb-package based systems run |dpkg| with the install flag:
+On |ubuntu| or |debian| deb-package based systems run |debian dpkg| with the install flag:
 
 .. code-block:: bash
 

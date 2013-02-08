@@ -8,10 +8,10 @@ If you do send consultants email directly, they will post it as a message to you
 To send us a message:
 
 #. Click the "Messages" tab
-   .. image:: project_portal_message_tab
+   .. image:: ../../images/project_portal_message_tab.png
 #. Click "Post a new Message"
-   .. image:: project_portal_post_message
+   .. image:: ../../images/project_portal_post_message.png
 #. Fill in the message Title and Body. Our consultants are notified automatically, but if the message is urgent, feel free to notify them via Email as well by clicking next to their name.
-   .. image:: project_portal_message_body
+   .. image:: ../../images/project_portal_message_body.png
 #. Click "Post this message"
-   .. image:: project_portal_send_message
+   .. image:: ../../images/project_portal_send_message.png

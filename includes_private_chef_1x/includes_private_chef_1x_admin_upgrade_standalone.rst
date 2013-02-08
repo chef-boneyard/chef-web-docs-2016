@@ -3,7 +3,7 @@
 
 The installation process for a standalone upgrade of |chef private| does not reconfigure |chef private| or restart any of the services. This prevents inadvertent fail overs from occurring on High Availability installations.
 
-On RedHat RPM based systems run rpm with the appropriate upgrade flags and with the new RPM to be installed:
+On |redhat| |rpm| based systems run |rpm| with the appropriate upgrade flags and with the new |rpm| to be installed:
 
 .. code-block:: bash
 
@@ -17,7 +17,7 @@ On RedHat RPM based systems run rpm with the appropriate upgrade flags and with 
    $ ln -sf /opt/opscode/embedded/cookbooks/bin/private-chef-ctl /usr/bin/
 
 
-On |ubuntu| or |debian| deb-package based systems run |dpkg| with the install flag:
+On |ubuntu| or |debian| deb-package based systems run |debian dpkg| with the install flag:
 
 .. code-block:: bash
 

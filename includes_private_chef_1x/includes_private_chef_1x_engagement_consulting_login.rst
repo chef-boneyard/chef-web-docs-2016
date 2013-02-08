@@ -7,6 +7,6 @@ http://opscode.basecamphq.com
 
 You will be presented with a login screen similar to the following:
 
-.. image:: project_portal_login_screen
+.. image:: ../../images/project_portal_login_screen.png
 
 Input the Username and Password you created during the sign-up process.
