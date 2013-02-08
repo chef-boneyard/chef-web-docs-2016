@@ -205,7 +205,7 @@ But X-technology is better!
 
 Installation
 =====================================================
-.. include:: ../../includes_private_chef_1x/xxxxx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install.rst
 
 Prerequisites
 -----------------------------------------------------
@@ -359,9 +359,139 @@ Success!
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_success.rst
 
+
+
 High Availability
 -----------------------------------------------------
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha.rst
+
+System Requirements
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_system_requirements.rst
+
+Network Requirements
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|chef private| has the following network requirements for a high availability installation:
+
+Back-end Networking
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_backend.rst
+
+Back-end Virtual IP Addresses
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_virtual_ips.rst
+
+Back-end Disk Configuraiton
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_disc_config.rst
+
+Load Balancing
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_load_balancers.rst
+
+Firewalls
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_firewalls.rst
+
+private-chef.rb Config File
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb.rst
+
+Set the topology
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_set_topology.rst
+
+Add entries for back-end servers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_add_backend.rst
+
+Add entries for front-end servers
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_add_frontend.rst
+
+Set api_fqdn
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_set_api_fqdn.rst
+
+private-chef.rb example
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_example.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+xxxxx
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/xxxxx.rst
+
+Success!
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_success.rst
 
 Create Users
 -----------------------------------------------------
