@@ -24,19 +24,21 @@ xxxxx
 
 Configuration Files
 =====================================================
-:doc:`client.rb </client_rb>` | :doc:`knife.rb </knife_rb>` | :doc:`metadata.rb </metadata_rb>` | :doc:`server.rb </server_rb>` | :doc:`solo.rb </solo_rb>` | :doc:`solr.rb </solr_rb>`
+:doc:`server.rb </server_rb>` | :doc:`solo.rb </solo_rb>` | :doc:`solr.rb </solr_rb>`
 
 APIs and DSLs
 =====================================================
-:doc:`Chef Server API </api_chef_server>` | :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Recipe DSL </dsl_recipe>`
+:doc:`Chef Server API </api_chef_server>` | :doc:`Cookbooks Site API </api_cookbooks_site>`
 
 
 
 Private Chef 1.x
 =====================================================
-:doc:`Chef Server API </api_chef_server>` | :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Recipe DSL </dsl_recipe>`
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x.rst
 
+.. note:: This section is about the version of |chef private| that existed up until February 4, 2013.
 
+:doc:`Engagement </private_chef_1x_engage>` | :doc:`Architecture </private_chef_1x_architecture>` | :doc:`Installation </private_chef_1x_install>` | :doc:`Administration </private_chef_1x_admin>` | :doc:`Support </private_chef_1x_support>`
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
@@ -56,7 +58,11 @@ Private Chef 1.x
    solo_rb
    solr_rb
 
-
+   private_chef_1x_engage
+   private_chef_1x_architecture
+   private_chef_1x_install
+   private_chef_1x_admin
+   private_chef_1x_support
 
 
 
