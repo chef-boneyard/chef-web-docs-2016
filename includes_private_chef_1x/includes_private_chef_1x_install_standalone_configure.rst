@@ -3,13 +3,11 @@
 
 |chef private| is now installed on your server, but is not configured for use. To configure it for a standalone installation, simply run:
 
-Configure |chef private| Standalone
-
 .. code-block:: bash
 
    $ private-chef-ctl reconfigure
 
-This command may take several minutes to run, during which you will see the output of the Chef run that is configuring your new Private Chef installation. When it is complete, you will see:
+This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef private| installation. When it is complete, you will see:
 
 Completed ``private-chef-ctl reconfigure``
 

@@ -9,7 +9,7 @@
 
 Options:
 
-* standalone (default): All of Private Chef running on a single server.
+* standalone (default): All of |chef private| running on a single server.
 * manual: Identical to standalone.
 * tier: Many front-end servers to a single, non-high-availability back-end server.
 * ha: Many front-end servers to a high-availability back-end cluster.

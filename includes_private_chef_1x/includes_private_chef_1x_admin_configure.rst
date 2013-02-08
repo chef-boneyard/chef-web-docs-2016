@@ -3,7 +3,7 @@
 
 Configuration of |chef private| is done through the ``/etc/opscode/private-chef.rb`` file. The file itself is written in |ruby|, allowing you to have as much flexibility as possible with how you configure the system.
 
-While there are a great deal of configuration options, the number required for common use is quite small. For standalone single server configurations no configuration is required at all - the defaults take care of everything.
+While there are a great deal of configuration options, the number required for common use is quite small. For standalone single server configurations no configuration is required at all---the defaults take care of everything.
 
 A typical High Availability or Tiered configuration consists of only:
 

@@ -1,8 +1,8 @@
 =====================================================
-Private Chef 10.x Documentation
+Private Chef 1.x Documentation
 =====================================================
 
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x.rst
 
 
 Engagement
@@ -687,9 +687,31 @@ redis
 
 User Management
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_user_management.rst
+The following tasks can be done around user management.
 
-THIS ONE STILL NEEDS TO BE BROKEN DOWN
+Change Password
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_user_management_change_password.rst
+
+Create User
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_user_management_create.rst
+
+Edit Profile
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_user_management_edit_profile.rst
+
+Recover Password
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_user_management_recover_password.rst
+
+Regenerate Private Key
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_user_management_regenerate_private_key.rst
+
+View Profile
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_user_management_view_profile.rst
 
 High Availability
 -----------------------------------------------------
@@ -721,7 +743,7 @@ Split-brain Handlers
 
 Assumptions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_private_chef_1x/includes_private_chef_10x_admin_ha_drbd_assumptions.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_drbd_assumptions.rst
 
 Failure Scenarios
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

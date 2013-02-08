@@ -7,4 +7,4 @@ The following four common scenarios are discussed:
 #. BE2 hard fails badly (unsynced data)
 #. BE1 fails gracefully (all data is synced)
 #. BE1 hard fails badly (unsynced data)
-#. Both hosts are up as Secondary, and Private Chef is unhappy
+#. Both hosts are up as Secondary, and |chef private| is unhappy

@@ -3,4 +3,4 @@
 
 When Active Directory / LDAP is enabled, the login page will authenticate users using their Active Directory credentials.
 
-.. image:: ../../images/ad_ldap_login.png 
+.. image:: ../../images/private_chef_1x_ad_ldap_login.png 

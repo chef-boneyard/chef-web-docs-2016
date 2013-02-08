@@ -3,7 +3,7 @@
 
 With both servers now configured for |drbd|, let the cluster know that the bootstrap server should be primary for the shared device:
 
-Make the bootstrap server primary for |drbd| on |redhat| and |centos| 6
+Make the bootstrap server primary for |drbd| on |redhat| and |centos| 6:
 
 .. code-block:: bash
 

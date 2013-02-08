@@ -21,7 +21,7 @@ After installing the upgraded package, you must instruct |private chef ctl| to u
 
    $ private-chef-ctl upgrade
 
-This may trigger a cluster failover, which will require watching the keepalived logs until the cluster failover completes and the server has transitioned fully into either the master or backup states:
+This may trigger a cluster failover, which will require watching the |keepalived| logs until the cluster failover completes and the server has transitioned fully into either the master or backup states:
 
 .. code-block:: bash
 
@@ -38,6 +38,5 @@ This may trigger a cluster failover, which will require watching the keepalived 
    Wed, 28 Mar 2012 22:09:17 +0000: Stopping service nagios
    Wed, 28 Mar 2012 22:09:17 +0000: Stopping service nginx
    Wed, 28 Mar 2012 22:09:18 +0000: Transitioned to backup
-
 
 If instead bringing the backup node online triggers a transition to master, please use the top command to watch for the load average to fall below 1.00 before proceeding.

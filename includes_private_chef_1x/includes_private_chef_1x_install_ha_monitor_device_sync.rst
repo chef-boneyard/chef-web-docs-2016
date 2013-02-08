@@ -24,9 +24,9 @@ You will see output similar to:
      [==>……………..] sync’ed: 19.5% (12388/15372)M
      finish: 0:11:00 speed: 19,188 (24,468) K/sec
 
-When the ds section of the output reads UpToDate/UpToDate, the synchronization is complete.
+When the ds section of the output reads ``UpToDate/UpToDate``, the synchronization is complete.
 
-Under normal operation, |drbd| dedicates only a portion of the available disk bandwidth to initial/complete re-synchronization - this is to ensure that new data that may be written to the shared device is also being synchronized. To enable |drbd| to utilize more of the bandwidth available during the initial synchronization, you can run:
+Under normal operation, |drbd| dedicates only a portion of the available disk bandwidth to initial/complete re-synchronization---this is to ensure that new data that may be written to the shared device is also being synchronized. To enable |drbd| to utilize more of the bandwidth available during the initial synchronization, you can run:
 
 Speeding up initial synchronization on |redhat| and |centos| 6:
 

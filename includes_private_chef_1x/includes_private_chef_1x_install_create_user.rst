@@ -1,19 +1,20 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Initial User Creation
-You must create a new user account before using Private Chef.
+You must create a new user account before using |chef private|.
 
-Note
-If your server is in Active Directory/LDAP mode, signup is unnecessary and you can simply log in to Chef using your credentials.
-Visiting the Private Chef management console will present you with a Login page, which contains a Sign Up link:
+.. note:: If your server is in Active Directory/LDAP mode, signup is unnecessary and you can simply log in to |chef private| using your credentials.
 
-signup1
+Visiting the |chef private| management console will present you with a Login page, which contains a Sign Up link:
+
+.. image:: ../../images/private_chef_1x_signup1.png
+
 
 Enter your information on the signup page, and click Submit.
 
-create_user_click_signup1
+.. image:: ../../images/private_chef_1x_create_user_click_signup1.png
 
-Once your user is created, you will have the opportunity to download your private key - download it now. This key is used for API access to Private Chef. Private Chef does not keep a copy of this key, so please store it somewhere safe.
+Once your user is created, you will have the opportunity to download your private key - download it now. This key is used for API access to |chef private|. |chef private| does not keep a copy of this key, so please store it somewhere safe.
 
-download_private_key1
+.. image:: ../../images/private_chef_1x_download_private_key1.png
+

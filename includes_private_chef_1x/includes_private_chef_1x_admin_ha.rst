@@ -12,11 +12,11 @@
 
 Under the hood, we achieve this failover through:
 
-* Asynchronous block level replication of an LVM logical volume via DRBD between two back-end servers.
+* Asynchronous block level replication of an LVM logical volume via |drbd| between two back-end servers.
 * Primary/Backup cluster election using VRRP over unicast TCP/IP via keepalived.
 * keepalived manages assigning a Virtual IP Address (VIP) to the Primary server based on the results of the election.
 
-.. image:: ../../images/private_chef_10x_ha_topology.png
+.. image:: ../../images/private_chef_1x_ha_topology.png
 
 The front-end servers require load-balancers provided by the customer. |opscode| recommends:
 

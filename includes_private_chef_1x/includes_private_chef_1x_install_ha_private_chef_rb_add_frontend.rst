@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-For each front-end server in private-chef.rb, add the following:
+For each front-end server in ``private-chef.rb``, add the following:
 
 .. code-block:: ruby
 

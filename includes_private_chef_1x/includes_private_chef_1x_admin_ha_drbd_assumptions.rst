@@ -4,8 +4,8 @@
 * Back-end processes running on two hosts BE1 and BE2
 * Back-end is using keepalived and a dedicated network interface for heartbeat
 * Back-end is using drbd for file redundancy
-* BE1 is the current drbd Primary and the Private Chef master
-* BE2 is the current drbd Secondary and the Private Chef backup
+* BE1 is the current drbd Primary and the |chef private| master
+* BE2 is the current drbd Secondary and the |chef private| backup
 
 When both nodes are up and behaving as expected, the contents of ``/proc/drbd`` on the Primary will look like this:
 

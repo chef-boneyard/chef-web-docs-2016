@@ -9,6 +9,6 @@
 * 20 GB of free disk space in /opt
 * 40 GB of free disk space in /var
 
-.. note:: While you can certainly run private chef on smaller systems, our assumption with the Tiered and High Availability installations are that they are intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
+.. note:: While you can certainly run |chef private| on smaller systems, our assumption with the Tiered and High Availability installations are that they are intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
 
 This architecture consists of two back-end servers, with as many front-end servers as you desire.
