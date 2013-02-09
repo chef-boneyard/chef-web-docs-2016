@@ -3,7 +3,7 @@
 
 Occasionally, you may need to utilize a GRE tunnel to handle the VRRP traffic. To accomplish this, you will need to put the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh``.
 
-On the backend server you are using for bootstrapping:
+On the backend server that will be used for bootstrapping:
 
 .. code-block:: bash
 
@@ -13,17 +13,7 @@ On the backend server you are using for bootstrapping:
    ip addr add 172.18.16.1 dev pc
    ip route add 172.18.16.0/24 dev pc
 
-On the backend server you are not using for bootstrapping
-
-.. code-block:: bash
-
-   #!/bin/sh
-   ip tunnel add pc mode gre remote VRRP_IP_OF_PEER local MY_IP ttl 25
-   ip link set pc up
-   ip addr add 172.18.16.2 dev pc
-   ip route add 172.18.16.0/24 dev pc
-
-Replace ``VRRP_IP_OF_PEER`` with the IP address of the server on the other end of the tunnel, and ``MY_IP`` with the IP address of the server you are putting the script on.
+Replace ``VRRP_IP_OF_PEER`` with the IP address of the server on the other end of the tunnel, and ``MY_IP`` with the IP address of the server on which the script will be located.
 
 The ``172.17.16.0/24`` network used in the above examples could be any unused reserved IP address space.
 
@@ -36,6 +26,6 @@ Set the following in ``/etc/opscode/private-chef.rb``:
      :device => "eth0",
      :heartbeat_device => "pc"
 
-And set the keepalived unicast addresses to the GRE tunnel addresses.
+And set the |keepalived| unicast addresses to the GRE tunnel addresses.
 
 

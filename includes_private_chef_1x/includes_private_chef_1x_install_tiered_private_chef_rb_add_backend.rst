@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-For the server you will be using as the back-end, add the following to ``private-chef.rb``:
+For the server that will be used as a back-end servers, add the following to the |private chef rb| file:
 
 .. code-block:: ruby
 

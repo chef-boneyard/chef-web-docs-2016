@@ -9,10 +9,9 @@ Both of the back-end servers must have |drbd| installed.
    $ yum install -y http://elrepo.org/elrepo-release-6-4.el6.elrepo.noarch.rpm
    $ yum install -y drbd84-utils kmod-drbd84
 
-.. note:: The ELRepo provides updated drivers for the Enterprise Linux family of distributions (based on Red Hat Enterprise Linux.) With the introduction of Red Hat Enterprise 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland.
+.. note:: The ELRepo provides updated drivers for the Enterprise Linux family of distributions (based on |redhat enterprise linux|.) With the introduction of |redhat enterprise linux| 6, |redhat| no longer distributes |drbd| within the kernel. These modules provide properly built, community tested releases of the required kernel and |drbd| userland.
 
-
-Install |drbd| on |ubuntu|
+For |ubuntu|:
 
 .. code-block:: bash
 

@@ -1,9 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Nominate one of your back-end servers as the bootstrap server. For that server, add the following:
-
-Create the back-end bootstrap server entry in ``private-chef.rb``
+Nominate one of your back-end servers as the bootstrap server. For that server, add the following to the |private chef rb| file:
 
 .. code-block:: ruby
 
@@ -26,7 +24,7 @@ For the other back-end server, add the following:
 
 Replace ``FQDN`` with the fully qualified domain name of the server, and ``IPADDRESS`` with the IP address of the server. Replace ``CLUSTER_IPADDRESS`` with the IP address of the server’s interface assigned for cluster communications. If no such interface is configured, exclude the ``cluster_ipaddress`` entry.
 
-Add an entry for the back-end VIP that you assigned earlier:
+Add an entry for the back-end VIP that was assigned earlier:
 
 .. code-block:: ruby
 

@@ -7,17 +7,17 @@ We recommend that you have disks entirely dedicated to storing the data for your
 * Be configured in either RAID1 or RAID5
 * Be identical across both of your back-end servers
 
-Our recommended configuration utilizes the Linux Logical Volume Manager (LVM) as the backing store for DRBD. Assuming:
+Our recommended configuration utilizes the Linux |lvm| as the backing store for |drbd|. Assuming:
 
 * You have 1TB of raw, unpartitioned disk space
-* It presents as a single device, /dev/sdb
-* The storage should be added to a volume group named opscode
-* And in a logical volume group named drbd
+* It presents as a single device, ``/dev/sdb``
+* The storage should be added to a volume group named ``opscode``
+* And in a logical volume group named ``drbd``
 * The volume group should have adequate space to enable LVM snapshots to be used for backups (at least 40GB)
 
-The following commands would properly set up the back-end disk configuration for DRBD:
+The following commands would properly set up the back-end disk configuration for |drbd|:
 
-Setting up LVM for DRBD
+Setting up LVM for |drbd|:
 
 .. code-block:: bash
 

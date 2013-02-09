@@ -1,15 +1,13 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Install the |chef private| package on both of the back-end servers.
-
-Install the Private Chef package on |redhat| and |centos| 6
+Install the |chef private| package on both of the back-end servers. For |redhat| and |centos| 6:
 
 .. code-block:: bash
 
    $ rpm -Uvh /tmp/private-chef-full-1.0.0–1.x86_64.rpm
 
-Install the |chef private| package on |ubuntu|
+For |ubuntu|:
 
 .. code-block:: bash
 

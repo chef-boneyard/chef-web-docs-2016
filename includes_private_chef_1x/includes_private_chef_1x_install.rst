@@ -3,16 +3,16 @@
 
 We’re excited to help you install |chef private|!
 
-Your first step is to make sure you meet the universal prerequisites - regardless of how you install |chef private|, you’ll need to make sure these steps are complete.
+The first step is to make sure that all of the universal prerequisites are met. Regardless of how |chef private| will be installed, the prerequisites are the same.
 
-Next, this guide provides details on 3 different installation options:
+After the prerequisites have been met, the remaining sections of this guide provides details on three different installation options:
 
-* Standalone: |chef private| on a single server.
-* Tiered: |chef private| on multiple servers.
-* High Availability: |chef private| on multiple servers with a highly available data storage layer.
+* **Standalone:** |chef private| on a single server.
+* **Tiered:** |chef private| on multiple servers.
+* **High Availability:** |chef private| on multiple servers with a highly available data storage layer.
 
-Your |opscode| representative can provide guidance on which option is right for your environment. If you are in doubt, follow the standalone installation.
+Representatives from |opscode| can provide guidance on which options are right for the environment in which |chef private| will be installed. If there are any doubts, follow the instructions for a standalone installation.
 
-Once you have |chef private| installed, you’ll want to move on to creating a user and creating an organization.
+After |chef private| is installed, the next steps will be to create a user and an organization.
 
 

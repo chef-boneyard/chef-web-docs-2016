@@ -1,15 +1,13 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Before proceeding with the installation, YOU MUST allow the |drbd| devices to fully synchronize. To observe the synchronization process, you can run:
-
-Observe |drbd| synchronization status
+Before proceeding with the installation, |drbd| MUST be allowed to fully synchronize all devices. To observe the synchronization process, you can run:
 
 .. code-block:: bash
 
    $ watch -n1 cat /proc/drbd
 
-You will see output similar to:
+Output similar to the following will be shown:
 
 .. code-block:: bash
 
@@ -24,7 +22,7 @@ You will see output similar to:
      [==>……………..] sync’ed: 19.5% (12388/15372)M
      finish: 0:11:00 speed: 19,188 (24,468) K/sec
 
-When the ds section of the output reads ``UpToDate/UpToDate``, the synchronization is complete.
+When the ``ds`` section of the output reads ``UpToDate/UpToDate``, the synchronization is complete.
 
 Under normal operation, |drbd| dedicates only a portion of the available disk bandwidth to initial/complete re-synchronization---this is to ensure that new data that may be written to the shared device is also being synchronized. To enable |drbd| to utilize more of the bandwidth available during the initial synchronization, you can run:
 
@@ -41,8 +39,6 @@ Speeding up initial synchronization on |ubuntu|:
    $ drbdsetup /dev/drbd0 syncer -r 1100M
 
 With synchronization complete, you are now ready to use |drbd| on the bootstrap node---let |chef private| know by running:
-
-Let private-chef-ctl know that you are ready to proceed
 
 .. code-block:: bash
 

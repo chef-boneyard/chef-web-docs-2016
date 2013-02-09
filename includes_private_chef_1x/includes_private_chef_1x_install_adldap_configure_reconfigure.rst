@@ -7,4 +7,4 @@ When this is done, run:
 
    $ private-chef-ctl reconfigure
 
-At this point, all users will use their Active Directory or LDAP username and password to log in to |chef private|. The first time they log in, they can either create a new account linked to their Active Directory credentials or link an existing |chef private| account to their Active Directory credentials.
+At this point, all users will use their |microsoft ad| or |ldap| username and password to log in to |chef private|. The first time they log in, they can either create a new account linked to their |microsoft ad| credentials or link an existing |chef private| account to their |microsoft ad| credentials.
