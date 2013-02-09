@@ -1,17 +1,17 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Configuration of |chef private| is done through the ``/etc/opscode/private-chef.rb`` file. The file itself is written in |ruby|, allowing you to have as much flexibility as possible with how you configure the system.
+Configuration of |chef private| is done using the |private chef rb| file that is located at ``/etc/opscode``. This file is written in |ruby|, which allows some flexibility around how |chef private| can be configured.
 
-While there are a great deal of configuration options, the number required for common use is quite small. For standalone single server configurations no configuration is required at all---the defaults take care of everything.
+While there are a great deal of configuration options in the |private chef rb| file, the actual number of required and recommended settings is quite small. For a Standalone server configuration, configuration of the |private chef rb| file is not required because the default settings take care of everything.
 
-A typical High Availability or Tiered configuration consists of only:
+For the High Availability or Tiered configurations, some of the settings will need to be modified. For example, based on the following decisions:
 
-* A topology
-* A number of server entries
-* An ``api_fqdn`` entry
-* A ``backend_vip`` entry
-* A ``notification_email``
+* The topology
+* The number of servers
+* The ``api_fqdn`` setting
+* The ``backend_vip`` setting
+* The ``notification_email`` setting
 
-See the tiered and high-availability installation documentation for complete configuration examples.
+These details are covered in the Tiered and High Availability sections for more information about these settings.
 

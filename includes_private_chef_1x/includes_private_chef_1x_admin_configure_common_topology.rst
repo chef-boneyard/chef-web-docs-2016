@@ -1,38 +1,25 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef private| configurations are governed by a topology, which describes which of our recommended architectures you plan to install. Your choices are:
+|chef private| configuration settings are determined by the topology:
+
+* **Standalone (default):** All components of |chef private| run on a single server.
+* **Tiered:** Many front-end servers; a single back-end server.
+* **High Availability:** Many front-end servers; a back-end cluster.
+
+For Standalone:
 
 .. code-block:: ruby
 
    topology "standalone"
 
-Options:
-
-* standalone (default): All of |chef private| running on a single server.
-* manual: Identical to standalone.
-* tier: Many front-end servers to a single, non-high-availability back-end server.
-* ha: Many front-end servers to a high-availability back-end cluster.
-
-For example:
-
-.. code-block:: ruby
-
-   topology "standalone"
-
-or:
-
-.. code-block:: ruby
-
-   topology "manual"
-
-or:
+For Tiered:
 
 .. code-block:: ruby
 
    topology "tier"
 
-or:
+For High Availability:
 
 .. code-block:: ruby
 

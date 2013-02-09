@@ -1,9 +1,9 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-In a tiered or high availability scenario, you are expected to be running multiple front-end servers. The ``api_fqdn`` should point to the fully qualified domain name that you want to use for accessing the Web UI and API.
+In a Tiered or High Availability scenario, it is expected that multiple front-end servers will be running. The ``api_fqdn`` setting should point to the |fully qualified domain name| that will be used to access the user interface for |chef private| and for the |api chef server|.
 
-In the following example, you would access your Private Chef server at chef.example.com.
+The following example shows how this setting is configured when the domain is ``chef.example.com``:
 
 .. code-block:: ruby
 
