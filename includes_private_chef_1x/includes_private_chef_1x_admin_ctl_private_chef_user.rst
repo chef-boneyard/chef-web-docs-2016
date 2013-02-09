@@ -10,7 +10,7 @@ The following commands are available for user management:
    * - Command
      - Description
    * - ``password``
-     - Lets you change a user’s password. When LDAP/AD is enabled, this command enables (or disables) an account’s System Recovery Password.
+     - Use this command to change a user's password. When |microsoft ad| or |ldap| is enabled, this command enables (or disables) the system recovery password for that user. For example:
 
        .. code-block:: bash
 
@@ -18,8 +18,8 @@ The following commands are available for user management:
           Enter the new password:  ******
           Enter the new password again:  ******
           Password for adamjacobs successfully set.
-
-       To disable the user’s System Recovery Password, pass –disable on the command line:
+   * - ``password --disable``
+     - Use this command with the ``--disable`` attribute to disable a user's system recoery password. For example:
 
        .. code-block:: bash
           

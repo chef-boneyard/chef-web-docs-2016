@@ -1,12 +1,12 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-On high availability back-ends, whether a service should be running or not is controlled by our clustering service, |keepalived|. When running |private chef ctl| status on these nodes, a few things change:
+On back-end servers in a High Availability topology, |keepalived| is used by the clustering service to determine whether a service should be running. If the ``private chef ctl status`` command is run against any of these nodes, a few things change:
 
-* On the back-end node that is currently the backup server, it would be normal to see only the |keepalived| and |nagios nrpe| processes as running.
-* On the back-end node that is currently the master server, it would be normal to see all the services running, but to have normally down appear in the third segment. This reflects the fact that, on reboot, this server would not attempt to start these services; instead, it would allow |keepalived| to decide whether they should be running based on the cluster state.
+* On the back-end node that is currently the backup server, it is normal to see only two running processes: |keepalived| and |nagios nrpe|
+* On the back-end node that is currently the master server, it is normal to see all services running. It is also normal to see some services in a down state if the server, on reboot, did not attempt to start the services because |keepalived| determines which services are restarted based on the state of the cluster
 
-A sample status line for a service on a High Availability ``master``:
+A sample status line for a service that is running on the master server in a High Availability toplogy:
 
 .. code-block:: bash
 

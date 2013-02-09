@@ -10,36 +10,36 @@ The following commands are available for managing services that are used by |che
    * - Command
      - Description
    * - ``service-list``
-     - Displays a list of all the |chef private| services. Those enabled on the machine are labeled with an asterisk (*).
+     - Use this command to display a list of all services available to |chef private|. A service that is enabled is labeled with an asterisk (*).
    * - ``status``
-     - Shows the status of the |chef private| services. The output will vary based on the configuration of a given server. This command can also be run for an individual service, rather than every service:
+     - Use this command to show the status of all services available |chef private|. The results will vary based on the configuration of a given server. This command can also be run for an individual service by specifying the name of the service in the command. For example:
 
        .. code-block:: bash
           
-          $ private-chef-ctl opscode-solr status
+          $ private-chef-ctl name_of_service status
 
-       Any service listed in |private chef ctl| service-list can replace opscode-solr in the above.
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``ha-status``
-     - Check the status of the H/A configuration of private chef services. This command will check that:
+     - Use this command to check the status for services running in a High Availability topology. This command will verify the following:
 
-       * The keepalived daemon is enabled in the config.
-       * The |drbd| process is enabled in the config.
-       * The underlying block device or logical volume for |drbd| has been created and configured.
-       * The |drbd| device exists.
-       * The current state of the server is ``master`` or ``backup`` and that any migration has completed.
-       * The failover VIP is correctly attached to only the ``master`` node.
-       * The |drbd| state is correct based on the state of the server being ``master`` or ``backup``.
-       * The |drbd| mount point is correctly mounted to only the ``master`` node.
-       * The |drbd| replication IPs (typically connected via crossover cable) are both pingable.
-       * The runit status of the services are correct (up or down) based on the ``master`` or ``backup`` state.
+       * The |keepalived| daemon is enabled in the config
+       * The |drbd| process is enabled in the config
+       * The underlying block device or logical volume for |drbd| has been created and configured
+       * The |drbd| device exists
+       * The current state of the server is ``master`` or ``backup``; any migration processes have completed
+       * The failover virtual IP address is correctly attached to only the ``master`` node
+       * The |drbd| state is correct based on the state of the server being ``master`` or ``backup``
+       * The |drbd| mount point is correctly mounted to only the ``master`` node
+       * The |drbd| replication IP addresses are pingable
+       * The ``runit`` status of the services are correct (up or down) based on the ``master`` or ``backup`` state of the server
 
-       If this command succeeds, it will print that everything is okay on the last line:
+       If this command succeeds, it will print display the following:
 
        .. code-block:: bash
        
           [OK] all checks passed.
 
-       Otherwise it will print out that errors were detected on the last line; the precise error will be listed in the output above:
+       Otherwise it will print out a list of errors:
 
        .. code-block:: bash
 
@@ -51,61 +51,76 @@ The following commands are available for managing services that are used by |che
           
           [ERROR] ERRORS WERE DETECTED.
    * - ``start``
-     - Start all the enabled |chef private| services. You can also start only a single service, rather than all services:
-
-        .. code-block:: bash
-
-           $ private-chef-ctl opscode-solr start
-
-       The |chef private| supervisor is configured to wait seven seconds for a service to respond to a command from the supervisor. If you see output that references a ``timeout``, it means that the signal has been sent to the process, but that it has yet to actually comply. In general, you can not worry about timed out processes, unless they are failing to respond to the signals at all---in which case you may need to escalate to using a command such as |private chef ctl| kill.
-   * - ``stop``
-     - Stop all the enabled |chef private| services. You can also stop only a single service:
-
-        .. code-block:: bash
-
-           $ private-chef-ctl opscode-solr stop
-   * - ``restart``
-     - Restart all the enabled |chef private| services. You can also restart only a single service:
-
-        .. code-block:: bash
-
-           $ private-chef-ctl opscode-solr restart
-   * - ``once``
-     - The supervisor is configured to restart any services that fail, unless we have specifically asked them to change their state. This command changes this behavior---it tells the supervisor that, should any service fail, do not attempt to restart it ("Run it once"). This command is usually used when troubleshooting configuration errors that cause a service to fail to start: running |private chef ctl| once followed by |private chef ctl| status, and looking for services in the down state will tell you what services are having trouble.
-
-       You can also tell only a specific service to run once:
+     - Use this command to start all services that are enabled in |chef private|. This command can also be run for an individual service by specifying the name of the service in the command. For example:
 
        .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service start
 
-          $ private-chef-ctl opscode-solr once
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
+
+       The |chef private| supervisor is configured to wait seven seconds for a service to respond to a command from the supervisor. If you see output that references a timeout, it means that a signal has been sent to the process, but that the process has yet to actually comply. In general, processes that have timed out are not a big concern, unless they are failing to respond to the signals at all. If a process is not responding, use a command like ``private-chef-ctl kill`` to stop the process, investigate the cause (if required), and then use ``private-chef-ctl start`` to re-enable it.
+   * - ``stop``
+     - Use this command to stop all services enabled on |chef private|. This command can also be run for an individual service by specifying the name of the service in the command. For example:
+
+       .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service stop
+
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
+   * - ``restart``
+     - Use this command to restart all services enabled on |chef private|. This command can also be run for an individual service by specifying the name of the service in the command. For example:
+
+       .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service restart
+
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
+   * - ``once``
+     - The supervisor for |chef private| is configured to restart any service that fails, unless that service has been asked to change its state. Use this command to tell the supervisor that, should any service fail, do not attempt to restart it. This command is useful when troubleshooting configuration errors that prevent a service from starting. Run ``private-chef-ctl once`` followed by ``private-chef-ctl status`` to look for services in a down state to identify which services are in trouble. This command can also be run for an individual service by specifying the name of the service in the command. For example:
+
+       .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service once
+
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``hup``
-     - Send a ``SIGHUP`` to all the services. You can also ``hup`` only a specific service:
+     - Use this command to send a ``SIGHUP`` to all services. This command can also be run for an individual service by specifying the name of the service in the command. For example:
 
-        .. code-block:: bash
+       .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service hup
 
-           $ private-chef-ctl opscode-solr hup
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``term``
-     - Send a ``SIGTERM`` to all the services. You can also send ``term`` to only a specific service:
+     - Use this command to send a ``SIGTERM`` to all services. This command can also be run for an individual service by specifying the name of the service in the command. For example:
 
-        .. code-block:: bash
+       .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service term
 
-           $ private-chef-ctl opscode-solr term
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``int``
-     - Send a ``SIGINT`` to all the services. You can also send ``int`` to only a specific service:
+     - Use this command to send a ``SIGINT`` to all services. This command can also be run for an individual service by specifying the name of the service in the command. For example:
 
-        .. code-block:: bash
+       .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service int
 
-           $ private-chef-ctl opscode-solr int
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``kill``
-     - Send a ``SIGKILL`` to all the services. You can also send a ``kill`` to only a specific service:
+     - Use this command to send a ``SIGKILL`` to all services. This command can also be run for an individual service by specifying the name of the service in the command. For example:
 
-        .. code-block:: bash
+       .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service kill
 
-           $ private-chef-ctl opscode-solr kill
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``tail``
-     - Follow the |chef private| logs for all services. You can also watch the logs of a specific service:
+     - Use this command to follow all |chef private| logs for all services. This command can also be run for an individual service by specifying the name of the service in the command. For example:
 
-        .. code-block:: bash
+       .. code-block:: bash
+          
+          $ private-chef-ctl name_of_service tail
 
-           $ private-chef-ctl opscode-solr tail
-
+       where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
