@@ -1,13 +1,15 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-* Back-end processes running on two hosts BE1 and BE2
-* Back-end is using keepalived and a dedicated network interface for heartbeat
-* Back-end is using drbd for file redundancy
-* BE1 is the current drbd Primary and the |chef private| master
-* BE2 is the current drbd Secondary and the |chef private| backup
+The following assumptions exist when |chef private| is deployed in a High Availability topology:
 
-When both nodes are up and behaving as expected, the contents of ``/proc/drbd`` on the Primary will look like this:
+* The back-end processes run on two hosts: ``BE1`` and ``BE2``. ``BE1`` is the |drbd| primary and |chef private| master; ``BE2`` is the |drbd| secondary and the |chef private| backup
+* The back-end uses |keepalived| and a dedicated network interface for heartbeat
+* The back-end uses |drbd| for file redundancy
+
+On each host, its own status is reported first, and then the status of its remote partner.
+
+When both the primary and secondary nodes are running and behaving as expected, the contents of ``/proc/drbd`` on the primary node will look similar to the following:
 
 .. code-block:: bash
 
@@ -16,7 +18,7 @@ When both nodes are up and behaving as expected, the contents of ``/proc/drbd`` 
  0: cs:Connected ro:Primary/Secondary ds:UpToDate/UpToDate C r-----
        ns:4091788 nr:64 dw:112 dr:4092817 al:3 bm:252 lo:0 pe:0 ua:0 ap:0 ep:1 wo:b oos:0
 
-On the Secondary, the status will look similar to this:
+On the secondary node, the status will look similar to the following:
 
 .. code-block:: bash
 
@@ -25,4 +27,7 @@ On the Secondary, the status will look similar to this:
  0: cs:Connected ro:Secondary/Primary ds:UpToDate/UpToDate C r-----
        ns:0 nr:48 dw:48 dr:0 al:0 bm:2 lo:0 pe:0 ua:0 ap:0 ep:1 wo:b oos:0
 
-More information about the fields in this file is available at the drbd.org website: http://www.drbd.org/users-guide/ch-admin.html. On each host, its own status is reported first, then the status of its remote partner.
+For information about the settings in this file, see the |drbd| website: http://www.drbd.org/users-guide/ch-admin.html. 
+
+
+
