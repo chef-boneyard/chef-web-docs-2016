@@ -7,7 +7,7 @@
 
    $ yum install git
 
-For |ubuntu|
+For |ubuntu|:
 
 .. code-block:: bash
 
