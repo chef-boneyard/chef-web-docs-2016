@@ -4,9 +4,9 @@
 This section will guide you through the most common administrative tasks associated with |chef private|.
 
 * |private chef ctl| provides a command line interface for controlling |chef private|.
-* Logs: Information on what is logged by |chef private|, and how to use them for troubleshooting.
-* User Management: An overview of User Management.
-* High Availability: An in-depth tour of the High Availability features of |chef private|.
-* Upgrading: Step-by-step guide to upgrading |chef private|.
+* Information on what is logged by |chef private|, and how to use them for troubleshooting.
+* An overview of user management.
+* An in-depth tour of the High Availability features of |chef private|.
+* Step-by-step guide to upgrading |chef private|.
 
 
