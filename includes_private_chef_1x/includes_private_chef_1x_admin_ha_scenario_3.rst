@@ -1,11 +1,11 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Trouble starts when the |drbd| Primary is the host that becomes unavailable. The |drbd| process on the Secondary makes no assumptions about whether or not it should automatically take over, based on the split-brain configurations in the ``drbd.conf`` file.
+Trouble starts when the |drbd| primary is the host that becomes unavailable. The |drbd| process on the secondary makes no assumptions about whether or not it should automatically take over, based on the split-brain configurations in the ``drbd.conf`` file.
 
-Basically, what this means is that when the Primary becomes unavailable to the Secondary without an explicit takeover being initiated, the Secondary will assume that it itself is the wrong, split-brained host, and is the one unconnected and incorrect. It will take no automatic action.
+Basically, what this means is that when the primary becomes unavailable to the secondary without an explicit takeover being initiated, the secondary will assume that it itself is the wrong, ``split-brained`` host, and is the one unconnected and incorrect. It will take no automatic action.
 
-The status of the secondary looks like this:
+The status of the secondary will look something like the following:
 
 .. code-block:: bash
 
@@ -14,15 +14,15 @@ The status of the secondary looks like this:
     0: cs:WFConnection ro:Secondary/Unknown ds:UpToDate/DUnknown C r-----
        ns:0 nr:3505480 dw:4938128 dr:0 al:0 bm:290 lo:0 pe:0 ua:0 ap:0 ep:1 wo:f oos:0
 
-The ``ds:UpToDate/Unknown`` is important; it tells you that the Secondary has all the data that was on the Primary and won’t lose anything if it is promoted.
+The ``ds:UpToDate/Unknown`` is important; it indicates that the secondary has all the data that was on the primary and won’t lose anything if it is promoted.
 
-If you have verified that the Primary host is going to be down for a while, you can promote the Secondary to Primary:
+If it is verified that the primary host is going to be down for a while, the secondary can be promoted to primary:
 
 .. code-block:: bash
 
    $ drbdadm primary pc0
 
-And the status will change:
+at that point the status will change to something like the following:
 
 .. code-block:: bash
 
@@ -31,7 +31,7 @@ And the status will change:
     0: cs:WFConnection ro:Primary/Unknown ds:UpToDate/DUnknown C r-----
        ns:0 nr:3505480 dw:4938128 dr:672 al:0 bm:290 lo:0 pe:0 ua:0 ap:0 ep:1 wo:f oos:0
 
-Notice that ``ro`` is now ``ro:Primary/Unknown``. You can now recover |chef private| with
+Notice that ``ro`` is now ``ro:Primary/Unknown``. |chef private| can now be recovered by entering the following command:
 
 .. code-block:: bash
 
@@ -39,6 +39,8 @@ Notice that ``ro`` is now ``ro:Primary/Unknown``. You can now recover |chef priv
 
 This will start up the configured services and |chef private| will be master on this host.
 
-If you are able to bring the original Primary back online, the cluster management script run by |keepalived| will try to do a |drbd| takeover, based on that host’s original Primary/|chef private| Master status. The first thing it will do is attempt to promote itself to |drbd| Primary, which will fail if the disk has been written to at all while this host was down, and |keepalived| will be unable to transition back to the original master. This leaves the HA pair in a good state, with the BE2 box as the |drbd| Primary/|chef private| Master.
+If the original primary can be brought back online, the cluster management script run by |keepalived| will try to do a |drbd| takeover, based on that host’s original primary |chef private| master status.
 
-|drbd| on BE1 will sync to BE2 and become the clean Secondary.
+The first thing it will do is attempt to promote itself to |drbd| primary, which will fail if the disk has been written to at all while this host was down, and |keepalived| will be unable to transition back to the original master. This leaves the pair of servers in a good state, with the second back-end box as the |drbd| primary |chef private| master.
+
+|drbd| on the first back-end server will sync to the second back-end server and will become the clean secondary.

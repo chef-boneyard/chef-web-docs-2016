@@ -1,7 +1,6 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Front-end scalability is achieved through horizontally scaling the number of front-end servers.
+Scalability for front-end servers is achieved by horizontally scaling the number of servers.
 
-Back-end scalability is achieved through vertically scaling the back-end servers - more memory, CPU, and faster disks will all contribute to getting more throughput from the back-end servers. Faster disks, and dedicated 10G NICs will all increase both the reliability of |drbd| and the responsiveness of 
-|chef private|.
+Scalability for back-end servers is achieved by vertically scaling the servers. For example, adding memory, CPU, and faster disks will all increase throughput from the back-end servers. Faster disks, and dedicated network interface cards will all increase the reliability of |drbd| and the responsiveness of |chef private|.

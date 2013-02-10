@@ -1,9 +1,9 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-So far, the scenarios we have looked at have not created any data loss. When the hosts in the HA pair are synced, either can be lost and the data will be safe.
+So far, the scenarios have not described any data loss. When the hosts in the High Availability pair are synced, either can be lost and the data will be safe.
 
-If you get to a situation in which the Primary host, BE1, is lost and unrecoverable but the last status of the |drbd| pair was reporting that the Secondary node was in an Inconsistent state, you are going to lose some data. The |drbd| status on the remaining host, BE2, looks like this:
+If you get to a situation in which the primary host is lost and unrecoverable, but the last status of the |drbd| pair was reporting that the secondary node was in an ``Inconsistent`` state, it is very likely that some data will be lost. The |drbd| status on the remaining host will look something like the following:
 
 .. code-block:: bash
 
@@ -12,21 +12,26 @@ If you get to a situation in which the Primary host, BE1, is lost and unrecovera
    0: cs:WFConnection ro:Secondary/Unknown ds:Inconsistent/DUnknown C r-----
       ns:0 nr:210572 dw:210572 dr:0 al:0 bm:13 lo:0 pe:0 ua:0 ap:0 ep:1 wo:b oos:40552
 
-Since you’re practicing good source code management with your cookbooks and other files in your |chef| repo, you can re-upload any missing bits when you’ve got a working cluster again. You may find that newly created users or organizations will need to be recreated. Other actions such as ``chef client`` runs and uploads will fail while the cluster is in an Inconsistent state, but will be fine once you’ve fixed the cluster.
+As long as good source code management is practiced with cookbooks and other files in the |chef| repository, any missing bits can be re-uploaded after there is a working cluster. In some cases, newly-created users or organizations will need to be re-created. Other actions, such as |chef| runs and uploads may fail while the cluster is in an ``Inconsistent`` state, but will be fine after there is a working cluster.
 
-When BE1 has been lost while BE2 is Inconsistent, and you aren’t anticipating being able to bring it back online, the best thing to do is to provision another host to become the new |chef private| cluster partner for BE2, and build it out. If the new host has a new IP address different from BE1, change the configs on BE2 and reconfigure.
+When the primary back-end server has been lost while the secondary back-end server is in an ``Inconsistent`` state and it's not going to be back online quickly, the best thing to do is to provision another host to become the new |chef private| cluster partner for the secondary back-end server, and then build it out. If the new host has an IP address that is different from the primary back-end server, change the configuration on the secondary back-end server, and then reconfigure.
 
-|chef private| will be freaking out a bit, so turn off the daemons for now with ``private chef ctl`` stop.
+In this situation, |chef private| may be freaking out a bit, so turn off the daemons using the ``private-chef-ctl stop`` command.
 
-Let’s call the new host BEA. When you have the |drbd| devices on BEA completed, you’ll want to bring up |drbd| and get it talking to BE2. BE2 won’t want to be the Primary; it will be waiting for its old Primary to return. Start up |drbd| on BEA and verify that it is listening on the correct port and the status in ``/proc/drbd`` is reporting that the host is up but ``WFConnect: waiting for connection``.
+Once the new host is identified and the |drbd| devices on that host are ready, bring up |drbd| and get it talking to the secondary back-end server. This secondary server should not want to be the primary server; it should be waiting for the old primary server to return. Start up |drbd| on the new host and verify that it is listening on the correct port and that the status in ``/proc/drbd`` is reporting that the host is up, but in the ``WFConnect: waiting for connection`` state.
 
-By the time you get the new BEA node up, BE2 may have taken itself into Standalone mode, meaning it is no longer listening on the network port. Run two commands to get BE2 to connect to BEA:
+By the time you get the new node is up, the secondary back-end server may have taken itself into ``standalone`` mode, which means that it is no longer listening on the network port. In this situation, run the following commands to get the secondary back-end server to talk to the new node:
 
 .. code-block:: bash
 
    $ drbdadm primary --force pc0
+
+and:
+
+.. code-block:: bash
+
    $ drbdadm connect pc0
 
-You should then see BEA syncing itself from BE2. BE2 will forget all about the data it was missing from the now-gone BE1, and you can begin the process of bringing |chef private| back online.
+At this point, the new host should be synchronizing with the secondary back-end server. The secondary back-end server will forget all about the data it was missing from the now-gone primary back-end server, and the process of bringing |chef private| back online can begin.
 
-Running a fast network between the BE1 and BE2 hosts, and keeping it full throttle for |drbd| transfers, will go a long way to mitigating the damage done in the event of a loss of the Primary from an un-synced cluster.
+Running a fast network between the primary and secondary hosts, and keeping it full throttle for |drbd| transfers, will go a long way to mitigating the any damage that may be done in the event of a loss of the primary from an un-synced cluster.

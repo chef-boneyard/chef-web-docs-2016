@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |keepalived| service manages the VRRP and cluster transitions. It should be running on both the Primary and Backup servers. To transition from the Primary to the Backup, simply run the following on the Primary:
+The |keepalived| service manages the |vrrp| and cluster transitions. It should be running on both the primary and secondary servers. To transition from the primary to the secondary, simply run the following on the primary:
 
 .. code-block:: bash
 
@@ -9,7 +9,7 @@ The |keepalived| service manages the VRRP and cluster transitions. It should be 
 
 This will cause the current primary to:
 
-#. Remove the Virtual IP Address.
+#. Remove the virtual IP address.
 #. Stop the services.
 #. Unmount the |drbd| device.
 #. Becoming secondary for the |drbd| device.

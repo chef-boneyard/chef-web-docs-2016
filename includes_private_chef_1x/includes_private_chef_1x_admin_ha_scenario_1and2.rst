@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-When the acting backup server fails, |drbd| on the master will continue to function in Primary mode, whether the |drbd| on the Secondary was shutdown gracefully or became unavailable unexpectedly. Verify this by running ``drbdadm role pc0`` on the primary:
+When the acting backup server fails, |drbd| on the master will continue to function in primary mode, whether the |drbd| on the secondary was shut down gracefully or became unavailable unexpectedly. Verify that |drbd| is functioning by running ``drbdadm role pc0`` on the primary:
 
 .. code-block:: bash
 
@@ -18,11 +18,14 @@ You can see the full status by running cat ``/proc/drbd``:
  0: cs:WFConnection ro:Primary/Unknown ds:UpToDate/DUnknown C r-----
        ns:672 nr:0 dw:24 dr:1697 al:2 bm:0 lo:0 pe:0 ua:0 ap:0 ep:1 wo:b oos:130760
 
-The disk partition is still mounted into the filesystem and can be used as normal.
+The disk partition is still mounted into the file system and can be used as normal.
 
-When the secondary becomes available again, two things may happen. If the status of the Secondary reports Inconsistent or UpToDate without manual intervention, all is well. If it remains DUnknown, |drbd| on the Secondary can be manually restarted and it will start to sync. The DUnknown status is the report that |drbd| sees no network connection to its partner.
+When the secondary becomes available again, two things may happen:
 
-The last field in the ``/prod/drbd`` file, ``oos`` reports how far the Primary is out of sync with its partner. If the Secondary is down and there are a lot of writes on the Primary, this number will increase. For example:
+* If the status of the secondary reports ``Inconsistent`` or ``UpToDate`` without manual intervention, all is well.
+* If it remains ``DUnknown``, |drbd| on the secondary can be manually restarted and it will start to sync. The ``DUnknown`` status is the report which indicates that |drbd| sees no network connection to its partner.
+
+The last field in the ``/prod/drbd`` file (``oos``) reports how far the primary is out of sync with its partner. If the secondary is down and there are a lot of writes on the primary, this number will increase. For example:
 
 .. code-block:: bash
 
@@ -31,9 +34,7 @@ The last field in the ``/prod/drbd`` file, ``oos`` reports how far the Primary i
     0: cs:WFConnection ro:Primary/Unknown ds:UpToDate/DUnknown C r-----
         ns:5205048 nr:64 dw:1466728 dr:4180125 al:354 bm:261 lo:1667 pe:0 ua:0 ap:1665 ep:1 wo:b oos:361540
 
-When the disks return to a synced state, that field will return to 0. While the Secondary is syncing, you’ll see a status about the syncing process on both hosts:
-
-Secondary syncing:
+When the disks return to a synced state, that field will return to ``0``. While the secondary is syncing, status about the syncing process will be shown for both hosts. For the secondary, something like the following:
 
 .. code-block:: bash
 
@@ -43,7 +44,7 @@ Secondary syncing:
            [======>.............] sync'ed: 36.3% (1670512/2613068)K
            finish: 0:00:47 speed: 35,152 (18,124) want: 44,520 K/sec
 
-Primary Syncing:
+and for the primary, something like the following:
 
 .. code-block:: bash
 
@@ -54,6 +55,6 @@ Primary Syncing:
            [==========>.........] sync'ed: 57.3% (1121600/2613068)K
            finish: 0:00:32 speed: 34,328 (21,304) K/sec
 
-Eventually the hosts will quiesce and report ``ds:UpToDate/UpToDate``. Depending on how long the Secondary was down, how much data was written to the Primary in the interim, and the speed of the shared network, this process could be nearly instantaneous, or could take several minutes. Your |chef private| processes should not need to be manipulated in any way during this recovery.
+Eventually the hosts will quiesce and report ``ds:UpToDate/UpToDate``. Depending on how long the secondary was down, how much data was written to the primary in the interim, and the speed of the shared network, this process could be nearly instantaneous, or could take several minutes. Your |chef private| processes should not need to be manipulated in any way during this recovery.
 
-If the Secondary host is lost completely, a new host can be installed in its place, the device built, and |drbd| started. The new host will pair with the existing Primary, sync data, and be ready to take over if necessary.
+If the secondary host is lost completely, a new host can be installed in its place, the device built, and then |drbd| started. The new host will pair with the existing primary, sync data, and be ready to take over if necessary.
