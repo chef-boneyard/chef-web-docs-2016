@@ -7,6 +7,6 @@ With the bootstrap complete, you can now populate ``/etc/opscode`` on the front-
 
    $ scp -r /etc/opscode FQDN:/etc
 
-Will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the fully qualified domain name of the system you want to install.
+Will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fully qualified domain name| of the system you want to install.
 
 

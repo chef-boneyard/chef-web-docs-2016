@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A completed |private chef rb| configuration file for a four server tiered private chef cluster, consisting of:
+A completed |private chef rb| configuration file for a four server tiered |chef private| cluster, consisting of:
 
 .. list-table::
    :widths: 100 100 100 100 100
