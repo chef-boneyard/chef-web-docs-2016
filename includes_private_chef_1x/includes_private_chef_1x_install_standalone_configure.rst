@@ -7,7 +7,7 @@
 
    $ private-chef-ctl reconfigure
 
-This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef private| installation. When it is complete, you will see:
+This command may take several minutes to run, during which the output of the |chef| run that is configuring your new |chef private| installation is shown. When it is complete, you will see:
 
 .. code-block:: bash
 
