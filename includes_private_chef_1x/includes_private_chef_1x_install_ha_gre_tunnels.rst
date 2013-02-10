@@ -1,9 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Occasionally, you may need to utilize a GRE tunnel to handle the VRRP traffic. To accomplish this, you will need to put the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh``.
-
-On the backend server that will be used for bootstrapping:
+Occasionally, a GRE tunnel will be required to handle the |vrrp| traffic. To accomplish this, set the following in ``/var/opt/opscode/keepalived/bin/tunnel.sh`` on the backend server that will be used for bootstrapping:
 
 .. code-block:: bash
 

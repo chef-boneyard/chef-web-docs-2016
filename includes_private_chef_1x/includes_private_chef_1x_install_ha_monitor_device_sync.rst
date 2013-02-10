@@ -24,7 +24,7 @@ Output similar to the following will be shown:
 
 When the ``ds`` section of the output reads ``UpToDate/UpToDate``, the synchronization is complete.
 
-Under normal operation, |drbd| dedicates only a portion of the available disk bandwidth to initial/complete re-synchronization---this is to ensure that new data that may be written to the shared device is also being synchronized. To enable |drbd| to utilize more of the bandwidth available during the initial synchronization, you can run:
+Under normal operation, |drbd| dedicates only a portion of the available disk bandwidth to initial/complete re-synchronization. This is to ensure that new data that may be written to the shared device is also being synchronized. To enable |drbd| to utilize more of the bandwidth available during the initial synchronization, you can run:
 
 Speeding up initial synchronization on |redhat| and |centos| 6:
 
@@ -38,7 +38,7 @@ Speeding up initial synchronization on |ubuntu|:
 
    $ drbdsetup /dev/drbd0 syncer -r 1100M
 
-With synchronization complete, you are now ready to use |drbd| on the bootstrap node---let |chef private| know by running:
+With synchronization complete, |drbd| is ready to be used on the bootstrap node. Let |chef private| know that |drbd| is ready by running the following command:
 
 .. code-block:: bash
 

@@ -3,9 +3,7 @@
 
 .. warning:: Make sure |drbd| synchronization has completed, and that |chef private| has fully started on the bootstrap node before continuing!
 
-Each member of your |chef private| back-end cluster participates in an election for who should be Primary for the |drbd| device. This means that, if you do not allow the bootstrap node to finish initializing the system before setting up the non-bootstrap server, you may leave the system in an unstable state.
-
-Let ``private-chef-ctl`` know that you are ready to proceed
+Each node that is part of the |chef private| back-end cluster participates in an election for which server should be the primary server for the |drbd| device. This means that, if the bootstrap node is not allowed to finish initializing the system before setting up the non-bootstrap server, the system may be left in an unstable state:
 
 .. code-block:: bash
 
