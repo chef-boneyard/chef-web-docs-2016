@@ -3,13 +3,13 @@
 
 We’re happy you’re interested in |chef private|!
 
-This section will provide you with an overview of the currently supported architectures for |chef private|, as well as some guidance if you have questions or concerns about the efficacy or performance of these architectures in your environment. Future changes or options to |chef private| are listed in the Scaling and Customization section, but this is not meant to serve as a definitive roadmap for |chef private|; please contact us if you have additional concerns.
+This section will provide you with an overview of the currently supported architectures for |chef private|, as well as some guidance if you have questions or concerns about the efficacy or performance of these architectures in your environment.
 
 |chef private| is flexible, and we want you to be confident in your environment! However, our ability to officially support customizations is extremely constrained. The three currently supported architectures of |chef private| are:
 
-* Standalone: A full stack |chef private| on a single host.
-* Tiered: |chef private| with a horizontally scaled front-end and single back-end.
-* High Availability: |chef private| with N front-ends and a clustered back-end pair.
-* Modifications to |chef private|: Deviating from the supported architectures.
+* **Standalone:** A full stack |chef private| on a single host.
+* **Tiered:** |chef private| with a horizontally scaled front-end and single back-end.
+* **High Availability:** |chef private| with N front-ends and a clustered back-end pair.
+* **Modifications to |chef private|:** Deviating from the supported architectures.
 
 

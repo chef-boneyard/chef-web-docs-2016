@@ -2,6 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|opscode| recommends that the back-end systems be backed up by at least LVM snapshotting. You can also use other third-party backup software if you have it available in your environment.
-
-The data written and accessed by the |chef private| back-ends is stored in ``/var/opt/opscode``. There are also key files in ``/etc/opscode`` that are required for the front-end hosts to access the data processes on the back-end hosts, and these should be added to your backup mechanisms.
+|opscode| recommends that the back-end systems be backed up using |lvm| snapshots or some other third-party software that provides for the same type of functionality. The data written and accessed by the |chef private| back-end servers is stored in ``/var/opt/opscode``. There are also key files stored in ``/etc/opscode``, which are required for the front-end hosts to access the data processes on the back-end hosts. The files in ``/etc/opscode`` should be part of the backup strategy.

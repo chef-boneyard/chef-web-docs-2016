@@ -8,8 +8,8 @@ You should then proceed with procuring, installing and configuring the equipment
 * Configure the network
 * Install a supported operating system on each server according to our specifications
 
-When installing the operating systems and configuring the network, make sure you reference and comply with the agreed upon Server and Network Requirements. Pay particular attention to the required Operating System configuration.
+When installing the operating systems and configuring the network, make sure you reference and comply with the agreed upon server and network requirements. Pay particular attention to the required operating system configuration.
 
-If you have questions or encounter trouble, let us know by posting a Message in the client portal.
+If you have questions or encounter trouble, let us know by posting a message in the client portal.
 
 

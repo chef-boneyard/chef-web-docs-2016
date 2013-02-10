@@ -3,8 +3,8 @@
 
 The acceptance criteria for |chef private| Installation is as follows:
 
-* The Validation Steps are completed
-* Administrative Training is completed
-* The Support Process walkthrough has been completed
+* The validation steps are completed
+* Administrative training is completed
+* The Support process walkthrough has been completed
 
 

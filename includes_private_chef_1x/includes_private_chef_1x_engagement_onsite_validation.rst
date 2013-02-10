@@ -5,7 +5,7 @@ At this point |chef private| will be installed and running. The consultants will
 
 Consultants will verify, with the client, at a minimum:
 
-* Accessibility of the Management Console
+* Accessibility of the |management console|
 * User creation
 * Organization creation
 * Client creation
