@@ -9,9 +9,9 @@ There are two categories of logs that are produced by |chef private| services:
    :widths: 60 420
    :header-rows: 1
 
-   * - Log Tyoe
+   * - Log Type
      - Description
    * - Supervisor
-     - These are created and managed directly by the service supervisor, and are automatically rotated when a the current log file reaches 1,000,000 bytes. 10 log files are kept. The latest supervisor log is always located in ``/var/log/opscode/SERVICENAME/current``, and rotated logs have a filename starting with ``@`` followed by a precise ``tai64n`` timestamp based on when the file was rotated.
+     - These are created and managed directly by the service supervisor, and are automatically rotated when a the current log file reaches 1,000,000 bytes. 10 log files are kept. The latest supervisor log is always located in ``/var/log/opscode/SERVICENAME/current`` and rotated logs have a filename starting with ``@`` followed by a precise ``tai64n`` timestamp based on when the file was rotated.
    * - Application
      - These are created by the services directly, and may require you to apply the log rotation policies that make sense for your organization and operating system.

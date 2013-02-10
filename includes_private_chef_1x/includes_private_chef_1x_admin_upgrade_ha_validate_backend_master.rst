@@ -7,4 +7,4 @@ Next, wait until the load average of the server has dropped by watching top unti
 
     $ private-chef-ctl test
 
-If this test succeeds without any red failing tests, then you are ready to proceed.
+If this test succeeds without any red failing tests, proceed to the next step.

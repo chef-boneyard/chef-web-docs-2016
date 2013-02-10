@@ -15,7 +15,7 @@ On |ubuntu| or |debian| deb-package based systems run |debian dpkg| with the ins
 
    $ dpkg -i private-chef_1.1.10-1.ubuntu.10.04_amd64.deb
 
-After installing the upgraded package, you must instruct |private chef ctl| to update the configuration and perform the upgrade:
+After installing the upgraded package, instruct |private chef ctl| to update the configuration and perform the upgrade:
 
 .. code-block:: bash
 
@@ -39,4 +39,4 @@ This may trigger a cluster failover, which will require watching the |keepalived
    Wed, 28 Mar 2012 22:09:17 +0000: Stopping service nginx
    Wed, 28 Mar 2012 22:09:18 +0000: Transitioned to backup
 
-If instead bringing the backup node online triggers a transition to master, please use the top command to watch for the load average to fall below 1.00 before proceeding.
+If instead bringing the backup node online triggers a transition to master, use the top command to watch for the load average to fall below 1.00 before proceeding.

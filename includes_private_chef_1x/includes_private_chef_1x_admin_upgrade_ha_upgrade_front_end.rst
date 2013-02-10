@@ -13,8 +13,7 @@ On |ubuntu| or |debian| deb-package based systems run |debian dpkg| with the ins
 
    $ dpkg -i private-chef_1.1.10-1.ubuntu.10.04_amd64.deb
 
-
-After installing the upgraded package, you must instruct |private chef ctl| to update the configuration and perform the upgrade:
+After installing the upgraded package, instruct |private chef ctl| to update the configuration and perform the upgrade:
 
 .. code-block:: bash
 

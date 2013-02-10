@@ -39,7 +39,7 @@ The meaning of each field is as follows:
    * - ``$remote_addr``
      - The IP address of the client who made this request.
    * - ``$remote_user``
-     - The http basic auth username of this request.
+     - The HTTP basic auth user name of this request.
    * - ``$time_local``
      - The local time of the request.
    * - ``$request``
@@ -61,7 +61,7 @@ The meaning of each field is as follows:
    * - ``$upstream_response_time``
      - The upstream reverse proxy response time.
    * - ``$http_x_chef_version``
-     - The version of Chef used to make this request.
+     - The version of |chef| used to make this request.
    * - ``$http_x_ops_sign``
      - The version of the authentication protocol.
    * - ``$http_x_ops_userid``
