@@ -10,6 +10,8 @@ About Configuration Files
 
    * - Sub-command
      - Description
+   * - :doc:`config_rb_chef_server`
+     - |config rb chef server|
    * - :doc:`config_rb_client`
      - |config rb client|
    * - :doc:`config_rb_knife`
@@ -28,6 +30,7 @@ About Configuration Files
 .. toctree::
    :hidden:
 
+   config_rb_chef_server
    config_rb_client
    config_rb_knife
    config_rb_metadata

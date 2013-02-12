@@ -9,13 +9,11 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``xxxxx``
-     - xxxxx For example:
-       ::
- 
-          xxxxx
-   * - ``xxxxx``
-     - xxxxx For example:
-       ::
- 
-          xxxxx
+   * - ``api_version``
+     - Default value: ``11.0.2``.
+   * - ``bootstrap``
+     - Default value: ``true``.
+   * - ``flavor``
+     - Default value: ``osc`` (|chef open source|).
+   * - ``notification_email``
+     - Default value: ``info@example.com``.

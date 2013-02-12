@@ -1,0 +1,22 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+This configuration file has the following settings:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``dir``
+     - Default value: ``/var/opt/chef-server/estatsd``.
+   * - ``enable``
+     - Default value: ``true``.
+   * - ``log_directory``
+     - Default value: ``/var/log/chef-server/estatsd``.
+   * - ``port``
+     - Default value: ``9466``.
+   * - ``vip``
+     - Default value: ``127.0.0.1``.
+

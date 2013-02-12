@@ -43,7 +43,7 @@ The Chef server
 
 **Policy:** :doc:`About policy </essentials_policy>` | :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
 
-**Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
+**Settings:** :doc:`chef-server.rb </config_rb_chef_server>` | :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
 
 **Manage:** :doc:`Hosted Chef </manage_server_hosted>`
 
@@ -101,7 +101,7 @@ Cookbooks
    dsl_recipe
 
    community
-
+   config_rb_chef_server
    opscode_cookbooks
 
    essentials_nodes
