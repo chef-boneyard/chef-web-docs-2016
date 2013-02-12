@@ -6,6 +6,8 @@ To install |chef server 11|, do the following:
 
 #. Go to http://www.opscode.com/chef/install.
 
+#. Click the **Chef Server** tab.
+
 #. Select the operating system, version, and architecture.
 
 #. Select the version of |chef server 11| to download, and then click the link that appears to download the package.
