@@ -221,7 +221,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'Knife.tex', u'Knife',
+  ('knife', 'Knife.tex', u'Knife',
    u'Opscode, Inc.', 'manual'),
 ]
 
@@ -251,7 +251,7 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'knife', u'Knife',
+    ('knife', 'knife', u'Knife',
      [u'Opscode, Inc.'], 1)
 ]
 
@@ -265,7 +265,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'Knife', u'Knife',
+  ('knife', 'Knife', u'Knife',
    u'Opscode, Inc.', 'Knife', 'Knife Command Line Reference',
    'Miscellaneous'),
 ]

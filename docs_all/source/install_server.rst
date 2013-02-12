@@ -1,11 +1,45 @@
 =====================================================
-Install the Chef Server
+Install Chef Server 11.x
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef.rst
+To install |chef server 11|, do the following:
 
-.. include:: ../../includes_chef_server/includes_chef_server.rst
+#. Go to http://www.opscode.com/chef/install.
 
-.. include:: ../../includes_install/includes_install_omnibus_server.rst
+#. Select the operating system, version, and architecture.
+
+#. Select the version of |chef server 11| to download.
+
+#. Install the downloaded file using the correct method for the operating system.
+
+#. Configure |chef server 11| by running the following command:
+
+.. code-block:: bash
+
+   $ chef-server-ctl reconfigure
+
+   This command will run set up all of the required components, including |erchef|, |rabbitmq|, |postgresql|, and the cookbooks the embedded version of |chef solo| used to maintain |chef server 11|.
+
+#. Verify the installation of |chef server 11| by running the following command:
+
+.. code-block:: bash
+
+   $ chef-server-ctl test
+
+   This will run the Pedant test suite against the installed |chef server 11| and will report back that everything is working and installed correctly.
+
+#. Follow the steps here http://docs.opscode.com/install.html to set up a workstation.
+
+#. Verify the install by running the following commands to ensure that the each |chef client| and user is registered correctly.
+
+.. code-block:: bash
+
+   $ knife client list
+
+and:
+
+.. code-block:: bash
+
+   $ knife user list
 
 

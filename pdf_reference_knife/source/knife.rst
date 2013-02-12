@@ -226,6 +226,7 @@ delete
 .. include:: ../../includes_knife/includes_knife_delete.rst
 
 
+
 diff
 =====================================================
 .. include:: ../../includes_knife/includes_knife_diff.rst
@@ -276,6 +277,7 @@ exec
 index rebuild
 =====================================================
 .. include:: ../../includes_knife/includes_knife_index_rebuild.rst
+
 
 
 list
@@ -332,6 +334,9 @@ raw
 .. include:: ../../includes_knife/includes_knife_raw.rst
 
 
+
+
+
 recipe list
 =====================================================
 
@@ -372,6 +377,9 @@ list
 show
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_show.rst
+
+
+
 
 
 search
@@ -424,307 +432,3 @@ list
 upload
 =====================================================
 .. include:: ../../includes_knife/includes_knife_upload.rst
-
-
-
-
-Plugins
-=====================================================
-
-The following plugins for |knife| are provided by |opscode|:
-
-* azure
-* bluebox
-* bluelock
-* ec2
-* eucalyptus
-* google
-* hp
-* linode
-* openstack
-* rackspace
-* terremark
-* windows
-
-Common Options
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
-azure (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_azure.rst
-
-image list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_image_list.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_server_delete.rst
-
-server describe
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_server_describe.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_server_list.rst
-
-
-bluebox (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_bluebox.rst
-
-images list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluebox_images_list.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluebox_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluebox_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluebox_server_list.rst
-
-
-bluelock (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_bluelock.rst
-
-images list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluelock_images_list.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluelock_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluelock_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluelock_server_list.rst
-
-
-ec2 (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_ec2.rst
-
-instance data
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_ec2_instance_data.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_ec2_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_ec2_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_ec2_server_list.rst
-
-
-eucalyptus (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_eucalyptus.rst
-
-flavor list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst
-
-image list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_image_list.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_server_list.rst
-
-
-google (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_google.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_google_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_google_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_google_server_list.rst
-
-
-hp (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_hp.rst
-
-flavor list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_flavor_list.rst
-
-image list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_image_list.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_server_list.rst
-
-
-linode (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_linode.rst
-
-datacenter list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_datacenter_list.rst
-
-flavor list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_flavor_list.rst
-
-image list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_image_list.rst
-
-kernel list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_kernel_list.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_server_list.rst
-
-server reboot
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_server_reboot.rst
-
-stackscript list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_stackscript_list.rst
-
-
-openstack (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_openstack.rst
-
-flavor list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_flavor_list.rst
-
-image list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_image_list.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_server_list.rst
-
-
-rackspace (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_rackspace.rst
-
-flavor list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_flavor_list.rst
-
-image list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_image_list.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_server_list.rst
-
-
-terremark (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_terremark.rst
-
-server create
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_terremark_server_create.rst
-
-server delete
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_terremark_server_delete.rst
-
-server list
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_terremark_server_list.rst
-
-
-windows (plug-in)
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_windows.rst
-
-bootstrap windows ssh
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst
-
-bootstrap windows winrm
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst
-
-winrm
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_windows_winrm.rst
