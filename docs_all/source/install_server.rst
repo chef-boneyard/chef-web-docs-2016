@@ -30,7 +30,7 @@ To install |chef server 11|, do the following:
 
 #. Follow the steps here http://docs.opscode.com/install.html to set up a workstation.
 
-#. Verify the install by running the following commands to ensure that the each |chef client| and user is registered correctly.
+#. Verify the install by running the following commands to ensure that each |chef client| and user is registered correctly.
 
    .. code-block:: bash
 
