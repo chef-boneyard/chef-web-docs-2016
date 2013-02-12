@@ -22,7 +22,7 @@ Essentials
 
 Install and Migrate
 =====================================================
-:doc:`Install the Workstation </install_workstation>` | :doc:`Install the Open Source Workstation </install_workstation_open_source>` | `Install Chef Server 11.x </install_server>` | :doc:`Migrate from Open Source Chef to Hosted Chef </migrate_to_hosted>`
+:doc:`Install the Workstation </install_workstation>` | :doc:`Install the Open Source Workstation </install_workstation_open_source>` | :doc:`Install Chef Server 11.x </install_server>` | :doc:`Migrate from Open Source Chef to Hosted Chef </migrate_to_hosted>`
 
 Manage the Chef Server
 =====================================================
