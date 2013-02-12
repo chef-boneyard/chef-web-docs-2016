@@ -48,7 +48,6 @@ APIs and DSLs
    chef_pedant
    ctl_chef_server
    install_server
-   install_server_10x
 
    chef_client
    chef_overview
