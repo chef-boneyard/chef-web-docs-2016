@@ -8,9 +8,9 @@ To install |chef server 11|, do the following:
 
 #. Select the operating system, version, and architecture.
 
-#. Select the version of |chef server 11| to download.
+#. Select the version of |chef server 11| to download, and then click the link that appears to download the package.
 
-#. Install the downloaded file using the correct method for the operating system.
+#. Install the downloaded package using the correct method for the operating system on which |chef server 11| will be installed.
 
 #. Configure |chef server 11| by running the following command:
 
