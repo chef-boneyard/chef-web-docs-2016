@@ -14,17 +14,17 @@ To install |chef server 11|, do the following:
 
 #. Configure |chef server 11| by running the following command:
 
-.. code-block:: bash
-
-   $ chef-server-ctl reconfigure
+   .. code-block:: bash
+   
+      $ chef-server-ctl reconfigure
 
    This command will run set up all of the required components, including |erchef|, |rabbitmq|, |postgresql|, and the cookbooks the embedded version of |chef solo| used to maintain |chef server 11|.
 
 #. Verify the installation of |chef server 11| by running the following command:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ chef-server-ctl test
+      $ chef-server-ctl test
 
    This will run the Pedant test suite against the installed |chef server 11| and will report back that everything is working and installed correctly.
 
@@ -32,14 +32,14 @@ To install |chef server 11|, do the following:
 
 #. Verify the install by running the following commands to ensure that the each |chef client| and user is registered correctly.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ knife client list
+      $ knife client list
 
-and:
+   and:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   $ knife user list
+      $ knife user list
 
 
