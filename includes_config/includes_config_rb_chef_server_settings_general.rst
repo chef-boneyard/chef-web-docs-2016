@@ -14,6 +14,6 @@ This configuration file has the following settings:
    * - ``bootstrap``
      - Default value: ``true``.
    * - ``flavor``
-     - Default value: ``osc`` (|chef open source|).
+     - Default value: ``osc``.
    * - ``notification_email``
      - Default value: ``info@example.com``.

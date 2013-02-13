@@ -24,7 +24,7 @@ This configuration file has the following settings:
    * - ``ip_address``
      - Default value: ``127.0.0.1``.
    * - ``java_opts``
-     - Default value: ````.
+     - Default value: ``(empty)``.
    * - ``log_directory``
      - Default value: ``/var/log/chef-server/chef-solr``.
    * - ``max_commit_docs``
