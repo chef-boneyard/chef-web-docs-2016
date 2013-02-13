@@ -32,10 +32,6 @@ Erchef
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_settings_erchef.rst
 
-Estatsd
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_estatsd.rst
-
 Load Balancer
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_settings_load_balancer.rst
