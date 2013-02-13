@@ -37,3 +37,5 @@ The following handlers are available in the |chef| open source community:
      - A |chef| handler that supports exceptions and reports for |splunk storm|. Download this handler: http://ampledata.org/splunk_storm_chef_handler.html.
    * - Updated Resources
      - A |chef| handler that provides a simple way to display resources that were updated during a |chef| run. Download this handler: https://rubygems.org/gems/chef-handler-updated-resources.
+   * - |sns|
+     - A |chef| handler that notifies exception and report handler data and sends it to a |sns| topic. Download this handler: https://rubygems.org/gems/chef-handler-sns.
