@@ -9,9 +9,9 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``dir``
+   * - ``chef_pedant['dir']``
      - Default value: ``/var/opt/chef-server/chef-pedant``.
-   * - ``log_directory``
+   * - ``chef_pedant['log_directory']``
      - Default value: ``/var/log/chef-server/chef-pedant``.
-   * - ``log_http_requests``
+   * - ``chef_pedant['log_http_requests']``
      - Default value: ``true``.

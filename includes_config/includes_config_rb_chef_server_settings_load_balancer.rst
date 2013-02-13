@@ -9,21 +9,21 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``api_fqdn``
+   * - ``lb['api_fqdn']``
      - Default value: ``node['fqdn']``.
-   * - ``bookshelf``
+   * - ``lb['bookshelf']``
      - Default value: ``127.0.0.1``.
-   * - ``cache_cookbook_files``
+   * - ``lb['cache_cookbook_files']``
      - Default value: ``false``.
-   * - ``chef-server-webui``
+   * - ``lb['chef_server_webui']``
      - Default value: ``127.0.0.1``.
-   * - ``debug``
+   * - ``lb['debug']``
      - Default value: ``false``.
-   * - ``enable``
+   * - ``lb['enable']``
      - Default value: ``true``.
-   * - ``erchef``
+   * - ``lb['erchef']``
      - Default value: ``127.0.0.1``.
-   * - ``web_ui_fqdn``
+   * - ``lb['web_ui_fqdn']``
      - Default value: ``node['fqdn']``.
-   * - ``vip``
+   * - ``lb['vip']``
      - Default value: ``127.0.0.1``.

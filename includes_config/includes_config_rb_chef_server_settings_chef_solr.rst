@@ -9,43 +9,43 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``commit_interval``
+   * - ``chef_solr['commit_interval']``
      - Default value: ``60000``.
-   * - ``data_dir``
+   * - ``chef_solr['data_dir']``
      - Default value: ``/var/opt/chef-server/chef-solr/data``.
-   * - ``dir``
+   * - ``chef_solr['dir']``
      - Default value: ``/var/opt/chef-server/chef-solr``.
-   * - ``enable``
+   * - ``chef_solr['enable']``
      - Default value: ``true``.
-   * - ``ha``
+   * - ``chef_solr['ha']``
      - Default value: ``false``.
-   * - ``heap_size``
-     - Default value: ``v``.
-   * - ``ip_address``
-     - Default value: ``127.0.0.1``.
-   * - ``java_opts``
-     - Default value: ``(empty)``.
-   * - ``log_directory``
-     - Default value: ``/var/log/chef-server/chef-solr``.
-   * - ``max_commit_docs``
-     - Default value: ``1000``.
-   * - ``max_field_length``
-     - Default value: ``100000``.
-   * - ``max_merge_docs``
-     - Default value: ``2147483647``.
-   * - ``merge_factor``
-     - Default value: ``100``.
-   * - ``new_size``
+   * - ``chef_solr['heap_size']``
      - Default value: ``nil``.
-   * - ``poll_seconds``
+   * - ``chef_solr['ip_address']``
+     - Default value: ``127.0.0.1``.
+   * - ``chef_solr['java_opts']``
+     - Default value: ``(empty)``.
+   * - ``chef_solr['log_directory']``
+     - Default value: ``/var/log/chef-server/chef-solr``.
+   * - ``chef_solr['max_commit_docs']``
+     - Default value: ``1000``.
+   * - ``chef_solr['max_field_length']``
+     - Default value: ``100000``.
+   * - ``chef_solr['max_merge_docs']``
+     - Default value: ``2147483647``.
+   * - ``chef_solr['merge_factor']``
+     - Default value: ``100``.
+   * - ``chef_solr['new_size']``
+     - Default value: ``nil``.
+   * - ``chef_solr['poll_seconds']``
      - Default value: ``20``.
-   * - ``port``
+   * - ``chef_solr['port']``
      - Default value: ``8983``.
-   * - ``ram_buffer_size``
+   * - ``chef_solr['ram_buffer_size']``
      - Default value: ``200``.
-   * - ``url``
+   * - ``chef_solr['url']``
      - Default value: ``http://localhost:8983``.
-   * - ``vip``
+   * - ``chef_solr['vip']``
      - Default value: ``127.0.0.1``.
 
 

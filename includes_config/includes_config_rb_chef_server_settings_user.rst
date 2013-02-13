@@ -9,9 +9,9 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``home``
+   * - ``user['home']``
      - Default value: ``/opt/chef-server/embedded``.
-   * - ``shell``
+   * - ``user['shell']``
      - Default value: ``/bin/sh``.
-   * - ``username``
+   * - ``user['username']``
      - Default value: ``chef_server``.

@@ -9,29 +9,29 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``access_key_id``
+   * - ``bookshelf['access_key_id']``
      - Default value: ``generated-by-default``.
-   * - ``data_dir``
+   * - ``bookshelf['data_dir']``
      - Default value: ``/var/opt/chef-server/bookshelf/data``.
-   * - ``dir``
+   * - ``bookshelf['dir']``
      - Default value: ``/var/opt/chef-server/bookshelf``.
-   * - ``enable``
+   * - ``bookshelf['enable']``
      - Default value: ``true``.
-   * - ``ha``
+   * - ``bookshelf['ha']``
      - Default value: ``false``.
-   * - ``listen``
+   * - ``bookshelf['listen']``
      - Default value: ``127.0.0.1``.
-   * - ``log_directory``
+   * - ``bookshelf['log_directory']``
      - Default value: ``/var/log/chef-server/bookshelf``.
-   * - ``port``
+   * - ``bookshelf['port']``
      - Default value: ``4321``.
-   * - ``secret_access_key``
+   * - ``bookshelf['secret_access_key']``
      - Default value: ``generated-by-default``.
-   * - ``stream_download``
+   * - ``bookshelf['stream_download']``
      - Default value: ``true``.
-   * - ``svlogd_num``
+   * - ``bookshelf['svlogd_num']``
      - Default value: ``10``.
-   * - ``svlogd_size``
+   * - ``bookshelf['svlogd_size']``
      - Default value: ``1000000``.
-   * - ``vip``
+   * - ``bookshelf['vip']``
      - Default value: ``node['fqdn']``.

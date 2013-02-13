@@ -9,31 +9,31 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``consumer_id``
+   * - ``rabbitmq['consumer_id']``
      - Default value: ``hotsauce``.
-   * - ``data_dir``
+   * - ``rabbitmq['data_dir']``
      - Default value: ``/var/opt/chef-server/rabbitmq/db``.
-   * - ``dir``
+   * - ``rabbitmq['dir']``
      - Default value: ``/var/opt/chef-server/rabbitmq``.
-   * - ``enable``
+   * - ``rabbitmq['enable']``
      - Default value: ``true``.
-   * - ``ha``
+   * - ``rabbitmq['ha']``
      - Default value: ``false``.
-   * - ``log_directory``
+   * - ``rabbitmq['log_directory']``
      - Default value: ``/var/log/chef-server/rabbitmq``.
-   * - ``node_ip_address``
+   * - ``rabbitmq['node_ip_address']``
      - Default value: ``127.0.0.1``.
-   * - ``node_port``
+   * - ``rabbitmq['node_port']``
      - Default value: ``5672``.
-   * - ``nodename``
+   * - ``rabbitmq['nodename']``
      - Default value: ``rabbit@localhost``.
-   * - ``password``
+   * - ``rabbitmq['password']``
      - Default value: ``chefrocks``.
-   * - ``user``
+   * - ``rabbitmq['user']``
      - Default value: ``chef``.
-   * - ``vhost``
+   * - ``rabbitmq['vhost']``
      - Default value: ``/chef``.
-   * - ``vip``
+   * - ``rabbitmq['vip']``
      - Default value: ``127.0.0.1``.
 
 

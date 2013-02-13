@@ -9,65 +9,65 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``checkpoint_completion_target``
+   * - ``postgresql['checkpoint_completion_target']``
      - Default value: ``0.9``.
-   * - ``checkpoint_segments``
+   * - ``postgresql['checkpoint_segments']``
      - Default value: ``10``.
-   * - ``checkpoint_timeout``
+   * - ``postgresql['checkpoint_timeout']``
      - Default value: ``5min``.
-   * - ``checkpoint_warning``
+   * - ``postgresql['checkpoint_warning']``
      - Default value: ``30s``.
-   * - ``enable``
+   * - ``postgresql['enable']``
      - Default value: ``true``.
-   * - ``ha``
+   * - ``postgresql['ha']``
      - Default value: ``false``.
-   * - ``home``
+   * - ``postgresql['home']``
      - Default value: ``/var/opt/chef-server/postgresql``.
-   * - ``data_dir``
+   * - ``postgresql['data_dir']``
      - Default value: ``/var/opt/chef-server/postgresql/data``.
-   * - ``dir``
+   * - ``postgresql['dir']``
      - Default value: ``/var/opt/chef-server/postgresql``.
-   * - ``effective_cache_size``
+   * - ``postgresql['effective_cache_size']``
      - Default value: ``#{(node['memory']['total'].to_i / 2) / (1024)}MB``.
-   * - ``listen_address``
+   * - ``postgresql['listen_address']``
      - Default value: ``localhost``.
-   * - ``log_directory``
+   * - ``postgresql['log_directory']``
      - Default value: ``/var/log/chef-server/postgresql``.
-   * - ``max_connections``
+   * - ``postgresql['max_connections']``
      - Default value: ``200``.
-   * - ``md5_auth_cidr_addresses``
+   * - ``postgresql['md5_auth_cidr_addresses']``
      - Default value: ``[ ]``.
-   * - ``port``
+   * - ``postgresql['port']``
      - Default value: ``5432``.
-   * - ``shared_buffers``
+   * - ``postgresql['shared_buffers']``
      - Default value: ``#{(node['memory']['total'].to_i / 4) / (1024)}MB``.
-   * - ``shmall``
+   * - ``postgresql['shmall']``
      - Default value: ``kernel['machine'] =~ /x86_64/ ? 4194304 : 1048575``.
-   * - ``shmmax``
+   * - ``postgresql['shmmax']``
      - Default value: ``kernel['machine'] =~ /x86_64/ ? 17179869184 : 4294967295``.
-   * - ``shell``
+   * - ``postgresql['shell']``
      - Default value: ``/bin/sh``.
-   * - ``sql_password``
+   * - ``postgresql['sql_password']``
      - Default value: ``snakepliskin``.
-   * - ``sql_ro_password``
+   * - ``postgresql['sql_ro_password']``
      - Default value: ``shmunzeltazzen``.
-   * - ``sql_ro_user``
-     - Default value: ``v``.
-   * - ``sql_user``
+   * - ``postgresql['sql_ro_user']``
+     - Default value: ``opscode_chef_ro``.
+   * - ``postgresql['sql_user']``
      - Default value: ``opscode_chef``.
-   * - ``svlogd_num``
+   * - ``postgresql['svlogd_num']``
      - Default value: ``10``.
-   * - ``svlogd_size``
+   * - ``postgresql['svlogd_size']``
      - Default value: ``1000000``.
-   * - ``trust_auth_cidr_addresses``
+   * - ``postgresql['trust_auth_cidr_addresses']``
      - Default value: ``'127.0.0.1/32', '::1/128'``.
-   * - ``user_path``
+   * - ``postgresql['user_path']``
      - Default value: ``/opt/chef-server/embedded/bin:/opt/chef-server/bin:$PATH``.
-   * - ``username``
+   * - ``postgresql['username']``
      - Default value: ``opscode-pgsql``.
-   * - ``vip``
+   * - ``postgresql['vip']``
      - Default value: ``127.0.0.1``.
-   * - ``work_mem``
+   * - ``postgresql['work_mem']``
      - Default value: ``8MB``.
 
 

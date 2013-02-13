@@ -9,17 +9,17 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``consumer_id``
+   * - ``chef_expander['consumer_id']``
      - Default value: ``default``.
-   * - ``dir``
+   * - ``chef_expander['dir']``
      - Default value: ``/var/opt/chef-server/chef-expander``.
-   * - ``enable``
+   * - ``chef_expander['enable']``
      - Default value: ``true``.
-   * - ``ha``
+   * - ``chef_expander['ha']``
      - Default value: ``false``.
-   * - ``log_directory``
+   * - ``chef_expander['log_directory']``
      - Default value: ``/var/log/chef-server/chef-expander``.
-   * - ``nodes``
+   * - ``chef_expander['nodes']``
      - Default value: ``2``.
-   * - ``reindexer_log_directory``
+   * - ``chef_expander['reindexer_log_directory']``
      - Default value: ``/var/log/chef-server/chef-expander-reindexer``.
