@@ -12,7 +12,7 @@ Chef Server 11.x
 =====================================================
 .. note:: This section is a work in progress.
 
-**The basics:** :doc:`Chef Overview </chef_overview>`
+**The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support
 
 **Components:** Nginx | Erchef | Bookshelf | chef-webui | RabbitMQ | chef-expander | chef-solr | PostgreSQL
 
@@ -20,13 +20,13 @@ Chef Server 11.x
 
 **Install:** Open Source **Private Chef:** Standalone | Tiered | High Availability **Migrate:** Open Source >> Hosted Chef
 
-**Manage:** Log Files | Config Settings | Performance Tuning | Backup / Restore **Manager:** Open Source | Hosted Chef | Private Chef
+**System Analysis and Tuning:** Settings | Performance | Backup / Restore | Security | Hardening | High Availability
 
-**Tools:** chef-server-ctl
+**Manager:** Open Source | Hosted Chef | Private Chef
 
-**Settings:** chef-server.rb
+**Monitor:** Database | Cookbooks | Log Files
 
-**APIs:** Chef Server API
+**Reference:** chef-server-ctl | chef-server.rb | Chef Server API
 
 
 
