@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following examples show how partial search can be used in a cookbook. First, a cookbook without partial search:
+The following examples show how partial search can be used in a recipe. First, a recipe without partial search:
 
 .. code-block:: ruby
 
@@ -22,7 +22,7 @@ The following examples show how partial search can be used in a cookbook. First,
      end
    end
 
-and then a cookbook that uses the ``partial_search`` method to provide better and more targeted search results:
+and then the same recipe that uses the ``partial_search`` method to provide better and more targeted search results:
 
 .. code-block:: ruby
 
@@ -61,7 +61,39 @@ and then a cookbook that uses the ``partial_search`` method to provide better an
      end
    end
 
+And a different example from a different recipe. First, without partial search:
 
+.. code-block:: ruby
+
+   def generate_status_hash(query)
+     result = Hash.new
+     client_with_actor.get("search/node?q=*:*&sort=&start=0&rows=20")["rows"].each do |n|
+       result[n.name] = n unless n.nil?
+     end
+     result
+   end
+
+and then the same recipe using the ``partial_search`` method:
+
+.. code-block:: ruby
+
+   def generate_status_hash(query)
+     result = Hash.new
+     args = { 
+       'name' => [ 'name' ], 
+       'platform'   => [ 'platform' ], 
+       'platform_version' => [ 'platform_version' ], 
+       'fqdn' => [ 'fqdn' ], 
+       'ipaddress' => [ 'ipaddress' ], 
+       'uptime' => [ 'uptime' ], 
+       'ohai_time' => [ 'ohai_time' ], 
+       'run_list' => [ 'run_list' ]
+     }
+     client_with_actor.post("search/node?q=*:*&sort=&start=0", args)["rows"].each do |n| puts n.inspect
+       result[n['data']['name']] = n['data'] unless n.nil?
+     end
+     result
+   end
 
  
 

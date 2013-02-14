@@ -22,7 +22,7 @@ This configuration file has the following settings:
    * - ``erchef['enable']``
      - Default value: ``true``.
    * - ``erchef['ha']``
-     - Default value: ``false``.
+     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
    * - ``erchef['ibrowse_max_pipeline_size']``
      - Default value: ``1``.
    * - ``erchef['ibrowse_max_sessions']``
@@ -30,7 +30,7 @@ This configuration file has the following settings:
    * - ``erchef['listen']``
      - Default value: ``127.0.0.1``.
    * - ``erchef['log_directory']``
-     - Default value: ``/var/log/chef-server/erchef``.
+     - The directory in which log files are located. Default value: ``/var/log/chef-server/erchef``.
    * - ``erchef['max_cache_size']``
      - Default value: ``10000``.
    * - ``erchef['port']``

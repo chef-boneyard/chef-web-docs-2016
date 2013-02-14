@@ -18,35 +18,35 @@ This configuration file has the following settings:
    * - ``nginx['enable']``
      - Default value: ``true``.
    * - ``nginx['enable_non_ssl']``
-     - Default value: ``false``.
+     - Indicates whether port 80 redirects to port 443 are allowed. When this value is set to ``false``, load balancers on the front-end hardware are allowed to do |ssl| termination of the WebUI and API. Default value: ``false``.
    * - ``nginx['gzip']``
-     - Default value: ``on``.
+     - Indicates that |gzip| compression is enabled. Default value: ``on``.
    * - ``nginx['gzip_comp_level']``
-     - Default value: ``2``.
+     - The compression level used with |gzip|, from least amount of compression (``1``, fastest) to the most (``2``, slowest). Default value: ``2``.
    * - ``nginx['gzip_http_version']``
-     - Default value: ``1.0``.
+     - Enables |gzip| depending on the version of the HTTP request. Default value: ``1.0``.
    * - ``nginx['gzip_proxied']``
-     - Default value: ``any``.
+     - The type of compression used based on the request and response. Default value: ``any``.
    * - ``nginx['gzip_types']``
-     - Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
+     - Enables compression for the specified MIME-types. Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
    * - ``nginx['ha']``
-     - Default value: ``false``.
+     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
    * - ``nginx['keepalive_timeout']``
-     - Default value: ``65``.
+     - The amount of time (in seconds) that a connection will be allowed to stay open. Default value: ``65``.
    * - ``nginx['log_directory']``
-     - Default value: ``/var/log/chef-server/nginx``.
+     - The directory in which log files are located. Default value: ``/var/log/chef-server/nginx``.
    * - ``nginx['non_ssl_port']``
-     - Default value: ``80``.
+     - The port on which the WebUI and API are bound for non-|ssl| connections. If this value is ``nil``, this port is disabled. Use ``nginx['enable_non_ssl'] to enable or disable |ssl| redirects on this port number. Default value: ``80``.
    * - ``nginx['sendfile']``
-     - Default value: ``on``.
+     - Indicates whether ``sendfile()`` is used to copy data between file descriptors. Default value: ``on``.
    * - ``nginx['server_name']``
-     - Default value: ``node['fqdn']``.
+     - The |fully qualified domain name| of the server. Default value: ``node['fqdn']``.
    * - ``nginx['ssl_certificate']``
-     - Default value: ``nil``.
+     - The file that contains the |ssl| certificate. Default value: ``nil``.
    * - ``nginx['ssl_certificate_key']``
-     - Default value: ``nil``.
+     - The file that contains the private key used by ``nginx['ssl_certificate']``. Default value: ``nil``.
    * - ``nginx['ssl_ciphers']``
-     - Default value: varies.
+     - The list of supported cipher suites that are used to establish a secure connection. Default value: varies.
    * - ``nginx['ssl_company_name']``
      - Default value: ``YouCorp``.
    * - ``nginx['ssl_country_name']``
@@ -60,16 +60,16 @@ This configuration file has the following settings:
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
-     - Default value: varies.
+     - The protocol versions that are enabled. Default value: varies, depending on the configuration of the |chef server| topology.
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``
-     - Default value: ``on``.
+     - Indicates whether the |nagle| buffering algorithm is enabled. Default value: ``on``.
    * - ``nginx['tcp_nopush']``
-     - Default value: ``on``.
+     - Indicates whether TCP/IP transactions are enabled. Default value: ``on``.
    * - ``nginx['url']``
      - Default value: ``https://#{node['fqdn']}``.
    * - ``nginx['worker_connections']``
-     - Default value: ``10240``.
+     - The number of allowed worker connections. Used with ``nginx['worker_processes']`` to determine the maximum number of allowed clients. Default value: ``10240``.
    * - ``nginx['worker_processes']``
-     - Default value: ``node['cpu']['total'].to_i``.
+     - The number of allowed worker processes. Used with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``.

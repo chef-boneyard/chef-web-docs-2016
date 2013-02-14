@@ -18,21 +18,21 @@ This configuration file has the following settings:
    * - ``rabbitmq['enable']``
      - Default value: ``true``.
    * - ``rabbitmq['ha']``
-     - Default value: ``false``.
+     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
    * - ``rabbitmq['log_directory']``
-     - Default value: ``/var/log/chef-server/rabbitmq``.
+     - The directory in which log files are located. Default value: ``/var/log/chef-server/rabbitmq``.
    * - ``rabbitmq['node_ip_address']``
-     - Default value: ``127.0.0.1``.
+     - The IP address for machine on which |rabbitmq| is running. Default value: ``127.0.0.1``.
    * - ``rabbitmq['node_port']``
-     - Default value: ``5672``.
+     - The port on which |rabbitmq| listens. Default value: ``5672``.
    * - ``rabbitmq['nodename']``
-     - Default value: ``rabbit@localhost``.
+     - The name of the node. Default value: ``rabbit@localhost``.
    * - ``rabbitmq['password']``
-     - Default value: ``chefrocks``.
+     - The password for the ``user``. Default value: ``chefrocks``.
    * - ``rabbitmq['user']``
-     - Default value: ``chef``.
+     - The user. Default value: ``chef``.
    * - ``rabbitmq['vhost']``
-     - Default value: ``/chef``.
+     - The virtual host. Default value: ``/chef``.
    * - ``rabbitmq['vip']``
      - Default value: ``127.0.0.1``.
 

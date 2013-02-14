@@ -22,11 +22,11 @@ This configuration file has the following settings:
    * - ``chef_server_webui['environment']``
      - Default value: ``chefserver``.
    * - ``chef_server_webui['ha']``
-     - Default value: ``false``.
+     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
    * - ``chef_server_webui['listen']``
      - Default value: ``127.0.0.1:9462``.
    * - ``chef_server_webui['log_directory']``
-     - Default value: ``/var/log/chef-server/chef-server-webui``.
+     - The directory in which log files are located. Default value: ``/var/log/chef-server/chef-server-webui``.
    * - ``chef_server_webui['port']``
      - Default value: ``9462``.
    * - ``chef_server_webui['session_key']``
