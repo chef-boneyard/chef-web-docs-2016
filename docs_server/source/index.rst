@@ -6,29 +6,28 @@ Chef Server Topics
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-Getting started 
-=====================================================
-:doc:`Chef Overview </chef_overview>`
 
-Install and Migrate
-=====================================================
-:doc:`Migrate from Open Source Chef to Hosted Chef </migrate_to_hosted>`
 
-Manage the Chef Server
+Chef Server 11.x
 =====================================================
-:doc:`Hosted Chef </manage_server_hosted>` | :doc:`Open Source Chef </manage_server_open_source>`
+.. note:: This section is a work in progress.
 
-References
-=====================================================
-xxxxx
+**The basics:** :doc:`Chef Overview </chef_overview>`
 
-Configuration Files
-=====================================================
-:doc:`server.rb </server_rb>` | :doc:`solo.rb </solo_rb>` | :doc:`solr.rb </solr_rb>`
+**Components:** Nginx | Erchef | Bookshelf | chef-webui | RabbitMQ | chef-expander | chef-solr | PostgreSQL
 
-APIs and DSLs
-=====================================================
-:doc:`Chef Server API </api_chef_server>` | :doc:`Cookbooks Site API </api_cookbooks_site>`
+**Topologies:** Standalone | Tiered | High Availability | Options
+
+**Install:** Open Source **Private Chef:** Standalone | Tiered | High Availability **Migrate:** Open Source >> Hosted Chef
+
+**Manage:** Log Files | Config Settings | Performance Tuning | Backup / Restore **Manager:** Open Source | Hosted Chef | Private Chef
+
+**Tools:** chef-server-ctl
+
+**Settings:** chef-server.rb
+
+**APIs:** Chef Server API
+
 
 
 
