@@ -32,11 +32,11 @@ APIs and DSLs
 
 
 
-Private Chef 1.x
+Private Chef 10.x
 =====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x.rst
-
 .. note:: This section is about the version of |chef private| that existed up until February 4, 2013.
+
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x.rst
 
 :doc:`Engagement </private_chef_1x_engage>` | :doc:`Architecture </private_chef_1x_architecture>` | :doc:`Installation </private_chef_1x_install>` | :doc:`Administration </private_chef_1x_admin>` | :doc:`Support </private_chef_1x_support>`
 
