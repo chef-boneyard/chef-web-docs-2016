@@ -12,7 +12,7 @@ Chef Server 11.x
 =====================================================
 .. note:: This section is a work in progress.
 
-**The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support
+**The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements
 
 **Components:** Nginx | Erchef | Bookshelf | chef-webui | RabbitMQ | chef-expander | chef-solr | PostgreSQL
 
