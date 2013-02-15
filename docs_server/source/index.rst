@@ -35,15 +35,15 @@ Private Chef 10.x
 =====================================================
 .. note:: This section is about the version of |chef private| that existed up until February 4, 2013.
 
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x.rst
+.. include:: ../../includes_private_chef_10x/includes_private_chef_10x.rst
 
-* :doc:`Engagement </private_chef_1x_engage>`
-* :doc:`Architecture </private_chef_1x_architecture>`
-* :doc:`Installation </private_chef_1x_install>`
-* :doc:`Administration </private_chef_1x_admin>`
-* :doc:`Support </private_chef_1x_support>`
+* :doc:`Engagement </private_chef_10x_engage>`
+* :doc:`Architecture </private_chef_10x_architecture>`
+* :doc:`Installation </private_chef_10x_install>`
+* :doc:`Administration </private_chef_10x_admin>`
+* :doc:`Support </private_chef_10x_support>`
 
-.. note:: Unless otherwise stated, all the commands in this manual should be run as root, either directly or via the ``sudo`` command.
+.. note:: Unless otherwise stated, all the commands in the documentation for |chef private| should be run as root, either directly or via the ``sudo`` command.
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
@@ -63,11 +63,12 @@ Private Chef 10.x
    solo_rb
    solr_rb
 
-   private_chef_1x_engage
-   private_chef_1x_architecture
-   private_chef_1x_install
-   private_chef_1x_admin
-   private_chef_1x_support
+   private_chef_10x
+   private_chef_10x_engage
+   private_chef_10x_architecture
+   private_chef_10x_install
+   private_chef_10x_admin
+   private_chef_10x_support
 
 
 
