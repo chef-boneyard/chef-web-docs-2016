@@ -24,9 +24,9 @@ Chef Server 11.x
 
 **Manager:** Open Source | Hosted Chef | Private Chef
 
-**Monitor:** Database | Cookbooks | Log Files
+**Monitor:** Database | Cookbooks | Log Files | Services | Ports
 
-**Reference:** chef-server-ctl | chef-server.rb | Chef Server API
+**Reference:** chef-server-ctl | chef-server.rb | Chef Server API | Files, Folders, and Directories
 
 
 
