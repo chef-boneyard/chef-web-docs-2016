@@ -73,7 +73,7 @@ And a different example from a different recipe. First, without partial search:
      result
    end
 
-and then the same recipe using the ``partial_search`` method:
+and then the same recipe using a partial search:
 
 .. code-block:: ruby
 
