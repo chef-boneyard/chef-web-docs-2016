@@ -12,15 +12,15 @@ Download |chef private|
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_download.rst
 
-Supported Operating Systems
+Supported Platforms
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_supported.rst
 
-Configuring the Operating System
+Configuring the Platform
 -----------------------------------------------------
 Before installing |chef private|, ensure that each system has the following installed and configured:
 
-Host names and FQDNs
+Hostnames, FQDNs
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_host_name_fqdn.rst
 
@@ -40,7 +40,7 @@ Mail Relay
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_git.rst
 
-|redhat| and |centos| Dependencies
+|redhat| and |centos|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_prerequisites_os_redhat_centosrst.rst
 
@@ -64,7 +64,7 @@ Firewall Requirements
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_requirements_firewall.rst
 
-Put the Package on the Server
+Add Package to Server
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_put_package_on_server.rst
 
@@ -72,7 +72,7 @@ Install the Package
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_install_package.rst
 
-Configure |chef private|
+Configure
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_standalone_configure.rst
 
@@ -100,56 +100,64 @@ Firewalls
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_network_firewalls.rst
 
-Create the private-chef.rb file
+private-chef.rb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb.rst
 
-Set the topology
+Configure topology
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_set_topology.rst
 
-Add a server entry for the back-end
+Back-end entries
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_add_backend.rst
 
-Add server entries for the front-end
+Front-end entries
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_add_frontend.rst
 
-Set the api_fqdn
+Set api_fqdn
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_set_api_fqdn.rst
 
-private-chef.rb example
+Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_private_chef_rb_example.rst
 
-Place the package on the servers
+Add Package to Servers
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_add_package_to_server.rst
 
-Put private-chef.rb on the bootstrap server
+Configure Bootstrap
 -----------------------------------------------------
+The following sections describe what is required to configure the bootstrap server.
+
+Add private-chef.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_put_private_chef_rb_on_bootstrap.rst
 
-Install |chef private| on the bootstrap server
------------------------------------------------------
+Install |chef private|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_install_private_chef_on_bootstrap.rst
 
-Configure the bootstrap server
------------------------------------------------------
+Configure 
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_config_bootstrap.rst
 
-Copy /etc/opscode to the front-end servers
+Configure Front-end
 -----------------------------------------------------
+The following sections describe what is required to configure the front-end server.
+
+Copy /etc/opscode
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_copy_etc_opscode.rst
 
-Install the package on front-end servers
------------------------------------------------------
+Install package
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_install_package_on_front_end.rst
 
-Configure |chef private| on front-end servers
------------------------------------------------------
+Configure
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_tiered_config_front_end.rst
 
 Success!
@@ -169,15 +177,15 @@ Network Requirements
 -----------------------------------------------------
 |chef private| has the following network requirements for a high availability installation:
 
-Back-end Networking
+Networking
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_backend.rst
 
-Back-end Virtual IP Addresses
+Virtual IP Addresses
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_virtual_ips.rst
 
-Back-end Disk Configuration
+Disk Configuration
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_disc_config.rst
 
@@ -189,7 +197,7 @@ Firewalls
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_network_firewalls.rst
 
-private-chef.rb Config File
+private-chef.rb
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb.rst
 
@@ -197,11 +205,11 @@ Set the topology
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_set_topology.rst
 
-Add entries for back-end servers
+Back-end entries
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_add_backend.rst
 
-Add entries for front-end servers
+Front-end entries
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_add_frontend.rst
 
@@ -209,11 +217,11 @@ Set api_fqdn
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_set_api_fqdn.rst
 
-private-chef.rb example
+Example
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_private_chef_rb_example.rst
 
-Add package to server
+Add Package to Servers
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_add_package_to_server.rst
 
@@ -233,11 +241,11 @@ Configure |drbd| on the back-end bootstrap server
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_drbd_for_bootstrap.rst
 
-Copy configuration to non-bootstrap server
+Copy config to non-bootstrap back-end server
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_copy_config_to_non_bootstrap_backend.rst
 
-Configure |drbd| on non-bootstrap server
+Configure |drbd| for non-bootstrap back-end server
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_drbd_for_non_bootstrap_backend.rst
 
@@ -257,20 +265,24 @@ Configure |chef private| on the bootstrap server
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_private_chef_on_bootstrap.rst
 
-Configure |chef private| on the non-bootstrap server
+Configure |chef private| on non-bootstrap back-end
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_non_bootstrap_backend.rst
 
-Copy /etc/opscode to the front-end servers
+Configure Front-end
 -----------------------------------------------------
+The following sections describe what is required to configure the front-end server.
+
+Copy /etc/opscode
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_copy_etc_opscode_to_frontend.rst
 
-Install |chef private| on the front-end servers
------------------------------------------------------
+Install package
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_install_private_chef_on_frontend.rst
 
-Configure |chef private| on the front-end servers
------------------------------------------------------
+Configure
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_private_chef_on_frontend.rst
 
 Success!
@@ -292,11 +304,11 @@ Create the Organization
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_create_org.rst
 
 
-Configure AD / LDAP
+Active Directory and LDAP
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_adldap.rst
 
-Configure Active AD / LDAP
+Configure
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_adldap_configure.rst
 
@@ -324,7 +336,7 @@ Reconfigure
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_adldap_configure_reconfigure.rst
 
-Verify the Configuration
+Verify
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_adldap_verify.rst
 

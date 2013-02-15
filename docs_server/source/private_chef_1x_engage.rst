@@ -4,7 +4,7 @@ Private Chef 1.x Engagement
 
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement.rst
 
-How Opscode Consulting Works
+How Consulting Works
 =====================================================
 The following sections describe how |opscode| consulting works from the initial engagement through to the point at which the engagement is finished.
 
@@ -12,13 +12,13 @@ Initial Engagement
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_initial.rst
 
-Login to the Project Portal
------------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_login.rst
-
-Use the Project Portal
+The Project Portal
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_project.rst
+
+Log In
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_login.rst
 
 Messages
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -36,7 +36,7 @@ During the Engagement
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_during.rst
 
-Finishing the Engagement
+Finish the Engagement
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_consulting_finished.rst
 
@@ -48,16 +48,20 @@ Questionnaire
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_questions.rst
 
-Server and Network Requirements
+Requirements
 -----------------------------------------------------
+A |chef private| deployment has some important requirements that should be identified before the actual deployment begins.
+
+Server and Network
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_server_and_network.rst
 
-Install
------------------------------------------------------
+Installation
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_install.rst
 
 SSL
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_preinstall_ssl.rst
 
 Review
@@ -67,14 +71,6 @@ Review
 Onsite Installation
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_onsite.rst
-
-Verify Account Privileges
------------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_onsite_install.rst
-
-Verify Pre-requisites
------------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_engagement_onsite_prereqs.rst
 
 Install Private Chef
 -----------------------------------------------------

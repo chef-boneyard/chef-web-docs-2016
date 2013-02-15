@@ -8,9 +8,7 @@ For example, on |chef private| installation engagements, a **Writeboard** is cre
 To access a **Writeboard**:
 
 #. Click the **Writeboards** tab.
-   .. image:: ../../images/project_portal_writeboard_tab.png
 #. Select the **Writeboard** you wish to view or edit.
-   .. image:: ../../images/project_portal_select_writeboard.png
 #. Once viewing the **Writeboard**, you can click the **Edit this page** button to edit, or simply scroll to view the document.
-   .. image:: ../../images/project_portal_edit_writeboard.png
+
 

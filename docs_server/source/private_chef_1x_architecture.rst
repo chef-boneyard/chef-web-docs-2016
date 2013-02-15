@@ -8,48 +8,48 @@ Standalone
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone.rst
 
-Hosts
------------------------------------------------------
+**Hosts**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone_hosts.rst
 
-Backup
------------------------------------------------------
+**Backup**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone_backup.rst
 
-Scaling
------------------------------------------------------
+**Scaling**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_standalone_scaling.rst
 
 Tiered
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_tiered.rst
 
-Hosts
------------------------------------------------------
+**Hosts**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_tiered_hosts.rst
 
-Backup
------------------------------------------------------
+**Backup**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_tiered_backup.rst
 
-Scaling
------------------------------------------------------
+**Scaling**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_tiered_scaling.rst
 
 High Availability
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_ha.rst
 
-Hosts
------------------------------------------------------
+**Hosts**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_ha_hosts.rst
 
-Backup
------------------------------------------------------
+**Backup**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_ha_backup.rst
 
-Scaling
------------------------------------------------------
+**Scaling**
+
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_ha_scaling.rst
 
 Modifications
@@ -68,7 +68,7 @@ Where is MySQL?
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_modifications_mysql.rst
 
-But X-technology is better!
+But X-tech is better!
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_architecture_modifications_xtechnology.rst
 
