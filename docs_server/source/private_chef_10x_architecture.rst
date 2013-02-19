@@ -1,5 +1,5 @@
 =====================================================
-Private Chef 1.x Architecture
+Private Chef 10.x Architecture
 =====================================================
 
 .. include:: ../../includes_private_chef_10x/includes_private_chef_10x_architecture.rst

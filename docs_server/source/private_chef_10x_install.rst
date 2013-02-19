@@ -1,5 +1,5 @@
 =====================================================
-Install Private Chef 1.x
+Install Private Chef 10.x 
 =====================================================
 
 .. include:: ../../includes_private_chef_10x/includes_private_chef_10x_install.rst
