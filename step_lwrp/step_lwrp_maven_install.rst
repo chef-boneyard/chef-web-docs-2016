@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |apache maven|:
+To install the |mysql| artifact:
 
 .. code-block:: ruby
 
