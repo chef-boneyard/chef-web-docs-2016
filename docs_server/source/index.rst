@@ -12,13 +12,13 @@ Chef Server 11.x
 =====================================================
 .. note:: This section is a work in progress.
 
-**The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements | Ommibus
+**The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements
 
 **Components:** Nginx | Erchef | Bookshelf | chef-webui | RabbitMQ | chef-expander | chef-solr | PostgreSQL
 
 **Topologies:** Standalone | Tiered | High Availability | Options
 
-**Install:** Open Source **Private Chef:** Standalone | Tiered | High Availability **Migrate:** Open Source >> Hosted Chef | chef-pedant
+**Install:** Open Source **Private Chef:** Standalone | Tiered | High Availability **Migrate:** Open Source >> Hosted Chef | chef-pedant | Ommibus
 
 **System Analysis and Tuning:** Settings | Performance | Backup / Restore | Security | Hardening | High Availability
 

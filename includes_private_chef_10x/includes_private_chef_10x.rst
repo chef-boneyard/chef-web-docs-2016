@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Welcome to the |chef private| guide! This document is broken into four broad sections:
+Welcome to the |chef private| guide! This document is broken into five broad sections:
 
 * **Engagement Overview:** A guide to working with |opscode| consulting to install |chef private| in your environment.
 * **Architecture:** An overview of the three topology options: Standalone, Tiered, and High Availability.
