@@ -144,7 +144,7 @@ Where CouchDB will store its on-disk data.
 .. warning::
 
   While this attribute can be changed, we recommend you do not deviate
-  from out typical, supported layout.
+  from our typical, supported layout.
 
 *Default Value*:
 
@@ -191,7 +191,7 @@ The base directory for CouchDB data.
 .. warning::
 
   While this attribute can be changed, we recommend you do not deviate
-  from out typical, supported layout.
+  from our typical, supported layout.
 
 *Default Value*:
 
@@ -259,7 +259,7 @@ The base directory for CouchDB log data.
 .. warning::
 
   While this attribute can be changed, we recommend you do not deviate
-  from out typical, supported layout.
+  from our typical, supported layout.
 
 *Default Value*:
 
@@ -519,7 +519,7 @@ Where data that should reside on DRBD should live.
 .. warning::
 
   While this attribute can be changed, we recommend you do not deviate
-  from out typical, supported layout.
+  from our typical, supported layout.
 
 *Default Value*:
 
@@ -564,7 +564,7 @@ The top level directory for DRBD configuration.
 .. warning::
 
   While this attribute can be changed, we recommend you do not deviate
-  from out typical, supported layout.
+  from our typical, supported layout.
 
 
 *Default Value*:
@@ -762,7 +762,7 @@ Where keepalived will store its on-disk data.
 .. warning::
 
   While this attribute can be changed, we recommend you do not deviate
-  from out typical, supported layout.
+  from our typical, supported layout.
 
 *Default Value*:
 
@@ -809,7 +809,7 @@ The base directory for keepalived log data.
 .. warning::
 
   While this attribute can be changed, we recommend you do not deviate
-  from out typical, supported layout.
+  from our typical, supported layout.
 
 *Default Value*:
 
