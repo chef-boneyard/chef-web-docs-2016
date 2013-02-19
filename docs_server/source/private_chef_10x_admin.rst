@@ -1,5 +1,5 @@
 =====================================================
-Private Chef 10.x Administration
+Private Chef 1.4.4 Administration
 =====================================================
 
 .. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin.rst

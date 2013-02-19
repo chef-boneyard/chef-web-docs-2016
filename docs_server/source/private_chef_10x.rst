@@ -1,5 +1,5 @@
 =====================================================
-Private Chef 10.x
+Private Chef 1.4.4
 =====================================================
 
 .. include:: ../../includes_private_chef_10x/includes_private_chef_10x.rst
