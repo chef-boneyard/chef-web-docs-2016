@@ -12,7 +12,7 @@ This document covers:
 #. An overview of the work that will be performed on-site
 #. Details of the criteria by which you and |opscode| can be certain the work has been completed
 
-|opscode| looks forward to learning about your environment, and then working with you to ensure you have the highest degree of satisfaction with your |chef private| deployment
+|opscode| looks forward to learning about your environment, and then working with you to ensure you have the highest degree of satisfaction with your |chef private| deployment.
 
 
 
