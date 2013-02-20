@@ -18,7 +18,7 @@ To install |chef server 11|, do the following:
 
    .. code-block:: bash
    
-      $ chef-server-ctl reconfigure
+      $ sudo chef-server-ctl reconfigure
 
    This command will set up all of the required components, including |erchef|, |rabbitmq|, |postgresql|, and all of the cookbooks that are used by |chef solo| to maintain |chef server 11|.
 

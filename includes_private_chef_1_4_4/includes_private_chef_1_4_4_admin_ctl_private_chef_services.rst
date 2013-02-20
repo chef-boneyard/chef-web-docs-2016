@@ -16,7 +16,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service status
+          $ private-chef-ctl status name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``ha-status``
@@ -55,7 +55,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service start
+          $ private-chef-ctl start name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
 
@@ -65,7 +65,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service stop
+          $ private-chef-ctl stop name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``restart``
@@ -73,7 +73,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service restart
+          $ private-chef-ctl restart name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``once``
@@ -81,7 +81,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service once
+          $ private-chef-ctl once name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``hup``
@@ -89,7 +89,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service hup
+          $ private-chef-ctl hup name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``term``
@@ -97,7 +97,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service term
+          $ private-chef-ctl term name_of_service 
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``int``
@@ -105,7 +105,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service int
+          $ private-chef-ctl int name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``kill``
@@ -113,7 +113,7 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service kill
+          $ private-chef-ctl kill name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``tail``
