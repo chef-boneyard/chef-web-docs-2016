@@ -109,6 +109,7 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_common_notifications
    resource_common_relative_paths
 
+   resource_batch
    resource_cookbook_file
    resource_cron
    resource_deploy
@@ -127,6 +128,7 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_ohai
    resource_package
    resource_powershell_script
+   resource_registry_key
    resource_remote_directory
    resource_remote_file
    resource_route

@@ -87,8 +87,15 @@ Cookbooks
    :hidden:
    
    chef_overview
+   chef_quick_overview
    just_enough_ruby_for_chef
    install
+   breaking_changes_chef_11
+
+   chef_overview_server
+   chef_overview_server_hosted
+   chef_overview_server_open_source
+   chef_overview_server_private
 
    chef_client
    knife
@@ -103,10 +110,12 @@ Cookbooks
    community
    config_rb_chef_server
    opscode_cookbooks
+   orgmapper
+   ohai
 
    essentials_nodes
    essentials_chef_client
-   ohai
+
    essentials_nodes_chef_run
    essentials_handlers
 
@@ -140,23 +149,6 @@ Cookbooks
 
    images
 
-   orgmapper
 
-   chef_overview_server
-   chef_overview_server_hosted
-   chef_overview_server_open_source
-   chef_overview_server_private
-
-   breaking_changes_chef_11
-
-   chef_quick_overview
-   resource_batch
-   resource_registry_key
-   dsl_recipe_method_registry_data_exists
-   dsl_recipe_method_registry_get_subkeys
-   dsl_recipe_method_registry_get_values
-   dsl_recipe_method_registry_has_subkeys
-   dsl_recipe_method_registry_key_exists
-   dsl_recipe_method_registry_value_exists
 
    
