@@ -51,6 +51,10 @@ attribute?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_attribute.rst
 
+cookbook_name
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_cookbook_name.rst
+
 data_bag, data_bag_item
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag.rst
@@ -100,6 +104,10 @@ The following examples show how the ``platform_family?`` method can be used in a
 **Use the platform_family? method**
 
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
+recipe_name
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_recipe_name.rst
 
 resources
 -----------------------------------------------------

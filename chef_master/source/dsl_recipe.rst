@@ -29,10 +29,14 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
      - Use in a recipe to include an attribute.
    * - :doc:`data_bag, data_bag_item </dsl_recipe_method_data_bag>`
      - Use in a recipe to include a data bag or data bag item.
+   * - :doc:`cookbook_name </dsl_recipe_method_cookbook_name>`
+     - Use in a recipe to cookbook_name.
    * - :doc:`platform? </dsl_recipe_method_platform>`
      - Use in a recipe to check for the platform.
    * - :doc:`platform_family? </dsl_recipe_method_platform_family>`
      - Use in a recipe to check for the platform family.
+   * - :doc:`recipe_name </dsl_recipe_method_recipe_name>`
+     - Use in a recipe to get the name of a recipe.
    * - :doc:`resources </dsl_recipe_method_resources>`
      - Use in a recipe to include a resource.
    * - :doc:`search </dsl_recipe_method_search>`
@@ -83,9 +87,11 @@ The following recipe DSL methods can be used to interact with |windows| registry
    dsl_recipe_use_ruby
    dsl_recipe_include_recipes
    dsl_recipe_method_attribute
+   dsl_recipe_method_cookbook_name
    dsl_recipe_method_data_bag
    dsl_recipe_method_platform
    dsl_recipe_method_platform_family
+   dsl_recipe_method_recipe_name
    dsl_recipe_method_resources
    dsl_recipe_method_search
    dsl_recipe_method_tag
