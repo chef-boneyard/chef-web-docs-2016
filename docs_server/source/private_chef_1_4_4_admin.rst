@@ -2,16 +2,16 @@
 Private Chef 1.4.4 Administration
 =====================================================
 
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin.rst
 
 
 Configure Private Chef
 =====================================================
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_configure.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_configure.rst
 
 Apply Configuration Changes
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_configure_apply_changes.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_configure_apply_changes.rst
 
 Common Options
 -----------------------------------------------------
@@ -19,27 +19,27 @@ The following options are common for the |chef private| server.
 
 topology
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_configure_common_topology.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_configure_common_topology.rst
 
 notification_email
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_configure_common_notification_email.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_configure_common_notification_email.rst
 
 from_email
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_configure_common_from_email.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_configure_common_from_email.rst
 
 server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_configure_common_server.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_configure_common_server.rst
 
 api_fqdn
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_configure_common_api_fqdn.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_configure_common_api_fqdn.rst
 
 backend_vip
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_configure_common_backend_vip.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_configure_common_backend_vip.rst
 
 General Options
 -----------------------------------------------------
@@ -72,8 +72,7 @@ entry.
 
   bootstrap['enable'] = true
 
-.. index::
-  triple: configuration; couchdb; batch_save_interval
+
 
 couchdb['batch_save_interval']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -93,8 +92,7 @@ regardless of how many have been written.
 
   couchdb['batch_save_interval'] = 1000
 
-.. index::
-  triple: configuration; couchdb; batch_save_size
+
 
 couchdb['batch_save_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -113,8 +111,7 @@ The number of documents that will trigger a batch save.
 
   couchdb['batch_save_size'] = 1000
 
-.. index::
-  triple: configuration; couchdb; bind_address
+
 
 couchdb['bind_address']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -133,8 +130,7 @@ The address that CouchDB will bind to.
 
   couchdb['bind_address'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; couchdb; data_dir
+
 
 couchdb['data_dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -158,8 +154,6 @@ Where CouchDB will store its on-disk data.
 
   couchdb['data_dir'] = "/var/opt/opscode/couchdb/db"
 
-.. index::
-  triple: configuration; couchdb; delayed_commits
 
 couchdb['delayed_commits']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -180,8 +174,7 @@ options above.
 
   couchdb['delayed_commits'] = "true"
 
-.. index::
-  triple: configuration; couchdb; dir
+
 
 couchdb['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -205,8 +198,7 @@ The base directory for CouchDB data.
 
   couchdb['dir'] = "/var/opt/opscode/couchdb"
 
-.. index::
-  triple: configuration; couchdb; enable
+
 
 couchdb['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -226,8 +218,7 @@ managed by the ``role`` a server has in its ``server`` entry.
 
   couchdb['enable'] = true
 
-.. index::
-  triple: configuration; couchdb; ha
+
 
 couchdb['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -248,8 +239,7 @@ Causes the CouchDB service to be ``down`` by default.
 
   couchdb['ha'] = false
 
-.. index::
-  triple: configuration; couchdb; log_directory
+
 
 couchdb['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -273,8 +263,7 @@ The base directory for CouchDB log data.
 
   couchdb['log_directory'] = "/var/log/opscode/couchdb"
 
-.. index::
-  triple: configuration; couchdb; svlogd_size
+
 
 couchdb['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -294,8 +283,7 @@ size, in bytes, of the logfile.
 
   couchdb['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; couchdb; svlogd_num
+
 
 couchdb['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -315,8 +303,7 @@ number of logfiles retained.
 
   couchdb['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; couchdb; log_level
+
 
 couchdb['log_level']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -341,8 +328,7 @@ The verbosity of the CouchDB logs.
 
   couchdb['log_level'] = "error"
 
-.. index::
-  triple: configuration; couchdb; max_attachment_chunk_size
+
 
 couchdb['max_attachment_chunk_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -361,8 +347,7 @@ The maximum attachment size.
 
   couchdb['max_attachment_chunk_size'] = "4294967296"
 
-.. index::
-  triple: configuration; couchdb; max_dbs_open
+
 
 couchdb['max_dbs_open']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -381,8 +366,7 @@ The maximum number of open databases.
 
   couchdb['max_dbs_open'] = 10000
 
-.. index::
-  triple: configuration; couchdb; max_document_size
+
 
 couchdb['max_document_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -401,8 +385,7 @@ The maximum size of a document.
 
   couchdb['max_document_size'] = "4294967296"
 
-.. index::
-  triple: configuration; couchdb; os_process_timeout
+
 
 couchdb['os_process_timeout']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -421,8 +404,7 @@ How long before timing out external processes, in milliseconds.
 
   couchdb['os_process_timeout'] = "300000"
 
-.. index::
-  triple: configuration; couchdb; port
+
 
 couchdb['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -441,8 +423,7 @@ The port CouchDB will listen on.
 
   couchdb['port'] = 5984
 
-.. index::
-  triple: configuration; couchdb; reduce_limit
+
 
 couchdb['reduce_limit']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -461,8 +442,7 @@ Disable limiting the number of reduces.
 
   couchdb['reduce_limit'] = "false"
 
-.. index::
-  triple: configuration; couchdb; vip
+
 
 couchdb['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -486,8 +466,7 @@ The IP address that other services needing access to CouchDB should use.
 
   couchdb['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; dark_launch; new_theme
+
 
 database_type
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -508,8 +487,7 @@ install and configure both the server itself and the MySQL client libraries.
 
   database_type "postgresql"
 
-.. index::
-  triple: configuration; drbd; data_dir
+
 
 drbd['data_dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -533,8 +511,7 @@ Where data that should reside on DRBD should live.
 
   drbd['data_dir'] = "/var/opt/opscode/drbd/data"
 
-.. index::
-  triple: configuration; drbd; device
+
 
 drbd['device']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -553,8 +530,7 @@ The device name to use for DRBD.
 
   drbd['device'] = "/dev/drbd0"
 
-.. index::
-  triple: configuration; drbd; dir
+
 
 drbd['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -579,8 +555,7 @@ The top level directory for DRBD configuration.
 
   drbd['dir'] = "/var/opt/opscode/drbd"
 
-.. index::
-  triple: configuration; drbd; disk
+
 
 drbd['disk']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -599,8 +574,7 @@ The local LVM logical volume to use behind DRBD.
 
   drbd['disk'] = "/dev/opscode/drbd"
 
-.. index::
-  triple: configuration; drbd; enable
+
 
 drbd['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -619,8 +593,7 @@ Whether or not this server is using DRBD. This is typically set by the ``role`` 
 
   drbd['enable'] = false
 
-.. index::
-  triple: configuration; drbd; flexible_meta_disk
+
 
 drbd['flexible_meta_disk']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -639,8 +612,6 @@ Where DRBD meta-data is stored.
 
   drbd['flexible_meta_disk'] = "internal"
 
-.. index::
-  triple: configuration; drbd; primary
 
 drbd['primary']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -663,8 +634,6 @@ with the ``backend`` ``role`` when in an ``ha`` ``topology``.
   drbd['primary'] = {"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}
 
 
-.. index::
-  triple: configuration; drbd; secondary
 
 drbd['secondary']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -685,8 +654,7 @@ Identical to the ``drbd['primary']`` setting, including caveats.
   drbd['secondary'] = {"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}
 
 
-.. index::
-  triple: configuration; drbd; shared_secret
+
 
 drbd['shared_secret']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -710,8 +678,7 @@ The shared secret for DRBD.
 
   drbd['shared_secret'] = "promisespromises"
 
-.. index::
-  triple: configuration; drbd; sync_rate
+
 
 drbd['sync_rate']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -731,8 +698,7 @@ percentage of the available bandwidth available for DRBD replication.
 
   drbd['sync_rate'] = "40M"
 
-.. index::
-  triple: configuration; drbd; version
+
 
 drbd['version']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -751,8 +717,6 @@ The version of DRBD installed on the system. Auto-detected.
 
   drbd['version'] = "8.4.1"
 
-.. index::
-  triple: configuration; keepalived; dir
 
 keepalived['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -776,8 +740,6 @@ Where keepalived will store its on-disk data.
 
   keepalived['dir'] = "/var/opt/opscode/keepalived"
 
-.. index::
-  triple: configuration; keepalived; enable
 
 keepalived['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -797,9 +759,6 @@ servers in an ``ha`` ``topology`` will have this enabled.
 .. code-block:: ruby
 
   keepalived['enable'] = false
-
-.. index::
-  triple: configuration; keepalived; log_directory
 
 keepalived['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -823,8 +782,6 @@ The base directory for keepalived log data.
 
   keepalived['log_directory'] = "/var/log/opscode/keepalived"
 
-.. index::
-  triple: configuration; keepalived; svlogd_size
 
 keepalived['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -844,8 +801,6 @@ size, in bytes, of the logfile.
 
   keepalived['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; keepalived; svlogd_num
 
 keepalived['svlogd_num']
 v
@@ -865,8 +820,6 @@ number of logfiles retained.
 
   keepalived['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; keepalived; service_order
 
 keepalived['service_order']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -876,59 +829,55 @@ Primary to Backup.
 
 .. warning::
 
-  Changing this order without consulting with your Opscode Support Engineer
+  Changing this order without consulting with your |opscode| Support Engineer
   will make it very difficult to troubleshoot your ``ha`` cluster.
 
 *Default Value*:
 
 .. code-block:: ruby
 
-  [{"key"=>"couchdb", "service_name"=>"couchdb"},
- {"key"=>"postgresql", "service_name"=>"postgres"},
- {"key"=>"rabbitmq", "service_name"=>"rabbitmq"},
- {"key"=>"redis", "service_name"=>"redis"},
- {"key"=>"opscode-authz", "service_name"=>"opscode-authz"},
- {"key"=>"opscode-certificate", "service_name"=>"opscode-certificate"},
- {"key"=>"opscode-account", "service_name"=>"opscode-account"},
- {"key"=>"opscode-solr", "service_name"=>"opscode-solr"},
- {"key"=>"opscode-expander", "service_name"=>"opscode-expander"},
- {"key"=>"opscode-expander", "service_name"=>"opscode-expander-reindexer"},
- {"key"=>"opscode-org-creator", "service_name"=>"opscode-org-creator"},
- {"key"=>"opscode-chef", "service_name"=>"opscode-chef"},
- {"key"=>"opscode-erchef", "service_name"=>"opscode-erchef"},
- {"key"=>"opscode-webui", "service_name"=>"opscode-webui"},
- {"key"=>"nagios", "service_name"=>"php-fpm"},
- {"key"=>"nagios", "service_name"=>"fcgiwrap"},
- {"key"=>"nagios", "service_name"=>"nagios"},
- {"key"=>"nginx", "service_name"=>"nginx"}]
-
+   [{"key"=>"couchdb", "service_name"=>"couchdb"},
+     {"key"=>"postgresql", "service_name"=>"postgres"},
+     {"key"=>"rabbitmq", "service_name"=>"rabbitmq"},
+     {"key"=>"redis", "service_name"=>"redis"},
+     {"key"=>"opscode-authz", "service_name"=>"opscode-authz"},
+     {"key"=>"opscode-certificate", "service_name"=>"opscode-certificate"},
+     {"key"=>"opscode-account", "service_name"=>"opscode-account"},
+     {"key"=>"opscode-solr", "service_name"=>"opscode-solr"},
+     {"key"=>"opscode-expander", "service_name"=>"opscode-expander"},
+     {"key"=>"opscode-expander", "service_name"=>"opscode-expander-reindexer"},
+     {"key"=>"opscode-org-creator", "service_name"=>"opscode-org-creator"},
+     {"key"=>"opscode-chef", "service_name"=>"opscode-chef"},
+     {"key"=>"opscode-erchef", "service_name"=>"opscode-erchef"},
+     {"key"=>"opscode-webui", "service_name"=>"opscode-webui"},
+     {"key"=>"nagios", "service_name"=>"php-fpm"},
+     {"key"=>"nagios", "service_name"=>"fcgiwrap"},
+     {"key"=>"nagios", "service_name"=>"nagios"},
+     {"key"=>"nginx", "service_name"=>"nginx"}]
 
 *Example*:
 
 .. code-block:: ruby
 
-  keepalived['service_order'] = [{"key"=>"couchdb", "service_name"=>"couchdb"},
- {"key"=>"postgresql", "service_name"=>"postgres"},
- {"key"=>"rabbitmq", "service_name"=>"rabbitmq"},
- {"key"=>"redis", "service_name"=>"redis"},
- {"key"=>"opscode-authz", "service_name"=>"opscode-authz"},
- {"key"=>"opscode-certificate", "service_name"=>"opscode-certificate"},
- {"key"=>"opscode-account", "service_name"=>"opscode-account"},
- {"key"=>"opscode-solr", "service_name"=>"opscode-solr"},
- {"key"=>"opscode-expander", "service_name"=>"opscode-expander"},
- {"key"=>"opscode-expander", "service_name"=>"opscode-expander-reindexer"},
- {"key"=>"opscode-org-creator", "service_name"=>"opscode-org-creator"},
- {"key"=>"opscode-chef", "service_name"=>"opscode-chef"},
- {"key"=>"opscode-erchef", "service_name"=>"opscode-erchef"},
- {"key"=>"opscode-webui", "service_name"=>"opscode-webui"},
- {"key"=>"nagios", "service_name"=>"php-fpm"},
- {"key"=>"nagios", "service_name"=>"fcgiwrap"},
- {"key"=>"nagios", "service_name"=>"nagios"},
- {"key"=>"nginx", "service_name"=>"nginx"}]
+   keepalived['service_order'] = [{"key"=>"couchdb", "service_name"=>"couchdb"},
+     {"key"=>"postgresql", "service_name"=>"postgres"},
+     {"key"=>"rabbitmq", "service_name"=>"rabbitmq"},
+     {"key"=>"redis", "service_name"=>"redis"},
+     {"key"=>"opscode-authz", "service_name"=>"opscode-authz"},
+     {"key"=>"opscode-certificate", "service_name"=>"opscode-certificate"},
+     {"key"=>"opscode-account", "service_name"=>"opscode-account"},
+     {"key"=>"opscode-solr", "service_name"=>"opscode-solr"},
+     {"key"=>"opscode-expander", "service_name"=>"opscode-expander"},
+     {"key"=>"opscode-expander", "service_name"=>"opscode-expander-reindexer"},
+     {"key"=>"opscode-org-creator", "service_name"=>"opscode-org-creator"},
+     {"key"=>"opscode-chef", "service_name"=>"opscode-chef"},
+     {"key"=>"opscode-erchef", "service_name"=>"opscode-erchef"},
+     {"key"=>"opscode-webui", "service_name"=>"opscode-webui"},
+     {"key"=>"nagios", "service_name"=>"php-fpm"},
+     {"key"=>"nagios", "service_name"=>"fcgiwrap"},
+     {"key"=>"nagios", "service_name"=>"nagios"},
+     {"key"=>"nginx", "service_name"=>"nginx"}]
 
-
-.. index::
-  triple: configuration; keepalived; smtp_connect_timeout
 
 keepalived['smtp_connect_timeout']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -947,8 +896,6 @@ When sending messages about transitions, how long to wait to connect with an STM
 
   keepalived['smtp_connect_timeout'] = "30"
 
-.. index::
-  triple: configuration; keepalived; smtp_server
 
 keepalived['smtp_server']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -967,8 +914,6 @@ The SMTP server to connect to.
 
   keepalived['smtp_server'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; keepalived; vrrp_instance_advert_int
 
 keepalived['vrrp_instance_advert_int']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -987,8 +932,6 @@ How often should the ``primary`` server advertise, in seconds.
 
   keepalived['vrrp_instance_advert_int'] = "1"
 
-.. index::
-  triple: configuration; keepalived; vrrp_instance_interface
 
 keepalived['vrrp_instance_interface']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1009,8 +952,6 @@ dedicated interface.
 
   keepalived['vrrp_instance_interface'] = "eth0"
 
-.. index::
-  triple: configuration; keepalived; vrrp_instance_ipaddress
 
 keepalived['vrrp_instance_ipaddress']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1024,8 +965,6 @@ option.
 
   keepalived['vrrp_instance_ipaddress'] = "192.168.4.131"
 
-.. index::
-  triple: configuration; keepalived; vrrp_instance_ipaddress_dev
 
 keepalived['vrrp_instance_ipaddress_dev']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1044,8 +983,6 @@ The device to add the virtual IP address to.
 
   keepalived['vrrp_instance_ipaddress_dev'] = "eth0"
 
-.. index::
-  triple: configuration; keepalived; vrrp_instance_password
 
 keepalived['vrrp_instance_password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1069,8 +1006,6 @@ The secret key for VRRP pairs.
 
   keepalived['vrrp_instance_password'] = "sneakybeaky"
 
-.. index::
-  triple: configuration; keepalived; vrrp_instance_priority
 
 keepalived['vrrp_instance_priority']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1091,8 +1026,6 @@ Set to a lower value on the host you want to have be preferred.
 
   keepalived['vrrp_instance_priority'] = "100"
 
-.. index::
-  triple: configuration; keepalived; vrrp_instance_state
 
 keepalived['vrrp_instance_state']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1112,8 +1045,6 @@ back-end systems.
 
   keepalived['vrrp_instance_state'] = "MASTER"
 
-.. index::
-  triple: configuration; keepalived; vrrp_instance_virtual_router_id
 
 keepalived['vrrp_instance_virtual_router_id']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1133,8 +1064,6 @@ within the multicast domain you are using for keepalived.
 
   keepalived['vrrp_instance_virtual_router_id'] = "1"
 
-.. index::
-  triple: configuration; keepalived; vrrp_unicast_bind
 
 keepalived['vrrp_unicast_bind']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1146,7 +1075,7 @@ to talk to its peer.  This should be undefined in order to use multicast.
 
   This will be configured automatically based on settings derived from the
   /etc/opscode/private-chef.rb file.  Changing this order without consulting
-  with your Opscode Support Engineer will make it very difficult to
+  with your |opscode| Support Engineer will make it very difficult to
   troubleshoot your ``ha`` cluster.
 
 *Default Value*:
@@ -1161,8 +1090,6 @@ to talk to its peer.  This should be undefined in order to use multicast.
 
   keepalived['vrrp_unicast_bind'] = nil
 
-.. index::
-  triple: configuration; keepalived; vrrp_unicast_peer
 
 keepalived['vrrp_unicast_peer']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1174,7 +1101,7 @@ to talk to its peer.  This should be undefined in order to use multicast.
 
   This will be configured automatically based on settings derived from the
   /etc/opscode/private-chef.rb file.  Changing this order without consulting
-  with your Opscode Support Engineer will make it very difficult to
+  with your |opscode| Support Engineer will make it very difficult to
   troubleshoot your ``ha`` cluster.
 
 *Default Value*:
@@ -1189,8 +1116,6 @@ to talk to its peer.  This should be undefined in order to use multicast.
 
   keepalived['vrrp_unicast_peer'] = nil
 
-.. index::
-  triple: configuration; lb; api_fqdn
 
 
 lb['api_fqdn']
@@ -1208,8 +1133,6 @@ lb['api_fqdn']
 
   lb['api_fqdn'] = "ubuntu.localdomain"
 
-.. index::
-  triple: configuration; lb; cache_cookbook_files
 
 lb['cache_cookbook_files']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1226,8 +1149,6 @@ lb['cache_cookbook_files']
 
   lb['cache_cookbook_files'] = false
 
-.. index::
-  triple: configuration; lb; debug
 
 lb['debug']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1244,8 +1165,7 @@ lb['debug']
 
   lb['debug'] = false
 
-.. index::
-  triple: configuration; lb; enable
+
 
 lb['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1262,8 +1182,7 @@ lb['enable']
 
   lb['enable'] = true
 
-.. index::
-  triple: configuration; lb; upstream
+
 
 lb['upstream']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1273,11 +1192,11 @@ lb['upstream']
 .. code-block:: ruby
 
   {"opscode-chef"=>["127.0.0.1"],
- "opscode-erchef"=>["127.0.0.1"],
- "opscode-account"=>["127.0.0.1"],
- "opscode-webui"=>["127.0.0.1"],
- "opscode-authz"=>["127.0.0.1"],
- "opscode-solr"=>["127.0.0.1"]}
+    "opscode-erchef"=>["127.0.0.1"],
+    "opscode-account"=>["127.0.0.1"],
+    "opscode-webui"=>["127.0.0.1"],
+    "opscode-authz"=>["127.0.0.1"],
+    "opscode-solr"=>["127.0.0.1"]}
 
 
 *Example*:
@@ -1285,15 +1204,12 @@ lb['upstream']
 .. code-block:: ruby
 
   lb['upstream'] = {"opscode-chef"=>["127.0.0.1"],
- "opscode-erchef"=>["127.0.0.1"],
- "opscode-account"=>["127.0.0.1"],
- "opscode-webui"=>["127.0.0.1"],
- "opscode-authz"=>["127.0.0.1"],
- "opscode-solr"=>["127.0.0.1"]}
+    "opscode-erchef"=>["127.0.0.1"],
+    "opscode-account"=>["127.0.0.1"],
+    "opscode-webui"=>["127.0.0.1"],
+    "opscode-authz"=>["127.0.0.1"],
+    "opscode-solr"=>["127.0.0.1"]}
 
-
-.. index::
-  triple: configuration; lb; vip
 
 lb['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1310,8 +1226,7 @@ lb['vip']
 
   lb['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; lb; web_ui_fqdn
+
 
 lb['web_ui_fqdn']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1328,8 +1243,7 @@ lb['web_ui_fqdn']
 
   lb['web_ui_fqdn'] = "ubuntu.localdomain"
 
-.. index::
-  triple: configuration; lb_internal; account_port
+
 
 lb_internal['account_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1346,8 +1260,7 @@ lb_internal['account_port']
 
   lb_internal['account_port'] = 9685
 
-.. index::
-  triple: configuration; lb_internal; authz_port
+
 
 lb_internal['authz_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1364,8 +1277,7 @@ lb_internal['authz_port']
 
   lb_internal['authz_port'] = 9683
 
-.. index::
-  triple: configuration; lb_internal; chef_port
+
 
 lb_internal['chef_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1382,8 +1294,7 @@ lb_internal['chef_port']
 
   lb_internal['chef_port'] = 9680
 
-.. index::
-  triple: configuration; lb_internal; enable
+
 
 lb_internal['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1400,8 +1311,7 @@ lb_internal['enable']
 
   lb_internal['enable'] = true
 
-.. index::
-  triple: configuration; lb_internal; vip
+
 
 lb_internal['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1418,8 +1328,7 @@ lb_internal['vip']
 
   lb_internal['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; mysql; destructive_migrate
+
 
 ldap['host']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1439,8 +1348,6 @@ can resolve any host names.
 
   ldap['host'] = '1.2.3.4'
 
-.. index::
-  triple: configuration; ldap; external authentication
 
 ldap['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1460,8 +1367,7 @@ enough for most installs.
 
   ldap['port'] = '389'
 
-.. index::
-  triple: configuration; ldap; external authentication
+
 
 ldap['ssl_enabled']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1482,8 +1388,7 @@ with the correct value (usually ``636``).
 
   ldap['ssl_enabled'] = true
 
-.. index::
-  triple: configuration; ldap; external authentication
+
 
 ldap['bind_dn']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1506,8 +1411,7 @@ Leave this value unset if anonymous bind is sufficient.
 
   ldap['bind_dn'] = 'cn=bofh,dc=opscode,dc=com'
 
-.. index::
-  triple: configuration; ldap; external authentication
+
 
 ldap['bind_password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1528,8 +1432,6 @@ Leave this value unset if anonymous bind is sufficient.
 
   ldap['bind_password'] = 'supersecret'
 
-.. index::
-  triple: configuration; ldap; external authentication
 
 ldap['base_dn']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1548,8 +1450,6 @@ The LDAP root node, the top entry (starting point) in the directory.
 
   ldap['base_dn'] = 'cn=users,dc=opscode,dc=com'
 
-.. index::
-  triple: configuration; ldap; external authentication
 
 ldap['login_attribute']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1569,8 +1469,6 @@ Directory it will be ``sAMAccountName``, while in OpenLDAP it is ``uid``.
 
   ldap['login_attribute'] = 'sAMAccountName'
 
-.. index::
-  triple: configuration; ldap; external authentication
 
 ldap['system_adjective']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1592,8 +1490,6 @@ the webui will talk about things like "the corporate login server",
 
   ldap['system_adjective'] = 'corporate'
 
-.. index::
-  triple: configuration; ldap; external authentication
 
 mysql['destructive_migrate']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1610,8 +1506,6 @@ mysql['destructive_migrate']
 
   mysql['destructive_migrate'] = false
 
-.. index::
-  triple: configuration; mysql; enable
 
 mysql['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1628,8 +1522,6 @@ mysql['enable']
 
   mysql['enable'] = false
 
-.. index::
-  triple: configuration; mysql; install_libs
 
 mysql['install_libs']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1646,8 +1538,6 @@ mysql['install_libs']
 
   mysql['install_libs'] = true
 
-.. index::
-  triple: configuration; mysql; sql_password
 
 mysql['sql_password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1664,8 +1554,6 @@ mysql['sql_password']
 
   mysql['sql_password'] = "snakepliskin"
 
-.. index::
-  triple: configuration; mysql; sql_user
 
 mysql['sql_user']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1682,8 +1570,6 @@ mysql['sql_user']
 
   mysql['sql_user'] = "opscode_chef"
 
-.. index::
-  triple: configuration; mysql; vip
 
 mysql['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1700,8 +1586,6 @@ mysql['vip']
 
   mysql['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; nagios; admin_email
 
 nagios['admin_email']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1718,8 +1602,6 @@ nagios['admin_email']
 
   nagios['admin_email'] = "nobody@example.com"
 
-.. index::
-  triple: configuration; nagios; admin_pager
 
 nagios['admin_pager']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1736,8 +1618,6 @@ nagios['admin_pager']
 
   nagios['admin_pager'] = "nobody@example.com"
 
-.. index::
-  triple: configuration; nagios; admin_password
 
 nagios['admin_password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1754,8 +1634,6 @@ nagios['admin_password']
 
   nagios['admin_password'] = "privatechef"
 
-.. index::
-  triple: configuration; nagios; admin_user
 
 nagios['admin_user']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1772,8 +1650,6 @@ nagios['admin_user']
 
   nagios['admin_user'] = "nagiosadmin"
 
-.. index::
-  triple: configuration; nagios; alert_email
 
 nagios['alert_email']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1790,8 +1666,6 @@ nagios['alert_email']
 
   nagios['alert_email'] = "nobody@example.com"
 
-.. index::
-  triple: configuration; nagios; debug_level
 
 nagios['debug_level']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1808,8 +1682,6 @@ nagios['debug_level']
 
   nagios['debug_level'] = 0
 
-.. index::
-  triple: configuration; nagios; debug_verbosity
 
 nagios['debug_verbosity']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1826,8 +1698,6 @@ nagios['debug_verbosity']
 
   nagios['debug_verbosity'] = 1
 
-.. index::
-  triple: configuration; nagios; default_host
 
 nagios['default_host']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1837,9 +1707,9 @@ nagios['default_host']
 .. code-block:: ruby
 
   {"check_interval"=>15,
- "retry_interval"=>15,
- "max_check_attempts"=>1,
- "notification_interval"=>300}
+    "retry_interval"=>15,
+    "max_check_attempts"=>1,
+    "notification_interval"=>300}
 
 
 *Example*:
@@ -1847,13 +1717,9 @@ nagios['default_host']
 .. code-block:: ruby
 
   nagios['default_host'] = {"check_interval"=>15,
- "retry_interval"=>15,
- "max_check_attempts"=>1,
- "notification_interval"=>300}
-
-
-.. index::
-  triple: configuration; nagios; default_service
+    "retry_interval"=>15,
+    "max_check_attempts"=>1,
+    "notification_interval"=>300}
 
 nagios['default_service']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1878,9 +1744,6 @@ nagios['default_service']
  "notification_interval"=>1200}
 
 
-.. index::
-  triple: configuration; nagios; dir
-
 nagios['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -1896,8 +1759,6 @@ nagios['dir']
 
   nagios['dir'] = "/var/opt/opscode/nagios"
 
-.. index::
-  triple: configuration; nagios; enable
 
 nagios['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1914,8 +1775,6 @@ nagios['enable']
 
   nagios['enable'] = true
 
-.. index::
-  triple: configuration; nagios; fcgiwrap_log_directory
 
 nagios['fcgiwrap_log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1932,8 +1791,6 @@ nagios['fcgiwrap_log_directory']
 
   nagios['fcgiwrap_log_directory'] = "/var/log/opscode/fcgiwrap"
 
-.. index::
-  triple: configuration; nagios; fcgiwrap_svlogd_size
 
 nagios['fcgiwrap_svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1953,8 +1810,6 @@ size, in bytes, of the logfile.
 
   nagios['fcgiwrap_svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; nagios; fcgiwrap_svlogd_num
 
 nagios['fcgiwrap_svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1974,8 +1829,6 @@ number of logfiles retained.
 
   nagios['fcgiwrap_svlogd_num'] = 10
 
-.. index::
-  triple: configuration; nagios; fcgiwrap_port
 
 nagios['fcgiwrap_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1992,8 +1845,6 @@ nagios['fcgiwrap_port']
 
   nagios['fcgiwrap_port'] = 9670
 
-.. index::
-  triple: configuration; nagios; ha
 
 nagios['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2010,8 +1861,6 @@ nagios['ha']
 
   nagios['ha'] = false
 
-.. index::
-  triple: configuration; nagios; hosts
 
 nagios['hosts']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2030,8 +1879,6 @@ nagios['hosts']
   nagios['hosts'] = {"ubuntu"=>{"ipaddress"=>"192.168.4.131", "hostgroups"=>[]}}
 
 
-.. index::
-  triple: configuration; nagios; interval_length
 
 nagios['interval_length']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2048,8 +1895,6 @@ nagios['interval_length']
 
   nagios['interval_length'] = 1
 
-.. index::
-  triple: configuration; nagios; log_directory
 
 nagios['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2066,8 +1911,6 @@ nagios['log_directory']
 
   nagios['log_directory'] = "/var/log/opscode/nagios"
 
-.. index::
-  triple: configuration; nagios; svlogd_size
 
 nagios['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2087,8 +1930,6 @@ size, in bytes, of the logfile.
 
   nagios['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; nagios; svlogd_num
 
 nagios['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2108,8 +1949,6 @@ number of logfiles retained.
 
   nagios['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; nagios; php_fpm_log_directory
 
 nagios['php_fpm_log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2126,8 +1965,6 @@ nagios['php_fpm_log_directory']
 
   nagios['php_fpm_log_directory'] = "/var/log/opscode/php-fpm"
 
-.. index::
-  triple: configuration; nagios; php_fpm_svlogd_size
 
 nagios['php_fpm_svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2147,8 +1984,6 @@ size, in bytes, of the logfile.
 
   nagios['php_fpm_svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; nagios; php_fpm_svlogd_num
 
 nagios['php_fpm_svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2168,8 +2003,6 @@ number of logfiles retained.
 
   nagios['php_fpm_svlogd_num'] = 10
 
-.. index::
-  triple: configuration; nagios; php_fpm_port
 
 nagios['php_fpm_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2186,8 +2019,6 @@ nagios['php_fpm_port']
 
   nagios['php_fpm_port'] = 9000
 
-.. index::
-  triple: configuration; nagios; port
 
 nagios['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2204,8 +2035,6 @@ nagios['port']
 
   nagios['port'] = 9671
 
-.. index::
-  triple: configuration; nginx; cache_max_size
 
 nginx['cache_max_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2222,8 +2051,6 @@ nginx['cache_max_size']
 
   nginx['cache_max_size'] = "5000m"
 
-.. index::
-  triple: configuration; nginx; client_max_body_size
 
 nginx['client_max_body_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2240,8 +2067,6 @@ nginx['client_max_body_size']
 
   nginx['client_max_body_size'] = "250m"
 
-.. index::
-  triple: configuration; nginx; dir
 
 nginx['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2258,8 +2083,6 @@ nginx['dir']
 
   nginx['dir'] = "/var/opt/opscode/nginx"
 
-.. index::
-  triple: configuration; nginx; enable
 
 nginx['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2276,8 +2099,6 @@ nginx['enable']
 
   nginx['enable'] = true
 
-.. index::
-  triple: configuration; nginx; gzip
 
 nginx['gzip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2294,8 +2115,7 @@ nginx['gzip']
 
   nginx['gzip'] = "on"
 
-.. index::
-  triple: configuration; nginx; gzip_comp_level
+
 
 nginx['gzip_comp_level']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2312,8 +2132,7 @@ nginx['gzip_comp_level']
 
   nginx['gzip_comp_level'] = "2"
 
-.. index::
-  triple: configuration; nginx; gzip_http_version
+
 
 nginx['gzip_http_version']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2330,8 +2149,6 @@ nginx['gzip_http_version']
 
   nginx['gzip_http_version'] = "1.0"
 
-.. index::
-  triple: configuration; nginx; gzip_proxied
 
 nginx['gzip_proxied']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2348,8 +2165,7 @@ nginx['gzip_proxied']
 
   nginx['gzip_proxied'] = "any"
 
-.. index::
-  triple: configuration; nginx; gzip_types
+
 
 nginx['gzip_types']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2380,8 +2196,7 @@ nginx['gzip_types']
  "text/javascript"]
 
 
-.. index::
-  triple: configuration; nginx; ha
+
 
 nginx['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2398,8 +2213,7 @@ nginx['ha']
 
   nginx['ha'] = false
 
-.. index::
-  triple: configuration; nginx; keepalive_timeout
+
 
 nginx['keepalive_timeout']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2416,8 +2230,7 @@ nginx['keepalive_timeout']
 
   nginx['keepalive_timeout'] = 65
 
-.. index::
-  triple: configuration; nginx; log_directory
+
 
 nginx['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2434,8 +2247,7 @@ nginx['log_directory']
 
   nginx['log_directory'] = "/var/log/opscode/nginx"
 
-.. index::
-  triple: configuration; nginx; svlogd_size
+
 
 nginx['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2455,8 +2267,7 @@ size, in bytes, of the logfile.
 
   nginx['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; nginx; svlogd_num
+
 
 nginx['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2476,8 +2287,7 @@ number of logfiles retained.
 
   nginx['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; nginx; sendfile
+
 
 nginx['sendfile']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2494,8 +2304,7 @@ nginx['sendfile']
 
   nginx['sendfile'] = "on"
 
-.. index::
-  triple: configuration; nginx; server_name
+
 
 nginx['server_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2512,8 +2321,7 @@ nginx['server_name']
 
   nginx['server_name'] = "ubuntu.localdomain"
 
-.. index::
-  triple: configuration; nginx; ssl_certificate
+
 
 nginx['ssl_certificate']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2530,8 +2338,6 @@ nginx['ssl_certificate']
 
   nginx['ssl_certificate'] = nil
 
-.. index::
-  triple: configuration; nginx; ssl_certificate_key
 
 nginx['ssl_certificate_key']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2548,8 +2354,7 @@ nginx['ssl_certificate_key']
 
   nginx['ssl_certificate_key'] = nil
 
-.. index::
-  triple: configuration; nginx; ssl_ciphers
+
 
 nginx['ssl_ciphers']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2566,8 +2371,7 @@ nginx['ssl_ciphers']
 
   nginx['ssl_ciphers'] = "RC4-SHA:RC4-MD5:RC4:RSA:HIGH:MEDIUM:!LOW:!kEDH:!aNULL:!ADH:!eNULL:!EXP:!SSLv2:!SEED:!CAMELLIA:!PSK"
 
-.. index::
-  triple: configuration; nginx; ssl_company_name
+
 
 nginx['ssl_company_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2584,8 +2388,7 @@ nginx['ssl_company_name']
 
   nginx['ssl_company_name'] = "YouCorp"
 
-.. index::
-  triple: configuration; nginx; ssl_country_name
+
 
 nginx['ssl_country_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2602,8 +2405,7 @@ nginx['ssl_country_name']
 
   nginx['ssl_country_name'] = "US"
 
-.. index::
-  triple: configuration; nginx; ssl_email_address
+
 
 nginx['ssl_email_address']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2620,8 +2422,7 @@ nginx['ssl_email_address']
 
   nginx['ssl_email_address'] = "you@example.com"
 
-.. index::
-  triple: configuration; nginx; ssl_locality_name
+
 
 nginx['ssl_locality_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2638,8 +2439,7 @@ nginx['ssl_locality_name']
 
   nginx['ssl_locality_name'] = "Seattle"
 
-.. index::
-  triple: configuration; nginx; ssl_organizational_unit_name
+
 
 nginx['ssl_organizational_unit_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2656,8 +2456,7 @@ nginx['ssl_organizational_unit_name']
 
   nginx['ssl_organizational_unit_name'] = "Operations"
 
-.. index::
-  triple: configuration; nginx; enable_non_ssl
+
 
 nginx['enable_non_ssl']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2678,8 +2477,7 @@ of the WebUI and API front end.
 
   nginx['enable_non_ssl'] = true
 
-.. index::
-  triple: configuration; nginx; non_ssl_port
+
 
 nginx['non_ssl_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2701,8 +2499,7 @@ this port see the nginx['enable_non_ssl'] parameter.
 
   nginx['non_ssl_port'] = 80
 
-.. index::
-  triple: configuration; nginx; ssl_port
+
 
 nginx['ssl_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2719,8 +2516,7 @@ nginx['ssl_port']
 
   nginx['ssl_port'] = 443
 
-.. index::
-  triple: configuration; nginx; ssl_protocols
+
 
 nginx['ssl_protocols']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2737,8 +2533,7 @@ nginx['ssl_protocols']
 
   nginx['ssl_protocols'] = "SSLv3 TLSv1"
 
-.. index::
-  triple: configuration; nginx; ssl_state_name
+
 
 nginx['ssl_state_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2755,8 +2550,7 @@ nginx['ssl_state_name']
 
   nginx['ssl_state_name'] = "WA"
 
-.. index::
-  triple: configuration; nginx; tcp_nodelay
+
 
 nginx['tcp_nodelay']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2773,8 +2567,7 @@ nginx['tcp_nodelay']
 
   nginx['tcp_nodelay'] = "on"
 
-.. index::
-  triple: configuration; nginx; tcp_nopush
+
 
 nginx['tcp_nopush']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2791,8 +2584,7 @@ nginx['tcp_nopush']
 
   nginx['tcp_nopush'] = "on"
 
-.. index::
-  triple: configuration; nginx; url
+
 
 nginx['url']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2809,8 +2601,7 @@ nginx['url']
 
   nginx['url'] = "https://ubuntu.localdomain"
 
-.. index::
-  triple: configuration; nginx; worker_connections
+
 
 nginx['worker_connections']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2827,8 +2618,7 @@ nginx['worker_connections']
 
   nginx['worker_connections'] = 10240
 
-.. index::
-  triple: configuration; nginx; worker_processes
+
 
 nginx['worker_processes']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2845,8 +2635,7 @@ nginx['worker_processes']
 
   nginx['worker_processes'] = 4
 
-.. index::
-  triple: configuration; nginx; x_forwarded_proto
+
 
 nginx['x_forwarded_proto']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2866,8 +2655,7 @@ to connect to the Private Chef API by your clients.
 
   nginx['x_forwarded_protocol'] = "http"
 
-.. index::
-  triple: configuration; nrpe; allowed_hosts
+
 
 nrpe['allowed_hosts']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2886,8 +2674,6 @@ nrpe['allowed_hosts']
   nrpe['allowed_hosts'] = ["127.0.0.1", "192.168.4.131"]
 
 
-.. index::
-  triple: configuration; nrpe; dir
 
 nrpe['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2904,8 +2690,7 @@ nrpe['dir']
 
   nrpe['dir'] = "/var/opt/opscode/nrpe"
 
-.. index::
-  triple: configuration; nrpe; enable
+
 
 nrpe['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2922,8 +2707,6 @@ nrpe['enable']
 
   nrpe['enable'] = true
 
-.. index::
-  triple: configuration; nrpe; listen
 
 nrpe['listen']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2940,8 +2723,6 @@ nrpe['listen']
 
   nrpe['listen'] = "192.168.4.131"
 
-.. index::
-  triple: configuration; nrpe; log_directory
 
 nrpe['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2958,8 +2739,7 @@ nrpe['log_directory']
 
   nrpe['log_directory'] = "/var/log/opscode/nrpe"
 
-.. index::
-  triple: configuration; nrpe; svlogd_size
+
 
 nrpe['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2979,8 +2759,7 @@ size, in bytes, of the logfile.
 
   nrpe['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; nrpe; svlogd_num
+
 
 nrpe['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3000,8 +2779,7 @@ number of logfiles retained.
 
   nrpe['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; nrpe; port
+
 
 nrpe['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3018,8 +2796,6 @@ nrpe['port']
 
   nrpe['port'] = 9672
 
-.. index::
-  triple: configuration; opscode_account; backlog
 
 opscode_account['backlog']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3036,8 +2812,6 @@ opscode_account['backlog']
 
   opscode_account['backlog'] = 1024
 
-.. index::
-  triple: configuration; opscode_account; dir
 
 opscode_account['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3054,8 +2828,7 @@ opscode_account['dir']
 
   opscode_account['dir'] = "/var/opt/opscode/opscode-account"
 
-.. index::
-  triple: configuration; opscode_account; enable
+
 
 opscode_account['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3072,8 +2845,7 @@ opscode_account['enable']
 
   opscode_account['enable'] = true
 
-.. index::
-  triple: configuration; opscode_account; environment
+
 
 opscode_account['environment']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3090,8 +2862,7 @@ opscode_account['environment']
 
   opscode_account['environment'] = "privatechef"
 
-.. index::
-  triple: configuration; opscode_account; ha
+
 
 opscode_account['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3108,8 +2879,7 @@ opscode_account['ha']
 
   opscode_account['ha'] = false
 
-.. index::
-  triple: configuration; opscode_account; listen
+
 
 opscode_account['listen']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3126,8 +2896,7 @@ opscode_account['listen']
 
   opscode_account['listen'] = "127.0.0.1:9465"
 
-.. index::
-  triple: configuration; opscode_account; log_directory
+
 
 opscode_account['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3144,8 +2913,7 @@ opscode_account['log_directory']
 
   opscode_account['log_directory'] = "/var/log/opscode/opscode-account"
 
-.. index::
-  triple: configuration; opscode_account; svlogd_size
+
 
 opscode_account['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3165,8 +2933,7 @@ size, in bytes, of the logfile.
 
   opscode_account['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_account; svlogd_num
+
 
 opscode_account['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3186,8 +2953,7 @@ number of logfiles retained.
 
   opscode_account['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_account; port
+
 
 opscode_account['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3204,8 +2970,7 @@ opscode_account['port']
 
   opscode_account['port'] = 9465
 
-.. index::
-  triple: configuration; opscode_account; proxy_user
+
 
 opscode_account['proxy_user']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3222,8 +2987,7 @@ opscode_account['proxy_user']
 
   opscode_account['proxy_user'] = "pivotal"
 
-.. index::
-  triple: configuration; opscode_account; session_secret_key
+
 
 opscode_account['session_secret_key']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3240,8 +3004,7 @@ opscode_account['session_secret_key']
 
   opscode_account['session_secret_key'] = "change-by-default"
 
-.. index::
-  triple: configuration; opscode_account; tcp_nodelay
+
 
 opscode_account['tcp_nodelay']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3258,8 +3021,6 @@ opscode_account['tcp_nodelay']
 
   opscode_account['tcp_nodelay'] = true
 
-.. index::
-  triple: configuration; opscode_account; umask
 
 opscode_account['umask']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3276,8 +3037,7 @@ opscode_account['umask']
 
   opscode_account['umask'] = "0022"
 
-.. index::
-  triple: configuration; opscode_account; url
+
 
 opscode_account['url']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3294,8 +3054,7 @@ opscode_account['url']
 
   opscode_account['url'] = "http://127.0.0.1:9465"
 
-.. index::
-  triple: configuration; opscode_account; validation_client_name
+
 
 opscode_account['validation_client_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3312,8 +3071,7 @@ opscode_account['validation_client_name']
 
   opscode_account['validation_client_name'] = "chef"
 
-.. index::
-  triple: configuration; opscode_account; vip
+
 
 opscode_account['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3330,8 +3088,7 @@ opscode_account['vip']
 
   opscode_account['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_account; worker_processes
+
 
 opscode_account['worker_processes']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3348,8 +3105,7 @@ opscode_account['worker_processes']
 
   opscode_account['worker_processes'] = 4
 
-.. index::
-  triple: configuration; opscode_account; worker_timeout
+
 
 opscode_account['worker_timeout']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3366,8 +3122,7 @@ opscode_account['worker_timeout']
 
   opscode_account['worker_timeout'] = 3600
 
-.. index::
-  triple: configuration; opscode_authz; caching
+
 
 opscode_authz['caching']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3384,8 +3139,7 @@ opscode_authz['caching']
 
   opscode_authz['caching'] = "enabled"
 
-.. index::
-  triple: configuration; opscode_authz; dir
+
 
 opscode_authz['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3402,8 +3156,7 @@ opscode_authz['dir']
 
   opscode_authz['dir'] = "/var/opt/opscode/opscode-authz"
 
-.. index::
-  triple: configuration; opscode_authz; enable
+
 
 opscode_authz['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3420,8 +3173,7 @@ opscode_authz['enable']
 
   opscode_authz['enable'] = true
 
-.. index::
-  triple: configuration; opscode_authz; ha
+
 
 opscode_authz['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3438,8 +3190,7 @@ opscode_authz['ha']
 
   opscode_authz['ha'] = false
 
-.. index::
-  triple: configuration; opscode_authz; log_directory
+
 
 opscode_authz['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3456,8 +3207,7 @@ opscode_authz['log_directory']
 
   opscode_authz['log_directory'] = "/var/log/opscode/opscode-authz"
 
-.. index::
-  triple: configuration; opscode_authz; svlogd_size
+
 
 opscode_authz['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3477,8 +3227,7 @@ size, in bytes, of the logfile.
 
   opscode_authz['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_authz; svlogd_num
+
 
 opscode_authz['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3498,8 +3247,7 @@ number of logfiles retained.
 
   opscode_authz['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_authz; port
+
 
 opscode_authz['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3516,8 +3264,7 @@ opscode_authz['port']
 
   opscode_authz['port'] = 9463
 
-.. index::
-  triple: configuration; opscode_authz; vip
+
 
 opscode_authz['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3534,8 +3281,7 @@ opscode_authz['vip']
 
   opscode_authz['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_certificate; dir
+
 
 opscode_certificate['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3552,8 +3298,7 @@ opscode_certificate['dir']
 
   opscode_certificate['dir'] = "/var/opt/opscode/opscode-certificate"
 
-.. index::
-  triple: configuration; opscode_certificate; enable
+
 
 opscode_certificate['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3570,8 +3315,7 @@ opscode_certificate['enable']
 
   opscode_certificate['enable'] = true
 
-.. index::
-  triple: configuration; opscode_certificate; ha
+
 
 opscode_certificate['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3588,8 +3332,7 @@ opscode_certificate['ha']
 
   opscode_certificate['ha'] = false
 
-.. index::
-  triple: configuration; opscode_certificate; log_directory
+
 
 opscode_certificate['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3606,8 +3349,7 @@ opscode_certificate['log_directory']
 
   opscode_certificate['log_directory'] = "/var/log/opscode/opscode-certificate"
 
-.. index::
-  triple: configuration; opscode_certificate; svlogd_size
+
 
 opscode_certificate['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3627,8 +3369,7 @@ size, in bytes, of the logfile.
 
   opscode_certificate['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_certificate; svlogd_num
+
 
 opscode_certificate['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3648,8 +3389,7 @@ number of logfiles retained.
 
   opscode_certificate['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_certificate; num_certificates_per_worker
+
 
 opscode_certificate['num_certificates_per_worker']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3666,8 +3406,7 @@ opscode_certificate['num_certificates_per_worker']
 
   opscode_certificate['num_certificates_per_worker'] = "50"
 
-.. index::
-  triple: configuration; opscode_certificate; num_workers
+
 
 opscode_certificate['num_workers']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3684,8 +3423,7 @@ opscode_certificate['num_workers']
 
   opscode_certificate['num_workers'] = "2"
 
-.. index::
-  triple: configuration; opscode_certificate; port
+
 
 opscode_certificate['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3702,8 +3440,7 @@ opscode_certificate['port']
 
   opscode_certificate['port'] = 5140
 
-.. index::
-  triple: configuration; opscode_certificate; vip
+
 
 opscode_certificate['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3720,8 +3457,7 @@ opscode_certificate['vip']
 
   opscode_certificate['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_chef; backlog
+
 
 opscode_chef['backlog']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3738,8 +3474,7 @@ opscode_chef['backlog']
 
   opscode_chef['backlog'] = 1024
 
-.. index::
-  triple: configuration; opscode_chef; checksum_path
+
 
 opscode_chef['checksum_path']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3756,8 +3491,7 @@ opscode_chef['checksum_path']
 
   opscode_chef['checksum_path'] = "/var/opt/opscode/opscode-chef/checksum"
 
-.. index::
-  triple: configuration; opscode_chef; dir
+
 
 opscode_chef['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3774,8 +3508,7 @@ opscode_chef['dir']
 
   opscode_chef['dir'] = "/var/opt/opscode/opscode-chef"
 
-.. index::
-  triple: configuration; opscode_chef; enable
+
 
 opscode_chef['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3792,8 +3525,7 @@ opscode_chef['enable']
 
   opscode_chef['enable'] = true
 
-.. index::
-  triple: configuration; opscode_chef; environment
+
 
 opscode_chef['environment']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3810,8 +3542,7 @@ opscode_chef['environment']
 
   opscode_chef['environment'] = "privatechef"
 
-.. index::
-  triple: configuration; opscode_chef; ha
+
 
 opscode_chef['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3828,8 +3559,7 @@ opscode_chef['ha']
 
   opscode_chef['ha'] = false
 
-.. index::
-  triple: configuration; opscode_chef; listen
+
 
 opscode_chef['listen']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3846,8 +3576,7 @@ opscode_chef['listen']
 
   opscode_chef['listen'] = "127.0.0.1:9460"
 
-.. index::
-  triple: configuration; opscode_chef; log_directory
+
 
 opscode_chef['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3864,8 +3593,7 @@ opscode_chef['log_directory']
 
   opscode_chef['log_directory'] = "/var/log/opscode/opscode-chef"
 
-.. index::
-  triple: configuration; opscode_chef; svlogd_size
+
 
 opscode_chef['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3885,8 +3613,7 @@ size, in bytes, of the logfile.
 
   opscode_chef['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_chef; svlogd_num
+
 
 opscode_chef['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3906,8 +3633,6 @@ number of logfiles retained.
 
   opscode_chef['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_chef; port
 
 opscode_chef['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3924,8 +3649,7 @@ opscode_chef['port']
 
   opscode_chef['port'] = 9460
 
-.. index::
-  triple: configuration; opscode_chef; proxy_user
+
 
 opscode_chef['proxy_user']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3942,8 +3666,7 @@ opscode_chef['proxy_user']
 
   opscode_chef['proxy_user'] = "pivotal"
 
-.. index::
-  triple: configuration; opscode_chef; sandbox_path
+
 
 opscode_chef['sandbox_path']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3960,8 +3683,7 @@ opscode_chef['sandbox_path']
 
   opscode_chef['sandbox_path'] = "/var/opt/opscode/opscode-chef/sandbox"
 
-.. index::
-  triple: configuration; opscode_chef; tcp_nodelay
+
 
 opscode_chef['tcp_nodelay']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3978,8 +3700,7 @@ opscode_chef['tcp_nodelay']
 
   opscode_chef['tcp_nodelay'] = true
 
-.. index::
-  triple: configuration; opscode_chef; umask
+
 
 opscode_chef['umask']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -3996,8 +3717,7 @@ opscode_chef['umask']
 
   opscode_chef['umask'] = "0022"
 
-.. index::
-  triple: configuration; opscode_chef; upload_internal_port
+
 
 opscode_chef['upload_internal_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4014,8 +3734,7 @@ opscode_chef['upload_internal_port']
 
   opscode_chef['upload_internal_port'] = 9460
 
-.. index::
-  triple: configuration; opscode_chef; upload_internal_proto
+
 
 opscode_chef['upload_internal_proto']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4032,8 +3751,7 @@ opscode_chef['upload_internal_proto']
 
   opscode_chef['upload_internal_proto'] = "http"
 
-.. index::
-  triple: configuration; opscode_chef; upload_internal_vip
+
 
 opscode_chef['upload_internal_vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4050,8 +3768,7 @@ opscode_chef['upload_internal_vip']
 
   opscode_chef['upload_internal_vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_chef; upload_port
+
 
 opscode_chef['upload_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4068,8 +3785,7 @@ opscode_chef['upload_port']
 
   opscode_chef['upload_port'] = 9460
 
-.. index::
-  triple: configuration; opscode_chef; upload_proto
+
 
 opscode_chef['upload_proto']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4086,8 +3802,7 @@ opscode_chef['upload_proto']
 
   opscode_chef['upload_proto'] = "http"
 
-.. index::
-  triple: configuration; opscode_chef; upload_vip
+
 
 opscode_chef['upload_vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4104,8 +3819,7 @@ opscode_chef['upload_vip']
 
   opscode_chef['upload_vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_chef; url
+
 
 opscode_chef['url']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4122,8 +3836,7 @@ opscode_chef['url']
 
   opscode_chef['url'] = "http://127.0.0.1:9460"
 
-.. index::
-  triple: configuration; opscode_chef; validation_client_name
+
 
 opscode_chef['validation_client_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4140,8 +3853,7 @@ opscode_chef['validation_client_name']
 
   opscode_chef['validation_client_name'] = "chef"
 
-.. index::
-  triple: configuration; opscode_chef; vip
+
 
 opscode_chef['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4158,8 +3870,7 @@ opscode_chef['vip']
 
   opscode_chef['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_chef; web_ui_admin_default_password
+
 
 opscode_chef['web_ui_admin_default_password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4176,8 +3887,7 @@ opscode_chef['web_ui_admin_default_password']
 
   opscode_chef['web_ui_admin_default_password'] = "p@ssw0rd1"
 
-.. index::
-  triple: configuration; opscode_chef; web_ui_admin_user_name
+
 
 opscode_chef['web_ui_admin_user_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4194,8 +3904,7 @@ opscode_chef['web_ui_admin_user_name']
 
   opscode_chef['web_ui_admin_user_name'] = "admin"
 
-.. index::
-  triple: configuration; opscode_chef; web_ui_client_name
+
 
 opscode_chef['web_ui_client_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4212,8 +3921,7 @@ opscode_chef['web_ui_client_name']
 
   opscode_chef['web_ui_client_name'] = "chef-webui"
 
-.. index::
-  triple: configuration; opscode_chef; worker_processes
+
 
 opscode_chef['worker_processes']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4230,8 +3938,7 @@ opscode_chef['worker_processes']
 
   opscode_chef['worker_processes'] = 4
 
-.. index::
-  triple: configuration; opscode_chef; worker_timeout
+
 
 opscode_chef['worker_timeout']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4248,8 +3955,7 @@ opscode_chef['worker_timeout']
 
   opscode_chef['worker_timeout'] = 3600
 
-.. index::
-  triple: configuration; opscode_erchef; auth_skew
+
 
 opscode_erchef['auth_skew']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4266,8 +3972,7 @@ opscode_erchef['auth_skew']
 
   opscode_erchef['auth_skew'] = "900"
 
-.. index::
-  triple: configuration; opscode_erchef; bulk_fetch_batch_size
+
 
 opscode_erchef['bulk_fetch_batch_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4284,8 +3989,7 @@ opscode_erchef['bulk_fetch_batch_size']
 
   opscode_erchef['bulk_fetch_batch_size'] = "5"
 
-.. index::
-  triple: configuration; opscode_erchef; cache_ttl
+
 
 opscode_erchef['cache_ttl']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4302,8 +4006,7 @@ opscode_erchef['cache_ttl']
 
   opscode_erchef['cache_ttl'] = "3600"
 
-.. index::
-  triple: configuration; opscode_erchef; couchdb_max_conn
+
 
 opscode_erchef['couchdb_max_conn']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4320,8 +4023,7 @@ opscode_erchef['couchdb_max_conn']
 
   opscode_erchef['couchdb_max_conn'] = "100"
 
-.. index::
-  triple: configuration; opscode_erchef; db_pool_size
+
 
 opscode_erchef['db_pool_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4338,8 +4040,7 @@ opscode_erchef['db_pool_size']
 
   opscode_erchef['db_pool_size'] = "20"
 
-.. index::
-  triple: configuration; opscode_erchef; dir
+
 
 opscode_erchef['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4356,8 +4057,7 @@ opscode_erchef['dir']
 
   opscode_erchef['dir'] = "/var/opt/opscode/opscode-erchef"
 
-.. index::
-  triple: configuration; opscode_erchef; enable
+
 
 opscode_erchef['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4374,8 +4074,7 @@ opscode_erchef['enable']
 
   opscode_erchef['enable'] = true
 
-.. index::
-  triple: configuration; opscode_erchef; ha
+
 
 opscode_erchef['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4392,8 +4091,7 @@ opscode_erchef['ha']
 
   opscode_erchef['ha'] = false
 
-.. index::
-  triple: configuration; opscode_erchef; listen
+
 
 opscode_erchef['listen']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4410,8 +4108,7 @@ opscode_erchef['listen']
 
   opscode_erchef['listen'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_erchef; log_directory
+
 
 opscode_erchef['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4428,8 +4125,7 @@ opscode_erchef['log_directory']
 
   opscode_erchef['log_directory'] = "/var/log/opscode/opscode-erchef"
 
-.. index::
-  triple: configuration; opscode_erchef; svlogd_size
+
 
 opscode_erchef['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4449,8 +4145,6 @@ size, in bytes, of the logfile.
 
   opscode_erchef['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_erchef; svlogd_num
 
 opscode_erchef['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4470,8 +4164,7 @@ number of logfiles retained.
 
   opscode_erchef['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_erchef; max_cache_size
+
 
 opscode_erchef['max_cache_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4488,8 +4181,7 @@ opscode_erchef['max_cache_size']
 
   opscode_erchef['max_cache_size'] = "10000"
 
-.. index::
-  triple: configuration; opscode_erchef; port
+
 
 opscode_erchef['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4506,8 +4198,7 @@ opscode_erchef['port']
 
   opscode_erchef['port'] = 8000
 
-.. index::
-  triple: configuration; opscode_erchef; vip
+
 
 opscode_erchef['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4524,8 +4215,7 @@ opscode_erchef['vip']
 
   opscode_erchef['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_expander; consumer_id
+
 
 opscode_expander['consumer_id']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4542,8 +4232,7 @@ opscode_expander['consumer_id']
 
   opscode_expander['consumer_id'] = "default"
 
-.. index::
-  triple: configuration; opscode_expander; dir
+
 
 opscode_expander['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4560,8 +4249,7 @@ opscode_expander['dir']
 
   opscode_expander['dir'] = "/var/opt/opscode/opscode-expander"
 
-.. index::
-  triple: configuration; opscode_expander; enable
+
 
 opscode_expander['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4578,8 +4266,6 @@ opscode_expander['enable']
 
   opscode_expander['enable'] = true
 
-.. index::
-  triple: configuration; opscode_expander; ha
 
 opscode_expander['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4596,8 +4282,7 @@ opscode_expander['ha']
 
   opscode_expander['ha'] = false
 
-.. index::
-  triple: configuration; opscode_expander; log_directory
+
 
 opscode_expander['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4614,8 +4299,7 @@ opscode_expander['log_directory']
 
   opscode_expander['log_directory'] = "/var/log/opscode/opscode-expander"
 
-.. index::
-  triple: configuration; opscode_expander; svlogd_size
+
 
 opscode_expander['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4635,8 +4319,6 @@ size, in bytes, of the logfile.
 
   opscode_expander['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_expander; svlogd_num
 
 opscode_expander['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4656,8 +4338,6 @@ number of logfiles retained.
 
   opscode_expander['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_expander; nodes
 
 opscode_expander['nodes']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4674,8 +4354,7 @@ opscode_expander['nodes']
 
   opscode_expander['nodes'] = 2
 
-.. index::
-  triple: configuration; opscode_expander; reindexer_log_directory
+
 
 opscode_expander['reindexer_log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4692,8 +4371,7 @@ opscode_expander['reindexer_log_directory']
 
   opscode_expander['reindexer_log_directory'] = "/var/log/opscode/opscode-expander-reindexer"
 
-.. index::
-  triple: configuration; opscode_expander; reindexer_svlogd_size
+
 
 opscode_expander['reindexer_svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4713,8 +4391,7 @@ size, in bytes, of the logfile.
 
   opscode_expander['reindexer_svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_expander; reindexer_svlogd_num
+
 
 opscode_expander['redindexer_svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4734,8 +4411,7 @@ number of logfiles retained.
 
   opscode_expander['reindexer_svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_org_creator; create_splay_ms
+
 
 opscode_org_creator['create_splay_ms']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4752,8 +4428,7 @@ opscode_org_creator['create_splay_ms']
 
   opscode_org_creator['create_splay_ms'] = 25000
 
-.. index::
-  triple: configuration; opscode_org_creator; create_wait_ms
+
 
 opscode_org_creator['create_wait_ms']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4770,8 +4445,7 @@ opscode_org_creator['create_wait_ms']
 
   opscode_org_creator['create_wait_ms'] = 30000
 
-.. index::
-  triple: configuration; opscode_org_creator; dir
+
 
 opscode_org_creator['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4788,8 +4462,7 @@ opscode_org_creator['dir']
 
   opscode_org_creator['dir'] = "/var/opt/opscode/opscode-org-creator"
 
-.. index::
-  triple: configuration; opscode_org_creator; enable
+
 
 opscode_org_creator['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4806,8 +4479,7 @@ opscode_org_creator['enable']
 
   opscode_org_creator['enable'] = true
 
-.. index::
-  triple: configuration; opscode_org_creator; ha
+
 
 opscode_org_creator['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4824,8 +4496,7 @@ opscode_org_creator['ha']
 
   opscode_org_creator['ha'] = false
 
-.. index::
-  triple: configuration; opscode_org_creator; log_directory
+
 
 opscode_org_creator['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4842,8 +4513,7 @@ opscode_org_creator['log_directory']
 
   opscode_org_creator['log_directory'] = "/var/log/opscode/opscode-org-creator"
 
-.. index::
-  triple: configuration; opscode_org_creator; svlogd_size
+
 
 opscode_org_creator['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4863,8 +4533,7 @@ size, in bytes, of the logfile.
 
   opscode_org_creator['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_org_creator; svlogd_num
+
 
 opscode_org_creator['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4884,8 +4553,7 @@ number of logfiles retained.
 
   opscode_org_creator['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_org_creator; max_workers
+
 
 opscode_org_creator['max_workers']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4902,8 +4570,7 @@ opscode_org_creator['max_workers']
 
   opscode_org_creator['max_workers'] = 1
 
-.. index::
-  triple: configuration; opscode_org_creator; port
+
 
 opscode_org_creator['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4920,8 +4587,7 @@ opscode_org_creator['port']
 
   opscode_org_creator['port'] = 4369
 
-.. index::
-  triple: configuration; opscode_org_creator; ready_org_depth
+
 
 opscode_org_creator['ready_org_depth']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4938,8 +4604,7 @@ opscode_org_creator['ready_org_depth']
 
   opscode_org_creator['ready_org_depth'] = 10
 
-.. index::
-  triple: configuration; opscode_solr; commit_interval
+
 
 opscode_solr['commit_interval']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4956,8 +4621,7 @@ opscode_solr['commit_interval']
 
   opscode_solr['commit_interval'] = 60000
 
-.. index::
-  triple: configuration; opscode_solr; data_dir
+
 
 opscode_solr['data_dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4974,8 +4638,7 @@ opscode_solr['data_dir']
 
   opscode_solr['data_dir'] = "/var/opt/opscode/opscode-solr/data"
 
-.. index::
-  triple: configuration; opscode_solr; dir
+
 
 opscode_solr['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -4992,8 +4655,7 @@ opscode_solr['dir']
 
   opscode_solr['dir'] = "/var/opt/opscode/opscode-solr"
 
-.. index::
-  triple: configuration; opscode_solr; enable
+
 
 opscode_solr['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5010,8 +4672,7 @@ opscode_solr['enable']
 
   opscode_solr['enable'] = true
 
-.. index::
-  triple: configuration; opscode_solr; ha
+
 
 opscode_solr['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5028,8 +4689,7 @@ opscode_solr['ha']
 
   opscode_solr['ha'] = false
 
-.. index::
-  triple: configuration; opscode_solr; heap_size
+
 
 opscode_solr['heap_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5046,8 +4706,7 @@ opscode_solr['heap_size']
 
   opscode_solr['heap_size'] = "256M"
 
-.. index::
-  triple: configuration; opscode_solr; ip_address
+
 
 opscode_solr['ip_address']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5064,8 +4723,7 @@ opscode_solr['ip_address']
 
   opscode_solr['ip_address'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_solr; java_opts
+
 
 opscode_solr['java_opts']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5082,8 +4740,7 @@ opscode_solr['java_opts']
 
   opscode_solr['java_opts'] = ""
 
-.. index::
-  triple: configuration; opscode_solr; log_directory
+
 
 opscode_solr['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5100,8 +4757,7 @@ opscode_solr['log_directory']
 
   opscode_solr['log_directory'] = "/var/log/opscode/opscode-solr"
 
-.. index::
-  triple: configuration; opscode_solr; svlogd_size
+
 
 opscode_solr['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5121,8 +4777,6 @@ size, in bytes, of the logfile.
 
   opscode_solr['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_solr; svlogd_num
 
 opscode_solr['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5142,8 +4796,7 @@ number of logfiles retained.
 
   opscode_solr['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_solr; max_commit_docs
+
 
 opscode_solr['max_commit_docs']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5160,8 +4813,7 @@ opscode_solr['max_commit_docs']
 
   opscode_solr['max_commit_docs'] = 1000
 
-.. index::
-  triple: configuration; opscode_solr; max_field_length
+
 
 opscode_solr['max_field_length']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5178,8 +4830,7 @@ opscode_solr['max_field_length']
 
   opscode_solr['max_field_length'] = 100000
 
-.. index::
-  triple: configuration; opscode_solr; max_merge_docs
+
 
 opscode_solr['max_merge_docs']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5196,8 +4847,7 @@ opscode_solr['max_merge_docs']
 
   opscode_solr['max_merge_docs'] = 2147483647
 
-.. index::
-  triple: configuration; opscode_solr; merge_factor
+
 
 opscode_solr['merge_factor']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5214,8 +4864,7 @@ opscode_solr['merge_factor']
 
   opscode_solr['merge_factor'] = 100
 
-.. index::
-  triple: configuration; opscode_solr; poll_seconds
+
 
 opscode_solr['poll_seconds']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5232,8 +4881,7 @@ opscode_solr['poll_seconds']
 
   opscode_solr['poll_seconds'] = 20
 
-.. index::
-  triple: configuration; opscode_solr; port
+
 
 opscode_solr['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5250,8 +4898,7 @@ opscode_solr['port']
 
   opscode_solr['port'] = 8983
 
-.. index::
-  triple: configuration; opscode_solr; ram_buffer_size
+
 
 opscode_solr['ram_buffer_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5268,8 +4915,7 @@ opscode_solr['ram_buffer_size']
 
   opscode_solr['ram_buffer_size'] = 200
 
-.. index::
-  triple: configuration; opscode_solr; url
+
 
 opscode_solr['url']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5286,8 +4932,7 @@ opscode_solr['url']
 
   opscode_solr['url'] = "http://localhost:8983"
 
-.. index::
-  triple: configuration; opscode_solr; vip
+
 
 opscode_solr['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5304,8 +4949,7 @@ opscode_solr['vip']
 
   opscode_solr['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_webui; backlog
+
 
 opscode_webui['backlog']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5322,8 +4966,7 @@ opscode_webui['backlog']
 
   opscode_webui['backlog'] = 1024
 
-.. index::
-  triple: configuration; opscode_webui; cookie_domain
+
 
 opscode_webui['cookie_domain']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5340,8 +4983,7 @@ opscode_webui['cookie_domain']
 
   opscode_webui['cookie_domain'] = "all"
 
-.. index::
-  triple: configuration; opscode_webui; cookie_secret
+
 
 opscode_webui['cookie_secret']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5358,8 +5000,7 @@ opscode_webui['cookie_secret']
 
   opscode_webui['cookie_secret'] = "47b3b8d95dea455baf32155e95d1e64e"
 
-.. index::
-  triple: configuration; opscode_webui; dir
+
 
 opscode_webui['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5376,8 +5017,7 @@ opscode_webui['dir']
 
   opscode_webui['dir'] = "/var/opt/opscode/opscode-webui"
 
-.. index::
-  triple: configuration; opscode_webui; enable
+
 
 opscode_webui['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5394,8 +5034,7 @@ opscode_webui['enable']
 
   opscode_webui['enable'] = true
 
-.. index::
-  triple: configuration; opscode_webui; environment
+
 
 opscode_webui['environment']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5412,8 +5051,7 @@ opscode_webui['environment']
 
   opscode_webui['environment'] = "privatechef"
 
-.. index::
-  triple: configuration; opscode_webui; ha
+
 
 opscode_webui['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5430,8 +5068,7 @@ opscode_webui['ha']
 
   opscode_webui['ha'] = false
 
-.. index::
-  triple: configuration; opscode_webui; listen
+
 
 opscode_webui['listen']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5448,8 +5085,7 @@ opscode_webui['listen']
 
   opscode_webui['listen'] = "127.0.0.1:9462"
 
-.. index::
-  triple: configuration; opscode_webui; log_directory
+
 
 opscode_webui['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5466,8 +5102,7 @@ opscode_webui['log_directory']
 
   opscode_webui['log_directory'] = "/var/log/opscode/opscode-webui"
 
-.. index::
-  triple: configuration; opscode_webui; svlogd_size
+
 
 opscode_webui['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5487,8 +5122,6 @@ size, in bytes, of the logfile.
 
   opscode_webui['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; opscode_webui; svlogd_num
 
 opscode_webui['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5508,8 +5141,7 @@ number of logfiles retained.
 
   opscode_webui['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; opscode_webui; port
+
 
 opscode_webui['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5526,8 +5158,7 @@ opscode_webui['port']
 
   opscode_webui['port'] = 9462
 
-.. index::
-  triple: configuration; opscode_webui; session_key
+
 
 opscode_webui['session_key']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5544,8 +5175,7 @@ opscode_webui['session_key']
 
   opscode_webui['session_key'] = "_sandbox_session"
 
-.. index::
-  triple: configuration; opscode_webui; tcp_nodelay
+
 
 opscode_webui['tcp_nodelay']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5562,8 +5192,7 @@ opscode_webui['tcp_nodelay']
 
   opscode_webui['tcp_nodelay'] = true
 
-.. index::
-  triple: configuration; opscode_webui; umask
+
 
 opscode_webui['umask']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5580,8 +5209,7 @@ opscode_webui['umask']
 
   opscode_webui['umask'] = "0022"
 
-.. index::
-  triple: configuration; opscode_webui; url
+
 
 opscode_webui['url']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5598,8 +5226,7 @@ opscode_webui['url']
 
   opscode_webui['url'] = "http://127.0.0.1:9462"
 
-.. index::
-  triple: configuration; opscode_webui; validation_client_name
+
 
 opscode_webui['validation_client_name']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5616,8 +5243,7 @@ opscode_webui['validation_client_name']
 
   opscode_webui['validation_client_name'] = "chef"
 
-.. index::
-  triple: configuration; opscode_webui; vip
+
 
 opscode_webui['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5634,8 +5260,7 @@ opscode_webui['vip']
 
   opscode_webui['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; opscode_webui; worker_processes
+
 
 opscode_webui['worker_processes']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5652,8 +5277,7 @@ opscode_webui['worker_processes']
 
   opscode_webui['worker_processes'] = 4
 
-.. index::
-  triple: configuration; opscode_webui; worker_timeout
+
 
 opscode_webui['worker_timeout']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5670,8 +5294,7 @@ opscode_webui['worker_timeout']
 
   opscode_webui['worker_timeout'] = 3600
 
-.. index::
-  triple: configuration; postgresql; data_dir
+
 
 postgresql['data_dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5688,8 +5311,7 @@ postgresql['data_dir']
 
   postgresql['data_dir'] = "/var/opt/opscode/postgresql/data"
 
-.. index::
-  triple: configuration; postgresql; dir
+
 
 postgresql['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5706,8 +5328,7 @@ postgresql['dir']
 
   postgresql['dir'] = "/var/opt/opscode/postgresql"
 
-.. index::
-  triple: configuration; postgresql; enable
+
 
 postgresql['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5724,8 +5345,7 @@ postgresql['enable']
 
   postgresql['enable'] = true
 
-.. index::
-  triple: configuration; postgresql; ha
+
 
 postgresql['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5742,8 +5362,7 @@ postgresql['ha']
 
   postgresql['ha'] = false
 
-.. index::
-  triple: configuration; postgresql; home
+
 
 postgresql['home']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5760,8 +5379,7 @@ postgresql['home']
 
   postgresql['home'] = "/opt/opscode/embedded"
 
-.. index::
-  triple: configuration; postgresql; listen_address
+
 
 postgresql['listen_address']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5778,8 +5396,7 @@ postgresql['listen_address']
 
   postgresql['listen_address'] = "localhost"
 
-.. index::
-  triple: configuration; postgresql; log_directory
+
 
 postgresql['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5796,8 +5413,7 @@ postgresql['log_directory']
 
   postgresql['log_directory'] = "/var/log/opscode/postgresql"
 
-.. index::
-  triple: configuration; postgresql; svlogd_size
+
 
 postgresql['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5817,8 +5433,7 @@ size, in bytes, of the logfile.
 
   postgresql['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; postgresql; svlogd_num
+
 
 postgresql['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5838,8 +5453,7 @@ number of logfiles retained.
 
   postgresql['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; postgresql; max_connections
+
 
 postgresql['max_connections']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5856,8 +5470,7 @@ postgresql['max_connections']
 
   postgresql['max_connections'] = 200
 
-.. index::
-  triple: configuration; postgresql; md5_auth_cidr_addresses
+
 
 postgresql['md5_auth_cidr_addresses']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5876,8 +5489,7 @@ postgresql['md5_auth_cidr_addresses']
   postgresql['md5_auth_cidr_addresses'] = []
 
 
-.. index::
-  triple: configuration; postgresql; port
+
 
 postgresql['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5894,8 +5506,7 @@ postgresql['port']
 
   postgresql['port'] = 5432
 
-.. index::
-  triple: configuration; postgresql; shell
+
 
 postgresql['shell']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5912,8 +5523,7 @@ postgresql['shell']
 
   postgresql['shell'] = "/bin/sh"
 
-.. index::
-  triple: configuration; postgresql; shmall
+
 
 postgresql['shmall']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5930,8 +5540,7 @@ postgresql['shmall']
 
   postgresql['shmall'] = 4194304
 
-.. index::
-  triple: configuration; postgresql; shmmax
+
 
 postgresql['shmmax']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5948,8 +5557,7 @@ postgresql['shmmax']
 
   postgresql['shmmax'] = 17179869184
 
-.. index::
-  triple: configuration; postgresql; sql_password
+
 
 postgresql['sql_password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5966,8 +5574,7 @@ postgresql['sql_password']
 
   postgresql['sql_password'] = "snakepliskin"
 
-.. index::
-  triple: configuration; postgresql; sql_ro_password
+
 
 postgresql['sql_ro_password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -5984,8 +5591,7 @@ postgresql['sql_ro_password']
 
   postgresql['sql_ro_password'] = "shmunzeltazzen"
 
-.. index::
-  triple: configuration; postgresql; sql_ro_user
+
 
 postgresql['sql_ro_user']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6002,8 +5608,7 @@ postgresql['sql_ro_user']
 
   postgresql['sql_ro_user'] = "opscode_chef_ro"
 
-.. index::
-  triple: configuration; postgresql; sql_user
+
 
 postgresql['sql_user']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6020,8 +5625,7 @@ postgresql['sql_user']
 
   postgresql['sql_user'] = "opscode_chef"
 
-.. index::
-  triple: configuration; postgresql; trust_auth_cidr_addresses
+
 
 postgresql['trust_auth_cidr_addresses']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6040,8 +5644,7 @@ postgresql['trust_auth_cidr_addresses']
   postgresql['trust_auth_cidr_addresses'] = ["127.0.0.1/32", "::1/128"]
 
 
-.. index::
-  triple: configuration; postgresql; username
+
 
 postgresql['username']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6058,8 +5661,7 @@ postgresql['username']
 
   postgresql['username'] = "opscode-pgsql"
 
-.. index::
-  triple: configuration; postgresql; vip
+
 
 postgresql['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6076,8 +5678,7 @@ postgresql['vip']
 
   postgresql['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; rabbitmq; consumer_id
+
 
 rabbitmq['consumer_id']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6094,8 +5695,7 @@ rabbitmq['consumer_id']
 
   rabbitmq['consumer_id'] = "hotsauce"
 
-.. index::
-  triple: configuration; rabbitmq; data_dir
+
 
 rabbitmq['data_dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6112,8 +5712,7 @@ rabbitmq['data_dir']
 
   rabbitmq['data_dir'] = "/var/opt/opscode/rabbitmq/db"
 
-.. index::
-  triple: configuration; rabbitmq; dir
+
 
 rabbitmq['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6130,8 +5729,7 @@ rabbitmq['dir']
 
   rabbitmq['dir'] = "/var/opt/opscode/rabbitmq"
 
-.. index::
-  triple: configuration; rabbitmq; enable
+
 
 rabbitmq['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6148,8 +5746,7 @@ rabbitmq['enable']
 
   rabbitmq['enable'] = true
 
-.. index::
-  triple: configuration; rabbitmq; ha
+
 
 rabbitmq['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6166,8 +5763,6 @@ rabbitmq['ha']
 
   rabbitmq['ha'] = false
 
-.. index::
-  triple: configuration; rabbitmq; jobs_password
 
 rabbitmq['jobs_password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6184,8 +5779,7 @@ rabbitmq['jobs_password']
 
   rabbitmq['jobs_password'] = "workcomplete"
 
-.. index::
-  triple: configuration; rabbitmq; jobs_user
+
 
 rabbitmq['jobs_user']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6202,8 +5796,7 @@ rabbitmq['jobs_user']
 
   rabbitmq['jobs_user'] = "jobs"
 
-.. index::
-  triple: configuration; rabbitmq; jobs_vhost
+
 
 rabbitmq['jobs_vhost']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6220,8 +5813,7 @@ rabbitmq['jobs_vhost']
 
   rabbitmq['jobs_vhost'] = "/jobs"
 
-.. index::
-  triple: configuration; rabbitmq; log_directory
+
 
 rabbitmq['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6238,8 +5830,7 @@ rabbitmq['log_directory']
 
   rabbitmq['log_directory'] = "/var/log/opscode/rabbitmq"
 
-.. index::
-  triple: configuration; rabbitmq; svlogd_size
+
 
 rabbitmq['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6259,8 +5850,7 @@ size, in bytes, of the logfile.
 
   rabbitmq['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; rabbitmq; svlogd_num
+
 
 rabbitmq['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6280,8 +5870,7 @@ number of logfiles retained.
 
   rabbitmq['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; rabbitmq; node_ip_address
+
 
 rabbitmq['node_ip_address']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6298,8 +5887,7 @@ rabbitmq['node_ip_address']
 
   rabbitmq['node_ip_address'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; rabbitmq; node_port
+
 
 rabbitmq['node_port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6316,8 +5904,7 @@ rabbitmq['node_port']
 
   rabbitmq['node_port'] = "5672"
 
-.. index::
-  triple: configuration; rabbitmq; nodename
+
 
 rabbitmq['nodename']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6334,8 +5921,7 @@ rabbitmq['nodename']
 
   rabbitmq['nodename'] = "rabbit@localhost"
 
-.. index::
-  triple: configuration; rabbitmq; password
+
 
 rabbitmq['password']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6352,8 +5938,7 @@ rabbitmq['password']
 
   rabbitmq['password'] = "chefrocks"
 
-.. index::
-  triple: configuration; rabbitmq; reindexer_vhost
+
 
 rabbitmq['reindexer_vhost']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6370,8 +5955,6 @@ rabbitmq['reindexer_vhost']
 
   rabbitmq['reindexer_vhost'] = "/reindexer"
 
-.. index::
-  triple: configuration; rabbitmq; user
 
 rabbitmq['user']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6388,8 +5971,7 @@ rabbitmq['user']
 
   rabbitmq['user'] = "chef"
 
-.. index::
-  triple: configuration; rabbitmq; vhost
+
 
 rabbitmq['vhost']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6406,8 +5988,6 @@ rabbitmq['vhost']
 
   rabbitmq['vhost'] = "/chef"
 
-.. index::
-  triple: configuration; rabbitmq; vip
 
 rabbitmq['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6424,8 +6004,7 @@ rabbitmq['vip']
 
   rabbitmq['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; redis; appendfsync
+
 
 redis['appendfsync']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6442,8 +6021,7 @@ redis['appendfsync']
 
   redis['appendfsync'] = "everysec"
 
-.. index::
-  triple: configuration; redis; appendonly
+
 
 redis['appendonly']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6460,8 +6038,7 @@ redis['appendonly']
 
   redis['appendonly'] = "no"
 
-.. index::
-  triple: configuration; redis; bind
+
 
 redis['bind']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6478,8 +6055,7 @@ redis['bind']
 
   redis['bind'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; redis; databases
+
 
 redis['databases']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6496,8 +6072,6 @@ redis['databases']
 
   redis['databases'] = "16"
 
-.. index::
-  triple: configuration; redis; dir
 
 redis['dir']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6514,8 +6088,7 @@ redis['dir']
 
   redis['dir'] = "/var/opt/opscode/redis"
 
-.. index::
-  triple: configuration; redis; enable
+
 
 redis['enable']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6532,8 +6105,7 @@ redis['enable']
 
   redis['enable'] = true
 
-.. index::
-  triple: configuration; redis; ha
+
 
 redis['ha']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6550,8 +6122,7 @@ redis['ha']
 
   redis['ha'] = false
 
-.. index::
-  triple: configuration; redis; log_directory
+
 
 redis['log_directory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6568,8 +6139,7 @@ redis['log_directory']
 
   redis['log_directory'] = "/var/log/opscode/redis"
 
-.. index::
-  triple: configuration; redis; svlogd_size
+
 
 redis['svlogd_size']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6589,8 +6159,7 @@ size, in bytes, of the logfile.
 
   redis['svlogd_size'] = 1000000
 
-.. index::
-  triple: configuration; redis; svlogd_num
+
 
 redis['svlogd_num']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6610,8 +6179,7 @@ number of logfiles retained.
 
   redis['svlogd_num'] = 10
 
-.. index::
-  triple: configuration; redis; loglevel
+
 
 redis['loglevel']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6628,8 +6196,7 @@ redis['loglevel']
 
   redis['loglevel'] = "notice"
 
-.. index::
-  triple: configuration; redis; maxmemory
+
 
 redis['maxmemory']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6646,8 +6213,7 @@ redis['maxmemory']
 
   redis['maxmemory'] = "1g"
 
-.. index::
-  triple: configuration; redis; maxmemory_policy
+
 
 redis['maxmemory_policy']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6664,8 +6230,7 @@ redis['maxmemory_policy']
 
   redis['maxmemory_policy'] = "volatile-lru"
 
-.. index::
-  triple: configuration; redis; port
+
 
 redis['port']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6682,8 +6247,7 @@ redis['port']
 
   redis['port'] = "6379"
 
-.. index::
-  triple: configuration; redis; root
+
 
 redis['root']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6700,8 +6264,7 @@ redis['root']
 
   redis['root'] = "/var/opt/opscode/redis"
 
-.. index::
-  triple: configuration; redis; timeout
+
 
 redis['timeout']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6718,8 +6281,7 @@ redis['timeout']
 
   redis['timeout'] = "300"
 
-.. index::
-  triple: configuration; redis; vip
+
 
 redis['vip']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6736,8 +6298,7 @@ redis['vip']
 
   redis['vip'] = "127.0.0.1"
 
-.. index::
-  triple: configuration; redis; vm
+
 
 redis['vm']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6764,8 +6325,6 @@ redis['vm']
  "max_threads"=>"4"}
 
 
-.. index::
-  triple: configuration; user; home
 
 user['home']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6782,8 +6341,7 @@ user['home']
 
   user['home'] = "/opt/opscode/embedded"
 
-.. index::
-  triple: configuration; user; shell
+
 
 user['shell']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6800,8 +6358,7 @@ user['shell']
 
   user['shell'] = "/bin/sh"
 
-.. index::
-  triple: configuration; user; username
+
 
 user['username']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6818,8 +6375,7 @@ user['username']
 
   user['username'] = "opscode"
 
-.. index::
-  pair: configuration; log_rotation
+
 
 log_rotation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6865,8 +6421,7 @@ rotated by the application itself.
     },
   }
 
-.. index::
-  triple: configuration; log_retention; couchdb
+
 
 log_retention['couchdb']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6887,8 +6442,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['couchdb'] = 14
 
-.. index::
-  triple: configuration; log_retention; postgresql
+
 
 log_retention['postgresql']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6909,8 +6463,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['postgresql'] = 14
 
-.. index::
-  triple: configuration; log_retention; rabbitmq
+
 
 log_retention['rabbitmq']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6931,8 +6484,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['rabbitmq'] = 14
 
-.. index::
-  triple: configuration; log_retention; redis
+
 
 log_retention['redis']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6953,8 +6505,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['redis'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-authz
+
 
 log_retention['opscode-authz']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6975,8 +6526,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-authz'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-certificate
+
 
 log_retention['opscode-certificate']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -6997,8 +6547,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-certificate'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-account
+
 
 log_retention['opscode-account']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7019,8 +6568,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-account'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-solr
+
 
 log_retention['opscode-solr']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7041,8 +6589,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-solr'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-expander
+
 
 log_retention['opscode-expander']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7063,8 +6610,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-expander'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-org-creator
+
 
 log_retention['opscode-org-creator']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7085,8 +6631,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-org-creator'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-chef
+
 
 log_retention['opscode-chef']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7107,8 +6652,7 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-chef'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-erchef
+
 
 log_retention['opscode-erchef']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7129,8 +6673,6 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-erchef'] = 14
 
-.. index::
-  triple: configuration; log_retention; opscode-webui
 
 log_retention['opscode-webui']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7151,8 +6693,6 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['opscode-webui'] = 14
 
-.. index::
-  triple: configuration; log_retention; nagios
 
 log_retention['nagios']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7173,8 +6713,6 @@ And files with mtimes older than this number of days will be deleted.
 
   log_retention['nagios'] = 14
 
-.. index::
-  triple: configuration; log_retention; nginx
 
 log_retention['nginx']
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -7198,43 +6736,43 @@ And files with mtimes older than this number of days will be deleted.
 
 private-chef-ctl
 =====================================================
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ctl_private_chef_ha.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ctl_private_chef_ha.rst
 
 General Commands
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ctl_private_chef_general.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ctl_private_chef_general.rst
 
 HA Commands
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ctl_private_chef_ha.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ctl_private_chef_ha.rst
 
 Services Commands
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ctl_private_chef_services.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ctl_private_chef_services.rst
 
 Reading the status line
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ctl_private_chef_services_read_status_line.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ctl_private_chef_services_read_status_line.rst
 
 Logs
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ctl_private_chef_services_read_status_line_service_logs.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ctl_private_chef_services_read_status_line_service_logs.rst
 
 Services in HA deployments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ctl_private_chef_services_read_status_line_on_ha.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ctl_private_chef_services_read_status_line_on_ha.rst
 
 User Commands
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ctl_private_chef_user.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ctl_private_chef_user.rst
 
 Logs
 =====================================================
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs.rst
 
 View Logs
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_view.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_view.rst
 
 Services
 -----------------------------------------------------
@@ -7242,83 +6780,83 @@ The following services used by |chef private| generate log files:
 
 couchdb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_couchdb.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_couchdb.rst
 
 fcgiwrap
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_fcgiwrap.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_fcgiwrap.rst
 
 nagios
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_nagios.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_nagios.rst
 
 nginx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_nginx.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_nginx.rst
 
 **Access Logs**
 
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_nginx_read_logs.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_nginx_read_logs.rst
 
 nrpe
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_nrpe.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_nrpe.rst
 
 opscode-account
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_account.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_account.rst
 
 opscode-authz
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_authz.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_authz.rst
 
 opscode-certificate
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_certificate.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_certificate.rst
 
 opscode-chef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_chef.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_chef.rst
 
 opscode-erchef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_erchef.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_erchef.rst
 
 opscode-expander
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_expander_reindexer.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_expander_reindexer.rst
 
 opscode-expander-reindexer
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_expander.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_expander.rst
 
 opscode-org-creator
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_org_creator.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_org_creator.rst
 
 opscode-solr
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_solr.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_solr.rst
 
 opscode-webui
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_opscode_webui.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_opscode_webui.rst
 
 phpfpm
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_phpfpm.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_phpfpm.rst
 
 postgresql
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_postgresql.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_postgresql.rst
 
 rabbitmq
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_rabbitmq.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_rabbitmq.rst
 
 redis
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_logs_services_redis.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_logs_services_redis.rst
 
 
 User Management
@@ -7327,79 +6865,79 @@ The following tasks can be done around user management.
 
 Change Password
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_user_management_change_password.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_user_management_change_password.rst
 
 Create User
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_user_management_create.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_user_management_create.rst
 
 Edit Profile
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_user_management_edit_profile.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_user_management_edit_profile.rst
 
 Recover Password
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_user_management_recover_password.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_user_management_recover_password.rst
 
 Regenerate Private Key
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_user_management_regenerate_private_key.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_user_management_regenerate_private_key.rst
 
 View Profile
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_user_management_view_profile.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_user_management_view_profile.rst
 
 High Availability
 =====================================================
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha.rst
 
 Scalability
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scalability.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_scalability.rst
 
 Failover and Recovery
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_failover.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_failover.rst
 
 Graceful Transitions
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_transitions.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_transitions.rst
 
 DRBD
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_drbd.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_drbd.rst
 
 Split Brains (yum)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_drbd_split_brain.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_drbd_split_brain.rst
 
 Split-brain Handlers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_drbd_handlers.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_drbd_handlers.rst
 
 Assumptions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_drbd_assumptions.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_drbd_assumptions.rst
 
 Failure Scenarios
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_scenario.rst
 
 Scenarios 1 and 2
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario_1and2.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_scenario_1and2.rst
 
 Scenario 3
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario_3.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_scenario_3.rst
 
 Scenario 4
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario_4.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_scenario_4.rst
 
 Scenario 5
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_ha_scenario_5.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_ha_scenario_5.rst
 
 orgmapper
 =====================================================
@@ -7447,61 +6985,61 @@ There are two upgrade scenarios for |chef private|: standalone and high availabi
 
 Standalone Upgrade
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_standalone.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_standalone.rst
 
 High Availability Upgrade
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha.rst
 
 Identify Bootstrap Server
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha_identify_bootstrap_server.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha_identify_bootstrap_server.rst
 
 Identify Backend Master
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha_identify_backend_master.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha_identify_backend_master.rst
 
 Set Backend Master
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha_set_backend_master.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha_set_backend_master.rst
 
 Upgrade Backend Master
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha_upgrade_backend_master.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha_upgrade_backend_master.rst
 
 Validate Backend Master
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha_validate_backend_master.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha_validate_backend_master.rst
 
 Copy Configuration to Nodes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha_copy_config_to_nodes.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha_copy_config_to_nodes.rst
 
 Upgrade Backend Slave
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha_upgrade_backend_slave.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha_upgrade_backend_slave.rst
 
 Upgrade Front End
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_upgrade_ha_upgrade_front_end.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_upgrade_ha_upgrade_front_end.rst
 
 Active Directory / LDAP
 =====================================================
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_adldap.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_adldap.rst
 
 Login when AD / LDAP Enabled
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_adldap_login_enabled.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_adldap_login_enabled.rst
 
 First-time Login
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_adldap_login_first_time.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_adldap_login_first_time.rst
 
 Accessing Chef
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_adldap_enable_then_access.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_adldap_enable_then_access.rst
 
 Accessing when AD/LDAP is down
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x_admin_adldap_access_when_down.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4_admin_adldap_access_when_down.rst
 

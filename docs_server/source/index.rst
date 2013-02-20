@@ -35,13 +35,13 @@ Private Chef 1.4.4
 =====================================================
 .. note:: This section is about the version of |chef private| that existed up until February 4, 2013.
 
-.. include:: ../../includes_private_chef_10x/includes_private_chef_10x.rst
+.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1_4_4.rst
 
-* :doc:`Engagement </private_chef_10x_engage>`
-* :doc:`Architecture </private_chef_10x_architecture>`
-* :doc:`Installation </private_chef_10x_install>`
-* :doc:`Administration </private_chef_10x_admin>`
-* :doc:`Support </private_chef_10x_support>`
+* :doc:`Engagement </private_chef_1_4_4_engage>`
+* :doc:`Architecture </private_chef_1_4_4_architecture>`
+* :doc:`Installation </private_chef_1_4_4_install>`
+* :doc:`Administration </private_chef_1_4_4_admin>`
+* :doc:`Support </private_chef_1_4_4_support>`
 
 .. note:: Unless otherwise stated, all the commands in the documentation for |chef private| should be run as root, either directly or via the ``sudo`` command.
 
@@ -63,12 +63,12 @@ Private Chef 1.4.4
    solo_rb
    solr_rb
 
-   private_chef_10x
-   private_chef_10x_engage
-   private_chef_10x_architecture
-   private_chef_10x_install
-   private_chef_10x_admin
-   private_chef_10x_support
+   private_chef_1_4_4
+   private_chef_1_4_4_engage
+   private_chef_1_4_4_architecture
+   private_chef_1_4_4_install
+   private_chef_1_4_4_admin
+   private_chef_1_4_4_support
 
 
 

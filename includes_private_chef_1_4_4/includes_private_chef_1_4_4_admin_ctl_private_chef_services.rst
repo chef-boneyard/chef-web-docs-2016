@@ -121,6 +121,6 @@ The following commands are available for managing services that are used by |che
 
        .. code-block:: bash
           
-          $ private-chef-ctl name_of_service tail
+          $ private-chef-ctl tail name_of_service
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.

@@ -35,10 +35,10 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'docs_private_chef_1x'
+master_doc = 'docs_private_chef_1_1_4'
 
 # General information about the project.
-project = u'Private Chef 1x Documentation'
+project = u'Private Chef 1.4.4 Documentation'
 copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -202,7 +202,7 @@ html_show_copyright = False
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Private Chef 1x Documentation'
+htmlhelp_basename = 'Private Chef 1.1.4 Documentation'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -221,7 +221,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('docs_private_chef_1x', 'Private Chef 1x Documentation.tex', u'Private Chef 1x Documentation',
+  ('docs_private_chef_1_1_4', 'Private Chef 1.4.4 Documentation.tex', u'Private Chef 1.4.4 Documentation',
    u'Opscode, Inc.', 'manual'),
 ]
 
@@ -251,7 +251,7 @@ latex_logo = "../../images/opscode_color_text.png"
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('docs_private_chef_1x', 'Private Chef 1x Documentation', u'Private Chef 1x Documentation',
+    ('docs_private_chef_1_1_4', 'Private Chef 1.4.4 Documentation', u'Private Chef 1.4.4 Documentation',
      [u'Opscode, Inc.'], 1)
 ]
 
@@ -265,8 +265,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('docs_private_chef_1x', 'private_chef_1x', u'Private Chef 1x Documentation',
-   u'Opscode, Inc.', 'Private Chef 1x Documentation', 'Private Chef 1x Documentation',
+  ('docs_private_chef_1x', 'docs_private_chef_1_1_4', u'Private Chef 1.4.4 Documentation',
+   u'Opscode, Inc.', 'Private Chef 1.4.4 Documentation', 'Private Chef 1.4.4 Documentation',
    'Miscellaneous'),
 ]
 
@@ -283,7 +283,7 @@ texinfo_documents = [
 # -- Options for Epub output ---------------------------------------------------
 
 # Bibliographic Dublin Core info.
-epub_title = u'Private Chef 1x Documentation'
+epub_title = u'Private Chef 1.4.4 Documentation'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
 epub_copyright = u'2012, Opscode, Inc.'

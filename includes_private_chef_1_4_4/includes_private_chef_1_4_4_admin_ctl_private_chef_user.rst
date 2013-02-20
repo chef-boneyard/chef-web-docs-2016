@@ -19,7 +19,7 @@ The following commands are available for user management:
           Enter the new password again:  ******
           Password for adamjacobs successfully set.
    * - ``password --disable``
-     - Use this command with the ``--disable`` attribute to disable a user's system recoery password. For example:
+     - Use this command with the ``--disable`` attribute to disable a user's system recoery password. For example
 
        .. code-block:: bash
           
