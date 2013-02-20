@@ -35,7 +35,7 @@ Private Chef 1.x.x
 =====================================================
 .. note:: This section is about the version of |chef private| that existed up until February 4, 2013.
 
-.. include:: ../../includes_private_chef_1_4_4/includes_private_chef_1x.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x.rst
 
 * :doc:`Engagement </private_chef_1x_engage>`
 * :doc:`Architecture </private_chef_1x_architecture>`
