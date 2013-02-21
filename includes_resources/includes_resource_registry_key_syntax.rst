@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource windows_registry| resource in a recipe is as follows:
+The syntax for using the |resource registry_key| resource in a recipe is as follows:
 
 .. code-block:: ruby
 
@@ -32,7 +32,7 @@ where
 * |values resource registry_key types|
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run
 
-The following is an example of how the |resource windows_registry| resource can work when used in a recipe. In this example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a mulit-string value named "foo bar":
+The following is an example of how the |resource registry_key| resource can work when used in a recipe. In this example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a mulit-string value named "foo bar":
 
 .. code-block:: ruby
 

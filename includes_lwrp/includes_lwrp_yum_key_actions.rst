@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - Default. Use to install a |gnupg| key to ``/etc/pki/rpm-gpg/``.
+     - Default. |lwrp action add yum_key|
    * - ``:remove``
-     - Use to remove a |gnupg| key from ``/etc/pki/rpm-gpg/``.
+     - |lwrp action remove yum_key|

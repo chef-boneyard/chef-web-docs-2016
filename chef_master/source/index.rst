@@ -35,7 +35,7 @@ The workstation
 
 The Chef server
 =====================================================
-**The basics:** :doc:`About the server </chef_overview_server>` | :doc:`Erchef </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
+**The basics:** :doc:`About the server </chef_overview_server>` | :doc:`Server components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
 
 **Configure:** :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a virtual machine </install_server_scenario_vm>`
 

@@ -30,6 +30,7 @@
 .. |repo resource deploy| replace:: The alias for the repository.
 .. |repo_mode| replace:: The layout of the local repository. The ``default`` repository includes cookbooks, data bags, environments, and roles. The ``everything`` repository adds nodes, |chef api client|, and users. Default value: ``default``.
 .. |repo_name lwrp apt_repository| replace:: The name of the repository. Default value: ``name``.
+.. |repo_name lwrp yum_repository| replace:: The name of the channel.
 .. |repository| replace:: The path to the |chef| repository.
 .. |repository resource deploy| replace:: The URI for the repository.
 .. |repository resource scm| replace:: The URI for the repository.
@@ -50,12 +51,12 @@
 .. |resource action create ruby_block| replace:: Use to create a |ruby| block.
 .. |resource action create template| replace:: Use to create a file.
 .. |resource action create user| replace:: Use to create a user with given attributes. If the user already exists, use to ensure that the resource is in the correct state (which is effectively the same as ``:modify``).
-.. |resource action create windows_registry| replace:: Use to create a registry key.
+.. |resource action create registry_key| replace:: Use to create a registry key.
 .. |resource action create_if_missing cookbook_file| replace:: Use to create a file if it doesn't already exist.
 .. |resource action create_if_missing file| replace:: Use to create a file only if the file does not already exist. (When the file exists, nothing happens.)
 .. |resource action create_if_missing remote_file| replace:: Use to create a file locally by fetching from the remote source, but only if the file doesn't yet exist.
 .. |resource action create_if_missing template| replace:: Use to create a file only if it does not exist.
-.. |resource action create_if_missing windows_registry| replace:: Use to create a registry key if it doesn't already exist. Also, use to create a registry key value if it doesn't already exist.
+.. |resource action create_if_missing registry_key| replace:: Use to create a registry key if it doesn't already exist. Also, use to create a registry key value if it doesn't already exist.
 .. |resource action delete cookbook_file| replace:: Use to delete a file.
 .. |resource action delete cron| replace:: Use to delete an entry from a |cron| table file ("crontab").
 .. |resource action delete directory| replace:: Use to delete a directory.
@@ -65,8 +66,8 @@
 .. |resource action delete ifconfig| replace:: Use to run |ifconfig| to disable a network interface and (on some platforms) delete that network interface's configuration file.
 .. |resource action delete link| replace:: Use to delete a link.
 .. |resource action delete route| replace:: Use to delete a route.
-.. |resource action delete windows_registry| replace:: Use to delete the specified values for a registry key.
-.. |resource action delete key windows_registry| replace:: Use to delete the specified registry key and all of its subkeys.
+.. |resource action delete registry_key| replace:: Use to delete the specified values for a registry key.
+.. |resource action delete key registry_key| replace:: Use to delete the specified registry key and all of its subkeys.
 .. |resource action deploy deploy| replace:: Use to deploy an application.
 .. |resource action disable ifconfig| replace:: Use to run |ifconfig| to disable a network interface.
 .. |resource action disable mount| replace:: Use to remove an entry from the file systems table (fstab).
@@ -119,6 +120,8 @@
 .. |resource action upgrade package| replace:: Use to upgrade a package to the latest version.
 .. |resource action upgrade yum| replace:: Indicates that a package will be upgraded to the latest available version.
 .. |resource action write log| replace:: Use to write to log.
+
+.. |resource desc batch| replace:: The |resource batch| resource is used to execute a batch script using the |windows cmd exe| interpreter (much like the script resources for |bash|, |csh|, |windows powershell|, |python|, and |ruby|). A temporary file is created and then executed like other script resources, rather than run inline.
 .. |resource desc cookbook_file| replace:: The |resource cookbook file| resource is used to transfer files from a sub-directory of the ``files/`` directory in a cookbook to a specified path that is located on the host running the |chef client| or |chef solo|. The file in a cookbook is selected according to file specificity, which allows different source files to be used based on the hostname, host platform (operating system, distro, or as appropriate), or platform version. Files that are located under ``COOKBOOK_NAME/files/default`` can be used on any platform.
 .. |resource desc cron| replace:: The |resource cron| resource is used to manage |cron| entries for time-based job scheduling. Attributes for a schedule will default to ``*`` if not provided. The |resource cron| resource requires access to a |crontab| program, typically |cron|.
 .. |resource desc deploy| replace:: The |resource deploy| resource is used to manage and control deployments.
@@ -137,6 +140,7 @@
 .. |resource desc ohai| replace:: The |resource ohai| resource is used to re-load the |ohai| configuration on a node, which allows recipes that change system attributes (like adding a user) to refer to those attributes later on during the |chef| run.
 .. |resource desc package| replace:: The |resource package| resource is used to manage packages. When the package is installed from a local file (such as |rubygems| |debian dpkg| or |rpm|), the file must be added to the node using the |resource remote_file| or |resource cookbook file| resources.
 .. |resource desc powershell_script| replace:: The |resource powershell script| resource is used to execute a script using the |windows powershell| interpreter. This resource is used just like the |resource script| resource or the providers for |bash|, |csh|, |perl|, |python|, and |ruby|. The |resource powershell script| resource is similar to those, but with some small tweaks under the covers for the |windows| platform and |windows powershell| interpreter. This resource creates and executes a temporary file (similar to the |resource script| resource), rather than running it inline. This resource includes actions (``:run`` and ``:nothing``; ) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) that are available from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence.
+.. |resource desc registry_key| replace:: The |resource registry_key| resource is used to create and delete registry keys in |windows|.
 .. |resource desc remote_directory| replace:: The |resource remote_directory| resource is used to recursively transfer a directory from a cookbook's files or default directory. A remote directory will obey file specificity; the directory that will be copied should be located under COOKBOOK_NAME/files/default/REMOTE_DIRECTORY. A host-or distribution-specific path can also be used.
 .. |resource desc remote_file| replace:: The |resource remote_file| resource is used to transfer a file from a remote location using file specificity. This resource is similar to the |resource file| resource.
 .. |resource desc route| replace:: The |resource route| resource is used to manage the system routing table in a |linux| environment.
@@ -146,8 +150,6 @@
 .. |resource desc service| replace:: The |resource service| resource is used to manage a service.
 .. |resource desc template| replace:: The |resource template| resource is used to manage file contents with an embedded |ruby| (erb) template. This resource includes actions and attributes from the |resource file| resource. Template files managed by the |resource template| resource follow the same file specificity rules as the |resource remote_file| and |resource file| resources.
 .. |resource desc user| replace:: The |resource user| resource is used to manage a local user.
-.. |resource desc windows_batch| replace:: The |resource windows_batch| resource is used to execute a batch script using the |windows cmd exe| interpreter (much like the script resources for |bash|, |csh|, |windows powershell|, |python|, and |ruby|). A temporary file is created and then executed like other script resources, rather than run inline.
-.. |resource desc windows_registry| replace:: The |resource windows_registry| resource is used to create and delete registry keys in |windows|.
 .. |resource desc yum| replace:: The |resource yum package| resource is used to use |yum| for installation, upgrade, and removal of packages. This resource is able to resolve ``provides`` data for packages much like |yum| can do when running it from the command line. This allows a variety of options for installing packages, like minimum versions, virtual provides, and library names.
 
 .. |response code 200 ok| replace:: OK. The request was successful.

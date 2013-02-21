@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``key``
-     - The name of a |gnupg| key to install.
+     - |key lwrp yum_key|
    * - ``url``
-     - The URL from which a |gnupg| key is downloaded.
+     - |url lwrp yum_key|

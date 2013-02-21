@@ -10,12 +10,12 @@ This resource has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Default. |resource action create windows_registry|
+     - Default. |resource action create registry_key|
    * - ``:create_if_missing``
-     - |resource action create_if_missing windows_registry|
+     - |resource action create_if_missing registry_key|
    * - ``:delete``
-     - |resource action delete windows_registry|
+     - |resource action delete registry_key|
    * - ``:delete_key``
-     - |resource action delete key windows_registry|
+     - |resource action delete key registry_key|
 
 .. note:: |note registry_key resource recursive|

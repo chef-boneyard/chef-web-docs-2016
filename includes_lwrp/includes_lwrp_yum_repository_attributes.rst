@@ -12,22 +12,22 @@ This lightweight resource provider has the following attributes:
    * - ``bootstrapurl``
      - Optional.
    * - ``description``
-     - A description of the repository.
+     - |description lwrp yum_repository|
    * - ``enabled``
-     - Indicates whether a repository is enabled. Default value: ``1`` (enabled).
+     - |enabled lwrp yum_repository|
    * - ``failovermethod``
-     - Optional. The fail-over method. ``roundrobin`` randomly selects a URL out of a list of URLs and proceeds through each of them as it encounters a failure when contacting the host; ``priority`` starts from the first base URL listed and proceeds through them sequentially. Default value: ``roundrobin``.
+     - Optional. |failovermethod|
    * - ``includepkgs``
-     - A list of packages in a repository.
+     - |includepkgs|
    * - ``key``
-     - Optional. The name of the |gnupg| key that is installed by the |lwrp yum key| lightweight resource.
+     - Optional. |key gnupg|
    * - ``make_cache``
      - Optional.
    * - ``mirrorlist``
-     - A string that contains the URI to the mirror list, starting with ``http://``, ``ftp://``, or ``file://``. Use ``file://`` if the mirror list is a text file or resides on the local system.
+     - |mirrorlist|
    * - ``repo_name``
-     - The name of the channel.
+     - |repo_name lwrp yum_repository|
    * - ``type``
      - Optional.
    * - ``url``
-     - The URL from which a package is downloaded.
+     - |url lwrp yum_repository|

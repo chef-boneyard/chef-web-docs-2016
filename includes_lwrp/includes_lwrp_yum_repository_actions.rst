@@ -10,8 +10,8 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - Default. Use to create a repository file and build a repository listing.
+     - Default. |lwrp action add yum_repository|
    * - ``:remove``
-     - Use to remove a repository file.
-   * - ``:remove``
-     - Use to update a repository file.
+     - |lwrp action remove yum_repository|
+   * - ``:update``
+     - |lwrp action update yum_repository|
