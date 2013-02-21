@@ -12,7 +12,7 @@ Chef Server 11.x
 =====================================================
 .. note:: This section is a work in progress.
 
-**The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements
+**The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements | :doc:`Components </server_components>`
 
 **Components:** Nginx | Erchef | Bookshelf | chef-webui | RabbitMQ | chef-expander | chef-solr | PostgreSQL
 
@@ -59,10 +59,10 @@ Private Chef 1.x.x
    manage_server_hosted
    manage_server_open_source
    migrate_to_hosted
-   server_rb
-   solo_rb
-   solr_rb
-
+   config_server_rb
+   config_solo_rb
+   config_solr_rb
+   server_components
    private_chef_1x
    private_chef_1x_engage
    private_chef_1x_architecture
