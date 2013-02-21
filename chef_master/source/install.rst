@@ -2,7 +2,7 @@
 Install Chef on a Workstation
 =====================================================
 
-.. include:: ../../includes_install/includes_install_omnibus_workstation.rst
+.. include:: ../../includes_install/includes_install_workstation.rst
 
 Follow the steps below to use the |omnibus installer| to set up a workstation on a machine running |unix|, |linux|, |mac os x|, or |windows|. When finished, a workstation will be configured to connect to a |chef server| and (optionally) can be configured to act as a |chef client|, used to set up a |chef client| on an external machine (or virtual machine) using a ``knife bootstrap`` operation, and used to manage cookbooks, organization settings (like roles, environments, and data bags).
 

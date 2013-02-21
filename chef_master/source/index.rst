@@ -9,7 +9,7 @@ Getting started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
 
-**Key concepts:** :doc:`The workstation </essentials_workstation>` | :doc:`The server </essentials_server>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`About resources and providers </resource>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`The workstation </essentials_workstation>` | :doc:`The server </server_types>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`About resources and providers </resource>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
@@ -24,18 +24,20 @@ The workstation
 =====================================================
 **The basics:** :doc:`About the workstation </essentials_workstation>` | :doc:`Repository </essentials_repository>` | :doc:`Knife </knife>`
 
+**Configure:** :doc:`Install Chef on a Workstation </install>` | :doc:`Create and sync the repository </essentials_repository_create>`
+
 **Knife:** :doc:`About Knife </knife>` | :doc:`Common options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`index rebuild </knife_index_rebuild>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` --- **Single page:** `Knife Reference <http://docs.opscode.com/chef/knife.html>`_ | `Knife Quick Reference <http://docs.opscode.com/_images/qr_knife_web.png>`_ (image)
 
 **Plugins:** :doc:`About plugins </plugin_knife>` | :doc:`Common options </knife_common_options>` --- **Commands:** :doc:`azure </plugin_knife_azure>` | :doc:`bluebox </plugin_knife_bluebox>` | :doc:`bluelock </plugin_knife_bluelock>` | :doc:`ec2 </plugin_knife_ec2>` | :doc:`eucalyptus </plugin_knife_eucalyptus>` | :doc:`google </plugin_knife_google>` | :doc:`hp </plugin_knife_hp>` | :doc:`linode </plugin_knife_linode>` | :doc:`openstack </plugin_knife_openstack>` | :doc:`rackspace </plugin_knife_rackspace>` | :doc:`terremark </plugin_knife_terremark>` | :doc:`windows </plugin_knife_windows>` --- **Single page:** `Knife Plugins Reference <http://docs.opscode.com/chef/knife_plugins.html>`_
-
-**Configure:** :doc:`Install Chef on a Workstation </install>` | :doc:`Create and sync the repository </essentials_repository_create>`
 
 **Settings:** :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
 
 
 The Chef server
 =====================================================
-**The basics:** :doc:`About the server </chef_overview_server>` | :doc:`Erchef </essentials_server_erchef>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
+**The basics:** :doc:`About the server </chef_overview_server>` | :doc:`Erchef </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
+
+**Configure:** :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a virtual machine </install_server_scenario_vm>`
 
 **The node object:** :doc:`About node objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep merge </essentials_node_object_deep_merge>`
 
@@ -107,6 +109,9 @@ Cookbooks
    api_cookbooks_site
    dsl_recipe
 
+   install_server
+   install_server_scenario_vm
+
    community
    config_rb_chef_server
    opscode_cookbooks
@@ -123,8 +128,6 @@ Cookbooks
    essentials_repository
    essentials_knife
 
-   essentials_server
-   essentials_server_erchef
    essentials_policy
    essentials_node_object
    essentials_data_bags
@@ -144,6 +147,9 @@ Cookbooks
    essentials_cookbook_resources
    essentials_cookbook_templates
    essentials_cookbook_versions
+
+   server_types
+   server_components
 
    manage_server_hosted 
 

@@ -53,6 +53,7 @@ Private Chef 1.x.x
    chef_pedant
    ctl_chef_server
    install_server
+   install_server_scenario_vm
    chef_overview
    api_chef_server
    api_cookbooks_site

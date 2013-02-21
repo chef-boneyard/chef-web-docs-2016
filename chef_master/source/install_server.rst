@@ -9,5 +9,3 @@ The steps below describe the process for installing |chef server 11|.
 Steps
 =====================================================
 .. include:: ../../step_install/step_install_server.rst
-
-
