@@ -9,7 +9,7 @@
      action :nothing
    end
 
-   http_request "HEAD #{http://couchdb.apache.org/img/sketch.png}" do
+   http_request "HEAD http://couchdb.apache.org/img/sketch.png" do
      message ""
      url "http://couchdb.apache.org/img/sketch.png"
      action :head
