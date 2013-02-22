@@ -29,12 +29,14 @@
 .. |cluster_members lwrp riak_cluster| replace:: A list of nodes that should be part of the cluster. Default value: discovered by |chef| search functionality.
 .. |cluster_name lwrp riak_cluster| replace:: The name of the local node (as identified by the ``riak.erlang.node_name`` attribute).
 
+.. |code lwrp windows_batch| replace:: A quoted (" ") string of code to be executed.
 .. |code resource batch| replace:: A quoted (" ") string of code to be executed.
 .. |code resource erlang_call| replace:: The code to be executed on a node located within a distributed |erlang| system. Default value: ``q()``.
 .. |code resource powershell_script| replace:: The quoted script of code to execute. Default value: ``nil``.
 .. |code resource script| replace:: The quoted script of code to execute. Default value: ``nil``.
 .. |color| replace:: Indicates that colored output will be used.
 .. |command lwrp powershell| replace:: The name of the command to be executed.
+.. |command lwrp windows_batch| replace:: The name of the command to be executed.
 .. |command resource batch| replace:: The name of a command to be executed.
 .. |command resource cron| replace:: The command to run. Default value: ``*``.
 .. |command resource execute| replace:: The name of the command that will be executed. Default value: ``name``.
@@ -54,6 +56,7 @@
 .. |content resource file| replace:: A string that is written to the file. The contents of this attribute will replace any previous content when this attribute has something other than the default value. Default value: ``nil`` (don't modify content).
 .. |concurrency| replace:: The number of allowed concurrent connections.
 .. |config| replace:: The configuration file to use.
+.. |context_template lwrp application_ruby_rails| replace:: The name of a template that will be rendered to create the context file. Default value: ``context.xml.erb`` (from this cookbook).
 .. |continue_seeding lwrp transmission_torrent_file| replace:: Indicates whether a file should continue to be seeded to the |bittorrent| swarm after download.
 .. |cookbook directory attributes| replace:: The sub-directory in which attributes are located. 
 .. |cookbook directory libraries| replace:: The sub-directory in which libraries are located. 
@@ -93,8 +96,6 @@
 .. |cookbook name windows| replace:: The ``windows`` cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
 .. |cookbook name yum| replace:: The ``yum`` cookbook is used to configure |yum| components and manage repositories and |gnupg| keys.
 .. |cookbook name zenoss| replace:: The ``zenoss`` cookbook is used to install and configure |zenoss|, and then register nodes as devices.
-
-
 .. |cookbook resource cookbook_file| replace:: The cookbook in which a file is located. Default value: ``nil`` (the current cookbook).
 .. |cookbook resource remote_directory| replace:: The cookbook in which a file is located. Default value: ``nil`` (the current cookbook).
 .. |cookbook resource template| replace:: The cookbook in which a template is located. Default value: ``nil`` (the current cookbook).
@@ -113,7 +114,9 @@
 .. |couchdb_version| replace:: Optional. The version of the |couch db| database.
 
 .. |create_dirs_before_symlink| replace:: Use this attribute to create directories before symbolic links are created. This attribute runs after ``purge_before_symlink`` and before ``symlink``. Default value: ``%w{tmp public config}`` (or the same as ``["tmp", "public", "config"]``).
+.. |create_dirs_before_symlink lwrp application| replace:: The directories to create before symbolic linking. This runs after ``purge_before_symlink``.
 .. |creates lwrp powershell| replace:: A file that is created by the command. If the file exists, the command will not run.
+.. |creates lwrp windows_batch| replace:: A file that is created by a command; if the file exists, the command will not be run.
 .. |creates resource batch| replace:: A file that is created by a command; if the file exists, the command will not be run.
 .. |creates resource execute| replace:: Indicates that a command to create a file will not be run when that file already exists. Default value: ``nil``.
 
@@ -121,6 +124,8 @@
 
 .. |cwd lwrp djbdns_rr| replace:: The current working directory in which the |tinydns| data file is located.
 .. |cwd lwrp powershell| replace:: The current working directory from which a command is run.
+.. |cwd lwrp windows_batch| replace:: The current working directory from which a command is run.
+.. |cwd lwrp windows_shortcut| replace:: The current working directory.
 .. |cwd resource batch| replace:: The current working directory from which a command is run.
 .. |cwd resource execute| replace:: The current working directory from which a command will be run. Default value: ``nil``.
 

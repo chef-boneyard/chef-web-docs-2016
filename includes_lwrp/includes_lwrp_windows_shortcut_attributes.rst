@@ -10,12 +10,12 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``arguments``
-     - The command-line arguments associate with a shortcut.
+     - |arguments lwrp windows_shortcut|
    * - ``cwd``
-     - The current working directory.
+     - |cwd lwrp windows_shortcut|
    * - ``description``
-     - A description of the shortcut.
+     - |description lwrp windows_shortcut|
    * - ``name``
-     - The name of the shortcut.
+     - |name lwrp windows_shortcut|
    * - ``target``
-     - The unique identifier for the object the shortcut will link to.
+     - |target lwrp windows_shortcut|

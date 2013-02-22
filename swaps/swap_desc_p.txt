@@ -14,9 +14,11 @@
 .. |package_name lwrp windows_package| replace:: The display name of the application installation package. This is the same as the ``DisplayName`` registry value in the uninstallation data that is created during package installation. The easiest way to find the proper ``DisplayName`` value is to install a package on a machine and search for the uninstall information under one of the following registry keys: ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall``, ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall``, or ``HKEY_LOCAL_MACHINE\Software\Wow6464Node\Microsoft\Windows\CurrentVersion\Uninstall``. This value may also be identified by the uninstaller itself (in the ``Name`` column) and can be viewed while running the uninstaller.
 .. |package_name resource package| replace:: The name of the package to install. Default value: ``name``.
 .. |package_name resource yum| replace:: One of the following: the name of a package, the name of a package and its architecture; the name of a dependency. Default value: ``name``.
+.. |packages lwrp application| replace:: A list of one (or more) packages to be installed along with the application.
 .. |PART| replace:: The part of the cookbook to show: ``attributes``, ``definitions``, ``files``, ``libraries``, ``providers``, ``recipes``, ``resources``, or ``templates``. More than one part can be specified.
 .. |pass resource mount| replace:: The pass number used by the file system check (fsck) command while creating a file systems table (fstab) entry. Default value: ``2``.
 .. |password bluelock| replace:: The password for the |bluelock| account.
+.. |password lwrp application| replace:: The path to the application.
 .. |password lwrp dynect_rr| replace:: The |dns update api| password.
 .. |password lwrp mysql_database| replace:: The password for the specified username.
 .. |password lwrp rabbitmq_user| replace:: The password for the user.
@@ -24,6 +26,7 @@
 .. |password resource user| replace:: The password shadow hash. This attribute requires that ``ruby-shadow`` be installed. This is part of the |debian| package: ``libshadow-ruby1.8``. Default value: ``nil``.
 .. |patches lwrp pacman_aur| replace:: An array of files to be used as patches for the package. Default value: ``[]``.
 .. |path lwrp python_virtualenv| replace:: The path to the location in which the virtual |python| environment will be created. Default value: ``\``.
+.. |path lwrp windows_path| replace:: The value to be added to or removed from a system path.
 .. |path resource cookbook_file| replace:: The destination path and the name of the file on the node. Default value: ``name``, which means that the file will be located at the same path and have the same name as the ``source`` file.
 .. |path resource cron| replace:: Sets the PATH environment variable.
 .. |path resource directory| replace:: The path to the directory. Default value: ``name``.
@@ -45,13 +48,19 @@
 .. |platform-version| replace:: The version of the platform.
 .. |plugin resource ohai| replace:: Optional. Indicates that only the specified plug-ins are reloaded by |ohai|. Default value: ``nil`` (all plug-ins are reloaded ).
 
+.. |port lwrp application_nginx_load_balancer| replace:: The port to which |nginx| will bind. Default value: ``80``.
 .. |port lwrp firewall_rule| replace:: The port number.
 .. |position lwrp firewall_rule| replace:: The position at which a rule is inserted. If this value is not specified, a rule is inserted at the end of a rule list.
 
+.. |precompile_assets lwrp application_ruby| replace:: Indicates whether assets will be pre-compiled. Unless this attribute is specified, |chef| will attempt to auto-detect whether the pipeline is in use by looking in ``config/assets.yml``.
+.. |preload_app lwrp application_ruby| replace:: Indicates whether an application is loaded before a worker process is forked. Default value: ``false``.
 .. |preferred_state lwrp php_pear| replace:: By default, |pear| only installs stable packages. Packages can be installed in various non-stable states: ``devel``, ``alpha`` or ``beta``. Default value: ``stable``.
 .. |prerelease| replace:: Indicates that pre-release |chef| gems should be installed.
 .. |print-after| replace:: Indicates that data will be shown after a destructive operation.
 .. |private-key-file| replace:: The file in which the |ssh| private key used for authentication is located.
+
+.. |product_id lwrp webpi| replace:: The identifier of the product to be installed.
+.. |program lwrp windows_autorun| replace:: The program to be run.
 .. |project_id| replace:: The identifier for the |google compute engine| project.
 .. |protocol lwrp firewall_rule| replace:: The protocol used by the firewall rule. Valid values are: ``:all``, ``:udp``, ``:tcp``. Default value: ``:all``.
 
@@ -67,6 +76,6 @@
 .. |purge resource remote_directory| replace:: Indicates that extra files found in the target directory will be purged. Default value: ``false``.
 .. |purge windows azure| replace:: Indicates that all corresponding nodes and clients on the |chef server| will be destroyed, in addition to the |windows azure| node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the ``--node-name`` option must be used to specify the name of the node.
 .. |purge_before_symlink| replace:: Use this attribute to specify an array of directories (relative to the application root) that should be removed from a checkout before symbolic links are created. This attribute runs before ``create_dirs_before_symlink`` and before ``symlink``. Default value: ``%w{log tmp/pids public/system}`` (or the same as ``["log", "tmp/pids", "public/system"]``.
-
+.. |purge_before_symlink lwrp application| replace:: An array of paths, relative to the application root, that are to be removed from a checkout before symbolic linking.
 
 

@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Use to create a shortcut.
+     - |lwrp action create windows_shortcut|
