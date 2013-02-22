@@ -6,11 +6,11 @@ Chef Server Components
 
 .. include:: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst
 
-Depending on the chosen topology (standalone, tiered, or high availability), the number of servers and/or their roles within the topology (front-end or back-end) may change. But first, a quick discussion of each of the components and the relationships they have with one another. The following diagram shows the various components that are part of a |chef server| deployment.
+The following diagram shows the various components that are part of a |chef server| deployment.
 
 .. image:: ../../images/server_components_all.png
 
-The |chef server| has the following components:
+|chef server| components:
 
 .. list-table::
    :widths: 60 420

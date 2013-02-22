@@ -10,19 +10,19 @@ This resource has the following has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - The name of a command to be executed.
+     - |command resource batch|
    * - ``code``
-     - A quoted (" ") string of code to be executed.
+     - |code resource batch|
    * - ``creates``
-     - A file that is created by a command; if the file exists, the command will not be run.
+     - |creates resource batch|
    * - ``cwd``
-     - The current working directory from which a command is run.
+     - |cwd resource batch|
    * - ``flags``
-     - One (or more) command line flags that are passed to the interpreter when the command is invoked.
+     - |flags resource batch|
    * - ``group``
-     - A group name or identifier that must be changed before running a command.
+     - |group resource batch|
    * - ``returns``
-     - 
+     - |returns resource batch|
    * - ``user``
-     - A user name or identifier that must be changed before running a command.
+     - |user resource batch|
 
