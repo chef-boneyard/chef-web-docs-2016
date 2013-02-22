@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Default. Use to create a port options file using a template or an options hash.
+     - Default. |lwrp action create freebsd_port|

@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - Use to create a preferences file under ``/etc/apt/preferences.d``. This creates a "pin" for a package.
+     - |lwrp action add apt_preference|
    * - ``:remove``
-     - Use to remove a preferences file, which will "unpin" a package.
+     - |lwrp action remove apt_preference|

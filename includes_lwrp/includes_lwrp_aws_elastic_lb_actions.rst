@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:deregister``
-     - Use to remove an instance from a load balancer.
+     - |lwrp action deregister aws_elastic_lb|
    * - ``:register``
-     - Use to add an instance to a load balancer.
+     - |lwrp action reregister aws_elastic_lb|
