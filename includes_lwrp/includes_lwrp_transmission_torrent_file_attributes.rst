@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``path``
-     - The path to a file.
+     - |path lwrp transmission_torrent_file|
    * - ``torrent``
      - |torrent lwrp transmission_torrent_file|
    * - ``blocking``

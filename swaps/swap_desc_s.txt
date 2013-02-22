@@ -19,6 +19,7 @@
 .. |search query syntax| replace:: A search query is comprised of two parts: the key and the search pattern.
 .. |search special character| replace:: A special character can be used to fine-tune a search query and to increase the accuracy of the search results.
 .. |search target| replace:: A search target is any object that has been indexed on the |chef server|, including roles (and run-lists), nodes, environments, data bags, and any |chef api client|.
+.. |search_group lwrp users| replace:: The name of the group to be searched. This value defaults to the name of the resource if left empty.
 .. |SEARCH_QUERY| replace:: The search query used to identify a a list of items on a |chef server|. This option uses the same syntax as the ``search`` sub-command.
 .. |SEARCH_QUERY SSH| replace:: The search query used to return a list of servers to be accessed using |ssh| and the specified ``SSH_COMMAND``. This option uses the same syntax as the search sub-command.
 .. |secret| replace:: The encryption key that is used for values contained within a data bag.
@@ -26,9 +27,11 @@
 .. |server-name| replace:: The name of the server.
 .. |server_name lwrp application_nginx_load_balancer| replace:: The virtual host name for a server. Defaults to the node |fqdn|.
 .. |server-url| replace:: The URL for the |chef server|.
-.. |server_aliases lwrp application_php_mod| replace:: An array of server aliases.
+.. |serverurl lwrp application_php_mod| replace:: An array of server aliases.
+.. |serverurl lwrp supervisor| replace:: The URL passed in the environment to the sub-process process.
 .. |service_name lwrp bluepill_service| replace:: The name of the service. A recipe that uses the |lwrp bluepill service| lightweight resource must contain a template resource for the pill and it must be named ``NAME.pill.erb`` where ``NAME`` is the ``service_name`` attribute.
 .. |service_name lwrp daemontools_service| replace:: The name of the service.
+.. |service_name lwrp supervisor| replace:: The name of a service.
 .. |service_name resource service| replace:: The name of the service. Default value: ``name``.
 
 .. |shallow_clone resource| replace:: Indicates that the clone depth is set to 5. Default value: ``true``.
@@ -99,9 +102,29 @@
 
 .. |start| replace:: The row at which return results will begin.
 .. |start_command resource service| replace:: The command used to start a service. Default value: ``nil``.
+
+.. |startretries lwrp supervisor| replace:: The number of serial failure attempts |python supervisor| will allow when attempting to start a program before giving up.
+.. |startsecs lwrp supervisor| replace:: The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.
+
 .. |static_files lwrp application_nginx_load_balancer| replace:: A hash that maps URLs to files. Default value: ``{}``.
 .. |status_command resource service| replace:: The command used to check the run status for a service. Default value: ``nil``.
+
+.. |stderr_capture_maxbytes lwrp supervisor| replace:: The maximum number of bytes written to capture for ``stderr_logfile``.
+.. |stderr_events_enabled lwrp supervisor| replace:: Indicates whether events are omitted from ``stderr_logfile``.
+.. |stderr_logfile lwrp supervisor| replace:: The location of the STDERR logfile.
+.. |stderr_logfile_backups lwrp supervisor| replace:: The number of ``stderr_logfile`` backups to keep.
+.. |stderr_logfile_maxbytes lwrp supervisor| replace:: The maximum size (in bytes) that may be consumed by ``stderr_logfile`` before it is rotated.
+.. |stdout_capture_maxbytes lwrp supervisor| replace:: The maximum number of bytes written to capture for ``stdout_logfile``.
+.. |stdout_events_enabled lwrp supervisor| replace:: Indicates whether events are omitted from ``stdout_logfile``.
+.. |stdout_logfile lwrp supervisor| replace:: The location of the STDOUT logfile.
+.. |stdout_logfile_backups lwrp supervisor| replace:: The number of ``stdout_logfile`` backups to keep.
+.. |stdout_logfile_maxbytes lwrp supervisor| replace:: The maximum size (in bytes) that may be consumed by ``stdout_logfile`` before it is rotated.
+
 .. |stop_command resource service| replace:: The command used to stop a service. Default value: ``nil``.
+
+.. |stopsignal lwrp supervisor| replace:: The signal used to kill a program when a stop is requested: ``TERM``, ``HUP``, ``INT``, ``QUIT``, ``KILL``, ``USR1``, or ``USR2``.
+.. |stopwaitsecs lwrp supervisor| replace:: The amount of time (in seconds) to wait (after ``stopsignal``) before a ``SIGKILL`` message is sent.
+
 .. |storage account| replace:: The name of the storage account used with the hosted service.
 .. |strategy lwrp application| replace:: The deploy strategy: ``timestamped_deploy`` or ``deploy_revision`` (default). Use ``deploy_revision`` to ensure that the name of a release sub-directory is based on a revision identifier and puts deployed components under the destination location that is owned by the user who runs the application. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---|chef| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. Use ``timestamped_deploy`` to name a release sub-directory with a timestamp in the form of YYYYMMDDHHMMSS. For example: /my/deploy/dir/releases/20121120162342.
 

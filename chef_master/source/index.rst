@@ -33,7 +33,7 @@ The workstation
 **Settings:** :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
 
 
-The Chef server
+The Chef Server
 =====================================================
 **The basics:** :doc:`About the server </chef_overview_server>` | :doc:`Server components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
 

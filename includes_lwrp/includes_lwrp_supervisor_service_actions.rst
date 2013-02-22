@@ -10,15 +10,15 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:disable``
-     - Use to disable a service at boot time.
+     - |lwrp action disable supervisor|
    * - ``:enable``
-     - Use to enable a service at boot time.
+     - |lwrp action enable supervisor|
    * - ``:reload``
-     - Use to reload a service.
+     - |lwrp action reload supervisor|
    * - ``:restart``
-     - Use to restart a service.
+     - |lwrp action restart supervisor|
    * - ``:start``
-     - Use to start a service.
+     - |lwrp action start supervisor|
    * - ``:stop``
-     - Use to stop a service.
+     - |lwrp action stop supervisor|
 

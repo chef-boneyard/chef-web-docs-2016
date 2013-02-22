@@ -10,12 +10,12 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``cookbook``
-     - The name of the cookbook in which the ``authorized_keys`` template is located.
+     - |cookbook lwrp users|
    * - ``data_bag``
-     - The object to be searched.
+     - |data_bag lwrp users|
    * - ``group_id``
-     - The numeric identifier for a group.
+     - |group_id lwrp users|
    * - ``group_name``
-     - The name of a group. This value defaults to the name of the resource if left empty.
+     - |group_name lwrp users|
    * - ``search_group``
-     - The name of the group to be searched. This value defaults to the name of the resource if left empty.
+     - |search_group lwrp users|
