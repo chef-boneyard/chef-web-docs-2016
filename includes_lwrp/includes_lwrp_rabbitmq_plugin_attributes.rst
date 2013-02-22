@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``plugin``
-     - The name of the plugin.
+     - |name plugin|

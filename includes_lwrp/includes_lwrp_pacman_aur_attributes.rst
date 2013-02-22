@@ -9,7 +9,18 @@ This lightweight resource provider has the following actions:
 
    * - Action
      - Description
-   * - ``build``
-     - |lwrp action build pacman_aur|
-   * - ``install``
-     - |lwrp action install pacman_aur|
+   * - ``builddir``
+     - |builddir lwrp pacman_aur|
+   * - ``exists``
+     - |exists lwrp pacman_aur|
+   * - ``options``
+     - |options lwrp pacman_aur|
+   * - ``package_name``
+     - |package_name lwrp pacman_aur|
+   * - ``patches``
+     - |patches lwrp pacman_aur|
+   * - ``pkgbuild_src``
+     - |pkgbuild_src lwrp pacman_aur|
+   * - ``version``
+     - |version lwrp pacman_aur|
+

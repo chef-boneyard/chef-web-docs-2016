@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:disable``
-     - Use to disable a plugin.
+     - |lwrp action disable rabbitmq_plugin|
    * - ``:enable``
-     - Default. Use to enable a plugin.
+     - Default. |lwrp action enable rabbitmq_plugin|

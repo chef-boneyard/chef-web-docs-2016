@@ -10,18 +10,18 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``commands``
-     - An array of commands that the user or group can execute using |sudo cmd|. This value must use the full path for each command, otherwise the resulting fragment will fail validation.
+     - |commands lwrp sudo|
    * - ``group``
-     - The group for which |sudo cmd| privileges are provided.
+     - |group lwrp sudo|
    * - ``host``
      - 
    * - ``nopasswd``
-     - Indicates whether a password must be supplied when invoking |sudo cmd|.
+     - |nopasswd|
    * - ``runas``
      - 
    * - ``template``
-     - A |erb| template file in the current cookbook (not the ``sudo`` cookbook). If this attribute is used, all other attributes will be ignored except for ``variables``.
+     - |template lwrp sudo|
    * - ``user``
-     - The user for which |sudo cmd| privileges are provided.
+     - |user lwrp sudo|
    * - ``variables``
-     - A hash of variables that are used with the |erb| template file.
+     - |variables erb template|
