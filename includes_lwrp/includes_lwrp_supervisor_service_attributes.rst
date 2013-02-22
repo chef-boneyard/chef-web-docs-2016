@@ -20,13 +20,13 @@ This lightweight resource provider has the following attributes:
    * - ``environment``
      - |environment lwrp supervisor|
    * - ``exitcodes``
-     - A list of expected exit codes for a program.
+     - |exitcodes lwrp supervisor|
    * - ``numprocs``
      - |numprocs lwrp supervisor|
    * - ``numprocs_start``
      - |numprocs_start lwrp supervisor|
    * - ``priority``
-     - |priority lwrp supervisor|
+     - |priority lwrp supervisor_service|
    * - ``process_name``
      - |process_name lwrp supervisor|
    * - ``redirect_stderr``
