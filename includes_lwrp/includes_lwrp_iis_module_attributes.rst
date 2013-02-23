@@ -10,11 +10,11 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``application``
-     - The application or site to which a module will be added.
+     - |application lwrp iis_module|
    * - ``module_name``
-     - The name of the module.
+     - |module_name lwrp iis_module|
    * - ``type``
-     - The module type.
+     - |type lwrp iis_module|
    * - ``precondition``
-     - The pre-condition for a module, if applicable.
+     - |precondition lwrp iis_module|
 

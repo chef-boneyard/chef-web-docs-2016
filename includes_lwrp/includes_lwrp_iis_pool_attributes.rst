@@ -10,14 +10,14 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``max_proc``
-     - The maximum number of worker processes available to service requests to an application pool.
+     - |max_proc lwrp iis_pool|
    * - ``pipeline_mode``
-     - The pipeline mode with which an application pool is created.
+     - |pipeline_mode lwrp iis_pool|
    * - ``private_mem``
-     - The maximum amount of private memory (in KB) that a worker process can consume before the application pool will recycle. A value of ``0`` means there is no limit.
+     - |private_mem lwrp iis_pool|
    * - ``pool_name``
-     - The name of the application pool.
+     - |pool_name lwrp iis_pool|
    * - ``runtime_version``
-     - The version of |microsoft dotnet| that will be used by the runtime.
+     - |runtime_version lwrp iis_pool|
    * - ``thirty_two_bit``
-     - Indicates whether an application pool can run in 64-bit mode. Default value: ``false``.
+     - |thirty_two_bit lwrp iis_pool|

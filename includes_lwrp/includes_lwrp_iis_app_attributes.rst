@@ -10,10 +10,10 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``app_name``
-     - The name of the application.
+     - |app_name lwrp iis_app|
    * - ``application_pool``
-     - The application pool to which an application belongs.
+     - |application_pool lwrp iis_app|
    * - ``path``
-     - The virtual path to the location where the application resides.
+     - |path lwrp iis_app|
    * - ``physical_path``
-     - The physical path to the location where the application resides.
+     - |physical_path lwrp iis_app|

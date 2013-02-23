@@ -12,13 +12,13 @@ This lightweight resource provider has the following actions:
    * - ``:install``
      - Default. |resource action install package| This action is inherited from the |resource package| resource resource.
    * - ``:purge``
-     - |resource action purge package| This action is inherited from the |resource package| resource resource. For |homebrew|, this is effectively the same as the ``:remove`` action.
+     - |resource action purge package| |lwrp action purge homebrew|
    * - ``:remove``
      - |resource action remove package| This action is inherited from the |resource package| resource resource.
    * - ``:tap``
-     - Use to enable a formula repository located on |github|.
-   * - ``:untap``
-     - Use to disable a formula repository located on |github|.
+     - |lwrp action tap homebrew|
    * - ``:upgrade``
-     - |resource action upgrade package| This action is inherited from the |resource package| resource resource. For |homebrew|, there isn't an upgrade, rather |homebrew| performs the ``:install`` action every time, effectively upgrading a package when it is newer than the one installed previously.
+     - |resource action upgrade package| |lwrp action upgrade homebrew|
+   * - ``:untap``
+     - |lwrp action untap homebrew|
 
