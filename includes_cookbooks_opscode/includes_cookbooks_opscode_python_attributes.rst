@@ -10,6 +10,6 @@ This cookbook includes the following attributes:
    * - Attribute
      - Description
    * - ``node["python"]["install_method"]``
-     - The method used to install |python|.
+     - |attribute python_install_method|
 
 .. note:: See /attributes/default.rb for platform- and source-specific settings.

@@ -10,24 +10,24 @@ This cookbook includes the following attributes:
    * - Attribute
      - Description
    * - ``node['supervisor']['inet_port']``
-     - The port on which to serve the internal web-based admin dashboard. For example: 'localhost:9001'.
+     - |attribute supervisor_inet_port|
    * - ``node['supervisor']['inet_username']``
-     - The user name used to authenticate to the HTTP server.
+     - |attribute supervisor_inet_username|
    * - ``node['supervisor']['inet_password']``
-     - The password used during authentication to the HTTP server. This setting supports both clear text and SHA-1 hashed passwords (that are prefixed by ``{SHA}``).
+     - |attribute supervisor_inet_password|
    * - ``node['supervisor']['dir']``
-     - The location of supervisor configuration files.
+     - |attribute supervisor_dir|
    * - ``node['supervisor']['log_dir']``
-     - The location of supervisor log files.
+     - |attribute supervisor_log_dir|
    * - ``node['supervisor']['logfile_maxbytes']``
-     - The maximum size (in bytes) of the ``supervisord`` log file. When this file reaches this size, it will be rotated. Default value: ``50MB``.
+     - |attribute supervisor_logfile_maxbytes|
    * - ``node['supervisor']['logfile_backups']``
-     - The number of backups of the log file that will be kept. Default value: ``10``.
+     - |attribute supervisor_logfile_backups|
    * - ``node['supervisor']['loglevel']``
-     - The minimum severity level for logged messages. Default value ``info``.
+     - |attribute supervisor_loglevel|
    * - ``node['supervisor']['minfds']``
-     - The minimum number of file descriptors that must be available before ``supervisord`` will start successfully.
+     - |attribute supervisor_minfds|
    * - ``node['supervisor']['minprocs']``
-     - The minimum number of process descriptors that must be available before ``supervisord`` will start successfully.
+     - |attribute supervisor_minprocs|
    * - ``node['supervisor']['version']``
-     - Sets the version of ``supervisor`` to install; must be version 3.0 (or higher) to use ``minprocs`` and ``minfds``.
+     - |attribute supervisor_version|

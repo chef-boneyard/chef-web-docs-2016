@@ -10,30 +10,30 @@ Use the ``mod_*`` option to install individual modules (extensions) for |microso
    * - Component
      - Description
    * - ``mod_aspnet``
-     - Use to install |microsoft aspdotnet| runtime components.
+     - |mod_aspnet|
    * - ``mod_auth_basic``
-     - Use to install support for basic authentication.
+     - |mod_auth_basic|
    * - ``mod_auth_windows``
-     - Use to install |windows| authentication, which allows clients to authenticate using |kerberos| or |ntlm|.
+     - |mod_auth_windows|
    * - ``mod_compress_dynamic``
-     - Use to install dynamic content compression support. Enabling dynamic compression allows a more efficient use of bandwidth; however, if the server's processor utilization is already high, the CPU load imposed by dynamic compression may affect site performance.
+     - |mod_compress_dynamic|
    * - ``mod_compress_static``
-     - Use to install support for static content compression.
+     - |mod_compress_static|
    * - ``mod_deploy``
-     - Use to install the |microsoft web deployment tool|, which simplifies the migration, management, and deployment of |microsoft iis| web servers, applications, and websites.
+     - |mod_deploy|
    * - ``mod_iis6_metabase_compat``
-     - Use to install |microsoft iis| the metabase compatibility component.
+     - |mod_iis6_metabase_compat|
    * - ``mod_isapi``
-     - Use to install extension and filter support for |microsoft isapi|.
+     - |mod_isapi|
    * - ``mod_logging``
-     - Use to install and enable HTTP logging for website activity, logging tools, and custom logging (for HTTP request/response headers, |microsoft iis| server variables, and client-side fields with simple configuration).
+     - |mod_logging|
    * - ``mod_management``
-     - Use to install the management console, which can be used to support the management of local and remote web servers.
+     - |mod_management|
    * - ``mod_mvc3``
-     - Use to install |microsoft dotnet| MVC3 runtime components.
+     - |mod_mvc3|
    * - ``mod_security``
-     - Use to install URL authorization (which authorizes client access to the URLs that comprise a web application), request filtering (which configures rules to block selected client requests), and IP security (which allows or denies access to content based on an IP address or a domain name).
+     - |mod_security|
    * - ``mod_tracing``
-     - Use to install support for tracing |microsoft aspdotnet| applications and failed requests.
+     - |mod_tracing|
    * - ``mod_urlrewrite``
-     - Use to install support for URL rewrite rules using rule templates, rewrite maps, and |microsoft dotnet| providers.
+     - |mod_urlrewrite|

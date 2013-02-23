@@ -10,18 +10,18 @@ This cookbook includes the following attributes:
    * - Attribute
      - Description
    * - ``node['iis']['accept_eula']``
-     - Indicates that the terms of the end user license agreement is accepted. Default value: ``false``.
+     - |attribute iis_accept_eula|
    * - ``node['iis']['home']``
-     - The home directory for |microsoft iis|. Default value: ``%WINDIR%\System32\inetsrv``.
+     - |attribute iis_home|
    * - ``node['iis']['conf_dir']``
-     - The location for |microsoft iis| configuration settings. Default value: ``%WINDIR%\System32\inetsrv\config``.
+     - |attribute iis_conf_dir|
    * - ``node['iis']['pubroot']``
-     - The public directory. Default value: ``%SYSTEMDRIVE%\inetpub``.
+     - |attribute iis_pubroot|
    * - ``node['iis']['docroot']``
-     - The home directory. Default value: ``%SYSTEMDRIVE%\inetpub\wwwroot``.
+     - |attribute iis_docroot|
    * - ``node['iis']['log_dir']``
-     - The directory in which log files are located. Default value: ``%SYSTEMDRIVE%\inetpub\logs\LogFiles``.
+     - |attribute iis_log_dir|
    * - ``node['iis']['cache_dir']``
-     - The directory in which cached data is located. Default value: ``%SYSTEMDRIVE%\inetpub\temp``.
+     - |attribute iis_cache_dir|
 
 
