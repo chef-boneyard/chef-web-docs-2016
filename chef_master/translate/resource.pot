@@ -1,0 +1,420 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-22 20:38\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource.rst:34
+# f34fb91cfb73495f9c6d97b1c912b07c
+msgid "About Resources and Providers"
+msgstr ""
+
+#: ../source/resource.rst:36
+# 83a3801774bb4bc3aa9fecbec5ef1042
+msgid "If you want to see all of the information about |chef| resources in a single document, see: http://docs.opscode.com/chef/resources.html. (This document also includes all of the lightweight resources that exist in |opscode|-maintained cookbooks.) If you want to read topics about individual resources, keep reading down this page (all of the individual resources are listed in a table just below). If you want to read topics about individual resources, see: http://docs.opscode.com/lwrp.html."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource.rst:4
+# a41446a85e0f4be092bf039d22e2e647
+msgid "A resource is a key part of a recipe. A resource defines the actions that can be taken, such as when a package should be installed, whether a service should be enabled or restarted, which groups, users, or groups of users should be created, where to put a collection of files, what the name of a new directory should be, and so on. During a |chef| run, each resource is identified and then associated with a provider. The provider then does the work to complete the action defined by the resource. |chef| ensures that the same actions are taken the same way everywhere and that actions produce the same result every time. A resource is implemented within a recipe using |ruby|."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_provider.rst:4
+# 60e3a8026be245f798a28e731133afd4
+msgid "A resource represents a piece of the system, its current state, and the action that is needed to move it to a desired state. A provider defines the steps that are required to bring that piece of the system from its current to the desired state. An action is de-coupled from the steps required to complete that action, which means that a provider exists for each of the paths that are required to complete the action. This is important because a single action may require different steps, depending on the platform of the system on which the action is being taken."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_provider.rst:6
+# ae73be5b061f42f8953c02dd516a45bc
+msgid "For example, \"install a package\" is a single action. To install a package onto various platforms, the steps required for each of those platforms may be different and may require different providers. On a |redhat| or |centos| machine a provider will use the |redhat yum| package provider to get the package installed and on a |debian| or an |ubuntu| machine, a provider will use the |apt| package installer. One action, two providers, each taking only the steps required to complete that action."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst:4
+# d5926546294041bf9b7751135cb49c0b
+msgid "The ``Chef::Platform`` class maps providers to platforms (and platform versions). |ohai|, as part of every |chef| run, verifies the ``platform`` and ``platform_version`` attributes on each node. |chef| then uses those values to identify the correct provider, build an instance of that provider, identify the current state of the resource, do the specified action, and then mark the resource as updated (if changes were made). For example, given the following resource:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst:15
+# 524272c518e345bdaf43938800761bde
+msgid "|chef| will look up the provider for the ``directory`` resource, which happens to be ``Chef::Provider::Directory``, call ``load_current_resource`` to create a new resource called ``directory[\"/tmp/folder\"]``, and then, based on the current state of the directory, do the specified action, which in this case is to create a directory called ``/tmp/folder``. If the directory already exists, nothing will happen. If the directory was changed in any way, the resource is marked as updated."
+msgstr ""
+
+#: ../source/resource.rst:45
+# 128723ada8304e8ebadd26d8ab1de81b
+msgid "Common Functionality"
+msgstr ""
+
+#: ../source/resource.rst:46
+# 3a0e84dbc42245dcb93b5a7e88684622
+msgid "All resources share a set of common actions, attributes, conditional executions, notifications, and relative path options."
+msgstr ""
+
+#: ../source/resource.rst:52
+# 80be3c3bb8034e69a0f708cc66c9be69
+msgid "Common Item"
+msgstr ""
+
+#: ../source/resource.rst:53
+#: ../source/resource.rst:74
+# ecc7c9be13914366816b25b7361dc13f
+# 43bea19d28f2486ea560665a949a8626
+msgid "Description"
+msgstr ""
+
+#: ../source/resource.rst:54
+# b966848a07fb4223b39b4a8113fdcd26
+msgid ":doc:`Actions </resource_common_actions>`"
+msgstr ""
+
+#: ../source/resource.rst:55
+# 3e2f8e7f15c74264b32425ea73944fcf
+msgid "The ``:nothing`` action can be used with any resource or lightweight resource."
+msgstr ""
+
+#: ../source/resource.rst:56
+# 29b5c3ee4180499dafe6d5ebcbe3f98a
+msgid ":doc:`Attributes </resource_common_attributes>`"
+msgstr ""
+
+#: ../source/resource.rst:57
+# 866d4b72df7a4ea6b70f1b5f52ef2f25
+msgid "The ``ignore_failure``, ``provider``, ``retries``, ``retry_delay``, and ``supports`` attributes can be used with any resource or lightweight resources."
+msgstr ""
+
+#: ../source/resource.rst:58
+# b1c03013a9d24e1e9f162ab4d4f037c3
+msgid ":doc:`Conditions </resource_common_conditionals>`"
+msgstr ""
+
+#: ../source/resource.rst:59
+# f558f48287a64dbeb91166d7018ac98d
+msgid "The ``not_if`` and ``only_if`` conditional executions can be used to put additional guards around certain resources so that they are only run when the condition is met."
+msgstr ""
+
+#: ../source/resource.rst:60
+# dc27c693ee33495fba5c228bf094d035
+msgid ":doc:`Notifications </resource_common_notifications>`"
+msgstr ""
+
+#: ../source/resource.rst:61
+# 656c58b5ed024aeabee64c3e1c1c1f6f
+msgid "The ``notifies`` and ``subscribes`` notifications can be used with any resource."
+msgstr ""
+
+#: ../source/resource.rst:62
+# 11fb7ace4fbb484990ba815717ccdc12
+msgid ":doc:`Relative Paths </resource_common_relative_paths>`"
+msgstr ""
+
+#: ../source/resource.rst:63
+# 121021d0c483499cb51c4e93f9a40d58
+msgid "The ``#{ENV['HOME']}`` relative path can be used with any resource."
+msgstr ""
+
+#: ../source/resource.rst:66
+# f843e0266df5433da616f4fb266f44f6
+msgid "|chef| Resources"
+msgstr ""
+
+#: ../source/resource.rst:67
+# e013fd7fc7ef4b769ebf0b14580c97fa
+msgid "|chef| includes the following resources (each provider is discussed within the context of its associated resource):"
+msgstr ""
+
+#: ../source/resource.rst:73
+# 420bd3b82b5e41d1bc1c0b865199601a
+msgid "Resource"
+msgstr ""
+
+#: ../source/resource.rst:75
+# 509ee52ddc7b45e1bc055fbd76b9f0fa
+msgid ":doc:`resource_cookbook_file`"
+msgstr ""
+
+#: ../source/resource.rst:76
+# 6edbee2e2fca41d38e178e309a228ce4
+msgid "|resource desc cookbook_file|"
+msgstr ""
+
+#: ../source/resource.rst:77
+# 9ef904295f5e495eb4c294733119b3b8
+msgid ":doc:`resource_cron`"
+msgstr ""
+
+#: ../source/resource.rst:78
+# befb59f461d74e2abac2114d5cef8591
+msgid "|resource desc cron|"
+msgstr ""
+
+#: ../source/resource.rst:79
+# 16e8a5a30f074dd1827da82fe5919c99
+msgid ":doc:`resource_deploy`"
+msgstr ""
+
+#: ../source/resource.rst:80
+# fe2757b12cf5447cb1d8729aa30b4608
+msgid "|resource desc deploy|"
+msgstr ""
+
+#: ../source/resource.rst:81
+# b606843658bf480a82a114eeb6c8b630
+msgid ":doc:`resource_directory`"
+msgstr ""
+
+#: ../source/resource.rst:82
+# 4a8306943c95494aa8515907abd4dfdb
+msgid "|resource desc directory|"
+msgstr ""
+
+#: ../source/resource.rst:83
+# 07949d3990564ebaa5def6dd0064fe2f
+msgid ":doc:`resource_env`"
+msgstr ""
+
+#: ../source/resource.rst:84
+# fe0e4901989b446e83c18f2f78ee0424
+msgid "|resource desc env|"
+msgstr ""
+
+#: ../source/resource.rst:85
+# ec56eb9bad74407d8c7e5a19dcc698c0
+msgid ":doc:`resource_erlang_call`"
+msgstr ""
+
+#: ../source/resource.rst:86
+# 62a9517d331043b7aa61a1c81e2eb119
+msgid "|resource desc erlang_call|"
+msgstr ""
+
+#: ../source/resource.rst:87
+# 0d598c8ab6704052a617cb43fae42b1a
+msgid ":doc:`resource_execute`"
+msgstr ""
+
+#: ../source/resource.rst:88
+# ec46e6a172a2470088e9fa1819f641af
+msgid "|resource desc execute|"
+msgstr ""
+
+#: ../source/resource.rst:89
+# 8d5a044d6af446e783f322b82a3bee7b
+msgid ":doc:`resource_file`"
+msgstr ""
+
+#: ../source/resource.rst:90
+# 1897e53aa28942aa99391dbc931a8b1f
+msgid "|resource desc file|"
+msgstr ""
+
+#: ../source/resource.rst:91
+# 6fec6bbb5af54ea08928a1529184b8d7
+msgid ":doc:`resource_group`"
+msgstr ""
+
+#: ../source/resource.rst:92
+# afc285dc972f483e9eaec251eaa0f081
+msgid "|resource desc group|"
+msgstr ""
+
+#: ../source/resource.rst:93
+# a4adb682faa74266a9a4d9cb632c1aa5
+msgid ":doc:`resource_http_request`"
+msgstr ""
+
+#: ../source/resource.rst:94
+# 010c171628334103b708e0abe73d36d1
+msgid "|resource desc http_request|"
+msgstr ""
+
+#: ../source/resource.rst:95
+# 81100ecad7dc4cffae4d7f10c18d422c
+msgid ":doc:`resource_ifconfig`"
+msgstr ""
+
+#: ../source/resource.rst:96
+# e82f94b259b04dc99285424e0a372568
+msgid "|resource desc ifconfig|"
+msgstr ""
+
+#: ../source/resource.rst:97
+# 140d1c127e8b48388336789977e14508
+msgid ":doc:`resource_link`"
+msgstr ""
+
+#: ../source/resource.rst:98
+# 2ed6937b6616496d9a6bb2a917578196
+msgid "|resource desc link|"
+msgstr ""
+
+#: ../source/resource.rst:99
+# fe5235c8a05842a88795fe6c202bbdd5
+msgid ":doc:`resource_log`"
+msgstr ""
+
+#: ../source/resource.rst:100
+# 22294e8423ca4822bd7cdaf88d1f3f24
+msgid "|resource desc log|"
+msgstr ""
+
+#: ../source/resource.rst:101
+# 74ade1178ff24014bd5a7393c18c2f59
+msgid ":doc:`resource_mdadm`"
+msgstr ""
+
+#: ../source/resource.rst:102
+# 2af8ebe9151140718da3ebc6a037492f
+msgid "|resource desc mdadm|"
+msgstr ""
+
+#: ../source/resource.rst:103
+# cf6cb40ff0154452a9c55a2438b38426
+msgid ":doc:`resource_mount`"
+msgstr ""
+
+#: ../source/resource.rst:104
+# 61025ce4787d4e6290cb81ef77364e6c
+msgid "|resource desc mount|"
+msgstr ""
+
+#: ../source/resource.rst:105
+# e47757d7a6cd465e85b3de2e97ccdc7e
+msgid ":doc:`resource_ohai`"
+msgstr ""
+
+#: ../source/resource.rst:106
+# 2c063dbb35d64ea49c9f12ffa09b40d8
+msgid "|resource desc ohai|"
+msgstr ""
+
+#: ../source/resource.rst:107
+# 4b781ee3256e40f58248e18725b3169a
+msgid ":doc:`resource_package`"
+msgstr ""
+
+#: ../source/resource.rst:108
+# 241c21ba06224233afe1434366ec2d3f
+msgid "|resource desc package|"
+msgstr ""
+
+#: ../source/resource.rst:109
+# f16178c58e4a47dd9b6fb156ddb6ab03
+msgid ":doc:`resource_powershell_script`"
+msgstr ""
+
+#: ../source/resource.rst:110
+# 56fee008062242c081a54f07ee2983a2
+msgid "|resource desc powershell_script|"
+msgstr ""
+
+#: ../source/resource.rst:111
+# eea399420b0f4feba62aea46a82ac5e1
+msgid ":doc:`resource_remote_directory`"
+msgstr ""
+
+#: ../source/resource.rst:112
+# c5dec148266c47e6bedbd0e3048129a3
+msgid "|resource desc remote_directory|"
+msgstr ""
+
+#: ../source/resource.rst:113
+# 8285e6cf794b4db1901928f15307ca6a
+msgid ":doc:`resource_remote_file`"
+msgstr ""
+
+#: ../source/resource.rst:114
+# 871d61344e02456686f5229022204c57
+msgid "|resource desc remote_file|"
+msgstr ""
+
+#: ../source/resource.rst:115
+# 4b3c376590db452d831fbc9b2c3f232f
+msgid ":doc:`resource_route`"
+msgstr ""
+
+#: ../source/resource.rst:116
+# 9174ebf703204bd88120955a25acce33
+msgid "|resource desc route|"
+msgstr ""
+
+#: ../source/resource.rst:117
+# 7f90b4b7f530445381594d976ed2fb66
+msgid ":doc:`resource_ruby_block`"
+msgstr ""
+
+#: ../source/resource.rst:118
+# 146cd00193614b1e934d5ff2a6cf475b
+msgid "|resource desc ruby_block|"
+msgstr ""
+
+#: ../source/resource.rst:119
+# a372c80a8f2d4816926b1ad004e5023a
+msgid ":doc:`resource_scm`"
+msgstr ""
+
+#: ../source/resource.rst:120
+# ac416c987da7482d88ad2ace806a71eb
+msgid "|resource desc scm|"
+msgstr ""
+
+#: ../source/resource.rst:121
+# 62f4bd03cf244591860d4782a5eef371
+msgid ":doc:`resource_script`"
+msgstr ""
+
+#: ../source/resource.rst:122
+# fc4b535694a44e388da27d59b11e2fb6
+msgid "|resource desc script|"
+msgstr ""
+
+#: ../source/resource.rst:123
+# 72da9f15e1b74d9bb8b3d4c59099c9cb
+msgid ":doc:`resource_service`"
+msgstr ""
+
+#: ../source/resource.rst:124
+# 257f9f3ad38b4372a6081f12dd06c050
+msgid "|resource desc service|"
+msgstr ""
+
+#: ../source/resource.rst:125
+# d436932164e24f0c85f7de9358240499
+msgid ":doc:`resource_template`"
+msgstr ""
+
+#: ../source/resource.rst:126
+# 30049815738848c6a3a04e82c850e30e
+msgid "|resource desc template|"
+msgstr ""
+
+#: ../source/resource.rst:127
+# b9a8cd055ff84199a21dafeba6511bf9
+msgid ":doc:`resource_user`"
+msgstr ""
+
+#: ../source/resource.rst:128
+# 0a07be5ef0a34359979e66785afaeae1
+msgid "|resource desc user|"
+msgstr ""
+
+#: ../source/resource.rst:129
+# 1ef6a0a163be4531a61bd8bfa2eb8f20
+msgid ":doc:`resource_yum`"
+msgstr ""
+
+#: ../source/resource.rst:130
+# 4a75e877dc054938a291a9d222932fad
+msgid "|resource desc yum|"
+msgstr ""
+
