@@ -6,7 +6,7 @@
 .. P
 .. 
 
-
+.. |package_name lwrp apt| replace:: The name of the package.
 .. |package_name lwrp pacman_aur| replace:: The name of the package.
 .. |package_name lwrp pacman_group| replace:: The name of the package group.
 .. |package_name lwrp php_pear| replace:: The name of the |pear| package to install.
@@ -17,6 +17,9 @@
 .. |packages lwrp application| replace:: A list of one (or more) packages to be installed along with the application.
 .. |packages lwrp application_php| replace:: An array of |pear| packages to install.
 .. |packages lwrp application_python_django| replace:: An array of |python pip| package to install.
+.. |packaging lwrp maven| replace:: The type of package. Default value: ``jar``.
+.. |parameters lwrp nagios_nrpecheck| replace:: One (or more) additional parameters that are passed to the command.
+.. |params lwrp application_ruby_passenger| replace:: A hash of extra parameters that will be passed to a template file.
 .. |PART| replace:: The part of the cookbook to show: ``attributes``, ``definitions``, ``files``, ``libraries``, ``providers``, ``recipes``, ``resources``, or ``templates``. More than one part can be specified.
 .. |pass resource mount| replace:: The pass number used by the file system check (fsck) command while creating a file systems table (fstab) entry. Default value: ``2``.
 .. |password bluelock| replace:: The password for the |bluelock| account.
@@ -27,6 +30,7 @@
 .. |password lwrp samba| replace:: The password for a user. This is passed to the ``smbpasswd`` program in |samba|.
 .. |password resource user| replace:: The password shadow hash. This attribute requires that ``ruby-shadow`` be installed. This is part of the |debian| package: ``libshadow-ruby1.8``. Default value: ``nil``.
 .. |patches lwrp pacman_aur| replace:: An array of files to be used as patches for the package. Default value: ``[]``.
+.. |path lwrp gunicorn_config| replace:: The path to the location in which the configuration file will be created.
 .. |path lwrp iis_app| replace:: The virtual path to the location where the application resides.
 .. |path lwrp iis_pool| replace:: A local path that is mapped to the root application and root virtual directory. If this is not specified, |microsoft iis| will generate this path.
 .. |path lwrp python_virtualenv| replace:: The path to the location in which the virtual |python| environment will be created. Default value: ``\``.
@@ -47,7 +51,11 @@
 
 .. |physical_path lwrp iis_app| replace:: The physical path to the location where the application resides.
 
+.. |pid lwrp gunicorn_config| replace:: The file name for the process identifier (PID) file. Default value: `` `` (no file).
 .. |pid_file| replace:: The location in which a process identification number (pid) is saved. An executable, when started as a daemon, will write the pid to the specified file. Default value: ``/tmp/name-of-executable.pid``.
+.. |pidfile lwrp application_python_gunicorn| replace:: A file name to use for the PID file.
+.. |pin lwrp apt| replace:: The package version or repository to be pinned.
+.. |pin_priority lwrp apt| replace:: The priority for the package version or repository, in comparison to the priority for other versions of the same package or repository. The higher value will have the higher priority.
 .. |pipeline_mode lwrp iis_pool| replace:: The pipeline mode with which an application pool is created.
 
 .. |pkgbuild_src lwrp pacman_aur| replace:: Indicates whether to use a custom ``PKGBUILD`` file. When ``true``, the ``pacman_aur`` lightweight resource will look for a ``cookbook_file`` named ``PKGBUILD`` to use as package instructions. Default value: ``false``.
@@ -64,7 +72,9 @@
 
 .. |precompile_assets lwrp application_ruby| replace:: Indicates whether assets will be pre-compiled. Unless this attribute is specified, |chef| will attempt to auto-detect whether the pipeline is in use by looking in ``config/assets.yml``.
 .. |precondition lwrp iis_module| replace:: The pre-condition for a module, if applicable.
+.. |preload_app lwrp application_python_gunicorn| replace:: Indicates that application code is loaded before worker processes are forked. Default value: ``false``.
 .. |preload_app lwrp application_ruby| replace:: Indicates whether an application is loaded before a worker process is forked. Default value: ``false``.
+.. |preload_app lwrp gunicorn_config| replace:: Indicates whether application code should be loaded before worker processes are forked. Default value: ``false``.
 .. |preferred_state lwrp php_pear| replace:: By default, |pear| only installs stable packages. Packages can be installed in various non-stable states: ``devel``, ``alpha`` or ``beta``. Default value: ``stable``.
 .. |prerelease| replace:: Indicates that pre-release |chef| gems should be installed.
 .. |print-after| replace:: Indicates that data will be shown after a destructive operation.
@@ -74,6 +84,7 @@
 .. |private-key-file| replace:: The file in which the |ssh| private key used for authentication is located.
 .. |private_mem lwrp iis_pool| replace:: The maximum amount of private memory (in KB) that a worker process can consume before the application pool will recycle. A value of ``0`` means there is no limit.
 
+.. |proc_name lwrp application_python_gunicorn| replace:: The name of an instance of |gunicorn|. This attribute is only necessary when more than one instance of |gunicorn| is running.
 .. |product_id lwrp webpi| replace:: The identifier of the product to be installed.
 .. |process_name lwrp supervisor| replace:: A |python| string expression that is used to compose the supervisor process name for a process.
 .. |program lwrp windows_autorun| replace:: The program to be run... |programs lwrp supervisor_group| replace:: An array of program names. Programs that are listed will become members of the group. Default value: ``[]``.

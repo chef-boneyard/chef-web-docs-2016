@@ -10,33 +10,33 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``backlog``
-     - The maximum number of pending connections. Default value: ``2048``.
+     - |backlog lwrp gunicorn_config|
    * - ``cookbook``
-     - The cookbook in which a template file is located. Default value: ``gunicorn`` (the ``gunicorn`` cookbook).
+     - |cookbook lwrp gunicorn_config|
    * - ``group``
-     - A string or identifier for the group owner of a configuration file.
+     - |group lwrp gunicorn_config|
    * - ``listen``
-     - The socket to bind. This value must be a string in the form: ``HOST``, ``HOST:PORT``, or ``unix:PATH``. Default value: ``0.0.0.0:8000`` which will listen on port 8000 for all interfaces.
+     - |listen lwrp gunicorn_config|
    * - ``owner``
-     - A string or identifier for the owner for a configuration file.
+     - |owner lwrp gunicorn_config|
    * - ``path``
-     - The path to the location in which the configuration file will be created.
+     - |path lwrp gunicorn_config|
    * - ``pid``
-     - The file name for the process identifier (PID) file. Default value: `` `` (no file).
+     - |pid lwrp gunicorn_config|
    * - ``preload_app``
-     - Indicates whether application code should be loaded before worker processes are forked. Default value: ``false``.
+     - |preload_app lwrp gunicorn_config|
    * - ``server_hooks``
-     - A hash with values that are rendered as |gunicorn| server hook functions named after the hash item's key name. Default value: ``{}`` (no server hooks).
+     - |server_hooks lwrp gunicorn_config|
    * - ``template``
-     - The template to use when rendering a configuration file. Default value: ``gunicorn.py.erb`` (included as part of the ``gunicorn`` cookbook).
+     - |template lwrp gunicorn_config|
    * - ``worker_class``
      - The type of workers to use. Default value: ``sync``.
    * - ``worker_keepalive``
-     - The amount of time (in seconds) to wait for requests on a keep-alive connection. Default value: ``2``.
+     - |worker_max_keepalive lwrp gunicorn_config|
    * - ``worker_max_requests``
-     - The maximum number of requests a worker will process before restarting. Default value: ``0`` (which disables worker restarts).
+     - |worker_max_requests lwrp gunicorn_config|
    * - ``worker_processes``
-     - The number of worker processes available to handle requests. Default value: ``4``.
+     - |worker_processes lwrp gunicorn_config|
    * - ``worker_timeout``
-     - The amount of time (in seconds) to wait before a worker is killed and restarted. Default value: ``60``.
+     - |worker_timeout lwrp gunicorn_config|
 

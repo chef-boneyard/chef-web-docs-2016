@@ -10,8 +10,8 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``package_name``
-     - The name of the packaage
+     - |package_name lwrp apt|
    * - ``pin``
-     - The package version or repository to be pinned.
+     - |pin lwrp apt|
    * - ``pin_priority``
-     - The priority for the package version or repository, in comparison to the priority for other versions of the same package or repository. The higher value will have the higher priority.
+     - |pin_priority lwrp apt|

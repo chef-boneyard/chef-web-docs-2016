@@ -20,6 +20,7 @@
 .. |linode-image| replace:: The image for the |linode| server.
 .. |linode-kernel| replace:: The kernel for the |linode| server.
 .. |linode-node-name| replace:: The name of the node in the |linode| environment.
+.. |listen lwrp gunicorn_config| replace:: The socket to bind. This value must be a string in the form: ``HOST``, ``HOST:PORT``, or ``unix:PATH``. Default value: ``0.0.0.0:8000`` which will listen on port 8000 for all interfaces.
 
 .. |load-balancer| replace:: The load balancing application to which a server should be added.
 .. |local resource template| replace:: Indicates whether a template is already present on the node. Default value: ``false``.
@@ -28,6 +29,8 @@
 .. |lockfile| replace:: A lock used by |chef| to ensure that only one instance of |chef client| or |chef solo| is modifying the system at any time. By default, the lock file is located in the ``file_cache_path`` so that intentional uses of multiple instances work automatically. If ``file_cache_path`` is located on an NF mount a different location for the lock file is recommended.
 .. |log lwrp daemontools_service| replace:: Indicates whether a service has a custom logging script. Default value: ``nil``.
 .. |log_level| replace:: The level of logging that will be stored in a log file: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``.
+.. |logfile lwrp application_python_gunicorn| replace:: A file to which log entries are written.
+.. |loglevel lwrp application_python_gunicorn| replace:: The granularity of error logging: ``debug``, ``info``, ``warning``, ``error``, or ``critical``.
 .. |log_location| replace:: The location in which log file output files will be saved. If this location is set to something other than ``STDOUT``, standard output logging will still be performed (otherwise there would be no output other than to a file). Default value: ``STDOUT``.
 .. |logfile| replace:: The location in which the log file will be located. The default location is ``STDOUT``.
 .. |long| replace:: Display long output when searching nodes while using the default summary format.
@@ -41,6 +44,7 @@
 .. |lwrp action add iis_module| replace:: Use to add a module.
 .. |lwrp action add iis_pool| replace:: Use to add an application pool.
 .. |lwrp action add iis_site| replace:: Use to add a virtual site.
+.. |lwrp action add nagios_nrpecheck| replace:: Use to create a |nagios nrpe| configuration file and restart the process.
 .. |lwrp action add php_pear_channel| replace:: Use to add a channel to the channel list. Typically, this is used only for private channels. Public channels should be added using the ``:discover`` action.
 .. |lwrp action add rabbitmq_user| replace:: Use to add a user (with a password).
 .. |lwrp action add rabbitmq_vhost| replace:: Use to add a virtual host.
@@ -64,6 +68,7 @@
 .. |lwrp action create cloudkick_monitor| replace:: Use to create a |cloudkick| monitor.
 .. |lwrp action create dynect_rr| replace:: Use to create a record.
 .. |lwrp action create freebsd_port| replace:: Use to create a port options file using a template or an options hash.
+.. |lwrp action create gunicorn_config| replace:: Use to create a |gunicorn| configuration file.
 .. |lwrp action create python_virtualenv| replace:: Use to create a virtual |python| environment.
 .. |lwrp action create samba_user| replace:: Use to create a user.
 .. |lwrp action create transmission_torrent_file| replace:: Use to download a file using the |bittorrent| protocol.
@@ -73,6 +78,7 @@
 .. |lwrp action create windows_shortcut| replace:: Use to create a shortcut.
 .. |lwrp action create_db mysql_database| replace:: Use to create a database.
 .. |lwrp action delete dynect_rr| replace:: Use to delete a record.
+.. |lwrp action delete gunicorn_config| replace:: Use to delete a |gunicorn| configuration file.
 .. |lwrp action delete iis_app| replace:: Use to delete an application pool.
 .. |lwrp action delete iis_module| replace:: Use to delete a module.
 .. |lwrp action delete iis_pool| replace:: Use to delete an application pool.
@@ -114,6 +120,7 @@
 .. |lwrp action hup daemontools_service| replace:: Use to send the ``HUP`` signal. The following command is used: ``svc -h``.
 .. |lwrp action install dmg_package| replace:: Use to install an application. (There is no ``:uninstall`` action because on in the |mac os x| environment, uninstalling an application only requires it being dragged to the trash can.)
 .. |lwrp action install gunicorn_install| replace:: Use to install a virtual environment.
+.. |lwrp action install maven| replace:: Use to install |apache maven|.
 .. |lwrp action install pacman_aur| replace:: Use to install a package that has been built with the ``:build`` action.
 .. |lwrp action install pacman_group| replace:: Use to install a group.
 .. |lwrp action install php_pear| replace:: Use to install a |pear| package. If a version is provided, use to install that version.
@@ -142,6 +149,7 @@
 .. |lwrp action remove apt_preference| replace:: Use to remove a preferences file, which will "unpin" a package.
 .. |lwrp action remove apt_repository| replace:: Use to delete a repository.
 .. |lwrp action remove aws_resource_tag| replace:: Use to remove a tag from a resource that matches one (or more) tags.
+.. |lwrp action remove nagios_nrpecheck| replace:: Use to remove a |nagios nrpe| configuration file and restart the process.
 .. |lwrp action remove pacman_group| replace:: Use to remove a group.
 .. |lwrp action remove php_pear| replace:: Use to remove a |pear| package.
 .. |lwrp action remove php_pear_channel| replace:: Use to remove a channel from the channel list.

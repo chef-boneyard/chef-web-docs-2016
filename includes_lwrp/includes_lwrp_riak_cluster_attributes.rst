@@ -16,6 +16,6 @@ This lightweight resource provider has the following attributes:
    * - ``node_name``
      - |cluster_name lwrp riak_cluster|
    * - ``timeout``
-     - |timeout lwrp name_of_resource|
+     - |timeout lwrp riak_cluster|
    * - ``riak_admin_path``
      - |riak_admin_path lwrp riak_cluster|
