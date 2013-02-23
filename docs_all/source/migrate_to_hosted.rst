@@ -1,5 +1,5 @@
 =====================================================
-Migrate to |chef hosted| from |chef open server|
+Migrate to Hosted Chef
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_open_source.rst
@@ -8,7 +8,7 @@ Migrate to |chef hosted| from |chef open server|
 
 .. include:: ../../includes_migrate/includes_migrate_to_hosted.rst
 
-Follow the steps below to migrate from an |chef open server| to |chef hosted|.
+Follow the steps below to migrate from the open source |chef server| to |chef hosted|.
 
 System Requirements
 =====================================================
@@ -16,9 +16,9 @@ System Requirements
 
 Migrate to |chef hosted|
 =====================================================
-The steps for migrating to |chef hosted| from an instance of |chef open server| are:
+The steps for migrating to |chef hosted| from an instance of the open source |chef server| are:
 
-#. Backup data from |chef open server| 
+#. Backup data from the open source |chef server|
 #. Choose an organization
 #. Choose a repository
 #. Verify nodes and API clients
@@ -30,7 +30,7 @@ See the following sections for more information about each step.
 
 Backup Data
 -----------------------------------------------------
-To back up the data (including run-lists and node attributes) that is being used with |chef open server| server, it must be exported from the |chef open server| server so that it can be uploaded to the |chef hosted| server. Use the ``backup_export`` |knife| plugin to perform this task.
+To back up the data (including run-lists and node attributes) that is being used with the open source |chef server|, it must be exported from the open source |chef server| so that it can be uploaded to the |chef hosted| server. Use the ``backup_export`` |knife| plugin to perform this task.
 
 Using ``backup_export``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -57,7 +57,7 @@ Sign up for |chef hosted| and create an organization.
 
 Choose a repository
 -----------------------------------------------------
-The |chef| repository used with |chef hosted| can be the same repository as the one used with |chef open server|. Or, a brand new repository can be created using the data that was exported from the |chef open server| server.
+The |chef| repository used with |chef hosted| can be the same repository as the one used with the open source |chef server|. Or, a brand new repository can be created using the data that was exported from the open source |chef server|.
 
 .. include:: ../../step_install/step_install_workstation_chef_directory_move_files.rst
 
@@ -113,7 +113,7 @@ Bootstrapping Nodes
 
 Upload Data
 -----------------------------------------------------
-To restore the data (including run-lists and node attributes) that was being used with |chef open server| server, it must be uploaded to the |chef hosted| server. There are two options: use the ``backup_restore`` |knife| plugin or use the ``knife upload`` sub-command.
+To restore the data (including run-lists and node attributes) that was being used with the open source |chef server| server, it must be uploaded to the |chef hosted| server. There are two options: use the ``backup_restore`` |knife| plugin or use the ``knife upload`` sub-command.
 
 Using ``backup_restore``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
