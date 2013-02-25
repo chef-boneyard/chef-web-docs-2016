@@ -51,8 +51,7 @@ APIs and DSLs
 
    chef_pedant
    ctl_chef_server
-   install_server
-   install_server_scenario_vm
+
 
    chef_client
    chef_overview
@@ -79,8 +78,10 @@ APIs and DSLs
    essentials_repository
    essentials_roles
    essentials_search
+   install_bootstrap
+   install_server
+   install_server_scenario_vm
    install_workstation
-   install_workstation_open_source
    just_enough_ruby_for_chef
    knife_rb
    knife
