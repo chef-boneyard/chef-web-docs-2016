@@ -14,7 +14,7 @@ Chef Server 11.x
 
 **The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements | :doc:`Components </server_components>`
 
-**Components:** Nginx | Erchef | Bookshelf | chef-webui | RabbitMQ | chef-expander | chef-solr | PostgreSQL
+**Components:** Nginx | Erchef | Bookshelf | chef-webui | Search Index Queues (RabbitMQ | chef-expander | chef-solr) | PostgreSQL
 
 **Topologies:** Standalone | Tiered | High Availability | Options
 
@@ -22,7 +22,7 @@ Chef Server 11.x
 
 **System Analysis and Tuning:** Settings | Performance | Backup / Restore | Security | Hardening | High Availability
 
-**Manager:** Open Source | Hosted Chef | Private Chef
+**Manage:** Open Source | Hosted Chef | Private Chef
 
 **Monitor:** Database | Cookbooks | Log Files | Services | Ports | chef-pedant | Nagios | Graphite
 
