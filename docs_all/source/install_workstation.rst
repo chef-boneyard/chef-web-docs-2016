@@ -8,7 +8,7 @@ Prerequisites
 =====================================================
 The following items are prerequisites for installing |chef| on a workstation:
 
-* A computer running |nix| (|unix|, |linux|, or |mac os x|); |windows| machines are supported, but they are not described as part of the current install documentation
+* A computer running |unix|, |linux|, or |mac os x|; |windows| machines are supported, but they are not described as part of the current install documentation
 * |apple xcode| is installed; this application can be downloaded from |apple| for free
 * A |github| account; the |chef| repository must be downloaded and/or cloned from |github|
 * Access to a |chef server|, typically a |chef hosted| account or the open source |chef server|; the open source |chef server| may be installed on a virtual machine for demo purposes
