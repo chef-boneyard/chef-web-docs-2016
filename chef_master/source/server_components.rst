@@ -6,11 +6,9 @@ Chef Server Components
 
 .. include:: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst
 
-The following diagram shows the various components that are part of a |chef server| deployment.
+The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another.
 
 .. image:: ../../images/server_components.png
-
-|chef server| components:
 
 .. list-table::
    :widths: 60 420
@@ -20,7 +18,9 @@ The following diagram shows the various components that are part of a |chef serv
      - Description
    * - Bookshelf
      - .. include:: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst
-   * - chef-server-webui
+
+       All cookbooks are stored in a dedicated repository.
+   * - WebUI
      - .. include:: ../../includes_chef_server/includes_chef_server_component_webui.rst
    * - Erchef
      - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
@@ -30,6 +30,8 @@ The following diagram shows the various components that are part of a |chef serv
           #. .. include:: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst
           #. .. include:: ../../includes_chef_server/includes_chef_server_component_expander.rst
           #. .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
+
+       All messages are added to a dedicated search index repository.
    * - Nginx
      - .. include:: ../../includes_chef_server/includes_chef_server_component_nginx.rst
    * - PostgreSQL
