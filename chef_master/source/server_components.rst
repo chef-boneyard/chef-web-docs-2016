@@ -8,7 +8,7 @@ Chef Server Components
 
 The following diagram shows the various components that are part of a |chef server| deployment.
 
-.. image:: ../../images/server_components_all.png
+.. image:: ../../images/server_components.png
 
 |chef server| components:
 
