@@ -13,7 +13,7 @@ Getting started
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
-**Try it out:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/>`_ (click the Free Trial link) or :doc:`Install the Chef Server </install_server>` or :doc:`Install the Chef Server on a virtual machine </install_server_scenario_vm>`, then :doc:`Install Chef on a workstation </install_workstation>`, and then :doc:`Bootstrap a node </install_bootstrap>`
+**Try it out:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/>`_ (click the **Free Trial** link) or :doc:`Install the Chef Server </install_server>` or :doc:`Install the Chef Server on a virtual machine </install_server_scenario_vm>`, then :doc:`Install Chef on a workstation </install_workstation>`, and then :doc:`Bootstrap a node </install_bootstrap>`
 
 **What's new:** :doc:`Chef 11.0 </breaking_changes_chef_11>`
 
