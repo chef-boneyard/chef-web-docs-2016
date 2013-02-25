@@ -20,17 +20,17 @@ The following diagram shows the various components that are part of a |chef serv
      - Description
    * - Bookshelf
      - .. include:: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst
-   * - chef-expander
-     - .. include:: ../../includes_chef_server/includes_chef_server_component_expander.rst
    * - chef-server-webui
      - .. include:: ../../includes_chef_server/includes_chef_server_component_webui.rst
-   * - chef-solr
-     - .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
    * - Erchef
      - .. include:: ../../includes_chef_server/includes_chef_server_component_erchef.rst
+   * - Message Queues
+     - Messages are sent to the Search Index using the following components:
+       
+       #. .. include:: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst
+       #. .. include:: ../../includes_chef_server/includes_chef_server_component_expander.rst
+       #. .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
    * - Nginx
      - .. include:: ../../includes_chef_server/includes_chef_server_component_nginx.rst
    * - PostgreSQL
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
-   * - RabbitMQ
-     - .. include:: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst
