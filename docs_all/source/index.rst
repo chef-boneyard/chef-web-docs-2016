@@ -22,7 +22,7 @@ Essentials
 
 Install and Migrate
 =====================================================
-**Install:** :doc:`Install Chef Server 11.x </install_server>` | :doc:`Install Chef on a Workstation </install_workstation>`
+**Install:** :doc:`Install Chef Server 11.x </install_server>` | :doc:`Install Chef on a Workstation </install_workstation>` | :doc:`Bootstrap a Node </install_bootstrap>`
 
 **Scenarios:** :doc:`Install Chef Server 11.x on a Virtual Machine </install_server_scenario_vm>`
 
