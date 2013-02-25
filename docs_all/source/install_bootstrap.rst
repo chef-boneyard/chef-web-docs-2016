@@ -24,4 +24,4 @@ Run the ``knife bootstrap`` command
 
 Verify the node
 -----------------------------------------------------
-Log on to the |chef server| and verify that both the node and workstations are registered and known to the |cehf server|.
+Log on to the |chef server| and verify that both the node and workstations are registered and known to the |chef server|.
