@@ -27,9 +27,9 @@ The following diagram shows the various components that are part of a |chef serv
    * - Message Queues
      - Messages are sent to the Search Index using the following components:
        
-       #. .. include:: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst
-       #. .. include:: ../../includes_chef_server/includes_chef_server_component_expander.rst
-       #. .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_expander.rst
+          #. .. include:: ../../includes_chef_server/includes_chef_server_component_solr.rst
    * - Nginx
      - .. include:: ../../includes_chef_server/includes_chef_server_component_nginx.rst
    * - PostgreSQL
