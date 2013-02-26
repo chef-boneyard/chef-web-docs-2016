@@ -39,7 +39,7 @@ The Chef Server
 =====================================================
 **The basics:** :doc:`About the server </chef_overview_server>` | :doc:`Server components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
 
-**Configure:** :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a virtual machine </install_server_scenario_vm>`
+**Install:** :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a virtual machine </install_server_scenario_vm>`
 
 **The node object:** :doc:`About node objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep merge </essentials_node_object_deep_merge>`
 
