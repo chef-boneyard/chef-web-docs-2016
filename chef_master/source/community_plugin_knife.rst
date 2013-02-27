@@ -26,6 +26,8 @@ Knife Plugins
      - Adds the ability to compare command output across hosts. Learn more: https://github.com/lnxchk/Canon.
    * - knife-cfn
      - Adds the ability to validate, create, describe, and delete stacks in |amazon aws cloudformation|. Learn more: https://github.com/neillturner/knife-cfn.
+   * - knife-cisco_asa
+     - Adds the ability to manage |cisco asa| devices. Learn more: https://github.com/bflad/knife-cisco_asa.
    * - knife-cleanup
      - Adds the ability to remove unused versions of cookbooks that are hosted on the |chef server|. (Cookbook versions that are removed are backed-up prior to deletion.) Learn more: https://github.com/mdxp/knife-cleanup
    * - knife-cloudstack-fog
