@@ -32,7 +32,7 @@ Each flavor of the |chef server| provides the following features:
    * - Feature
      - Description
    * - :doc:`Node objects </essentials_node_object>`
-     - The node object consists of the run-list and node attributes, which is a |json| file that is stored on the |chef server|. The |chef client| gets a copy of the node object from the |chef server| during each |chef| run and places an updated copy on the |chef server| at the end of each |chef run.
+     - The node object consists of the run-list and node attributes, which is a |json| file that is stored on the |chef server|. The |chef client| gets a copy of the node object from the |chef server| during each |chef| run and places an updated copy on the |chef server| at the end of each |chef| run.
    * - :doc:`Search </essentials_search>`
      - Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles. 
    * - :doc:`Data bags </essentials_data_bags>`
