@@ -38,6 +38,8 @@ Knife Plugins
      - Adds the ability to assist with deploying completed cookbooks to the community web site. Learn more: https://github.com/miketheman/knife-community.
    * - knife-crawl
      - Adds the ability to display the roles that are included recursively within a role and (optionally) all of the roles that include it. Learn more: https://github.com/jgoulah/knife-crawl.
+   * - knife-digital_ocean
+     - Adds the ability to create, bootstrap, and manage instances in |digital ocean|. Learn more: https://github.com/rmoriz/knife-digital_ocean.
    * - knife-ec2-amis-ubuntu
      - Adds the ability to retrieve a list of released |ubuntu| |amazon ami|. Learn more: `<https://rubygems.org/gems/ubuntu_ami>`_.
    * - knife-env-diff
@@ -54,6 +56,8 @@ Knife Plugins
      - Adds the ability to collate multi-line output from parallel ``knife ssh`` outputs into one section per host. Learn more: https://github.com/lnxchk/Gather.
    * - knife-github-cookbooks
      - Adds the ability to create vendor branches automatically from any |github| cookbook. Learn more: https://github.com/websterclay/knife-github-cookbooks.
+   * - knife-glesys
+     - Adds the ability to create, delete, list, and bootstrap servers on |glesys|. Learn more: https://github.com/smgt/knife-glesys.
    * - knife-ipmi
      - Adds simple power control of nodes using |ipmi|. Learn more: https://github.com/Afterglow/knife-ipmi.
    * - knife-kvm
@@ -74,7 +78,7 @@ Knife Plugins
      - Adds the ability to check which nodes and roles use a cookbook. This is helpful when making changes to a cookbook. Learn more: https://github.com/jonlives/knife-preflight.
    * - knife-rhn
      - Adds the ability to manage the |redhat| network. Learn more: https://github.com/bflad/knife-rhn.
-   * - knife-role-copy
+   * - knife-role_copy
      - Adds the ability to get data from a role, and then set up a new role using that data (as long as the new role doesn't have the same name as an existing role). Learn more: https://github.com/benjaminws/knife_role_copy.
    * - knife-rvc
      - Integrates a subset of |knife| functionality with |ruby rvc|. Learn more: `<https://github.com/dougm/rvc-knife>`_.
@@ -90,7 +94,7 @@ Knife Plugins
      - Adds the ability create and tag clusters of |amazon ec2| nodes with a multi-threading bootstrap process. Learn more: https://github.com/kryptek/knife-slapchop.
    * - knife-spork
      - Adds a simple environment workflow so that teams can more easily work together on the same cookbooks and environments. Learn more: https://github.com/jonlives/knife-spork.
-   * - knife-ssh-cheto
+   * - knife-ssh_cheto
      - Adds extra features to be used with |ssh|. Learn more: https://github.com/demonccc/chef-repo/tree/master/plugins/knife/ssh_cheto.
    * - knife-ucs
      - Adds the ability to provision, list, and manage |cisco ucs| servers. Learn more: https://github.com/velankanisys/knife-ucs.
