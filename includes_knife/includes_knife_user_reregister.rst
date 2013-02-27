@@ -3,26 +3,23 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``reregister`` argument is used to regenerate an RSA key pair for a |chef| user. The public key will be stored on the |chef server| and the private key will be displayed on STDOUT or written to a named file.
+The ``reregister`` argument is used to regenerate an RSA key pair for a |chef| user. The public key will be stored on the |chef server| and the private key will be displayed on ``STDOUT`` or written to a named file.
 
 .. note:: Running this argument will invalidate the previous RSA key pair, making it unusable during authentication to the |chef server|. 
 
 This argument has the following syntax::
 
-   knife user reregister CLIENT_NAME (options)
+   knife user reregister USER_NAME (options)
 
 This argument has the following options:
 
-``-xxxxx``, ``--xxxxx``
-   xxxxx.
-
-``-xxxxx``, ``--xxxxx``
-   xxxxx.
+``-f FILE_NAME``, ``--file FILE_NAME``
+   Use to write the private key to a file.
 
 **Examples**
 
-For example, to xxxxx, enter:
+For example, to regenerate the RSA key pair for a user named "Robert Younger", enter:
 
 .. code-block:: bash
 
-   $ knife user create xxxxx
+   $ knife user reregister "Robert Younger"

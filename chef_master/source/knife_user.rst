@@ -2,8 +2,6 @@
 knife user
 =====================================================
 
-.. include:: ../../includes_security/includes_security_chef_validator.rst
-
 .. include:: ../../includes_knife/includes_knife_user.rst
 
 create
@@ -13,6 +11,10 @@ create
 delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_delete.rst
+
+edit
+=====================================================
+.. include:: ../../includes_knife/includes_knife_user_edit.rst
 
 list
 =====================================================
