@@ -2,9 +2,11 @@
 About Knife Plugins
 =====================================================
 
-.. include:: ../../includes_knife/includes_knife.rst
+.. include:: ../../includes_knife/includes_knife_plugin.rst
 
-There are many :doc:`knife_common_options` that are available for use with all |knife| plug-ins. The following |knife| plug-ins are maintained by |opscode|: 
+.. note:: The same :doc:`knife_common_options` available for use with |knife| are also available to be used with |knife| plug-ins.
+
+The following |knife| plug-ins are maintained by |opscode|: 
 
 .. list-table::
    :widths: 150 450

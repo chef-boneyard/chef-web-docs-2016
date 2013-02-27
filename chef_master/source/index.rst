@@ -9,11 +9,11 @@ Getting started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
 
-**Key concepts:** :doc:`The workstation </essentials_workstation>` | :doc:`The server </server_types>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`About resources and providers </resource>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`The workstation </chef_overview_workstation>` | :doc:`The server </server_types>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`About resources and providers </resource>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
-**Try it out:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/>`_ (click the **Free Trial** link) or :doc:`Install the Chef Server </install_server>` or :doc:`Install the Chef Server on a virtual machine </install_server_scenario_vm>`, then :doc:`Install Chef on a workstation </install_workstation>`, and then :doc:`Bootstrap a node </install_bootstrap>`
+**Try it out:** (1) `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/>`_ (select **Free Trial**) or :doc:`Install the Chef Server on a virtual machine </install_server_scenario_vm>`, (2) :doc:`Install Chef on a workstation </install_workstation>`, (3) and then :doc:`Bootstrap a node </install_bootstrap>`
 
 **What's new:** :doc:`Chef 11.0 </breaking_changes_chef_11>`
 
@@ -24,9 +24,9 @@ The Chef community
 
 The workstation
 =====================================================
-**The basics:** :doc:`About the workstation </essentials_workstation>` | :doc:`Repository </essentials_repository>` | :doc:`Knife </knife>`
+**The basics:** :doc:`About the workstation </chef_overview_workstation>` | :doc:`Repository </essentials_repository>` | :doc:`Knife </knife>`
 
-**Configure:** :doc:`Install Chef on a workstation </install_workstation>` | :doc:`Bootstrap a node </install_bootstrap>` | :doc:`Create and sync the repository </essentials_repository_create>`
+**Install:** :doc:`Install Chef on a workstation </install_workstation>` | :doc:`Bootstrap a node </install_bootstrap>` | :doc:`Create and sync the repository </essentials_repository_create>`
 
 **Knife:** :doc:`About Knife </knife>` | :doc:`Common options </knife_common_options>` | :doc:`Working with Knife </knife_using>` --- **Commands:** :doc:`bootstrap </knife_bootstrap>` | :doc:`client </knife_client>` | :doc:`configure </knife_configure>` | :doc:`cookbook </knife_cookbook>` | :doc:`cookbook site </knife_cookbook_site>` | :doc:`data bag </knife_data_bag>` | :doc:`delete </knife_delete>` | :doc:`diff </knife_diff>` | :doc:`download </knife_download>` | :doc:`environment </knife_environment>` | :doc:`exec </knife_exec>` | :doc:`index rebuild </knife_index_rebuild>` | :doc:`list </knife_list>` | :doc:`node </knife_node>` | :doc:`raw </knife_raw>` | :doc:`recipe list </knife_recipe_list>` | :doc:`role </knife_role>` | :doc:`search </knife_search>` | :doc:`show </knife_show>` | :doc:`ssh </knife_ssh>` | :doc:`status </knife_status>` | :doc:`tag </knife_tag>` | :doc:`upload </knife_upload>` --- **Single page:** `Knife Reference <http://docs.opscode.com/chef/knife.html>`_ | `Knife Quick Reference <http://docs.opscode.com/_images/qr_knife_web.png>`_ (image)
 
@@ -47,20 +47,22 @@ The Chef Server
 
 **Policy:** :doc:`About policy </essentials_policy>` | :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
 
-**Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
-
 **Manage:** :doc:`Hosted Chef </manage_server_hosted>`
 
-**APIs:** :doc:`Cookbooks site </api_cookbooks_site>` | :doc:`Chef server </api_chef_server>`
+**Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
 
-**Tools:** private-chef-ctl | :doc:`orgmapper </orgmapper>` 
+**Tools:** :doc:`orgmapper </orgmapper>`
+
+**APIs:** :doc:`Cookbooks site </api_cookbooks_site>` | :doc:`Chef server </api_chef_server>`
 
 
 The nodes 
 =====================================================
 **The basics:** :doc:`About nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The Chef run </essentials_nodes_chef_run>` | :doc:`Ohai </ohai>`
 
-**Configure:** :doc:`Install Chef on a node (bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Exception and report handlers </essentials_handlers>`
+**Install:** :doc:`Install Chef on a node (bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>`
+
+**Configure:** :doc:`Exception and report handlers </essentials_handlers>`
 
 **Settings:** :doc:`client.rb </config_rb_client>`
 
@@ -126,7 +128,7 @@ Cookbooks
    essentials_nodes_chef_run
    essentials_handlers
 
-   essentials_workstation
+   chef_overview_workstation
    essentials_repository
    essentials_knife
 
