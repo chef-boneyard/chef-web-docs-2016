@@ -22,7 +22,3 @@ There are three types of |chef| servers:
        |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located within the organization's firewall. |chef private| is the same as |chef hosted|. |chef hosted| is the largest |chef private| deployment in the world.
    * - 
      - .. include:: ../../includes_chef/includes_chef_open_source.rst
-
-Policy
-=====================================================
-.. include:: ../../includes_chef/includes_chef_policy.rst

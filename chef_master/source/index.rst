@@ -9,7 +9,7 @@ Getting started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
 
-**Key concepts:** :doc:`The workstation </chef_overview_workstation>` | :doc:`The server </server_types>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`About resources and providers </resource>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`The workstation </chef_overview_workstation>` | :doc:`The server </chef_overview_server>` | :doc:`The nodes </essentials_nodes>` | :doc:`Cookbooks </essentials_cookbooks>` | :doc:`About resources and providers </resource>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
@@ -53,7 +53,7 @@ The Chef Server
 
 **Tools:** :doc:`orgmapper </orgmapper>`
 
-**APIs:** :doc:`Cookbooks site </api_cookbooks_site>` | :doc:`Chef server </api_chef_server>`
+**APIs:** :doc:`Cookbooks site </api_cookbooks_site>` | :doc:`Chef Server </api_chef_server>`
 
 
 The nodes 
