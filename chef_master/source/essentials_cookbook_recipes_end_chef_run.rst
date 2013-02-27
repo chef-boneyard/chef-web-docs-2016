@@ -1,5 +1,5 @@
 =====================================================
-Ending a |chef| run
+Ending a |chef| Run
 =====================================================
 
 Sometimes it may be necessary to end a |chef| run before it completes. There are a few ways to do this:
