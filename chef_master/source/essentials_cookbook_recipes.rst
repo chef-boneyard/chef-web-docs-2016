@@ -8,7 +8,7 @@ About Recipes
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Options
      - Description
    * - :doc:`essentials_cookbook_recipes_data_bags`
      - A data bag can be loaded by a recipe.
@@ -26,6 +26,8 @@ About Recipes
      - A recipe can write events to a |chef| log file and can cause exceptions using ``Chef::Log``.
    * - :doc:`essentials_cookbook_recipes_tags`
      - A tag is a custom description that is applied to a node that can be helpful when building recipes by providing alternate methods of grouping similar types of information.
+   * - :doc:`essentials_cookbook_recipes_end_chef_run`
+     - Sometimes a |chef| run needs to be stopped. There are various ways for doing that from within a recipe.
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_attribute.rst
 
@@ -53,6 +55,7 @@ About Recipes
    :hidden:
 
    essentials_cookbook_recipes_data_bags
+   essentials_cookbook_recipes_end_chef_run
    essentials_cookbook_recipes_search
    essentials_cookbook_recipes_use_ruby
    essentials_cookbook_recipes_in_recipes
