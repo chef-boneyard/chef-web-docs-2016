@@ -8,6 +8,7 @@ The following example walks through the process of setting up the open source ve
 * |ubuntu| is installed with the default configuration (so that it has a very smal footprint in the virtual machine)
 * The browser used to access the |chef server| is located on the same computer as the virtual machine
 * The URL used to access the |chef server| will include the IP address or |fully qualified domain name| of the virtual machine, e.g. ``https://123.45.6.789``
+* A bridged network adapter is all that is required
 * The |chef server| is the only application installed on the virtual machine, other than the operating system
 
 The steps below will start with downloading the package for |chef server 11| to the virtual machine. These steps are nearly identical for any installation of |chef server 11| no matter the type of software used to host the virtual machine.
