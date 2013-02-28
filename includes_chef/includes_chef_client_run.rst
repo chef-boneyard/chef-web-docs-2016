@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef| run is a term that describes a series of steps that are taken by the |chef client| every time a node is configured by |chef|. The following diagram shows the various steps that occur during the |chef| run; the list below describes in greater detail what is going on.
+A "|chef| run" is the term used to describe a series of steps that are taken by the |chef client| when it is configuring a node. The following diagram shows the various stages that occur during the |chef| run, and then the list below the diagram describes in greater detail each of those stages.
 
 .. image:: ../../images/chef_run.png
 
@@ -12,12 +12,12 @@ During every |chef| run, the |chef client| does the following:
    :widths: 150 450
    :header-rows: 1
 
-   * - Phase
+   * - Stages
      - Description
    * - **Get configuration data**
-     - The |chef client| gets process configuration data from the |client rb| file on the node, and then gets node configuration data from |ohai|.
+     - The |chef client| gets process configuration data from the |client rb| file on the node, and then gets node configuration data from |ohai|. One important piece of configuration data is the name of the node, which is found in the ``node_name`` attribute in the |client rb| file or is provided by |ohai|. If |ohai| provides the name of a node, it is typically the |fully qualified domain name| for the node, which is always unique within an organization.
    * - **Authenticate to the Chef Server**
-     - The |chef client| authenticates to the |chef server| using an RSA private key. The the name of a node is required as part of the authentication process to the |chef server|. The name of a node is obtained from the ``node_name`` attribute in the |client rb| file or by |ohai|. If |ohai| obtains the name of a node, it is typically the |fully qualified domain name| name of the node (which is always unique within an organization). If this is the first |chef| run for a node, the |chef validator| will be used to generate the RSA private key.
+     - The |chef client| authenticates to the |chef server| using an RSA private key. The the name of a node is required as part of the authentication process to the |chef server|.  If this is the first |chef| run for a node, the |chef validator| will be used to generate the RSA private key.
    * - **Get, rebuild the node object**
      - The |chef client| pulls down the node object from the |chef server|. This node object is the same node object that was used during the previous |chef| run. If this is the first |chef| run for the node, there will not be a node object to pull down from the |chef| server. After a node object is pulled down from the |chef server|, the |chef client| rebuilds the node object. If this is the first |chef| run for the node, the node object will contain only the default run-list. For any subsequent |chef| run, the re-built node object will also contain the run-list from the previous |chef| run.
    * - **Expand the run-list**
