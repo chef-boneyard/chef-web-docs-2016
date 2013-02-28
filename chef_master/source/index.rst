@@ -5,7 +5,7 @@ Everything you need to know about Chef ...
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 
-Getting started
+Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
 
@@ -18,11 +18,11 @@ Getting started
 **What's new:** :doc:`Chef 11.0 </breaking_changes_chef_11>`
 
 
-The Chef community
+The Chef Community
 =====================================================
 .. include:: ../../includes_community/includes_community_contributions.rst
 
-The workstation
+The Workstation
 =====================================================
 **The basics:** :doc:`About the workstation </chef_overview_workstation>` | :doc:`Repository </essentials_repository>` | :doc:`Knife </knife>`
 
@@ -56,7 +56,7 @@ The Chef Server
 **APIs:** :doc:`Cookbooks site </api_cookbooks_site>` | :doc:`Chef Server </api_chef_server>`
 
 
-The nodes 
+The Nodes 
 =====================================================
 **The basics:** :doc:`About nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The Chef run </essentials_nodes_chef_run>` | :doc:`Ohai </ohai>`
 
