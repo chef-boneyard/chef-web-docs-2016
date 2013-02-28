@@ -113,9 +113,10 @@ Contents:
    man_knife_ssh
    man_knife_status
    man_knife_tag
-   man_knife_upload
    man_knife_terremark
-   man_knife_windows   
+   man_knife_upload
+   man_knife_user
+   man_knife_windows
 
 
 
