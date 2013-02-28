@@ -58,9 +58,7 @@ To install |chef server 11| on a virtual machine:
 
    (The IP address is identified by the ``inet addr`` field.)
 
-#. Open a browser and then enter the IP address as the URL for the |chef server|. The |chef server| requires HTTPS, so the URL would be something similar to the following:: 
-
-      https://123.45.6.789
+#. Open a browser and then enter the IP address as the URL for the |chef server|. The |chef server| requires HTTPS, so the URL would be something similar to the following: ``https://123.45.6.789``.
 
 #. In the initial logon page for the |chef server|, use the default user name (``admin``) and password (``p@ssw0rd1``) to log on.
 
