@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-02-27 17:14\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/server_components.rst:34
+# 1e50bc68c1f04da4897f7bf6d4bae0a3
+msgid "Chef Server Components"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server.rst:4
+# 37c2d3937e4e4f8a9e521fcf02abe7a7
+msgid "The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to cookbooks, and metadata that describes each registered node in the infrastructure. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions. The |chef client| then does as much of the configuration work as possible on the nodes themselves (and not on the |chef server|). This scalable approach distributes the configuration effort throughout the organization."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst:4
+# 3014d58d35ef47659646710af510b350
+msgid "Starting with the release of |chef 11|, the front-end for the |chef server| is written using `Erlang <http://www.erlang.org/>`_, which is a programming language that `first appeared in 1986 <http://en.wikipedia.org/wiki/Erlang_%28programming_language%29>`_, was open sourced in 1998, and is excellent with critical enterprise concerns like concurrency, fault-tolerance, and distributed environments. This version of |chef| can scale to the size of any enterprise and is often referred to as |erchef|."
+msgstr ""
+
+#: ../source/server_components.rst:40
+# fbf50a97a1014a808fc4b7fc7790f1ea
+msgid "The following diagram shows the various components that are part of a |chef server| deployment and how they relate to one another."
+msgstr ""
+
+#: ../source/server_components.rst:48
+# 2f03695987e44225afc07be630ac3945
+msgid "Component"
+msgstr ""
+
+#: ../source/server_components.rst:49
+# fad6641662c1431f9b2a10a7d605f017
+msgid "Description"
+msgstr ""
+
+#: ../source/server_components.rst:50
+# 9bb0b6cd826445d4ae91f9e196380f5d
+msgid "Bookshelf"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_bookshelf.rst:4
+# 45059ce946644acf9a5bebe7aefe5496
+msgid "|chef bookshelf| is used to store cookbook content---files, templates, and so on---that have been uploaded to the |chef server| as part of a cookbook version. Cookbook content is stored by content checksum. If two different cookbooks or different versions of the same cookbook include the same file or template, |chef bookshelf| will store that file only once. The cookbook content managed by |chef bookshelf| is stored in flat files and is separated from the |chef server| and search index repositories."
+msgstr ""
+
+#: ../source/server_components.rst:53
+# b29d164e4a604cc0a3241ccd31346f5d
+msgid "All cookbooks are stored in a dedicated repository."
+msgstr ""
+
+#: ../source/server_components.rst:54
+# 64d9e5ac829749ea986e404df553a3d1
+msgid "WebUI"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_webui.rst:4
+# 498d2afc3fa048a985509e19b13d1756
+msgid "|chef server webui| is a |ruby on rails| 3.0 application that hosts the web interface for the |chef server|."
+msgstr ""
+
+#: ../source/server_components.rst:56
+# bae4d2b1bed94d9b8f322ea385c73496
+msgid "Erchef"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef.rst:4
+# 1f67a6d103fa4166b66f636669fb713f
+msgid "|erchef| is a complete rewrite of the core API for the |chef server|, which allows it to be faster and more scalable than previous versions. The API itself is still compatible with the original |ruby|-based |chef server|, which means that cookbooks and recipes that were authored for the |ruby|-based |chef server| will continue to work on the |erlang|-based |chef server|. The |chef client| is still written in |ruby|."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_erchef.rst:6
+# 7fc6fb31d9ce49758f5c77b054e4fc27
+msgid "Even though |chef 11| is authored in |erlang|, writing code in |erlang| is NOT a requirement for using |chef 11|."
+msgstr ""
+
+#: ../source/server_components.rst:58
+# 9e33b560495c444ebf522b1dc80a80df
+msgid "Message Queues"
+msgstr ""
+
+#: ../source/server_components.rst:59
+# 0537bf58e3fe442c856d40c14f6dac32
+msgid "Messages are sent to the Search Index using the following components:"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_rabbitmq.rst:4
+# 9132e10e9da74e4cad16f14876efe6dd
+msgid "|rabbitmq| is used as the message queue for the |chef server|. All items that will be added to the search index repository are first added to a queue."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_expander.rst:4
+# e4aadf2a53fe4e199acbe6080b218099
+msgid "|chef expander| is used to pull messages from the |rabbitmq| queue, process them into the required format, and then post them to |chef solr| for indexing."
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_solr.rst:4
+# ee7af8d50afa4381867a7ff685426fe7
+msgid "|chef solr| wraps |apache solr| and exposes its REST API for indexing and search."
+msgstr ""
+
+#: ../source/server_components.rst:65
+# f74c71a73d4c44bfa153f86389292002
+msgid "All messages are added to a dedicated search index repository."
+msgstr ""
+
+#: ../source/server_components.rst:66
+# 6c3ba66f16524d3a87324ae5312b671b
+msgid "Nginx"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_nginx.rst:4
+# 85f2de2f1ca5466da3563e45aec36403
+msgid "|nginx| is an open-source HTTP and reverse proxy server that is used as the front-end load balancer for the |chef server|. All requests to the |api chef server| are routed through |nginx|."
+msgstr ""
+
+#: ../source/server_components.rst:68
+# 30b97790e7c340dfa039aea4aee694e9
+msgid "PostgreSQL"
+msgstr ""
+
+#: ../../includes_chef_server/includes_chef_server_component_postgresql.rst:4
+# ec8fb4e96289421ba8cc7cb42391a899
+msgid "|postgresql| is the data storage repository for the |chef server|."
+msgstr ""
+
