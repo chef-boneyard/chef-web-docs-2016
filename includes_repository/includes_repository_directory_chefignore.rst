@@ -6,7 +6,7 @@ The ``chefignore`` file is used to tell |knife| which cookbook files in the |che
 
 * A pattern is relative to the cookbook root
 * A pattern may contain relative directory names
-* A pattern cannot ignore an entire directory
+* A pattern may match all files in a directory
 
 The ``chefignore`` file is located at the root of the `/cookbooks`` subdirectory in the |chef| repository. It should contain sections similar to the following:
 

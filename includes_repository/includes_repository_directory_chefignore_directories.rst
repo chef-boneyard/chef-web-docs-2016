@@ -2,17 +2,17 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``chefignore`` file can be used to ignore an entire directory. For example:
+The ``chefignore`` file can be used to ignore all of the files in a directory. For example:
 
 .. code-block:: basemake
 
-   /directory/*
+   files/default/subdirectory/*
 
 or:
 
 .. code-block:: basemake
 
-   /directory/**
+   files/default/subdirectory/*
 
 
 
