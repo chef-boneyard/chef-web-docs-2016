@@ -608,6 +608,10 @@ The following examples show how to use the |resource execute| resource.
 
 .. include:: ../../step_resource/step_resource_execute_use_search_dsl_method.rst
 
+**Enable remote login for Mac OS X**
+
+.. include:: ../../step_resource/step_resource_execute_enable_remote_login.rst
+
 
 file
 -----------------------------------------------------
