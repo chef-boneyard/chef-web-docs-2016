@@ -94,53 +94,46 @@ Cookbooks
    
    chef_overview
    chef_quick_overview
-   just_enough_ruby_for_chef
-   install
+   community
    breaking_changes_chef_11
-
+   just_enough_ruby_for_chef
+   chef_overview_cookbooks
+   chef_overview_nodes
    chef_overview_server
    chef_overview_server_hosted
    chef_overview_server_open_source
    chef_overview_server_private
-   chef_overview_nodes
-   chef_overview_cookbooks
-
-   chef_client
+   chef_overview_workstation
+   install
+   install_server
+   install_server_scenario_vm
    knife
    plugin_knife
    resource
+   opscode_cookbooks
    lwrp
    config
+   config_rb_chef_server
+   chef_client
    api_chef_server
    api_cookbooks_site
    dsl_recipe
-
-   install_server
-   install_server_scenario_vm
-
-   community
-   config_rb_chef_server
-   opscode_cookbooks
-   orgmapper
    ohai
-
+   orgmapper
+   server_types
+   server_components
    essentials_nodes
-   essentials_chef_client
-
    essentials_nodes_chef_run
+   essentials_chef_client
    essentials_handlers
-
-   chef_overview_workstation
    essentials_repository
    essentials_knife
-
    essentials_policy
    essentials_node_object
    essentials_data_bags
    essentials_environments
    essentials_roles
    essentials_search
-
    essentials_cookbooks
    essentials_cookbook_attribute_files
    essentials_cookbook_directory
@@ -153,10 +146,6 @@ Cookbooks
    essentials_cookbook_resources
    essentials_cookbook_templates
    essentials_cookbook_versions
-
-   server_types
-   server_components
-
    manage_server_hosted 
 
    images
