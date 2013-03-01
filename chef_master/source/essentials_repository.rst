@@ -8,11 +8,13 @@ About the Repository
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Component
      - Description
+   * - :doc:`The chefignore File </essentials_repository_structure_chefignore>`
+     - A ``chefignore`` file can be used to ensure that certain types of files are not uploaded to the |chef server|.
    * - :doc:`essentials_repository_structure`
      - The |chef| repository contains directories for certificates, configuration settings, cookbooks, data bags, environments, and roles.
-   * - :doc:`essentials_repository_create`
+   * - :doc:`Create a Repository </essentials_repository_create>`
      - A repository can be cloned from |git| or downloaded and installed locally.
 
 .. toctree::
@@ -20,6 +22,7 @@ About the Repository
 
    essentials_repository_create
    essentials_repository_structure
+   essentials_repository_structure_chefignore
 
 
 
