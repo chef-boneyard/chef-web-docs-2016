@@ -23,7 +23,6 @@ There are three types of |chef| servers:
    * - :doc:`Open Source Chef Server </chef_overview_server_open_source>`
      - .. include:: ../../includes_chef/includes_chef_open_source.rst
 
-
 Components
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst
@@ -59,10 +58,11 @@ The following diagram shows the various components that are part of a |chef serv
    * - PostgreSQL
      - .. include:: ../../includes_chef_server/includes_chef_server_component_postgresql.rst
 
+For |chef hosted|, these components are mostly transparent because of the hosted interface for the |chef server|. For |chef private| and the open source |chef server|, these relationships can be more complex, depending on how the machines on which the |chef server| will run need to be deployed. 
 
 Common Features
 =====================================================
-Each flavor of the |chef server| provides the following features:
+Each type of |chef server| provides the following features:
 
 .. list-table::
    :widths: 150 450
