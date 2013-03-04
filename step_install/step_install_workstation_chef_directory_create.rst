@@ -30,3 +30,4 @@ To create the |chef repo hidden| directory:
          environments/
          roles/
 
+#. Add ``.chef`` to the ``.gitignore`` file to prevent uploading the contents of the ``/.chef`` folder to |github|.

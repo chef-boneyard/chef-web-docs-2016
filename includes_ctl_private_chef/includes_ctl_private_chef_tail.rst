@@ -12,6 +12,3 @@ This subcommand has the following syntax::
    $ private-chef-ctl tail (SERVICE_NAME)
 
 where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand.
-
-
-
