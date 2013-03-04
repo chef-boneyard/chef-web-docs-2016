@@ -28,7 +28,7 @@ Chef Server 11.x
 
 **Monitor:** Database | Cookbooks | Log Files | Services | Ports | chef-pedant | Nagios | Graphite
 
-**Reference:** :doc:`chef-server-ctl </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
+**Reference:** :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
 
 
 
