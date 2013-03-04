@@ -22,7 +22,7 @@ The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac 
 
 #. Identify the |chef server|
 #. Review the prequisites
-#. Download .pem files and |knife rb| (|chef hosted| and |chef private| only)
+#. Get the .pem files and |knife rb| files
 #. Select the |omnibus installer|
 #. Run the |omnibus installer|
 #. Install |git|
@@ -41,11 +41,13 @@ Review prerequisites
 -----------------------------------------------------
 Ensure that the workstation meets all of the software prerequisites and that it has access to a |chef server| and to a machine that can host a node.
 
-Download .pem files and |knife rb|
+Get the .pem files and |knife rb| files
 -----------------------------------------------------
-.. note:: This step is not required for the open source |chef server|.
+The |chef server| provides three files that must be in the |chef| repository and are required when connecting to the |chef server|.
 
 .. include:: ../../step_install/step_install_workstation_validation_files_download.rst
+
+.. include:: ../../step_install/step_install_workstation_validation_files_chef_open_server.rst
 
 Select the |omnibus installer|
 -----------------------------------------------------
