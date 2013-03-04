@@ -10,7 +10,7 @@ About the Repository
 
    * - Component
      - Description
-   * - :doc:`chefignore File </essentials_repository_structure_chefignore>`
+   * - :doc:`chefignore Files </essentials_repository_structure_chefignore>`
      - ``chefignore`` files can be used to ensure that certain types of files are not uploaded to the |chef server|.
    * - :doc:`essentials_repository_structure`
      - The |chef| repository contains directories for certificates, configuration settings, cookbooks, data bags, environments, and roles.
