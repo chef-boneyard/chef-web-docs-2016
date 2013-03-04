@@ -20,7 +20,7 @@ Chef Server 11.x
 
 **Install:** Open Source **Private Chef:** Standalone | Tiered | High Availability **Migrate:** Open Source >> Hosted Chef | chef-pedant | Ommibus
 
-**System Analysis and Tuning:** Settings | Performance | Backup / Restore | Security | Hardening | Firewall | High Availability
+**System Analysis and Tuning:** Settings | Performance | Backup / Restore | Security | Hardening | Firewall | High Availability | Ports (Chef 11 runs on ports 80 and 443)
 
 **Manage:** Open Source | Hosted Chef | Private Chef
 
