@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Many text editors leave files behind. To prevent these files from being uploaded to the |chef server|, add an entry to the ``chefignore`` file. For |emacs|, so something like:
+Many text editors leave files behind. To prevent these files from being uploaded to the |chef server|, add an entry to the ``chefignore`` file. For |emacs|, do something like:
 
 .. code-block:: basemake
 

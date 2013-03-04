@@ -12,7 +12,7 @@ or:
 
 .. code-block:: basemake
 
-   files/default/subdirectory/*
+   files/default/subdirectory/**
 
 
 
