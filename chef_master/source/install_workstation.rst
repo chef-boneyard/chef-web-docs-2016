@@ -9,7 +9,7 @@ Prerequisites
 The following items are prerequisites for installing |chef| on a workstation:
 
 * A computer running |unix|, |linux|, or |mac os x|; |windows| machines are supported, but they are not described as part of the current install documentation
-* |apple xcode| is installed; this application can be downloaded from |apple| for free
+* |apple xcode| is installed on machines running |mac os x|; this application can be downloaded from |apple| for free
 * A |github| account; the |chef| repository must be downloaded and/or cloned from |github|
 * Access to a |chef server|, typically a |chef hosted| account or the open source |chef server|; the open source |chef server| may be installed on a virtual machine for demo purposes
 * Access to a machine (physical or virtual) that can be used as the first node; the |fully qualified domain name| or IP address for a machine is required by the ``knife bootstrap`` command during a bootstrap operation
@@ -22,7 +22,7 @@ The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac 
 
 #. Identify the |chef server|
 #. Review the prequisites
-#. Download .pem files and |knife rb|
+#. Download .pem files and |knife rb| (|chef hosted| and |chef private| only)
 #. Select the |omnibus installer|
 #. Run the |omnibus installer|
 #. Install |git|
@@ -43,6 +43,8 @@ Ensure that the workstation meets all of the software prerequisites and that it 
 
 Download .pem files and |knife rb|
 -----------------------------------------------------
+.. note:: This step is not required for the open source |chef server|.
+
 .. include:: ../../step_install/step_install_workstation_validation_files_download.rst
 
 Select the |omnibus installer|

@@ -9,4 +9,4 @@ To download the |omnibus installer| for |chef|:
 
 #. Select the operating system, version, and architecture appropriate for your environment.
 
-#. Install |chef|!
+#. Identify the URL that will be used to download the package or download the package directly.
