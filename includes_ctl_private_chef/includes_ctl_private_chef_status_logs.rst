@@ -1,5 +1,7 @@
-.. The contents of this file may be included in multiple topics.
+.. The contents of this file are included in multiple topics.
+.. This file describes a command or a sub-command for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
 
 A typical status line for a service that is running in |chef private| in a |tiered| or |standalone| topology is similar to the following:
 
@@ -24,4 +26,3 @@ where
 
 * ``down`` indicates that the service is in a down state
 * ``3s, normally up;`` indicates that the service is normally in a run state and that the supervisor would attempt to restart this service after a reboot
-

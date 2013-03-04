@@ -20,7 +20,7 @@ The following commands are available for managing services that are used by |che
 
        where ``name_of_service`` represents the name of any service that is listed after running the ``private-chef-ctl service-list`` command.
    * - ``ha-status``
-     - Use this command to check the status for services running in a High Availability topology. This command will verify the following:
+     - Use this command to check the status for services running in a |ha| topology. This command will verify the following:
 
        * The |keepalived| daemon is enabled in the config
        * The |drbd| process is enabled in the config

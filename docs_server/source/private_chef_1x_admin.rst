@@ -6734,37 +6734,109 @@ And files with mtimes older than this number of days will be deleted.
   log_retention['nginx'] = 14
 
 
+
 private-chef-ctl
 =====================================================
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_ha.rst
 
-General Commands
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef.rst
+
+backup-recover
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_general.rst
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_backup_recover.rst
 
-HA Commands
+cleanse
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_ha.rst
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_cleanse.rst
 
-Services Commands
+ha-status
 -----------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_services.rst
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst
 
-Reading the status line
+help
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_help.rst
+
+master-recover
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_master_recover.rst
+
+password
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_password.rst
+
+reconfigure
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_reconfigure.rst
+
+show-config
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_show_config.rst
+
+uninstall
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_uninstall.rst
+
+Service Subcommands
+-----------------------------------------------------
+|chef private| has a built in process supervisor, which ensures that all of the required services are in the appropriate state at any given time. The supervisor starts two processes per service.
+
+hup
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_services_read_status_line.rst
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_hup.rst
 
-Logs
+int
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_services_read_status_line_service_logs.rst
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_int.rst
 
-Services in HA deployments
+kill
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_services_read_status_line_on_ha.rst
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_kill.rst
 
-User Commands
------------------------------------------------------
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ctl_private_chef_user.rst
+once
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_once.rst
+
+restart
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_restart.rst
+
+service-list
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_service_list.rst
+
+start
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_start.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status.rst
+
+High Availability
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status_ha.rst
+
+Log Files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_status_logs.rst
+
+stop
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_stop.rst
+
+tail
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_tail.rst
+
+term
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_term.rst
+
+
+
+
+
+
 
 Logs
 =====================================================

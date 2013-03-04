@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following commands are available for |chef private| deployments that are using the High Availability topology:
+The following commands are available for |chef private| deployments that are using the |ha| topology:
 
 .. list-table::
    :widths: 60 420
