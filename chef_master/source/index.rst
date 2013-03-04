@@ -51,7 +51,7 @@ The Chef Server
 
 **Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
 
-**Tools:** :doc:`orgmapper </orgmapper>`
+**Tools:** :doc:`orgmapper </orgmapper>` | :doc:`ctl-chef-server </ctl_chef_server>`
 
 **APIs:** :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Chef Server API </api_chef_server>`
 
@@ -120,6 +120,7 @@ Cookbooks
    dsl_recipe
    ohai
    orgmapper
+   ctl_chef_server
    server_types
    server_components
    essentials_nodes
