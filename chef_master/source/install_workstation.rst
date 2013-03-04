@@ -22,9 +22,9 @@ The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac 
 
 #. Identify the |chef server|
 #. Review the prequisites
-#. Get the .pem files and |knife rb| files
 #. Select the |omnibus installer|
 #. Run the |omnibus installer|
+#. Get the .pem files and |knife rb| files
 #. Install |git|
 #. Clone the |chef| repository
 #. Create the .chef directory
@@ -41,14 +41,6 @@ Review prerequisites
 -----------------------------------------------------
 Ensure that the workstation meets all of the software prerequisites and that it has access to a |chef server| and to a machine that can host a node.
 
-Get the .pem files and |knife rb| files
------------------------------------------------------
-The |chef server| provides three files that must be in the |chef| repository and are required when connecting to the |chef server|.
-
-.. include:: ../../step_install/step_install_workstation_validation_files_download.rst
-
-.. include:: ../../step_install/step_install_workstation_validation_files_chef_open_server.rst
-
 Select the |omnibus installer|
 -----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_select_omnibus_installer.rst
@@ -56,6 +48,14 @@ Select the |omnibus installer|
 Run the |omnibus installer|
 -----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_omnibus.rst
+
+Get the .pem files and |knife rb| files
+-----------------------------------------------------
+The |chef server| provides three files that must be in the |chef| repository and are required when connecting to the |chef server|.
+
+.. include:: ../../step_install/step_install_workstation_validation_files_download.rst
+
+.. include:: ../../step_install/step_install_workstation_validation_files_chef_open_server.rst
 
 Install |git|
 -----------------------------------------------------
