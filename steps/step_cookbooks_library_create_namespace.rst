@@ -41,7 +41,7 @@ A database can contain a list of virtual hosts that are used by customers. A cus
 
 After the custom namespace is created, it could then be used in a recipe, like this::
 
-   Using ISP.vhosts in a Recipe
+   # Using ISP.vhosts in a Recipe
    ISP.vhosts.each do |vhost|
      directory vhost[:documentroot] do
        owner vhost[:uid]
