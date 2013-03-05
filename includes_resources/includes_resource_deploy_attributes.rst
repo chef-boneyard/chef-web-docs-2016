@@ -27,6 +27,8 @@ This resource has the following has the following attributes:
      - |environment resource deploy|
    * - ``group``
      - |group resource deploy|
+   * - ``keep_releases``
+     - |keep_releases| Default value: ``5``.
    * - ``migrate``
      - |migrate resource deploy|
    * - ``migration_command``
@@ -101,6 +103,7 @@ For example:
      migration_command "rake db:migrate"
      environment "RAILS_ENV" => "production", "OTHER_ENV" => "foo"
      shallow_clone true
+     keep_releases 10
      action :deploy # or :rollback
      restart_command "touch tmp/restart.txt"
      git_ssh_wrapper "wrap-ssh4git.sh"
