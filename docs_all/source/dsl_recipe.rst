@@ -61,8 +61,6 @@ data_bag, data_bag_item
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst
 
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following examples show how the ``data_bag`` and ``data_bag_item`` methods can be used in a recipe.
 
 **Use the contents of a data bag in a recipe**
@@ -81,8 +79,6 @@ platform?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform.rst
 
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following examples show how the ``platform?`` method can be used in a recipe.
 
 **Use an if statement with the platform recipe DSL method**
@@ -97,8 +93,6 @@ platform_family?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_family.rst
 
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following examples show how the ``platform_family?`` method can be used in a recipe.
 
 **Use the platform_family? method**
@@ -119,8 +113,6 @@ search
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_search_indexes.rst
 
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
 The following examples show how the ``search`` method can be used in a recipe.
 
 **Use the search recipe DSL method to find users**
