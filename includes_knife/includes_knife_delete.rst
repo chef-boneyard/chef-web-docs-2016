@@ -4,11 +4,11 @@
 
 |knife delete| This sub-command works similar to ``knife cookbook delete``, ``knife data bag delete``, ``knife environment delete``, ``knife node delete``, and ``knife role delete``, but with a single verb (and a single action).
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife delete [PATTERN...] (options)
 
-This sub-command has the following options:
+This subcommand has the following options:
 
 ``--recurse``
    |no recurse delete|

@@ -5,6 +5,6 @@
 
 |knife site cookbook| The following arguments do not require a user account: ``download``, ``search``, ``install``, and ``list``.
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife cookbook site [ARGUMENT] (options)

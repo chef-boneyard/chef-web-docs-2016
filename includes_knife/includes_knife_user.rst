@@ -5,7 +5,7 @@
 
 |knife user|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife user [ARGUMENT] (options)
    

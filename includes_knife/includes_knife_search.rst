@@ -5,7 +5,7 @@
 
 |knife search|
 
-The sub-command has the following syntax::
+The subcommand has the following syntax::
 
    knife search INDEX SEARCH_QUERY
 

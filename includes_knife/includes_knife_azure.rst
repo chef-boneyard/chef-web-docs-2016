@@ -11,6 +11,6 @@ This plugin should be installed using |rubygems|.
 
 .. note:: This plugin requires the ``knife windows`` plugin to be present on the same machine.
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife azure [ARGUMENT] (options)

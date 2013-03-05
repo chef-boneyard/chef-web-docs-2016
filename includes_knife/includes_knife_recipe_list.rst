@@ -5,7 +5,7 @@
 
 |knife recipe list|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife recipe list REGEX
 

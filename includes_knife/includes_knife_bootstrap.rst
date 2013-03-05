@@ -5,11 +5,11 @@
 
 |knife bootstrap|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife bootstrap FQDN_or_IP_ADDRESS (options)
 
-This sub-command has the following options:
+This subcommand has the following options:
 
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap-proxy|

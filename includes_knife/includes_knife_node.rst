@@ -5,7 +5,7 @@
 
 |knife node|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife node [ARGUMENT] (options)
 

@@ -3,13 +3,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife upload| This sub-command is often used in conjunction with ``knife diff``, which can be used to see exactly what changes will be uploaded, and then ``knife download``, which does the opposite of ``knife upload``.
+|knife upload| This subcommand is often used in conjunction with ``knife diff``, which can be used to see exactly what changes will be uploaded, and then ``knife download``, which does the opposite of ``knife upload``.
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife upload [PATTERN...] (options)
 
-This sub-command has the following options:
+This subcommand has the following options:
 
 ``-n``, ``--dry-run``
    |dry_run|

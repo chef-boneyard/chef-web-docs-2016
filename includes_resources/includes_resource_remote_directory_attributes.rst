@@ -14,13 +14,13 @@ This resource has the following has the following attributes:
    * - ``files_backup``
      - |files_backup resource remote_directory|
    * - ``files_group``
-     - |files_group resource remote_directory|
+     - |group windows security|
    * - ``files_mode``
-     - |files_mode resource remote_directory|
+     - |mode windows security|
    * - ``files_owner``
-     - |files_owner resource remote_directory|
+     - |owner windows security|
    * - ``inherits``
-     - |inherits resource remote_directory|
+     - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``path``
      - |path resource remote_directory|
    * - ``overwrite``
@@ -28,6 +28,6 @@ This resource has the following has the following attributes:
    * - ``purge``
      - |purge resource remote_directory|
    * - ``rights``
-     - |rights resource remote_directory|
+     - |windows| only. |rights windows security|
    * - ``source``
      - |source resource remote_directory|

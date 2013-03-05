@@ -14,19 +14,19 @@ This resource has the following has the following attributes:
    * - ``cookbook``
      - |cookbook resource template|
    * - ``group``
-     - |group resource template|
+     - |group windows security|
    * - ``inherits``
-     - |inherits resource template|
+     - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``local``
      - |local resource template|
    * - ``mode``
-     - |octal mode|
+     - |mode windows security|
    * - ``owner``
-     - |owner resource template|
+     - |owner windows security|
    * - ``path``
      - |path resource template|
    * - ``rights``
-     - |rights resource template|
+     - |windows| only. |rights windows security|
    * - ``source``
      - |source resource template|
    * - ``variables``

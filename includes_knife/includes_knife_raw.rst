@@ -4,11 +4,11 @@
 
 |knife raw|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife raw REQUEST_PATH (options)
 
-This sub-command has the following options:
+This subcommand has the following options:
 
 ``-i FILE``, ``--input FILE``
    |input file| 

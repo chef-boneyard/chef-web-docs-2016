@@ -3,13 +3,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife download| It can be used to back up data on the |chef server|, inspect the state of one or more files, or to extract out-of-process changes users may have made to files on the |chef server|, such as if a user made a change that bypassed version source control. This sub-command is often used in conjunction with ``knife diff``, which can be used to see exactly what changes will be downloaded, and then ``knife upload``, which does the opposite of ``knife download``.
+|knife download| It can be used to back up data on the |chef server|, inspect the state of one or more files, or to extract out-of-process changes users may have made to files on the |chef server|, such as if a user made a change that bypassed version source control. This subcommand is often used in conjunction with ``knife diff``, which can be used to see exactly what changes will be downloaded, and then ``knife upload``, which does the opposite of ``knife download``.
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife download [PATTERN...] (options)
 
-This sub-command has the following options:
+This subcommand has the following options:
 
 ``-n``, ``--dry-run``
    |dry_run|

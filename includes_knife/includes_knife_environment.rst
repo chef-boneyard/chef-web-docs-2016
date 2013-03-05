@@ -5,7 +5,7 @@
 
 |knife environment|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife environment [ARGUMENT] (options)
 

@@ -7,7 +7,7 @@
 
 This plugin should be installed using |rubygems|.
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife linode [ARGUMENT] (options)
 

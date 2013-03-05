@@ -10,16 +10,16 @@ This resource has the following has the following attributes:
    * - Attribute
      - Description
    * - ``group``
-     - |group resource directory|
+     - |group windows security|
    * - ``inherits``
-     - |inherits resource directory|
+     - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |octal mode|
+     - |mode windows security|
    * - ``owner``
-     - |owner resource directory|
+     - |owner windows security|
    * - ``path``
      - |path resource directory|
    * - ``recursive``
      - |recursive resource directory|
    * - ``rights``
-     - |rights resource directory|
+     - |windows| only. |rights windows security|
