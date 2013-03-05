@@ -5,7 +5,7 @@
 
 |knife bluebox|
 
-This plugin should be installed using |rubygems|.
+This subcommand should be installed as a |knife| plugin, using |rubygems|.
 
 This subcommand has the following syntax::
 

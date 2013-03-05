@@ -5,6 +5,8 @@
 
 |knife windows|
 
+This subcommand should be installed as a |knife| plugin, using |rubygems|.
+
 This subcommand requires |windows remote management| to be installed, and then configured correctly. For more information, see: http://msdn.microsoft.com/en-us/library/aa384426(v=vs.85).aspx and/or http://support.microsoft.com/kb/968930. Use the quick configuration option in |windows remote management| to allow outside connections and the entire network path from |knife| (and the workstation):
 
 .. code-block:: bash
@@ -27,8 +29,6 @@ The following |windows remote management| configuration settings should be updat
      - Set this value to ``true`` for development and testing purposes.
    * - ``Basic``
      - Set this value to ``true`` for development and testing purposes. The ``knife windows`` subcommand supports |kerberos| and |windows basic| authentication schemes.
-
-This plugin should be installed using |rubygems|.
 
 This subcommand has the following syntax when connecting to one (or more) machines that run |windows|::
 
