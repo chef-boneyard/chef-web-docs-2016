@@ -29,7 +29,6 @@ About Versions
    :hidden:
 
    essentials_cookbook_versions_syntax
-   essentials_cookbook_versions_operators
    essentials_cookbook_versions_constraints
    essentials_cookbook_versions_metadata
    essentials_cookbook_versions_environments

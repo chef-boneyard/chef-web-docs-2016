@@ -140,6 +140,8 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_user
    resource_yum
 
+   resource_common_windows_file_security
+
 
 
 
