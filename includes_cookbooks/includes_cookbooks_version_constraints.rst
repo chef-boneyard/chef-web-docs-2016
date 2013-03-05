@@ -5,6 +5,27 @@ A version constraint is a string that combines the cookbook version syntax with 
 
    operator cookbook_version_syntax
 
+The following operators can be used with cookbook versions:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Operator
+     - Description
+   * - =
+     - Equal to
+   * - >
+     - Greater than
+   * - <
+     - Less than
+   * - >=
+     - Greater than or equal to
+   * - =<
+     - Less than or equal to
+   * - ~>
+     - Approximately greater than
+
 For example, a version constraint for "equals version 1.0.7" is expressed like this::
 
    = 1.0.7

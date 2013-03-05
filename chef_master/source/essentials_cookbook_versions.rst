@@ -12,10 +12,8 @@ About Versions
      - Description
    * - :doc:`essentials_cookbook_versions_syntax`
      - A cookbook version always takes the form x.y.z, where x, y, and z are decimal numbers that are used to represent major (x), minor (y), and patch (z) versions.
-   * - :doc:`essentials_cookbook_versions_operators`
-     - All of the most common operators can be used when referring to cookbook versions.
    * - :doc:`essentials_cookbook_versions_constraints`
-     - A version constraint is a string that combines the cookbook version syntax with an operator.
+     - A version constraint is a string that combines the cookbook version syntax with an operator. All of the most common operators can be used when referring to cookbook versions.
    * - :doc:`essentials_cookbook_versions_metadata`
      - Every cookbook requires a small amount of metadata. This metadata provides hints to the Chef server so that cookbooks are deployed to each node correctly.
    * - :doc:`essentials_cookbook_versions_environments`
