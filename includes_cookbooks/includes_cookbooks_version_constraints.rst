@@ -5,7 +5,11 @@ A version constraint is a string that combines the cookbook version syntax with 
 
    operator cookbook_version_syntax
 
-For example, a version constraint for "greater than version 1.0.2" is expressed like this::
+For example, a version constraint for "equals version 1.0.7" is expressed like this::
+
+   = 1.0.7
+
+A version constraint for "greater than version 1.0.2" is expressed like this::
 
    > 1.0.2
 
@@ -23,4 +27,10 @@ will match cookbooks that are greater than version 2.6, but less than version 3.
 
    ~> 2.6.5
 
-will match cookbooks that are greater than version 2.6.5, but less than version 2.7.0.
+will match cookbooks that are greater than version 2.6.5, but less than version 2.7.0. Or, a pessimistic version constraint that matches cookbooks less than a version number::
+
+   < 2.3.4
+
+or will match cookbooks less than or equal to a specific version number:
+
+   <= 2.6.5
