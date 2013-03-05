@@ -54,6 +54,7 @@ Private Chef 1.x.x
 
    chef_pedant
    ctl_chef_server
+   ctl_private_chef
    install_server
    install_server_scenario_vm
    chef_overview
