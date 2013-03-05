@@ -30,6 +30,10 @@ All resources share a set of common actions, attributes, conditional executions,
      - The ``notifies`` and ``subscribes`` notifications can be used with any resource.
    * - :doc:`Relative Paths </resource_common_relative_paths>`
      - The ``#{ENV['HOME']}`` relative path can be used with any resource.
+   * - :doc:`Windows File Security </resource_common_windows_file_security>`
+     - The |resource template|, |resource file|, |resource remote_file|, |resource cookbook file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes.
+   * - :doc:`Run a Resource First </resource_common_first_run>`
+     - Sometimes a resource needs to be run before every other resource.
 
 |chef| Resources
 -----------------------------------------------------
