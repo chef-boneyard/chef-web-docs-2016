@@ -30,8 +30,8 @@ Chef (for Nodes and Workstations)
    * - Mac OS X
      - 10.6, 10.7
      - x86_64
-   * - SUSE Enterprise
-     - 11.2
+   * - openSUSE
+     - 12.1
      - i686, x86_64
    * - Solaris
      - 5.9
@@ -39,8 +39,8 @@ Chef (for Nodes and Workstations)
    * - 
      - 5.10. 5.11
      - i386, sparc
-   * - openSUSE
-     - 12.1
+   * - SUSE Enterprise
+     - 11.2
      - i686, x86_64
    * - Ubuntu
      - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10
@@ -66,6 +66,7 @@ The |chef server|
 
 * Firefox xxxxx, Google Chrome xxxxx, Internet Explorer xxxxx, other browsers?
 * xxxxx
+* Each node that will be configured by |chef| must be able to communicate with |chef hosted|
 * xxxxx
 
 
@@ -113,6 +114,32 @@ For a high availability deployment:
 Open Source |chef server|
 -----------------------------------------------------
 The open source |chef server| has the following requirements:
+
+
+
+
+
+
+The open source |chef server| can run on the following systems:
+
+.. list-table::
+   :widths: 200 200 200
+   :header-rows: 1
+
+   * - Operating System
+     - Version
+     - Architecture
+   * - Enterprise Linux
+     - 5, 6
+     - x86_64
+   * - Ubuntu
+     - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10
+     - i686, x86_64
+
+
+
+
+
 
 * 1.0 GB RAM, minimum (for standalone testing purposes); 16 GB RAM recommended (in any type of production environment)
 * xxxxx
