@@ -2,37 +2,17 @@
 System Requirements
 =====================================================
 
-The following sections contain the system requirements for workstations, nodes, and the three |chef server| types.
+Before installing |chef|:
 
-Nodes
+* Ensure that each machine that will be a node is running a supported operating system
+* Ensure that the machine that will run the |chef server| is sufficiently powerful
+* Ensure that any network and firewall settings are configured correctly
+
+Install and configure the |chef server|, then install and configure a workstation, and then run the bootstrap command from the workstation to install |chef| on each node.
+
+Chef (for Nodes and Workstations)
 =====================================================
-Each node in a |chef| organization has the following requirements:
-
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-
-The following operating systems and versions:
-
-* Debian, Enterprise Linux, OSX, SUSE Enterprise, Solaris, OpenSUSE, Ubuntu, Windows (various 32-bit and 64-bit combinations -- James to figure out from download page)
-
-Workstations
-=====================================================
-Each workstation in a |chef| organization has the following requirements:
-
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-
-The following operating systems and versions:
+Blah. Runs on the following operating systems and versions:
 
 * Debian, Enterprise Linux, OSX, SUSE Enterprise, Solaris, OpenSUSE, Ubuntu, Windows (various 32-bit and 64-bit combinations -- James to figure out from download page)
 
@@ -41,10 +21,6 @@ The following operating systems and versions:
 |chef hosted| has the following requirements:
 
 * Firefox xxxxx, Google Chrome xxxxx, Internet Explorer xxxxx, other browsers?
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
 * xxxxx
 * xxxxx
 
