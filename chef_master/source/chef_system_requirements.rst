@@ -15,7 +15,7 @@ Chef (for Nodes and Workstations)
 |chef| can run on the following systems:
 
 .. list-table::
-   :widths: 240 140 140
+   :widths: 200 200 200
    :header-rows: 1
 
    * - Operating System
