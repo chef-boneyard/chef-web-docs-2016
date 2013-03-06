@@ -12,12 +12,56 @@ Install and configure the |chef server|, then install and configure a workstatio
 
 Chef (for Nodes and Workstations)
 =====================================================
-Blah. Runs on the following operating systems and versions:
+|chef| can run on the following systems:
 
-* Debian, Enterprise Linux, OSX, SUSE Enterprise, Solaris, OpenSUSE, Ubuntu, Windows (various 32-bit and 64-bit combinations -- James to figure out from download page)
+.. list-table::
+   :widths: 240 140 140
+   :header-rows: 1
+
+   * - Operating System
+     - Version
+     - Architecture
+   * - Debian
+     - 6
+     - i686, x86_64
+   * - Enterprise Linux
+     - 5, 6
+     - i686, x86_64
+   * - Mac OS X
+     - 10.6, 10.7
+     - x86_64
+   * - SUSE Enterprise
+     - 11.2
+     - i686, x86_64
+   * - Solaris
+     - 5.9
+     - sparc
+   * - 
+     - 5.10. 5.11
+     - i386, sparc
+   * - openSUSE
+     - 12.1
+     - i686, x86_64
+   * - Ubuntu
+     - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10
+     - i686, x86_64
+   * - Windows
+     - 2003 R2, 2008
+     - i686, x86_64
+   * - 
+     - 2008 R2, 2012
+     - x86_64
+
+The recommended amount of RAM available to the |chef client| during a |chef| run is 512MB.
+
+Each node and workstation must be able to communicate with the |chef server|.
+
+
+The |chef server|
+=====================================================
 
 |chef hosted|
-=====================================================
+-----------------------------------------------------
 |chef hosted| has the following requirements:
 
 * Firefox xxxxx, Google Chrome xxxxx, Internet Explorer xxxxx, other browsers?
@@ -26,7 +70,7 @@ Blah. Runs on the following operating systems and versions:
 
 
 |chef private|
-=====================================================
+-----------------------------------------------------
 |chef private| has the following requirements:
 
 * xxxxx
@@ -67,7 +111,7 @@ For a high availability deployment:
 * Two back-end servers; as many front-end servers as required.
 
 Open Source |chef server|
-=====================================================
+-----------------------------------------------------
 The open source |chef server| has the following requirements:
 
 * 1.0 GB RAM, minimum (for standalone testing purposes); 16 GB RAM recommended (in any type of production environment)
