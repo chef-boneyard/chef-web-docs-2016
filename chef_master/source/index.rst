@@ -149,7 +149,7 @@ Cookbooks
    essentials_cookbook_templates
    essentials_cookbook_versions
    manage_server_hosted 
-
+   chef_system_requirements
    images
 
 
