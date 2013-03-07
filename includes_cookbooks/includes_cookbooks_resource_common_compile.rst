@@ -1,6 +1,6 @@
-=====================================================
-Run Resources during Resource Collection
-=====================================================
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
 
 |chef| processes recipes in two phases:
 
@@ -12,4 +12,4 @@ Sometimes, it may be necessary to ensure that a specific resource is run during 
 * A resource may need to run first so that it can download a package that will be used by other resources in the resource collection
 * Several resources need to install a package; rather than having running the package installer several times, it can be configured to run only once
 
-Resources can be run at the beginning and the end of the resource collection phase, essentially before all other resources are added to the resource collection or after all resources have been added, but before |chef| configures the system.
+To support these types of uses cases, it is possible to tell |chef| to run a resources at the beginning and/or the end of the resource collection phase. Effectively, run a resource before all other resources are added to the resource collection and/or after all resources have been added, but before |chef| configures the system.

@@ -1,8 +1,8 @@
-=====================================================
-Begin
-=====================================================
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This can be done by setting up a ``Chef::Resource`` object and then calling the method that runs the action.
+
+To run a resource at the start of the resource collection phase of the |chef| run, set up a ``Chef::Resource`` object, and then call the method that runs the action.
 
 **Update a package cache**
 
@@ -20,7 +20,7 @@ where ``e`` is created as a ``Chef::Resource::Execute`` |ruby| object. The ``act
 
 **Install a RubyGem to use later**
 
-A single |chef| run should configure a node completely. |chef| uses |ruby| as the recipe language, which means that anything that can be done with |ruby| can be done in a recipe. However, in some cases, a |rubygem| may need to be installed before anything else happens. For example, when a |mysql| database needs to interact with a recipe. This can be done with a recipe similar to the following: 
+A single |chef| run should configure a node completely. |chef| uses |ruby| as the recipe language, which means that anything that can be done with |ruby| can be done in a recipe. However, in some cases, a |ruby| gem may need to be installed before anything else happens. For example, when a |mysql| database needs to interact with a recipe. This can be done with a recipe similar to the following: 
 
 .. code-block:: ruby
 
@@ -33,11 +33,11 @@ A single |chef| run should configure a node completely. |chef| uses |ruby| as th
    Gem.clear_paths
    require 'mysql'
 
-where similar to the previous example for updating package caches, this example creates a new |ruby| object called ``Chef::Resource::Package`` using the |rubygems| provider.
+where similar to the previous example for updating package caches, this example creates a new |ruby| object called ``Chef::Resource::Package``.
 
-* The |mysql| |rubygem| compiles native extensions in C, so the appropriate packages for the operating system will also need to be installed. 
-* ``Gem.clear_paths`` ensures that |chef| reloads the cache of available |rubygems|.
-* ``require 'mysql'`` loads the |mysql| |rubygem| so that it can be used to connect to a |mysql| database.
+* The |mysql| |ruby| gem compiles native extensions in C, so the appropriate packages for the operating system will also need to be installed. 
+* ``Gem.clear_paths`` ensures that |chef| reloads the cache of available |ruby| gem.
+* ``require 'mysql'`` loads the |mysql| |ruby| gem so that it can be used to connect to a |mysql| database.
 
 **An anti-pattern**
 
