@@ -55,7 +55,7 @@ Chef (for Nodes and Workstations)
 In addition:
 
 * The recommended amount of RAM available to the |chef client| during a |chef| run is 512MB
-* Each node and workstation must be able to communicate with the |chef server|
+* Each node and workstation must have access to the |chef server| via HTTPS
 * |knife| plugins require |chef| <VERSION?> or greater; ``knife windows`` requires |chef| <VERSION?>
 
 
@@ -63,7 +63,7 @@ The |chef server|
 =====================================================
 The following sections describe the various requirements for the three |chef server| types.
 
-.. note:: For testing purposes, open source |chef server| can be run with a very small footprint, such as a micro instance on a virtual machine. In this type of scenario, at least 1GB of memory should be available to the |chef server|.
+.. note:: For testing purposes, open source |chef server| can be run with a very small footprint, such as an m1.small instance on |amazon aws| or a local virtual machine. In this type of scenario, at least 1GB of memory should be available to the |chef server|.
 
 |chef hosted|
 -----------------------------------------------------
@@ -123,7 +123,9 @@ Before installing the open source |chef server|, ensure that each machine has th
 * **xxxxx** --- xxxxx.
 * **xxxxx** --- xxxxx.
 * **xxxxx** --- xxxxx.
-* **xxxxx** --- xxxxx.
+* **Cores** --- 4; 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
+* **RAM** --- 4.0 GB
+* **Free disk space** --- 5.0 GB of free disk space in ``/opt``; 5.0 GB of free disk space in ``/var``
 
 The open source |chef server| can run on the following systems:
 
@@ -141,21 +143,5 @@ The open source |chef server| can run on the following systems:
      - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10
      - i686, x86_64
 
-For a standalone deployment:
 
-* 4 total cores, 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
-* 4 GB of RAM
-* 5 GB of free disk space in ``/opt``
-* 5 GB of free disk space in ``/var``
-
-For a tiered deployment:
-
-* 8 total cores 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
-* 16GB RAM
-* 2 x 300GB SAS RAID1 drives
-* Hardware RAID card
-* 1 GigE NIC interface
-* 20 GB of free disk space in ``/opt``
-* 40 GB of free disk space in ``/var``
-* A back-end server; all other systems will be front-end servers.
 
