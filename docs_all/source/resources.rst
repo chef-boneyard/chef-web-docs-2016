@@ -196,6 +196,17 @@ Examples
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
 
 
+Windows File Security
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks_resource/includes_cookbooks_resource_common_windows_security.rst
+
+**Access Control Lists (ACLs)**
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_resource/includes_cookbooks_resource_common_windows_security_acl.rst
+
+**Inheritance**
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks_resource/includes_cookbooks_resource_common_windows_security_inherits.rst
 
 
 
@@ -245,18 +256,6 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_cookbook_file_attributes.rst
-
-Windows File Security
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_general_windows_security.rst
-
-**Access Control Lists (ACLs)**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_acl.rst
-
-**Inheritance**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_inherits.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -446,18 +445,6 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_directory_attributes.rst
-
-Windows File Security
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_general_windows_security.rst
-
-**Access Control Lists (ACLs)**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_acl.rst
-
-**Inheritance**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_inherits.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -654,18 +641,6 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_file_attributes.rst
-
-Windows File Security
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_general_windows_security.rst
-
-**Access Control Lists (ACLs)**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_acl.rst
-
-**Inheritance**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_inherits.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1213,18 +1188,6 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_directory_attributes.rst
 
-Windows File Security
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_general_windows_security.rst
-
-**Access Control Lists (ACLs)**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_acl.rst
-
-**Inheritance**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_inherits.rst
-
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_directory_providers.rst
@@ -1259,18 +1222,6 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
-
-Windows File Security
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_general_windows_security.rst
-
-**Access Control Lists (ACLs)**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_acl.rst
-
-**Inheritance**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_inherits.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1567,18 +1518,6 @@ Actions
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_attributes.rst
-
-Windows File Security
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_general_windows_security.rst
-
-**Access Control Lists (ACLs)**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_acl.rst
-
-**Inheritance**
-
-.. include:: ../../includes_resources/includes_resource_general_windows_security_inherits.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

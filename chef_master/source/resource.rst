@@ -109,10 +109,10 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_common
    resource_common_actions
    resource_common_attributes
+   resource_common_compile
    resource_common_conditionals
    resource_common_notifications
    resource_common_relative_paths
-   resource_common_resource_collection
    resource_common_windows_file_security
 
    resource_batch
