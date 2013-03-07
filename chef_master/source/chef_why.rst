@@ -67,19 +67,6 @@ Can I trust |chef|?
 Yes, absolutely. |chef| will not do anything to your system that isn't in a recipe. Because |chef| is an open source project, you have full access to the source code.
 
 
-What are the main benefits of using Chef?
-=====================================================
-The main benefits of using |chef| include the following:
-
-* **Economics** --- |chef| allows business to support larger and more complex infrastructures with fewer human resources, less repetition, and fewer errors. Do more with less!
-* **Efficiency** --- Automating your infrastructure with |chef| means never having to go back in six months to repeat yourself. Plus, you won't have to do it all yourself. Leverage our vibrant community of experts who are sharing their recipes, collaborating on best practices, and helping each other to succeed. Get rid of all those little "5 minute" tasks, and get ready for the difference in your workday.
-* **Scalability** --- The founders of Opscode have deep experience with what it takes to run infrastructure at scale. When we wrote Chef, we put that knowledge to work. Chef scales horizontally like a web application, so you'll be able to trust that Chef can keep up with even the fastest growing environment. Find out in the morning that you're being featured on CNN that afternoon? You're going to need some more horsepower! When your infrastructure is built with Chef, that's a snap, Just bring the new servers online, and let Chef take care of the rest.
-* **Infrastructure Awareness** --- Chef is infrastructure aware. When you add new servers, Chef automatically discovers thousands of data points about your system. When you need to know which web servers to load balance in production, you simply ask Chef – no need to change source code, or manually reconfigure based on static documentation. When you need to model new classes of data, from users to virtual machines, simply use the Chef API to store the information, and re-use the data instantly.
-Your Problems. Your Solutions.
-* **It works the way you want it to** --- Other solutions impose their model on your process. But who knows your problems best, you or them? Chef allows you to automate your current processes - your model, your decisions. Most infrastructure solutions force you to adapt to their "one-size-fits-all" approaches, even though every infrastructure challenge is different. That's crazy-talk. And it's precisely the reason why Chef is built directly on top of Ruby, a dynamic, open-source programming language. Integrated with well-known cloud platforms like Rackspace and EC2, Chef is built to seamlessly integrate into your existing environment. We designed Chef from the ground up to allow you to focus on solving your real business problems - because reality is chaotic enough. Dealing with it shouldn't be.
-* **Modeling that is meaningful** --- Chef allows you to create perfect clones of your environments, from QA to pre-production to partner preview and more. Once automated, you hold a blueprint for your infrastructure, enabling you to build, or rebuild, automatically in minutes or hours – not weeks or months. Better still, when you take those environments live and reality intrudes - which, trust us, it will - Chef gives you endless flexibility to adapt on the fly. We all know business is "a series of managed disasters." Chef gives you the power to deal with them quickly, accurately and intelligently.
-
-
 Who uses Chef?
 =====================================================
 Lots of companies, ranging from `small startups to the largest companies on the planet <http://www.opscode.com/customers/>`_.
@@ -88,9 +75,9 @@ Why the Apache license?
 =====================================================
 The short version is that we had three broad requirements for the license under which we would release open source software:
 
-* We are an open source company. We make money from our open source software. We wanted a license that allowed us to build a business from the things we created.
-* We wanted anyone (or any company) whose problems were solved by our software to be able to use it, in any environment they wanted, in whatever way they wanted.
-* We wanted to build an open and equal community of users. We did not want to reserve any rights for ourselves that we didn’t grant to the all of the other people (and companies) who helped build our software.
+* We are an open source company. We make money from our open source software. We wanted a license that allowed us to build a business from the things we created
+* We wanted anyone (or any company) whose problems were solved by our software to be able to use it, in any environment they wanted, in whatever way they wanted
+* We wanted to build an open and equal community of users. We did not want to reserve any rights for ourselves that we didn’t grant to the all of the other people (and companies) who helped build our software
 
 For more detail, read `the blog post about why we love open source <http://www.opscode.com/blog/2009/08/11/why-we-chose-the-apache-license/>`_.
 
@@ -110,6 +97,7 @@ There are some other applications out there that do things similar to |chef|. We
 * |chef| applies resources in the order they are specified in recipes. There is no dependency management. This means multiple |chef| runs will always apply the resources under management in the same order, every time
 * |chef| resources have actions, which can be signaled
 * Resources can appear more than once in |chef|, and they inherit the attributes of the earlier resource. In other words, you can tell |apache| to start and stop in a recipe by specifying the resource twice, with the second one only changing the action attribute
+
 
 As |chef| grows, the services we expose will likely be integrated with |puppet| as well. There is more than one way to do it.
 
