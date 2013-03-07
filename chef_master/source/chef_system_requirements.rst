@@ -52,9 +52,11 @@ Chef (for Nodes and Workstations)
      - 2008 R2, 2012
      - x86_64
 
-The recommended amount of RAM available to the |chef client| during a |chef| run is 512MB.
+In addition:
 
-Each node and workstation must be able to communicate with the |chef server|.
+* The recommended amount of RAM available to the |chef client| during a |chef| run is 512MB
+* Each node and workstation must be able to communicate with the |chef server|
+* |knife| plugins require |chef| <VERSION?> or greater; ``knife windows`` requires |chef| <VERSION?>
 
 
 The |chef server|
@@ -110,6 +112,9 @@ For a high availability deployment:
 * 20 GB of free disk space in ``/opt``
 * 40 GB of free disk space in ``/var``
 * Two back-end servers; as many front-end servers as required.
+
+PORTS, HOSTS, FIREWALLS?
+
 
 Open Source |chef server|
 -----------------------------------------------------
