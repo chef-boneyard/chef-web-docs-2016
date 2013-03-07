@@ -104,6 +104,7 @@ Cookbooks
    chef_overview_server_open_source
    chef_overview_server_private
    chef_overview_workstation
+   chef_why
    install
    install_server
    install_server_scenario_vm
