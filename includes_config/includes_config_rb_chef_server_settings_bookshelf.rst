@@ -33,5 +33,7 @@ This configuration file has the following settings:
      - Default value: ``10``.
    * - ``bookshelf['svlogd_size']``
      - Default value: ``1000000``.
+   * - ``bookshelf['url']``
+     - 
    * - ``bookshelf['vip']``
      - Default value: ``node['fqdn']``.
