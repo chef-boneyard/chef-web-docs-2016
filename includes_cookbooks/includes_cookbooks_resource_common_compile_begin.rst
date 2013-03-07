@@ -1,13 +1,8 @@
 =====================================================
-Run a Resource Before Anything Else
+Begin
 =====================================================
 
-|chef| processes recipes in two phases:
-
-#. First, each resource in the node object is identified and a resource collection is built. All recipes are loaded and the actions specified within them are identified.
-#. The system is configured based on the resource collection. Each resource is mapped to a provider. The provider examines the node and then does the steps necessary to complete the action.
-
-Sometimes, it may be necessary to ensure that a specific resource is configured before anything else, such as ensuring that a package is downloaded so that it may be used later. This can be done by setting up a ``Chef::Resource`` object and then calling the method that runs the action.
+This can be done by setting up a ``Chef::Resource`` object and then calling the method that runs the action.
 
 **Update a package cache**
 
