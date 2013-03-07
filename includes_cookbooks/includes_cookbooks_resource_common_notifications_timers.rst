@@ -9,8 +9,6 @@ The following timers can be used to define when a notification is triggered:
 
    * - Timer
      - Description
-   * - ``:restart``
-     - Use to restart a service or application.
    * - ``:delayed``
      - Use to specify that a notification should be queued up and then executed at the very end of a |chef| run.
    * - ``:immediately``
