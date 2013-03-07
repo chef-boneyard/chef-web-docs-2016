@@ -61,6 +61,9 @@ In addition:
 
 The |chef server|
 =====================================================
+The following sections describe the various requirements for the three |chef server| types.
+
+.. note:: For testing purposes, open source |chef server| can be run with a very small footprint, such as a micro instance on a virtual machine. In this type of scenario, at least 1GB of memory should be available to the |chef server|.
 
 |chef hosted|
 -----------------------------------------------------
