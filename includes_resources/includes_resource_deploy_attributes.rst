@@ -27,8 +27,6 @@ This resource has the following has the following attributes:
      - |environment resource deploy|
    * - ``group``
      - |group resource deploy|
-   * - ``keep_releases``
-     - |keep_releases| Default value: ``5``.
    * - ``migrate``
      - |migrate resource deploy|
    * - ``migration_command``
