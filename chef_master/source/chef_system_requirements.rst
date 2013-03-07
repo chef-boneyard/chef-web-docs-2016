@@ -69,7 +69,7 @@ The following sections describe the various requirements for the three |chef ser
 -----------------------------------------------------
 |chef hosted| has the following requirements:
 
-* Firefox xxxxx, Google Chrome xxxxx, Internet Explorer xxxxx, other browsers?
+* **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 8 and 9)
 * Every node that will be configured by |chef| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
 
 
@@ -86,6 +86,11 @@ Before installing |chef private|, ensure that each machine has the following ins
 * **libfreetype and libpng** --- |chef private| requires these libraries.
 * **Apache Qpid** --- This daemon must be disabled on |centos| and |redhat| systems.
 * **Required users** --- If the environment in which |chef private| will run has restrictions on the creation of local user and group accounts, ensure that the correct users already exist.
+
+|chef private| has the following requirements:
+
+* **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 8 and 9)
+* Every node that will be configured by |chef| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
 
 For a standalone deployment:
 
