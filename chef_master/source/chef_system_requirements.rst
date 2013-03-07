@@ -67,22 +67,22 @@ The |chef server|
 |chef hosted| has the following requirements:
 
 * Firefox xxxxx, Google Chrome xxxxx, Internet Explorer xxxxx, other browsers?
-* xxxxx
-* Each node that will be configured by |chef| must be able to communicate with |chef hosted|
-* xxxxx
+* Every node that will be configured by |chef| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
 
 
 |chef private|
 -----------------------------------------------------
-|chef private| has the following requirements:
+Before installing |chef private|, ensure that each machine has the following installed and configured properly:
 
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
+* **Host names** --- Ensure that all systems have properly configured host names.
+* **FQDNs** --- Ensure that all systems have a resolvable |fully qualified domain name|.
+* **NTP** --- Ensure that every server on which |chef private| is running is connected to NTP; |chef private| is sensitive to click drift.
+* **Mail Relay** --- |chef private| uses email to send notifications for various events; a local mail transfer agent should be installed and available to the |chef server|.
+* **cron** --- |chef private| performs periodic maintenance tasks using |cron|.
+* **git** --- |git| must be installed so that various internal services can confirm revisions.
+* **libfreetype and libpng** --- |chef private| requires these libraries.
+* **Apache Qpid** --- This daemon must be disabled on |centos| and |redhat| systems.
+* **Required users** --- If the environment in which |chef private| will run has restrictions on the creation of local user and group accounts, ensure that the correct users already exist.
 
 For a standalone deployment:
 
@@ -113,17 +113,14 @@ For a high availability deployment:
 * 40 GB of free disk space in ``/var``
 * Two back-end servers; as many front-end servers as required.
 
-PORTS, HOSTS, FIREWALLS?
-
-
 Open Source |chef server|
 -----------------------------------------------------
-The open source |chef server| has the following requirements:
+Before installing the open source |chef server|, ensure that each machine has the following installed and configured properly:
 
-
-
-
-
+* **xxxxx** --- xxxxx.
+* **xxxxx** --- xxxxx.
+* **xxxxx** --- xxxxx.
+* **xxxxx** --- xxxxx.
 
 The open source |chef server| can run on the following systems:
 
@@ -141,21 +138,21 @@ The open source |chef server| can run on the following systems:
      - 10.04, 10.10, 11.04, 11.10, 12.04, 12.10
      - i686, x86_64
 
+For a standalone deployment:
 
+* 4 total cores, 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
+* 4 GB of RAM
+* 5 GB of free disk space in ``/opt``
+* 5 GB of free disk space in ``/var``
 
+For a tiered deployment:
 
-
-
-* 1.0 GB RAM, minimum (for standalone testing purposes); 16 GB RAM recommended (in any type of production environment)
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
-
-The following operating systems and versions:
-
-* Enterprise Linux, Ubuntu (James to figure out from download page)
-
+* 8 total cores 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
+* 16GB RAM
+* 2 x 300GB SAS RAID1 drives
+* Hardware RAID card
+* 1 GigE NIC interface
+* 20 GB of free disk space in ``/opt``
+* 40 GB of free disk space in ``/var``
+* A back-end server; all other systems will be front-end servers.
 
