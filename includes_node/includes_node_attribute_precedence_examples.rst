@@ -67,6 +67,45 @@ The following examples are listed in the same order of attribute precedence (low
 
    node.override["apache"]["dir"] = "/etc/apache2"
 
+**Ensure that a default attribute has precedence over other attributes**
+
+When a default attribute is set like this:
+
+.. code-block:: ruby
+
+   default["attribute"] = "value"
+
+any value set by a role or an environment will replace it. To prevent this value from being replaced, use the ``force_default`` attribute precedence:
+
+.. code-block:: ruby
+
+   force_default["attribute"] = "I will crush you, role or environment attribute"
+
+or:
+
+.. code-block:: ruby
+
+   default!["attribute"] = "The '!' means I win!"
+
+**Ensure that an override attribute has precedence over other attributes**
+
+When an override attribute is set like this:
+
+.. code-block:: ruby
+
+   override["attribute"] = "value"
+
+any value set by a role or an environment will replace it. To prevent this value from being replaced, use the ``force_override`` attribute precedence:
+
+.. code-block:: ruby
+
+   force_override["attribute"] = "I will crush you, role or environment attribute"
+
+or:
+
+.. code-block:: ruby
+
+   override!["attribute"] = "The '!' means I win!"
 
 
 
