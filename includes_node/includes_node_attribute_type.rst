@@ -12,9 +12,9 @@ The following types of attributes are available:
    * - ``default``
      - A ``default`` attribute has the lowest attribute precedence and is automatically reset each time |chef| runs. A cookbook should be authored so that it uses ``default`` attributes whenever possible.
    * - ``force_default``
-     - A ``force_default`` attribute can be used to ensure that role or environment attributes do not take precedence over a ``default`` attribute.
+     - A ``force_default`` attribute can be used to ensure that role or environment default attributes do not take precedence over a ``default`` attribute.
    * - ``force_override``
-     - A ``force_override`` attribute can be used to ensure that role or environment attributes do not take precedence over an ``override`` attribute.
+     - A ``force_override`` attribute can be used to ensure that role or environment override attributes do not take precedence over an ``override`` attribute.
    * - ``normal``
      - A ``normal`` attribute is an attribute that persists on the target system and is never reset during a |chef| run. A ``normal`` attribute has a higher attribute precedence than a ``default`` attribute.
    * - ``override``
