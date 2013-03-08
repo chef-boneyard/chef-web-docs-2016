@@ -25,4 +25,8 @@ In other words: an automatic attribute takes precedence over a forced override a
 
 .. note:: The precedence order for role and environment attributes for ``override`` attributes is reversed from ``default`` attributes.
 
+Another way to look at this is with the following image, which shows the same relationships and order as described above, but in a visual manner:
+
+.. image:: ../../images/includes_node_attribute_precedence.png
+
 
