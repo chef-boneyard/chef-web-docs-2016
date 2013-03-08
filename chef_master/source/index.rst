@@ -95,6 +95,7 @@ Cookbooks
    chef_overview
    chef_quick_overview
    community
+
    breaking_changes_chef_11
    just_enough_ruby_for_chef
    chef_overview_cookbooks
