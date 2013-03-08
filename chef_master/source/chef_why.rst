@@ -2,9 +2,7 @@
 Why Chef?
 =====================================================
 
-
-
-The idea that you know best about what should happen in your organization goes hand-in-hand with the notion that you still need help keeping it all running. It is rare that a single individual knows everything about a very complex problem, let alone knows all of the steps that may be required to solve them. The same is true with tools. |chef| provides help with infrastructure management. And |chef| can help solve very complicated problems. |chef| also has a large community of users who have a lot of experience solving a lot of very complex problems. That |chef| community can provide knowledge and support in areas that your organization may not have and (along with |chef|) can help your organization solve any complex problem.
+.. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
 
 What are the core principles of Chef?
 =====================================================

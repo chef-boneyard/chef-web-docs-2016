@@ -174,9 +174,9 @@ In addition to attributes, recipes, and versions, the following items are also p
 
 Conclusion
 =====================================================
-The key underlying principle of |chef| is that you (the user) knows best about what your environment is, what it should do, and how it should be maintained. |chef| is designed to not make assumptions about any of those things. Only the individuals on the ground---that's you and your team---understand the technical problems and what is required to solve them. Only your team can understand the human problems (skill levels, audit trails, and other internal issues) that are unique to your organization and whether any single technical solution is viable.
+.. include:: ../../includes_chef/includes_chef_why_key_principle.rst
 
-The idea that you know best about what should happen in your organization goes hand-in-hand with the notion that you still need help. It is rare that a single individual knows everything about a very complex problem, let alone knows all of the steps that may be required to solve them. The same is true with tools. |chef| provides help with infrastructure management. And |chef| can help solve very complicated problems. |chef| also has a large community of users who have a lot of experience solving a lot of very complex problems. That |chef| community can provide knowledge and support in areas that your organization may not have and (along with |chef|) can help your organization solve any complex problem.
+.. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
 
 For more information ...
 -----------------------------------------------------
