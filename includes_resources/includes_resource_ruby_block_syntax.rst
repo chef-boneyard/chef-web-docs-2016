@@ -6,9 +6,9 @@ The syntax for using the |resource ruby block| resource in a recipe is as follow
 .. code-block:: ruby
 
    ruby_block "name" do
-     attribute "value" # see attributes section below
+     some_attribute "value" # see attributes section below
      ...
-     action :action
+     action :action # see actions section below
    end
 
 where 

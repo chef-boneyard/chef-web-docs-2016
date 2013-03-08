@@ -7,9 +7,9 @@ The syntax for using the |resource http request| resource in a recipe is as foll
 
    http_request "name" do
      url "http://opscode.com/path"
-     attribute "value" # see attributes section below
+     some_attribute "value" # see attributes section below
      ...
-     action :action
+     action :action # see actions section below
    end
 
 where 

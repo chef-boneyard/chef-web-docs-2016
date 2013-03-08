@@ -6,7 +6,7 @@ The syntax for using the |resource registry_key| resource in a recipe is as foll
 .. code-block:: ruby
 
    registry_key "name" do
-     attribute "value" # see attributes section below
+     some_attribute "value" # see attributes section below
      ...
      values [{
        :name => "name",
@@ -20,7 +20,7 @@ The syntax for using the |resource registry_key| resource in a recipe is as foll
        }
        ...
        ]
-     action :action
+     action :action # see actions section below
    end
 
 where 

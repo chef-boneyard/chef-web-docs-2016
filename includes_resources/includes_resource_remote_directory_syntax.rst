@@ -6,9 +6,9 @@ The syntax for using the |resource remote_directory| resource in a recipe is as 
 .. code-block:: ruby
 
    remote_directory "name" do
-     attribute "value" # see attributes section below
+     some_attribute "value" # see attributes section below
      ...
-     action :action
+     action :action # see actions section below
    end
 
 where 
