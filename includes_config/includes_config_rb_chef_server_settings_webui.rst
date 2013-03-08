@@ -35,8 +35,6 @@ This configuration file has the following settings:
      - Default value: ``true``.
    * - ``chef_server_webui['umask']``
      - Default value: ``0022``.
-   * - ``chef_server_webui['url']``
-     - Default value: ``http://127.0.0.1:9462``.
    * - ``chef_server_webui['vip']``
      - Default value: ``127.0.0.1``.
    * - ``chef_server_webui['web_ui_admin_default_password']``

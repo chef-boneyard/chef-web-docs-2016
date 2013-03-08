@@ -43,8 +43,6 @@ This configuration file has the following settings:
      - Default value: ``8983``.
    * - ``chef_solr['ram_buffer_size']``
      - Default value: ``200``.
-   * - ``chef_solr['url']``
-     - Default value: ``http://localhost:8983``.
    * - ``chef_solr['vip']``
      - Default value: ``127.0.0.1``.
 
