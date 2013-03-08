@@ -53,8 +53,6 @@ This configuration file has the following settings:
      - Default value: ``10``.
    * - ``erchef['umask']``
      - Default value: ``0022``.
-   * - ``erchef['url']``
-     - Default value: ``http://127.0.0.1:8000``.
    * - ``erchef['validation_client_name']``
      - Default value: ``chef-validator``.
    * - ``erchef['vip']``
