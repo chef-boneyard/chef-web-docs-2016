@@ -6,6 +6,10 @@ Why Chef?
 
 What are the core principles of Chef?
 =====================================================
+
+.. include:: ../../includes_chef/includes_chef_why_principles.rst
+
+
 There are some very important principles behind the design of |chef|:
 
 * **Idempotence** --- The system always returns to the desired state
@@ -15,22 +19,15 @@ There are some very important principles behind the design of |chef|:
 
 Idempotence
 -----------------------------------------------------
-A recipe can run multiple times on the same system and the results will always be identical. In |chef|, a resource is defined in a recipe, which then defines the actions to be performed on the system. |chef| ensures that actions are not performed if the resources have not changed and that any action that is performed is done the same way each time. If a recipe is re-run and nothing has change, then |chef| will not do anything.
+.. include:: ../../includes_chef/includes_chef_why_principles_idempotence.rst
 
 Thick Clients, Thin Server
 -----------------------------------------------------
-|chef| does as much work as possible on the node; a |chef client| runs on each node and it only interacts with the |chef server| when it needs to. The |chef server| is designed to distribute of data to each node easily, including all cookbooks, recipes, templates, files, and so on. The |chef server| also retains a copy of the state of the node at the conclusion of every |chef| run. This approach ensures that the actual work needed to configure each node in your infrastructure is distributed across the organization, rather than centralized on smaller set of configuration management servers.
+.. include:: ../../includes_chef/includes_chef_why_principles_thin_client.rst
 
 Order Matters
 -----------------------------------------------------
-When |chef| configures each node in the system, the order in which that configuration occurs is very important. For example, if |apache| is not installed, then it cannot be configured and the daemon cannot be started. Configuration management tools have struggled with this problem for a long time. With |chef|, for each node a list of recipes is applied, which in turn specifies resources. Within a recipe, resources are applied in the order in which they are listed. At any point in a recipe other recipes may be included, which assures that all resources are applied. |chef| will never apply the same recipe twice. Dependencies are only applied at the recipe level (and never the resource level). This means that dependencies can be tracked between high-level concepts like "I need to install Apache before I can start my Django application!" It also means that given the same set of cookbooks, |chef| will always execute resources in the same exact order.
-
-Easy to Understand, Change, and Extend
------------------------------------------------------
-The key underlying principle of |chef| is that you (the user) knows best about what your environment is, what it should do, and how it should be maintained. |chef| is designed to not make assumptions about any of those things. Only the individuals on the ground---that's you and your team---understand the technical problems and what is required to solve them. Only your team can understand the human problems (skill levels, audit trails, and other internal issues) that are unique to your organization and whether any single technical solution is viable.
-
-
-
+.. include:: ../../includes_chef/includes_chef_why_principles_order_matters.rst
 
 Why was Chef created?
 =====================================================
