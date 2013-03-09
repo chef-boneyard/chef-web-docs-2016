@@ -25,7 +25,7 @@ In other words: an automatic attribute takes precedence over a forced override a
 
 .. note:: The precedence order for role and environment attributes for ``override`` attributes is reversed from ``default`` attributes. This allows ``override`` attributes to be applied for environments after they have been applied for roles. This allows a role, such as a database server or a web server, to exist in multiple environments, rather than requiring a set of roles for each environment.
 
-Another way to look at this is with the following image, which shows the same relationships and order as described above, but in a visual manner:
+Another way to view attribute precedence is with the following table:
 
 .. image:: ../../images/includes_node_attribute_precedence.png
 
