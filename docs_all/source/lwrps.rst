@@ -194,6 +194,9 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
 
+Inline Resources
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst
 
 Lightweight Resources and Providers
 =====================================================

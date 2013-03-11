@@ -82,6 +82,8 @@ There are many lightweight resources that are found in cookbooks maintained by |
 .. toctree::
    :hidden:
 
+   lwrp_common_inline_compile
+
    lwrp_apt
    lwrp_aws
    lwrp_bluepill
