@@ -18,6 +18,8 @@ About Resources and Providers
      - Many resources are built-in to |chef|.
    * - :doc:`essentials_cookbook_resources_platform`
      - The ``Chef::Platform`` class maps providers to platforms (and platform versions).
+   * - :doc:`Chef Resources and Providers </resource>`
+     - |chef| includes many built-in resources.
 
 
 .. toctree::

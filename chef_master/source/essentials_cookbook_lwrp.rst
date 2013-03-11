@@ -16,6 +16,8 @@ About Lightweight Resources and Providers
      - Lightweight resources are much less complicated than platform resources.
    * - :doc:`essentials_cookbook_lwrp_example`
      - Creating a lightweight resource involves a few steps, a few files, and a cookbook.
+   * - :doc:`Lightweight Resources Reference </lwrp>`
+     - There are many lightweight resources that are found in cookbooks maintained by |opscode|.
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
 

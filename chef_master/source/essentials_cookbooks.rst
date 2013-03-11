@@ -16,9 +16,9 @@ About Cookbooks
      - The |chef| community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that are some of the most popular and are used by nearly everyone.
    * - :doc:`Recipes </essentials_cookbook_recipes>`
      - A recipe is the most fundamental configuration element within the Chef environment.
-   * - :doc:`Resources and Providers </resource>`
+   * - :doc:`Resources and Providers </essentials_cookbook_resources>`
      - A resource is a package, a service, a group of users, and so on. A resource tells |chef| which provider to use during a |chef| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. |chef| includes default providers that cover all of the most common scenarios.
-   * - :doc:`Lightweight Resources </lwrp>`
+   * - :doc:`Lightweight Resources </essentials_cookbook_lwrp>`
      - A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters.
    * - :doc:`Attribute Files </essentials_cookbook_attribute_files>`
      - An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on a node.

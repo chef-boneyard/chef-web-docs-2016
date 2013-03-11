@@ -8,7 +8,7 @@ About Lightweight Resources
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
 
-|chef| includes the following lightweight resources:
+There are many lightweight resources that are found in cookbooks maintained by |opscode|:
 
 .. list-table::
    :widths: 150 450
