@@ -8,6 +8,35 @@ Requirements
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst
 
+Authentication Headers
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_headers.rst
+
+Required authentication headers:
+
+.. list-table::
+   :widths: 100 400
+   :header-rows: 1
+
+   * - Feature
+     - Description
+   * - ``Accept``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst
+   * - ``Host``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst
+   * - ``X-Chef-Version``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_chef_version.rst
+   * - ``X-Ops-Authorization-N``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst
+   * - ``X-Ops-Content-Hash``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst
+   * - ``X-Ops-Sign``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst
+   * - ``X-Ops-Timestamp``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_timestamp.rst
+   * - ``X-Ops-UserId``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst
+
 Endpoints
 =====================================================
 The |api chef server| has the following endpoints:
