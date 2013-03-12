@@ -36,8 +36,6 @@ The following authentication headers are required:
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst
    * - ``X-Ops-Content-Hash``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst
-   * - ``X-Ops-RequestId``
-     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_requestid.rst
    * - ``X-Ops-Sign``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst
    * - ``X-Ops-Timestamp``
