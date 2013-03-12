@@ -30,8 +30,6 @@ The following authentication headers are required:
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst
    * - ``Host``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst
-   * - ``Version``
-     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_version.rst
    * - ``X-Chef-Version``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_chef_version.rst
    * - ``X-Ops-Authorization-N``
