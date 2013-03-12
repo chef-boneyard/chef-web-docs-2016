@@ -43,6 +43,10 @@ The following authentication headers are required:
    * - ``X-Ops-UserId``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst
 
+Example
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_example.rst
+
 Endpoints
 =====================================================
 The |api chef server| has the following endpoints:
