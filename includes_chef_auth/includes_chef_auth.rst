@@ -1,17 +1,14 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+http://wiki.opscode.com/display/chef/Authentication+and+Authorization
+http://wiki.opscode.com/display/chef/Hosted+Chef+Authorization
+http://wiki.opscode.com/display/chef/Making+Authenticated+API+Requests
+http://wiki.opscode.com/display/chef/API+Clients
 
-xxxxx
-
-
-
-Overview
 Chef-client and knife both communicate with the Chef Server using a REST API.
 Chef-clients make API requests to retrieve their run list, download their cookbooks, and save their state after a successful run.
 When developing cookbooks and managing your infrastructure, you will regularly use Knife commands which make API request to the Chef Server.
-
-
 
 Before being processed by the server, each request goes through two processes
 Authentication: Verifies the identity of the API client communicating with the Chef Server.

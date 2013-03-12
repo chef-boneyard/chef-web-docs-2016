@@ -19,7 +19,7 @@ For technical details on how API requests are authentication see Making Authenti
 
 
 Debugging Authentication Problems
-=================================
+
 Authentication problems are situations in which chef-client receives HTTP Status 401 in response to its request. If you are receiving HTTP Status 403, the problem is with Authorization.
 
 An authentication error error may look like the following:
