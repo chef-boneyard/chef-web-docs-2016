@@ -12,7 +12,13 @@ Authentication Headers
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers.rst
 
-Required authentication headers:
+Header Format
+-----------------------------------------------------
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst
+
+Required Headers
+-----------------------------------------------------
+The following authentication headers are required:
 
 .. list-table::
    :widths: 100 400
@@ -24,6 +30,8 @@ Required authentication headers:
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst
    * - ``Host``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst
+   * - ``Version``
+     - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_version.rst
    * - ``X-Chef-Version``
      - .. include:: ../../includes_api_chef_server/includes_api_chef_server_headers_x_chef_version.rst
    * - ``X-Ops-Authorization-N``
