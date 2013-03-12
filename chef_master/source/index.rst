@@ -126,6 +126,9 @@ Cookbooks
    ctl_private_chef
    server_types
    server_components
+
+   auth
+
    essentials_nodes
    essentials_nodes_chef_run
    essentials_chef_client
