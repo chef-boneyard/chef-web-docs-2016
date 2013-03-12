@@ -95,7 +95,7 @@ The following examples show how to use ``only_if`` as a condition in a recipe:
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_attribute_has_value.rst
 
-**Create a file with a Ruby block, but only if "/etc/passwd" exists**
+**Create a file with a Ruby block, but only if "/etc/passwd" does not exist**
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_ruby.rst
 
