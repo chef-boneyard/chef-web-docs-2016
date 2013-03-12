@@ -39,7 +39,7 @@ The Chef Server
 =====================================================
 **The basics:** :doc:`About the Chef Server </chef_overview_server>` | :doc:`Server Components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>`
 
-**Install:** :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>`
+**Install:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/>`_ (click **Free Trial**) | `Sign up for Private Chef <http://www.opscode.com/private-chef//>`_ (click **Free Trial**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>`
 
 **The Node Object:** :doc:`About Node Objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep Merge </essentials_node_object_deep_merge>`
 
