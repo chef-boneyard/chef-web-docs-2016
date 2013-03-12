@@ -42,6 +42,8 @@ Knife Plugins
      - Adds the ability to create, bootstrap, and manage instances in |digital ocean|. Learn more: https://github.com/rmoriz/knife-digital_ocean.
    * - knife-ec2-amis-ubuntu
      - Adds the ability to retrieve a list of released |ubuntu| |amazon ami|. Learn more: `<https://rubygems.org/gems/ubuntu_ami>`_.
+   * - knife-elb
+     - Adds the ability to add and remove instances from existing elbs, enlist them, and show them (Does not create or delete elb's itself). Learn more: https://github.com/ranjib/knife-elb
    * - knife-env-diff
      - Adds the ability to diff the cookbook versions for two (or more) environments. Learn more: https://github.com/jgoulah/knife-env-diff.
    * - knife-esx
