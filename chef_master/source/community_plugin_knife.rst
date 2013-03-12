@@ -43,7 +43,7 @@ Knife Plugins
    * - knife-ec2-amis-ubuntu
      - Adds the ability to retrieve a list of released |ubuntu| |amazon ami|. Learn more: `<https://rubygems.org/gems/ubuntu_ami>`_.
    * - knife-elb
-     - Adds the ability to add and remove instances from existing elbs, enlist them, and show them (Does not create or delete elb's itself). Learn more: https://github.com/ranjib/knife-elb
+     - Adds the ability to add and remove instances from existing enterprise load balancers, enlist them, and then show them. (This does not add the ability to create or delete enterprise load balancers.) Learn more: https://github.com/ranjib/knife-elb.
    * - knife-env-diff
      - Adds the ability to diff the cookbook versions for two (or more) environments. Learn more: https://github.com/jgoulah/knife-env-diff.
    * - knife-esx
