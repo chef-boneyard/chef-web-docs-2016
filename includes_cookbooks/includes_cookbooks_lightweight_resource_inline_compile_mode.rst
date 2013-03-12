@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Resources are created by the ``action`` block of a lightweight provider, they are inserted into the top-level resource collection after the lightweight resource to which the lightweight provider is associated. For example, if a resource collection looks like::
+A lightweight resource is created by the ``action`` block of a lightweight provider. When the resource collection is compiled, a lightweight resource is inserted into the top-level resource collection after the point at which the lightweight provider is associated. For example, if a resource collection looks like::
 
    top_level_resource_one
      lwrp_resource
@@ -9,10 +9,10 @@ Resources are created by the ``action`` block of a lightweight provider, they ar
 
 then when ``lwrp_resource`` is executed, the resource collection will be modified as follows::
 
-   top_level_resource_one              # already processed
-     lwrp_resource                     # already processed
-       embedded_resource_one           # created by the lightweight provider
-       embedded_resource_two           # created by the lightweight provider
+   top_level_resource_one           # already processed
+     lwrp_resource                  # already processed
+       embedded_resource_one        # created by the lightweight provider
+       embedded_resource_two        # created by the lightweight provider
    top_level_resource_two
 
 In this situation, embedded lightweight resources cannot notify the top-level resource because the top-level resource has finished processing. This has the same effect as if the top-level resource collection were invisible to the embedded lightweight resources.
