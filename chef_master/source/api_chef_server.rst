@@ -49,11 +49,17 @@ Example
 
 Endpoints
 =====================================================
-.. note:: For |chef hosted| and |chef private|, each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint. For the open source |chef server|, each authentication request must include ``/clients`` as part of the name of the endpoint. For example, the full endpoint for getting a list of roles on |chef hosted| or |chef private|:
+For |chef hosted| and |chef private|, each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint. For the open source |chef server|, each authentication request must include ``/clients`` as part of the name of the endpoint. For example, the full endpoint for getting a list of roles on |chef hosted| or |chef private|:
 
 .. code-block:: html
 
    GET /organizations/organization_name/roles
+
+and for the same request, but to the open source |chef server|:
+
+.. code-block:: html
+
+   GET /clients/roles
 
 The |api chef server| has the following endpoints:
 
