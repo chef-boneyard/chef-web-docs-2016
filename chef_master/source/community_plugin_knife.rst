@@ -100,5 +100,7 @@ Knife Plugins
      - Adds the ability to provision, list, and manage |cisco ucs| servers. Learn more: https://github.com/velankanisys/knife-ucs.
    * - knife-voxel
      - Adds the ability to provision instances in the |voxel| cloud. Learn more: https://github.com/voxeldotnet/knife-voxel.
+   * - knife-whisk
+     - Adds the ability to create new servers in a team environment. Learn more: https://github.com/Banno/knife-whisk.
    * - knife-xapi
      - Adds support for |xenserver|. Learn more: https://github.com/spheromak/knife-xapi.
