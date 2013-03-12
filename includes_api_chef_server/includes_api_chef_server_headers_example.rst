@@ -6,7 +6,7 @@ The following example shows an authentication request to |chef hosted|:
 
 .. code-block:: http
 
-   GET /organizations/org_name/nodes HTTP/1.1
+   GET /organizations/organization_name/nodes HTTP/1.1
      Accept: application/json
      Accept-Encoding: gzip;q=1.0,deflate;q=0.6,identity;q=0.3
      X-Ops-Sign: algorithm=sha1;version=1.0;

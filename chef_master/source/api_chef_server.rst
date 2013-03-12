@@ -49,6 +49,12 @@ Example
 
 Endpoints
 =====================================================
+.. note:: For |chef hosted| and |chef private|, each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint. (This is not required for the open source |chef server|). For example, the full endpoint for getting a list of roles on the |chef server|:
+
+.. code-block:: html
+
+   GET /organizations/organization_name/roles
+
 The |api chef server| has the following endpoints:
 
 * :doc:`api_chef_server_clients`
