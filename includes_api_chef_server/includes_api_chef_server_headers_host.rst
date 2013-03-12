@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-xxxxx
+The host name of the machine to which a request is sent. For example: ``api.opscode.com``.
