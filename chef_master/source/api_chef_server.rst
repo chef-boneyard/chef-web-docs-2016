@@ -21,7 +21,7 @@ Required Headers
 The following authentication headers are required:
 
 .. list-table::
-   :widths: 100 400
+   :widths: 130 400
    :header-rows: 1
 
    * - Feature
