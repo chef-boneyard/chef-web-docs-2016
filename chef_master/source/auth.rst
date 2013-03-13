@@ -56,13 +56,9 @@ Role-based Access Security
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_rbac.rst
 
-Global Permissions
+Permissions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions_global.rst
-
-Object Permissions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions_object.rst
+.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst
 
 Users and Groups
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
