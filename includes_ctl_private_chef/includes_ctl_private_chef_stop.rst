@@ -5,7 +5,7 @@
 
 The ``stop`` subcommand is used to stop all services enabled on |chef private|. This command can also be run for an individual service by specifying the name of the service in the command. 
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
 .. code-block:: bash
 

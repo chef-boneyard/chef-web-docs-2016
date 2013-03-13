@@ -5,7 +5,7 @@
 
 The ``status`` subcommand is used to show the status of all services available |chef private|. The results will vary based on the configuration of a given server. This command can also be run for an individual service by specifying the name of the service in the command. 
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
 .. code-block:: bash
 

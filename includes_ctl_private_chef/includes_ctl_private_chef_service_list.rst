@@ -5,7 +5,7 @@
 
 The ``service-list`` subcommand is used to display a list of all services available to |chef private|. A service that is enabled is labeled with an asterisk (*). 
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
 .. code-block:: bash
 

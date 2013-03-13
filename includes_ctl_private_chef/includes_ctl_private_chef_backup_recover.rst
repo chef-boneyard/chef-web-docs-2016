@@ -7,7 +7,7 @@ The ``backup-recover`` subcommand is used to force a |chef private| server to at
  
 .. warning:: If this command is run on both back-end servers, it will put the back-end cluster into a state where no server holds the |drbd| resource.
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
 .. code-block:: bash
 

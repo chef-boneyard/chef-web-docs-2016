@@ -5,7 +5,7 @@
 
 The ``reconfigure`` subcommand is used when changes are made to the |private chef rb| file to reconfigure the server. When changes are made to the |private chef rb| file, they will not be applied to the |chef private| configuration until after this command is run. 
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
 .. code-block:: bash
 

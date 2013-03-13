@@ -5,7 +5,7 @@
 
 The ``uninstall`` subcommand is used to remove the |chef private| application, but without removing any of the data. This subcommand will shut down all services (including the ``runit`` process supervisor).
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
 .. code-block:: bash
 

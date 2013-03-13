@@ -16,7 +16,7 @@ The ``ha-status`` subcommand is used to to check the status for services running
        * The |drbd| replication IP addresses are pingable
        * The ``runit`` status of the services are correct (up or down) based on the ``master`` or ``backup`` state of the server
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
 .. code-block:: bash
 
