@@ -4,10 +4,20 @@
 
 A |knife| plugin can be used to make authenticated API requests to the |chef server| using the following methods:
 
-* ``rest.delete_rest`` --- Use to delete an object from the |chef server|.
-* ``rest.get_rest`` --- Use to get the details of an object on the |chef server|.
-* ``rest.post_rest`` --- Use to add an object to the |chef server|.
-* ``rest.put_rest`` --- Use to update an object on the |chef server|.
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Method
+     - Description
+   * - ``rest.delete_rest``
+     - Use to delete an object from the |chef server|.
+   * - ``rest.get_rest``
+     - Use to get the details of an object on the |chef server|.
+   * - ``rest.post_rest``
+     - Use to add an object to the |chef server|.
+   * - ``rest.put_rest``
+     - Use to update an object on the |chef server|.
 
 For example:
 

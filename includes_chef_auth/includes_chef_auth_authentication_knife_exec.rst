@@ -4,10 +4,20 @@
 
 The ``knife exec`` subcommand can be used to make authenticated API requests to the |chef server| using the following methods:
 
-* ``api.delete`` --- Use to delete an object from the |chef server|.
-* ``api.get`` --- Use to get the details of an object on the |chef server|.
-* ``api.post`` --- Use to add an object to the |chef server|.
-* ``api.put`` --- Use to update an object on the |chef server|.
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Method
+     - Description
+   * - ``api.delete``
+     - Use to delete an object from the |chef server|.
+   * - ``api.get``
+     - Use to get the details of an object on the |chef server|.
+   * - ``api.post``
+     - Use to add an object to the |chef server|.
+   * - ``api.put``
+     - Use to update an object on the |chef server|.
 
 These methods are used with the ``-E`` option, which executes that string locally on the workstation using |chef shell|. These methods have the following syntax:
 
