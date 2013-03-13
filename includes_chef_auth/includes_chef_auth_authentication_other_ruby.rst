@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-On a system with |chef| installed use |ruby| code to make an authenticated request to the |chef server| using the |chef| libraries:
+On a system with |chef| installed use |ruby| to make an authenticated request to the |chef server| using the |chef| libraries:
 
 .. code-block:: ruby
 
@@ -104,6 +104,19 @@ or:
    
    Usage()
    ExecuteUserChoice()
+
+Another way |ruby| can be used with the |api chef server| is to get objects from the |chef server|, and then interact with the returned data using |ruby| methods. Whenever possible, the |api chef server| will return an object of the relevant type. The returned object is then available to be called by other methods. For example, the ``api.get`` method can be used to return a node named "foobar", and then ``.destroy`` can be used to delete that node:
+
+.. code-block:: ruby
+
+   silly_node = api.get("/nodes/foobar")
+   silly_node.destroy
+
+
+
+
+
+
 
 
 

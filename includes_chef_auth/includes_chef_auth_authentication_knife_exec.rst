@@ -2,77 +2,47 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-xxxxx
+The ``knife exec`` subcommand can be used to make authenticated API requests to the |chef server| using the following methods:
 
-From a Knife Plugin or Knife Exec script
+* ``api.delete`` --- Use to delete an object from the |chef server|.
+* ``api.get`` --- Use to get the details of an object on the |chef server|.
+* ``api.post`` --- Use to add an object to the |chef server|.
+* ``api.put`` --- Use to update an object on the |chef server|.
 
-When creating a Knife Plugin or Knife Exec script, the libraries required to make authenticated API requests have already been included. In the most cases, one will not need to make API calls directly when using knife plugins or knife exec scripts, as it is easier to interact with nodes, clients, and other objects via other means. See the Knife Plugins and Knife Exec page for details.
+These methods are used with the ``-E`` option, which passes a string of code to the |chef server|. These methods have the following syntax:
 
-In a Knife Exec script (and Shef), the api object already includes all of the necessary configuration to make API calls using the following methods:
+.. code-block:: bash
 
-* api.get
-* api.post
-* api.put
-* api.delete
+   $ knife exec -E 'api.method(/endpoint)'
 
-API Request from a Knife Exec Script, Example 1
+where:
 
-.. code-block:: ruby
+* ``api.method`` is the corresponding authentication method --- ``api.delete``, ``api.get``, ``api.post``, or ``api.put``
+* ``/endpoint`` is an endpoint in the |api chef server|
 
-   $ knife exec -E 'puts api.get("/nodes/nodename")'
+For example, to get the data for a node named "Example_Node":
 
-API Request from a Knife Exec Script, Example 2
+.. code-block:: bash
 
-.. code-block:: ruby
+   $ knife exec -E 'puts api.get("/nodes/Example_Node")'
+
+and to ensure that the output is visible in the console, add the ``puts`` in front of the API authorization request:
+
+.. code-block:: bash
+
+   $ knife exec -E 'puts api.get("/nodes/Example_Node")'
+
+where ``puts`` is the shorter version of the ``$stdout.puts`` predefined variable in |ruby|.
+
+
+The following example shows how to add a client named "monkeypants" and the ``/clients`` endpoint, and then return the private key for that user in the console:
+
+.. code-block:: bash
 
    $ client_desc = {
-     "name"  => "monkeypants",
-     "admin" => false
-   }
-
-   new_client = api.post("/clients", client_desc)
-   puts new_client["private_key"]
-
-Moreover, whenever possible, api will return an object of the relevant type, on which you can call methods.
-API Request from a Knife Exec Script, Example 2
-
-.. code-block:: ruby
-
-   # We could also just call api.delete, but that wouldn't show
-   # that api returns a node object
-   silly_node = api.get("/nodes/foobar")
-   silly_node.destroy
-
-In a Knife Plugin, the rest object is similar to the api client. The only difference is the function names:
-
-* rest.get_rest
-* rest.put_rest
-* rest.post_rest
-* rest.delete_rest
-
-API Request from a Knife Plugin
-
-.. code-block:: ruby
-
-   module MyCommands
-     class MyNodeDelete < Chef::Knife
-       #An implementation of knife node delete
-       banner 'knife my node delete [NODE_NAME]'
+       "name"  => "monkeypants",
+       "admin" => false
+     }
      
-     def run
-       if name_args.length < 1
-         show_usage
-         ui.fatal("You must specify a node name.")
-         exit 1
-       end
-       nodename = name_args[0]
-          api_endpoint = "nodes/#{nodename}"
-          # Again, we could just call rest.delete_rest
-          nodey = rest.get_rest(api_endpoint)
-          ui.confirm("Do you really want to delete #{nodey}")
-          nodey.destroy
-        end
-      end
-   end
-
-Note that knife will handle any HTTP exceptions that arise within your knife plugin or exec script.
+     new_client = api.post("/clients", client_desc)
+     puts new_client["private_key"]
