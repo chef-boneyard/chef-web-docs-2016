@@ -9,7 +9,7 @@ The ``knife exec`` subcommand can be used to make authenticated API requests to 
 * ``api.post`` --- Use to add an object to the |chef server|.
 * ``api.put`` --- Use to update an object on the |chef server|.
 
-These methods are used with the ``-E`` option, which passes a string of code to the |chef server|. These methods have the following syntax:
+These methods are used with the ``-E`` option, which executes that string locally on the workstation using |chef shell|. These methods have the following syntax:
 
 .. code-block:: bash
 
