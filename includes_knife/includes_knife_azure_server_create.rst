@@ -14,9 +14,6 @@ This argument has the following options:
 ``-a STORAGE_ACCOUNT_NAME``, ``--storage-account STORAGE_ACCOUNT_NAME``
    |storage account|
 
-``--bootstrap-protocol PROTOCOL``
-   |bootstrap protocol| Default value: ``winrm``.
-
 ``--bootstrap-version VERSION``
    |bootstrap-version|
 
@@ -29,7 +26,7 @@ This argument has the following options:
 ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
    |host-name|
 
-``--host_name HOST_NAME``
+``--host-name HOST_NAME``
    |azure host name|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``

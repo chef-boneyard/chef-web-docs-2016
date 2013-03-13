@@ -4,6 +4,10 @@ knife azure
 
 .. include:: ../../includes_knife/includes_knife_azure.rst
 
+Generate the Management Certificate
+=====================================================
+.. include:: ../../includes_knife/includes_knife_azure_certificate.rst
+
 image list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_azure_image_list.rst
