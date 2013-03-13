@@ -8,7 +8,7 @@ Authentication
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication.rst
 
-chef-validator
+|chef validator|
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_validator.rst
 
@@ -16,39 +16,39 @@ During a |chef| Run
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst
 
-Chef Server Web Interface
+From the Web Interface
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_webui.rst
 
-knife exec
+``knife exec``
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_knife_exec.rst
 
-Knife Plugins
+|knife| Plugins
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_knife_plugins.rst
 
-Others
+Other Options
 -----------------------------------------------------
-xxxxx
+The most common ways to interact with the |chef server| using the |api chef server| abstract the API from the user. That said, the |api chef server| can be interacted with directly. The following sections describe a few of the ways that are available for doing that.
 
-cURL
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+|curl|
+-----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_other_curl.rst
 
-PyChef (A Python Library for Chef)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+|pychef|
+-----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_other_pychef.rst
 
-Ruby
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+|ruby|
+-----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_other_ruby.rst
 
 Authorization
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization.rst
 
-Hosted Chef / Private Chef
+|chef hosted| and |chef private|
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server.rst
 
@@ -68,11 +68,11 @@ Users and Groups
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users_and_groups.rst
 
-Open Source Chef Server
+Open Source |chef server|
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst
 
-Chef Server API
+|api chef server|
 =====================================================
 .. include:: ../../includes_api_chef_server/includes_api_chef_server.rst
 

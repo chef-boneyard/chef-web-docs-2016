@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-An API request can be made using PyChef, which is a |python| library that meets the ``Mixlib::Authentication`` requirements so that it can easily interact with the |chef server|. The following example shows how an authenticated request can be made using the |api chef server| and PyChef:
+An API request can be made using |pychef|, which is a |python| library that meets the ``Mixlib::Authentication`` requirements so that it can easily interact with the |chef server|. The following example shows how an authenticated request can be made using the |api chef server| and |pychef|:
 
 .. code-block:: python
 
@@ -23,4 +23,4 @@ and the following example shows how to make API calls directly:
    api = autoconfigure()
    print api.api_request('GET', '/clients')
 
-The previous examples assume that the current working directory is such that PyChef can find a valid |chef| configuration file in the same manner as the |chef client| or |knife|. For more about PyChef, see: https://github.com/coderanger/pychef.
+The previous examples assume that the current working directory is such that |pychef| can find a valid |chef| configuration file in the same manner as the |chef client| or |knife|. For more about |pychef|, see: https://github.com/coderanger/pychef.

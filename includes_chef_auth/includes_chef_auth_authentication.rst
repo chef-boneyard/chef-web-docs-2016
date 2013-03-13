@@ -10,11 +10,7 @@ The authentication process ensures that requests to the |chef server| are made o
 
 Each request to the |chef server| from those executables encrypts a special group of HTTP headers along with the private key. The |chef server| then uses the public key to decrypt the headers and verify the contents.
 
-
-
-
-
-DEBUG
+**Debugging Authentication Errors**
 
 In some cases, the |chef client| may receive a 401 response to the authentication request and a 403 response to an authorization request. An authentication error error may look like the following:
 
@@ -23,19 +19,23 @@ In some cases, the |chef client| may receive a 401 response to the authenticatio
    [Wed, 05 Oct 2011 15:43:34 -0700] INFO: HTTP Request Returned 401 
    Unauthorized: Failed to authenticate as node_name. Ensure that your node_name and client key are correct.
 
-To debug authentication problems, the first piece of information to determine is the API client that chef-client is attempting to authenticate as. You can usually see this in the log messages emitted by chef-client. For instance if you turn on debug logging (chef-client -l debug) you will see a line such as:
+To debug authentication problems, determine which |chef client| is attempting to authenticate. This is often found in the log messages for that |chef client|. Debug logging can be enabled on a |chef client| using the following command:
 
-.. code-block:: bash
+   .. code-block:: bash
+   
+      $ chef-client -l debug
 
-   [Wed, 05 Oct 2011 22:05:35 +0000] DEBUG: Signing the request as SOMENODENAMEHERE
+   When debug logging is enabled, a log entry will look like the following:
 
-If the authentication is happening with your validator client, the problem is most likely with your validation key.
+   .. code-block:: bash
+   
+      [Wed, 05 Oct 2011 22:05:35 +0000] DEBUG: Signing the request as SOMENODENAMEHERE
 
-If the authentication is happening with the nodes API client, there are a number of common causes.
+If the authentication request occurs during the initial |chef| run, the issue is most likely with the private key.
 
-* Your client.pem file is incorrect. This can be fixed by deleting client.pem and re-running chef-client. When chef-client runs, it will register the API client and generate the correct key.
+If the authentication is happening on the node, there are a number of common causes:
 
-* You are trying to authenticate with a node_name that is different from the one you used on your first chef-client run. This can happen for a number of reasons. For example, if your client.rb file does not specify your node name and you have recently changed the systems hostname. You can fix this by explicitly setting the node name in the client.rb file or with chef-client's -N option to match the name originally used to register. Alternatively, you can re-register using the method described above.
-
-* Your system clock has drifted from the actual time by more than 15 minutes. This can be fixed by syncing your clock with an NTP server.
+* The ``client.pem`` file is incorrect. This can be fixed by deleting the ``client.pem`` file and re-running the |chef client|. When the |chef client| re-runs, it will re-attempt to register with the |chef server| and generate the correct key.
+* A ``node_name`` is different from the one used during the initial |chef| run. This can happen for a number of reasons. For example, if the ``client.rb`` file does not specify the correct node name and the host name has recently changed. This issue can be resolved by explicitly setting the node name in the ``client.rb`` file or by using the ``-N`` option for the |chef client| executable.
+* The system clock has drifted from the actual time by more than 15 minutes. This can be fixed by syncing the clock with an |ntp| server.
 
