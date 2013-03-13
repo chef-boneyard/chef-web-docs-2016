@@ -52,13 +52,13 @@ Authorization
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server.rst
 
-Role-based Access Security
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_rbac.rst
-
 Permissions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst
+
+Users
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst
 
 Default Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
