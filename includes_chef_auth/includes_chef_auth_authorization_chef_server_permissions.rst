@@ -44,4 +44,4 @@ and/or:
 #. If the request requires ``READ``, ``UPDATE``, ``DELETE``, or ``GRANT`` permissions, check to see if that user has those permissions to the object type for which the request has been authorized.
 #. If no, recursively check if the user is a member of a security group that has ``READ``, ``UPDATE``, ``DELETE``, or ``GRANT`` permissions to the object type. If yes, perform the action.
 
-Group permissions are set using the |manager| in the |chef hosted| or |chef private| user interface.
+Group permissions are set using the |chef manager| in the |chef hosted| or |chef private| user interface.

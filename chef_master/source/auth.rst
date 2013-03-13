@@ -60,9 +60,9 @@ Permissions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst
 
-Users and Groups
+Default Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users_and_groups.rst
+.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst
 
 Open Source |chef server|
 -----------------------------------------------------
