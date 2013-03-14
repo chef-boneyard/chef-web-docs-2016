@@ -20,6 +20,8 @@ Essentials
 
 **Nodes and Workstations:** :doc:`chef-client </essentials_chef_client>` | :doc:`Exception and report handlers </essentials_handlers>` | :doc:`The node object </essentials_node_object>` | :doc:`The repository </essentials_repository>`
 
+**Servers:** :doc:`Authentication and Authorization </auth>`
+
 Install and Migrate
 =====================================================
 **Install:** :doc:`Install Chef Server 11.x </install_server>` | :doc:`Install Chef on a Workstation </install_workstation>` | :doc:`Bootstrap a Node </install_bootstrap>`
@@ -96,6 +98,7 @@ APIs and DSLs
    server_rb
    solo_rb
    solr_rb
+   auth
 
 
 
