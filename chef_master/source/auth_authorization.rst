@@ -20,7 +20,7 @@ Default Settings
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst
 
-How Permissions are Determined
+Determine Access
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst
 
