@@ -66,7 +66,7 @@ To download data from the |chef server 10|, run the following command:
 
 .. code-block:: bash
 
-   $ knife download -c .chef/knife-chef10.rb
+   $ knife download -c .chef/knife-chef10.rb /
 
 This will transfer all of the data on |chef server 10| to the transfer directory.
 
@@ -163,7 +163,7 @@ To upload data to the |chef server 11|, run the following command:
 
 .. code-block:: bash
 
-   $ knife upload
+   $ knife upload /
 
 This will transfer all of the data in the transfer directory to |chef server 11|.
 
