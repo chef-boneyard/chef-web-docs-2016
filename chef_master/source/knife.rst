@@ -4,6 +4,8 @@ About Knife
 
 .. include:: ../../includes_knife/includes_knife.rst
 
+.. note:: |note knife quick reference|
+
 .. list-table::
    :widths: 150 450
    :header-rows: 1

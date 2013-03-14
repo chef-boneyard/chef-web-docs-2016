@@ -1,5 +1,5 @@
 =====================================================
-Ohai Plugins
+Community Ohai Plugins
 =====================================================
 
 .. include:: ../../includes_ohai/includes_ohai.rst

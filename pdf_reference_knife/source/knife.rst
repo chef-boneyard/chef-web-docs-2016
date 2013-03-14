@@ -4,6 +4,8 @@ Knife Command Line Reference
 
 .. include:: ../../includes_knife/includes_knife.rst
 
+.. note:: |note knife quick reference|
+
 Working with Knife
 =====================================================
 .. include:: ../../includes_knife/includes_knife_using.rst

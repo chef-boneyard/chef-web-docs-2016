@@ -1,5 +1,5 @@
 =====================================================
-Chef Plugins
+Community Chef Plugins
 =====================================================
 
 .. include:: ../../includes_handler/includes_handler.rst
