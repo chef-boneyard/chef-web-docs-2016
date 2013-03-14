@@ -8,7 +8,7 @@ Upgrading to |chef server 11| from |chef server 10| is a relatively simple proce
 * ``knife list``
 * ``knife upload``
 
-These subcommands will be used to download the data from the Chef 10 server (as |json|), and then upload it to the Chef 11 server. This approach bypasses the need to interact directly with either database or having to worry about how the data is stored in either location. 
+These subcommands will be used to download the data from |chef server 10| (as |json|), and then upload it to the |chef server 11| server. This approach bypasses the need to interact directly with either database or having to worry about how the data is stored in either location. 
 
 Install the latest version of the ``knife-essentials`` plugin using the following command:
 
