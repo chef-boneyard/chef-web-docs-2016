@@ -106,23 +106,23 @@ Update the chef-validator settings
 ==================================
 There are two differences between |chef server 11| and |chef server 10| that need to be addressed before the data can be uploaded to the |chef server 11| server: setting the validator flag for the |chef validator| executable and ensuring that the ``admin.pem`` private key is the correct one for each workstation that will access the |chef server 11|.
 
-#. The |chef validator| client is no longer special; |chef server 11| requires the ``chef-validator`` flag to be set in order for the |chef validator| to be created. Edit the ``clients/chef-validator.json`` file and add ``"validator": true`` as a property, like this:
+The |chef validator| client is no longer special; |chef server 11| requires the ``chef-validator`` flag to be set in order for the |chef validator| to be created. Edit the ``clients/chef-validator.json`` file and add ``"validator": true`` as a property, like this:
 
-   .. code-block:: javascript
+.. code-block:: javascript
 
-      {
-        "name": "chef-validator",
-        "public_key": "-----BEGIN PUBLIC KEY-----\
-          nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AM235gKCgAQEA8l0+sy05G6YX/SaVsu2k\
-          ndwOTIZKLhvfuhp/VcBU432455DTMWyxTR9sdgdRq+mgUqkF4ox/zIwhLG5nyHMLa\
-          nFKsKPxUQlS1Jsf2gaoP+RhnswmspJffhF2l593DwSsglTLNtDw5cqhF6YYo7b7cB\
-          nywHaWL+O3cSFLd0US7tSoOTeOdnAAwPwrsdfgKQdgfgerCV3Ottn83V8BUCfpnbi\
-          nNetytGDnE1Ms9lvYswsW2EqEnzQ+afvlDq5tXu72b1XBs7Y/8JqQz8+3lVHNGKys\
-          nh5U6VdI5Br0u1leO0LcffgrgE4@#$fs7/T2MVztXujUN9CoX1a+3siu3HAa8lslo\
-          noQIDAQAB\n-----END PUBLIC KEY-----\n",
-        "_rev": "1-72a9f16a92108bd794704c075261aeb5",
-        "validator": true
-      }
+   {
+     "name": "chef-validator",
+     "public_key": "-----BEGIN PUBLIC KEY-----\
+       nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AM235gKCgAQEA8l0+sy05G6YX/SaVsu2k\
+       ndwOTIZKLhvfuhp/VcBU432455DTMWyxTR9sdgdRq+mgUqkF4ox/zIwhLG5nyHMLa\
+       nFKsKPxUQlS1Jsf2gaoP+RhnswmspJffhF2l593DwSsglTLNtDw5cqhF6YYo7b7cB\
+       nywHaWL+O3cSFLd0US7tSoOTeOdnAAwPwrsdfgKQdgfgerCV3Ottn83V8BUCfpnbi\
+       nNetytGDnE1Ms9lvYswsW2EqEnzQ+afvlDq5tXu72b1XBs7Y/8JqQz8+3lVHNGKys\
+       nh5U6VdI5Br0u1leO0LcffgrgE4@#$fs7/T2MVztXujUN9CoX1a+3siu3HAa8lslo\
+       noQIDAQAB\n-----END PUBLIC KEY-----\n",
+     "_rev": "1-72a9f16a92108bd794704c075261aeb5",
+     "validator": true
+   }
 
 
 Verify the admin public key
