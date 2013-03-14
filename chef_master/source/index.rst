@@ -157,6 +157,8 @@ Cookbooks
    chef_system_requirements
    images
 
+   upgrade_server
+
 
 
    
