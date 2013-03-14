@@ -8,8 +8,15 @@ Upgrading to |chef server 11| from |chef server 10| is a relatively simple proce
 * ``knife list``
 * ``knife upload``
 
-These subcommands will be used to download the data from the Chef 10 server (as |json|), and then upload it to the Chef 11 server. This approach bypasses the need to interact directly with either database or having to worry about how the data is stored in either location. These subcommands are built into |chef 11|. If workstations have not yet been upgraded to |chef 11|, then download the ``knife-essentials`` plugin, which contains the same subcommands and provides the same functionality to |chef 10|. (For more information about ``knife-essentials``, see https://github.com/jkeiser/knife-essentials.)
+These subcommands will be used to download the data from the Chef 10 server (as |json|), and then upload it to the Chef 11 server. This approach bypasses the need to interact directly with either database or having to worry about how the data is stored in either location. 
 
+Install the latest version of the ``knife-essentials`` plugin using the following command:
+
+.. code-block:: bash
+
+   $ gem install knife-essentials
+
+For more information about ``knife-essentials``, see https://github.com/jkeiser/knife-essentials.
 
 
 Requirements
