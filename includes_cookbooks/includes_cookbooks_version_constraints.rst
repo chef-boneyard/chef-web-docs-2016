@@ -21,7 +21,7 @@ The following operators can be used with cookbook versions:
      - Less than
    * - >=
      - Greater than or equal to
-   * - =<
+   * - <=
      - Less than or equal to
    * - ~>
      - Approximately greater than
