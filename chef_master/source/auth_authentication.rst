@@ -16,7 +16,7 @@ From the Web Interface
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_webui.rst
 
-``knife exec``
+knife exec
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_knife_exec.rst
 
