@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-14 17:09\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_common_compile.rst:34
+# 149a9000e7a34e559ade00b06c10828e
+msgid "Run Resources from the Resource Collection"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:5
+# 873445d159394aa19e6088a2bbaa3b96
+msgid "|chef| processes recipes in two phases:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:7
+# 6bdf36defd9749dea85033db8bd29f78
+msgid "First, each resource in the node object is identified and a resource collection is built. All recipes are loaded in a specific order, and then the actions specified within each of them are identified."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:8
+# b2501c26eda34765bb97ef3a8a04810f
+msgid "Next, |chef| configures the system based on the order of the resources in the resource collection. Each resource is mapped to a provider, which then examines the node and then does the steps necessary to complete the action."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:10
+# d091655aaebc4200bb19dca06bd63994
+msgid "Sometimes, it may be necessary to ensure that a specific resource is run during the phase that builds the resource collection. For example:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:12
+# 6204d9420b984e618111b6725b81e9eb
+msgid "A resource may need to run first so that it can download a package that will be used by other resources in the resource collection"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:13
+# efdda09de8794f8ba2c63e42674b2af1
+msgid "Several resources need to install a package; rather than having running the package installer several times, it can be configured to run only once"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:15
+# 3d49718dee074ca59e8b07e98e099494
+msgid "To support these types of uses cases, it is possible to tell |chef| to run a resources at the beginning and/or the end of the resource collection phase. Effectively, run a resource before all other resources are added to the resource collection and/or after all resources have been added, but before |chef| configures the system."
+msgstr ""
+
+#: ../source/resource_common_compile.rst:40
+# 5b71c3c473614756b74d01fde2a7e4ae
+msgid "Before other resources"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:5
+# 5cbf86045f6c4fa2bdc51016b847da47
+msgid "To run a resource at the start of the resource collection phase of the |chef| run, set up a ``Chef::Resource`` object, and then call the method that runs the action."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:7
+# 33ec444063174c69b09253e053cc768c
+msgid "**Update a package cache**"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:9
+# 50db932b103a43e89fc07f048f3ba5cf
+msgid "It is important to make sure that an operating system's package cache is up to date before |chef| tries to install packages, otherwise there may be references to versions that no longer exist. For example, on |debian| or |ubuntu| systems, the |apt| cache needs to be updated. Use code similar to the following:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:19
+# 562b5325ba014d63ab8c1d49e9f1bd03
+msgid "where ``e`` is created as a ``Chef::Resource::Execute`` |ruby| object. The ``action`` attribute is set to ``:nothing`` so that the ``run_action`` method can be used to tell |chef| to run the specified command. |opscode| provides a cookbook for doing this with |apt| (|debian| or |ubuntu|) and |pacman| (for |archlinux|). The preceding recipe can be placed at the top of a node's run list to ensure it is run before |chef| tries to install any packages."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:21
+# 6d32bbfc28064eeda24c4245a08b3bdb
+msgid "**Install a RubyGem to use later**"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:23
+# d8215509872645408ab583e4828ab780
+msgid "A single |chef| run should configure a node completely. |chef| uses |ruby| as the recipe language, which means that anything that can be done with |ruby| can be done in a recipe. However, in some cases, a |ruby| gem may need to be installed before anything else happens. For example, when a |mysql| database needs to interact with a recipe. This can be done with a recipe similar to the following:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:36
+# e1a6f289ed45442c900d4efb39985026
+msgid "where similar to the previous example for updating package caches, this example creates a new |ruby| object called ``Chef::Resource::Package``."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:38
+# ad6eeda3a24f479fb59a03fd50f2a98f
+msgid "The |mysql| |ruby| gem compiles native extensions in C, so the appropriate packages for the operating system will also need to be installed."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:39
+# 0e064fbfc3d449919ab5a33c5aca8cbe
+msgid "``Gem.clear_paths`` ensures that |chef| reloads the cache of available |ruby| gem."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:40
+# 4b993ae78a964a18ad3a5643b1be1492
+msgid "``require 'mysql'`` loads the |mysql| |ruby| gem so that it can be used to connect to a |mysql| database."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:42
+# 4884e49398bb4395986da6401949b981
+msgid "**An anti-pattern**"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:44
+# e4da317024834a66b064b60e9b3d0f8c
+msgid "Unfortunately, resources that are executed when the resource collection is being built cannot notify any resource that has yet to be added to the resource collection. For example:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:56
+# d41d512b60a346a3bb89e443c567a381
+msgid "In some cases, the better approach may be to install the package before the resource collection is built to ensure that it is available to other resources later on. Or, something like the following can be used:"
+msgstr ""
+
+#: ../source/resource_common_compile.rst:44
+# b8540e02b822457bb8d4da2eacff2bd0
+msgid "After the resource collection is built"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_end.rst:5
+# fb28b944c33e4d4c9edbebb63418c126
+msgid "To run a resource at the end of the resource collection phase of the |chef| run, use the ``:delayed`` timer on a notification."
+msgstr ""
+
