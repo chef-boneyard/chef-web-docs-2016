@@ -10,7 +10,7 @@ Knife Options for Encryption
 
 Using Secret Keys
 =====================================================
-An encrypted data bag requires a secret key. The following examples show how to create a secret key using |openssl|:
+An encrypted data bag requires a secret key. The following examples show how to create a secret key using |open ssl|:
 
 .. code-block:: bash
 
