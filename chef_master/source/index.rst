@@ -133,6 +133,7 @@ Cookbooks
 
    essentials_nodes
    essentials_nodes_chef_run
+   essentials_nodes_why_run
    essentials_chef_client
    essentials_handlers
    essentials_repository
