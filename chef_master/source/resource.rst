@@ -61,6 +61,8 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc execute|
    * - :doc:`resource_file`
      - |resource desc file|
+   * - :doc:`resource_scm_git`
+     - |resource desc scm git|
    * - :doc:`resource_group`
      - |resource desc group|
    * - :doc:`resource_http_request`
@@ -89,12 +91,12 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc route|
    * - :doc:`resource_ruby_block`
      - |resource desc ruby_block|
-   * - :doc:`resource_scm`
-     - |resource desc scm|
    * - :doc:`resource_script`
      - |resource desc script|
    * - :doc:`resource_service`
      - |resource desc service|
+   * - :doc:`resource_scm_subversion`
+     - |resource desc scm svn|
    * - :doc:`resource_template`
      - |resource desc template|
    * - :doc:`resource_user`
@@ -140,6 +142,8 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_route
    resource_ruby_block
    resource_scm
+   resource_scm_git
+   resource_scm_subversion
    resource_script
    resource_service
    resource_template
