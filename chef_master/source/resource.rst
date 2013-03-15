@@ -126,6 +126,7 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_erlang_call
    resource_execute
    resource_file
+   resource_git
    resource_group
    resource_http_request
    resource_ifconfig
@@ -142,8 +143,7 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_route
    resource_ruby_block
    resource_scm
-   resource_scm_git
-   resource_scm_subversion
+   resource_subversion
    resource_script
    resource_service
    resource_template
