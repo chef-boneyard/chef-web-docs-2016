@@ -68,7 +68,7 @@ The Nodes
 
 **Settings:** :doc:`client.rb </config_rb_client>`
 
-**Tools:** :doc:`chef-client (executable) </chef_client>` | :doc:`why-run </chef_client_why_run_mode>`
+**Tools:** :doc:`chef-client (executable) </chef_client>` | :doc:`chef-solo (executable) </chef_solo>` | :doc:`why-run </essentials_nodes_why_run>`
 
 
 Cookbooks
