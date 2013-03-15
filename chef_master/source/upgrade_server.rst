@@ -123,6 +123,7 @@ The |chef validator| client is no longer special; |chef server 11| requires the 
      "_rev": "1-72a9f16a92108bd794704c075261aeb5",
      "validator": true
    }
+
 #. #. Verify the configuration by running the following command:
 
    .. code-block:: bash
@@ -130,6 +131,7 @@ The |chef validator| client is no longer special; |chef server 11| requires the 
       $ knife list /clients
 
    to return a list of all clients, including ``clients/chef-validator.json``.
+
 
 Verify the admin public key
 ===============================
