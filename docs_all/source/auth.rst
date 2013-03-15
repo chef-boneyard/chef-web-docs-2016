@@ -133,33 +133,5 @@ and for the same request, but to the open source |chef server|:
 
    GET /clients/roles
 
-The |api chef server| has the following endpoints:
-
-* :doc:`api_chef_server_clients`
-* :doc:`api_chef_server_clients_name`
-* :doc:`api_chef_server_cookbooks`
-* :doc:`api_chef_server_cookbooks_name`
-* :doc:`api_chef_server_cookbooks_version`
-* :doc:`api_chef_server_data_bag`
-* :doc:`api_chef_server_data_bag_item`
-* :doc:`api_chef_server_data_bag_name`
-* :doc:`api_chef_server_environments`
-* :doc:`api_chef_server_environments_name`
-* :doc:`api_chef_server_environments_cookbook_name`
-* :doc:`api_chef_server_environments_cookbook_version`
-* :doc:`api_chef_server_environments_cookbooks`
-* :doc:`api_chef_server_environments_node`
-* :doc:`api_chef_server_environments_recipe`
-* :doc:`api_chef_server_environments_role`
-* :doc:`api_chef_server_nodes`
-* :doc:`api_chef_server_nodes_name`
-* :doc:`api_chef_server_roles`
-* :doc:`api_chef_server_roles_name`
-* :doc:`api_chef_server_roles_name_environments`
-* :doc:`api_chef_server_roles_name_environments_name`
-* :doc:`api_chef_server_sandboxes`
-* :doc:`api_chef_server_sandboxes_id`
-* :doc:`api_chef_server_search`
-* :doc:`api_chef_server_search_index`
-* :doc:`api_chef_server_user`
+For more information about the |api chef server| endpoints see :doc:`api_chef_server`.
 
