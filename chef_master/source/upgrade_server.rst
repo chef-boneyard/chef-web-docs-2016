@@ -104,9 +104,9 @@ Use the following steps to configure a workstation so that it can communicate wi
 
 Update the chef-validator settings
 ==================================
-There are two differences between |chef server 11| and |chef server 10| that need to be addressed before the data can be uploaded to the |chef server 11| server: setting the validator flag for the |chef validator| executable and ensuring that the ``admin.pem`` private key is the correct one for each workstation that will access the |chef server 11|.
+The |chef validator| client is no longer special; |chef server 11| requires the ``chef-validator`` flag to be set in order for the |chef validator| to be created. 
 
-The |chef validator| client is no longer special; |chef server 11| requires the ``chef-validator`` flag to be set in order for the |chef validator| to be created. Edit the ``clients/chef-validator.json`` file and add ``"validator": true`` as a property, like this:
+#. Edit the ``clients/chef-validator.json`` file and add ``"validator": true`` as a property, like this:
 
 .. code-block:: javascript
 
@@ -123,25 +123,33 @@ The |chef validator| client is no longer special; |chef server 11| requires the 
      "_rev": "1-72a9f16a92108bd794704c075261aeb5",
      "validator": true
    }
+#. #. Verify the configuration by running the following command:
 
+   .. code-block:: bash
+
+      $ knife list /clients
+
+   to return a list of all clients, including ``clients/chef-validator.json``.
 
 Verify the admin public key
 ===============================
-#. |chef server 11| has a new user named ``admin``, whereas many instances of |chef server 10| have an admin client named ``admin``. For |chef 11|, |knife| requires a private key named ``admin.pem``. This can be an issue when the name of the client doesn't match the name of the private key. To resolve this issue, either copy the ``admin.pem`` to each workstation or replace the |chef 11| admin private key with the old private key. To do this, run the following commands:
+The ``admin.pem`` private key must be correct for each workstation that will have access to |chef server 11|. |chef server 11| has a new user named ``admin``, whereas many instances of |chef server 10| have an admin client named ``admin``. For |chef 11|, |knife| requires a private key named ``admin.pem``. This naming similarity can be an issue if the name of the client doesn't match the name of the private key.
+
+#. Copy the ``admin.pem`` to each workstation or replace the |chef 11| admin private key with the old private key. To do this, run the following commands:
 
    .. code-block:: bash
 
       $ knife download users/admin.json
       $ grep public_key clients/admin.json
 
-   and then replace the public key in ``users/admin.json`` with the results of the previous step:
+#. Replace the public key in ``users/admin.json`` with the results of the previous step:
 
    .. code-block:: bash
 
       $ knife upload users/admin.json
       $ cp <Chef 10 admin.pem> .chef/admin.pem
 
-   and then remove the following:
+#. Remove the following:
 
    .. code-block:: bash
 
@@ -154,7 +162,6 @@ Verify the admin public key
       $ knife list /users
 
    to return a list of all users, including ``users/admin.json``.
-
 
 
 Upload Data to Chef 11
