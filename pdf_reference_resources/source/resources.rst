@@ -268,7 +268,7 @@ Syntax
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource cookbook file| resource.
+|generic resource statement|
 
 **Transfer a file**
 
@@ -313,7 +313,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource cron| resource.
+|generic resource statement|
 
 **Run a program at a specified interval**
 
@@ -393,7 +393,7 @@ timestamped_deploy
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource deploy| resource.
+|generic resource statement|
 
 **Modify the layout of a Ruby on Rails application**
 
@@ -467,7 +467,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource directory| resource.
+|generic resource statement|
 
 **Create a directory**
 
@@ -521,7 +521,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource env| resource.
+|generic resource statement|
 
 **Set an environment variable**
 
@@ -552,7 +552,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource erlang call| resource.
+|generic resource statement|
 
 **Run a command**
 
@@ -583,7 +583,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource execute| resource.
+|generic resource statement|
 
 **Run a command upon notification**
 
@@ -674,7 +674,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource file| resource.
+|generic resource statement|
 
 **Create a file**
 
@@ -723,7 +723,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource group| resource.
+|generic resource statement|
 
 **Append users to groups**
 
@@ -752,7 +752,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource http request| resource.
+|generic resource statement|
 
 **Send a GET request**
 
@@ -785,7 +785,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource ifconfig| resource.
+|generic resource statement|
 
 **Configure a network interface**
 
@@ -814,7 +814,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource link| resource.
+|generic resource statement|
 
 **Create symbolic links**
 
@@ -851,7 +851,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource log| resource.
+|generic resource statement|
 
 **Set default logging level**
 
@@ -891,7 +891,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource mdadm| resource.
+|generic resource statement|
 
 **Create and assemble a RAID 1 array**
 
@@ -920,7 +920,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource mount| resource.
+|generic resource statement|
 
 **Mount a labeled file system**
 
@@ -981,7 +981,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource ohai| resource.
+|generic resource statement|
 
 **Reload Ohai**
 
@@ -1042,7 +1042,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource package| resource.
+|generic resource statement|
 
 **Install a gems file for use in recipes**
 
@@ -1135,7 +1135,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource powershell script| resource.
+|generic resource statement|
 
 **Write to an interpolated path**
 
@@ -1179,7 +1179,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource windows_registry| resource.
+|generic resource statement|
 
 **Create a registry key**
 
@@ -1232,7 +1232,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource remote_directory| resource.
+|generic resource statement|
 
 **Recursively transfer a directory from a remote location**
 
@@ -1279,7 +1279,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource remote_file| resource.
+|generic resource statement|
 
 **Transfer a file from a URL**
 
@@ -1323,7 +1323,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource route| resource.
+|generic resource statement|
 
 **Add a host route**
 
@@ -1356,7 +1356,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource ruby block| resource.
+|generic resource statement|
 
 **Re-read configuration data**
 
@@ -1395,53 +1395,6 @@ The following examples show how to use the |resource ruby block| resource.
 .. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
 
 
-scm
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_scm.rst
-
-.. note:: |note scm resource use with resource deploy|
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_scm_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_scm_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_scm_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_scm_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource scm| resource.
-
-**Get the latest version of an application**
-
-.. include:: ../../step_resource/step_resource_scm_get_latest_version.rst
-
-**Use the git mirror**
-
-.. include:: ../../step_resource/step_resource_scm_use_git_mirror.rst
-
-**Use different branches**
-
-.. include:: ../../step_resource/step_resource_scm_use_different_branches.rst
-
-**Install an application from github using bash**
-
-.. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
-
-**Upgrade packages from github**
-
-.. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst
-
-
 script
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_script.rst
@@ -1464,7 +1417,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource script| resource.
+|generic resource statement|
 
 **Use a named provider to run a script**
 
@@ -1509,7 +1462,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource service| resource.
+|generic resource statement|
 
 **Start a service**
 
@@ -1555,6 +1508,41 @@ The following examples show how to use the |resource service| resource.
 
 .. include:: ../../step_resource/step_resource_execute_control_a_service.rst
 
+
+
+subversion
+-----------------------------------------------------
+
+.. include:: ../../includes_resources/includes_resource_scm_subversion.rst
+
+.. note:: |note scm resource use with resource deploy|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_subversion_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_subversion_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_subversion_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_subversion_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Get the latest version of an application**
+
+.. include:: ../../step_resource/step_resource_scm_get_latest_version.rst
+
+
+
 template
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_template.rst
@@ -1589,7 +1577,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource template| resource.
+|generic resource statement|
 
 **Configure a file from a template**
 
@@ -1675,7 +1663,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource user| resource.
+|generic resource statement|
 
 **Create a random user**
 
@@ -1711,7 +1699,7 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following examples show how to use the |resource yum package| resource.
+|generic resource statement|
 
 **Install an exact version**
 
