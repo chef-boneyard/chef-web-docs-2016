@@ -8,6 +8,10 @@ Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_syntax.rst
 
+File Specificity
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_actions.rst
@@ -27,9 +31,6 @@ Windows File Security
 **Inheritance**
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst
-
-
-includes_cookbooks_resource
 
 Providers
 =====================================================
