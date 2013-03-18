@@ -1693,6 +1693,10 @@ yum_package
 
 .. note:: |note yum resource using file names|
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_yum_package_syntax.rst
+
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_yum_package_actions.rst

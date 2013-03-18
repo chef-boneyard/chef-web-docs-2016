@@ -8,10 +8,6 @@ Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_syntax.rst
 
-File Specificity
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
-
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_actions.rst
@@ -35,6 +31,10 @@ Windows File Security
 Providers
 =====================================================
 .. include:: ../../includes_resources/includes_resource_cookbook_file_providers.rst
+
+File Specificity
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
 
 Examples
 =====================================================
