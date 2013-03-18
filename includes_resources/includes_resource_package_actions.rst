@@ -16,4 +16,4 @@ This resource has the following actions:
    * - ``:remove``
      - |resource action remove package|
    * - ``:purge``
-     - |debian| platform only. |resource action purge package|
+     - |resource action purge package| (|debian| platform only; for other platforms, use the ``:remove`` action.)
