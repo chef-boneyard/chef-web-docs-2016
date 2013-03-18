@@ -73,7 +73,7 @@ The Nodes
 
 Cookbooks
 =====================================================
-**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`The Cookbooks Directory </essentials_cookbook_directory>`
+**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`Cookbooks Directory Structure </essentials_cookbook_directory>`
 
 **Community Cookbooks:** :doc:`Cookbooks Maintained by Opscode </opscode_cookbooks>` --- **Individual Cookbooks:** :doc:`chef_handler </opscode_cookbooks_chef_handler>` | :doc:`iis </opscode_cookbooks_iis>` | :doc:`python </opscode_cookbooks_python>` | :doc:`supervisor </opscode_cookbooks_supervisor>` | ... `more cookbooks <https://github.com/opscode-cookbooks>`_
 
