@@ -38,13 +38,16 @@ where:
 * ``class SubclassName < Chef::Knife`` declares the plugin as a subclass of both |knife| and |chef|. The capitalization of this name is important. For example, ``SubclassName`` would have a |knife| command of ``knife subclass name``, whereas ``Subclassname`` would have a |knife| command of ``knife subclassname``
 * ``deps do`` is a list of dependencies
 * ``banner "knife subcommand argument VALUE (options)"`` is displayed when a user enters ``knife subclassName --help``
-* ``option :name_of_option`` defines each of the options that are available for this plugin
+* ``option :name_of_option`` defines each of the command-line options that are available for this plugin. For example, ``knife subclass -l VALUE`` or ``knife subclass --long-option-name VALUE``
+* ``def run`` is the |ruby| code that is executed when the command is run
+
+and where for each command-line option:
+
 * ``:short`` defines the short option name
 * ``:long`` defines the long option name
 * ``:description`` defines a description that is displayed when a user enters ``knife subclassName --help``
 * ``:boolean`` defines whether the option is ``true`` or ``false``; if the ``:short`` and ``:long`` names define a ``VALUE``, then this attribute must not be used
 * ``:default`` defines a default value
-* ``def run`` is the |ruby| code that is executed when the command is run
 
 The following example shows part of a |knife| plugin named ``knife windows``:
 
@@ -75,14 +78,7 @@ The following example shows part of a |knife| plugin named ``knife windows``:
            :description => "The attribute to use for opening the connection - default is fqdn",
            :default => "fqdn"
    
-         option :returns,
-          :long => "--returns CODES",
-          :description => "A comma delimited list of return codes which indicate success",
-          :default => nil,
-          :proc => Proc.new { |codes|
-            Chef::Config[:knife][:returns] = codes.split(',').collect {|item| item.to_i} }
-   
-         ...
+         ... # other options, as needed
    
          def session
            session_opts = {}
