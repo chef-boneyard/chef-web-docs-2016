@@ -35,7 +35,7 @@ where:
 
 * ``require`` identifies any other |knife| subcommands and/or |knife| plugins required by this plugin
 * ``module ModuleName`` declares the |knife| plugin as its own namespace
-* ``class SubclassName < Chef::Knife`` declares the plugin as a subclass of both |knife| and |chef|. The capitalization of this name is important. For example, ``SubclassName`` would have a |knife| command of ``knife subclass name``, whereas ``Subclassname`` would have a |knife| command of ``knife subclassname``
+* ``class SubclassName < Chef::Knife`` declares the plugin as a subclass of |knife|, which is in the |chef| namespace. The capitalization of this name is important. For example, ``SubclassName`` would have a |knife| command of ``knife subclass name``, whereas ``Subclassname`` would have a |knife| command of ``knife subclassname``
 * ``deps do`` is a list of dependencies
 * ``banner "knife subcommand argument VALUE (options)"`` is displayed when a user enters ``knife subclassName --help``
 * ``option :name_of_option`` defines each of the command-line options that are available for this plugin. For example, ``knife subclass -l VALUE`` or ``knife subclass --long-option-name VALUE``
