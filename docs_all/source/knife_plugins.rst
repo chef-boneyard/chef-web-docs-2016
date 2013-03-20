@@ -55,6 +55,10 @@ azure (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_azure.rst
 
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_azure.rst
+
 Generate the Management Certificate
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_azure_certificate.rst
@@ -84,6 +88,10 @@ bluebox (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_bluebox.rst
 
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_bluebox.rst
+
 images list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_bluebox_images_list.rst
@@ -105,6 +113,10 @@ ec2 (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_ec2.rst
 
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_ec2.rst
+
 instance data
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_ec2_instance_data.rst
@@ -125,6 +137,10 @@ server list
 eucalyptus (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_eucalyptus.rst
+
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_eucalyptus.rst
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -151,6 +167,10 @@ google (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_google.rst
 
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_google.rst
+
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_google_server_create.rst
@@ -167,6 +187,10 @@ server list
 hp (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_hp.rst
+
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_hp.rst
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -192,6 +216,10 @@ server list
 linode (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_linode.rst
+
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_linode.rst
 
 datacenter list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -234,6 +262,10 @@ openstack (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_openstack.rst
 
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_openstack.rst
+
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_openstack_flavor_list.rst
@@ -258,6 +290,10 @@ server list
 rackspace (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_rackspace.rst
+
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_rackspace.rst
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -284,6 +320,10 @@ terremark (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_terremark.rst
 
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_terremark.rst
+
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_terremark_server_create.rst
@@ -300,6 +340,10 @@ server list
 windows (plug-in)
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_windows.rst
+
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_windows.rst
 
 Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

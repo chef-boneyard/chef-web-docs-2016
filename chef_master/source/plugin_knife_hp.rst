@@ -4,6 +4,10 @@ knife hp
 
 .. include:: ../../includes_knife/includes_knife_hp.rst
 
+Install this plugin
+=====================================================
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_hp.rst
+
 flavor list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_hp_flavor_list.rst

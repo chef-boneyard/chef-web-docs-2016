@@ -4,6 +4,10 @@ knife rackspace
 
 .. include:: ../../includes_knife/includes_knife_rackspace.rst
 
+Install this plugin
+=====================================================
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_rackspace.rst
+
 flavor list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_rackspace_flavor_list.rst

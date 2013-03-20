@@ -4,6 +4,10 @@ knife ec2
 
 .. include:: ../../includes_knife/includes_knife_ec2.rst
 
+Install this plugin
+=====================================================
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_ec2.rst
+
 instance data
 =====================================================
 .. include:: ../../includes_knife/includes_knife_ec2_instance_data.rst

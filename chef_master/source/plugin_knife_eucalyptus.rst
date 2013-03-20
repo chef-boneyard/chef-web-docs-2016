@@ -4,6 +4,10 @@ knife eucalyptus
 
 .. include:: ../../includes_knife/includes_knife_eucalyptus.rst
 
+Install this plugin
+=====================================================
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_eucalyptus.rst
+
 flavor list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst

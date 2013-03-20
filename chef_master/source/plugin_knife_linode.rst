@@ -4,6 +4,10 @@ knife linode
 
 .. include:: ../../includes_knife/includes_knife_linode.rst
 
+Install this plugin
+=====================================================
+.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_linode.rst
+
 datacenter list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_linode_datacenter_list.rst
