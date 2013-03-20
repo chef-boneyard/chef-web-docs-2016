@@ -55,7 +55,7 @@ The following |knife| plug-ins are maintained by |opscode|:
    plugin_knife_terremark
    plugin_knife_windows
 
-
+   plugin_knife_custom
 
 
 
