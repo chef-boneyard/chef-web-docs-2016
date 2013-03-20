@@ -46,81 +46,68 @@ where:
 * ``:default`` defines a default value
 * ``def run`` is the |ruby| code that is executed when the command is run
 
-The following example shows part of a |knife| plugin named ``knife audit``:
+The following example shows part of a |knife| plugin named ``knife windows``:
 
 .. code-block:: ruby
 
    require 'chef/knife'
- 
-   module KnifeAudit
-     class Audit < Chef::Knife
+   require 'chef/knife/winrm_base'
    
-       deps do
-         require 'chef/cookbook_loader'
-         require 'chef/environment'
-         require 'chef/node'
-         require 'chef/run_list'
-         require 'chef/json_compat' 
-         require 'chef/shef/ext'
-       end
+   class Chef
+     class Knife
+       class Winrm < Knife
    
-       banner "knife audit <COOKBOOK COOKBOOK ...>"
+         include Chef::Knife::WinrmBase
    
-       option :show_nodelist,
-         :short => "-s",
-         :long => "--show-nodelist",
-         :description => "Show all nodes running each cookbook"
-   
-       option :all_cookbooks,
-         :short => "-a",
-         :long => "--all-cookbooks",
-         :description => "Show all cookbook references"
-   
-       option :totals,
-         :short => "-t",
-         :long => "--totals",
-         :description => "Show cookbook count totals for all node types"
-   
-       option :install_cookbook,
-         :short => "-i",
-         :long => "--install-cookbook",
-         :description => "Install knife_audit helper cookbook into current cookbook directory"
-   
-       def run
-   
-         if @name_args.empty? 
-           display_cookbooks = {}
-         else
-           display_cookbooks = @name_args 
+         deps do
+           require 'readline'
+           require 'chef/search/query'
+           require 'em-winrm'
          end
    
-         self.config = Chef::Config.merge!(config)
+         attr_writer :password
    
-         if config[:install_cookbook]
+         banner "knife winrm QUERY COMMAND (options)"
    
-           unless config[:cookbook_path]
-             ui.msg("No path set in config.rb, cannot install cookbook.")
-             return
+         option :attribute,
+           :short => "-a ATTR",
+           :long => "--attribute ATTR",
+           :description => "The attribute to use for opening the connection - default is fqdn",
+           :default => "fqdn"
+   
+         option :returns,
+          :long => "--returns CODES",
+          :description => "A comma delimited list of return codes which indicate success",
+          :default => nil,
+          :proc => Proc.new { |codes|
+            Chef::Config[:knife][:returns] = codes.split(',').collect {|item| item.to_i} }
+   
+         ...
+   
+         def session
+           session_opts = {}
+           session_opts[:logger] = Chef::Log.logger if Chef::Log.level == :debug
+           @session ||= begin
+             s = EventMachine::WinRM::Session.new(session_opts)
+             s.on_output do |host, data|
+               print_data(host, data)
+             end
+             s.on_error do |host, err|
+               print_data(host, err, :red)
+             end
+             s.on_command_complete do |host|
+               host = host == :all ? 'All Servers' : host
+               Chef::Log.debug("command complete on #{host}")
+             end
+             s
            end
-        
-           source_path = File.dirname(__FILE__) + "/knife_audit_cookbook"
-           dest_path = config[:cookbook_path].first + "/knife_audit"
    
-           if File.exist?(dest_path)
-             ui.msg("knife_audit cookbook already present in #{config[:cookbook_path].first}")
-           else
-             FileUtils.copy_entry(source_path, dest_path)
-             ui.msg("knife-audit cookbook copied to #{config[:cookbook_path].first}")
-           end
-   
-           return
          end
+   
+         ...
+   
        end
-   
-       ... # several other def run blocks
-   
-     end #class end
-   
-   end #module end
+     end
+   end
 
-Take a look at all of the code for this plugin on |github|: https://github.com/jbz/knife-audit/blob/master/lib/chef/knife/audit.rb.
+Take a look at all of the code for this plugin on |github|: https://github.com/opscode/knife-windows/blob/master/lib/chef/knife/winrm.rb.
