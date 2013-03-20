@@ -11,7 +11,7 @@ The ``ui`` object provides a set of methods that can be used to define user inte
    * - Method
      - Description
    * - ``ui.ask(*args, &block)``
-     - Use to xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+     - 
    * - ``ui.ask_question(question, opts={})``
      - Use to ask a user the question contained in ``question``. If ``:default => default_value`` is passed as the second argument, ``default_value`` will be used if the user does not provide an answer. This method will respect the ``--default`` command-line option.
    * - ``ui.color(string, *colors)``
@@ -23,7 +23,7 @@ The ``ui`` object provides a set of methods that can be used to define user inte
    * - ``ui.edit_data(data, parse_output=true)``
      - Use to edit data. This opens the |chef editor|.
    * - ``ui.edit_object(klass, name)``
-     - Use to xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+     - 
    * - ``ui.error``
      - Use to present an error to the user.
    * - ``ui.fatal``
@@ -35,7 +35,7 @@ The ``ui`` object provides a set of methods that can be used to define user inte
    * - ``ui.interchange``
      - Use to determine if the output is a data interchange format such as |json| or |yaml|.
    * - ``ui.list(*args)``
-     - Use to xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx.
+     - 
    * - ``ui.msg(message)``
      - Use to present a message to the user.
    * - ``ui.output(data)``
