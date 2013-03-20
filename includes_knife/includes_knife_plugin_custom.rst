@@ -6,6 +6,6 @@
 
 * The home directory: ``~/.chef/plugins/knife/``
 * A ``.chef/plugins/knife`` directory in the cookbook repository
-* From the location in which a |knife| plugin is installed by |rubygems|
+* A plugin installed from |rubygems|. (For more information about releasing a plugin on |rubygems|, see: http://guides.rubygems.org/make-your-own-gem/.)
 
 This approach allows |knife| plugins to be reused across projects in the home directory, kept in a repository that is accessible to other team members, and distributable to the |chef| community using |rubygems|.
