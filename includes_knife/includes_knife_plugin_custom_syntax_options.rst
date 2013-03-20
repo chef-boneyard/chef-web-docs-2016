@@ -6,22 +6,34 @@ Command-line options can be added to a |knife| plugin using the ``option`` metho
 
 .. code-block:: ruby
 
-     option :true_or_false,
-       :short => "-t",
-       :long => "--true-or-false",
-       :description => "Is this value true? Or is this value false?",
-       :boolean => true | false
-       :default => true
+   option :true_or_false,
+     :short => "-t",
+     :long => "--true-or-false",
+     :description => "Is this value true? Or is this value false?",
+     :boolean => true | false
+     :default => true
 
 and it can have a string value:
 
 .. code-block:: ruby
 
-     option :some_type_of_string_value,
-       :short => "-s VALUE",
-       :long => "--some-type-of-string-value VALUE",
-       :description => "This is not a random string value.",
-       :default => 47
+   option :some_type_of_string_value,
+     :short => "-s VALUE",
+     :long => "--some-type-of-string-value VALUE",
+     :description => "This is not a random string value.",
+     :default => 47
+
+and can specify code that is run to determine the option's value:
+
+.. code-block:: ruby
+
+   option :tags,
+     :short => "-T T=V[,T=V,...]",
+     :long => "--tags Tag=Value[,Tag=Value...]",
+     :description => "A list of tags associated with the virtual machine",
+     :proc => Proc.new { |tags| tags.split(',') }
+
+where the |knife| command allows a comma-separated list of values and the ``:proc`` attribute converts that list of values into an array.
 
 When a user enters ``knife --help``, the description attributes are displayed as part of the help. Using the previous examples, something like the following will be displayed:
 
@@ -29,8 +41,9 @@ When a user enters ``knife --help``, the description attributes are displayed as
 
    **EXAMPLE COMMANDS**
    knife example
-     -t, --true-or-false                 Is this value true? Or is this value false?
      -s, --some-type-of-string-value     This is not a random string value.
+     -t, --true-or-false                 Is this value true? Or is this value false?
+     -T, --tags                          A list of tags associated with the virtual machine.
 
 When |knife| runs the command, the options are parsed from the command-line and make the settings available as a hash that can be used to access the ``config`` method. For example, the following option:
 
