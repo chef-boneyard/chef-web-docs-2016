@@ -23,6 +23,7 @@ There are many ways to structure a |knife| plugin. The best way to determine if 
        :short => "-l VALUE",
        :long => "--long-option-name VALUE",
        :description => "The description for the option.",
+       :proc => Proc.new { code_to_run }
        :boolean => true | false
        :default => default_value
    
@@ -47,6 +48,7 @@ and where for each command-line option:
 * ``:long`` defines the long option name
 * ``:description`` defines a description that is displayed when a user enters ``knife subclassName --help``
 * ``:boolean`` defines whether the option is ``true`` or ``false``; if the ``:short`` and ``:long`` names define a ``VALUE``, then this attribute must not be used
+* ``:proc`` defines code that determines the value for this option
 * ``:default`` defines a default value
 
 The following example shows part of a |knife| plugin named ``knife windows``:
@@ -107,3 +109,14 @@ The following example shows part of a |knife| plugin named ``knife windows``:
    end
 
 Take a look at all of the code for this plugin on |github|: https://github.com/opscode/knife-windows/blob/master/lib/chef/knife/winrm.rb.
+
+
+
+
+
+:proc => Proc.new
+
+
+ :proc => Proc.new { |tags| tags.split(',') }
+
+This example will take the tags blah and turn it into an array.
