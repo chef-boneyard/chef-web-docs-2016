@@ -5,6 +5,6 @@ The ``opscode-certificate`` service only creates supervisor logs. To follow the 
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-certificate tail
+   $ private-chef-ctl tail opscode-certificate
 
 

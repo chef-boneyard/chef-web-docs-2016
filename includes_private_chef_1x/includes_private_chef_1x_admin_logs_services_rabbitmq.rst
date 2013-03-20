@@ -5,4 +5,4 @@ The ``rabbitmq`` service only creates supervisor logs. To follow the logs for th
 
 .. code-block:: bash
 
-   $ private-chef-ctl rabbitmq tail
+   $ private-chef-ctl tail rabbitmq

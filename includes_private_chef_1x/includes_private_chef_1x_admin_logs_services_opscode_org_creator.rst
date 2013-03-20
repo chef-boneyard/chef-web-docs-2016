@@ -5,5 +5,5 @@ The ``opscode-org-creator`` service only creates supervisor logs. To follow the 
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-org-creator tail
+   $ private-chef-ctl tail opscode-org-creator
 

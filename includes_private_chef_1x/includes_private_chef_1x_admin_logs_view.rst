@@ -11,7 +11,7 @@ To view logs for a specific service:
 
 .. code-block:: bash
 
-   $ private-chef-ctl SERVICENAME tail
+   $ private-chef-ctl tail SERVICENAME
 
 where ``SERVICENAME`` should be replaced with name of the service for which log files will be viewed.
 

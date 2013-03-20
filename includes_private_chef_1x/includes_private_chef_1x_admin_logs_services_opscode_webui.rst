@@ -5,4 +5,4 @@ The ``opscode-webui`` service only creates supervisor logs. To follow the logs f
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-webui tail
+   $ private-chef-ctl tail opscode-webui

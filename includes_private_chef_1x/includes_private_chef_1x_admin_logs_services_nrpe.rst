@@ -5,4 +5,4 @@ The ``nrpe`` service only creates supervisor logs. To follow the logs for this s
 
 .. code-block:: bash
 
-   $ private-chef-ctl nrpe tail
+   $ private-chef-ctl tail nrpe

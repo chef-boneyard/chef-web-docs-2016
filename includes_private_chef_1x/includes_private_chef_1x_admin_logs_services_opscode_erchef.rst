@@ -5,4 +5,4 @@ The ``opscode-erchef`` service creates supervisor logs and application logs in `
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-erchef tail
+   $ private-chef-ctl tail opscode-erchef

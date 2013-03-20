@@ -5,4 +5,4 @@ The ``postresql`` service only creates supervisor logs. To follow the logs for t
 
 .. code-block:: bash
 
-   $ private-chef-ctl postgresql tail
+   $ private-chef-ctl tail postgresql

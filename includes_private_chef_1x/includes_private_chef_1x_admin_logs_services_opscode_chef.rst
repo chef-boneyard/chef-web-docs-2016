@@ -5,6 +5,6 @@ The ``opscode-chef`` service only creates supervisor logs. To follow the logs fo
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-chef tail
+   $ private-chef-ctl tail opscode-chef
 
 

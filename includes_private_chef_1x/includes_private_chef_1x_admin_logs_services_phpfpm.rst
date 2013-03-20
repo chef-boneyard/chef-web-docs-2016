@@ -5,4 +5,4 @@ The ``phpfpm`` service only creates supervisor logs. To follow the logs for this
 
 .. code-block:: bash
 
-   $ private-chef-ctl phpfpm tail
+   $ private-chef-ctl tail phpfpm

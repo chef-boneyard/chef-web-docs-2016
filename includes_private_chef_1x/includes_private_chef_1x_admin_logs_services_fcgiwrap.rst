@@ -5,5 +5,5 @@ The ``fcgiwrap`` service only creates supervisor logs. To follow the logs for th
 
 .. code-block:: bash
 
-   $ private-chef-ctl fcgiwrap tail
+   $ private-chef-ctl tail fcgiwrap
 

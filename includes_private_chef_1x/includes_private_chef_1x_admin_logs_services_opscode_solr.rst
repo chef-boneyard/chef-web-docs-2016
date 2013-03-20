@@ -5,4 +5,4 @@ The ``opscode-solr`` service only creates supervisor logs. To follow the logs fo
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-solr tail
+   $ private-chef-ctl tail opscode-solr

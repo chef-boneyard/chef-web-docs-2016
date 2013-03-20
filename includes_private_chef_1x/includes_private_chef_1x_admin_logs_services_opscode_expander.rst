@@ -5,6 +5,6 @@ The ``opscode-expander`` service only creates supervisor logs. To follow the log
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-expander tail
+   $ private-chef-ctl tail opscode-expander
 
 

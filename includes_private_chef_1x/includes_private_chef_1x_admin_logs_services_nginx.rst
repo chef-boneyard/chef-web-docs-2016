@@ -36,4 +36,4 @@ To follow the logs for this service, enter the following command:
 
 .. code-block:: bash
 
-   $ private-chef-ctl nginx tail
+   $ private-chef-ctl tail nginx

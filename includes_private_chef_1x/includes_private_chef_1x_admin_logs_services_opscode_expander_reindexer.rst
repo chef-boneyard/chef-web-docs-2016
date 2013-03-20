@@ -5,4 +5,4 @@ The ``opscode-expander-reindexer`` service only creates supervisor logs. To foll
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-expander-reindexer tail
+   $ private-chef-ctl tail opscode-expander-reindexer

@@ -10,4 +10,4 @@ To follow the logs for this service, enter the following command:
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-authz tail
+   $ private-chef-ctl tail opscode-authz

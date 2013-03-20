@@ -5,4 +5,4 @@ The ``redis`` service only creates supervisor logs. To follow the logs for this 
 
 .. code-block:: bash
 
-   $ private-chef-ctl redis tail
+   $ private-chef-ctl tail redis

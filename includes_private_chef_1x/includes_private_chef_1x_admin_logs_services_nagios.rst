@@ -5,5 +5,5 @@ The ``nagios`` service creates both supervisor and administrator logs. ``/var/lo
 
 .. code-block:: bash
 
-   $ private-chef-ctl nagios tail
+   $ private-chef-ctl tail nagios
 

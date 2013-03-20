@@ -5,4 +5,4 @@ The ``opscode-account`` service only creates supervisor logs. To follow the logs
 
 .. code-block:: bash
 
-   $ private-chef-ctl opscode-account tail
+   $ private-chef-ctl tail opscode-account

@@ -5,5 +5,5 @@ The ``couchdb`` service service only creates supervisor logs. To follow the logs
 
 .. code-block:: bash
 
-   $ private-chef-ctl couchdb tail
+   $ private-chef-ctl tail couchdb
 
