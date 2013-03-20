@@ -18,8 +18,6 @@ The following |knife| plug-ins are maintained by |opscode|:
      - |knife azure|
    * - :doc:`plugin_knife_bluebox`
      - |knife bluebox|
-   * - :doc:`plugin_knife_bluelock`
-     - |knife bluelock|
    * - :doc:`plugin_knife_ec2`
      - |knife ec2|
    * - :doc:`plugin_knife_eucalyptus`
