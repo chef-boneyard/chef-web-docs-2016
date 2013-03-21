@@ -15,13 +15,13 @@ This subcommand has the following options:
    |SEARCH_QUERY|
 
 ``-H``, ``--hide-healthy``
-   Indicates that nodes on which a |chef| run has occurred within the previous hour will be hidden.
+   |hide_healthy|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
 ``-s``, ``--sort-reverse``
-   Indicates that the list will be sorted by last run time, descending.
+   |sort_reverse|
 
 **Examples**
 

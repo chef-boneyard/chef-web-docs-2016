@@ -9,7 +9,10 @@ This argument has the following syntax::
 
    knife environment [create | edit] from file FILE (options)
 
-This argument does not have any argument-specific options.
+This argument has the following options:
+
+``-a``, ``--all``
+   |all environments|
 
 **Examples**
 

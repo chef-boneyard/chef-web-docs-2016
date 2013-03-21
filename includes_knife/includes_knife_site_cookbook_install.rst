@@ -32,7 +32,7 @@ This argument has the following options:
    |skip-dependencies|
 
 ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
-   |cookbook-path|
+   |cookbook path|
 
 **Examples**
 

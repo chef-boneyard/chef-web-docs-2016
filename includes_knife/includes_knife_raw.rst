@@ -11,7 +11,7 @@ This subcommand has the following syntax::
 This subcommand has the following options:
 
 ``-i FILE``, ``--input FILE``
-   |input file| 
+   |input file|
 
 ``--[no-]pretty``
    |no-pretty|

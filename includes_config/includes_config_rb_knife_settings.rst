@@ -67,32 +67,3 @@ This configuration file has the following settings:
        ::
  
           validation_key "/etc/chef/validation.pem"
-
-The following settings are used by the |knife| ``bootstrap`` sub-command:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Setting
-     - Description
-   * - ``knife[:bootstrap_proxy]``
-     - |bootstrap-proxy|
-   * - ``knife[:bootstrap_version]``
-     - |bootstrap-version|
-   * - ``knife[:distro]``
-     - |distro|
-   * - ``knife[:template_file]``
-     - |template-file|
-
-The following settings are used by the |knife| ``ssh`` sub-command:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Setting
-     - Description
-   * - ``knife[:ssh_port]``
-     - |ssh-port|
-

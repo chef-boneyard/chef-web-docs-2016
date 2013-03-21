@@ -34,7 +34,7 @@ This argument has the following options:
    |email|
 
 ``-o PATH``, ``--cookbook-path PATH``
-   |cookbook-path create|
+   |cookbook path|
 
 ``-r FORMAT``, ``--readme-format FORMAT``
    |readme-format|

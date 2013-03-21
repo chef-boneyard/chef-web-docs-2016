@@ -14,16 +14,16 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-a``, ``--admin``
-   Use to create a user as an admin.
+   |admin client| This option only works when used with the open source |chef server| and will have no effect when used with |chef hosted| or |chef private|.
 
 ``-f FILE_NAME``, ``--file FILE_NAME``
-   Use to write the private key to a file.
+   |file private key|
 
 ``-p PASSWORD``, ``--password PASSWORD``
-   The password for the newly-created user.
+   |password user|
 
 ``--user-key FILE_NAME``
-   All users are assigned a public key. Use to write the public key to a file.
+   |file_public_key|
 
 **Examples**
 

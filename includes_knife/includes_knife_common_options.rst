@@ -21,6 +21,9 @@ The following options can be run with all |knife| sub-commands and plug-ins:
 ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
    |environment|
 
+``-f FILE_NAME``, ``--file FILE_NAME``
+   |file private key|
+
 ``-F FORMAT``, ``--format FORMAT``
    |format|
 
@@ -32,6 +35,9 @@ The following options can be run with all |knife| sub-commands and plug-ins:
 
 ``--no-color``
    |no-color|
+
+``-p PASSWORD``, ``--password PASSWORD``
+   |password user|
 
 ``--print-after``
    |print-after|

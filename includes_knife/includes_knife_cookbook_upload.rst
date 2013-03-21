@@ -26,7 +26,7 @@ This argument has the following options:
    |freeze|
 
 ``-o PATH:PATH``, ``--cookbook-path PATH:PATH``
-   |cookbook-path|
+   |cookbook path|
 
 **Examples**
 

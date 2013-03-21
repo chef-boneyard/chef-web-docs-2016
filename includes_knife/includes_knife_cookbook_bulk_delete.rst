@@ -9,7 +9,10 @@ This argument has the following syntax::
 
    knife cookbook bulk delete REGEX (options)
 
-This argument does not have any argument-specific options.
+This argument has the following options:
+
+``-p``, ``--purge``
+   |purge cookbook|
 
 **Examples**
 

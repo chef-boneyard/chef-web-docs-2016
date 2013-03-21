@@ -14,7 +14,7 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-f FILE_NAME``, ``--file FILE_NAME``
-   Use to write the private key to a file.
+   |file private key|
 
 **Examples**
 
