@@ -6,6 +6,8 @@ About Knife Plugins
 
 .. note:: The same :doc:`knife_common_options` available for use with |knife| are also available to be used with |knife| plug-ins.
 
+Build a :doc:`custom plugin </plugin_knife_custom>` or use one of the following plugins that are maintained by |opscode|:
+
 The following |knife| plug-ins are maintained by |opscode|: 
 
 .. list-table::
