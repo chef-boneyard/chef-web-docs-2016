@@ -9,14 +9,14 @@ For example, to freeze a cookbook version using |knife|, enter:
 
    $ knife cookbook upload redis --freeze
 
-To return::
+To return:
 
 .. code-block:: bash
 
    Uploading redis...
    Upload completed
 
-Once a cookbook version is frozen, only by using the ``--force`` option can an update be made. For example::
+Once a cookbook version is frozen, only by using the ``--force`` option can an update be made. For example:
 
 .. code-block:: bash
 
