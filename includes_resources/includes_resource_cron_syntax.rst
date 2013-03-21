@@ -41,3 +41,23 @@ The following example will run at 8:00 PM, every weekday (Monday through Friday)
      weekday 1-5
      action :create
    end
+
+The following example is used to run weekly cookbook reports:
+
+.. code-block:: ruby
+
+   cron "cookbooks_report" do
+     action node.tags.include?('cookbooks-report') ? :create : :delete
+     minute 0
+     hour 0
+     weekday 1
+     user "opscode"
+     mailto "nharvey@opscode.com"
+     home "/srv/opscode-community-site/shared/system"
+     command %Q{
+       cd /srv/opscode-community-site/current &&
+       env RUBYLIB="/srv/opscode-community-site/current/lib"
+       RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}"
+       bundle exec rake cookbooks_report
+     }
+   end

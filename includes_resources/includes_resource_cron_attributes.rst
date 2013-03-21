@@ -11,6 +11,25 @@ This resource has the following attributes:
      - Description
    * - ``command``
      - |command resource cron|
+
+       Some examples:
+
+       .. code-block:: ruby
+
+          if [ -x /usr/share/mdadm/checkarray ] && [ $(date +\%d) -le 7 ];
+          then /usr/share/mdadm/checkarray --cron --all --idle --quiet; fi
+
+       and:
+
+       .. code-block:: ruby
+
+          command %Q{
+            cd /srv/opscode-community-site/current &&
+            env RUBYLIB="/srv/opscode-community-site/current/lib"
+            RAILS_ASSET_ID=`git rev-parse HEAD` RAILS_ENV="#{rails_env}"
+            bundle exec rake cookbooks_report
+          }
+
    * - ``day``
      - |day resource cron|
    * - ``home``
