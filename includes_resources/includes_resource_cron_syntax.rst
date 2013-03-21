@@ -36,7 +36,7 @@ The following example will run at 8:00 PM, every weekday (Monday through Friday)
    cron "name_of_cron_entry" do
      minute 0
      hour 20
-     day *
+     day "*"
      month 10
      weekday 1-5
      action :create
