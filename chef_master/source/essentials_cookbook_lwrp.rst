@@ -37,8 +37,16 @@ All lightweight resources share the same set of common functionality:
      - Attributes are available for timeouts, to set the current working directory, specify environment variables, groups, and users.
    * - :doc:`essentials_cookbook_lwrp_resources_common_conditionals`
      - A conditional execution can be used to put additional guards around certain resources so that they are only run when the condition is met.
+   * - :doc:`lwrp_common_inline_compile`
+     - Execute a lightweight resource as part of a self-contained |chef| run during resource compilation.
    * - :doc:`essentials_cookbook_lwrp_resources_common_notifications`
      - Lightweight resources can notify each other to take certain actions.
+   * - :doc:`essentials_cookbook_lwrp_resources_common_relative_paths`
+     - The environment home relative path can be set in a lightweight resource.
+
+   * - :doc:`essentials_cookbook_lwrp_resources_common_relative_paths`
+     - The environment home relative path can be set in a lightweight resource.
+
    * - :doc:`essentials_cookbook_lwrp_resources_common_relative_paths`
      - The environment home relative path can be set in a lightweight resource.
 
