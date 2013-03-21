@@ -14,6 +14,9 @@ This argument has the following options:
 ``COOKBOOK_VERSION``
    |COOKBOOK_VERSION download|
 
+``-f``, ``--force``
+   |force directory|
+
 **Examples**
 
 For example:
