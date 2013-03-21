@@ -33,7 +33,3 @@ exec
 .. include:: ../../swaps/swap_notes.txt
 
 .. include:: ../../includes_knife/includes_knife_exec.rst
-
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst

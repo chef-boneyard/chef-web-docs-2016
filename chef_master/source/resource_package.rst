@@ -2,37 +2,11 @@
 package
 =====================================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. include:: ../../includes_resources/includes_resource_package.rst
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_package_syntax.rst
 
 Gem Package Options
 =====================================================
@@ -42,13 +16,25 @@ Specify Options with a Hash
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_hash.rst
 
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_hash_options.rst
+
 Specify Options with a String
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_string.rst
 
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_options_string.rst
+
 Specify Options with a .gemrc File
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
+
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst
 
 Actions
 =====================================================
@@ -64,7 +50,7 @@ Providers
 
 Examples
 =====================================================
-The following examples show how to use the |resource package| resource.
+|generic resource statement|
 
 **Install a gems file for use in recipes**
 
@@ -117,3 +103,27 @@ The following examples show how to use the |resource package| resource.
 **Use the provider common attribute**
 
 .. include:: ../../step_resource/step_resource_package_use_provider_attribute.rst
+
+**Avoid unnecessary string interpolation**
+
+.. include:: ../../step_resource/step_resource_package_avoid_unnecessary_string_interpolation.rst
+
+**Install a package in a platform**
+
+.. include:: ../../step_resource/step_resource_package_install_package_on_platform.rst
+
+**Install sudo, then configure /etc/sudoers/ file**
+
+.. include:: ../../step_resource/step_resource_package_install_sudo_configure_etc_sudoers.rst
+
+**Use a case statement to specify the platform**
+
+.. include:: ../../step_resource/step_resource_package_use_case_statement.rst
+
+**Use symbols to reference attributes**
+
+.. include:: ../../step_resource/step_resource_package_use_symbols_to_reference_attributes.rst
+
+**Use a whitespace array to simply a recipe**
+
+.. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst

@@ -10,18 +10,18 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - The name of a command to be executed.
+     - |command lwrp windows_batch|
    * - ``code``
-     - A quoted (" ") string of code to be executed.
+     - |code lwrp windows_batch|
    * - ``creates``
-     - A file that is created by a command; if the file exists, the command will not be run.
+     - |creates lwrp windows_batch|
    * - ``cwd``
-     - The current working directory from which a command is run.
+     - |cwd lwrp windows_batch|
    * - ``flags``
-     - One (or more) command line flags that are passed to the interpreter when the command is invoked.
+     - |flag lwrp windows_batch|
    * - ``group``
-     - A group name or identifier that must be changed before running a command.
+     - |group lwrp windows_batch|
    * - ``returns``
      - 
    * - ``user``
-     - A user name or identifier that must be changed before running a command.
+     - |user lwrp windows_batch|

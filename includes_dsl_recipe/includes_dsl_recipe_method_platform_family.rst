@@ -24,3 +24,6 @@ or:
    end
 
 
+.. future example: step_resource_remote_file_use_platform_family
+
+

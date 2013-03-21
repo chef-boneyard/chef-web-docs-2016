@@ -23,9 +23,6 @@ This argument has the following options:
 ``-P``, ``--purge``
    |purge windows azure|
 
-``--purge-os-disk``
-   |purge os disk windows azure|
-
 ``-S ID``, ``--azure-subscription-id ID``
    |azure-subscription-id|
 

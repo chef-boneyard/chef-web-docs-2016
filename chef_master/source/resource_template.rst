@@ -2,37 +2,11 @@
 template
 =====================================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. include:: ../../includes_resources/includes_resource_template.rst
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_template_syntax.rst
 
 Actions
 =====================================================
@@ -42,13 +16,29 @@ Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_template_attributes.rst
 
+Windows File Security
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security.rst
+
+**Access Control Lists (ACLs)**
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst
+
+**Inheritance**
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst
+
 Providers
 =====================================================
 .. include:: ../../includes_resources/includes_resource_template_providers.rst
 
+File Specificity
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
+
 Examples
 =====================================================
-The following examples show how to use the |resource template| resource.
+|generic resource statement|
 
 **Configure a file from a template**
 
@@ -80,6 +70,10 @@ The following examples show how to use the |resource template| resource.
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
 
+**Use a whitespace array (``%w``)**
+
+.. include:: ../../step_resource/step_resource_template_use_whitespace_array.rst
+
 **Use a relative path**
 
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
@@ -107,6 +101,26 @@ The following examples show how to use the |resource template| resource.
 **Send notifications to multiple resources**
 
 .. include:: ../../step_resource/step_resource_template_notifies_send_notifications_to_multiple_resources.rst
+
+**Execute a command using a template**
+
+.. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Set an IP address using variables and a template**
+
+.. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
+
+**Add a rule to an IP table**
+
+.. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst
+
+**Apply proxy settings consistently across a Chef organization**
+
+.. include:: ../../step_resource/step_resource_template_consistent_proxy_settings.rst
+
+**Get template settings from a local file**
+
+.. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
 
 
 

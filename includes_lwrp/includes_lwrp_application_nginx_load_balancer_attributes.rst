@@ -10,22 +10,22 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``application_port``
-     - The port on which the application server will run. Default value: ``8080``.
+     - |application_port lwrp application_nginx_load_balancer|
    * - ``application_server_role``
-     - The name of a role. During a |chef| run, a search will be performed to application servers. Default value: ``#{application name}_application_server``.
+     - |application_server_role lwrp application_nginx_load_balancer|
    * - ``port``
-     - The port to which |nginx| will bind. Default value: ``80``.
+     - |port lwrp application_nginx_load_balancer|
    * - ``server_name``
-     - The virtual host name for a server. Defaults to the node |fqdn|.
+     - |server_name lwrp application_nginx_load_balancer|
    * - ``ssl``
-     - Indicates whether |ssl| is being used. Default value: ``false``.
+     - |ssl lwrp application_nginx_load_balancer| 
    * - ``ssl_certificate``
-     - The |ssl| certificate.
+     - |ssl_certificate lwrp application_nginx_load_balancer|
    * - ``ssl_certificate_key``
-     - The |ssl| certificate key.
+     - |ssl_certificate_key lwrp application_nginx_load_balancer|
    * - ``static_files``
-     - A hash that maps URLs to files. Default value: ``{}``.
+     - |static_files lwrp application_nginx_load_balancer|
    * - ``template``
-     - The name of a template that will be rendered to create a context file. Default value: ``load_balancer.conf.erb`` (from this cookbook).
+     - |template lwrp application_nginx_load_balancer|
 
 

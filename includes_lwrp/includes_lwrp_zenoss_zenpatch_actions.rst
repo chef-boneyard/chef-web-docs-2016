@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - Use to install a patch on a |zenoss| server.
+     - |lwrp action install zenoss_zenpatch|

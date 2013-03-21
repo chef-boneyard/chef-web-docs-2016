@@ -11,16 +11,11 @@ This argument has the following syntax::
 
 This argument has the following options:
 
-``-xxxxx``, ``--xxxxx``
-   xxxxx.
+This argument has the following options:
 
-``-xxxxx``, ``--xxxxx``
-   xxxxx.
+``-w``, ``--with-uri``
+   |with-uri|
 
 **Examples**
 
-For example, to xxxxx, enter:
-
-.. code-block:: bash
-
-   $ knife user create xxxxx
+None.

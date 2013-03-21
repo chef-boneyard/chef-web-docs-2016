@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``resources`` method can be used in a recipe to look up a resource in the resource collection. If the ``resource`` method's return value is the resource that it finds in the resource collection. The preferred syntax for the ``resources`` method is as follows:
+The ``resources`` method can be used in a recipe to look up a resource in the resource collection. The ``resources`` method's return value is the resource that it finds in the resource collection. The preferred syntax for the ``resources`` method is as follows:
 
 .. code-block:: ruby
 
@@ -13,7 +13,7 @@ but the following syntax can also be used:
 
    resources(:resource_type => "resource_name")
 
-where in either approach ``resource_type`` is the name of a |chef| resource and ``resource_name`` is  the name of a resource that can be configured by the |chef| resource. 
+where in either approach ``resource_type`` is the name of a |chef| resource and ``resource_name`` is the name of a resource that can be configured by the |chef| resource. 
 
 The ``resources`` method can be used to modify a resource later on in a recipe. For example:
 
@@ -29,4 +29,6 @@ and then later in the same recipe, or elsewhere:
 
    f = resources("file[/etc/hosts]")
    f.mode 00644
+
+where ``file`` is the type of resource and ``/etc/hosts`` is the name.
 

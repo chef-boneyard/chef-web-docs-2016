@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following has the following attributes:
+This resource has the following attributes:
 
 .. list-table::
    :widths: 200 300
@@ -14,16 +14,18 @@ This resource has the following has the following attributes:
    * - ``cookbook``
      - |cookbook resource cookbook_file|
    * - ``group``
-     - |group resource cookbook_file|
+     - |group windows security|
    * - ``inherits``
-     - |inherits resource cookbook_file|
+     - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |octal mode|
+     - |mode windows security|
    * - ``owner``
-     - |owner resource cookbook_file|
+     - |owner windows security|
    * - ``path``
      - |path resource cookbook_file|
    * - ``rights``
-     - |windows| only. |rights resource cookbook_file|
+     - |windows| only. |rights windows security|
    * - ``source``
      - |source resource cookbook_file|
+
+.. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.

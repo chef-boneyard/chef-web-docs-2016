@@ -28,7 +28,9 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-      "uri" => "http://localhost:4000/data/users"
+      "chef_type" => "xxxxx"
+      "data_bag" => "xxxxx"
+      "id" => "xxxxx"
    }
 
 **Response Codes**

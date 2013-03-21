@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following has the following attributes:
+This resource has the following attributes:
 
 .. list-table::
    :widths: 200 300
@@ -22,8 +22,7 @@ This resource has the following has the following attributes:
    * - ``user``
      - |user resource scm|
 
-
-The following attributes are for use with |git| only:
+For use with |git| only:
 
 .. list-table::
    :widths: 200 300
@@ -42,7 +41,7 @@ The following attributes are for use with |git| only:
    * - ``ssh_wrapper``
      - |ssh_wrapper resource|
 
-The following attributes are for use with |svn| only:
+For use with |svn| only:
 
 .. list-table::
    :widths: 200 300

@@ -23,6 +23,6 @@ For substituting an array with a hash::
    +
    role_or_environment 2 { :x => "1" , :y => "2" }
    =
-   { :x => "1", :y => "3" }
+   { :x => "1", :y => "2" }
 
 When items cannot be merged through substitution, the original data is overwritten.

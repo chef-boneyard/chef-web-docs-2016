@@ -2,39 +2,13 @@
 execute
 =====================================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. include:: ../../includes_resources/includes_resource_execute.rst
 
 .. note:: |note execute resource intepreter|
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_execute_syntax.rst
 
 Actions
 =====================================================
@@ -50,7 +24,7 @@ Providers
 
 Examples
 =====================================================
-The following examples show how to use the |resource execute| resource.
+|generic resource statement|
 
 **Run a command upon notification**
 
@@ -83,3 +57,36 @@ The following examples show how to use the |resource execute| resource.
 **Restart when a configuration is broken**
 
 .. include:: ../../step_resource/step_resource_execute_notifies_prevent_restart_if_config_is_broken.rst
+
+**Execute a command using a template**
+
+.. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Add a rule to an IP table**
+
+.. include:: ../../step_resource/step_resource_execute_add_rule_to_iptable.rst
+
+**Stop a service, do stuff, and then restart it**
+
+.. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
+
+**Use the platform_family? method**
+
+.. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
+**If a node doesn't have MySQL, install MySQL**
+
+.. include:: ../../step_resource/step_resource_mount_mysql.rst
+
+**Control a service using the execute resource**
+
+.. include:: ../../step_resource/step_resource_execute_control_a_service.rst
+
+**Use the search recipe DSL method to find users**
+
+.. include:: ../../step_resource/step_resource_execute_use_search_dsl_method.rst
+
+**Enable remote login for Mac OS X**
+
+.. include:: ../../step_resource/step_resource_execute_enable_remote_login.rst
+

@@ -11,7 +11,9 @@
 .. |maintainer| replace:: The name of the person responsible for maintaining a cookbook, either an individual or an organization.
 .. |maintainer email| replace:: The email address for the person responsible for maintaining a cookbook. Only one email can be listed here, so if this needs to be forwarded to multiple people consider using an email address that is already setup for mail forwarding.
 .. |manual-list| replace:: Indicates that a search query is a space-separated list of servers.
+.. |max_requests lwrp application_python_gunicorn| replace:: The maximum number of request a worker will process before restarting.
 .. |mask resource ifconfig| replace:: The netmask for the network interface. Default value: ``nil``.
+.. |max_proc lwrp iis_pool| replace:: The maximum number of worker processes available to service requests to an application pool.
 
 .. |media location| replace:: The geographic location for a virtual machine and its services.
 .. |medium| replace:: Display more, but not all, of a node's data when searching using the default summary format.
@@ -19,10 +21,10 @@
 .. |memory mb| replace:: The amount of memory, in megabytes. Possible values: ``512``, ``1024``, ``1536``, ``2048``, ``4096``, ``8192``, ``12288``, or ``16384``.
 
 .. |message resource http_request| replace:: The message that is sent by the HTTP request. Default value: ``name``.
+.. |message resource log| replace:: The message to be added to a log file.
 .. |metadata attributes| replace:: The list of attributes that are required to configure a cookbook. An attribute name is required, followed by any of these options: ``display_name`` (the name that appears in the user interface), ``description`` (a short description), ``choice`` (an array of choices that are presented to a user), ``calculated`` (indicates if the default value is calculated by the recipe), ``type`` (the type of value, either ``string`` or ``array``), ``required`` (the level of user input, either ``required``,``recommended``, or ``optional``), ``recipes`` (an array of recipes), or ``default`` (the attribute's default value).
-
 .. |metadata rb conflicts| replace:: Indicates that a cookbook conflicts with another cookbook or cookbook version. Use a version constraint to define constraints for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than).  This field requires that a cookbook with a matching name and version exist on the |chef server|. When the match exists, the |chef server| will ensure that any conflicted cookbooks are not included with the set of cookbooks that are sent to the node when the |chef client| runs.
-.. |metadata rb depends| replace:: Indicates that a cookbook has a dependency on another cookbook or cookbook version. Use a version constraint to define dependencies for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than). This field requires that a cookbook with a matching name and version exist on the |chef server|. When the match exists, the |chef server| will include the dependency as part of the set of cookbooks that are sent to the node when the |chef client| runs. This field should be used whenever a feature that is included in another cookbook should be run when this cookbook is run, such as including recipes, using the same resources or providers in lightweight resource providers, custom libraries, or definitions. It is very important that the ``depends`` field contain accurate data. If a dependency statement is inaccurate, |chef| may not be able to complete the configuration of the system.
+.. |metadata rb depends| replace:: Indicates that a cookbook has a dependency on another cookbook. Use a version constraint to define dependencies for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than). This field requires that a cookbook with a matching name and version exists on the |chef server|. When the match exists, the |chef server| will include the dependency as part of the set of cookbooks that are sent to the node when the |chef client| runs. It is very important that the ``depends`` field contain accurate data. If a dependency statement is inaccurate, |chef| may not be able to complete the configuration of the system.
 .. |metadata rb provides| replace:: Adds a recipe, definition, or resource that is provided by this cookbook, should the auto-populated list be insufficient.
 .. |metadata rb recommends| replace:: Adds a dependency on another cookbook that is recommended, but not required. A cookbook will still work even if recommended dependencies are not available.
 .. |metadata rb replaces| replace:: Indicates that this cookbook should replace another (and can be used in-place of that cookbook).
@@ -31,10 +33,33 @@
 .. |method request type| replace:: The request method: ``DELETE``, ``GET``, ``POST``, or ``PUT``. Default value: ``GET``.
 .. |metric resource ifconfig| replace:: The routing metric for the interface. Default value: ``nil``.
 
+.. |migrate lwrp application| replace:: Indicates that the migration command will be run.
 .. |migrate resource deploy| replace:: Indicates that the migration command will be run. Default value: ``false``.
+.. |migration_command lwrp application| replace:: A string that contains a shell command that can be executed to run a migration operation.
 .. |migration_command resource deploy| replace:: A string that contains a shell command that can be executed to run a migration operation.
 .. |minute resource cron| replace:: The minute at which the |cron| entry should run (0 - 59). Default value: ``*``.
+.. |mirrorlist| replace:: A string that contains the URI to the mirror list, starting with ``http://``, ``ftp://``, or ``file://``. Use ``file://`` if the mirror list is a text file or resides on the local system.
 
+.. |mod_aspnet| replace:: Use to install |microsoft aspdotnet| runtime components.
+.. |mod_auth_basic| replace:: Use to install support for basic authentication.
+.. |mod_auth_windows| replace:: Use to install |windows| authentication, which allows clients to authenticate using |kerberos| or |ntlm|.
+.. |mod_compress_dynamic| replace:: Use to install dynamic content compression support. Enabling dynamic compression allows a more efficient use of bandwidth; however, if the server's processor utilization is already high, the CPU load imposed by dynamic compression may affect site performance.
+.. |mod_compress_static| replace:: Use to install support for static content compression.
+.. |mod_deploy| replace:: Use to install the |microsoft web deployment tool|, which simplifies the migration, management, and deployment of |microsoft iis| web servers, applications, and websites.
+.. |mod_iis6_metabase_compat| replace:: Use to install |microsoft iis| the metabase compatibility component.
+.. |mod_isapi| replace:: Use to install extension and filter support for |microsoft isapi|.
+.. |mod_logging| replace:: Use to install and enable HTTP logging for website activity, logging tools, and custom logging (for HTTP request/response headers, |microsoft iis| server variables, and client-side fields with simple configuration).
+.. |mod_management| replace:: Use to install the management console, which can be used to support the management of local and remote web servers.
+.. |mod_mvc3| replace:: Use to install |microsoft dotnet| MVC3 runtime components.
+.. |mod_security| replace:: Use to install URL authorization (which authorizes client access to the URLs that comprise a web application), request filtering (which configures rules to block selected client requests), and IP security (which allows or denies access to content based on an IP address or a domain name).
+.. |mod_tracing| replace:: Use to install support for tracing |microsoft aspdotnet| applications and failed requests.
+.. |mod_urlrewrite| replace:: Use to install support for URL rewrite rules using rule templates, rewrite maps, and |microsoft dotnet| providers.
+
+.. |mode lwrp maven| replace:: An integer value for file permissions. Default value: ``0644``.
+.. |mode windows security| replace:: The octal mode of the file that is translated into rights for |windows| security. Values up to ``0777`` are allowed (no sticky bits) and mean the same in |windows| as they do in |unix|, where ``4`` equals ``GENERIC_READ``, ``2`` equals ``GENERIC_WRITE``, and ``1`` equals ``GENERIC_EXECUTE``. This attribute cannot be used to set ``:full_control``. This attribute has no effect if not specified, but when this attribute and ``rights`` are both specified, the effects will be cumulative.
+
+.. |module_name lwrp iis_module| replace:: The name of the module.
+.. |monitor lwrp cloudkick_check| replace:: The identifier of a |cloudkick| monitor, which will be the parent of this |cloudkick| check.
 .. |month resource cron| replace:: The month in the year on which the |cron| entry should run (1 - 12). Default value: ``*``.
 .. |mount_point resource mount| replace:: The directory (or path) in which the device should be mounted. Default value: ``name``.
 

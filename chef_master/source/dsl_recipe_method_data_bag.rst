@@ -2,36 +2,22 @@
 data_bag, data_bag_item Methods
 =====================================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst
+
+Examples
+=====================================================
+The following examples show how the ``data_bag`` and ``data_bag_item`` methods can be used in a recipe.
+
+**Use the contents of a data bag in a recipe**
+
+.. include:: ../../step_resource/step_resource_file_use_data_bag.rst
+
+**Create log entry when the contents of a data bag are used**
+
+.. include:: ../../step_resource/step_resource_log_create_log_entry_for_data_bag.rst
+
+**Use the data_bag_item method with the cookbook_file resource**
+
+.. include:: ../../step_resource/step_resource_cookbook_file_use_data_bag.rst

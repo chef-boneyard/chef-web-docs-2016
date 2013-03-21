@@ -18,8 +18,8 @@ This lightweight resource provider has the following attributes:
    * - ``full_path``
      - 
    * - ``name``
-     - The name of the port for which a port options file will be modified.
+     - |name lwrp freebsd|
    * - ``options``
-     - A hash with the option name as the key and a boolean value. For example: ``"APACHE" => true``.
+     - |options lwrp freebsd|
    * - ``source``
-     - A template that is used to create the port options file. For example: ``source "freebsd-php5-options.erb"``.
+     - |source lwrp freebsd|

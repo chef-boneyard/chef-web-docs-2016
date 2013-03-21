@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following has the following actions:
+This resource has the following actions:
 
 .. list-table::
    :widths: 200 300
@@ -14,6 +14,6 @@ This resource has the following has the following actions:
    * - ``:create_if_missing``
      - |resource action create_if_missing file|
    * - ``:delete``
-     - Default. |resource action delete file|
+     - |resource action delete file|
    * - ``:touch``
      - |resource action touch file|

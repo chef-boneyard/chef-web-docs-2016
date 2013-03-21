@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following has the following attributes:
+This resource has the following attributes:
 
 .. list-table::
    :widths: 200 300
@@ -14,16 +14,16 @@ This resource has the following has the following attributes:
    * - ``checksum``
      - |checksum resource remote_file|
    * - ``group``
-     - |group resource remote_file|
+     - |group windows security|
    * - ``inherits``
-     - |inherits resource remote_file|
+     - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |octal mode|
+     - |mode windows security|
    * - ``owner``
-     - |owner resource remote_file|
+     - |owner windows security|
    * - ``path``
      - |path resource remote_file|
    * - ``rights``
-     - |rights resource remote_file|
+     - |windows| only. |rights windows security|
    * - ``source``
      - |source resource remote_file|

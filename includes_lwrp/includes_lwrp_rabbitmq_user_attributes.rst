@@ -10,10 +10,10 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``password``
-     - The password for the user.
+     - |password lwrp rabbitmq_user|
    * - ``permissions``
-     - One (or more) permissions that will be set.
+     - |permissions lwrp rabbitmq_user|
    * - ``user``
-     - The name of the user.
+     - |user lwrp rabbitmq_user|
    * - ``vhost``
-     - The name of the virtual host.
+     - |vhost lwrp rabbitmq|

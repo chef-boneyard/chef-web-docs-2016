@@ -59,3 +59,24 @@ To search for all nodes running |centos| in the production environment, enter:
 
    $ knife search node 'chef_environment:production AND platform:centos'
 
+To find a nested attribute, use a pattern similar to the following:
+
+.. code-block:: bash
+
+   $ knife search node <query_to_run> -a <main_attribute>.<nested_attribute>
+
+To build a search query that can find a nested attribute:
+
+.. code-block:: bash
+
+   $ knife search node name:<node_name> -a kernel.machine
+
+To test a search query that will be used in a ``knife ssh`` command:
+
+.. code-block:: bash
+
+   $ knife search node "role:web AND NOT name:web03"
+
+where the query in the previous example will search all servers that have the ``web`` role, but not on the server named ``web03``.
+
+

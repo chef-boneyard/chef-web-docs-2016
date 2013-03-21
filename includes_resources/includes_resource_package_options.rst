@@ -5,4 +5,4 @@ The |rubygems| package provider attempts to use the |rubygems| API to install |g
 
 * When a ``gem_binary`` attribute is specified (as a hash, a string, or by a .gemrc file), the provider will run that command to examine its environment settings and then again to install the |gem|.
 * When install options are specified as a string, the provider will span a |gems| command with those options when installing the |gem|.
-* The |omnibus installer| will search the PATH for a |gem| command rather than defaulting to the current |gem| environment. As part of ``enforce_path_sanity``, the ``bin`` directories area dded to the PATH, which means when there are no other proceeding |rubygems|, the installation will still be operated against it.
+* The |omnibus installer| will search the PATH for a |gem| command rather than defaulting to the current |gem| environment. As part of ``enforce_path_sanity``, the ``bin`` directories area added to the PATH, which means when there are no other proceeding |rubygems|, the installation will still be operated against it.

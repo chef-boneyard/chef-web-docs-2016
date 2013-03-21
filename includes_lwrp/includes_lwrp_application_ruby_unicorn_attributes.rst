@@ -10,16 +10,16 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``before_fork``
-     - The object that is called by the master process before executing the |unicorn| binary.
+     - |before_fork lwrp application_ruby|
    * - ``bundler``
-     - Indicates whether |unicorn|
+     - |bundler lwrp application_ruby_unicorn|
    * - ``bundle_command``
      - 
    * - ``port``
      - 
    * - ``preload_app``
-     - Indicates whether an application is loaded before a worker process is forked. Default value: ``false``.
+     - |preload_app lwrp application_ruby|
    * - ``worker_processes``
-     - The number of allowed worker processes.
+     - |worker_processes lwrp application_ruby|
    * - ``worker_timeout``
-     - The amount of time (in seconds) before a worker process times out.
+     - |worker_timeout lwrp application_ruby|

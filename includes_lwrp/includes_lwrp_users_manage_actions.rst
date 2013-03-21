@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Use to create a user.
+     - |lwrp action create user|
    * - ``:remove``
-     - Use to remove a user.
+     - |lwrp action remove user|

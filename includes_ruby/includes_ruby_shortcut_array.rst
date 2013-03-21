@@ -11,4 +11,5 @@ For example:
      # do debian/ubuntu things with the Ruby array %w{} shortcut
    end 
 
-
+.. future example: step_resource_package_use_whitespace_array
+.. future example: step_resource_template_use_whitespace_array

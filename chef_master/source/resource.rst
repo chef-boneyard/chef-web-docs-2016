@@ -2,36 +2,6 @@
 About Resources and Providers
 =====================================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. note:: If you want to see all of the information about |chef| resources in a single document, see: http://docs.opscode.com/chef/resources.html. (This document also includes all of the lightweight resources that exist in |opscode|-maintained cookbooks.) If you want to read topics about individual resources, keep reading down this page (all of the individual resources are listed in a table just below). If you want to read topics about individual resources, see: http://docs.opscode.com/lwrp.html.
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
@@ -40,6 +10,33 @@ About Resources and Providers
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
 
+Common Functionality
+-----------------------------------------------------
+All resources share a set of common actions, attributes, conditional executions, notifications, and relative path options.
+
+.. list-table::
+   :widths: 160 440
+   :header-rows: 1
+
+   * - Common Item
+     - Description
+   * - :doc:`Actions </resource_common_actions>`
+     - The ``:nothing`` action can be used with any resource or lightweight resource.
+   * - :doc:`Attributes </resource_common_attributes>`
+     - The ``ignore_failure``, ``provider``, ``retries``, ``retry_delay``, and ``supports`` attributes can be used with any resource or lightweight resources.
+   * - :doc:`Conditions </resource_common_conditionals>`
+     - The ``not_if`` and ``only_if`` conditional executions can be used to put additional guards around certain resources so that they are only run when the condition is met. 
+   * - :doc:`Notifications </resource_common_notifications>`
+     - The ``notifies`` and ``subscribes`` notifications can be used with any resource.
+   * - :doc:`Relative Paths </resource_common_relative_paths>`
+     - The ``#{ENV['HOME']}`` relative path can be used with any resource.
+   * - :doc:`Windows File Security </resource_common_windows_file_security>`
+     - The |resource template|, |resource file|, |resource remote_file|, |resource cookbook file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes.
+   * - :doc:`Run a Resource during Resource Compilation </resource_common_compile>`
+     - Sometimes a resource needs to be run before every other resource or after all resources have been added to the resource collection.
+
+|chef| Resources
+-----------------------------------------------------
 |chef| includes the following resources (each provider is discussed within the context of its associated resource):
 
 .. list-table::
@@ -48,8 +45,6 @@ About Resources and Providers
 
    * - Resource
      - Description
-   * - :doc:`resource_common`
-     - All resources share a set of common actions, attributes, conditional executions, notifications, and relative path options.
    * - :doc:`resource_cookbook_file`
      - |resource desc cookbook_file|
    * - :doc:`resource_cron`
@@ -66,6 +61,8 @@ About Resources and Providers
      - |resource desc execute|
    * - :doc:`resource_file`
      - |resource desc file|
+   * - :doc:`resource_git`
+     - |resource desc scm git|
    * - :doc:`resource_group`
      - |resource desc group|
    * - :doc:`resource_http_request`
@@ -100,6 +97,8 @@ About Resources and Providers
      - |resource desc script|
    * - :doc:`resource_service`
      - |resource desc service|
+   * - :doc:`resource_subversion`
+     - |resource desc scm svn|
    * - :doc:`resource_template`
      - |resource desc template|
    * - :doc:`resource_user`
@@ -112,6 +111,15 @@ About Resources and Providers
    :hidden:
 
    resource_common
+   resource_common_actions
+   resource_common_attributes
+   resource_common_compile
+   resource_common_conditionals
+   resource_common_notifications
+   resource_common_relative_paths
+   resource_common_windows_file_security
+
+   resource_batch
    resource_cookbook_file
    resource_cron
    resource_deploy
@@ -120,6 +128,7 @@ About Resources and Providers
    resource_erlang_call
    resource_execute
    resource_file
+   resource_git
    resource_group
    resource_http_request
    resource_ifconfig
@@ -130,16 +139,19 @@ About Resources and Providers
    resource_ohai
    resource_package
    resource_powershell_script
+   resource_registry_key
    resource_remote_directory
    resource_remote_file
    resource_route
    resource_ruby_block
    resource_scm
+   resource_subversion
    resource_script
    resource_service
    resource_template
    resource_user
    resource_yum
+
 
 
 

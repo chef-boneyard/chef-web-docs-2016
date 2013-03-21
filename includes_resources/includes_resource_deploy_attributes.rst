@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following has the following attributes:
+This resource has the following attributes:
 
 .. list-table::
    :widths: 200 300
@@ -101,6 +101,7 @@ For example:
      migration_command "rake db:migrate"
      environment "RAILS_ENV" => "production", "OTHER_ENV" => "foo"
      shallow_clone true
+     keep_releases 10
      action :deploy # or :rollback
      restart_command "touch tmp/restart.txt"
      git_ssh_wrapper "wrap-ssh4git.sh"

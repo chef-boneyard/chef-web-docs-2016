@@ -2,37 +2,11 @@
 directory
 =====================================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. include:: ../../includes_resources/includes_resource_directory.rst
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_directory_syntax.rst
 
 Actions
 =====================================================
@@ -42,13 +16,25 @@ Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_directory_attributes.rst
 
+Windows File Security
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security.rst
+
+**Access Control Lists (ACLs)**
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst
+
+**Inheritance**
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst
+
 Providers
 =====================================================
 .. include:: ../../includes_resources/includes_resource_directory_providers.rst
 
 Examples
 =====================================================
-The following examples show how to use the |resource directory| resource.
+|generic resource statement|
 
 **Create a directory**
 
@@ -65,3 +51,15 @@ The following examples show how to use the |resource directory| resource.
 **Delete a directory**
 
 .. include:: ../../step_resource/step_resource_directory_delete.rst
+
+**Set directory permissions using a variable**
+
+.. include:: ../../step_resource/step_resource_directory_set_permissions_with_variable.rst
+
+**Set directory permissions for a specific type of node**
+
+.. include:: ../../step_resource/step_resource_directory_set_permissions_for_specific_node.rst
+
+**Reload the configuration**
+
+.. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst

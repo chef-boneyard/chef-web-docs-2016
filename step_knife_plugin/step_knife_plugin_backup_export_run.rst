@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To export data from the |chef open server| server using the ``backup_export`` |knife| plugin, enter:
+To export data from the open source |chef server| using the ``backup_export`` |knife| plugin, enter:
 
 .. code-block:: bash
 

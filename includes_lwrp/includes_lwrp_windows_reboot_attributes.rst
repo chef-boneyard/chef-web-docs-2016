@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``reason``
-     - The reason for a reboot. Default value: ``Opscode Chef initiated reboot``.
+     - |reason lwrp windows_reboot|
    * - ``timeout``
-     - The delay (in seconds) to wait before proceeding with a requested reboot. Default value: ``60``.
+     - |timeout lwrp windows_reboot|

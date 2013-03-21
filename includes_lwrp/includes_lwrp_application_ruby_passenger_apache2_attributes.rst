@@ -10,8 +10,8 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``params``
-     - A hash of extra parameters that will be passed to a template file.
+     - |params lwrp application_ruby_passenger|
    * - ``server_aliases``
-     - An array of server aliases.
+     - |server_aliases lwrp application_ruby_passenger|
    * - ``webapp_template``
-     - The template used to render the virtual host configuration file. Default value: ``#{application name}.conf.erb``.
+     - |webapp_template lwrp application_ruby_passenger|

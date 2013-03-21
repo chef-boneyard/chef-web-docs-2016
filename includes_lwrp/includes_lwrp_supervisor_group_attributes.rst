@@ -10,8 +10,8 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``group_name``
-     - The name of the group.
+     - |group_name lwrp supervisor_group|
    * - ``priority``
-     - A priority value assigned to the group.
+     - |priority lwrp supervisor_group|
    * - ``programs``
-     -  An array of program names. Programs that are listed will become members of the group. Default value: ``[]``.
+     - |programs lwrp supervisor_group|

@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``path``
-     - The value to be added to or removed from a system path.
+     - |path lwrp windows_path|

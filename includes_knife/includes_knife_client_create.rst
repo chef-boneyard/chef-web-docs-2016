@@ -2,7 +2,6 @@
 .. This file describes a command or a sub-command for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-
 The ``create`` argument is used to create a new |chef api client|. This process will generate an RSA key pair for the named |chef api client|. The public key will be stored on the |chef server| and the private key will be displayed on STDOUT or written to a named file.
 
 * For the |chef client|, the private key should be copied to the system as |path chef private key|.
@@ -15,7 +14,7 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-a``, ``--admin``
-   |admin client| This option only works when used with |chef open server| and will have no effect when used with |chef hosted| or |chef private|.
+   |admin client| This option only works when used with the open source |chef server| and will have no effect when used with |chef hosted| or |chef private|.
 
 **Examples**
 

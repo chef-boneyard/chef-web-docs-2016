@@ -3,13 +3,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife diff| For example, to compare files on the |chef server| prior to an uploading or downloading files using the ``knife download`` and ``knife upload`` sub-commands, or to ensure that certain files in multiple production environments are the same. This sub-command is similar to the ``git diff`` command that can be used to diff what is in the |chef| repository with what is synced to a |github| repository.
+|knife diff| For example, to compare files on the |chef server| prior to an uploading or downloading files using the ``knife download`` and ``knife upload`` subcommands, or to ensure that certain files in multiple production environments are the same. This subcommand is similar to the ``git diff`` command that can be used to diff what is in the |chef| repository with what is synced to a |github| repository.
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife diff [PATTERN...] (options)
 
-This sub-command has the following options:
+This subcommand has the following options:
 
 ``--name-only``
    |name only|

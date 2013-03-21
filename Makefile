@@ -1,25 +1,26 @@
 BUILDDIR = build
 S3BUCKET = chef-docs
-S3OPTIONS = --delete-removed --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs  --add-header "Cache-Control: 900"
+S3OPTIONS = --delete-removed --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs  --add-header "Cache-Control: max-age=900"
 
 clean:
 	rm -r $(BUILDDIR)
 
-release: master docs
+release: master all server
 
 master:
 	mkdir -p $(BUILDDIR)
 	sphinx-build chef_master/source $(BUILDDIR)
 
-docs:
+all:
 	mkdir -p $(BUILDDIR)/chef/
 	sphinx-build docs_all/source $(BUILDDIR)/chef/
 
+server:
+	mkdir -p $(BUILDDIR)/server/
+	sphinx-build docs_server/source $(BUILDDIR)/server/
+
 upload:	release
 	s3cmd sync $(S3OPTIONS) $(BUILDDIR)/ s3://$(S3BUCKET)/
-
-
-
 
 gettext:
 	sphinx-build -b gettext docs_all/source build/locale-all
@@ -39,5 +40,3 @@ text:
 	sphinx-build -b text docs_all/source build/text-all
 	@echo
 	@echo "Build finished. The text files are in $(BUILDDIR)/text."
-
-

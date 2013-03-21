@@ -5,13 +5,12 @@
 
 |knife windows|
 
-This plugin should be installed using |rubygems|.
+This subcommand should be installed as a |knife| plugin, using |rubygems|.
 
-This sub-command has the following syntax when connecting to one (or more) machines that run |windows|::
+This subcommand has the following syntax when connecting to one (or more) machines that run |windows|::
 
    knife winrm [ARGUMENT] (options)
 
 And the following syntax when performing a bootstrap::
 
    knife bootstrap windows [ARGUMENT] (options)
-

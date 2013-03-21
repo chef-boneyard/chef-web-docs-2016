@@ -4,7 +4,6 @@
 
 .. code-block:: ruby
 
-   # typically this will run /etc/init.d/example_service start
    service "example_service" do
      action :start
    end

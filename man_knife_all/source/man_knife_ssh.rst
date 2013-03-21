@@ -34,7 +34,3 @@ ssh
 
 .. include:: ../../includes_knife/includes_knife_ssh.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-

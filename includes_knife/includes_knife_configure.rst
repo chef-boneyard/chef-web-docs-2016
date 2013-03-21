@@ -5,11 +5,11 @@
 
 |knife configure|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife configure (options)
 
-This sub-command has the following options:
+This subcommand has the following options:
 
 ``--client DIRECTORY``
    |client|

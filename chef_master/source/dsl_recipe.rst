@@ -1,36 +1,6 @@
 =====================================================
-Recipe DSL
+About the Recipe DSL
 =====================================================
-
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe.rst
 
@@ -42,7 +12,7 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
 
    * - Approach
      - Description
-   * - :doc:`dsl_recipe_use_ruby`
+   * - :doc:`Use Ruby </dsl_recipe_use_ruby>`
      - Common Ruby techniques can be used with the Recipe DSL methods, including ``if`` and ``case`` statements.
    * - :doc:`dsl_recipe_include_recipes`
      - A recipe can include one (or more) recipes found in other cookbooks by using the ``include_recipe`` keyword. 
@@ -55,26 +25,51 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
 
    * - Methods
      - Description
-   * - :doc:`dsl_recipe_method_attribute`
+   * - :doc:`attribute? </dsl_recipe_method_attribute>`
      - Use in a recipe to include an attribute.
-   * - :doc:`dsl_recipe_method_data_bag`
+   * - :doc:`data_bag, data_bag_item </dsl_recipe_method_data_bag>`
      - Use in a recipe to include a data bag or data bag item.
-   * - :doc:`dsl_recipe_method_platform`
+   * - :doc:`cookbook_name </dsl_recipe_method_cookbook_name>`
+     - Use in a recipe to get the name of the cookbook in which a recipe is located.
+   * - :doc:`platform? </dsl_recipe_method_platform>`
      - Use in a recipe to check for the platform.
-   * - :doc:`dsl_recipe_method_platform_family`
+   * - :doc:`platform_family? </dsl_recipe_method_platform_family>`
      - Use in a recipe to check for the platform family.
-   * - :doc:`dsl_recipe_method_resources`
+   * - :doc:`recipe_name </dsl_recipe_method_recipe_name>`
+     - Use in a recipe to get the name of a recipe.
+   * - :doc:`resources </dsl_recipe_method_resources>`
      - Use in a recipe to include a resource.
-   * - :doc:`dsl_recipe_method_search`
+   * - :doc:`search </dsl_recipe_method_search>`
      - Use in a recipe to include search results.
-   * - :doc:`dsl_recipe_method_tag`
+   * - :doc:`tag, tagged?, untag </dsl_recipe_method_tag>`
      - Use in a recipe to use and apply tags.
-   * - :doc:`dsl_recipe_method_value_for_platform`
+   * - :doc:`value_for_platform </dsl_recipe_method_value_for_platform>`
      - Use in a recipe to check for a value for a platform.
-   * - :doc:`dsl_recipe_method_value_for_platform_family`
+   * - :doc:`value_for_platform_family </dsl_recipe_method_value_for_platform_family>`
      - Use in a recipe to check for a value for a platform family.
 
-.. The following recipe DSL methods can be used with |windows| registry keys. The order in which they should be used within a recipe: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and ``get_subkeys``.
+The following recipe DSL methods can be used to interact with |windows| registry keys.
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Methods
+     - Description
+   * -  :doc:`registry_data_exists? </dsl_recipe_method_registry_data_exists>`
+     - Find out if a registry key contains data.
+   * - :doc:`registry_get_subkeys </dsl_recipe_method_registry_get_subkeys>`
+     - Get a list of sub-keys for a registry setting.
+   * - :doc:`registry_get_values </dsl_recipe_method_registry_get_values>`
+     - Get values (name, type, and data) for a given registry key.
+   * - :doc:`registry_has_subkeys? </dsl_recipe_method_registry_has_subkeys>`
+     - Find out if a registry key has one (or more) sub-keys.
+   * - :doc:`registry_key_exists? </dsl_recipe_method_registry_key_exists>`
+     - Find out if a registry key exists.
+   * - :doc:`registry_value_exists? </dsl_recipe_method_registry_value_exists>`
+     - Find out if a registry key has values set (name, type, and data).
+
+.. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
 
 .. toctree::
    :hidden:
@@ -82,9 +77,17 @@ Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |
    dsl_recipe_use_ruby
    dsl_recipe_include_recipes
    dsl_recipe_method_attribute
+   dsl_recipe_method_cookbook_name
    dsl_recipe_method_data_bag
    dsl_recipe_method_platform
    dsl_recipe_method_platform_family
+   dsl_recipe_method_recipe_name
+   dsl_recipe_method_registry_data_exists
+   dsl_recipe_method_registry_get_subkeys
+   dsl_recipe_method_registry_get_values
+   dsl_recipe_method_registry_has_subkeys
+   dsl_recipe_method_registry_key_exists
+   dsl_recipe_method_registry_value_exists
    dsl_recipe_method_resources
    dsl_recipe_method_search
    dsl_recipe_method_tag

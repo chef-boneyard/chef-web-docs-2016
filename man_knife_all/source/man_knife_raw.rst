@@ -34,7 +34,3 @@ raw
 
 .. include:: ../../includes_knife/includes_knife_raw.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-

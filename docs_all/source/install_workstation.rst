@@ -1,102 +1,76 @@
 =====================================================
-Install Chef on a Workstation
+Install Chef 11.x on a Workstation
 =====================================================
- 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-.. include:: ../../includes_workstation/includes_workstation.rst
-
-.. include:: ../../includes_install/includes_install_omnibus_workstation.rst
-
-Follow the steps below to use the |omnibus installer| to set up a workstation on a machine running |unix|, |linux|, |mac os x|, or |windows|. When finished, a workstation will be configured to connect to a |chef server| and (optionally) can be configured to act as a |chef client|, used to set up a |chef client| on an external machine (or virtual machine) using a ``knife bootstrap`` operation, and used to manage cookbooks, organization settings (like roles, environments, and data bags).
-
-.. note:: If you want to install |chef| and try it out without having to install |chef server| on a physical machine, sign up for |chef hosted|: http://www.opscode.com/hosted-chef/. The first five nodes are free of charge. Once you have signed up you can continue with the installation process. You can decide to use another type of |chef server| later if you want to.
-
-System Requirements
+Prerequisites
 =====================================================
-.. include:: ../../includes_chef/includes_system_requirements_chef_omnibus.rst
+The following items are prerequisites for installing |chef| on a workstation:
 
-In addition, a |chef| workstation must be able to connect to a |chef server| (|chef hosted|, |chef private|, or |chef open server|), access to three generated files (two validation files that contain private keys and one configuration file), plus the ability to clone the |chef repo| repository from |github|.
+* A computer running |unix|, |linux|, or |mac os x|; |windows| machines are supported, but they are not described as part of the current install documentation
+* |apple xcode| is installed; this application can be downloaded from |apple| for free
+* A |github| account; the |chef| repository must be downloaded and/or cloned from |github|
+* Access to a |chef server|, typically a |chef hosted| account or the open source |chef server|; the open source |chef server| may be installed on a virtual machine for demo purposes
+* Access to a machine (physical or virtual) that can be used as the first node; the |fully qualified domain name| or IP address for a machine is required by the ``knife bootstrap`` command during a bootstrap operation
 
-For Machines Running |linux|, |unix|, or |mac os x|
+Steps
 =====================================================
+The following steps describe how to install |chef| on a workstation.
+
 The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac os x| are identical:
 
-1. Download .pem files and |knife rb|
-2. Select the |omnibus installer|
-3. Run the |omnibus installer|
-4. Install |git|
-5. Clone the |chef| repository
-6. Create the .chef directory
-7. Move files to the .chef directory
-8. Verify the |chef| install
+#. Identify the |chef server|
+#. Review the prequisites
+#. Download .pem files and |knife rb|
+#. Select the |omnibus installer|
+#. Run the |omnibus installer|
+#. Install |git|
+#. Clone the |chef| repository
+#. Create the .chef directory
+#. Move files to the .chef directory
+#. Verify the |chef| install
 
 See the following sections for more information about each step. 
 
+Identify the |chef server|
+-----------------------------------------------------
+Sign up for |chef hosted| or install the open source |chef server|.
+
+Review prerequisites
+-----------------------------------------------------
+Ensure that the workstation meets all of the software prerequisites and that it has access to a |chef server| and to a machine that can host a node.
+
 Download .pem files and |knife rb|
-----------------------------------------
+-----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_validation_files_download.rst
 
 Select the |omnibus installer|
-----------------------------------------
+-----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_select_omnibus_installer.rst
 
 Run the |omnibus installer|
-----------------------------------------
+-----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_omnibus.rst
 
 Install |git|
-----------------------------------------
+-----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_git_install.rst
 
 Clone the |chef| repository
-----------------------------------------
+-----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_git_clone_chef_repo.rst
 
 Create the .chef directory
-----------------------------------------
+-----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_chef_directory_create.rst
 
-Move files to the .chef directory
-----------------------------------------
+Move files to .chef directory
+-----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_chef_directory_move_files.rst
 
 Verify the |chef| install
-----------------------------------------
+-----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_verify.rst
 
-Bootstrapping Your First Node
-=====================================================
 
-.. include:: ../../step_install/step_install_workstation_bootstrap_default.rst

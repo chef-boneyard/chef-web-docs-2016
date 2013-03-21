@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - Use to install a virtual environment.
+     - |lwrp action install gunicorn_install|

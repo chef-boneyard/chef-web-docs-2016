@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Use to add an item to the list of programs that are run at login.
+     - |lwrp action create windows_autorun|
    * - ``:remove``
-     - Use to remove an item from the list of programs that are run at login.
+     - |lwrp action remove windows_autorun|

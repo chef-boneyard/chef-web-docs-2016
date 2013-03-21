@@ -30,7 +30,7 @@ Then, edit ``cookbooks/edb_demo/recipes/default.rb`` so that it contains the fol
    # cookbooks/edb_demo/recipes/default.rb
    passwords = Chef::EncryptedDataBagItem.load("prod", "passwords")
    mysql = passwords["mysql"]
-   Chef::Log.info("The mysql password is: ‘#{mysql}’")
+   Chef::Log.info("The mysql password is: '#{mysql}'")
 
 Finally, upload the cookbook and run |chef client| on the node. You should see something like this:
 
@@ -38,13 +38,13 @@ Finally, upload the cookbook and run |chef client| on the node. You should see s
 
    $ knife cookbook upload edb_demo
    # output clipped
-   knife ssh name:i-8a436fe5 -a ec2.public_hostname &#8216;sudo chef-client&#8217;
+   knife ssh name:i-8a436fe5 -a ec2.public_hostname 'sudo chef-client'
    INFO: *** Chef 0.10.0 ***
    INFO: Run List is [recipe[edb_demo]]
    INFO: Run List expands to [edb_demo]
    INFO: Starting Chef Run for i-8a436fe5
    INFO: Loading cookbooks [edb_demo]
-   INFO: The mysql password is: &#8216;open-sesame-123&#8242;
+   INFO: The mysql password is: 'open-sesame-123'
    INFO: Chef Run complete in 3.122228 seconds
    INFO: Running report handlers
    INFO: Report handlers complete

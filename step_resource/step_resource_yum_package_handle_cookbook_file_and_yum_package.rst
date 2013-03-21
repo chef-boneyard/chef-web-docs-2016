@@ -1,6 +1,7 @@
 .. This is an included how-to. 
 
-To handle cookbook_file and yum_package when both called in the same recipe
+.. To handle cookbook_file and yum_package when both called in the same recipe
+
 When a |resource cookbook file| resource and a |resource yum package| resource are both called from within the same recipe, dump the cache and use the new repository immediately to ensure that the correct package is installed:
 
 .. code-block:: ruby

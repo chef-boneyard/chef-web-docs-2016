@@ -2,38 +2,35 @@
 About Cookbooks
 ===================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-.. note:: A cookbook includes a readme file.
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
 
-Cookbooks have many components. See the following topics for more information about each of these components: :doc:`essentials_cookbooks` | :doc:`essentials_cookbook_directory` | :doc:`essentials_cookbook_attribute_files` | :doc:`essentials_cookbook_definitions` | :doc:`essentials_cookbook_files` | :doc:`essentials_cookbook_libraries` | :doc:`essentials_cookbook_lwrp` | :doc:`essentials_cookbook_metadata` | :doc:`essentials_cookbook_recipes` | :doc:`essentials_cookbook_resources` | :doc:`essentials_cookbook_templates` | :doc:`essentials_cookbook_versions`
+   * - Components
+     - Description
+   * - :doc:`Opscode-authored Cookbooks </opscode_cookbooks>`
+     - |opscode| maintains a collection of cookbooks that are important to |chef| and are widely used by the |chef| community.
+   * - `Community-authored Cookbooks <http://community.opscode.com/cookbooks>`_
+     - The |chef| community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that are some of the most popular and are used by nearly everyone.
+   * - :doc:`Recipes </essentials_cookbook_recipes>`
+     - A recipe is the most fundamental configuration element within the Chef environment.
+   * - :doc:`Resources and Providers </essentials_cookbook_resources>`
+     - A resource is a package, a service, a group of users, and so on. A resource tells |chef| which provider to use during a |chef| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. |chef| includes default providers that cover all of the most common scenarios.
+   * - :doc:`Lightweight Resources </essentials_cookbook_lwrp>`
+     - A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters.
+   * - :doc:`Attribute Files </essentials_cookbook_attribute_files>`
+     - An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on a node.
+   * - :doc:`Definitions </essentials_cookbook_definitions>`
+     - A definition is used to create new resources by stringing together one (or more) existing resources.
+   * - :doc:`Files </essentials_cookbook_files>`
+     - A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
+   * - :doc:`Libraries </essentials_cookbook_libraries>`
+     - A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef| language or to implement a new class.
+   * - :doc:`Metadata </essentials_cookbook_metadata>`
+     - A metadata file is used to ensure that each cookbook is correctly deployed to each node.
+   * - :doc:`Templates </essentials_cookbook_templates>`
+     - A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios.
+   * - :doc:`Versions </essentials_cookbook_versions>`
+     - A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based.

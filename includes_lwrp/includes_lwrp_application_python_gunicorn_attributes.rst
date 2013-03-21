@@ -10,42 +10,42 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``app_module``
-     - Set this value to ``djano`` to run a |django| application; any other string or symbol will build a |gunicorn| base command.
+     - |app_module lwrp application_python_gunicorn|
    * - ``settings_template``
-     - A template to render to create the ``gunicorn_config.py`` file. Default value: ``se.py.erb`` (from the ``gunicorn`` cookbook).
+     - |settings_template lwrp application_python_gunicorn|
    * - ``host``
      - 
    * - ``port``
      - 
    * - ``backlog``
-     - The maximum number of pending connections.
+     - |backlog lwrp application_python_gunicorn|
    * - ``workers``
-     - The number of worker processes for handling requests.
+     - |workers lwrp application_python_gunicorn|
    * - ``worker_class``
-     - The type of worker to use: ``sync``, ``eventlet``, ``gevent``, or ``tornado``.
+     - |worker_class lwrp application_python_gunicorn|
    * - ``worker_connections``
-     - The maximum number of simultaneous clients.
+     - |worker_connections lwrp application_python_gunicorn|
    * - ``max_requests``
-     - The maximum number of request a worker will process before restarting.
+     - |max_requests lwrp application_python_gunicorn|
    * - ``timeout``
-     - The amount of time (in seconds) that a worker can be silent before it is killed and restarted.
+     - |timeout lwrp application_python_gunicorn|
    * - ``keepalive``
-     - The amount of time (in seconds) to wait for requests on a Keep-Alive connection.
+     - |keepalive lwrp application_python_gunicorn|
    * - ``debug``
-     - Indicates whether debugging is turned on. Default value: ``false``.
+     - |debug lwrp application_python_gunicorn|
    * - ``trace``
-     - Indicates whether trace functions are executed by the server. Default value: ``false``.
+     - |trace lwrp application_python_gunicorn|
    * - ``preload_app``
-     - Indicates that application code is loaded before worker processes are forked. Default value: ``false``.
+     - |preload_app lwrp application_python_gunicorn|
    * - ``daemon``
-     - Indicates that the |gunicorn| process is daemonized.
+     - |daemon lwrp application_python_gunicorn|
    * - ``pidfile``
-     - A file name to use for the PID file.
+     - |pidfile lwrp application_python_gunicorn|
    * - ``umask``
-     - A bit mask used for the file mode on files written by |gunicorn|.
+     - |umask lwrp application_python_gunicorn|
    * - ``logfile``
-     - A file to which log entries are written.
+     - |logfile lwrp application_python_gunicorn|
    * - ``loglevel``
-     - The granularity of error logging: ``debug``, ``info``, ``warning``, ``error``, or ``critical``.
+     - |loglevel lwrp application_python_gunicorn|
    * - ``proc_name``
-     - The name of an instance of |gunicorn|. This attribute is only necessary when more than one instance of |gunicorn| is running.
+     - |proc_name lwrp application_python_gunicorn|

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This resource has the following has the following attributes:
+This resource has the following attributes:
 
 .. list-table::
    :widths: 200 300
@@ -14,14 +14,14 @@ This resource has the following has the following attributes:
    * - ``content``
      - |content resource file|
    * - ``group``
-     - |group resource file|
+     - |group windows security|
    * - ``inherits``
-     - |inherits resource file|
+     - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |octal mode|
+     - |mode windows security|
    * - ``owner``
-     - |owner resource file|	
+     - |owner windows security|	
    * - ``path``
      - |path resource file|
    * - ``rights``
-     - |rights resource file|
+     - |windows| only. |rights windows security|

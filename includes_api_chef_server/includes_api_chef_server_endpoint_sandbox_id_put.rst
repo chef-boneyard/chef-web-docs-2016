@@ -19,7 +19,22 @@ with a request body that looks something like:
 
 **Response**
 
-This method has no response body.
+The response will return something like the following:
+
+.. code-block:: javascript
+
+   {
+     "guid": guid,
+     "name": guid,
+     "checksums":
+       {"385ea5490c86570c7de71070bce9384a":
+       {"url":
+         "https://s3.amazonaws.com/opscode-platform-production-data/organization-(...)",
+         "needs_upload":true}
+     },
+     "create_time": <get an example of time format>,
+     "is_completed": true
+   }
 
 **Response Codes**
 

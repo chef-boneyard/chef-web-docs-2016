@@ -14,10 +14,10 @@ This lightweight resource provider has the following attributes:
    * - ``code``
      - 
    * - ``details``
-     - A |json| object with data specific to a |cloudkick| check.
+     - |details lwrp cloudkick_check|
    * - ``monitor``
-     - The identifier of a |cloudkick| monitor, which will be the parent of this |cloudkick| check.
+     - |monitor lwrp cloudkick_check|
    * - ``oauth_key``
-     - The |oauth| key used to authenticate to the |cloudkick| API.
+     - |oauth_key lwrp cloudkick|
    * - ``oauth_secret``
-     - The |oauth| secret used to authenticate to the |cloudkick| API.
+     - |oauth_secret lwrp cloudkick|

@@ -34,9 +34,9 @@ azure (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_azure.rst
 
-Common Options
+Generate the Management Certificate
 =====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
+.. include:: ../../includes_knife/includes_knife_azure_certificate.rst
 
 image list
 =====================================================

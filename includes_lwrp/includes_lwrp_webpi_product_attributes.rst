@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``accept_eula``
-     - Indicates that |microsoft webplcmdline| will auto-accept end-user license agreements. Default value: ``false``.
+     - |accept_eula lwrp webpi|
    * - ``product_id``
-     - The identifier of the product to be installed.
+     - |product_id lwrp webpi|

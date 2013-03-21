@@ -1,37 +1,6 @@
 =====================================================
 Recipe DSL
 =====================================================
- 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe.rst
 
@@ -82,19 +51,57 @@ attribute?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_attribute.rst
 
+cookbook_name
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_cookbook_name.rst
+
 data_bag, data_bag_item
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst
 
+The following examples show how the ``data_bag`` and ``data_bag_item`` methods can be used in a recipe.
+
+**Use the contents of a data bag in a recipe**
+
+.. include:: ../../step_resource/step_resource_file_use_data_bag.rst
+
+**Create log entry when the contents of a data bag are used**
+
+.. include:: ../../step_resource/step_resource_log_set_debug.rst
+
+**Use the data_bag_item method with the cookbook_file resource**
+
+.. include:: ../../step_resource/step_resource_cookbook_file_use_data_bag.rst
+
 platform?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform.rst
 
+The following examples show how the ``platform?`` method can be used in a recipe.
+
+**Use an if statement with the platform recipe DSL method**
+
+.. include:: ../../step_resource/step_resource_ruby_block_if_statement_use_with_platform.rst
+
+**Run specific blocks of Ruby code on specific platforms**
+
+.. include:: ../../step_resource/step_resource_ruby_block_run_specific_ruby_blocks_on_specific_platforms.rst
+
 platform_family?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform_family.rst
+
+The following examples show how the ``platform_family?`` method can be used in a recipe.
+
+**Use the platform_family? method**
+
+.. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
+
+recipe_name
+-----------------------------------------------------
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_recipe_name.rst
 
 resources
 -----------------------------------------------------
@@ -105,6 +112,12 @@ search
 .. include:: ../../includes_search/includes_search.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_search_indexes.rst
+
+The following examples show how the ``search`` method can be used in a recipe.
+
+**Use the search recipe DSL method to find users**
+
+.. include:: ../../step_resource/step_resource_execute_use_search_dsl_method.rst
 
 tag, tagged?, and untag
 -----------------------------------------------------
@@ -119,6 +132,34 @@ value_for_platform
 value_for_platform_family
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_family.rst
+
+Windows Registry Key Methods
+-----------------------------------------------------
+.. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
+
+registry_data_exists?
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst
+
+registry_get_subkeys
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst
+
+registry_get_values
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst
+
+registry_has_subkeys?
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst
+
+registry_key_exists?
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst
+
+registry_value_exists?
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst
 
 
 

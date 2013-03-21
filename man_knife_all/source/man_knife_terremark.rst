@@ -34,10 +34,6 @@ terremark (plug-in)
 
 .. include:: ../../includes_knife/includes_knife_terremark.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 server create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_terremark_server_create.rst

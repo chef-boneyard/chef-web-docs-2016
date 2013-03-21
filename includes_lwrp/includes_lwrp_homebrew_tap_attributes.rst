@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``name``
-     - The name of a formula repository located on |github|.
+     - |name lwrp homebrew|
    * - ``tapped``
-     - Indicates that a formula repository is tapped.
+     - |tapped lwrp homebrew|

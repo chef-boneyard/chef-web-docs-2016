@@ -10,14 +10,14 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:disable``
-     - Use to disable a |fcgi| process.
+     - |lwrp action disable supervisor_fcgi|
    * - ``:enable``
-     - Use to enable a |fcgi| process.
+     - |lwrp action enable supervisor_fcgi|
    * - ``:reload``
-     - Use to reload a |fcgi| process.
+     - |lwrp action reload supervisor_fcgi|
    * - ``:restart``
-     - Use to restart a |fcgi| process.
+     - |lwrp action restart supervisor_fcgi|
    * - ``:start``
-     - Use to start a |fcgi| process.
+     - |lwrp action start supervisor_fcgi|
    * - ``:stop``
-     - Use to stop a |fcgi| process.
+     - |lwrp action stop supervisor_fcgi|

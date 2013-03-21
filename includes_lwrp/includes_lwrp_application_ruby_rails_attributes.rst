@@ -12,16 +12,16 @@ This lightweight resource provider has the following attributes:
    * - ``bundle_command``
      - 
    * - ``bundler``
-     - Indicates whether ``bundler`` will be used. If ``false``, |bundler| will never be used. This attribute defaults to ``true`` when a |gem| includes |bundler|.
+     - |bundler lwrp application_ruby_rails|
    * - ``bundler_deployment``
-     - Indicates whether |bundler| will be run with the ``--deployment`` options. This attribute defaults to ``true`` when a |gemfilelock| is present.
+     - |bundler_deployment lwrp application_ruby_rails|
    * - ``bundler_without_groups``
-     - An array of |bundler| groups to skip.
+     - |bundler_without_groups lwrp application_ruby_rails|
    * - ``database_master_role``
-     - The name of a role. During a |chef| run, a search will be performed to find a node with the same name as this value in the same environment as the current role. If a node is found, it's IP address will be used when rendering the ``database.yml`` file.
+     - |database_master_role lwrp application_ruby_rails|
    * - ``database_template``
-     - The name of a template that will be rendered to create the ``database.yml`` file. Default value: ``database.yml.erb``.
+     - |database_template lwrp application_ruby_rails|
    * - ``gems``
-     - An array of |gems| to be installed.
+     - |gems lwrp application_ruby_rails|
    * - ``precompile_assets``
-     - Indicates whether assets will be pre-compiled. Unless this attribute is specified, |chef| will attempt to auto-detect whether the pipeline is in use by looking in ``config/assets.yml``.
+     - |precompile_assets lwrp application_ruby|

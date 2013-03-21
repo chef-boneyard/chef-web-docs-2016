@@ -1,13 +1,11 @@
 .. This is an included how-to. 
 
-A hash is a collection of key-value pairs. Indexing for a hash is done using arbitrary keys of any object (as opposed to the indexing done by an array). The syntax for a hash is: ``key => "value"``.
+A loop statement is used to execute a block of code one (or more) times. A loop statement is created when ``.each`` is added to an expression that defines an array or a hash. An array is an integer-indexed collection of objects. Each element in an array can be associated with and referred to by an index.
 
-To loop over a hash of gem package names:
+To loop over an array of package names by platform:
 
 .. code-block:: ruby
 
-   {"fog" => "0.6.0", "highline" => "1.6.0"}.each do |g,v|
-     gem_package g do
-       version v
-     end
+   ["apache2", "apache2-mpm"].each do |p|
+     package p
    end

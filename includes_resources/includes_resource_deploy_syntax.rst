@@ -6,7 +6,7 @@ The syntax for using the |resource deploy| resource in a recipe is as follows:
 .. code-block:: ruby
 
    deploy "name" do
-     attribute "value" # see attributes section below
+     some_attribute "value" # see attributes section below
      ...
      callback do
        # callback, including release_path or new_resource
@@ -15,7 +15,7 @@ The syntax for using the |resource deploy| resource in a recipe is as follows:
      purge_before_symlink
      create_dirs_before_symlink
      symlink
-     action :action
+     action :action # see actions section below
    end
 
 where

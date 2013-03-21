@@ -17,10 +17,12 @@
 .. |rdata lwrp dynect_rr| replace:: The record data.
 
 .. |readme-format| replace:: The document format of the readme file: ``md`` (markdown) and ``rdoc`` (|ruby| docs).
+.. |reason lwrp windows_reboot| replace:: The reason for a reboot. Default value: ``Opscode Chef initiated reboot``.
 .. |recipe_url| replace:: The URL location from which a remote cookbook |tar gz| will be downloaded.
 .. |record_type lwrp dynect_rr| replace:: The type of record. For example: ``A``, ``CNAME``, and so on.
 .. |recursive resource directory| replace:: Indicates whether the directory will be created or deleted recursively. For the ``owner``, ``group``, and ``mode`` attributes, the value of this attribute applies only to the leaf directory. Default value: ``false``.
-.. |recursive resource windows_registry| replace:: When creating a key, this value indicates whether the required keys for the specified path will be created. When using the ``:delete_key`` action in a recipe, and if the registry key has subkeys, then the value for this attribute should be set to ``true``.
+.. |recursive resource registry_key| replace:: When creating a key, this value indicates whether the required keys for the specified path will be created. When using the ``:delete_key`` action in a recipe, and if the registry key has subkeys, then the value for this attribute should be set to ``true``.
+.. |redirect_stderr lwrp supervisor| replace:: Indicates that the STDERR output for a process is sent back to |python supervisor| using STDOUT.
 .. |reference resource scm| replace:: The alias for revision. This action only works with the ``git`` provider.
 .. |region amazon| replace:: The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.
 .. |region eucalyptus| replace:: The name of the region from which instances of hosted applications are launched.
@@ -30,10 +32,14 @@
 .. |repo resource deploy| replace:: The alias for the repository.
 .. |repo_mode| replace:: The layout of the local repository. The ``default`` repository includes cookbooks, data bags, environments, and roles. The ``everything`` repository adds nodes, |chef api client|, and users. Default value: ``default``.
 .. |repo_name lwrp apt_repository| replace:: The name of the repository. Default value: ``name``.
+.. |repo_name lwrp yum_repository| replace:: The name of the channel.
 .. |repository| replace:: The path to the |chef| repository.
+.. |repository lwrp application| replace:: The name of the sub-directory in which the pristine copy of an application’s source is kept.
 .. |repository resource deploy| replace:: The URI for the repository.
 .. |repository resource scm| replace:: The URI for the repository.
 .. |repository_cache resource deploy| replace:: The name of the sub-directory in which the pristine copy of an application's source is kept. Default value: ``cached-copy``.
+.. |repositories lwrp maven| replace:: An array of |apache maven| repositories. Default value: ``["http://repo1.maven.apache.org/maven2"]``.
+.. |requirements lwrp application_python_django| replace:: The relative path to a requirements file. If this attribute is unspecified, the provider will look for one in the project root named ``requirements/#{chef_environment}.txt`` or ``requirements.txt``.
 .. |resource action add ifconfig| replace:: Use to run |ifconfig| to configure a network interface and (on some platforms) write a configuration file for that network interface.
 .. |resource action add route| replace:: Use to add a route.
 .. |resource action assemble mdadm| replace:: Use to assemble a previously created array into an active array.
@@ -50,12 +56,12 @@
 .. |resource action create ruby_block| replace:: Use to create a |ruby| block.
 .. |resource action create template| replace:: Use to create a file.
 .. |resource action create user| replace:: Use to create a user with given attributes. If the user already exists, use to ensure that the resource is in the correct state (which is effectively the same as ``:modify``).
-.. |resource action create windows_registry| replace:: Use to create a registry key.
+.. |resource action create registry_key| replace:: Use to create a registry key.
 .. |resource action create_if_missing cookbook_file| replace:: Use to create a file if it doesn't already exist.
 .. |resource action create_if_missing file| replace:: Use to create a file only if the file does not already exist. (When the file exists, nothing happens.)
 .. |resource action create_if_missing remote_file| replace:: Use to create a file locally by fetching from the remote source, but only if the file doesn't yet exist.
 .. |resource action create_if_missing template| replace:: Use to create a file only if it does not exist.
-.. |resource action create_if_missing windows_registry| replace:: Use to create a registry key if it doesn't already exist. Also, use to create a registry key value if it doesn't already exist.
+.. |resource action create_if_missing registry_key| replace:: Use to create a registry key if it doesn't already exist. Also, use to create a registry key value if it doesn't already exist.
 .. |resource action delete cookbook_file| replace:: Use to delete a file.
 .. |resource action delete cron| replace:: Use to delete an entry from a |cron| table file ("crontab").
 .. |resource action delete directory| replace:: Use to delete a directory.
@@ -65,8 +71,8 @@
 .. |resource action delete ifconfig| replace:: Use to run |ifconfig| to disable a network interface and (on some platforms) delete that network interface's configuration file.
 .. |resource action delete link| replace:: Use to delete a link.
 .. |resource action delete route| replace:: Use to delete a route.
-.. |resource action delete windows_registry| replace:: Use to delete the specified values for a registry key.
-.. |resource action delete key windows_registry| replace:: Use to delete the specified registry key and all of its subkeys.
+.. |resource action delete registry_key| replace:: Use to delete the specified values for a registry key.
+.. |resource action delete key registry_key| replace:: Use to delete the specified registry key and all of its subkeys.
 .. |resource action deploy deploy| replace:: Use to deploy an application.
 .. |resource action disable ifconfig| replace:: Use to run |ifconfig| to disable a network interface.
 .. |resource action disable mount| replace:: Use to remove an entry from the file systems table (fstab).
@@ -108,6 +114,7 @@
 .. |resource action run execute| replace:: Indicates that the command should be run.
 .. |resource action run powershell_script| replace:: Use to run the script.
 .. |resource action run script| replace:: Use to run a script.
+.. |resource action run windows_batch| replace:: Use to run a batch file.
 .. |resource action start service| replace:: Use to start a service (and keep it running until stopped or disabled).
 .. |resource action stop mdadm| replace:: Use to stop an active array.
 .. |resource action stop service| replace:: Use to stop a service.
@@ -118,14 +125,17 @@
 .. |resource action upgrade package| replace:: Use to upgrade a package to the latest version.
 .. |resource action upgrade yum| replace:: Indicates that a package will be upgraded to the latest available version.
 .. |resource action write log| replace:: Use to write to log.
-.. |resource desc cookbook_file| replace:: The |resource cookbook file| resource is used to transfer files from a sub-directory of the ``files/`` directory in a cookbook to a specified path on the host running the |chef client| or |chef solo|. The file in a cookbook is selected according to file specificity, which allows different source files to be used based on the hostname, host platform (operating system, distro, or as appropriate), or platform version. Place files under COOKBOOK_NAME/files/default to use them on any platform.
-.. |resource desc cron| replace:: The |resource cron| resource is used to manage |cron| entries for time-based job scheduling. Attributes for a schedule will default to ``*`` if not provided, so only specify scheduling attributes that are applicable to a |cron| entry. The |resource cron| resource requires that a package be installed that provides the |crontab| program, typically |cron|.
+
+.. |resource desc batch| replace:: The |resource batch| resource is used to execute a batch script using the |windows cmd exe| interpreter (much like the script resources for |bash|, |csh|, |windows powershell|, |python|, and |ruby|). A temporary file is created and then executed like other script resources, rather than run inline.
+.. |resource desc cookbook_file| replace:: The |resource cookbook file| resource is used to transfer files from a sub-directory of the ``files/`` directory in a cookbook to a specified path that is located on the host running the |chef client| or |chef solo|. The file in a cookbook is selected according to file specificity, which allows different source files to be used based on the hostname, host platform (operating system, distro, or as appropriate), or platform version. Files that are located under ``COOKBOOK_NAME/files/default`` can be used on any platform.
+.. |resource desc cron| replace:: The |resource cron| resource is used to manage |cron| entries for time-based job scheduling. Attributes for a schedule will default to ``*`` if not provided. The |resource cron| resource requires access to a |crontab| program, typically |cron|.
 .. |resource desc deploy| replace:: The |resource deploy| resource is used to manage and control deployments.
-.. |resource desc directory| replace:: The |resource directory| resource is used to manage a directory.
+.. |resource desc directory| replace:: The |resource directory| resource is used to manage a directory, which is a hierarchy of folders that comprises all of the information stored on a computer. The root directory is the top-level, under which the rest of the directory is organized. The |resource directory| resource uses the ``name`` attribute to specify the path to a location in a directory. Typically, permission to access that location in the directory is required.
 .. |resource desc env| replace:: The |resource env| resource is used to manage environment keys in |windows|. After an environment key is set, |windows| must be restarted before the environment key will be available to the |windows task scheduler|.
 .. |resource desc erlang_call| replace:: The |resource erlang call| resource is used to connect to a node located within a distributed |erlang| system. An |resource erlang call| resource is not idempotent. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence.
 .. |resource desc execute| replace:: The |resource execute| resource is used to execute a command. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence.
 .. |resource desc file| replace:: The |resource file| resource is used to manage files that are present on a node, including setting or updating the contents of those files.
+.. |resource desc scm git| replace:: The |resource scm git| resource is used to manage source control resources that exist in a |github| repository.
 .. |resource desc group| replace:: The |resource group| resource is used to manage a local group.
 .. |resource desc http_request| replace:: The |resource http request| resource is used to send an HTTP request (GET, PUT, POST, DELETE, HEAD, or OPTIONS) with an arbitrary message. This resource is useful when custom callbacks are necessary.
 .. |resource desc ifconfig| replace:: The |resource ifconfig| resource is used to manage interfaces.
@@ -136,6 +146,7 @@
 .. |resource desc ohai| replace:: The |resource ohai| resource is used to re-load the |ohai| configuration on a node, which allows recipes that change system attributes (like adding a user) to refer to those attributes later on during the |chef| run.
 .. |resource desc package| replace:: The |resource package| resource is used to manage packages. When the package is installed from a local file (such as |rubygems| |debian dpkg| or |rpm|), the file must be added to the node using the |resource remote_file| or |resource cookbook file| resources.
 .. |resource desc powershell_script| replace:: The |resource powershell script| resource is used to execute a script using the |windows powershell| interpreter. This resource is used just like the |resource script| resource or the providers for |bash|, |csh|, |perl|, |python|, and |ruby|. The |resource powershell script| resource is similar to those, but with some small tweaks under the covers for the |windows| platform and |windows powershell| interpreter. This resource creates and executes a temporary file (similar to the |resource script| resource), rather than running it inline. This resource includes actions (``:run`` and ``:nothing``; ) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) that are available from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence.
+.. |resource desc registry_key| replace:: The |resource registry_key| resource is used to create and delete registry keys in |windows|.
 .. |resource desc remote_directory| replace:: The |resource remote_directory| resource is used to recursively transfer a directory from a cookbook's files or default directory. A remote directory will obey file specificity; the directory that will be copied should be located under COOKBOOK_NAME/files/default/REMOTE_DIRECTORY. A host-or distribution-specific path can also be used.
 .. |resource desc remote_file| replace:: The |resource remote_file| resource is used to transfer a file from a remote location using file specificity. This resource is similar to the |resource file| resource.
 .. |resource desc route| replace:: The |resource route| resource is used to manage the system routing table in a |linux| environment.
@@ -143,10 +154,12 @@
 .. |resource desc scm| replace:: The |resource scm| resource is used to manage source control resources that exist in a |git| repository or a |svn| repository.
 .. |resource desc script| replace:: The |resource script| resource is used to execute scripts using the specified interpreter (|bash|, |csh|, |perl|, |python|, or |ruby|) and includes all of the actions and attributes that are available to the |resource execute| resource.
 .. |resource desc service| replace:: The |resource service| resource is used to manage a service.
+.. |resource desc scm svn| replace:: The |resource scm subversion| resource is used to manage source control resources that exist in a |svn| repository.
 .. |resource desc template| replace:: The |resource template| resource is used to manage file contents with an embedded |ruby| (erb) template. This resource includes actions and attributes from the |resource file| resource. Template files managed by the |resource template| resource follow the same file specificity rules as the |resource remote_file| and |resource file| resources.
 .. |resource desc user| replace:: The |resource user| resource is used to manage a local user.
-.. |resource desc windows_registry| replace:: The |resource windows_registry| resource is used to create and delete registry keys in |windows|.
 .. |resource desc yum| replace:: The |resource yum package| resource is used to use |yum| for installation, upgrade, and removal of packages. This resource is able to resolve ``provides`` data for packages much like |yum| can do when running it from the command line. This allows a variety of options for installing packages, like minimum versions, virtual provides, and library names.
+
+.. |resource_id lwrp aws_resource_tag| replace:: One or more resources whose tags will be modified. This value may be a single ID as a string or multiple IDs as an array. If this value is not specified, then the ``name`` attribute for each resource will be used.
 
 .. |response code 200 ok| replace:: OK. The request was successful.
 .. |response code 201 created| replace:: Created. The object was created.
@@ -164,29 +177,28 @@
 
 .. |response_file resource package| replace:: Optional. The response file that is used to pre-seed packages. Default value: ``nil``.
 .. |rest_timeout| replace:: The time (in seconds) after which an HTTP REST request will time out. Default value: ``300``.
+.. |restart_command lwrp application| replace:: A string that contains a shell command that can be executed to run a restart operation.
 .. |restart_command resource deploy| replace:: A string that contains a shell command that can be executed to run a restart operation . Default value: ``nil``.
 .. |restart_command action write service| replace:: The command used to restart a service. Default value: ``nil``.
 .. |returns| replace:: A comma-delimited list of return codes, which indicate the success or failure for the command that was run remotely.
+.. |returns lwrp powershell| replace:: The return value of the command. This value may be an array of accepted values. If the return value(s) do not match, an exception is returned.
+.. |returns resource batch| replace:: The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match.
 .. |returns resource execute| replace:: The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match. Default value: ``0``.
+.. |revision lwrp application| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier.
 .. |revision resource deploy| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier. Default value: ``HEAD``.
 .. |revision resource scm| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier. Default value: ``HEAD``.
 
 .. |riak_admin_path lwrp riak_cluster| replace:: The location in which ``riak`` and ``riak-admin`` scripts are located. Default value: ``/usr/sbin``.
 
-.. NEED TO COMBINE THE RIGHTS RESOURCE BLAH DESCRIPTIONS BELOW.
-
-.. |rights resource cookbook_file| replace:: The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a hash with one (or more) advanced rights options.
-.. |rights resource directory| replace:: |windows| only. The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a hash with one (or more) advanced rights options.
-.. |rights resource file| replace:: |windows| only. The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a hash with one (or more) advanced rights options.
-.. |rights resource remote_directory| replace:: |windows| only. The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a hash with one (or more) advanced rights options.
-.. |rights resource remote_file| replace:: |windows| only. The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and `<options>`` is a hash with one (or more) advanced rights options.
-.. |rights resource template| replace:: |windows| only. The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a hash with one (or more) advanced rights options.
+.. |rights windows security| replace:: The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a hash with one (or more) advanced rights options.
 
 .. |role description| replace:: A role is a way to define certain patterns and processes that exist across nodes in a |chef| organization as belonging to a single job function.
+.. |role lwrp application_ruby_memcached| replace:: The name of a role. During a |chef| run, a search will be performed to find a node with the same name as this value in the same environment as the current role. If a node is found, it's IP address will be used when rendering the ``memcached.yml`` file.
 .. |role-name| replace:: The name of the virtual machine.
 .. |role-size| replace:: The size of the virtual machine: ``ExtraSmall``, ``Small``, ``Medium``, ``Large``, or ``ExtraLarge``.
 .. |role_path| replace:: The location in which role files are located. Default value: ``/var/chef/roles``.
 .. |rollback_on_error resource deploy| replace:: Indicates whether a deploy resource will rollback to a previously-deployed release if an error occurs when deploying a new release. Default value: ``false``.
+.. |rollback_on_error lwrp application| replace:: Indicates whether a deploy resource will rollback to a previously-deployed release if an error occurs when deploying a new release.
 .. |rows| replace:: The number of rows to be returned.
 
 .. |rpc_host lwrp transmission_torrent_file| replace:: The address for the host to which a |bittorrent| transmission connection is made. Default value: ``localhost``.
@@ -204,4 +216,5 @@
 .. |ruby dsl run list| replace:: A list of recipes and/or roles that will be applied and the order in which those recipes and/or roles will be applied.
 .. |run-list| replace:: A comma-separated list of roles and/or recipes to be applied.
 .. |run-list indicator| replace:: Indicates that only the run-list will be shown.
+.. |runtime_version lwrp iis_pool| replace:: The version of |microsoft dotnet| that will be used by the runtime.
 

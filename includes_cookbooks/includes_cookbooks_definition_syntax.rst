@@ -13,16 +13,16 @@ The basic syntax of a definition:
 
 .. code-block:: ruby
 
-   define :resource_name, :parameter => :argument, :parameter => :argument
+   define :resource_name, :parameter => :argument, :parameter => :argument do
      params_hash
    end
 
-For example, a definition named ``apache_site`` with an parameter called ``action`` with an argument for ``enable do`` would look something like:
+For example, a definition named ``apache_site`` with an parameter called ``action`` with an argument for ``enable`` would look something like:
 
 .. code-block:: ruby
 
    define :apache_site, :action => :enable do
-     if params[:enable]
+     if params[:action] == :enable
         ...
      else
         ...

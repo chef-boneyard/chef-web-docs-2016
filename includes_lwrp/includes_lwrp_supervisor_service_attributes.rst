@@ -10,61 +10,61 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``autorestart``
-     - Indicates if a process is never auto-restarted (``false``), restarted when a program exits with an unknown exit code (``unexpected``), or unconditionally restarted (``true``).
+     - |autorestart lwrp supervisor|
    * - ``autostart``
-     - Indicates if a program starts automatically when |python supervisor| is started.
+     - |autostart lwrp supervisor|
    * - ``command``
-     - A command that is run when the program starts.
+     - |command lwrp supervisor|
    * - ``directory``
-     - The path to a directory in which a temporary chdir will occur.
+     - |directory lwrp supervisor|
    * - ``environment``
-     - A list of key-value pairs in the form of ``KEY=val1,KEY2=val2`` that will be placed in the environment for a child process.
+     - |environment lwrp supervisor|
    * - ``exitcodes``
-     - A list of expected exit codes for a program.
+     - |exitcodes lwrp supervisor|
    * - ``numprocs``
-     - The number of instances that will be started by |python supervisor|.
+     - |numprocs lwrp supervisor|
    * - ``numprocs_start``
-     - An integer offset that is used to compute the number at which ``numprocs`` starts.
+     - |numprocs_start lwrp supervisor|
    * - ``priority``
-     - The relative priority of the program for start and shutdown ordering.
+     - |priority lwrp supervisor_service|
    * - ``process_name``
-     - A |python| string expression that is used to compose the supervisor process name for a process.
+     - |process_name lwrp supervisor|
    * - ``redirect_stderr``
-     - Indicates that the STDERR output for a process is sent back to |python supervisor| using STDOUT.
+     - |redirect_stderr lwrp supervisor|
    * - ``serverurl``
-     - The URL passed in the environment to the sub-process process.
+     - |startretries lwrp supervisor|
    * - ``service_name``
-     - The name of a service.
+     - |service_name lwrp supervisor|
    * - ``startretries``
-     - The number of serial failure attempts |python supervisor| will allow when attempting to start a program before giving up.
+     - |startretries lwrp supervisor|
    * - ``startsecs``
-     - The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.
+     - |startsecs lwrp supervisor|
    * - ``stopsignal``
-     - The signal used to kill a program when a stop is requested: ``TERM``, ``HUP``, ``INT``, ``QUIT``, ``KILL``, ``USR1``, or ``USR2``.
+     - |stopsignal lwrp supervisor|
    * - ``stopwaitsecs``
-     - The amount of time (in seconds) to wait (after ``stopsignal``) before a ``SIGKILL`` message is sent.
+     - |stopwaitsecs lwrp supervisor|
    * - ``stderr_capture_maxbytes``
-     - The maximum number of bytes written to capture for ``stderr_logfile``.
+     - |stderr_capture_maxbytes lwrp supervisor|
    * - ``stderr_events_enabled``
-     - Indicates whether events are omitted from ``stderr_logfile``.
+     - |stderr_events_enabled lwrp supervisor|
    * - ``stderr_logfile``
-     - The location of the STDERR logfile.
+     - |stderr_logfile lwrp supervisor| 
    * - ``stderr_logfile_backups``
-     - The number of ``stderr_logfile`` backups to keep.
+     - |stderr_logfile_backups lwrp supervisor|
    * - ``stderr_logfile_maxbytes``
-     - The maximum size (in bytes) that may be consumed by ``stderr_logfile`` before it is rotated.
+     - |stderr_logfile_maxbytes lwrp supervisor|
    * - ``stdout_capture_maxbytes``
-     - The maximum number of bytes written to capture for ``stdout_logfile``.
+     - |stdout_capture_maxbytes lwrp supervisor|
    * - ``stdout_events_enabled``
-     - Indicates whether events are omitted from ``stdout_logfile``.
+     - |stdout_events_enabled lwrp supervisor|
    * - ``stdout_logfile``
-     - The location of the STDOUT logfile.
+     - |stdout_logfile lwrp supervisor|
    * - ``stdout_logfile_backups``
-     - The number of ``stdout_logfile`` backups to keep.
+     - |stdout_logfile_backups lwrp supervisor|
    * - ``stdout_logfile_maxbytes``
-     - The maximum size (in bytes) that may be consumed by ``stdout_logfile`` before it is rotated.
+     - |stdout_logfile_maxbytes lwrp supervisor|
    * - ``umask``
-     - An octal number that represents the umask of a process.
+     - |umask lwrp supervisor|
    * - ``user``
-     - The |unix| user account that runs the program.
+     - |user lwrp supervisor|
 

@@ -8,24 +8,38 @@
 
 .. |sandbox_path| replace:: The location in which cookbook files are stored (temporarily) during upload.
 
+.. |scm_provider lwrp application| replace:: The name of the source control management provider to be used.
 .. |scm_provider resource deploy| replace:: The name of the source control management provider to be used. Default value: ``Chef::Provider::Git``. Optional values: ``Chef::Provider::Subversion``.
 .. |script-path| replace:: A colon-separated path at which |ruby| scripts are located.
 .. |search index| replace:: A search index is a full-text list of objects that are stored on the |chef server|, against which search queries can be made.
 .. |search key| replace:: A key (or field name) is located in the JSON description for the |chef| object that is to be searched.
 .. |search pattern| replace:: A search pattern is a way to fine-tune search results by returning anything that matches some type of incomplete search query.
 .. |search operator| replace:: A Boolean operator can be used to ensure that certain terms are included in the results, are excluded from the results, or are not included even when other aspects of the query match.
+.. |search partial| replace:: A partial search query allows a search query to be made against specific attribute keys that are stored on the |chef server|.
 .. |search query syntax| replace:: A search query is comprised of two parts: the key and the search pattern.
 .. |search special character| replace:: A special character can be used to fine-tune a search query and to increase the accuracy of the search results.
 .. |search target| replace:: A search target is any object that has been indexed on the |chef server|, including roles (and run-lists), nodes, environments, data bags, and any |chef api client|.
+.. |search_group lwrp users| replace:: The name of the group to be searched. This value defaults to the name of the resource if left empty.
 .. |SEARCH_QUERY| replace:: The search query used to identify a a list of items on a |chef server|. This option uses the same syntax as the ``search`` sub-command.
 .. |SEARCH_QUERY SSH| replace:: The search query used to return a list of servers to be accessed using |ssh| and the specified ``SSH_COMMAND``. This option uses the same syntax as the search sub-command.
 .. |secret| replace:: The encryption key that is used for values contained within a data bag.
 .. |secret-file| replace:: The path to the file that contains the encryption key.
 .. |server-name| replace:: The name of the server.
+.. |server_name lwrp application_nginx_load_balancer| replace:: The virtual host name for a server. Defaults to the node |fqdn|.
 .. |server-url| replace:: The URL for the |chef server|.
+.. |server_aliases lwrp application_php_mod| replace:: An array of server aliases.
+.. |server_aliases lwrp application_ruby_passenger| replace:: An array of server aliases.
+.. |server_hooks lwrp gunicorn_config| replace:: A hash with values that are rendered as |gunicorn| server hook functions named after the hash item's key name. Default value: ``{}`` (no server hooks).
+.. |serverurl lwrp application_php_mod| replace:: An array of server aliases.
+.. |serverurl lwrp supervisor| replace:: The URL passed in the environment to the sub-process process.
 .. |service_name lwrp bluepill_service| replace:: The name of the service. A recipe that uses the |lwrp bluepill service| lightweight resource must contain a template resource for the pill and it must be named ``NAME.pill.erb`` where ``NAME`` is the ``service_name`` attribute.
 .. |service_name lwrp daemontools_service| replace:: The name of the service.
+.. |service_name lwrp supervisor| replace:: The name of a service.
 .. |service_name resource service| replace:: The name of the service. Default value: ``name``.
+.. |settings lwrp application_python_django| replace:: A hash of additional settings that will be made available to a template.
+.. |settings_template lwrp application_php| replace:: The name of a template that will be rendered to create the local settings file. Default value: ``#{local_settings_file}.erb``.
+.. |settings_template lwrp application_python_gunicorn| replace:: A template to render to create the ``gunicorn_config.py`` file. Default value: ``se.py.erb`` (from the ``gunicorn`` cookbook).
+.. |settings_template lwrp application_python_django| replace:: The name of a template that will be rendered to create the local settings file. If specified, this file must be located in the ``application`` cookbook. Default value: ``settings.py.erb`` (from this cookbook).
 
 .. |shallow_clone resource| replace:: Indicates that the clone depth is set to 5. Default value: ``true``.
 .. |shell resource cron| replace:: Sets the SHELL environment variable.
@@ -42,6 +56,8 @@
 .. |signing_ca_domain| replace:: The domain associated with the |ca| policy. This setting is passed by |chef| to |open ssl|.
 .. |signing_ca_email| replace:: The email address associated with the |ca| policy. This setting is passed by |chef| to |open ssl|. Default value: ``opensource.opscode.com``.
 .. |size lwrp aws_ebs_volume| replace:: The size of the volume (in gigabytes).
+.. |site_id lwrp iis_site| replace:: A unique identifier for the site. If this is not specified, |microsoft iis| will generate a unique identifier.
+.. |site_name lwrp iis_site| replace:: The name of the site.
 
 .. |skip-dependencies| replace:: Indicates that all cookbooks to which the installed cookbook has a dependency will not be installed.
 
@@ -50,6 +66,9 @@
 .. |snapshot_id lwrp aws_ebs_volume| replace:: The snapshot with which to build an |amazon ebs| volume.
 .. |snapshots_to_keep lwrp aws_ebs_volume| replace:: The number of snapshots to maintain. This attribute is available only when the ``:prune`` action is used. Default value: ``2``.
 
+.. |socket lwrp supervisor| replace:: The |fcgi| socket for a program.
+.. |socket_mode lwrp supervisor| replace:: A parameter that specifies the permission mode. |unix| only.
+.. |socket_owner lwrp supervisor| replace:: The user and group for a |fcgi| socket. |unix| only.
 .. |solo mode| replace:: Indicates whether |chef| is being run in "solo" mode. This setting determines if the |chef client| should attempt to communicate with a |chef server|. Default value: ``false``.
 .. |solr_data_path| replace:: The location in which the Solr indexes are located. Default value: ``/var/chef/solr/data``.
 .. |solr_heap_size| replace:: The amount of memory allocated to the Java Virtual Machine (JVM) that is being used to run Solr. Default value: ``256M``.
@@ -61,6 +80,7 @@
 .. |source lwrp chef_handler| replace:: The full path to the handler file or the path to a |gem| (if the handler ships as part of a |ruby| |gem|).
 .. |source lwrp dmg_package| replace:: The remote URL for the |apple disk image| to be download. Default value: ``nil``.
 .. |source lwrp firewall_rule| replace:: The IP address or subnet from which incoming traffic originates. Default value: ``0.0.0.0/0`` (from "anywhere").
+.. |source lwrp freebsd| replace:: A template that is used to create the port options file. For example: ``source "freebsd-php5-options.erb"``.
 .. |source lwrp windows_package| replace:: A URI or a local path that specifies the source of a |windows| installer.
 .. |source lwrp windows_zipfile| replace:: A URI or a local path that specifies the source of a |zip| file.
 .. |source resource cookbook_file| replace:: The name of a file in the ``files/`` directory for a cookbook..
@@ -86,15 +106,40 @@
 
 .. |ssl_ca_file| replace:: The file in which the |open ssl| key is saved. This setting is generated automatically by |chef| and most users will not need to modify it.
 .. |ssl_ca_path| replace:: The path to where the |open ssl| key is located. This setting is generated automatically by |chef| and most users will not need to modify it.
+.. |ssl lwrp application_nginx_load_balancer| replace:: Indicates whether |ssl| is being used. Default value: ``false``.
+.. |ssl_certificate lwrp application_nginx_load_balancer| replace:: The |ssl| certificate.
+.. |ssl_certificate_key lwrp application_nginx_load_balancer| replace:: The |ssl| certificate key.
 .. |ssl_client_cert| replace:: The |open ssl| X509 certificate. This setting is generated automatically by |chef| and most users will not need to modify it.
 .. |ssl_client_key| replace:: The |open ssl| X509 key. This setting is generated automatically by |chef| and most users will not need to modify it.
 .. |ssl_verify_mode| replace:: The verify mode for HTTPS requests. Set to ``:verify_none`` to not send certificate requests. Set to ``:verify_peer`` to send certificate requests to a |chef client|. For users of |chef hosted|, ``:verify_peer`` is recommended as the verification mode; depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified.
 
 .. |start| replace:: The row at which return results will begin.
 .. |start_command resource service| replace:: The command used to start a service. Default value: ``nil``.
+
+.. |startretries lwrp supervisor| replace:: The number of serial failure attempts |python supervisor| will allow when attempting to start a program before giving up.
+.. |startsecs lwrp supervisor| replace:: The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.
+
+.. |static_files lwrp application_nginx_load_balancer| replace:: A hash that maps URLs to files. Default value: ``{}``.
 .. |status_command resource service| replace:: The command used to check the run status for a service. Default value: ``nil``.
+
+.. |stderr_capture_maxbytes lwrp supervisor| replace:: The maximum number of bytes written to capture for ``stderr_logfile``.
+.. |stderr_events_enabled lwrp supervisor| replace:: Indicates whether events are omitted from ``stderr_logfile``.
+.. |stderr_logfile lwrp supervisor| replace:: The location of the STDERR logfile.
+.. |stderr_logfile_backups lwrp supervisor| replace:: The number of ``stderr_logfile`` backups to keep.
+.. |stderr_logfile_maxbytes lwrp supervisor| replace:: The maximum size (in bytes) that may be consumed by ``stderr_logfile`` before it is rotated.
+.. |stdout_capture_maxbytes lwrp supervisor| replace:: The maximum number of bytes written to capture for ``stdout_logfile``.
+.. |stdout_events_enabled lwrp supervisor| replace:: Indicates whether events are omitted from ``stdout_logfile``.
+.. |stdout_logfile lwrp supervisor| replace:: The location of the STDOUT logfile.
+.. |stdout_logfile_backups lwrp supervisor| replace:: The number of ``stdout_logfile`` backups to keep.
+.. |stdout_logfile_maxbytes lwrp supervisor| replace:: The maximum size (in bytes) that may be consumed by ``stdout_logfile`` before it is rotated.
+
 .. |stop_command resource service| replace:: The command used to stop a service. Default value: ``nil``.
+
+.. |stopsignal lwrp supervisor| replace:: The signal used to kill a program when a stop is requested: ``TERM``, ``HUP``, ``INT``, ``QUIT``, ``KILL``, ``USR1``, or ``USR2``.
+.. |stopwaitsecs lwrp supervisor| replace:: The amount of time (in seconds) to wait (after ``stopsignal``) before a ``SIGKILL`` message is sent.
+
 .. |storage account| replace:: The name of the storage account used with the hosted service.
+.. |strategy lwrp application| replace:: The deploy strategy: ``timestamped_deploy`` or ``deploy_revision`` (default). Use ``deploy_revision`` to ensure that the name of a release sub-directory is based on a revision identifier and puts deployed components under the destination location that is owned by the user who runs the application. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---|chef| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. Use ``timestamped_deploy`` to name a release sub-directory with a timestamp in the form of YYYYMMDDHHMMSS. For example: /my/deploy/dir/releases/20121120162342.
 
 .. |subnet| replace:: The |amazon vpc| instance in which a node will be created.
 .. |sudo| replace:: Indicates that a bootstrap operation should be executed using |sudo cmd|.
@@ -110,7 +155,9 @@
 .. |svn_username resource| replace:: The user name for a user that has access to the |svn| repository.
 
 .. |symlink_before_migrate| replace:: Use this attribute to map files in a shared directory to the current release directory. The symbolic links for these files will be created before any migration is run. Use ``symlink_before_migrate({})`` or ``symlink_before_migrate nil`` instead of ``symlink_before_migrate {}`` because ``{}`` will be interpreted as a block rather than an empty hash. Default value: ``{"config/database.yml" => "config/database.yml"}``.
+.. |symlink_before_migrate lwrp application| replace:: A hash that maps files in a shared directory into the current release. Runs before migration.
 .. |symlinks| replace:: Use this attribute to map files in a shared directory to their paths in the current release directory. This attribute runs after ``create_dirs_before_symlink`` and ``purge_before_symlink``. Default value: ``{"system" => "public/system", "pids" => "tmp/pids", "log" => "log"}``.
+.. |symlinks lwrp application| replace:: A hash that maps files in a shared directory to their paths in the current release.
 .. |system resource group| replace:: Indicates whether a group is a system group (``true``) or is not a system group (``false``). Default value: ``nil``.
 .. |system resource user| replace:: Indicates that a system user should be created. This attribute may be used with ``useradd`` as the provider to create a system user which passes the ``-r`` flag to ``useradd``. Default value: ``nil``.
 

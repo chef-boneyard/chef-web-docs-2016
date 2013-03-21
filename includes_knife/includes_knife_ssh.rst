@@ -5,11 +5,11 @@
 
 |knife ssh|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife ssh SEARCH_QUERY SSH_COMMAND (options)
 
-This sub-command has the following options:
+This subcommand has the following options:
 
 ``-a SSH_ATTR``, ``--attribute SSH_ATTR``
    |attribute ssh| The default attribute is the |fully qualified domain name| of the host. Other possible values include a public IP address, a private IP address, or a hostname.

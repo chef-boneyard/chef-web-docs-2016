@@ -32,23 +32,3 @@ This command has the following options:
 
 ``test --all``
    Use to execute |chef pedant|, an integration test suite for the |chef server| installation. By default, only a subset of the available test are run. Add the ``--all`` flag to run the full test suite.
-
-**Examples**
-
-To view the status of the ``erchef`` component of the |chef server|, enter:
-
-.. code-block:: bash
-
-   $ chef-server-ctl status erchef
-
-To restart all enabled services, enter:
-
-.. code-block:: bash
-
-   $ chef-server-ctl restart 
-
-To restart the ``erchef`` service, enter:
-
-.. code-block:: bash
-
-   $ chef-server-ctl restart erchef 

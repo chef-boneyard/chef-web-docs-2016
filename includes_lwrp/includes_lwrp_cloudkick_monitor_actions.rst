@@ -12,8 +12,8 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Use to create a |cloudkick| monitor.
+     - |lwrp action create cloudkick_monitor|
    * - ``:disable``
-     - Use to disable a |cloudkick| monitor.
+     - |lwrp action disable cloudkick_monitor|
    * - ``:enable``
-     - Use to enable a |cloudkick| monitor.
+     - |lwrp action enable cloudkick_monitor|

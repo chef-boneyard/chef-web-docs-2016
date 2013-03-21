@@ -5,7 +5,7 @@
 
 |knife client|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife client [ARGUMENT] (options)
    

@@ -32,7 +32,7 @@ Style Guide
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-The |opscode| style guide is just a limited subset of the full capabilities of Sphinx. If it's not listed here, we're not using it.
+The |opscode| style guide is just a limited subset of the full capabilities of Sphinx, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it.
 
 All of the documents built by Sphinx for Chef can be found at docs.opscode.com.
 
@@ -50,40 +50,6 @@ Each topic can have a single topic title. What it looks like as reST::
 
 This is the only section header that requires the structure above and below the header.
 
-Swaps Header
------------------------------------------------------
-The swaps header ensures that all of the swap strings are available to the topic at build time. For example::
-
-      .. include:: ../../swaps/swap_desc_a.txt
-      .. include:: ../../swaps/swap_desc_b.txt
-      .. include:: ../../swaps/swap_desc_c.txt
-      .. include:: ../../swaps/swap_desc_d.txt
-      .. include:: ../../swaps/swap_desc_e.txt
-      .. include:: ../../swaps/swap_desc_f.txt
-      .. include:: ../../swaps/swap_desc_g.txt
-      .. include:: ../../swaps/swap_desc_h.txt
-      .. include:: ../../swaps/swap_desc_i.txt
-      .. include:: ../../swaps/swap_desc_j.txt
-      .. include:: ../../swaps/swap_desc_k.txt
-      .. include:: ../../swaps/swap_desc_l.txt
-      .. include:: ../../swaps/swap_desc_m.txt
-      .. include:: ../../swaps/swap_desc_n.txt
-      .. include:: ../../swaps/swap_desc_o.txt
-      .. include:: ../../swaps/swap_desc_p.txt
-      .. include:: ../../swaps/swap_desc_q.txt
-      .. include:: ../../swaps/swap_desc_r.txt
-      .. include:: ../../swaps/swap_desc_s.txt
-      .. include:: ../../swaps/swap_desc_t.txt
-      .. include:: ../../swaps/swap_desc_u.txt
-      .. include:: ../../swaps/swap_desc_v.txt
-      .. include:: ../../swaps/swap_desc_w.txt
-      .. include:: ../../swaps/swap_desc_x.txt
-      .. include:: ../../swaps/swap_desc_y.txt
-      .. include:: ../../swaps/swap_desc_z.txt
-      .. include:: ../../swaps/swap_http.txt
-      .. include:: ../../swaps/swap_names.txt
-      .. include:: ../../swaps/swap_notes.txt
-
 Body
 -----------------------------------------------------
 The body of the topic contains anything else needed for the topic. Often, a topic contains an include file (or three), and then some topics contain sub-headers. Most of the topics that are published to docs.opscode.com contain a series of includes files. But some topics, like An Overview of Chef, include original content alongside the includes files. It just depends on what the topic requires.
@@ -95,37 +61,6 @@ The following example is the first two sections from "An Overview of Chef"::
       =====================================================
       An Overview of |chef|
       =====================================================
-       
-      .. include:: ../../swaps/swap_desc_a.txt
-      .. include:: ../../swaps/swap_desc_b.txt
-      .. include:: ../../swaps/swap_desc_c.txt
-      .. include:: ../../swaps/swap_desc_d.txt
-      .. include:: ../../swaps/swap_desc_e.txt
-      .. include:: ../../swaps/swap_desc_f.txt
-      .. include:: ../../swaps/swap_desc_g.txt
-      .. include:: ../../swaps/swap_desc_h.txt
-      .. include:: ../../swaps/swap_desc_i.txt
-      .. include:: ../../swaps/swap_desc_j.txt
-      .. include:: ../../swaps/swap_desc_k.txt
-      .. include:: ../../swaps/swap_desc_l.txt
-      .. include:: ../../swaps/swap_desc_m.txt
-      .. include:: ../../swaps/swap_desc_n.txt
-      .. include:: ../../swaps/swap_desc_o.txt
-      .. include:: ../../swaps/swap_desc_p.txt
-      .. include:: ../../swaps/swap_desc_q.txt
-      .. include:: ../../swaps/swap_desc_r.txt
-      .. include:: ../../swaps/swap_desc_s.txt
-      .. include:: ../../swaps/swap_desc_t.txt
-      .. include:: ../../swaps/swap_desc_u.txt
-      .. include:: ../../swaps/swap_desc_v.txt
-      .. include:: ../../swaps/swap_desc_w.txt
-      .. include:: ../../swaps/swap_desc_x.txt
-      .. include:: ../../swaps/swap_desc_y.txt
-      .. include:: ../../swaps/swap_desc_z.txt
-      .. include:: ../../swaps/swap_http.txt
-      .. include:: ../../swaps/swap_names.txt
-      .. include:: ../../swaps/swap_notes.txt
-      
       
       .. include:: ../../includes_chef/includes_chef.rst
       
@@ -358,6 +293,14 @@ An internal link is one that resolves to another topic that is built by Sphinx. 
 
 where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. If this isn't formatted correctly, Sphinx will let you know.
 
+Internal, with short link names
+-----------------------------------------------------
+An internal link is one that resolves to another topic that is built by Sphinx. Sometimes it's better to have the name of the link that displays be as short as possible (and different from the actual title of the topic). What it looks like as reST:: 
+
+   :doc:`Actions </resource_common_actions>`
+
+where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. ``Actions`` represents the short name that will display on the page in which this internal link is located, and then ``resource_common_actions`` is the filename and is contained within brackets (< >). If this isn't formatted correctly, Sphinx will let you know.
+
 External
 -----------------------------------------------------
 An external link points to something that does not live on docs.opscode.com. An external link requires an HTTP address. In general, it's better to spell out the HTTP address fully, in case the topic is printed out. What an external link looks like as reST:: 
@@ -558,3 +501,72 @@ quick-reference
 Two large PNG images (front and back) and a smaller single-page image for a Knife Quick Reference can be found here:
 
 https://github.com/opscode/quick-reference
+
+Localization
+=====================================================
+Sphinx supports localization into many languages.
+
+.pot files
+-----------------------------------------------------
+.pot files are used by localization teams as an intermediate step in-between the native English content and the localized content. Opscode needs to build the .pot files so that localization teams can feed them into their tools as part of their localization process.
+
+The .pot file is built using much the same process as a regular Sphinx content build. For example, a regular content build:
+
+.. code-block:: bash
+
+   sphinx-build -b html /path/to/source /path/to/build
+
+and then for the .pot files:
+
+.. code-block:: bash
+
+   sphinx-build -b gettext /path/to/source /path/to/translate
+
+with the very important difference of the ``/build`` vs. ``/translate`` folders for the output.
+
+.pot files should be checked into the github repository like every other source file and even though they are output of the source files, should be treated as if they are source files.
+
+.. note:: The /translate folder in the github source contains a regularly updated set of .pot files. That said, it is recommended that if you want to localize the Chef documentation, check with Opscode (send email to docs@opscode.com) and let us know that you want to participate in the localization process and we can sync up. Or just update the .pot files locally to make sure they are the most current versions of the .pot files.
+
+Custom Configuration Settings (conf.py)
+=====================================================
+Every Sphinx build has a configuration file.
+
+rst_prolog
+-----------------------------------------------------
+Opscode has added this configuration setting to every conf.py file to help streamline the inclusion of files at the beginning of the build process and to help support localization efforts. This setting is added to the general configuration settings and looks like this:
+
+.. code-block:: python
+
+   # A string of reStructuredText that will be included at the beginning of every source file that is read.
+   rst_prolog = """
+   .. include:: ../../swaps/swap_desc_a.txt
+   .. include:: ../../swaps/swap_desc_b.txt
+   .. include:: ../../swaps/swap_desc_c.txt
+   .. include:: ../../swaps/swap_desc_d.txt
+   .. include:: ../../swaps/swap_desc_e.txt
+   .. include:: ../../swaps/swap_desc_f.txt
+   .. include:: ../../swaps/swap_desc_g.txt
+   .. include:: ../../swaps/swap_desc_h.txt
+   .. include:: ../../swaps/swap_desc_i.txt
+   .. include:: ../../swaps/swap_desc_j.txt
+   .. include:: ../../swaps/swap_desc_k.txt
+   .. include:: ../../swaps/swap_desc_l.txt
+   .. include:: ../../swaps/swap_desc_m.txt
+   .. include:: ../../swaps/swap_desc_n.txt
+   .. include:: ../../swaps/swap_desc_o.txt
+   .. include:: ../../swaps/swap_desc_p.txt
+   .. include:: ../../swaps/swap_desc_q.txt
+   .. include:: ../../swaps/swap_desc_r.txt
+   .. include:: ../../swaps/swap_desc_s.txt
+   .. include:: ../../swaps/swap_desc_t.txt
+   .. include:: ../../swaps/swap_desc_u.txt
+   .. include:: ../../swaps/swap_desc_v.txt
+   .. include:: ../../swaps/swap_desc_w.txt
+   .. include:: ../../swaps/swap_desc_x.txt
+   .. include:: ../../swaps/swap_desc_y.txt
+   .. include:: ../../swaps/swap_desc_z.txt
+   .. include:: ../../swaps/swap_http.txt
+   .. include:: ../../swaps/swap_names.txt
+   .. include:: ../../swaps/swap_notes.txt
+   """

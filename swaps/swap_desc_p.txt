@@ -6,7 +6,7 @@
 .. P
 .. 
 
-
+.. |package_name lwrp apt| replace:: The name of the package.
 .. |package_name lwrp pacman_aur| replace:: The name of the package.
 .. |package_name lwrp pacman_group| replace:: The name of the package group.
 .. |package_name lwrp php_pear| replace:: The name of the |pear| package to install.
@@ -14,15 +14,28 @@
 .. |package_name lwrp windows_package| replace:: The display name of the application installation package. This is the same as the ``DisplayName`` registry value in the uninstallation data that is created during package installation. The easiest way to find the proper ``DisplayName`` value is to install a package on a machine and search for the uninstall information under one of the following registry keys: ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall``, ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall``, or ``HKEY_LOCAL_MACHINE\Software\Wow6464Node\Microsoft\Windows\CurrentVersion\Uninstall``. This value may also be identified by the uninstaller itself (in the ``Name`` column) and can be viewed while running the uninstaller.
 .. |package_name resource package| replace:: The name of the package to install. Default value: ``name``.
 .. |package_name resource yum| replace:: One of the following: the name of a package, the name of a package and its architecture; the name of a dependency. Default value: ``name``.
+.. |packages lwrp application| replace:: A list of one (or more) packages to be installed along with the application.
+.. |packages lwrp application_php| replace:: An array of |pear| packages to install.
+.. |packages lwrp application_python_django| replace:: An array of |python pip| package to install.
+.. |packaging lwrp maven| replace:: The type of package. Default value: ``jar``.
+.. |parameters lwrp nagios_nrpecheck| replace:: One (or more) additional parameters that are passed to the command.
+.. |params lwrp application_ruby_passenger| replace:: A hash of extra parameters that will be passed to a template file.
 .. |PART| replace:: The part of the cookbook to show: ``attributes``, ``definitions``, ``files``, ``libraries``, ``providers``, ``recipes``, ``resources``, or ``templates``. More than one part can be specified.
 .. |pass resource mount| replace:: The pass number used by the file system check (fsck) command while creating a file systems table (fstab) entry. Default value: ``2``.
 .. |password bluelock| replace:: The password for the |bluelock| account.
+.. |password lwrp application| replace:: The path to the application.
 .. |password lwrp dynect_rr| replace:: The |dns update api| password.
 .. |password lwrp mysql_database| replace:: The password for the specified username.
+.. |password lwrp rabbitmq_user| replace:: The password for the user.
 .. |password lwrp samba| replace:: The password for a user. This is passed to the ``smbpasswd`` program in |samba|.
 .. |password resource user| replace:: The password shadow hash. This attribute requires that ``ruby-shadow`` be installed. This is part of the |debian| package: ``libshadow-ruby1.8``. Default value: ``nil``.
 .. |patches lwrp pacman_aur| replace:: An array of files to be used as patches for the package. Default value: ``[]``.
+.. |path lwrp gunicorn_config| replace:: The path to the location in which the configuration file will be created.
+.. |path lwrp iis_app| replace:: The virtual path to the location where the application resides.
+.. |path lwrp iis_pool| replace:: A local path that is mapped to the root application and root virtual directory. If this is not specified, |microsoft iis| will generate this path.
 .. |path lwrp python_virtualenv| replace:: The path to the location in which the virtual |python| environment will be created. Default value: ``\``.
+.. |path lwrp transmission_torrent_file| replace:: The path to the file.
+.. |path lwrp windows_path| replace:: The value to be added to or removed from a system path.
 .. |path resource cookbook_file| replace:: The destination path and the name of the file on the node. Default value: ``name``, which means that the file will be located at the same path and have the same name as the ``source`` file.
 .. |path resource cron| replace:: Sets the PATH environment variable.
 .. |path resource directory| replace:: The path to the directory. Default value: ``name``.
@@ -34,7 +47,16 @@
 .. |path_to_location lwrp windows_zipfile| replace:: The path to the location in which a file will be unzipped.
 .. |pattern resource service| replace:: The pattern to look for in the process table. Default value: ``service_name``.
 
+.. |permissions lwrp rabbitmq_user| replace:: One (or more) permissions that will be set.
+
+.. |physical_path lwrp iis_app| replace:: The physical path to the location where the application resides.
+
+.. |pid lwrp gunicorn_config| replace:: The file name for the process identifier (PID) file. Default value: `` `` (no file).
 .. |pid_file| replace:: The location in which a process identification number (pid) is saved. An executable, when started as a daemon, will write the pid to the specified file. Default value: ``/tmp/name-of-executable.pid``.
+.. |pidfile lwrp application_python_gunicorn| replace:: A file name to use for the PID file.
+.. |pin lwrp apt| replace:: The package version or repository to be pinned.
+.. |pin_priority lwrp apt| replace:: The priority for the package version or repository, in comparison to the priority for other versions of the same package or repository. The higher value will have the higher priority.
+.. |pipeline_mode lwrp iis_pool| replace:: The pipeline mode with which an application pool is created.
 
 .. |pkgbuild_src lwrp pacman_aur| replace:: Indicates whether to use a custom ``PKGBUILD`` file. When ``true``, the ``pacman_aur`` lightweight resource will look for a ``cookbook_file`` named ``PKGBUILD`` to use as package instructions. Default value: ``false``.
 
@@ -42,15 +64,35 @@
 .. |platform-version| replace:: The version of the platform.
 .. |plugin resource ohai| replace:: Optional. Indicates that only the specified plug-ins are reloaded by |ohai|. Default value: ``nil`` (all plug-ins are reloaded ).
 
+.. |pool_name lwrp iis_pool| replace:: The name of the application pool.
+.. |port lwrp application_nginx_load_balancer| replace:: The port to which |nginx| will bind. Default value: ``80``.
 .. |port lwrp firewall_rule| replace:: The port number.
+.. |port lwrp iis_site| replace:: The port on which a site will listen. Default value: ``80``.
 .. |position lwrp firewall_rule| replace:: The position at which a rule is inserted. If this value is not specified, a rule is inserted at the end of a rule list.
 
+.. |precompile_assets lwrp application_ruby| replace:: Indicates whether assets will be pre-compiled. Unless this attribute is specified, |chef| will attempt to auto-detect whether the pipeline is in use by looking in ``config/assets.yml``.
+.. |precondition lwrp iis_module| replace:: The pre-condition for a module, if applicable.
+.. |preload_app lwrp application_python_gunicorn| replace:: Indicates that application code is loaded before worker processes are forked. Default value: ``false``.
+.. |preload_app lwrp application_ruby| replace:: Indicates whether an application is loaded before a worker process is forked. Default value: ``false``.
+.. |preload_app lwrp gunicorn_config| replace:: Indicates whether application code should be loaded before worker processes are forked. Default value: ``false``.
 .. |preferred_state lwrp php_pear| replace:: By default, |pear| only installs stable packages. Packages can be installed in various non-stable states: ``devel``, ``alpha`` or ``beta``. Default value: ``stable``.
 .. |prerelease| replace:: Indicates that pre-release |chef| gems should be installed.
 .. |print-after| replace:: Indicates that data will be shown after a destructive operation.
+.. |priority lwrp supervisor_fcgi| replace:: A priority value assigned to the process.
+.. |priority lwrp supervisor_group| replace:: A priority value assigned to the group.
+.. |priority lwrp supervisor_service| replace:: The relative priority of the program for start and shutdown ordering.
 .. |private-key-file| replace:: The file in which the |ssh| private key used for authentication is located.
+.. |private_mem lwrp iis_pool| replace:: The maximum amount of private memory (in KB) that a worker process can consume before the application pool will recycle. A value of ``0`` means there is no limit.
+
+.. |proc_name lwrp application_python_gunicorn| replace:: The name of an instance of |gunicorn|. This attribute is only necessary when more than one instance of |gunicorn| is running.
+.. |product_id lwrp webpi| replace:: The identifier of the product to be installed.
+.. |process_name lwrp supervisor| replace:: A |python| string expression that is used to compose the supervisor process name for a process.
+.. |program lwrp windows_autorun| replace:: The program to be run... |programs lwrp supervisor_group| replace:: An array of program names. Programs that are listed will become members of the group. Default value: ``[]``.
+.. |program_name lwrp supervisor_fcgi| replace:: The name of the program.
+.. |programs lwrp supervisor_group| replace:: An array of program names. Programs that are listed will become members of the group. Default value: ``[]``.
 .. |project_id| replace:: The identifier for the |google compute engine| project.
 .. |protocol lwrp firewall_rule| replace:: The protocol used by the firewall rule. Valid values are: ``:all``, ``:udp``, ``:tcp``. Default value: ``:all``.
+.. |protocol lwrp iis_site| replace:: The HTTP protocol type to which a site responds: ``:http`` or ``:https``. Default value: ``:http``.
 
 .. |public-key-file| replace:: The file in which the |ssh| public key used for authentication is located.
 .. |purge amazon ec2| replace:: Indicates that all corresponding nodes and clients on the |chef server| will be destroyed, in addition to the |amazon ec2| node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the ``--node-name`` option must be used to specify the name of the node.
@@ -64,6 +106,6 @@
 .. |purge resource remote_directory| replace:: Indicates that extra files found in the target directory will be purged. Default value: ``false``.
 .. |purge windows azure| replace:: Indicates that all corresponding nodes and clients on the |chef server| will be destroyed, in addition to the |windows azure| node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the ``--node-name`` option must be used to specify the name of the node.
 .. |purge_before_symlink| replace:: Use this attribute to specify an array of directories (relative to the application root) that should be removed from a checkout before symbolic links are created. This attribute runs before ``create_dirs_before_symlink`` and before ``symlink``. Default value: ``%w{log tmp/pids public/system}`` (or the same as ``["log", "tmp/pids", "public/system"]``.
-
+.. |purge_before_symlink lwrp application| replace:: An array of paths, relative to the application root, that are to be removed from a checkout before symbolic linking.
 
 

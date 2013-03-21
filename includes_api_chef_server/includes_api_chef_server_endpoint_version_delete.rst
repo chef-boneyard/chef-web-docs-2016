@@ -13,7 +13,7 @@ This method has no parameters.
 
 **Response**
 
-This method has no response body.
+This method has no response body. Unused ``checksum`` values will be garbage collected.
 
 **Response Codes**
 

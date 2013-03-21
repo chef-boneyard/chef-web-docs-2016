@@ -5,7 +5,7 @@
 
 |knife cookbook|
 
-This sub-command has the following syntax::
+This subcommand has the following syntax::
 
    knife cookbook [ARGUMENT] (options)
 

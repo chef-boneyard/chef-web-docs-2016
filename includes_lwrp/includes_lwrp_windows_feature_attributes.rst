@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``feature_name``
-     - The name of a server role, role service, or feature. Depending on the provider being used, the same feature may have different names. For example: ``DHCPServer`` vs. ``DHCP``; ``DNS-Server-Full-Role`` vs. ``DNS``.
+     - |feature_name lwrp windows_feature|

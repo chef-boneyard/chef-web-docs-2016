@@ -10,48 +10,48 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``name``
-     - The name of the application.
+     - |name application|
    * - ``environment_name``
-     - The name of the environment.
+     - |name environment|
    * - ``path``
-     - The path to the application.
+     - |password lwrp application|
    * - ``owner``
-     - The system owner that is responsible for the checked-out code.
+     - |owner lwrp application|
    * - ``group``
-     - The system group that is responsible for the checked-out code.
+     - |group lwrp application|
    * - ``strategy``
-     - The deploy strategy: ``timestamped_deploy`` or ``deploy_revision`` (default). Use ``deploy_revision`` to ensure that the name of a release sub-directory is based on a revision identifier and puts deployed components under the destination location that is owned by the user who runs the application. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---|chef| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. Use ``timestamped_deploy`` to name a release sub-directory with a timestamp in the form of YYYYMMDDHHMMSS. For example: /my/deploy/dir/releases/20121120162342.
+     - |strategy lwrp application|
    * - ``scm_provider``
-     - The name of the source control management provider to be used.
+     - |scm_provider lwrp application|
    * - ``revision``
-     - The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier.
+     - |revision lwrp application|
    * - ``repository``
-     - The name of the sub-directory in which the pristine copy of an application’s source is kept.
+     - |repository lwrp application|
    * - ``enable_submodules``
-     - |git| only. Use to perform a sub-module initialization and update.
+     - |git| only. |enable_submodules lwrp application|
    * - ``environment``
-     - A hash of the form ``{"ENV_VARIABLE"=>"VALUE"}``.
+     - |environment lwrp application|
    * - ``deploy_key``
-     - The RSA private key needed to deploy an application.
+     - |deploy_key lwrp application|
    * - ``force``
      - 
    * - ``rollback_on_error``
-     - Indicates whether a deploy resource will rollback to a previously-deployed release if an error occurs when deploying a new release.
+     - |rollback_on_error lwrp application|
    * - ``purge_before_symlink``
-     - An array of paths, relative to the application root, that are to be removed from a checkout before symbolic linking.
+     - |purge_before_symlink lwrp application|
    * - ``create_dirs_before_symlink``
-     - The directories to create before symbolic linking. This runs after ``purge_before_symlink``.
+     - |create_dirs_before_symlink lwrp application|
    * - ``symlinks``
-     - A hash that maps files in a shared directory to their paths in the current release.
+     - |symlinks lwrp application|
    * - ``symlink_before_migrate``
-     - A hash that maps files in a shared directory into the current release. Runs before migration.
+     - |symlink_before_migrate lwrp application|
    * - ``migrate``
-     - Indicates that the migration command will be run.
+     - |migrate lwrp application|
    * - ``migration_command``
-     - A string that contains a shell command that can be executed to run a migration operation.
+     - |migration_command lwrp application|
    * - ``restart_command``
-     - A string that contains a shell command that can be executed to run a restart operation.
+     - |restart_command lwrp application|
    * - ``packages``
-     - A list of one (or more) packages to be installed along with the application.
+     - |packages lwrp application|
    * - ``application_provider``
      - 

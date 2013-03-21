@@ -12,12 +12,12 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``name``
-     - The name of the monitor.
+     - |name lwrp cloudkick|
    * - ``notes``
-     - Optional. Notes about the monitor.
+     - Optional. |notes lwrp cloudkick|
    * - ``oauth_key``
-     - The |oauth| key used to authenticate to the |cloudkick| API.
+     - |oauth_key lwrp cloudkick|
    * - ``oauth_secret``
-     - The |oauth| secret used to authenticate to the |cloudkick| API.
+     - |oauth_secret lwrp cloudkick|
    * - ``query``
-     - A node-based query that identifies one (or more) targets to which the monitor will be applied. If this attribute is unspecified, it will default to the name of the node.
+     - |query lwrp cloudkick|

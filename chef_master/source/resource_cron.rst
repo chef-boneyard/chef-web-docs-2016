@@ -2,37 +2,11 @@
 cron
 =====================================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. include:: ../../includes_resources/includes_resource_cron.rst
+
+Syntax
+=====================================================
+.. include:: ../../includes_resources/includes_resource_cron_syntax.rst
 
 Actions
 =====================================================
@@ -48,7 +22,7 @@ Providers
 
 Examples
 =====================================================
-The following examples show how to use the |resource cron| resource.
+|generic resource statement|
 
 **Run a program at a specified interval**
 
@@ -57,3 +31,11 @@ The following examples show how to use the |resource cron| resource.
 **Run an entry if a folder exists**
 
 .. include:: ../../step_resource/step_resource_cron_run_entry_when_folder_exists.rst
+
+**Run every Saturday, 8:00 AM**
+
+.. include:: ../../step_resource/step_resource_cron_run_every_saturday.rst
+
+**Run only in November**
+
+.. include:: ../../step_resource/step_resource_cron_run_only_in_november.rst

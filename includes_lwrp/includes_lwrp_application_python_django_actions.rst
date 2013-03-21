@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:deploy``
-     - Use to deploy an application.
+     - |lwrp action deploy application|
    * - ``:force_deploy``
-     - Use to remove any existing release of the same code version and re-deploy a new one in its place.
+     - |lwrp action force_deploy application|

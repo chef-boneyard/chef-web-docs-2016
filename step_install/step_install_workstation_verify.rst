@@ -5,13 +5,13 @@ A |chef| workstation is installed correctly when it is able to use |knife| to co
 
 To verify that a workstation can connect to the |chef server|:
 
-1. In a command window, navigate to the |chef repo|:
+#. In a command window, navigate to the |chef repo|:
 
    .. code-block:: bash
 
       cd ~/chef-repo
 
-2. In a command window, enter the following:
+#. In a command window, enter the following:
 
    .. code-block:: bash
 

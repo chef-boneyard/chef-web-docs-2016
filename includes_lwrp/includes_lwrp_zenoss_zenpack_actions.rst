@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - Use to install a |zenoss zenpack|.
+     - |lwrp action install zenoss_zenpack|
    * - ``:remove``
-     - Use to remove a |zenoss zenpack|.
+     - |lwrp action remove zenoss_zenpack|

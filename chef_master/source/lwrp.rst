@@ -2,43 +2,13 @@
 About Lightweight Resources
 =====================================================
 
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
 
-|chef| includes the following lightweight resources:
+There are many lightweight resources that are found in cookbooks maintained by |opscode|:
 
 .. list-table::
    :widths: 150 450
@@ -46,71 +16,73 @@ About Lightweight Resources
 
    * - Cookbook
      - Description
-   * - :doc:`lwrp_apt`
+   * - :doc:`apt </lwrp_apt>`
      - |cookbook name apt|
-   * - :doc:`lwrp_aws`
+   * - :doc:`aws </lwrp_aws>`
      - |cookbook name aws|
-   * - :doc:`lwrp_bluepill`
+   * - :doc:`bluepill </lwrp_bluepill>`
      - |cookbook name bluepill|
-   * - :doc:`lwrp_chef_handler`
+   * - :doc:`chef_handler </lwrp_chef_handler>`
      - |cookbook name chef_handler|
-   * - :doc:`lwrp_daemontools`
+   * - :doc:`daemontools </lwrp_daemontools>`
      - |cookbook name daemontools|
-   * - :doc:`lwrp_djbdns`
+   * - :doc:`djbdns </lwrp_djbdns>`
      - |cookbook name djbdns|
-   * - :doc:`lwrp_dmg`
+   * - :doc:`dmg </lwrp_dmg>`
      - |cookbook name dmg|
-   * - :doc:`lwrp_dynect`
+   * - :doc:`dynect </lwrp_dynect>`
      - |cookbook name dynect|
-   * - :doc:`lwrp_firewall`
+   * - :doc:`firewall </lwrp_firewall>`
      - |cookbook name firewall|
-   * - :doc:`lwrp_freebsd`
+   * - :doc:`freebsd </lwrp_freebsd>`
      - |cookbook name freebsd|
-   * - :doc:`lwrp_gunicorn`
+   * - :doc:`gunicorn </lwrp_gunicorn>`
      - |cookbook name gunicorn|
-   * - :doc:`lwrp_homebrew`
+   * - :doc:`homebrew </lwrp_homebrew>`
      - |cookbook name homebrew|
-   * - :doc:`lwrp_iis`
+   * - :doc:`iis </lwrp_iis>`
      - |cookbook name iis|
-   * - :doc:`lwrp_maven`
+   * - :doc:`maven </lwrp_maven>`
      - |cookbook name maven|
-   * - :doc:`lwrp_mysql`
+   * - :doc:`mysql </lwrp_mysql>`
      - |cookbook name mysql|
-   * - :doc:`lwrp_nagios`
+   * - :doc:`nagios </lwrp_nagios>`
      - |cookbook name nagios|
-   * - :doc:`lwrp_pacman`
+   * - :doc:`pacman </lwrp_pacman>`
      - |cookbook name pacman|
-   * - :doc:`lwrp_php`
+   * - :doc:`php </lwrp_php>`
      - |cookbook name php|
-   * - :doc:`lwrp_powershell`
+   * - :doc:`powershell </lwrp_powershell>`
      - |cookbook name powershell|
-   * - :doc:`lwrp_python`
+   * - :doc:`python </lwrp_python>`
      - |cookbook name python|
-   * - :doc:`lwrp_rabbitmq`
+   * - :doc:`rabbitmq </lwrp_rabbitmq>`
      - |cookbook name rabbitmq|
-   * - :doc:`lwrp_riak`
+   * - :doc:`riak </lwrp_riak>`
      - |cookbook name riak|
-   * - :doc:`lwrp_samba`
+   * - :doc:`samba </lwrp_samba>`
      - |cookbook name samba|
-   * - :doc:`lwrp_sudo`
+   * - :doc:`sudo </lwrp_sudo>`
      - |cookbook name sudo|
-   * - :doc:`lwrp_supervisor`
+   * - :doc:`supervisor </lwrp_supervisor>`
      - |cookbook name supervisor|
-   * - :doc:`lwrp_transmission`
+   * - :doc:`transmission </lwrp_transmission>`
      - |cookbook name transmission|
-   * - :doc:`lwrp_users`
+   * - :doc:`users </lwrp_users>`
      - |cookbook name users|
-   * - :doc:`lwrp_webpi`
+   * - :doc:`webpi </lwrp_webpi>`
      - |cookbook name webpi|
-   * - :doc:`lwrp_windows`
+   * - :doc:`windows </lwrp_windows>`
      - |cookbook name windows|
-   * - :doc:`lwrp_yum`
+   * - :doc:`yum </lwrp_yum>`
      - |cookbook name yum|
-   * - :doc:`lwrp_zenoss`
+   * - :doc:`zenoss </lwrp_zenoss>`
      - |cookbook name zenoss|
 
 .. toctree::
    :hidden:
+
+   lwrp_common_inline_compile
 
    lwrp_apt
    lwrp_aws

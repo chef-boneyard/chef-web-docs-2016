@@ -10,12 +10,12 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``cluster_name``
-     - The name of the cluster.
+     - |name cluster|
    * - ``cluster_members``
      - |cluster_members lwrp riak_cluster|
    * - ``node_name``
      - |cluster_name lwrp riak_cluster|
    * - ``timeout``
-     - |timeout lwrp name_of_resource|
+     - |timeout lwrp riak_cluster|
    * - ``riak_admin_path``
      - |riak_admin_path lwrp riak_cluster|

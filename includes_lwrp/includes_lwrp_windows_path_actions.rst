@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - Use to add an item to a system path.
+     - |lwrp action add windows_path|
    * - ``:remove``
-     - Use to remove an item from a system path.
+     - |lwrp action remove windows_path|

@@ -5,7 +5,7 @@ The |knife rb|, |organization pem|, and |user pem| files must be moved to the |c
 
 To move files to the |chef repo hidden| directory:
 
-1. In a command window, enter each of the following:
+#. In a command window, enter each of the following:
 
    .. code-block:: bash
 
@@ -25,5 +25,5 @@ To move files to the |chef repo hidden| directory:
 
    where ``/path/to/`` represents the path to the location in which these three files were placed after they were downloaded.
 
-3. Verify that the files are in the |chef repo hidden| folder.
+#. Verify that the files are in the |chef repo hidden| folder.
 
