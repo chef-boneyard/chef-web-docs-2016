@@ -80,8 +80,8 @@ The following example shows part of a |knife| plugin named ``knife windows``:
            :description => "The attribute to use for opening the connection - default is fqdn",
            :default => "fqdn"
    
-         ... # other options, as needed
-   
+         ... # more options
+      
          def session
            session_opts = {}
            session_opts[:logger] = Chef::Log.logger if Chef::Log.level == :debug
@@ -102,7 +102,7 @@ The following example shows part of a |knife| plugin named ``knife windows``:
    
          end
    
-         ...
+         ... # more def blocks
    
        end
      end
