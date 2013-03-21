@@ -110,13 +110,9 @@ The following example shows part of a |knife| plugin named ``knife windows``:
 
 Take a look at all of the code for this plugin on |github|: https://github.com/opscode/knife-windows/blob/master/lib/chef/knife/winrm.rb.
 
+The following example takes a list of tags that are specified when a virtual server is created on |amazon ec2| and turns them into an array:
 
+.. code-block:: ruby
 
+   :proc => Proc.new { |tags| tags.split(',') }
 
-
-:proc => Proc.new
-
-
- :proc => Proc.new { |tags| tags.split(',') }
-
-This example will take the tags blah and turn it into an array.
