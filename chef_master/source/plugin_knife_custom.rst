@@ -2,6 +2,8 @@
 Custom Knife Plugins
 =====================================================
 
+.. include:: ../../includes_knife/includes_knife_plugin.rst
+
 .. include:: ../../includes_knife/includes_knife_plugin_custom.rst
 
 Syntax
