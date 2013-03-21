@@ -80,3 +80,4 @@ or just ``knife example`` to return:
 .. code-block:: bash
 
    I am just a boring example.
+
