@@ -36,6 +36,10 @@ Arguments
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_plugin_custom_syntax_arguments.rst
 
+|knife rb| Settings
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_plugin_custom_syntax_settings.rst
+
 Search
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_plugin_custom_syntax_search.rst
