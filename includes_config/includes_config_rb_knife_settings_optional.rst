@@ -10,16 +10,16 @@ In addition to the default settings in the |knife rb| file, there are other sett
 
 In all cases, a value passed via the command line will override any value in the |knife rb| file and a value in the |knife rb| file will override any default value. 
 
-Before adding any of the following settings to a |knife rb| file:
+Before adding any settings to the |knife rb| file:
 
-* Verify these settings by reviewing the documentation for the |knife| subcommands and/or |knife| plugins
+* Verify the settings by reviewing the documentation for the |knife| subcommands and/or |knife| plugins
 * Verify the use case(s) your organization has for adding them
 
 Also note that:
 
-* Custom plugins can be configured to use the same settings as the core |knife| subcommands.
-* Many of these settings are used by more than one subcommand and/or plugin.
-* Some of these settings are only included in the following list only because |knife| checks for a value in the |knife rb| file when it runs.
+* Custom plugins can be configured to use the same settings as the core |knife| subcommands
+* Many of these settings are used by more than one subcommand and/or plugin
+* Some of the settings are included only because |knife| checks for a value in the |knife rb| file
 
 To add settings to the |knife rb| file, use the following syntax:
 
