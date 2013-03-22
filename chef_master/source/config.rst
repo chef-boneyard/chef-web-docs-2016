@@ -33,6 +33,7 @@ About Configuration Files
    config_rb_chef_server
    config_rb_client
    config_rb_knife
+   config_rb_knife_optional_settings
    config_rb_metadata
    config_rb_server
    config_rb_solo
