@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-21 17:35\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_cookbook_recipes_data_bags.rst:34
+# 9f763fb2bb4d474ca067149d27b5918f
+msgid "Use Data Bags in a Recipe"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag.rst:4
+# 8a716b3347454a7cb1298e8f6b4d793c
+msgid "|data bag description| A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords)."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst:4
+# 80107308db31409083011f8ec28c2f31
+msgid "The contents of a data bag can be loaded into a recipe. For example, a data bag named \"apps\" and a data bag item named \"my_app\":"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst:13
+# cb74ec01d01a4af8a47e932375239136
+msgid "can be accessed in a recipe, like this:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst:19
+# 166b3524a38f411b895b89abad46350c
+msgid "The data bag item's keys and values can be accessed with a |ruby| hash:"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_data_bags.rst:41
+# 3e0a7977f88840de9e74f8e474993eba
+msgid "Secret Keys"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst:5
+# e6db76644a064a159c8c895230de45c7
+msgid "An encrypted data bag requires a secret key. |open ssl| can be used to generate a secret key with the following syntax:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst:11
+# f46b868173b8480c95a10124531e4100
+msgid "where ``encrypted_data_bag_secret`` is the name of the file which contains the secret key. For example, to create a secret key named \"secret_key\":"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst:17
+# 0bb6d1e007b7462eb01da160bd6fb808
+msgid "and then to use it to encrypt a data bag item named \"passwords\" located in a data bag named \"production\":"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst:23
+# 9e01b19e42f442a9a64cbf5e2571dd64
+msgid "This will open the |json| editor:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst:33
+# bb27e29182dc474d9ebc03445fdd6732
+msgid "To view the data bag item without decryption, enter the following:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst:39
+#: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst:53
+# 06ff7dd143a54dc9acea28c433f5f277
+# 674f3d5ec4b341c0a9dcae1e7d6774e6
+msgid "to return something similar to:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst:47
+# 8e5f836b37f24f8ba0201c9211e9ab20
+msgid "and then to view the same data bag item, but with decryption:"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_data_bags.rst:45
+# 9484cc2506224fbaae2e60a1148f82bd
+msgid "Store encryption keys on nodes"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_store_on_nodes.rst:4
+# ddc47242ccb7478ba677edd8ea6d715a
+msgid "An encryption key can also be stored in an alternate file on the nodes that need it and specify the path location to the file inside an attribute; however, ``EncryptedDataBagItem.load`` expects to see the actual secret as the third argument, rather than a path to the secret file. In this case, you can use ``EncryptedDataBagItem.load_secret`` to slurp the secret file contents and then pass them:"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_data_bags.rst:49
+# 1f11d74c397c412e917802a621933172
+msgid "Example"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_example.rst:4
+# 81d48becede74d91adabf4f38b48f702
+msgid "To demonstrate the use of encrypted data bags on a node, we'll start by copying the ``secret_key`` file to an example node using ``scp`` and moving it to ``/etc/chef/encrypted_data_bag_secret``:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_example.rst:12
+# b6c87dcdcc2945a4876a3771fb7329bf
+msgid "The ``knife bootstrap`` sub-command supports the ``encrypted_data_bag_secret`` setting in |knife rb|. You will want to add this line:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_example.rst:18
+# 4453c01fbde8441a9507bba8ae4aaed1
+msgid "And change ``/path/to/your/data_bag_key`` to the location of where the data bag key is located. When you run knife bootstrap afterwards it automatically adds this line to the |client rb| for the node you are bootstrapping and copies the key over."
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_example.rst:20
+# 1310e4f97ca74021828649709d851d46
+msgid "Next, we'll create a recipe that will log the decrypted values for demonstration purposes (if these were real secrets, you would want to avoid logging them). Use |knife| and run the following:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_example.rst:26
+# e8f3bddf57384e599b3c48d76a3f831d
+msgid "Then, edit ``cookbooks/edb_demo/recipes/default.rb`` so that it contains the following:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_example.rst:35
+# c8c032d2b363418f8789681f87511c78
+msgid "Finally, upload the cookbook and run |chef client| on the node. You should see something like this:"
+msgstr ""
+
+#: ../../includes_data_bag/includes_data_bag_encryption_example.rst:52
+# c60daf753cb14f4cb76505aa2cfeff21
+msgid "As you can see, the recipe was able to decrypt the values in the encrypted data bag. It did so by using the shared secret located in the default location of ``/etc/chef/encrypted_data_bag_secret``."
+msgstr ""
+
