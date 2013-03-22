@@ -44,11 +44,6 @@ All lightweight resources share the same set of common functionality:
    * - :doc:`essentials_cookbook_lwrp_resources_common_relative_paths`
      - The environment home relative path can be set in a lightweight resource.
 
-   * - :doc:`essentials_cookbook_lwrp_resources_common_relative_paths`
-     - The environment home relative path can be set in a lightweight resource.
-
-   * - :doc:`essentials_cookbook_lwrp_resources_common_relative_paths`
-     - The environment home relative path can be set in a lightweight resource.
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider.rst
 

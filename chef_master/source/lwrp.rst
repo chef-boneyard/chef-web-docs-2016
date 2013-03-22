@@ -2,9 +2,44 @@
 About Lightweight Resources
 =====================================================
 
-A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state.
+.. A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state.
 
-A lightweight resource is similar to a resource in that it can have actions, attributes, conditions, notifications, and relative paths. A lightweight resource (and any associated lightweight provider) has its own file location, which is a sub-directory within a cookbook. In addition, a lightweight resource can be run during the resource compilation phase. Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`, and learn how to use the ones that are found in cookbooks maintained by |opscode| by clicking one of the links below:
+.. A lightweight resource is similar to a resource in that it can have actions, attributes, conditions, notifications, and relative paths. A lightweight resource (and any associated lightweight provider) has its own file location, which is a sub-directory within a cookbook. In addition, a lightweight resource can be run during the resource compilation phase. Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`, and learn how to use the ones that are found in cookbooks maintained by |opscode| by clicking one of the links below:
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider.rst
+
+Common Functionality
+=====================================================
+All lightweight resources (and resources!) have common functionality:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Method
+     - Description
+   * - :doc:`essentials_cookbook_lwrp_resources_syntax`
+     - A lightweight resource is an abstract interface that specifies one (or more) actions that can be taken, one (or more) attributes, and then for each attribute a validation rule that defines how each attribute can be applied.
+   * - :doc:`essentials_cookbook_lwrp_file_locations`
+     - Lightweight resources and providers are loaded from files that are saved in cookbook sub-directories.
+   * - :doc:`essentials_cookbook_lwrp_resources_common_actions`
+     - Use the ``:nothing`` action to do nothing.
+   * - :doc:`essentials_cookbook_lwrp_resources_common_attributes`
+     - Attributes are available for timeouts, to set the current working directory, specify environment variables, groups, and users.
+   * - :doc:`essentials_cookbook_lwrp_resources_common_conditionals`
+     - A conditional execution can be used to put additional guards around certain resources so that they are only run when the condition is met.
+   * - :doc:`lwrp_common_inline_compile`
+     - Execute a lightweight resource as part of a self-contained |chef| run during resource compilation.
+   * - :doc:`essentials_cookbook_lwrp_resources_common_notifications`
+     - Lightweight resources can notify each other to take certain actions.
+   * - :doc:`essentials_cookbook_lwrp_resources_common_relative_paths`
+     - The environment home relative path can be set in a lightweight resource.
+
+|opscode|-maintained
+=====================================================
+Custom resources and providers can also be created using the |lwrp| DSL. |opscode| provides several cookbooks that define some commonly used |lwrp|. To use the lightweight resources provided by |opscode| the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.
 
 .. list-table::
    :widths: 150 450
@@ -74,6 +109,8 @@ A lightweight resource is similar to a resource in that it can have actions, att
      - |cookbook name yum|
    * - :doc:`zenoss </lwrp_zenoss>`
      - |cookbook name zenoss|
+
+
 
 .. toctree::
    :hidden:
