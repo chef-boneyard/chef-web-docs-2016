@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-In addition to the default settings in the |knife rb| file, there are other settings that can be added. The behavior of |knife| when a command is run is to:
+In addition to the default settings in the |knife rb| file, there are other settings that can be added. When a command is run, |knife| will:
 
 #. Use a value passed via the command-line
 #. Use a value contained in the |knife rb| file
