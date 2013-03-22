@@ -16,8 +16,6 @@ About Attribute Files
      - When |chef| loads cookbook attribute files, it does so in alphabetical order for all the cookbooks.
    * - :doc:`essentials_cookbook_attribute_files_accessor_methods`
      - Attribute accessor methods are automatically created and the method invocation can be used interchangeably with the keys.
-   * - :doc:`essentials_cookbook_attribute_files_reload`
-     - Attributes sometimes depend on actions taken from within recipes, so it may be necessary to reload a given attribute from within a recipe.
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_when_to_use.rst
 

@@ -22,10 +22,6 @@ Attribute Accessor Methods
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
 
-Reloading Attribute Files From Recipes
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_reload_from_recipe.rst
-
 Types
 =====================================================
 .. include:: ../../includes_node/includes_node_attribute_type.rst
