@@ -1,17 +1,16 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Attributes sometimes depend on actions taken from within recipes, so it may be necessary to reload a given attribute from within a recipe. For example: if you have an attribute that reads firewall rules, and a recipe that installs a firewall package, the firewall attributes will not be set the first time you execute the cookbook. Because the ``include_attribute`` is not available from inside recipes, you will need to manually reload your ``firewall::default attribute`` from recipes by using code similar to the following:
+Attributes sometimes depend on actions taken from within recipes, so it may be necessary to reload a given attribute from within a recipe. For example:
 
 .. code-block:: ruby
-
-   package 'iptables' do
-     notifies :create, 'ruby_block[try_firewall_again]', :immediately
-   end
    
-   ruby_block 'try_firewall_again' do
+   ruby_block 'some_code' do
      block do
-       node.load_attribute_by_short_filename('default', 'firewall')
+       node.from_file(run_context.resolve_attribute("COOKBOOK_NAME", "ATTR_FILE"))
      end
      action :nothing
    end
+
+
+
