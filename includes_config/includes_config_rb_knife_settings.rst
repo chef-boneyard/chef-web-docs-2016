@@ -53,7 +53,7 @@ This configuration file has the following settings:
  
           http_proxy "http://proxy.vmware.com:3128"
    * - ``node_name``
-     - |node_name| This is typically also the same name as the computer from which |knife| is run. This is typically also the same name as the computer from which |knife| is run. For example:
+     - |node_name| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
  
           node_name "jtimberman2012"
