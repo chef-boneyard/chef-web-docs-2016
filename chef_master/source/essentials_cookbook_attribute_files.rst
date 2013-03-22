@@ -44,7 +44,6 @@ About Attribute Files
 
    essentials_cookbook_attribute_files_accessor_methods
    essentials_cookbook_attribute_files_ordering
-   essentials_cookbook_attribute_files_reload
    essentials_cookbook_attribute_files_attribute_types
    essentials_cookbook_attribute_files_attribute_persistence
    essentials_cookbook_attribute_files_attribute_precedence
