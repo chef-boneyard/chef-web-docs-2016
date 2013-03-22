@@ -2,11 +2,9 @@
 About Lightweight Resources
 =====================================================
 
-A :doc:`lightweight resource </lwrp>` is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state.
+A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state.
 
-A lightweight resource is similar to a resource in that it can have :doc:`actions </resource_common_actions>`, :doc:`attributes </resource_common_attributes>`, :doc:`conditions </resource_common_conditionals>`, :doc:`notifications </resource_common_notifications>`, and :doc:`relative paths </resource_common_relative_paths>`. A lightweight resource (and any associated lightweight provider) has its own :doc:`file location </essentials_cookbook_lwrp_file_locations>`, which is a sub-directory within a cookbook. In addition, a lightweight resource can be run during the :doc:`resource compilation </lwrp_common_inline_compile>` phase.  
-
-There are many lightweight resources that are found in cookbooks maintained by |opscode|:
+A lightweight resource is similar to a resource in that it can have actions, attributes, conditions, notifications, and relative paths. A lightweight resource (and any associated lightweight provider) has its own file location, which is a sub-directory within a cookbook. In addition, a lightweight resource can be run during the resource compilation phase. Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`, and learn how to use the ones that are found in cookbooks maintained by |opscode| by clicking one of the links below:
 
 .. list-table::
    :widths: 150 450
