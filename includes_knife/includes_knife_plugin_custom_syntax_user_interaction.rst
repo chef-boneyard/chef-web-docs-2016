@@ -17,7 +17,18 @@ The ``ui`` object provides a set of methods that can be used to define user inte
    * - ``ui.color(string, *colors)``
      - Use to specify a color.
    * - ``ui.color?()``
-     - Indicates that colored output should be used. When output is not to a terminal, colored output is never used.
+     - Indicates that colored output should be used. When output is not to a terminal, colored output is never used. For example (from the ``knife rackspace server list`` subcommand in the |opscode|-maintained |knife| plugin):
+       ::
+ 
+           server_list = [
+             ui.color('Instance ID', :bold),
+             ui.color('Name', :bold),
+             ui.color('Public IP', :bold),
+             ui.color('Private IP', :bold),
+             ui.color('Flavor', :bold),
+             ui.color('Image', :bold),
+             ui.color('State', :bold)
+           ]
    * - ``ui.confirm(question, append_instructions=true)``
      - Use to as a Y/N question. If the user responds with ``N``, immediately exit with status code 3.
    * - ``ui.edit_data(data, parse_output=true)``
