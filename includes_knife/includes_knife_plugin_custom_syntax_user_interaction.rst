@@ -44,7 +44,7 @@ The ``ui`` object provides a set of methods that can be used to define user inte
             puts "#{ui.color("SSH Key", :cyan)}: #{server.key_name}"
           print "\n#{ui.color("Waiting for server", :magenta)}"
    * - ``ui.confirm(question, append_instructions=true)``
-     - Use to as a Y/N question. If the user responds with ``N``, immediately exit with status code 3.
+     - Use to ask a Y/N question. If the user responds with ``N``, immediately exit with status code 3.
    * - ``ui.edit_data(data, parse_output=true)``
      - Use to edit data. This opens the |chef editor|.
    * - ``ui.edit_object(klass, name)``
