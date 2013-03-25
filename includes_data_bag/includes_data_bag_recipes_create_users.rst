@@ -11,8 +11,8 @@
    admins.each do |login|
      # This causes a round-trip to the server for each admin in the data bag
      admin = data_bag_item('admins', login)
-     home = "/home/#{login}"
-      
+     homedir = "/home/#{login}"
+   
      # for each admin in the data bag, make a user resource
      # to ensure they exist
      user(login) do
@@ -21,12 +21,12 @@
        shell     admin['shell']
        comment   admin['comment']
    
-       home      home
+       homedir   home
        supports  :manage_home => true
      end
-    
+   
    end
-    
+   
    # Create an "admins" group on the system
    # You might use this group in the /etc/sudoers file
    # to provide sudo access to the admins
