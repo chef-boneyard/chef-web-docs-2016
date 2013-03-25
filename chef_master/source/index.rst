@@ -51,7 +51,7 @@ The Chef Server
 
 **Manage:** :doc:`Hosted Chef </manage_server_hosted>`
 
-**Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solo.rb </config_rb_solo>` | :doc:`solr.rb </config_rb_solr>`
+**Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solr.rb </config_rb_solr>`
 
 **Tools:** :doc:`orgmapper </orgmapper>` | :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>`
 
@@ -66,7 +66,7 @@ The Nodes
 
 **Configure:** :doc:`Exception and Report Handlers </essentials_handlers>`
 
-**Settings:** :doc:`client.rb </config_rb_client>`
+**Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
 
 **Tools:** :doc:`chef-client (executable) </chef_client>` | :doc:`chef-solo (executable) </chef_solo>` | :doc:`why-run </essentials_nodes_why_run>`
 
