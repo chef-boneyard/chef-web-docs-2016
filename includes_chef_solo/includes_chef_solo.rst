@@ -11,4 +11,3 @@
 * Authentication or authorization
 * Persistent attributes
 
-|chef solo| is configured using the `chef-solo (executable) <http://docs.opscode.com/ctl_chef_solo.html>`_.
