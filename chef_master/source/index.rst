@@ -60,7 +60,7 @@ The Chef Server
 
 The Nodes 
 =====================================================
-**The Basics:** :doc:`About Nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The Chef Run </essentials_nodes_chef_run>` | :doc:`Ohai </ohai>`
+**The Basics:** :doc:`About Nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The Chef Run </essentials_nodes_chef_run>` | :doc:`Ohai </ohai>` | :doc:`Chef Solo </chef_solo>`
 
 **Install:** :doc:`Install Chef on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>`
 
@@ -68,7 +68,7 @@ The Nodes
 
 **Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
 
-**Tools:** :doc:`chef-client (executable) </chef_client>` | :doc:`chef-solo (executable) </chef_solo>` | :doc:`why-run </essentials_nodes_why_run>`
+**Tools:** :doc:`chef-client (executable) </chef_client>` | :doc:`chef-solo (executable) </ctl_chef_solo>` | :doc:`why-run </essentials_nodes_why_run>`
 
 
 Cookbooks
@@ -127,6 +127,7 @@ Cookbooks
    orgmapper
    ctl_chef_server
    ctl_private_chef
+   ctl_chef_solo
    server_types
    server_components
 
