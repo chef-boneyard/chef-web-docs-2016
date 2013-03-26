@@ -18,6 +18,8 @@ About Ohai
      - There are many plugins available for |ohai| that are authored by members of the |chef| community.
    * - :doc:`ohai_install`
      - |ohai| is a requirement for |chef| and is installed whenever (and wherever) |chef| is installed. |ohai| can also be installed separately from |chef|.
+   * - :doc:`ohai_plugins`
+     - Create a custom |ohai| plugin or modify an existing one.
 
 .. toctree::
    :hidden:
@@ -25,7 +27,7 @@ About Ohai
    ohai_automatic_attributes
    ohai_attributes_list
    ohai_install
-
+   ohai_plugins
 
 
 
