@@ -48,6 +48,22 @@ The following example replaces the previous example:
 
    node.default.my_attribute = "value"
 
+Knife Output Changes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Previously, |knife| was adding the ID field to search results for node attributes. With |chef 11|, |knife| groups search results by the name of the node. For example:
+
+.. code-block:: bash
+
+   environment > knife search roles:role_name -a attribute_name
+   2 items found
+   
+   i-a82555d2:
+     attribute_name: ec2-54-14-193-994.compute-9.amazonaws.com
+   
+   i-75555514:
+     attribute_name: ec2-994-79-96-9.compute-9.amazonaws.com
+
+This may require that search queries be updated for |chef 11|.
 
 Role and Environment Attribute Changes
 -----------------------------------------------------
