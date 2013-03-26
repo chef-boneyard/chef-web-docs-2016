@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following assumptions exist when |chef private| is deployed in a High Availability topology:
+The following assumptions exist when |chef private| is deployed in a |ha| topology:
 
 * The back-end processes run on two hosts: ``BE1`` and ``BE2``. ``BE1`` is the |drbd| primary and |chef private| master; ``BE2`` is the |drbd| secondary and the |chef private| backup
 * The back-end uses |keepalived| and a dedicated network interface for heartbeat

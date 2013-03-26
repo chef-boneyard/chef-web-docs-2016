@@ -16,12 +16,15 @@ About Ohai
      - Some attributes are re-written by |ohai| during every |chef| run.
    * - :doc:`community_plugin_ohai`
      - There are many plugins available for |ohai| that are authored by members of the |chef| community.
+   * - :doc:`ohai_install`
+     - |ohai| is a requirement for |chef| and is installed whenever (and wherever) |chef| is installed. |ohai| can also be installed separately from |chef|.
 
 .. toctree::
    :hidden:
 
    ohai_automatic_attributes
    ohai_attributes_list
+   ohai_install
 
 
 
