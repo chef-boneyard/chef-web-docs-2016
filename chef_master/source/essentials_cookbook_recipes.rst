@@ -70,3 +70,4 @@ About Recipes
    essentials_cookbook_recipes_attribute_automatic
    essentials_cookbook_recipes_attribute_notation
    essentials_cookbook_recipes_attribute_methods
+   essentials_cookbook_recipes_environment_variables
