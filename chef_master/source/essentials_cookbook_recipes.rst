@@ -49,7 +49,8 @@ About Recipes
      - Attributes are a special key-value store called a mash within the context of the |ruby| DSL.
    * - :doc:`essentials_cookbook_recipes_attribute_methods`
      - Methods are available to set attribute precedence in a cookbook.
-
+   * - :doc:`essentials_cookbook_recipes_environment_variables`
+     - |unix| environment variables can be used in recipes.
 
 .. toctree::
    :hidden:
