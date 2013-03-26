@@ -9,11 +9,11 @@ chef-client
 .. note:: .. include:: ../../includes_config/includes_config_rb_client.rst
 
 Options
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_options.rst
 
 Examples
------------------------------------------------------
+=====================================================
 
 **Start a Chef run when the chef-client is running as a daemon**
 

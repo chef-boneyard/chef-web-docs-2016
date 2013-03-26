@@ -125,6 +125,7 @@ Cookbooks
    dsl_recipe
    ohai
    orgmapper
+   ctl_chef_client
    ctl_chef_server
    ctl_private_chef
    ctl_chef_solo

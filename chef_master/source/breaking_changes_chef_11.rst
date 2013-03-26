@@ -50,18 +50,47 @@ The following example replaces the previous example:
 
 Knife Output Changes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Previously, |knife| was adding the ID field to search results for node attributes. With |chef 11|, |knife| groups search results by the name of the node. For example:
+Previously, |knife| was adding the ID field to search results for node attributes. With |chef 11|, |knife| groups search results by the name of the node. For example, the old output looks something like:
 
 .. code-block:: bash
 
-   environment > knife search roles:role_name -a attribute_name
+   $ knife search roles:role_name -a ipaddress -fj
    2 items found
-   
-   i-a82555d2:
-     attribute_name: ec2-54-14-193-994.compute-9.amazonaws.com
-   
-   i-75555514:
-     attribute_name: ec2-994-79-96-9.compute-9.amazonaws.com
+   {
+     "results": 1,
+     "rows": [
+       {
+         "ipaddress": "ec2-54-14-193-994.compute-9.amazonaws.com",
+         "id": "i-a82555d2"
+       }
+       {
+         "ipaddress": "ec2-994-79-96-9.compute-9.amazonaws.com",
+         "id": "i-75555514"
+       }
+    ]
+   }
+
+and the new output looks something like:
+
+.. code-block:: bash
+
+   $ knife search roles:role_name -a ipaddress -fj
+   2 items found
+   {
+     "results": 1,
+     "rows": [
+       {
+         "i-a82555d2": {
+           "ipaddress": "ec2-54-14-193-994.compute-9.amazonaws.com"
+         }
+       }
+       {
+         "i-75555514": {
+           "ipaddress": "ec2-994-79-96-9.compute-9.amazonaws.com"
+         }
+       }
+     ]
+   }
 
 This may require that search queries be updated for |chef 11|.
 

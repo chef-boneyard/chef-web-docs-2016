@@ -28,4 +28,4 @@ About Resources and Providers
    essentials_cookbook_resources_platform
    essentials_cookbook_resources_providers
    essentials_cookbook_resources_syntax
-
+   essentials_cookbook_resources_first_run
