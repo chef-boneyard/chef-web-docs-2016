@@ -6,7 +6,7 @@ To install |ohai| from |git|, run the following command:
 
    $ clone git repository
 
-or install the |ruby gem| with |rake|:
+or install from |rubygems| with |rake|:
 
 .. code-block:: bash
 

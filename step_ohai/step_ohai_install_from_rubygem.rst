@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |ohai| from |ruby gems|, do the following:
+To install |ohai| from |rubygems|, do the following:
 
 #. Add the |gem| server to the local resources:
 
