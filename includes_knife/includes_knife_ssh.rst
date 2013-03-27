@@ -59,14 +59,14 @@ To upgrade all nodes, enter:
 .. code-block:: bash
 
    $ knife ssh name:* "sudo aptitude upgrade -y"
-   
+
 To find the uptime of all of your Web servers running |ubuntu| on the |amazon ec2| platform, enter:
 
 .. code-block:: bash
 
    $ knife ssh "role:web" "uptime" -x ubuntu -a ec2.public_hostname
 
-to return:
+to return something like:
 
 .. code-block:: bash
 
@@ -82,7 +82,7 @@ To force a |chef client| run on all of your Web servers running |ubuntu| on the 
 
    $ knife ssh "role:web" "sudo chef-client" -x ubuntu -a ec2.public_hostname
    
-to return:
+to return something like:
 
 .. code-block:: bash
 

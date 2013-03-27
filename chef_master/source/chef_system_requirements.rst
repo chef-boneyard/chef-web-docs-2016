@@ -125,9 +125,6 @@ Open Source |chef server|
 -----------------------------------------------------
 Before installing the open source |chef server|, ensure that each machine has the following installed and configured properly:
 
-* **xxxxx** --- xxxxx.
-* **xxxxx** --- xxxxx.
-* **xxxxx** --- xxxxx.
 * **Cores** --- 4; 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
 * **RAM** --- 4.0 GB
 * **Free disk space** --- 5.0 GB of free disk space in ``/opt``; 5.0 GB of free disk space in ``/var``

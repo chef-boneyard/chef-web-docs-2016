@@ -28,7 +28,11 @@ Chef Server 11.x
 
 **Monitor:** Database | Cookbooks | Log Files | Services | Ports | chef-pedant | Nagios | Graphite
 
+**Tools:** :doc:`orgmapper </orgmapper>`
+
 **Reference:** :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
+
+
 
 
 
@@ -73,7 +77,7 @@ Private Chef 1.x.x
    private_chef_1x_install
    private_chef_1x_admin
    private_chef_1x_support
-
+   orgmapper
 
 
 
