@@ -14,13 +14,13 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-A KEY``, ``--aws-access-key-id KEY``
-   |aws-access-key-id|
+   |aws_access_key_id|
 
 ``-e``, ``--edit``
    |edit|
 
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
-   |aws-secret-access-key|
+   |aws_access_key_secret|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|

@@ -24,4 +24,4 @@ This lightweight resource provider has the following attributes:
    * - ``password``
      - |password lwrp dynect_rr|
    * - ``zone``
-     - |zone lwrp dynect_rr|
+     - |dns_zone|

@@ -17,11 +17,11 @@ The following |windows remote management| configuration settings should be updat
    * - Setting
      - Description
    * - ``MaxMemoryPerShellMB``
-     - |chef| and |ohai| require more memory than the default setting allows. Increase this value to ``300MB``.
+     - |winrm_max_memory_per_shell_mb|
    * - ``MaxTimeoutms``
-     - A bootstrap command can take longer than allowed by the default setting. Increase this value to ``1800000`` (30 minutes). 
+     - |winrm_max_timeouts|
    * - ``AllowUnencrypted``
-     - Set this value to ``true`` for development and testing purposes.
+     - |winrm_allow_unencrypted|
    * - ``Basic``
-     - Set this value to ``true`` for development and testing purposes. The ``knife windows`` subcommand supports |kerberos| and |windows basic| authentication schemes.
+     - |winrm_basic|
 

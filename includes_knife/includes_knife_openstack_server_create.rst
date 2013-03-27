@@ -66,7 +66,7 @@ This argument has the following options:
    |ssh-user|
 
 ``-Z ZONE"``, ``--availability-zone ZONE``
-   |availability-zone openstack|
+   |availability_zone openstack|
 
 
 

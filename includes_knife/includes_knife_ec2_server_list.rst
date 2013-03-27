@@ -12,7 +12,7 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-A KEY``, ``--aws-access-key-id KEY``
-   |aws-access-key-id|
+   |aws_access_key_id|
 
 ``-n``, ``--no-name``
    |no name tags|

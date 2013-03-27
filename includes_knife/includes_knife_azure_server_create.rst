@@ -27,7 +27,7 @@ This argument has the following options:
    |host-name|
 
 ``--host-name HOST_NAME``
-   |azure host name|
+   |azure_host_name|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
@@ -48,7 +48,7 @@ This argument has the following options:
    |os-disk-name|
 
 ``-p FILE_NAME``, ``--azure-mgmt-cert FILE_NAME``
-   |azure-pem-filename|
+   |azure_pem_filename|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
@@ -66,7 +66,7 @@ This argument has the following options:
    |hosted-service-name|
 
 ``-S ID``, ``--azure-subscription-id ID``
-   |azure-subscription-id|
+   |azure_subscription_id|
 
 ``-t PORT_LIST``, ``--tcp-endpoints PORT_LIST``
    |tcp-endpoints|
@@ -78,7 +78,7 @@ This argument has the following options:
    |udp-endpoints|
 
 ``--verify-ssl-cert``
-   |azure verify ssl certificate|
+   |azure_verify_ssl_certificate|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|

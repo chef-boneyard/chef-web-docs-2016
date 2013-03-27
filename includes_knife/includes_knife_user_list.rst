@@ -14,7 +14,7 @@ This argument has the following options:
 This argument has the following options:
 
 ``-w``, ``--with-uri``
-   |with-uri|
+   |with_uri|
 
 **Examples**
 

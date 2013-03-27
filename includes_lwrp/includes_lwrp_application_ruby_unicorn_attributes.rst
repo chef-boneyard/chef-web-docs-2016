@@ -20,6 +20,6 @@ This lightweight resource provider has the following attributes:
    * - ``preload_app``
      - |preload_app lwrp application_ruby|
    * - ``worker_processes``
-     - |worker_processes lwrp application_ruby|
+     - |worker_processes|
    * - ``worker_timeout``
-     - |worker_timeout lwrp application_ruby|
+     - |worker_timeout|

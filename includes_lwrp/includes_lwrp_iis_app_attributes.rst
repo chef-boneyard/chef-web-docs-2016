@@ -10,9 +10,9 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``app_name``
-     - |app_name lwrp iis_app|
+     - |application_name|
    * - ``application_pool``
-     - |application_pool lwrp iis_app|
+     - |application_pool app|
    * - ``path``
      - |path lwrp iis_app|
    * - ``physical_path``

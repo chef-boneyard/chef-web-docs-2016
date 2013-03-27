@@ -10,9 +10,9 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``aws_access_key``
-     - |aws_access_key lwrp aws_resource_tag|
+     - |aws_access_key_username|
    * - ``aws_secret_access_key``
-     - |aws_secret_access_key lwrp aws_resource_tag|
+     - |aws_access_key_password|
    * - ``resource_id``
      - |resource_id lwrp aws_resource_tag|
    * - ``tags``

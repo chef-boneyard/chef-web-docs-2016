@@ -14,9 +14,9 @@ This resource has the following attributes:
    * - ``command``
      - |command resource script|
    * - ``creates``
-     - |creates resource execute|
+     - |creates file_exists|
    * - ``cwd``
-     - |cwd resource execute|
+     - |cwd| Default value: ``nil``.
    * - ``environment``
      - |environment resource execute|
    * - ``flags``

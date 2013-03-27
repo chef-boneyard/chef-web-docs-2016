@@ -12,15 +12,15 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
-   |azure host name|
+   |azure_host_name|
 
 ``-p FILE_NAME``, ``--azure-mgmt-cert FILE_NAME``
-   |azure-pem-filename|
+   |azure_pem_filename|
 
 ``-S ID``, ``--azure-subscription-id ID``
-   |azure-subscription-id|
+   |azure_subscription_id|
 
 ``--verify-ssl-cert``
-   |azure verify ssl certificate|
+   |azure_verify_ssl_certificate|
 
 

@@ -27,10 +27,10 @@ This argument has the following options:
    |manual-list|
 
 ``-p PORT``, ``--winrm-port PORT``
-   |winrm-port|
+   |winrm_port|
 
 ``-P PASSWORD``, ``--winrm-password PASSWORD``
-   |winrm-password|
+   |winrm_password|
 
 ``-R KERBEROS_REALM``, ``--kerberos-realm KERBEROS_REALM``
    |kerberos-realm|
@@ -48,10 +48,10 @@ This argument has the following options:
    |SSH_COMMAND|
 
 ``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
-   |winrm-transport|
+   |winrm_transport|
 
 ``-x USERNAME``, ``--winrm-user USERNAME``
-   |winrm-user|
+   |winrm_user|
 
 **Examples**
 

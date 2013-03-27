@@ -14,9 +14,9 @@ This resource has the following attributes:
    * - ``code``
      - |code resource batch|
    * - ``creates``
-     - |creates resource batch|
+     - |creates file_exists|
    * - ``cwd``
-     - |cwd resource batch|
+     - |cwd run_command|
    * - ``flags``
      - |flags resource batch|
    * - ``group``

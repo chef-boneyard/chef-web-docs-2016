@@ -14,9 +14,9 @@ This lightweight resource provider has the following attributes:
    * - ``code``
      - |code lwrp windows_batch|
    * - ``creates``
-     - |creates lwrp windows_batch|
+     - |creates file_exists|
    * - ``cwd``
-     - |cwd lwrp windows_batch|
+     - |cwd run_command|
    * - ``flags``
      - |flag lwrp windows_batch|
    * - ``group``

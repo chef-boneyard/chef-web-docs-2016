@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``allow_downgrade``
-     - |allow_downgrade resource package|
+     - |allow_downgrade|
    * - ``arch``
      - |arch resource package|
    * - ``flush_cache``

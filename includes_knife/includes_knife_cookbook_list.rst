@@ -15,7 +15,7 @@ This argument has the following options:
    |all cookbooks return|
 
 ``-w``, ``--with-uri``
-   |with-uri|
+   |with_uri|
 
 **Examples**
 

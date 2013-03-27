@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``cwd``
-     - |cwd lwrp djbdns_rr|
+     - |cwd tinydns|
    * - ``fqdn``
      - |fqdn lwrp djbdns_rr|
    * - ``ip``

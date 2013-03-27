@@ -30,13 +30,13 @@ This lightweight resource provider has the following attributes:
    * - ``template``
      - |template lwrp gunicorn_config|
    * - ``worker_class``
-     - The type of workers to use. Default value: ``sync``.
+     - |worker_class| Default value: ``sync``.
    * - ``worker_keepalive``
-     - |worker_max_keepalive lwrp gunicorn_config|
+     - |worker_max_keepalive| Default value: ``2``.
    * - ``worker_max_requests``
-     - |worker_max_requests lwrp gunicorn_config|
+     - |worker_max_requests| Default value: ``0`` (which disables worker restarts).
    * - ``worker_processes``
-     - |worker_processes lwrp gunicorn_config|
+     - |worker_processes| Default value: ``4``.
    * - ``worker_timeout``
-     - |worker_timeout lwrp gunicorn_config|
+     - |worker_kill_restart| Default value: ``60``.
 

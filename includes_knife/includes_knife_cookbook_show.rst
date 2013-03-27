@@ -30,7 +30,7 @@ This argument has the following options:
    |platform-version|
 
 ``-w``, ``--with-uri``
-   |with-uri|
+   |with_uri|
 
 **Examples**
 

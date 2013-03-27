@@ -14,4 +14,4 @@ This lightweight resource provider has the following attributes:
    * - ``server_aliases``
      - |server_aliases lwrp application_ruby_passenger|
    * - ``webapp_template``
-     - |webapp_template lwrp application_ruby_passenger|
+     - |webapp_template| Default value: ``#{application name}.conf.erb``.

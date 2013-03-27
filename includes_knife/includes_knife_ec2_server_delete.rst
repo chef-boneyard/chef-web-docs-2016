@@ -12,10 +12,10 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-A KEY``, ``--aws-access-key-id KEY``
-   |aws-access-key-id|
+   |aws_access_key_id|
 
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
-   |aws-secret-access-key|
+   |aws_access_key_secret|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name purge|

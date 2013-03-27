@@ -12,9 +12,9 @@ This resource has the following attributes:
    * - ``command``
      - |command resource execute|
    * - ``creates``
-     - |creates resource execute|
+     - |creates file_exists| Default value: ``nil``.
    * - ``cwd``
-     - |cwd resource execute|
+     - |cwd run_command| Default value: ``nil``.
    * - ``environment``
      - |environment resource execute|
    * - ``group``

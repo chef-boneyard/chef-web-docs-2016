@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``application_pool``
-     - |application_pool lwrp iis_site|
+     - |application_pool site|
    * - ``bindings``
      - |bindings lwrp iis_site|
    * - ``host_header``

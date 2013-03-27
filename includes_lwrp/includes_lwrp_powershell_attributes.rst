@@ -12,9 +12,9 @@ This lightweight resource provider has the following attributes:
    * - ``command``
      - |command lwrp powershell|
    * - ``creates``
-     - |creates lwrp powershell|
+     - |creates file_exists|
    * - ``cwd``
-     - |cwd lwrp powershell|
+     - |cwd run_command|
    * - ``environment``
      - |environment lwrp powershell|
    * - ``group``

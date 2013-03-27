@@ -63,7 +63,7 @@ This argument has the following options:
    |ssh-user|
 
 ``-Z ZONE``, ``--availability-zone ZONE``
-   |availability-zone eucalyptus|
+   |availability_zone eucalyptus|
 
 
 

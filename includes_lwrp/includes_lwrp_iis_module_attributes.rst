@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``application``
-     - |application lwrp iis_module|
+     - |application_pool app|
    * - ``module_name``
      - |module_name lwrp iis_module|
    * - ``type``

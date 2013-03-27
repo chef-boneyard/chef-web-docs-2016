@@ -10,8 +10,8 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``aws_access_key``
-     - |aws_access_key lwrp aws_elastic_lb|
+     - |aws_access_key_username|
    * - ``aws_secret_access_key``
-     - |aws_secret_access_key lwrp aws_elastic_lb|
+     - |aws_access_key_password|
    * - ``name``
      - Required. |name lwrp aws_elastic_lb|

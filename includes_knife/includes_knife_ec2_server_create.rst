@@ -12,7 +12,7 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-A KEY``, ``--aws-access-key-id KEY``
-   |aws-access-key-id|
+   |aws_access_key_id|
 
 ``-bootstrap-protocol PROTOCOL``
    |bootstrap protocol|
@@ -54,7 +54,7 @@ This argument has the following options:
    |image|
 
 ``-K SECRET``, ``--aws-secret-access-key SECRET``
-   |aws-secret-access-key|
+   |aws_access_key_secret|
 
 ``-N NAME``, ``--node-name NAME``
    |node-name cloud|
@@ -102,7 +102,7 @@ This argument has the following options:
    |ssh-user|
 
 ``-Z ZONE"``, ``--availability-zone ZONE``
-   |availability-zone amazon ec2|
+   |availability_zone amazon_ec2|
 
 **Examples**
 

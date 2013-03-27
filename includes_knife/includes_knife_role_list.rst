@@ -12,7 +12,7 @@ This argument has the following syntax::
 This argument has the following options:
 
 ``-w``, ``--with-uri``
-   |with-uri|
+   |with_uri|
 
 **Examples**
 
