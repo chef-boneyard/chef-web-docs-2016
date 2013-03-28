@@ -10,6 +10,8 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/qr_knife_web.png
 
+.. image:: ../../images/overview_chef_draft_300dpi.png
+
 
 
 
