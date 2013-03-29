@@ -41,11 +41,11 @@ This argument has the following options:
 ``-K SECRET``, ``--hp-secret SECRET``
    |hp-secret|
 
-``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node-name cloud|
+``-N NAME``, ``--node-name NAME``
+   |name_node|
 
 ``--[no-]host-key-verify``
-   |[no-]host-key-verify|
+   |[no-]host-key-verify| Default setting: ``--host-key-verify``.
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|

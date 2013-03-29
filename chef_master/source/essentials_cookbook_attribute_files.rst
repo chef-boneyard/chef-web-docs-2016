@@ -10,7 +10,7 @@ About Attribute Files
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_attribute_files_ordering`
      - When |chef| loads cookbook attribute files, it does so in alphabetical order for all the cookbooks.
@@ -23,7 +23,7 @@ About Attribute Files
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_attribute_files_attribute_types`
      - There are four types of attributes: ``default``, ``normal``, ``override``, and ``automatic``.

@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner resource link|
    * - ``target_file``
-     - |target_file resource link|
+     - |name_link| Default value: ``name``.
    * - ``to``
      - |to resource link|
 

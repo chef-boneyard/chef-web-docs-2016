@@ -27,7 +27,7 @@ This subcommand has the following options:
    |manual-list|
 
 ``--[no-]host-key-verify``
-   |[no-]host-key-verify|
+   |[no-]host-key-verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|

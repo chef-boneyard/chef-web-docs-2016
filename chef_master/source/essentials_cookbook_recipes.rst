@@ -8,7 +8,7 @@ About Recipes
    :widths: 150 450
    :header-rows: 1
 
-   * - Options
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_recipes_data_bags`
      - A data bag can be loaded by a recipe.
@@ -35,7 +35,7 @@ About Recipes
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_recipes_attribute_types`
      - There are four types of attributes: ``default``, ``normal``, ``override``, and ``automatic``.

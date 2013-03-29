@@ -9,7 +9,7 @@ Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
 
-**Key concepts:** :doc:`Workstations </chef_overview_workstation>` **|** :doc:`The Chef Server </chef_overview_server>` **|** :doc:`Nodes </chef_overview_nodes>` **|** :doc:`Cookbooks </chef_overview_cookbooks>` **|** :doc:`Resources and Providers </resource>` **|** :doc:`Knife </knife>`
+**Key concepts:** :doc:`Workstations </chef_overview_workstation>` | :doc:`The Chef Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Resources and Providers </resource>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
@@ -93,7 +93,7 @@ Cookbooks
 
 .. toctree::
    :hidden:
-   
+
    chef_overview
    chef_quick_overview
    community

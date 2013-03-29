@@ -23,11 +23,11 @@ This argument has the following options:
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
 
-``--N NAME``, ``--node-name NAME``
-   |node-name cloud|
+``-N NAME``, ``--node-name NAME``
+   |name_node|
 
 ``--[no-]host-key-verify``
-   |[no-]host-key-verify|
+   |[no-]host-key-verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|

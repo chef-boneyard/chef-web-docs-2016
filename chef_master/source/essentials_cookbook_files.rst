@@ -8,7 +8,7 @@ About Files
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_files_syntax`
      - The |resource cookbook file| resource defines a file distribution.

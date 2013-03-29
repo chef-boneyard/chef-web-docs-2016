@@ -30,10 +30,10 @@ This argument has the following options:
    |public-key-file|
 
 ``-n NETWORK_NAME``, ``--network NETWORK_NAME``
-   |network|
+   |network_name|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node-name cloud|
+   |name_node|
 
 ``-p PROJECT``, ``--project_id PROJECT``
    |project_id|

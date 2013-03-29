@@ -22,9 +22,9 @@ This lightweight resource provider has the following attributes:
    * - ``exitcodes``
      - |exitcodes lwrp supervisor|
    * - ``numprocs``
-     - |numprocs lwrp supervisor|
+     - |number_of_processes|
    * - ``numprocs_start``
-     - |numprocs_start lwrp supervisor|
+     - |number_of_processes_start|
    * - ``priority``
      - |priority lwrp supervisor_fcgi|
    * - ``process_name``

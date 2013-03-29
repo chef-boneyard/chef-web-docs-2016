@@ -39,10 +39,10 @@ This argument has the following options:
    |linode-node-name| 
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name cloud|
+   |name_node|
 
 ``--[no-]host-key-verify``
-   |[no-]host-key-verify|
+   |[no-]host-key-verify| Default setting: ``--host-key-verify``.
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|

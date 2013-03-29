@@ -11,4 +11,4 @@ This subcommand has the following syntax::
 This subcommand has the following options:
 
 ``--recurse``
-   |no recurse delete|
+   |no_recurse_delete| Default: ``--no-recurse``.

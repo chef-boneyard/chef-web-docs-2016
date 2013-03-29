@@ -10,7 +10,7 @@ About Templates
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_templates_requirements`
      - To use a template, it must be added to a recipe and an |erb| template must be added to a cookbook.

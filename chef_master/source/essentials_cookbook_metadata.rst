@@ -8,7 +8,7 @@ About Cookbook Metadata
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`config_rb_metadata`
      - Metadata is stored in a file called |metadata rb| that lives at the top of each cookbook’s directory.

@@ -39,10 +39,10 @@ This argument has the following options:
    |media location|
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name cloud| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
+   |name_node| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
 
 ``--[no-]host-key-verify``
-   |[no-]host-key-verify|
+   |[no-]host-key-verify| Default setting: ``--host-key-verify``.
 
 ``-o DISK_NAME``, ``--os-disk-name DISK_NAME``
    |os-disk-name|

@@ -26,7 +26,7 @@ This lightweight resource provider has the following attributes:
    * - ``loglevel``
      - |loglevel lwrp application_python_gunicorn|
    * - ``max_requests``
-     - |max_requests lwrp application_python_gunicorn|
+     - |worker_max_requests|
    * - ``pidfile``
      - |pidfile lwrp application_python_gunicorn|
    * - ``port``

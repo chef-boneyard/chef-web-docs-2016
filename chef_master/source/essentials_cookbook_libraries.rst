@@ -10,7 +10,7 @@ About Libraries
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_libraries_syntax`
      - All libraries have a similar syntax.

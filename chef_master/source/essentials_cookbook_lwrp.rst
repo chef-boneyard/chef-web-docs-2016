@@ -8,7 +8,7 @@ About Lightweight Resources and Providers
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_lwrp_file_locations`
      - Lightweight resources and providers are loaded from files that are saved in cookbook sub-directories.
@@ -27,7 +27,7 @@ All lightweight resources share the same set of common functionality:
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_lwrp_resources_syntax`
      - A lightweight resource is an abstract interface that specifies one (or more) actions that can be taken, one (or more) attributes, and then for each attribute a validation rule that defines how each attribute can be applied.

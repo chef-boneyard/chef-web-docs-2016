@@ -20,16 +20,16 @@ This resource has the following attributes:
    * - ``inet_addr``
      - |inet_addr resource ifconfig|
    * - ``mask``
-     - |mask resource ifconfig|
+     - |netmask| Default value: ``nil``.
    * - ``metric``
      - |metric resource ifconfig|
    * - ``mtu``
-     - |mtu resource ifconfig|
+     - |maximum_transmission_unit| Default value: ``nil``.
    * - ``network``
-     - |network resource ifconfig|
+     - |network_address| Default value: ``nil``.
    * - ``onboot``
      - |onboot resource ifconfig|
    * - ``onparent``
      - |onparent resource ifconfig|
    * - ``target``
-     - |target resource ifconfig|
+     - |target resource ifconfig| Default value: ``name``.

@@ -18,7 +18,7 @@ This subcommand has the following options:
    |purge knife download|
 
 ``--no-recurse``
-   |no recurse download|
+   |no_recurse_download| Default: ``--recurse``.
 
 ``--force``
    |force knife download|

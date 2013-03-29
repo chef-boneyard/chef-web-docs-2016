@@ -18,7 +18,7 @@ This subcommand has the following options:
    |name status|
 
 ``--no-recurse``
-   |no recurse diff|
+   |no_recurse_diff| Default: ``--recurse``.
 
 **Examples**
 

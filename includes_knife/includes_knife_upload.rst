@@ -18,7 +18,7 @@ This subcommand has the following options:
    |purge knife upload|
 
 ``--recurse``
-   |no recurse upload|
+   |no_recurse_upload| Default: ``--recurse``.
 
 ``--force``
    |force knife upload|

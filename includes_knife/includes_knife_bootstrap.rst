@@ -33,10 +33,10 @@ This subcommand has the following options:
    |json-attributes|
 
 ``-N NAME``, ``--node-name NAME``
-   |node-name cloud|
+   |name_node|
 
 ``--[no-]host-key-verify``
-   |[no-]host-key-verify|
+   |[no-]host-key-verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|

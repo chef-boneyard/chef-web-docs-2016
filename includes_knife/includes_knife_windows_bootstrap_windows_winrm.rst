@@ -20,8 +20,8 @@ This argument has the following options:
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
-``--N NAME``, ``--node-name NAME``
-   |node-name cloud|
+``-N NAME``, ``--node-name NAME``
+   |name_node|
 
 ``--prerelease``
    |prerelease|

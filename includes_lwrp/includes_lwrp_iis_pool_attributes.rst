@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``max_proc``
-     - |max_proc lwrp iis_pool|
+     - |worker_processes|
    * - ``pipeline_mode``
      - |pipeline_mode lwrp iis_pool|
    * - ``private_mem``

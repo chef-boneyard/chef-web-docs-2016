@@ -10,7 +10,7 @@ About Resources and Providers
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_resources_syntax`
      - A resource is a |ruby| block with four components: a type, a name, one (or more) parameters (with attributes), and one (or more) actions.

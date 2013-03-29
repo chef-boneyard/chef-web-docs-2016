@@ -4,19 +4,14 @@
 
 .. include:: ../../includes_chef/includes_chef_client.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+|chef validator|
+=====================================================
+.. include:: ../../includes_security/includes_security_chef_validator.rst
 
-   * - Method
-     - Description
-   * - :doc:`essentials_chef_client_validator`
-     - The |chef validator| ensures that when a node runs for the first time that it can make an authenticated request to the |chef server|.
-   * - :doc:`essentials_chef_client_ssl`
-     - All communication between the |chef client| and the |chef server| is done using SSL and signed header authentication.
+SSL Certificates
+=====================================================
+.. include:: ../../includes_node/includes_node_certificate.rst
 
-.. toctree::
-   :hidden:
-
-   essentials_chef_client_validator
-   essentials_chef_client_ssl
+Signed Header Authentication
+-----------------------------------------------------
+.. include:: ../../includes_security/includes_security_signed_header_authentication.rst

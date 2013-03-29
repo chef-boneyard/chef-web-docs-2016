@@ -8,7 +8,7 @@ About Definitions
    :widths: 150 450
    :header-rows: 1
 
-   * - Method
+   * - Topic
      - Description
    * - :doc:`essentials_cookbook_definitions_syntax`
      - A definition has a resource name, at least one argument, and a hash.
