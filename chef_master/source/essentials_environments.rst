@@ -28,7 +28,7 @@ About Environments
    * - Method
      - Description
    * - :doc:`essentials_environments_attributes_types`
-     - There are two types of attributes that can be used with environments: ``default`` and ``override``.
+     - There are two types of attributes that can be used with environments: ``default`` and ``override``. Both ``default`` and ``override`` attributes can be forced on a case-by-case basis.
    * - :doc:`essentials_environments_attributes_persistence`
      - During a |chef| run, saved attributes are retrieved from the |chef server| and are merged with the attributes on the local system.
    * - :doc:`essentials_environments_attributes_precedence`

@@ -38,7 +38,7 @@ About Recipes
    * - Topic
      - Description
    * - :doc:`essentials_cookbook_recipes_attribute_types`
-     - There are four types of attributes: ``default``, ``normal``, ``override``, and ``automatic``.
+     - There are four types of attributes: ``default``, ``normal``, ``override``, and ``automatic``. Both ``default`` and ``override`` attributes can be forced on a case-by-case basis.
    * - :doc:`essentials_cookbook_recipes_attribute_persistence`
      - During a |chef| run, saved attributes are retrieved from the |chef server| and are merged with the attributes on the local system.
    * - :doc:`essentials_cookbook_recipes_attribute_precedence`
