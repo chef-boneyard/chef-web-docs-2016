@@ -50,15 +50,19 @@ This configuration file has the following settings for |drbd|:
      - The ``fqdn``, ``ip`` and ``port`` of the server we consider the |drbd| *primary*. This is typically set automatically from the ``server`` entries with the ``backend`` ``role`` when in an ``ha`` topology. Default value: ``{"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}``. For example:
        ::
 
-          drbd['primary'] = {"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}
+          drbd['primary'] = {
+            "fqdn"=>"ubuntu.localdomain", 
+            "ip"=>"192.168.4.131", "port"=>7788
+          }
 
    * - ``drbd['secondary']``
      - Identical to the ``drbd['primary']`` setting, including caveats. Default value: ``{"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}``. For example:
        ::
 
-          drbd['secondary'] = {"fqdn"=>"ubuntu.localdomain", "ip"=>"192.168.4.131", "port"=>7788}
-
-
+          drbd['secondary'] = {
+            "fqdn"=>"ubuntu.localdomain", 
+            "ip"=>"192.168.4.131", "port"=>7788
+          }
 
    * - ``drbd['shared_secret']``
      - The shared secret for |drbd|. This attribute is randomly generated for you when you install the ``bootstrap`` server. You should not need to set it explicitly. Default value: ``"promisespromises"``. For example:

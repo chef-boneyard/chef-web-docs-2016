@@ -133,7 +133,11 @@ This configuration file has the following settings for |nagios|:
      - Default value: ``{"ubuntu"=>{"ipaddress"=>"192.168.4.131", "hostgroups"=>[]}}``. For example:
        ::
 
-          nagios['hosts'] = {"ubuntu"=>{"ipaddress"=>"192.168.4.131", "hostgroups"=>[]}}
+          nagios['hosts'] = {
+            "ubuntu"=>{
+              "ipaddress"=>"192.168.4.131", "hostgroups"=>[]
+            }
+          }
 
    * - ``nagios['interval_length']``
      - Default value: ``1``. For example:

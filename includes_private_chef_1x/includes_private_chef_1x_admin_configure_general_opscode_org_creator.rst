@@ -20,7 +20,8 @@ This configuration file has the following settings for opscode-org-creator:
      - Default value: ``"/var/log/opscode/opscode-org-creator"``. For example:
        ::
 
-          opscode_org_creator['log_directory'] = "/var/log/opscode/opscode-org-creator"
+          opscode_org_creator['log_directory'] = 
+            "/var/log/opscode/opscode-org-creator"
 
    * - ``opscode_org_creator['svlogd_size']``
      - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``. For example:

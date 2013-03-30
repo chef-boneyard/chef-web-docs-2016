@@ -66,7 +66,8 @@ This configuration file has the following settings for keepalived:
        For example:
        ::
 
-          keepalived['service_order'] = [{"key"=>"couchdb", "service_name"=>"couchdb"},
+          keepalived['service_order'] = [
+            {"key"=>"couchdb", "service_name"=>"couchdb"},
             {"key"=>"postgresql", "service_name"=>"postgres"},
             {"key"=>"rabbitmq", "service_name"=>"rabbitmq"},
             {"key"=>"redis", "service_name"=>"redis"},
@@ -83,7 +84,8 @@ This configuration file has the following settings for keepalived:
             {"key"=>"nagios", "service_name"=>"php-fpm"},
             {"key"=>"nagios", "service_name"=>"fcgiwrap"},
             {"key"=>"nagios", "service_name"=>"nagios"},
-            {"key"=>"nginx", "service_name"=>"nginx"}]
+            {"key"=>"nginx", "service_name"=>"nginx"}
+          ]
 
    * - ``keepalived['smtp_connect_timeout']``
      - When sending messages about transitions, how long to wait to connect with an STMP server. Default value: ``"30"``. For example:

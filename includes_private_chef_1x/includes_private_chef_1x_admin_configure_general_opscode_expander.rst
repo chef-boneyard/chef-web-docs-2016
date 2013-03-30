@@ -62,7 +62,8 @@ This configuration file has the following settings for opscode-expander:
      - Default value: ``"/var/log/opscode/opscode-expander-reindexer"``. For example:
        ::
 
-          opscode_expander['reindexer_log_directory'] = "/var/log/opscode/opscode-expander-reindexer"
+          opscode_expander['reindexer_log_directory'] = 
+            "/var/log/opscode/opscode-expander-reindexer"
 
    * - ``opscode_expander['reindexer_svlogd_size']``
      - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``. For example:
