@@ -32,6 +32,10 @@ Common Options
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_common_options.rst
 
+Authenticated API Requests
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_plugin_authenticated_requests.rst
+
 Plugins
 =====================================================
 

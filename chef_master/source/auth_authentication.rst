@@ -18,11 +18,11 @@ From the Web Interface
 
 knife exec
 =====================================================
-.. include:: ../../includes_chef_auth/includes_chef_auth_authentication_knife_exec.rst
+.. include:: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst
 
 |knife| Plugins
 =====================================================
-.. include:: ../../includes_chef_auth/includes_chef_auth_authentication_knife_plugins.rst
+.. include:: ../../includes_knife/includes_knife_plugin_authenticated_api_requests.rst
 
 Other Options
 =====================================================

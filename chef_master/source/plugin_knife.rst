@@ -4,7 +4,8 @@ About Knife Plugins
 
 .. include:: ../../includes_knife/includes_knife_plugin.rst
 
-.. note:: The same :doc:`knife_common_options` available for use with |knife| are also available to be used with |knife| plug-ins.
+* The same :doc:`common options </knife_common_options>` used by |knife| subcommands can also be used by |knife| plug-ins
+* A |knife| plugin can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|
 
 Build a :doc:`custom plugin </plugin_knife_custom>` or use one of the following plugins that are maintained by |opscode|:
 
@@ -55,6 +56,7 @@ The following |knife| plug-ins are maintained by |opscode|:
    plugin_knife_terremark
    plugin_knife_windows
 
+   plugin_knife_authenticated_requests
    plugin_knife_custom
 
 
