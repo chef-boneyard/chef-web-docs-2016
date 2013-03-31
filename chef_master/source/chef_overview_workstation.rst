@@ -15,7 +15,7 @@ Some important components of workstations include:
    * - :doc:`Knife </knife>`
      - .. include:: ../../includes_knife/includes_knife.rst
    * - :doc:`Knife Plugins </plugin_knife>`
-     - .. include:: ../../includes_knife/includes_knife_plugin.rst
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
    * - :doc:`The Chef Repository </essentials_repository>`
      - .. include:: ../../includes_repository/includes_repository.rst
    * - :doc:`knife.rb </config_rb_knife>`

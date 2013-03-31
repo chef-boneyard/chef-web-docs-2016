@@ -22,7 +22,7 @@ knife exec
 
 |knife| Plugins
 =====================================================
-.. include:: ../../includes_knife/includes_knife_plugin_authenticated_api_requests.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst
 
 Other Options
 =====================================================

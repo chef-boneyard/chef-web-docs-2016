@@ -2,7 +2,7 @@
 knife ec2
 =====================================================
 
-.. include:: ../../includes_knife/includes_knife_ec2.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2.rst
 
 Install this plugin
 =====================================================
@@ -10,16 +10,16 @@ Install this plugin
 
 instance data
 =====================================================
-.. include:: ../../includes_knife/includes_knife_ec2_instance_data.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_instance_data.rst
 
 server create
 =====================================================
-.. include:: ../../includes_knife/includes_knife_ec2_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_create.rst
 
 server delete
 =====================================================
-.. include:: ../../includes_knife/includes_knife_ec2_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_delete.rst
 
 server list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_ec2_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_list.rst

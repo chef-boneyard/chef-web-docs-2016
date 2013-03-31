@@ -2,7 +2,7 @@
 knife bluebox
 =====================================================
 
-.. include:: ../../includes_knife/includes_knife_bluebox.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox.rst
 
 Install this plugin
 =====================================================
@@ -10,16 +10,16 @@ Install this plugin
 
 images list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bluebox_images_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_images_list.rst
 
 server create
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bluebox_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_create.rst
 
 server delete
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bluebox_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_delete.rst
 
 server list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bluebox_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_list.rst

@@ -2,7 +2,7 @@
 About Knife Plugins
 =====================================================
 
-.. include:: ../../includes_knife/includes_knife_plugin.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
 
 * The same :doc:`common options </knife_common_options>` used by |knife| subcommands can also be used by |knife| plug-ins
 * A |knife| plugin can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|

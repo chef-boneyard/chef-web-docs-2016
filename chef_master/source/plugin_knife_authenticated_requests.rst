@@ -2,7 +2,7 @@
 Authenticated API Requests
 =====================================================
 
-.. include:: ../../includes_knife/includes_knife_plugin.rst
+.. include:: ../../includes_knife/includes_plugin_knife.rst
 
-.. include:: ../../includes_knife/includes_knife_plugin_authenticated_requests.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst
 
