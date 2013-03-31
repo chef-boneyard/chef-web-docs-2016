@@ -5,19 +5,3 @@
 
 The ``delete`` argument is used to delete a role from the |chef server|.
 
-This argument has the following syntax::
-
-   knife role delete ROLE_NAME
-
-This argument does not have any argument-specific options.
-
-**Examples**
-
-For example:
-
-.. code-block:: bash
-
-   $ knife role delete devops
-
-Type ``Y`` to confirm a deletion.
-

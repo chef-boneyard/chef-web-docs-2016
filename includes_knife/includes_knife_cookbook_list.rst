@@ -5,22 +5,3 @@
 
 The ``list`` argument is used to view a list of cookbooks that are currently available on the |chef server|. The list will contain only the most recent version for each cookbook by default.
 
-This argument has the following syntax::
-
-   knife cookbook list (options)
-
-This argument has the following options:
-
-``-a``, ``--all``
-   |all cookbooks return|
-
-``-w``, ``--with-uri``
-   |with_uri|
-
-**Examples**
-
-For example:
-
-.. code-block:: bash
-
-   $ knife cookbook list

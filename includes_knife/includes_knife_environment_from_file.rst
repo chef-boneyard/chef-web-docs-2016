@@ -5,27 +5,3 @@
 
 The ``from file`` argument is used to add or update an environment using a JSON or Ruby DSL description. It must be run with the ``create`` or ``edit`` arguments.
 
-This argument has the following syntax::
-
-   knife environment [create | edit] from file FILE (options)
-
-This argument has the following options:
-
-``-a``, ``--all``
-   |all environments|
-
-**Examples**
-
-For example:
-
-.. code-block:: bash
-
-   $ knife environment create devops from file "path to JSON file"
-
-or:
-
-.. code-block:: bash
-
-   $ knife environment edit devops from file "path to JSON file"
-
-

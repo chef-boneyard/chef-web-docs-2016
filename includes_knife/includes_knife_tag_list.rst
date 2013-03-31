@@ -5,12 +5,3 @@
 
 The ``list`` argument is used to list all of the tags that have been applied to a node.
 
-This argument has the following syntax::
-
-   knife tag list [NODE_NAME...]
-
-This argument does not have any argument-specific options.
-
-**Examples**
-
-.. include:: ../../step_knife/step_knife_tag_list.rst

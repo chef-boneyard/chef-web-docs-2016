@@ -3,14 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``create`` argument is used to add one or more tags to a node. 
+The ``create`` argument is used to add one or more tags to a node.
 
-This argument has the following syntax::
-
-   knife tag create NODE_NAME [TAG...]
-
-This argument does not have any argument-specific options.
-
-**Examples**
-
-.. include:: ../../step_knife/step_knife_tag_create.rst

@@ -3,23 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``create`` argument is used to add an environment object to the |chef server|. When this argument is run, |knife| will open $EDITOR to enable editing of the ENVIRONMENT description field (unless a description is specified as part of the command). When finished, |knife| will add the environment to the |chef server|. 
-
-This argument has the following syntax::
-
-   knife environment create ENVIRONMENT_NAME -d DESCRIPTION
-
-This argument has the following options:
-
-``-d DESCRIPTION``, ``--description DESCRIPTION``
-   |description environment|
-
-**Examples**
-
-For example:
-
-.. code-block:: bash
-
-   $ knife environment create dev -d "The development environment."
-
+The ``create`` argument is used to add an environment object to the |chef server|. When this argument is run, |knife| will open $EDITOR to enable editing of the ENVIRONMENT description field (unless a description is specified as part of the command). When finished, |knife| will add the environment to the |chef server|.
 

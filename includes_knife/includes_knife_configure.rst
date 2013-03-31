@@ -5,33 +5,3 @@
 
 |knife configure|
 
-This subcommand has the following syntax::
-
-   knife configure (options)
-
-This subcommand has the following options:
-
-``--client DIRECTORY``
-   |client|
-
-``-i``, ``--initial``
-   |initial|
-
-``-r REPO``, ``--repository REPO``
-   |repository|
-
-**Examples**
-
-For example, to create a |knife rb| file, enter:
-
-.. code-block:: bash
-
-   $ knife configure
-   
-To configure a |client rb|, enter:
-
-.. code-block:: bash
-
-   $ knife configure client '/directory'
-
-

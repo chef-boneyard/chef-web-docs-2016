@@ -71,6 +71,8 @@ About Knife
      - |knife tag|
    * - :doc:`knife_upload`
      - |knife upload|
+   * - :doc:`knife_user`
+     - |knife user|
 
 
 .. toctree::

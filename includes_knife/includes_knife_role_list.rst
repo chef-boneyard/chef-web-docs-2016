@@ -3,22 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``list`` argument is used to view a list of roles that are currently available on the |chef server|. 
-
-This argument has the following syntax::
-
-   knife role list
-
-This argument has the following options:
-
-``-w``, ``--with-uri``
-   |with_uri|
-
-**Examples**
-
-For example, to view a list of roles on the |chef server| and display the URI for each role returned, enter:
-
-.. code-block:: bash
-
-   $ knife role list -w
+The ``list`` argument is used to view a list of roles that are currently available on the |chef server|.
 
