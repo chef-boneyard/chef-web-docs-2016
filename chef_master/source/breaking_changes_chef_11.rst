@@ -94,6 +94,53 @@ and the new output looks something like:
 
 This may require that search queries be updated for |chef 11|.
 
+This change also affects |ohai| plugin output.For example, the old output looks something like:
+
+.. code-block:: ruby
+
+   {
+     "results": 35,
+     "rows": [
+       {
+         "virtualization": {
+           "system": "kvm",
+           "role": "host",
+           "kvm": {
+             "guests": {
+               "EXAMPLE": {
+                 "id": "28",
+               },
+             }
+           }
+         },
+         "id": "virt30.ny4dev.EXAMPLE.com"
+       }
+   }
+
+and the new output looks something like:
+
+.. code-block:: ruby
+
+   {
+     "results": 35,
+     "rows": [
+       {
+         "virt18.ny4dev.EXAMPLE.com": {
+           "virtualization": {
+             "system": "kvm",
+             "role": "host",
+             "kvm": {
+               "guests": {
+                 "EXAMPLE": {
+                   "id": "3"
+                
+                 }
+             }
+           }
+         }
+       }
+   }
+
 Role and Environment Attribute Changes
 -----------------------------------------------------
 Role and environment default and override attributes are visible in attributes files. In |chef 11|, several changes have been made to attributes to enable you to include more complex logic in your attributes files. Though you should still try to keep your attributes files simple, you can effectively generate attributes composed of other attributes or based on a node's platform in attribute files now.
