@@ -32,7 +32,7 @@ openstack (plug-in)
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_knife/includes_knife_openstack.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack.rst
 
 Common Options
 =====================================================
@@ -40,21 +40,76 @@ Common Options
 
 flavor list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_openstack_flavor_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_flavor_list.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_flavor_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_flavor_list_options.rst
+
+**Examples**
+
+For example, enter:
+
+.. code-block:: bash
+
+   $ knife openstack flavor list
 
 image list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_openstack_image_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_image_list.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_image_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_image_list_options.rst
+
+**Examples**
+
+For example, to view a list of images, enter:
+
+.. code-block:: bash
+
+   $ knife openstack image list
 
 server create
 =====================================================
-.. include:: ../../includes_knife/includes_knife_openstack_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_create.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_create_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_create_options.rst
 
 server delete
 =====================================================
-.. include:: ../../includes_knife/includes_knife_openstack_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_delete.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_delete_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_delete_options.rst
 
 server list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_openstack_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_list.rst
 
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_list_options.rst

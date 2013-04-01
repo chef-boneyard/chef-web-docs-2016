@@ -20,6 +20,8 @@ create
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_user_create_settings.rst
 
 **Examples**
@@ -98,6 +100,8 @@ reregister
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_user_reregister_settings.rst
 

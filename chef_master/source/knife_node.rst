@@ -155,6 +155,8 @@ from file
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_node_from_file_settings.rst
 
 **Examples**
@@ -181,6 +183,8 @@ list
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_node_list_settings.rst
 
 **Examples**
@@ -202,6 +206,8 @@ run_list add
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_settings.rst
 
@@ -253,6 +259,8 @@ run_list remove
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_node_run_list_remove_settings.rst
 

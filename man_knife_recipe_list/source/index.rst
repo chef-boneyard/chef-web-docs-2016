@@ -34,6 +34,31 @@ recipe list
 
 .. include:: ../../includes_knife/includes_knife_recipe_list.rst
 
-Common Options
-=====================================================
+**Common Options**
+
 .. include:: ../../includes_knife/includes_knife_common_options.rst
+
+**Syntax**
+
+.. include:: ../../includes_knife/includes_knife_recipe_list_syntax.rst
+
+**Options**
+
+|no_options|
+
+**Examples**
+
+For example, enter:
+
+.. code-block:: bash
+
+   $ knife recipe list 'couchdb::*'
+
+to return:
+
+.. code-block:: bash
+
+   couchdb::main_monitors
+   couchdb::master
+   couchdb::default
+   couchdb::org_cleanu

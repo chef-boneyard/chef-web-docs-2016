@@ -32,7 +32,7 @@ google (plug-in)
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_knife/includes_knife_google.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google.rst
 
 Common Options
 =====================================================
@@ -40,13 +40,52 @@ Common Options
 
 server create
 =====================================================
-.. include:: ../../includes_knife/includes_knife_google_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_create.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_create_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_create_options.rst
 
 server delete
 =====================================================
-.. include:: ../../includes_knife/includes_knife_google_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_delete.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_delete_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_delete_options.rst
+
+**Examples**
+
+For example, to delete a server named "devops01" from a project named "engineering", enter:
+
+.. code-block:: bash
+
+   $ knife google server delete devops1 engineering
 
 server list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_google_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_list.rst
 
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_list_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_list_options.rst
+
+**Examples**
+
+For example, to view a list of instances associated with a project named "dev-01", enter:
+
+.. code-block:: bash
+
+   $ knife google server list -p dev-01

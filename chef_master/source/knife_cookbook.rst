@@ -22,6 +22,8 @@ bulk delete
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_settings.rst
 
 **Examples**
@@ -47,6 +49,8 @@ create
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_create_settings.rst
 
@@ -83,6 +87,8 @@ delete
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_cookbook_delete_settings.rst
 
 **Examples**
@@ -111,6 +117,8 @@ download
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_cookbook_download_settings.rst
 
 **Examples**
@@ -137,6 +145,8 @@ list
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_cookbook_list_settings.rst
 
 **Examples**
@@ -162,6 +172,8 @@ metadata
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_settings.rst
 
@@ -208,6 +220,8 @@ show
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_show_settings.rst
 
@@ -302,6 +316,8 @@ test
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_cookbook_test_settings.rst
 
 **Examples**
@@ -327,6 +343,8 @@ upload
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_cookbook_upload_settings.rst
 

@@ -34,7 +34,34 @@ show
 
 .. include:: ../../includes_knife/includes_knife_show.rst
 
-Common Options
-=====================================================
+**Common Options**
+
 .. include:: ../../includes_knife/includes_knife_common_options.rst
 
+**Syntax**
+
+.. include:: ../../includes_knife/includes_knife_show_syntax.rst
+
+**Options**
+
+|no_options|
+
+**Examples**
+
+For example, to show all cookbooks in the ``cookbooks/`` directory:
+
+.. code-block:: bash
+
+   $ knife show cookbooks/
+
+or, (if already in the ``cookbooks/`` directory in the local |chef| repository):
+
+.. code-block:: bash
+
+   $ knife show
+
+To show roles and environments:
+
+.. code-block:: bash
+
+   $ knife show roles/ environments/

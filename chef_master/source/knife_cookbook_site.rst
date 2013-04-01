@@ -22,6 +22,8 @@ download
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_site_cookbook_download_settings.rst
 
 **Examples**
@@ -55,6 +57,8 @@ install
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook_install_settings.rst
 
@@ -191,6 +195,8 @@ share
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook_share_settings.rst
 

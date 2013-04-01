@@ -28,7 +28,6 @@ server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create.rst
 
-
 **Syntax**
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_syntax.rst

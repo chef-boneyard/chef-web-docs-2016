@@ -32,7 +32,7 @@ bluebox (plug-in)
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 
-.. include:: ../../includes_knife/includes_knife_bluebox.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox.rst
 
 Common Options
 =====================================================
@@ -40,19 +40,57 @@ Common Options
 
 images list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bluebox_images_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_images_list.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_images_list_syntax.rst
+
+**Options**
+
+|no_options|
 
 server create
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bluebox_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_create.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_create_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_create_options.rst
 
 server delete
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bluebox_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_delete.rst
+
+**Syntax**
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_delete_syntax.rst
+
+**Options**
+
+|no_options|
+
+**Examples**
+
+For example, to delete an instance at block "12345" with a hostname of "dev", enter:
+
+.. code-block:: bash
+
+   $ knife bluebox server delete block12345-dev.blueboxgrid.com
 
 server list
 =====================================================
-.. include:: ../../includes_knife/includes_knife_bluebox_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_list.rst
 
+**Syntax**
 
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_list_syntax.rst
+
+**Options**
+
+|no_options|
 

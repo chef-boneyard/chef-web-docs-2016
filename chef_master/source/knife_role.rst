@@ -25,7 +25,6 @@ For example:
 .. code-block:: bash
 
    $ knife role bulk delete "^[0-9]{3}$"
-   
 
 create
 =====================================================
@@ -42,6 +41,8 @@ create
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_role_create_settings.rst
 
@@ -155,6 +156,8 @@ from file
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
 
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+
 .. include:: ../../includes_knife/includes_knife_role_from_file_settings.rst
 
 **Examples**
@@ -200,6 +203,8 @@ show
 **knife.rb File Settings**
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_role_show_settings.rst
 

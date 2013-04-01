@@ -7,5 +7,5 @@ In addition to the default settings in a |knife rb| file, there are other subcom
 #. A value contained in the |knife rb| file
 #. The default value
 
-A value passed via the command line will override a value in the |knife rb| file; a value in a |knife rb| file will override a default value. See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+A value passed via the command line will override a value in the |knife rb| file; a value in a |knife rb| file will override a default value.
 

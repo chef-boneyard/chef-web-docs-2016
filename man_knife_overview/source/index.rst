@@ -54,7 +54,7 @@ Sub-commands
 
 |opscode| provides the following plug-ins, which work the same as built-in sub-commands (including common options), but must be downloaded separately from |github|: ``azure``, ``bluebox``, ``ec2``, ``eucalyptus``, ``google``, ``hp``, ``linode``, ``openstack``, ``rackspace``, ``slicehost``, ``terremark``, and ``windows``.
 
-.. note:: The following sub-command runs only against the |chef open server|: ``index rebuild``.
+.. note:: The following sub-command runs only against the open source |chef server|: ``index rebuild``.
 
 The |chef| community provides many other plugins for |knife|: http://community.opscode.com/.
 
