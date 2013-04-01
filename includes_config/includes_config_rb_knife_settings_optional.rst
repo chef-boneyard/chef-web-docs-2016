@@ -4,9 +4,9 @@
 
 In addition to the default settings in the |knife rb| file, there are other settings that can be added. When a command is run, |knife| will:
 
-#. Use a value passed via the command-line
-#. Use a value contained in the |knife rb| file
-#. Use the default value
+#. First use a value passed via the command-line,
+#. Then use a value contained in the |knife rb| file,
+#. And then use the default value.
 
 In all cases, a value passed via the command line will override any value in the |knife rb| file and a value in the |knife rb| file will override any default value. 
 
