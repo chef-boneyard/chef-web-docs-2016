@@ -16,6 +16,12 @@ knife exec
 
 .. include:: ../../includes_knife/includes_knife_exec_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_exec_settings.rst
+
 **Examples**
 
 There are three ways to use ``knife exec`` to run |ruby| script files. For example:

@@ -12,6 +12,12 @@ knife status
 
 .. include:: ../../includes_knife/includes_knife_status_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_status_settings.rst
+
 **Examples**
 
 For example, to view the status of all nodes in the organization, enter:

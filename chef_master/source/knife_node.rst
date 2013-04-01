@@ -151,6 +151,12 @@ from file
 
 |no_options|
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_node_from_file_settings.rst
+
 **Examples**
 
 For example:
@@ -171,6 +177,12 @@ list
 
 .. include:: ../../includes_knife/includes_knife_node_list_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_node_list_settings.rst
+
 **Examples**
 
 .. include:: ../../step_knife/step_knife_node_list_all.rst
@@ -186,6 +198,12 @@ run_list add
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_node_run_list_add_settings.rst
 
 **Examples**
 
@@ -231,6 +249,12 @@ run_list remove
 **Options**
 
 |no_options|
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_node_run_list_remove_settings.rst
 
 **Examples**
 

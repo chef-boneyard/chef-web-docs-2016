@@ -18,6 +18,12 @@ bulk delete
 
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_settings.rst
+
 **Examples**
 
 For example:
@@ -37,6 +43,12 @@ create
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_cookbook_create_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_create_settings.rst
 
 **Examples**
 
@@ -67,6 +79,12 @@ delete
 
 .. include:: ../../includes_knife/includes_knife_cookbook_delete_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_delete_settings.rst
+
 **Examples**
 
 For example, to delete version "0.8" from a cookbook named "smartmon", enter:
@@ -89,6 +107,12 @@ download
 
 .. include:: ../../includes_knife/includes_knife_cookbook_download_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_download_settings.rst
+
 **Examples**
 
 For example, to download a cookbook named "smartmon", enter:
@@ -109,6 +133,12 @@ list
 
 .. include:: ../../includes_knife/includes_knife_cookbook_list_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_list_settings.rst
+
 **Examples**
 
 For example:
@@ -128,6 +158,12 @@ metadata
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_metadata_settings.rst
 
 **Examples**
 
@@ -168,6 +204,12 @@ show
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_cookbook_show_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_show_settings.rst
 
 **Examples**
 
@@ -256,6 +298,12 @@ test
 
 .. include:: ../../includes_knife/includes_knife_cookbook_test_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_test_settings.rst
+
 **Examples**
 
 For example, to test a cookbook named "getting-started", enter:
@@ -275,6 +323,12 @@ upload
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_cookbook_upload_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_cookbook_upload_settings.rst
 
 **Examples**
 

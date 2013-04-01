@@ -2,14 +2,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-In addition to the default settings in the |knife rb| file, there are other settings that can be added. When a command is run, |knife| will:
-
-#. First use a value passed via the command-line,
-#. Then use a value contained in the |knife rb| file,
-#. And then use the default value.
-
-In all cases, a value passed via the command line will override any value in the |knife rb| file and a value in the |knife rb| file will override any default value. 
-
 Before adding any settings to the |knife rb| file:
 
 * Verify the settings by reviewing the documentation for the |knife| subcommands and/or |knife| plugins

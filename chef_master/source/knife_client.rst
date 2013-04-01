@@ -34,6 +34,12 @@ create
 
 .. include:: ../../includes_knife/includes_knife_client_create_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
+
 **Examples**
 
 For example, to create a |chef client admin| with the name "exampleorg" and save its private key to a file, enter:
@@ -119,6 +125,12 @@ reregister
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_client_reregister_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_client_reregister_settings.rst
 
 **Examples**
 

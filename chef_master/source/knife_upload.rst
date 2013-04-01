@@ -12,6 +12,12 @@ knife upload
 
 .. include:: ../../includes_knife/includes_knife_upload_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_upload_settings.rst
+
 **Examples**
 
 .. include:: ../../step_knife/step_knife_upload_repository.rst

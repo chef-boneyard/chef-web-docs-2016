@@ -39,6 +39,12 @@ create
 
 .. include:: ../../includes_knife/includes_knife_role_create_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_role_create_settings.rst
+
 **Examples**
 
 For example, to add a role named "role1", enter:
@@ -145,6 +151,12 @@ from file
 
 |no_options|
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_role_from_file_settings.rst
+
 **Examples**
 
 For example:
@@ -184,6 +196,12 @@ show
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_role_show_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_role_show_settings.rst
 
 **Examples**
 

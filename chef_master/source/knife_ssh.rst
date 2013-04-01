@@ -12,6 +12,12 @@ knife ssh
 
 .. include:: ../../includes_knife/includes_knife_ssh_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_ssh_settings.rst
+
 **Examples**
 
 For example, to query for all nodes that have the "webserver" role and then use |ssh| to run the command "sudo chef-client", enter:

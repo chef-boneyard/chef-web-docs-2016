@@ -18,6 +18,12 @@ create
 
 .. include:: ../../includes_knife/includes_knife_environment_create_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_environment_create_settings.rst
+
 **Examples**
 
 For example:
@@ -79,6 +85,12 @@ from file
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_environment_from_file_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_environment_from_file_settings.rst
 
 **Examples**
 

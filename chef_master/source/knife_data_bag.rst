@@ -20,6 +20,12 @@ create
 
 .. include:: ../../includes_knife/includes_knife_data_bag_create_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_data_bag_create_settings.rst
+
 **Examples**
 
 For example, to create a data bag named "admins", enter:
@@ -74,6 +80,12 @@ edit
 
 .. include:: ../../includes_knife/includes_knife_data_bag_edit_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_data_bag_edit_settings.rst
+
 **Examples**
 
 For example, to edit the contents of a data bag, enter:
@@ -119,6 +131,12 @@ from file
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_data_bag_from_file_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_data_bag_from_file_settings.rst
 
 **Examples**
 
@@ -166,6 +184,12 @@ show
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_data_bag_show_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_data_bag_show_settings.rst
 
 **Examples**
 

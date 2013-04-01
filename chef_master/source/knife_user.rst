@@ -16,6 +16,12 @@ create
 
 .. include:: ../../includes_knife/includes_knife_user_create_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_user_create_settings.rst
+
 **Examples**
 
 For example, to create a new user named "Radio Birdman" with a private key saved to "/keys/user_name", enter:
@@ -88,6 +94,12 @@ reregister
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_user_reregister_options.rst
+
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_user_reregister_settings.rst
 
 **Examples**
 

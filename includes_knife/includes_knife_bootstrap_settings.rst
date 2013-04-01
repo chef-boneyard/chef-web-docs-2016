@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following settings can be added to the |knife rb| file:
+The following ``knife bootstrap`` settings can be added to the |knife rb| file:
 
 ``knife[:bootstrap_proxy]``
    Use to add the ``--bootstrap-proxy`` option.

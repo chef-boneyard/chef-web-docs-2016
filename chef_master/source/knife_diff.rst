@@ -12,6 +12,12 @@ knife diff
 
 .. include:: ../../includes_knife/includes_knife_diff_options.rst
 
+**knife.rb File Settings**
+
+.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+
+.. include:: ../../includes_knife/includes_knife_diff_settings.rst
+
 **Examples**
 
 For example, to compare the differences between the local |chef| repository and the files that are on the |chef server|, enter:
