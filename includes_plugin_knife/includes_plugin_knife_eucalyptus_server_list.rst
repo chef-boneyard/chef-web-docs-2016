@@ -5,20 +5,3 @@
 
 The ``server list`` argument is used to find instances that are associated with a |eucalyptus| account. The results may show instances that are not currently managed by the |chef server|.
 
-This argument has the following syntax::
-
-   knife eucalyptus server list
-
-This argument has the following options:
-
-``-A ID``, ``--euca-access-key-id ID``
-   |euca-access-key-id|
-
-``--euca-api-endpoint ENDPOINT``
-   |euca-api-endpoint|
-
-``-K SECRET``, ``--euca-secret-access-key SECRET``
-   |euca-secret-access-key|
-
-``--region REGION``
-   |region eucalyptus|

@@ -5,14 +5,3 @@
 
 The ``kernel list`` argument is used to view a list of available kernels, listed by ID and name.
 
-This argument has the following syntax::
-
-   knife linode kernel list
-
-This argument has the following options:
-
-``-A KEY``, ``--linode-api-key KEY``
-   |linode-api-key|
-
-
-

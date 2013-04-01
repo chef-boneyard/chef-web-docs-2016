@@ -5,32 +5,3 @@
 
 The ``image list`` argument is used to list of images from the |eucalyptus| environment, listed by ID, kernel ID, architecture, and location.
 
-This argument has the following syntax::
-
-   knife eucalyptus image list
-
-This argument has the following options:
-
-``-A ID``, ``--euca-access-key-id ID``
-   |euca-access-key-id|
-
-``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
-
-``--euca-api-endpoint ENDPOINT``
-   |euca-api-endpoint|
-
-``-K SECRET``, ``--euca-secret-access-key SECRET``
-   |euca-secret-access-key|
-
-``--region REGION``
-   |region eucalyptus|
-
-**Examples**
-
-For example, enter:
-
-.. code-block:: bash
-
-   $ knife eucalyptus flavor list
-

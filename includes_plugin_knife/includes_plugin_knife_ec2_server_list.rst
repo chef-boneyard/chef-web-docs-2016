@@ -5,20 +5,3 @@
 
 The ``server list`` argument is used to find instances that are associated with a |amazon ec2| account. The results may show instances that are not currently managed by the |chef server|.
 
-This argument has the following syntax::
-
-   knife ec2 server list
-
-This argument has the following options:
-
-``-A KEY``, ``--aws-access-key-id KEY``
-   |aws_access_key_id|
-
-``-n``, ``--no-name``
-   |no name tags|
-
-``--region REGION``
-   |region amazon|
-
-``-t TAG1, TAG2``, ``--tags TAG1, TAG2``
-   |tags list|

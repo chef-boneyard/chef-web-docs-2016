@@ -7,23 +7,3 @@ The ``instance data`` argument is used to generate instance metadata used with c
 
 .. warning:: Using this sub-command is an older way of launching |amazon ec2| instances for |chef| and should be considered deprecated. Using the ``server create`` sub-command is preferred (and more flexible). Although this sub-command will remain, the |opscode| custom |amazon ami| are out of date.
 
-This argument has the following syntax::
-
-   knife ec2 instance data (options)
-
-This argument has the following options:
-
-``-A KEY``, ``--aws-access-key-id KEY``
-   |aws_access_key_id|
-
-``-e``, ``--edit``
-   |edit|
-
-``-K SECRET``, ``--aws-secret-access-key SECRET``
-   |aws_access_key_secret|
-
-``-r RUN_LIST``, ``--run-list RUN_LIST``
-   |run-list|
-
-``--region REGION``
-   |region amazon|
