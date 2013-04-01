@@ -16,6 +16,8 @@ About the Repository
      - The |chef| repository contains directories for certificates, configuration settings, cookbooks, data bags, environments, and roles.
    * - :doc:`Create a Repository </essentials_repository_create>`
      - A repository can be cloned from |git| or downloaded and installed locally.
+   * - :doc:`Many users, same knife.rb file </essentials_repository_many_users_same_repo>`
+     - Multiple users can access the |chef server| using the same |knife rb| file.
 
 .. toctree::
    :hidden:
@@ -23,6 +25,7 @@ About the Repository
    essentials_repository_create
    essentials_repository_structure
    essentials_repository_structure_chefignore
+   essentials_repository_many_users_same_repo
 
 
 

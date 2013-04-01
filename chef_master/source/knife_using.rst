@@ -32,3 +32,8 @@ Syntax
 =====================================================
 .. include:: ../../includes_knife/includes_knife_using_syntax.rst
 
+Many Users, Same Repo
+=====================================================
+.. include:: ../../includes_repository/includes_repository_many_users_same_repo.rst
+
+
