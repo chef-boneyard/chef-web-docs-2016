@@ -41,8 +41,6 @@ Private Chef 1.x.x
 =====================================================
 .. note:: This section is about the version of |chef private| that existed up until February 4, 2013.
 
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x.rst
-
 **Engagement:** :doc:`How Consulting Works </private_chef_1x_engage_how_consulting_works>` | :doc:`Pre-Installation Steps </private_chef_1x_engage_preinstall>` | :doc:`Onsite Installation </private_chef_1x_engage_onsite>` | :doc:`Acceptance </private_chef_1x_engage_acceptance>`
 
 **Architecture:** :doc:`Standalone </private_chef_1x_architecture_standalone>` | :doc:`Tiered </private_chef_1x_architecture_tiered>` | :doc:`High Availability </private_chef_1x_architecture_ha>` | :doc:`Modifications </private_chef_1x_architecture_modifications>`
