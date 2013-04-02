@@ -2,8 +2,6 @@
 chef-server.rb
 =====================================================
 
-.. note:: This topic applies to |chef 11|.
-
 .. include:: ../../includes_config/includes_config_rb_chef_server.rst
 
 Settings
