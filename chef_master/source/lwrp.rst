@@ -2,13 +2,20 @@
 About Lightweight Resources
 =====================================================
 
-.. A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state.
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
 
-.. A lightweight resource is similar to a resource in that it can have actions, attributes, conditions, notifications, and relative paths. A lightweight resource (and any associated lightweight provider) has its own file location, which is a sub-directory within a cookbook. In addition, a lightweight resource can be run during the resource compilation phase. Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`, and learn how to use the ones that are found in cookbooks maintained by |opscode| by clicking one of the links below:
+.. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
+A lightweight resource is a way to extend |chef| so that it can support custom actions in a way that is similar to a resource. A lightweight resource:
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider.rst
+* Has its own file location (the ``/resources`` cookbook sub-directory)
+* Defines a set of actions
+* For each action, defines a set of attributes, conditions, and so on
+* Relies on a lightweight provider (located in the ``/providers`` cookbook sub-directory)
+
+A lightweight resource is used in a recipe in much the same way as a traditional resource. During the |chef| run, |chef| will use the lightweight provider to take the necessary steps to bring the system into the desired state.
+
+Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below
 
 Common Functionality
 =====================================================
