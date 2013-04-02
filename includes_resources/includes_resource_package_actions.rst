@@ -13,6 +13,8 @@ This resource has the following actions:
      - Default. |resource action install package|
    * - ``:upgrade``
      - |resource action upgrade package|
+   * - ``:reconfig``
+     - |resource action reconfigure package|
    * - ``:remove``
      - |resource action remove package|
    * - ``:purge``
