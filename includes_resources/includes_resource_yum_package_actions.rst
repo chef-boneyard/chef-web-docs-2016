@@ -15,3 +15,5 @@ This resource has the following actions:
      - |resource action upgrade yum|
    * - ``:remove``
      - |resource action remove yum|
+   * - ``:purge``
+     - |resource action purge package|
