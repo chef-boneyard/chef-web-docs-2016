@@ -112,11 +112,11 @@ term
 
 Logs
 =====================================================
-.. include:: ../../includes_log_files/includes_log_files.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs.rst
 
 View Logs
 -----------------------------------------------------
-.. include:: ../../includes_log_files/includes_log_files_view.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_view.rst
 
 Services
 -----------------------------------------------------
@@ -124,83 +124,83 @@ The following services used by |chef private| generate log files:
 
 couchdb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_couchdb.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_couchdb.rst
 
 fcgiwrap
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_fcgiwrap.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_fcgiwrap.rst
 
 nagios
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_nagios.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_nagios.rst
 
 nginx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_nginx.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_nginx.rst
 
 **Access Logs**
 
-.. include:: ../../includes_log_files/includes_log_files_services_nginx_read_logs.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_nginx_read_logs.rst
 
 nrpe
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_nrpe.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_nrpe.rst
 
 opscode-account
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_account.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_account.rst
 
 opscode-authz
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_authz.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_authz.rst
 
 opscode-certificate
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_certificate.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_certificate.rst
 
 opscode-chef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_chef.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_chef.rst
 
 opscode-erchef
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_erchef.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_erchef.rst
 
 opscode-expander
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_expander_reindexer.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_expander_reindexer.rst
 
 opscode-expander-reindexer
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_expander.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_expander.rst
 
 opscode-org-creator
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_org_creator.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_org_creator.rst
 
 opscode-solr
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_solr.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_solr.rst
 
 opscode-webui
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_opscode_webui.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_webui.rst
 
 phpfpm
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_phpfpm.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_phpfpm.rst
 
 postgresql
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_postgresql.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_postgresql.rst
 
 rabbitmq
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_rabbitmq.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_rabbitmq.rst
 
 redis
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_log_files/includes_log_files_services_redis.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_redis.rst
 
 
 User Management

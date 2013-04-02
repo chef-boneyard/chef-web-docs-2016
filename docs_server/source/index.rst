@@ -78,7 +78,7 @@ Private Chef 1.x.x
    private_chef_1x_admin
    private_chef_1x_support
    orgmapper
-   log_files
+
 
 
 
