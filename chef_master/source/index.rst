@@ -51,7 +51,7 @@ The Chef Server
 
 **Manage:** :doc:`Hosted Chef </manage_server_hosted>`
 
-**Settings:** :doc:`server.rb </config_rb_server>` | :doc:`solr.rb </config_rb_solr>`
+**Settings:** :doc:`chef-server.rb </config_rb_chef_server>`
 
 **Tools:** :doc:`orgmapper </orgmapper>` | :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>`
 
