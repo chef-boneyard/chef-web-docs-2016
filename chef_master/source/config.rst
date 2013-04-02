@@ -8,7 +8,7 @@ About Configuration Files
    :widths: 150 450
    :header-rows: 1
 
-   * - Sub-command
+   * - Config File
      - Description
    * - :doc:`config_rb_chef_server`
      - |config rb chef server|
@@ -18,13 +18,17 @@ About Configuration Files
      - |config rb knife|
    * - :doc:`config_rb_metadata`
      - |config rb metadata|
-   * - :doc:`config_rb_server`
-     - |config rb server|
    * - :doc:`config_rb_solo`
      - |config rb solo|
+
+The following configuration files apply only to |chef 10|:
+
+   * - Config File
+     - Description
+   * - :doc:`config_rb_server`
+     - |config rb server|
    * - :doc:`config_rb_solr`
      - |config rb solr|
-
 
 
 .. toctree::
