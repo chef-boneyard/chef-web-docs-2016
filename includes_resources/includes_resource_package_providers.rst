@@ -12,7 +12,7 @@ The following providers are available. Use the short name to use the provider in
      - Notes
    * - ``Chef::Provider::Package``
      - ``package``
-     - When this short name is used, |chef| will determine the correct provider during the |chef| run.
+     - When this short name is used, |chef| will attempt to determine the correct provider during the |chef| run.
    * - ``Chef::Provider::Package::Apt``
      - ``apt_package``
      - The provider that is used with the |debian| and |ubuntu| platforms.

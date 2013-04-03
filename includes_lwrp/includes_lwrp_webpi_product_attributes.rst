@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``accept_eula``
-     - |accept_eula lwrp webpi|
+     - |accept_license| Default value: ``false``.
    * - ``product_id``
      - |product_id lwrp webpi|

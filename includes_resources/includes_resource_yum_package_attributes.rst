@@ -16,10 +16,12 @@ This resource has the following attributes:
    * - ``flush_cache``
      - |flush_cache resource yum|
    * - ``options``
-     - |options resource yum|
+     - |options resource package|
    * - ``package_name``
-     - |package_name resource yum|
+     - |package_name resource package|
+   * - ``response_file``
+     - |response_file resource package|
    * - ``source``
-     - |source resource yum|
+     - |source resource package|
    * - ``version``
-     - |version resource yum|
+     - |version resource package|
