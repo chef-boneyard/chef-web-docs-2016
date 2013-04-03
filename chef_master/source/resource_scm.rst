@@ -6,7 +6,7 @@ scm
 
 .. include:: ../../includes_resources/includes_resource_scm.rst
 
-This resource is the base resource for two other commonly-used resources: |resource scm subversion| and |resource scm git|. While it is possible to use the |resource scm| resource to access content stored in either |github| or |svn|, the recommendation is to use the |resource scm subversion| resource with |svn| and to use the |resource scm git| resource with |git|. For more information, see the following topics:
+This resource is the base resource for two other commonly-used resources: |resource scm_subversion| and |resource scm_git|. While it is possible to use the |resource scm| resource to access content stored in either |github| or |svn|, the recommendation is to use the |resource scm_subversion| resource with |svn| and to use the |resource scm_git| resource with |git|. For more information, see the following topics:
 
 * :doc:`git </resource_git>`
 * :doc:`subversion </resource_subversion>`

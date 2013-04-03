@@ -6,6 +6,23 @@ package
 
 .. include:: ../../includes_resources/includes_resource_package.rst
 
+This resource is the base resource for several other resources used for package management on specific platforms. While it is possible to use each of these specific resources, it is recommended to use the |resource package| resource as often as possible. For more information about specific resources for specific platforms, see the following topics:
+
+* :doc:`apt_package </resource_apt_package>`
+* :doc:`chef_gem </resource_chef_gem>`
+* :doc:`dpkg_package </resource_dpkg_package>`
+* :doc:`easy_install_package </resource_easy_install_package>`
+* :doc:`freebsd_package </resource_freebsd_package>`
+* :doc:`gem_package </resource_gem_package>`
+* :doc:`ips_package </resource_ips_package>`
+* :doc:`macports_package </resource_macports_package>`
+* :doc:`pacman_package </resource_pacman_package>`
+* :doc:`portage_package </resource_portage_package>`
+* :doc:`rpm_package </resource_rpm_package>`
+* :doc:`smartos_package </resource_smartos_package>`
+* :doc:`solaris_package </resource_solaris_package>`
+* :doc:`yum_package </resource_yum>`
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_syntax.rst
@@ -126,6 +143,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_package_use_symbols_to_reference_attributes.rst
 
-**Use a whitespace array to simply a recipe**
+**Use a whitespace array to simplify a recipe**
 
 .. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst

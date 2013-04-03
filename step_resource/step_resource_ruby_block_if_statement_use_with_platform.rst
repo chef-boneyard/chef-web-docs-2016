@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to an ``if`` statement can be used with the ``platform?`` method in the recipe DSL to run code specific to |windows|. The code is defined using the |resource ruby block| resource:
+The following example shows how to an ``if`` statement can be used with the ``platform?`` method in the recipe DSL to run code specific to |windows|. The code is defined using the |resource ruby_block| resource:
 
 .. code-block:: ruby
 

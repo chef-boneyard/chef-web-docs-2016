@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |resource cookbook file| resource defines a file distribution. For example, the following |resource cookbook file| details::
+The |resource cookbook_file| resource defines a file distribution. For example, the following |resource cookbook_file| details::
 
    cookbook_file "/usr/local/bin/apache2_module_conf_generate.pl" do
      source "apache2_module_conf_generate.pl"

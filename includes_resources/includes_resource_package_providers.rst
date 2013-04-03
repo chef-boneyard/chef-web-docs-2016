@@ -15,46 +15,46 @@ The following providers are available. Use the short name to use the provider in
      - When this short name is used, |chef| will attempt to determine the correct provider during the |chef| run.
    * - ``Chef::Provider::Package::Apt``
      - ``apt_package``
-     - The provider that is used with the |debian| and |ubuntu| platforms.
+     - |resource desc package_apt|
    * - ``Chef::Provider::Package::Dpkg``
      - ``dpkg_package``
-     - The provider that is used with the |debian dpkg| platform. Can be used with the ``options`` attribute.
+     - |resource desc package_dpkg| Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::EasyInstall``
      - ``easy_install_package``
-     - The provider that is used with |python| platform.
+     - |resource desc package_easy_install|
    * - ``Chef::Provider::Package::Freebsd``
      - ``freebsd_package``
-     - The provider that is used with the |freebsd| platform.
+     - |resource desc package_freebsd|
    * - ``Chef::Provider::Package::Ips``
      - ``ips_package``
-     - The provider that is used with the |ips| platform.
+     - |resource desc package_ips|
    * - ``Chef::Provider::Package::Macports``
      - ``macports_package``
-     - The provider that is used with the |mac os x| platform.
+     - |resource desc package_macports|
    * - ``Chef::Provider::Package::Pacman``
      - ``pacman_package``
-     - The provider that is used with the |pacman| platform.
+     - |resource desc package_pacman|
    * - ``Chef::Provider::Package::Portage``
      - ``portage_package``
-     - The provider that is used with the |gentoo| platform. Can be used with the ``options`` attribute.
+     - |resource desc package_portage| Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::Rpm``
      - ``rpm_package``
-     - The provider that is used with the |rpm| platform. Can be used with the ``options`` attribute.
+     - |resource desc package_rpm| Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::Rubygems``
      - ``gem_package``
-     - The provider that is used with packages that are only included in recipes. |gem_package provider package|
+     - |resource desc package_gem| Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::Rubygems``
      - ``chef_gem``
-     - The provider that is used when a |gem| is installed only for |chef| resources. |chef_gem provider package|
+     - |resource desc chef_gem| Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::Smartos``
      - ``smartos_package``
-     - The provider that is used with the |smartos| platform.
+     - |resource desc package_smartos|
    * - ``Chef::Provider::Package::Solaris``
      - ``solaris_package``
-     - The provider that is used with the |solaris| platform.
+     - |resource desc package_solaris|
    * - ``Chef::Provider::Package::Yum``
      - ``yum_package``
-     - The provider that is used with the |redhat| and |centos| platforms.
+     - |resource desc package_yum|
    * - ``Chef::Provider::Package::Zypper``
      - ``package``
      - The provider that is used with the |suse| platform.

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource powershell script| resource in a recipe is as follows:
+The syntax for using the |resource powershell_script| resource in a recipe is as follows:
 
 .. code-block:: ruby
 
@@ -18,7 +18,7 @@ where
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run
 
-The following is an example of how the |resource powershell script| resource can work when used in a recipe:
+The following is an example of how the |resource powershell_script| resource can work when used in a recipe:
 
 .. code-block:: ruby
 

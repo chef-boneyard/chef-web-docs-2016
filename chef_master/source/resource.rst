@@ -31,7 +31,7 @@ All resources share a set of common actions, attributes, conditional executions,
    * - :doc:`Relative Paths </resource_common_relative_paths>`
      - The ``#{ENV['HOME']}`` relative path can be used with any resource.
    * - :doc:`Windows File Security </resource_common_windows_file_security>`
-     - The |resource template|, |resource file|, |resource remote_file|, |resource cookbook file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes.
+     - The |resource template|, |resource file|, |resource remote_file|, |resource cookbook_file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes.
    * - :doc:`Run a Resource during Resource Compilation </resource_common_compile>`
      - Sometimes a resource needs to be run before every other resource or after all resources have been added to the resource collection.
 
@@ -62,7 +62,7 @@ All resources share a set of common actions, attributes, conditional executions,
    * - :doc:`resource_file`
      - |resource desc file|
    * - :doc:`resource_git`
-     - |resource desc scm git|
+     - |resource desc scm_git|
    * - :doc:`resource_group`
      - |resource desc group|
    * - :doc:`resource_http_request`
@@ -98,13 +98,13 @@ All resources share a set of common actions, attributes, conditional executions,
    * - :doc:`resource_service`
      - |resource desc service|
    * - :doc:`resource_subversion`
-     - |resource desc scm svn|
+     - |resource desc scm_svn|
    * - :doc:`resource_template`
      - |resource desc template|
    * - :doc:`resource_user`
      - |resource desc user|
    * - :doc:`resource_yum`
-     - |resource desc yum|
+     - |resource desc package_yum|
 
 
 .. toctree::
@@ -119,32 +119,45 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_common_relative_paths
    resource_common_windows_file_security
 
+   resource_apt_package
    resource_batch
+   resource_chef_gem
    resource_cookbook_file
    resource_cron
    resource_deploy
    resource_directory
+   resource_dpkg_package
+   resource_easy_install_package
    resource_env
    resource_erlang_call
    resource_execute
    resource_file
+   resource_freebsd_package
+   resource_gem_package
    resource_git
    resource_group
    resource_http_request
    resource_ifconfig
+   resource_ips_package
    resource_link
    resource_log
+   resource_macports_package
    resource_mdadm
    resource_mount
    resource_ohai
    resource_package
+   resource_pacman_package
+   resource_portage_package
    resource_powershell_script
    resource_registry_key
    resource_remote_directory
    resource_remote_file
+   resource_rpm_package
    resource_route
    resource_ruby_block
    resource_scm
+   resource_smartos_package
+   resource_solaris_package
    resource_subversion
    resource_script
    resource_service

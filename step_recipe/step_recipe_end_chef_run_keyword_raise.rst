@@ -3,7 +3,7 @@
 In certain situations it may be useful to stop a |chef| run entirely, such as when an unhandled exception occurs. For example, a |resource template| resource may not be able to find its source file or a user who is running |chef| does not have permission to create a directory. The ``raise`` keyword can be useful for stopping the |chef| run if an unhandled exception occurs. There are two approaches:
 
 * Place the ``raise`` keyword in a recipe (instead of the ``return`` keyword) to raise an exception during the compile phase
-* Place the ``raise`` keyword in a |resource ruby block| resource to raise an exception during the execution phase
+* Place the ``raise`` keyword in a |resource ruby_block| resource to raise an exception during the execution phase
 
 For example, using the ``raise`` keyword in a recipe to raise an exception during the compile phase may look something like this:
 

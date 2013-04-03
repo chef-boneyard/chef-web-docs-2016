@@ -18,7 +18,7 @@
 
 .. |note execute resource intepreter| replace:: Use the |resource script| resource to execute a script using a specific interpreter (|ruby|, |python|, |perl|, |csh|, or |bash|).
 
-.. |note file resource use other resources| replace:: Other resources should be used to manage files that are not present on a node. Use |resource cookbook file| when copying a file from a cookbook, |resource template| when using a template, and |resource remote_file| when transferring files from remote locations.
+.. |note file resource use other resources| replace:: Other resources should be used to manage files that are not present on a node. Use |resource cookbook_file| when copying a file from a cookbook, |resource template| when using a template, and |resource remote_file| when transferring files from remote locations.
 
 .. |note install trial for hosted| replace:: If you want to install |chef| and try it out without having to install |chef server| on a physical machine, sign up for |chef hosted|: http://www.opscode.com/hosted-chef/. The first five nodes are free of charge. Once you have signed up you can continue with the installation process. You can decide to use another type of |chef server| later if you want to.
 
@@ -34,7 +34,9 @@
 
 .. |note registry_key not_if only_if| replace:: This method can be used in recipes and from within the ``not_if`` and ``only_if`` blocks in resources. This method is not designed to create or modify a registry setting. If a registry setting needs to be modified, use the |resource registry_key| resource.
 
-.. |note remote_file resource fetch from files directory| replace:: Fetching files from the ``files/`` directory in a cookbook should be done with the |resource cookbook file| resource.
+.. |note remote_file resource fetch from files directory| replace:: Fetching files from the ``files/`` directory in a cookbook should be done with the |resource cookbook_file| resource.
+
+.. |note resource_based_on_package| replace:: This resource is based on the |resource package| resource. In many cases, it is better to use the |resource package| resource instead of this one. This is because when the |resource package| resource is used in a recipe, |chef| will details collected by |ohai| at the start of the |chef| run to determine the correct package application to use. Using the |resource package| resource allows a recipe to be authored in a way that allows it to be used across many platforms. That said, there are scenarios where using an application-specific package is preferred.
 
 .. |note scm resource use with resource deploy| replace:: This resource is often used in conjunction with the |resource deploy| resource.
 

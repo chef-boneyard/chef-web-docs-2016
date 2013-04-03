@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how the |resource ruby block| resource can be used to update the ``/etc/hosts`` file:
+The following example shows how the |resource ruby_block| resource can be used to update the ``/etc/hosts`` file:
 
 .. code-block:: ruby
 

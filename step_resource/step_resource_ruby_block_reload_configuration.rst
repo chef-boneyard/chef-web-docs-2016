@@ -4,7 +4,7 @@ The following example shows how to reload the configuration of a |chef client| u
 
 * using an ``if`` statement to check whether the plugins on a node are the latest versions
 * identify the location from which |ohai| plugins are stored
-* using the ``notifies`` attribute and a |resource ruby block| resource to trigger an update (if required) and to then reload the |client rb| file.
+* using the ``notifies`` attribute and a |resource ruby_block| resource to trigger an update (if required) and to then reload the |client rb| file.
 
 .. code-block:: ruby
 
