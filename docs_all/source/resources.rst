@@ -187,6 +187,7 @@ The following examples show how to use the ``subscribes`` notification in a reci
 
 .. include:: ../../step_resource/step_resource_ruby_block_stash_file_in_data_bag.rst
 
+
 Relative Paths
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_relative_paths.rst
@@ -194,6 +195,19 @@ Relative Paths
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
+
+
+Run Resources from the Resource Collection
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst
+
+Before other resources
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst
+
+After the resource collection is built
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_end.rst
 
 
 Windows File Security
@@ -214,36 +228,164 @@ Resources
 =====================================================
 The following resources are included with |chef| and have native providers:
 
+* apt_package
+* chef_gem
 * cookbook_file
 * cron
 * deploy (including |git| and |svn|)
 * directory
+* dpkg_package
+* easy_install_package
 * env
-* erlang_call
+* erl_call
 * execute
 * file
+* freebsd_package
+* gem_package
+* git
 * group
 * http_request
 * ifconfig
+* ips_package
 * link
 * log
+* macports_package
 * mdadm
 * mount
 * ohai
 * package
+* pacman_package
+* portage_package
 * powershell_script
+* registry_key
 * remote_directory
 * remote_file
+* rpm_package
 * route
 * ruby_block
 * scm
 * script
 * service
+* smartos_package
+* solaris_package
+* subversion
 * template
 * user
 * yum
 
 See below for more information about each of these resources, their related actions and attributes, the providers they rely on, and examples of how these resources can be used in recipes.
+
+apt_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_apt.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_apt_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_apt_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_apt_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_apt_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   apt_package "name of package" do
+     action :install
+   end
+
+
+chef_gem
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_chef_gem.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_chef_gem_syntax.rst
+
+Gem Package Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_options.rst
+
+Specify Options with a Hash
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources/includes_resource_package_options_hash.rst
+
+**Example**
+
+.. code-block:: ruby
+
+   chef_gem "bundler" do
+     options(:prerelease => true, :format_executable => false)
+   end
+
+Specify Options with a String
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources/includes_resource_package_options_string.rst
+
+**Example**
+
+.. code-block:: ruby
+
+   chef_gem "nokogiri" do
+     gem_binary("/opt/ree/bin/gem")
+     options("--prerelease --no-format-executable")
+   end
+
+Specify Options with a .gemrc File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
+
+**Example**
+
+.. code-block:: ruby
+
+   chef_gem "nokogiri" do
+     gem_binary "gem"
+   end
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_chef_gem_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_chef_gem_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_chef_gem_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a gems file for use in recipes**
+
+.. code-block:: ruby
+
+   chef_gem "right_aws" do
+     action :install
+   end
+   
+   require 'right_aws'
 
 cookbook_file
 -----------------------------------------------------
@@ -487,6 +629,76 @@ Examples
 .. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
 
 
+dpkg_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_dpkg.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_dpkg_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_dpkg_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_dpkg_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_dpkg_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   dpkg_package "name of package" do
+     action :install
+   end
+
+
+easy_install_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_easy_install.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_easy_install_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_easy_install_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_easy_install_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_easy_install_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   easy_install_package "name of package" do
+     action :install
+   end
+
+
 env
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_env.rst
@@ -679,6 +891,103 @@ Examples
 .. include:: ../../step_resource/step_resource_file_use_data_bag.rst
 
 
+freebsd_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_freebsd.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_freebsd_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_freebsd_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_freebsd_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_freebsd_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   freebsd_package "name of package" do
+     action :install
+   end
+
+
+gem_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_gem.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_gem_syntax.rst
+
+Gem Package Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_options.rst
+
+Specify Options with a Hash
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources/includes_resource_package_options_hash.rst
+
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_hash_options.rst
+
+Specify Options with a String
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources/includes_resource_package_options_string.rst
+
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_options_string.rst
+
+Specify Options with a .gemrc File
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
+
+**Example**
+
+.. include:: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_gem_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_gem_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_gem_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a gems file from the local file system**
+
+.. include:: ../../step_resource/step_resource_package_install_gems_from_local.rst
+
+**Use the ignore_failure common attribute**
+
+.. include:: ../../step_resource/step_resource_package_use_ignore_failure_attribute.rst
+
 
 
 git
@@ -815,6 +1124,40 @@ Examples
 
 .. include:: ../../step_resource/step_resource_ifconfig_configure_network_interface.rst
 
+ips_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_ips.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_ips_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_ips_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_ips_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_ips_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   ips_package "name of package" do
+     action :install
+   end
+
 
 link
 -----------------------------------------------------
@@ -892,6 +1235,41 @@ Examples
 **Add a message to a log file**
 
 .. include:: ../../step_resource/step_resource_log_add_message.rst
+
+macports_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_macports.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_macports_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_macports_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_macports_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_macports_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   macports_package "name of package" do
+     action :install
+   end
+
 
 mdadm
 -----------------------------------------------------
@@ -1136,6 +1514,76 @@ Examples
 
 .. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst
 
+pacman_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_pacman.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_pacman_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_pacman_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_pacman_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_pacman_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   pacman_package "name of package" do
+     action :install
+   end
+
+
+portage_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_portage.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_portage_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_portage_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_portage_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_portage_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   portage_package "name of package" do
+     action :install
+   end
+
+
 
 powershell_script
 -----------------------------------------------------
@@ -1301,6 +1749,42 @@ Examples
 
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
 
+
+rpm_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_rpm.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_rpm_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_rpm_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_rpm_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_rpm_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   rpm_package "name of package" do
+     action :install
+   end
+
+
 route
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_route.rst
@@ -1394,6 +1878,60 @@ Examples
 
 .. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
 
+scm
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_scm.rst
+
+This resource is the base resource for two other commonly-used resources: |resource scm_subversion| and |resource scm_git|. While it is possible to use the |resource scm| resource to access content stored in either |github| or |svn|, the recommendation is to use the |resource scm_subversion| resource with |svn| and to use the |resource scm_git| resource with |git|. For more information, see the following topics:
+
+* :doc:`git </resource_git>`
+* :doc:`subversion </resource_subversion>`
+
+.. note:: |note scm resource use with resource deploy|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_scm_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Get the latest version of an application**
+
+.. include:: ../../step_resource/step_resource_scm_get_latest_version.rst
+
+**Use the git mirror**
+
+.. include:: ../../step_resource/step_resource_scm_use_git_mirror.rst
+
+**Use different branches**
+
+.. include:: ../../step_resource/step_resource_scm_use_different_branches.rst
+
+**Install an application from github using bash**
+
+.. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
+
+**Upgrade packages from github**
+
+.. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst
+
+
 
 script
 -----------------------------------------------------
@@ -1438,6 +1976,8 @@ Examples
 **Store certain settings**
 
 .. include:: ../../step_resource/step_resource_remote_file_store_certain_settings.rst
+
+
 
 service
 -----------------------------------------------------
@@ -1507,6 +2047,75 @@ Examples
 
 .. include:: ../../step_resource/step_resource_execute_control_a_service.rst
 
+
+smartos_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_smartos.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_smartos_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_smartos_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_smartos_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_smartos_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   smartos_package "name of package" do
+     action :install
+   end
+
+
+solaris_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_package_solaris.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_solaris_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_solaris_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_solaris_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_solaris_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. code-block:: ruby
+
+   solaris_package "name of package" do
+     action :install
+   end
 
 
 
@@ -1623,6 +2232,7 @@ Examples
 **Get template settings from a local file**
 
 .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
+
 
 user
 -----------------------------------------------------

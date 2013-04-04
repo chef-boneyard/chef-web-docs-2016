@@ -10,15 +10,15 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``easy_install_binary``
-     - xxxxx
+     - The location of the |python easy_install| binary.
    * - ``module_name``
-     - xxxxx
+     - The name of the module.
    * - ``options``
      - |options resource package|
    * - ``package_name``
      - |package_name resource package|
    * - ``python_binary``
-     - xxxxx
+     - The location of the |python| binary.
    * - ``response_file``
      - |response_file resource package|
    * - ``source``

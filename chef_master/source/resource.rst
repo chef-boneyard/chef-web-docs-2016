@@ -45,6 +45,10 @@ All resources share a set of common actions, attributes, conditional executions,
 
    * - Resource
      - Description
+   * - :doc:`resource_apt_package`
+     - |resource desc package_apt|
+   * - :doc:`resource_chef_gem`
+     - |resource desc chef_gem|
    * - :doc:`resource_cookbook_file`
      - |resource desc cookbook_file|
    * - :doc:`resource_cron`
@@ -53,6 +57,10 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc deploy|
    * - :doc:`resource_directory`
      - |resource desc directory|
+   * - :doc:`resource_dpkg_package`
+     - |resource desc package_dpkg|
+   * - :doc:`resource_easy_install_package`
+     - |resource desc package_easy_install|
    * - :doc:`resource_env`
      - |resource desc env|
    * - :doc:`resource_erlang_call`
@@ -61,6 +69,10 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc execute|
    * - :doc:`resource_file`
      - |resource desc file|
+   * - :doc:`resource_freebsd_package`
+     - |resource desc package_freebsd|
+   * - :doc:`resource_gem_package`
+     - |resource desc package_gem|
    * - :doc:`resource_git`
      - |resource desc scm_git|
    * - :doc:`resource_group`
@@ -69,10 +81,14 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc http_request|
    * - :doc:`resource_ifconfig`
      - |resource desc ifconfig|
+   * - :doc:`resource_ips_package`
+     - |resource desc package_ips|
    * - :doc:`resource_link`
      - |resource desc link|
    * - :doc:`resource_log`
      - |resource desc log|
+   * - :doc:`resource_macports_package`
+     - ||resource desc package_macports|
    * - :doc:`resource_mdadm`
      - |resource desc mdadm|
    * - :doc:`resource_mount`
@@ -81,12 +97,18 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc ohai|
    * - :doc:`resource_package`
      - |resource desc package|
+   * - :doc:`resource_pacman_package`
+     - |resource desc package_pacman|
+   * - :doc:`resource_portage_package`
+     - |resource desc package_portage|
    * - :doc:`resource_powershell_script`
      - |resource desc powershell_script|
    * - :doc:`resource_remote_directory`
      - |resource desc remote_directory|
    * - :doc:`resource_remote_file`
      - |resource desc remote_file|
+   * - :doc:`resource_rpm_package`
+     - |resource desc package_rpm|
    * - :doc:`resource_route`
      - |resource desc route|
    * - :doc:`resource_ruby_block`
@@ -97,6 +119,10 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc script|
    * - :doc:`resource_service`
      - |resource desc service|
+   * - :doc:`resource_smartos_package`
+     - |resource desc package_smartos|
+   * - :doc:`resource_solaris_package`
+     - |resource desc package_solaris|
    * - :doc:`resource_subversion`
      - |resource desc scm_svn|
    * - :doc:`resource_template`

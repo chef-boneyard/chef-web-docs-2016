@@ -20,7 +20,11 @@ Specify Options with a Hash
 
 **Example**
 
-.. include:: ../../step_resource/step_resource_package_install_gem_with_hash_options.rst
+.. code-block:: ruby
+
+   chef_gem "bundler" do
+     options(:prerelease => true, :format_executable => false)
+   end
 
 Specify Options with a String
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -28,7 +32,12 @@ Specify Options with a String
 
 **Example**
 
-.. include:: ../../step_resource/step_resource_package_install_gem_with_options_string.rst
+.. code-block:: ruby
+
+   chef_gem "nokogiri" do
+     gem_binary("/opt/ree/bin/gem")
+     options("--prerelease --no-format-executable")
+   end
 
 Specify Options with a .gemrc File
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -36,7 +45,11 @@ Specify Options with a .gemrc File
 
 **Example**
 
-.. include:: ../../step_resource/step_resource_package_install_gem_with_gemrc.rst
+.. code-block:: ruby
+
+   chef_gem "nokogiri" do
+     gem_binary "gem"
+   end
 
 Actions
 =====================================================
@@ -56,5 +69,11 @@ Examples
 
 **Install a gems file for use in recipes**
 
-.. include:: ../../step_resource/step_resource_package_install_gems_for_chef_recipe.rst
+.. code-block:: ruby
+
+   chef_gem "right_aws" do
+     action :install
+   end
+   
+   require 'right_aws'
 
