@@ -5,6 +5,8 @@
 
 |knife tag|
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
-   knife tag [ARGUMENT]
+.. code-block:: bash
+
+   $ knife tag [ARGUMENT]

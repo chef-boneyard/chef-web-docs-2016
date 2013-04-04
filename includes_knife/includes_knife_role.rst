@@ -5,9 +5,11 @@
 
 |knife role|
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
-   knife role [ARGUMENT] (options)
+.. code-block:: bash
+
+   $ knife role [ARGUMENT] (options)
 
 .. note:: Use the ``node`` sub-command (and the ``run_list add node`` argument) to add a role to a node on the |chef server|.
 

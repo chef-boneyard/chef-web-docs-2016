@@ -5,7 +5,9 @@
 
 |knife client|
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
-   knife client [ARGUMENT] (options)
+.. code-block:: bash
+
+   $ knife client [ARGUMENT] (options)
    

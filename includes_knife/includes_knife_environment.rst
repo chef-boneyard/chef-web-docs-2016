@@ -5,7 +5,9 @@
 
 |knife environment|
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
-   knife environment [ARGUMENT] (options)
+.. code-block:: bash
+
+   $ knife environment [ARGUMENT] (options)
 

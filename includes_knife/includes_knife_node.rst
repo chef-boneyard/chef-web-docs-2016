@@ -5,7 +5,9 @@
 
 |knife node|
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
-   knife node [ARGUMENT] (options)
+.. code-block:: bash
+
+   $ knife node [ARGUMENT] (options)
 

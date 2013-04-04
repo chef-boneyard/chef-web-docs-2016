@@ -5,6 +5,8 @@
 
 |knife site cookbook| The following arguments do not require a user account: ``download``, ``search``, ``install``, and ``list``.
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
-   knife cookbook site [ARGUMENT] (options)
+.. code-block:: bash
+
+   $ knife cookbook site [ARGUMENT] (options)

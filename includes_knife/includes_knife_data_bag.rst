@@ -5,7 +5,9 @@
 
 |knife data bag|
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
-   knife data bag [ARGUMENT] (options)
+.. code-block:: bash
+
+   $ knife data bag [ARGUMENT] (options)
 

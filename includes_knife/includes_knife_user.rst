@@ -5,7 +5,9 @@
 
 |knife user|
 
-This subcommand has the following syntax::
+This subcommand has the following syntax:
 
-   knife user [ARGUMENT] (options)
+.. code-block:: bash
+
+   $ knife user [ARGUMENT] (options)
    
