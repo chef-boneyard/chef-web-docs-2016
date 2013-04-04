@@ -13,7 +13,7 @@ The syntax for using the |resource package| resource in a recipe is as follows:
 
 where 
 
-* ``chef_gem`` tells |chef| to use the ``Chef::Provider::Rubygems`` provider during the |chef| run
+* ``chef_gem`` tells |chef| to use the ``Rubygems`` provider during the |chef| run
 * ``"name"`` is the name of the package
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run
