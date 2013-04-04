@@ -5,11 +5,4 @@
 
 |knife search|
 
-The subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ knife search INDEX SEARCH_QUERY
-
-where ``INDEX`` is one of ``client``, ``environment``, ``node``, ``role``, or the name of a data bag and SEARCH_QUERY is the search query syntax for the query that will be executed.
 
