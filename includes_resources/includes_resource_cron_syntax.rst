@@ -23,9 +23,9 @@ For example, the following will run every hour at 8:00 every Saturday morning, s
 .. code-block:: ruby
 
    cron "name_of_cron_entry" do
-     hour 8
-     weekday 6
-     mailto admin@opscode.com
+     hour "8"
+     weekday "6"
+     mailto "admin@opscode.com"
      action :create
    end
 
@@ -34,11 +34,11 @@ The following example will run at 8:00 PM, every weekday (Monday through Friday)
 .. code-block:: ruby
 
    cron "name_of_cron_entry" do
-     minute 0
-     hour 20
+     minute "0"
+     hour "20"
      day "*"
-     month 10
-     weekday 1-5
+     month "10"
+     weekday "1-5"
      action :create
    end
 
@@ -48,9 +48,9 @@ The following example is used to run weekly cookbook reports:
 
    cron "cookbooks_report" do
      action node.tags.include?('cookbooks-report') ? :create : :delete
-     minute 0
-     hour 0
-     weekday 1
+     minute "0"
+     hour "0"
+     weekday "1"
      user "opscode"
      mailto "nharvey@opscode.com"
      home "/srv/opscode-community-site/shared/system"
