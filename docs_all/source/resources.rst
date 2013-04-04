@@ -324,7 +324,7 @@ Gem Package Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options.rst
 
-Specify Options with a Hash
+Use a Hash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_package_options_hash.rst
 
@@ -336,7 +336,7 @@ Specify Options with a Hash
      options(:prerelease => true, :format_executable => false)
    end
 
-Specify Options with a String
+Use a String
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_package_options_string.rst
 
@@ -349,7 +349,7 @@ Specify Options with a String
      options("--prerelease --no-format-executable")
    end
 
-Specify Options with a .gemrc File
+Use a .gemrc File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
 
@@ -940,7 +940,7 @@ Gem Package Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options.rst
 
-Specify Options with a Hash
+Use a Hash
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_package_options_hash.rst
 
@@ -948,7 +948,7 @@ Specify Options with a Hash
 
 .. include:: ../../step_resource/step_resource_package_install_gem_with_hash_options.rst
 
-Specify Options with a String
+Use a String
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_package_options_string.rst
 
@@ -956,7 +956,7 @@ Specify Options with a String
 
 .. include:: ../../step_resource/step_resource_package_install_gem_with_options_string.rst
 
-Specify Options with a .gemrc File
+Use a .gemrc File
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
 
