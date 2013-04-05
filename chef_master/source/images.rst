@@ -20,11 +20,11 @@ Instead of using this page to view these images, click these links:
 
 * http://docs.opscode.com/_images/chef_run_300dpi.png (use for printing and presentations)
 
-.. image:: ../../images/chef_run.png
+.. image:: ../../images/chef_run_300dpi.png
 
 * http://docs.opscode.com/_images/server_components_300dpi.png (use for printing and presentations)
 
-.. image:: ../../images/server_components.png
+.. image:: ../../images/server_components_300dpi.png
 
 
 
