@@ -48,21 +48,5 @@ To install |chef| on a node using ``knife bootstrap``:
       123.45.6.789 [Fri, 07 Sep 2012 11:05:19 -0700] INFO: Report handlers complete
       123.45.6.789
 
-#. When the bootstrap operation is finished, enter the following command:
 
-   .. code-block:: bash
-
-      $ knife client show name_of_client
-
-   where ``name_of_client`` is the name of the client node that was just bootstrapped. The |chef server| will return something similar to:
-
-   .. code-block:: bash
-
-         admin:       false
-         chef_type:   client
-         json_class:  Chef::ApiClient
-         name:        name_of_client
-         public_key: 
-
-   This verifies that the node is recognized by the |chef server|.
 

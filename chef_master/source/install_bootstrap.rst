@@ -24,5 +24,5 @@ Run the ``knife bootstrap`` command
 
 Verify the node
 -----------------------------------------------------
-Log on to the |chef server| and verify that both the node and workstations are registered and known to the |chef server|.
+.. include:: ../../step_install/step_install_node_verify.rst
 
