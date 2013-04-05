@@ -18,11 +18,11 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/overview_chef_draft_300dpi.png
 
-* http://docs.opscode.com/_images/chef_run.png (use for printing and presentations)
+* http://docs.opscode.com/_images/chef_run_300dpi.png (use for printing and presentations)
 
 .. image:: ../../images/chef_run.png
 
-* http://docs.opscode.com/_images/server_components.png (use for printing and presentations)
+* http://docs.opscode.com/_images/server_components_300dpi.png (use for printing and presentations)
 
 .. image:: ../../images/server_components.png
 
