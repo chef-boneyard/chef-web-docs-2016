@@ -58,7 +58,7 @@ The Chef Server
 **APIs:** :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Chef Server API </api_chef_server>`
 
 
-The Nodes 
+The Nodes
 =====================================================
 **The Basics:** :doc:`About Nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The Chef Run </essentials_nodes_chef_run>` | :doc:`Ohai </ohai>` | :doc:`Chef Solo </chef_solo>`
 
