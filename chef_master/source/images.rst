@@ -10,9 +10,9 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/qr_knife_web.png
 
-* http://docs.opscode.com/_images/qr_knife_web_300.png (use for printing and presentations)
+* http://docs.opscode.com/_images/qr_knife_web_300dpi.png (use for printing and presentations)
 
-.. image:: ../../images/qr_knife_web_300.png
+.. image:: ../../images/qr_knife_web_300dpi.png
 
 * http://docs.opscode.com/_images/overview_chef_draft_300dpi.png (use for printing and presentations)
 
