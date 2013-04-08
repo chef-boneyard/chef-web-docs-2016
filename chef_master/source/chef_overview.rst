@@ -42,8 +42,7 @@ Some important components on nodes include:
    * - .. image:: ../../images/icon_ohai.png
      - .. include:: ../../includes_ohai/includes_ohai.rst
 
-|chef| uses RSA public key-pairs to authenticate a |chef client| with the |chef server| every time a |chef client| needs access to data that is stored on the |chef server|. This prevents any node from accessing data that it shouldn't and ensures that only nodes that are properly registered with the |chef| server can be managed by |chef|.
-
+.. include:: ../../includes_security/includes_security_key_pairs.rst
 
 Workstations
 =====================================================

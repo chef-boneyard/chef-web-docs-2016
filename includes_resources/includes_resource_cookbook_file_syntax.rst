@@ -13,7 +13,7 @@ The syntax for using the |resource cookbook_file| resource in a recipe is as fol
 
 where 
 
-* ``cookbook_file`` tells |chef| to use the ``CookbookFile`` provider during the |chef| run
+* ``cookbook_file`` tells |chef| to use the ``Chef::Provider::CookbookFile`` provider during the |chef| run
 * ``"name"`` is the destination path and file name on the node
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run

@@ -13,7 +13,7 @@ The syntax for using the |resource batch| resource in a recipe is as follows:
 
 where 
 
-* ``batch`` tells |chef| to use the ``Windows::Batch`` provider during the |chef| run
+* ``batch`` tells |chef| to use the ``Chef::Provider::Windows::Batch`` provider during the |chef| run
 * ``"name"`` is the xxxxx
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run

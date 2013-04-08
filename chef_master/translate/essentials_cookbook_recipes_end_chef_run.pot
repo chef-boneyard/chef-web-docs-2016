@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-08 13:57\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:34
+# 48830b99250a4eadb037fd167d4c96ea
+msgid "Ending a |chef| Run"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:36
+# b968e032c298422bae01d0d047a8f0e9
+msgid "Sometimes it may be necessary to end a |chef| run before it completes. There are a few ways to do this:"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:38
+# 221c475598a040d8895421c84830f467
+msgid "Using the ``return`` keyword and a condition"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:39
+# fdc0e9840cf44c798c0f155f17603725
+msgid "Using the ``raise`` keyword to trigger an unhandled exception"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:40
+# 1bc43f05a3d548a88d7595c6644838e1
+msgid "Using the ``rescue`` block in |ruby| code"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:41
+# 299fa1de7b4049c7b661eb5275e7f6ea
+msgid "Using ``Chef::Application.fatal!`` to log a fatal message to the |chef| logger and ``STDERR``"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:42
+# 9b5c1bc31e244d94ba55291e102687bb
+msgid "Using an :doc:`exception handler </essentials_handlers>`"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:45
+# b5fd4df7ff944b4d815263689c3c40e7
+msgid "Examples"
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:46
+# 02b20753fdf4463b9aaa2a3b6498f251
+msgid "The following examples show various approaches to ending a |chef| run."
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:48
+# 35bedffb93b24c33821fb951b5fd2d20
+msgid "**Using the raise keyword**"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst:3
+# 62099d71500141648f06084d52e4a2c7
+msgid "In certain situations it may be useful to stop a |chef| run entirely, such as when an unhandled exception occurs. For example, a |resource template| resource may not be able to find its source file or a user who is running |chef| does not have permission to create a directory. The ``raise`` keyword can be useful for stopping the |chef| run if an unhandled exception occurs. There are two approaches:"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst:5
+# f7ca71a1cab6443e910b3ff904341a40
+msgid "Place the ``raise`` keyword in a recipe (instead of the ``return`` keyword) to raise an exception during the compile phase"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst:6
+# 86460d222fda471aa411855e6de856b3
+msgid "Place the ``raise`` keyword in a |resource ruby_block| resource to raise an exception during the execution phase"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst:8
+# d191126b1d3b4f6ebf778ed87a47068a
+msgid "For example, using the ``raise`` keyword in a recipe to raise an exception during the compile phase may look something like this:"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst:22
+# cab8470c89f04334bccadd3bbfbc64d9
+msgid "where ``node['platform'] == 'windows'`` is the condition set on the ``raise`` keyword. This condition is useful in a situation where the |windows| system does not have a package manager available, but the package (``name_of_package``) should be installed. Because the package should be installed, but cannot be, |chef| will exit the run with a fatal error and will provide a stack trace."
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:52
+# 01ebfeadf6e449299f5b27c5ec2fa1a0
+msgid "**Using the return keyword**"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst:3
+# 1aaa8fae60ff43b89bde4e1c039e987d
+msgid "Using the ``return`` keyword and a condition is typically the most direct approach to stopping a |chef| run. When the condition is met, stop the run. When the condition is not met, allow the run to continue. The following example shows how the ``return`` keyword can be used to set a condition that, if met, will stop a |chef| run:"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst:17
+# e80fd82aa8e44b8ebbe8d011cbefc766
+msgid "where ``node['platform'] == 'windows'`` is the condition set on the ``return`` keyword. This condition is useful in a situation where a |windows| system cannot install the package named ``name_of_package``. In a situation where this condition is met, there is no need for the recipe to continue and consequently it is OK for the |chef| run to be stopped."
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:56
+# dc313e88e2b4447482ec42baa42bad3c
+msgid "**Using a rescue block**"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_rescue_block.rst:3
+# fefb2474b2f2483789c401fd99d8e78d
+msgid "Since recipes are written in |ruby|, they can be written to attempt to handle error conditions using the ``rescue`` block."
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_rescue_block.rst:5
+# da93437c7f934c74b00d098a6e619e2f
+msgid "For example:"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_rescue_block.rst:16
+# 3a9e40ccd32547209c4fa69c61dbb39e
+msgid "where ``data_bag_item`` makes an HTTP request to the |chef server| to get a data bag item named ``flowers``. If there is a problem, the request will return a ``Net::HTTPServerException``. The ``rescue`` block can be used to try to retry or otherwise handle the situation. If the ``rescue`` block is unable to handle the situation, then the ``raise`` keyword is used to specify the message to be raised."
+msgstr ""
+
+#: ../source/essentials_cookbook_recipes_end_chef_run.rst:60
+# b10aedae15704a1c9d908fbeb5d68cf8
+msgid "**Sending a fatal message to a log file**"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_send_fatal_message.rst:3
+# 67386b0cb9064ec1a81e3a1f86235f93
+msgid "If a log entry is required, use ``Chef::Application.fatal!`` to log a fatal message to a log file using standard error output. After the log message is sent, |chef| will stop the run. Something like the following can be used to trigger this type of log entry:"
+msgstr ""
+
+#: ../../step_recipe/step_recipe_end_chef_run_send_fatal_message.rst:9
+# 2929d076865f4a79bf1fd8457f721993
+msgid "where ``some_condition`` is the condition to be met, ``return_code`` is the code that will be identified in the log entry. When this condition is met, |chef| will exit, send a log message and return the code specified with ``return_code`` from the process."
+msgstr ""
+
