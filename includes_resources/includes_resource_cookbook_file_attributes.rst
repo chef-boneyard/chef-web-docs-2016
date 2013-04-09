@@ -22,10 +22,10 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path resource cookbook_file|
+     - |path file| Default value: ``name``.
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source resource cookbook_file|
+     - |source file_location| Default value: basename of ``name``.
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.

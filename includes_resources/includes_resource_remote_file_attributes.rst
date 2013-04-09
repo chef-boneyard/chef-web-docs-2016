@@ -22,8 +22,8 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path resource remote_file|
+     - |path file| Default value: ``name``.
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source resource remote_file|
+     - Required. |source uri| Default value: ``nil``.

@@ -24,10 +24,10 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path resource template|
+     - |path file| Default value: ``name``.
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source resource template|
+     - |source file_location| Default value: basename of ``name`` plus ``.erb``.
    * - ``variables``
      - |variables for template|
