@@ -65,7 +65,6 @@ Install this plugin
 
 Generate the Management Certificate
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_certificate.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
