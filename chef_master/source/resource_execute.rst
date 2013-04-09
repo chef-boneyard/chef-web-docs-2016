@@ -56,10 +56,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_execute_notifies_specific_order.rst
 
-**Restart when a configuration is broken**
-
-.. include:: ../../step_resource/step_resource_execute_notifies_prevent_restart_if_config_is_broken.rst
-
 **Execute a command using a template**
 
 .. include:: ../../step_resource/step_resource_execute_command_from_template.rst
@@ -91,4 +87,8 @@ Examples
 **Enable remote login for Mac OS X**
 
 .. include:: ../../step_resource/step_resource_execute_enable_remote_login.rst
+
+**Execute code immediately, based on the template resource**
+
+.. include:: ../../step_resource/step_resource_template_notifies_run_immediately.rst
 

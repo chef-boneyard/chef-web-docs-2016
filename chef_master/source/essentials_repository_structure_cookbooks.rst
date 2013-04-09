@@ -6,8 +6,8 @@ cookbooks/
 
 .. include:: ../../steps/step_repository_cookbooks_configure_settings.rst
 
-.. include:: ../../steps/step_repository_cookbooks_create.rst
+.. include:: ../../step_knife/step_knife_cookbook_create.rst
 
-.. include:: ../../steps/step_repository_cookbooks_download_git.rst
+.. include:: ../../step_knife/step_knife_cookbook_download_git.rst
 
-.. include:: ../../steps/step_repository_cookbooks_download_no_git.rst
+.. include:: ../../step_knife/step_knife_cookbook_download_no_git.rst

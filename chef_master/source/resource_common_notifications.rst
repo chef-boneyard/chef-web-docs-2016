@@ -36,10 +36,6 @@ The following examples show how to use the ``notifies`` notification in a recipe
 
 .. include:: ../../step_resource/step_resource_execute_notifies_specific_order.rst
 
-**Restart when a configuration is broken**
-
-.. include:: ../../step_resource/step_resource_execute_notifies_prevent_restart_if_config_is_broken.rst
-
 **Reload a service**
 
 .. include:: ../../step_resource/step_resource_template_notifies_reload_service.rst

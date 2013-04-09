@@ -277,8 +277,6 @@ See below for more information about each of these resources, their related acti
 
 apt_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_apt.rst
 
 Syntax
@@ -312,8 +310,6 @@ Examples
 
 chef_gem
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_chef_gem.rst
 
 Syntax
@@ -631,8 +627,6 @@ Examples
 
 dpkg_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_dpkg.rst
 
 Syntax
@@ -666,8 +660,6 @@ Examples
 
 easy_install_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_easy_install.rst
 
 Syntax
@@ -807,6 +799,14 @@ Examples
 
 .. include:: ../../step_resource/step_resource_yum_package_install_yum_repo_from_file.rst
 
+**Prevent restart and reconfigure if configuration is broken**
+
+.. include:: ../../step_resource/step_resource_execute_subscribes_prevent_restart_and_reconfigure.rst
+
+**Notify in a specific order**
+
+.. include:: ../../step_resource/step_resource_execute_notifies_specific_order.rst
+
 **Execute a command using a template**
 
 .. include:: ../../step_resource/step_resource_execute_command_from_template.rst
@@ -838,6 +838,10 @@ Examples
 **Enable remote login for Mac OS X**
 
 .. include:: ../../step_resource/step_resource_execute_enable_remote_login.rst
+
+**Execute code immediately, based on the template resource**
+
+.. include:: ../../step_resource/step_resource_template_notifies_run_immediately.rst
 
 
 file
@@ -893,8 +897,6 @@ Examples
 
 freebsd_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_freebsd.rst
 
 Syntax
@@ -928,8 +930,6 @@ Examples
 
 gem_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_gem.rst
 
 Syntax
@@ -1126,8 +1126,6 @@ Examples
 
 ips_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_ips.rst
 
 Syntax
@@ -1238,8 +1236,6 @@ Examples
 
 macports_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_macports.rst
 
 Syntax
@@ -1516,8 +1512,6 @@ Examples
 
 pacman_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_pacman.rst
 
 Syntax
@@ -1551,8 +1545,6 @@ Examples
 
 portage_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_portage.rst
 
 Syntax
@@ -1752,8 +1744,6 @@ Examples
 
 rpm_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_rpm.rst
 
 Syntax
@@ -2050,8 +2040,6 @@ Examples
 
 smartos_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_smartos.rst
 
 Syntax
@@ -2085,8 +2073,6 @@ Examples
 
 solaris_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
 .. include:: ../../includes_resources/includes_resource_package_solaris.rst
 
 Syntax
@@ -2213,13 +2199,41 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_use_whitespace_array.rst
 
-**Set an IP address using variables and a template**
+**Use a relative path**
 
-.. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
+.. include:: ../../step_resource/step_resource_template_use_relative_paths.rst
+
+**Delay notifications**
+
+.. include:: ../../step_resource/step_resource_template_notifies_delay.rst
+
+**Notify immediately**
+
+.. include:: ../../step_resource/step_resource_template_notifies_run_immediately.rst
+
+**Notify multiple resources**
+
+.. include:: ../../step_resource/step_resource_template_notifies_multiple_resources.rst
+
+**Reload a service**
+
+.. include:: ../../step_resource/step_resource_template_notifies_reload_service.rst
+
+**Restart a service when a template is modified**
+
+.. include:: ../../step_resource/step_resource_template_notifies_restart_service_when_template_modified.rst
+
+**Send notifications to multiple resources**
+
+.. include:: ../../step_resource/step_resource_template_notifies_send_notifications_to_multiple_resources.rst
 
 **Execute a command using a template**
 
 .. include:: ../../step_resource/step_resource_execute_command_from_template.rst
+
+**Set an IP address using variables and a template**
+
+.. include:: ../../step_resource/step_resource_template_set_ip_address_with_variables_and_template.rst
 
 **Add a rule to an IP table**
 
@@ -2232,7 +2246,6 @@ Examples
 **Get template settings from a local file**
 
 .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
-
 
 user
 -----------------------------------------------------
