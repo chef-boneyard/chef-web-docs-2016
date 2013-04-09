@@ -2,7 +2,7 @@
 Knife Plugins Reference
 =====================================================
 
-.. include:: ../../includes_knife/includes_knife_plugin.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
 
 Working with Knife
 =====================================================
@@ -34,7 +34,7 @@ Common Options
 
 Authenticated API Requests
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_plugin_authenticated_requests.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst
 
 Plugins
 =====================================================
@@ -57,7 +57,7 @@ The following plugins for |knife| are provided by |opscode|:
 
 azure (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_azure.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -65,31 +65,32 @@ Install this plugin
 
 Generate the Management Certificate
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_image_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete.rst
 
 server describe
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_server_describe.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_azure_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list.rst
 
 
 bluebox (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_bluebox.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -97,24 +98,24 @@ Install this plugin
 
 images list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluebox_images_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_images_list.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluebox_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluebox_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_bluebox_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_list.rst
 
 
 ec2 (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_ec2.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -122,24 +123,24 @@ Install this plugin
 
 instance data
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_ec2_instance_data.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_instance_data.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_ec2_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_ec2_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_ec2_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_list.rst
 
 
 eucalyptus (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_eucalyptus.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -147,28 +148,28 @@ Install this plugin
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_flavor_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_flavor_list.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_image_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_image_list.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_eucalyptus_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_list.rst
 
 
 google (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_google.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -176,20 +177,20 @@ Install this plugin
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_google_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_google_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_google_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_list.rst
 
 
 hp (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_hp.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_hp.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -197,28 +198,28 @@ Install this plugin
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_flavor_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_hp_flavor_list.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_image_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_hp_image_list.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_hp_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_hp_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_hp_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_hp_server_list.rst
 
 
 linode (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_linode.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -226,44 +227,44 @@ Install this plugin
 
 datacenter list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_datacenter_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_datacenter_list.rst
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_flavor_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_flavor_list.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_image_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_image_list.rst
 
 kernel list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_kernel_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_kernel_list.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_server_list.rst
 
 server reboot
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_server_reboot.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_server_reboot.rst
 
 stackscript list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_linode_stackscript_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_stackscript_list.rst
 
 
 openstack (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_openstack.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -271,28 +272,28 @@ Install this plugin
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_flavor_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_flavor_list.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_image_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_image_list.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_openstack_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_server_list.rst
 
 
 rackspace (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_rackspace.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -300,28 +301,28 @@ Install this plugin
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_flavor_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_flavor_list.rst
 
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_image_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_image_list.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_rackspace_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_list.rst
 
 
 terremark (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_terremark.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -329,20 +330,20 @@ Install this plugin
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_terremark_server_create.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_create.rst
 
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_terremark_server_delete.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_delete.rst
 
 server list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_terremark_server_list.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_list.rst
 
 
 windows (plug-in)
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_windows.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -350,16 +351,16 @@ Install this plugin
 
 Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_windows_winrm_requirements.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst
 
 bootstrap windows ssh
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_windows_bootstrap_windows_ssh.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh.rst
 
 bootstrap windows winrm
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_windows_bootstrap_windows_winrm.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm.rst
 
 winrm
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_windows_winrm.rst
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm.rst
