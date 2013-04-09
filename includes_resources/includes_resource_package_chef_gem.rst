@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|resource desc chef_gem| This resource is based on the :doc:`package resource </resource_package>`. 
+|resource desc chef_gem| This resource is based on the `package <http://docs.opscode.com/resource_package.html>`_ resource. 
 
 The |resource chef_gem| resource works with all of the same attributes and options as the |resource package_gem| resource, but does not accept the ``gem_binary`` attribute because it always uses the ``CurrentGemEnvironment`` under which |chef| is running. In addition to performing actions similar to the |resource package_gem| resource, the |resource chef_gem| resource does the following:
 
