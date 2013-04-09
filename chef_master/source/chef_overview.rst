@@ -39,10 +39,10 @@ Some important components on nodes include:
      - Description
    * - .. image:: ../../images/icon_chef_client.png
      - .. include:: ../../includes_chef/includes_chef_client.rst
+       
+       .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
    * - .. image:: ../../images/icon_ohai.png
      - .. include:: ../../includes_ohai/includes_ohai.rst
-
-.. include:: ../../includes_security/includes_security_key_pairs.rst
 
 Workstations
 =====================================================
@@ -58,6 +58,8 @@ Some important components of workstations include:
      - Description
    * - .. image:: ../../images/icon_knife.png
      - .. include:: ../../includes_knife/includes_knife.rst
+       
+       .. include:: ../../includes_security/includes_security_key_pairs_knife.rst
    * - .. image:: ../../images/icon_repository.png
      - .. include:: ../../includes_repository/includes_repository.rst
 
