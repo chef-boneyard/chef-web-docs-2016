@@ -57,17 +57,6 @@ roles/
 .. include:: ../../includes_repository/includes_repository_directory_roles.rst 
 
 
-.. toctree::
-   :hidden:
-
-   essentials_repository_structure_certificates
-   essentials_repository_structure_chef
-   essentials_repository_structure_config
-   essentials_repository_structure_cookbooks
-   essentials_repository_structure_data_bags
-   essentials_repository_structure_environments
-   essentials_repository_structure_roles
-
 
 
 
