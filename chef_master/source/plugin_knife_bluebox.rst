@@ -4,6 +4,8 @@ knife bluebox
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox.rst
 
+.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+
 Install this plugin
 =====================================================
 .. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_bluebox.rst
