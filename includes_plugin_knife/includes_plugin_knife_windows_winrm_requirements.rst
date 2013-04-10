@@ -25,3 +25,27 @@ The following |windows remote management| configuration settings should be updat
    * - ``Basic``
      - |winrm_basic|
 
+To update these settings, run the following commands:
+
+.. code-block:: bash
+
+   $ winrm set winrm/config/winrs @{MaxMemoryPerShellMB="300"}
+
+and:
+
+.. code-block:: bash
+
+   $ winrm set winrm/config @{MaxTimeoutms="1800000"}
+
+and:
+
+.. code-block:: bash
+
+   $ winrm set winrm/config/service @{AllowUnencrypted="true"}
+
+and then:
+
+.. code-block:: bash
+
+   $ winrm set winrm/config/service/auth @{Basic="true"}
+
