@@ -20,7 +20,7 @@ The following resources are built into |chef|:
 
    * - Resource
      - Description
-   * - |resource cookbook file|
+   * - |resource cookbook_file|
      - |resource desc cookbook_file|
    * - |resource cron|
      - |resource desc cron|
@@ -30,7 +30,7 @@ The following resources are built into |chef|:
      - |resource desc directory|
    * - |resource env|
      - |resource desc env|
-   * - |resource erlang call|
+   * - |resource erlang_call|
      - |resource desc erlang_call|
    * - |resource execute|
      - |resource desc execute|
@@ -38,7 +38,7 @@ The following resources are built into |chef|:
      - |resource desc file|
    * - |resource group|
      - |resource desc group|
-   * - |resource http request|
+   * - |resource http_request|
      - |resource desc http_request|
    * - |resource ifconfig|
      - |resource desc ifconfig|
@@ -54,7 +54,7 @@ The following resources are built into |chef|:
      - |resource desc ohai|
    * - |resource package|
      - |resource desc package|     
-   * - |resource powershell script|
+   * - |resource powershell_script|
      - |resource desc powershell_script|
    * - |resource remote_directory|
      - |resource desc remote_directory|
@@ -62,7 +62,7 @@ The following resources are built into |chef|:
      - |resource desc remote_file|
    * - |resource route|
      - |resource desc route|
-   * - |resource ruby block|
+   * - |resource ruby_block|
      - |resource desc ruby_block|
    * - |resource scm|
      - |resource desc scm|
@@ -74,8 +74,8 @@ The following resources are built into |chef|:
      - |resource desc template|
    * - |resource user|
      - |resource desc user|
-   * - |resource yum package|
-     - |resource desc yum|
+   * - |resource yum_package|
+     - |resource desc package_yum|
 
 Platform Providers
 =====================================================
