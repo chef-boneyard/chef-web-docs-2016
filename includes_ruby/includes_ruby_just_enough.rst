@@ -2,61 +2,92 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
+Many people who are new to |ruby| often find that it doesn't take very long to get up to speed with the basics. For example, it's useful to know how to check the syntax of a |ruby| file, such as the contents of a cookbook named "my_cookbook.rb":
 
-Many people who are new to |ruby| often find that it doesn't take very long to get up to speed with the basics. For example, it's useful to know how to check the syntax of a |ruby| file, such as the contents of a cookbook named "my_cookbook.rb"::
+.. code-block:: bash
 
    $ ruby -c my_cookbook_file.rb
 
 to return::
 
+.. code-block:: bash
+
    Syntax OK
 
-Here is a quick rundown of some basic |ruby| commands::
+Here is a quick rundown of some basic |ruby| commands.
 
-   # anything after # is a comment.
+Anything after a ``#`` is a comment.
+
+.. code-block:: ruby
+
+   # This is a comment.
+
+Assign a local variable:
     
-   # assigning a local variable:
+.. code-block:: ruby
+
    x = 1
+
+Do some basic arithmetic:
  
-   # some basic arithmetic:
+.. code-block:: ruby
+
    1 + 2           # => 3
    2 * 7           # => 14
    5 / 2           # => 2   (because both arguments are whole numbers)
    5 / 2.0         # => 2.5 (because one of the numbers had a decimal place)
    1 + (2 * 3)     # => 7   (you can use parens to group expressions)
  
-   # strings
+Work with strings:
+
+.. code-block:: ruby
+
    'single quoted' # => "single quoted"
    "double quoted" # => "double quoted"
    'It\'s alive'   # => "It's alive!"
    "1 + 2 = 5"     # => "1 + 2 = 5" (numbers surrounded by quotes may exhibit string-like behavior)
  
-   # a string with embedded ruby
+Embed |ruby| in a string:
+
+.. code-block:: ruby
+
    x = "Bob"
    "Hi, #{x}"      # => "Hi, Bob"
    'Hello, #{x}'   # => "Hello, \#{x}" Notice that single quotes don't work with #{}
  
-   # some basic truths
+Work with basic truths:
+
+.. code-block:: ruby
+
    true            # => true
    false           # => false
    nil             # => nil
    1 == 1          # => true ( == tests for equality )
    1 == true       # => false ( == tests for equality )
  
-   # ! means not
+Work with basic untruths (``!`` means not!):
+
+.. code-block:: ruby
+
    !true           # => false
    !false          # => true
    !nil            # => true
    1 != 2          # => true (1 is not equal to 2)
    1 != 1          # => false (1 is not not equal to itself)
  
-   # !! (not not) converts something to either true or false
+Convert something to either true or false (``!!`` means not not!!):
+
+.. code-block:: ruby
+
    !!true          # => true
    !!false         # => false
    !!nil           # => false (when pressed, nil is false)
    !!0             # => true (zero is NOT false).
  
-   # arrays are lists
+Create lists using arrays:
+
+.. code-block:: ruby
+
    x = ["a", "b", "c"] # => ["a", "b", "c"]
    x[0]                # => "a" (zero is the first index)
    x.first             # => "a" (see?)
@@ -66,13 +97,19 @@ Here is a quick rundown of some basic |ruby| commands::
    x = x + ["d"]       # => ["a", "b", "c", "d"]
    x                   # => ["a", "b", "c", "d"]
  
-   # a hash is a list with keys and values
-   # - but no set order (!)
+A hash is a list with keys and values. Sometimes they don't have a set order:
+
+.. code-block:: ruby
+
    h = {
    "first_name" => "Bob",
    "last_name"  => "Jones"
    }
-   # => { "first_name => "Bob", "last_name" => "Jones" }
+
+And sometimes they do. For example, first name then last name:
+
+.. code-block:: ruby
+
    h.keys              # => ["first_name", "last_name"]
    h["first_name"]     # => "Bob"
    h["last_name"]      # => "Jones"
@@ -80,16 +117,20 @@ Here is a quick rundown of some basic |ruby| commands::
    h.keys              # => ["first_name", "age", "last_name"]
    h.values            # => ["Jones", "Bob", 23]
  
-   # perl-style regular expressions
+Use |perl|-style regular expressions:
+
+.. code-block:: ruby
+
    "I believe"  =~ /I/                       # => 0 (matches at the first character)
    "I believe"  =~ /lie/                     # => 4 (matches at the 5th character)
    "I am human" =~ /bacon/                   # => nil (no match - bacon comes from pigs)
    "I am human" !~ /bacon/                   # => true (correct, no bacon here)
    /give me a ([0-9]+)/ =~ "give me a 7"     # => 0 (matched)
  
-   # you can do things conditionally
- 
-   # with an if statement
+Use conditions! For example, an ``if`` statement
+
+.. code-block:: ruby
+
    if false
      # this won't happen
    elsif nil
@@ -98,7 +139,10 @@ Here is a quick rundown of some basic |ruby| commands::
      # code here will run though
    end
  
-   # or a case statement
+or a ``case`` statement:
+
+.. code-block:: ruby
+
    x = "dog"
    case x
    when "fish"
@@ -109,7 +153,9 @@ Here is a quick rundown of some basic |ruby| commands::
      # the else is an optional catch-all
    end
  
-   # def defines a method (functions, if you like)
+Define a method (or a function, if you like):
+
+.. code-block:: ruby
  
    def do_something_useless( first_argument, second_argument)
      puts "You gave me #{first_argument} and #{second_argument}"
@@ -121,7 +167,10 @@ Here is a quick rundown of some basic |ruby| commands::
    # => "You gave me 1 and 2"
    # see how the parens are optional if there's no confusion about what to do
  
-   # call a method on something with .method_name()
+Call a method on something with ``.method_name()``:
+
+.. code-block:: ruby
+
    x = "My String"
    x.split(" ")            # => ["My", "String"]
    x.split(" ").join(", ") # => "My, String"
