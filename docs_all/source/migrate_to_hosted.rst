@@ -101,17 +101,7 @@ Bootstrapping Nodes
 
 Upload Data
 -----------------------------------------------------
-To restore the data (including run-lists and node attributes) that was being used with the open source |chef server| server, it must be uploaded to the |chef hosted| server. There are two options: use the ``backup_restore`` |knife| plugin or use the ``knife upload`` sub-command.
-
-Using ``backup_restore``
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_backup_restore_install.rst
-
-.. include:: ../../step_knife_plugin/step_knife_plugin_backup_restore_run.rst
-
-Using Knife
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-|knife upload|
+To restore the data (including run-lists and node attributes) that was being used with the open source |chef server| server, it must be uploaded to the |chef hosted| server. Use the ``knife upload`` subcommand to perform this task.
 
 .. include:: ../../step_knife/step_knife_upload_repository.rst
 
