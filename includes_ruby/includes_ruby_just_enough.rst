@@ -8,7 +8,7 @@ Many people who are new to |ruby| often find that it doesn't take very long to g
 
    $ ruby -c my_cookbook_file.rb
 
-to return::
+to return:
 
 .. code-block:: bash
 
