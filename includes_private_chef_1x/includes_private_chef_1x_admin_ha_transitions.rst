@@ -5,7 +5,7 @@ The |keepalived| service manages the |vrrp| and cluster transitions. It should b
 
 .. code-block:: bash
 
-   $ private-chef-ctl keepalived stop
+   $ private-chef-ctl stop keepalived
 
 This will cause the current primary to:
 
