@@ -11,4 +11,5 @@ The following example shows how to use variables within a |ruby| block to set en
      block do
        ENV['RBENV_ROOT'] = node[:rbenv][:root]
        ENV['PATH'] = "#{node[:rbenv][:root]}/bin:#{node[:ruby_build][:bin_path]}:#{ENV['PATH']}"
+     end
    end
