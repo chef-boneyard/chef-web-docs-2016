@@ -15,7 +15,7 @@ Getting Started
 
 **Try it out:** (1) `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/>`_ (click **Free Trial**) or `Sign up for Private Chef <http://www.opscode.com/private-chef//>`_ (click **Free Trial**), then (2) :doc:`Install Chef on a Workstation </install_workstation>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
 
-**learnchef.opscode.com:** Install a Workstation `for Mac <https://learnchef.opscode.com/quickstart/workstation-setup/#mac/>`_, `for Linux <https://learnchef.opscode.com/quickstart/workstation-setup/#linux/>`_, or `for Windows <https://learnchef.opscode.com/quickstart/workstation-setup/#windows/>`_ | `Use the Chef Repo <https://learnchef.opscode.com/quickstart/chef-repo//>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge//>`_
+**learnchef.opscode.com:** Install a Workstation `for Mac <https://learnchef.opscode.com/quickstart/workstation-setup/#mac/>`_, `for Linux <https://learnchef.opscode.com/quickstart/workstation-setup/#linux/>`_, or `for Windows <https://learnchef.opscode.com/quickstart/workstation-setup/#windows/>`_ | `Use the Chef Repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
 
 **What's new:** :doc:`Chef 11.0 </breaking_changes_chef_11>`
 
