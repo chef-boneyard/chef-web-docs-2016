@@ -52,6 +52,11 @@ This configuration file has the following settings:
        ::
  
           http_proxy "http://proxy.vmware.com:3128"
+   * - ``https_proxy``
+     - |https_proxy| For example:
+       ::
+
+          https_proxy "http://proxy.vmware.com:3128"
    * - ``http_proxy_user``
      - |http_proxy_user|
    * - ``http_proxy_pass``
@@ -61,6 +66,11 @@ This configuration file has the following settings:
        ::
  
           node_name "jtimberman2012"
+   * - ``no_proxy``
+     - |no_proxy| For example:
+       ::
+
+         no_proxy "localhost, 10.*, *.example.com, *.dev.example.com"
    * - ``validation_client_name``
      - |validation_client_name| For example:
        ::
