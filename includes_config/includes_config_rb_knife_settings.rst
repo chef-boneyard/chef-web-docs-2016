@@ -52,11 +52,21 @@ This configuration file has the following settings:
        ::
  
           http_proxy "http://proxy.vmware.com:3128"
+   * - ``https_proxy``
+     - |https_proxy| For example:
+       ::
+
+          https_proxy "http://proxy.vmware.com:3128"
    * - ``node_name``
      - |node_name| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
  
           node_name "jtimberman2012"
+   * - ``no_proxy``
+     - |no_proxy| For example:
+       ::
+
+         no_proxy "localhost, 10.*, *.example.com, *.dev.example.com"
    * - ``validation_client_name``
      - |validation_client_name| For example:
        ::
