@@ -33,6 +33,8 @@ The following handlers are available in the |chef| open source community:
      - A |chef| handler that supports |nagios nsca|, an add-on for |nagios|. This will allow |chef| report and exception handler messages to be passed to |nagios| from |nagios nsca|. `Download NSCA <https://github.com/ranjibd/nsca_handler>`_.
    * - Simple Email
      - A |chef| handler that collects exception and report handler data and then uses |pony| to send email reports that are based on |erubis| templates. `Download Simple Email <https://rubygems.org/gems/chef-handler-mail>`_.
+   * - |sns|
+     - A |chef| handler that notifies exception and report handler data and sends it to a |sns| topic. `Download SNS <https://rubygems.org/gems/chef-handler-sns>`_.
    * - |splunk storm|
      - A |chef| handler that supports exceptions and reports for |splunk storm|. `Download Splunk Storm <http://ampledata.org/splunk_storm_chef_handler.html>`_.
    * - Updated Resources
