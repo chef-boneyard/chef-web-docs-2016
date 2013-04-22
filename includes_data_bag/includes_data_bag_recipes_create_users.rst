@@ -20,8 +20,7 @@
        gid       admin['gid']
        shell     admin['shell']
        comment   admin['comment']
-   
-       homedir   home
+       home      homedir
        supports  :manage_home => true
      end
    
