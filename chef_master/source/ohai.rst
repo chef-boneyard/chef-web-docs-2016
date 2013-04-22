@@ -20,6 +20,8 @@ About Ohai
      - |ohai| is a requirement for |chef| and is installed whenever (and wherever) |chef| is installed. |ohai| can also be installed separately from |chef|.
    * - :doc:`ohai_plugins`
      - Create a custom |ohai| plugin or modify an existing one.
+   * - Disable a plugin
+     - .. include:: ../../step_ohai/step_ohai_disable_plugin.rst
 
 .. toctree::
    :hidden:

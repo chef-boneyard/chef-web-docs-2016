@@ -92,10 +92,6 @@ Upload a Custom Plugin
 =====================================================
 .. include:: ../../step_ohai/step_ohai_upload_custom_plugin.rst
 
-Disable a Plugins
-=====================================================
-.. include:: ../../step_ohai/step_ohai_disable_plugin.rst
-
 Add the ohai Recipe to a Run-list
 =====================================================
 .. include:: ../../step_ohai/step_ohai_upload_custom_plugin.rst
