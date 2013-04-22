@@ -2,36 +2,6 @@
 Style Guide
 =====================================================
  
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
-.. include:: ../../swaps/swap_names.txt
-.. include:: ../../swaps/swap_notes.txt
-
 The |opscode| style guide is just a limited subset of the full capabilities of Sphinx, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it.
 
 All of the documents built by Sphinx for Chef can be found at docs.opscode.com.
@@ -42,7 +12,7 @@ All documents must have a title, must refer to any files that provide inline tex
 
 Topic Titles
 -----------------------------------------------------
-Each topic can have a single topic title. What it looks like as reST:: 
+Each topic can have a single topic title. Use the equals symbol (=) above and below the header name. What it looks like as reST:: 
 
    =====================================================
    header name goes here
@@ -110,6 +80,8 @@ The following example is the first two sections from "An Overview of Chef"::
    accessing data that it shouldn't and ensures that only nodes that are properly registered with the 
    |chef| server can be managed by |chef|.
 
+.. note:: Elements within this example, such as images, includes, inline replacements, list tables, and headers are discussed in more detail below.
+
 Section Headers
 =====================================================
 Section headers create structure in a document. When section headers are part of a topic that is included in other topics, those headers are treated as if they first appeared at that location (and are bumped down appropriately). For this, and for other cosmetic reasons, the headers in Opscode documents are limited to 4 levels beyond the topic title. If headers are required beyond that, they should only be done using standard emphasis and white space or through some other creative method (such as creating more topics with less TOC depth).
@@ -120,7 +92,7 @@ Sphinx allows many different conventions for how headers can exist in documents 
 
 H1
 -----------------------------------------------------
-If a topic requires a sub-header, this is the first one to use. What it looks like as reST:: 
+If a topic requires a sub-header, this is the first one to use. Use the equals symbol (=) below the header name. What it looks like as reST:: 
 
    header name goes here
    =====================================================
@@ -128,7 +100,7 @@ If a topic requires a sub-header, this is the first one to use. What it looks li
 
 H2
 -----------------------------------------------------
-If an H1 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H1. What it looks like as reST:: 
+If an H1 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H1. Use the dash symbol (-) below the header name. What it looks like as reST:: 
 
    header name goes here
    -----------------------------------------------------
@@ -136,7 +108,7 @@ If an H1 requires a sub-header, this is one to use. Sphinx will generate errors 
 
 H3
 -----------------------------------------------------
-If an H2 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H2. What it looks like as reST:: 
+If an H2 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like as reST:: 
 
    header name goes here
    +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -144,7 +116,7 @@ If an H2 requires a sub-header, this is one to use. Sphinx will generate errors 
 
 H4
 -----------------------------------------------------
-If a . What it looks like as reST:: 
+If a H3 requires a sub-header, this is the one to use. Sphinx will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like as reST:: 
 
    header name goes here
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -152,10 +124,10 @@ If a . What it looks like as reST::
 
 H5
 -----------------------------------------------------
-Only 4 levels of headers are supported (title, H2, H3, and H4). If, in the rare instance a lower-level header is needed, use a bold emphasis and then white space to provide the visual treatment and content separation. What it looks like as reST:: 
+Only 4 levels of headers are supported (title, H2, H3, and H4). Conversely, when more than 4 levels of headers are required, re-think the header structure rather than go deeper. If, in the rare instance a lower-level header is needed, use a bold emphasis and then white space to provide the visual treatment and content separation. What it looks like as reST:: 
 
-   **header name goes here**  << in regular bold emphasis
-     << this is a hard return
+   **header name goes here**         # in regular bold emphasis
+                                     # this is a hard return
    content, as normally authored.
 
 What an "H5 header" link looks like after it's built:
@@ -210,9 +182,6 @@ These are used primarily to show the options available to a command line tool. T
    
    ``--name-status``
       |name status|
-   
-   ``--no-recurse``
-      |no recurse diff|
 
 What it looks like after it's built:
 
@@ -221,9 +190,6 @@ What it looks like after it's built:
 
 ``--name-status``
    |name status|
-
-``--no-recurse``
-   |no recurse diff|
 
 List Tables
 -----------------------------------------------------
@@ -240,9 +206,11 @@ The list table is the only table style that Opscode is using in the docs. Sphinx
       * - text, image, swap, or include
         - text, image, swap, or include
 
-The table cells support images and includes, along with all of the other standard Sphinx that is being used here. The widths can be changed and the number of columns can be changed too. In general, Opscode is trying to keep the number of columns below 4. When creating a list table, think about what it will look like in HTML and in print formats, with regard to the table's width. If your document is going into a man page, list tables are not recommended.
+The table cells support images and includes, along with all of the other standard Sphinx that is being used here. The widths can be changed and the number of columns can be changed too. In general, Opscode is trying to keep the number of columns below 4. When creating a list table, think about what it will look like in HTML, PDF, man-page, and other formats and keep in mind the width limitations inherent in print formats.
 
-What the list table looks like after it's built::
+.. warning:: Tables (as opposed to list tables) should never be used. This is, in part, to help ensure that all topics can work in any published format, including HTML, PDF, and man-page, but also because list tables are much, much easier to work with.
+
+What the list table might look like in the source file::
 
    .. list-table::
       :widths: 60 420
@@ -250,10 +218,27 @@ What the list table looks like after it's built::
       
       * - Header
         - Description
-      * - .. image:: ../../images/icon_node_cloud.png
-        - .. include:: ../../includes_node/includes_node_cloud.rst
-      * - .. image:: ../../images/icon_node_physical.png
-        - .. include:: ../../includes_node/includes_node_physical.rst
+      * - .. image:: ../../images/image_style_guide_example.png
+        - .. include:: ../../includes_style_guide/includes_style_guide_example.rst
+      * - No image, just text!
+        - .. include:: ../../includes_style_guide/includes_style_guide_example.rst
+      * - |chef|
+        - |chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure.
+
+and then what it looks like after it is built:
+
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+   
+   * - Header
+     - Description
+   * - .. image:: ../../images/image_style_guide_example.png
+     - .. include:: ../../includes_style_guide/includes_style_guide_example.rst
+   * - No image, just text!
+     - .. include:: ../../includes_style_guide/includes_style_guide_example.rst
+   * - |chef|
+     - |chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure.
 
 Inline Markup
 =====================================================
@@ -387,25 +372,22 @@ and what it looks like after it's built:
 
 Literal
 -----------------------------------------------------
-These should be used sparingly, but sometimes there is a need for a block of text that doesn't fit neatly into one of the options available for ``code-block``, such as showing a directory structure, basic syntax, or pseudocode. What it looks like as reST:: 
-
-   a preceding paragraph that ends with a double colon::
+These should be used sparingly, but sometimes there is a need for a block of text that doesn't fit neatly into one of the options available for ``code-block``, such as showing a directory structure, basic syntax, or pseudocode. What it looks like as reST::
 
       a block of literal text indented three spaces
-        with more
-        text as required to
-        complete the block of text.
+      with more
+      text as required to
+      complete the block of text.
       end.
 
-and what it looks like after it's built:
-
-.. code-block:: javascript
+and what it looks like after it's built::
 
    a block of literal text indented three spaces
-     with more
-     text as required to
-     complete the block of text.
+   with more
+   text as required to
+   complete the block of text.
    end.
+
 
 Includes
 -----------------------------------------------------
@@ -460,21 +442,21 @@ Use sparingly, but much more often than a warning. A note sometimes works best w
 
 See the What it looks like as reST:: 
 
-   .. note:: this is a note.
+   .. note:: This is a note.
 
 What a note looks like after it's built:
 
-.. note:: this is a note.
+.. note:: This is a note.
 
 Warnings
 -----------------------------------------------------
 Use sparingly, so that when the user sees a warning it registers appropriately. A warning really should be a "Hey, if you do this, you might break your environment." type of situation. What it looks like as reST:: 
 
-   .. warning:: this is a warning.
+   .. warning:: This is a warning.
 
 What a warning looks like after it's built:
 
-.. warning:: this is a warning. if you do this, your hard drive will be deleted.
+.. warning:: This is a warning.
 
 Images
 =====================================================
@@ -498,7 +480,7 @@ https://github.com/opscode/chef-docs
 
 quick-reference
 -----------------------------------------------------
-Two large PNG images (front and back) and a smaller single-page image for a Knife Quick Reference can be found here:
+The quick-reference repository contains large PNG images that can be printed (front and back), plus smaller single-page images. It can be found here:
 
 https://github.com/opscode/quick-reference
 
@@ -509,6 +491,8 @@ Sphinx supports localization into many languages.
 .pot files
 -----------------------------------------------------
 .pot files are used by localization teams as an intermediate step in-between the native English content and the localized content. Opscode needs to build the .pot files so that localization teams can feed them into their tools as part of their localization process.
+
+.. warning:: .pot files should be recompiled, not modified.
 
 The .pot file is built using much the same process as a regular Sphinx content build. For example, a regular content build:
 
