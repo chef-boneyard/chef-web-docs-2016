@@ -1,5 +1,5 @@
 =====================================================
-Everything you need to know about Chef ...
+All about Chef ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -166,7 +166,7 @@ Cookbooks
 
    upgrade_server
 
-
+   style_guide
 
 
    
