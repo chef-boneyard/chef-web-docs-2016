@@ -133,32 +133,33 @@ value_for_platform_family
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_family.rst
 
+
 Windows Registry Key Methods
------------------------------------------------------
+=====================================================
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
 
 registry_data_exists?
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst
 
 registry_get_subkeys
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst
 
 registry_get_values
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_values.rst
 
 registry_has_subkeys?
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_has_subkeys.rst
 
 registry_key_exists?
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_key_exists.rst
 
 registry_value_exists?
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst
 
 
