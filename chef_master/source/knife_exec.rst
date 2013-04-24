@@ -4,30 +4,28 @@ knife exec
 
 .. include:: ../../includes_knife/includes_knife_exec.rst
 
-**Authenticated API Requests**
-
+Authenticated API Requests
+=====================================================
 .. include:: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst
 
-**Syntax**
-
+Syntax
+=====================================================
 .. include:: ../../includes_knife/includes_knife_exec_syntax.rst
 
-**Options**
-
+Options
+=====================================================
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_exec_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
+-----------------------------------------------------
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_exec_settings.rst
-
-**Examples**
-
+Examples
+=====================================================
 There are three ways to use ``knife exec`` to run |ruby| script files. For example:
 
 .. code-block:: bash
@@ -68,7 +66,7 @@ Or to check the status of |knife| using a |ruby| script named "status.rb" (which
    nodes.all do |n|
       checkin = Time.at(n['ohai_time']).strftime("%F %R")
       rubyver = n['languages']['ruby']['version']
-      recipes = n.run_list.expand.recipes.join(", ")
+      recipes = n.run_list.expand(_default).recipes.join(", ")
       printf "%-20s %-12s %-8s %s\n", checkin, n.name, rubyver, recipes
    end
 
