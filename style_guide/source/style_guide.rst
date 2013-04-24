@@ -6,9 +6,9 @@ The |opscode| style guide is just a limited subset of the full capabilities of S
 
 All of the documents built by Sphinx for Chef can be found at docs.opscode.com.
 
-Basic Documentation Template
+Basic Doc Template
 =====================================================
-All documents must have a title, must refer to any files that provide inline text replacement (swaps files), and a body.
+All documents must have a title and a body.
 
 Topic Titles
 -----------------------------------------------------
@@ -278,7 +278,7 @@ An internal link is one that resolves to another topic that is built by Sphinx. 
 
 where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. If this isn't formatted correctly, Sphinx will let you know.
 
-Internal, with short link names
+Internal w/short names
 -----------------------------------------------------
 An internal link is one that resolves to another topic that is built by Sphinx. Sometimes it's better to have the name of the link that displays be as short as possible (and different from the actual title of the topic). What it looks like as reST:: 
 
@@ -389,7 +389,7 @@ and what it looks like after it's built::
    end.
 
 
-Includes
+Includes   
 -----------------------------------------------------
 An includes file is a way to use a path to pull content into a topic at build time. This allows the contents of a topic to be sourced in one location, yet used within any deliverable that requires it. What it looks like as reST:: 
 
@@ -434,13 +434,13 @@ and what that would look like after it's built: "I like to use Homebrew on my Ma
 
 Notes and Warnings
 =====================================================
-In general, notes and warnings are not the ideal way to present information. Before using them ask yourself if this wouldn't be better represented as an actual section header. If it's truly important, then it is information you want the reader to find, and the best way to ensure that is to write the topics so that important information has its own section header. This helps the search engines pick up the information and provide better search results. If notes and warnings must be used, the approach for using them is as follows.
+In general, notes and warnings are not the best way to present important information. Before using them ask yourself how important the information is. If you want the information to be returned in a search result, then it is better for the information to have its own topic or section header. Notes and warnings do provide a visual (because they have a different color than the surrounding text) and can be easily spotted within a doc. If notes and warnings must be used, the approach for using them is as follows.
 
 Notes
 -----------------------------------------------------
-Use sparingly, but much more often than a warning. A note sometimes works best when they are consistently used across a wide set of topics. Some people just read docs looking for notes and images and steps. Notes shouldn't be used in a way that discourages people from reading the docs. If something is really important, the best place for it is a location that gives it a spot in the TOC, with its own topic title, and so on.
+Use sparingly, but much more often than a warning. A note works best when they are consistently used across a wide set of topics. Some people just read docs looking for notes and images and steps. Notes shouldn't be used in a way that discourages people from reading the docs. The most important topics have unique and meaningful titles. If something is really important, the best place for it is a location that gives it a spot in the TOC, with its own topic title, and so on.
 
-See the What it looks like as reST:: 
+What a note looks like as reST:: 
 
    .. note:: This is a note.
 
@@ -450,7 +450,7 @@ What a note looks like after it's built:
 
 Warnings
 -----------------------------------------------------
-Use sparingly, so that when the user sees a warning it registers appropriately. A warning really should be a "Hey, if you do this, you might break your environment." type of situation. What it looks like as reST:: 
+Use sparingly, so that when the user sees a warning it registers appropriately. A warning really should be a "Hey, if you do this, you might break your environment." type of situation. What a warning looks like as reST:: 
 
    .. warning:: This is a warning.
 
@@ -512,7 +512,7 @@ with the very important difference of the ``/build`` vs. ``/translate`` folders 
 
 .. note:: The /translate folder in the github source contains a regularly updated set of .pot files. That said, it is recommended that if you want to localize the Chef documentation, check with Opscode (send email to docs@opscode.com) and let us know that you want to participate in the localization process and we can sync up. Or just update the .pot files locally to make sure they are the most current versions of the .pot files.
 
-Custom Configuration Settings (conf.py)
+conf.py Settings
 =====================================================
 Every Sphinx build has a configuration file.
 
