@@ -2,4 +2,4 @@
 Style Guide
 =====================================================
 
-.. include:: ../../style_guide/style_guide.rst
+.. include:: ../../style_guide/source/style_guide.rst
