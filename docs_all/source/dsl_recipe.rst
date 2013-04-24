@@ -134,7 +134,7 @@ value_for_platform_family
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_value_for_platform_family.rst
 
 
-Windows Registry Key Methods
+Windows Methods
 =====================================================
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
 
