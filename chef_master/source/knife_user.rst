@@ -10,24 +10,22 @@ create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_create_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_user_create_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to create a new user named "Radio Birdman" with a private key saved to "/keys/user_name", enter:
 
 .. code-block:: bash
@@ -38,16 +36,16 @@ delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete a user named "Steve Danno", enter:
 
 .. code-block:: bash
@@ -58,16 +56,16 @@ edit
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_edit.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_edit_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 None.
 
 
@@ -75,40 +73,38 @@ list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 None.
 
 reregister
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_reregister.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_reregister_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_reregister_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_user_reregister_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to regenerate the RSA key pair for a user named "Robert Younger", enter:
 
 .. code-block:: bash
@@ -119,16 +115,16 @@ show
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_show.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_show_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_user_show_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view a user named "Dennis Teck", enter:
 
 .. code-block:: bash

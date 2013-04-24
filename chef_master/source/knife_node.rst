@@ -12,16 +12,16 @@ bulk delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_bulk_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_bulk_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -34,16 +34,16 @@ create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to add a node, enter:
 
 .. code-block:: bash
@@ -80,16 +80,16 @@ delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete a node called "dev", enter:
 
 .. code-block:: bash
@@ -100,16 +100,16 @@ edit
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_edit.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_edit_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_edit_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to edit the data for a node named "node1", enter:
 
 .. code-block:: bash
@@ -145,24 +145,22 @@ from file
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_from_file.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_from_file_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_node_from_file_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -173,48 +171,44 @@ list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_list_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_node_list_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 .. include:: ../../step_knife/step_knife_node_list_all.rst
 
 run_list add
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_run_list_add.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_add_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_node_run_list_add_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to add a role to a run list, enter:
 
 .. code-block:: bash
@@ -250,24 +244,22 @@ run_list remove
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_run_list_remove.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_run_list_remove_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_node_run_list_remove_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to remove a role from a run list, enter:
 
 .. code-block:: bash
@@ -284,16 +276,16 @@ show
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_show.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_show_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_node_show_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view all data for a node named "build", enter:
 
 .. code-block:: bash

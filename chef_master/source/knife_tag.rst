@@ -12,46 +12,46 @@ create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_tag_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_tag_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 .. include:: ../../step_knife/step_knife_tag_create.rst
 
 delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_tag_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_tag_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 .. include:: ../../step_knife/step_knife_tag_delete.rst
 
 list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_tag_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_tag_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 .. include:: ../../step_knife/step_knife_tag_list.rst

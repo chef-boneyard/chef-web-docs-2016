@@ -12,40 +12,38 @@ bulk delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_client_bulk_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_bulk_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 None.
 
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_client_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_create_options.rst
 
-**knife.rb File Settings**
-
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
-
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
 .. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to create a |chef client admin| with the name "exampleorg" and save its private key to a file, enter:
 
 .. code-block:: bash
@@ -62,16 +60,16 @@ delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_client_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete a client with the name "client_foo", enter:
 
 .. code-block:: bash
@@ -84,16 +82,16 @@ edit
 =====================================================
 .. include:: ../../includes_knife/includes_knife_client_edit.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_edit_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to edit a client with the name "exampleorg", enter:
 
 .. code-block:: bash
@@ -104,16 +102,16 @@ list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_client_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 .. include:: ../../step_knife/step_knife_client_list_all.rst
 
 .. include:: ../../step_knife/step_knife_client_list_authenticate.rst
@@ -122,24 +120,22 @@ reregister
 =====================================================
 .. include:: ../../includes_knife/includes_knife_client_reregister.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_reregister_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_reregister_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_client_reregister_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to regenerate the RSA key pair for a client named "testclient" and save it to a file named "rsa_key", enter:
 
 .. code-block:: bash
@@ -150,16 +146,16 @@ show
 =====================================================
 .. include:: ../../includes_knife/includes_knife_client_show.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_show_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_client_show_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view a client named "testclient", enter:
 
 .. code-block:: bash

@@ -12,24 +12,22 @@ bulk delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_bulk_delete_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -40,24 +38,22 @@ create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_create_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_create_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to create a cookbook named "my_cookbook" with copyright, email, license, and readme format options specified, enter:
 
 .. code-block:: bash
@@ -77,24 +73,22 @@ delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_delete_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_delete_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete version "0.8" from a cookbook named "smartmon", enter:
 
 .. code-block:: bash
@@ -107,24 +101,22 @@ download
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_download.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_download_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_download_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_download_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to download a cookbook named "smartmon", enter:
 
 .. code-block:: bash
@@ -135,24 +127,22 @@ list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_list_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_list_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -163,24 +153,22 @@ metadata
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_metadata_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to generate metadata for all cookbooks:
 
 .. code-block:: bash
@@ -191,16 +179,16 @@ metadata from file
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_from_file.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_metadata_from_file_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -211,24 +199,22 @@ show
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_show.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_show_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_show_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_show_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to get the list of available versions of a cookbook named "getting-started", enter:
 
 .. code-block:: bash
@@ -306,24 +292,22 @@ test
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_test.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_test_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_test_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_test_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to test a cookbook named "getting-started", enter:
 
 .. code-block:: bash
@@ -334,24 +318,22 @@ upload
 =====================================================
 .. include:: ../../includes_knife/includes_knife_cookbook_upload.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_upload_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_cookbook_upload_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_cookbook_upload_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash

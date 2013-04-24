@@ -4,26 +4,24 @@ knife ssh
 
 .. include:: ../../includes_knife/includes_knife_ssh.rst
 
-**Syntax**
-
+Syntax
+=====================================================
 .. include:: ../../includes_knife/includes_knife_ssh_syntax.rst
 
-**Options**
-
+Options
+=====================================================
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_ssh_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
+-----------------------------------------------------
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_ssh_settings.rst
-
-**Examples**
-
+Examples
+=====================================================
 For example, to query for all nodes that have the "webserver" role and then use |ssh| to run the command "sudo chef-client", enter:
 
 .. code-block:: bash

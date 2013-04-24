@@ -12,24 +12,22 @@ create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_create_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_environment_create_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -40,16 +38,16 @@ delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete an environment named "dev", enter:
 
 .. code-block:: bash
@@ -62,16 +60,16 @@ edit
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_edit.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_edit_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to edit an environment named "devops", enter:
 
 .. code-block:: bash
@@ -82,24 +80,22 @@ from file
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_from_file.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_from_file_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_from_file_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_environment_from_file_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -116,16 +112,16 @@ list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -136,16 +132,16 @@ show
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_show.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_environment_show_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view information about the "dev" environment enter:
 
 .. code-block:: bash

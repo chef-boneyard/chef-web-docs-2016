@@ -12,15 +12,15 @@ bulk delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_role_bulk_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_bulk_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
+Examples
 
 For example:
 
@@ -32,24 +32,22 @@ create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_role_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_create_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_role_create_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to add a role named "role1", enter:
 
 .. code-block:: bash
@@ -76,23 +74,21 @@ In the $EDITOR enter the role data in JSON:
    }
 
 When finished, save it.
-   
-
 
 delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_role_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -105,16 +101,16 @@ edit
 =====================================================
 .. include:: ../../includes_knife/includes_knife_role_edit.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_edit_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to edit the data for a role named "role1", enter:
 
 .. code-block:: bash
@@ -146,24 +142,22 @@ from file
 =====================================================
 .. include:: ../../includes_knife/includes_knife_role_from_file.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_from_file_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_role_from_file_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -174,16 +168,16 @@ list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_role_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view a list of roles on the |chef server| and display the URI for each role returned, enter:
 
 .. code-block:: bash
@@ -194,24 +188,22 @@ show
 =====================================================
 .. include:: ../../includes_knife/includes_knife_role_show.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_show_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_role_show_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_role_show_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash

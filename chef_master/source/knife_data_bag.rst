@@ -14,24 +14,22 @@ create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_data_bag_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_create_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_data_bag_create_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to create a data bag named "admins", enter:
 
 .. code-block:: bash
@@ -48,16 +46,16 @@ delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_data_bag_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_delete_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -76,24 +74,22 @@ edit
 =====================================================
 .. include:: ../../includes_knife/includes_knife_data_bag_edit.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_edit_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_edit_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_data_bag_edit_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to edit the contents of a data bag, enter:
 
 .. code-block:: bash
@@ -130,24 +126,22 @@ from file
 =====================================================
 .. include:: ../../includes_knife/includes_knife_data_bag_from_file.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_from_file_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_from_file_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_data_bag_from_file_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 To create a data bag on the |chef server| from a file:
 
 .. code-block:: bash
@@ -165,16 +159,16 @@ list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_data_bag_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view a list of data bags on the |chef server|, enter:
 
 .. code-block:: bash
@@ -185,24 +179,22 @@ show
 =====================================================
 .. include:: ../../includes_knife/includes_knife_data_bag_show.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_show_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_data_bag_show_options.rst
 
-**knife.rb File Settings**
+knife.rb Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_using_knife_rb.rst
+.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
 
-..note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
-
-.. include:: ../../includes_knife/includes_knife_data_bag_show_settings.rst
-
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to show the contents of a data bag, enter:
 
 .. code-block:: bash
