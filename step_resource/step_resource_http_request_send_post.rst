@@ -10,6 +10,5 @@ To send a POST request, with a |json| message body and using basic authenticatio
      message :some => "data"
      headers({"AUTHORIZATION" => "Basic #{Base64.encode64("username:password")}"})
    end
-	 JSON message body
 
 The message is posted as application/data and not multipart/form-data or application/x-www-form-urlencoded.
