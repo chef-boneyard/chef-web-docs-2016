@@ -37,6 +37,6 @@ epub:
 
 text:
 	sphinx-build -b text docs_all/source build/text-all
-	sphinx-build -b text docs_all/source build/text-all
+	sphinx-build -b text chef_master/source build/text-all
 	@echo
 	@echo "Build finished. The text files are in $(BUILDDIR)/text."
