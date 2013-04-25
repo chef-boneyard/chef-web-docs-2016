@@ -16,7 +16,7 @@ The |json| format for environments maps directly to the domain-specific |ruby| f
      "json_class": "Chef::Environment",
      "description": "",
       "cookbook_versions": {
-       "couchdb": "11.0.0"
+       "couchdb": "= 11.0.0"
      },
      "chef_type": "environment"
      }
