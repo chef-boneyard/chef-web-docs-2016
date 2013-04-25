@@ -1,5 +1,5 @@
 =====================================================
-Chef Single-page Topics 
+Chef Single-page Topics
 =====================================================
 
 .. note:: This page contains the same, exact set of topics that are available from docs.opscode.com. These pages are organized differently. Instead of being broken down into smaller subsets of topics, they are consolidated into single-page groupings and structured more like a traditional TOC. For example, http://docs.opscode.com has individual URLs for every resource, |knife| sub-command, and lightweight resource, whereas this set of topics has three URLs, one each for resources, |knife|, and lightweight resources. If you want everything about search functionality in a single URL, use this one. If you only need to see information about Boolean operators, then this topic does that: http://docs.opscode.com/essentials_search_boolean_operators.html.
