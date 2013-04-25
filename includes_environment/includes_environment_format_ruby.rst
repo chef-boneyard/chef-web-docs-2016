@@ -95,7 +95,7 @@ where both default and override attributes are optional and either a cookbook or
 
    name "dev"
    description "The development environment"
-   cookbook_versions  "couchdb" => "11.0.0"
+   cookbook_versions  "couchdb" => "= 11.0.0"
    default_attributes "apache2" => { "listen_ports" => [ "80", "443" ] }
 
 Or (using the same scenario) to specify a version constraint for only one cookbook:
