@@ -13,7 +13,7 @@ Getting Started
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
-**Try it out:** (1) `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/>`_ (click **Free Trial**) or `Sign up for Private Chef <http://www.opscode.com/private-chef//>`_ (click **Free Trial**), then (2) :doc:`Install Chef on a Workstation </install_workstation>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
+**Try it out:** (1) `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) or `Sign up for Private Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**), then (2) :doc:`Install Chef on a Workstation </install_workstation>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
 
 **learnchef.opscode.com:** Install a Workstation `for Mac <https://learnchef.opscode.com/quickstart/workstation-setup/#mac/>`_, `for Linux <https://learnchef.opscode.com/quickstart/workstation-setup/#linux/>`_, or `for Windows <https://learnchef.opscode.com/quickstart/workstation-setup/#windows/>`_ | `Use the Chef Repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
 
@@ -41,7 +41,7 @@ The Chef Server
 =====================================================
 **The basics:** :doc:`About the Chef Server </chef_overview_server>` | :doc:`Server Components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>` | :doc:`Authentication and Authorization </auth>` | :doc:`Private Keys </chef_private_keys>`
 
-**Install:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/>`_ (click **Free Trial**) | `Sign up for Private Chef <http://www.opscode.com/private-chef//>`_ (click **Free Trial**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>`
+**Install:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) | `Sign up for Private Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>`
 
 **The Node Object:** :doc:`About Node Objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep Merge </essentials_node_object_deep_merge>`
 
