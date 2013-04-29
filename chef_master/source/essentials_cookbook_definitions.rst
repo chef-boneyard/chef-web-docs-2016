@@ -4,22 +4,22 @@ About Definitions
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_definition.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Syntax
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition_syntax.rst
 
-   * - Topic
-     - Description
-   * - :doc:`essentials_cookbook_definitions_syntax`
-     - A definition has a resource name, at least one argument, and a hash.
-   * - Examples
-     - :doc:`essentials_cookbook_definitions_example_create_resource`, :doc:`essentials_cookbook_definitions_example_one_definition`, :doc:`essentials_cookbook_definitions_example_virtual_hosts`
+Examples
+=====================================================
+The following examples show how to use cookbook definitions.
 
+Create a Resource
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_create_resource.rst
 
-.. toctree::
-   :hidden:
+Many Recipes, One Definition
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_many_recipes_one_definition.rst
 
-   essentials_cookbook_definitions_syntax
-   essentials_cookbook_definitions_example_create_resource
-   essentials_cookbook_definitions_example_one_definition
-   essentials_cookbook_definitions_example_virtual_hosts
+Virtual Hosts
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_definition_scenario_virtaul_hosts.rst
