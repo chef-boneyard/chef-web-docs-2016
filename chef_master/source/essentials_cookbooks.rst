@@ -17,7 +17,7 @@ About Cookbooks
    * - :doc:`Recipes </essentials_cookbook_recipes>`
      - A recipe is the most fundamental configuration element within the |chef| environment.
    * - :doc:`Cookbooks Directory Structure </essentials_cookbook_directory>`
-     - The cookbooks/ directory is used to store the cookbooks that are used by |chef| when configuring the various systems in the organization.
+     - The ``cookbooks/`` directory is used to store the cookbooks that are used by |chef| when configuring the various systems in the organization.
    * - :doc:`Resources and Providers </essentials_cookbook_resources>`
      - A resource is a package, a service, a group of users, and so on. A resource tells |chef| which provider to use during a |chef| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. |chef| includes default providers that cover all of the most common scenarios.
    * - :doc:`Lightweight Resources </essentials_cookbook_lwrp>`
