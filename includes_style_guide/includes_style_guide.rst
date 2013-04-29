@@ -150,7 +150,7 @@ Bulleted lists are useful for breaking up text blocks and for drawing attention 
    * text goes here
    * text goes here
 
-Use the asterisk symbol (*) only for bulleted lists, even though Sphinx supports using other symbols. For example:
+Use the asterisk symbol (*) only for bulleted lists, even though Sphinx supports using other symbols. What bullets look like after they are built:
 
 * text goes here
 * text goes here
@@ -166,7 +166,7 @@ Numbered lists are good for when people need to understand a list of information
    #. text goes here
    #. text goes here
 
-Use the number symbol (#) to let Sphinx handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. For example:
+Use the number symbol (#) to let Sphinx handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. What an ordered list looks like after it is built:
 
 #. text goes here
 #. text goes here
@@ -183,7 +183,7 @@ These are used primarily to show the options available to a command line tool. T
    ``--name-status``
       |name status|
 
-What it looks like after it's built:
+What a definition list looks like after it's built:
 
 ``--name-only``
    |name only|
@@ -225,7 +225,7 @@ What the list table might look like in the source file::
       * - |chef|
         - |chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure.
 
-and then what it looks like after it is built:
+and then what a list table looks like after it is built:
 
 .. list-table::
    :widths: 60 420
@@ -262,7 +262,7 @@ Sometimes the name of a method or database field needs to be used inline in a pa
 
    ``code goes here``
 
-What it looks like in a paragraph:
+What it looks like in a paragraph after it is built:
 
 Sometimes if an API ``method`` or database ``table`` needs to be referred to in a paragraph, it's useful to apply a style to that ``item`` so that readers can tell that it's special.
 
@@ -292,7 +292,7 @@ An external link points to something that does not live on docs.opscode.com. An 
 
    http://www.codecademy.com/tracks/ruby
 
-What an external link looks like after it's built:
+and what an external link looks like after it's built:
 
 "A great tool for learning Ruby is http://www.codecademy.com/tracks/ruby."
 
@@ -425,7 +425,7 @@ or::
 
    |chef client|
 
-and what it looks like in the document::
+and what it looks like in a document::
 
    I like to use |homebrew| on my |mac os x| machine when managing my |knife rb| file that I 
    use with my |chef client| every time the |resource deploy| resource is run.
