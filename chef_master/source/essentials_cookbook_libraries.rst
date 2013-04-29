@@ -6,22 +6,22 @@ About Libraries
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_library_common_uses.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Syntax
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_library_syntax.rst
 
-   * - Topic
-     - Description
-   * - :doc:`essentials_cookbook_libraries_syntax`
-     - All libraries have a similar syntax.
-   * - Examples
-     - :doc:`essentials_cookbook_libraries_example_create_namespace`, :doc:`essentials_cookbook_libraries_example_extend_recipe`, :doc:`essentials_cookbook_libraries_example_loop_over_record`
+Examples
+=====================================================
+The following examples show how to use cookbook libraries.
 
+Create a Namespace
+-----------------------------------------------------
+.. include:: ../../steps/step_cookbooks_library_create_namespace.rst
 
-.. toctree::
-   :hidden:
+Extend a Recipe
+-----------------------------------------------------
+.. include:: ../../steps/step_cookbooks_library_store_attributes_in_file.rst
 
-   essentials_cookbook_libraries_syntax
-   essentials_cookbook_libraries_example_create_namespace
-   essentials_cookbook_libraries_example_extend_recipe
-   essentials_cookbook_libraries_example_loop_over_record
+Loop Over a Record
+-----------------------------------------------------
+.. include:: ../../steps/step_cookbooks_library_loop_over_records.rst
