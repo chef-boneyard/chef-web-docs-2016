@@ -4,18 +4,16 @@ About Cookbook Metadata
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+metadata.rb
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
 
-   * - Topic
-     - Description
-   * - :doc:`config_rb_metadata`
-     - Metadata is stored in a file called |metadata rb| that lives at the top of each cookbook’s directory.
-   * - :doc:`essentials_cookbook_metadata_error_messages`
-     - If dependencies are not specified in the cookbook's |metadata rb| file, an error message will be generated.
+.. include:: ../../includes_config/includes_config_rb_metadata.rst
 
-.. toctree::
-   :hidden:
+Settings
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_metadata_settings.rst
 
-   essentials_cookbook_metadata_error_messages
+Error Messages
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_metadata_error_messages.rst
