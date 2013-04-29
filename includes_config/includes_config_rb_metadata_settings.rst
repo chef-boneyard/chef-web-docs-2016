@@ -16,10 +16,10 @@ This configuration file has the following settings:
           attribute 'pets/cat/name',
            :display_name => "Cat Name",
            :description => "The name of your cat",
-           :choice => \[ 
-             'kitty kitty', 
-             'peanut', 
-             'einstein', 
+           :choice => \[
+             'kitty kitty',
+             'peanut',
+             'einstein',
              'honey' \],
            :type => "string",
            :required => "recommended",
@@ -71,12 +71,12 @@ This configuration file has the following settings:
 
        or:
        ::
- 
+
           license 'MIT'
 
        or:
        ::
- 
+
           license 'Proprietary - All Rights Reserved'
    * - ``long_description``
      - |long description| For example, to embed the long description within the field itself:
@@ -84,27 +84,27 @@ This configuration file has the following settings:
 
           long_description <<-EOH
           = DESCRIPTION:
-          
+
           Complete Debian/Ubuntu style Apache2 configuration.
-          
+
           = REQUIREMENTS:
-          
+
           Debian or Ubuntu preferred.
-          
-          Red Hat/CentOS and Fedora can be used but will be converted to 
-          a Debian/Ubuntu style Apache as it's far easier to manage 
-          with Chef. 
-          
+
+          Red Hat/CentOS and Fedora can be used but will be converted to
+          a Debian/Ubuntu style Apache as it's far easier to manage
+          with Chef.
+
           = ATTRIBUTES:
-          
-          The file attributes/apache.rb contains the following attribute 
+
+          The file attributes/apache.rb contains the following attribute
           types:
-          
+
           * platform specific locations and settings.
           * general settings
           * pre-fork attributes
           * worker attributes
-          
+
           General settings and pre-fork/worker attributes are tunable.
           EOH
 
@@ -171,20 +171,20 @@ This configuration file has the following settings:
 
           replaces "dogs"
 
-       Or to replace a cookbook named dogs, but only between versions 1.0 and 4.0:
+       Or to replace a cookbook named dogs, but only for versions prior to 4.0:
        ::
 
-         replaces "dogs", "> 1.0", "< 4.0"
+         replaces "dogs", "< 4.0"
    * - ``suggests``
      - |metadata rb suggests| For example:
        ::
 
           suggests "cats"
 
-       Or, to suggest a cookbook named "cats", but only between versions 1.0 and 3.0:
+       Or, to suggest a cookbook named "cats", but only for versions 1.0 and higher.
        ::
 
-          suggests "cats", "> 1.0", "< 3.0"
+          suggests "cats", "> 1.0"
    * - ``supports``
      - |metadata rb supports| For example, to support every version of |ubuntu|:
        ::
