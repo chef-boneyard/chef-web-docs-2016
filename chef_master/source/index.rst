@@ -68,16 +68,14 @@ The Nodes
 
 **Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
 
-**Tools:** :doc:`chef-client (executable) </chef_client>` | :doc:`chef-solo (executable) </ctl_chef_solo>` | :doc:`why-run </essentials_nodes_why_run>`
+**Tools:** :doc:`chef-client (executable) </chef_client>` | :doc:`chef-solo (executable) </ctl_chef_solo>` | :doc:`why-run </essentials_nodes_why_run>` 
 
 
 Cookbooks
 =====================================================
-**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`Cookbooks Directory Structure </essentials_cookbook_directory>`
+**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`Cookbooks Directory Structure </essentials_cookbook_directory>` | :doc:`About Recipes </essentials_cookbook_recipes>`
 
 **Community Cookbooks:** :doc:`Cookbooks Maintained by Opscode </opscode_cookbooks>` --- **Individual Cookbooks:** :doc:`chef_handler </opscode_cookbooks_chef_handler>` | :doc:`iis </opscode_cookbooks_iis>` | :doc:`python </opscode_cookbooks_python>` | :doc:`supervisor </opscode_cookbooks_supervisor>` | ... `more cookbooks <https://github.com/opscode-cookbooks>`_
-
-**Recipes:** :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`Recipe DSL </dsl_recipe>` | :doc:`Use Data Bags </essentials_cookbook_recipes_data_bags>` | :doc:`Use Search Results </essentials_cookbook_recipes_search>` | :doc:`Use Ruby </essentials_cookbook_recipes_use_ruby>` | :doc:`Include other Recipes </essentials_cookbook_recipes_in_recipes>` | :doc:`Dependencies </essentials_cookbook_recipes_cookbook_dependencies>` | :doc:`Exception Handlers </essentials_cookbook_recipes_handlers_and_logs>` | :doc:`Apply to Run-lists </essentials_cookbook_recipes_run_lists>` | :doc:`End a Chef run </essentials_cookbook_recipes_end_chef_run>`
 
 **The Recipe DSL:** :doc:`About the Recipe DSL </dsl_recipe>` --- **Methods:** :doc:`attribute? </dsl_recipe_method_attribute>` | :doc:`cookbook_name </dsl_recipe_method_cookbook_name>` | :doc:`data_bag </dsl_recipe_method_data_bag>` | :doc:`data_bag_item </dsl_recipe_method_data_bag>` | :doc:`platform? </dsl_recipe_method_platform>` | :doc:`platform_family? </dsl_recipe_method_platform_family>` | :doc:`recipe_name </dsl_recipe_method_recipe_name>` |  :doc:`registry_data_exists? </dsl_recipe_method_registry_data_exists>` | :doc:`registry_get_subkeys </dsl_recipe_method_registry_get_subkeys>` | :doc:`registry_get_values </dsl_recipe_method_registry_get_values>` | :doc:`registry_has_subkeys? </dsl_recipe_method_registry_has_subkeys>` | :doc:`registry_key_exists? </dsl_recipe_method_registry_key_exists>` | :doc:`registry_value_exists? </dsl_recipe_method_registry_value_exists>` | :doc:`resources </dsl_recipe_method_resources>` | :doc:`search </dsl_recipe_method_search>` | :doc:`tag </dsl_recipe_method_tag>` | :doc:`tagged? </dsl_recipe_method_tag>` | :doc:`untag </dsl_recipe_method_tag>` | :doc:`value_for_platform </dsl_recipe_method_value_for_platform>` | :doc:`value_for_platform_family </dsl_recipe_method_value_for_platform_family>` --- **Single Page:** `Recipe DSL <http://docs.opscode.com/chef/dsl_recipe.html>`_
 
@@ -145,6 +143,7 @@ Cookbooks
    essentials_policy
    essentials_node_object
    essentials_data_bags
+   essentials_environment_variables
    essentials_environments
    essentials_roles
    essentials_search

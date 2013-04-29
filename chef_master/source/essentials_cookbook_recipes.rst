@@ -4,70 +4,159 @@ About Recipes
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Recipe Attributes
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
 
-   * - Topic
-     - Description
-   * - :doc:`essentials_cookbook_recipes_data_bags`
-     - A data bag can be loaded by a recipe.
-   * - :doc:`essentials_cookbook_recipes_search`
-     - A search is a full-text query that can be done from several locations, including from within a recipe.
-   * - :doc:`essentials_cookbook_recipes_use_ruby`
-     - Anything that can be done with Ruby can be used within a recipe.
-   * - :doc:`essentials_cookbook_recipes_in_recipes`
-     - A recipe can include one (or more) recipes found in other cookbooks by using the ``include_recipe`` keyword.
-   * - :doc:`essentials_cookbook_recipes_run_lists`
-     - A recipe must be assigned to a run-list using the appropriate name, as defined by the cookbook directory and namespace.
-   * - :doc:`essentials_cookbook_recipes_cookbook_dependencies`
-     - If a cookbook has a dependency on a recipe that is located in another cookbook, that dependency must be declared in the |metadata rb| file for that cookbook using the ``depends`` keyword.
-   * - :doc:`essentials_cookbook_recipes_handlers_and_logs`
-     - A recipe can write events to a |chef| log file and can cause exceptions using ``Chef::Log``.
-   * - :doc:`essentials_cookbook_recipes_tags`
-     - A tag is a custom description that is applied to a node that can be helpful when building recipes by providing alternate methods of grouping similar types of information.
-   * - :doc:`essentials_cookbook_recipes_end_chef_run`
-     - Sometimes a |chef| run needs to be stopped. There are various ways for doing that from within a recipe.
+Attribute Types
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_type.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_attribute.rst
+Attribute Persistence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Attribute Precedence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-   * - Topic
-     - Description
-   * - :doc:`essentials_cookbook_recipes_attribute_types`
-     - There are four types of attributes: ``default``, ``normal``, ``override``, and ``automatic``. Both ``default`` and ``override`` attributes can be forced on a case-by-case basis.
-   * - :doc:`essentials_cookbook_recipes_attribute_persistence`
-     - During a |chef| run, saved attributes are retrieved from the |chef server| and are merged with the attributes on the local system.
-   * - :doc:`essentials_cookbook_recipes_attribute_precedence`
-     - At the beginning of a |chef| run, all default, override, and automatic attributes are reset.
-   * - :doc:`essentials_cookbook_recipes_attribute_automatic`
-     - An automatic attribute is data that must be understood by |chef|, but not modified.
-   * - :doc:`essentials_cookbook_recipes_attribute_notation`
-     - Attributes are a special key-value store called a mash within the context of the |ruby| DSL.
-   * - :doc:`essentials_cookbook_recipes_attribute_methods`
-     - Methods are available to set attribute precedence in a cookbook.
-   * - :doc:`essentials_cookbook_recipes_environment_variables`
-     - |unix| environment variables can be used in recipes.
+Automatic Attributes
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_automatic.rst
 
-.. toctree::
-   :hidden:
+Attribute Notation
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_notation.rst
 
-   essentials_cookbook_recipes_data_bags
-   essentials_cookbook_recipes_end_chef_run
-   essentials_cookbook_recipes_search
-   essentials_cookbook_recipes_use_ruby
-   essentials_cookbook_recipes_in_recipes
-   essentials_cookbook_recipes_run_lists
-   essentials_cookbook_recipes_cookbook_dependencies
-   essentials_cookbook_recipes_handlers_and_logs
-   essentials_cookbook_recipes_tags
-   essentials_cookbook_recipes_attribute_types
-   essentials_cookbook_recipes_attribute_persistence
-   essentials_cookbook_recipes_attribute_precedence
-   essentials_cookbook_recipes_attribute_automatic
-   essentials_cookbook_recipes_attribute_notation
-   essentials_cookbook_recipes_attribute_methods
-   essentials_cookbook_recipes_environment_variables
+File Methods
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
+
+Environment Variables
+-----------------------------------------------------
+.. include:: ../../includes_environment_variables/includes_environment_variables.rst
+
+.. include:: ../../includes_environment_variables/includes_environment_variables_access_resource_attributes.rst
+
+
+Work with Recipes
+=====================================================
+The following sections show approaches to working with recipes.
+
+Use Data Bags
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_data_bags.rst
+
+Secret Keys
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst
+
+Store Keys on Nodes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_store_on_nodes.rst
+
+Example
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_example.rst
+
+Assign Dependencies
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_cookbook_dependencies.rst
+
+Create Exceptions
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_exceptions_and_logging.rst
+
+Include Recipes
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_include_in_recipe.rst
+
+Reload Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_reload_from_recipe.rst
+
+Accessor Methods
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
+
+Use Ruby
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_use_ruby.rst
+
+Assign a value
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_recipe_assign_value_to_variable.rst
+
+Use a case statement
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_recipe_case_statement.rst
+
+Check for a condition
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_recipe_check_for_condition.rst
+
+Execute a condition
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_recipe_execute_expression_by_condition.rst
+
+Loop over an array
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_recipe_loop_over_array_of_package_names.rst
+
+Loop over a hash
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../steps/step_chef_recipe_loop_over_hash_of_package_names.rst
+
+Apply to Run-lists
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_apply_to_run_lists.rst
+
+|chef server|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_apply_to_run_lists_chef_server.rst
+
+|chef solo|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_apply_to_run_lists_chef_solo.rst
+
+Use Search Results
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_search_indexes.rst
+
+Use Tags
+-----------------------------------------------------
+.. include:: ../../includes_chef/includes_chef_tags.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
+
+End a Chef Run
+-----------------------------------------------------
+Sometimes it may be necessary to end a |chef| run before it completes. There are a few ways to do this:
+
+* Using the ``return`` keyword and a condition
+* Using the ``raise`` keyword to trigger an unhandled exception
+* Using the ``rescue`` block in |ruby| code
+* Using ``Chef::Application.fatal!`` to log a fatal message to the |chef| logger and ``STDERR``
+* Using an :doc:`exception handler </essentials_handlers>`
+
+The following sections show various approaches to ending a |chef| run.
+
+Use the raise keyword
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst
+
+Use the return keyword
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst
+
+Use a rescue block
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_recipe/step_recipe_end_chef_run_rescue_block.rst
+
+Send a message to a log file
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_recipe/step_recipe_end_chef_run_send_fatal_message.rst
