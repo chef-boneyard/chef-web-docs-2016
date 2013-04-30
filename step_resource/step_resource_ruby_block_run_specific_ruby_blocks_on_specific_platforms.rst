@@ -4,7 +4,7 @@ The following example shows how the ``platform?`` method and an if statement can
 
 .. code-block:: ruby
 
-   if platform?("ubuntu","debian","redhat","centos","fedora","scientific","amazon")
+   if platform?("ubuntu", "debian", "redhat", "centos", "fedora", "scientific", "amazon")
      ruby_block "update-java-alternatives" do
        block do
          if platform?("ubuntu", "debian") and version == 6

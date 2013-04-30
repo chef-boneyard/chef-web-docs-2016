@@ -4,7 +4,7 @@ The following example shows how to an ``if`` statement can be used with the ``pl
 
 .. code-block:: ruby
 
-   if platform? 'windows'
+   if platform?("windows")
      ruby_block "copy libmysql.dll into ruby path" do
        block do
          require 'fileutils'
