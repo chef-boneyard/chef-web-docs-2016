@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The syntax for using the |resource package| resource in a recipe is as follows:
+The syntax for using the |resource package_rpm| resource in a recipe is as follows:
 
 .. code-block:: ruby
 
