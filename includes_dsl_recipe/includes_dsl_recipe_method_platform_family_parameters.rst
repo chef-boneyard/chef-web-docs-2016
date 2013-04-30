@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following parameters are available:
+The following parameters can be used with the ``platform_family?`` method:
 
 .. list-table::
    :widths: 60 420
@@ -23,6 +23,18 @@ The following parameters are available:
      - |slackware|.
    * - ``suse``
      - |suse| and |suse els|.
+
+For example:
+
+.. code-block:: ruby
+
+   platform_family?("gentoo")
+
+or:
+
+.. code-block:: ruby
+
+   platform_family?("slackware", "suse", "arch")
 
 .. note:: ``platform_family?`` will default to ``platform?`` when ``platform_family?`` is not explicitly defined.
 
