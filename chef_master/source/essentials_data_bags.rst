@@ -4,45 +4,106 @@ About Data Bags
 
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Create a Data Bag
+=====================================================
+.. include:: ../../includes_data_bag/includes_data_bag_create.rst
 
-   * - Method
-     - Description
-   * - :doc:`essentials_data_bags_store`
-     - Each data bag is placed within the ``data_bags`` directory within the |chef| repository.
-   * - :doc:`essentials_data_bags_create`
-     - A data bag can be created using |knife| or manually.
-   * - :doc:`essentials_data_bags_encrypt`
-     - Any data bag item can be encrypted.
+Using Knife
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_create_knife.rst
 
-Data bags can be accessed from the following locations:
+Manually
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_create_manual.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Store Data in a Data Bag
+=====================================================
+.. include:: ../../includes_data_bag/includes_data_bag_store.rst
 
-   * - Method
-     - Description
-   * - :doc:`essentials_data_bags_use_search`
-     - Every data bag can be accessed via a search index that has the same name as the data bag.
-   * - :doc:`essentials_data_bags_use_environment`
-     - There are two main strategies that can be used to store per-environment data within a data bag: by using a top-level key that corresponds to the environment or by using separate items for each environment.
-   * - :doc:`essentials_data_bags_use_recipe`
-     - A data bag can be accessed from a recipe by loading it by name using the recipe DSL or by accessing it via a search index.
-   * - :doc:`essentials_data_bags_use_chef_solo`
-     - |chef solo| can load data from a data bag as long as the contents of that data bag are accessible from a directory structure that exists on the same machine as |chef solo|.
+Directory Structure
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_directory_structure.rst
 
+Data Bag Items
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_item.rst
 
+Encrypt a Data Bag
+=====================================================
+.. include:: ../../includes_data_bag/includes_data_bag_encryption.rst
 
-.. toctree::
-   :hidden:
+Knife Options
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_knife_options.rst
 
-   essentials_data_bags_create
-   essentials_data_bags_encrypt
-   essentials_data_bags_store
-   essentials_data_bags_use_chef_solo
-   essentials_data_bags_use_environment
-   essentials_data_bags_use_recipe
-   essentials_data_bags_use_search
+Secret Keys
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_secret_key.rst
+
+Encrypt
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_encrypt.rst
+
+Verify encryption
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_verify.rst
+
+Decrypt
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_decrypt.rst
+
+Store Keys on Nodes
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_store_on_nodes.rst
+
+Example
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_example.rst
+
+Use Data Bags
+=====================================================
+Data bags can be accessed in the following ways:
+
+with Search
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_search.rst
+
+Search Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_search_syntax.rst
+
+Use Search Indexes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_search_indexes.rst
+
+Example
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_search_example.rst
+
+with Environments
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_environments.rst
+
+with Recipes
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_recipes.rst
+
+Load with Recipe DSL
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_recipes_load_using_recipe_dsl.rst
+
+Create and edit
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_recipes_edit_within_recipe.rst
+
+Access from recipe
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_recipes_access_encrypted_data.rst
+
+Create users
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_data_bag/includes_data_bag_recipes_create_users.rst
+
+with |chef solo|
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_chef_solo.rst
