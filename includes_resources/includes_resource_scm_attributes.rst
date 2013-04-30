@@ -4,7 +4,7 @@
 This resource has the following attributes:
 
 .. list-table::
-   :widths: 200 300
+   :widths: 150 450
    :header-rows: 1
 
    * - Attribute
@@ -25,7 +25,7 @@ This resource has the following attributes:
 For use with |git| only:
 
 .. list-table::
-   :widths: 200 300
+   :widths: 150 450
    :header-rows: 1
 
    * - Attribute
@@ -44,7 +44,7 @@ For use with |git| only:
 For use with |svn| only:
 
 .. list-table::
-   :widths: 200 300
+   :widths: 150 450
    :header-rows: 1
 
    * - Attribute

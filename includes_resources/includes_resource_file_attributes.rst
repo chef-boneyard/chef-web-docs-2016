@@ -4,7 +4,7 @@
 This resource has the following attributes:
 
 .. list-table::
-   :widths: 200 300
+   :widths: 150 450
    :header-rows: 1
 
    * - Attribute

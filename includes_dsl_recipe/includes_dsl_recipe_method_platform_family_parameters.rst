@@ -4,7 +4,7 @@
 The following parameters can be used with the ``platform_family?`` method:
 
 .. list-table::
-   :widths: 60 420
+   :widths: 100 500
    :header-rows: 1
 
    * - Parameter
