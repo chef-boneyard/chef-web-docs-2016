@@ -6,12 +6,13 @@
 The ``create`` argument is used to create a new cookbook directory on the local machine, including the following directories and files:
 
   * cookbook/attributes
+  * cookbook/CHANGELOG.md
   * cookbook/definitions
   * cookbook/files/default
   * cookbook/libraries
   * cookbook/metadata.rb
   * cookbook/providers
-  * cookbook/readme.md (or .rdoc)
+  * cookbook/README.md (or .rdoc)
   * cookbook/recipes/default.rb
   * cookbook/resources
   * cookbook/templates/default
