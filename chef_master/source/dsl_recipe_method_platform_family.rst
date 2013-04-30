@@ -12,6 +12,6 @@ Examples
 =====================================================
 The following examples show how the ``platform_family?`` method can be used in a recipe.
 
-**Use the platform_family? method**
+**Use a specific binary for a specific platform**
 
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
