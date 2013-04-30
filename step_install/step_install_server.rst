@@ -26,7 +26,7 @@ To install |chef server 11|, do the following:
 
    This will run the |chef pedant| test suite against the installed |chef server 11| and will report back that everything is working and installed correctly.
 
-#. `Set up a workstation <http://docs.opscode.com/chef/install_workstation.html>`_.
+#. `Set up a workstation <http://docs.opscode.com/install_workstation.html>`_.
 
 #. From the workstation, verify the install by running the following commands to ensure that every |chef client| and user was registered correctly.
 
