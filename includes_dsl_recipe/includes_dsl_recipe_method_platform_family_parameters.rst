@@ -8,21 +8,21 @@ The following parameters are available:
    :header-rows: 1
 
    * - Parameter
-     - Description
+     - Platforms
    * - ``arch``
-     - Use this parameter for the following platforms: |archlinux|.
+     - |archlinux|.
    * - ``debian``
-     - Use this parameter for the following platforms: |debian|, |mint|, and |ubuntu|.
+     - |debian|, |mint|, and |ubuntu|.
    * - ``enterprise fedora``
-     - Use this parameter for the following platforms: |fedora enterprise|.
+     - |fedora enterprise|.
    * - ``gentoo``
-     - Use this parameter for the following platforms: |gentoo|.
+     - |gentoo|.
    * - ``rhel``
-     - Use this parameter for the following platforms: |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat|, and |redhat enterprise linux|.
+     - |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat|, and |redhat enterprise linux|.
    * - ``slackware``
-     - Use this parameter for the following platforms: |slackware|.
+     - |slackware|.
    * - ``suse``
-     - Use this parameter for the following platforms: |suse| and |suse els|.
+     - |suse| and |suse els|.
 
 
 
