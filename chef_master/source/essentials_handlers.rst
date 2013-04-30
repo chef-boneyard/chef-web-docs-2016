@@ -4,30 +4,42 @@ About Exception and Report Handlers
 
 .. include:: ../../includes_handler/includes_handler.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Handler Properties
+=====================================================
+.. include:: ../../includes_handler/includes_handler_properties.rst
 
-   * - Method
-     - Description
-   * - :doc:`essentials_handlers_properties`
-     - A handler is a class that inherits from ``Chef::Handler`` and implements the ``report()`` function.
-   * - :doc:`essentials_handlers_write`
-     - A cookbook called ``chef_handler`` contains a lightweight resource provider that allows custom handlers to be easily included within recipes.
-   * - :doc:`essentials_handlers_install`
-     - A handler can be installed and configured in two ways: by using the |lwrp chef handler| |lwrp| or by a manual process.
-   * - :doc:`essentials_handlers_distribute`
-     - A handler can be distributed using a specific cookbook that is provided by |opscode| to help facilitate the distribution of custom |chef| handlers.
-   * - :doc:`essentials_handlers_available_handlers`
-     - |chef| includes one handler (``JsonFile``) and the |chef| community provides a number of open-source handlers that can be used by anyone in the |chef| community.
+Writing a Handler
+=====================================================
+.. include:: ../../includes_handler/includes_handler_write.rst
 
+Example
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_write_example_send_email.rst
 
-.. toctree::
-   :hidden:
+Install and Configure a Handler
+=====================================================
+.. include:: ../../includes_handler/includes_handler_install.rst
 
-   essentials_handlers_properties
-   essentials_handlers_write
-   essentials_handlers_install
-   essentials_handlers_distribute
-   essentials_handlers_available_handlers
+|lwrp chef handler|
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_install_from_cookbook.rst
 
+Manual Install
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_install_manual.rst
+
+Distribute a Handler
+=====================================================
+.. include:: ../../includes_handler/includes_handler_distribute.rst
+
+Available Handlers
+=====================================================
+.. include:: ../../includes_handler/includes_handler_available.rst
+
+JsonFile Handler
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_available_jsonfile.rst
+
+Open Source Handlers
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_available_community.rst
