@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``download`` argument is used to download a cookbook from the |chef server|.
+The ``download`` argument is used to download a cookbook from the |chef server| to the current working directory.
 
