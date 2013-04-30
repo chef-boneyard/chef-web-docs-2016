@@ -10,19 +10,19 @@ The following parameters can be used with the ``platform_family?`` method:
    * - Parameter
      - Platforms
    * - ``arch``
-     - |archlinux|.
+     - |archlinux|
    * - ``debian``
-     - |debian|, |mint|, and |ubuntu|.
+     - |debian|, |mint|, |ubuntu|
    * - ``enterprise fedora``
-     - |fedora enterprise|.
+     - |fedora enterprise|
    * - ``gentoo``
-     - |gentoo|.
+     - |gentoo|
    * - ``rhel``
-     - |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat|, and |redhat enterprise linux|.
+     - |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat|, |redhat enterprise linux|
    * - ``slackware``
-     - |slackware|.
+     - |slackware|
    * - ``suse``
-     - |suse| and |suse els|.
+     - |suse|, |suse els|
 
 For example:
 
