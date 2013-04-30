@@ -1,34 +1,26 @@
 =====================================================
-script
+bash
 =====================================================
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_script.rst
-
-This resource is the base resource for several other resources used for scripting on specific platforms. For more information about specific resources for specific platforms, see the following topics:
-
-* :doc:`bash </resource_bash>`
-* :doc:`csh </resource_csh>`
-* :doc:`perl </resource_perl>`
-* :doc:`python </resource_python>`
-* :doc:`ruby </resource_ruby>`
+.. include:: ../../includes_resources/includes_resource_script_bash.rst
 
 Syntax
 =====================================================
-.. include:: ../../includes_resources/includes_resource_script_syntax.rst
+.. include:: ../../includes_resources/includes_resource_script_bash_syntax.rst
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_script_actions.rst
+.. include:: ../../includes_resources/includes_resource_script_bash_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_script_attributes.rst
+.. include:: ../../includes_resources/includes_resource_script_bash_attributes.rst
 
 Providers
 =====================================================
-.. include:: ../../includes_resources/includes_resource_script_providers.rst
+.. include:: ../../includes_resources/includes_resource_script_bash_providers.rst
 
 Examples
 =====================================================
@@ -37,10 +29,6 @@ Examples
 **Use a named provider to run a script**
 
 .. include:: ../../step_resource/step_resource_script_bash_provider_and_interpreter.rst
-
-**Run a script**
-
-.. include:: ../../step_resource/step_resource_script_bash_script.rst
 
 **Install a file from a remote location using bash**
 

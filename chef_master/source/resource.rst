@@ -47,12 +47,16 @@ All resources share a set of common actions, attributes, conditional executions,
      - Description
    * - :doc:`resource_apt_package`
      - |resource desc package_apt|
+   * - :doc:`resource_bash`
+     - |resource desc script_bash|
    * - :doc:`resource_chef_gem`
      - |resource desc chef_gem|
    * - :doc:`resource_cookbook_file`
      - |resource desc cookbook_file|
    * - :doc:`resource_cron`
      - |resource desc cron|
+   * - :doc:`resource_csh`
+     - |resource desc script_csh|
    * - :doc:`resource_deploy`
      - |resource desc deploy|
    * - :doc:`resource_directory`
@@ -99,10 +103,14 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc package|
    * - :doc:`resource_pacman_package`
      - |resource desc package_pacman|
+   * - :doc:`resource_perl`
+     - |resource desc script_perl|
    * - :doc:`resource_portage_package`
      - |resource desc package_portage|
    * - :doc:`resource_powershell_script`
      - |resource desc powershell_script|
+   * - :doc:`resource_python`
+     - |resource desc script_python|
    * - :doc:`resource_remote_directory`
      - |resource desc remote_directory|
    * - :doc:`resource_remote_file`
@@ -111,6 +119,8 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc package_rpm|
    * - :doc:`resource_route`
      - |resource desc route|
+   * - :doc:`resource_ruby`
+     - |resource desc script_ruby|
    * - :doc:`resource_ruby_block`
      - |resource desc ruby_block|
    * - :doc:`resource_scm`
@@ -146,10 +156,12 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_common_windows_file_security
 
    resource_apt_package
+   resource_bash
    resource_batch
    resource_chef_gem
    resource_cookbook_file
    resource_cron
+   resource_csh
    resource_deploy
    resource_directory
    resource_dpkg_package
@@ -173,13 +185,16 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_ohai
    resource_package
    resource_pacman_package
+   resource_perl
    resource_portage_package
    resource_powershell_script
+   resource_python
    resource_registry_key
    resource_remote_directory
    resource_remote_file
    resource_rpm_package
    resource_route
+   resource_ruby
    resource_ruby_block
    resource_scm
    resource_smartos_package
