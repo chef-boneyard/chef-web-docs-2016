@@ -24,5 +24,5 @@ The following parameters are available:
    * - ``suse``
      - |suse| and |suse els|.
 
-
+.. note:: ``platform_family?`` will default to ``platform?`` when ``platform_family?`` is not explicitly defined.
 
