@@ -11,4 +11,4 @@ Here are some contributions from the |chef| community:
 
 **Plugins:** :doc:`Chef </community_plugin_chef>` | :doc:`Knife </community_plugin_knife>` | :doc:`Ohai </community_plugin_ohai>` | :doc:`Report handlers </community_plugin_report_handler>` | `Ridley <https://github.com/reset/ridley>`_
 
-**Documentation** `Contribute to this documentation <https://github.com/opscode/chef-docs>`_
+**Documentation** `Contribute to this documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.opscode.com/style_guide.html>`_
