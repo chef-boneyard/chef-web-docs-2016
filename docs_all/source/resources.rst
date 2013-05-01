@@ -225,9 +225,11 @@ Resources
 The following resources are included with |chef| and have native providers:
 
 * apt_package
+* bash
 * chef_gem
 * cookbook_file
 * cron
+* csh
 * deploy (including |git| and |svn|)
 * directory
 * dpkg_package
@@ -251,13 +253,16 @@ The following resources are included with |chef| and have native providers:
 * ohai
 * package
 * pacman_package
+* perl
 * portage_package
 * powershell_script
+* python
 * registry_key
 * remote_directory
 * remote_file
 * rpm_package
 * route
+* ruby
 * ruby_block
 * scm
 * script
@@ -302,6 +307,48 @@ Examples
    apt_package "name of package" do
      action :install
    end
+
+
+bash
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_script_bash.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_bash_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_bash_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_bash_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_bash_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Use a named provider to run a script**
+
+.. include:: ../../step_resource/step_resource_script_bash_provider_and_interpreter.rst
+
+**Install a file from a remote location using bash**
+
+.. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
+
+**Install an application from github using bash**
+
+.. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
+
+**Store certain settings**
+
+.. include:: ../../step_resource/step_resource_remote_file_store_certain_settings.rst
+
 
 
 chef_gem
@@ -467,6 +514,31 @@ Examples
 **Run only in November**
 
 .. include:: ../../step_resource/step_resource_cron_run_only_in_november.rst
+
+
+csh
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_script_csh.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_csh_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_csh_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_csh_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_csh_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
 
 
 deploy
@@ -1539,6 +1611,31 @@ Examples
    end
 
 
+perl
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_script_perl.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_perl_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_perl_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_perl_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_perl_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
+
+
 portage_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_portage.rst
@@ -1612,6 +1709,32 @@ Examples
 **Pass an environment variable to a script**
 
 .. include:: ../../step_resource/step_resource_powershell_pass_env_to_script.rst
+
+
+
+python
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_script_python.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_python_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_python_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_python_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_python_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
 
 
 
@@ -1802,6 +1925,31 @@ Examples
 **Delete a network route**
 
 .. include:: ../../step_resource/step_resource_route_delete_network.rst
+
+
+ruby
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_script_ruby.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_ruby_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_ruby_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_ruby_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_script_ruby_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+None.
 
 
 ruby_block
