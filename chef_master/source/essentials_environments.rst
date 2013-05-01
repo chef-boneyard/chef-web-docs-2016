@@ -4,50 +4,78 @@ About Environments
 
 .. include:: ../../includes_environment/includes_environment.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+The _default Environment
+=====================================================
+.. include:: ../../includes_environment/includes_environment_default.rst
 
-   * - Method
-     - Description
-   * - :doc:`essentials_environments_default`
-     - Every |chef| organization must have at least one environment.
-   * - :doc:`essentials_environments_formats`
-     - Environment data is stored in two formats: as a |ruby| file that contains domain-specific language and as |json| data.
-   * - :doc:`essentials_environments_create`
-     - An environment can be created using |ruby|, with |json|, using |knife|, the |chef manager|, or by using the |api chef server|.
-   * - :doc:`essentials_environments_manage`
-     - There are several ways to manage environments, including with |knife| and the |chef manager|.
-
+Environment Attributes
+=====================================================
 .. include:: ../../includes_environment/includes_environment_attribute.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Attribute Types
+-----------------------------------------------------
+.. include:: ../../includes_environment/includes_environment_attribute_type.rst
 
-   * - Method
-     - Description
-   * - :doc:`essentials_environments_attributes_types`
-     - There are two types of attributes that can be used with environments: ``default`` and ``override``. Both ``default`` and ``override`` attributes can be forced on a case-by-case basis.
-   * - :doc:`essentials_environments_attributes_persistence`
-     - During a |chef| run, saved attributes are retrieved from the |chef server| and are merged with the attributes on the local system.
-   * - :doc:`essentials_environments_attributes_precedence`
-     - At the beginning of a |chef| run, all default, override, and automatic attributes are reset.
-   * - :doc:`essentials_environments_attributes_automatic`
-     - An automatic attribute is data that must be understood by |chef|, but not modified.
-   * - :doc:`essentials_environments_attributes_notation`
-     - Attributes are a special key-value store called a mash within the context of the |ruby| DSL.
+Attribute Persistence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_persistence.rst
+
+Attribute Precedence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
+
+Automatic Attributes
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_automatic.rst
+
+Attribute Notation
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_notation.rst
+
+Environment Formats
+=====================================================
+.. include:: ../../includes_environment/includes_environment_format.rst
+
+Ruby DSL
+-----------------------------------------------------
+.. include:: ../../includes_ruby/includes_ruby_dsl.rst
+
+.. include:: ../../includes_environment/includes_environment_format_ruby.rst
+
+JSON
+-----------------------------------------------------
+.. include:: ../../includes_environment/includes_environment_format_json.rst
+
+Create Environments
+=====================================================
+.. include:: ../../includes_environment/includes_environment_create.rst
+
+Manage Environments
+=====================================================
+.. include:: ../../includes_environment/includes_environment_manage.rst
+
+Save in a Data Bag
+-----------------------------------------------------
+.. include:: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst
+
+Override Attributes in Roles
+-----------------------------------------------------
+.. include:: ../../includes_environment/includes_environment_manage_override_in_roles.rst
+
+Set for a Node
+-----------------------------------------------------
+.. include:: ../../includes_environment/includes_environment_manage_set_on_node.rst
+
+Move Nodes
+-----------------------------------------------------
+.. include:: ../../includes_environment/includes_environment_manage_move_nodes_between.rst
+
+Set Per-environment Run-lists
+-----------------------------------------------------
+.. include:: ../../includes_environment/includes_environment_manage_per_environment_run_lists.rst
+
+Search Environments
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search_environment.rst
 
 
-.. toctree::
-   :hidden:
-
-   essentials_environments_default
-   essentials_environments_formats
-   essentials_environments_create
-   essentials_environments_manage
-   essentials_environments_attributes_types
-   essentials_environments_attributes_persistence
-   essentials_environments_attributes_precedence
-   essentials_environments_attributes_automatic
-   essentials_environments_attributes_notation
