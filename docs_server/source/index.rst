@@ -37,7 +37,7 @@ Chef Server 11.x
 
 
 
-Private Chef 1.x.x 
+Private Chef 1.x.x  
 =====================================================
 .. note:: This section is about the version of |chef private| that existed up until February 4, 2013.
 
