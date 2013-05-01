@@ -4,49 +4,48 @@ About Roles
 
 .. include:: ../../includes_role/includes_role.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
-
-   * - Method
-     - Description
-   * - :doc:`essentials_roles_formats`
-     - Role data is stored in two formats: as a |ruby| file that contains domain-specific language and as |json| data.
-   * - :doc:`essentials_roles_manage`
-     - There are several ways to manage roles, including with |knife| and the |chef manager|.
-
+Role Attributes
+=====================================================
 .. include:: ../../includes_role/includes_role_attribute.rst
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
+Attribute Types
+-----------------------------------------------------
+.. include:: ../../includes_role/includes_role_attribute_type.rst
 
-   * - Method
-     - Description
-   * - :doc:`essentials_roles_attributes_types`
-     - There are two types of attributes that can be used with roles: ``default`` and ``override``. Both ``default`` and ``override`` attributes can be forced on a case-by-case basis.
-   * - :doc:`essentials_roles_attributes_persistence`
-     - During a |chef| run, saved attributes are retrieved from the |chef server| and are merged with the attributes on the local system.
-   * - :doc:`essentials_roles_attributes_precedence`
-     - At the beginning of a |chef| run, all default, override, and automatic attributes are reset.
-   * - :doc:`essentials_roles_attributes_automatic`
-     - An automatic attribute is data that must be understood by |chef|, but not modified.
-   * - :doc:`essentials_roles_attributes_notation`
-     - Attributes are a special key-value store called a mash within the context of the |ruby| DSL.
+Attribute Persistence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
+Attribute Precedence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-.. toctree::
-   :hidden:
+Automatic Attributes
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_automatic.rst
 
-   essentials_roles_formats
-   essentials_roles_manage
-   essentials_roles_attributes_types
-   essentials_roles_attributes_persistence
-   essentials_roles_attributes_precedence
-   essentials_roles_attributes_automatic
-   essentials_roles_attributes_notation
+Attribute Notation
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_notation.rst
 
+Role Formats
+=====================================================
+.. include:: ../../includes_role/includes_role_formats.rst
 
+Ruby DSL
+-----------------------------------------------------
+.. include:: ../../includes_ruby/includes_ruby_dsl.rst
 
+.. include:: ../../includes_role/includes_role_formats_ruby.rst
 
+JSON
+-----------------------------------------------------
+.. include:: ../../includes_role/includes_role_formats_json.rst
 
+Manage Roles
+=====================================================
+.. include:: ../../includes_role/includes_role_manage.rst
+
+Delete from Run-list
+-----------------------------------------------------
+.. include:: ../../includes_role/includes_role_manage_delete.rst
