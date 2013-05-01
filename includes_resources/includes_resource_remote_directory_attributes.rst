@@ -16,7 +16,11 @@ This resource has the following attributes:
    * - ``files_group``
      - |group windows security|
    * - ``files_mode``
-     - |mode windows security|
+     - The octal mode for a file.
+       
+       |unix|- and |linux|-based systems: |mode *nix|
+       
+       |windows|: |mode windows security|
    * - ``files_owner``
      - |owner windows security|
    * - ``inherits``

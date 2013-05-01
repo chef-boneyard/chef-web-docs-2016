@@ -18,7 +18,11 @@ This resource has the following attributes:
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - |mode windows security|
+     - The octal mode for a file.
+       
+       |unix|- and |linux|-based systems: |mode *nix|
+       
+       |windows|: |mode windows security|
    * - ``owner``
      - |owner windows security|	
    * - ``path``

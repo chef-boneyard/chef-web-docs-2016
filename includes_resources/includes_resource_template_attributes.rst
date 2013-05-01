@@ -20,7 +20,11 @@ This resource has the following attributes:
    * - ``local``
      - |local resource template|
    * - ``mode``
-     - |mode windows security|
+     - The octal mode for a file.
+       
+       |unix|- and |linux|-based systems: |mode *nix|
+       
+       |windows|: |mode windows security|
    * - ``owner``
      - |owner windows security|
    * - ``path``
