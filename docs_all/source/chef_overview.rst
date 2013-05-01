@@ -78,7 +78,7 @@ There are three types of |chef| servers:
    :widths: 60 420
    :header-rows: 1
 
-   * - Feature
+   * - Server
      - Description
    * - .. image:: ../../images/icon_chef_hosted.png
      - .. include:: ../../includes_chef/includes_chef_hosted.rst
