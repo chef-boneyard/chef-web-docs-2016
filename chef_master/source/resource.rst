@@ -146,6 +146,10 @@ All resources share a set of common actions, attributes, conditional executions,
 .. toctree::
    :hidden:
 
+   resource_apt_package
+   resource_bash
+   resource_batch
+   resource_chef_gem
    resource_common
    resource_common_actions
    resource_common_attributes
@@ -154,11 +158,6 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_common_notifications
    resource_common_relative_paths
    resource_common_windows_file_security
-
-   resource_apt_package
-   resource_bash
-   resource_batch
-   resource_chef_gem
    resource_cookbook_file
    resource_cron
    resource_csh
