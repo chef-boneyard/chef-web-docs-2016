@@ -70,7 +70,15 @@ If we go back to the `overview of Chef <http://docs.opscode.com/chef_overview.ht
 
 .. image:: ../../images/overview_chef_attributes.png
 
-where many attributes are maintained in the |chef| repository for environments, roles, and cookbooks (attribute files and recipes). This attribute data is pushed up to the |chef server| from the workstation, periodically. During the |chef| run, for each node, |ohai| will collect data about that node, and then the |chef client| will pull down the node object from the |chef server| (which contains the attribute data from the previous |chef| run) and then will update the cookbooks on the node (effectively updating the attribute files and recipes, as required), and then updating the role and environment data.
+where many attributes are maintained in the |chef| repository for environments, roles, and cookbooks (attribute files and recipes).
+
+* The attributes that are maintained in the |chef| repository are up to the |chef server| from the workstation, periodically
+* During the |chef| run, for each node, |ohai| will collect data about that node
+* The |chef client| will pull down the node object from the |chef server| (which contains the attribute data from the previous |chef| run)
+* The |chef client| will update the cookbooks on the node (if required), which updates the attributes contained in attribute files and recipes
+* The |chef client| will update the role and environment data (if required)
+
+When the |chef| run is finished, the |chef client| pushes the node object to the |chef server|. The updated node object is indexed for search and will be stored until the next |chef| run.
 
 Attribute Precedence
 =====================================================
