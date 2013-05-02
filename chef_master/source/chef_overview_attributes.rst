@@ -99,7 +99,7 @@ Attributes are always applied to |chef| in the following order:
 #. An ``override`` attribute located in a role
 #. An ``override`` attribute located in an environment
 #. A ``force_override`` attribute located in an attribute file
-#. A ``force_override`` attribute located in a recipe
+#. A ``force_override`` attribute located in a recipe 
 #. An ``automatic`` attribute identified by |ohai| at the start of the |chef| run
 
 where the last attribute in the list is the one that is applied to the node.
