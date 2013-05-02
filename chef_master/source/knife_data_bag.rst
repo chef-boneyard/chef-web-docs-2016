@@ -30,17 +30,7 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to create a data bag named "admins", enter:
-
-.. code-block:: bash
-
-   $ knife data bag create admins
-
-to return:
-
-.. code-block:: bash
-
-   Created data_bag[admins]
+.. include:: ../../step_knife/step_knife_data_bag_create.rst
 
 delete
 =====================================================
@@ -56,19 +46,9 @@ Options
 
 Examples
 -----------------------------------------------------
-For example:
+.. include:: ../../step_knife/step_knife_data_bag_delete.rst
 
-.. code-block:: bash
-
-   $ knife data bag delete admins
-   
-Or, to delete an item named "charlie", enter:
-
-.. code-block:: bash
-
-   $ knife data bag delete admins charlie
-
-Type ``Y`` to confirm a deletion.
+.. include:: ../../step_knife/step_knife_data_bag_delete_item.rst
 
 edit
 =====================================================
@@ -90,37 +70,9 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to edit the contents of a data bag, enter:
+.. include:: ../../step_knife/step_knife_data_bag_edit.rst
 
-.. code-block:: bash
-
-   $ knife data bag edit admins
-
-To edit an item named "charlie" that is contained in a data bag named "admins", enter:
-
-.. code-block:: bash
-
-   $ knife data bag edit admins charlie
-
-to open the $EDITOR. Once opened, you can update the data before saving it to the |chef server|. For example, by changing:
-
-.. code-block:: bash
-
-   {
-      "id": "charlie"
-   }
-
-to:
-
-.. code-block:: javascript
-
-   {
-      "id": "charlie",
-      "uid": 1005,
-      "gid":"ops",
-      "shell":"/bin/zsh",
-      "comment":"Crazy Charlie"
-   }
+.. include:: ../../step_knife/step_knife_data_bag_edit_item.rst
 
 from file
 =====================================================
@@ -142,17 +94,9 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-To create a data bag on the |chef server| from a file:
+.. include:: ../../step_knife/step_knife_data_bag_from_file_create.rst
 
-.. code-block:: bash
-
-   $ knife data bag from file "path to JSON file"
-
-To create a data bag named "devops_data" that contains encrypted data, enter:
-
-.. code-block:: bash
-
-   $ knife data bag from file devops_data --secret-file "path to decryption file"
+.. include:: ../../step_knife/step_knife_data_bag_from_file_create_encrypted.rst
 
 
 list
@@ -169,11 +113,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to view a list of data bags on the |chef server|, enter:
-
-.. code-block:: bash
-
-   $ knife data bag list
+.. include:: ../../step_knife/step_knife_data_bag_list.rst
 
 show
 =====================================================
@@ -195,73 +135,12 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to show the contents of a data bag, enter:
+.. include:: ../../step_knife/step_knife_data_bag_show.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_data_bag_show_item.rst
 
-   $ knife data bag show admins
+.. include:: ../../step_knife/step_knife_data_bag_show_item_encrypted.rst
 
-to return:
+.. include:: ../../step_knife/step_knife_data_bag_show_item_decrypted.rst
 
-.. code-block:: bash
-
-   charlie 
-
-To show the contents of a specific item within data bag, enter:
-
-.. code-block:: bash
-
-   $ knife data bag show admins charlie
-
-to return:
-
-.. code-block:: bash
-
-   comment:  Crazy Charlie
-   gid:      ops
-   id:       charlie
-   shell:    /bin/zsh
-   uid:      1005
-
-To show the contents of a data bag named "passwords" with an item that contains encrypted data named "mysql", enter:
-
-.. code-block:: bash
-
-   $ knife data bag show passwords mysql
-
-to return:
-
-.. code-block:: javascript
-
-   ## sample:
-   {
-     "id": "mysql",
-     "pass": "trywgFA6R70NO28PNhMpGhEvKBZuxouemnbnAUQsUyo=\n",
-     "user": "e/p+8WJYVHY9fHcEgAAReg==\n"
-   }
-
-To show the decrypted contents of the same databag, enter:
-
-.. code-block:: bash
-
-   $ knife data bag show --secret-file /path/to/decryption/file passwords mysql
-
-to return:
-
-.. code-block:: javascript
-
-   ## sample:
-   {
-      "id": "mysql",
-      "pass": "thesecret123",
-      "user": "fred"
-   }
-
-To view information in |json| format, use the ``-F`` common option as part of the command like this:
-
-.. code-block:: bash
-
-   $ knife data bag show admins -F json
-
-Other formats available include ``text``, ``yaml``, and ``pp``.
-
+.. include:: ../../step_knife/step_knife_data_bag_show_as_json.rst
