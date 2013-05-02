@@ -4,7 +4,7 @@ Knife
 
 .. include:: ../../includes_knife/includes_knife.rst
 
-Sub-commands
+Subcommands
 =====================================================
 .. include:: ../../includes_knife/includes_knife_subcommand.rst
 
