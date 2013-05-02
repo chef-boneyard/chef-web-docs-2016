@@ -103,6 +103,7 @@ Cookbooks
    chef_overview_server_open_source
    chef_overview_server_private
    chef_overview_workstation
+   chef_overview_attributes
    chef_private_keys
    chef_why
    install
