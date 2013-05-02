@@ -70,8 +70,10 @@ If we go back to the `overview of Chef <http://docs.opscode.com/chef_overview.ht
 
 .. image:: ../../images/overview_chef_attributes.png
 
-where many attributes are maintained in the |chef| repository for environments, roles, and cookbooks (attribute files and recipes).
+where
 
+* Many attributes are maintained in the |chef| repository for environments, roles, and cookbooks (attribute files and recipes)
+* Many attributes are collected by |ohai| on each individual node
 * The attributes that are maintained in the |chef| repository are up to the |chef server| from the workstation, periodically
 * During the |chef| run, for each node, |ohai| will collect data about that node
 * The |chef client| will pull down the node object from the |chef server| (which contains the attribute data from the previous |chef| run)
