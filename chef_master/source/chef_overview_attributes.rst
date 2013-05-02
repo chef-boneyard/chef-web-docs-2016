@@ -104,6 +104,8 @@ Attributes are always applied to |chef| in the following order:
 
 where the last attribute in the list is the one that is applied to the node.
 
+.. image:: ../../images/overview_chef_attributes_precedence.png
+
 .. note:: Yes, the order of application for roles and environments is reversed for ``default`` and ``override`` attributes, where the precedence for ``default`` attributes is environment, then role and for ``override`` attributes is role, then environment. This allows ``override`` attributes for environments to be applied after ``override`` attributes for roles. This allows a role to exist in multiple environments, rather than require a set of roles for each environment.
 
 Examples
