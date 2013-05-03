@@ -15,9 +15,7 @@ The ``ui`` object provides a set of methods that can be used to define user inte
    * - ``ui.ask_question(question, opts={})``
      - Use to ask a user the question contained in ``question``. If ``:default => default_value`` is passed as the second argument, ``default_value`` will be used if the user does not provide an answer. This method will respect the ``--default`` command-line option.
    * - ``ui.color(string, *colors)``
-     - Use to specify a color.
-   * - ``ui.color?()``
-     - Indicates that colored output should be used. (Colored output can only be used when output is sent to a terminal.) For example, from the ``knife rackspace server list`` subcommand:
+     - Use to specify a color. For example, from the ``knife rackspace server list`` subcommand:
        
        .. code-block:: ruby
  
@@ -42,6 +40,8 @@ The ``ui`` object provides a set of methods that can be used to define user inte
             ...
             puts "#{ui.color("SSH Key", :cyan)}: #{server.key_name}"
           print "\n#{ui.color("Waiting for server", :magenta)}"
+   * - ``ui.color?()``
+     - Indicates that colored output should be used. (Colored output can only be used when output is sent to a terminal.)
    * - ``ui.confirm(question, append_instructions=true)``
      - Use to ask a Y/N question. If the user responds with ``N``, immediately exit with status code 3.
    * - ``ui.edit_data(data, parse_output=true)``
