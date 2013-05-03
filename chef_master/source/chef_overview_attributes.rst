@@ -133,7 +133,7 @@ and then with a different list, a different diagram:
 
 where the lower the number, the more important the attribute. If the same attribute is defined more than once, then the most important value will be used by |chef| when it configures the node.
 
-.. warning:: Now that you have read about "attribute importance", forget about it because it's entirely possible for a ``default`` attribute to be the "most important" attribute, especially from the perspective of attribute, cookbook, and recipe management. Keep in mind only "attribute precedence" when working with cookbooks (attribute files and recipes), environments, roles, and |ohai| data. Understanding the order in which they are applied is what matters.
+.. warning:: Now that you have read about "attribute importance", forget about it because it's entirely possible for a ``default`` attribute to be the "most important" attribute, especially from the perspective of attribute, cookbook, and recipe management. Keep only "attribute precedence" in mind when working with cookbooks (attribute files and recipes), environments, roles, and |ohai| data. Understanding the order in which they are applied is what matters.
 
 Examples
 =====================================================
