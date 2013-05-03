@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-There are many ways to structure a |knife| plugin. The best way to determine if a different structure is needed is to look at the other |knife| plugins. The following syntax shows how a typical |knife| plugin is structured:
+There are many ways to structure a |knife| plugin. The following syntax shows how a typical |knife| plugin is structured:
 
 .. code-block:: ruby
 
