@@ -80,6 +80,8 @@ Community Knife Plugins
      - Adds the ability to check which nodes and roles use a cookbook. This is helpful when making changes to a cookbook.
    * - `knife-rhn <https://github.com/bflad/knife-rhn>`_
      - Adds the ability to manage the |redhat| network.
+   * - `knife-rightscale <https://github.com/caryp/knife-rightscale>`_
+     - Adds the ability to provision servers on clouds managed by the RightScale platform.
    * - `knife-role_copy <https://github.com/benjaminws/knife_role_copy>`_
      - Adds the ability to get data from a role, and then set up a new role using that data (as long as the new role doesn't have the same name as an existing role).
    * - `knife-rvc <https://github.com/dougm/rvc-knife>`_
