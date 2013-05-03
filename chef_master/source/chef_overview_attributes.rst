@@ -137,7 +137,7 @@ where the lower the number, the more important the attribute. If the same attrib
 
 Examples
 =====================================================
-The following examples show some of the most common ways that attributes appear in the |chef| repository.
+The following examples show some of the most common ways that attributes are used.
 
 **A default attribute in an attribute file**
 
