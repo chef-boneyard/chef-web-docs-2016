@@ -109,7 +109,7 @@ where the last attribute in the list is the one that is applied to the node. And
 
 Attribute Importance
 -----------------------------------------------------
-The notion of "attribute importance", as a concept within |chef|, doesn't really exist. It is only in this topic as a way to reinforce how attribute precedence works and the order in which |chef| will look to understand the various attributes that are available in any given |chef| run. From this perspective, only the most important attribute will be applied and attribute importance order looks like this:
+The notion of "attribute importance", as a concept within |chef|, doesn't really exist. It is only in this topic as a way to reinforce how attribute precedence works and the order in which |chef| will apply the various attributes that are available to any given |chef| run. From this perspective, only the most important attribute will be applied and attribute importance order looks like this:
 
 #. An ``automatic`` attribute identified by |ohai| at the start of the |chef| run
 #. A ``force_override`` attribute located in a recipe
@@ -133,7 +133,7 @@ and then with a different list, a different diagram:
 
 where the lower the number, the more important the attribute. If the same attribute is defined more than once, then the most important value will be used by |chef| when it configures the node.
 
-.. warning:: Now that you have read about "attribute importance", forget about it because it's entirely possible for a ``default`` attribute to be the "most important" attribute. Keep in mind only "attribute precedence" when working with cookbooks (attribute files and recipes), environments, roles, and |ohai| data.
+.. warning:: Now that you have read about "attribute importance", forget about it because it's entirely possible for a ``default`` attribute to be the "most important" attribute, especially from the perspective of attribute, cookbook, and recipe management. Keep in mind only "attribute precedence" when working with cookbooks (attribute files and recipes), environments, roles, and |ohai| data. Understanding the order in which they are applied is what matters.
 
 Examples
 =====================================================
