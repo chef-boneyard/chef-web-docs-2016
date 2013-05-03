@@ -39,8 +39,7 @@ The ``ui`` object provides a set of methods that can be used to define user inte
             puts "#{ui.color("Instance ID", :cyan)}: #{server.id}"
             puts "#{ui.color("Flavor", :cyan)}: #{server.flavor_id}"
             puts "#{ui.color("Image", :cyan)}: #{server.image_id}"
-            puts "#{ui.color("Availability Zone", :cyan)}: #{server.availability_zone}"
-            puts "#{ui.color("Security Groups", :cyan)}: #{server.groups.join(", ")}"
+            ...
             puts "#{ui.color("SSH Key", :cyan)}: #{server.key_name}"
           print "\n#{ui.color("Waiting for server", :magenta)}"
    * - ``ui.confirm(question, append_instructions=true)``
