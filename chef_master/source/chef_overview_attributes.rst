@@ -101,7 +101,7 @@ Attributes are always applied to |chef| in the following order:
 #. A ``force_override`` attribute located in a recipe 
 #. An ``automatic`` attribute identified by |ohai| at the start of the |chef| run
 
-where the last attribute in the list is the one that is applied to the node.
+where the last attribute in the list is the one that is applied to the node. And as a diagram:
 
 .. image:: ../../images/overview_chef_attributes_precedence.png
 
