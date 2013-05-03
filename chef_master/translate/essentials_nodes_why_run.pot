@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-05-03 15:53\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_nodes_why_run.rst:34
+# 57dc601e755844bf84221c81061faf3a
+msgid "why-run Mode"
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:36
+# 727ec188a00d4c0994f22a728a1ef269
+msgid "|whyrun| mode is a way to see what |chef| would have configured, had an actual |chef| run occurred. This approach is similar to the concept of \"no-operation\" (or \"no-op\"): decide what should be done, but then don't actually do it until it's done right. This approach to configuration management can help identify where complexity exists in the system, where inter-dependencies may be located, and to verify that everything will be configured in the desired manner."
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:38
+# b2a2722f1b6f444c85d27a6a9ecff5b0
+msgid "When |whyrun| mode is enabled, a |chef| run will occur that does everything up to the point at which configuration would normally occur. This includes getting the configuration data, authenticating to the |chef server|, rebuilding the node object, expanding the run list, getting the necessary cookbook files, resetting node attributes, identifying the resources, and building the resource collection and does not include mapping each resource to a provider or configuring any part of the system."
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:40
+# 3bc4c710a84e494da4a8e15aaf4bb2d2
+msgid "why-run mode is not a replacement for running cookbooks in a test environment that mirrors the production environment. |opscode| uses why-run mode to learn more about what is going on, but also test-kitchen on developer systems, along with an internal |openstack| cloud and external cloud providers to test more thoroughly."
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:42
+# 84cc41dc4f6d4e81ab48168b9a48dff3
+msgid "For example, the |resource service| resource can be used to start a service. If the action is ``:start`` and the service is not running, then start the service (if it is not running) and do nothing (if it is running). What about a service that is installed from a package? |chef| cannot check to see if the service is running until after the package is installed. A simple question that |whyrun| mode can answer is what |chef| would say about the state of the service after installing the package because service actions often trigger notifications to other resources. So it can be important to know in advance that any notifications are being triggered correctly."
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:44
+# 82232afa06dc4b178a068878856c0447
+msgid "When |chef| is run in |whyrun| mode, certain assumptions are made:"
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:46
+# ec3f707bec7e491280fc1f90773822ad
+msgid "If the |resource service| resource cannot find the appropriate command to verify the status of a service, |whyrun| mode will assume that the command would have been installed by a previous resource and that the service would not be running"
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:47
+# 2d2a9fc2bfd04898adc295a67bc44021
+msgid "For ``not_if`` and ``only_if`` attribute, |whyrun| mode will assume these are commands or blocks that are safe to run. These conditions are not designed to be used to change the state of the system, but rather to help facilitate idempotency for the resource itself. That said, it may be possible that these attributes are being used in a way that modifies the system state"
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:48
+# 6b2858a076cf44bea01c45687cfcc88b
+msgid "The closer the current state of the system is to the desired state, the more useful |whyrun| mode will be. For example, if a full run-list is run against a fresh system, that run-list may not be completely correct on the first try, but also that run-list will produce more output than smaller run-list"
+msgstr ""
+
+#: ../source/essentials_nodes_why_run.rst:50
+# 6183a250c5614d5c8e194cc52f280646
+msgid "To enable why-run mode for a |chef| run, use the ``-W`` option for the |chef client| executable:"
+msgstr ""
+
