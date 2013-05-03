@@ -66,7 +66,7 @@ Attributes are provided to |chef| from the following locations:
 * Environments
 * Roles
 
-If we go back to the `overview of Chef <http://docs.opscode.com/chef_overview.html>`_, but then only focus on where the attributes are located, it looks something like this:
+If we go back to the `overview of Chef <http://docs.opscode.com/chef_overview.html>`_, but then focus only on where attributes are located, it looks something like this:
 
 .. image:: ../../images/overview_chef_attributes.png
 
@@ -105,19 +105,47 @@ where the last attribute in the list is the one that is applied to the node.
 
 .. image:: ../../images/overview_chef_attributes_precedence.png
 
-.. note:: Yes, the order of application for roles and environments is reversed for ``default`` and ``override`` attributes, where the precedence for ``default`` attributes is environment, then role and for ``override`` attributes is role, then environment. This allows ``override`` attributes for environments to be applied after ``override`` attributes for roles. This allows a role to exist in multiple environments, rather than require a set of roles for each environment.
+.. note:: Yes, the order of application for roles and environments is reversed for ``default`` and ``override`` attributes. The precedence order for ``default`` attributes is environment, then role. The precedence order for ``override`` attributes is role, then environment. Applying environment ``override`` attributes after role ``override`` attributes allows a role to exist in multiple environments.
+
+Attribute Importance
+-----------------------------------------------------
+The notion of "attribute importance", as a concept within |chef|, doesn't really exist. It is only in this topic as a way to reinforce how attribute precedence works and the order in which |chef| will look to understand the various attributes that are available in any given |chef| run. From this perspective, only the most important attribute will be applied and attribute importance order looks like this:
+
+#. An ``automatic`` attribute identified by |ohai| at the start of the |chef| run
+#. A ``force_override`` attribute located in a recipe
+#. A ``force_override`` attribute located in an attribute file
+#. An ``override`` attribute located in an environment
+#. An ``override`` attribute located in a role
+#. An ``override`` attribute located in a recipe
+#. An ``override`` attribute located in an attribute file
+#. A ``normal`` attribute located in a recipe
+#. A ``normal`` attribute located in an attribute file
+#. A ``force_default`` attribute located in a recipe
+#. A ``force_default`` attribute located in an attribute file
+#. A ``default`` attribute located in role
+#. A ``default`` attribute located in an environment
+#. A ``default`` attribute located in a recipe
+#. A ``default`` attribute located in an attribute file
+
+and then with a different list, a different diagram:
+
+.. image:: ../../images/overview_chef_attributes_importance.png
+
+where the lower the number, the more important the attribute. If the same attribute is defined more than once, then the most important value will be used by |chef| when it configures the node.
+
+.. warning:: Now that you have read about "attribute importance", forget about it because it's entirely possible for a ``default`` attribute to be the "most important" attribute. Keep in mind only "attribute precedence" when working with cookbooks (attribute files and recipes), environments, roles, and |ohai| data.
 
 Examples
 =====================================================
 The following examples show some of the most common ways that attributes appear in the |chef| repository.
 
-**type: default; source: attribute_file**
+**A default attribute in an attribute file**
 
 .. code-block:: ruby
 
    default[:graphite][:carbon][:version] = "0.9.10"
 
-**type: default; source: recipe**
+**A default attribute in a recipe**
 
 .. code-block:: ruby
 
@@ -128,7 +156,7 @@ The following examples show some of the most common ways that attributes appear 
      node.default['foo']['foo_attribute'] << u['blargh'] unless node.default['foo']['foo_attribute'].include?(u['blargh'])
    end
 
-**type: default; source: role**
+**A default attribute in a role**
 
 .. code-block:: ruby
 
@@ -138,7 +166,7 @@ The following examples show some of the most common ways that attributes appear 
      }
    })
 
-**type: override; source: environment**
+**An override attribute in an environment**
 
 .. code-block:: ruby
 
@@ -153,13 +181,13 @@ The following examples show some of the most common ways that attributes appear 
      }
    )
 
-**type: override; source: attribute file**
+**An override attribute in an attribute file**
 
 .. code-block:: ruby
 
    override['apache']['prefork']['maxclients'] = 8
 
-**type: override; source: role**
+**An override attribute in a role**
 
 .. code-block:: ruby
 
