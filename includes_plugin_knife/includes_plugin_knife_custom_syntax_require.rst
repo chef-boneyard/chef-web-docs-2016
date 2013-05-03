@@ -12,7 +12,7 @@ First, ensure that the correct files are available using the following syntax:
 
 where the actual path may vary from plugin to plugin, but is typically located in the ``chef/knife/`` directory.
 
-.. note:: Using the ``deps`` method instead of ``require`` is recommended, especially if the environment in which |knife| is being run contains a lot of plugins and/or any of those plugins have a lot of dependencies and/or requirements on other plugins and |chef| search functionality.
+.. note:: Using the ``deps`` method instead of ``require`` is recommended, especially when the environment in which |knife| is being run contains a lot of plugins and/or any of those plugins have a lot of dependencies and/or requirements on other plugins and |chef| search functionality.
 
 For example, use the following to require a plugin named ``bootstrap``:
 
