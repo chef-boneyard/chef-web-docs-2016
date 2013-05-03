@@ -81,7 +81,7 @@ Community Knife Plugins
    * - `knife-rhn <https://github.com/bflad/knife-rhn>`_
      - Adds the ability to manage the |redhat| network.
    * - `knife-rightscale <https://github.com/caryp/knife-rightscale>`_
-     - Adds the ability to provision servers on clouds managed by the RightScale platform.
+     - Adds the ability to provision servers on clouds managed by the |rightscale| platform.
    * - `knife-role_copy <https://github.com/benjaminws/knife_role_copy>`_
      - Adds the ability to get data from a role, and then set up a new role using that data (as long as the new role doesn't have the same name as an existing role).
    * - `knife-rvc <https://github.com/dougm/rvc-knife>`_
