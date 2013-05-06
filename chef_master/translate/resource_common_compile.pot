@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-03 15:53\n"
+"POT-Creation-Date: 2013-05-06 11:34\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,122 +17,122 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/resource_common_compile.rst:34
-# c976a3238fbc4d4c8654d4a60b566209
+# df7ab1e866264b4ab05c65fed79a515c
 msgid "Run Resources from the Resource Collection"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:5
-# b0897537201b4dadae98060da8fab3b9
+# 712d448afc9a4f8594e786f191599b4f
 msgid "|chef| processes recipes in two phases:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:7
-# 5840b2dc519d49c6857027da40fd009a
+# 509bdbb0b4a34faaa974ae1c74727854
 msgid "First, each resource in the node object is identified and a resource collection is built. All recipes are loaded in a specific order, and then the actions specified within each of them are identified."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:8
-# d925d80d0110450db455aae027eac3d0
+# b2be79e9b50e4c9799873db27c573b04
 msgid "Next, |chef| configures the system based on the order of the resources in the resource collection. Each resource is mapped to a provider, which then examines the node and then does the steps necessary to complete the action."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:10
-# fe9c8559ff1e4279937d93392f3fa727
+# 02722bfebd3f48398161e758bf8fc728
 msgid "Sometimes, it may be necessary to ensure that a specific resource is run during the phase that builds the resource collection. For example:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:12
-# ffa4f314c6214840a99e8f35249052a9
+# c80575354c6341e891df2cf2d68b239f
 msgid "A resource may need to run first so that it can download a package that will be used by other resources in the resource collection"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:13
-# f31d94d3544a46868b3226cee1878ccb
+# 50da36b9f5c54f5c877e8c7cff6712f6
 msgid "Several resources need to install a package; rather than having running the package installer several times, it can be configured to run only once"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile.rst:15
-# d83992f5c13e4a8791efba554707e625
+# 14cee0cdd3fc4bd0992851731ae69ec8
 msgid "To support these types of uses cases, it is possible to tell |chef| to run a resources at the beginning and/or the end of the resource collection phase. Effectively, run a resource before all other resources are added to the resource collection and/or after all resources have been added, but before |chef| configures the system."
 msgstr ""
 
 #: ../source/resource_common_compile.rst:40
-# da4bcbd4aebe497889b4d56dc3f5f719
+# 5b6c4d39f5724b919dac01883835573f
 msgid "Before other resources"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:5
-# 450f0ce84d244f6ca9b47f0fc5516104
+# e59bf0c02711462ca7aa82aa2b8b5818
 msgid "To run a resource at the start of the resource collection phase of the |chef| run, set up a ``Chef::Resource`` object, and then call the method that runs the action."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:7
-# ffbf9005220c409ebf034448f05f9b1a
+# e8935104ca88415f8db5ca50e80e02b9
 msgid "**Update a package cache**"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:9
-# 06b86d5fc547402fbc24d8832f2c406f
+# b4cb644a09b745229bd809aa12321b81
 msgid "It is important to make sure that an operating system's package cache is up to date before |chef| tries to install packages, otherwise there may be references to versions that no longer exist. For example, on |debian| or |ubuntu| systems, the |apt| cache needs to be updated. Use code similar to the following:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:19
-# b72b185b3cfb46d2b90f568004acb31f
+# 97c8081d9a6648b9807e19c20e5d0d0f
 msgid "where ``e`` is created as a ``Chef::Resource::Execute`` |ruby| object. The ``action`` attribute is set to ``:nothing`` so that the ``run_action`` method can be used to tell |chef| to run the specified command. |opscode| provides a cookbook for doing this with |apt| (|debian| or |ubuntu|) and |pacman| (for |archlinux|). The preceding recipe can be placed at the top of a node's run list to ensure it is run before |chef| tries to install any packages."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:21
-# 4e61932e35664c3eadd117f54011e266
+# 432d4c5315f640cc8f40f43ed8e8b35e
 msgid "**Install a RubyGem to use later**"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:23
-# 8723e2fe74b94cd99bd57a16a8576b6a
+# 1a6cb6eaae134bbeb6b4e0c2c768cafc
 msgid "A single |chef| run should configure a node completely. |chef| uses |ruby| as the recipe language, which means that anything that can be done with |ruby| can be done in a recipe. However, in some cases, a |ruby| gem may need to be installed before anything else happens. For example, when a |mysql| database needs to interact with a recipe. This can be done with a recipe similar to the following:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:36
-# 8dbf84bf96ef4cdc8f5a5e60dcab2071
+# 0928a93d73054ca992f30f1b53236d73
 msgid "where similar to the previous example for updating package caches, this example creates a new |ruby| object called ``Chef::Resource::Package``."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:38
-# 46b101e29aa24aeaae719e127c2816a1
+# 60f6e4f74b9846aabcb065b3df9d5184
 msgid "The |mysql| |ruby| gem compiles native extensions in C, so the appropriate packages for the operating system will also need to be installed."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:39
-# c66b00723f9a48218197baffe426ac13
+# fe3814357669492187879895392e90ea
 msgid "``Gem.clear_paths`` ensures that |chef| reloads the cache of available |ruby| gem."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:40
-# a10eb315a8f7403b8e56a727de6dde53
+# 7613074e077c4050ad0a3da40156fbb5
 msgid "``require 'mysql'`` loads the |mysql| |ruby| gem so that it can be used to connect to a |mysql| database."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:42
-# a0ca20fc9a2442eb89036f20159a79f7
+# a39578dcf646410da7e59690624c2d4a
 msgid "**An anti-pattern**"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:44
-# be9ea8588fa8467b85778e517c6fe2e5
+# 324f6ca4316141abaac8f1c345371deb
 msgid "Unfortunately, resources that are executed when the resource collection is being built cannot notify any resource that has yet to be added to the resource collection. For example:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_begin.rst:56
-# 246386ef18c84cd4a5e0609c5f304226
+# 99fef8cc253146e682ec406542b08c25
 msgid "In some cases, the better approach may be to install the package before the resource collection is built to ensure that it is available to other resources later on. Or, something like the following can be used:"
 msgstr ""
 
 #: ../source/resource_common_compile.rst:44
-# ab92d387b10148ecb4eb5d60ecf7dca9
+# c6a78ae72c69400d9aecada3e880a7aa
 msgid "After the resource collection is built"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_resource_common_compile_end.rst:5
-# f68ae0276f434e138ff82cd80d12ec39
+# 2e495cb0571e41cf8c474d75b31e1832
 msgid "To run a resource at the end of the resource collection phase of the |chef| run, use the ``:delayed`` timer on a notification."
 msgstr ""
 

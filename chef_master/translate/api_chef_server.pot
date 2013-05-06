@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-05-03 15:53\n"
+"POT-Creation-Date: 2013-05-06 11:34\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,362 +17,362 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/api_chef_server.rst:34
-# e335f7fff66942788f41d2403fe3fe77
+# c50359ad21444544962a269953a6c6c9
 msgid "Chef Server API"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server.rst:4
-# b40e3c7456ea4d6e8ef670e48b771495
+# 3b2006ef23234dfc8096d4fa4c73119a
 msgid "The |api chef server| is used to provide access to objects on the |chef server|, including nodes, environments, roles, cookbooks (and cookbook versions), and to manage an |chef api client| list and the associated RSA public key-pairs."
 msgstr ""
 
 #: ../source/api_chef_server.rst:39
-# 33fe764b4bed46eb9972d544f735fca1
+# c34801f369ba4b0db7e637d6ba90e0b1
 msgid "Requirements"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:4
-# e51f32548bed4e1c8cdd881358a4d930
+# 3c90b66543434ed29ced3f22813f278d
 msgid "The |api chef server| has the following requirements:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:6
-# 7f4edd23a49d4a0ea05639529a14686a
+# 779c3e7cb1874bc3ac120b52f51996b4
 msgid "Access to a |chef server| running |chef| 0.9.x or above"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:7
-# ed526b6b84f9472999a96aab6cf4c250
+# 89f1130282d24c7786a6b7a702a9b98d
 msgid "The ``Accept`` header must be set to \"application/json\""
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:8
-# 7fed15aaaf244d05823abde6f63af178
+# b91dfadbaf5342beb40740d105f8e40f
 msgid "The ``X-Chef-Version`` header must be set to the version of the |api chef server| that is being used"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:9
-# 2116fca3d7204956ba6e4d4aa4a960b0
+# 4bba67b57f58477e89db3fe14b02c4b1
 msgid "A request must be signed using ``Mixlib::Authentication``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst:10
-# b98a0d433005415daf975ce5808a7c69
+# e81bfd4a0199404c9c8784ae679bb3a4
 msgid "A request must be well-formatted. The easiest way to ensure a well-formatted request is to use the ``Chef::REST`` library that is bundled with |chef|."
 msgstr ""
 
 #: ../source/api_chef_server.rst:43
-# 47f3b61c49fd49a1ab5a3e6a87779669
+# 0cd5b903968945e2b30e0093bfca8a0c
 msgid "Authentication Headers"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:4
-# dcbb58cfc8ae4dc7b85e2ba97a0df626
+# ce1b69687935422e98ea5a9b9799b8e9
 msgid "Authentication to the |chef server| occurs when a specific set of HTTP headers are signed using a private key that is associated with the machine from which the request is made. The request is authorized if the |chef server| can verify the signature using the public key. Only authorized actions are allowed."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:6
-# 1d1d9fd7b50a40f4ab95b150d06b5351
+# be8b43e274f34fdd93eb91613913a24e
 msgid "Most authentication requests made to the |chef server| are abstracted from the user. Such as when using |knife| or the |chef server| user interface. In some cases, such as when using the ``knife exec`` subcommand, the authentication requests need to be made more explicitly, but still in a way that does not require authentication headers. In a few cases, such as when using arbitrary |ruby| code or |curl|, it may be necessary to include the full authentication header as part of the request to the |chef server|."
 msgstr ""
 
 #: ../source/api_chef_server.rst:47
-# 267b423ed6ee421a8c854f1a350f693a
+# e512aa36aad048708e483c68096e51e2
 msgid "Header Format"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:5
-# 8848ed111c8144f9bc4a9ce53f8dfffb
+# 112e2c80da784262b4fc6f61232c9c21
 msgid "All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters.  Each canonical header should be encoded in the following format:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:15
-# 723023cad3834c6fb4989085925f290d
+# e8b86cc80891450695494a4247d6956f
 msgid "where:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:17
-# fec9908df86b4b75903039cec1366b98
+# cd1a0f976a7047dca0a0da2ce4739302
 msgid "``HTTP_METHOD`` is the method used in the API request (``GET``, ``POST``, and so on)"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:18
-# d7076ad91c0a450db36f211590e5af5c
+# 5102f12bb38b4eb888881676e3cafeb1
 msgid "``HASHED_PATH`` is the path of the request (``/name_of_endpoint`` for the open source |chef server| and ``/organizations/organization_name/name_of_endpoint`` for |chef hosted| or |chef private|). The ``HASHED_PATH`` must be hashed using |sha1| and encoded using |base64| and must not have repeated forward slashes (``/``) or end in a forward slash (unless the path is ``/``)."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:19
-# c2d117a51ae54e9c8d613e2443fd535c
+# c95460bcd1554f73b4d09d255e5a4ac7
 msgid "The private key must be an RSA key in the SSL .pem file format. This signature is then broken into character strings (of not more than 60 characters per line) and placed in the header."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:21
-# 19291381fc9743b7ab787169ab0f7a58
+# e9d6b8ee806e4a4b92b9f45ec3b9f506
 msgid "The |chef server| decrypts this header and ensures its content matches the content of the non-encrypted headers that were in the request. The timestamp of the message is checked to ensure the request was received within a reasonable amount of time. One approach generating the signed headers is to use `mixlib-authentication <https://github.com/opscode/mixlib-authentication>`_, which is a class-based header signing authentication object similar to the one used in |chef|."
 msgstr ""
 
 #: ../source/api_chef_server.rst:51
-# e44b48c3d8bd4ce48bdbda214661fc45
+# 89a348aa0d2a4434b4483ab49904e9f7
 msgid "Required Headers"
 msgstr ""
 
 #: ../source/api_chef_server.rst:52
-# 58fc61bc32654435b780feb58119f0b6
+# eb0f938173014785b2447bbf3c2d69e1
 msgid "The following authentication headers are required:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:58
-# aab4838ac56f47e3a29fa89a5193ce5c
+# 534ee9f4627949ecacb907977de81a66
 msgid "Feature"
 msgstr ""
 
 #: ../source/api_chef_server.rst:59
-# fbaece9b95dd4f46a0c43c07ec82ad6d
+# e09848cf3f034daebe91a2ca582269a4
 msgid "Description"
 msgstr ""
 
 #: ../source/api_chef_server.rst:60
-# 4423050d8c19402281d51dd451131e5f
+# 2c940a70e01f4017b06b69ac6e0b0787
 msgid "``Accept``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst:4
-# 448e589582864ba08604c521077d6d65
+# 9b855fac3b4647d48ae8355ece6c3f7c
 msgid "The format in which response data will be provided, such as ``json``, ``xml``, ``html``, and so on. This header is not required, but is often included to ensure that response data is returned in the desired format."
 msgstr ""
 
 #: ../source/api_chef_server.rst:62
-# 3c36c53c514f47c6bf4f0727f4419232
+# 55a0d91f28384fdfa50e1c148e2b5b17
 msgid "``Host``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst:5
-# fa70ee2b3f12485eae7e85dd10cb4cc9
+# 6f8d393acaa54a2ba2d18df7517d2ff5
 msgid "The host name of the machine to which a request is sent. For example: ``api.opscode.com``."
 msgstr ""
 
 #: ../source/api_chef_server.rst:64
-# 74b8ea3171054b2d936ed889a3ae0ebe
+# 17118201c48640f6a68494862f1764db
 msgid "``X-Chef-Version``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_chef_version.rst:5
-# 4f93470a85534d0a884309c794f21802
+# df67eb4d4f4c4c4db8ce29adc37c33ac
 msgid "The version of the |chef| executable from which a request is made. This header ensures that responses are in the correct format. For example: ``11.0.4.x`` or ``0.10.x``."
 msgstr ""
 
 #: ../source/api_chef_server.rst:66
-# c9b5f95e74ad4dcfa4ecab476b81b03a
+# 4e5846dca48b4425b263afb7a9790b2e
 msgid "``X-Ops-Authorization-N``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst:5
-# 21489b38dd96464aba879d2419b07672
+# 53e63e1037e746a98b9492d597dae376
 msgid "One (or more) 60 character segments that comprise the canonical header. A canonical header is signed with the private key used by the client machine from which the request is sent, and is also encoded using |base64|. If more than one segment is required, each should be named sequentially, e.g. ``X-Ops-Authorization-1``, ``X-Ops-Authorization-2``, ``X-Ops-Authorization-N``, where ``N`` represents the integer used by the last header that is part of the request."
 msgstr ""
 
 #: ../source/api_chef_server.rst:68
-# 500281e7382841458942ee88a12e3014
+# 99f2fc59661d4f80937890fbc77457dc
 msgid "``X-Ops-Content-Hash``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst:5
-# 7bd0e5dc6b3e49a5800a747a31ea9ab3
+# e7967264381f4c6c89f32d2a392f8d9d
 msgid "The body of the request. The body should be hashed using |sha1| and encoded using |base64|. All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters."
 msgstr ""
 
 #: ../source/api_chef_server.rst:70
-# dc042722986f4a0cad450165555935b5
+# 57190c7dcea8405188c8c5bb2b24892f
 msgid "``X-Ops-Sign``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst:5
-# 200ce123d3204648840ea47f292fd0cf
+# 6504df46156a4bb2bb5a89f50038762c
 msgid "Set this header to the following value: ``version=1.0``."
 msgstr ""
 
 #: ../source/api_chef_server.rst:72
-# 429dd53448144b39bfab365e242f93c0
+# 8ad9408f31de4f699b448f505cc071a0
 msgid "``X-Ops-Timestamp``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_timestamp.rst:5
-# e877e205c1a14ecd8c901148f04cb326
+# df54130b97b34ff2ba4794ff683861c0
 msgid "The timestamp, in |iso 8601| format and with |utc| indicated by a trailing ``Z`` and separated by the character ``T``. For example: ``2013-03-10T14:14:44Z``."
 msgstr ""
 
 #: ../source/api_chef_server.rst:74
-# 8d3f17f370014490a809c10a75a1f86d
+# b64cc093805f4244a94b803333883e82
 msgid "``X-Ops-UserId``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst:5
-# 52bba6758a16435199d92a3177bc1610
+# 0fa0d91928b54aecaddfa59de6f760d3
 msgid "The name of the API client whose private key will be used to create the authorization header."
 msgstr ""
 
 #: ../source/api_chef_server.rst:78
-# 7d34307c1f8149db984241d45cff255b
+# bb6f56c8cc144d7d9727c8f818e836e9
 msgid "Example"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_example.rst:5
-# 0c9ca72b439b4af5bac7b5d8399d2847
+# c82531e6b20e4cf69aed10f4c87eb5fc
 msgid "The following example shows an authentication request to |chef hosted|:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:82
-# 08eb9f6084de4b27bfabd77f373c0a91
+# d9af12202eb24e4d89d8c7a0182453fa
 msgid "Endpoints"
 msgstr ""
 
 #: ../source/api_chef_server.rst:83
-# f4c98610591844b281fc151e11310062
+# 72c7954bfc8e4c9cb092a476339a9093
 msgid "For |chef hosted| and |chef private|, each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint. For the open source |chef server|, each authentication request must include ``/clients`` as part of the name of the endpoint. For example, the full endpoint for getting a list of roles on |chef hosted| or |chef private|:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:89
-# e3bd504e68654bc6b4a1867c04f16103
+# 818279bcf8be4e129930087398b0fa28
 msgid "and for the same request, but to the open source |chef server|:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:95
-# b3fe97b01a1b4042b8204e3bf44175bf
+# cb9e378b1eb847318b5ae2d346006505
 msgid "The |api chef server| has the following endpoints:"
 msgstr ""
 
 #: ../source/api_chef_server.rst:97
-# 8d6de1243d664009ad3aabdf3cb8b3db
+# 98ef0420558e4ec0834429ae8a8eb149
 msgid ":doc:`api_chef_server_clients`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:98
-# e73ab9db00c640ec8c55bf2473595705
+# c3fd331f8242492ea0c63348bc2f8ed6
 msgid ":doc:`api_chef_server_clients_name`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:99
-# b1231caeccf84fa380c1caa15c7cab8d
+# c455fb408f9e4afaa4d3361320f4ef51
 msgid ":doc:`api_chef_server_cookbooks`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:100
-# 7b6ddd2803534e91be4d439ab27e8add
+# 836fb6a18cee4ade8c8ac535bb862428
 msgid ":doc:`api_chef_server_cookbooks_name`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:101
-# f68c33a371304e35a87698caf8e45022
+# 404220868723487c94d8ec3e3760db37
 msgid ":doc:`api_chef_server_cookbooks_version`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:102
-# bcd3d5f503604a0b934e3239ee71540e
+# 9069843a7947402d8d9717a7cb33ae47
 msgid ":doc:`api_chef_server_data_bag`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:103
-# 92152398a0c0475eb5d0f4f0b7d021a7
+# 35fe55d602664f2295fdf41f3ce19bea
 msgid ":doc:`api_chef_server_data_bag_item`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:104
-# b1a0cc15454a4076a01442323abecda4
+# d596e78a4c5a4fe4b3b8e3e327e95f42
 msgid ":doc:`api_chef_server_data_bag_name`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:105
-# 5d8ed426099a4a099261b21c0b9f5bc7
+# e30eb458ef0d41fa93e7ba2ec1be09f6
 msgid ":doc:`api_chef_server_environments`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:106
-# 6863a03457314e15a3e1454c2a9a302c
+# 8dce01613e084e0eb8f06b3d16a70035
 msgid ":doc:`api_chef_server_environments_name`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:107
-# 69ec513f7f8b4a3893bb274013d42204
+# 4823c154dbdf4ada96664821465c97eb
 msgid ":doc:`api_chef_server_environments_cookbook_name`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:108
-# edbec3e167f747b591def82dd0355a8a
+# 4a489e1acdaa441590ef9010a98d3c11
 msgid ":doc:`api_chef_server_environments_cookbook_version`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:109
-# 556a6ae2a62e4d61ae9612444b9df8d8
+# c21ceccbf2094f64894d65f4849212aa
 msgid ":doc:`api_chef_server_environments_cookbooks`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:110
-# 7279691ff22b4f388bacb9251d33becf
+# d2415cb566b7489ead778f76e2be5b5f
 msgid ":doc:`api_chef_server_environments_node`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:111
-# 1bb855afe2ef4c51a2fba3520b5c1206
+# 6978bf431ef04714b97bb409b0304039
 msgid ":doc:`api_chef_server_environments_recipe`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:112
-# 6e418915ca854a54b7292298e52908d6
+# 228f92da0237497f9b44ad2d78f15ce8
 msgid ":doc:`api_chef_server_environments_role`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:113
-# 5521df754861440a93559987055a2f0b
+# 2152b4c8e8264a34ab22cebe8d98d36a
 msgid ":doc:`api_chef_server_nodes`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:114
-# a9aaece8335e465ea9445e0a68a34de2
+# eb046b9d204a42d0b1ed4dddee574767
 msgid ":doc:`api_chef_server_nodes_name`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:115
-# d97e3dda6de04b5c9fbdbb3b3fd63ad4
+# 1aebac474cf94446b9a2cdbf248e1aaa
 msgid ":doc:`api_chef_server_roles`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:116
-# 9f07b512811045119ab08e34f435b438
+# 52867933c83d4c219e27f76a1f3a223b
 msgid ":doc:`api_chef_server_roles_name`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:117
-# 04c7e6198f6542db8ae6cefd026bfe65
+# 3220c9fb3ca34aa294ba22d0f4f48ddd
 msgid ":doc:`api_chef_server_roles_name_environments`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:118
-# 2d2f2a2c87394e0a999cecfeb38c3fbb
+# 422fd5e077464a9d81d2a6386feac657
 msgid ":doc:`api_chef_server_roles_name_environments_name`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:119
-# 3464276d3c60488a9a7ada6194ab13d5
+# 40c5d2847f60483d83f7b7af24455b15
 msgid ":doc:`api_chef_server_sandboxes`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:120
-# 19391674e8ba4a4098c2f49283cdb5de
+# 827725d7034043ab831f7dd7393d7767
 msgid ":doc:`api_chef_server_sandboxes_id`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:121
-# 58aaafc9584a4b7596e2deb5c0dcb283
+# 65f965e097be41bf9fcc764b31446fe5
 msgid ":doc:`api_chef_server_search`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:122
-# e794aa7c23cb4f5f8854c2f5601ba17a
+# 334d453fcf974855a39266a656ffabac
 msgid ":doc:`api_chef_server_search_index`"
 msgstr ""
 
 #: ../source/api_chef_server.rst:123
-# 1508bc5d10634e8996fe16149f8da8bb
+# 783d2a3c2a194a3dabee1a85375030f8
 msgid ":doc:`api_chef_server_user`"
 msgstr ""
 
