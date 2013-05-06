@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following attributes are those which are re-written with each Ohai run, so they should be recognized as being unmodifiable when considering the use of attributes:
+The list of automatic attributes that are collected by |ohai| at the start of each |chef| run vary from organization to organization, and will often vary between the various server types being configured and the platforms on which those servers are run. All attributes collected by |ohai| are unmodifiable. To see which automatic attributes are collected by |ohai| for a particular node, run the following command:
 
 .. code-block:: bash
 
