@@ -296,7 +296,6 @@ What an external link looks like after it's built:
 
 "A great tool for learning Ruby is http://www.codecademy.com/tracks/ruby."
 
-
 TOC Trees
 =====================================================
 A TOC tree defines all of the topics that are children of this topic. In Sphinx outputs, the Previous and Next patterns use this topic structure to determine these links. In addition, a visible TOC will use the structure defined by the ``toctree`` directive. In general, Opscode is not using the visible TOC tree, but they still need to be present in the topics to keep Sphinx happy. What the hidden ``toctree`` looks like as reST:: 
