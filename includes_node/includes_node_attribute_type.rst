@@ -10,15 +10,15 @@ Attribute types can be any of the following:
    * - Attribute Type
      - Description
    * - ``default``
-     - A ``default`` attribute is automatically reset at the start of every |chef| run and has the lowest attribute precedence. A cookbook should be authored to use ``default`` attributes as often as possible.
+     - |attribute_type default|
    * - ``force_default``
-     - A ``force_default`` attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over a ``default`` attribute set by a role or an environment.
+     - |attribute_type force_default|
    * - ``normal``
-     - A ``normal`` attribute is a setting that persists on the target system and is never reset during a |chef| run. A ``normal`` attribute has a higher attribute precedence than a ``default`` attribute.
+     - |attribute_type normal|
    * - ``override``
-     - An ``override`` attribute is automatically reset at the start of every |chef| run and has a higher attribute precedence than ``default``, ``force_default``, and ``normal`` attributes. An ``override`` attribute is most often specified in a recipe, but can be specified in an attribute file, for a role, and/or for an environment. A cookbook should be authored so that it uses ``override`` attributes only when required.
+     - |attribute_type override|
    * - ``force_override``
-     - A ``force_override`` attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over an ``override`` attribute set by a role or an environment.
+     - |attribute_type force_override|
    * - ``automatic``
-     - An ``automatic`` attribute contains data that is identified by |ohai| at the beginning of every |chef| run. An ``automatic`` attribute cannot be modified and always has the highest attribute precedence.
+     - |attribute_type automatic|
 
