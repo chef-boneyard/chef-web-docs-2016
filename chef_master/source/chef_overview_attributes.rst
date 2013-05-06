@@ -1,28 +1,7 @@
 =====================================================
 About Attributes
 =====================================================
-An attribute is a specific detail about a node. Attributes are used by |chef| to understand:
-
-* The current state of the node
-* What the state of the node was at the end of the previous |chef| run
-* What the state of the node should be at the end of the current |chef| run
-
-Attributes are defined by:
-
-* The state of the node itself
-* Cookbooks (in attribute files and/or recipes)
-* Roles
-* Environments
-
-During every |chef| run, the |chef client| builds the attribute list using:
-
-* Data about the node collected by |ohai|
-* The node object that was saved to the |chef server| at the end of the previous |chef| run
-* The rebuilt node object from the current |chef| run, after it is updated for changes to cookbooks (attribute files and/or recipes), roles, and/or environments, and updated for any changes to the state of the node itself
-
-After the node object is rebuilt, all of attributes are compared, and then the node is updated based on attribute precedence. At the end of every |chef| run, the node object that defines the current state of the node is uploaded to the |chef server| so that it can be indexed for search.
-
-.. the following is NOT part of the generic attribute overview.
+.. include:: ../../includes_node/includes_node_attribute.rst
 
 |chef| uses six types of attributes to determine the value that is applied to a node during the |chef| run. In addition, |chef| sources attribute values from up to five locations. The combination of attribute types and sources allows for up to 15 different competing values to be available to |chef| during the |chef| run.
 
@@ -30,28 +9,9 @@ So how does |chef| determine which value should be applied? Keep reading to lear
 
 Attribute Types
 =====================================================
-Attribute types can be any of the following:
+.. include:: ../../includes_node/includes_node_attribute_type.rst
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Attribute Type
-     - Description
-   * - ``default``
-     - A ``default`` attribute is automatically reset at the start of every |chef| run and has the lowest attribute precedence. A cookbook should be authored to use ``default`` attributes as often as possible.
-   * - ``force_default``
-     - A ``force_default`` attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over a ``default`` attribute set by a role or an environment.
-   * - ``normal``
-     - A ``normal`` attribute is a setting that persists on the target system and is never reset during a |chef| run. A ``normal`` attribute has a higher attribute precedence than a ``default`` attribute.
-   * - ``override``
-     - An ``override`` attribute is automatically reset at the start of every |chef| run and has a higher attribute precedence than ``default``, ``force_default``, and ``normal`` attributes. An ``override`` attribute is most often specified in a recipe, but can be specified in an attribute file, for a role, and/or for an environment. A cookbook should be authored so that it uses ``override`` attributes only when required.
-   * - ``force_override``
-     - A ``force_override`` attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over an ``override`` attribute set by a role or an environment.
-   * - ``automatic``
-     - An ``automatic`` attribute contains data that is identified by |ohai| at the beginning of every |chef| run. An ``automatic`` attribute cannot be modified and always has the highest attribute precedence.
-
-At the beginning of a |chef| run, all default, override, and automatic attributes are reset. |chef| rebuilds them using data collected by |ohai| at the beginning of the |chef| run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the |chef| run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next |chef| run.
+.. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
 Attribute Sources
 ===================================================== 
@@ -106,99 +66,10 @@ Environments
 
 .. include:: ../../includes_environment/includes_environment_attribute.rst
 
-
 Attribute Precedence
 =====================================================
-Attributes are always applied to |chef| in the following order:
-
-#. A ``default`` attribute located in an attribute file
-#. A ``default`` attribute located in a recipe
-#. A ``default`` attribute located in an environment
-#. A ``default`` attribute located in role
-#. A ``force_default`` attribute located in an attribute file
-#. A ``force_default`` attribute located in a recipe
-#. A ``normal`` attribute located in an attribute file
-#. A ``normal`` attribute located in a recipe
-#. An ``override`` attribute located in an attribute file
-#. An ``override`` attribute located in a recipe
-#. An ``override`` attribute located in a role
-#. An ``override`` attribute located in an environment
-#. A ``force_override`` attribute located in an attribute file
-#. A ``force_override`` attribute located in a recipe 
-#. An ``automatic`` attribute identified by |ohai| at the start of the |chef| run
-
-where the last attribute in the list is the one that is applied to the node. Attribute precedence, based on the |chef| overview diagram:
-
-.. image:: ../../images/overview_chef_attributes_precedence.png
-
-Yes, the order of application for roles and environments is reversed for ``default`` and ``override`` attributes. The precedence order for ``default`` attributes is environment, then role. The precedence order for ``override`` attributes is role, then environment. Applying environment ``override`` attributes after role ``override`` attributes allows a role to exist in multiple environments.
-
-Attribute precedence, viewed as a table:
-
-.. image:: ../../images/overview_chef_attributes_table.png
-
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
 Examples
 =====================================================
-.. include:: ../../includes_node/includes_node_attribute_notation.rst
-
-The following examples show some of the most common ways that attributes are used.
-
-**A default attribute in an attribute file**
-
-.. code-block:: ruby
-
-   default[:graphite][:carbon][:version] = "0.9.10"
-
-**A default attribute in a recipe**
-
-.. code-block:: ruby
-
-   example.each do |u|
-     example_group << u['id']
-   
-     node.default['foo']['foo_attribute'] = node['bar']['bar_attribute'] ? node.default['foo']['foo_attribute'] : Array.new
-     node.default['foo']['foo_attribute'] << u['blargh'] unless node.default['foo']['foo_attribute'].include?(u['blargh'])
-   end
-
-**A default attribute in a role**
-
-.. code-block:: ruby
-
-   default_attributes({
-     :chef_client => {
-       :server_url => "http://chef.local:4000"
-     }
-   })
-
-**An override attribute in an environment**
-
-.. code-block:: ruby
-
-   override_attributes(
-     "authorization" => {
-       "sudo" => {
-         "groups" => ["admin", "foo", "bar"],
-         "users" => ["user1","user2"],
-         "passwordless" => true,
-         "include_sudoers_d" => true
-       }
-     }
-   )
-
-**An override attribute in an attribute file**
-
-.. code-block:: ruby
-
-   override['apache']['prefork']['maxclients'] = 8
-
-**An override attribute in a role**
-
-.. code-block:: ruby
-
-   override_attributes(
-     "foo" => {
-       "app_server_role" => "demo",
-       "member_port" => "80"
-     }
-     )
+.. include:: ../../includes_node/includes_node_attribute_precedence_examples.rst

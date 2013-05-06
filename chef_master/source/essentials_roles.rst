@@ -8,6 +8,8 @@ Role Attributes
 =====================================================
 .. include:: ../../includes_role/includes_role_attribute.rst
 
+.. note:: There are many types of attributes in |chef|. See the :doc:`overview of attributes </chef_overview_attributes>` for more information about all of these attribute types.
+
 Attribute Types
 -----------------------------------------------------
 .. include:: ../../includes_role/includes_role_attribute_type.rst
@@ -19,14 +21,6 @@ Attribute Persistence
 Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
-
-Automatic Attributes
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_automatic.rst
-
-Attribute Notation
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_notation.rst
 
 Role Formats
 =====================================================

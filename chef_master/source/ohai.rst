@@ -8,9 +8,18 @@ Automatic Attributes
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
 
-Get List of Automatic Attributes
------------------------------------------------------
+**Get a list of automatic attributes for a node**
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
+
+.. note:: There are many types of attributes in |chef|. See the :doc:`overview of attributes </chef_overview_attributes>` for more information about all of these attribute types.
+
+Attribute Persistence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_persistence.rst
+
+Attribute Precedence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
 Install |ohai|
 =====================================================
@@ -112,7 +121,7 @@ Use the Ohai Cookbook
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_add_ohai_cookbook_to_chef_repo.rst
 
-Change the Default Location
+Change Default Location
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_change_plugin_path.rst
 

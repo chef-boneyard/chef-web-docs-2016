@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following examples are listed in the same order of attribute precedence (low precedence to high).
+The following examples are listed from low to high precedence.
 
 **Default attribute in /attributes/default.rb**
 

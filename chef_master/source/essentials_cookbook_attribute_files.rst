@@ -18,6 +18,8 @@ Use Attribute Files
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_when_to_use.rst
 
+.. note:: There are many types of attributes in |chef|. See the :doc:`overview of attributes </chef_overview_attributes>` for more information about all of these attribute types.
+
 Attribute Types
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_type.rst
@@ -30,14 +32,6 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-Automatic Attributes
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_automatic.rst
-
-Attribute Notation
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_notation.rst
-
 File Methods
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst

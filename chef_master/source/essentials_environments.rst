@@ -12,9 +12,19 @@ Environment Attributes
 =====================================================
 .. include:: ../../includes_environment/includes_environment_attribute.rst
 
+.. note:: There are many types of attributes in |chef|. See the :doc:`overview of attributes </chef_overview_attributes>` for more information about all of these attribute types.
+
 Attribute Types
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment_attribute_type.rst
+
+Attribute Persistence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_persistence.rst
+
+Attribute Precedence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
 Environment Formats
 =====================================================

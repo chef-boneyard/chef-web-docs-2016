@@ -8,6 +8,8 @@ Recipe Attributes
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
 
+.. note:: There are many types of attributes in |chef|. See the :doc:`overview of attributes </chef_overview_attributes>` for more information about all of these attribute types.
+
 Attribute Types
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_type.rst
@@ -20,20 +22,13 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-Automatic Attributes
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_automatic.rst
-
-Attribute Notation
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_notation.rst
 
 File Methods
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
 
 Environment Variables
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_environment_variables/includes_environment_variables.rst
 
 .. include:: ../../includes_environment_variables/includes_environment_variables_access_resource_attributes.rst
@@ -89,23 +84,23 @@ Assign a value
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_recipe_assign_value_to_variable.rst
 
-Use a case statement
+Use Case Statement
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_recipe_case_statement.rst
 
-Check for a condition
+Check Conditions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_recipe_check_for_condition.rst
 
-Execute a condition
+Execute Conditions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_recipe_execute_expression_by_condition.rst
 
-Loop over an array
+Loop over Array
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_recipe_loop_over_array_of_package_names.rst
 
-Loop over a hash
+Loop over Hash
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../steps/step_chef_recipe_loop_over_hash_of_package_names.rst
 
@@ -133,7 +128,7 @@ Use Tags
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
 
-End a Chef Run
+End a |chef| Run 
 -----------------------------------------------------
 Sometimes it may be necessary to end a |chef| run before it completes. There are a few ways to do this:
 
@@ -145,18 +140,18 @@ Sometimes it may be necessary to end a |chef| run before it completes. There are
 
 The following sections show various approaches to ending a |chef| run.
 
-Use the raise keyword
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst
-
-Use the return keyword
+Return Keyword
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst
 
-Use a rescue block
+Raise Keyword
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst
+
+Rescue Blocks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_recipe/step_recipe_end_chef_run_rescue_block.rst
 
-Send a message to a log file
+Send to Log Files
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_recipe/step_recipe_end_chef_run_send_fatal_message.rst
