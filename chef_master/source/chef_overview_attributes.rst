@@ -1,9 +1,6 @@
 =====================================================
 About Attributes
 =====================================================
-
-.. warning:: DRAFT
-
 An attribute is a specific detail about a node. Attributes are used by |chef| to understand:
 
 * The current state of the node
