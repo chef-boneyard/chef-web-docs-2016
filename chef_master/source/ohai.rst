@@ -55,7 +55,7 @@ Now to fire up irb (and assuming the directory "plugins" is the current folder; 
    >> o.all_plugins
    >> o.orly #=> "yea, rly"
 
-Using a Mash
+Use a Mash
 -----------------------------------------------------
 Most of the information we want to lookup would be nested in some way, and |ohai| tends to do this by storing the data in a Mash. This can be done by creating a new mash and setting the attribute to it.
 
@@ -67,7 +67,7 @@ In plugins/canhas.rb:
    canhas Mash.new
    canhas[:burger] = "want"
 
-Working with Different Platforms
+Work with Platforms
 -----------------------------------------------------
 One of the main reasons for using |ohai| is to gather information regardless of the operating system. Luckily this is made easy by optionally loading recipes based on the platform. With that platform specific calls abstracted away you can keep your code DRY.
 
@@ -95,7 +95,7 @@ Checkout ohai's os.rb for the list of platform names.
 
 All of these examples can be found in the ``ohai-plugin-howto`` |github| repo, you should be able to clone that and run the ruby scripts in the repo's root directory. If you figure out any other handy tricks please fork the project and add them.
 
-Extending an Existing Plugin
+Extend a Plugin
 -----------------------------------------------------
 |ohai| makes it very easy to extend a current plugin with new information. Simply require the plugin you want to extend and extend away. In this example we want to add LOLCODE to languages.
 
@@ -108,11 +108,11 @@ In plugins/lolcode.rb:
    languages[:lolcode] = Mash.new
    languages[:lolcode][:version] = "TEH VERSHIONS"
 
-Add the Ohai Cookbook to the Chef Repository
+Use the Ohai Cookbook
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_add_ohai_cookbook_to_chef_repo.rst
 
-Change the Default Plugin Location
+Change the Default Location
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_change_plugin_path.rst
 
@@ -120,7 +120,7 @@ Upload a Custom Plugin
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_upload_custom_plugin.rst
 
-Add the ohai Recipe to a Run-list
+Use the ohai Recipe
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_upload_custom_plugin.rst
 
