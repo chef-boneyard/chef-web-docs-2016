@@ -14,7 +14,7 @@ Gem Package Options
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_options.rst
 
-Specify with a Hash
+Specify with Hash
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_hash.rst
 
@@ -26,7 +26,7 @@ Specify with a Hash
      options(:prerelease => true, :format_executable => false)
    end
 
-Specify with a String
+Specify with String
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_string.rst
 
@@ -39,7 +39,7 @@ Specify with a String
      options("--prerelease --no-format-executable")
    end
 
-Specify with a .gemrc File
+Specify with .gemrc File
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
 
