@@ -26,7 +26,7 @@ About Node Objects
    * - Method
      - Description
    * - :doc:`essentials_node_object_attributes_types`
-     - There are four types of attributes: ``default``, ``normal``, ``override``, and ``automatic``. Both ``default`` and ``override`` attributes can be forced on a case-by-case basis.
+     - There are six types of attributes: ``default``, ``normal``, ``override``, and ``automatic``. Both ``default`` and ``override`` attributes can be forced on a case-by-case basis.
    * - :doc:`essentials_node_object_attributes_persistence`
      - During a |chef| run, saved attributes are retrieved from the |chef server| and are merged with the attributes on the local system.
    * - :doc:`essentials_node_object_attributes_precedence`

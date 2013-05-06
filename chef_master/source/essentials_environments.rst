@@ -16,22 +16,6 @@ Attribute Types
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment_attribute_type.rst
 
-Attribute Persistence
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_persistence.rst
-
-Attribute Precedence
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_precedence.rst
-
-Automatic Attributes
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_automatic.rst
-
-Attribute Notation
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_notation.rst
-
 Environment Formats
 =====================================================
 .. include:: ../../includes_environment/includes_environment_format.rst
