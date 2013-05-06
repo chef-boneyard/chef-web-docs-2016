@@ -1,5 +1,5 @@
 =====================================================
-Style Guide
+Style Guide 
 =====================================================
  
 The |opscode| style guide is just a limited subset of the full capabilities of Sphinx, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it.
