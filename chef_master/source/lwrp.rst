@@ -15,7 +15,7 @@ A lightweight resource is a way to extend |chef| so that it can support custom a
 
 A lightweight resource is used in a recipe in much the same way as a traditional resource. During the |chef| run, |chef| will use the lightweight provider to take the necessary steps to bring the system into the desired state.
 
-Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below
+Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below.
 
 |opscode|-maintained
 =====================================================
