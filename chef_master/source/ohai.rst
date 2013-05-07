@@ -11,7 +11,7 @@ Automatic Attributes
 **Get a list of automatic attributes for a node**
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
-.. note:: There are many types of attributes in |chef|. See the :doc:`overview of attributes </chef_overview_attributes>` for more information about all of these attribute types.
+.. note:: Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, |ohai| collects attribute data about each node at the start of the |chef| run. See the :doc:`overview of attributes </chef_overview_attributes>` for more information about how all of these attributes fit together.
 
 Attribute Persistence
 -----------------------------------------------------
