@@ -4,11 +4,6 @@ About LWRPs
 
 .. include:: ../../includes_lwrp/includes_lwrp.rst
 
-A LWRP behaves similar to |chef| resources and providers:
-
-* .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
-* .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
-
 Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below.
 
 |opscode|-maintained
