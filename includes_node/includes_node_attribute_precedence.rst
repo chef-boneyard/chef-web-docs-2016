@@ -19,13 +19,15 @@ Attributes are always applied to |chef| in the following order:
 #. A ``force_override`` attribute located in a recipe 
 #. An ``automatic`` attribute identified by |ohai| at the start of the |chef| run
 
-where the last attribute in the list is the one that is applied to the node. Attribute precedence, based on the |chef| overview diagram:
+where the last attribute in the list is the one that is applied to the node. 
+
+.. note:: The attribute precedence order for roles and environments is reversed for ``default`` and ``override`` attributes. The precedence order for ``default`` attributes is environment, then role. The precedence order for ``override`` attributes is role, then environment. Applying environment ``override`` attributes after role ``override`` attributes allows a role to exist in multiple environments.
+
+Attribute precedence, when viewed from the perspective of on the |chef| overview diagram, where the numbers in the diagram match the order of attribute precedence:
 
 .. image:: ../../images/overview_chef_attributes_precedence.png
 
-Yes, the order of application for roles and environments is reversed for ``default`` and ``override`` attributes. The precedence order for ``default`` attributes is environment, then role. The precedence order for ``override`` attributes is role, then environment. Applying environment ``override`` attributes after role ``override`` attributes allows a role to exist in multiple environments.
-
-Attribute precedence, viewed as a table:
+Attribute precedence, when viewed as a table:
 
 .. image:: ../../images/overview_chef_attributes_table.png
 
