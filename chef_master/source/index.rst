@@ -138,6 +138,7 @@ Cookbooks
    essentials_chef_client
    essentials_handlers
    essentials_repository
+   essentials_repository_create
    essentials_knife
    essentials_policy
    essentials_node_object

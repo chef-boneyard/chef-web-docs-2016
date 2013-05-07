@@ -1,19 +1,13 @@
 =====================================================
-About Lightweight Resources
+About LWRPs
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
+.. include:: ../../includes_lwrp/includes_lwrp.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
+A LWRP behaves similar to |chef| resources and providers:
 
-A lightweight resource is a way to extend |chef| so that it can support custom actions in a way that is similar to a resource. A lightweight resource:
-
-* Has its own file location (the ``/resources`` cookbook sub-directory)
-* Defines a set of actions
-* For each action, defines a set of attributes, conditions, and so on
-* Relies on a lightweight provider (located in the ``/providers`` cookbook sub-directory)
-
-A lightweight resource is used in a recipe in much the same way as a traditional resource. During the |chef| run, |chef| will use the lightweight provider to take the necessary steps to bring the system into the desired state.
+* .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
+* .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
 Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below.
 
