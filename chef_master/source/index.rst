@@ -45,7 +45,7 @@ The Chef Server
 
 **The Node Object:** :doc:`About Node Objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep Merge </essentials_node_object_deep_merge>`
 
-**Search:** :doc:`About Search </essentials_search>` | :doc:`Indexes </essentials_search_indexes>` | :doc:`Keys (field names) </essentials_search_keys>` | :doc:`Operators </essentials_search_boolean_operators>` | :doc:`Partial Search Queries </essentials_search_partial>` | :doc:`Patterns </essentials_search_patterns>` | :doc:`Query Syntax </essentials_search_query_syntax>` | :doc:`Special Characters </essentials_search_special_characters>` | :doc:`Targets </essentials_search_targets>`
+**Search:** :doc:`About Search </essentials_search>`
 
 **Policy:** :doc:`About Policy </essentials_policy>` | :doc:`Data Bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
 
