@@ -162,6 +162,8 @@ Cookbooks
    chef_system_requirements
    images
 
+   pushy
+
    upgrade_server
 
    style_guide
