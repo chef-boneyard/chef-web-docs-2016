@@ -23,6 +23,8 @@ This resource has the following attributes:
      - |owner windows security|
    * - ``path``
      - |path resource directory|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``recursive``
      - |recursive resource directory|
    * - ``rights``

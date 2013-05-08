@@ -17,6 +17,8 @@ This resource has the following attributes:
      - |options resource package|
    * - ``package_name``
      - |package_name resource package|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``python_binary``
      - The location of the |python| binary.
    * - ``response_file``

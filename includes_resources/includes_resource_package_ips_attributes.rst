@@ -15,6 +15,8 @@ This resource has the following attributes:
      - |options resource package|
    * - ``package_name``
      - |package_name resource package|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``response_file``
      - |response_file resource package|
    * - ``source``

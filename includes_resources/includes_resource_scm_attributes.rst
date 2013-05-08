@@ -13,6 +13,8 @@ This resource has the following attributes:
      - |destination resource scm|
    * - ``group``
      - |group resource scm|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``reference``
      - |reference resource scm|
    * - ``repository``

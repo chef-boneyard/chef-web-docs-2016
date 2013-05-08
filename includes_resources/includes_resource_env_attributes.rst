@@ -13,6 +13,8 @@ This resource has the following attributes:
      - |delim resource directory|
    * - ``key_name``
      - |key_name resource directory|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``value``
      - |value resource directory|
 

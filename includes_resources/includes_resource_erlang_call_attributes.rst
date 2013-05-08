@@ -19,3 +19,5 @@ This resource has the following attributes:
      - |name_type resource directory|
    * - ``node_name``
      - |node_name resource directory|
+   * - ``provider``
+     - Optional. |provider resource_attribute|

@@ -11,6 +11,8 @@ This resource has the following attributes:
      - Description
    * - ``pattern``
      - |pattern resource service|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``reload_command``
      - |reload_command resource service|
    * - ``restart_command``

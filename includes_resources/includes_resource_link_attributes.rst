@@ -15,6 +15,8 @@ This resource has the following attributes:
      - |link_type resource link|
    * - ``owner``
      - |owner resource link|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``target_file``
      - |name_link| Default value: ``name``.
    * - ``to``

@@ -33,6 +33,8 @@ This resource has the following attributes:
      - |migrate resource deploy|
    * - ``migration_command``
      - |migration_command resource deploy|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``purge_before_symlink``
      - |purge_before_symlink| 
    * - ``repo``

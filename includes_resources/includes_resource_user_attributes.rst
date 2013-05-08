@@ -17,6 +17,8 @@ This resource has the following attributes:
      - |home resource user|
    * - ``password``
      - |password resource user|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``shell``
      - |shell resource user|
    * - ``supports``

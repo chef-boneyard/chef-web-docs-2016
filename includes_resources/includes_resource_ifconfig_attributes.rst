@@ -31,5 +31,7 @@ This resource has the following attributes:
      - |onboot resource ifconfig|
    * - ``onparent``
      - |onparent resource ifconfig|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``target``
      - |target resource ifconfig| Default value: ``name``.

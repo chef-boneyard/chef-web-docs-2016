@@ -23,5 +23,7 @@ This resource has the following attributes:
      - |options resource mount|
    * - ``pass``
      - |pass resource mount|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``supports``
      - |supports resource mount|

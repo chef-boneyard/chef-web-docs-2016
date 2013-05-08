@@ -19,6 +19,8 @@ This resource has the following attributes:
      - |key_name resource registry_key| This attribute defaults to the ``name`` of the resource if not specified.
 
        |key_name resource registry_key hives|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``recursive``
      - |recursive resource registry_key|
 

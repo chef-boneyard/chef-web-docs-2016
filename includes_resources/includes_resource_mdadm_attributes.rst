@@ -15,5 +15,7 @@ This resource has the following attributes:
      - |devices resource mdadm|
    * - ``level``
      - |level resource mdadm|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``raid_device``
      - |raid_device resource mdadm|

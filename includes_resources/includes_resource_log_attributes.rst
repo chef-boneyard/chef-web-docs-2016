@@ -13,3 +13,5 @@ This resource has the following attributes:
      - |level resource log|
    * - ``message``
      - |message resource log|
+   * - ``provider``
+     - Optional. |provider resource_attribute|

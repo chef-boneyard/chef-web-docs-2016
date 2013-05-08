@@ -11,3 +11,5 @@ This resource has the following attributes:
      - Description
    * - ``plugin``
      - |plugin resource ohai|
+   * - ``provider``
+     - Optional. |provider resource_attribute|

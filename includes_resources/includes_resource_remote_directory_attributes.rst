@@ -25,10 +25,12 @@ This resource has the following attributes:
      - |owner windows security|
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
-   * - ``path``
-     - |path resource remote_directory|
    * - ``overwrite``
      - |overwrite resource remote_directory|
+   * - ``path``
+     - |path resource remote_directory|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``purge``
      - |purge resource remote_directory|
    * - ``rights``

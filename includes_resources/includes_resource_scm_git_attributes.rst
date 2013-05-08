@@ -19,6 +19,8 @@ This resource has the following attributes:
      - |enable_submodules resource|
    * - ``group``
      - |group resource scm|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``reference``
      - |reference resource scm|
    * - ``remote``

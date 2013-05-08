@@ -27,6 +27,8 @@ This resource has the following attributes:
      - |interpreter resource script|
    * - ``path``
      - |path resource execute|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``returns``
      - |returns resource execute|
    * - ``timeout``

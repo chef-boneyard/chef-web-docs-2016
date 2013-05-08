@@ -21,6 +21,8 @@ This resource has the following attributes:
      - |flags resource batch|
    * - ``group``
      - |group resource batch|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``returns``
      - |returns resource batch|
    * - ``user``

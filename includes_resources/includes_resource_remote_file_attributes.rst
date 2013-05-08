@@ -27,6 +27,8 @@ This resource has the following attributes:
      - |owner windows security|
    * - ``path``
      - |path file| Default value: ``name``.
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``

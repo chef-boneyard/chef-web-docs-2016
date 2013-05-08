@@ -13,5 +13,7 @@ This resource has the following attributes:
      - |headers resource http_request|
    * - ``message``
      - |message resource http_request|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``url``
      - |url resource http_request|

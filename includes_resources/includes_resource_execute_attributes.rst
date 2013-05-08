@@ -21,6 +21,8 @@ This resource has the following attributes:
      - |group resource execute|
    * - ``path``
      - |path resource execute|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``returns``
      - |returns resource execute|
    * - ``timeout``

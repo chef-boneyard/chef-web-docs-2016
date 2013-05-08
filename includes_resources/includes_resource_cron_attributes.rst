@@ -44,6 +44,8 @@ This resource has the following attributes:
      - |month resource cron|
    * - ``path``
      - |path resource cron|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``shell``
      - |shell resource cron|
    * - ``user``

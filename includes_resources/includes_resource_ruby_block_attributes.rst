@@ -11,3 +11,5 @@ This resource has the following attributes:
      - Description
    * - ``block``
      - |block resource ruby_block|
+   * - ``provider``
+     - Optional. |provider resource_attribute|

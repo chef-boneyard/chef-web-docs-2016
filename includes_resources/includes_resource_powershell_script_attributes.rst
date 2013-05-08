@@ -17,4 +17,6 @@ This resource has the following attributes:
      - |flags resource powershell_script|
    * - ``interpreter``
      - |interpreter resource powershell_script|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
 

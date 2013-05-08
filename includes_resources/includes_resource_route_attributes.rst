@@ -15,5 +15,7 @@ This resource has the following attributes:
      - |gateway resource route|
    * - ``netmask``
      - |netmask|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``target``
      - |target_address| Default value: ``name``.

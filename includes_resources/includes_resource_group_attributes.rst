@@ -17,5 +17,7 @@ This resource has the following attributes:
      - |group_name resource group|
    * - ``members``
      - |members resource group|
+   * - ``provider``
+     - Optional. |provider resource_attribute|
    * - ``system``
      - |system resource group|

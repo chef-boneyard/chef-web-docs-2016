@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``package_name``
      - |package_name resource package|
    * - ``provider``
-     - Optional. Use this attribute to specify a provider by using its long name. For example: ``provider Chef::Provider::Package::Rubygems``. See the Providers section below for the list of providers that are available to this resource. 
+     - Optional. |provider resource_attribute|
    * - ``response_file``
      - |response_file resource package|
    * - ``source``
