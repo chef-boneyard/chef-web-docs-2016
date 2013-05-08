@@ -28,5 +28,11 @@ To view information about a node:
 
    knife raw /nodes/<node_name>
 
+To view information about a client:
+
+.. code-block:: bash
+
+   knife raw /clients/<client_name>
+
 
 
