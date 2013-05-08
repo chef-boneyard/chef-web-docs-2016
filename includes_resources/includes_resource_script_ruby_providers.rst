@@ -10,9 +10,9 @@ The following providers are available. Use the short name to call the provider f
    * - Long name
      - Short name
      - Notes
-   * - ``Chef::Resource::Script``
+   * - ``Chef::Provider::Script``
      - ``script``
      - When this short name is used, |chef| will determine the correct provider during the |chef| run.
-   * - ``Chef::Resource::Script::Ruby``
+   * - ``Chef::Provider::Script::Ruby``
      - ``ruby``
      - The provider that is used with the |ruby| command interpreter.
