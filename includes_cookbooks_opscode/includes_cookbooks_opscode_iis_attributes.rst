@@ -10,18 +10,18 @@ This cookbook includes the following attributes:
    * - Attribute
      - Description
    * - ``node['iis']['accept_eula']``
-     - |attribute iis_accept_eula|
+     - |iis_accept_eula|
    * - ``node['iis']['home']``
-     - |attribute iis_home|
+     - |iis_home|
    * - ``node['iis']['conf_dir']``
-     - |attribute iis_conf_dir|
+     - |iis_conf_dir|
    * - ``node['iis']['pubroot']``
-     - |attribute iis_pubroot|
+     - |iis_pubroot|
    * - ``node['iis']['docroot']``
-     - |attribute iis_docroot|
+     - |iis_docroot|
    * - ``node['iis']['log_dir']``
-     - |attribute iis_log_dir|
+     - |iis_log_dir|
    * - ``node['iis']['cache_dir']``
-     - |attribute iis_cache_dir|
+     - |iis_cache_dir|
 
 
