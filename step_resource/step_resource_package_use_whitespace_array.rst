@@ -30,4 +30,4 @@ and the next shows how to do the same exact thing, but with a single ``package``
      end
    end
 
-where ``|pkg|`` is used to define the name of the resource, but ensure that each item in the whitespace array has its own name.
+where ``|pkg|`` is used to define the name of the resource, but also to ensure that each item in the whitespace array has its own name.
