@@ -10,24 +10,24 @@ This cookbook includes the following attributes:
    * - Attribute
      - Description
    * - ``node['supervisor']['inet_port']``
-     - |attribute supervisor_inet_port|
+     - |supervisor_inet_port|
    * - ``node['supervisor']['inet_username']``
-     - |attribute supervisor_inet_username|
+     - |supervisor_inet_username|
    * - ``node['supervisor']['inet_password']``
-     - |attribute supervisor_inet_password|
+     - |supervisor_inet_password|
    * - ``node['supervisor']['dir']``
-     - |attribute supervisor_dir|
+     - |supervisor_dir|
    * - ``node['supervisor']['log_dir']``
-     - |attribute supervisor_log_dir|
+     - |supervisor_log_dir|
    * - ``node['supervisor']['logfile_maxbytes']``
-     - |attribute supervisor_logfile_maxbytes|
+     - |supervisor_logfile_maxbytes|
    * - ``node['supervisor']['logfile_backups']``
-     - |attribute supervisor_logfile_backups|
+     - |supervisor_logfile_backups|
    * - ``node['supervisor']['loglevel']``
-     - |attribute supervisor_loglevel|
+     - |supervisor_loglevel|
    * - ``node['supervisor']['minfds']``
-     - |attribute supervisor_minfds|
+     - |supervisor_minfds|
    * - ``node['supervisor']['minprocs']``
-     - |attribute supervisor_minprocs|
+     - |supervisor_minprocs|
    * - ``node['supervisor']['version']``
-     - |attribute supervisor_version|
+     - |supervisor_version|

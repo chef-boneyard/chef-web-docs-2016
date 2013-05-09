@@ -10,4 +10,4 @@ This cookbook includes the following attributes:
    * - Attribute
      - Description
    * - ``node["chef_handler"]["handler_path"]``
-     - |attribute handler_path|
+     - |handler_path|

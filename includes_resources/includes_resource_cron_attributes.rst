@@ -16,7 +16,7 @@ This resource has the following attributes:
 
        .. code-block:: ruby
 
-          if [ -x /usr/share/mdadm/checkarray ] && [ $(date +\%d) -le 7 ];
+          command if [ -x /usr/share/mdadm/checkarray ] && [ $(date +\%d) -le 7 ];
           then /usr/share/mdadm/checkarray --cron --all --idle --quiet; fi
 
        and:
@@ -30,6 +30,11 @@ This resource has the following attributes:
             bundle exec rake cookbooks_report
           }
 
+       and:
+
+       .. code-block:: ruby
+
+          command "/srv/app/scripts/daily_report"
    * - ``day``
      - |day resource cron|
    * - ``home``
