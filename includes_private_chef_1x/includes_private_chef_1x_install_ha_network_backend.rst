@@ -3,9 +3,7 @@
 
 The back-end servers utilize |drbd|, a distributed block device, to ensure that data written to disk on one back-end server is efficiently replicated to another. For optimal performance and reliability, we recommend that:
 
-* Bback-end servers have a 100M+ ethernet interface cross-connected to the other, for the cluster ``keepalive`` signal.
-* Back-end servers have a 10G+ ethernet interface cross-connected to the other, for |drbd| data replication.
+* Back-end servers have a 10G+ ethernet interface cross-connected to the other, for both the cluster ``keepalive`` signal and |drbd| data replication.
 
-This is in addition to the standard network interfaces that are available. While |drbd| replication can function on systems without these additional network interfaces, this configuration gives maximum performance and reliability.
-
+This is in addition to the standard network interfaces that are available and would be used for access by the frontends and management functions. While |drbd| replication can function on systems without this additional network interface, this configuration gives maximum performance and reliability.
 
