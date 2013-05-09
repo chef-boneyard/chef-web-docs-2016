@@ -10,12 +10,12 @@ The following attributes are common to every resource:
    * - Attribute
      - Description
    * - ``ignore_failure``
-     - Use to continue running a recipe if a resource fails for any reason. Default value: ``false``.
+     - |ignore_failure| Default value: ``false``.
    * - ``provider``
-     - Use to specify the class name of a provider for use with a resource.
+     - Optional. |provider resource_attribute|
    * - ``retries``
-     - Use to specify the number of times to catch exceptions and retry the resource. Default value: ``0``.
+     - |retries| Default value: ``0``.
    * - ``retry_delay``
-     - Use to specify the retry delay (in seconds). Default value: ``2``.
+     - |retry_delay| Default value: ``2``.
    * - ``supports``
      - Use to specify a hash of options that contains hints about the capabilities of a resource. |chef| may use these hints to help identify the correct provider. This attribute is only used by a small number of providers, including ``User`` and ``Service``.
