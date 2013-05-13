@@ -10,7 +10,8 @@ where R is read, W is write, and D is disable. (Disabling support for older encr
 For version 0 (default, through |chef| 10.18):
 
 * An encrypted data bag is written using |yaml| as the serialization format
-* Data is encrypted using a combination of |yaml|, |aes 256 cbc| (as defined by the ``openssl`` package in the |ruby standard library|), and |base64| encoding
+* |base64| encoding is used to preserve special characters in encrypted contents
+* Data is encrypted using |aes 256 cbc| (as defined by the |open ssl| package in the |ruby standard library|)
 * |chef| uses shared-key encryption; an encrypted file can only be decrypted by a node or a user with the same shared-key
 * A recipe can load encrypted data as long as the shared secret is present in a file on the node or is accessible from a URI path
 * Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed by |chef| when tracking the data bag item)
@@ -18,7 +19,8 @@ For version 0 (default, through |chef| 10.18):
 For version 1 (default, starting with |chef| 11.x):
 
 * An encrypted data bag is written using |json| as the serialization format
-* Data is encrypted using a combination of |json|, |aes 256 cbc| (as defined by the ``openssl`` package in the |ruby standard library|), and |base64| encoding. This allows a data bag to store confidential information (such as a database password) or to be managed in a source control system (without plain-text data appearing in revision history)
+* |base64| encoding is used to preserve special characters in encrypted contents
+* Data is encrypted using |aes 256 cbc| (as defined by the |open ssl| package in the |ruby standard library|)
 * A data bag item is encrypted using a random initialization vector each time a value is encrypted, which helps protect against some forms of cryptanalysis
 * |chef| uses shared-key encryption; an encrypted file can only be decrypted by a node or a user with the same shared-key
 * A recipe can load encrypted data as long as the shared secret is present in a file on the node or is accessible from a URI path
