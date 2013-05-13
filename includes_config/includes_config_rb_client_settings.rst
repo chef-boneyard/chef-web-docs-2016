@@ -50,6 +50,11 @@ This configuration file has the following settings:
             "/var/chef/cookbooks", 
             "/var/chef/site-cookbooks" 
           ]
+   * - ``data_bag_decrypt_minimum_version``
+     - The minimum required version of data bag encryption. Possible values: ``0``, ``1``, and ``2``. When all of the machines in an organization are running |chef client| version 11.6 (or higher), it is recommended that this value be set to ``2``. For example:
+       ::
+ 
+          data_bag_decrypt_minimum_version "2"
    * - ``environment``
      - |environment config| For example:
        ::
