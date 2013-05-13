@@ -12,7 +12,7 @@ For version 0 (default, through |chef| 10.18):
 * An encrypted data bag is written using |yaml| as the serialization format
 * |base64| encoding is used to preserve special characters in encrypted contents
 * Data is encrypted using |aes 256 cbc| (as defined by the |open ssl| package in the |ruby standard library|)
-* |chef| uses shared-key encryption; an encrypted file can only be decrypted by a node or a user with the same shared-key
+* |chef| uses `shared secret encryption <https://en.wikipedia.org/wiki/Symmetric-key_algorithm>`_; an encrypted file can only be decrypted by a node or a user with the same shared secret
 * A recipe can load encrypted data as long as the shared secret is present in a file on the node or is accessible from a URI path
 * Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed by |chef| when tracking the data bag item)
 
@@ -22,7 +22,7 @@ For version 1 (default, starting with |chef| 11.x):
 * |base64| encoding is used to preserve special characters in encrypted contents
 * Data is encrypted using |aes 256 cbc| (as defined by the |open ssl| package in the |ruby standard library|)
 * A data bag item is encrypted using a random initialization vector each time a value is encrypted, which helps protect against some forms of cryptanalysis
-* |chef| uses shared-key encryption; an encrypted file can only be decrypted by a node or a user with the same shared-key
+* |chef| uses `shared secret encryption <https://en.wikipedia.org/wiki/Symmetric-key_algorithm>`_; an encrypted file can only be decrypted by a node or a user with the same shared secret
 * A recipe can load encrypted data as long as the shared secret is present in a file on the node or is accessible from a URI path
 * Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed by |chef| when tracking the data bag item)
 
