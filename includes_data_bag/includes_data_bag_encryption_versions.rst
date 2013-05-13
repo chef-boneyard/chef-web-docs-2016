@@ -5,7 +5,7 @@ The manner by which a data bag is encrypted depends on the version of |chef|. Se
 
 .. image:: ../../images/essentials_data_bags_versions.png
 
-where R is read, W is write, and D is disable.
+where R is read, W is write, and D is disable. (Disabling support for older encryption version formats requires a configuration change.)
 
 For version 0 (default, through |chef| 10.18):
 
