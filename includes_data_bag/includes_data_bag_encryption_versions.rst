@@ -28,4 +28,5 @@ For version 2 (default, starting with |chef| 11.6):
 
 * Same as version 1
 * Can disable version 0 and version 1 data bag encryption formats
+* Adds Encrypt-then-MAC(EtM) protection
 
