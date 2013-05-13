@@ -32,6 +32,10 @@ Encrypt a Data Bag
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag_encryption.rst
 
+Encryption Versions
+-----------------------------------------------------
+.. include:: ../../includes_data_bag/includes_data_bag_encryption_versions.rst
+
 Knife Options
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_knife_options.rst

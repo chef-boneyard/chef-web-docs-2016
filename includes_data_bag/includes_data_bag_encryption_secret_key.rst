@@ -2,23 +2,23 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-An encrypted data bag requires a secret key. |open ssl| can be used to generate a secret key with the following syntax:
+An encrypted data bag requires a secret key. A secret key can be created in any number of ways. For example, |open ssl| can be used to generate a random number, which can then be used as the secret key:
 
 .. code-block:: bash
 
    $ openssl rand -base64 512 > encrypted_data_bag_secret
 
-where ``encrypted_data_bag_secret`` is the name of the file which contains the secret key. For example, to create a secret key named "secret_key":
+where ``encrypted_data_bag_secret`` is the name of the file which will contain the secret key. For example, to create a secret key named "my_secret_key":
 
 .. code-block:: bash
 
-   $ openssl rand -base64 512 > secret_key
+   $ openssl rand -base64 512 > my_secret_key
 
-and then to use it to encrypt a data bag item named "passwords" located in a data bag named "production":
+and then to use it to encrypt a data bag item named "my_password" located in a data bag named "production":
 
 .. code-block:: bash
 
-   $ knife data bag create --secret-file ./secret_key production passwords
+   $ knife data bag create --secret-file ./secret_key production my_password
 
 This will open the |json| editor:
 
