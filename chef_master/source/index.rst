@@ -169,5 +169,7 @@ Cookbooks
 
    style_guide
 
+   videos
+
 
    
