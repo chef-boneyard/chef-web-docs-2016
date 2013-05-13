@@ -4,7 +4,7 @@ gem_package
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
-.. warning:: The |resource chef_gem| and |resource gem_package| resources are both used to install |ruby| |gems|. For any machine on which |chef| is installed, there are two instances of |ruby|. One is the standard, system-wide instance of |ruby| and the other is a dedicated instance that is available only to |chef|. Use the |resource chef_gem| resource to install |gems| into the instance of |ruby| that is dedicated to |chef|. Use the |resource gem_package| resource to install all other |gems| (i.e. install |gems| system-wide).
+.. warning:: The |resource chef_gem| and |resource package_gem| resources are both used to install |ruby| |gems|. For any machine on which |chef| is installed, there are two instances of |ruby|. One is the standard, system-wide instance of |ruby| and the other is a dedicated instance that is available only to |chef|. Use the |resource chef_gem| resource to install |gems| into the instance of |ruby| that is dedicated to |chef|. Use the |resource package_gem| resource to install all other |gems| (i.e. install |gems| system-wide).
 
 .. include:: ../../includes_resources/includes_resource_package_gem.rst
 
