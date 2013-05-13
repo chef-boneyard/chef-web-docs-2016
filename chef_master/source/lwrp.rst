@@ -119,6 +119,15 @@ Custom resources and providers can also be created using the |lwrp| DSL. |opscod
    lwrp_zenoss
 
 
+   lwrp_application
+   lwrp_application_java
+   lwrp_application_nginx
+   lwrp_application_php
+   lwrp_application_python
+   lwrp_application_ruby
+
+
+
 
 
 
