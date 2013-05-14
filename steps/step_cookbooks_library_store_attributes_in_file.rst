@@ -33,7 +33,7 @@ A simple library could be created that extends ``Chef::Recipe::``, like this::
      class Recipe    
        # A shortcut to a customer
        def customer(name)
-         @node[:mycompany_customers][name]
+         node[:mycompany_customers][name]
        end
      end 
    end
