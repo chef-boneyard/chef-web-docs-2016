@@ -26,7 +26,7 @@ A simple library could be created that extends ``Chef::Recipe::``, like this::
    class Chef
      class Recipe
        def all_customers(&block)
-         @node[:mycompany_customers].each do |name, info|
+         node[:mycompany_customers].each do |name, info|
            block.call(name, info)
          end
        end
