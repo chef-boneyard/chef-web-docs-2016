@@ -6,43 +6,32 @@ Cookbook Attribute Files
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file.rst
 
-When to Use Attributes
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_when_to_use.rst
-
-Attribute File Methods
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
-
-Cookbook Attribute File Ordering
+Attribute File Ordering
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_ordering.rst
 
-Attribute Accessor Methods
-=====================================================
+Accessor Methods
+-----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst
 
-Types
+Use Attribute Files
 =====================================================
+.. include:: ../../includes_node/includes_node_attribute_when_to_use.rst
+
+.. note:: Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, |ohai| collects attribute data about each node at the start of the |chef| run. See the `About Attributes <http://docs.opscode.com/chef_overview_attributes.html>`_ topic for more information about how all of these attributes fit together.
+
+Attribute Types
+-----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_type.rst
 
-Precedence
-=====================================================
-.. include:: ../../includes_node/includes_node_attribute_precedence.rst
-
-Persistence
-=====================================================
+Attribute Persistence
+-----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
-Automatic Attributes
+Attribute Precedence
+-----------------------------------------------------
+.. include:: ../../includes_node/includes_node_attribute_precedence.rst
+
+File Methods
 =====================================================
-.. include:: ../../includes_node/includes_node_attribute_automatic.rst
-
-Notation
-=====================================================
-.. include:: ../../includes_node/includes_node_attribute_notation.rst
-
-
-
-
-
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst

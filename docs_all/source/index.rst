@@ -101,6 +101,7 @@ APIs and DSLs
    solr_rb
    auth
 
+   lwrps_custom
 
 
 
