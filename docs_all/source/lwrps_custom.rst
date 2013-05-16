@@ -49,11 +49,6 @@ The syntax for a lightweight resource is as follows:
 
    attr_accessor :attribute, :attribute
 
-   def initialize(*args)
-     super
-     @action = :action_name
-   end
-
 where 
 
 * ``require`` lists any external entities that may be required by the lightweight resources, such as a library; a lightweight resource is |ruby| and anything that can be done in |ruby| can be done in a lightweight resource
@@ -64,7 +59,6 @@ where
 * ``:name_attribute`` is associated with one ``attribute`` to indicate which attribute's value will be defined by the name of the resource as it is defined in the recipe (i.e. the string that appears in front of the ``do`` block in the recipe and after the resource: ``resource_name "name_attribute" do``)
 * ``:validation_parameter`` represents a comma-delimited list of validation parameters for each attribute
 * ``attr_accessor`` allows the lightweight resource to use the ``Module`` |ruby| class to check for one (or more) named attributes, such as ``:exists`` or ``:running``
-* the ``def initialize(*args)`` block defines the default attribute in ``@action = :action_name``
 
 For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| cookbook maintained by |opscode|) can be used to manage files located in ``/etc/cron.d``:
 
@@ -99,7 +93,6 @@ where
 * ``:command`` is the command that will be run (and also required)
 * ``:user`` is the user by which the command is run
 * ``:mailto``, ``:path``, ``:home``, and ``:shell`` are optional environment variables that do not have default value, which each being defined as an array that supports the ``String`` and ``NilClass`` |ruby| classes
-* the ``def initialize(*args)`` block sets ``:create`` to be the default action
 * the ``def block_name`` block represents the rest of the lightweight resource, should additional code blocks be required
 
 Resource DSL
