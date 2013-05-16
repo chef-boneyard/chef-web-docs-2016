@@ -170,7 +170,7 @@ where
 * ``:kind_of => value`` specifies the |ruby| class (or an array of |ruby| classes) that are used to define this attribute's value
 * ``:name_attribute`` is associated with one ``attribute`` to indicate which attribute's value will be defined by the name of the resource as it is defined in the recipe (i.e. the string that appears in front of the ``do`` block in the recipe and after the resource: ``resource_name "name_attribute" do``)
 * ``:validation_parameter`` represents a comma-delimited list of validation parameters for each attribute
-* ``attr_accessor`` allows the lightweight resource to use the ``Module`` |ruby| class to check for one (or more) named attributes, such as ``:exists`` (to xxxxx) or ``:running`` (to xxxxx)
+* ``attr_accessor`` allows the lightweight resource to use the ``Module`` |ruby| class to check for one (or more) named attributes, such as ``:exists`` or ``:running``
 * the ``def initialize(*args)`` block defines the default attribute in ``@action = :action_name`` (NO ... NO? SOME HAVE THIS, SOME HAVE default_action, WTF?)
 
 For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| cookbook maintained by |opscode|) can be used to manage files located in ``/etc/cron.d``:
