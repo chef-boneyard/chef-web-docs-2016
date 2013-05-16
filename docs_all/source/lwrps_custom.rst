@@ -750,11 +750,7 @@ where the following example would provide the same functionality, but without us
 
 Notes (to be deleted)
 =====================================================
-**A useless list of syntax / examples of validation parameters**
-
-.. NOT PART OF THE SYNTAX, THIS IS KEEPING TRACK
-
-Structurally, validation parameters look like this:
+A list of syntax / examples of validation parameters:
 
 .. code-block:: ruby
 
@@ -827,8 +823,6 @@ Structurally, validation parameters look like this:
 .. code-block:: ruby
 
    :respond_to 
-
-The bare-bones syntax of validation parameter combinations that are seen in cookbooks:
 
 .. code-block:: ruby
 
