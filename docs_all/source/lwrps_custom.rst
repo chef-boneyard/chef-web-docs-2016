@@ -71,7 +71,8 @@ For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| c
 .. code-block:: ruby
 
    actions :create, :delete
-   
+   default_action :create
+
    attribute :name, :kind_of => String, :name_attribute => true
    attribute :cookbook, :kind_of => String, :default => "cron"
    attribute :minute, :kind_of => [Integer, String], :default => "*"
@@ -86,11 +87,6 @@ For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| c
    attribute :home, :kind_of => [String, NilClass]
    attribute :shell, :kind_of => [String, NilClass]
    
-   def initialize(*args)
-     super
-     @action = :create
-   end
-   
    def block_name
      # other def blocks, as needed
    end
@@ -98,7 +94,8 @@ For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| c
 where
 
 * the ``actions`` allow a recipe to manage entries in a |crontab| file (create entry, delete entry)
-* ``:minute``, ``:hour``, ``:day``, ``:month``, and ``:weekday`` are the collection of attributes used to schedule a |cron| job, assigned a default value of ``"*"``
+* ``:create`` is the default action
+* ``:minute``, ``:hour``, ``:day``, ``:month``, and ``:weekday`` are the collection of attributes used to schedule a |cron| job, assigned a default value of ``"*"`
 * ``:command`` is the command that will be run (and also required)
 * ``:user`` is the user by which the command is run
 * ``:mailto``, ``:path``, ``:home``, and ``:shell`` are optional environment variables that do not have default value, which each being defined as an array that supports the ``String`` and ``NilClass`` |ruby| classes
