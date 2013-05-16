@@ -142,21 +142,152 @@ A validation parameter is used to add zero or more validation parameters to an a
    * - Parameter
      - Description
    * - ``:callbacks``
-     - Use to define a collection of unique keys and values (a Hash) that should return true. For example: ``"Option #{key}'s value #{value} #{message}!"``, which will insert a key into an error message if the Proc does not return true.
+     - Use to define a collection of unique keys and values (a Hash) that should return true. For example: ``"Option #{key}'s value #{value} #{message}!"``, which will insert a key into an error message if the Proc does not return true. For example:
+
+       .. code-block:: ruby
+       
+          :callbacks => {callback}
    * - ``:default``
-     - Use to specify the default value for an attribute.
+     - Use to specify the default value for an attribute. For example:
+
+       .. code-block:: ruby
+       
+          :default => "a_string_value"
+       
+       .. code-block:: ruby
+       
+          :default => 123456789
+       
+       .. code-block:: ruby
+       
+          :default => []
+       
+       .. code-block:: ruby
+       
+          :default => ()
+       
+       .. code-block:: ruby
+       
+          :default => {}
    * - ``:equal_to``
-     - Use to match a value with ``==``. Use an array of values to match any of those values with ``==``. For example: ``:equal_to => [:true, :false]`` or ``:equal_to => [:value_one, :value_two]``.
+     - Use to match a value with ``==``. Use an array of values to match any of those values with ``==``. For example: ``:equal_to => [:true, :false]`` or ``:equal_to => [:value_one, :value_two]``. For example:
+
+       .. code-block:: ruby
+       
+          :equal_to => :true
    * - ``:kind_of``
-     - Use to ensure a value is of a particular |ruby| class, such as ``TrueClass``, ``FalseClass``, ``NilClass``, ``String``, ``Array``, ``Hash``, and so on. Use an array of |ruby| classes to allow a value to be of more than one type. For example: ``:kind_of => String``, ``:kind_of => Array``, ``:kind_of => [TrueClass, FalseClass]`` and ``:kind_of => [Array, Hash]``.
+     - Use to ensure a value is of a particular |ruby| class, such as ``TrueClass``, ``FalseClass``, ``NilClass``, ``String``, ``Array``, ``Hash``, and so on. Use an array of |ruby| classes to allow a value to be of more than one type. For example: ``:kind_of => String``, ``:kind_of => Array``, ``:kind_of => [TrueClass, FalseClass]`` and ``:kind_of => [Array, Hash]``. For example:
+
+       .. code-block:: ruby
+       
+          :kind_of => String
+       
+       .. code-block:: ruby
+       
+          :kind_of => Integer
+       
+       .. code-block:: ruby
+       
+          :kind_of => Hash
+       
+       .. code-block:: ruby
+       
+          :kind_of => [TrueClass, FalseClass]
+       
+       .. code-block:: ruby
+       
+          :kind_of => [String, NilClass]
+       
+       .. code-block:: ruby
+       
+          :kind_of => [Class, String, Symbol]
+       
+       .. code-block:: ruby
+       
+          :kind_of => [Array, Hash]
    * - ``:name_attribute``
-     - Use to set the default name of a lightweight resource. If the name isn't specified in the recipe, this is the value that will be used.
+     - Use to set the default name of a lightweight resource. If the name isn't specified in the recipe, this is the value that will be used. For example:
+
+       .. code-block:: ruby
+       
+          :name_attribute => true
    * - ``:regex``
-     - Use to match a value to a regular expression.
+     - Use to match a value to a regular expression. For example:
+
+       .. code-block:: ruby
+       
+          :regex => /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/
    * - ``:required``
-     - Indicates that an attribute is required.
+     - Indicates that an attribute is required. For example:
+
+       .. code-block:: ruby
+       
+          :required
    * - ``:respond_to``
-     - Use to ensure that a value has a given method. This can be a single method name or an array of method names.
+     - Use to ensure that a value has a given method. This can be a single method name or an array of method names. For example:
+
+       .. code-block:: ruby
+       
+          :respond_to
+
+Some examples of combining validation parameters:
+
+.. code-block:: ruby
+
+   :kind_of => String, :name_attribute => true
+
+.. code-block:: ruby
+
+   :kind_of => String, :default => 'a_string_value'
+
+.. code-block:: ruby
+
+   :kind_of => Integer, :default => integer
+
+.. code-block:: ruby
+
+   :kind_of => [TrueClass, FalseClass], :default => true
+
+.. code-block:: ruby
+
+   :kind_of => [TrueClass, FalseClass], :default => false
+
+.. code-block:: ruby
+
+   :kind_of => [String, NilClass], :default => nil
+
+.. code-block:: ruby
+
+   :kind_of => [String, NilClass], :default => a_string
+
+.. code-block:: ruby
+
+   :kind_of => [Class, String, Symbol]
+
+.. code-block:: ruby
+
+   :kind_of => [Array, Hash], :default => []
+
+.. code-block:: ruby
+
+   :kind_of => Array, :default => []
+
+.. code-block:: ruby
+
+   :kind_of => Hash, :default => {}, :callbacks => {callback}
+
+.. code-block:: ruby
+
+   :kind_of => Hash, :default => {}
+
+.. code-block:: ruby
+
+   :kind_of => Symbol, :default => :value_one, :equal_to => [:value_one, :value_two]
+
+.. code-block:: ruby
+
+   :kind_of => Symbol, :default => :true, :equal_to => [:true, :false]
+
 
 Chef::Resources
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -743,142 +874,6 @@ where the following example would provide the same functionality, but without us
 
 
 
-
-
-
-
-
-Notes (to be deleted)
-=====================================================
-A list of syntax / examples of validation parameters:
-
-.. code-block:: ruby
-
-   :callbacks => {callback}
-
-.. code-block:: ruby
-
-   :default => {}
-
-.. code-block:: ruby
-
-   :default => "a_string_value"
-
-.. code-block:: ruby
-
-   :default => 123456789
-
-.. code-block:: ruby
-
-   :default => []
-
-.. code-block:: ruby
-
-   :default => ()
-
-.. code-block:: ruby
-
-   :equal_to
-
-.. code-block:: ruby
-
-   :kind_of => String
-
-.. code-block:: ruby
-
-   :kind_of => Integer
-
-.. code-block:: ruby
-
-   :kind_of => Hash
-
-.. code-block:: ruby
-
-   :kind_of => [TrueClass, FalseClass]
-
-.. code-block:: ruby
-
-   :kind_of => [String, NilClass]
-
-.. code-block:: ruby
-
-   :kind_of => [Class, String, Symbol]
-
-.. code-block:: ruby
-
-   :kind_of => [Array, Hash]
-
-.. code-block:: ruby
-
-   :name_attribute => true
-
-.. code-block:: ruby
-
-   :regex => /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/
-
-.. code-block:: ruby
-
-   :required
-
-.. code-block:: ruby
-
-   :respond_to 
-
-.. code-block:: ruby
-
-   :kind_of => String, :name_attribute => true
-
-.. code-block:: ruby
-
-   :kind_of => String, :default => 'a_string_value'
-
-.. code-block:: ruby
-
-   :kind_of => Integer, :default => integer
-
-.. code-block:: ruby
-
-   :kind_of => [TrueClass, FalseClass], :default => true
-
-.. code-block:: ruby
-
-   :kind_of => [TrueClass, FalseClass], :default => false
-
-.. code-block:: ruby
-
-   :kind_of => [String, NilClass], :default => nil
-
-.. code-block:: ruby
-
-   :kind_of => [String, NilClass], :default => a_string
-
-.. code-block:: ruby
-
-   :kind_of => [Class, String, Symbol]
-
-.. code-block:: ruby
-
-   :kind_of => [Array, Hash], :default => []
-
-.. code-block:: ruby
-
-   :kind_of => Array, :default => []
-
-.. code-block:: ruby
-
-   :kind_of => Hash, :default => {}, :callbacks => {callback}
-
-.. code-block:: ruby
-
-   :kind_of => Hash, :default => {}
-
-.. code-block:: ruby
-
-   :kind_of => Symbol, :default => :value_one, :equal_to => [:value_one, :value_two]
-
-.. code-block:: ruby
-
-   :kind_of => Symbol, :default => :true, :equal_to => [:true, :false]
 
 
 Example LWRPs
