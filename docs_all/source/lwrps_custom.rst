@@ -511,8 +511,6 @@ and the following example shows the same code, but using the ``converge_by`` met
        end
      end
 
-
-
 whyrun_supported?
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |whyrun| mode is a way to see what |chef| would have configured, had an actual |chef| run occurred. This approach is similar to the concept of "no-operation" (or "no-op"): decide what should be done, but then don't actually do anything until it's done right. This approach to configuration management can help identify where complexity exists in the system, where inter-dependencies may be located, and to verify that everything will be configured in the desired manner.
@@ -535,9 +533,48 @@ where ``whyrun_supported?`` is set to ``true`` for any lightweight provider that
 
 Chef::Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
+Use ``Chef::Providers`` class in a lightweight provider to xxxxx. The syntax is as follows:
 
-Conditional Statements
+.. code-block:: ruby
+
+   Chef::Providers.provider_name
+
+where:
+
+* ``xxxxx`` is xxxxx
+* ``xxxxx`` is xxxxx
+
+Chef::Log
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Use ``Chef::Log`` class in a lightweight provider to define log entries to be created at specific points during the processing of a resource during a |chef| run. The syntax for a log message is as follows:
+
+.. code-block:: ruby
+
+   Chef::Log.log_type("message")
+
+where
+
+* ``log_type`` can be ``.debug``, ``.info``, ``.warn``, ``.error``, or ``.fatal`` 
+* ``"message"`` is the message that is logged. For example: ``"#{@new_resource} added module '#{@new_resource.module_name}'"`` or ``"#{@new_resource} module already exists - nothing to do"``
+
+For example, from the ``repository.rb`` provider in the |cookbook yum| cookbook:
+
+.. code-block:: ruby
+
+   action :add do
+     unless ::File.exists?("/etc/yum.repos.d/#{new_resource.repo_name}.repo")
+       Chef::Log.info "Adding #{new_resource.repo_name} repository to /etc/yum.repos.d/#{new_resource.repo_name}.repo"
+       repo_config
+     end
+   end
+
+where the ``Chef::Log`` class appends ``.info`` as the log type. If the name of the repo was "foo", then the log message would be "Adding foo repository to /etc/yum.repos.d/foo.repo".
+
+Use Ruby
+-----------------------------------------------------
+All providers are built using |ruby| code. In addition to using the |chef| Provider DSL, anything that can be done in |ruby| can also be done in a lightweight provider.
+
+Condition Statements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 A lightweight provider can use any conditional statement that can be used in |ruby|: ``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, and ``for``.
 
@@ -586,32 +623,6 @@ where ``::File.exists?`` is using the ``File`` |ruby| class to determine if a na
      else
 
 where the ``::File`` class is used to first see if the file exists, and then open that file so that it can be updated.
-
-Chef::Log
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-Use ``Chef::Log`` class in a lightweight provider to define log entries to be created at specific points during the processing of a resource during a |chef| run. The syntax for a log message is as follows:
-
-.. code-block:: ruby
-
-   Chef::Log.log_type("message")
-
-where
-
-* ``log_type`` can be ``.debug``, ``.info``, ``.warn``, ``.error``, or ``.fatal`` 
-* ``"message"`` is the message that is logged. For example: ``"#{@new_resource} added module '#{@new_resource.module_name}'"`` or ``"#{@new_resource} module already exists - nothing to do"``
-
-For example, from the ``repository.rb`` provider in the |cookbook yum| cookbook:
-
-.. code-block:: ruby
-
-   action :add do
-     unless ::File.exists?("/etc/yum.repos.d/#{new_resource.repo_name}.repo")
-       Chef::Log.info "Adding #{new_resource.repo_name} repository to /etc/yum.repos.d/#{new_resource.repo_name}.repo"
-       repo_config
-     end
-   end
-
-where the ``Chef::Log`` class appends ``.info`` as the log type. If the name of the repo was "foo", then the log message would be "Adding foo repository to /etc/yum.repos.d/foo.repo".
 
 Examples
 -----------------------------------------------------
