@@ -6,11 +6,11 @@ All hashing is done using |sha1| and encoded in |base64|. |base64| encoding shou
 
 .. code-block:: bash
 
-   Method:HTTP_METHOD\
-   nHashedPath:HASHED_PATH\
-   nX-Ops-Content-Hash:HASHED_BODY\
-   nX-Ops-Timestamp:TIME\
-   nX-Ops-UserId:USERID
+   Method:HTTP_METHOD
+   HashedPath:HASHED_PATH
+   X-Ops-Content-Hash:HASHED_BODY
+   X-Ops-Timestamp:TIME
+   X-Ops-UserId:USERID
 
 where:
 
