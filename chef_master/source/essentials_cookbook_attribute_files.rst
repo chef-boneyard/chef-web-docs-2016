@@ -35,3 +35,7 @@ Attribute Precedence
 File Methods
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
+
+Attribute Precedence
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_attribute.rst
