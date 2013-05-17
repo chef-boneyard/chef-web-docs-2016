@@ -12,16 +12,16 @@ This argument has the following options:
    |distro|
 
 ``-f CREDENTIAL_FILE``, ``--compute-credential-file CREDENTIAL_FILE``
-   The credential file used by |google compute engine|. (This file is created when running the ``knife google setup`` command.)
+   |credential_file google|
 
 ``--google-compute-disks DISK1,DISK2``
-   A comma-separated list of disks to be attached.
+   |google_compute_disks|
 
 ``--google-compute-public-ip IP_ADDRESS``
-   The public IP address for |google compute engine|. Options: ``EPHEMERAL``, a static IP address, or ``NONE``. Default value: ``EPHEMERAL``.
+   |google_compute_public_ip|
 
 ``--google-compute-server-connect-ip PUBLIC``
-   Indicates whether the IP address for |google compute engine| is ``PUBLIC`` or ``PRIVATE``. Default value: ``PUBLIC``.
+   |google_compute_server_connect_ip|
 
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
@@ -36,13 +36,13 @@ This argument has the following options:
    |json-attributes|
 
 ``-m MACHINE_TYPE``, ``--google-compute-machine MACHINE_TYPE``
-   The machine type for the instance running in |google compute engine| server. For example, ``n1-highcpu-2`` or ``n1-highcpu-2-d``. The full list of available machine types: https://developers.google.com/compute/docs/instances.
+   |google_compute_machine_type|
 
 ``-M K=V[,K=V,...]``, ``--google-compute-metadata Key=Value[,Key=Value...]``
-   A list of metadata key-value pairs that are associated with an instance.
+   |google_compute_metadata|
 
 ``-n NETWORK_NAME``, ``--google-compute-network NETWORK_NAME``
-   The name of the network in which an instance is running.
+   |google_compute_network|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |name_node|
@@ -63,13 +63,13 @@ This argument has the following options:
    |run-list|
 
 ``-T TAG1,TAG2,TAG3``, ``--google-compute-tags TAG1,TAG2,TAG3``
-   A list of tags that are associated with an instance.
+   |google_compute_tags|
 
 ``--template-file TEMPLATE``
    |template-file|
 
 ``-u USER_DATA_FILE``, ``--user-data USER_DATA_FILE``
-   The user data file used to provision |google compute engine|.
+   |google_compute_user_data|
 
 ``-w GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh-gateway|
@@ -78,4 +78,4 @@ This argument has the following options:
    |ssh-user|
 
 ``-Z ZONE``, ``--google-compute-zone ZONE``
-   The |google compute engine| in which the disk is located.
+   |zone google|

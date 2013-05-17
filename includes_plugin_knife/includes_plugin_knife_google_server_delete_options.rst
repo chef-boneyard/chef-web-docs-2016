@@ -6,16 +6,16 @@
 This argument has the following options:
 
 ``-f CREDENTIAL_FILE``, ``--compute-credential-file CREDENTIAL_FILE``
-   The credential file used by |google compute engine|. (This file is created when running the ``knife google setup`` command.)
+   |credential_file google|
 
 ``-p``, ``--purge``
-   Indicates that all corresponding nodes and clients on the |chef server| will be destroyed, in addition to the |google compute engine| node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the ``--node-name`` option must be used to specify the name of the node.
+   |purge google|
 
 ``-N NAME``, ``--node-name NAME``
    |name_node|
 
 ``-Z ZONE``, ``--google-compute-zone ZONE``
-   The |google compute engine| in which the disk is located.
+   |zone google|
 
 
 

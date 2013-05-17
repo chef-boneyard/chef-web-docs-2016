@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Create a Google Cloud Platform project, enable |google compute engine|, and then set up the client identifier. Run the following command:
+Create a project in |google cloud platform|, enable |google compute engine|, and then set up the client identifier. Run the following command:
 
 .. code-block:: bash
 
