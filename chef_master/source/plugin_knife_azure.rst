@@ -18,28 +18,28 @@ image list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list_options.rst
 
 server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_create_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to provision a medium-sized |centos| machine configured as a web server in the "West US" data center, while also creating new hosted service and storage accounts, enter something like:
 
 .. code-block:: bash
@@ -61,16 +61,16 @@ server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_delete_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete an instance named "devops12", enter:
 
 .. code-block:: bash
@@ -81,16 +81,16 @@ server describe
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_describe_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view the details for a role named "admin", enter:
 
 .. code-block:: bash
@@ -101,10 +101,10 @@ server list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_server_list_options.rst

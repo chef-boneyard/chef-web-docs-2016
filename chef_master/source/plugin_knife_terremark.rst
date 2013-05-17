@@ -14,16 +14,16 @@ server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_create_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to create a new instance, enter:
 
 .. code-block:: bash
@@ -42,16 +42,16 @@ server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete an instance with an identifier of "abcdefg", enter:
 
 .. code-block:: bash
@@ -62,16 +62,16 @@ server list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark_server_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, enter:
 
 .. code-block:: bash

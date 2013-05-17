@@ -14,28 +14,28 @@ instance data
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_instance_data.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_instance_data_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_instance_data_options.rst
 
 server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_create_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to launch a new Amazon EC2 instance with the "webserver" role, enter:
 
 .. code-block:: bash
@@ -52,16 +52,16 @@ server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_delete_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete a node called "preprod" in an instance named "operations", enter:
 
 .. code-block:: bash
@@ -72,10 +72,10 @@ server list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2_server_list_options.rst

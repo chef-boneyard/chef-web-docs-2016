@@ -18,48 +18,48 @@ disk create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_create_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 None.
 
 disk delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_delete_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 None.
 
 disk list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view a list of disks, enter:
 
 .. code-block:: bash
@@ -79,16 +79,16 @@ server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_create_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to create a server:
 
 .. code-block:: bash
@@ -100,16 +100,16 @@ server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_delete_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete a server using the ``--purge`` option. which will delete every |chef client| and |chef| node:
 
 .. code-block:: bash
@@ -120,16 +120,16 @@ server list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to view a list of instances associated with a project named "dev-01", enter:
 
 .. code-block:: bash
@@ -161,32 +161,32 @@ setup
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_setup_plugin.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_setup_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_setup_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 None.
 
 zone list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_zone_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_zone_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_zone_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to see a list of all zones, including status and maintenance windows, enter:
 
 .. code-block:: bash

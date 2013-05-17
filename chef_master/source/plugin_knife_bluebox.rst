@@ -14,40 +14,40 @@ images list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_images_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_images_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
 server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_create_options.rst
 
 server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete an instance at block "12345" with a hostname of "dev", enter:
 
 .. code-block:: bash
@@ -58,10 +58,10 @@ server list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox_server_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 |no_options|

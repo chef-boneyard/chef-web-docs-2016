@@ -14,16 +14,16 @@ flavor list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_flavor_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_flavor_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_flavor_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, enter:
 
 .. code-block:: bash
@@ -34,16 +34,16 @@ image list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_image_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_image_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_image_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, enter:
 
 .. code-block:: bash
@@ -54,28 +54,28 @@ server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_create_options.rst
 
 server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_delete_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete an instance named "devops2012", enter:
 
 .. code-block:: bash
@@ -86,10 +86,10 @@ server list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus_server_list_options.rst

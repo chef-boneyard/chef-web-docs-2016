@@ -14,40 +14,40 @@ flavor list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_flavor_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_flavor_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_flavor_list_options.rst
 
 image list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_image_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_image_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_image_list_options.rst
 
 server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_create.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_create_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_create_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 To launch a new Rackspace instance with the "webserver" role, enter:
 
 .. code-block:: bash
@@ -65,16 +65,16 @@ server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_delete.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_delete_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_delete_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to delete a |rackspace| instance with an Instance ID of "12345678", enter:
 
 .. code-block:: bash
@@ -105,16 +105,16 @@ server list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_list.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_list_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_list_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to find all Rackspace instances, enter:
 
 .. code-block:: bash

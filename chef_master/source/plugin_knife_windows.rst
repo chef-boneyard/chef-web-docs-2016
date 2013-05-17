@@ -18,16 +18,16 @@ bootstrap windows ssh
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -38,16 +38,16 @@ bootstrap windows winrm
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_winrm_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example:
 
 .. code-block:: bash
@@ -58,16 +58,16 @@ winrm
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm.rst
 
-**Syntax**
-
+Syntax
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_syntax.rst
 
-**Options**
-
+Options
+-----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst
 
-**Examples**
-
+Examples
+-----------------------------------------------------
 For example, to find the uptime of all web servers, enter:
 
 .. code-block:: bash
