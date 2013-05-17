@@ -3,5 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``server list`` argument is used to find instances that are associated with a |google compute engine| zone. The results may show instances that are not currently managed by the |chef server|.
-
+The ``zone list`` argument is used to get the list of available |google compute engine| zones, including current status, number of deployed servers (and disks), and upcoming maintenance windows.

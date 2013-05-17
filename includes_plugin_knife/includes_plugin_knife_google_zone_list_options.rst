@@ -7,7 +7,3 @@ This argument has the following options:
 
 ``-f CREDENTIAL_FILE``, ``--compute-credential-file CREDENTIAL_FILE``
    The credential file used by |google compute engine|. (This file is created when running the ``knife google setup`` command.)
-
-``-Z ZONE``, ``--google-compute-zone ZONE``
-   The |google compute engine| in which the disk is located.
-
