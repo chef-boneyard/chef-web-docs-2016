@@ -110,13 +110,7 @@ server delete
 
 **Examples**
 
-For example, to delete a server named "devops01" from a project named "engineering", enter:
-
-.. code-block:: bash
-
-   $ knife google server delete devops1 engineering
-
-To delete a server using the ``--purge`` option. which will delete every |chef client| and |chef| node:
+For example, to delete a server using the ``--purge`` option. which will delete every |chef client| and |chef| node:
 
 .. code-block:: bash
 
