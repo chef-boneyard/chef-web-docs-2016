@@ -4,6 +4,8 @@ Custom Lightweight Resources
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
 
+.. warning:: DRAFT
+
 Syntax
 =====================================================
 The syntax for a lightweight resource is as follows:
