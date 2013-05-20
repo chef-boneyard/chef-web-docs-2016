@@ -26,6 +26,10 @@ where there is typically a 1:1 ratio of lightweight resource files to lightweigh
 
 This topic will walk through the structure, syntax, and options available to lightweight resources and lightweight providers.
 
+File Locations
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
+
 
 Lightweight Resources
 =====================================================
@@ -49,3 +53,8 @@ Many lightweight providers are built using only core |chef| resources, such as |
 Use Custom Ruby
 -----------------------------------------------------
 Some lightweight providers are built using custom |ruby| code. In general, it is recommended to use the core |chef| resources for |chef| resource collection processing as much as possible. That said, lightweight providers are built using |ruby| and can take any shape and form required.
+
+Compare Platform and Lightweight Resources
+=====================================================
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_compared_to_platform_resource.rst

@@ -32,3 +32,9 @@ xxxxx
 xxxxx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
+
+
+
+Use a Custom Library
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider_extend.rst

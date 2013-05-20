@@ -252,6 +252,37 @@ Some examples of combining validation parameters:
    :kind_of => Symbol, :default => :true, :equal_to => [:true, :false]
 
 
+Conditional Executions
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional.rst
+
+Conditional Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_attributes.rst
+
+Conditional Arguements
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
+
+
+Notifications
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_notifies.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_subscribes.rst
+
+Timers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_timers.rst
+
+
+
+
+
 Examples
 =====================================================
 xxxxx
