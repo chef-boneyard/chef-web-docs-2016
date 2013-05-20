@@ -640,8 +640,6 @@ When |whyrun| mode is enabled, a |chef| run will occur that does everything up t
 
 .. note:: why-run mode is not a replacement for running cookbooks in a test environment that mirrors the production environment. |opscode| uses why-run mode to learn more about what is going on, but also test-kitchen on developer systems, along with an internal |openstack| cloud and external cloud providers to test more thoroughly.
 
-.. END_INCLUDE
-
 The ``whyrun_supported?`` method is used to tell |chef| that a lightweight provider supports |whyrun| mode. The syntax for the ``whyrun_supported?`` method is as follows:
 
 .. code-block:: ruby
