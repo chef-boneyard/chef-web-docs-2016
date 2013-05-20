@@ -44,13 +44,13 @@ The syntax for a lightweight provider that is built primarily to use |chef| reso
 where:
 
 * ``whyrun_supported?`` is used to tell |chef| if the lightweight provider supports running in |whyrun| mode
-* ``use_inline_resources`` is used to tell |chef| how to handle resources that exist within other resources during the |chef| run **(VERIFY)**
+* ``use_inline_resources`` is used to tell |chef| to execute any ``action`` blocks as part of a self-contained |chef| run, which ensures that |chef| can notify the parent lightweight resource after the embedded resources have finished processing
 * ``action`` is the code block that tells |chef| what to do when the ``:action_name`` is used in a recipe
 * ``condition`` is a |ruby| condition statement (``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, or ``for``)
 * ``test`` is used to test for idempotency; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block lightweight provider, or defined using any other pattern that is available in |ruby|
 * ``resource`` is a |chef| resource written as a recipe
 * ``Chef::Log.log_type`` is used to tell |chef| to create a log entry of one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
-* ``new_resource.updated_by_last_action(true)`` is used to tell |chef| whether the object that exists on the node should be updated by the object created by the resource during the |chef| run **(VERIFY)**
+* ``updated_by_last_action`` is used to notify a lightweight resource that a node was updated successfully
 
 
 Use the Provider DSL
