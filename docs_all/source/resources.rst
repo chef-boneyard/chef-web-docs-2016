@@ -1600,7 +1600,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_package_use_symbols_to_reference_attributes.rst
 
-**Use a whitespace array to simply a recipe**
+**Use a whitespace array to simplify a recipe**
 
 .. include:: ../../step_resource/step_resource_package_use_whitespace_array.rst
 
