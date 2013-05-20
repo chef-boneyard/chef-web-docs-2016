@@ -6,8 +6,9 @@ The syntax for using the |resource ruby_block| resource in a recipe is as follow
 .. code-block:: ruby
 
    ruby_block "name" do
-     some_attribute "value" # see attributes section below
-     ...
+     block do
+       # some Ruby code
+     end
      action :action # see actions section below
    end
 
@@ -15,5 +16,5 @@ where
 
 * ``ruby_block`` tells |chef| to use the ``Chef::Provider::RubyBlock`` provider during the |chef| run
 * ``"name"`` is the name of the code block
-* ``attribute`` is zero (or more) of the attributes that are available for this resource
+* ``block`` is the attribute that is used to define the |ruby| block
 * ``:action`` is the step that the resource will ask the provider to take during the |chef| run
