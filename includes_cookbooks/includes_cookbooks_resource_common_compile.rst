@@ -10,6 +10,6 @@
 Sometimes, it may be necessary to ensure that a specific resource is run during the phase that builds the resource collection. For example:
 
 * A resource may need to run first so that it can download a package that will be used by other resources in the resource collection
-* Several resources need to install a package; rather than having running the package installer several times, it can be configured to run only once
+* Several resources need to install a package; rather than having the package installer run several times, it can be configured to run only once
 
-To support these types of uses cases, it is possible to tell |chef| to run a resources at the beginning and/or the end of the resource collection phase. Effectively, run a resource before all other resources are added to the resource collection and/or after all resources have been added, but before |chef| configures the system.
+To support these types of uses cases, it is possible to tell |chef| to run a resource at the beginning and/or the end of the resource collection phase. Effectively, run a resource before all other resources are added to the resource collection and/or after all resources have been added, but before |chef| configures the system.

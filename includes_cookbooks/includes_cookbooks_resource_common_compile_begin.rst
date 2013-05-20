@@ -36,7 +36,7 @@ A single |chef| run should configure a node completely. |chef| uses |ruby| as th
 where similar to the previous example for updating package caches, this example creates a new |ruby| object called ``Chef::Resource::Package``.
 
 * The |mysql| |ruby| gem compiles native extensions in C, so the appropriate packages for the operating system will also need to be installed. 
-* ``Gem.clear_paths`` ensures that |chef| reloads the cache of available |ruby| gem.
+* ``Gem.clear_paths`` ensures that |chef| reloads the cache of available |ruby| gems.
 * ``require 'mysql'`` loads the |mysql| |ruby| gem so that it can be used to connect to a |mysql| database.
 
 **An anti-pattern**
