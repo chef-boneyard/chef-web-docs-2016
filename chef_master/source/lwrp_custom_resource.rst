@@ -62,7 +62,7 @@ where
 
 * the ``actions`` allow a recipe to manage entries in a |crontab| file (create entry, delete entry)
 * ``:create`` is the default action
-* ``:minute``, ``:hour``, ``:day``, ``:month``, and ``:weekday`` are the collection of attributes used to schedule a |cron| job, assigned a default value of ``"*"`
+* ``:minute``, ``:hour``, ``:day``, ``:month``, and ``:weekday`` are the collection of attributes used to schedule a |cron| job, assigned a default value of ``"*"``
 * ``:command`` is the command that will be run (and also required)
 * ``:user`` is the user by which the command is run
 * ``:mailto``, ``:path``, ``:home``, and ``:shell`` are optional environment variables that do not have default value, which each being defined as an array that supports the ``String`` and ``NilClass`` |ruby| classes
@@ -96,7 +96,7 @@ Validation Parameters
 -----------------------------------------------------
 A validation parameter is used to add zero or more validation parameters to an attribute.
 
-.. warning:: REMOVE ME: The list of valid ruby classes (in the sidebar): http://ruby-doc.org/core-1.9.3/TrueClass.html
+.. warning:: REMOVE ME. The list of valid ruby classes (in the sidebar): http://ruby-doc.org/core-1.9.3/TrueClass.html
 
 .. list-table::
    :widths: 150 450
