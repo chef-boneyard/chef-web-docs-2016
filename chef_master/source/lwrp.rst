@@ -127,6 +127,10 @@ Custom resources and providers can also be created using the |lwrp| DSL. |opscod
    lwrp_application_ruby
 
 
+   lwrp_custom
+   lwrp_custom_provider_resources
+   lwrp_custom_provider_ruby
+   lwrp_custom_resource
 
 
 
