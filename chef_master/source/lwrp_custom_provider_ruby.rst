@@ -100,7 +100,7 @@ where:
 * ``updated_by_last_action`` is used to notify a lightweight resource that a node was updated successfully
 
 
-Use the Provider DSL
+Provider DSL Methods
 =====================================================
 The Provider DSL is a Ruby DSL that is used to define a lightweight provider. The Provider DSL also helps ensure that a lightweight provider takes the correct actions when its corresponding lightweight resource is used in a recipe. The Provider DSL is a small DSL with just a few methods that are specific to |chef|. Because the Provider DSL is a Ruby DSL, then anything that can be done using Ruby can also be done as part of defining a lightweight provider.
 

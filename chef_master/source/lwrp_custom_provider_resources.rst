@@ -6,18 +6,17 @@ Custom Lightweight Providers w/Chef Resources
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
-A lightweight provider is always authored using |ruby|; anything that can be done using |ruby| can also be done in a lightweight provider. In addition to |ruby|, the Provider DSL provides additional methods that are specific to |chef|.
+A lightweight provider is a custom provider that defines the steps that are required to complete one (or more) actions defined by a lightweight resource. The lightweight provider and lightweight resource that work together to tell |chef| what action to take and how to do it must be located in the same cookbook (the ``/providers`` and ``/resources`` subdirectories); together, they are referred as a LWRP (or "lightweight resource provider"). A lightweight provider is always authored using |ruby|. Anything that can be done using |ruby| can be done in a lightweight provider. In addition to using |ruby|, the |dsl provider| provides additional methods that are specific to |chef|.
 
 Syntax
 =====================================================
-This section shows some of the more common elements that appear in lightweight providers when they are built primarily to use |chef| resources to define the actions that |chef| should take during a |chef| run. Some lightweight provider-specific methods are used, but basic |ruby| elements are also very common. Remember:
+This section shows some of the common structural elements that appear a lightweight provider that is built in a way that leverages core |chef| resources (such as |resource file|, |resource template|, or |resource package|). Remember:
 
-* The structure of a lightweight provider can vary, depending on what a lightweight provider is being asked to do
+* A lightweight provider tells |chef| how to handle actions that are defined by a lightweight resource
+* The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action
 * At its core, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider
-* A lightweight provider tells |chef| how to handle the actions that are defined by a lightweight resource
-* The complexity of the lightweight provider depends on what the lightweight provider needs to do
 
-The syntax for a lightweight provider that is built primarily to use |chef| resources is as follows:
+The syntax for a lightweight provider that is built to leverage |chef| resources is as follows:
 
 .. code-block:: ruby
 
@@ -43,19 +42,55 @@ The syntax for a lightweight provider that is built primarily to use |chef| reso
 
 where:
 
-* ``whyrun_supported?`` is used to tell |chef| if the lightweight provider supports running in |whyrun| mode
-* ``use_inline_resources`` is used to tell |chef| to execute any ``action`` blocks as part of a self-contained |chef| run, which ensures that |chef| can notify the parent lightweight resource after the embedded resources have finished processing
+* ``whyrun_supported?`` indicates whether a lightweight provider can be run in |whyrun| mode
+* ``use_inline_resources`` is used to tell |chef| to execute ``action`` blocks as part of a self-contained |chef| run. Using this method ensures that |chef| can notify parent lightweight resources after embedded resources have finished processing
 * ``action`` is the code block that tells |chef| what to do when the ``:action_name`` is used in a recipe
 * ``condition`` is a |ruby| condition statement (``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, or ``for``)
-* ``test`` is used to test for idempotency; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block lightweight provider, or defined using any other pattern that is available in |ruby|
+* ``test`` is used to test for idempotence; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block elsewhere in the lightweight provider, or defined using any other pattern that is available in |ruby|
 * ``resource`` is a |chef| resource written as a recipe
-* ``Chef::Log.log_type`` is used to tell |chef| to create a log entry of one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
+* ``Chef::Log.log_type`` is used to tell |chef| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
 * ``updated_by_last_action`` is used to notify a lightweight resource that a node was updated successfully
 
+For example:
 
-Use the Provider DSL
+.. code-block:: ruby
+
+   def whyrun_supported?
+     true
+   end
+   
+   use_inline_resources
+
+   action :delete do
+     if user_exists?(new_resource.user)
+       cmdStr = "rabbitmqctl delete_user #{new_resource.user}"
+       execute cmdStr do
+         Chef::Log.debug "rabbitmq_user_delete: #{cmdStr}"
+         Chef::Log.info "Deleting RabbitMQ user '#{new_resource.user}'."
+         new_resource.updated_by_last_action(true)
+       end
+     end
+   end
+   
+   def user_exists?(name)
+     cmdStr = "rabbitmqctl -q list_users |grep '^#{name}\\b'"
+     cmd = Mixlib::ShellOut.new(cmdStr)
+     cmd.environment['HOME'] = ENV.fetch('HOME', '/root')
+     cmd.run_command
+     Chef::Log.debug "rabbitmq_user_exists?: #{cmdStr}"
+     Chef::Log.debug "rabbitmq_user_exists?: #{cmd.stdout}"
+     begin
+       cmd.error!
+       true
+     rescue
+       false
+     end
+   end
+
+
+|dsl provider| Methods
 =====================================================
-The Provider DSL is a Ruby DSL that is used to define a lightweight provider. The Provider DSL also helps ensure that a lightweight provider takes the correct actions when its corresponding lightweight resource is used in a recipe. The Provider DSL is a small DSL with just a few methods that are specific to |chef|. Because the Provider DSL is a Ruby DSL, then anything that can be done using Ruby can also be done as part of defining a lightweight provider.
+The |dsl provider| is a |ruby| DSL that is used to define a lightweight provider. The |dsl provider| also helps ensure that a lightweight provider takes the correct actions when its corresponding lightweight resource is used in a recipe. The |dsl provider| is a small DSL with just a few methods that are specific to |chef|. Because the |dsl provider| is a |ruby| DSL, then anything that can be done using |ruby| can also be done when defining a lightweight provider.
 
 action
 -----------------------------------------------------

@@ -2,9 +2,11 @@
 Custom Lightweight Resources
 =====================================================
 
+.. warning:: DRAFT
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst
 
-.. warning:: DRAFT
+A lightweight resource is a custom resource that defines an action to be completed, which are then processed by a lightweight provider during the |chef| run. The lightweight provider and lightweight resource that work together to tell |chef| what action to take and how to do it must be located in the same cookbook (the ``/providers`` and ``/resources`` subdirectories); together, they are referred as a LWRP (or "lightweight resource provider"). A lightweight resource is always authored using |ruby|. Anything that can be done using |ruby| can be done in a lightweight resource. In addition to using |ruby|, the |dsl resource| provides additional methods that are specific to |chef|.
 
 Syntax
 =====================================================
@@ -70,9 +72,9 @@ where
 * ``:mailto``, ``:path``, ``:home``, and ``:shell`` are optional environment variables that do not have default value, which each being defined as an array that supports the ``String`` and ``NilClass`` |ruby| classes
 * the ``def block_name`` block represents the rest of the lightweight resource, should additional code blocks be required
 
-Resource DSL
+|dsl resource| Methods
 =====================================================
-The Resource DSL is a Ruby DSL that is used to define a lightweight resource. The Resource DSL also helps ensure that lightweight resources provide its corresponding lightweight provider the correct information. The Resource DSL is a small DSL with just two methods and at least one ``def`` block (to set the default action). Because the Resource DSL is a Ruby DSL, then anything that can be done using Ruby can also be done as part of defining a lightweight resource.
+The |dsl resource| is a |ruby| DSL that is used to define a lightweight resource. The |dsl resource| also helps ensure that lightweight resources provide its corresponding lightweight provider the correct information. The |dsl resource| is a small DSL with just three methods. Because the |dsl resource| is a Ruby DSL, then anything that can be done using Ruby can also be done as part of defining a lightweight resource.
 
 action
 -----------------------------------------------------
@@ -93,6 +95,16 @@ The ``attribute`` method is used to define a list of attributes and any of those
    attribute :attribute_name :validation_parameter => value, :validation_parameter => value
 
 where ``attribute`` must have an attribute name and zero (or more) validation parameters.
+
+default_action
+-----------------------------------------------------
+The ``default_action`` method is used to set the default action for a lightweight resource. The syntax for the ``default_action`` method is as follows:
+
+.. code-block:: ruby
+
+   default_action :action_name
+
+where ``action_name`` is the default action.
 
 Validation Parameters
 -----------------------------------------------------
