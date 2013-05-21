@@ -238,13 +238,13 @@ In the following example an ``unless`` statement is used to add a key, unless th
        notifies :run, "execute[import-rpm-gpg-key-#{new_resource.key}]", :immediately
      end
    end
-
-action :add do
-  unless ::File.exists?("/etc/yum.repos.d/#{new_resource.repo_name}.repo")
-    Chef::Log.info "Adding #{new_resource.repo_name} repository to /etc/yum.repos.d/#{new_resource.repo_name}.repo"
-    repo_config
-  end
-end
+   
+   action :add do
+     unless ::File.exists?("/etc/yum.repos.d/#{new_resource.repo_name}.repo")
+       Chef::Log.info "Adding #{new_resource.repo_name} repository to /etc/yum.repos.d/#{new_resource.repo_name}.repo"
+       repo_config
+     end
+   end
 
 
 Log Entries
@@ -270,6 +270,7 @@ For example, from the ``repository.rb`` provider in the |cookbook yum| cookbook:
        repo_config
      end
    end
+
 
 where the ``Chef::Log`` class appends ``.info`` as the log type. If the name of the repo was "foo", then the log message would be "Adding foo repository to /etc/yum.repos.d/foo.repo".
 
@@ -327,11 +328,14 @@ The ``cron_d`` lightweight provider (found in the |cookbook cron| cookbook maint
      new_resource.updated_by_last_action(t.updated_by_last_action?)
    end
 
+
 where:
 
 * two ``action`` blocks are defined, one for the ``:create`` action and one for the ``:delete`` action
 * the ``:delete`` action block calls the |resource file| resource (and it's ``:delete`` action) to delete a file in the ``/etc/cron.d`` folder
-* the ``:create`` action block creates a new entry in the ``/etc/cron.d`` folder. For example, if a recipe used the ``cron_d`` lightweight resource similar to the following:
+* the ``:create`` action block creates a new entry in the ``/etc/cron.d`` folder. 
+
+For example, if a recipe used the ``cron_d`` lightweight resource similar to the following:
 
   .. code-block:: ruby
 
@@ -342,7 +346,7 @@ where:
         user "appuser"
       end
 
-   this tells |chef| to use the ``cron_d`` lightweight provider and the credentials for a user named ``appuser`` to create a |crontab| entry named "daily-usage-report". This |crontab| entry executes a command located in the ``/srv/app/scripts/daily_report`` directory at a specified interval (defined by the ``minute`` and ``hour`` attributes). Any of the attributes that are not specified in the recipe (such as ``mailto``, ``weekday``, and ``day``) just use the default attribute values defined by the lightweight resource.
+this tells |chef| to use the ``cron_d`` lightweight provider and the credentials for a user named ``appuser`` to create a |crontab| entry named "daily-usage-report". This |crontab| entry executes a command located in the ``/srv/app/scripts/daily_report`` directory at a specified interval (defined by the ``minute`` and ``hour`` attributes). Any of the attributes that are not specified in the recipe (such as ``mailto``, ``weekday``, and ``day``) just use the default attribute values defined by the lightweight resource.
 
 ebs_volume
 -----------------------------------------------------
