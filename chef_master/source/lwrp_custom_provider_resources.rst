@@ -439,14 +439,14 @@ where:
 
 For example, if a recipe used the ``cron_d`` lightweight resource similar to the following:
 
-  .. code-block:: ruby
+.. code-block:: ruby
 
-      cron_d "daily-usage-report" do
-        minute 0
-        hour 23
-        command "/srv/app/scripts/daily_report"
-        user "appuser"
-      end
+   cron_d "daily-usage-report" do
+     minute 0
+     hour 23
+     command "/srv/app/scripts/daily_report"
+     user "appuser"
+   end
 
 this tells |chef| to use the ``cron_d`` lightweight provider and the credentials for a user named ``appuser`` to create a |crontab| entry named "daily-usage-report". This |crontab| entry executes a command located in the ``/srv/app/scripts/daily_report`` directory at a specified interval (defined by the ``minute`` and ``hour`` attributes). Any of the attributes that are not specified in the recipe (such as ``mailto``, ``weekday``, and ``day``) just use the default attribute values defined by the lightweight resource.
 
@@ -482,9 +482,9 @@ and the following ``def`` block defines the ``vol`` variable called by the ``det
 
 entry (|ssh|)
 -----------------------------------------------------
-The ``entry`` lightweight provider (from the ``ssh_known_hosts`` cookbook) is used to add hosts and keys to the ``/etc/ssh_known_hosts`` file.
+The ``entry.rb`` lightweight provider (from the ``ssh_known_hosts`` cookbook) is used to add hosts and keys to the ``/etc/ssh_known_hosts`` file.
 
-.. code-block:: ruby:
+.. code-block:: ruby
 
    action :create do
      key = (new_resource.key || `ssh-keyscan -H #{new_resource.host} 2>&1`)
@@ -513,7 +513,7 @@ The ``entry`` lightweight provider (from the ``ssh_known_hosts`` cookbook) is us
 
 rabbitmq_plugin
 -----------------------------------------------------
-The ``rabbitmq_plugin`` lightweight provider is used to tell |chef| how to handle two actions (``:disable`` and ``:enable``) that are used to manage |rabbitmq| plugins. Using a lightweight resource in a recipe is simple:
+The ``rabbitmq_plugin`` lightweight provider is used to tell |chef| how to handle two actions (``:disable`` and ``:enable``) that are used to manage |rabbitmq| plugins. Using this lightweight resource in a recipe is simple:
 
 .. code-block:: ruby
 
@@ -521,10 +521,10 @@ The ``rabbitmq_plugin`` lightweight provider is used to tell |chef| how to handl
      action :enable
    end
 
-The lightweight provider is doing most of the work:
+The lightweight provider then does most of the work:
 
 .. code-block:: ruby
-   
+
    action :enable do
      unless plugin_enabled?(new_resource.plugin)
        execute "rabbitmq-plugins enable #{new_resource.plugin}" do
@@ -534,7 +534,7 @@ The lightweight provider is doing most of the work:
        end
      end
    end
-
+   
    def plugins_bin_path(return_array=false)
      path = ENV.fetch('PATH') + ':/usr/lib/rabbitmq/bin'
      return_array ? path.split(':') : path
