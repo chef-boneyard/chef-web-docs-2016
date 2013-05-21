@@ -98,13 +98,13 @@ where ``attribute`` must have an attribute name and zero (or more) validation pa
 
 attr_accessor
 -----------------------------------------------------
-The ``attr_accessor`` method is used to define custom xxxxx that can be used in a lightweight provider to xxxxx. The syntax for the ``attr_accessor`` method is as follows:
+The ``attr_accessor`` method is used to define custom attributes for a lightweight resource that can be accessed by a lightweight provider. The syntax for the ``attr_accessor`` method is as follows:
 
 .. code-block:: ruby
 
    attr_accessor :accessor_name, :accessor_name
 
-where ``accessor_name`` is a comma-delimited list of individual xxxxx.
+where ``accessor_name`` is a comma-delimited list of custom attributes.
 
 default_action
 -----------------------------------------------------
@@ -119,8 +119,6 @@ where ``action_name`` is the default action.
 Validation Parameters
 -----------------------------------------------------
 A validation parameter is used to add zero or more validation parameters to an attribute.
-
-.. warning:: REMOVE ME. The list of valid ruby classes (in the sidebar): http://ruby-doc.org/core-1.9.3/TrueClass.html
 
 .. list-table::
    :widths: 150 450
@@ -221,59 +219,39 @@ Some examples of combining validation parameters:
 
 .. code-block:: ruby
 
-   :kind_of => String, :name_attribute => true
+   attribute :spool_name, :kind_of => String, :name_attribute => true
 
 .. code-block:: ruby
 
-   :kind_of => String, :default => 'a_string_value'
+   attribute :enabled, :equal_to => [true, false, 'true', 'false'], :default => true
+
+From the ``nrpecheck`` lightweight resource in the |cookbook nagios| cookbook:
 
 .. code-block:: ruby
 
-   :kind_of => Integer, :default => integer
+   attribute :command_name, :kind_of => String, :name_attribute => true
+   attribute :warning_condition, :kind_of => String, :default => nil
+   attribute :critical_condition, :kind_of => String, :default => nil
+   attribute :command, :kind_of => String
+   attribute :parameters, :kind_of => String, :default => nil
+
+From the ``policy`` lightweight resource in the |cookbook rabbitmq| cookbook:
 
 .. code-block:: ruby
 
-   :kind_of => [TrueClass, FalseClass], :default => true
+   attribute :policy, :kind_of => String, :name_attribute => true
+   attribute :pattern, :kind_of => String
+   attribute :params, :kind_of => Hash
+   attribute :priority, :kind_of => Integer
+
+From the ``module`` lightweight resource in the |cookbook iis| cookbook:
 
 .. code-block:: ruby
 
-   :kind_of => [TrueClass, FalseClass], :default => false
-
-.. code-block:: ruby
-
-   :kind_of => [String, NilClass], :default => nil
-
-.. code-block:: ruby
-
-   :kind_of => [String, NilClass], :default => a_string
-
-.. code-block:: ruby
-
-   :kind_of => [Class, String, Symbol]
-
-.. code-block:: ruby
-
-   :kind_of => [Array, Hash], :default => []
-
-.. code-block:: ruby
-
-   :kind_of => Array, :default => []
-
-.. code-block:: ruby
-
-   :kind_of => Hash, :default => {}, :callbacks => {callback}
-
-.. code-block:: ruby
-
-   :kind_of => Hash, :default => {}
-
-.. code-block:: ruby
-
-   :kind_of => Symbol, :default => :value_one, :equal_to => [:value_one, :value_two]
-
-.. code-block:: ruby
-
-   :kind_of => Symbol, :default => :true, :equal_to => [:true, :false]
+   attribute :module_name, :kind_of => String, :name_attribute => true
+   attribute :type, :kind_of => String, :default => nil
+   attribute :precondition, :kind_of => String, :default => nil
+   attribute :application, :kind_of => String, :default => nil
 
 
 Conditional Executions
@@ -309,7 +287,7 @@ Timers
 
 Examples
 =====================================================
-xxxxx
+The following examples show various lightweight providers that use core |chef| resources.
 
 :callbacks
 -----------------------------------------------------

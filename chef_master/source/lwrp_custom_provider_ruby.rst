@@ -30,23 +30,6 @@ The syntax for a lightweight provider is as follows:
    end
 
    action :action_name do
-     condition test
-       # some Ruby code
-         converge_by("message") do
-           # some Ruby code
-         end
-     else
-       # some Ruby code
-   end
-   
-   action :action_name2 do
-     if @current_resource.exists
-       converge_by("message") do
-         # some Ruby code
-       end
-     end
-
-   action :action_name do
      converge_by("message") do
        condition test
          # some Ruby code
@@ -62,52 +45,34 @@ The syntax for a lightweight provider is as follows:
      # some Ruby code
    end
 
-   def method2?
-     # some Ruby code
-   end
-
-   current_resource               # THIS HAS TO BE IN THE SYNTAX BLOCK; FIGURE OUT WHERE THE PROPER PLACE IS
-   inline_compile_mode            # THIS HAS TO BE IN THE SYNTAX BLOCK; FIGURE OUT WHERE THE PROPER PLACE IS
-   load_current_resource          # THIS HAS TO BE IN THE SYNTAX BLOCK; FIGURE OUT WHERE THE PROPER PLACE IS
-   new_resource                   # THIS HAS TO BE IN THE SYNTAX BLOCK; FIGURE OUT WHERE THE PROPER PLACE IS
-   updated_by_last_action         # THIS HAS TO BE IN THE SYNTAX BLOCK; FIGURE OUT WHERE THE PROPER PLACE IS
-
 where:
 
 * ``require`` is a standard |ruby| method that allows a lightweight provider to require modules that are not located in the current cookbook, such as a file located in the ``chef/mixin`` directory
 * ``include`` is a standard |ruby| method that allows a lightweight provider to include a class, such as ``Chef::Mixin::ShellOut`` or ``Windows::Helper``
 * ``whyrun_supported?`` indicates that a provider supports running a resource in |whyrun| mode
-* ``action :action_name``` is a |ruby| code block that tells |chef| what to do when the "action_name1" lightweight resource is used in a recipe
-* there is generally a ``def`` block for each ``action`` block (or at least one ``def`` block that corresponds to each method called by an ``action`` block); this will vary from lightweight provider to lightweight provider
+* ``action`` is a block of |ruby| code that tells |chef| what to do when the ``:action_name`` lightweight resource is used in a recipe; there are many possible structures an action block may take and the syntax in the previous example is just one way to do this
 * ``converge_by()`` tells |chef| what do if this resource is run in |whyrun| mode and the ``"message"`` that |chef| will log
-* ``current_resource`` is an instance variable used to represent what is on the node
-* ``inline_compile_mode`` is xxxxx
-* ``load_current_resource`` is xxxxx
-* ``new_resource`` is xxxxx
-* ``updated_by_last_action`` is xxxxx
-
-
-
-
-where:
-
-* ``whyrun_supported?`` is used to tell |chef| if the lightweight provider supports running in |whyrun| mode
-* ``use_inline_resources`` is used to tell |chef| to execute any ``action`` blocks as part of a self-contained |chef| run, which ensures that |chef| can notify the parent lightweight resource after the embedded resources have finished processing
-* ``action`` is the code block that tells |chef| what to do when the ``:action_name`` is used in a recipe
 * ``condition`` is a |ruby| condition statement (``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, or ``for``)
-* ``test`` is used to test for idempotency; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block lightweight provider, or defined using any other pattern that is available in |ruby|
-* ``resource`` is a |chef| resource written as a recipe
-* ``Chef::Log.log_type`` is used to tell |chef| to create a log entry of one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
-* ``updated_by_last_action`` is used to notify a lightweight resource that a node was updated successfully
+* ``test`` is used to test for idempotence; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block elsewhere in the lightweight provider (shown as ``def test()``), or defined using any other pattern that is available in |ruby|
+* ``Chef::Log.log_type`` is used to tell |chef| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
+* ``updated_by_last_action`` is used to notify that a node was updated successfully
+
+Also, commonly used methods (but not shown in the previous example) are ``current_resource``, ``load_current_resource``, and ``new_resource``.
+
+For example:
+
+.. code-block:: ruby
+
+   xxxxx
 
 
-Provider DSL Methods
+|dsl provider| Methods
 =====================================================
-The Provider DSL is a Ruby DSL that is used to define a lightweight provider. The Provider DSL also helps ensure that a lightweight provider takes the correct actions when its corresponding lightweight resource is used in a recipe. The Provider DSL is a small DSL with just a few methods that are specific to |chef|. Because the Provider DSL is a Ruby DSL, then anything that can be done using Ruby can also be done as part of defining a lightweight provider.
+The |dsl provider| is a |ruby| DSL that is used to help define a lightweight provider and to ensure that a lightweight provider takes the correct actions when it is called from a recipe. The |dsl provider| is a small DSL with just a few methods that are specific to |chef|. Because the |dsl provider| is a |ruby| DSL, anything that can be done using |ruby| can also be done when defining a lightweight provider.
 
 action
 -----------------------------------------------------
-The ``action`` method is used to define the steps that will be taken for each of the possible actions defined by the lightweight resource. Each action must be defined separately, but within the same lightweight provider Ruby file. The syntax for the ``action`` method is as follows:
+The ``action`` method is used to define the steps that will be taken for each of the possible actions defined by the lightweight resource. Each action must be defined in separate ``action`` blocks within the same file. The syntax for the ``action`` method is as follows:
 
 .. code-block:: ruby
 
@@ -115,36 +80,94 @@ The ``action`` method is used to define the steps that will be taken for each of
      if @current_resource.exists
        Chef::Log.info "#{ @new_resource } already exists - nothing to do."
      else
-       converge_by("Create #{ new_resource }") do
-         # the action
+       resource "resource_name" do
+         Chef::Log.info "#{ @new_resource } created."
        end
      end
+     new_resource.updated_by_last_action(true)
    end
 
 where:
 
-* ``:action_name`` corresponds to an action defined in a lightweight resource
-* ``@current_resource.exists`` is an instance variable that is used to check if the object already exists; this is an example of a test for idempotency
-* If the object does not already exist, ``# the action`` is |ruby| code that tells |chef| what to do
-* ``converge_by`` tells |chef| which log entry to use when |chef| is run in |whyrun| mode
+* ``:action_name`` corresponds to an action defined by a lightweight resource
+* ``if @current_resource.exists`` is a condition test that is using an instance variable to see if the object already exists; this is an example of a test for idempotency
+* If the object already exists, a ``#{ @new_resource } already exists - nothing to do.`` log entry is created
+* If the object does not already exists, the ``resource`` block is run. This block is a recipe that tells |chef| what to do. A ``#{ @new_resource } created.`` log entry is created
 
-resource
+.. note:: The ``converge_by`` method is not included in the previous syntax example because when |whyrun| mode is enabled in a lightweight provider that leverages core |chef| resources, the ``converge_by`` blocks are already defined.
+
+converge_by
 -----------------------------------------------------
-A resource is created during the |chef| run as |chef| processes all of the recipes in the run-list. All resources are processed in a specific order. There are resources that are created by |chef| as part of the |chef| run (new resources). These resources are then compared to the resources that exist on the node itself (current resources). Depending on the conditions defined within the recipe and a comparison of the new and current resources, |chef| then determines which actions to take (including not taking any action at all).
+The ``converge_by`` method is used to xxxxx.
 
-|chef| uses the following methods to handle resources:
+current_resource
+-----------------------------------------------------
+The ``current_resource`` method is used to represent a resource as it exists on the node at the beginning of the |chef| run. In other words: what the resource is currently. |chef| compares the resource as it exists on the node to the resource that is created during the |chef| run to determine what steps need to be taken to bring the resource into the desired state. This method is often used as an instance variable (``@current_resource``).
 
-* ``new_resource``
-* ``current_resource``
-* ``load_current_resource``
-* ``?????``
+For example:
 
-These methods can also be instance variables (``@``):
+.. code-block:: ruby
 
-* ``@new_resource``
-* ``@current_resource``
-* ``@load_current_resource``
-* ``@?????``
+   action :add do
+     unless @current_resource.exists
+       cmd = "#{appcmd} add app /site.name:\"#{@new_resource.app_name}\""
+       cmd << " /path:\"#{@new_resource.path}\""
+       cmd << " /applicationPool:\"#{@new_resource.application_pool}\"" if @new_resource.application_pool
+       cmd << " /physicalPath:\"#{@new_resource.physical_path}\"" if @new_resource.physical_path
+       Chef::Log.debug(cmd)
+       shell_out!(cmd)
+       Chef::Log.info("App created")
+     else
+       Chef::Log.debug("#{@new_resource} app already exists - nothing to do")
+     end
+   end
+
+where the ``unless`` conditional statement checks to make sure the resource doesn't already exist, and then runs a series of commands if it doesn't. If the resource already exists, the log entry would be "Foo app already exists - nothing to do."
+
+load_current_resource
+-----------------------------------------------------
+The ``load_current_resource`` method is used to find a resource on a node based on a collection of attributes. These attributes are defined in a lightweight resource and are loaded by |chef| when processing a recipe during a |chef| run. This method will ask |chef| to look on the node to see if a resource exists with specific matching attributes.
+
+For example:
+
+.. code-block:: ruby
+
+   def load_current_resource
+     @current_resource = Chef::Resource::TransmissionTorrentFile.new(@new_resource.name)
+     Chef::Log.debug("#{@new_resource} torrent hash = #{torrent_hash}")
+     @transmission = Opscode::Transmission::Client.new("foo:#{@new_resource.att1}@#{@new_resource.att2}:#{@new_resource.att3}/path")
+     @torrent = nil
+     begin
+       @torrent = @transmission.get_torrent(torrent_hash)
+       Chef::Log.info("Found existing #{@new_resource} in swarm with name of '#{@torrent.name}' and status of '#{@torrent.status_message}'")
+       @current_resource.torrent(@new_resource.torrent)
+     rescue
+       Chef::Log.debug("Cannot find #{@new_resource} in the swarm")
+     end
+     @current_resource
+   end
+
+new_resource
+-----------------------------------------------------
+The ``new_resource`` method is used to represent a resource as it exists as loaded by |chef| during the |chef| run. In other words: what the resource should be. |chef| compares the resource as it exists on the node to the resource that is created during the |chef| run to determine what steps need to be taken to bring the resource into the desired state. This method can be used as an instance variable (``@new_resource``).
+
+For example:
+
+.. code-block:: ruby
+
+   action :delete do 
+    if exists?
+      if ::File.writable?(@new_resource.path)
+        Chef::Log.info("Deleting #{@new_resource} at #{@new_resource.path}")
+        ::File.delete(@new_resource.path)
+        new_resource.updated_by_last_action(true)
+      else
+        raise "Cannot delete #{@new_resource} at #{@new_resource.path}!"
+      end
+    end
+  end
+
+where |chef| checks to see if the file exists, then if the file is writable, and then attempts to delete the resource. ``path`` is an attribute of the new resource that is defined by the lightweight resource.
 
 updated_by_last_action
 -----------------------------------------------------
@@ -177,57 +200,6 @@ The ``updated_by_last_action`` method is used to notify a lightweight resource t
    end
 
 where ``t.updated_by_last_action?`` uses a variable to check whether a new crontab entry was created from a template file and the |resource template| resource.
-
-use_inline_resources
------------------------------------------------------
-A lightweight resource is created by the ``action`` block of a lightweight provider. When the resource collection is compiled, and as a lightweight resource is discovered by |chef|, each lightweight resource is inserted into the resource collection after the point at which it was discovered. For example, a resource collection may start out like this:
-
-.. code-block:: ruby
-
-   resource_one
-   resource_two
-   resource_three
-
-If a lightweight resource is discovered while processing the second resource, it will be inserted into the resource collection like this:
-
-.. code-block:: ruby
-
-   resource_one
-   resource_two
-     lightweight_resource_one
-   resource_three
-
-If that lightweight resource then contains references to other |chef| resources (like |resource file|, |resource template|, or |resource cookbook_file|), then those additional resources are inserted into the resource collection in much the same way as the lightweight resource was. For example:
-
-.. code-block:: ruby
-
-   resource_one
-   resource_two
-     lightweight_resource_one
-       embedded_resource_a
-       embedded_resource_b
-   resource_three
-
-where resources are processed in exactly the same order as defined by the resource collection. In addition, each resource is processed fully before |chef| moves on to the next resource in the resource collection. 
-
-This is how |chef| processes resources.
-
-This behavior can create an situation where |chef| resources which have been embedded into the resource collection by a lightweight resource are unable to notify their parent lightweight resource when processing is finished. For example:
-
-.. code-block:: ruby
-
-   resource_one
-     lightweight_resource_one
-       a
-       b
-   resource_two
-     lightweight_resource_two
-       c
-   resource_three
-
-where embedded resources ``a`` and ``b`` would be unable to notify ``lightweight_resource_one`` and embedded resource ``c`` would be unable to notify ``lightweight_resource_two``.
-
-This is the default behavior of |chef|. This is often not the desired behavior. To resolve this issue, an additional method named ``use_inline_resources`` is added to the top of a lightweight provider. This method ensures that |chef| executes the ``action`` blocks within that lightweight resource as part of a self-contained |chef| run and then also ensures that |chef| can notify the parent lightweight resource when the embedded resources have finished processing. Once notified, the parent lightweight resource is marked as updated (``updated_by_last_action``) and then any notifications that are set on that lightweight resource may be triggered normally.
 
 whyrun_supported?
 -----------------------------------------------------
@@ -338,6 +310,9 @@ Another example shows two log entries, one that is triggered when a service is b
 Use a Custom Library
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider_extend.rst
+
+
+INCLUDE AND REQUIRE
 
 Examples
 =====================================================
