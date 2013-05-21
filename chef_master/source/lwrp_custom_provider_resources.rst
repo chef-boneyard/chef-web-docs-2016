@@ -513,17 +513,27 @@ The ``entry`` lightweight provider (from the ``ssh_known_hosts`` cookbook) is us
 
 rabbitmq_plugin
 -----------------------------------------------------
-The ``rabbitmq_plugin`` lightweight provider is used to tell |chef| how to handle two actions (``:disable`` and ``:enable``) that are used to manage |rabbitmq| plugins:
+The ``rabbitmq_plugin`` lightweight provider is used to tell |chef| how to handle two actions (``:disable`` and ``:enable``) that are used to manage |rabbitmq| plugins. Using a lightweight resource in a recipe is simple:
 
 .. code-block:: ruby
 
-   rabbitmq_plugin "plugin_name" do
-     action :action
+   rabbitmq_plugin "my_plugin" do
+     action :enable
    end
 
 The lightweight provider is doing most of the work:
 
 .. code-block:: ruby
+   
+   action :enable do
+     unless plugin_enabled?(new_resource.plugin)
+       execute "rabbitmq-plugins enable #{new_resource.plugin}" do
+         Chef::Log.info "Enabling RabbitMQ plugin '#{new_resource.plugin}'."
+         path plugins_bin_path(true)
+         new_resource.updated_by_last_action(true)
+       end
+     end
+   end
 
    def plugins_bin_path(return_array=false)
      path = ENV.fetch('PATH') + ':/usr/lib/rabbitmq/bin'
@@ -540,25 +550,5 @@ The lightweight provider is doing most of the work:
      Chef::Log.debug "rabbitmq_plugin_enabled?: #{cmd.stdout}"
      cmd.error!
      cmd.stdout =~ /\b#{name}\b/
-   end
-   
-   action :enable do
-     unless plugin_enabled?(new_resource.plugin)
-       execute "rabbitmq-plugins enable #{new_resource.plugin}" do
-         Chef::Log.info "Enabling RabbitMQ plugin '#{new_resource.plugin}'."
-         path plugins_bin_path(true)
-         new_resource.updated_by_last_action(true)
-       end
-     end
-   end
-   
-   action :disable do
-     if plugin_enabled?(new_resource.plugin)
-       execute "rabbitmq-plugins disable #{new_resource.plugin}" do
-         Chef::Log.info "Disabling RabbitMQ plugin '#{new_resource.plugin}'."
-         path plugins_bin_path(true)
-         new_resource.updated_by_last_action(true)
-       end
-     end
    end
 
