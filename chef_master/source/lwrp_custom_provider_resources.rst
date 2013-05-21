@@ -118,7 +118,7 @@ where:
 
 .. note:: The ``converge_by`` method is not included in the previous syntax example because when |whyrun| mode is enabled in a lightweight provider that leverages core |chef| resources, the ``converge_by`` blocks are already defined.
 
-resource
+Resources
 -----------------------------------------------------
 A resource is created during the |chef| run as |chef| processes all of the recipes in the run-list.
 
@@ -133,37 +133,55 @@ The following methods can be used in a lightweight provider to handle resources:
 * ``current_resource`` represents the resource as it exists on the node
 * ``load_current_resource`` attempts to find on the node an existing resource that matches the one |chef| is being asked to create; |chef| does this automatically
 
-These methods can also be instance variables (``@``):
-
-* ``@new_resource``
-* ``@current_resource``
+current_resource
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The ``current_resource`` method is used to represent a resource as it exists on the node at the beginning of the |chef| run. In other words: what the resource is currently. |chef| compares the resource as it exists on the node to the resource that is created during the |chef| run to determine what steps need to be taken to bring the resource into the desired state. This method is often used as an instance variable (``@current_resource``).
 
 For example:
 
 .. code-block:: ruby
 
-   xxxxx
+   action :add do
+     unless @current_resource.exists
+       cmd = "#{appcmd} add app /site.name:\"#{@new_resource.app_name}\""
+       cmd << " /path:\"#{@new_resource.path}\""
+       cmd << " /applicationPool:\"#{@new_resource.application_pool}\"" if @new_resource.application_pool
+       cmd << " /physicalPath:\"#{@new_resource.physical_path}\"" if @new_resource.physical_path
+       Chef::Log.debug(cmd)
+       shell_out!(cmd)
+       Chef::Log.info("App created")
+     else
+       Chef::Log.debug("#{@new_resource} app already exists - nothing to do")
+     end
+   end
 
-current_resource
------------------------------------------------------
-The ``current_resource`` method is used to xxxxx. This method is often used as an instance variable (``@current_resource``).
+where the ``unless`` conditional statement checks to make sure the resource doesn't already exist, and then runs a series of commands if it doesn't. If the resource already exists, the log entry would be "Foo app already exists - nothing to do."
 
 new_resource
------------------------------------------------------
-The ``new_resource`` method is used to xxxxx. This method is often used as an instance variable (``@new_resource``).
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The ``new_resource`` method is used to represent a resource as it exists as loaded by |chef| during the |chef| run. In other words: what the resource should be. |chef| compares the resource as it exists on the node to the resource that is created during the |chef| run to determine what steps need to be taken to bring the resource into the desired state. This method can be used as an instance variable (``@new_resource``).
 
+For example:
+
+.. code-block:: ruby
+
+   action :delete do 
+    if exists?
+      if ::File.writable?(@new_resource.path)
+        Chef::Log.info("Deleting #{@new_resource} at #{@new_resource.path}")
+        ::File.delete(@new_resource.path)
+        new_resource.updated_by_last_action(true)
+      else
+        raise "Cannot delete #{@new_resource} at #{@new_resource.path}!"
+      end
+    end
+  end
+
+where |chef| checks to see if the file exists, then if the file is writable, and then attempts to delete the resource. ``path`` is an attribute of the new resource that is defined by the lightweight resource.
 
 load_current_resource
------------------------------------------------------
-The ``load_current_resource`` method is used to find a resource on a node based on a collection of attributes. These attributes are defined in the lightweight resource and are loaded when |chef| is processing a recipe during a |chef| run. This method will ask |chef| to look on the node to see if a resource exists with specific matching attributes.
-
-
-|chef| automatically looks on the node to see if a resource exists with criteria that matches the resource it is being asked to manage. The ``load_current_resource`` allows a lightweight provider to override the default behavior with additional processing details.
-
-
-. The information that |chef| uses to find this resource is based on the attributes defined in the lightweight resource. |chef| does this step automatically by default; this method should be used to override the default behavior so that |chef| does something specific with that information.
-
-
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+The ``load_current_resource`` method is used to find a resource on a node based on a collection of attributes. These attributes are defined in a lightweight resource and are loaded by |chef| when processing a recipe during a |chef| run. This method will ask |chef| to look on the node to see if a resource exists with specific matching attributes.
 
 For example:
 
@@ -183,7 +201,6 @@ For example:
      end
      @current_resource
    end
-
 
 
 updated_by_last_action
@@ -358,7 +375,6 @@ For example, from the ``repository.rb`` provider in the |cookbook yum| cookbook:
        repo_config
      end
    end
-
 
 where the ``Chef::Log`` class appends ``.info`` as the log type. If the name of the repo was "foo", then the log message would be "Adding foo repository to /etc/yum.repos.d/foo.repo".
 
