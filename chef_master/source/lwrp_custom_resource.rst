@@ -74,7 +74,7 @@ where
 
 |dsl resource| Methods
 =====================================================
-The |dsl resource| is a |ruby| DSL that is used to define a lightweight resource. The |dsl resource| also helps ensure that lightweight resources provide its corresponding lightweight provider the correct information. The |dsl resource| is a small DSL with just three methods. Because the |dsl resource| is a Ruby DSL, then anything that can be done using Ruby can also be done as part of defining a lightweight resource.
+The |dsl resource| is a |ruby| DSL that is used to help define a lightweight resource and to ensure that a lightweight resource provides the correct information to a lightweight provider. The |dsl resource| is a small DSL with just three methods. Because the |dsl resource| is a Ruby DSL, anything that can be done using Ruby can also be done as part of defining a lightweight resource.
 
 action
 -----------------------------------------------------
@@ -95,6 +95,16 @@ The ``attribute`` method is used to define a list of attributes and any of those
    attribute :attribute_name :validation_parameter => value, :validation_parameter => value
 
 where ``attribute`` must have an attribute name and zero (or more) validation parameters.
+
+attr_accessor
+-----------------------------------------------------
+The ``attr_accessor`` method is used to define custom xxxxx that can be used in a lightweight provider to xxxxx. The syntax for the ``attr_accessor`` method is as follows:
+
+.. code-block:: ruby
+
+   attr_accessor :accessor_name, :accessor_name
+
+where ``accessor_name`` is a comma-delimited list of individual xxxxx.
 
 default_action
 -----------------------------------------------------

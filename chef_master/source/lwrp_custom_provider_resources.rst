@@ -46,10 +46,10 @@ where:
 * ``use_inline_resources`` is used to tell |chef| to execute ``action`` blocks as part of a self-contained |chef| run. Using this method ensures that |chef| can notify parent lightweight resources after embedded resources have finished processing
 * ``action`` is the code block that tells |chef| what to do when the ``:action_name`` is used in a recipe
 * ``condition`` is a |ruby| condition statement (``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, or ``for``)
-* ``test`` is used to test for idempotence; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block elsewhere in the lightweight provider, or defined using any other pattern that is available in |ruby|
+* ``test`` is used to test for idempotence; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block elsewhere in the lightweight provider (shown as ``def test()``), or defined using any other pattern that is available in |ruby|
 * ``resource`` is a |chef| resource written as a recipe
 * ``Chef::Log.log_type`` is used to tell |chef| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
-* ``updated_by_last_action`` is used to notify a lightweight resource that a node was updated successfully
+* ``updated_by_last_action`` is used to notify that a node was updated successfully
 
 For example:
 
@@ -90,11 +90,11 @@ For example:
 
 |dsl provider| Methods
 =====================================================
-The |dsl provider| is a |ruby| DSL that is used to define a lightweight provider. The |dsl provider| also helps ensure that a lightweight provider takes the correct actions when its corresponding lightweight resource is used in a recipe. The |dsl provider| is a small DSL with just a few methods that are specific to |chef|. Because the |dsl provider| is a |ruby| DSL, then anything that can be done using |ruby| can also be done when defining a lightweight provider.
+The |dsl provider| is a |ruby| DSL that is used to help define a lightweight provider and to ensure that a lightweight provider takes the correct actions when it is called from a recipe. The |dsl provider| is a small DSL with just a few methods that are specific to |chef|. Because the |dsl provider| is a |ruby| DSL, anything that can be done using |ruby| can also be done when defining a lightweight provider.
 
 action
 -----------------------------------------------------
-The ``action`` method is used to define the steps that will be taken for each of the possible actions defined by the lightweight resource. Each action must be defined separately, but within the same lightweight provider Ruby file. The syntax for the ``action`` method is as follows:
+The ``action`` method is used to define the steps that will be taken for each of the possible actions defined by the lightweight resource. Each action must be defined in separate ``action`` blocks within the same file. The syntax for the ``action`` method is as follows:
 
 .. code-block:: ruby
 
@@ -102,18 +102,21 @@ The ``action`` method is used to define the steps that will be taken for each of
      if @current_resource.exists
        Chef::Log.info "#{ @new_resource } already exists - nothing to do."
      else
-       converge_by("Create #{ new_resource }") do
-         # the action
+       resource "resource_name" do
+         Chef::Log.info "#{ @new_resource } created."
        end
      end
+     new_resource.updated_by_last_action(true)
    end
 
 where:
 
-* ``:action_name`` corresponds to an action defined in a lightweight resource
-* ``@current_resource.exists`` is an instance variable that is used to check if the object already exists; this is an example of a test for idempotency
-* If the object does not already exist, ``# the action`` is |ruby| code that tells |chef| what to do
-* ``converge_by`` tells |chef| which log entry to use when |chef| is run in |whyrun| mode
+* ``:action_name`` corresponds to an action defined by a lightweight resource
+* ``if @current_resource.exists`` is a condition test that is using an instance variable to see if the object already exists; this is an example of a test for idempotency
+* If the object already exists, a ``#{ @new_resource } already exists - nothing to do.`` log entry is created
+* If the object does not already exists, the ``resource`` block is run. This block is a recipe that tells |chef| what to do. A ``#{ @new_resource } created.`` log entry is created
+
+.. note:: The ``converge_by`` method is not included in the previous syntax example because when |whyrun| mode is enabled in a lightweight provider that leverages core |chef| resources, the ``converge_by`` blocks are already defined.
 
 resource
 -----------------------------------------------------

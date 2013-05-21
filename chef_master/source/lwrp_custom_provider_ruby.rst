@@ -285,13 +285,13 @@ In the following example an ``unless`` statement is used to add a key, unless th
        notifies :run, "execute[import-rpm-gpg-key-#{new_resource.key}]", :immediately
      end
    end
-
-action :add do
-  unless ::File.exists?("/etc/yum.repos.d/#{new_resource.repo_name}.repo")
-    Chef::Log.info "Adding #{new_resource.repo_name} repository to /etc/yum.repos.d/#{new_resource.repo_name}.repo"
-    repo_config
-  end
-end
+   
+   action :add do
+     unless ::File.exists?("/etc/yum.repos.d/#{new_resource.repo_name}.repo")
+       Chef::Log.info "Adding #{new_resource.repo_name} repository to /etc/yum.repos.d/#{new_resource.repo_name}.repo"
+       repo_config
+     end
+   end
 
 
 Log Entries
