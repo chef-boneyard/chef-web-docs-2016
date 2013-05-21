@@ -309,10 +309,13 @@ Another example shows two log entries, one that is triggered when a service is b
 
 Use a Custom Library
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider_extend.rst
+A lightweight provider can extend another provider class. This can be done as a ``mixin``, which is then placed in a library under the ``library/`` directory of any cookbook that will use the extended provider class. The lightweight provider is then written to include that library in its implementation so that it has access to the extended core resource. Use the ``include`` method in the lightweight provider to ensure that a lightweight provider has access to an external library.
 
+For example:
 
-INCLUDE AND REQUIRE
+.. code-block:: ruby
+
+   include Chef::Class::Name
 
 Examples
 =====================================================
@@ -326,7 +329,27 @@ xxxxx
 -----------------------------------------------------
 xxxxx
 
-xxxxx
+rbenbv_global
 -----------------------------------------------------
-xxxxx
+The ``global.rb`` lightweight provider from the `chef-rbenv <https://github.com/fnichol/chef-rbenv>`_ cookbook shows a custom lightweight provider that  sets the global version of |ruby|:
+
+.. code-block:: ruby
+
+   include Chef::Rbenv::ScriptHelpers
+   
+   action :create do
+     if current_global_version != new_resource.rbenv_version
+       command = %{rbenv global #{new_resource.rbenv_version}}
+       rbenv_script "#{command} #{which_rbenv}" do
+         code        command
+         user        new_resource.user       if new_resource.user
+         root_path   new_resource.root_path  if new_resource.root_path
+         action      :nothing
+       end.run_action(:run)
+   
+       new_resource.updated_by_last_action(true)
+     else
+       Chef::Log.debug("#{new_resource} is already set - nothing to do")
+     end
+   end
 
