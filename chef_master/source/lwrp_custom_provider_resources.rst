@@ -120,21 +120,71 @@ where:
 
 resource
 -----------------------------------------------------
-A resource is created during the |chef| run as |chef| processes all of the recipes in the run-list. All resources are processed in a specific order. There are resources that are created by |chef| as part of the |chef| run (new resources). These resources are then compared to the resources that exist on the node itself (current resources). Depending on the conditions defined within the recipe and a comparison of the new and current resources, |chef| then determines which actions to take (including not taking any action at all).
+A resource is created during the |chef| run as |chef| processes all of the recipes in the run-list.
 
-|chef| uses the following methods to handle resources:
+* All resources are processed in a specific order
+* Some resources that are created by |chef| as part of the |chef| run ("new resources")
+* Some resources already exist on the node ("current resources")
+* New and current resources are compared and |chef| then determines what actions to take based on the comparison of those two states
 
-* ``new_resource``
-* ``current_resource``
-* ``load_current_resource``
-* ``?????``
+The following methods can be used in a lightweight provider to handle resources:
+
+* ``new_resource`` represents the resource that is created by |chef| during the |chef| run
+* ``current_resource`` represents the resource as it exists on the node
+* ``load_current_resource`` attempts to find on the node an existing resource that matches the one |chef| is being asked to create; |chef| does this automatically
 
 These methods can also be instance variables (``@``):
 
 * ``@new_resource``
 * ``@current_resource``
-* ``@load_current_resource``
-* ``@?????``
+
+For example:
+
+.. code-block:: ruby
+
+   xxxxx
+
+current_resource
+-----------------------------------------------------
+The ``current_resource`` method is used to xxxxx. This method is often used as an instance variable (``@current_resource``).
+
+new_resource
+-----------------------------------------------------
+The ``new_resource`` method is used to xxxxx. This method is often used as an instance variable (``@new_resource``).
+
+
+load_current_resource
+-----------------------------------------------------
+The ``load_current_resource`` method is used to find a resource on a node based on a collection of attributes. These attributes are defined in the lightweight resource and are loaded when |chef| is processing a recipe during a |chef| run. This method will ask |chef| to look on the node to see if a resource exists with specific matching attributes.
+
+
+|chef| automatically looks on the node to see if a resource exists with criteria that matches the resource it is being asked to manage. The ``load_current_resource`` allows a lightweight provider to override the default behavior with additional processing details.
+
+
+. The information that |chef| uses to find this resource is based on the attributes defined in the lightweight resource. |chef| does this step automatically by default; this method should be used to override the default behavior so that |chef| does something specific with that information.
+
+
+
+For example:
+
+.. code-block:: ruby
+
+   def load_current_resource
+     @current_resource = Chef::Resource::TransmissionTorrentFile.new(@new_resource.name)
+     Chef::Log.debug("#{@new_resource} torrent hash = #{torrent_hash}")
+     @transmission = Opscode::Transmission::Client.new("foo:#{@new_resource.att1}@#{@new_resource.att2}:#{@new_resource.att3}/path")
+     @torrent = nil
+     begin
+       @torrent = @transmission.get_torrent(torrent_hash)
+       Chef::Log.info("Found existing #{@new_resource} in swarm with name of '#{@torrent.name}' and status of '#{@torrent.status_message}'")
+       @current_resource.torrent(@new_resource.torrent)
+     rescue
+       Chef::Log.debug("Cannot find #{@new_resource} in the swarm")
+     end
+     @current_resource
+   end
+
+
 
 updated_by_last_action
 -----------------------------------------------------
@@ -323,6 +373,20 @@ Another example shows two log entries, one that is triggered when a service is b
        new_resource.updated_by_last_action(true)
        Chef::Log.debug "Restarted #{new_resource.service_name}"
      end
+   end
+
+Use the ``rescue`` clause to make sure that a log message is always provided. For example:
+
+.. code-block:: ruby
+
+   def load_current_resource
+     ...
+     begin
+       ...
+     rescue
+       Chef::Log.debug("Cannot find #{@new_resource} in the swarm")
+     end
+     ...
    end
 
 
