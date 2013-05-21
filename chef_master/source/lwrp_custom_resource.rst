@@ -19,10 +19,10 @@ The syntax for a lightweight resource is as follows:
    actions :action_name1, :action_name2, :action_name...
    default_action :action_name1
    
-   attribute :attribute_name :kind_of => value, :name_attribute => true
-   attribute :attribute_name :kind_of => value, :validation_parameter => value
+   attribute :attribute_name, :kind_of => value, :name_attribute => true
+   attribute :attribute_name, :kind_of => value, :validation_parameter => value
    ...
-   attribute :attribute_name :kind_of => value, :validation_parameter => value
+   attribute :attribute_name, :kind_of => value, :validation_parameter => value
 
    attr_accessor :attribute, :attribute
 

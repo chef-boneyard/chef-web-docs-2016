@@ -6,7 +6,7 @@ Custom Lightweight Providers w/Ruby
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
-A lightweight provider is always authored using |ruby|; anything that can be done using |ruby| can also be done in a lightweight provider. In addition to |ruby|, the Provider DSL provides additional methods that are specific to |chef|.
+A lightweight provider is a custom provider that defines the steps that are required to complete one (or more) actions defined by a lightweight resource. The lightweight provider and lightweight resource that work together to tell |chef| what action to take and how to do it must be located in the same cookbook (the ``/providers`` and ``/resources`` subdirectories); together, they are referred as a LWRP (or "lightweight resource provider"). A lightweight provider is always authored using |ruby|. Anything that can be done using |ruby| can be done in a lightweight provider. In addition to using |ruby|, the |dsl provider| provides additional methods that are specific to |chef|.
 
 Syntax
 =====================================================
@@ -29,12 +29,12 @@ The syntax for a lightweight provider is as follows:
      true
    end
 
-   action :action_name1 do
-     # some Ruby code
-     if method1
-       converge_by("message") do
-         # some Ruby code
-       end
+   action :action_name do
+     condition test
+       # some Ruby code
+         converge_by("message") do
+           # some Ruby code
+         end
      else
        # some Ruby code
    end
@@ -46,18 +46,19 @@ The syntax for a lightweight provider is as follows:
        end
      end
 
-   action :action_name... do
-     # some Ruby code
+   action :action_name do
      converge_by("message") do
-       if method2
-       # some Ruby code
+       condition test
+         # some Ruby code
        end
+       Chef::Log.log_type "log_message"
      end
+     new_resource.updated_by_last_action(true)
    end
 
    ...
 
-   def method1?
+   def test?()
      # some Ruby code
    end
 

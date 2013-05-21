@@ -37,7 +37,7 @@ The syntax for a lightweight provider that is built to leverage |chef| resources
    end
    
    def test()
-     # Ruby code
+     # some Ruby code
    end
 
 where:
