@@ -6,18 +6,17 @@ Custom Lightweight Providers w/Ruby
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
-A lightweight provider is a custom provider that defines the steps that are required to complete one (or more) actions defined by a lightweight resource. The lightweight provider and lightweight resource that work together to tell |chef| what action to take and how to do it must be located in the same cookbook (the ``/providers`` and ``/resources`` subdirectories); together, they are referred as a LWRP (or "lightweight resource provider"). A lightweight provider is always authored using |ruby|. Anything that can be done using |ruby| can be done in a lightweight provider. In addition to using |ruby|, the |dsl provider| provides additional methods that are specific to |chef|.
+A lightweight provider is a custom provider that defines the steps that are required to complete one (or more) actions defined by a lightweight resource. A lightweight provider and lightweight resource work together, each being defined in the same cookbook (the ``/providers`` and ``/resources`` subdirectories, respectively); together, they are referred as a LWRP (or "lightweight resource provider"). A lightweight provider is always authored using |ruby|. Anything that can be done using |ruby| can be done in a lightweight provider. In addition to using |ruby|, the |dsl provider| provides additional methods that are specific to |chef|.
 
 Syntax
 =====================================================
-This section shows some of the more common elements that appear in lightweight providers, including lightweight provider-specific methods, but also some basic |ruby| elements too. Know that many lightweight providers do not contain as much code as this syntax example does. Remember:
+This section shows some of the common structural elements that appear a lightweight provider that is built using custom |ruby| code. Remember:
 
-* The structure of a lightweight provider can vary, depending on what a lightweight provider is being asked to do
+* A lightweight provider tells |chef| how to complete a task
+* The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action
 * At its core, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider
-* A lightweight provider tells |chef| how to handle the actions that are defined by a lightweight resource
-* The complexity of the lightweight provider simply depends on what the lightweight provider needs to do; if a lightweight provider feels too complex, try breaking it down into smaller tasks (and creating more)
 
-The syntax for a lightweight provider is as follows:
+The syntax for a lightweight provider that is built using custom |ruby| code is as follows:
 
 .. code-block:: ruby
 
