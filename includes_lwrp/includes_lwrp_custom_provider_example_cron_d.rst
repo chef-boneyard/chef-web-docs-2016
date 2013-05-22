@@ -1,0 +1,57 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+
+The ``cron_d`` lightweight provider (found in the `cron <https://github.com/opscode-cookbooks/cron>`_ cookbook maintained by |opscode|) is used to tell |chef| what to do whenever the ``cron_d`` lightweight resource is used in a recipe:
+
+.. code-block:: ruby
+
+   action :delete do
+     file "/etc/cron.d/#{new_resource.name}" do
+       action :delete
+     end
+   end
+   
+   action :create do
+     t = template "/etc/cron.d/#{new_resource.name}" do
+       cookbook new_resource.cookbook
+       source "cron.d.erb"
+       mode "0644"
+       variables({
+           :name => new_resource.name, 
+           :minute => new_resource.minute,
+           :hour => new_resource.hour,
+           :day => new_resource.day,
+           :month => new_resource.month,
+           :weekday => new_resource.weekday,
+           :command => new_resource.command,
+           :user => new_resource.user,
+           :mailto => new_resource.mailto,
+           :path => new_resource.path,
+           :home => new_resource.home,
+           :shell => new_resource.shell
+         })
+       action :create
+     end
+     new_resource.updated_by_last_action(t.updated_by_last_action?)
+   end
+
+
+where:
+
+* two ``action`` blocks are defined, one for the ``:create`` action and one for the ``:delete`` action
+* the ``:delete`` action block calls the |resource file| resource (and it's ``:delete`` action) to delete a file in the ``/etc/cron.d`` folder
+* the ``:create`` action block creates a new entry in the ``/etc/cron.d`` folder. 
+
+For example, if a recipe used the ``cron_d`` lightweight resource similar to the following:
+
+.. code-block:: ruby
+
+   cron_d "daily-usage-report" do
+     minute 0
+     hour 23
+     command "/srv/app/scripts/daily_report"
+     user "appuser"
+   end
+
+this tells |chef| to use the ``cron_d`` lightweight provider and the credentials for a user named ``appuser`` to create a |crontab| entry named "daily-usage-report". This |crontab| entry executes a command located in the ``/srv/app/scripts/daily_report`` directory at a specified interval (defined by the ``minute`` and ``hour`` attributes). Any of the attributes that are not specified in the recipe (such as ``mailto``, ``weekday``, and ``day``) just use the default attribute values defined by the lightweight resource.

@@ -50,7 +50,7 @@ where:
 * ``include`` is a standard |ruby| method that allows a lightweight provider to include a class, such as ``Chef::Mixin::ShellOut`` or ``Windows::Helper``
 * ``whyrun_supported?`` indicates that a provider supports running a resource in |whyrun| mode
 * ``action`` is a block of |ruby| code that tells |chef| what to do when the ``:action_name`` lightweight resource is used in a recipe; there are many possible structures an action block may take and the syntax in the previous example is just one way to do this
-* ``converge_by()`` tells |chef| what do if this resource is run in |whyrun| mode and the ``"message"`` that |chef| will log
+* ``converge_by()`` is used to provide |chef| a ``"message"`` to be returned when a resource is run in |whyrun| mode
 * ``condition`` is a |ruby| condition statement (``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, or ``for``)
 * ``test`` is used to test for idempotence; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block elsewhere in the lightweight provider (shown as ``def test()``), or defined using any other pattern that is available in |ruby|
 * ``Chef::Log.log_type`` is used to tell |chef| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
@@ -97,7 +97,9 @@ where:
 
 converge_by
 -----------------------------------------------------
-The ``converge_by`` method is used to xxxxx.
+The ``converge_by`` method is a wrapper that is used to tell |chef| what do if this resource is run in |whyrun| mode and the ``"message"`` that |chef| will log.
+
+* ``converge_by()`` 
 
 current_resource
 -----------------------------------------------------
@@ -322,33 +324,12 @@ The following examples show various lightweight providers that rely on custom |r
 
 xxxxx
 -----------------------------------------------------
-xxxxx
+The ``xxxxx`` lightweight provider (found in the `xxxxx <xxxxx>`_ cookbook maintained by |opscode|) is used to xxxxx.
 
 xxxxx
 -----------------------------------------------------
-xxxxx
+The ``xxxxx`` lightweight provider (found in the `xxxxx <xxxxx>`_ cookbook maintained by |opscode|) is used to xxxxx.
 
 rbenbv_global
 -----------------------------------------------------
-The ``global.rb`` lightweight provider from the `chef-rbenv <https://github.com/fnichol/chef-rbenv>`_ cookbook shows a custom lightweight provider that  sets the global version of |ruby|:
-
-.. code-block:: ruby
-
-   include Chef::Rbenv::ScriptHelpers
-   
-   action :create do
-     if current_global_version != new_resource.rbenv_version
-       command = %{rbenv global #{new_resource.rbenv_version}}
-       rbenv_script "#{command} #{which_rbenv}" do
-         code        command
-         user        new_resource.user       if new_resource.user
-         root_path   new_resource.root_path  if new_resource.root_path
-         action      :nothing
-       end.run_action(:run)
-   
-       new_resource.updated_by_last_action(true)
-     else
-       Chef::Log.debug("#{new_resource} is already set - nothing to do")
-     end
-   end
-
+.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_example_rbenbv_global.rst

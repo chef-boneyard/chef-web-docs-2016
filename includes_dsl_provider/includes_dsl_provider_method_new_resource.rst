@@ -1,0 +1,24 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+The ``new_resource`` method is used to represent a resource as loaded by |chef| during the |chef| run. In other words: what the resource should be. |chef| compares the resource as it exists on the node to the resource that is created during the |chef| run to determine what steps need to be taken to bring the resource into the desired state. This method can be used as an instance variable (``@new_resource``).
+
+For example:
+
+.. code-block:: ruby
+
+   action :delete do 
+    if exists?
+      if ::File.writable?(@new_resource.path)
+        Chef::Log.info("Deleting #{@new_resource} at #{@new_resource.path}")
+        ::File.delete(@new_resource.path)
+        new_resource.updated_by_last_action(true)
+      else
+        raise "Cannot delete #{@new_resource} at #{@new_resource.path}!"
+      end
+    end
+  end
+
+where |chef| checks to see if the file exists, then if the file is writable, and then attempts to delete the resource. ``path`` is an attribute of the new resource that is defined by the lightweight resource.
+
+
