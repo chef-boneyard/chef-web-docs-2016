@@ -16,7 +16,7 @@ This section shows some of the common structural elements that appear a lightwei
 * The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action
 * At its core, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider
 
-The syntax for a lightweight provider that is built to leverage |chef| resources is as follows:
+The basic syntax for a lightweight provider that is built to leverage |chef| resources is as follows:
 
 .. code-block:: ruby
 
