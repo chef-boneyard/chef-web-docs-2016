@@ -175,10 +175,6 @@ Platform vs. Lightweight
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_compared_to_platform_resource.rst
 
-|opscode|-maintained
-=====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_opscode_maintained.rst
-
 More Reading
 =====================================================
 Doug Ireton (a |chef| community member) has a blog with a nice series on LWRPs:
