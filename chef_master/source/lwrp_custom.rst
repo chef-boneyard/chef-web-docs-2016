@@ -12,14 +12,14 @@ The following sections describe the structure, syntax, and options available for
 
    * - Topic
      - Description
-   * - :doc:`lwrp_custom_resource`
+   * - :doc:`Lightweight Resources </lwrp_custom_resource>`
      - A lightweight resource defines custom actions and attributes.
-   * - :doc:`lwrp_custom_provider`
+   * - :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>`
      - Many lightweight providers are built using only core |chef| resources, such as |resource file|, |resource cookbook_file|, |resource template|, and so on. These types of resources use recipes to tell |chef| when to use core resources during a |chef| run.
-   * - :doc:`lwrp_custom_provider_ruby`
+   * - :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
      - Some lightweight providers are built using custom |ruby| code.
 
-.. warning:: It is recommended to not mix core |chef| resources with custom resources in the same lightweight provider. This helps ensure the proper processing of core |chef| resources that have been embedded into the resource collection during the |chef| run.
+.. warning:: It is recommended to not mix platform |chef| resources with custom resources in the same lightweight provider. This helps ensure the proper processing of core |chef| resources that have been embedded into the resource collection during the |chef| run.
 
 File Locations
 =====================================================

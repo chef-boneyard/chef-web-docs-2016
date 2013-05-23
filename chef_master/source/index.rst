@@ -77,7 +77,7 @@ Cookbooks
 
 **LWRPs:** :doc:`About LWRPs </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
 
-**Other Cookbook Components:** :doc:`About Definitions </essentials_cookbook_definitions>` | :doc:`About Files </essentials_cookbook_files>` | :doc:`About Libraries </essentials_cookbook_libraries>` | :doc:`About Cookbook Metadata </essentials_cookbook_metadata>` | :doc:`About Templates </essentials_cookbook_templates>` | :doc:`About Versions </essentials_cookbook_versions>` | :doc:`About LWRPs </essentials_cookbook_lwrp>`
+**Other Cookbook Components:** :doc:`About Definitions </essentials_cookbook_definitions>` | :doc:`About Files </essentials_cookbook_files>` | :doc:`About Libraries </essentials_cookbook_libraries>` | :doc:`About Cookbook Metadata </essentials_cookbook_metadata>` | :doc:`About Templates </essentials_cookbook_templates>` | :doc:`About Versions </essentials_cookbook_versions>`
 
 **Community Cookbooks:** :doc:`Cookbooks Maintained by Opscode </opscode_cookbooks>` --- **Individual Cookbooks:** :doc:`chef_handler </opscode_cookbooks_chef_handler>` | :doc:`iis </opscode_cookbooks_iis>` | :doc:`python </opscode_cookbooks_python>` | :doc:`supervisor </opscode_cookbooks_supervisor>` | ... `more cookbooks <https://github.com/opscode-cookbooks>`_
 
@@ -155,7 +155,6 @@ Cookbooks
    essentials_cookbook_definitions
    essentials_cookbook_files
    essentials_cookbook_libraries
-   essentials_cookbook_lwrp
    essentials_cookbook_metadata
    essentials_cookbook_recipes
    essentials_cookbook_resources
