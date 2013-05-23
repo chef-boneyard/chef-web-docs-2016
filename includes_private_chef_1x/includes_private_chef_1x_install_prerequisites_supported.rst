@@ -7,5 +7,5 @@
 * |centos| 6.3 or newer
 * |ubuntu| 10.04
 
-|chef private| requires an x86_64 compatible systems architecture. When installing on |redhat enterprise linux| or |centos| please note that we recommend you run 'yum update' prior to the installation of |chef_private| as you may encounter issues due to out of date dependencies |chef_private| requires. 
+|chef private| requires an x86_64 compatible systems architecture. When installing on |redhat enterprise linux| or |centos| please note that we recommend you run 'yum update' prior to the installation of |chef private| as you may encounter issues due to out of date dependencies |chef private| requires. 
 
