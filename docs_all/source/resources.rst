@@ -171,9 +171,9 @@ Examples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The following examples show how to use the ``subscribes`` notification in a recipe.
 
-**Execute code immediately, based on the template resource**
+**Prevent restart and reconfigure if configuration is broken**
 
-.. include:: ../../step_resource/step_resource_template_notifies_run_immediately.rst
+.. include:: ../../step_resource/step_resource_execute_subscribes_prevent_restart_and_reconfigure.rst
 
 **Reload a service using a template**
 
