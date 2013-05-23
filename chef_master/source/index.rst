@@ -75,7 +75,7 @@ Cookbooks
 =====================================================
 **The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>`
 
-**LWRPs:** :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers </lwrp_custom_provider>`
+**LWRPs:** :doc:`Custom Lightweight Resources </lwrp_custom_resource>` | :doc:`Custom Lightweight Providers </lwrp_custom_provider>`
 
 **Other Cookbook Components:** :doc:`About Definitions </essentials_cookbook_definitions>` | :doc:`About Files </essentials_cookbook_files>` | :doc:`About Libraries </essentials_cookbook_libraries>` | :doc:`About Cookbook Metadata </essentials_cookbook_metadata>` | :doc:`About Templates </essentials_cookbook_templates>` | :doc:`About Versions </essentials_cookbook_versions>` | :doc:`About LWRPs </essentials_cookbook_lwrp>`
 
