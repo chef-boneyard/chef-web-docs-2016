@@ -12,7 +12,7 @@ To reload a service based on a template, use the |resource template| and |resour
    service "apache" do
      supports :restart => true, :reload => true
      action :enable
-     subscribes :reload, resources("template[/tmp/somefile]"), :immediately
+     subscribes :reload, "template[/tmp/somefile]", :immediately
    end
 
 where the ``subscribes`` notification is used to reload the service using the template specified by the |resource template| resource.
