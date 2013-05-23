@@ -1,8 +1,6 @@
 =====================================================
-Custom Lightweight Providers w/Ruby
+Lightweight Providers w/Custom Ruby
 =====================================================
-
-.. warning:: DRAFT
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
@@ -10,7 +8,7 @@ Custom Lightweight Providers w/Ruby
 
 Syntax
 =====================================================
-.. include:: ../../includes_dsl_provider/includes_lwrp_custom_provider_syntax_ruby.rst
+.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst
 
 |dsl provider| Methods
 =====================================================
@@ -63,14 +61,6 @@ Use a Custom Library
 Examples
 =====================================================
 The following examples show various lightweight providers that rely on custom |ruby| code.
-
-xxxxx
------------------------------------------------------
-The ``xxxxx`` lightweight provider (found in the `xxxxx <xxxxx>`_ cookbook maintained by |opscode|) is used to xxxxx.
-
-xxxxx
------------------------------------------------------
-The ``xxxxx`` lightweight provider (found in the `xxxxx <xxxxx>`_ cookbook maintained by |opscode|) is used to xxxxx.
 
 rbenbv_global
 -----------------------------------------------------
