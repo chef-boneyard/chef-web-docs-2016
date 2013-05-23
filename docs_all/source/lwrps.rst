@@ -2,13 +2,9 @@
 Lightweight Resources Reference
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
+.. include:: ../../includes_lwrp/includes_lwrp.rst
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_provider.rst
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
-
-Custom resources and providers can also be created using the |lwrp| DSL. |opscode| provides several cookbooks that define some commonly used |lwrp|. To use the lightweight resources provided by |opscode| the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.
+Read more about how to create lightweight resources :doc:`here </lwrps_custom>`.
 
 Common Functionality for all Resources 
 =====================================================
@@ -101,6 +97,10 @@ The following examples show how to use ``only_if`` as a condition in a recipe:
 **Create a file using a string, but only if "/etc/passwd" exists**
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
+
+File Locations
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
 
 Notifications
 -----------------------------------------------------

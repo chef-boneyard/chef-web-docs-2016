@@ -32,3 +32,11 @@ Platform vs. Lightweight
 |opscode|-maintained
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_opscode_maintained.rst
+
+More Reading
+=====================================================
+Doug Ireton (a |chef| community member) has a blog with a nice series on LWRPs:
+
+* Part 1: http://dougireton.com/blog/2012/12/31/creating-an-lwrp/
+* Part 2: http://dougireton.com/blog/2013/01/07/creating-an-lwrp-part-2/
+* Part 3: http://dougireton.com/blog/2013/01/13/creating-an-lwrp-part-3/

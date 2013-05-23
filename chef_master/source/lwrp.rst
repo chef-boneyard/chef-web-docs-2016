@@ -4,7 +4,7 @@ About LWRPs
 
 .. include:: ../../includes_lwrp/includes_lwrp.rst
 
-Read more about how to create lightweight resources :doc:`here </essentials_cookbook_lwrp>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below.
+Read more about how to create lightweight resources :doc:`here </lwrp_custom>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below.
 
 |opscode|-maintained
 =====================================================

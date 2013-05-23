@@ -54,7 +54,7 @@ rescue
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_custom_provider_logs_rescue.rst
 
-Use a Custom Library
+Libraries
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_custom_provider_library.rst
 

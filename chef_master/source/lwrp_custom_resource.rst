@@ -46,7 +46,6 @@ Conditional Arguements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
 
-
 Notifications
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications.rst
@@ -60,10 +59,6 @@ Syntax
 Timers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_timers.rst
-
-
-
-
 
 Examples
 =====================================================
