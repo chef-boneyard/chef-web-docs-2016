@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 A lightweight resource is created by the ``action`` block of a lightweight provider. When the resource collection is compiled, and as a lightweight resource is discovered by |chef|, each lightweight resource is inserted into the resource collection after the point at which it was discovered. For example, a resource collection may start out like this:
 
 .. code-block:: ruby

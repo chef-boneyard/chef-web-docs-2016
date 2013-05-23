@@ -1,6 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 The ``new_resource`` method is used to represent a resource as loaded by |chef| during the |chef| run. In other words: what the resource should be. |chef| compares the resource as it exists on the node to the resource that is created during the |chef| run to determine what steps need to be taken to bring the resource into the desired state. This method can be used as an instance variable (``@new_resource``).
 
 For example:
