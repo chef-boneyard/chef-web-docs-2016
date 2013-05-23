@@ -1,5 +1,5 @@
 =====================================================
-Custom Lightweight Resources
+Lightweight Resources
 =====================================================
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource.rst

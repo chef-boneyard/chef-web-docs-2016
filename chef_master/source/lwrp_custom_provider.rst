@@ -1,5 +1,5 @@
 =====================================================
-Custom Lightweight Providers w/Chef Resources
+Lightweight Providers w/Chef Resources
 =====================================================
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
