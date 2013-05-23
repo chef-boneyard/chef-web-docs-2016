@@ -2,44 +2,41 @@
 Chef Server Topics
 =====================================================
 
-.. note:: This page is a work in progress. Right now, the only content that is here is for |chef private| as it existed up until February 4, 2013.
-
 .. include:: ../../includes_chef/includes_chef.rst
 
-
-
-Chef Server 11.x
-=====================================================
-.. note:: This section is a work in progress.
-
-**The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements | :doc:`Components </server_components>`
-
-**Components:** Nginx | Erchef | Bookshelf | chef-webui | Search Index Queues (RabbitMQ | chef-expander | chef-solr) | PostgreSQL
-
-**Topologies:** Standalone | Tiered | High Availability | Options
-
-**Install:** Open Source **Private Chef:** Standalone | Tiered | High Availability **Hosted Chef::** Sign Up
-
-**Migrate:** Open Source >> Hosted Chef | chef-pedant | Ommibus
-
-**System Analysis and Tuning:** Settings | Performance | Backup / Restore | Security | Hardening | Firewall | High Availability | Ports (Chef 11 runs on ports 80 and 443)
-
-**Manage:** Open Source | Hosted Chef | Private Chef
-
-**Monitor:** Database | Cookbooks | Log Files | Services | Ports | chef-pedant | Nagios | Graphite
-
-**Tools:** :doc:`orgmapper </orgmapper>`
-
-**Reference:** :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
-
-
-
-
-
+.. 
+.. 
+.. Chef Server 11.x
+.. =====================================================
+.. .. note:: This section is a work in progress.
+.. 
+.. **The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements | :doc:`Components </server_components>`
+.. 
+.. **Components:** Nginx | Erchef | Bookshelf | chef-webui | Search Index Queues (RabbitMQ | chef-expander | chef-solr) | PostgreSQL
+.. 
+.. **Topologies:** Standalone | Tiered | High Availability | Options
+.. 
+.. **Install:** Open Source **Private Chef:** Standalone | Tiered | High Availability **Hosted Chef::** Sign Up
+.. 
+.. **Migrate:** Open Source >> Hosted Chef | chef-pedant | Ommibus
+.. 
+.. **System Analysis and Tuning:** Settings | Performance | Backup / Restore | Security | Hardening | Firewall | High Availability | Ports (Chef 11 runs on ports 80 and 443)
+.. 
+.. **Manage:** Open Source | Hosted Chef | Private Chef
+.. 
+.. **Monitor:** Database | Cookbooks | Log Files | Services | Ports | chef-pedant | Nagios | Graphite
+.. 
+.. **Tools:** :doc:`orgmapper </orgmapper>`
+.. 
+.. **Reference:** :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
+.. 
+.. 
+.. 
+.. 
+.. 
 
 Private Chef 1.x.x  
 =====================================================
-.. note:: This section is about the version of |chef private| that existed up until February 4, 2013.
 
 **Engagement:** :doc:`How Consulting Works </private_chef_1x_engage_how_consulting_works>` | :doc:`Pre-Installation Steps </private_chef_1x_engage_preinstall>` | :doc:`Onsite Installation </private_chef_1x_engage_onsite>` | :doc:`Acceptance </private_chef_1x_engage_acceptance>`
 
