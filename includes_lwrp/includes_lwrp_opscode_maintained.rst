@@ -10,67 +10,67 @@ Custom resources and providers can also be created using the |lwrp| DSL. |opscod
 
    * - Cookbook
      - Description
-   * - :doc:`apt </lwrp_apt>`
+   * - `apt <http://docs.opscode.com/lwrp_apt.html>`_
      - |cookbook name apt|
-   * - :doc:`aws </lwrp_aws>`
+   * - `lwrp_aws <http://docs.opscode.com/aws.html>`_
      - |cookbook name aws|
-   * - :doc:`bluepill </lwrp_bluepill>`
+   * - `bluepill <http://docs.opscode.com/lwrp_bluepill.html>`_
      - |cookbook name bluepill|
-   * - :doc:`chef_handler </lwrp_chef_handler>`
+   * - `chef_handler <http://docs.opscode.com/lwrp_chef_handler.html>`_
      - |cookbook name chef_handler|
-   * - :doc:`daemontools </lwrp_daemontools>`
+   * - `daemontools <http://docs.opscode.com/lwrp_daemontools.html>`_
      - |cookbook name daemontools|
-   * - :doc:`djbdns </lwrp_djbdns>`
+   * - `djbdns <http://docs.opscode.com/lwrp_djbdns.html>`_
      - |cookbook name djbdns|
-   * - :doc:`dmg </lwrp_dmg>`
+   * - `dmg <http://docs.opscode.com/lwrp_dmg.html>`_
      - |cookbook name dmg|
-   * - :doc:`dynect </lwrp_dynect>`
+   * - `dynect <http://docs.opscode.com/lwrp_dynect.html>`_
      - |cookbook name dynect|
-   * - :doc:`firewall </lwrp_firewall>`
+   * - `firewall <http://docs.opscode.com/lwrp_firewall.html>`_
      - |cookbook name firewall|
-   * - :doc:`freebsd </lwrp_freebsd>`
+   * - `freebsd <http://docs.opscode.com/lwrp_freebsd.html>`_
      - |cookbook name freebsd|
-   * - :doc:`gunicorn </lwrp_gunicorn>`
+   * - `gunicorn <http://docs.opscode.com/lwrp_gunicorn.html>`_
      - |cookbook name gunicorn|
-   * - :doc:`homebrew </lwrp_homebrew>`
+   * - `homebrew <http://docs.opscode.com/lwrp_homebrew.html>`_
      - |cookbook name homebrew|
-   * - :doc:`iis </lwrp_iis>`
+   * - `iis <http://docs.opscode.com/lwrp_iis.html>`_
      - |cookbook name iis|
-   * - :doc:`maven </lwrp_maven>`
+   * - `maven <http://docs.opscode.com/lwrp_maven.html>`_
      - |cookbook name maven|
-   * - :doc:`mysql </lwrp_mysql>`
+   * - `mysql <http://docs.opscode.com/lwrp_mysql.html>`_
      - |cookbook name mysql|
-   * - :doc:`nagios </lwrp_nagios>`
+   * - `nagios <http://docs.opscode.com/lwrp_nagios.html>`_
      - |cookbook name nagios|
-   * - :doc:`pacman </lwrp_pacman>`
+   * - `pacman <http://docs.opscode.com/lwrp_pacman.html>`_
      - |cookbook name pacman|
-   * - :doc:`php </lwrp_php>`
+   * - `php <http://docs.opscode.com/lwrp_php.html>`_
      - |cookbook name php|
-   * - :doc:`powershell </lwrp_powershell>`
+   * - `powershell <http://docs.opscode.com/lwrp_powershell.html>`_
      - |cookbook name powershell|
-   * - :doc:`python </lwrp_python>`
+   * - `python <http://docs.opscode.com/lwrp_python.html>`_
      - |cookbook name python|
-   * - :doc:`rabbitmq </lwrp_rabbitmq>`
+   * - `rabbit mq <http://docs.opscode.com/lwrp_rabbitmq.html>`_
      - |cookbook name rabbitmq|
-   * - :doc:`riak </lwrp_riak>`
+   * - `riak <http://docs.opscode.com/lwrp_riak.html>`_
      - |cookbook name riak|
-   * - :doc:`samba </lwrp_samba>`
+   * - `samba <http://docs.opscode.com/lwrp_samba.html>`_
      - |cookbook name samba|
-   * - :doc:`sudo </lwrp_sudo>`
+   * - `sudo <http://docs.opscode.com/lwrp_sudo.html>`_
      - |cookbook name sudo|
-   * - :doc:`supervisor </lwrp_supervisor>`
+   * - `supervisor <http://docs.opscode.com/lwrp_supervisor.html>`_
      - |cookbook name supervisor|
-   * - :doc:`transmission </lwrp_transmission>`
+   * - `transmission <http://docs.opscode.com/lwrp_transmission.html>`_
      - |cookbook name transmission|
-   * - :doc:`users </lwrp_users>`
+   * - `users <http://docs.opscode.com/lwrp_users.html>`_
      - |cookbook name users|
-   * - :doc:`webpi </lwrp_webpi>`
+   * - `webpi <http://docs.opscode.com/lwrp_webpi.html>`_
      - |cookbook name webpi|
-   * - :doc:`windows </lwrp_windows>`
+   * - `windows <http://docs.opscode.com/lwrp_windows.html>`_
      - |cookbook name windows|
-   * - :doc:`yum </lwrp_yum>`
+   * - `yum <http://docs.opscode.com/lwrp_yum.html>`_
      - |cookbook name yum|
-   * - :doc:`zenoss </lwrp_zenoss>`
+   * - `zenoss <http://docs.opscode.com/lwrp_zenoss.html>`_
      - |cookbook name zenoss|
 
 

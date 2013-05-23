@@ -13,7 +13,7 @@ Getting started
 
 Essentials
 =====================================================
-**Cookbooks:** :doc:`Attribute files </essentials_cookbook_attribute_files>` | :doc:`Definitions </essentials_cookbook_definitions>` | :doc:`Files </essentials_cookbook_files>` | :doc:`Libraries </essentials_cookbook_libraries>` | :doc:`Lightweight resources </essentials_cookbook_lwrp>` | :doc:`Metadata </essentials_cookbook_metadata>` | :doc:`Recipes </essentials_cookbook_recipes>` | :doc:`Resources and providers </essentials_cookbook_resources>` | :doc:`Templates </essentials_cookbook_templates>` | :doc:`Versions </essentials_cookbook_versions>`
+**Cookbooks:** :doc:`Attribute Files </essentials_cookbook_attribute_files>` | :doc:`Definitions </essentials_cookbook_definitions>` | :doc:`Files </essentials_cookbook_files>` | :doc:`Libraries </essentials_cookbook_libraries>` | :doc:`Lightweight Resources </lwrps>` (and :doc:`Custom LWRPs </lwrps_custom>`) | :doc:`Metadata </essentials_cookbook_metadata>` | :doc:`Recipes </essentials_cookbook_recipes>` | :doc:`Resources and Providers </essentials_cookbook_resources>` | :doc:`Templates </essentials_cookbook_templates>` | :doc:`Versions </essentials_cookbook_versions>`
 
 **Policy:** :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
 
@@ -68,7 +68,6 @@ APIs and DSLs
    essentials_cookbook_definitions
    essentials_cookbook_files
    essentials_cookbook_libraries
-   essentials_cookbook_lwrp
    essentials_cookbook_metadata
    essentials_cookbook_recipes
    essentials_cookbook_resources
@@ -90,6 +89,7 @@ APIs and DSLs
    knife
    knife_plugins
    lwrps
+   lwrps_custom
    manage_server_hosted
    manage_server_open_source
    metadata_rb
@@ -101,7 +101,7 @@ APIs and DSLs
    solr_rb
    auth
 
-   lwrps_custom
+
 
 
 
