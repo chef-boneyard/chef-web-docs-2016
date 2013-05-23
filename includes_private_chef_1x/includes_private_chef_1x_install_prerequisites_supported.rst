@@ -3,8 +3,9 @@
 
 |chef private| is supported on the following operating systems:
 
-* |redhat enterprise linux| 6
-* |centos| 6
+* |redhat enterprise linux| 6.3 or newer
+* |centos| 6.3 or newer
 * |ubuntu| 10.04
 
-|chef private| requires an x86_64 compatible systems architecture.
+|chef private| requires an x86_64 compatible systems architecture. When installing on |redhat enterprise linux| or |centos| please note that we recommend you run 'yum update' prior to the installation of |chef_private| as you may encounter issues due to out of date dependencies |chef_private| requires. 
+
