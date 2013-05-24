@@ -27,7 +27,7 @@ The naming patterns of lightweight resources and providers are determined by the
      - example
      - Chef::Resource::Example
    * - ``custom.rb``
-     - custom
+     - example_custom
      - Chef::Resource::ExampleCustom
 
 And the following files would be part of the ``providers/`` directory:

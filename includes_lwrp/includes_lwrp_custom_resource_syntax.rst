@@ -49,10 +49,6 @@ For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| c
    attribute :path, :kind_of => [String, NilClass]
    attribute :home, :kind_of => [String, NilClass]
    attribute :shell, :kind_of => [String, NilClass]
-   
-   def block_name
-     # other def blocks, as needed
-   end
 
 where
 
@@ -62,4 +58,3 @@ where
 * ``:command`` is the command that will be run (and also required)
 * ``:user`` is the user by which the command is run
 * ``:mailto``, ``:path``, ``:home``, and ``:shell`` are optional environment variables that do not have default value, which each being defined as an array that supports the ``String`` and ``NilClass`` |ruby| classes
-* the ``def block_name`` block represents the rest of the lightweight resource, should additional code blocks be required
