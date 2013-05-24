@@ -57,6 +57,9 @@ In addition:
 * The recommended amount of RAM available to the |chef client| during a |chef| run is 512MB
 * Each node and workstation must have access to the |chef server| via HTTPS
 * |knife| plugins require |chef| <VERSION?> or greater; ``knife windows`` requires |chef| <VERSION?>
+* |ruby| 1.8.7, 1.9.1, or 1.9.2 with |ssl| bindings
+* |rubygems| 1.6.2 or higher; on the |ubuntu| or |debian| platforms, |rubygems| should be installed from source
+* |chef hosted| is compatible with |chef client| version 0.10.0 and greater; older clients must be upgraded before they can connect to |chef hosted|
 
 
 The |chef server|
