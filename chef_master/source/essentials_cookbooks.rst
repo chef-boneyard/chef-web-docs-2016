@@ -20,7 +20,7 @@ About Cookbooks
      - The ``cookbooks/`` directory is used to store the cookbooks that are used by |chef| when configuring the various systems in the organization.
    * - :doc:`Resources and Providers </essentials_cookbook_resources>`
      - A resource is a package, a service, a group of users, and so on. A resource tells |chef| which provider to use during a |chef| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. |chef| includes default providers that cover all of the most common scenarios.
-   * - :doc:`Lightweight Resources </essentials_cookbook_lwrp>`
+   * - :doc:`Lightweight Resources </lwrp_custom>`
      - A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters.
    * - :doc:`Attribute Files </essentials_cookbook_attribute_files>`
      - An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on a node.
