@@ -10,7 +10,7 @@ This command has the following syntax::
 This command has the following options:
 
 ``-A``, ``--fatal-windows-admin-check``
-   Indicates that a |chef| run should fail if the |chef client| does not have administrator privileges in |windows|.
+   |fatal_windows_admin_check|
 
 ``-c CONFIG``, ``--config CONFIG``
    |config chef-client|
@@ -22,16 +22,16 @@ This command has the following options:
    |environment chef-client|
 
 ``-f``, ``--fork``
-   Indicates that a |chef| run will be contained in a secondary process with dedicated RAM. When the |chef| run is complete the RAM will be returned to the master process. This option helps ensure that a |chef client| will use a steady amount of RAM over time because the master process will not run recipes. This option will also help prevent memory leaks (such as those that can be introduced by the code contained within a poorly designed cookbook).
+   |fork_chef|
 
-``-F FORMATTER``, ``--format FORMATTER``
-   The output format.
+``-F FORMAT``, ``--format FORMAT``
+   |format|
 
 ``--force-formatter``
-   Indicates that formatter output will be used instead of logger output.
+   |force_formatter|
 
 ``--force-logger``
-   Indicates that logger output will be used instead of formatter output.
+   |force_logger|
 
 ``-g GROUP``, ``--group GROUP``
    |group chef-client|
@@ -58,13 +58,13 @@ This command has the following options:
    |log_location| This is recommended when starting any executable as a daemon.
 
 ``--[no-]color``
-   Use ``--no-color`` to disable colored output. Default setting: ``--color``.
+   |no-color| Default setting: ``--color``.
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node name chef-client|
 
 ``-o RUN_LIST_ITEM``, ``--override-runlist RUN_LIST_ITEM``
-   Replace the current run list with the specified items.
+   |override_runlist|
 
 ``--once``
    |once|
@@ -73,7 +73,7 @@ This command has the following options:
    |pid_file|
 
 ``-R``, ``--enable-reporting``
-   Indicates that data collection reporting during |chef| runs is enabled.
+   |enable_reporting|
 
 ``-s SECONDS``, ``--splay SECONDS``
    |splay|
@@ -88,7 +88,7 @@ This command has the following options:
    |version chef|
 
 ``-W``, ``--why-run``
-   Indicates that the executable will be run in whyrun mode, which is a |chef| run that does everything except modify the system. Use whyrun mode to understand why |chef| makes the decisions that it makes and to learn more about the current and proposed state of the system.
+   |whyrun_mode|
 
 
 

@@ -6,6 +6,8 @@
 .. F
 .. 
 
+.. |fatal_windows_admin_check| replace:: Indicates that a |chef| run should fail if the |chef client| does not have administrator privileges in |windows|.
+
 .. |failovermethod| replace:: The fail-over method. ``roundrobin`` randomly selects a URL out of a list of URLs and proceeds through each of them as it encounters a failure when contacting the host; ``priority`` starts from the first base URL listed and proceeds through them sequentially. Default value: ``roundrobin``.
 
 .. |feature_name lwrp windows_feature| replace:: The name of a server role, role service, or feature. Depending on the provider being used, the same feature may have different names. For example: ``DHCPServer`` vs. ``DHCP``; ``DNS-Server-Full-Role`` vs. ``DNS``.
@@ -34,7 +36,13 @@
 .. |force knife download| replace:: Use ``--force`` to download files even when the file on the hard drive is identical to the object on the server (role, cookbook, etc.).  By default, files are compared to see if they have equivalent content, and local files are only overwritten if they are different.  Default: ``--no-force``.
 .. |force knife upload| replace:: Use ``--force`` to upload roles, cookbooks, etc. even if the file in the directory is identical (by default, no POST or PUT is performed unless an actual change would be made). Default: ``--no-force``.
 .. |force update| replace:: Indicates that a cookbook should be updated even if the ``--freeze`` flag has been set.
+
+.. |force_formatter| replace:: Indicates that formatter output will be used instead of logger output.
+.. |force_logger| replace:: Indicates that logger output will be used instead of formatter output.
+
 .. |format| replace:: The output format: ``summary`` (default), ``text``, ``json``, ``yaml``, and ``pp``.
+
+.. |fork_chef| replace:: Indicates that a |chef| run will be contained in a secondary process with dedicated RAM. When the |chef| run is complete the RAM will be returned to the master process. This option helps ensure that a |chef client| will use a steady amount of RAM over time because the master process will not run recipes. This option will also help prevent memory leaks (such as those that can be introduced by the code contained within a poorly designed cookbook).
 
 .. |fqdn| replace:: The |fully qualified domain name| of the host.
 .. |fqdn amazon ec2| replace:: A pre-defined |fully qualified domain name|.
