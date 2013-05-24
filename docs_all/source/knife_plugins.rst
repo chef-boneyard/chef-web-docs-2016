@@ -59,7 +59,7 @@ knife azure
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -169,7 +169,7 @@ knife bluebox
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -236,7 +236,7 @@ knife bluelock
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluelock.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -295,7 +295,7 @@ knife ec2
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -376,7 +376,7 @@ knife eucalyptus
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -471,7 +471,7 @@ knife google
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -677,7 +677,7 @@ knife hp
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_hp.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -854,7 +854,7 @@ knife linode
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_linode.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -973,7 +973,7 @@ knife openstack
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1060,7 +1060,7 @@ knife rackspace
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1190,7 +1190,7 @@ knife terremark
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1269,7 +1269,7 @@ knife windows
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
