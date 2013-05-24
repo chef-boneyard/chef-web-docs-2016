@@ -32,7 +32,7 @@ Some important components of nodes include:
 
 The Chef Run
 =====================================================
-.. include:: ../../includes_chef/includes_chef_client_run.rst
+.. include:: ../../includes_chef_client/includes_chef_client_run.rst
 
 
 

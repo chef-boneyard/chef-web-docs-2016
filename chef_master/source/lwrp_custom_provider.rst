@@ -42,6 +42,10 @@ use_inline_resources
 
 whyrun_supported?
 -----------------------------------------------------
+.. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode.rst
+
+.. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst
+
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_whyrun_supported.rst
 
 .. note:: When a lightweight provider contains only |chef| resources, the ``converge_by`` method is not required because it is already built into all of the |chef| `resources <http://docs.opscode.com/resource.html>`_.

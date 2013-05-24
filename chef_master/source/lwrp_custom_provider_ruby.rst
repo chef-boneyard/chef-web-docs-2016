@@ -40,6 +40,10 @@ updated_by_last_action
 
 whyrun_supported?
 -----------------------------------------------------
+.. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode.rst
+
+.. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst
+
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_whyrun_supported.rst
 
 Condition Statements
