@@ -72,50 +72,8 @@ As |chef| grows, the services we expose will likely be integrated with |puppet| 
 -----------------------------------------------------
 |cfengine| and |chef| aren't very similar at all, outside of both applications embracing the concept of Single Copy Nirvana.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-xxxxx:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - xxxxx
-     - Description
-   * - xxxxx
-     - xxxxx
-
-
-
-Conclusion
-=====================================================
-
-
 For more information ...
------------------------------------------------------
+=====================================================
 For history of |chef|, where it came from and how it evolved, watch these two (short) videos:
 
 * Part one: |http opscode youtube short part one|
@@ -126,5 +84,3 @@ For more information about |opscode|, cookbooks for |chef|, and the |chef| commu
 * |http opscode|
 * |http community|
 * |http community cookbooks|
-
-
