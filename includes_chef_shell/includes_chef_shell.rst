@@ -2,7 +2,7 @@
 .. This file describes a command or a sub-command for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This is the stub for documentation about chef-shell. This used to be Chef.
+This is the stub for documentation about chef-shell. This used to be Shef.
 
 It has a resource/provider: breakpoint
 
