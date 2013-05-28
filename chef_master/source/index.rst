@@ -169,7 +169,7 @@ Cookbooks
    upgrade_server
 
    style_guide
-
+   chef_shell
    videos
 
 

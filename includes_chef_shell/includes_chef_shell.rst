@@ -2,13 +2,22 @@
 .. This file describes a command or a sub-command for Knife.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This is the stub for documentation about chef-shell. This used to be Shef.
+|chef shell| is a recipe debugging tool for |chef| that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features.
 
-It has a resource/provider: breakpoint
+.. note:: |chef shell| is the new name for |shef| as of |chef| 11.0.0. |chef shell| is backwards compatible and aside from the name change, has the same set of functionality as with previous releases of |chef|.
 
-https://github.com/opscode/chef/blob/master/lib/chef/provider/breakpoint.rb
-https://github.com/opscode/chef/blob/master/lib/chef/resource/breakpoint.rb
 
-that should be moved to the includes_resources folder when finished (but only included into the chef-shell docs) ... among other things. Placeholder for now!
+
+
+
+
+
+
+
+
+
+
+
+
 
 
