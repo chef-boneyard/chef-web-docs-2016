@@ -66,6 +66,6 @@ Examples
 =====================================================
 The following examples show various lightweight providers that rely on custom |ruby| code.
 
-rbenbv_global
+rbenv_global
 -----------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_example_rbenbv_global.rst
+.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_example_rbenv_global.rst
