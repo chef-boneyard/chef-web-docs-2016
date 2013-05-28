@@ -50,7 +50,7 @@ Conditional Attributes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_attributes.rst
 
-Conditional Arguements
+Conditional Arguments
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
 
@@ -163,9 +163,9 @@ rabbitmq_plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_lwrp/includes_lwrp_custom_provider_example_rabbitmq_plugin.rst
 
-rbenbv_global
+rbenv_global
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_example_rbenbv_global.rst
+.. include:: ../../includes_lwrp/includes_lwrp_custom_provider_example_rbenv_global.rst
 
 ssh_known_hosts_entry
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
