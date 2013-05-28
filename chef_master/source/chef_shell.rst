@@ -4,7 +4,7 @@ chef-shell
 
 |chef shell| is a recipe debugging tool for |chef| that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features.
 
-.. note:: |chef shell| is the new name for |shef| as of |chef| 11.0.0. |chef shell| is backwards compatible and aside from the name change, has the same set of functionality as with previous releases of |chef|.
+.. note:: |chef shell| is the new name for |shef| as of |chef| 11.0.0. |chef shell| is backwards compatible and (aside from a name change) has the same set of functionality as before.
 
 Modes
 =====================================================
@@ -306,7 +306,7 @@ After the recipes that are to be debugged have been loaded, use the ``run_chef``
 
 Advanced Debugging
 -----------------------------------------------------
-In |chef shell|, it is possible to get extremely verbose debugging using the tracing feature in |irb|. |chef shell| provides a shortcut for turning tracing on and off. For example:
+In |chef shell|, it is possible to get extremely verbose debugging using the tracing feature in |ruby irb|. |chef shell| provides a shortcut for turning tracing on and off. For example:
 
 .. code-block:: bash
 

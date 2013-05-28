@@ -167,7 +167,7 @@ Cookbooks
    pushy
 
    upgrade_server
-
+   ctl_chef_shell
    style_guide
    chef_shell
    videos

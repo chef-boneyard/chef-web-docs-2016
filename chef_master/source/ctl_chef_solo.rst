@@ -7,11 +7,11 @@ chef-solo
 .. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo.rst
 
 Options
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst
 
 Examples
------------------------------------------------------
+=====================================================
 **Use a URL**
 
 .. code-block:: bash
@@ -35,22 +35,3 @@ where the ``-r URL`` option is not used. |chef solo| will look in the |solo rb| 
    $ chef-solo -c ~/solo.rb -j http://www.example.com/node.json -r http://www.example.com/chef-solo.tar.gz
 
 where ``-r`` corresponds to ``recipe_url`` and ``-j`` corresponds to ``json_attribs``, both of which are configuration options in |solo rb|.
-
-
-
-
-
-
-
-
-
-You can create the solo.rb in /etc/chef/solo.rb instead, as chef-solo will look there by default, thus making the '-c ~/solo.rb' optional.
-
-**xxxxx**
-
-.. code-block:: bash
-
-   $ xxxxx
-
-Remember: Chef Solo is disconnected from a Chef Server
-There is no authentication, no authorization, no search indexes, no persistent attributes. It's just the bare ability to execute Cookbooks and Data Bags.
