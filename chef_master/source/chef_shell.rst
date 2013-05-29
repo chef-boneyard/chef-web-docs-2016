@@ -2,26 +2,43 @@
 chef-shell
 =====================================================
 
-|chef shell| is a recipe debugging tool for |chef| that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features.
-
-.. note:: |chef shell| is the new name for |shef| as of |chef| 11.0.0. |chef shell| is backwards compatible and (aside from a name change) has the same set of functionality as before.
+.. include:: ../../includes_chef_shell/includes_chef_shell.rst
 
 Modes
 =====================================================
-|chef shell| is tool that allows |knife| to be run using an |ruby irb| session. |chef shell| currently supports recipe and attribute file syntax, as well as interactive debugging features. |chef shell| has three run modes:
+.. include:: ../../includes_chef_shell/includes_chef_shell_modes.rst
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
+Breakpoint Resource
+=====================================================
+.. include:: ../../includes_resources/includes_resource_breakpoint.rst
 
-   * - Mode
-     - Description
-   * - Standalone
-     - No cookbooks are loaded, and the run list is empty. This mode is the default.
-   * - Solo
-     - |chef shell| acts as a |chef solo| client. It attempts to load the |chef solo| configuration file and |json| attributes. If the |json| attributes set a run list, it will be honored. Cookbooks will be loaded in the same way that |chef solo| loads them. |chef solo| mode is activated with the ``-s`` or ``--solo`` command line option, and |json| attributes are specified in the same way as for |chef solo|, with ``-j /path/to/chef-solo.json``.
-   * - Client
-     - |chef shell| acts as a |chef client|. During startup, it reads the |chef client| configuration file and contacts the |chef server| to get attributes and cookbooks. The run list will be set in the same way as normal |chef client| runs. |chef client| mode is activated with the ``-z`` or ``--client`` options. You can also specify the configuration file with ``-c CONFIG`` and the server URL with ``-S SERVER_URL``.
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_breakpoint_syntax.rst
+
+Actions
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_breakpoint_actions.rst
+
+Attributes
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
+
+Providers
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
+
+Examples
+-----------------------------------------------------
+|generic resource statement|
+
+**A recipe without a breakpoint**
+
+.. include:: ../../step_resource/step_resource_breakpoint_no.rst
+
+**The same recipe with breakpoints**
+
+.. include:: ../../step_resource/step_resource_breakpoint_yes.rst
 
 Configure
 =====================================================
@@ -248,7 +265,7 @@ From the output, the rewound run-list is shown, but when the resources are execu
    $ chef:recipe > ls("/tmp").grep(/breakpoint/).each {|f| rm "/tmp/#{f}" }
        => ["after-breakpoint", "before-breakpoint"]
 
-Rewind, and then resume the |chef| run to get the expected results:
+Rewind, and then resume the |chef| run to get the expected results: 
 
 .. code-block:: bash
 
