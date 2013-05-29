@@ -34,4 +34,4 @@
      action :break
    end
 
-where the ``"name"`` of each breakpoint is an arbitrary string. In the previous example, the ``"name"`` indicates if the breakpoint is before or after a resource, and then also the resource/name combination of that resource.
+where the ``"name"`` of each breakpoint is an arbitrary string. In the previous example, ``"name"`` is used to indicate if the breakpoint is before or after a resource, and then also to specify which resource.
