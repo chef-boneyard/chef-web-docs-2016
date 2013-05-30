@@ -124,6 +124,7 @@ Cookbooks
    chef_solo
    api_chef_server
    api_cookbooks_site
+   api_pushy
    dsl_recipe
    ohai
    orgmapper

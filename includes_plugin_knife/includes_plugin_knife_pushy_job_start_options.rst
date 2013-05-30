@@ -6,8 +6,8 @@
 This argument has the following options:
 
 ``--timeout TIMEOUT``
-   The maximum amount of time (in seconds) a job will be allowed to run.
+   The maximum amount of time (in seconds) by which a job must complete, before it will be stopped.
 
 ``-q QUORUM``, ``--quorum QUORUM``
-   The xxxxx. This can be expressed as a percentage (e.g. ``50%``) or as an integer (e.g. ``145``). Default value: ``100%``
+   The minimum number of nodes that match the search criteria, are available, and acknowledge the job request. This can be expressed as a percentage (e.g. ``50%``) or as an absolute number of nodes (e.g. ``145``). Default value: ``100%``
 
