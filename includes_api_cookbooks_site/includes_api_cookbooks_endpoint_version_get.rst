@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The GET method is used to get a specific version of a cookbook. Use ``latest`` to get the most recent version of a cookbook.
+The ``GET`` method is used to get a specific version of a cookbook. Use ``latest`` to get the most recent version of a cookbook.
 
 This method has no parameters.
 
