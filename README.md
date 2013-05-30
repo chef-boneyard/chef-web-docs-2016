@@ -33,7 +33,7 @@ If you want to test your modifications :
     make release #~30min
 
     #Start the webserver
-    cd build/html
+    cd build
     serve-this
 
 And in your browser, go to [http://localhost:1337](http://localhost:1337)
