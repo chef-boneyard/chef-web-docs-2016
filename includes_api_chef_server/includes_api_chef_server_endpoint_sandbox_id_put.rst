@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The PUT method is used to commit files that are in a sandbox to their final location so that changes to cookbooks will not require re-uploading the same data.
+The ``PUT`` method is used to commit files that are in a sandbox to their final location so that changes to cookbooks will not require re-uploading the same data.
 
 This method has no parameters.
 

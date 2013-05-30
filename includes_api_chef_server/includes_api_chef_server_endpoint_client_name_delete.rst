@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The DELETE method is used to remove a specific |chef api client|.
+The ``DELETE`` method is used to remove a specific |chef api client|.
 
 This method has no parameters.
 

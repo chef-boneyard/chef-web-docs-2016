@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The POST method is used to return partial search results. For example, if a node has the following:
+The ``POST`` method is used to return partial search results. For example, if a node has the following:
 
 .. code-block:: javascript
 
@@ -26,13 +26,13 @@ This method has the following parameters:
    * - Parameter
      - Description
    * - ``q``
-     - A valid search string.
+     - |SEARCH_QUERY|
    * - ``rows``
-     - The number of rows to be returned.
+     - |rows|
    * - ``sort``
-     - A sort string, such as ``name DESC``.
+     - |sort|
    * - ``start``
-     - The result number from which to start.
+     - |start|
 
 **Request**
 

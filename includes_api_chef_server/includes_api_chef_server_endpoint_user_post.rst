@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The POST method is used to create a new user. If a public key is not specified, both public and private keys will be generated and returned. If a public key is specified, only the public key will be returned.
+The ``POST`` method is used to create a new user. If a public key is not specified, both public and private keys will be generated and returned. If a public key is specified, only the public key will be returned.
 
 This method has no parameters.
 
@@ -15,7 +15,9 @@ with a request body that looks something like:
 
 .. code-block:: javascript
 
-   POST /users { "name": "Robert Forster" }
+   {
+     "name": "Robert Forster"
+   }
 
 **Response**
 

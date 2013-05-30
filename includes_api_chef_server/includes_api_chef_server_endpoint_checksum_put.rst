@@ -3,7 +3,7 @@
 
 **THIS ENDPOINT IS NOT PART OF THE CHEF API. IT IS AN IMPLEMENTATION DETAIL OF LOCAL COOKBOOK STORAGE. THIS TOPIC IS NOT INCLUDED IN THE PUBLISHED DOCS.**
 
-The PUT method is used to add a checksum to a sandbox.
+The ``PUT`` method is used to add a checksum to a sandbox.
 
 This method has no parameters.
 

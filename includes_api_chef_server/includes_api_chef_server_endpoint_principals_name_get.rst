@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The GET method is used to get a list of public keys for clients and users in order to ensure that enough information is present for authorized requests.
+The ``GET`` method is used to get a list of public keys for clients and users in order to ensure that enough information is present for authorized requests.
 
 This method has no parameters.
 

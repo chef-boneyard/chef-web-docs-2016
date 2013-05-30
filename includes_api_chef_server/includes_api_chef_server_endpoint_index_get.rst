@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The GET method is used to return all of the data that matches the query in the GET request.
+The ``GET`` method is used to return all of the data that matches the query in the ``GET`` request.
 
 This method has the following parameters:
 
@@ -12,13 +12,13 @@ This method has the following parameters:
    * - Parameter
      - Description
    * - ``q``
-     - A valid search string.
+     - |SEARCH_QUERY|
    * - ``rows``
-     - The number of rows to be returned.
+     - |rows|
    * - ``sort``
-     - A sort string, such as ``name DESC``.
+     - |sort|
    * - ``start``
-     - The result number from which to start.
+     - |start|
 
 **Request**
 

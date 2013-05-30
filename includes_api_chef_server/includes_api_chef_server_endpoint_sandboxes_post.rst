@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The POST method is used to create a new sandbox. This method accepts a list of checksums as input and returns the URLs against which to PUT files that need to be uploaded.
+The ``POST`` method is used to create a new sandbox. This method accepts a list of checksums as input and returns the URLs against which to ``PUT`` files that need to be uploaded.
 
 This method has no parameters.
 

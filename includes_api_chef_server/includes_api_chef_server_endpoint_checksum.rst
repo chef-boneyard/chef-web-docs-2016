@@ -3,4 +3,4 @@
 
 **THIS ENDPOINT IS NOT PART OF THE CHEF API. IT IS AN IMPLEMENTATION DETAIL OF LOCAL COOKBOOK STORAGE. THIS TOPIC IS NOT INCLUDED IN THE PUBLISHED DOCS.** 
 
-The /sandboxes/ID/CHECKSUM endpoint has the following methods: PUT.
+The ``/sandboxes/ID/CHECKSUM`` endpoint has the following methods: ``PUT``.

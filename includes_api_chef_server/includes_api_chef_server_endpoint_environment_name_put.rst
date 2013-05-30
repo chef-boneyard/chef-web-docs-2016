@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The PUT method is used to update the details of an environment on the |chef server|.
+The ``PUT`` method is used to update the details of an environment on the |chef server|.
 
 This method has no parameters.
 

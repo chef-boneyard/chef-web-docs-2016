@@ -1,13 +1,13 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The PUT method is used to update a specific user. If values are not specified for the PUT method, the |chef server| will use the existing values rather than assign default values.
+The ``PUT`` method is used to update a specific user. If values are not specified for the ``PUT`` method, the |chef server| will use the existing values rather than assign default values.
 
-PUT accepts a boolean ``{ "private_key": "true" }``. If this is specified, a new private key is generated.
+``PUT`` accepts a boolean: ``{ "private_key": "true" }``. If this is specified, a new private key is generated.
 
 If values are missing, they will not be overwritten. If ``public_key`` is null, the public key will not be overwritten.
 
-.. note:: PUT supports renames. If ``PUT /user/foo`` is requested with { "name: "bar""}, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``.
+.. note:: ``PUT`` supports renames. If ``PUT /user/foo`` is requested with { "name: "bar""}, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``.
 
 This method has no parameters.
 
