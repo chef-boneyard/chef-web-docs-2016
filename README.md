@@ -30,8 +30,7 @@ If you want to test your modifications :
 
     #Compile the document
     cd /path/to/this/repo
-    cd chef_master/source/
-    sphinx-build . build/html #~30min
+    make release #~30min
 
     #Start the webserver
     cd build/html
