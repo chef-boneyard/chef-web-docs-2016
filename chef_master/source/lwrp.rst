@@ -30,7 +30,6 @@ Read more about how to create lightweight resources :doc:`here </lwrp_custom>`; 
    lwrp_homebrew
    lwrp_iis
    lwrp_maven
-   lwrp_mysql
    lwrp_nagios
    lwrp_pacman
    lwrp_php
