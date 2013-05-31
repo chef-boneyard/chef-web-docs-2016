@@ -4,13 +4,13 @@ mysql_database Lightweight Resource
 
 |cookbook name mysql|
 
-The ``mysql_database`` cookbook contains the following lightweight resource: ``mysql_database``.
+The ``database`` cookbook contains the following lightweight resource: ``mysql_database``.
 
 mysql_database
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_mysql_database.rst
 
-.. note:: This lightweight resource is part of the ``mysql`` cookbook (http://community.opscode.com/cookbooks/mysql).
+.. note:: This lightweight resource is part of the ``database`` cookbook (http://community.opscode.com/cookbooks/database).
 
 Actions
 -----------------------------------------------------
