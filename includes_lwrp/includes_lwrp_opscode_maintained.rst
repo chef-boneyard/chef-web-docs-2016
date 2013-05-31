@@ -38,8 +38,6 @@ Custom resources and providers can also be created using the |lwrp| DSL. |opscod
      - |cookbook name iis|
    * - `maven <http://docs.opscode.com/lwrp_maven.html>`_
      - |cookbook name maven|
-   * - `mysql <http://docs.opscode.com/lwrp_mysql.html>`_
-     - |cookbook name mysql|
    * - `nagios <http://docs.opscode.com/lwrp_nagios.html>`_
      - |cookbook name nagios|
    * - `pacman <http://docs.opscode.com/lwrp_pacman.html>`_
