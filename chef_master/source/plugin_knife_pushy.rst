@@ -42,7 +42,11 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
+For example, to search for nodes assigned the role "webapp", and where 90% of those nodes must be available, enter:
+
+.. code-block:: bash
+
+   $ knife job start -quorum 90% 'chef-client' --search 'role:webapp`
 
 
 job status
@@ -59,7 +63,19 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
+For example, to view the status of a job that has the identifier of "235", enter:
+
+.. code-block:: bash
+
+   $ knife job status 235
+
+to return something similar to:
+
+.. code-block:: bash
+
+   Node name   Status      Last updated
+   foo         Failed      2012-05-04 00:00
+   bar         Done        2012-05-04 00:01
 
 
 node status
