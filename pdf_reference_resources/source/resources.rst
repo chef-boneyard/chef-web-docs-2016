@@ -1435,7 +1435,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
 
-**Install an application from github using bash**
+**Install an application from git using bash**
 
 .. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
 
