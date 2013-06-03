@@ -36,7 +36,7 @@ This command has the following options:
 ``-i SECONDS``, ``--interval SECONDS``
    |interval|
 
-``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
+``-j PATH``, ``--json-attributes PATH``
    |json_attribs|
 
 ``-l LEVEL``, ``--log_level LEVEL``

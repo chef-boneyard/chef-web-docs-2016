@@ -18,7 +18,7 @@ This command has the following options:
 ``-h``, ``--help``
    |help chef shell|
 
-``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
+``-j PATH``, ``--json-attributes PATH``
    |json_attribs|
 
 ``-l LEVEL``, ``--log_level LEVEL``
