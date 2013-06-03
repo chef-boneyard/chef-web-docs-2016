@@ -26,7 +26,7 @@ Repository
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository.rst
 
-|github| is the most common location to store a |chef| repository that is used with a |chef hosted| account.
+|git| is the most common location to store a |chef| repository that is used with a |chef hosted| account.
 
 The Hosted Chef Server
 =====================================================

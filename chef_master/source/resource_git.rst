@@ -36,10 +36,10 @@ Examples
 
 .. include:: ../../step_resource/step_resource_scm_use_different_branches.rst
 
-**Install an application from github using bash**
+**Install an application from git using bash**
 
 .. include:: ../../step_resource/step_resource_scm_use_bash_and_ruby_build.rst
 
-**Upgrade packages from github**
+**Upgrade packages from git**
 
 .. include:: ../../step_resource/step_resource_scm_upgrade_packages.rst
