@@ -31,7 +31,7 @@ This command has the following options:
    |chef_server_url|
 
 ``-v``, ``--version``
-   |version pushy| >>> MAKE THIS SAY: "Shows the version of |pushy|."
+   |version pushy|
 
 
 
