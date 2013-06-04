@@ -20,7 +20,7 @@ The |pushy| server is used to xxxxx.
 
 Workstations
 -----------------------------------------------------
-A workstation is used to manage |pushy| jobs, including maintaining the |cookbook pushyjobs| cookbook, using |knife| to start and stop jobs and to manage job lists.
+A workstation is used to manage |pushy| jobs, including maintaining the |cookbook pushjobs| cookbook, using |knife| to start and stop jobs and to manage job lists.
 
 push-jobs Cookbook
 -----------------------------------------------------
