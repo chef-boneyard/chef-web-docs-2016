@@ -8,21 +8,21 @@ Pushy
 
 Components
 =====================================================
-.. include:: ../../includes_pushy/includes_pushy_components.rst
+.. include:: ../../includes_pushy/includes_pushy_component.rst
 
-.. include:: ../../includes_pushy/includes_pushy_components_diagram.rst
+.. include:: ../../includes_pushy/includes_pushy_component_diagram.rst
 
 |pushy| Server
 -----------------------------------------------------
-The |pushy| server is used to xxxxx.
+.. include:: ../../includes_pushy/includes_pushy_component_server.rst
 
 |pushy| Client
 -----------------------------------------------------
-The |pushy| server is used to xxxxx.
+.. include:: ../../includes_pushy/includes_pushy_component_client.rst
 
 Workstations
 -----------------------------------------------------
-A workstation is used to manage |pushy| jobs, including maintaining the |cookbook pushjobs| cookbook, using |knife| to start and stop jobs and to manage job lists.
+.. include:: ../../includes_pushy/includes_pushy_component_workstation.rst
 
 push-jobs Cookbook
 -----------------------------------------------------
@@ -38,11 +38,11 @@ Messages
 
 Heartbeat Messages
 -----------------------------------------------------
-.. include:: ../../includes_pushy/includes_pushy_components_heartbeat.rst
+.. include:: ../../includes_pushy/includes_pushy_messages_heartbeat.rst
 
 Job Messages
 -----------------------------------------------------
-.. include:: ../../includes_pushy/includes_pushy_components_command.rst
+.. include:: ../../includes_pushy/includes_pushy_messages_jobs.rst
 
 Reference
 =====================================================

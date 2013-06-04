@@ -11,3 +11,4 @@ All communication between these components is done with the following:
 * The |api chef server| and the |api pushy| 
 * A |knife| plugin named ``knife-pushy``
 * |chef server| authentication and authorization
+* The |zeromq| messaging library for message transport
