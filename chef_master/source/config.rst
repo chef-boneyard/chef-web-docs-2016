@@ -39,6 +39,7 @@ The following configuration files apply only to |chef 10|:
    config_rb_knife
    config_rb_knife_optional_settings
    config_rb_metadata
+   config_rb_pushy_server
    config_rb_server
    config_rb_solo
    config_rb_solr
