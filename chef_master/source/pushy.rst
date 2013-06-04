@@ -10,6 +10,8 @@ Components
 =====================================================
 .. include:: ../../includes_pushy/includes_pushy_components.rst
 
+.. include:: ../../includes_pushy/includes_pushy_components_diagram.rst
+
 |pushy| Server
 -----------------------------------------------------
 The |pushy| server is used to xxxxx.
@@ -32,7 +34,7 @@ Whitelist
 
 Messages
 =====================================================
-.. include:: ../../includes_pushy/includes_pushy_components_diagram.rst
+|pushy| sends two types of messages: heartbeat and job.
 
 Heartbeat Messages
 -----------------------------------------------------
