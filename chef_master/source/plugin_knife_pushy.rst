@@ -74,6 +74,18 @@ to return something similar to:
 
 .. note:: If quorum had been set at 80% (``--quorum 80%``), then quorum would have passed with the previous example.
 
+Use the ``knife job start`` subcommand to run a job using the following syntax:
+
+.. code-block:: bash
+
+   $ knife job start job_name node_name
+
+For example, to run a job named ``add-glasses`` job against a node named "Ricardo Salazar", enter the following:
+
+.. code-block:: bash
+
+   $ knife job start add-glasses 'Ricardo Salazar'
+
 job status
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_status.rst

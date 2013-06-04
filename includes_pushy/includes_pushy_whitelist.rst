@@ -42,11 +42,11 @@ Use the ``knife job start`` subcommand to run a job using the following syntax:
 
    $ knife job start job_name node_name
 
-For example, to run a job named ``needs-glasses`` job against a node named "Ricardo Salazar", enter the following:
+For example, to run a job named ``add-glasses`` job against a node named "Ricardo Salazar", enter the following:
 
 .. code-block:: bash
 
-   $ knife job start needs-glasses 'Ricardo Salazar'
+   $ knife job start add-glasses 'Ricardo Salazar'
 
 
  
