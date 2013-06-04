@@ -30,7 +30,7 @@ The |cookbook pushjobs| cookbook is used by |pushy| to install the |pushy| clien
 
 Whitelist
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_pushy/includes_pushy_components.rst
+.. include:: ../../includes_pushy/includes_pushy_whitelist.rst
 
 Messages
 =====================================================
