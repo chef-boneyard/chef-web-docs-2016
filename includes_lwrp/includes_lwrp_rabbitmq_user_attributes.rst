@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``password``
-     - |password lwrp rabbitmq_user|
+     - |password user|
    * - ``permissions``
      - |permissions lwrp rabbitmq_user|
    * - ``user``

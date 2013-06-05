@@ -14,9 +14,9 @@ This resource has the following attributes:
    * - ``command``
      - |command resource powershell_script|
    * - ``flags``
-     - |flags resource powershell_script|
+     - |flags| Default value: ``nil``.
    * - ``interpreter``
-     - |interpreter resource powershell_script|
+     - |interpreter| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_attribute|
 

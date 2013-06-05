@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``group_name``
-     - |group_name lwrp supervisor_group|
+     - |name group|
    * - ``priority``
      - |priority lwrp supervisor_group|
    * - ``programs``

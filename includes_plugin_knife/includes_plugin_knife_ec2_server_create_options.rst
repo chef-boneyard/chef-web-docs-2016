@@ -30,7 +30,7 @@ This argument has the following options:
    |flavor|
 
 ``-fqdn FQDN``
-   |fqdn amazon ec2|
+   |fqdn| This value should be pre-defined.
 
 ``-g X,Y,Z``, ``--security-group-ids X,Y,Z``
    |group ids| Required when using |amazon vpc|.

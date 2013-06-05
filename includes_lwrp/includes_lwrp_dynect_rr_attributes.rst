@@ -16,7 +16,7 @@ This lightweight resource provider has the following attributes:
    * - ``ttl``
      - |ttl lwrp dynect_rr|
    * - ``fqdn``
-     - |fqdn lwrp dynect_rr|
+     - |fqdn|
    * - ``username``
      - |username lwrp dynect_rr|
    * - ``customer``

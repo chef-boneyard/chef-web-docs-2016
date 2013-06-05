@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``package_name``
-     - |package_name lwrp php_pear|
+     - |name package|
    * - ``version``
      - |version lwrp php_pear|
    * - ``preferred_state``
@@ -18,4 +18,4 @@ This lightweight resource provider has the following attributes:
    * - ``directives``
      - |directives lwrp php_pear|
    * - ``options``
-     - |options lwrp php_pear|
+     - |options command|

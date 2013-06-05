@@ -14,9 +14,9 @@ This resource has the following attributes:
    * - ``module_name``
      - The name of the module.
    * - ``options``
-     - |options resource package|
+     - |options command|
    * - ``package_name``
-     - |package_name resource package|
+     - |name package|
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``python_binary``

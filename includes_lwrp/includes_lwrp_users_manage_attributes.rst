@@ -16,6 +16,6 @@ This lightweight resource provider has the following attributes:
    * - ``group_id``
      - |group_id lwrp users|
    * - ``group_name``
-     - |group_name lwrp users|
+     - |name group| This value defaults to the name of the resource if left empty.
    * - ``search_group``
      - |search_group lwrp users|

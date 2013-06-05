@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``password``
-     - |password lwrp samba|
+     - |password user| This is passed to the ``smbpasswd`` program in |samba|.

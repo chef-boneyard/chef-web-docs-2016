@@ -10,9 +10,9 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``options``
-     - |options resource package|
+     - |options command|
    * - ``package_name``
-     - |package_name resource package|
+     - |name package|
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``response_file``

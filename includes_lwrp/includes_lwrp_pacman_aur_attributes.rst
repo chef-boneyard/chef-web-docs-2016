@@ -14,9 +14,9 @@ This lightweight resource provider has the following actions:
    * - ``exists``
      - |exists lwrp pacman_aur|
    * - ``options``
-     - |options lwrp pacman_aur|
+     - |options command|
    * - ``package_name``
-     - |package_name lwrp pacman_aur|
+     - |name package|
    * - ``patches``
      - |patches lwrp pacman_aur|
    * - ``pkgbuild_src``

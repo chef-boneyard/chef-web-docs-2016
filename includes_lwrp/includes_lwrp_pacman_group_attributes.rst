@@ -12,4 +12,4 @@ This lightweight resource provider has the following attributes:
    * - ``package_name``
      - |package_name lwrp pacman_group|
    * - ``options``
-     - |package_name lwrp pacman_group|
+     - |options command|

@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``cwd``
      - |cwd run_command|
    * - ``flags``
-     - |flag lwrp windows_batch|
+     - |flags|
    * - ``group``
      - |group lwrp windows_batch|
    * - ``returns``

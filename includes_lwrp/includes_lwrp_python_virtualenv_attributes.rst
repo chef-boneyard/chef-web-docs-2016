@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``path``
      - |path lwrp python_virtualenv|
    * - ``interpreter``
-     - |interpreter lwrp python_virtualenv|
+     - |interpreter python| Default value: ``python2.6``.
    * - ``owner``
      - |owner lwrp python_virtualenv|
    * - ``group``

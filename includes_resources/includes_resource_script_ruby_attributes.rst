@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``environment``
      - |environment resource execute|
    * - ``flags``
-     - |flags resource script|
+     - |flags| Default value: ``nil``.
    * - ``group``
      - |group resource execute|
    * - ``path``

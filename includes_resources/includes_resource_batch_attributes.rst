@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``cwd``
      - |cwd run_command|
    * - ``flags``
-     - |flags resource batch|
+     - |flags|
    * - ``group``
      - |group resource batch|
    * - ``provider``

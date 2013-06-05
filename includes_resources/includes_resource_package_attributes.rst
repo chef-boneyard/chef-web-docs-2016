@@ -18,9 +18,9 @@ This resource has the following attributes:
    * - ``gem_binary``
      - |gem_binary resource package|
    * - ``options``
-     - |options resource package|
+     - |options command| Can be used with |apt|, |debian dpkg|, |gentoo|, |rpm|, and |rubygems|. Default value: ``nil``.
    * - ``package_name``
-     - |package_name resource package|
+     - |name package|
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``response_file``

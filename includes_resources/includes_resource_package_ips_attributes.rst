@@ -12,9 +12,9 @@ This resource has the following attributes:
    * - ``accept_license``
      -  |accept_license| Default value: ``false``.
    * - ``options``
-     - |options resource package|
+     - |options command|
    * - ``package_name``
-     - |package_name resource package|
+     - |name package|
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``response_file``

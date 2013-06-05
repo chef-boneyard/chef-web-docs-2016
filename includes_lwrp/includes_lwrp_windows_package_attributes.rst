@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``installer_type``
      - |installer_type lwrp windows_package|
    * - ``options``
-     - |options lwrp windows_package|
+     - |options command|

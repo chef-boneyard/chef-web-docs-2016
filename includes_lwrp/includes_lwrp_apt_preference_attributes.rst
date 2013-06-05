@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``package_name``
-     - |package_name lwrp apt|
+     - |name package|
    * - ``pin``
      - |pin lwrp apt|
    * - ``pin_priority``

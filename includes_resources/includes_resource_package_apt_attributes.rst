@@ -17,12 +17,10 @@ This resource has the following attributes:
      - |flush_cache resource package|
    * - ``gem_binary``
      - |gem_binary resource package|
-
-
    * - ``options``
-     - |options resource package|
+     - |options command|
    * - ``package_name``
-     - |package_name resource package|
+     - |name package|
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``response_file``

@@ -16,9 +16,9 @@ This resource has the following attributes:
    * - ``flush_cache``
      - |flush_cache resource yum|
    * - ``options``
-     - |options resource package|
+     - |options command|
    * - ``package_name``
-     - |package_name resource package|
+     - |package_name resource yum|
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``response_file``
