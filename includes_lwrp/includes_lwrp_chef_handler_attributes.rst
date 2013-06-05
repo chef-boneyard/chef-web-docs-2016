@@ -14,6 +14,6 @@ This lightweight resource provider has the following attributes:
    * - ``source``
      - |source lwrp chef_handler|
    * - ``arguments``
-     - |arguments lwrp chef_handler|
+     - |arguments chef_handler|
    * - ``supports``
      - |supports lwrp chef_handler|

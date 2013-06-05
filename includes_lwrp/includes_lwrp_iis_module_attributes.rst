@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``application``
      - |application_pool app|
    * - ``module_name``
-     - |module_name lwrp iis_module|
+     - |name module|
    * - ``type``
      - |type lwrp iis_module|
    * - ``precondition``

@@ -15,5 +15,5 @@ This argument has the following options:
    |azure_subscription_id|
 
 ``--verify-ssl-cert``
-   |azure_verify_ssl_certificate|
+   |ssl_certificate|
 

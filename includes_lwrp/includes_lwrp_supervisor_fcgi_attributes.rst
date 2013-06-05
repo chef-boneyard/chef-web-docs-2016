@@ -10,11 +10,11 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``autorestart``
-     - |autorestart lwrp supervisor|
+     - |autorestart supervisor|
    * - ``autostart``
-     - |autostart lwrp supervisor|
+     - |autostart supervisor|
    * - ``command``
-     - |command lwrp supervisor|
+     - |name command|
    * - ``directory``
      - |directory lwrp supervisor|
    * - ``environment``

@@ -14,4 +14,4 @@ This lightweight resource provider has the following attributes:
    * - ``aws_secret_access_key``
      - |aws_access_key_password|
    * - ``name``
-     - Required. |name lwrp aws_elastic_lb|
+     - Required. |name load_balancer|

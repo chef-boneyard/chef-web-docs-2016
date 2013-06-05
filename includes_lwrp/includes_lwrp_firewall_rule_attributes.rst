@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``name``
-     - |name lwrp firewall_rule|
+     - |name firewall_rule|
    * - ``protocol``
      - |protocol lwrp firewall_rule|
    * - ``port``

@@ -10,9 +10,9 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``architecture``
-     - |architecture resource registry_key|
+     - |architecture registry_key| Default value: ``:machine``.
 
-       |architecture resource registry_key machine|
+       |architecture registry_key machine|
 
        .. note:: |note registry_key architecture|
    * - ``key``

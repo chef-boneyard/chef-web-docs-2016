@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``full_path``
      - 
    * - ``name``
-     - |name lwrp freebsd|
+     - |name port| This is the port for which a port options file will be modified.
    * - ``options``
      - |options lwrp freebsd|
    * - ``source``

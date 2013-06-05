@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``artifact_id``
-     - |artifact_id lwrp maven|
+     - |artifact_id|
    * - ``dest``
      - |dest lwrp maven|
    * - ``group_id``

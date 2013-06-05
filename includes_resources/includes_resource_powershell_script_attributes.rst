@@ -10,9 +10,9 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``code``
-     - |code resource powershell_script|
+     - |code quoted_string| Default value: ``nil``.
    * - ``command``
-     - |command resource powershell_script|
+     - |name command| Default value: ``name``.
    * - ``flags``
      - |flags| Default value: ``nil``.
    * - ``interpreter``

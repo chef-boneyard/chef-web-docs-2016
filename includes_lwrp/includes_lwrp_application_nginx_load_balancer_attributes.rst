@@ -10,19 +10,19 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``application_port``
-     - |application_port lwrp application_nginx_load_balancer|
+     - |application_port| Default value: ``8080``.
    * - ``application_server_role``
-     - |application_server_role lwrp application_nginx_load_balancer|
+     - |application_server_role| Default value: ``#{application name}_application_server``.
    * - ``port``
      - |port lwrp application_nginx_load_balancer|
    * - ``server_name``
      - |server_name lwrp application_nginx_load_balancer|
    * - ``ssl``
-     - |ssl lwrp application_nginx_load_balancer| 
+     - |use ssl| Default value: ``false``.
    * - ``ssl_certificate``
-     - |ssl_certificate lwrp application_nginx_load_balancer|
+     - |ssl_certificate|
    * - ``ssl_certificate_key``
-     - |ssl_certificate_key lwrp application_nginx_load_balancer|
+     - |ssl_certificate key|
    * - ``static_files``
      - |static_files lwrp application_nginx_load_balancer|
    * - ``template``

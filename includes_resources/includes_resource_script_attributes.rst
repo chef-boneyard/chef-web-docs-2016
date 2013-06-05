@@ -10,9 +10,9 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``code``
-     - |code resource script|
+     - |code quoted_string| Default value: ``nil``.
    * - ``command``
-     - |command resource script|
+     - |name command| Default value: ``name``.
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``

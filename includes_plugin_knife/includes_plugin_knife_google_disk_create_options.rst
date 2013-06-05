@@ -12,5 +12,5 @@ This argument has the following options:
    |zone google|
 
 ``-s SIZE``, ``--size SIZE``
-   The size of a disk, in GB.
+   |size disk|
 

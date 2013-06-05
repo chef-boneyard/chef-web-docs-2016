@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``name``
-     - |name lwrp firewall|
+     - |name firewall|

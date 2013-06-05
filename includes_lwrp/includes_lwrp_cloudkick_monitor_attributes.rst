@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``name``
-     - |name lwrp cloudkick|
+     - |name monitor|
    * - ``notes``
      - Optional. |notes lwrp cloudkick|
    * - ``oauth_key``

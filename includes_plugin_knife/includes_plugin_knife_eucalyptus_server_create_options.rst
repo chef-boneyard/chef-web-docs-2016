@@ -58,5 +58,5 @@ This argument has the following options:
    |ssh-user|
 
 ``-Z ZONE``, ``--availability-zone ZONE``
-   |availability_zone eucalyptus|
+   |availability_zone| Default: ``us-east-1b``.
 

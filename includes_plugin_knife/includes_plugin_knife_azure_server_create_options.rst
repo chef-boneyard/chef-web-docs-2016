@@ -72,7 +72,7 @@ This argument has the following options:
    |udp-endpoints|
 
 ``--verify-ssl-cert``
-   |azure_verify_ssl_certificate|
+   |ssl_certificate|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|

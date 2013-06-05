@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``app_name``
-     - |application_name|
+     - |name application|
    * - ``application_pool``
      - |application_pool app|
    * - ``path``

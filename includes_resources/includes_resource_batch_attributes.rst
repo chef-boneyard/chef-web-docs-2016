@@ -10,9 +10,9 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - |command resource batch|
+     - |name command|
    * - ``code``
-     - |code resource batch|
+     - |code quoted_string|
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``

@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``allow_downgrade``
      - |allow_downgrade|
    * - ``arch``
-     - |arch resource yum|
+     - |architecture package|
    * - ``flush_cache``
      - |flush_cache resource yum|
    * - ``options``

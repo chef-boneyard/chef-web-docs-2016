@@ -10,8 +10,8 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``args``
-     - |args lwrp windows_autorun|
+     - |arguments windows_autorun|
    * - ``name``
-     - |name lwrp windows_autorun|
+     - |name windows_registry_value|
    * - ``program``
      - |program lwrp windows_autorun|

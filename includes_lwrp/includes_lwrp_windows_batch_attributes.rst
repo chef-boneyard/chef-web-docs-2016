@@ -10,9 +10,9 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - |command lwrp windows_batch|
+     - |name command|
    * - ``code``
-     - |code lwrp windows_batch|
+     - |code quoted_string|
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``

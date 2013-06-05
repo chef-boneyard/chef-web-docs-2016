@@ -14,7 +14,7 @@ The syntax for the ``registry_key_exists?`` method is as follows:
 where 
 
 * ``KEY_PATH`` is the path to the registry key. |key_name resource registry_key hives|
-* ``ARCHITECTURE`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``. |architecture resource registry_key machine|
+* ``ARCHITECTURE`` is one of the following values: ``:x86_64``, ``:i386``, or ``:machine``. |architecture registry_key machine|
 
 This method will return ``true`` or ``false``. 
 

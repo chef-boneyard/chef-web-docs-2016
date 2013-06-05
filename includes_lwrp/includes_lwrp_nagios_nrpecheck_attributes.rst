@@ -10,9 +10,9 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - |command lwrp nagios_nrpecheck|
+     - |name command| Default value: ``node['nagios']['plugin']['plugin_dir']/command_name``.
    * - ``command_name``
-     - |command_name lwrp nagios_nrpecheck|
+     - |command nagios_nrpecheck|
    * - ``critical_condition``
      - |critical_condition lwrp nagios_nrpecheck|
    * - ``parameters``

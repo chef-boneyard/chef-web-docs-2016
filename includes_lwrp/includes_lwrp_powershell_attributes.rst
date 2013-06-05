@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - |command lwrp powershell|
+     - |name command|
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``

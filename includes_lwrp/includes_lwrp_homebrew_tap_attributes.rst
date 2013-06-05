@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``name``
-     - |name lwrp homebrew|
+     - |name git_repo|
    * - ``tapped``
      - |tapped lwrp homebrew|

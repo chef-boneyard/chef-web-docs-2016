@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``allow_downgrade``
      - |allow_downgrade|
    * - ``arch``
-     - |arch resource package|
+     - |architecture package| Default value: ``nil``. This attribute is only available for the |resource yum_package| resource.
    * - ``flush_cache``
      - |flush_cache resource package|
    * - ``gem_binary``
