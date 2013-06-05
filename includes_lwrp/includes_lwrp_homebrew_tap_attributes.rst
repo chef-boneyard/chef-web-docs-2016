@@ -12,4 +12,4 @@ This lightweight resource provider has the following attributes:
    * - ``name``
      - |name git_repo|
    * - ``tapped``
-     - |tapped lwrp homebrew|
+     - |tapped|

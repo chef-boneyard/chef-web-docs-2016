@@ -14,6 +14,6 @@ This lightweight resource provider has the following attributes:
    * - ``aws_secret_access_key``
      - |aws_access_key_password|
    * - ``ip``
-     - |ip lwrp aws_elastic_ip|
+     - |ip_address node|
    * - ``timeout``
      - |timeout lwrp aws_elastic_ip|

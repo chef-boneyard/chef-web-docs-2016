@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path resource directory|
+     - |path directory| Default value: ``name``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``recursive``

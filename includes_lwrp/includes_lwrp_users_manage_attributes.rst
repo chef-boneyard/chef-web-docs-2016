@@ -14,7 +14,7 @@ This lightweight resource provider has the following attributes:
    * - ``data_bag``
      - |data_bag lwrp users|
    * - ``group_id``
-     - |group_id lwrp users|
+     - |id group|
    * - ``group_name``
      - |name group| This value defaults to the name of the resource if left empty.
    * - ``search_group``

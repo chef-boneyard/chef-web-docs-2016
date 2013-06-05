@@ -24,7 +24,7 @@ This lightweight resource provider has the following attributes:
    * - ``owner``
      - |owner lwrp daemontools_service|
    * - ``service_name``
-     - |service_name lwrp daemontools_service|
+     - |name service|
    * - ``template``
      - |template lwrp daemontools_service|
    * - ``variables``

@@ -26,7 +26,7 @@ This lightweight resource provider has the following attributes:
    * - ``mirrorlist``
      - |mirrorlist|
    * - ``repo_name``
-     - |repo_name lwrp yum_repository|
+     - |name repository|
    * - ``type``
      - Optional.
    * - ``url``

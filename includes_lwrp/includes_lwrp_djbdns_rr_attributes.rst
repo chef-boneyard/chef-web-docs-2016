@@ -14,6 +14,6 @@ This lightweight resource provider has the following attributes:
    * - ``fqdn``
      - |fqdn|
    * - ``ip``
-     - Required. |ip lwrp djbdns_rr|
+     - Required. |ip_address|
    * - ``type``
      - |type lwrp djbdns_rr|

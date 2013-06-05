@@ -34,7 +34,7 @@ This lightweight resource provider has the following attributes:
    * - ``serverurl``
      - |startretries lwrp supervisor|
    * - ``service_name``
-     - |service_name lwrp supervisor|
+     - |name service|
    * - ``startretries``
      - |startretries lwrp supervisor|
    * - ``startsecs``

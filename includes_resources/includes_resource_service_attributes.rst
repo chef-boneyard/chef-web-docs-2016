@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``restart_command``
      - |restart_command action write service|
    * - ``service_name``
-     - |service_name resource service|
+     - |name service| Default value: ``name``.
    * - ``start_command``
      - |start_command resource service|
    * - ``status_command``

@@ -22,7 +22,7 @@ This lightweight resource provider has the following attributes:
    * - ``strategy``
      - |strategy lwrp application|
    * - ``scm_provider``
-     - |scm_provider lwrp application|
+     - |name scm_provider|
    * - ``revision``
      - |revision lwrp application|
    * - ``repository``

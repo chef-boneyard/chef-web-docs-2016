@@ -28,7 +28,7 @@ This resource has the following attributes:
    * - ``overwrite``
      - |overwrite resource remote_directory|
    * - ``path``
-     - |path resource remote_directory|
+     - |path directory| Default value: ``name``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``purge``

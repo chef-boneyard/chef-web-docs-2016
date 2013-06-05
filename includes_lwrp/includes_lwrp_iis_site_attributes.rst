@@ -22,6 +22,6 @@ This lightweight resource provider has the following attributes:
    * - ``protocol``
      - |protocol lwrp iis_site|
    * - ``site_id``
-     - |site_id lwrp iis_site|
+     - |id site| If this is not specified, |microsoft iis| will generate a unique identifier.
    * - ``site_name``
-     - |site_name lwrp iis_site|
+     - |name site|

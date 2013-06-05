@@ -10,16 +10,16 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``components``
-     - |components lwrp apt_repository|
+     - |components array|
    * - ``deb_src``
-     - |dev_src lwrp apt_repository|
+     - |use debsrc| Default value: ``false``.
    * - ``distribution``
-     - |distribution lwrp apt_repository|
+     - |name distribution| For example: ``lucid``.
    * - ``key``
      - |key lwrp apt_repository|
    * - ``keyserver``
      - |keyserver lwrp apt_repository|
    * - ``repo_name``
-     - |repo_name lwrp apt_repository|
+     - |name repository| Default value: ``name``.
    * - ``uri``
      - |uri lwrp apt_repository|

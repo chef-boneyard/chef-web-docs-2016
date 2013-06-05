@@ -14,7 +14,7 @@ This lightweight resource provider has the following attributes:
    * - ``dest``
      - |dest lwrp maven|
    * - ``group_id``
-     - |group_id lwrp maven|
+     - |id group|
    * - ``mode``
      - |mode lwrp maven|
    * - ``owner``
