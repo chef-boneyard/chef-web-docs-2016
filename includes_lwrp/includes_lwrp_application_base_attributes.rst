@@ -30,7 +30,7 @@ This lightweight resource provider has the following attributes:
    * - ``enable_submodules``
      - |git| only. |enable_submodules lwrp application|
    * - ``environment``
-     - |environment lwrp application|
+     - |environment variable_hash|
    * - ``deploy_key``
      - |deploy_key lwrp application|
    * - ``force``

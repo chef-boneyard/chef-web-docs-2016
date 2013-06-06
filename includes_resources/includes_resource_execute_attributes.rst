@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``cwd``
      - |cwd run_command| Default value: ``nil``.
    * - ``environment``
-     - |environment resource execute|
+     - |environment variable_hash| Default value: ``nil``.
    * - ``group``
      - |group resource execute|
    * - ``path``

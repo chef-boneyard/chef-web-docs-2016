@@ -12,5 +12,5 @@ This argument has the following options:
    |terremark-password|
 
 ``-S SERVICE``, ``--terremark-service SERVICE``
-   |terremark-service|
+   |name service|
 

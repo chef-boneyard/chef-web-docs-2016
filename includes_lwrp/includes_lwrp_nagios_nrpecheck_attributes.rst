@@ -18,4 +18,4 @@ This lightweight resource provider has the following attributes:
    * - ``parameters``
      - |parameters lwrp nagios_nrpecheck|
    * - ``warning_condition``
-     - |warning_condition lwrp nagios_nrpecheck|
+     - |warning_condition|

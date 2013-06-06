@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``overwrite``
-     - |overwrite resource remote_directory|
+     - |use file_overwrite| Default value: ``true``.
    * - ``path``
      - |path directory| Default value: ``name``.
    * - ``provider``

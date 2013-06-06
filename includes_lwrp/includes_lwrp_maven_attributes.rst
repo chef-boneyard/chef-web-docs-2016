@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``mode``
      - |mode lwrp maven|
    * - ``owner``
-     - |owner lwrp maven|
+     - |owner lwrp maven| Default value: ``root``.
    * - ``packaging``
      - |packaging lwrp maven|
    * - ``repositories``

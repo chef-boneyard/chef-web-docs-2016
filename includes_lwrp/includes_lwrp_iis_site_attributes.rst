@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``port``
      - |port lwrp iis_site|
    * - ``protocol``
-     - |protocol lwrp iis_site|
+     - |protocol http|
    * - ``site_id``
      - |id site| If this is not specified, |microsoft iis| will generate a unique identifier.
    * - ``site_name``

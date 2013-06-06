@@ -15,5 +15,5 @@ This argument has the following options:
    |print-after|
 
 ``-S SERVICE_NAME``, ``--terremark-service SERVICE_NAME``
-   |terremark-service|
+   |name service|
 

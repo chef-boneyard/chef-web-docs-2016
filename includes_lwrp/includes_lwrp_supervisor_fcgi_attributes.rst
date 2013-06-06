@@ -30,7 +30,7 @@ This lightweight resource provider has the following attributes:
    * - ``process_name``
      - |process_name lwrp supervisor|
    * - ``program_name``
-     - |program_name lwrp supervisor_fcgi|
+     - |name program|
    * - ``redirect_stderr``
      - |redirect_stderr lwrp supervisor|
    * - ``serverurl``

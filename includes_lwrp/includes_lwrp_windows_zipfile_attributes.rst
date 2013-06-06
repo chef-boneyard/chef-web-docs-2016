@@ -14,4 +14,4 @@ This lightweight resource provider has the following attributes:
    * - ``source``
      - |source lwrp windows_zipfile|
    * - ``overwrite``
-     - |overwrite lwrp windows_zipfile|
+     - |use file_overwrite| Default value: ``false``.

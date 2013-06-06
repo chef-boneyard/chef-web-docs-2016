@@ -24,7 +24,7 @@ This resource has the following attributes:
    * - ``deploy_to``
      - |deploy_to|
    * - ``environment``
-     - |environment resource deploy|
+     - |environment variable_hash|
    * - ``group``
      - |group resource deploy|
    * - ``keep_releases``

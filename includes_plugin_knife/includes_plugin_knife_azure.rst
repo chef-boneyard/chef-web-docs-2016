@@ -7,7 +7,7 @@
 
 This subcommand should be installed as a |knife| plugin, using |rubygems|.
 
-.. note:: This plugin requires the ``knife windows`` plugin to be present on the same machine.
+.. note:: This plugin requires the |subcommand knife windows| plugin to be present on the same machine.
 
 This subcommand has the following syntax::
 
