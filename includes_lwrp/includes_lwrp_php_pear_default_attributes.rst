@@ -9,13 +9,13 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
+   * - ``directives``
+     - |directives php_pear|
+   * - ``options``
+     - |command options|
    * - ``package_name``
      - |name package|
-   * - ``version``
-     - |version lwrp php_pear|
    * - ``preferred_state``
-     - |preferred_state lwrp php_pear|
-   * - ``directives``
-     - |directives lwrp php_pear|
-   * - ``options``
-     - |options command|
+     - |preferred_state php_pear| Default value: ``stable``.
+   * - ``version``
+     - |version package|

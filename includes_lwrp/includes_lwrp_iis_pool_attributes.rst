@@ -12,12 +12,12 @@ This lightweight resource provider has the following attributes:
    * - ``max_proc``
      - |worker_processes|
    * - ``pipeline_mode``
-     - |pipeline_mode lwrp iis_pool|
+     - |pipeline_mode|
    * - ``private_mem``
-     - |private_mem lwrp iis_pool|
+     - |private_memory|
    * - ``pool_name``
-     - |pool_name lwrp iis_pool|
+     - |name application_pool|
    * - ``runtime_version``
-     - |runtime_version lwrp iis_pool|
+     - |version dotnet_runtime|
    * - ``thirty_two_bit``
-     - |thirty_two_bit lwrp iis_pool|
+     - |thirty_two_bit|

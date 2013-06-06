@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``key_name``
-     - |key_name lwrp windows_registry|
+     - |key_name windows_registry|
    * - ``values``
-     - |values lwrp windows_registry|
+     - |values windows_registry|

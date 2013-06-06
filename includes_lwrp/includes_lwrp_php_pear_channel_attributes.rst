@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``channel_name``
-     - |channel_name lwrp php_pear_channel|
+     - |name pear_channel|
    * - ``channel_xml``
-     - |channel_xml lwrp php_pear_channel|
+     - |file pear_channel|

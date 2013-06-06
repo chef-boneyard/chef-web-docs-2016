@@ -9,11 +9,11 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
+   * - ``options``
+     - |command options|
    * - ``package_name``
      - |name package|
    * - ``version``
-     - |version lwrp python_pip|
+     - |version package|
    * - ``virtualenv``
      - |virtualenv lwrp python_pip|
-   * - ``options``
-     - |options command|

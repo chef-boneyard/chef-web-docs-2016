@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``accept_license``
      -  |accept_license| Default value: ``false``.
    * - ``options``
-     - |options command|
+     - |command options|
    * - ``package_name``
      - |name package|
    * - ``provider``
@@ -22,4 +22,4 @@ This resource has the following attributes:
    * - ``source``
      - |source resource package|
    * - ``version``
-     - |version resource package|
+     - |version package| Default value: ``nil``.

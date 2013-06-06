@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``ip``
      - |ip_address node|
    * - ``timeout``
-     - |timeout lwrp aws_elastic_ip|
+     - |timeout aws_ec2| Default value: ``3 minutes``.

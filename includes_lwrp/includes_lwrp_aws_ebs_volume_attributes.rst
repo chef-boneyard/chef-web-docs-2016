@@ -24,6 +24,6 @@ This lightweight resource provider has the following attributes:
    * - ``snapshots_to_keep``
      - |snapshots_to_keep lwrp aws_ebs_volume|
    * - ``timeout``
-     - |timeout lwrp aws_ebs_volume|
+     - |timeout aws_ec2| Default value: ``3 minutes``.
    * - ``volume_id``
-     - |volume_id lwrp aws_ebs_volume|
+     - |id ebs_volume|

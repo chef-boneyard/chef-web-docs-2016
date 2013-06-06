@@ -10,17 +10,17 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``builddir``
-     - |builddir lwrp pacman_aur|
+     - |directory package_download| Default value: ``Chef::Config[:file_cache_path]/builds``.
    * - ``exists``
-     - |exists lwrp pacman_aur|
+     - |exists package|
    * - ``options``
-     - |options command|
+     - |command options|
    * - ``package_name``
      - |name package|
    * - ``patches``
-     - |patches lwrp pacman_aur|
+     - |patch file_array| Default value: ``[]``.
    * - ``pkgbuild_src``
-     - |pkgbuild_src lwrp pacman_aur|
+     - |use pkgbuild|
    * - ``version``
-     - |version lwrp pacman_aur|
+     - |version package|
 

@@ -10,8 +10,8 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``path_to_location``
-     - |path_to_location lwrp windows_zipfile|
+     - |path directory_unzip|
    * - ``source``
-     - |source lwrp windows_zipfile|
+     - |source windows_zipfile|
    * - ``overwrite``
      - |use file_overwrite| Default value: ``false``.

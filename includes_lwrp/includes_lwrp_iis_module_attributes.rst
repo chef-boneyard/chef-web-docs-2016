@@ -14,7 +14,7 @@ This lightweight resource provider has the following attributes:
    * - ``module_name``
      - |name module|
    * - ``type``
-     - |type lwrp iis_module|
+     - |type module|
    * - ``precondition``
      - |precondition lwrp iis_module|
 

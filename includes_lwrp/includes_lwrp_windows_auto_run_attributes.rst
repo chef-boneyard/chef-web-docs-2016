@@ -14,4 +14,4 @@ This lightweight resource provider has the following attributes:
    * - ``name``
      - |name windows_registry_value|
    * - ``program``
-     - |program lwrp windows_autorun|
+     - |name program|

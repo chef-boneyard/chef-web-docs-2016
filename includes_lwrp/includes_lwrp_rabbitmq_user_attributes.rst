@@ -12,8 +12,8 @@ This lightweight resource provider has the following attributes:
    * - ``password``
      - |password user|
    * - ``permissions``
-     - |permissions lwrp rabbitmq_user|
+     - |permissions|
    * - ``user``
-     - |user lwrp rabbitmq_user|
+     - |name user|
    * - ``vhost``
-     - |vhost lwrp rabbitmq|
+     - |name virtual_host|

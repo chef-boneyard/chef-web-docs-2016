@@ -14,8 +14,8 @@ This lightweight resource provider has the following attributes:
    * - ``cwd``
      - |cwd|
    * - ``description``
-     - |description lwrp windows_shortcut|
+     - |description windows_shortcut|
    * - ``name``
      - |name windows_shortcut|
    * - ``target``
-     - |target lwrp windows_shortcut|
+     - |target windows_shortcut|

@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``feature_name``
-     - |feature_name lwrp windows_feature|
+     - |name windows_feature|

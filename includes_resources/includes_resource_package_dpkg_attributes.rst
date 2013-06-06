@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``options``
-     - |options command|
+     - |command options|
    * - ``package_name``
      - |name package|
    * - ``provider``
@@ -20,4 +20,4 @@ This resource has the following attributes:
    * - ``source``
      - |source resource package|
    * - ``version``
-     - |version resource package|
+     - |version package| Default value: ``nil``.

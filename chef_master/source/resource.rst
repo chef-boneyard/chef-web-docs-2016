@@ -49,6 +49,8 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc package_apt|
    * - :doc:`resource_bash`
      - |resource desc script_bash|
+   * - :doc:`resource_breakpoint`
+     - |resource desc breakpoint|
    * - :doc:`resource_chef_gem`
      - |resource desc chef_gem|
    * - :doc:`resource_cookbook_file`
@@ -111,14 +113,16 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc powershell_script|
    * - :doc:`resource_python`
      - |resource desc script_python|
+   * - :doc:`resource_registry_key`
+     - |resource desc registry_key|
    * - :doc:`resource_remote_directory`
      - |resource desc remote_directory|
    * - :doc:`resource_remote_file`
      - |resource desc remote_file|
-   * - :doc:`resource_rpm_package`
-     - |resource desc package_rpm|
    * - :doc:`resource_route`
      - |resource desc route|
+   * - :doc:`resource_rpm_package`
+     - |resource desc package_rpm|
    * - :doc:`resource_ruby`
      - |resource desc script_ruby|
    * - :doc:`resource_ruby_block`

@@ -9,49 +9,49 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``name``
-     - |name application|
-   * - ``environment_name``
-     - |name environment|
-   * - ``path``
-     - |password lwrp application|
-   * - ``owner``
-     - |owner lwrp application|
-   * - ``group``
-     - |group lwrp application|
-   * - ``strategy``
-     - |strategy lwrp application|
-   * - ``scm_provider``
-     - |name scm_provider|
-   * - ``revision``
-     - |revision lwrp application|
-   * - ``repository``
-     - |repository lwrp application|
+   * - ``application_provider``
+     - 
+   * - ``create_dirs_before_symlink``
+     - |create_dirs_before_symlink lwrp application|
+   * - ``deploy_key``
+     - |deploy_key lwrp application|
    * - ``enable_submodules``
      - |git| only. |enable_submodules lwrp application|
    * - ``environment``
      - |environment variable_hash|
-   * - ``deploy_key``
-     - |deploy_key lwrp application|
+   * - ``environment_name``
+     - |name environment|
    * - ``force``
      - 
-   * - ``rollback_on_error``
-     - |rollback_on_error lwrp application|
-   * - ``purge_before_symlink``
-     - |purge_before_symlink lwrp application|
-   * - ``create_dirs_before_symlink``
-     - |create_dirs_before_symlink lwrp application|
-   * - ``symlinks``
-     - |symlinks lwrp application|
-   * - ``symlink_before_migrate``
-     - |symlink_before_migrate lwrp application|
+   * - ``group``
+     - |group lwrp application|
    * - ``migrate``
      - |migrate lwrp application|
    * - ``migration_command``
      - |migration_command lwrp application|
-   * - ``restart_command``
-     - |restart_command lwrp application|
+   * - ``name``
+     - |name application|
+   * - ``owner``
+     - |owner lwrp application|
    * - ``packages``
      - |packages lwrp application|
-   * - ``application_provider``
-     - 
+   * - ``path``
+     - |password application|
+   * - ``purge_before_symlink``
+     - |purge_before_symlink lwrp application|
+   * - ``repository``
+     - |repository lwrp application|
+   * - ``restart_command``
+     - |restart_command lwrp application|
+   * - ``revision``
+     - |revision lwrp application|
+   * - ``rollback_on_error``
+     - |rollback_on_error lwrp application|
+   * - ``scm_provider``
+     - |name scm_provider|
+   * - ``strategy``
+     - |strategy lwrp application|
+   * - ``symlink_before_migrate``
+     - |symlink_before_migrate lwrp application|
+   * - ``symlinks``
+     - |symlinks lwrp application|
