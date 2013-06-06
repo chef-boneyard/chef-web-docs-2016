@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``ip``
      - Required. |ip_address|
    * - ``type``
-     - |type lwrp djbdns_rr|
+     - |type djbdns_rr|
