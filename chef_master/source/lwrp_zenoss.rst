@@ -4,13 +4,13 @@ zenoss Lightweight Resource
 
 |cookbook name zenoss|
 
-The ``zenoss`` cookbook contains the following lightweight resources: ``zenoss_zenbatchload``, ``zenoss_zenmd``, ``zenoss_zenpack``, and ``zenoss_zenpatch``.
+The |cookbook zenoss| cookbook contains the following lightweight resources: ``zenoss_zenbatchload``, ``zenoss_zenmd``, ``zenoss_zenpack``, and ``zenoss_zenpatch``.
+
+.. note:: These lightweight resources are part of the |cookbook zenoss| cookbook (http://community.opscode.com/cookbooks/zenoss).
 
 zenoss_zenbatchload
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_zenoss_zenbatchload.rst
-
-.. note:: This lightweight resource is part of the ``zenoss`` cookbook (http://community.opscode.com/cookbooks/zenoss).
 
 Actions
 -----------------------------------------------------
@@ -29,8 +29,6 @@ zenoss_zenmd
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_zenoss_zenmd.rst
 
-.. note:: This lightweight resource is part of the ``zenoss`` cookbook (http://community.opscode.com/cookbooks/zenoss).
-
 Actions
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_zenoss_zenmd_actions.rst
@@ -48,8 +46,6 @@ zenoss_zenpack
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_zenoss_zenpack.rst
 
-.. note:: This lightweight resource is part of the ``zenoss`` cookbook (http://community.opscode.com/cookbooks/zenoss).
-
 Actions
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_zenoss_zenpack_actions.rst
@@ -66,8 +62,6 @@ None.
 zenoss_zenpatch
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_zenoss_zenpatch.rst
-
-.. note:: This lightweight resource is part of the ``zenoss`` cookbook (http://community.opscode.com/cookbooks/zenoss).
 
 Actions
 -----------------------------------------------------

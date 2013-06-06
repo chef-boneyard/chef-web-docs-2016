@@ -6,13 +6,13 @@ application_ruby Lightweight Resource
 
 |cookbook name application_ruby|
 
-The ``application_ruby`` cookbook contains the following lightweight resources: ``application_ruby_memcached``, ``application_ruby_passenger_apache2``, ``application_ruby_rails``, and ``application_ruby_unicorn``.
+The |cookbook application_ruby| cookbook contains the following lightweight resources: ``application_ruby_memcached``, ``application_ruby_passenger_apache2``, ``application_ruby_rails``, and ``application_ruby_unicorn``.
+
+.. note:: These lightweight resources are part of the  |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/application_ruby).
 
 application_ruby_memcached
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_memcached.rst
-
-.. note:: This lightweight resource is part of the ``application_ruby`` cookbook (http://community.opscode.com/cookbooks/application_ruby).
 
 Actions
 -----------------------------------------------------
@@ -30,8 +30,6 @@ application_ruby_passenger_apache2
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2.rst
 
-.. note:: This lightweight resource is part of the ``application_ruby`` cookbook (http://community.opscode.com/cookbooks/application_ruby).
-
 Actions
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2_actions.rst
@@ -48,8 +46,6 @@ application_ruby_rails
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails.rst
 
-.. note:: This lightweight resource is part of the ``application_ruby`` cookbook (http://community.opscode.com/cookbooks/application_ruby).
-
 Actions
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails_actions.rst
@@ -65,8 +61,6 @@ None.
 application_ruby_unicorn
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_unicorn.rst
-
-.. note:: This lightweight resource is part of the ``application_ruby`` cookbook (http://community.opscode.com/cookbooks/application_ruby).
 
 Actions
 -----------------------------------------------------

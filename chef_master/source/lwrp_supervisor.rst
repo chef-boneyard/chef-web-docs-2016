@@ -4,13 +4,13 @@ supervisor Lightweight Resource
 
 |cookbook name supervisor|
 
-The ``supervisor`` cookbook contains the following lightweight resources: ``supervisor_fcgi``, ``supervisor_group``, and ``supervisor_service``.
+The |cookbook supervisor| cookbook contains the following lightweight resources: ``supervisor_fcgi``, ``supervisor_group``, and ``supervisor_service``.
+
+.. note:: These lightweight resources are part of the |cookbook supervisor| cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 supervisor_fcgi
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_fcgi.rst
-
-.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 Actions
 -----------------------------------------------------
@@ -29,8 +29,6 @@ supervisor_group
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_group.rst
 
-.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
-
 Actions
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_group_actions.rst
@@ -47,8 +45,6 @@ None.
 supervisor_service
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_service.rst
-
-.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 Actions
 -----------------------------------------------------

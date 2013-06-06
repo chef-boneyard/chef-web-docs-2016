@@ -4,13 +4,13 @@ powershell Lightweight Resource
 
 |cookbook name powershell|
 
-The ``powershell`` cookbook contains the following lightweight resource: ``powershell``.
+The |cookbook powershell| cookbook contains the following lightweight resource: ``powershell``.
 
 powershell
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_powershell.rst
 
-.. note:: This lightweight resource is part of the ``powershell`` cookbook (http://community.opscode.com/cookbooks/powershell).
+.. note:: This lightweight resource is part of the |cookbook powershell| cookbook (http://community.opscode.com/cookbooks/powershell).
 
 Actions
 -----------------------------------------------------

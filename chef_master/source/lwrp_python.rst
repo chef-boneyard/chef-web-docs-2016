@@ -4,13 +4,13 @@ python Lightweight Resource
 
 |cookbook name python|
 
-The ``python`` cookbook contains the following lightweight resources: ``python_pip`` and ``python_virtualenv``.
+The |cookbook python| cookbook contains the following lightweight resources: ``python_pip`` and ``python_virtualenv``.
+
+.. note:: These lightweight resources are part of the |cookbook python| cookbook (http://community.opscode.com/cookbooks/python).
 
 python_pip
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_python_pip.rst
-
-.. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
 
 Actions
 -----------------------------------------------------
@@ -33,8 +33,6 @@ Examples
 python_virtualenv
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_python_virtualenv.rst
-
-.. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
 
 Actions
 -----------------------------------------------------

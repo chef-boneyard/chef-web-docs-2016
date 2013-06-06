@@ -4,7 +4,7 @@ dmg Lightweight Resource
 
 |cookbook name dmg|
 
-The ``dmg`` cookbook contains the following lightweight resource: ``dmg_package``.
+The |cookbook dmg| cookbook contains the following lightweight resource: ``dmg_package``.
 
 dmg_package
 =====================================================
@@ -12,7 +12,7 @@ dmg_package
 
 .. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
 
-.. note:: This lightweight resource is part of the ``dmg`` cookbook (http://community.opscode.com/cookbooks/dmg).
+.. note:: This lightweight resource is part of the |cookbook dmg| cookbook (http://community.opscode.com/cookbooks/dmg).
 
 Actions
 -----------------------------------------------------

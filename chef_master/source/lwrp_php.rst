@@ -4,13 +4,13 @@ php Lightweight Resource
 
 |cookbook name php|
 
-The ``php`` cookbook contains the following lightweight resources: ``php_pear`` and ``php_pear_channel``.
+The |cookbook php| cookbook contains the following lightweight resources: ``php_pear`` and ``php_pear_channel``.
+
+.. note:: These lightweight resources are part of the |cookbook php| cookbook (http://community.opscode.com/cookbooks/php).
 
 php_pear
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_php_pear_default.rst
-
-.. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
 
 Actions
 -----------------------------------------------------
@@ -37,8 +37,6 @@ Examples
 php_pear_channel
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_php_pear_channel.rst
-
-.. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
 
 Actions
 -----------------------------------------------------

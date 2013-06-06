@@ -4,13 +4,13 @@ rabbitmq Lightweight Resource
 
 |cookbook name rabbitmq|
 
-The ``rabbitmq`` cookbook contains the following lightweight resources: ``rabbitmq_plugin``, ``rabbitmq_user``, and ``rabbitmq_vhost``.
+The |cookbook rabbitmq| cookbook contains the following lightweight resources: ``rabbitmq_plugin``, ``rabbitmq_user``, and ``rabbitmq_vhost``.
+
+.. note:: These lightweight resources are part of the |cookbook rabbitmq| cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 rabbitmq_plugin
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_plugin.rst
-
-.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 -----------------------------------------------------
@@ -29,8 +29,6 @@ Examples
 rabbitmq_user
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_user.rst
-
-.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 -----------------------------------------------------
@@ -52,8 +50,6 @@ Examples
 rabbitmq_vhost
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_vhost.rst
-
-.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 -----------------------------------------------------

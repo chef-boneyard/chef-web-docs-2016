@@ -4,13 +4,13 @@ iis Lightweight Resource
 
 |cookbook name iis|
 
-The ``iis`` cookbook contains the following lightweight resources: ``iis_app``, ``iis_config``, ``iis_pool``, and ``iis_site``.
+The |cookbook iis| cookbook contains the following lightweight resources: ``iis_app``, ``iis_config``, ``iis_pool``, and ``iis_site``.
+
+.. note:: These lightweight resources are part of the |cookbook iis| cookbook (http://community.opscode.com/cookbooks/iis).
 
 iis_app
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_iis_app.rst
-
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 -----------------------------------------------------
@@ -28,8 +28,6 @@ Examples
 iis_config
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_iis_config.rst
-
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 -----------------------------------------------------
@@ -49,8 +47,6 @@ iis_module
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_module.rst
 
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
-
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_lwrp/includes_lwrp_iis_module_actions.rst
@@ -68,8 +64,6 @@ iis_pool
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_iis_pool.rst
 
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
-
 Actions
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_pool_actions.rst
@@ -85,8 +79,6 @@ Examples
 iis_site
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_iis_site.rst
-
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 -----------------------------------------------------

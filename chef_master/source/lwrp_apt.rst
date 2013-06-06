@@ -4,13 +4,13 @@ apt Lightweight Resource
 
 |cookbook name apt|
 
-The ``apt`` cookbook contains the following lightweight resources: ``apt_preference`` and ``apt_repository``.
+The |cookbook apt| cookbook contains the following lightweight resources: ``apt_preference`` and ``apt_repository``.
+
+.. note:: These lightweight resources are part of the |cookbook apt| cookbook (http://community.opscode.com/cookbooks/apt).
 
 apt_preference
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_apt_preference.rst
-
-.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
 
 Actions
 -----------------------------------------------------
@@ -30,8 +30,6 @@ Examples
 apt_repository
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_apt_repository.rst
-
-.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
 
 Actions
 -----------------------------------------------------

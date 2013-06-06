@@ -4,13 +4,13 @@ transmission Lightweight Resource
 
 |cookbook name transmission|
 
-The ``transmission`` cookbook contains the following lightweight resource: ``transmission_torrent_file``.
+The |cookbook transmission| cookbook contains the following lightweight resource: ``transmission_torrent_file``.
 
 transmission_torrent_file
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_transmission_torrent_file.rst
 
-.. note:: This lightweight resource is part of the ``transmission`` cookbook (http://community.opscode.com/cookbooks/transmission).
+.. note:: This lightweight resource is part of the |cookbook transmission| cookbook (http://community.opscode.com/cookbooks/transmission).
 
 Actions
 -----------------------------------------------------

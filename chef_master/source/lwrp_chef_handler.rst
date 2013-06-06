@@ -4,7 +4,7 @@ chef_handler Lightweight Resource
 
 |cookbook name chef_handler|
 
-The ``chef_handler`` cookbook contains the following lightweight resource: ``chef_handler``.
+The |cookbook chef_handler| cookbook contains the following lightweight resource: ``chef_handler``.
 
 chef_handler
 =====================================================
@@ -12,7 +12,7 @@ chef_handler
 
 .. include:: ../../includes_lwrp/includes_lwrp_chef_handler.rst
 
-.. note:: This lightweight resource is part of the ``chef_handler`` cookbook (http://community.opscode.com/cookbooks/chef_handler).
+.. note:: This lightweight resource is part of the |cookbook chef_handler| cookbook (http://community.opscode.com/cookbooks/chef_handler).
 
 Actions
 -----------------------------------------------------

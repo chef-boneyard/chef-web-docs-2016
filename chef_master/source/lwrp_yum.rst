@@ -4,13 +4,13 @@ yum Lightweight Resource
 
 |cookbook name yum|
 
-The ``yum`` cookbook contains the following lightweight resources: ``yum_key`` and ``yum_repository``.
+The |cookbook yum| cookbook contains the following lightweight resources: ``yum_key`` and ``yum_repository``.
+
+.. note:: These lightweight resources are part of the |cookbook yum| cookbook (http://community.opscode.com/cookbooks/yum).
 
 yum_key
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_yum_key.rst
-
-.. note:: This lightweight resource is part of the ``yum`` cookbook (http://community.opscode.com/cookbooks/yum).
 
 Actions
 -----------------------------------------------------
@@ -30,8 +30,6 @@ Examples
 yum_repository
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_yum_repository.rst
-
-.. note:: This lightweight resource is part of the ``yum`` cookbook (http://community.opscode.com/cookbooks/yum).
 
 Actions
 -----------------------------------------------------

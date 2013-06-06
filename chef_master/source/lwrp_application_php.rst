@@ -6,13 +6,13 @@ application_php Lightweight Resource
 
 |cookbook name application_php|
 
-The ``application_php`` cookbook contains the following lightweight resources: ``application_php`` and ``application_mod_php``.
+The |cookbook application_php| cookbook contains the following lightweight resources: ``application_php`` and ``application_mod_php``.
+
+.. note:: These lightweight resources are part of the |cookbook application_php| cookbook (http://community.opscode.com/cookbooks/application_php).
 
 application_php
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_application_php_php.rst
-
-.. note:: This lightweight resource is part of the ``application_php`` cookbook (http://community.opscode.com/cookbooks/application_php).
 
 Actions
 -----------------------------------------------------
@@ -29,8 +29,6 @@ None.
 application_mod_php
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_application_php_mod_php_apache2.rst
-
-.. note:: This lightweight resource is part of the ``application_php`` cookbook (http://community.opscode.com/cookbooks/application_php).
 
 Actions
 -----------------------------------------------------

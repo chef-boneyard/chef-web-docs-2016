@@ -4,13 +4,13 @@ gunicorn Lightweight Resource
 
 |gunicorn desc| |cookbook name gunicorn|
 
-The ``gunicorn`` cookbook contains the following lightweight resources: ``gunicorn_config`` and ``gunicorn_install``.
+The |cookbook gunicorn| cookbook contains the following lightweight resources: ``gunicorn_config`` and ``gunicorn_install``.
+
+.. note:: These lightweight resources are part of the |cookbook gunicorn| cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 gunicorn_config
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_gunicorn_config.rst
-
-.. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 Actions
 -----------------------------------------------------
@@ -32,8 +32,6 @@ Examples
 gunicorn_install
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_gunicorn_install.rst
-
-.. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 Actions
 -----------------------------------------------------
