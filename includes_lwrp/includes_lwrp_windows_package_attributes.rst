@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``installer_type``
      - |installer_type windows|
    * - ``options``
-     - |options command|
+     - |command options|

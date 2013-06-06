@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``vhost``
-     - |vhost lwrp rabbitmq|
+     - |name virtual_host|

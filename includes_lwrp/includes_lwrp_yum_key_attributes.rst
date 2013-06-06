@@ -12,4 +12,4 @@ This lightweight resource provider has the following attributes:
    * - ``key``
      - |key lwrp yum_key|
    * - ``url``
-     - |url lwrp yum_key|
+     - |url key_download|

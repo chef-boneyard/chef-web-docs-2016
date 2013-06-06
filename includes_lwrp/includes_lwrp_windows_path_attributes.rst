@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``path``
-     - |path lwrp windows_path|
+     - |path windows_path|

@@ -14,7 +14,7 @@ This lightweight resource provider has the following attributes:
    * - ``description``
      - |description lwrp yum_repository|
    * - ``enabled``
-     - |enabled lwrp yum_repository|
+     - |use repo| Default value: ``1`` (enabled).
    * - ``failovermethod``
      - Optional. |failovermethod|
    * - ``includepkgs``
@@ -30,4 +30,4 @@ This lightweight resource provider has the following attributes:
    * - ``type``
      - Optional.
    * - ``url``
-     - |url lwrp yum_repository|
+     - |url package_download|

@@ -10,10 +10,10 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``class_name``
-     - |class_name lwrp chef_handler|
+     - |name class_chef_handler|
    * - ``source``
-     - |source lwrp chef_handler|
+     - |path chef_handler|
    * - ``arguments``
      - |arguments chef_handler|
    * - ``supports``
-     - |supports lwrp chef_handler|
+     - |supports chef_handler|

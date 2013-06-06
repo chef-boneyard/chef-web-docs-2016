@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``listen``
      - |listen lwrp gunicorn_config|
    * - ``owner``
-     - |owner lwrp gunicorn_config|
+     - |owner file_config|
    * - ``path``
      - |path lwrp gunicorn_config|
    * - ``pid``
@@ -28,7 +28,7 @@ This lightweight resource provider has the following attributes:
    * - ``server_hooks``
      - |server_hooks lwrp gunicorn_config|
    * - ``template``
-     - |template lwrp gunicorn_config|
+     - |template file_config| Default value: ``gunicorn.py.erb`` (included as part of the ``gunicorn`` cookbook).
    * - ``worker_class``
      - |worker_class| Default value: ``sync``.
    * - ``worker_keepalive``

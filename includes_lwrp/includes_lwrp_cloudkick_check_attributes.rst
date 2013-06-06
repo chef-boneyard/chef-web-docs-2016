@@ -14,10 +14,10 @@ This lightweight resource provider has the following attributes:
    * - ``code``
      - 
    * - ``details``
-     - |details lwrp cloudkick_check|
+     - |details cloudkick_check|
    * - ``monitor``
-     - |monitor lwrp cloudkick_check|
+     - |id monitor_cloudkick|
    * - ``oauth_key``
-     - |oauth_key lwrp cloudkick|
+     - |oauth_key cloudkick|
    * - ``oauth_secret``
-     - |oauth_secret lwrp cloudkick|
+     - |oauth_secret cloudkick|

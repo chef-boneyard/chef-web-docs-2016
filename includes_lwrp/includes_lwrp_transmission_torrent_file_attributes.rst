@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``continue_seeding``
      - |continue_seeding lwrp transmission_torrent_file|
    * - ``owner``
-     - |owner lwrp transmission_torrent_file|
+     - |owner file|
    * - ``group``
      - |group lwrp transmission_torrent_file|
    * - ``rpc_host``

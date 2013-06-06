@@ -22,7 +22,7 @@ This lightweight resource provider has the following attributes:
    * - ``log``
      - |log lwrp daemontools_service|
    * - ``owner``
-     - |owner lwrp daemontools_service|
+     - |owner directory_service|
    * - ``service_name``
      - |name service|
    * - ``template``
