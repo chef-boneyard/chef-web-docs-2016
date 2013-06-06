@@ -13,12 +13,12 @@ The following parameters can be used with the ``platform_family?`` method:
      - |archlinux|
    * - ``debian``
      - |debian|, |mint|, |ubuntu|
-   * - ``enterprise fedora``
-     - |fedora enterprise|
+   * - ``fedora``
+     - |fedora|
    * - ``gentoo``
      - |gentoo|
    * - ``rhel``
-     - |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat|, |redhat enterprise linux|
+     - |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat enterprise linux|
    * - ``slackware``
      - |slackware|
    * - ``suse``
