@@ -28,4 +28,4 @@ This resource has the following attributes:
    * - ``uid``
      - |uid resource user|
    * - ``username``
-     - |username resource user|
+     - |name user| Default value: ``name``.

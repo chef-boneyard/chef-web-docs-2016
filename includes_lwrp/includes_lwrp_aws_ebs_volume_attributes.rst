@@ -16,13 +16,13 @@ This lightweight resource provider has the following attributes:
    * - ``aws_secret_access_key``
      - |aws_access_key_password|
    * - ``device``
-     - |device lwrp aws_ebs_volume|
+     - |device aws_ebs_volume|
    * - ``size``
-     - |size lwrp aws_ebs_volume|
+     - |size volume|
    * - ``snapshot_id``
-     - |snapshot_id lwrp aws_ebs_volume|
+     - |id aws_snapshot|
    * - ``snapshots_to_keep``
-     - |snapshots_to_keep lwrp aws_ebs_volume|
+     - |snapshots_to_keep| Default value: ``2``.
    * - ``timeout``
      - |timeout aws_ec2| Default value: ``3 minutes``.
    * - ``volume_id``

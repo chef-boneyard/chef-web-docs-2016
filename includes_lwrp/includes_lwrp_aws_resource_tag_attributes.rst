@@ -14,6 +14,6 @@ This lightweight resource provider has the following attributes:
    * - ``aws_secret_access_key``
      - |aws_access_key_password|
    * - ``resource_id``
-     - |resource_id lwrp aws_resource_tag|
+     - |id aws_resource_tag|
    * - ``tags``
-     - Required. |tags lwrp aws_resource_tag|
+     - Required. |tags hash|
