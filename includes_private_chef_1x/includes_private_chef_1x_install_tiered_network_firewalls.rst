@@ -50,4 +50,4 @@ On the back-end servers:
      - redis
 
 
-Refer to the operating systems manual or a site systems administrators for instructions on how to enable this change.
+Refer to the operating system's manual or a site systems administrators for instructions on how to enable this change.

@@ -51,6 +51,6 @@ On the back-end servers:
    * - 7788
      - drbd
 
-Refer to the operating systems manual or site systems administrators for instructions on how to enable this change.
+Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
 
 
