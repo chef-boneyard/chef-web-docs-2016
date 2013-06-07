@@ -6,4 +6,4 @@ If you are using host-based firewalls (iptables, ufw, etc.) ensure that the foll
 * Port 80, nginx 
 * Port 443, nginx
 
-Refer to the operating systems manual, or a site systems administrator for instructions on how to enable this change.
+Refer to the operating system's manual, or a site systems administrator for instructions on how to enable this change.
