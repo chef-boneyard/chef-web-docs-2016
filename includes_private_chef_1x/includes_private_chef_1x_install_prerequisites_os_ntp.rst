@@ -6,7 +6,7 @@
 .. code-block:: bash
 
    $ yum install ntp
-   $ chkconfig --add ntp
+   $ chkconfig ntpd on
    $ service ntpd start
 
 For |ubuntu|:
