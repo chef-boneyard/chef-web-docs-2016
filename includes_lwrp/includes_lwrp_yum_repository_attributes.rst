@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``bootstrapurl``
      - Optional.
    * - ``description``
-     - |description lwrp yum_repository|
+     - |description yum_repository|
    * - ``enabled``
      - |use repo| Default value: ``1`` (enabled).
    * - ``failovermethod``

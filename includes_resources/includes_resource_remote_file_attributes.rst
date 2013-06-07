@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``backup``
      - |backup resource remote_file|
    * - ``checksum``
-     - |checksum resource remote_file|
+     - Optional. |checksum file| Default value: ``nil``.
    * - ``group``
      - |group windows security|
    * - ``inherits``

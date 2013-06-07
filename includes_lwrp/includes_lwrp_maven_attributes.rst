@@ -12,16 +12,16 @@ This lightweight resource provider has the following attributes:
    * - ``artifact_id``
      - |artifact_id|
    * - ``dest``
-     - |dest lwrp maven|
+     - |directory maven|
    * - ``group_id``
      - |id group|
    * - ``mode``
-     - |mode lwrp maven|
+     - |mode *nix| Default value: ``0644``.
    * - ``owner``
      - |owner file_artifact| Default value: ``root``.
    * - ``packaging``
-     - |packaging lwrp maven|
+     - |type package| Default value: ``jar``.
    * - ``repositories``
-     - |repositories lwrp maven|
+     - |repositories maven| Default value: ``["http://repo1.maven.apache.org/maven2"]``.
    * - ``version``
-     - |version lwrp maven|
+     - |version artifact|

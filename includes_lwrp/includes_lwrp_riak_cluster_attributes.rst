@@ -12,10 +12,10 @@ This lightweight resource provider has the following attributes:
    * - ``cluster_name``
      - |name cluster|
    * - ``cluster_members``
-     - |cluster_members lwrp riak_cluster|
+     - |cluster member_nodes| Default value: discovered by |chef| search functionality.
    * - ``node_name``
-     - |cluster_name lwrp riak_cluster|
+     - |name local_riak_node|
    * - ``timeout``
-     - |timeout lwrp riak_cluster|
+     - |timeout riak_cluster| Default value: ``30``.
    * - ``riak_admin_path``
-     - |riak_admin_path lwrp riak_cluster|
+     - |path riak_admin| Default value: ``/usr/sbin``.

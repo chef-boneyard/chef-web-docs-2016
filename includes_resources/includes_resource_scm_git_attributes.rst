@@ -28,7 +28,7 @@ This resource has the following attributes:
    * - ``repository``
      - |repository resource scm|
    * - ``revision``
-     - |revision resource scm|
+     - |revision| Default value: ``HEAD``.
    * - ``ssh_wrapper``
      - |ssh_wrapper resource|
    * - ``user``

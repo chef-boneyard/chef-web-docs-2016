@@ -36,20 +36,6 @@ where ``["ntpdate"] = "ntpdate -u time"`` is added to the whitelist:
      "ntpdate" => "ntpdate -u time",
    }
 
-Use the ``knife job start`` subcommand to run a job using the following syntax:
-
-.. code-block:: bash
-
-   $ knife job start job_name node_name
-
-For example, to run a job named ``add-glasses`` against a node named "ricardosalazar", enter the following:
-
-.. code-block:: bash
-
-   $ knife job start add-glasses 'ricardosalazar'
-
-
- 
 
 
 

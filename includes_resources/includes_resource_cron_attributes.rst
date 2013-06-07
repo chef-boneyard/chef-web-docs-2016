@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - |command resource cron|
+     - |command_or_path|
 
        Some examples:
 
@@ -36,24 +36,24 @@ This resource has the following attributes:
 
           command "/srv/app/scripts/daily_report"
    * - ``day``
-     - |day resource cron|
+     - |day cron|
    * - ``home``
-     - |home resource cron|
+     - |environment set_home|
    * - ``hour``
-     - |hour resource cron|
+     - |hour cron|
    * - ``mailto``
-     - |mailto resource cron|
+     - |environment set_mailto|
    * - ``minute``
-     - |minute resource cron|
+     - |minute cron|
    * - ``month``
-     - |month resource cron|
+     - |month cron|
    * - ``path``
-     - |path resource cron|
+     - |environment set_path|
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``shell``
-     - |shell resource cron|
+     - |environment set_shell|
    * - ``user``
-     - |user resource cron|
+     - |name user cron| Default value: ``root``.
    * - ``weekday``
-     - |weekday resource cron|
+     - |weekday cron|

@@ -42,9 +42,9 @@ This lightweight resource provider has the following attributes:
    * - ``repository``
      - |repository lwrp application|
    * - ``restart_command``
-     - |restart_command lwrp application|
+     - |restart shell_command| Default value: ``nil``.
    * - ``revision``
-     - |revision lwrp application|
+     - |revision| Default value: ``HEAD``.
    * - ``rollback_on_error``
      - |rollback_on_error lwrp application|
    * - ``scm_provider``

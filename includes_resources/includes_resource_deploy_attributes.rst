@@ -44,9 +44,9 @@ This resource has the following attributes:
    * - ``repository_cache``
      - |repository_cache resource deploy|
    * - ``restart_command``
-     - |restart_command resource deploy|
+     - |restart shell_command| Default value: ``nil``.
    * - ``revision``
-     - |revision resource deploy|
+     - |revision| Default value: ``HEAD``.
    * - ``rollback_on_error``
      - |rollback_on_error resource deploy|
    * - ``scm_provider``

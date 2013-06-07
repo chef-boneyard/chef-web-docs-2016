@@ -14,12 +14,13 @@
 .. |rackspace-username| replace:: The user name for the |rackspace| account.
 .. |raid_device resource mdadm| replace:: The name of the |raid| device. Default value: ``name``.
 
-.. |rdata lwrp dynect_rr| replace:: The record data.
+.. |record_data| replace:: The record data.
+.. |record_ttl| replace:: The record time to live.
 
 .. |readme-format| replace:: The document format of the readme file: ``md`` (markdown) and ``rdoc`` (|ruby| docs).
 .. |reason windows_reboot| replace:: The reason for a |windows| reboot.
 .. |recipe_url| replace:: The URL location from which a remote cookbook |tar gz| will be downloaded.
-.. |record_type lwrp dynect_rr| replace:: The type of record. For example: ``A``, ``CNAME``, and so on.
+
 .. |recursive resource directory| replace:: Indicates whether the directory will be created or deleted recursively. For the ``owner``, ``group``, and ``mode`` attributes, the value of this attribute applies only to the leaf directory. Default value: ``false``.
 .. |recursive resource registry_key| replace:: When creating a key, this value indicates whether the required keys for the specified path will be created. When using the ``:delete_key`` action in a recipe, and if the registry key has subkeys, then the value for this attribute should be set to ``true``.
 .. |redirect_stderr lwrp supervisor| replace:: Indicates that the STDERR output for a process is sent back to |python supervisor| using STDOUT.
@@ -27,7 +28,7 @@
 .. |region amazon| replace:: The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.
 .. |region eucalyptus| replace:: The name of the region from which instances of hosted applications are launched.
 .. |region openstack| replace:: The name of the region from which instances of hosted applications are launched.
-.. |reload_command resource service| replace:: The command used to tell a service to reload its configuration. Default value: ``nil``.
+
 .. |remote resource| replace:: The remote repository to be used when synchronizing an existing clone.
 .. |repo resource deploy| replace:: The alias for the repository.
 .. |repo_mode| replace:: The layout of the local repository. The ``default`` repository includes cookbooks, data bags, environments, and roles. The ``everything`` repository adds nodes, |chef api client|, and users. Default value: ``default``.
@@ -37,7 +38,7 @@
 .. |repository resource deploy| replace:: The URI for the repository.
 .. |repository resource scm| replace:: The URI for the repository.
 .. |repository_cache resource deploy| replace:: The name of the sub-directory in which the pristine copy of an application's source is kept. Default value: ``cached-copy``.
-.. |repositories lwrp maven| replace:: An array of |apache maven| repositories. Default value: ``["http://repo1.maven.apache.org/maven2"]``.
+.. |repositories maven| replace:: An array of |apache maven| repositories.
 .. |requirements lwrp application_python_django| replace:: The relative path to a requirements file. If this attribute is unspecified, the provider will look for one in the project root named ``requirements/#{chef_environment}.txt`` or ``requirements.txt``.
 .. |resource action add ifconfig| replace:: Use to run |ifconfig| to configure a network interface and (on some platforms) write a configuration file for that network interface.
 .. |resource action add route| replace:: Use to add a route.
@@ -197,9 +198,15 @@
 
 .. |response_file resource package| replace:: Optional. The response file that is used to pre-seed packages. Default value: ``nil``.
 .. |rest_timeout| replace:: The time (in seconds) after which an HTTP REST request will time out. Default value: ``300``.
-.. |restart_command lwrp application| replace:: A string that contains a shell command that can be executed to run a restart operation.
-.. |restart_command resource deploy| replace:: A string that contains a shell command that can be executed to run a restart operation . Default value: ``nil``.
-.. |restart_command action write service| replace:: The command used to restart a service. Default value: ``nil``.
+
+
+.. |restart shell_command| replace:: A string that contains a shell command that can be executed to run a restart operation.
+
+
+
+
+
+
 
 .. |retries| replace:: Use to specify the number of times to catch exceptions and retry the resource.
 .. |retry_delay| replace:: Use to specify the retry delay (in seconds).
@@ -208,11 +215,16 @@
 .. |returns lwrp powershell| replace:: The return value of the command. This value may be an array of accepted values. If the return value(s) do not match, an exception is returned.
 .. |returns resource batch| replace:: The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match.
 .. |returns resource execute| replace:: The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match. Default value: ``0``.
-.. |revision lwrp application| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier.
-.. |revision resource deploy| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier. Default value: ``HEAD``.
-.. |revision resource scm| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier. Default value: ``HEAD``.
 
-.. |riak_admin_path lwrp riak_cluster| replace:: The location in which ``riak`` and ``riak-admin`` scripts are located. Default value: ``/usr/sbin``.
+
+
+
+.. |revision| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier.
+
+
+
+
+
 
 .. |rights windows security| replace:: The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a hash with one (or more) advanced rights options.
 

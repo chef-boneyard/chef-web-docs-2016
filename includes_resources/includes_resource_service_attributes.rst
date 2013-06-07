@@ -10,20 +10,20 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``pattern``
-     - |pattern resource service|
+     - |pattern process_table| Default value: ``service_name``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``reload_command``
-     - |reload_command resource service|
+     - |command service_reload| Default value: ``nil``.
    * - ``restart_command``
-     - |restart_command action write service|
+     - |command service_restart|
    * - ``service_name``
      - |name service| Default value: ``name``.
    * - ``start_command``
-     - |start_command resource service|
+     - |command service_start| Default value: ``nil``.
    * - ``status_command``
-     - |status_command resource service|
+     - |command service_status| Default value: ``nil``.
    * - ``stop_command``
-     - |stop_command resource service|
+     - |command service_stop| Default value: ``nil``.
    * - ``supports``
      - |supports resource service|

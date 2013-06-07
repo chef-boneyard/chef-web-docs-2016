@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``repository``
      - |repository resource scm|
    * - ``revision``
-     - |revision resource scm|
+     - |revision| Default value: ``HEAD``.
    * - ``user``
      - |user resource scm|
 

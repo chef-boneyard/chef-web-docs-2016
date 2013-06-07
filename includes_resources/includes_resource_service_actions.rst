@@ -20,6 +20,6 @@ This resource has the following actions:
    * - ``:stop``
      - |resource action stop service|
    * - ``:restart``
-     - |resource action restart service|
+     - |resource action restart service| Default value: ``nil``.
    * - ``:reload``
      - |resource action reload service|

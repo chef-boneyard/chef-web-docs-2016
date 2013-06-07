@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``repository``
      - |repository resource scm|
    * - ``revision``
-     - |revision resource scm|
+     - |revision| Default value: ``HEAD``.
    * - ``svn_arguments``
      - |svn_arguments resource|
    * - ``svn_info_args``
