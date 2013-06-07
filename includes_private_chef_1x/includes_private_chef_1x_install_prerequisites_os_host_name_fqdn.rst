@@ -3,7 +3,7 @@
 
 Ensure that the systems you are going to install |chef private| on have properly configured host names, and a *resolvable* |fully qualified domain name| (e.g. mychefserver.example.com). 
 
-Depending on your OS, there are a few different ways to change your hostname. Please note that the following are examples and you should refer to the operating systems manual or local systems administrator for guidance.
+Depending on your OS, there are a few different ways to change your hostname. Please note that the following are examples and you should refer to the operating system's manual or local systems administrator for guidance.
 
 For |redhat| and |centos| 6:
 
@@ -33,4 +33,4 @@ Run the following command to add an entry for your IP address (this command assu
 	
 	$ echo -e "`ip addr list eth0 |grep \"inet \" |cut -d' ' -f6|cut -d/ -f1`\t`hostname -s` `hostname`" | sudo tee -a /etc/hosts
 
-As mentioned before, the commands above are examples on how to make your FQDN properly set and resolvable, however you **should always** refer to the operating systems manual or local systems administrator for guidance.
+As mentioned before, the commands above are examples on how to make your FQDN properly set and resolvable, however you **should always** refer to the operating system's manual or local systems administrator for guidance.
