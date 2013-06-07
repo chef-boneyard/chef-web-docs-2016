@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-07 08:08\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/resource_common_windows_file_security.rst:34
+# 5d3d70088d5f478da49853ea4df68aca
+msgid "Windows File Security"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security.rst:4
+# f95e69ab9008408c86399dcd0f98249f
+msgid "To support |windows| security, the |resource template|, |resource file|, |resource remote_file|, |resource cookbook_file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes."
+msgstr ""
+
+#: ../source/resource_common_windows_file_security.rst:39
+# 5f4c5637c3ed421991acddc4d5dbc51f
+msgid "Access Control Lists (ACLs)"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:4
+# 2fabc03d5e824c6c805b553f61ffe480
+msgid "The ``rights`` attribute can be used in a recipe to manage access control lists (ACLs), which allow permissions to be given to multiple users and groups. The syntax for the ``rights`` attribute is as follows:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:10
+# 40ab9aa835a74ef6a94c5b36f582add9
+msgid "where"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:12
+# 78b42677c70f4490b3fc4d37454ba2ff
+msgid "``permission`` is used to specify which rights will be granted to the ``principal``. The possible values are: ``:read``, ``:write``, ``:full_control``, and ``:deny``. These permissions are cumulative. If ``:write`` is specified, then it includes ``:read``. If ``:full_control`` is specified, then it includes both ``:write`` and ``:read``. If ``:deny`` is specified, then the user or group will not have rights to the object. (For those who know the |windows| API: ``:read`` corresponds to ``GENERIC_READ`` and ``GENERIC_EXECUTE``; ``:write`` corresponds to ``GENERIC_WRITE``, ``GENERIC_READ``, and ``GENERIC_EXECUTE``; ``:full_control`` corresponds to ``GENERIC_ALL``, which allows a user to change the owner and other metadata about a file.)"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:13
+# ba0f78cbf4084dbabc10c83f120bd943
+msgid "``principal`` is used to specify a group or user name. This is identical to what is entered in the login box for |windows|, such as ``user_name``, ``domain\\user_name``, or ``user_name@fully_qualified_domain_name``. |chef| does not need to know if a principal is a user or a group."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:14
+# 2c2e9e2d24c54180a7e8f85062a19b19
+msgid "``option`` is a hash that contains advanced rights options. For example, the rights to a directory that only applies to its children might look something like: ``rights :write, \"domain\\group_name\", :option_type => value`` where ``option_type`` is one of the following:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:20
+# d1266be066a5432196f2048d17fd28f5
+msgid "Option Type"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:21
+# 3760eb2c85fc4f87998730d68e764819
+msgid "Description"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:22
+# f1035908d20e412fad9b643dd92b46f3
+msgid "``:applies_to_children``"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:23
+# 115884744fd5487a82261fd65416931c
+msgid "Use to specify how permissions are applied to children. Possible values: ``true`` to inherit both child directories and files;  ``false`` to not inherit any child directories or files; ``:containers_only`` to inherit only child directories (and not files); ``:objects_only`` to recursively inherit files (and not child directories)."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:24
+# 36f7b696c8984f43a7410b029fe0530d
+msgid "``:applies_to_self``"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:25
+# d15b933e8e5f489cab75b088eb3f3135
+msgid "Indicates whether a permission is applied to the parent directory. Possible values: ``true`` to apply to the parent directory or file and its children; ``false`` to not apply only to child directories and files."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:26
+# 788a683fccd747799f8ce5daa176c5b1
+msgid "``:one_level_deep``"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:27
+# 3308e00402fa4f719964764cb3c30391
+msgid "Indicates the depth to which permissions will be applied. Possible values: ``true`` to apply only to the first level of children; ``false`` to apply to all children."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:29
+# 536403df645f4562943ebb8bfd4fb127
+msgid "The ``rights`` attribute can be used as many times as necessary; |chef| will apply them to the file or directory as required. For example:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:40
+# 1f558017329949f3b29710ddc290ba12
+msgid "Some other important things to know when using the ``rights`` attribute:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:42
+# 10c3d8c784b84656bdd4f66bfb23a5e6
+msgid "Order independence. It doesn't matter if ``rights :deny, \"Sally\"`` is placed before or after ``rights :read, \"Sally\"``, Sally will be unable to read the document."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:43
+# dbe52c6ce1fa4f4f8deeb04a7ae9754f
+msgid "Only inherited rights remain. All existing explicit rights on the object are removed and replaced."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:44
+# 496458d6eb50417da4067c7c768a3fe5
+msgid "If rights are not specified, nothing will be changed. |chef| does not clear out the rights on a file or directory if rights are not specified."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst:45
+# 5653377a233b40e9ae12b9086f7d8756
+msgid "Changing inherited rights can be expensive. |windows| will propagate rights to all children recursively due to inheritance. This is a normal aspect of |windows|, so consider the frequency with which this type of action is necessary and take steps to control this type of action if performance is the primary consideration."
+msgstr ""
+
+#: ../source/resource_common_windows_file_security.rst:43
+# 2b2f6a21e0224dd486db827c7799dcb3
+msgid "Inheritance"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst:4
+# 3d50094bd35d437db0a2b883f9ae00e7
+msgid "By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The ``inherits`` attribute can be used to specifically tell |chef| to apply (or not apply) inherited rights from its parent directory."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst:6
+# 3086b8bcda4e4d998eb632d5b91efd78
+msgid "For example, the following example specifies the rights for a directory:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst:15
+# 1886557d032e4c4aaf6f9bd88782df7d
+msgid "and then the following example specifies how to use inheritance to deny access to the child directory:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst:24
+# 77838a5d92f444f0a92dce960e6fd4e8
+msgid "If the ``:deny`` permission were to be used instead, something could slip through unless all users and groups were denied."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst:26
+# 0e83d298d4424279a420e17ff90c0027
+msgid "Another example also shows how to specify rights for a directory:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst:36
+# f881eb77cc75467aabf123425a54abad
+msgid "but then not use the ``inherits`` attribute to deny those rights on a child directory:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst:44
+# 16cbc6a253034e588025482a3aa36442
+msgid "Because the ``inherits`` attribute is not specified, |chef| will default it to ``true``, which will ensure that security settings for existing files remain unchanged."
+msgstr ""
+
