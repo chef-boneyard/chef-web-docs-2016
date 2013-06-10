@@ -1,0 +1,188 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>registry_key_exists? Method &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About the Recipe DSL" href="dsl_recipe.html" />
+    <link rel="next" title="registry_value_exists? Method" href="dsl_recipe_method_registry_value_exists.html" />
+    <link rel="prev" title="registry_has_subkeys? Method" href="dsl_recipe_method_registry_has_subkeys.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="dsl_recipe_method_registry_value_exists.html" title="registry_value_exists? Method"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="dsl_recipe_method_registry_has_subkeys.html" title="registry_has_subkeys? Method"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="dsl_recipe.html" accesskey="U">About the Recipe DSL</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="registry-key-exists-method">
+<h1>registry_key_exists? Method<a class="headerlink" href="#registry-key-exists-method" title="Permalink to this headline">¶</a></h1>
+<p>The <tt class="docutils literal"><span class="pre">registry_key_exists?</span></tt> method can be used to find out if a Microsoft Windows registry key exists.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This method can be used in recipes and from within the <tt class="docutils literal"><span class="pre">not_if</span></tt> and <tt class="docutils literal"><span class="pre">only_if</span></tt> blocks in resources. This method is not designed to create or modify a registry setting. If a registry setting needs to be modified, use the <strong>registry_key</strong> resource.</p>
+</div>
+<p>The syntax for the <tt class="docutils literal"><span class="pre">registry_key_exists?</span></tt> method is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">registry_key_exists?</span><span class="p">(</span><span class="no">KEY_PATH</span><span class="p">,</span> <span class="no">ARCHITECTURE</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">KEY_PATH</span></tt> is the path to the registry key. The path must include the registry hive, which can be specified either as its full name or as the 3- or 4-letter abbreviation. For example, both <tt class="docutils literal"><span class="pre">HKLM\SECURITY</span></tt> and <tt class="docutils literal"><span class="pre">HKEY_LOCAL_MACHINE\SECURITY</span></tt> are both valid and equivalent. The following hives are valid: <tt class="docutils literal"><span class="pre">HKEY_LOCAL_MACHINE</span></tt>, <tt class="docutils literal"><span class="pre">HKLM</span></tt>, <tt class="docutils literal"><span class="pre">HKEY_CURRENT_CONFIG</span></tt>, <tt class="docutils literal"><span class="pre">HKCC</span></tt>, <tt class="docutils literal"><span class="pre">HKEY_CLASSES_ROOT</span></tt>, <tt class="docutils literal"><span class="pre">HKCR</span></tt>, <tt class="docutils literal"><span class="pre">HKEY_USERS</span></tt>, <tt class="docutils literal"><span class="pre">HKU</span></tt>, <tt class="docutils literal"><span class="pre">HKEY_CURRENT_USER</span></tt>, and <tt class="docutils literal"><span class="pre">HKCU</span></tt>.</li>
+<li><tt class="docutils literal"><span class="pre">ARCHITECTURE</span></tt> is one of the following values: <tt class="docutils literal"><span class="pre">:x86_64</span></tt>, <tt class="docutils literal"><span class="pre">:i386</span></tt>, or <tt class="docutils literal"><span class="pre">:machine</span></tt>. In order to read or write 32-bit registry keys on 64-bit machines running Microsoft Windows, the <tt class="docutils literal"><span class="pre">architecture</span></tt> attribute must be set to <tt class="docutils literal"><span class="pre">:i386</span></tt>. The <tt class="docutils literal"><span class="pre">:x86_64</span></tt> value can be used to force writing to a 64-bit registry location, but this value is less useful than the default (<tt class="docutils literal"><span class="pre">:machine</span></tt>) because Chef will return an exception if <tt class="docutils literal"><span class="pre">:x86_64</span></tt> is used and the machine turns out to be a 32-bit machine (whereas with <tt class="docutils literal"><span class="pre">:machine</span></tt>, Chef will be able to access the registry key on the 32-bit machine).</li>
+</ul>
+<p>This method will return <tt class="docutils literal"><span class="pre">true</span></tt> or <tt class="docutils literal"><span class="pre">false</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">ARCHITECTURE</span></tt> attribute should only specify <tt class="docutils literal"><span class="pre">:x86_64</span></tt> or <tt class="docutils literal"><span class="pre">:i386</span></tt> when it is necessary to write 32-bit (<tt class="docutils literal"><span class="pre">:i386</span></tt>) or 64-bit (<tt class="docutils literal"><span class="pre">:x86_64</span></tt>) values on a 64-bit machine. <tt class="docutils literal"><span class="pre">ARCHITECTURE</span></tt> will default to <tt class="docutils literal"><span class="pre">:machine</span></tt> unless a specific value is given.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="dsl_recipe_method_registry_value_exists.html" title="registry_value_exists? Method"
+             >next</a></li>
+        <li class="right" >
+          <a href="dsl_recipe_method_registry_has_subkeys.html" title="registry_has_subkeys? Method"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="dsl_recipe.html" >About the Recipe DSL</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

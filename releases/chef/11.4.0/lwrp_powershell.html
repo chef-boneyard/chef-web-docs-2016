@@ -1,0 +1,316 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>powershell Lightweight Resource &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About LWRPs" href="lwrp.html" />
+    <link rel="next" title="python Lightweight Resource" href="lwrp_python.html" />
+    <link rel="prev" title="php Lightweight Resource" href="lwrp_php.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_python.html" title="python Lightweight Resource"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="lwrp_php.html" title="php Lightweight Resource"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" accesskey="U">About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">powershell Lightweight Resource</a><ul>
+<li><a class="reference internal" href="#powershell">powershell</a><ul>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="powershell-lightweight-resource">
+<h1>powershell Lightweight Resource<a class="headerlink" href="#powershell-lightweight-resource" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>powershell</strong> cookbook is used to install Windows PowerShell.</p>
+<p>The <strong>powershell</strong> cookbook contains the following lightweight resource: <tt class="docutils literal"><span class="pre">powershell</span></tt>.</p>
+<div class="section" id="powershell">
+<h2>powershell<a class="headerlink" href="#powershell" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>powershell</strong> lightweight resource is used to execute a script using the Windows PowerShell interpreter (similar to script resources for Bash, Csh, Perl, Python, or Ruby). A temporary file is created and executed like other script resources, rather than run in-line. A Windows PowerShell lightweight resource is not idempotent. Use the <tt class="docutils literal"><span class="pre">not_if</span></tt> and <tt class="docutils literal"><span class="pre">only_if</span></tt> meta parameters to guard the use of this resource for idempotence.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This lightweight resource is part of the <strong>powershell</strong> cookbook (<a class="reference external" href="http://community.opscode.com/cookbooks/powershell">http://community.opscode.com/cookbooks/powershell</a>).</p>
+</div>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:run</span></tt></td>
+<td>Use to run a script.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">command</span></tt></td>
+<td>The name of the command to be executed.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">creates</span></tt></td>
+<td>Indicates that a command to create a file will not be run when that file already exists.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">cwd</span></tt></td>
+<td>The current working directory from which a command is run.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">environment</span></tt></td>
+<td>A hash of environment variables: <tt class="docutils literal"><span class="pre">{&quot;ENV_VARIABLE&quot;=&gt;&quot;VALUE&quot;}</span></tt>. (These environment variables must exist for a command to execute successfully.)</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">group</span></tt></td>
+<td>A group name or group identifier that must be changed before the command can be run.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">returns</span></tt></td>
+<td>The return value of the command. This value may be an array of accepted values. If the return value(s) do not match, an exception is returned.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">timeout</span></tt></td>
+<td>The amount of time (in seconds) a command will run before it times out.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">user</span></tt></td>
+<td>A user name or user identifier that myst be changed before the command can be run.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>To change the hostname for a computer:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">powershell</span> <span class="s2">&quot;rename hostname&quot;</span> <span class="k">do</span>
+  <span class="n">code</span> <span class="o">&lt;&lt;-</span><span class="no">EOH</span>
+<span class="sh">  $computer_name = Get-Content env:computername</span>
+<span class="sh">  $new_name = &#39;test-hostname&#39;</span>
+<span class="sh">  $sysInfo = Get-WmiObject -Class Win32_ComputerSystem</span>
+<span class="sh">  $sysInfo.Rename($new_name)</span>
+<span class="no">  EOH</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>To pass an environment variable to a script:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">powershell</span> <span class="s2">&quot;read-env-var&quot;</span> <span class="k">do</span>
+  <span class="n">cwd</span> <span class="no">Chef</span><span class="o">::</span><span class="no">Config</span><span class="o">[</span><span class="ss">:file_cache_path</span><span class="o">]</span>
+  <span class="n">environment</span> <span class="p">({</span><span class="s1">&#39;foo&#39;</span> <span class="o">=&gt;</span> <span class="s1">&#39;BAZ&#39;</span><span class="p">})</span>
+  <span class="n">code</span> <span class="o">&lt;&lt;-</span><span class="no">EOH</span>
+<span class="sh">  $stream = [System.IO.StreamWriter] &quot;./test-read-env-var.txt&quot;</span>
+<span class="sh">  $stream.WriteLine(&quot;FOO is $env:foo&quot;)</span>
+<span class="sh">  $stream.close()</span>
+<span class="no">  EOH</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>To set the <tt class="docutils literal"><span class="pre">cwd</span></tt> attribute to a Microsoft Windows environment variable:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">powershell</span> <span class="s2">&quot;cwd-to-win-env-var&quot;</span> <span class="k">do</span>
+  <span class="n">cwd</span> <span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;TEMP&#39;</span><span class="o">]</span>
+  <span class="n">code</span> <span class="o">&lt;&lt;-</span><span class="no">EOH</span>
+<span class="sh">  $stream = [System.IO.StreamWriter] &quot;./temp-write-from-chef.txt&quot;</span>
+<span class="sh">  $stream.WriteLine(&quot;chef on windows rox yo!&quot;)</span>
+<span class="sh">  $stream.close()</span>
+<span class="no">  EOH</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>To use the <tt class="docutils literal"><span class="pre">cwd</span></tt> attribute:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">powershell</span> <span class="s2">&quot;cwd-then-write&quot;</span> <span class="k">do</span>
+  <span class="n">cwd</span> <span class="no">Chef</span><span class="o">::</span><span class="no">Config</span><span class="o">[</span><span class="ss">:file_cache_path</span><span class="o">]</span>
+  <span class="n">code</span> <span class="o">&lt;&lt;-</span><span class="no">EOH</span>
+<span class="sh">  $stream = [System.IO.StreamWriter] &quot;C:/powershell-test2.txt&quot;</span>
+<span class="sh">  $pwd = pwd</span>
+<span class="sh">  $stream.WriteLine(&quot;This is the contents of: $pwd&quot;)</span>
+<span class="sh">  $dirs = dir</span>
+<span class="sh">  foreach ($dir in $dirs) {</span>
+<span class="sh">    $stream.WriteLine($dir.fullname)</span>
+<span class="sh">  }</span>
+<span class="sh">  $stream.close()</span>
+<span class="no">  EOH</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>To write to an interpolated path:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">powershell</span> <span class="s2">&quot;write-to-interpolated-path&quot;</span> <span class="k">do</span>
+  <span class="n">code</span> <span class="o">&lt;&lt;-</span><span class="no">EOH</span>
+<span class="sh">  $stream = [System.IO.StreamWriter]&quot;#{Chef::Config[:file_cache_path]}/powershell-test.txt&quot;</span>
+<span class="sh">  $stream.WriteLine(&quot;In #{Chef::Config[:file_cache_path]}...word.&quot;)</span>
+<span class="sh">  $stream.close()</span>
+<span class="no">  EOH</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_python.html" title="python Lightweight Resource"
+             >next</a></li>
+        <li class="right" >
+          <a href="lwrp_php.html" title="php Lightweight Resource"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" >About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

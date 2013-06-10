@@ -1,0 +1,247 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Run Resources from the Resource Collection &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About Resources and Providers" href="resource.html" />
+    <link rel="next" title="Conditional Executions in Recipes and Resources" href="resource_common_conditionals.html" />
+    <link rel="prev" title="Common Attributes for Resources" href="resource_common_attributes.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_common_conditionals.html" title="Conditional Executions in Recipes and Resources"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="resource_common_attributes.html" title="Common Attributes for Resources"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" accesskey="U">About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Run Resources from the Resource Collection</a><ul>
+<li><a class="reference internal" href="#before-other-resources">Before other resources</a></li>
+<li><a class="reference internal" href="#after-the-resource-collection-is-built">After the resource collection is built</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="run-resources-from-the-resource-collection">
+<h1>Run Resources from the Resource Collection<a class="headerlink" href="#run-resources-from-the-resource-collection" title="Permalink to this headline">¶</a></h1>
+<p>Chef processes recipes in two phases:</p>
+<ol class="arabic simple">
+<li>First, each resource in the node object is identified and a resource collection is built. All recipes are loaded in a specific order, and then the actions specified within each of them are identified.</li>
+<li>Next, Chef configures the system based on the order of the resources in the resource collection. Each resource is mapped to a provider, which then examines the node and then does the steps necessary to complete the action.</li>
+</ol>
+<p>Sometimes, it may be necessary to ensure that a specific resource is run during the phase that builds the resource collection. For example:</p>
+<ul class="simple">
+<li>A resource may need to run first so that it can download a package that will be used by other resources in the resource collection</li>
+<li>Several resources need to install a package; rather than having the package installer run several times, it can be configured to run only once</li>
+</ul>
+<p>To support these types of uses cases, it is possible to tell Chef to run a resource at the beginning and/or the end of the resource collection phase. Effectively, run a resource before all other resources are added to the resource collection and/or after all resources have been added, but before Chef configures the system.</p>
+<div class="section" id="before-other-resources">
+<h2>Before other resources<a class="headerlink" href="#before-other-resources" title="Permalink to this headline">¶</a></h2>
+<p>To run a resource at the start of the resource collection phase of the Chef run, set up a <tt class="docutils literal"><span class="pre">Chef::Resource</span></tt> object, and then call the method that runs the action.</p>
+<p><strong>Update a package cache</strong></p>
+<p>It is important to make sure that an operating system&#8217;s package cache is up to date before Chef tries to install packages, otherwise there may be references to versions that no longer exist. For example, on Debian or Ubuntu systems, the APT cache needs to be updated. Use code similar to the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">e</span> <span class="o">=</span> <span class="n">execute</span> <span class="s2">&quot;apt-get update&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
+
+<span class="n">e</span><span class="o">.</span><span class="n">run_action</span><span class="p">(</span><span class="ss">:run</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">e</span></tt> is created as a <tt class="docutils literal"><span class="pre">Chef::Resource::Execute</span></tt> Ruby object. The <tt class="docutils literal"><span class="pre">action</span></tt> attribute is set to <tt class="docutils literal"><span class="pre">:nothing</span></tt> so that the <tt class="docutils literal"><span class="pre">run_action</span></tt> method can be used to tell Chef to run the specified command. Opscode provides a cookbook for doing this with APT (Debian or Ubuntu) and pacman (for Arch Linux). The preceding recipe can be placed at the top of a node&#8217;s run list to ensure it is run before Chef tries to install any packages.</p>
+<p><strong>Install a RubyGem to use later</strong></p>
+<p>A single Chef run should configure a node completely. Chef uses Ruby as the recipe language, which means that anything that can be done with Ruby can be done in a recipe. However, in some cases, a Ruby gem may need to be installed before anything else happens. For example, when a MySQL database needs to interact with a recipe. This can be done with a recipe similar to the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">g</span> <span class="o">=</span> <span class="n">gem_package</span> <span class="s2">&quot;mysql&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
+
+<span class="n">g</span><span class="o">.</span><span class="n">run_action</span><span class="p">(</span><span class="ss">:install</span><span class="p">)</span>
+
+<span class="no">Gem</span><span class="o">.</span><span class="n">clear_paths</span>
+<span class="nb">require</span> <span class="s1">&#39;mysql&#39;</span>
+</pre></div>
+</div>
+<p>where similar to the previous example for updating package caches, this example creates a new Ruby object called <tt class="docutils literal"><span class="pre">Chef::Resource::Package</span></tt>.</p>
+<ul class="simple">
+<li>The MySQL Ruby gem compiles native extensions in C, so the appropriate packages for the operating system will also need to be installed.</li>
+<li><tt class="docutils literal"><span class="pre">Gem.clear_paths</span></tt> ensures that Chef reloads the cache of available Ruby gems.</li>
+<li><tt class="docutils literal"><span class="pre">require</span> <span class="pre">'mysql'</span></tt> loads the MySQL Ruby gem so that it can be used to connect to a MySQL database.</li>
+</ul>
+<p><strong>An anti-pattern</strong></p>
+<p>Unfortunately, resources that are executed when the resource collection is being built cannot notify any resource that has yet to be added to the resource collection. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">execute</span> <span class="s2">&quot;ifconfig&quot;</span>
+
+<span class="nb">p</span> <span class="o">=</span> <span class="n">package</span> <span class="s1">&#39;vim-enhanced&#39;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+  <span class="n">notifies</span> <span class="ss">:run</span><span class="p">,</span> <span class="s2">&quot;execute[ifconfig]&quot;</span><span class="p">,</span> <span class="ss">:immediately</span>
+<span class="k">end</span>
+<span class="nb">p</span><span class="o">.</span><span class="n">run_action</span><span class="p">(</span><span class="ss">:install</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In some cases, the better approach may be to install the package before the resource collection is built to ensure that it is available to other resources later on. Or, something like the following can be used:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">p</span> <span class="o">=</span> <span class="n">package</span> <span class="s2">&quot;foo&quot;</span> <span class="k">do</span>
+  <span class="c1">#parameters</span>
+<span class="k">end</span>
+<span class="nb">p</span><span class="o">.</span><span class="n">run_action</span><span class="p">(</span><span class="ss">:install</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="nb">p</span><span class="o">.</span><span class="n">updated_by_last_action?</span>
+  <span class="c1">#Call the resource that we want to &quot;notify&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="after-the-resource-collection-is-built">
+<h2>After the resource collection is built<a class="headerlink" href="#after-the-resource-collection-is-built" title="Permalink to this headline">¶</a></h2>
+<p>To run a resource at the end of the resource collection phase of the Chef run, use the <tt class="docutils literal"><span class="pre">:delayed</span></tt> timer on a notification.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_common_conditionals.html" title="Conditional Executions in Recipes and Resources"
+             >next</a></li>
+        <li class="right" >
+          <a href="resource_common_attributes.html" title="Common Attributes for Resources"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" >About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

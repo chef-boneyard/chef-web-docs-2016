@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Attribute Files &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Cookbooks Directory" href="essentials_cookbook_directory.html" />
+    <link rel="prev" title="About Cookbooks" href="essentials_cookbooks.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbook_directory.html" title="Cookbooks Directory"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbooks.html" title="About Cookbooks"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About Attribute Files</a><ul>
+<li><a class="reference internal" href="#attribute-file-ordering">Attribute File Ordering</a><ul>
+<li><a class="reference internal" href="#accessor-methods">Accessor Methods</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-attribute-files">Use Attribute Files</a><ul>
+<li><a class="reference internal" href="#attribute-types">Attribute Types</a></li>
+<li><a class="reference internal" href="#attribute-persistence">Attribute Persistence</a></li>
+<li><a class="reference internal" href="#attribute-precedence">Attribute Precedence</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#file-methods">File Methods</a><ul>
+<li><a class="reference internal" href="#id1">Attribute Precedence</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-attribute-files">
+<h1>About Attribute Files<a class="headerlink" href="#about-attribute-files" title="Permalink to this headline">¶</a></h1>
+<p>An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on a node. When a cookbook is loaded during a Chef run, these attributes are compared to the attributes that are already present on the node. When the cookbook attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
+<p>An attribute file is located in the <tt class="docutils literal"><span class="pre">attributes/</span></tt> sub-directory for a cookbook. When a cookbook is run against a node, the attributes contained in all attribute files are evaluated in the context of the node object. Node methods (when present) are used to set attribute values on a node. For example, the Apache cookbook contains an attribute file called <tt class="docutils literal"><span class="pre">default.rb</span></tt>, which contains the following attributes:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">[</span><span class="s2">&quot;apache&quot;</span><span class="o">][</span><span class="s2">&quot;dir&quot;</span><span class="o">]</span>          <span class="o">=</span> <span class="s2">&quot;/etc/apache2&quot;</span>
+<span class="n">default</span><span class="o">[</span><span class="s2">&quot;apache&quot;</span><span class="o">][</span><span class="s2">&quot;listen_ports&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span><span class="s2">&quot;443&quot;</span> <span class="o">]</span>
+</pre></div>
+</div>
+<p>The use of the node object (<tt class="docutils literal"><span class="pre">node.</span></tt>) is implicit in the previous example; the following example defines the node object itself as part of the attribute:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="s2">&quot;apache&quot;</span><span class="o">][</span><span class="s2">&quot;dir&quot;</span><span class="o">]</span>          <span class="o">=</span> <span class="s2">&quot;/etc/apache2&quot;</span>
+<span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="s2">&quot;apache&quot;</span><span class="o">][</span><span class="s2">&quot;listen_ports&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span><span class="s2">&quot;443&quot;</span> <span class="o">]</span>
+</pre></div>
+</div>
+<div class="section" id="attribute-file-ordering">
+<h2>Attribute File Ordering<a class="headerlink" href="#attribute-file-ordering" title="Permalink to this headline">¶</a></h2>
+<p>When Chef loads cookbook attribute files, it does so in alphabetical order for all the cookbooks. If you need to ensure that one attribute file is loaded before another you can use the <tt class="docutils literal"><span class="pre">include_attribute</span></tt> method.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_attribute</span> <span class="s2">&quot;name_of_cookbook&quot;</span>
+</pre></div>
+</div>
+<p>For example, if a Ruby on Rails cookbook requires that Apache attributes are available first):</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_attribute</span> <span class="s2">&quot;apache2&quot;</span>
+</pre></div>
+</div>
+<p>This will load the <tt class="docutils literal"><span class="pre">apache/attributes/default.rb</span></tt> file before continuing the processing of the current attribute file. If a specific attributes file (and not the default attributes file) needs to be loaded, then use the double colon (::) pattern (similar to the <tt class="docutils literal"><span class="pre">include_recipe</span></tt> method):</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_attribute</span> <span class="s2">&quot;rails::tunables&quot;</span>
+</pre></div>
+</div>
+<p>This will load the <tt class="docutils literal"><span class="pre">attributes/tunables.rb</span></tt> file in the <tt class="docutils literal"><span class="pre">rails</span></tt> cookbook.</p>
+<div class="section" id="accessor-methods">
+<h3>Accessor Methods<a class="headerlink" href="#accessor-methods" title="Permalink to this headline">¶</a></h3>
+<p>Attribute accessor methods are automatically created and the method invocation can be used interchangeably with the keys. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">dir</span>          <span class="o">=</span> <span class="s2">&quot;/etc/apache2&quot;</span>
+<span class="n">default</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">listen_ports</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span><span class="s2">&quot;443&quot;</span> <span class="o">]</span>
+</pre></div>
+</div>
+<p>This is a matter of style and preference for how attributes are reloaded from recipes, and may be seen when &#8220;retrieving&#8221; the value of an attribute.</p>
+</div>
+</div>
+<div class="section" id="use-attribute-files">
+<h2>Use Attribute Files<a class="headerlink" href="#use-attribute-files" title="Permalink to this headline">¶</a></h2>
+<p>An attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on. An attribute may be unique to a specific node or it can be identical across every node in the organization. Attributes are most commonly set from a cookbook, by using Knife, or are retrieved by Ohai from each node prior to every Chef run. All attributes are indexed for search on the Chef Server. Good candidates for attributes include:</p>
+<ul class="simple">
+<li>any cross-platform abstraction for an application, such as the path to a configuration files</li>
+<li>default values for tunable settings, such as the amount of memory assigned to a process or the number of workers to spawn</li>
+<li>anything that may need to be persisted in node data between Chef runs</li>
+</ul>
+<p>In general, attribute precedence is set to enable cookbooks and roles to define attribute defaults, for normal attributes to define the values that should be specific for a node, and for override attributes to force a certain value, even when a node already has that value specified.</p>
+<p>One approach is to set attributes at the same precedence level by setting attributes in a cookbook&#8217;s attribute files, and then also setting the same default attributes (but with different values) using a role. The attributes set in the role will be deep merged on top of the attributes from the attribute file, and the attributes set by the role will take precedence over the attributes specified in the cookbook&#8217;s attribute files.</p>
+<p>Another (much less common) approach is to set a value only if an attribute has no value. This can be done by using the <tt class="docutils literal"><span class="pre">_unless</span></tt> variants of the attribute priority methods: <tt class="docutils literal"><span class="pre">default_unless</span></tt>, <tt class="docutils literal"><span class="pre">set_unless</span></tt>, and <tt class="docutils literal"><span class="pre">override_unless</span></tt>. These variants should be used carefully because when they are used, the attributes applied to nodes may become out of sync with the values in the cookbooks as these cookbooks are updated. This approach can create situations where two otherwise identical nodes end up having slightly different configurations. This approach can also be a challenge to debug, so it is recommended to use the <tt class="docutils literal"><span class="pre">_unless</span></tt> variants carefully (and only when they are really necessary).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, Ohai collects attribute data about each node at the start of the Chef run. See the <a class="reference internal" href="chef_overview_attributes.html"><em>overview of attributes</em></a> for more information about how all of these attributes fit together.</p>
+</div>
+<div class="section" id="attribute-types">
+<h3>Attribute Types<a class="headerlink" href="#attribute-types" title="Permalink to this headline">¶</a></h3>
+<p>Attribute types can be any of the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute is automatically reset at the start of every Chef run and has the lowest attribute precedence. A cookbook should be authored to use <tt class="docutils literal"><span class="pre">default</span></tt> attributes as often as possible.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">force_default</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over a <tt class="docutils literal"><span class="pre">default</span></tt> attribute set by a role or an environment.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">normal</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute is a setting that persists on the target system and is never reset during a Chef run. A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute has a higher attribute precedence than a <tt class="docutils literal"><span class="pre">default</span></tt> attribute.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">override</span></tt></td>
+<td>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute is automatically reset at the start of every Chef run and has a higher attribute precedence than <tt class="docutils literal"><span class="pre">default</span></tt>, <tt class="docutils literal"><span class="pre">force_default</span></tt>, and <tt class="docutils literal"><span class="pre">normal</span></tt> attributes. An <tt class="docutils literal"><span class="pre">override</span></tt> attribute is most often specified in a recipe, but can be specified in an attribute file, for a role, and/or for an environment. A cookbook should be authored so that it uses <tt class="docutils literal"><span class="pre">override</span></tt> attributes only when required.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">force_override</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over an <tt class="docutils literal"><span class="pre">override</span></tt> attribute set by a role or an environment.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">automatic</span></tt></td>
+<td>An <tt class="docutils literal"><span class="pre">automatic</span></tt> attribute contains data that is identified by Ohai at the beginning of every Chef run. An <tt class="docutils literal"><span class="pre">automatic</span></tt> attribute cannot be modified and always has the highest attribute precedence.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-persistence">
+<h3>Attribute Persistence<a class="headerlink" href="#attribute-persistence" title="Permalink to this headline">¶</a></h3>
+<p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds them using data collected by Ohai at the beginning of the Chef run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
+</div>
+<div class="section" id="attribute-precedence">
+<h3>Attribute Precedence<a class="headerlink" href="#attribute-precedence" title="Permalink to this headline">¶</a></h3>
+<p>Attributes are always applied to Chef in the following order:</p>
+<ol class="arabic simple">
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in a recipe</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in an environment</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in role</li>
+<li>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute located in a recipe</li>
+<li>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in an attribute file</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in a role</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in an environment</li>
+<li>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">automatic</span></tt> attribute identified by Ohai at the start of the Chef run</li>
+</ol>
+<p>where the last attribute in the list is the one that is applied to the node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The attribute precedence order for roles and environments is reversed for <tt class="docutils literal"><span class="pre">default</span></tt> and <tt class="docutils literal"><span class="pre">override</span></tt> attributes. The precedence order for <tt class="docutils literal"><span class="pre">default</span></tt> attributes is environment, then role. The precedence order for <tt class="docutils literal"><span class="pre">override</span></tt> attributes is role, then environment. Applying environment <tt class="docutils literal"><span class="pre">override</span></tt> attributes after role <tt class="docutils literal"><span class="pre">override</span></tt> attributes allows a role to exist in multiple environments.</p>
+</div>
+<p>Attribute precedence, viewed from the same perspective as the Chef overview diagram, where the numbers in the diagram match the order of attribute precedence:</p>
+<img alt="_images/overview_chef_attributes_precedence.png" src="_images/overview_chef_attributes_precedence.png" />
+<p>Attribute precedence, when viewed as a table:</p>
+<img alt="_images/overview_chef_attributes_table.png" src="_images/overview_chef_attributes_table.png" />
+</div>
+</div>
+<div class="section" id="file-methods">
+<h2>File Methods<a class="headerlink" href="#file-methods" title="Permalink to this headline">¶</a></h2>
+<p>Use the following methods within the attributes file for a cookbook or within a recipe. These methods correspond to the attribute type of the same name:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">override</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">default</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">normal</span></tt> (or <tt class="docutils literal"><span class="pre">set</span></tt>, where <tt class="docutils literal"><span class="pre">set</span></tt> is an alias for <tt class="docutils literal"><span class="pre">normal</span></tt>)</li>
+<li><tt class="docutils literal"><span class="pre">_unless</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">attribute?</span></tt></li>
+</ul>
+<p>Additionally, there are <tt class="docutils literal"><span class="pre">_unless</span></tt> methods available. See the end of this topic for information on how to conditionally set attributes</p>
+<div class="section" id="id1">
+<h3>Attribute Precedence<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>A useful method that is related to attributes is the <tt class="docutils literal"><span class="pre">attribute?</span></tt> method. This method will check for the existence of an attribute, so that processing can be done in an attributes file or recipe, but only if a specific attribute exists.</p>
+<p>Using <tt class="docutils literal"><span class="pre">attribute?()</span></tt> in an attributes file:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">attribute?</span><span class="p">(</span><span class="s2">&quot;ec2&quot;</span><span class="p">)</span>
+  <span class="c1"># ... set stuff related to EC2</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Using <tt class="docutils literal"><span class="pre">attribute?()</span></tt> in a recipe:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">attribute?</span><span class="p">(</span><span class="s2">&quot;ec2&quot;</span><span class="p">)</span>
+  <span class="c1"># ... do stuff on EC2 nodes</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbook_directory.html" title="Cookbooks Directory"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbooks.html" title="About Cookbooks"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

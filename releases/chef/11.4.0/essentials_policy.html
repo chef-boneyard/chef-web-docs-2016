@@ -1,0 +1,189 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Policy &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Node Objects" href="essentials_node_object.html" />
+    <link rel="prev" title="Knife" href="essentials_knife.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_node_object.html" title="About Node Objects"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_knife.html" title="Knife"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-policy">
+<h1>About Policy<a class="headerlink" href="#about-policy" title="Permalink to this headline">¶</a></h1>
+<p>Policy settings can be used to map the capabilities of Chef to business and operational requirements, such as process and workflow. Roles define server types, such as &#8220;web server&#8221; or &#8220;database server&#8221;. Environments define process, such as &#8220;dev&#8221;, &#8220;staging&#8221;, or &#8220;production&#8221;. Certain types of data, such as passwords, user account data, and other sensitive items can be placed in data bags, which are located in a secure sub-area of Chef that can only be accessed by nodes that have the correct SSL certificates.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Policy Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="essentials_data_bags.html"><em>Data Bags</em></a></td>
+<td>A data bag is a global variable that is stored as JSON data and is accessible from a Chef Server. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="essentials_environments.html"><em>Environments</em></a></td>
+<td>An environment is a way to map an organization&#8217;s real-life workflow to what can be configured and managed when using Chef Server. Every Chef organization begins with a single environment called the <tt class="docutils literal"><span class="pre">_default</span></tt> environment, which cannot be modified (or deleted). Additional environments can be created, such as production, staging, testing, and development. Generally, an environment is also associated with one (or more) cookbook versions.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="essentials_roles.html"><em>Roles</em></a></td>
+<td>A role is a way to define certain patterns and processes that exist across nodes in a Chef organization as belonging to a single job function. Each role consists of zero (or more) attributes and a run list. Each node can have zero (or more) roles assigned to it. When a role is run against a node, the configuration details of that node are compared against the attributes of the role, and then the contents of that role&#8217;s run list are applied to the node&#8217;s configuration details. When a chef-client runs, it merges its own attributes and run lists with those contained within each assigned role.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_node_object.html" title="About Node Objects"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_knife.html" title="Knife"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

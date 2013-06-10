@@ -1,0 +1,735 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Recipes &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Resources and Providers" href="essentials_cookbook_resources.html" />
+    <link rel="prev" title="About Cookbook Metadata" href="essentials_cookbook_metadata.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbook_resources.html" title="About Resources and Providers"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbook_metadata.html" title="About Cookbook Metadata"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About Recipes</a><ul>
+<li><a class="reference internal" href="#recipe-attributes">Recipe Attributes</a><ul>
+<li><a class="reference internal" href="#attribute-types">Attribute Types</a></li>
+<li><a class="reference internal" href="#attribute-persistence">Attribute Persistence</a></li>
+<li><a class="reference internal" href="#attribute-precedence">Attribute Precedence</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#file-methods">File Methods</a></li>
+<li><a class="reference internal" href="#environment-variables">Environment Variables</a></li>
+<li><a class="reference internal" href="#work-with-recipes">Work with Recipes</a><ul>
+<li><a class="reference internal" href="#use-data-bags">Use Data Bags</a><ul>
+<li><a class="reference internal" href="#secret-keys">Secret Keys</a></li>
+<li><a class="reference internal" href="#store-keys-on-nodes">Store Keys on Nodes</a></li>
+<li><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#assign-dependencies">Assign Dependencies</a></li>
+<li><a class="reference internal" href="#create-exceptions">Create Exceptions</a></li>
+<li><a class="reference internal" href="#include-recipes">Include Recipes</a><ul>
+<li><a class="reference internal" href="#reload-attributes">Reload Attributes</a></li>
+<li><a class="reference internal" href="#accessor-methods">Accessor Methods</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-ruby">Use Ruby</a><ul>
+<li><a class="reference internal" href="#assign-a-value">Assign a value</a></li>
+<li><a class="reference internal" href="#use-case-statement">Use Case Statement</a></li>
+<li><a class="reference internal" href="#check-conditions">Check Conditions</a></li>
+<li><a class="reference internal" href="#execute-conditions">Execute Conditions</a></li>
+<li><a class="reference internal" href="#loop-over-array">Loop over Array</a></li>
+<li><a class="reference internal" href="#loop-over-hash">Loop over Hash</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#apply-to-run-lists">Apply to Run-lists</a><ul>
+<li><a class="reference internal" href="#chef-server">Chef Server</a></li>
+<li><a class="reference internal" href="#chef-solo">chef-solo</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#use-search-results">Use Search Results</a></li>
+<li><a class="reference internal" href="#use-tags">Use Tags</a></li>
+<li><a class="reference internal" href="#end-a-chef-run">End a Chef Run</a><ul>
+<li><a class="reference internal" href="#return-keyword">Return Keyword</a></li>
+<li><a class="reference internal" href="#raise-keyword">Raise Keyword</a></li>
+<li><a class="reference internal" href="#rescue-blocks">Rescue Blocks</a></li>
+<li><a class="reference internal" href="#send-to-log-files">Send to Log Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-recipes">
+<h1>About Recipes<a class="headerlink" href="#about-recipes" title="Permalink to this headline">¶</a></h1>
+<p>A recipe is the most fundamental configuration element within the Chef environment. A recipe:</p>
+<ul class="simple">
+<li>Is authored using Ruby, which is a programming language designed to read and behave in a predictable manner</li>
+<li>Is mostly a collection of resources in a Ruby syntax with some helper code around it</li>
+<li>Must define everything that is required to configure part of a system</li>
+<li>Must be stored in a cookbook</li>
+<li>May be included in a recipe</li>
+<li>May use the results of a search query and read the contents of a data bag (including an encrypted data bag)</li>
+<li>May have a dependency on one (or more) recipes</li>
+<li>May be tagged to facilitate the creation of arbitrary groupings that exist outside of the normal naming conventions an organization may have</li>
+<li>Must be added to a run-list before it can be used by Chef</li>
+<li>Is always executed in the same order as listed in a run-list</li>
+</ul>
+<div class="section" id="recipe-attributes">
+<h2>Recipe Attributes<a class="headerlink" href="#recipe-attributes" title="Permalink to this headline">¶</a></h2>
+<p>An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on a node. When a cookbook is loaded during a Chef run, these attributes are compared to the attributes that are already present on the node. When the cookbook attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, Ohai collects attribute data about each node at the start of the Chef run. See the <a class="reference internal" href="chef_overview_attributes.html"><em>overview of attributes</em></a> for more information about how all of these attributes fit together.</p>
+</div>
+<div class="section" id="attribute-types">
+<h3>Attribute Types<a class="headerlink" href="#attribute-types" title="Permalink to this headline">¶</a></h3>
+<p>Attribute types can be any of the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute is automatically reset at the start of every Chef run and has the lowest attribute precedence. A cookbook should be authored to use <tt class="docutils literal"><span class="pre">default</span></tt> attributes as often as possible.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">force_default</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over a <tt class="docutils literal"><span class="pre">default</span></tt> attribute set by a role or an environment.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">normal</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute is a setting that persists on the target system and is never reset during a Chef run. A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute has a higher attribute precedence than a <tt class="docutils literal"><span class="pre">default</span></tt> attribute.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">override</span></tt></td>
+<td>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute is automatically reset at the start of every Chef run and has a higher attribute precedence than <tt class="docutils literal"><span class="pre">default</span></tt>, <tt class="docutils literal"><span class="pre">force_default</span></tt>, and <tt class="docutils literal"><span class="pre">normal</span></tt> attributes. An <tt class="docutils literal"><span class="pre">override</span></tt> attribute is most often specified in a recipe, but can be specified in an attribute file, for a role, and/or for an environment. A cookbook should be authored so that it uses <tt class="docutils literal"><span class="pre">override</span></tt> attributes only when required.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">force_override</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over an <tt class="docutils literal"><span class="pre">override</span></tt> attribute set by a role or an environment.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">automatic</span></tt></td>
+<td>An <tt class="docutils literal"><span class="pre">automatic</span></tt> attribute contains data that is identified by Ohai at the beginning of every Chef run. An <tt class="docutils literal"><span class="pre">automatic</span></tt> attribute cannot be modified and always has the highest attribute precedence.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-persistence">
+<h3>Attribute Persistence<a class="headerlink" href="#attribute-persistence" title="Permalink to this headline">¶</a></h3>
+<p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds them using data collected by Ohai at the beginning of the Chef run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
+</div>
+<div class="section" id="attribute-precedence">
+<h3>Attribute Precedence<a class="headerlink" href="#attribute-precedence" title="Permalink to this headline">¶</a></h3>
+<p>Attributes are always applied to Chef in the following order:</p>
+<ol class="arabic simple">
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in a recipe</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in an environment</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in role</li>
+<li>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute located in a recipe</li>
+<li>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in an attribute file</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in a role</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in an environment</li>
+<li>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">automatic</span></tt> attribute identified by Ohai at the start of the Chef run</li>
+</ol>
+<p>where the last attribute in the list is the one that is applied to the node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The attribute precedence order for roles and environments is reversed for <tt class="docutils literal"><span class="pre">default</span></tt> and <tt class="docutils literal"><span class="pre">override</span></tt> attributes. The precedence order for <tt class="docutils literal"><span class="pre">default</span></tt> attributes is environment, then role. The precedence order for <tt class="docutils literal"><span class="pre">override</span></tt> attributes is role, then environment. Applying environment <tt class="docutils literal"><span class="pre">override</span></tt> attributes after role <tt class="docutils literal"><span class="pre">override</span></tt> attributes allows a role to exist in multiple environments.</p>
+</div>
+<p>Attribute precedence, viewed from the same perspective as the Chef overview diagram, where the numbers in the diagram match the order of attribute precedence:</p>
+<img alt="_images/overview_chef_attributes_precedence.png" src="_images/overview_chef_attributes_precedence.png" />
+<p>Attribute precedence, when viewed as a table:</p>
+<img alt="_images/overview_chef_attributes_table.png" src="_images/overview_chef_attributes_table.png" />
+</div>
+</div>
+<div class="section" id="file-methods">
+<h2>File Methods<a class="headerlink" href="#file-methods" title="Permalink to this headline">¶</a></h2>
+<p>Use the following methods within the attributes file for a cookbook or within a recipe. These methods correspond to the attribute type of the same name:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">override</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">default</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">normal</span></tt> (or <tt class="docutils literal"><span class="pre">set</span></tt>, where <tt class="docutils literal"><span class="pre">set</span></tt> is an alias for <tt class="docutils literal"><span class="pre">normal</span></tt>)</li>
+<li><tt class="docutils literal"><span class="pre">_unless</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">attribute?</span></tt></li>
+</ul>
+<p>Additionally, there are <tt class="docutils literal"><span class="pre">_unless</span></tt> methods available. See the end of this topic for information on how to conditionally set attributes</p>
+</div>
+<div class="section" id="environment-variables">
+<h2>Environment Variables<a class="headerlink" href="#environment-variables" title="Permalink to this headline">¶</a></h2>
+<p>In Unix, a process&#8217; environment is a set of key-value pairs made available to the process. Often, programs expect their environment to contain information required for the program to run. The details of how these key-value pairs are accessed depends on the API of the language being used. This article explains how environments of child processes interact with their parent process and how you can use Chef to ensure that services and applications are started with the proper environment.</p>
+<p>If you are starting a processes by using an execute or script resource, you can use the environment attribute to alter the environment that will be passed to the process.</p>
+<div class="highlight-bash"><div class="highlight"><pre>bash <span class="s2">&quot;env_test&quot;</span> <span class="k">do</span>
+<span class="k">  </span>code<span class="s">&lt;&lt;-EOF</span>
+<span class="s">  echo $FOO</span>
+<span class="s">EOF</span>
+  environment <span class="o">{</span> <span class="s1">&#39;FOO&#39;</span> <span class="o">=</span>&gt; <span class="s2">&quot;bar&quot;</span> <span class="o">}</span>
+end
+</pre></div>
+</div>
+<p>Note that the only environment being altered is the environment being passed to the child process being started by the bash resource. This will not affect the environment of chef-client or subsequently started child processes.</p>
+</div>
+<div class="section" id="work-with-recipes">
+<h2>Work with Recipes<a class="headerlink" href="#work-with-recipes" title="Permalink to this headline">¶</a></h2>
+<p>The following sections show approaches to working with recipes.</p>
+<div class="section" id="use-data-bags">
+<h3>Use Data Bags<a class="headerlink" href="#use-data-bags" title="Permalink to this headline">¶</a></h3>
+<p>A data bag is a global variable that is stored as JSON data and is accessible from a Chef Server. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords).</p>
+<p>The contents of a data bag can be loaded into a recipe. For example, a data bag named &#8220;apps&#8221; and a data bag item named &#8220;my_app&#8221;:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;my_app&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;repository&quot;</span><span class="o">:</span> <span class="s2">&quot;git://github.com/company/my_app.git&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>can be accessed in a recipe, like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">my_bag</span> <span class="o">=</span> <span class="n">data_bag_item</span><span class="p">(</span><span class="s2">&quot;apps&quot;</span><span class="p">,</span> <span class="s2">&quot;my_app&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The data bag item&#8217;s keys and values can be accessed with a Ruby hash:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">my_bag</span><span class="o">[</span><span class="s2">&quot;repository&quot;</span><span class="o">]</span> <span class="c1">#=&gt; &quot;git://github.com/company/my_app.git&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="secret-keys">
+<h4>Secret Keys<a class="headerlink" href="#secret-keys" title="Permalink to this headline">¶</a></h4>
+<p>Encrypting a data bag requires a secret key. A secret key can be created in any number of ways. For example, OpenSSL can be used to generate a random number, which can then be used as the secret key:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>openssl rand -base64 512 &gt; encrypted_data_bag_secret
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">encrypted_data_bag_secret</span></tt> is the name of the file which will contain the secret key. For example, to create a secret key named &#8220;my_secret_key&#8221;:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>openssl rand -base64 512 &gt; my_secret_key
+</pre></div>
+</div>
+</div>
+<div class="section" id="store-keys-on-nodes">
+<h4>Store Keys on Nodes<a class="headerlink" href="#store-keys-on-nodes" title="Permalink to this headline">¶</a></h4>
+<p>An encryption key can also be stored in an alternate file on the nodes that need it and specify the path location to the file inside an attribute; however, <tt class="docutils literal"><span class="pre">EncryptedDataBagItem.load</span></tt> expects to see the actual secret as the third argument, rather than a path to the secret file. In this case, you can use <tt class="docutils literal"><span class="pre">EncryptedDataBagItem.load_secret</span></tt> to slurp the secret file contents and then pass them:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1"># inside your attribute file:</span>
+<span class="c1"># default[:mysql][:secretpath] = &quot;C:\\chef\\any_secret_filename&quot;</span>
+<span class="c1">#</span>
+<span class="c1"># inside your recipe:</span>
+<span class="c1"># look for secret in file pointed to by mysql attribute :secretpath</span>
+<span class="n">mysql_secret</span> <span class="o">=</span> <span class="no">Chef</span><span class="o">::</span><span class="no">EncryptedDataBagItem</span><span class="o">.</span><span class="n">load_secret</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:mysql</span><span class="o">][</span><span class="ss">:secretpath</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">mysql_creds</span> <span class="o">=</span> <span class="no">Chef</span><span class="o">::</span><span class="no">EncryptedDataBagItem</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;passwords&quot;</span><span class="p">,</span> <span class="s2">&quot;mysql&quot;</span><span class="p">,</span> <span class="n">mysql_secret</span><span class="p">)</span>
+<span class="n">mysql_creds</span><span class="o">[</span><span class="s2">&quot;pass&quot;</span><span class="o">]</span> <span class="c1"># will be decrypted</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example">
+<h4>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h4>
+<p>To demonstrate the use of encrypted data bags on a node, we&#8217;ll start by copying the <tt class="docutils literal"><span class="pre">secret_key</span></tt> file to an example node using <tt class="docutils literal"><span class="pre">scp</span></tt> and moving it to <tt class="docutils literal"><span class="pre">/etc/chef/encrypted_data_bag_secret</span></tt>:</p>
+<div class="highlight-bash"><div class="highlight"><pre>scp ./secret_key <span class="nv">$MY_NODE_IP</span>:~/
+ssh <span class="nv">$MY_NODE_IP</span>
+sudo mv ./secret_key /etc/chef/encrypted_data_bag_secret
+</pre></div>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">bootstrap</span></tt> sub-command supports the <tt class="docutils literal"><span class="pre">encrypted_data_bag_secret</span></tt> setting in knife.rb. You will want to add this line:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">encrypted_data_bag_secret</span> <span class="s1">&#39;/path/to/your/data_bag_key&#39;</span>
+</pre></div>
+</div>
+<p>And change <tt class="docutils literal"><span class="pre">/path/to/your/data_bag_key</span></tt> to the location of where the data bag key is located. When you run knife bootstrap afterwards it automatically adds this line to the client.rb for the node you are bootstrapping and copies the key over.</p>
+<p>Next, we&#8217;ll create a recipe that will log the decrypted values for demonstration purposes (if these were real secrets, you would want to avoid logging them). Use Knife and run the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook create edb_demo
+</pre></div>
+</div>
+<p>Then, edit <tt class="docutils literal"><span class="pre">cookbooks/edb_demo/recipes/default.rb</span></tt> so that it contains the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1"># cookbooks/edb_demo/recipes/default.rb</span>
+<span class="n">passwords</span> <span class="o">=</span> <span class="no">Chef</span><span class="o">::</span><span class="no">EncryptedDataBagItem</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s2">&quot;prod&quot;</span><span class="p">,</span> <span class="s2">&quot;passwords&quot;</span><span class="p">)</span>
+<span class="n">mysql</span> <span class="o">=</span> <span class="n">passwords</span><span class="o">[</span><span class="s2">&quot;mysql&quot;</span><span class="o">]</span>
+<span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;The mysql password is: &#39;</span><span class="si">#{</span><span class="n">mysql</span><span class="si">}</span><span class="s2">&#39;&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Finally, upload the cookbook and run chef-client on the node. You should see something like this:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload edb_demo
+<span class="c"># output clipped</span>
+knife ssh name:i-8a436fe5 -a ec2.public_hostname <span class="s1">&#39;sudo chef-client&#39;</span>
+INFO: *** Chef 0.10.0 ***
+INFO: Run List is <span class="o">[</span>recipe<span class="o">[</span>edb_demo<span class="o">]]</span>
+INFO: Run List expands to <span class="o">[</span>edb_demo<span class="o">]</span>
+INFO: Starting Chef Run <span class="k">for </span>i-8a436fe5
+INFO: Loading cookbooks <span class="o">[</span>edb_demo<span class="o">]</span>
+INFO: The mysql password is: <span class="s1">&#39;open-sesame-123&#39;</span>
+INFO: Chef Run <span class="nb">complete </span>in 3.122228 seconds
+INFO: Running report handlers
+INFO: Report handlers <span class="nb">complete</span>
+</pre></div>
+</div>
+<p>As you can see, the recipe was able to decrypt the values in the encrypted data bag. It did so by using the shared secret located in the default location of <tt class="docutils literal"><span class="pre">/etc/chef/encrypted_data_bag_secret</span></tt>.</p>
+</div>
+</div>
+<div class="section" id="assign-dependencies">
+<h3>Assign Dependencies<a class="headerlink" href="#assign-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>If a cookbook has a dependency on a recipe that is located in another cookbook, that dependency must be declared in the metadata.rb file for that cookbook using the <tt class="docutils literal"><span class="pre">depends</span></tt> keyword.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Declaring cookbook dependencies is not required with chef-solo.</p>
+</div>
+<p>For example, if the following recipe is included in a cookbook named &#8220;my_app&#8221;:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_recipe</span> <span class="s2">&quot;apache2::mod_ssl&quot;</span>
+</pre></div>
+</div>
+<p>Then the metadata.rb file for that cookbook would have:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">depends</span> <span class="s2">&quot;apache2&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-exceptions">
+<h3>Create Exceptions<a class="headerlink" href="#create-exceptions" title="Permalink to this headline">¶</a></h3>
+<p>A recipe can write events to a Chef log file and can cause exceptions using <tt class="docutils literal"><span class="pre">Chef::Log</span></tt>. The levels include <tt class="docutils literal"><span class="pre">debug</span></tt>, <tt class="docutils literal"><span class="pre">info</span></tt>, <tt class="docutils literal"><span class="pre">warn</span></tt>, <tt class="docutils literal"><span class="pre">error</span></tt>, and <tt class="docutils literal"><span class="pre">fatal</span></tt>. For example, to just capture information:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s1">&#39;some useful information&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or to trigger a fatal exception:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">fatal!</span><span class="p">(</span><span class="s1">&#39;something bad&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="include-recipes">
+<h3>Include Recipes<a class="headerlink" href="#include-recipes" title="Permalink to this headline">¶</a></h3>
+<p>A recipe can include one (or more) recipes found in other cookbooks by using the <tt class="docutils literal"><span class="pre">include_recipe</span></tt> keyword. When a recipe is included, the resources found in that recipe will be inserted (in the same exact order) at the point where the <tt class="docutils literal"><span class="pre">include_recipe</span></tt> keyword is located. The syntax for including a recipe is like this:</p>
+<div class="highlight-python"><pre>include_recipe "recipe"</pre>
+</div>
+<p>For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_recipe</span> <span class="s2">&quot;apache2::mod_ssl&quot;</span>
+</pre></div>
+</div>
+<p>If a recipe is included more than once in a recipe, only the first inclusion will be processed and any subsequent inclusion will be ignored.</p>
+<div class="section" id="reload-attributes">
+<h4>Reload Attributes<a class="headerlink" href="#reload-attributes" title="Permalink to this headline">¶</a></h4>
+<p>Attributes sometimes depend on actions taken from within recipes, so it may be necessary to reload a given attribute from within a recipe. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">ruby_block</span> <span class="s1">&#39;some_code&#39;</span> <span class="k">do</span>
+  <span class="n">block</span> <span class="k">do</span>
+    <span class="n">node</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">run_context</span><span class="o">.</span><span class="n">resolve_attribute</span><span class="p">(</span><span class="s2">&quot;COOKBOOK_NAME&quot;</span><span class="p">,</span> <span class="s2">&quot;ATTR_FILE&quot;</span><span class="p">))</span>
+  <span class="k">end</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessor-methods">
+<h4>Accessor Methods<a class="headerlink" href="#accessor-methods" title="Permalink to this headline">¶</a></h4>
+<p>Attribute accessor methods are automatically created and the method invocation can be used interchangeably with the keys. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">dir</span>          <span class="o">=</span> <span class="s2">&quot;/etc/apache2&quot;</span>
+<span class="n">default</span><span class="o">.</span><span class="n">apache</span><span class="o">.</span><span class="n">listen_ports</span> <span class="o">=</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span><span class="s2">&quot;443&quot;</span> <span class="o">]</span>
+</pre></div>
+</div>
+<p>This is a matter of style and preference for how attributes are reloaded from recipes, and may be seen when &#8220;retrieving&#8221; the value of an attribute.</p>
+</div>
+</div>
+<div class="section" id="use-ruby">
+<h3>Use Ruby<a class="headerlink" href="#use-ruby" title="Permalink to this headline">¶</a></h3>
+<p>Anything that can be done with Ruby can be used within a recipe, such as expressions (if, unless, etc.), case statements, loop statements, arrays, hashes, and variables. In Ruby, the conditionals <tt class="docutils literal"><span class="pre">nil</span></tt> and <tt class="docutils literal"><span class="pre">false</span></tt> are false; every other conditional is <tt class="docutils literal"><span class="pre">true</span></tt>.</p>
+<div class="section" id="assign-a-value">
+<h4>Assign a value<a class="headerlink" href="#assign-a-value" title="Permalink to this headline">¶</a></h4>
+<p>A variable uses an equals sign (&#8220;=&#8221;) to assign a value.</p>
+<p>To assign a value to a variable:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">package_name</span> <span class="o">=</span> <span class="s2">&quot;apache2&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="use-case-statement">
+<h4>Use Case Statement<a class="headerlink" href="#use-case-statement" title="Permalink to this headline">¶</a></h4>
+<p>A case statement can be used to compare an expression (specified by case) and then executing the code that matches the expression.</p>
+<p>To select a package name based on platform:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">package</span> <span class="s2">&quot;apache2&quot;</span> <span class="k">do</span>
+  <span class="k">case</span> <span class="n">node</span><span class="o">[</span><span class="ss">:platform</span><span class="o">]</span>
+  <span class="k">when</span> <span class="s2">&quot;centos&quot;</span><span class="p">,</span><span class="s2">&quot;redhat&quot;</span><span class="p">,</span><span class="s2">&quot;fedora&quot;</span><span class="p">,</span><span class="s2">&quot;suse&quot;</span>
+    <span class="n">package_name</span> <span class="s2">&quot;httpd&quot;</span>
+  <span class="k">when</span> <span class="s2">&quot;debian&quot;</span><span class="p">,</span><span class="s2">&quot;ubuntu&quot;</span>
+    <span class="n">package_name</span> <span class="s2">&quot;apache2&quot;</span>
+  <span class="k">when</span> <span class="s2">&quot;arch&quot;</span>
+    <span class="n">package_name</span> <span class="s2">&quot;apache&quot;</span>
+  <span class="k">end</span>
+  <span class="n">action</span> <span class="ss">:install</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-conditions">
+<h4>Check Conditions<a class="headerlink" href="#check-conditions" title="Permalink to this headline">¶</a></h4>
+<p>An if expression can be used to check for conditions (true or false).</p>
+<p>To check for condition only for Debian and Ubuntu platforms:</p>
+<div class="highlight-ruby"><pre>if platform?(“debian”, “ubuntu”)
+  # do something if node[‘platform’] is debian or ubuntu
+else
+  # do other stuff
+end</pre>
+</div>
+</div>
+<div class="section" id="execute-conditions">
+<h4>Execute Conditions<a class="headerlink" href="#execute-conditions" title="Permalink to this headline">¶</a></h4>
+<p>An unless expression can be used to execute code when a condition returns a false value (effectively, an unless expression is the opposite of an if statement).</p>
+<p>To use an expression to execute when a condition returns a false value:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">unless</span> <span class="n">node</span><span class="o">[</span><span class="ss">:platform_version</span><span class="o">]</span> <span class="o">==</span> <span class="s2">&quot;5.0&quot;</span>
+  <span class="c1"># do stuff on everything but 5.0</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loop-over-array">
+<h4>Loop over Array<a class="headerlink" href="#loop-over-array" title="Permalink to this headline">¶</a></h4>
+<p>A loop statement is used to execute a block of code one (or more) times. A loop statement is created when <tt class="docutils literal"><span class="pre">.each</span></tt> is added to an expression that defines an array or a hash. An array is an integer-indexed collection of objects. Each element in an array can be associated with and referred to by an index.</p>
+<p>To loop over an array of package names by platform:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="o">[</span><span class="s2">&quot;apache2&quot;</span><span class="p">,</span> <span class="s2">&quot;apache2-mpm&quot;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">p</span><span class="o">|</span>
+  <span class="n">package</span> <span class="nb">p</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="loop-over-hash">
+<h4>Loop over Hash<a class="headerlink" href="#loop-over-hash" title="Permalink to this headline">¶</a></h4>
+<p>A hash is a collection of key-value pairs. Indexing for a hash is done using arbitrary keys of any object (as opposed to the indexing done by an array). The syntax for a hash is: <tt class="docutils literal"><span class="pre">key</span> <span class="pre">=&gt;</span> <span class="pre">&quot;value&quot;</span></tt>.</p>
+<p>To loop over a hash of gem package names:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="p">{</span><span class="s2">&quot;fog&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;0.6.0&quot;</span><span class="p">,</span> <span class="s2">&quot;highline&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;1.6.0&quot;</span><span class="p">}</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">g</span><span class="p">,</span><span class="n">v</span><span class="o">|</span>
+  <span class="n">gem_package</span> <span class="n">g</span> <span class="k">do</span>
+    <span class="n">version</span> <span class="n">v</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="apply-to-run-lists">
+<h3>Apply to Run-lists<a class="headerlink" href="#apply-to-run-lists" title="Permalink to this headline">¶</a></h3>
+<p>A recipe must be assigned to a run-list using the appropriate name, as defined by the cookbook directory and namespace. For example, a cookbook directory has the following structure:</p>
+<div class="highlight-python"><pre>cookbooks/
+  apache2/
+    recipes/
+      default.rb
+      mod_ssl.rb</pre>
+</div>
+<p>There are two recipes: a default recipe (that has the same name as the cookbook) and a recipe named mod_ssl. The syntax that applies a recipe to a run-list is similar to:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="p">:</span> <span class="o">[</span>
+  <span class="s2">&quot;recipe[cookbook_name::default_recipe]&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;recipe[cookbook_name::recipe_name]&quot;</span>
+  <span class="o">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">::default_recipe</span></tt> is implied (and does not need to be specified). On a node, these recipes can be assigned to a node&#8217;s run-list similar to:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="p">:</span> <span class="o">[</span>
+  <span class="s2">&quot;recipe[apache2]&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;recipe[apache2::mod_ssl]&quot;</span>
+  <span class="o">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="chef-server">
+<h4>Chef Server<a class="headerlink" href="#chef-server" title="Permalink to this headline">¶</a></h4>
+<p>Use Knife to add the recipe to the node&#8217;s run-list. For example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife node run list add NODENAME <span class="s2">&quot;recipe[apache2]&quot;</span>
+</pre></div>
+</div>
+<p>More than one recipe can to be added:</p>
+<div class="highlight-bash"><div class="highlight"><pre>% knife node run list add NODENAME <span class="s2">&quot;recipe[apache2],recipe[mysql],role[ssh]&quot;</span>
+   run_list:
+      recipe<span class="o">[</span>apache2<span class="o">]</span>
+      recipe<span class="o">[</span>mysql<span class="o">]</span>
+      role<span class="o">[</span>ssh<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="chef-solo">
+<h4>chef-solo<a class="headerlink" href="#chef-solo" title="Permalink to this headline">¶</a></h4>
+<p>Use a JSON file to pass run-list details to chef-solo as long as the cookbook in which the recipe is located is available to the system on which chef-solo is running. For example, a JSON file named &#8220;dna.json&#8221; contains the following details:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;recipe[apache2]&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>To add the run-list to the node, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo chef-solo -j /etc/chef/dna.json
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="use-search-results">
+<h3>Use Search Results<a class="headerlink" href="#use-search-results" title="Permalink to this headline">¶</a></h3>
+<p>Search indexes allow queries to be made for any type of data that is indexed by the Chef Server, including data bags (and data bag items), environments, nodes, and roles. Chef has a defined query syntax that supports search patterns like exact, wildcard, range, and fuzzy. A search is a full-text query that can be done from several locations, including from within a recipe, by using the <tt class="docutils literal"><span class="pre">search</span></tt> subcommand in Knife, by using the search functionality in the Management Console, or by using the <tt class="docutils literal"><span class="pre">/search</span></tt> or <tt class="docutils literal"><span class="pre">/search/INDEX</span></tt> endpoints in the Chef Server API. The search engine is based on Apache Solr and is run from the Chef Server.</p>
+<p>The results of a search query can be loaded into a recipe. For example, a very simple search query (in a recipe) might look like this:</p>
+<div class="highlight-python"><pre>search(:node, "attribute:value")</pre>
+</div>
+<p>A search query can be assigned to variables and then used elsewhere in a recipe. For example, to search for all nodes that have a role assignment named &#8220;webserver&#8221;, and then render a template which includes those role assignments:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">webservers</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span> <span class="s2">&quot;role:webserver&quot;</span><span class="p">)</span>
+
+<span class="n">template</span> <span class="s2">&quot;/tmp/list_of_webservers&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;list_of_webservers.erb&quot;</span>
+  <span class="n">variables</span><span class="p">(</span><span class="ss">:webservers</span> <span class="o">=&gt;</span> <span class="n">webservers</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="use-tags">
+<h3>Use Tags<a class="headerlink" href="#use-tags" title="Permalink to this headline">¶</a></h3>
+<p>A tag is a custom description that is applied to a node. A tag, once applied, can be helpful when managing nodes using Knife or when building recipes by providing alternate methods of grouping similar types of information.</p>
+<p>Tags can be added and remove. Machines can be checked to see if they already have a specific tag. To use tags in your recipe simply add the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">tag</span><span class="p">(</span><span class="s1">&#39;mytag&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To test if a machine is tagged, add the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">tagged?</span><span class="p">(</span><span class="s1">&#39;mytag&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>to return <tt class="docutils literal"><span class="pre">true</span></tt> or <tt class="docutils literal"><span class="pre">false</span></tt>. <tt class="docutils literal"><span class="pre">tagged?</span></tt> can also use an array as an argument.</p>
+<p>To remove a tag:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">untag</span><span class="p">(</span><span class="s1">&#39;mytag&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">tag</span><span class="p">(</span><span class="s2">&quot;machine&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">tagged?</span><span class="p">(</span><span class="s2">&quot;machine&quot;</span><span class="p">)</span>
+   <span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Hey I&#39;m </span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:tags</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="n">untag</span><span class="p">(</span><span class="s2">&quot;machine&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="ow">not</span> <span class="n">tagged?</span><span class="p">(</span><span class="s2">&quot;machine&quot;</span><span class="p">)</span>
+   <span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;I has no tagz&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Will return something like this:</p>
+<div class="highlight-bash"><pre>[Thu, 22 Jul 2010 18:01:45 +0000] INFO: Hey I'm machine
+[Thu, 22 Jul 2010 18:01:45 +0000] INFO: I has no tagz</pre>
+</div>
+</div>
+<div class="section" id="end-a-chef-run">
+<h3>End a Chef Run<a class="headerlink" href="#end-a-chef-run" title="Permalink to this headline">¶</a></h3>
+<p>Sometimes it may be necessary to end a Chef run before it completes. There are a few ways to do this:</p>
+<ul class="simple">
+<li>Using the <tt class="docutils literal"><span class="pre">return</span></tt> keyword and a condition</li>
+<li>Using the <tt class="docutils literal"><span class="pre">raise</span></tt> keyword to trigger an unhandled exception</li>
+<li>Using the <tt class="docutils literal"><span class="pre">rescue</span></tt> block in Ruby code</li>
+<li>Using <tt class="docutils literal"><span class="pre">Chef::Application.fatal!</span></tt> to log a fatal message to the Chef logger and <tt class="docutils literal"><span class="pre">STDERR</span></tt></li>
+<li>Using an <a class="reference internal" href="essentials_handlers.html"><em>exception handler</em></a></li>
+</ul>
+<p>The following sections show various approaches to ending a Chef run.</p>
+<div class="section" id="return-keyword">
+<h4>Return Keyword<a class="headerlink" href="#return-keyword" title="Permalink to this headline">¶</a></h4>
+<p>Using the <tt class="docutils literal"><span class="pre">return</span></tt> keyword and a condition is typically the most direct approach to stopping a Chef run. When the condition is met, stop the run. When the condition is not met, allow the run to continue. The following example shows how the <tt class="docutils literal"><span class="pre">return</span></tt> keyword can be used to set a condition that, if met, will stop a Chef run:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">file</span> <span class="s1">&#39;/tmp/name_of_file&#39;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+
+<span class="k">return</span> <span class="k">if</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;platform&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;windows&#39;</span>
+
+<span class="n">package</span> <span class="s1">&#39;name_of_package&#39;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:install</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">node['platform']</span> <span class="pre">==</span> <span class="pre">'windows'</span></tt> is the condition set on the <tt class="docutils literal"><span class="pre">return</span></tt> keyword. This condition is useful in a situation where a Microsoft Windows system cannot install the package named <tt class="docutils literal"><span class="pre">name_of_package</span></tt>. In a situation where this condition is met, there is no need for the recipe to continue and consequently it is OK for the Chef run to be stopped.</p>
+</div>
+<div class="section" id="raise-keyword">
+<h4>Raise Keyword<a class="headerlink" href="#raise-keyword" title="Permalink to this headline">¶</a></h4>
+<p>In certain situations it may be useful to stop a Chef run entirely, such as when an unhandled exception occurs. For example, a <strong>template</strong> resource may not be able to find its source file or a user who is running Chef does not have permission to create a directory. The <tt class="docutils literal"><span class="pre">raise</span></tt> keyword can be useful for stopping the Chef run if an unhandled exception occurs. There are two approaches:</p>
+<ul class="simple">
+<li>Place the <tt class="docutils literal"><span class="pre">raise</span></tt> keyword in a recipe (instead of the <tt class="docutils literal"><span class="pre">return</span></tt> keyword) to raise an exception during the compile phase</li>
+<li>Place the <tt class="docutils literal"><span class="pre">raise</span></tt> keyword in a <strong>ruby_block</strong> resource to raise an exception during the execution phase</li>
+</ul>
+<p>For example, using the <tt class="docutils literal"><span class="pre">raise</span></tt> keyword in a recipe to raise an exception during the compile phase may look something like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">file</span> <span class="s1">&#39;/tmp/name_of_file&#39;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+
+<span class="k">raise</span> <span class="k">if</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;platform&#39;</span><span class="o">]</span> <span class="o">==</span> <span class="s1">&#39;windows&#39;</span>
+
+<span class="n">package</span> <span class="s1">&#39;name_of_package&#39;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:install</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">node['platform']</span> <span class="pre">==</span> <span class="pre">'windows'</span></tt> is the condition set on the <tt class="docutils literal"><span class="pre">raise</span></tt> keyword. This condition is useful in a situation where the Microsoft Windows system does not have a package manager available, but the package (<tt class="docutils literal"><span class="pre">name_of_package</span></tt>) should be installed. Because the package should be installed, but cannot be, Chef will exit the run with a fatal error and will provide a stack trace.</p>
+</div>
+<div class="section" id="rescue-blocks">
+<h4>Rescue Blocks<a class="headerlink" href="#rescue-blocks" title="Permalink to this headline">¶</a></h4>
+<p>Since recipes are written in Ruby, they can be written to attempt to handle error conditions using the <tt class="docutils literal"><span class="pre">rescue</span></tt> block.</p>
+<p>For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">begin</span>
+  <span class="n">dater</span> <span class="o">=</span> <span class="n">data_bag_item</span><span class="p">(</span><span class="ss">:basket</span><span class="p">,</span> <span class="s2">&quot;flowers&quot;</span><span class="p">)</span>
+  <span class="k">rescue</span> <span class="no">Net</span><span class="o">::</span><span class="no">HTTPServerException</span>
+    <span class="c1"># maybe some retry code here?</span>
+  <span class="k">raise</span> <span class="s2">&quot;message_to_be_raised&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">data_bag_item</span></tt> makes an HTTP request to the Chef Server to get a data bag item named <tt class="docutils literal"><span class="pre">flowers</span></tt>. If there is a problem, the request will return a <tt class="docutils literal"><span class="pre">Net::HTTPServerException</span></tt>. The <tt class="docutils literal"><span class="pre">rescue</span></tt> block can be used to try to retry or otherwise handle the situation. If the <tt class="docutils literal"><span class="pre">rescue</span></tt> block is unable to handle the situation, then the <tt class="docutils literal"><span class="pre">raise</span></tt> keyword is used to specify the message to be raised.</p>
+</div>
+<div class="section" id="send-to-log-files">
+<h4>Send to Log Files<a class="headerlink" href="#send-to-log-files" title="Permalink to this headline">¶</a></h4>
+<p>If a log entry is required, use <tt class="docutils literal"><span class="pre">Chef::Application.fatal!</span></tt> to log a fatal message to a log file using standard error output. After the log message is sent, Chef will stop the run. Something like the following can be used to trigger this type of log entry:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="no">Chef</span><span class="o">::</span><span class="no">Application</span><span class="o">.</span><span class="n">fatal!</span><span class="p">(</span><span class="s2">&quot;Didn&#39;t expect some_condition&quot;</span><span class="p">,</span> <span class="n">return_code</span><span class="p">)</span> <span class="k">if</span> <span class="n">some_condition</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">some_condition</span></tt> is the condition to be met, <tt class="docutils literal"><span class="pre">return_code</span></tt> is the code that will be identified in the log entry. When this condition is met, Chef will exit, send a log message and return the code specified with <tt class="docutils literal"><span class="pre">return_code</span></tt> from the process.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbook_resources.html" title="About Resources and Providers"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbook_metadata.html" title="About Cookbook Metadata"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

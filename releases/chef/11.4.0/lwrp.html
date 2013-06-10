@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About LWRPs &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Inline Compile Mode" href="lwrp_common_inline_compile.html" />
+    <link rel="prev" title="supervisor Cookbook" href="opscode_cookbooks_supervisor.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_common_inline_compile.html" title="Inline Compile Mode"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="opscode_cookbooks_supervisor.html" title="supervisor Cookbook"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About LWRPs</a><ul>
+<li><a class="reference internal" href="#opscode-maintained">Opscode-maintained</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-lwrps">
+<h1>About LWRPs<a class="headerlink" href="#about-lwrps" title="Permalink to this headline">¶</a></h1>
+<p>A LWRP is a part of a cookbook that is used to extend Chef in a way that allows custom actions to be defined, and then used in recipes in much the same way as any core Chef resource. A LWRP has two principal components:</p>
+<ul class="simple">
+<li>A lightweight resource that defines a set of actions and attributes</li>
+<li>A lightweight provider that tells Chef how to handle each action, what to do if certain conditions are met, and so on</li>
+</ul>
+<p>Once created, a LWRP becomes a Ruby class within the Chef organization. During each Chef run, Chef will read the lightweight resources from recipes and process them alongside all of the other resources. When it is time to configure the node, Chef will use the corresponding lightweight provider to determine the steps required to bring the system into the desired state.</p>
+<p>Where the lightweight resource represents a piece of the system, its current state, and the action that is needed to move it to the desired state, a lightweight provider defines the steps that are required to bring that piece of the system from its current state to the desired state. A LWRP behaves similar to Chef resources and providers:</p>
+<ul class="simple">
+<li>A lightweight resource is a key part of a recipe</li>
+<li>A lightweight resource defines the actions that can be taken</li>
+<li>During a Chef run, each lightweight resource is identified, and then associated with a lightweight provider</li>
+<li>A lightweight provider does the work to complete the action requested by the lightweight resource</li>
+</ul>
+<p>Read more about how to create lightweight resources <a class="reference internal" href="lwrp_custom.html"><em>here</em></a>; learn how to use the lightweight resources available in cookbooks maintained by Opscode by clicking one of the links below.</p>
+<div class="section" id="opscode-maintained">
+<h2>Opscode-maintained<a class="headerlink" href="#opscode-maintained" title="Permalink to this headline">¶</a></h2>
+<p>Custom resources and providers can also be created using the lightweight resource provider (LWRP) DSL. Opscode provides several cookbooks that define some commonly used lightweight resource provider (LWRP). To use the lightweight resources provided by Opscode the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Cookbook</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_apt.html">apt</a></td>
+<td>The <strong>apt</strong> cookbook is used to configure APT and APT services, for managing APT repositories and preferences.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/aws.html">lwrp_aws</a></td>
+<td>The <strong>aws</strong> cookbook is used to manage resources that are running in Amazon Web Services.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_bluepill.html">bluepill</a></td>
+<td>The <strong>bluepill</strong> cookbook is used to install Blue Pill, and then use it to manage services.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_chef_handler.html">chef_handler</a></td>
+<td>The <strong>chef_handler</strong> cookbook is used to distribute and enable Chef exception and report handlers.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_daemontools.html">daemontools</a></td>
+<td>The <strong>daemontools</strong> cookbook is used to install and configure daemontools so that it can be used to manage UNIX services.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_djbdns.html">djbdns</a></td>
+<td>The <strong>djbdns</strong> cookbook is used to install djbdns and use it to configure DNS services.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_dmg.html">dmg</a></td>
+<td>The <strong>dmg</strong> cookbook is used to create a DMG package for use with Mac OS X.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_dynect.html">dynect</a></td>
+<td>The <strong>dynect</strong> cookbook is used to manage DNS records using the DynECT REST API.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_firewall.html">firewall</a></td>
+<td>The <strong>firewall</strong> cookbook is used to manage firewalls and their associated firewall rulesets.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_freebsd.html">freebsd</a></td>
+<td>The <strong>freebsd</strong> cookbook is used to manage port options for FreeBSD.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_gunicorn.html">gunicorn</a></td>
+<td>The <strong>gunicorn</strong> cookbook is used to install and configure Gunicorn.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_homebrew.html">homebrew</a></td>
+<td>The <strong>homebrew</strong> cookbook is used to install and configure Homebrew for use as the package manager for Mac OS X.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_iis.html">iis</a></td>
+<td>The <strong>iis</strong> cookbook is used to install and configure Internet Information Services (IIS).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_maven.html">maven</a></td>
+<td>The <strong>maven</strong> cookbook is used to install and configure Apache Maven.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_nagios.html">nagios</a></td>
+<td>The <strong>nagios</strong> cookbook is used to install and configure Nagios.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_pacman.html">pacman</a></td>
+<td>The <strong>pacman</strong> cookbook is used to install the pacman package manager and configure groups.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_php.html">php</a></td>
+<td>The <strong>php</strong> cookbook is used to install and configure PHP and PHP modules.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_powershell.html">powershell</a></td>
+<td>The <strong>powershell</strong> cookbook is used to install Windows PowerShell.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_python.html">python</a></td>
+<td>The <strong>python</strong> cookbook is used to install Python, pip, and virtualenv.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_rabbitmq.html">rabbit mq</a></td>
+<td>The <strong>rabbitmq</strong> cookbook is used to install and configure RabbitMQ.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_riak.html">riak</a></td>
+<td>The <strong>riak</strong> cookbook is used to install and configure the Riak distributed data store.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_samba.html">samba</a></td>
+<td>The <strong>samba</strong> cookbook is used to install and configure Samba.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_sudo.html">sudo</a></td>
+<td>The <strong>sudo</strong> cookbook is used to install Indicates that a bootstrap operation should be executed using sudo. and configure /etc/sudoers.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_supervisor.html">supervisor</a></td>
+<td>The <strong>supervisor</strong> cookbook is used to install Supervisor and use it to provide resources while configuring services.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_transmission.html">transmission</a></td>
+<td>The <strong>transmission</strong> cookbook is used to install and configure the Transmission BitTorrent client.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_users.html">users</a></td>
+<td>The <strong>users</strong> cookbook is used to create users based on a data bag search.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_webpi.html">webpi</a></td>
+<td>The <strong>webpi</strong> cookbook is used to run the Microsoft Web Platform Installer (WebPI).</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="http://docs.opscode.com/lwrp_windows.html">windows</a></td>
+<td>The <strong>windows</strong> cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure Microsoft Windows packages, reboot machines, and more.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="http://docs.opscode.com/lwrp_yum.html">yum</a></td>
+<td>The <strong>yum</strong> cookbook is used to configure yum components and manage repositories and GnuPG keys.</td>
+</tr>
+</tbody>
+</table>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_common_inline_compile.html" title="Inline Compile Mode"
+             >next</a></li>
+        <li class="right" >
+          <a href="opscode_cookbooks_supervisor.html" title="supervisor Cookbook"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

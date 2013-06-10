@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chef-solo &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Chef Server API" href="api_chef_server.html" />
+    <link rel="prev" title="chef-client" href="chef_client.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="api_chef_server.html" title="Chef Server API"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="chef_client.html" title="chef-client"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chef-solo</a><ul>
+<li><a class="reference internal" href="#cookbooks">Cookbooks</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#data-bags">Data Bags</a></li>
+<li><a class="reference internal" href="#roles">Roles</a></li>
+<li><a class="reference internal" href="#environments">Environments</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chef-solo">
+<h1>chef-solo<a class="headerlink" href="#chef-solo" title="Permalink to this headline">¶</a></h1>
+<p>chef-solo is an open source version of Chef that allows using cookbooks with nodes that do not have access to a Chef Server. chef-solo runs locally and requires that a cookbook (and any of its dependencies) be on the same physical disk as the node. chef-solo is a limited-functionality version of Chef and <strong>does not support</strong> the following:</p>
+<ul class="simple">
+<li>Node data storage</li>
+<li>Search indexes</li>
+<li>Centralized distribution of cookbooks</li>
+<li>Environments, including policy settings and cookbook versions</li>
+<li>A centralized API that interacts with and integrates infrastructure components</li>
+<li>Authentication or authorization</li>
+<li>Persistent attributes</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">chef-solo is configured using the <a class="reference internal" href="ctl_chef_solo.html"><em>chef-solo (executable)</em></a>.</p>
+</div>
+<div class="section" id="cookbooks">
+<h2>Cookbooks<a class="headerlink" href="#cookbooks" title="Permalink to this headline">¶</a></h2>
+<p>chef-solo supports two locations from which cookbooks can be run:</p>
+<ul class="simple">
+<li>A local directory.</li>
+<li>A URL at which a tar.gz archive is located.</li>
+</ul>
+<p>Using a tar.gz archive is the more common approach, but requires that cookbooks be added to an archive. For example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>tar zcvf chef-solo.tar.gz ./cookbooks
+</pre></div>
+</div>
+<p>If multiple cookbook directories are being used, chef-solo expects the tar.gz archive to have a directory structure similar to the following:</p>
+<div class="highlight-python"><pre>cookbooks/
+  |---- cbname1/
+    |--attributes/ ... etc
+  ...
+  |---- cbname2/
+    |--attributes/</pre>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">cookbook_path</span></tt> variable in the solo.rb file must include both directories. For example:</p>
+<div class="highlight-python"><pre>.. code-block:: bash</pre>
+</div>
+<blockquote>
+<div>$ tar zcvf chef-solo.tar.gz ./cookbooks ./site-cookbooks</div></blockquote>
+<p>When the tar.gz archive contains all of the cookbooks required by chef-solo, upload it to the web server from which chef-solo will access the archive.</p>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>chef-solo does not interact with the Chef Server. Consequently, node-specific attributes must be located in a JSON file on the target system, a remote location (such as Amazon S3), or a web server on the local network.</p>
+<p>The JSON file must also specify the recipes that are part of the run-list. For example:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;resolver&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;nameservers&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;10.0.0.1&quot;</span> <span class="p">],</span>
+    <span class="s2">&quot;search&quot;</span><span class="o">:</span><span class="s2">&quot;int.example.com&quot;</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;recipe[resolver]&quot;</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-bags">
+<h2>Data Bags<a class="headerlink" href="#data-bags" title="Permalink to this headline">¶</a></h2>
+<p>A data bag is defined using JSON. chef-solo will look for data bags in <tt class="docutils literal"><span class="pre">/var/chef/roles</span></tt>, but this location can be modified by changing the setting in solo.rb For example, the following setting in solo.rb:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">data_bag_path</span> <span class="s2">&quot;/var/chef-solo/data_bags&quot;</span>
+</pre></div>
+</div>
+<p>Create a data bag by creating folders. For example:</p>
+<div class="highlight-bash"><div class="highlight"><pre>mkdir /var/chef-solo/data_bags
+</pre></div>
+</div>
+<p>and:</p>
+<div class="highlight-bash"><div class="highlight"><pre>mkdir /var/chef-solo/data_bags/admins
+</pre></div>
+</div>
+<p>and then create a JSON file in that location:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;ITEM_NAME&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>where the name of the file is the <tt class="docutils literal"><span class="pre">ITEM_NAME</span></tt>, for example:</p>
+<div class="highlight-python"><pre>/var/chef-solo/data_bags/admins/ITEM_NAME.json</pre>
+</div>
+</div>
+<div class="section" id="roles">
+<h2>Roles<a class="headerlink" href="#roles" title="Permalink to this headline">¶</a></h2>
+<p>A role is defined using JSON or the Ruby DSL. chef-solo will look for roles in <tt class="docutils literal"><span class="pre">/var/chef/roles</span></tt>, but this location can be modified by changing the setting in solo.rb. For example, the following setting in solo.rb:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">role_path</span> <span class="s2">&quot;/var/chef-solo/roles&quot;</span>
+</pre></div>
+</div>
+<p>Role data looks like the following in JSON:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;test&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;default_attributes&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="p">},</span>
+  <span class="s2">&quot;override_attributes&quot;</span><span class="o">:</span> <span class="p">{</span> <span class="p">},</span>
+  <span class="s2">&quot;json_class&quot;</span><span class="o">:</span> <span class="s2">&quot;Chef::Role&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;This is just a test role, no big deal.&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;chef_type&quot;</span><span class="o">:</span> <span class="s2">&quot;role&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="o">:</span> <span class="p">[</span> <span class="s2">&quot;recipe[test]&quot;</span> <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and like the following in the Ruby DSL:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s1">&#39;test&#39;</span>
+<span class="n">description</span> <span class="s1">&#39;This is just a test role, no big deal.&#39;</span>
+<span class="n">run_list</span> <span class="s1">&#39;recipe[test]&#39;</span>
+</pre></div>
+</div>
+<p>and finally, JSON data passed to chef-solo:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="p">{</span> <span class="s2">&quot;run_list&quot;</span><span class="p">:</span> <span class="s2">&quot;role[test]&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="environments">
+<h2>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">¶</a></h2>
+<p>chef-solo does not have support for environments.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="api_chef_server.html" title="Chef Server API"
+             >next</a></li>
+        <li class="right" >
+          <a href="chef_client.html" title="chef-client"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

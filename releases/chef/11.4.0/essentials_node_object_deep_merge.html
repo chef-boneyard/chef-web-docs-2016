@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Deep Merge &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About Node Objects" href="essentials_node_object.html" />
+    <link rel="next" title="Run-lists" href="essentials_node_object_run_lists.html" />
+    <link rel="prev" title="About Node Objects" href="essentials_node_object.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_node_object_run_lists.html" title="Run-lists"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_node_object.html" title="About Node Objects"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="essentials_node_object.html" accesskey="U">About Node Objects</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Deep Merge</a><ul>
+<li><a class="reference internal" href="#substitution">Substitution</a></li>
+<li><a class="reference internal" href="#addition">Addition</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="deep-merge">
+<h1>Deep Merge<a class="headerlink" href="#deep-merge" title="Permalink to this headline">¶</a></h1>
+<p>Attributes are typically stored in cookbooks and recipes, roles, and environments. These attributes are rolled-up to the node level during a Chef run. For example, a recipe can store attributes using a multi-level hash or array; a group of attributes for web servers might be:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>But what if all of the web servers are not the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like the preceding example and once just like the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>But that is not very efficient, especially because most of them are identical. The deep merge capabilities of Chef allows attributes to be layered across recipes and cookbooks, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named <tt class="docutils literal"><span class="pre">baseline.rb</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;baseline&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;The most basic role for all configurations&quot;</span>
+<span class="n">run_list</span> <span class="s2">&quot;recipe[baseline]&quot;</span>
+
+<span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:listen_ports</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="mi">80</span> <span class="o">]</span><span class="p">,</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:minspareservers</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">,</span>
+      <span class="ss">:maxspareservers</span> <span class="o">=&gt;</span> <span class="mi">40</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>and then a role named <tt class="docutils literal"><span class="pre">web.rb</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;web&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;Web server config&quot;</span>
+<span class="n">run_list</span> <span class="s2">&quot;role[baseline]&quot;</span>
+
+<span class="n">override_attributes</span><span class="p">(</span>
+  <span class="ss">:apache</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="ss">:prefork</span> <span class="o">=&gt;</span> <span class="p">{</span>
+      <span class="ss">:startservers</span> <span class="o">=&gt;</span> <span class="mi">30</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>Both of these files are similar. They share the same structure. When an attribute is of the same type of data, such as  a hash or an array, the contents are merged. This is true even with different levels of precedence, such as default and override attributes. If the attribute is of a different data type, it is overwritten at higher levels of precedence.</p>
+<p>For example, the <tt class="docutils literal"><span class="pre">web.rb</span></tt> references the <tt class="docutils literal"><span class="pre">baseline.rb</span></tt> role. The <tt class="docutils literal"><span class="pre">web.rb</span></tt> file only provides a value for one attribute: <tt class="docutils literal"><span class="pre">:startservers</span></tt>. When Chef compares these attributes, the deep merge feature will ensure that <tt class="docutils literal"><span class="pre">:startservers</span></tt> (and its value of <tt class="docutils literal"><span class="pre">30</span></tt>) will be applied to any node for which the <tt class="docutils literal"><span class="pre">web.rb</span></tt> attribute structure should be applied.</p>
+<p>This approach will allow a recipe like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">include_recipe</span> <span class="s2">&quot;apache2&quot;</span>
+<span class="no">Chef</span><span class="o">::</span><span class="no">Log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;apache&#39;</span><span class="o">][</span><span class="s1">&#39;prefork&#39;</span><span class="o">].</span><span class="n">to_hash</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>and a <tt class="docutils literal"><span class="pre">run_list</span></tt> like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">run_list</span><span class="o">/</span><span class="n">web</span><span class="o">.</span><span class="n">json</span>
+<span class="p">{</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="p">:</span> <span class="o">[</span> <span class="s2">&quot;role[web]&quot;</span> <span class="o">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>to produce results like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="o">[</span><span class="no">Tue</span><span class="p">,</span> <span class="mi">16</span> <span class="no">Aug</span> <span class="mi">2011</span> <span class="mi">14</span><span class="p">:</span><span class="mi">44</span><span class="p">:</span><span class="mi">26</span> <span class="o">-</span><span class="mo">0700</span><span class="o">]</span> <span class="no">INFO</span><span class="p">:</span>
+         <span class="p">{</span>
+           <span class="s2">&quot;startservers&quot;</span><span class="o">=&gt;</span><span class="mi">30</span><span class="p">,</span>
+           <span class="s2">&quot;minspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">20</span><span class="p">,</span>
+           <span class="s2">&quot;maxspareservers&quot;</span><span class="o">=&gt;</span><span class="mi">40</span><span class="p">,</span>
+           <span class="s2">&quot;serverlimit&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
+           <span class="s2">&quot;maxclients&quot;</span><span class="o">=&gt;</span><span class="mi">400</span><span class="p">,</span>
+           <span class="s2">&quot;maxrequestsperchild&quot;</span><span class="o">=&gt;</span><span class="mi">10000</span>
+         <span class="p">}</span>
+</pre></div>
+</div>
+<p>Even though the <tt class="docutils literal"><span class="pre">web.rb</span></tt> file does not contain attributes and values for <tt class="docutils literal"><span class="pre">minspareservers</span></tt>, <tt class="docutils literal"><span class="pre">maxspareservers</span></tt>, <tt class="docutils literal"><span class="pre">serverlimit</span></tt>, <tt class="docutils literal"><span class="pre">maxclients</span></tt>, and <tt class="docutils literal"><span class="pre">maxrequestsperchild</span></tt>, the deep merge capabilities pulled them in.</p>
+<p>The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.</p>
+<div class="section" id="substitution">
+<h2>Substitution<a class="headerlink" href="#substitution" title="Permalink to this headline">¶</a></h2>
+<p>The following examples show how the logic works for substituting an existing string using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
++
+role_or_environment 2 { :y =&gt; "3" }
+=
+{ :x =&gt; "1", :y =&gt; "3" }</pre>
+</div>
+<p>For substituting an existing boolean using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; true, :y =&gt; false }
++
+role_or_environment 2 { :y =&gt; true }
+=
+{ :x =&gt; true, :y =&gt; true }</pre>
+</div>
+<p>For substituting an array with a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2", "3" ]
++
+role_or_environment 2 { :x =&gt; "1" , :y =&gt; "2" }
+=
+{ :x =&gt; "1", :y =&gt; "2" }</pre>
+</div>
+<p>When items cannot be merged through substitution, the original data is overwritten.</p>
+</div>
+<div class="section" id="addition">
+<h2>Addition<a class="headerlink" href="#addition" title="Permalink to this headline">¶</a></h2>
+<p>The following examples show how the logic works for adding a string using a hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; "1", :y =&gt; "2" }
++
+role_or_environment 2 { :z =&gt; "3" }
+=
+{ :x =&gt; "1", :y =&gt; "2", :z =&gt; "3" }</pre>
+</div>
+<p>For adding a string using an array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ "1", "2" ]
++
+role_or_environment 2 [ "3" ]
+=
+[ "1", "2", "3" ]</pre>
+</div>
+<p>For adding a string using a multi-level hash:</p>
+<div class="highlight-python"><pre>role_or_environment 1 { :x =&gt; { :y =&gt; "2" } }
++
+role_or_environment 2 { :x =&gt; { :z =&gt; "3" } }
+=
+{ :x =&gt; { :y =&gt; "2", :z =&gt; "3" } }</pre>
+</div>
+<p>For adding a string using a multi-level array:</p>
+<div class="highlight-python"><pre>role_or_environment 1 [ [ 1, 2 ] ]
++
+role_or_environment 2 [ [ 3 ] ]
+=
+[ [ 1, 2 ], [ 3 ] ]</pre>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_node_object_run_lists.html" title="Run-lists"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_node_object.html" title="About Node Objects"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="essentials_node_object.html" >About Node Objects</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

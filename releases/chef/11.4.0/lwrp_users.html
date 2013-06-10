@@ -1,0 +1,264 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>users Lightweight Resource &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About LWRPs" href="lwrp.html" />
+    <link rel="next" title="webpi Lightweight Resource" href="lwrp_webpi.html" />
+    <link rel="prev" title="transmission Lightweight Resource" href="lwrp_transmission.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_webpi.html" title="webpi Lightweight Resource"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="lwrp_transmission.html" title="transmission Lightweight Resource"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" accesskey="U">About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">users Lightweight Resource</a><ul>
+<li><a class="reference internal" href="#users-manage">users_manage</a><ul>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="users-lightweight-resource">
+<h1>users Lightweight Resource<a class="headerlink" href="#users-lightweight-resource" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>users</strong> cookbook is used to create users based on a data bag search.</p>
+<p>The <strong>users</strong> cookbook contains the following lightweight resource: <tt class="docutils literal"><span class="pre">users_manage</span></tt>.</p>
+<div class="section" id="users-manage">
+<h2>users_manage<a class="headerlink" href="#users-manage" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>users_manage</strong> lightweight resource is used to add and remove users from security groups, based on the presence of group attributes for user objects in a data bag.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This lightweight resource is part of the <strong>users</strong> cookbook (<a class="reference external" href="http://community.opscode.com/cookbooks/users">http://community.opscode.com/cookbooks/users</a>).</p>
+</div>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:create</span></tt></td>
+<td>Use to create a user.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:remove</span></tt></td>
+<td>Use to remove a user.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">cookbook</span></tt></td>
+<td>The name of the cookbook in which the <tt class="docutils literal"><span class="pre">authorized_keys</span></tt> template is located.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">data_bag</span></tt></td>
+<td>The object to be searched.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">group_id</span></tt></td>
+<td>The identifier for the group.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">group_name</span></tt></td>
+<td>The name of the group. This value defaults to the name of the resource if left empty.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">search_group</span></tt></td>
+<td>The name of the group to be searched. This value defaults to the name of the resource if left empty.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>To create users based on data bag objects that have a <tt class="docutils literal"><span class="pre">group_id</span></tt> attribute value of <tt class="docutils literal"><span class="pre">2300</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">users_manage</span> <span class="s2">&quot;sysadmin&quot;</span> <span class="k">do</span>
+  <span class="n">group_id</span> <span class="mi">2300</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>To remove users based on data bag objects that have a <tt class="docutils literal"><span class="pre">group_id</span></tt> attribute value of <tt class="docutils literal"><span class="pre">2300</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">users_manage</span> <span class="s2">&quot;sysadmin&quot;</span> <span class="k">do</span>
+  <span class="n">group_id</span> <span class="mi">2300</span>
+  <span class="n">action</span> <span class="ss">:remove</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_webpi.html" title="webpi Lightweight Resource"
+             >next</a></li>
+        <li class="right" >
+          <a href="lwrp_transmission.html" title="transmission Lightweight Resource"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" >About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

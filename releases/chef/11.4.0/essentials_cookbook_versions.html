@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Versions &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Manage the Hosted Chef Server" href="manage_server_hosted.html" />
+    <link rel="prev" title="About Templates" href="essentials_cookbook_templates.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="manage_server_hosted.html" title="Manage the Hosted Chef Server"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbook_templates.html" title="About Templates"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About Versions</a><ul>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#constraints">Constraints</a></li>
+<li><a class="reference internal" href="#metadata">Metadata</a></li>
+<li><a class="reference internal" href="#environments">Environments</a></li>
+<li><a class="reference internal" href="#run-lists">Run-lists</a></li>
+<li><a class="reference internal" href="#freeze-versions">Freeze Versions</a></li>
+<li><a class="reference internal" href="#version-source-control">Version Source Control</a><ul>
+<li><a class="reference internal" href="#branch-tracking">Branch Tracking</a></li>
+<li><a class="reference internal" href="#maximum-versions">Maximum Versions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-versions">
+<h1>About Versions<a class="headerlink" href="#about-versions" title="Permalink to this headline">¶</a></h1>
+<p>A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as ensuring that the correct version of third-party component is being used appropriately or providing an update to a cookbook that fixes a bug or adds a new improvement. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is handled just a cookbook with regard to how the repository sees a cookbook version, how cookbook versions are stored on the Chef Server, how cookbook versions are pushed out to nodes, and how cookbook versions are used during a Chef run.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>A cookbook version always takes the form x.y.z, where x, y, and z are decimal numbers that are used to represent major (x), minor (y), and patch (z) versions. A two-part version (x.y) is also allowed. Alphanumeric version numbers (1.2.a3) and version numbers with more than three parts (1.2.3.4) are not allowed.</p>
+</div>
+<div class="section" id="constraints">
+<h2>Constraints<a class="headerlink" href="#constraints" title="Permalink to this headline">¶</a></h2>
+<p>A version constraint is a string that combines the cookbook version syntax with an operator, in the following format:</p>
+<div class="highlight-python"><pre>operator cookbook_version_syntax</pre>
+</div>
+<p>The following operators can be used with cookbook versions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operator</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>=</td>
+<td>Equal to</td>
+</tr>
+<tr class="row-odd"><td>&gt;</td>
+<td>Greater than</td>
+</tr>
+<tr class="row-even"><td>&lt;</td>
+<td>Less than</td>
+</tr>
+<tr class="row-odd"><td>&gt;=</td>
+<td>Greater than or equal to</td>
+</tr>
+<tr class="row-even"><td>&lt;=</td>
+<td>Less than or equal to</td>
+</tr>
+<tr class="row-odd"><td>~&gt;</td>
+<td>Approximately greater than</td>
+</tr>
+</tbody>
+</table>
+<p>For example, a version constraint for &#8220;equals version 1.0.7&#8221; is expressed like this:</p>
+<div class="highlight-python"><pre>= 1.0.7</pre>
+</div>
+<p>A version constraint for &#8220;greater than version 1.0.2&#8221; is expressed like this:</p>
+<div class="highlight-python"><pre>&gt; 1.0.2</pre>
+</div>
+<p>An optimistic version constraint is one that looks for versions greater than or equal to the specified version. For example:</p>
+<div class="highlight-python"><pre>&gt;= 2.6.5</pre>
+</div>
+<p>will match cookbooks greater than or equal to 2.6.5, such as 2.6.5, 2.6.7 or 3.1.1.</p>
+<p>A pessimistic version constraint is one that will find the upper limit version number within the range specified by the minor version number or patch version number. For example, a pessimistic version constraint for minor version numbers:</p>
+<div class="highlight-python"><pre>~&gt; 2.6</pre>
+</div>
+<p>will match cookbooks that are greater than version 2.6, but less than version 3.0. Or, a pessimistic version constraint for patch version numbers:</p>
+<div class="highlight-python"><pre>~&gt; 2.6.5</pre>
+</div>
+<p>will match cookbooks that are greater than version 2.6.5, but less than version 2.7.0. Or, a pessimistic version constraint that matches cookbooks less than a version number:</p>
+<div class="highlight-python"><pre>&lt; 2.3.4</pre>
+</div>
+<p>or will match cookbooks less than or equal to a specific version number:</p>
+<blockquote>
+<div>&lt;= 2.6.5</div></blockquote>
+</div>
+<div class="section" id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<p>Every cookbook requires a small amount of metadata. Metadata is stored in a file called metadata.rb that lives at the top of each cookbook&#8217;s directory. The contents of the metadata.rb file provides hints to the Chef Server so that cookbooks are deployed to each node correctly.</p>
+<p>Versions and version constraints can be specified in a cookbook&#8217;s metadata.rb file by using the following functions. Each function accepts a name and an optional version constraint; if a version constraint is not provided, <tt class="docutils literal"><span class="pre">&gt;=</span> <span class="pre">0.0.0</span></tt> is used as the default.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Function</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">conflicts</span></tt></td>
+<td><p class="first">Indicates that a cookbook conflicts with another cookbook or cookbook version. Use a version constraint to define constraints for cookbook versions: <tt class="docutils literal"><span class="pre">&lt;</span></tt> (less than), <tt class="docutils literal"><span class="pre">&lt;=</span></tt> (less than or equal to), <tt class="docutils literal"><span class="pre">=</span></tt> (equal to), <tt class="docutils literal"><span class="pre">&gt;=</span></tt> (greater than or equal to), <tt class="docutils literal"><span class="pre">~&gt;</span></tt> (approximately greater than), or <tt class="docutils literal"><span class="pre">&gt;</span></tt> (greater than).  This field requires that a cookbook with a matching name and version exist on the Chef Server. When the match exists, the Chef Server will ensure that any conflicted cookbooks are not included with the set of cookbooks that are sent to the node when the chef-client runs. For example:</p>
+<div class="highlight-python"><pre>conflicts "apache2", "&lt; 3.0"</pre>
+</div>
+<p>Or:</p>
+<div class="last highlight-python"><pre>conflicts "daemon-tools"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">depends</span></tt></td>
+<td><p class="first">Indicates that a cookbook has a dependency on another cookbook. Use a version constraint to define dependencies for cookbook versions: <tt class="docutils literal"><span class="pre">&lt;</span></tt> (less than), <tt class="docutils literal"><span class="pre">&lt;=</span></tt> (less than or equal to), <tt class="docutils literal"><span class="pre">=</span></tt> (equal to), <tt class="docutils literal"><span class="pre">&gt;=</span></tt> (greater than or equal to), <tt class="docutils literal"><span class="pre">~&gt;</span></tt> (approximately greater than), or <tt class="docutils literal"><span class="pre">&gt;</span></tt> (greater than). This field requires that a cookbook with a matching name and version exists on the Chef Server. When the match exists, the Chef Server will include the dependency as part of the set of cookbooks that are sent to the node when the chef-client runs. It is very important that the <tt class="docutils literal"><span class="pre">depends</span></tt> field contain accurate data. If a dependency statement is inaccurate, Chef may not be able to complete the configuration of the system. For example:</p>
+<div class="highlight-python"><pre>depends "opscode-base"</pre>
+</div>
+<p>Or:</p>
+<div class="highlight-python"><pre>depends "opscode-github", "&gt; 1.0.0"</pre>
+</div>
+<p>Or:</p>
+<div class="last highlight-python"><pre>depends "runit", "~&gt; 1.2.3"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">provides</span></tt></td>
+<td>Adds a recipe, definition, or resource that is provided by this cookbook, should the auto-populated list be insufficient.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">recommends</span></tt></td>
+<td>Adds a dependency on another cookbook that is recommended, but not required. A cookbook will still work even if recommended dependencies are not available.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">replaces</span></tt></td>
+<td>Indicates that this cookbook should replace another (and can be used in-place of that cookbook).</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">suggests</span></tt></td>
+<td>Adds a dependency on another cookbook that is suggested, but not required. This field is weaker than <tt class="docutils literal"><span class="pre">recommends</span></tt>; a cookbook will still work even when suggested dependencies are not available.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">supports</span></tt></td>
+<td>Indicates that a cookbook has a supported platform. Use a version constraint to define dependencies for platform versions: <tt class="docutils literal"><span class="pre">&lt;</span></tt> (less than), <tt class="docutils literal"><span class="pre">&lt;=</span></tt> (less than or equal to), <tt class="docutils literal"><span class="pre">=</span></tt> (equal to), <tt class="docutils literal"><span class="pre">&gt;=</span></tt> (greater than or equal to), <tt class="docutils literal"><span class="pre">~&gt;</span></tt> (approximately greater than), or <tt class="docutils literal"><span class="pre">&gt;</span></tt> (greater than). To specify more than one platform, use more than one <tt class="docutils literal"><span class="pre">supports</span></tt> field, once for each platform.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="environments">
+<h2>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">¶</a></h2>
+<p>An environment can use version constraints to specify a list of allowed cookbook versions by specifying the cookbook&#8217;s name, along with the version constraint. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">cookbook</span> <span class="s2">&quot;apache2&quot;</span><span class="p">,</span> <span class="s2">&quot;~&gt; 1.2.3&quot;</span>
+</pre></div>
+</div>
+<p>Or:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">cookbook</span> <span class="s2">&quot;runit&quot;</span><span class="p">,</span> <span class="s2">&quot;= 4.2.0&quot;</span>
+</pre></div>
+</div>
+<p>If a cookbook is not explicitly given a version constraint the environment will assume the cookbook has no version constraint and will use any version of that cookbook with any node in the environment.</p>
+</div>
+<div class="section" id="run-lists">
+<h2>Run-lists<a class="headerlink" href="#run-lists" title="Permalink to this headline">¶</a></h2>
+<p>A version constraint can be specified for recipe items that are part of a run-list. Use <tt class="docutils literal"><span class="pre">&#64;</span></tt> (at sign) to indicate a version constraint. Only the &#8220;equal to&#8221; constraint can be used to specify a version constraint in a run-list. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="p">{</span><span class="s2">&quot;run_list&quot;</span><span class="p">:</span><span class="o">[</span><span class="s2">&quot;recipe[nginx@1.2.3]&quot;</span><span class="o">]</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="freeze-versions">
+<h2>Freeze Versions<a class="headerlink" href="#freeze-versions" title="Permalink to this headline">¶</a></h2>
+<p>A cookbook version can be frozen, which will prevent updates from being made to that version of a cookbook. (A user can always upload a new version of a cookbook.) Using cookbook versions that are frozen within environments is a reliable way to keep a production environment safe from accidental updates while testing changes that are made to a development infrastructure.</p>
+<p>For example, to freeze a cookbook version using Knife, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload redis --freeze
+</pre></div>
+</div>
+<p>To return:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Uploading redis...
+Upload completed
+</pre></div>
+</div>
+<p>Once a cookbook version is frozen, only by using the <tt class="docutils literal"><span class="pre">--force</span></tt> option can an update be made. For example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload redis --force
+</pre></div>
+</div>
+<p>Without the <tt class="docutils literal"><span class="pre">--force</span></tt> option specified, an error will be returned similar to &#8220;Version 0.0.0 of cookbook redis is frozen. Use &#8211;force to override.&#8221;</p>
+</div>
+<div class="section" id="version-source-control">
+<h2>Version Source Control<a class="headerlink" href="#version-source-control" title="Permalink to this headline">¶</a></h2>
+<p>There are two strategies to consider when using version control as part of the cookbook management process:</p>
+<ul class="simple">
+<li>Use maximum version control when it is important to keep every bit of data within version control</li>
+<li>Use branch tracking when cookbooks are being managed in separate environments using git branches and the versioning policy information is already stored in a cookbook&#8217;s metadata.</li>
+</ul>
+<div class="section" id="branch-tracking">
+<h3>Branch Tracking<a class="headerlink" href="#branch-tracking" title="Permalink to this headline">¶</a></h3>
+<p>Using a branch tracking strategy requires that a branch for each environment exists in the source control and that each cookbook&#8217;s versioning policy is tracked at the branch level. This approach is relatively simple and lightweight: for development environments that track the latest cookbooks, just bump the version before a cookbook is uploaded for testing. For any cookbooks that require higher levels of version control, Knife allows cookbooks to be uploaded to specific environments and for cookbooks to be frozen (which prevents others from being able to make changes to that cookbook).</p>
+<p>The typical workflow with a branch tracking version control strategy includes:</p>
+<ol class="arabic simple">
+<li>Bumping the version number as appropriate.</li>
+<li>Making changes to a cookbook.</li>
+<li>Uploading and testing a cookbook.</li>
+<li>Moving a tested cookbook to production.</li>
+</ol>
+<p>For example, to bump a version number, first make changes to the cookbook, and then upload and test it. Repeat this process as required, and then upload it using a Knife command similar to:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload my-app
+</pre></div>
+</div>
+<p>When the cookbook is finished, move those changes to the production environment and use the <tt class="docutils literal"><span class="pre">--freeze</span></tt> option to prevent others from making further changes:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload  my-app -E production --freeze
+</pre></div>
+</div>
+</div>
+<div class="section" id="maximum-versions">
+<h3>Maximum Versions<a class="headerlink" href="#maximum-versions" title="Permalink to this headline">¶</a></h3>
+<p>Using a maximum version control strategy is required when everything needs to be tracked in source control. This approach is very similar to a branch tracking strategy while the cookbook is in development and being tested, but is more complicated and time-consuming (and requires file-level editing for environment data) in order to get the cookbook deployed to a production environment.</p>
+<p>The typical workflow with a maximum version control strategy includes:</p>
+<ol class="arabic simple">
+<li>Bumping the version number as appropriate.</li>
+<li>Making changes to a cookbook.</li>
+<li>Uploading and testing a cookbook.</li>
+<li>Moving a tested cookbook to production.</li>
+</ol>
+<p>For example, to bump a version number, first make changes to the cookbook, and then upload and test it. Repeat this process as required, and then upload it using a Knife command similar to:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload my-app
+</pre></div>
+</div>
+<p>When the cookbook is finished, move those changes to the production environment and use the <tt class="docutils literal"><span class="pre">--freeze</span></tt> option to prevent others from making further changes:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook upload  my-app -E production --freeze
+</pre></div>
+</div>
+<p>Then modify the environment so that it prefers the newly uploaded version:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="o">(</span>vim|emacs|mate|ed<span class="o">)</span> YOUR_REPO/environments/production.rb
+</pre></div>
+</div>
+<p>Upload the updated environment:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife environment from file production.rb
+</pre></div>
+</div>
+<p>And then deploy the new cookbook version.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="manage_server_hosted.html" title="Manage the Hosted Chef Server"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbook_templates.html" title="About Templates"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

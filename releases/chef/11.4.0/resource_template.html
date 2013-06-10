@@ -1,0 +1,770 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>template &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About Resources and Providers" href="resource.html" />
+    <link rel="next" title="user" href="resource_user.html" />
+    <link rel="prev" title="service" href="resource_service.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_user.html" title="user"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="resource_service.html" title="service"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" accesskey="U">About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">template</a><ul>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li><a class="reference internal" href="#windows-file-security">Windows File Security</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#providers">Providers</a></li>
+<li><a class="reference internal" href="#file-specificity">File Specificity</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="template">
+<h1>template<a class="headerlink" href="#template" title="Permalink to this headline">¶</a></h1>
+<p>A <a class="reference external" href="http://docs.opscode.com/resource.html">resource</a> is a key part of a <a class="reference external" href="http://docs.opscode.com/essentials_cookbook_recipes.html">recipe</a> that defines the actions that can be taken against a piece of the system. These actions are identified during each <a class="reference external" href="http://docs.opscode.com/essentials_nodes_chef_run.html">Chef run</a> as the resource collection is compiled. Once identified, each resource (in turn) is mapped to a provider, which then configures each piece of the system.</p>
+<p>The <strong>template</strong> resource is used to manage file contents with an embedded Ruby (erb) template. This resource includes actions and attributes from the <strong>file</strong> resource. Template files managed by the <strong>template</strong> resource follow the same file specificity rules as the <strong>remote_file</strong> and <strong>file</strong> resources.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>The syntax for using the <strong>template</strong> resource in a recipe is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
+  <span class="n">some_attribute</span> <span class="s2">&quot;value&quot;</span> <span class="c1"># see attributes section below</span>
+  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="n">action</span> <span class="ss">:action</span> <span class="c1"># see actions section below</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">template</span></tt> tells Chef to use the <tt class="docutils literal"><span class="pre">Chef::Provider::File::Template</span></tt> provider during the Chef run</li>
+<li><tt class="docutils literal"><span class="pre">&quot;name&quot;</span></tt> is the name of the template file</li>
+<li><tt class="docutils literal"><span class="pre">attribute</span></tt> is zero (or more) of the attributes that are available for this resource</li>
+<li><tt class="docutils literal"><span class="pre">:action</span></tt> is the step that the resource will ask the provider to take during the Chef run</li>
+</ul>
+</div>
+<div class="section" id="actions">
+<h2>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
+<p>This resource has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:create</span></tt></td>
+<td>Default. Use to create a file.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:create_if_missing</span></tt></td>
+<td>Use to create a file only if it does not exist.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>This resource has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">backup</span></tt></td>
+<td>The number of backups of a file that should be kept. Set to <tt class="docutils literal"><span class="pre">false</span></tt> to prevent backups from being kept. Default value: <tt class="docutils literal"><span class="pre">5</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">cookbook</span></tt></td>
+<td>The cookbook in which a template is located. Default value: <tt class="docutils literal"><span class="pre">nil</span></tt> (the current cookbook).</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">group</span></tt></td>
+<td>A string or ID that identifies the group owner by group name, including fully qualified group names such as <tt class="docutils literal"><span class="pre">domain\group</span></tt> or <tt class="docutils literal"><span class="pre">group&#64;domain</span></tt>. If this value is not specified, existing groups will remain unchanged and new group assignments will use the default <tt class="docutils literal"><span class="pre">POSIX</span></tt> group (if available).</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">inherits</span></tt></td>
+<td>Microsoft Windows only. Indicates that a file inherits rights from its parent. Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">local</span></tt></td>
+<td>Indicates whether a template is already present on the node. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">mode</span></tt></td>
+<td><p class="first">The octal mode for a file.</p>
+<p>UNIX- and Linux-based systems: The octal mode of the file that is passed to chmod. If the value is specified as a quoted string, it will work exactly as if the <tt class="docutils literal"><span class="pre">chmod</span></tt> command was passed. If the value is specified as an integer, prepend a zero (<tt class="docutils literal"><span class="pre">0</span></tt>) to the value to ensure it is interpreted as an octal number. For example, to assign read, write, and execute rights for all users, use <tt class="docutils literal"><span class="pre">0777</span></tt> or <tt class="docutils literal"><span class="pre">'777'</span></tt>; for the same rights, plus the sticky bit, use <tt class="docutils literal"><span class="pre">01777</span></tt> or <tt class="docutils literal"><span class="pre">'1777'</span></tt>.</p>
+<p class="last">Microsoft Windows: The octal mode of the file that is translated into rights for Microsoft Windows security. Values up to <tt class="docutils literal"><span class="pre">0777</span></tt> are allowed (no sticky bits) and mean the same in Microsoft Windows as they do in UNIX, where <tt class="docutils literal"><span class="pre">4</span></tt> equals <tt class="docutils literal"><span class="pre">GENERIC_READ</span></tt>, <tt class="docutils literal"><span class="pre">2</span></tt> equals <tt class="docutils literal"><span class="pre">GENERIC_WRITE</span></tt>, and <tt class="docutils literal"><span class="pre">1</span></tt> equals <tt class="docutils literal"><span class="pre">GENERIC_EXECUTE</span></tt>. This attribute cannot be used to set <tt class="docutils literal"><span class="pre">:full_control</span></tt>. This attribute has no effect if not specified, but when this attribute and <tt class="docutils literal"><span class="pre">rights</span></tt> are both specified, the effects will be cumulative.</p>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">owner</span></tt></td>
+<td>A string or ID that identifies the group owner by user name, including fully qualified user names such as <tt class="docutils literal"><span class="pre">domain\user</span></tt> or <tt class="docutils literal"><span class="pre">user&#64;domain</span></tt>. If this value is not specified, existing owners will remain unchanged and new owner assignments will use the current user (when necessary).</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">path</span></tt></td>
+<td>The path to the file. Default value: <tt class="docutils literal"><span class="pre">name</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">provider</span></tt></td>
+<td>Optional. Use to specify a provider by using its long name. For example: <tt class="docutils literal"><span class="pre">provider</span> <span class="pre">Chef::Provider::Long::Name</span></tt>. See the Providers section below for the list of providers available to this resource.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rights</span></tt></td>
+<td>Microsoft Windows only. The permissions for users and groups in a Microsoft Windows environment. For example: <tt class="docutils literal"><span class="pre">rights</span> <span class="pre">&lt;permissions&gt;,</span> <span class="pre">&lt;principal&gt;,</span> <span class="pre">&lt;options&gt;</span></tt> where <tt class="docutils literal"><span class="pre">&lt;permissions&gt;</span></tt> specifies the rights granted to the principal, <tt class="docutils literal"><span class="pre">&lt;principal&gt;</span></tt> is the group or user name, and <tt class="docutils literal"><span class="pre">&lt;options&gt;</span></tt> is a hash with one (or more) advanced rights options.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">source</span></tt></td>
+<td>The location of the source file. Can be used to distribute specific files to specific platforms (see the section &#8220;File Specificity&#8221;, below). Default value: basename of <tt class="docutils literal"><span class="pre">name</span></tt> plus <tt class="docutils literal"><span class="pre">.erb</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">variables</span></tt></td>
+<td>A hash of variables that are passed into a template file.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="windows-file-security">
+<h3>Windows File Security<a class="headerlink" href="#windows-file-security" title="Permalink to this headline">¶</a></h3>
+<p>To support Microsoft Windows security, the <strong>template</strong>, <strong>file</strong>, <strong>remote_file</strong>, <strong>cookbook_file</strong>, <strong>directory</strong>, and <strong>remote_directory</strong> resources support the use of inheritance and access control lists (ACLs) within recipes.</p>
+<p><strong>Access Control Lists (ACLs)</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">rights</span></tt> attribute can be used in a recipe to manage access control lists (ACLs), which allow permissions to be given to multiple users and groups. The syntax for the <tt class="docutils literal"><span class="pre">rights</span></tt> attribute is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">rights</span> <span class="n">permission</span><span class="p">,</span> <span class="n">principal</span><span class="p">,</span> <span class="n">option</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul>
+<li><p class="first"><tt class="docutils literal"><span class="pre">permission</span></tt> is used to specify which rights will be granted to the <tt class="docutils literal"><span class="pre">principal</span></tt>. The possible values are: <tt class="docutils literal"><span class="pre">:read</span></tt>, <tt class="docutils literal"><span class="pre">:write</span></tt>, <tt class="docutils literal"><span class="pre">:full_control</span></tt>, and <tt class="docutils literal"><span class="pre">:deny</span></tt>. These permissions are cumulative. If <tt class="docutils literal"><span class="pre">:write</span></tt> is specified, then it includes <tt class="docutils literal"><span class="pre">:read</span></tt>. If <tt class="docutils literal"><span class="pre">:full_control</span></tt> is specified, then it includes both <tt class="docutils literal"><span class="pre">:write</span></tt> and <tt class="docutils literal"><span class="pre">:read</span></tt>. If <tt class="docutils literal"><span class="pre">:deny</span></tt> is specified, then the user or group will not have rights to the object. (For those who know the Microsoft Windows API: <tt class="docutils literal"><span class="pre">:read</span></tt> corresponds to <tt class="docutils literal"><span class="pre">GENERIC_READ</span></tt> and <tt class="docutils literal"><span class="pre">GENERIC_EXECUTE</span></tt>; <tt class="docutils literal"><span class="pre">:write</span></tt> corresponds to <tt class="docutils literal"><span class="pre">GENERIC_WRITE</span></tt>, <tt class="docutils literal"><span class="pre">GENERIC_READ</span></tt>, and <tt class="docutils literal"><span class="pre">GENERIC_EXECUTE</span></tt>; <tt class="docutils literal"><span class="pre">:full_control</span></tt> corresponds to <tt class="docutils literal"><span class="pre">GENERIC_ALL</span></tt>, which allows a user to change the owner and other metadata about a file.)</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">principal</span></tt> is used to specify a group or user name. This is identical to what is entered in the login box for Microsoft Windows, such as <tt class="docutils literal"><span class="pre">user_name</span></tt>, <tt class="docutils literal"><span class="pre">domain\user_name</span></tt>, or <tt class="docutils literal"><span class="pre">user_name&#64;fully_qualified_domain_name</span></tt>. Chef does not need to know if a principal is a user or a group.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">option</span></tt> is a hash that contains advanced rights options. For example, the rights to a directory that only applies to its children might look something like: <tt class="docutils literal"><span class="pre">rights</span> <span class="pre">:write,</span> <span class="pre">&quot;domain\group_name&quot;,</span> <span class="pre">:option_type</span> <span class="pre">=&gt;</span> <span class="pre">value</span></tt> where <tt class="docutils literal"><span class="pre">option_type</span></tt> is one of the following:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Option Type</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last"><tt class="docutils literal"><span class="pre">:applies_to_children</span></tt></p>
+</td>
+<td><p class="first last">Use to specify how permissions are applied to children. Possible values: <tt class="docutils literal"><span class="pre">true</span></tt> to inherit both child directories and files;  <tt class="docutils literal"><span class="pre">false</span></tt> to not inherit any child directories or files; <tt class="docutils literal"><span class="pre">:containers_only</span></tt> to inherit only child directories (and not files); <tt class="docutils literal"><span class="pre">:objects_only</span></tt> to recursively inherit files (and not child directories).</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><tt class="docutils literal"><span class="pre">:applies_to_self</span></tt></p>
+</td>
+<td><p class="first last">Indicates whether a permission is applied to the parent directory. Possible values: <tt class="docutils literal"><span class="pre">true</span></tt> to apply to the parent directory or file and its children; <tt class="docutils literal"><span class="pre">false</span></tt> to not apply only to child directories and files.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><tt class="docutils literal"><span class="pre">:one_level_deep</span></tt></p>
+</td>
+<td><p class="first last">Indicates the depth to which permissions will be applied. Possible values: <tt class="docutils literal"><span class="pre">true</span></tt> to apply only to the first level of children; <tt class="docutils literal"><span class="pre">false</span></tt> to apply to all children.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+<p>The <tt class="docutils literal"><span class="pre">rights</span></tt> attribute can be used as many times as necessary; Chef will apply them to the file or directory as required. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">resource</span> <span class="s2">&quot;x.txt&quot;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:read</span><span class="p">,</span> <span class="s2">&quot;Everyone&quot;</span>
+  <span class="n">rights</span> <span class="ss">:write</span><span class="p">,</span> <span class="s2">&quot;domain\group&quot;</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s2">&quot;group_name_or_user_name&quot;</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s2">&quot;user_name&quot;</span><span class="p">,</span> <span class="n">option</span> <span class="o">=&gt;</span> <span class="ss">:applies_to_children</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Some other important things to know when using the <tt class="docutils literal"><span class="pre">rights</span></tt> attribute:</p>
+<ul class="simple">
+<li>Order independence. It doesn&#8217;t matter if <tt class="docutils literal"><span class="pre">rights</span> <span class="pre">:deny,</span> <span class="pre">&quot;Sally&quot;</span></tt> is placed before or after <tt class="docutils literal"><span class="pre">rights</span> <span class="pre">:read,</span> <span class="pre">&quot;Sally&quot;</span></tt>, Sally will be unable to read the document.</li>
+<li>Only inherited rights remain. All existing explicit rights on the object are removed and replaced.</li>
+<li>If rights are not specified, nothing will be changed. Chef does not clear out the rights on a file or directory if rights are not specified.</li>
+<li>Changing inherited rights can be expensive. Microsoft Windows will propagate rights to all children recursively due to inheritance. This is a normal aspect of Microsoft Windows, so consider the frequency with which this type of action is necessary and take steps to control this type of action if performance is the primary consideration.</li>
+</ul>
+<p><strong>Inheritance</strong></p>
+<p>By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The <tt class="docutils literal"><span class="pre">inherits</span></tt> attribute can be used to specifically tell Chef to apply (or not apply) inherited rights from its parent directory.</p>
+<p>For example, the following example specifies the rights for a directory:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s1">&#39;C:\mordor&#39;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:read</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Minions&#39;</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Sauron&#39;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>and then the following example specifies how to use inheritance to deny access to the child directory:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s1">&#39;C:\mordor\mount_doom&#39;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Sauron&#39;</span>
+  <span class="n">inherits</span> <span class="kp">false</span> <span class="c1"># Sauron is the only person who should have any sort of access</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>If the <tt class="docutils literal"><span class="pre">:deny</span></tt> permission were to be used instead, something could slip through unless all users and groups were denied.</p>
+<p>Another example also shows how to specify rights for a directory:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s1">&#39;C:\mordor&#39;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:read</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Minions&#39;</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Sauron&#39;</span>
+  <span class="n">rights</span> <span class="ss">:write</span><span class="p">,</span> <span class="s1">&#39;SHIRE\Frodo&#39;</span> <span class="c1"># Who put that there I didn&#39;t put that there</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>but then not use the <tt class="docutils literal"><span class="pre">inherits</span></tt> attribute to deny those rights on a child directory:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s1">&#39;C:\mordor\mount_doom&#39;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:deny</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Minions&#39;</span> <span class="c1"># Oops, not specific enough</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Because the <tt class="docutils literal"><span class="pre">inherits</span></tt> attribute is not specified, Chef will default it to <tt class="docutils literal"><span class="pre">true</span></tt>, which will ensure that security settings for existing files remain unchanged.</p>
+</div>
+</div>
+<div class="section" id="providers">
+<h2>Providers<a class="headerlink" href="#providers" title="Permalink to this headline">¶</a></h2>
+<p>The following providers are available. Use the short name to call the provider from a recipe:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="15%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Long name</th>
+<th class="head">Short name</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">Chef::Provider::File::Template</span></tt></td>
+<td><tt class="docutils literal"><span class="pre">template</span></tt></td>
+<td>The default provider for all platforms.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="file-specificity">
+<h2>File Specificity<a class="headerlink" href="#file-specificity" title="Permalink to this headline">¶</a></h2>
+<p>A cookbook will frequently be designed to work across many platforms and will often be required to distribute a specific file to a specific platform. A cookbook can be designed to support distributing files across platforms, but ensuring that the right file ends up on each system. For example, a cookbook may have a directory structure like this:</p>
+<div class="highlight-python"><pre>files/
+   host-foo.example.com
+   ubuntu-10.04
+   ubuntu-10
+   ubuntu
+   default</pre>
+</div>
+<p>and a cookbook_file resource like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">cookbook_file</span> <span class="s2">&quot;/usr/local/bin/apache2_module_conf_generate.pl&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;apache2_module_conf_generate.pl&quot;</span>
+  <span class="n">mode</span> <span class="mo">0755</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>would be matched in the same order as the cookbook directory structure. For a node named &#8220;foo.example.com&#8221; that is running Ubuntu 10.04, the second item would be the matching item and the location to which the file identified in the cookbook_resource would be distributed:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">host</span><span class="o">-</span><span class="n">foo</span><span class="o">.</span><span class="n">example</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">apache2_module_conf_generate</span><span class="o">.</span><span class="n">pl</span>
+<span class="n">ubuntu</span><span class="o">-</span><span class="mi">8</span><span class="o">.</span><span class="mo">04</span><span class="o">/</span><span class="n">apache2_module_conf_generate</span><span class="o">.</span><span class="n">pl</span>
+<span class="n">ubuntu</span><span class="o">-</span><span class="mi">8</span><span class="o">/</span><span class="n">apache2_module_conf_generate</span><span class="o">.</span><span class="n">pl</span>
+<span class="n">ubuntu</span><span class="o">/</span><span class="n">apache2_module_conf_generate</span><span class="o">.</span><span class="n">pl</span>
+<span class="n">default</span><span class="o">/</span><span class="n">apache2_module_conf_generate</span><span class="o">.</span><span class="n">pl</span>
+</pre></div>
+</div>
+<p>If the <tt class="docutils literal"><span class="pre">apache_module_conf_generate.pl</span></tt> file was located in the cookbook directory under <tt class="docutils literal"><span class="pre">files/host-foo.example.com/</span></tt>, the specified file(s) would only be copied to the machine with the domain name foo.example.com.</p>
+<p>So, the pattern for file specificity is as follows:</p>
+<ol class="arabic simple">
+<li>host-node[:fqdn]</li>
+<li>node[:platform]-node[:platform_version]</li>
+<li>node[:platform]-version_components: The version string is split on decimals and searched from greatest specificity to least; for example, if the location from the last rule was centos-5.7.1, then centos-5.7 and centos-5 would also be searched.</li>
+<li>node[:platform]</li>
+<li>default</li>
+</ol>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The following examples demonstrate various approaches for using resources in recipes. If you want to see examples of how Opscode uses resources in recipes, take a closer look at the cookbooks that Opscode authors and maintains: <a class="reference external" href="https://github.com/opscode-cookbooks">https://github.com/opscode-cookbooks</a>.</p>
+<p><strong>Configure a file from a template</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/config.conf&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;config.conf.erb&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Configure a file from a local template</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/config.conf&quot;</span> <span class="k">do</span>
+  <span class="n">local</span> <span class="kp">true</span>
+  <span class="n">source</span> <span class="s2">&quot;/tmp/config.conf.erb&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Configure a file using a variable map</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/config.conf&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;config.conf.erb&quot;</span>
+  <span class="n">variables</span><span class="p">(</span>
+    <span class="ss">:config_var</span> <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s2">&quot;configs&quot;</span><span class="o">][</span><span class="s2">&quot;config_var&quot;</span><span class="o">]</span>
+  <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Use the ``not_if`` condition</strong></p>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">not_if</span></tt> condition to create a file based on a template and using the presence of an attribute on the node to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">not_if</span> <span class="p">{</span> <span class="n">node</span><span class="o">[</span><span class="ss">:some_value</span><span class="o">]</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">not_if</span></tt> condition to create a file based on a template and using Ruby to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">not_if</span> <span class="k">do</span>
+    <span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;/etc/passwd&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">not_if</span></tt> condition to create a file based on a template and using a Ruby block (with curly braces) to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">not_if</span> <span class="p">{</span><span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;/etc/passwd&quot;</span><span class="p">)}</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">not_if</span></tt> condition to create a file based on a template and using a string to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">not_if</span> <span class="s2">&quot;test -f /etc/passwd&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Use the ``only_if`` condition</strong></p>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">only_if</span></tt> condition to create a file based on a template and using the presence of an attribute on the node to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">only_if</span> <span class="p">{</span> <span class="n">node</span><span class="o">[</span><span class="ss">:some_value</span><span class="o">]</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">only_if</span></tt> condition to create a file based on a template, and then use Ruby to specify a condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">only_if</span> <span class="k">do</span> <span class="o">!</span> <span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;/etc/passwd&quot;</span><span class="p">)</span> <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">only_if</span></tt> condition to create a file based on a template and using a string to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">only_if</span> <span class="s2">&quot;test -f /etc/passwd&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Use a whitespace array (``%w``)</strong></p>
+<p>The following example shows how to use a Ruby whitespace array to define a list of configuration tools, and then use that list of tools within the <strong>template</strong> resource to ensure that all of these configuration tools are using the same RSA key:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="sx">%w{openssl.cnf pkitool vars Rakefile}</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+  <span class="n">template</span> <span class="s2">&quot;/etc/openvpn/easy-rsa/</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">do</span>
+    <span class="n">source</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">f</span><span class="si">}</span><span class="s2">.erb&quot;</span>
+    <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+    <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+    <span class="n">mode</span> <span class="mo">0755</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Use a relative path</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;HOME&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">/chef-getting-started.txt&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;chef-getting-started.txt.erb&quot;</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Delay notifications</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/etc/nagios3/configures-nagios.conf&quot;</span> <span class="k">do</span>
+  <span class="c1"># other parameters</span>
+  <span class="n">notifies</span> <span class="ss">:run</span><span class="p">,</span> <span class="s2">&quot;execute[test-nagios-config]&quot;</span><span class="p">,</span> <span class="ss">:delayed</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Notify immediately</strong></p>
+<p>By default, notifications are <tt class="docutils literal"><span class="pre">:delayed</span></tt>, that is they are queued up as they are triggered, and then executed at the very end of a Chef run. To run an action immediately, use <tt class="docutils literal"><span class="pre">:immediately</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/etc/nagios3/configures-nagios.conf&quot;</span> <span class="k">do</span>
+  <span class="c1"># other parameters</span>
+  <span class="n">notifies</span> <span class="ss">:run</span><span class="p">,</span> <span class="s2">&quot;execute[test-nagios-config]&quot;</span><span class="p">,</span> <span class="ss">:immediately</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>and then Chef would immediately run the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">execute</span> <span class="s2">&quot;test-nagios-config&quot;</span> <span class="k">do</span>
+  <span class="n">command</span> <span class="s2">&quot;nagios3 --verify-config&quot;</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Notify multiple resources</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/etc/chef/server.rb&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;server.rb.erb&quot;</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="s2">&quot;644&quot;</span>
+  <span class="n">notifies</span> <span class="ss">:restart</span><span class="p">,</span> <span class="s2">&quot;service[chef-solr]&quot;</span><span class="p">,</span> <span class="ss">:delayed</span>
+  <span class="n">notifies</span> <span class="ss">:restart</span><span class="p">,</span> <span class="s2">&quot;service[chef-solr-indexer]&quot;</span><span class="p">,</span> <span class="ss">:delayed</span>
+  <span class="n">notifies</span> <span class="ss">:restart</span><span class="p">,</span> <span class="s2">&quot;service[chef-server]&quot;</span><span class="p">,</span> <span class="ss">:delayed</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Reload a service</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="s2">&quot;0644&quot;</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">notifies</span> <span class="ss">:reload</span><span class="p">,</span> <span class="s2">&quot;service[apache]&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Restart a service when a template is modified</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/etc/www/configures-apache.conf&quot;</span> <span class="k">do</span>
+  <span class="n">notifies</span> <span class="ss">:restart</span><span class="p">,</span> <span class="s2">&quot;service[apache]&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Send notifications to multiple resources</strong></p>
+<p>To send notifications to multiple resources, just use multiple attributes. Multiple attributes will get sent to the notified resources in the order specified.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/etc/netatalk/netatalk.conf&quot;</span> <span class="k">do</span>
+  <span class="n">notifies</span> <span class="ss">:restart</span><span class="p">,</span> <span class="s2">&quot;service[afpd]&quot;</span><span class="p">,</span> <span class="ss">:immediately</span>
+  <span class="n">notifies</span> <span class="ss">:restart</span><span class="p">,</span> <span class="s2">&quot;service[cnid]&quot;</span><span class="p">,</span> <span class="ss">:immediately</span>
+<span class="k">end</span>
+
+<span class="n">service</span> <span class="s2">&quot;afpd&quot;</span>
+<span class="n">service</span> <span class="s2">&quot;cnid&quot;</span>
+</pre></div>
+</div>
+<p><strong>Execute a command using a template</strong></p>
+<p>The following example shows how to set up IPv4 packet forwarding using the <strong>execute</strong> resource to run a command named &#8220;forward_ipv4&#8221; that uses a template defined by the <strong>template</strong> resource:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">execute</span> <span class="s2">&quot;forward_ipv4&quot;</span> <span class="k">do</span>
+  <span class="n">command</span> <span class="s2">&quot;echo &gt; /proc/.../ipv4/ip_forward&quot;</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
+
+<span class="n">template</span> <span class="s2">&quot;/etc/file_name.conf&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;routing/file_name.conf.erb&quot;</span>
+  <span class="n">notifies</span> <span class="ss">:run</span><span class="p">,</span> <span class="s1">&#39;execute[forward_ipv4]&#39;</span><span class="p">,</span> <span class="ss">:delayed</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where the <tt class="docutils literal"><span class="pre">command</span></tt> attribute for the <strong>execute</strong> resource contains the command that is to be run and the <tt class="docutils literal"><span class="pre">source</span></tt> attribute for the <strong>template</strong> resource specifies which template to use. The <tt class="docutils literal"><span class="pre">notifies</span></tt> attribute for the <strong>template</strong> specifies that the <tt class="docutils literal"><span class="pre">execute[forward_ipv4]</span></tt> (which is defined by the <strong>execute</strong> resource) should be queued up and run at the end of the Chef run.</p>
+<p><strong>Set an IP address using variables and a template</strong></p>
+<p>The following example shows how a template resource can be used in a recipe to combine settings stored in an attributes file, variables within a recipe, and a template to set the IP addresses that are used by the Nginx service. The attributes file contains the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;dir&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;/etc/nginx&quot;</span>
+</pre></div>
+</div>
+<p>The recipe then does the following to:</p>
+<ul class="simple">
+<li>Declare two variables at the beginning of the recipe, one for the remote IP address and the other for the authorized IP address</li>
+<li>Use the <strong>service</strong> resource to restart and reload the Nginx service</li>
+<li>Load a template named &#8220;authorized_ip.erb&#8221; from the <tt class="docutils literal"><span class="pre">templates/</span></tt> directory that is used to set the IP address values based on the variables specified in the recipe</li>
+</ul>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;remote_ip_var&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;remote_addr&quot;</span>
+<span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;authorized_ips&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="o">[</span><span class="s2">&quot;127.0.0.1/32&quot;</span><span class="o">]</span>
+
+<span class="n">service</span> <span class="s2">&quot;nginx&quot;</span> <span class="k">do</span>
+  <span class="n">supports</span> <span class="ss">:status</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span> <span class="ss">:restart</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span> <span class="ss">:reload</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="k">end</span>
+
+<span class="n">template</span> <span class="s2">&quot;authorized_ip&quot;</span> <span class="k">do</span>
+  <span class="n">path</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;dir&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">/authorized_ip&quot;</span>
+  <span class="n">source</span> <span class="s2">&quot;modules/authorized_ip.erb&quot;</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">variables</span><span class="p">(</span>
+    <span class="ss">:remote_ip_var</span> <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;remote_ip_var&#39;</span><span class="o">]</span><span class="p">,</span>
+    <span class="ss">:authorized_ips</span> <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;authorized_ips&#39;</span><span class="o">]</span>
+  <span class="p">)</span>
+
+  <span class="n">notifies</span> <span class="ss">:reload</span><span class="p">,</span> <span class="n">resources</span><span class="p">(</span><span class="ss">:service</span> <span class="o">=&gt;</span> <span class="s2">&quot;nginx&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where the <tt class="docutils literal"><span class="pre">variables</span></tt> attribute tells the template to use the variables set at the beginning of the recipe and the <tt class="docutils literal"><span class="pre">source</span></tt> attribute is used to call a template file located in the cookbook&#8217;s <tt class="docutils literal"><span class="pre">templates/</span></tt> directory. The template file looks something like:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">geo</span> <span class="vg">$&lt;</span><span class="sx">%= @remote_ip_var %&gt; $authorized_ip {</span>
+<span class="sx">  default no;</span>
+<span class="sx">  &lt;% @authorized_ips.each do |ip| %&gt;</span>
+<span class="sx">  &lt;%=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">ip</span><span class="si">}</span><span class="s2"> yes;&quot;</span> <span class="sx">%&gt;</span>
+<span class="sx">  &lt;% end %&gt;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Add a rule to an IP table</strong></p>
+<p>The following example shows how to add a rule named &#8220;test_rule&#8221; to an IP table using the <strong>execute</strong> resource to run a command using a template that is defined by the <strong>template</strong> resource:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">execute</span> <span class="s1">&#39;test_rule&#39;</span> <span class="k">do</span>
+  <span class="n">command</span> <span class="s2">&quot;command_to_run</span>
+<span class="s2">    --option value</span>
+<span class="s2">    ...</span>
+<span class="s2">    --option value</span>
+<span class="s2">    --source </span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:name_of_node</span><span class="o">][</span><span class="ss">:ipsec</span><span class="o">][</span><span class="ss">:local</span><span class="o">][</span><span class="ss">:subnet</span><span class="o">]</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">    -j test_rule&quot;</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
+
+<span class="n">template</span> <span class="s2">&quot;/etc/file_name.local&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;routing/file_name.local.erb&quot;</span>
+  <span class="n">notifies</span> <span class="ss">:run</span><span class="p">,</span> <span class="s1">&#39;execute[test_rule]&#39;</span><span class="p">,</span> <span class="ss">:delayed</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where the <tt class="docutils literal"><span class="pre">command</span></tt> attribute for the <strong>execute</strong> resource contains the command that is to be run and the <tt class="docutils literal"><span class="pre">source</span></tt> attribute for the <strong>template</strong> resource specifies which template to use. The <tt class="docutils literal"><span class="pre">notifies</span></tt> attribute for the <strong>template</strong> specifies that the <tt class="docutils literal"><span class="pre">execute[test_rule]</span></tt> (which is defined by the <strong>execute</strong> resource) should be queued up and run at the end of the Chef run.</p>
+<p><strong>Apply proxy settings consistently across a Chef organization</strong></p>
+<p>The following example shows how a template can be used to apply consistent proxy settings for all nodes of the same type across the Chef organization.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:matching_node</span><span class="o">][</span><span class="ss">:dir</span><span class="o">]</span><span class="si">}</span><span class="s2">/sites-available/site_proxy.conf&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;site_proxy.matching_node.conf.erb&quot;</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="s2">&quot;0644&quot;</span>
+  <span class="n">variables</span><span class="p">(</span>
+    <span class="ss">:ssl_certificate</span> <span class="o">=&gt;</span>    <span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:matching_node</span><span class="o">][</span><span class="ss">:dir</span><span class="o">]</span><span class="si">}</span><span class="s2">/shared/certificates/site_proxy.crt&quot;</span><span class="p">,</span>
+    <span class="ss">:ssl_key</span> <span class="o">=&gt;</span>            <span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:matching_node</span><span class="o">][</span><span class="ss">:dir</span><span class="o">]</span><span class="si">}</span><span class="s2">/shared/certificates/site_proxy.key&quot;</span><span class="p">,</span>
+    <span class="ss">:listen_port</span> <span class="o">=&gt;</span>        <span class="n">node</span><span class="o">[</span><span class="ss">:site</span><span class="o">][</span><span class="ss">:matching_node_proxy</span><span class="o">][</span><span class="ss">:listen_port</span><span class="o">]</span><span class="p">,</span>
+    <span class="ss">:server_name</span> <span class="o">=&gt;</span>        <span class="n">node</span><span class="o">[</span><span class="ss">:site</span><span class="o">][</span><span class="ss">:matching_node_proxy</span><span class="o">][</span><span class="ss">:server_name</span><span class="o">]</span><span class="p">,</span>
+    <span class="ss">:fqdn</span> <span class="o">=&gt;</span>               <span class="n">node</span><span class="o">[</span><span class="ss">:fqdn</span><span class="o">]</span><span class="p">,</span>
+    <span class="ss">:server_options</span> <span class="o">=&gt;</span>     <span class="n">node</span><span class="o">[</span><span class="ss">:site</span><span class="o">][</span><span class="ss">:matching_node</span><span class="o">][</span><span class="ss">:server</span><span class="o">][</span><span class="ss">:options</span><span class="o">]</span><span class="p">,</span>
+    <span class="ss">:proxy_options</span> <span class="o">=&gt;</span>      <span class="n">node</span><span class="o">[</span><span class="ss">:site</span><span class="o">][</span><span class="ss">:matching_node</span><span class="o">][</span><span class="ss">:proxy</span><span class="o">][</span><span class="ss">:options</span><span class="o">]</span>
+  <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">matching_node</span></tt> represents a type of node in the Chef organization (like Nginx) and <tt class="docutils literal"><span class="pre">site_proxy</span></tt> represents the type of proxy being used for that type of node (like Nexus).</p>
+<p><strong>Get template settings from a local file</strong></p>
+<p>Should application-specific configuration settings be stored in a cookbook or should they be stored in the application&#8217;s code base? Chef doesn&#8217;t care, so the answer depends on how you want to manage your recipes and how you want to use Chef. The <strong>template</strong> resource can be used to render a template based on settings contained in a local file on disk or to get the settings from a template in a cookbook. Most of the time, the settings are retrieved from a template in a cookbook. The following example shows how the <strong>template</strong> resource can be used to retrieve these settings from a local file.</p>
+<p>The following example is based on a few assumptions:</p>
+<ul class="simple">
+<li>The environment is a Ruby on Rails application that needs render a file named <tt class="docutils literal"><span class="pre">database.yml</span></tt></li>
+<li>Information about the application&#8212;the user, their password, the server&#8212;is stored in a data bag on the Chef server</li>
+<li>The application is already deployed to the system and that only requirement in this example is to render the <tt class="docutils literal"><span class="pre">database.yml</span></tt> file</li>
+</ul>
+<p>The application source tree looks something like:</p>
+<div class="highlight-python"><pre>myapp/
+-&gt; config/
+   -&gt; database.yml.erb</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There should not be a file named <tt class="docutils literal"><span class="pre">database.yml</span></tt> (without the <tt class="docutils literal"><span class="pre">.erb</span></tt>), as the <tt class="docutils literal"><span class="pre">database.yml</span></tt> file is what will be rendered using the <strong>template</strong> resource.</p>
+</div>
+<p>The deployment of the app will end up in <tt class="docutils literal"><span class="pre">/srv</span></tt>, so the full path to this template would be something like <tt class="docutils literal"><span class="pre">/srv/myapp/current/config/database.yml.erb</span></tt>.</p>
+<p>The content of the template itself may look like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="o">&lt;</span><span class="sx">%= @rails_env %&gt;:</span>
+<span class="sx">   adapter: &lt;%=</span> <span class="vi">@adapter</span> <span class="sx">%&gt;</span>
+<span class="sx">   host: &lt;%= @host %&gt;</span>
+   <span class="n">database</span><span class="p">:</span> <span class="o">&lt;</span><span class="sx">%= @database %&gt;</span>
+<span class="sx">   username: &lt;%=</span> <span class="vi">@username</span> <span class="sx">%&gt;</span>
+<span class="sx">   password: &lt;%= @password %&gt;</span>
+   <span class="n">encoding</span><span class="p">:</span> <span class="s1">&#39;utf8&#39;</span>
+   <span class="n">reconnect</span><span class="p">:</span> <span class="kp">true</span>
+</pre></div>
+</div>
+<p>The recipe will be similar to the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">results</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span> <span class="s2">&quot;role:myapp_database_master AND environment:</span><span class="si">#{</span><span class="n">node</span><span class="o">.</span><span class="n">chef_environment</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">db_master</span> <span class="o">=</span> <span class="n">results</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span>
+
+<span class="n">template</span> <span class="s2">&quot;/srv/myapp/shared/database.yml&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;/srv/myapp/current/config/database.yml.erb&quot;</span>
+  <span class="n">local</span> <span class="kp">true</span>
+  <span class="n">variables</span><span class="p">(</span>
+    <span class="ss">:rails_env</span> <span class="o">=&gt;</span> <span class="n">node</span><span class="o">.</span><span class="n">chef_environment</span><span class="p">,</span>
+    <span class="ss">:adapter</span> <span class="o">=&gt;</span> <span class="n">db_master</span><span class="o">[</span><span class="s1">&#39;myapp&#39;</span><span class="o">][</span><span class="s1">&#39;db_adapter&#39;</span><span class="o">]</span><span class="p">,</span>
+    <span class="ss">:host</span> <span class="o">=&gt;</span> <span class="n">db_master</span><span class="o">[</span><span class="s1">&#39;fqdn&#39;</span><span class="o">]</span><span class="p">,</span>
+    <span class="ss">:database</span> <span class="o">=&gt;</span> <span class="s2">&quot;myapp_</span><span class="si">#{</span><span class="n">node</span><span class="o">.</span><span class="n">chef_environment</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="ss">:username</span> <span class="o">=&gt;</span> <span class="s2">&quot;myapp&quot;</span><span class="p">,</span>
+    <span class="ss">:password</span> <span class="o">=&gt;</span> <span class="s2">&quot;SUPERSECRET&quot;</span><span class="p">,</span>
+  <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li>the <tt class="docutils literal"><span class="pre">search</span></tt> method in the recipe DSL is used to find the first node that is the database master (of which there should only be one)</li>
+<li>the <tt class="docutils literal"><span class="pre">:adapter</span></tt> attribute may also require an attribute to have been set on a role, which then determines the correct adapter</li>
+</ul>
+<p>The template will render similar to the following:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">production</span><span class="p">:</span>
+  <span class="n">adapter</span><span class="p">:</span> <span class="n">mysql</span>
+  <span class="n">host</span><span class="p">:</span> <span class="n">domU</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="mi">39</span><span class="o">-</span><span class="mi">14</span><span class="o">-</span><span class="no">F1</span><span class="o">-</span><span class="no">C3</span><span class="o">.</span><span class="n">compute</span><span class="o">-</span><span class="mi">1</span><span class="o">.</span><span class="n">internal</span>
+  <span class="n">database</span><span class="p">:</span> <span class="n">myapp_production</span>
+  <span class="n">username</span><span class="p">:</span> <span class="n">myapp</span>
+  <span class="n">password</span><span class="p">:</span> <span class="no">SUPERSECRET</span>
+  <span class="n">encoding</span><span class="p">:</span> <span class="n">utf8</span>
+  <span class="n">reconnect</span><span class="p">:</span> <span class="kp">true</span>
+</pre></div>
+</div>
+<p>This example showed how to use the <strong>template</strong> resource to render a template based on settings contained in a local file. Some other issues that should be considered when using this type of approach include:</p>
+<ul class="simple">
+<li>Should the <tt class="docutils literal"><span class="pre">database.yml</span></tt> file be in a <tt class="docutils literal"><span class="pre">.gitignore</span></tt> file?</li>
+<li>How do developers run the application locally?</li>
+<li>How does this work with chef-solo?</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_user.html" title="user"
+             >next</a></li>
+        <li class="right" >
+          <a href="resource_service.html" title="service"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" >About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

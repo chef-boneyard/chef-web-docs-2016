@@ -1,0 +1,658 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>supervisor Cookbook &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="Cookbooks Authored and Maintained by Opscode" href="opscode_cookbooks.html" />
+    <link rel="next" title="About LWRPs" href="lwrp.html" />
+    <link rel="prev" title="python Cookbook" href="opscode_cookbooks_python.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp.html" title="About LWRPs"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="opscode_cookbooks_python.html" title="python Cookbook"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="opscode_cookbooks.html" accesskey="U">Cookbooks Authored and Maintained by Opscode</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">supervisor Cookbook</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#lightweight-resources">Lightweight Resources</a><ul>
+<li><a class="reference internal" href="#fcgi">fcgi</a><ul>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#id1">Attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#group">group</a><ul>
+<li><a class="reference internal" href="#id2">Actions</a></li>
+<li><a class="reference internal" href="#id3">Attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#service">service</a><ul>
+<li><a class="reference internal" href="#id4">Actions</a></li>
+<li><a class="reference internal" href="#id5">Attributes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#default">default</a></li>
+<li><a class="reference internal" href="#id6">fcgi</a></li>
+<li><a class="reference internal" href="#id7">group</a></li>
+<li><a class="reference internal" href="#id8">service</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="supervisor-cookbook">
+<h1>supervisor Cookbook<a class="headerlink" href="#supervisor-cookbook" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>supervisor</strong> cookbook is used to install Supervisor and use it to provide resources while configuring services. This cookbook also exposes three lightweight resources (<tt class="docutils literal"><span class="pre">supervisor_fcgi</span></tt>, <tt class="docutils literal"><span class="pre">supervisor_group</span></tt>, and <tt class="docutils literal"><span class="pre">supervisor_service</span></tt>) that allows <tt class="docutils literal"><span class="pre">supervisor</span></tt> to be installed and configured.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This cookbook requires the <tt class="docutils literal"><span class="pre">python</span></tt> cookbook.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This cookbook is available from github: <a class="reference external" href="https://github.com/opscode-cookbooks/supervisor">https://github.com/opscode-cookbooks/supervisor</a>.</p>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>This cookbook includes the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">node['supervisor']['inet_port']</span></tt></td>
+<td>The port on which to serve the internal web-based admin dashboard. For example: &#8216;localhost:9001&#8217;.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">node['supervisor']['inet_username']</span></tt></td>
+<td>The user name used to authenticate to the HTTP server.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">node['supervisor']['inet_password']</span></tt></td>
+<td>The password used during authentication to the HTTP server. This setting supports both clear text and SHA-1 hashed passwords (that are prefixed by <tt class="docutils literal"><span class="pre">{SHA}</span></tt>).</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">node['supervisor']['dir']</span></tt></td>
+<td>The location of supervisor configuration files.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">node['supervisor']['log_dir']</span></tt></td>
+<td>The location of supervisor log files.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">node['supervisor']['logfile_maxbytes']</span></tt></td>
+<td>The maximum size (in bytes) of the <tt class="docutils literal"><span class="pre">supervisord</span></tt> log file. When this file reaches this size, it will be rotated. Default value: <tt class="docutils literal"><span class="pre">50MB</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">node['supervisor']['logfile_backups']</span></tt></td>
+<td>The number of backups of the log file that will be kept. Default value: <tt class="docutils literal"><span class="pre">10</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">node['supervisor']['loglevel']</span></tt></td>
+<td>The minimum severity level for logged messages. Default value <tt class="docutils literal"><span class="pre">info</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">node['supervisor']['minfds']</span></tt></td>
+<td>The minimum number of file descriptors that must be available before <tt class="docutils literal"><span class="pre">supervisord</span></tt> will start successfully.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">node['supervisor']['minprocs']</span></tt></td>
+<td>The minimum number of process descriptors that must be available before <tt class="docutils literal"><span class="pre">supervisord</span></tt> will start successfully.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">node['supervisor']['version']</span></tt></td>
+<td>Sets the version of <tt class="docutils literal"><span class="pre">supervisor</span></tt> to install; must be version 3.0 (or higher) to use <tt class="docutils literal"><span class="pre">minprocs</span></tt> and <tt class="docutils literal"><span class="pre">minfds</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="lightweight-resources">
+<h2>Lightweight Resources<a class="headerlink" href="#lightweight-resources" title="Permalink to this headline">¶</a></h2>
+<p>A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state.</p>
+<div class="section" id="fcgi">
+<h3>fcgi<a class="headerlink" href="#fcgi" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>supervisor_fcgi</strong> lightweight resource is used to manage groups of FastCGI processes that all listen on the same socket. For more information, see <a class="reference external" href="http://supervisord.org/configuration.html">http://supervisord.org/configuration.html</a>.</p>
+<div class="section" id="actions">
+<h4>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h4>
+<p>This lightweight resource provider has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:disable</span></tt></td>
+<td>Use to disable a FastCGI process.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:enable</span></tt></td>
+<td>Use to enable a FastCGI process.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:reload</span></tt></td>
+<td>Use to reload a FastCGI process.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:restart</span></tt></td>
+<td>Use to restart a FastCGI process.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:start</span></tt></td>
+<td>Use to start a FastCGI process.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:stop</span></tt></td>
+<td>Use to stop a FastCGI process.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h4>Attributes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>This lightweight resource provider has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">autorestart</span></tt></td>
+<td>Indicates if a process is never auto-restarted (<tt class="docutils literal"><span class="pre">false</span></tt>), restarted when a program exits with an unknown exit code (<tt class="docutils literal"><span class="pre">unexpected</span></tt>), or unconditionally restarted (<tt class="docutils literal"><span class="pre">true</span></tt>).</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">autostart</span></tt></td>
+<td>Indicates if a program starts automatically when Supervisor is started.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">command</span></tt></td>
+<td>The name of the command to be executed.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">directory</span></tt></td>
+<td>The path to a directory in which a temporary <tt class="docutils literal"><span class="pre">chdir</span></tt> will occur.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">environment</span></tt></td>
+<td>A list of key-value pairs in the form of <tt class="docutils literal"><span class="pre">KEY=val1,KEY2=val2</span></tt> that will be placed in the environment for a child process.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">exitcodes</span></tt></td>
+<td>A list of expected exit codes for a program.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">numprocs</span></tt></td>
+<td>The number of instances that will be started.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">numprocs_start</span></tt></td>
+<td>An integer offset that is used to compute the point at which the number of processes begins.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">priority</span></tt></td>
+<td>A priority value assigned to the process.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">process_name</span></tt></td>
+<td>A Python string expression that is used to compose the supervisor process name for a process.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">program_name</span></tt></td>
+<td>The name of the program.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">redirect_stderr</span></tt></td>
+<td>Indicates that the STDERR output for a process is sent back to Supervisor using STDOUT.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">serverurl</span></tt></td>
+<td>The number of serial failure attempts Supervisor will allow when attempting to start a program before giving up.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">socket</span></tt></td>
+<td>The FastCGI socket for a program.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">socket_mode</span></tt></td>
+<td>A parameter that specifies the permission mode. UNIX only.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">socket_owner</span></tt></td>
+<td>The user and group for a FastCGI socket. UNIX only.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">startretries</span></tt></td>
+<td>The number of serial failure attempts Supervisor will allow when attempting to start a program before giving up.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">startsecs</span></tt></td>
+<td>The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stopsignal</span></tt></td>
+<td>The signal used to kill a program when a stop is requested: <tt class="docutils literal"><span class="pre">TERM</span></tt>, <tt class="docutils literal"><span class="pre">HUP</span></tt>, <tt class="docutils literal"><span class="pre">INT</span></tt>, <tt class="docutils literal"><span class="pre">QUIT</span></tt>, <tt class="docutils literal"><span class="pre">KILL</span></tt>, <tt class="docutils literal"><span class="pre">USR1</span></tt>, or <tt class="docutils literal"><span class="pre">USR2</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stopwaitsecs</span></tt></td>
+<td>The amount of time (in seconds) to wait (after <tt class="docutils literal"><span class="pre">stopsignal</span></tt>) before a <tt class="docutils literal"><span class="pre">SIGKILL</span></tt> message is sent.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stderr_capture_maxbytes</span></tt></td>
+<td>The maximum number of bytes written to capture for <tt class="docutils literal"><span class="pre">stderr_logfile</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stderr_events_enabled</span></tt></td>
+<td>Indicates whether events are omitted from <tt class="docutils literal"><span class="pre">stderr_logfile</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stderr_logfile</span></tt></td>
+<td>The location of the STDERR logfile.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stderr_logfile_backups</span></tt></td>
+<td>The number of <tt class="docutils literal"><span class="pre">stderr_logfile</span></tt> backups to keep.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stderr_logfile_maxbytes</span></tt></td>
+<td>The maximum size (in bytes) that may be consumed by <tt class="docutils literal"><span class="pre">stderr_logfile</span></tt> before it is rotated.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stdout_capture_maxbytes</span></tt></td>
+<td>The maximum number of bytes written to capture for <tt class="docutils literal"><span class="pre">stdout_logfile</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stdout_events_enabled</span></tt></td>
+<td>Indicates whether events are omitted from <tt class="docutils literal"><span class="pre">stdout_logfile</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stdout_logfile</span></tt></td>
+<td>The location of the STDOUT logfile.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stdout_logfile_backups</span></tt></td>
+<td>The number of <tt class="docutils literal"><span class="pre">stdout_logfile</span></tt> backups to keep.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stdout_logfile_maxbytes</span></tt></td>
+<td>The maximum size (in bytes) that may be consumed by <tt class="docutils literal"><span class="pre">stdout_logfile</span></tt> before it is rotated.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">umask</span></tt></td>
+<td>An octal number that represents the umask of a process.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">user</span></tt></td>
+<td>The UNIX user account that runs the program.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="group">
+<h3>group<a class="headerlink" href="#group" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>supervisor_group</strong> lightweight resource is used to manage processes and programs together as a single group. For more information, see <a class="reference external" href="http://supervisord.org/configuration.html">http://supervisord.org/configuration.html</a>.</p>
+<div class="section" id="id2">
+<h4>Actions<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>This lightweight resource provider has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:disable</span></tt></td>
+<td>Use to disable a group.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:enable</span></tt></td>
+<td>Use to enable a group.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:reload</span></tt></td>
+<td>Use to reload a group.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:restart</span></tt></td>
+<td>Use to restart a group.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:start</span></tt></td>
+<td>Use to start a group.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:stop</span></tt></td>
+<td>Use to stop a group.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id3">
+<h4>Attributes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>This lightweight resource provider has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">group_name</span></tt></td>
+<td>The name of the group.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">priority</span></tt></td>
+<td>A priority value assigned to the group.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">programs</span></tt></td>
+<td>An array of program names. Programs that are listed will become members of the group. Default value: <tt class="docutils literal"><span class="pre">[]</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="service">
+<h3>service<a class="headerlink" href="#service" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>supervisor_service</strong> lightweight resource is used to manage services. For more information, see <a class="reference external" href="http://supervisord.org/configuration.html">http://supervisord.org/configuration.html</a>.</p>
+<div class="section" id="id4">
+<h4>Actions<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h4>
+<p>This lightweight resource provider has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:disable</span></tt></td>
+<td>Use to disable a service at boot time.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:enable</span></tt></td>
+<td>Use to enable a service at boot time.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:reload</span></tt></td>
+<td>Use to reload a service.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:restart</span></tt></td>
+<td>Use to restart a service.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:start</span></tt></td>
+<td>Use to start a service.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:stop</span></tt></td>
+<td>Use to stop a service.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id5">
+<h4>Attributes<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h4>
+<p>This lightweight resource provider has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">autorestart</span></tt></td>
+<td>Indicates if a process is never auto-restarted (<tt class="docutils literal"><span class="pre">false</span></tt>), restarted when a program exits with an unknown exit code (<tt class="docutils literal"><span class="pre">unexpected</span></tt>), or unconditionally restarted (<tt class="docutils literal"><span class="pre">true</span></tt>).</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">autostart</span></tt></td>
+<td>Indicates if a program starts automatically when Supervisor is started.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">command</span></tt></td>
+<td>The name of the command to be executed.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">directory</span></tt></td>
+<td>The path to a directory in which a temporary <tt class="docutils literal"><span class="pre">chdir</span></tt> will occur.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">environment</span></tt></td>
+<td>A list of key-value pairs in the form of <tt class="docutils literal"><span class="pre">KEY=val1,KEY2=val2</span></tt> that will be placed in the environment for a child process.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">exitcodes</span></tt></td>
+<td>A list of expected exit codes for a program.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">numprocs</span></tt></td>
+<td>The number of instances that will be started.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">numprocs_start</span></tt></td>
+<td>An integer offset that is used to compute the point at which the number of processes begins.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">priority</span></tt></td>
+<td>The relative priority of the program for start and shutdown ordering.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">process_name</span></tt></td>
+<td>A Python string expression that is used to compose the supervisor process name for a process.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">redirect_stderr</span></tt></td>
+<td>Indicates that the STDERR output for a process is sent back to Supervisor using STDOUT.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">serverurl</span></tt></td>
+<td>The number of serial failure attempts Supervisor will allow when attempting to start a program before giving up.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">service_name</span></tt></td>
+<td>The name of the service.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">startretries</span></tt></td>
+<td>The number of serial failure attempts Supervisor will allow when attempting to start a program before giving up.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">startsecs</span></tt></td>
+<td>The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stopsignal</span></tt></td>
+<td>The signal used to kill a program when a stop is requested: <tt class="docutils literal"><span class="pre">TERM</span></tt>, <tt class="docutils literal"><span class="pre">HUP</span></tt>, <tt class="docutils literal"><span class="pre">INT</span></tt>, <tt class="docutils literal"><span class="pre">QUIT</span></tt>, <tt class="docutils literal"><span class="pre">KILL</span></tt>, <tt class="docutils literal"><span class="pre">USR1</span></tt>, or <tt class="docutils literal"><span class="pre">USR2</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stopwaitsecs</span></tt></td>
+<td>The amount of time (in seconds) to wait (after <tt class="docutils literal"><span class="pre">stopsignal</span></tt>) before a <tt class="docutils literal"><span class="pre">SIGKILL</span></tt> message is sent.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stderr_capture_maxbytes</span></tt></td>
+<td>The maximum number of bytes written to capture for <tt class="docutils literal"><span class="pre">stderr_logfile</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stderr_events_enabled</span></tt></td>
+<td>Indicates whether events are omitted from <tt class="docutils literal"><span class="pre">stderr_logfile</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stderr_logfile</span></tt></td>
+<td>The location of the STDERR logfile.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stderr_logfile_backups</span></tt></td>
+<td>The number of <tt class="docutils literal"><span class="pre">stderr_logfile</span></tt> backups to keep.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stderr_logfile_maxbytes</span></tt></td>
+<td>The maximum size (in bytes) that may be consumed by <tt class="docutils literal"><span class="pre">stderr_logfile</span></tt> before it is rotated.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stdout_capture_maxbytes</span></tt></td>
+<td>The maximum number of bytes written to capture for <tt class="docutils literal"><span class="pre">stdout_logfile</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stdout_events_enabled</span></tt></td>
+<td>Indicates whether events are omitted from <tt class="docutils literal"><span class="pre">stdout_logfile</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stdout_logfile</span></tt></td>
+<td>The location of the STDOUT logfile.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">stdout_logfile_backups</span></tt></td>
+<td>The number of <tt class="docutils literal"><span class="pre">stdout_logfile</span></tt> backups to keep.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">stdout_logfile_maxbytes</span></tt></td>
+<td>The maximum size (in bytes) that may be consumed by <tt class="docutils literal"><span class="pre">stdout_logfile</span></tt> before it is rotated.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">umask</span></tt></td>
+<td>An octal number that represents the umask of a process.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">user</span></tt></td>
+<td>The UNIX user account that runs the program.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The following sections describe the usage options that are available in this cookbook.</p>
+<div class="section" id="default">
+<h3>default<a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h3>
+<p>Use the <tt class="docutils literal"><span class="pre">default</span></tt> option to ensure that the <tt class="docutils literal"><span class="pre">supervisor</span></tt> PIP package is installed and that <tt class="docutils literal"><span class="pre">supervisor</span></tt> is set up.</p>
+</div>
+<div class="section" id="id6">
+<h3>fcgi<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>supervisor_fcgi</strong> lightweight resource is used to manage groups of FastCGI processes that all listen on the same socket.</p>
+</div>
+<div class="section" id="id7">
+<h3>group<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>supervisor_group</strong> lightweight resource is used to manage processes and programs together as a single group.</p>
+</div>
+<div class="section" id="id8">
+<h3>service<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>supervisor_service</strong> lightweight resource is used to manage services.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Enable the celery service</strong></p>
+<p>To enable a service named <tt class="docutils literal"><span class="pre">celery</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">ruby</span> <span class="n">supervisor_service</span> <span class="s2">&quot;celery&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:enable</span>
+  <span class="n">autostart</span> <span class="kp">false</span>
+  <span class="n">user</span> <span class="s2">&quot;nobody&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp.html" title="About LWRPs"
+             >next</a></li>
+        <li class="right" >
+          <a href="opscode_cookbooks_python.html" title="python Cookbook"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="opscode_cookbooks.html" >Cookbooks Authored and Maintained by Opscode</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

@@ -1,0 +1,607 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lightweight Resources &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About LWRPs" href="lwrp.html" />
+    <link rel="next" title="About Configuration Files" href="config.html" />
+    <link rel="prev" title="Lightweight Providers w/Custom Ruby" href="lwrp_custom_provider_ruby.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="config.html" title="About Configuration Files"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="lwrp_custom_provider_ruby.html" title="Lightweight Providers w/Custom Ruby"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" accesskey="U">About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Lightweight Resources</a><ul>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#dsl-resource-methods">Resource DSL Methods</a><ul>
+<li><a class="reference internal" href="#action">action</a></li>
+<li><a class="reference internal" href="#attribute">attribute</a></li>
+<li><a class="reference internal" href="#attr-accessor">attr_accessor</a></li>
+<li><a class="reference internal" href="#default-action">default_action</a></li>
+<li><a class="reference internal" href="#validation-parameters">Validation Parameters</a></li>
+<li><a class="reference internal" href="#conditional-executions">Conditional Executions</a><ul>
+<li><a class="reference internal" href="#conditional-attributes">Conditional Attributes</a></li>
+<li><a class="reference internal" href="#conditional-arguments">Conditional Arguments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#notifications">Notifications</a><ul>
+<li><a class="reference internal" href="#id1">Syntax</a></li>
+<li><a class="reference internal" href="#timers">Timers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a><ul>
+<li><a class="reference internal" href="#callbacks">:callbacks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="lightweight-resources">
+<h1>Lightweight Resources<a class="headerlink" href="#lightweight-resources" title="Permalink to this headline">¶</a></h1>
+<p>A resource is a key part of a recipe. A resource defines the actions that can be taken, such as when a package should be installed, whether a service should be enabled or restarted, which groups, users, or groups of users should be created, where to put a collection of files, what the name of a new directory should be, and so on. During a Chef run, each resource is identified and then associated with a provider. The provider then does the work to complete the action defined by the resource. Chef ensures that the same actions are taken the same way everywhere and that actions produce the same result every time. A resource is implemented within a recipe using Ruby.</p>
+<p>A lightweight resource is a custom resource that defines an action to be completed, which are then processed by a lightweight provider during the Chef run. A lightweight provider and lightweight resource work together, each being defined in the same cookbook (the <tt class="docutils literal"><span class="pre">/providers</span></tt> and <tt class="docutils literal"><span class="pre">/resources</span></tt> subdirectories, respectively); together, they are referred as a LWRP (or &#8220;lightweight resource provider&#8221;). A lightweight resource is always authored using Ruby. Anything that can be done using Ruby can be done in a lightweight resource. In addition to using Ruby, the Resource DSL provides additional methods that are specific to Chef.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>The syntax for a lightweight resource is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">require</span> <span class="s1">&#39;required_item&#39;</span>
+
+<span class="n">actions</span> <span class="ss">:action_name1</span><span class="p">,</span> <span class="ss">:action_name2</span><span class="p">,</span> <span class="ss">:action_name</span><span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="n">default_action</span> <span class="ss">:action_name1</span>
+
+<span class="n">attribute</span> <span class="ss">:attribute_name</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="n">value</span><span class="p">,</span> <span class="ss">:name_attribute</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="n">attribute</span> <span class="ss">:attribute_name</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="n">value</span><span class="p">,</span> <span class="ss">:validation_parameter</span> <span class="o">=&gt;</span> <span class="n">value</span>
+<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+<span class="n">attribute</span> <span class="ss">:attribute_name</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="n">value</span><span class="p">,</span> <span class="ss">:validation_parameter</span> <span class="o">=&gt;</span> <span class="n">value</span>
+
+<span class="kp">attr_accessor</span> <span class="ss">:attribute</span><span class="p">,</span> <span class="ss">:attribute</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">require</span></tt> lists any external entities that may be required by the lightweight resources, such as a library; a lightweight resource is Ruby and anything that can be done in Ruby can be done in a lightweight resource</li>
+<li><tt class="docutils literal"><span class="pre">:action_name1</span></tt>, <tt class="docutils literal"><span class="pre">:action_name2</span></tt>, and <tt class="docutils literal"><span class="pre">:action_name...</span></tt> represents a comma-delimited list of <tt class="docutils literal"><span class="pre">actions</span></tt> that are available to this lightweight resource; there must be at least one action</li>
+<li><tt class="docutils literal"><span class="pre">action_name1</span></tt> is set to be the <tt class="docutils literal"><span class="pre">default_action</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">:attribute_name</span></tt> is the name of the attribute; a lightweight resource may define as many attributes as necessary</li>
+<li><tt class="docutils literal"><span class="pre">:kind_of</span> <span class="pre">=&gt;</span> <span class="pre">value</span></tt> specifies the Ruby class (or an array of Ruby classes) that are used to define this attribute&#8217;s value</li>
+<li><tt class="docutils literal"><span class="pre">:name_attribute</span></tt> is associated with one <tt class="docutils literal"><span class="pre">attribute</span></tt> to indicate which attribute&#8217;s value will be defined by the name of the resource as it is defined in the recipe (i.e. the string that appears in front of the <tt class="docutils literal"><span class="pre">do</span></tt> block in the recipe and after the resource: <tt class="docutils literal"><span class="pre">resource_name</span> <span class="pre">&quot;name_attribute&quot;</span> <span class="pre">do</span></tt>)</li>
+<li><tt class="docutils literal"><span class="pre">:validation_parameter</span></tt> represents a comma-delimited list of validation parameters for each attribute</li>
+<li><tt class="docutils literal"><span class="pre">attr_accessor</span></tt> allows the lightweight resource to use the <tt class="docutils literal"><span class="pre">Module</span></tt> Ruby class to check for one (or more) named attributes, such as <tt class="docutils literal"><span class="pre">:exists</span></tt> or <tt class="docutils literal"><span class="pre">:running</span></tt></li>
+</ul>
+<p>For example, the <tt class="docutils literal"><span class="pre">cron_d</span></tt> lightweight resource (found in the <strong>cron</strong> cookbook maintained by Opscode) can be used to manage files located in <tt class="docutils literal"><span class="pre">/etc/cron.d</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">actions</span> <span class="ss">:create</span><span class="p">,</span> <span class="ss">:delete</span>
+<span class="n">default_action</span> <span class="ss">:create</span>
+
+<span class="n">attribute</span> <span class="ss">:name</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:name_attribute</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="n">attribute</span> <span class="ss">:cookbook</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;cron&quot;</span>
+<span class="n">attribute</span> <span class="ss">:minute</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">Integer</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;*&quot;</span>
+<span class="n">attribute</span> <span class="ss">:hour</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">Integer</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;*&quot;</span>
+<span class="n">attribute</span> <span class="ss">:day</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">Integer</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;*&quot;</span>
+<span class="n">attribute</span> <span class="ss">:month</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">Integer</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;*&quot;</span>
+<span class="n">attribute</span> <span class="ss">:weekday</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">Integer</span><span class="p">,</span> <span class="nb">String</span><span class="o">]</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;*&quot;</span>
+<span class="n">attribute</span> <span class="ss">:command</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:required</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="n">attribute</span> <span class="ss">:user</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;root&quot;</span>
+<span class="n">attribute</span> <span class="ss">:mailto</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">String</span><span class="p">,</span> <span class="no">NilClass</span><span class="o">]</span>
+<span class="n">attribute</span> <span class="ss">:path</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">String</span><span class="p">,</span> <span class="no">NilClass</span><span class="o">]</span>
+<span class="n">attribute</span> <span class="ss">:home</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">String</span><span class="p">,</span> <span class="no">NilClass</span><span class="o">]</span>
+<span class="n">attribute</span> <span class="ss">:shell</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">String</span><span class="p">,</span> <span class="no">NilClass</span><span class="o">]</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li>the <tt class="docutils literal"><span class="pre">actions</span></tt> allow a recipe to manage entries in a crontab file (create entry, delete entry)</li>
+<li><tt class="docutils literal"><span class="pre">:create</span></tt> is the default action</li>
+<li><tt class="docutils literal"><span class="pre">:minute</span></tt>, <tt class="docutils literal"><span class="pre">:hour</span></tt>, <tt class="docutils literal"><span class="pre">:day</span></tt>, <tt class="docutils literal"><span class="pre">:month</span></tt>, and <tt class="docutils literal"><span class="pre">:weekday</span></tt> are the collection of attributes used to schedule a cron job, assigned a default value of <tt class="docutils literal"><span class="pre">&quot;*&quot;</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">:command</span></tt> is the command that will be run (and also required)</li>
+<li><tt class="docutils literal"><span class="pre">:user</span></tt> is the user by which the command is run</li>
+<li><tt class="docutils literal"><span class="pre">:mailto</span></tt>, <tt class="docutils literal"><span class="pre">:path</span></tt>, <tt class="docutils literal"><span class="pre">:home</span></tt>, and <tt class="docutils literal"><span class="pre">:shell</span></tt> are optional environment variables that do not have default value, which each being defined as an array that supports the <tt class="docutils literal"><span class="pre">String</span></tt> and <tt class="docutils literal"><span class="pre">NilClass</span></tt> Ruby classes</li>
+</ul>
+</div>
+<div class="section" id="dsl-resource-methods">
+<h2>Resource DSL Methods<a class="headerlink" href="#dsl-resource-methods" title="Permalink to this headline">¶</a></h2>
+<p>The Resource DSL is a Ruby DSL that is used to help define a lightweight resource and to ensure that a lightweight resource provides the correct information to a lightweight provider. The Resource DSL is a small DSL with just three methods. Because the Resource DSL is a Ruby DSL, anything that can be done using Ruby can also be done as part of defining a lightweight resource.</p>
+<div class="section" id="action">
+<h3>action<a class="headerlink" href="#action" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">action</span></tt> method is used to define a list of actions that are available to be used in a recipe. Each action must have a corresponding section in a lightweight provider that tells Chef what to do when this action is specified in a recipe. The syntax for the <tt class="docutils literal"><span class="pre">action</span></tt> method is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">actions</span> <span class="ss">:action_name</span><span class="p">,</span> <span class="ss">:action_name</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">actions</span></tt> is a comma-delimited list of individual actions.</p>
+</div>
+<div class="section" id="attribute">
+<h3>attribute<a class="headerlink" href="#attribute" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">attribute</span></tt> method is used to define a list of attributes and any of those attribute&#8217;s associated validation parameters. The syntax for the <tt class="docutils literal"><span class="pre">attribute</span></tt> method is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:attribute_name</span> <span class="ss">:validation_parameter</span> <span class="o">=&gt;</span> <span class="n">value</span><span class="p">,</span> <span class="ss">:validation_parameter</span> <span class="o">=&gt;</span> <span class="n">value</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">attribute</span></tt> must have an attribute name and zero (or more) validation parameters.</p>
+</div>
+<div class="section" id="attr-accessor">
+<h3>attr_accessor<a class="headerlink" href="#attr-accessor" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">attr_accessor</span></tt> method is used to define custom attributes for a lightweight resource that can be accessed by a lightweight provider. The syntax for the <tt class="docutils literal"><span class="pre">attr_accessor</span></tt> method is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="kp">attr_accessor</span> <span class="ss">:accessor_name</span><span class="p">,</span> <span class="ss">:accessor_name</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">accessor_name</span></tt> is a comma-delimited list of custom attributes.</p>
+</div>
+<div class="section" id="default-action">
+<h3>default_action<a class="headerlink" href="#default-action" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">default_action</span></tt> method is used to set the default action for a lightweight resource. The syntax for the <tt class="docutils literal"><span class="pre">default_action</span></tt> method is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default_action</span> <span class="ss">:action_name</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">action_name</span></tt> is the default action.</p>
+</div>
+<div class="section" id="validation-parameters">
+<h3>Validation Parameters<a class="headerlink" href="#validation-parameters" title="Permalink to this headline">¶</a></h3>
+<p>A validation parameter is used to add zero or more validation parameters to an attribute.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Parameter</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:callbacks</span></tt></td>
+<td><p class="first">Use to define a collection of unique keys and values (a Hash) that should return true. For example: <tt class="docutils literal"><span class="pre">&quot;Option</span> <span class="pre">#{key}'s</span> <span class="pre">value</span> <span class="pre">#{value}</span> <span class="pre">#{message}!&quot;</span></tt>, which will insert a key into an error message if the Proc does not return true. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="ss">:callbacks</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="n">callback</span><span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:default</span></tt></td>
+<td><p class="first">Use to specify the default value for an attribute. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;a_string_value&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:default</span> <span class="o">=&gt;</span> <span class="mi">123456789</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:default</span> <span class="o">=&gt;</span> <span class="o">[]</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:default</span> <span class="o">=&gt;</span> <span class="p">()</span>
+</pre></div>
+</div>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="ss">:default</span> <span class="o">=&gt;</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:equal_to</span></tt></td>
+<td><p class="first">Use to match a value with <tt class="docutils literal"><span class="pre">==</span></tt>. Use an array of values to match any of those values with <tt class="docutils literal"><span class="pre">==</span></tt>. For example: <tt class="docutils literal"><span class="pre">:equal_to</span> <span class="pre">=&gt;</span> <span class="pre">[:true,</span> <span class="pre">:false]</span></tt> or <tt class="docutils literal"><span class="pre">:equal_to</span> <span class="pre">=&gt;</span> <span class="pre">[:value_one,</span> <span class="pre">:value_two]</span></tt>. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="ss">:equal_to</span> <span class="o">=&gt;</span> <span class="ss">:true</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:kind_of</span></tt></td>
+<td><p class="first">Use to ensure a value is of a particular Ruby class, such as <tt class="docutils literal"><span class="pre">TrueClass</span></tt>, <tt class="docutils literal"><span class="pre">FalseClass</span></tt>, <tt class="docutils literal"><span class="pre">NilClass</span></tt>, <tt class="docutils literal"><span class="pre">String</span></tt>, <tt class="docutils literal"><span class="pre">Array</span></tt>, <tt class="docutils literal"><span class="pre">Hash</span></tt>, and so on. Use an array of Ruby classes to allow a value to be of more than one type. For example: <tt class="docutils literal"><span class="pre">:kind_of</span> <span class="pre">=&gt;</span> <span class="pre">String</span></tt>, <tt class="docutils literal"><span class="pre">:kind_of</span> <span class="pre">=&gt;</span> <span class="pre">Array</span></tt>, <tt class="docutils literal"><span class="pre">:kind_of</span> <span class="pre">=&gt;</span> <span class="pre">[TrueClass,</span> <span class="pre">FalseClass]</span></tt> and <tt class="docutils literal"><span class="pre">:kind_of</span> <span class="pre">=&gt;</span> <span class="pre">[Array,</span> <span class="pre">Hash]</span></tt>. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">Integer</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="no">Hash</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="no">TrueClass</span><span class="p">,</span> <span class="no">FalseClass</span><span class="o">]</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">String</span><span class="p">,</span> <span class="no">NilClass</span><span class="o">]</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="no">Class</span><span class="p">,</span> <span class="nb">String</span><span class="p">,</span> <span class="no">Symbol</span><span class="o">]</span>
+</pre></div>
+</div>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="nb">Array</span><span class="p">,</span> <span class="no">Hash</span><span class="o">]</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:name_attribute</span></tt></td>
+<td><p class="first">Use to set the default name of a lightweight resource. If the name isn&#8217;t specified in the recipe, this is the value that will be used. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="ss">:name_attribute</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:regex</span></tt></td>
+<td><p class="first">Use to match a value to a regular expression. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="ss">:regex</span> <span class="o">=&gt;</span> <span class="sr">/^([a-z]|[A-Z]|[0-9]|_|-)+$/</span><span class="p">,</span> <span class="sr">/^\d+$/</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:required</span></tt></td>
+<td><p class="first">Indicates that an attribute is required. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="ss">:required</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:respond_to</span></tt></td>
+<td><p class="first">Use to ensure that a value has a given method. This can be a single method name or an array of method names. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="ss">:respond_to</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Some examples of combining validation parameters:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:spool_name</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:name_attribute</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</pre></div>
+</div>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:enabled</span><span class="p">,</span> <span class="ss">:equal_to</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="kp">true</span><span class="p">,</span> <span class="kp">false</span><span class="p">,</span> <span class="s1">&#39;true&#39;</span><span class="p">,</span> <span class="s1">&#39;false&#39;</span><span class="o">]</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+</pre></div>
+</div>
+<p>From the <tt class="docutils literal"><span class="pre">nrpecheck</span></tt> lightweight resource in the <strong>nagios</strong> cookbook:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:command_name</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:name_attribute</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="n">attribute</span> <span class="ss">:warning_condition</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="kp">nil</span>
+<span class="n">attribute</span> <span class="ss">:critical_condition</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="kp">nil</span>
+<span class="n">attribute</span> <span class="ss">:command</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span>
+<span class="n">attribute</span> <span class="ss">:parameters</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="kp">nil</span>
+</pre></div>
+</div>
+<p>From the <tt class="docutils literal"><span class="pre">policy</span></tt> lightweight resource in the <strong>rabbitmq</strong> cookbook:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:policy</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:name_attribute</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="n">attribute</span> <span class="ss">:pattern</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span>
+<span class="n">attribute</span> <span class="ss">:params</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="no">Hash</span>
+<span class="n">attribute</span> <span class="ss">:priority</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">Integer</span>
+</pre></div>
+</div>
+<p>From the <tt class="docutils literal"><span class="pre">module</span></tt> lightweight resource in the <strong>iis</strong> cookbook:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:module_name</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:name_attribute</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+<span class="n">attribute</span> <span class="ss">:type</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="kp">nil</span>
+<span class="n">attribute</span> <span class="ss">:precondition</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="kp">nil</span>
+<span class="n">attribute</span> <span class="ss">:application</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="nb">String</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="kp">nil</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="conditional-executions">
+<h3>Conditional Executions<a class="headerlink" href="#conditional-executions" title="Permalink to this headline">¶</a></h3>
+<p>A conditional execution can be used to put additional guards around certain resources so that they are only run when the condition is met. A conditional execution can be used with any resource. The most common reason for using a conditional execution is to ensure that the <tt class="docutils literal"><span class="pre">execute</span></tt> resource produces the same result every time. A conditional execution can be passed as a string or as a block. A strings is executed as a shell command and a block is Ruby code. In both cases, the attribute is <tt class="docutils literal"><span class="pre">true</span></tt> when the command returns <tt class="docutils literal"><span class="pre">0</span></tt>).</p>
+<div class="section" id="conditional-attributes">
+<h4>Conditional Attributes<a class="headerlink" href="#conditional-attributes" title="Permalink to this headline">¶</a></h4>
+<p>The following attributes can be used to define a conditional execution for a resource:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">not_if</span></tt></td>
+<td>Indicates whether this resource should not be applied. If <tt class="docutils literal"><span class="pre">true</span></tt>, this action should not be performed. If <tt class="docutils literal"><span class="pre">false</span></tt>, this action should always be performed.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">only_if</span></tt></td>
+<td>Indicates whether only this resource is applied. If <tt class="docutils literal"><span class="pre">true</span></tt>, this action should always be performed. If <tt class="docutils literal"><span class="pre">false</span></tt>, this action should never be performed.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="conditional-arguments">
+<h4>Conditional Arguments<a class="headerlink" href="#conditional-arguments" title="Permalink to this headline">¶</a></h4>
+<p>The following arguments can be used with the <tt class="docutils literal"><span class="pre">not_if</span></tt> or <tt class="docutils literal"><span class="pre">only_if</span></tt> attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Argument</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:user</span></tt></td>
+<td><p class="first">Use to specify the user that a command will run as. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;grep adam /etc/passwd&quot;</span><span class="p">,</span> <span class="ss">:user</span> <span class="o">=&gt;</span> <span class="s1">&#39;adam&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:group</span></tt></td>
+<td><p class="first">Use to specify the group that a command will run as. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;grep adam /etc/passwd&quot;</span><span class="p">,</span> <span class="ss">:group</span> <span class="o">=&gt;</span> <span class="s1">&#39;adam&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:environment</span></tt></td>
+<td><p class="first">Use to specify a hash of environment variables to be set. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;grep adam /etc/passwd&quot;</span><span class="p">,</span> <span class="ss">:environment</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s1">&#39;HOME&#39;</span> <span class="o">=&gt;</span> <span class="s2">&quot;/home/adam&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:cwd</span></tt></td>
+<td><p class="first">Use to set the current working directory before running a command. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;grep adam passwd&quot;</span><span class="p">,</span> <span class="ss">:cwd</span> <span class="o">=&gt;</span> <span class="s1">&#39;/etc&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:timeout</span></tt></td>
+<td><p class="first">Use to set a timeout for a command. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;sleep 10000&quot;</span><span class="p">,</span> <span class="ss">:timeout</span> <span class="o">=&gt;</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="notifications">
+<h3>Notifications<a class="headerlink" href="#notifications" title="Permalink to this headline">¶</a></h3>
+<p>The following notifications can be used with any resource:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Notification</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">notifies</span></tt></td>
+<td>Use to notify another resource to take an action if this resource&#8217;s state changes for any reason.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">subscribes</span></tt></td>
+<td>Use to take action on this resource if another resource&#8217;s state changes. This is similar to <tt class="docutils literal"><span class="pre">notifies</span></tt>, but reversed.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="id1">
+<h4>Syntax<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>The basic syntax of a <tt class="docutils literal"><span class="pre">notifies</span></tt> notification is:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">resource</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
+  <span class="n">notifies</span> <span class="ss">:action</span><span class="p">,</span> <span class="s2">&quot;resource_type[resource_name]&quot;</span><span class="p">,</span> <span class="ss">:notification_timing</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The basic syntax of a <tt class="docutils literal"><span class="pre">subscribes</span></tt> notification is:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">resource</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
+  <span class="n">subscribes</span> <span class="ss">:action</span><span class="p">,</span> <span class="s2">&quot;resource_type[resource_name]&quot;</span><span class="p">,</span> <span class="ss">:notification_timing</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="timers">
+<h4>Timers<a class="headerlink" href="#timers" title="Permalink to this headline">¶</a></h4>
+<p>The following timers can be used to define when a notification is triggered:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Timer</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:delayed</span></tt></td>
+<td>Use to specify that a notification should be queued up and then executed at the very end of a Chef run.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:immediately</span></tt></td>
+<td>Use to specify that a notification be run immediately.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The following examples show various lightweight providers that use core Chef resources or how to use certain parts of the Resource DSL.</p>
+<div class="section" id="callbacks">
+<h3>:callbacks<a class="headerlink" href="#callbacks" title="Permalink to this headline">¶</a></h3>
+<p>An example of using the <tt class="docutils literal"><span class="pre">:callbacks</span></tt> validation parameter from the <strong>gunicorn</strong> cookbook (formatted for better readability):</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">attribute</span> <span class="ss">:server_hooks</span><span class="p">,</span> <span class="ss">:kind_of</span> <span class="o">=&gt;</span> <span class="no">Hash</span><span class="p">,</span> <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="p">{},</span> <span class="p">\</span>
+  <span class="ss">:callbacks</span> <span class="o">=&gt;</span>
+    <span class="p">{</span><span class="s2">&quot;should contain a valid gunicorn server hook name&quot;</span> <span class="o">=&gt;</span> <span class="nb">lambda</span>
+        <span class="p">{</span>
+          <span class="o">|</span><span class="n">hooks</span><span class="o">|</span> <span class="no">Chef</span><span class="o">::</span><span class="no">Resource</span><span class="o">::</span><span class="no">GunicornConfig</span><span class="o">.</span><span class="n">validate_server_hook_hash_keys</span><span class="p">(</span><span class="n">hooks</span><span class="p">)</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+<span class="o">.</span><span class="n">.</span><span class="o">.</span>
+
+<span class="no">VALID_SERVER_HOOK_NAMES</span> <span class="o">=</span>
+  <span class="o">[</span>
+    <span class="ss">:on_starting</span><span class="p">,</span>
+    <span class="ss">:on_reload</span><span class="p">,</span>
+    <span class="ss">:when_ready</span><span class="p">,</span>
+    <span class="ss">:pre_fork</span><span class="p">,</span>
+    <span class="ss">:post_fork</span><span class="p">,</span>
+    <span class="ss">:pre_exec</span><span class="p">,</span>
+    <span class="ss">:pre_request</span><span class="p">,</span>
+    <span class="ss">:post_request</span><span class="p">,</span>
+    <span class="ss">:worker_exit</span>
+  <span class="o">]</span>
+
+<span class="kp">private</span>
+  <span class="k">def</span> <span class="nc">self</span><span class="o">.</span><span class="nf">validate_server_hook_hash_keys</span><span class="p">(</span><span class="n">server_hooks</span><span class="p">)</span>
+    <span class="n">server_hooks</span><span class="o">.</span><span class="n">keys</span><span class="o">.</span><span class="n">reject</span><span class="p">{</span><span class="o">|</span><span class="n">key</span><span class="o">|</span> <span class="no">VALID_SERVER_HOOK_NAMES</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="n">key</span><span class="o">.</span><span class="n">to_sym</span><span class="p">)}</span><span class="o">.</span><span class="n">empty?</span>
+  <span class="k">end</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li>the <tt class="docutils literal"><span class="pre">:server_hooks</span></tt> attribute requires the value to be a valid Gunicorn server hook name</li>
+<li>the <tt class="docutils literal"><span class="pre">VALID_SERVER_HOOK_NAMES</span></tt> array defines the list of valid server hooks</li>
+<li>the <tt class="docutils literal"><span class="pre">private</span> <span class="pre">def</span></tt> block ensures the <tt class="docutils literal"><span class="pre">:callback</span></tt> validation parameter has the list of valid server hooks</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="config.html" title="About Configuration Files"
+             >next</a></li>
+        <li class="right" >
+          <a href="lwrp_custom_provider_ruby.html" title="Lightweight Providers w/Custom Ruby"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" >About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

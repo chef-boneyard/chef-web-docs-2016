@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Roles &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Search" href="essentials_search.html" />
+    <link rel="prev" title="About Environments" href="essentials_environments.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_search.html" title="About Search"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_environments.html" title="About Environments"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About Roles</a><ul>
+<li><a class="reference internal" href="#role-attributes">Role Attributes</a><ul>
+<li><a class="reference internal" href="#attribute-types">Attribute Types</a></li>
+<li><a class="reference internal" href="#attribute-persistence">Attribute Persistence</a></li>
+<li><a class="reference internal" href="#attribute-precedence">Attribute Precedence</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#role-formats">Role Formats</a><ul>
+<li><a class="reference internal" href="#ruby-dsl">Ruby DSL</a></li>
+<li><a class="reference internal" href="#json">JSON</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#manage-roles">Manage Roles</a><ul>
+<li><a class="reference internal" href="#delete-from-run-list">Delete from Run-list</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-roles">
+<h1>About Roles<a class="headerlink" href="#about-roles" title="Permalink to this headline">¶</a></h1>
+<p>A role is a way to define certain patterns and processes that exist across nodes in a Chef organization as belonging to a single job function. Each role consists of zero (or more) attributes and a run list. Each node can have zero (or more) roles assigned to it. When a role is run against a node, the configuration details of that node are compared against the attributes of the role, and then the contents of that role&#8217;s run list are applied to the node&#8217;s configuration details. When a chef-client runs, it merges its own attributes and run lists with those contained within each assigned role.</p>
+<div class="section" id="role-attributes">
+<h2>Role Attributes<a class="headerlink" href="#role-attributes" title="Permalink to this headline">¶</a></h2>
+<p>An attribute can be defined in a role and then used to override the default settings on a node. When a role is applied during a Chef run, these attributes are compared to the attributes that are already present on the node. When the role attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
+<p>A role attribute can only be set to be a default attribute or an override attribute. A role attribute cannot be set to be a normal attribute. Use the <tt class="docutils literal"><span class="pre">default_attribute</span></tt> and <tt class="docutils literal"><span class="pre">override_attribute</span></tt> methods in the Ruby DSL file or the <tt class="docutils literal"><span class="pre">default_attributes</span></tt> and <tt class="docutils literal"><span class="pre">override_attributes</span></tt> hashes in a JSON data file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, Ohai collects attribute data about each node at the start of the Chef run. See the <a class="reference internal" href="chef_overview_attributes.html"><em>overview of attributes</em></a> for more information about how all of these attributes fit together.</p>
+</div>
+<div class="section" id="attribute-types">
+<h3>Attribute Types<a class="headerlink" href="#attribute-types" title="Permalink to this headline">¶</a></h3>
+<p>There are two types of attributes that can be used with roles:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute is automatically reset at the start of every Chef run and has the lowest attribute precedence. A cookbook should be authored to use <tt class="docutils literal"><span class="pre">default</span></tt> attributes as often as possible.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">override</span></tt></td>
+<td>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute is automatically reset at the start of every Chef run and has a higher attribute precedence than <tt class="docutils literal"><span class="pre">default</span></tt>, <tt class="docutils literal"><span class="pre">force_default</span></tt>, and <tt class="docutils literal"><span class="pre">normal</span></tt> attributes. An <tt class="docutils literal"><span class="pre">override</span></tt> attribute is most often specified in a recipe, but can be specified in an attribute file, for a role, and/or for an environment. A cookbook should be authored so that it uses <tt class="docutils literal"><span class="pre">override</span></tt> attributes only when required.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-persistence">
+<h3>Attribute Persistence<a class="headerlink" href="#attribute-persistence" title="Permalink to this headline">¶</a></h3>
+<p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds them using data collected by Ohai at the beginning of the Chef run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
+</div>
+<div class="section" id="attribute-precedence">
+<h3>Attribute Precedence<a class="headerlink" href="#attribute-precedence" title="Permalink to this headline">¶</a></h3>
+<p>Attributes are always applied to Chef in the following order:</p>
+<ol class="arabic simple">
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in a recipe</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in an environment</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in role</li>
+<li>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute located in a recipe</li>
+<li>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in an attribute file</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in a role</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in an environment</li>
+<li>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">automatic</span></tt> attribute identified by Ohai at the start of the Chef run</li>
+</ol>
+<p>where the last attribute in the list is the one that is applied to the node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The attribute precedence order for roles and environments is reversed for <tt class="docutils literal"><span class="pre">default</span></tt> and <tt class="docutils literal"><span class="pre">override</span></tt> attributes. The precedence order for <tt class="docutils literal"><span class="pre">default</span></tt> attributes is environment, then role. The precedence order for <tt class="docutils literal"><span class="pre">override</span></tt> attributes is role, then environment. Applying environment <tt class="docutils literal"><span class="pre">override</span></tt> attributes after role <tt class="docutils literal"><span class="pre">override</span></tt> attributes allows a role to exist in multiple environments.</p>
+</div>
+<p>Attribute precedence, viewed from the same perspective as the Chef overview diagram, where the numbers in the diagram match the order of attribute precedence:</p>
+<img alt="_images/overview_chef_attributes_precedence.png" src="_images/overview_chef_attributes_precedence.png" />
+<p>Attribute precedence, when viewed as a table:</p>
+<img alt="_images/overview_chef_attributes_table.png" src="_images/overview_chef_attributes_table.png" />
+</div>
+</div>
+<div class="section" id="role-formats">
+<h2>Role Formats<a class="headerlink" href="#role-formats" title="Permalink to this headline">¶</a></h2>
+<p>Role data is stored in two formats: as a Ruby file that contains domain-specific language and as JSON data.</p>
+<div class="section" id="ruby-dsl">
+<h3>Ruby DSL<a class="headerlink" href="#ruby-dsl" title="Permalink to this headline">¶</a></h3>
+<p>Chef uses a domain-specific language in Ruby to define recipes and to store settings, such as those which define a role or an environment. These settings are saved as Ruby files and are stored in the Chef repository. When these files are uploaded to the Chef Server, they are converted to JSON. Each time the Chef repository is refreshed, the contents of all domain-specific Ruby files are re-compiled to JSON and are re-uploaded to the Chef Server.</p>
+<p>Domain-specific Ruby attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default_attributes</span></tt></td>
+<td><p class="first">Optional. A set of attributes that should be applied to all nodes, assuming the node does not already have a value for the attribute. This is useful for setting global defaults that can then be overridden for specific nodes. If more than one role attempts to set a default value for the same attribute, the last role applied will be the role to set the attribute value. When nested attributes are present, they will be preserved. For example, to specify that a node that has the attribute <tt class="docutils literal"><span class="pre">apache2</span></tt> should listen on ports 80 and 443 (unless ports are already specified):</p>
+<div class="last highlight-python"><pre>default_attributes "apache2" =&gt; {
+  "listen_ports" =&gt; [ "80", "443" ]
+}</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">description</span></tt></td>
+<td><p class="first">A description of the functionality that is covered. For example:</p>
+<div class="last highlight-python"><pre>description 'The base role for systems that serve HTTP traffic'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">env_run_lists</span></tt></td>
+<td><p class="first">Optional. A list of environments, each specifying a recipe or a role that will be applied to that environment. This setting must specify the <tt class="docutils literal"><span class="pre">_default</span></tt> environment. If the <tt class="docutils literal"><span class="pre">_default</span></tt> environment is set to <tt class="docutils literal"><span class="pre">[]</span></tt> or <tt class="docutils literal"><span class="pre">nil</span></tt>, then the run list will be empty. <strong>jamescott: SEE CHEF-2636.</strong> For example:</p>
+<div class="last highlight-python"><pre>env_run_lists "prod" =&gt; ["recipe[apache2]"],
+              "staging" =&gt; ["recipe[apache2::staging]"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">name</span></tt></td>
+<td><p class="first">A unique name within the Chef organization. Each name must be unique and must be made up of letters (upper- and lower-case), numbers, underscores, and hyphens: [A-Z][a-z][0-9] and [_-]. Spaces are not allowed. For example:</p>
+<div class="last highlight-python"><pre>name 'dev01-24'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">override_attributes</span></tt></td>
+<td><p class="first">Optional. A set of attributes that should be applied to all nodes, even if the node already has a value for an attribute. This is useful for ensuring that certain attributes always have specific values. If more than one role attempts to set an override value for the same attribute, the last role applied will win. When nested attributes are present, they will be preserved. For example:</p>
+<div class="highlight-python"><pre>override_attributes "apache2" =&gt; {
+  "max_children" =&gt; "50"
+}</pre>
+</div>
+<p>The parameters in a Ruby file are actually Ruby method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example:</p>
+<div class="highlight-python"><pre>override_attributes(
+  :apache2 =&gt; {
+    :prefork =&gt; { :min_spareservers =&gt; "5" }
+  }
+)</pre>
+</div>
+<p>Or:</p>
+<div class="last highlight-python"><pre>override_attributes(
+  :apache2 =&gt; {
+    :prefork =&gt; { :min_spareservers =&gt; "5" }
+  },
+  :tomcat =&gt; {
+    :worker_threads =&gt; "100"
+  }
+)</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">run_list</span></tt></td>
+<td><p class="first">A list of recipes and/or roles that will be applied and the order in which those recipes and/or roles will be applied. For example, the following run list:</p>
+<div class="highlight-python"><pre>run_list "recipe[apache2]",
+         "recipe[apache2::mod_ssl]",
+         "role[monitor]"</pre>
+</div>
+<p class="last">would apply the <tt class="docutils literal"><span class="pre">apache2</span></tt> recipe first, then the <tt class="docutils literal"><span class="pre">apache2::mod_ssl</span></tt> recipe, and then the <tt class="docutils literal"><span class="pre">role[monitor]</span></tt> recipe.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A Ruby DSL file for each role must exist in the <tt class="docutils literal"><span class="pre">roles/</span></tt> subdirectory of the Chef repository. (If the repository does not have this subdirectory, then create it using Knife.) Each Ruby file should have the .rb suffix. The complete roles Ruby DSL has the following syntax:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">name</span> <span class="s2">&quot;role_name&quot;</span>
+<span class="nx">description</span> <span class="s2">&quot;role_description&quot;</span>
+<span class="nx">run_list</span> <span class="s2">&quot;recipe[name]&quot;</span><span class="p">,</span> <span class="s2">&quot;recipe[name::attribute]&quot;</span><span class="p">,</span> <span class="s2">&quot;recipe[name::attribute]&quot;</span>
+<span class="nx">env_run_lists</span> <span class="s2">&quot;name&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;recipe[name]&quot;</span><span class="p">],</span> <span class="s2">&quot;environment_name&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;recipe[name::attribute]&quot;</span><span class="p">]</span>
+<span class="nx">default_attributes</span> <span class="s2">&quot;node&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;attribute&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;etc.&quot;</span> <span class="p">]</span> <span class="p">}</span>
+<span class="nx">override_attributes</span> <span class="s2">&quot;node&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;attribute&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;etc.&quot;</span> <span class="p">]</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>where both default and override attributes are optional and at least one run-list (with at least one run-list item) is specified. For example, a role named &#8220;webserver&#8221; that has a run-list that defines actions for three different roles, and for certain roles takes extra steps (such as the &#8220;apache2&#8221; role listening on ports 80 and 443):</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="nx">name</span> <span class="s2">&quot;webserver&quot;</span>
+<span class="nx">description</span> <span class="s2">&quot;The base role for systems that serve HTTP traffic&quot;</span>
+<span class="nx">run_list</span> <span class="s2">&quot;recipe[apache2]&quot;</span><span class="p">,</span> <span class="s2">&quot;recipe[apache2::mod_ssl]&quot;</span><span class="p">,</span> <span class="s2">&quot;role[monitor]&quot;</span>
+<span class="nx">env_run_lists</span> <span class="s2">&quot;prod&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;recipe[apache2]&quot;</span><span class="p">],</span> <span class="s2">&quot;staging&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;recipe[apache2::staging]&quot;</span><span class="p">],</span> <span class="s2">&quot;_default&quot;</span> <span class="o">=&gt;</span> <span class="p">[]</span>
+<span class="nx">default_attributes</span> <span class="s2">&quot;apache2&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;listen_ports&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span> <span class="s2">&quot;443&quot;</span> <span class="p">]</span> <span class="p">}</span>
+<span class="nx">override_attributes</span> <span class="s2">&quot;apache2&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;max_children&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;50&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json">
+<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<p>The JSON format for environments maps directly to the domain-specific Ruby format: same settings, attributes, and values, and a similar structure and organization. For example:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;webserver&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;chef_type&quot;</span><span class="o">:</span> <span class="s2">&quot;role&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;json_class&quot;</span><span class="o">:</span> <span class="s2">&quot;Chef::Role&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;default_attributes&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;apache2&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;listen_ports&quot;</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s2">&quot;80&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;443&quot;</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;The base role for systems that serve HTTP traffic&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">&quot;recipe[apache2]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;recipe[apache2::mod_ssl]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;role[montior]&quot;</span>
+  <span class="p">],</span>
+  <span class="s2">&quot;env_run_lists&quot;</span> <span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;production&quot;</span> <span class="o">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;preprod&quot;</span> <span class="o">:</span> <span class="p">[],</span>
+    <span class="s2">&quot;dev&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="s2">&quot;role[base]&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;recipe[apache]&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;recipe[apache::copy_dev_configs]&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+     <span class="s2">&quot;test&quot;</span><span class="o">:</span> <span class="p">[</span>
+      <span class="s2">&quot;role[base]&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;recipe[apache]&quot;</span>
+    <span class="p">]</span>
+   <span class="p">},</span>
+  <span class="s2">&quot;override_attributes&quot;</span><span class="o">:</span> <span class="p">{</span>
+    <span class="s2">&quot;apache2&quot;</span><span class="o">:</span> <span class="p">{</span>
+      <span class="s2">&quot;max_children&quot;</span><span class="o">:</span> <span class="s2">&quot;50&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The JSON format has two additional settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_type</span></tt></td>
+<td>This should always be set to <tt class="docutils literal"><span class="pre">role</span></tt>. Use this setting for any custom process that consumes role objects outside of Ruby.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">json_class</span></tt></td>
+<td>This should always be set to <tt class="docutils literal"><span class="pre">Chef::Role</span></tt>. This setting is used internally by Chef to auto-inflate an role object. If objects are being rebuilt outside of Ruby, ignore it.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="manage-roles">
+<h2>Manage Roles<a class="headerlink" href="#manage-roles" title="Permalink to this headline">¶</a></h2>
+<p>There are several ways to manage roles:</p>
+<ul class="simple">
+<li>Knife can be used to create, edit, view, list, tag, and delete roles.</li>
+<li>The Management Console can be used to create, edit, view, list, tag, and delete roles. In addition, role attributes can be modified and roles can be moved between environments.</li>
+<li>The chef-client can be used to manage role data using the command line and JSON files (that contain a hash, the elements of which are added as role attributes). In addition, the <tt class="docutils literal"><span class="pre">run_list</span></tt> setting allows roles and/or recipes to be added to the role.</li>
+<li>The open source Chef Server can be used to manage role data using the command line and JSON files (that contain a hash, the elements of which are added as role attributes). In addition, the <tt class="docutils literal"><span class="pre">run_list</span></tt> setting allows roles and/or recipes to be added to the role.</li>
+<li>The Chef Server API can be used to create and manage roles directly, although using Knife and/or the Management Console is the most common way users of Chef manage roles.</li>
+<li>The command line can also be used with JSON files and third-party services, such as Amazon EC2, where the JSON files can contain per-instance metadata stored in a file on-disk and then read by chef-solo or chef-client as required.</li>
+<li>chef-solo does not allow roles.</li>
+</ul>
+<p>By creating and editing files using the Ruby DSL or JSON, role data can be dynamically generated with the Ruby DSL. Roles created and edited using files are compatible with all versions of Chef, including chef-solo. Roles created and edited using files can be kept in version source control, which also keeps a history of what changed when. When roles are created and edited using files, they should not be managed using Knife or the Management Console, as changes will be overwritten.</p>
+<p>A run-list that is associated with a role can be edited using the Management Console. The canonical source of a role&#8217;s data is stored on the Chef Server, which means that keeping role data in version source control can be challenging.</p>
+<p>When files are uploaded to a Chef Server from a file and then edited using the Management Console, if the file is edited and uploaded again, the changes made in the Management Console will be lost. The same is true with Knife, in that if roles are created and managed using Knife and then arbitrarily updated uploaded JSON data, that action will overwrite what has been done previously using Knife. It is strongly recommended to keep to one process and not switch back and forth.</p>
+<div class="section" id="delete-from-run-list">
+<h3>Delete from Run-list<a class="headerlink" href="#delete-from-run-list" title="Permalink to this headline">¶</a></h3>
+<p>When an environment is deleted, it will remain within a run-list for a role until it is removed from that run-list. If a new environment is created that has an identical name to an environment that was deleted, a run-list that contains an old environment name will use the new one.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_search.html" title="About Search"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_environments.html" title="About Environments"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

@@ -1,0 +1,217 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Chef Server Components &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Authentication and Authorization" href="auth.html" />
+    <link rel="prev" title="Chef Server" href="server_types.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="auth.html" title="Authentication and Authorization"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="server_types.html" title="Chef Server"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chef-server-components">
+<h1>Chef Server Components<a class="headerlink" href="#chef-server-components" title="Permalink to this headline">¶</a></h1>
+<p>The Chef Server acts as a hub for configuration data. The Chef Server stores cookbooks, the policies that are applied to cookbooks, and metadata that describes each registered node in the infrastructure. Nodes use the chef-client to ask the Chef Server for configuration details, such as recipes, templates, and file distributions. The chef-client then does as much of the configuration work as possible on the nodes themselves (and not on the Chef Server). This scalable approach distributes the configuration effort throughout the organization.</p>
+<p>Starting with the release of Chef 11.x, the front-end for the Chef Server is written using <a class="reference external" href="http://www.erlang.org/">Erlang</a>, which is a programming language that <a class="reference external" href="http://en.wikipedia.org/wiki/Erlang_%28programming_language%29">first appeared in 1986</a>, was open sourced in 1998, and is excellent with critical enterprise concerns like concurrency, fault-tolerance, and distributed environments. This version of Chef can scale to the size of any enterprise and is often referred to as Erchef.</p>
+<p>The following diagram shows the various components that are part of a Chef Server deployment and how they relate to one another.</p>
+<img alt="_images/server_components.png" src="_images/server_components.png" />
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Component</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Bookshelf</td>
+<td><p class="first">Bookshelf is used to store cookbook content&#8212;files, templates, and so on&#8212;that have been uploaded to the Chef Server as part of a cookbook version. Cookbook content is stored by content checksum. If two different cookbooks or different versions of the same cookbook include the same file or template, Bookshelf will store that file only once. The cookbook content managed by Bookshelf is stored in flat files and is separated from the Chef Server and search index repositories.</p>
+<p class="last">All cookbooks are stored in a dedicated repository.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>WebUI</td>
+<td>chef-server-webui is a Ruby on Rails 3.0 application that hosts the web interface for the Chef Server.</td>
+</tr>
+<tr class="row-even"><td>Erchef</td>
+<td><p class="first">Erchef is a complete rewrite of the core API for the Chef Server, which allows it to be faster and more scalable than previous versions. The API itself is still compatible with the original Ruby-based Chef Server, which means that cookbooks and recipes that were authored for the Ruby-based Chef Server will continue to work on the Erlang-based Chef Server. The chef-client is still written in Ruby.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Even though Chef 11.x is authored in Erlang, writing code in Erlang is NOT a requirement for using Chef 11.x.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>Message Queues</td>
+<td><p class="first">Messages are sent to the Search Index using the following components:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>RabbitMQ is used as the message queue for the Chef Server. All items that will be added to the search index repository are first added to a queue.</li>
+<li>chef-expander is used to pull messages from the RabbitMQ queue, process them into the required format, and then post them to chef-solr for indexing.</li>
+<li>chef-solr wraps Apache Solr and exposes its REST API for indexing and search.</li>
+</ol>
+</div></blockquote>
+<p class="last">All messages are added to a dedicated search index repository.</p>
+</td>
+</tr>
+<tr class="row-even"><td>Nginx</td>
+<td>Nginx is an open-source HTTP and reverse proxy server that is used as the front-end load balancer for the Chef Server. All requests to the Chef Server API are routed through Nginx.</td>
+</tr>
+<tr class="row-odd"><td>PostgreSQL</td>
+<td>PostgreSQL is the data storage repository for the Chef Server.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="auth.html" title="Authentication and Authorization"
+             >next</a></li>
+        <li class="right" >
+          <a href="server_types.html" title="Chef Server"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

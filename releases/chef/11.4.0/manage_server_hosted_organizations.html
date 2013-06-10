@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Manage Organizations in Hosted Chef &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="Manage the Hosted Chef Server" href="manage_server_hosted.html" />
+    <link rel="next" title="Manage Permissions in Hosted Chef" href="manage_server_hosted_permissions.html" />
+    <link rel="prev" title="Manage Nodes in Hosted Chef" href="manage_server_hosted_nodes.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="manage_server_hosted_permissions.html" title="Manage Permissions in Hosted Chef"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="manage_server_hosted_nodes.html" title="Manage Nodes in Hosted Chef"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="manage_server_hosted.html" accesskey="U">Manage the Hosted Chef Server</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Manage Organizations in Hosted Chef</a><ul>
+<li><a class="reference internal" href="#create">Create</a></li>
+<li><a class="reference internal" href="#manage-users">Manage Users</a><ul>
+<li><a class="reference internal" href="#add-user">Add User</a></li>
+<li><a class="reference internal" href="#remove-user">Remove User</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#regenerate-the-private-key">Regenerate the Private Key</a></li>
+<li><a class="reference internal" href="#regenerate-the-knife-config">Regenerate the Knife Config</a></li>
+<li><a class="reference internal" href="#select-organization">Select Organization</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="manage-organizations-in-hosted-chef">
+<h1>Manage Organizations in Hosted Chef<a class="headerlink" href="#manage-organizations-in-hosted-chef" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>Management Console</strong> allows users to manage organizations.</p>
+<div class="section" id="create">
+<h2>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h2>
+<p>To create a new organization:</p>
+<ol class="arabic">
+<li><p class="first">Log in to the <strong>Management Console</strong> using your existing username.</p>
+</li>
+<li><p class="first">Go to the <strong>Organizations</strong> page. If you do not have an organization associated with your user, you are on that page automatically. Otherwise, click the <strong>Organizations</strong> link on the upper right corner.</p>
+</li>
+<li><p class="first">On the <strong>Organizations</strong> page, click <strong>Create</strong>.</p>
+<img alt="_images/step_manage_server_hosted_org_add_1.png" src="_images/step_manage_server_hosted_org_add_1.png" />
+</li>
+<li><p class="first">Enter a full name and a short name. The short name is like an account name for your new organization, only lower case a-z, -, and _ are supported. You cannot use spaces in the short name.</p>
+</li>
+<li><p class="first">Select your desired billing plan to create your organization.</p>
+<img alt="_images/step_manage_server_hosted_org_add_2.jpg" src="_images/step_manage_server_hosted_org_add_2.jpg" />
+</li>
+<li><p class="first">If you selected any of the non-free billing plans in the previous step, you will be prompted to enter your billing information at this time. Please do so before you proceed.</p>
+<img alt="_images/step_manage_server_hosted_org_add_3.png" src="_images/step_manage_server_hosted_org_add_3.png" />
+</li>
+<li><p class="first">Download your validation key and a sample Knife configuration file. You need to use the validation key to register new clients using this organization. The Knife configuration file allows you to start using Knife &#8212; the command line tool for Chef &#8212; immediately.</p>
+<img alt="_images/step_manage_server_hosted_org_add_4.jpg" src="_images/step_manage_server_hosted_org_add_4.jpg" />
+</li>
+</ol>
+<p>If you will be using Knife, be sure to download the user&#8217;s private key as well.</p>
+</div>
+<div class="section" id="manage-users">
+<h2>Manage Users<a class="headerlink" href="#manage-users" title="Permalink to this headline">¶</a></h2>
+<p>If you want other users to be able to access the organization with Knife or the REST API, you will need to add them to the organization with the correct permissions so they are authorized to make changes to it.</p>
+<div class="section" id="add-user">
+<h3>Add User<a class="headerlink" href="#add-user" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need update permissions on the organization to be able to associate a user with the organization. Users in the admins group have update permissions by default.</p>
+</div>
+<p>To associate a user with the current organization:</p>
+<ol class="arabic">
+<li><p class="first">Ask them to sign up for a Hosted Chef account and give you their username.</p>
+</li>
+<li><p class="first">Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</p>
+</li>
+<li><p class="first">Click the <strong>Users</strong> tab in the main navigation menu.</p>
+</li>
+<li><p class="first">Click <strong>Invite</strong> in the sub-menu.</p>
+</li>
+<li><p class="first">Enter the users you want to associate to the organization shown, separated by comma if there is more than one. And then click on the <strong>Invite</strong> button:</p>
+<img alt="_images/step_manage_server_hosted_org_user_add_1.png" src="_images/step_manage_server_hosted_org_user_add_1.png" />
+<p>Afterwards you should see this user appear in the <strong>Pending User Invites</strong> section of the <strong>Users</strong> tab.</p>
+</li>
+<li><p class="first">Ask the user to log into their account to accept the invite.</p>
+</li>
+<li><p class="first">The user will need to click on organizations in the upper right hand corner. Then they can click on the <strong>Accept</strong> link next to the invite at the bottom of the page:</p>
+<img alt="_images/step_manage_server_hosted_org_user_add_2.png" src="_images/step_manage_server_hosted_org_user_add_2.png" />
+</li>
+</ol>
+</div>
+<div class="section" id="remove-user">
+<h3>Remove User<a class="headerlink" href="#remove-user" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need update permissions on the organization to be able to dissociate a user from the organization. Users in the admins group have update permissions by default.</p>
+</div>
+<p>To dissociate a user from the current organization:</p>
+<ol class="arabic simple">
+<li>Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</li>
+<li>Click the <strong>Users</strong> tab in the main navigation menu.</li>
+<li>Click <strong>Dissociate</strong> next to the username. Click <strong>OK</strong> on the warning message box.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="regenerate-the-private-key">
+<h2>Regenerate the Private Key<a class="headerlink" href="#regenerate-the-private-key" title="Permalink to this headline">¶</a></h2>
+<p>The private key for the organization is also referred to as the validation key and is used to authenticate with both Knife and chef-client. Regenerating the key will be useful if you have lost the organization&#8217;s private key, if the private key has been exposed to someone you don&#8217;t want to have access to your Hosted Chef account, or if you wish to regularly rotate keys for security purposes.</p>
+<p>You can also download a default Knife config on the same page.</p>
+<p>To download the private key and the knife.rb file:</p>
+<ol class="arabic simple">
+<li>Log into the <strong>Management Console</strong>.</li>
+<li>Click <strong>Organizations</strong> in the upper right of the screen, next to your username.</li>
+<li>On the <strong>Organizations</strong> page, click the <strong>Regenerate validation key</strong> and the <strong>Generate knife config</strong> links to regenerate the private key and download a Knife config file. If there are no associated organizations listed, please make sure your user account is associated with an organization or contact Opscode support.</li>
+</ol>
+<p>Due to a bug with some browsers, the file may be named &#8220;_regenerate_key&#8221; after downloading. You can just rename this file to ORG-validator.pem substituting the name of your organization for ORG.
+If you will be using Knife, be sure to download the user&#8217;s private key as well.</p>
+</div>
+<div class="section" id="regenerate-the-knife-config">
+<h2>Regenerate the Knife Config<a class="headerlink" href="#regenerate-the-knife-config" title="Permalink to this headline">¶</a></h2>
+<p>The private key for the organization is also referred to as the validation key and is used to authenticate with both Knife and chef-client. Regenerating the key will be useful if you have lost the organization&#8217;s private key, if the private key has been exposed to someone you don&#8217;t want to have access to your Hosted Chef account, or if you wish to regularly rotate keys for security purposes.</p>
+<p>You can also download a default Knife config on the same page.</p>
+<p>To download the private key and the knife.rb file:</p>
+<ol class="arabic simple">
+<li>Log into the <strong>Management Console</strong>.</li>
+<li>Click <strong>Organizations</strong> in the upper right of the screen, next to your username.</li>
+<li>On the <strong>Organizations</strong> page, click the <strong>Regenerate validation key</strong> and the <strong>Generate knife config</strong> links to regenerate the private key and download a Knife config file. If there are no associated organizations listed, please make sure your user account is associated with an organization or contact Opscode support.</li>
+</ol>
+<p>Due to a bug with some browsers, the file may be named &#8220;_regenerate_key&#8221; after downloading. You can just rename this file to ORG-validator.pem substituting the name of your organization for ORG.
+If you will be using Knife, be sure to download the user&#8217;s private key as well.</p>
+</div>
+<div class="section" id="select-organization">
+<h2>Select Organization<a class="headerlink" href="#select-organization" title="Permalink to this headline">¶</a></h2>
+<p>A user is allowed to be associated with multiple organizations. When there are multiple orgs, you can select which organization to use from the list of associated organizations in the <strong>Management Console</strong>. Subsequent actions will be scoped to that organization.</p>
+<p>To see which organization is currently selected, or to view the list of associated organizations:</p>
+<ol class="arabic">
+<li><p class="first">Log into the <strong>Management Console</strong>.</p>
+</li>
+<li><p class="first">Click organizations in the upper right of the screen, next to your username.</p>
+<img alt="_images/step_manage_server_hosted_org_select.png" src="_images/step_manage_server_hosted_org_select.png" />
+</li>
+<li><p class="first">On the <strong>Organizations</strong> page, click the <strong>Select</strong> link next to the organization you want to select to use. If there are no associated organizations listed, please make sure your user account is associated with an organization or contact Opscode support.</p>
+</li>
+</ol>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="manage_server_hosted_permissions.html" title="Manage Permissions in Hosted Chef"
+             >next</a></li>
+        <li class="right" >
+          <a href="manage_server_hosted_nodes.html" title="Manage Nodes in Hosted Chef"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="manage_server_hosted.html" >Manage the Hosted Chef Server</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>dmg Lightweight Resource &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About LWRPs" href="lwrp.html" />
+    <link rel="next" title="dynect Lightweight Resource" href="lwrp_dynect.html" />
+    <link rel="prev" title="djbdns Lightweight Resource" href="lwrp_djbdns.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_dynect.html" title="dynect Lightweight Resource"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="lwrp_djbdns.html" title="djbdns Lightweight Resource"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" accesskey="U">About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">dmg Lightweight Resource</a><ul>
+<li><a class="reference internal" href="#dmg-package">dmg_package</a><ul>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="dmg-lightweight-resource">
+<h1>dmg Lightweight Resource<a class="headerlink" href="#dmg-lightweight-resource" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>dmg</strong> cookbook is used to create a DMG package for use with Mac OS X.</p>
+<p>The <strong>dmg</strong> cookbook contains the following lightweight resource: <tt class="docutils literal"><span class="pre">dmg_package</span></tt>.</p>
+<div class="section" id="dmg-package">
+<h2>dmg_package<a class="headerlink" href="#dmg-package" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>dmg_package</strong> lightweight resource is used to install applications from Mac OS X Apple Disk Image (.dmg) files. This lightweight resource will install a package by retrieving the file from a remote URL, mounting the file using the HDI driver backing store service (hdid), copying the application directory to the specified directory, detaching the image (using <tt class="docutils literal"><span class="pre">hdiutil</span></tt>), and then storing the file in the <tt class="docutils literal"><span class="pre">Chef::Config[:file_cache_path]</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This lightweight resource does not do full package management for Mac OS X applications, as they have different installed artifacts.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This lightweight resource is part of the <strong>dmg</strong> cookbook (<a class="reference external" href="http://community.opscode.com/cookbooks/dmg">http://community.opscode.com/cookbooks/dmg</a>).</p>
+</div>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:install</span></tt></td>
+<td>Use to install an application. (There is no <tt class="docutils literal"><span class="pre">:uninstall</span></tt> action because on in the Mac OS X environment, uninstalling an application only requires it being dragged to the trash can.)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">app</span></tt></td>
+<td>The name of the application. This is used for the <tt class="docutils literal"><span class="pre">/Volumes</span></tt> directory and <tt class="docutils literal"><span class="pre">.app</span></tt> directory that is copied to <tt class="docutils literal"><span class="pre">/Applications</span></tt>. Default value: <tt class="docutils literal"><span class="pre">name</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">checksum</span></tt></td>
+<td>The SHA-256 checksum for the Apple Disk Image (.dmg). If the local file matches the checksum, Chef will not download it. Default value: <tt class="docutils literal"><span class="pre">nil</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">destination</span></tt></td>
+<td>The directory to which the <tt class="docutils literal"><span class="pre">.app</span></tt> directory is copied. Default value: <tt class="docutils literal"><span class="pre">/Applications</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">dmg_name</span></tt></td>
+<td>The name of the Apple Disk Image (.dmg) (if it is not the same as the <tt class="docutils literal"><span class="pre">app</span></tt> attribute or if the name of the application contains spaces). Default value: <tt class="docutils literal"><span class="pre">nil</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">source</span></tt></td>
+<td>The remote URL for the Apple Disk Image (.dmg) to be download. Default value: <tt class="docutils literal"><span class="pre">nil</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">volumes_dir</span></tt></td>
+<td>The directory under <tt class="docutils literal"><span class="pre">/Volumes</span></tt> where the Apple Disk Image (.dmg) is to be mounted. Default value: <tt class="docutils literal"><span class="pre">app</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>To install Google Chrome. Uses the dmg_name because the application name has spaces. Installs in /Applications/Google Chrome.app.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">dmg_package</span> <span class="s2">&quot;Google Chrome&quot;</span> <span class="k">do</span>
+   <span class="n">dmg_name</span> <span class="s2">&quot;googlechrome&quot;</span>
+   <span class="n">source</span> <span class="s2">&quot;https://dl-ssl.google.com/chrome/mac/stable/GGRM/googlechrome.dmg&quot;</span>
+   <span class="n">checksum</span> <span class="s2">&quot;7daa2dc5c46d9bfb14f1d7ff4b33884325e5e63e694810adc58f14795165c91a&quot;</span>
+   <span class="n">action</span> <span class="ss">:install</span>
+ <span class="k">end</span>
+</pre></div>
+</div>
+<p>The following examples all use the SHA256 checksum that was current when the application was originally installed, and may not be current for the latest releases.</p>
+<p>If you want to install an application that has already been downloaded (not using the source parameter), copy it to the appropriate location. You can find out what directory this is with the following command on the node to run chef:</p>
+<div class="highlight-bash"><div class="highlight"><pre>knife <span class="nb">exec</span> -E <span class="s1">&#39;p Chef::Config[:file_cache_path]&#39;</span> -c /etc/chef/client.rb
+</pre></div>
+</div>
+<p>To install Dropbox. Uses volumes_dir because the mounted directory is different than the name of the application directory. Installs in /Applications/Dropbox.app.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">dmg_package</span> <span class="s2">&quot;Dropbox&quot;</span> <span class="k">do</span>
+   <span class="n">volumes_dir</span> <span class="s2">&quot;Dropbox Installer&quot;</span>
+   <span class="n">source</span> <span class="s2">&quot;http://www.dropbox.com/download?plat=mac&quot;</span>
+   <span class="n">checksum</span> <span class="s2">&quot;b4ea620ca22b0517b75753283ceb82326aca8bc3c86212fbf725de6446a96a13&quot;</span>
+   <span class="n">action</span> <span class="ss">:install</span>
+ <span class="k">end</span>
+</pre></div>
+</div>
+<p>The following examples all use the SHA256 checksum that was current when the application was originally installed, and may not be current for the latest releases.</p>
+<p>To install MacIrssi to ~/Applications from the local file downloaded to the cache path into an Applications directory in the current user&#8217;s home directory.</p>
+<p>Chef should run as a non-root user for this: directory &#8220;#{ENV[&#8216;HOME&#8217;]}/Applications&#8221;</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">dmg_package</span> <span class="s2">&quot;MacIrssi&quot;</span> <span class="k">do</span>
+   <span class="n">destination</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;HOME&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">/Applications&quot;</span>
+   <span class="n">action</span> <span class="ss">:install</span>
+ <span class="k">end</span>
+</pre></div>
+</div>
+<p>The following examples all use the SHA256 checksum that was current when the application was originally installed, and may not be current for the latest releases.</p>
+<p>To install /Applications/Tunnelblick.app from the primary download site.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">dmg_package</span> <span class="s2">&quot;Tunnelblick&quot;</span> <span class="k">do</span>
+   <span class="n">source</span> <span class="s2">&quot;http://tunnelblick.googlecode.com/files/Tunnelblick_3.1.2.dmg&quot;</span>
+   <span class="n">checksum</span> <span class="s2">&quot;a3fae60b6833175f32df20c90cd3a3603a&quot;</span>
+   <span class="n">action</span> <span class="ss">:install</span>
+ <span class="k">end</span>
+</pre></div>
+</div>
+<p>The following examples all use the SHA256 checksum that was current when the application was originally installed, and may not be current for the latest releases.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_dynect.html" title="dynect Lightweight Resource"
+             >next</a></li>
+        <li class="right" >
+          <a href="lwrp_djbdns.html" title="djbdns Lightweight Resource"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" >About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

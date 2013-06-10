@@ -1,0 +1,662 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>What’s New in Chef 11 &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Just Enough Ruby for Chef" href="just_enough_ruby_for_chef.html" />
+    <link rel="prev" title="Report Handlers" href="community_plugin_report_handler.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="just_enough_ruby_for_chef.html" title="Just Enough Ruby for Chef"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="community_plugin_report_handler.html" title="Report Handlers"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">What&#8217;s New in Chef 11</a><ul>
+<li><a class="reference internal" href="#chef-client-and-chef-solo">chef-client and chef-solo</a><ul>
+<li><a class="reference internal" href="#shef-is-now-chef-shell">Shef is now chef-shell</a></li>
+<li><a class="reference internal" href="#node-attribute-changes">Node attribute changes</a><ul>
+<li><a class="reference internal" href="#implicit-writes-removed">Implicit writes removed</a></li>
+<li><a class="reference internal" href="#attribute-value-required">attribute=&#8221;value&#8221; required</a></li>
+<li><a class="reference internal" href="#knife-output-changes">Knife Output Changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#role-and-environment-attribute-changes">Role and Environment Attribute Changes</a><ul>
+<li><a class="reference internal" href="#computing-attributes-from-attributes">Computing attributes from attributes</a></li>
+<li><a class="reference internal" href="#setting-attributes-by-platform">Setting attributes by platform</a></li>
+<li><a class="reference internal" href="#behavioral-changes">Behavioral changes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#node-run-state-replaced">node.run_state Replaced</a></li>
+<li><a class="reference internal" href="#subtractive-merge-removed">Subtractive Merge Removed</a></li>
+<li><a class="reference internal" href="#chef-rest-run-request-removed">Chef::REST#run_request Removed</a></li>
+<li><a class="reference internal" href="#delayed-notifications-changes">Delayed Notifications Changes</a></li>
+<li><a class="reference internal" href="#single-notifies-for-notification">Single Notifies for Notification</a></li>
+<li><a class="reference internal" href="#changes-for-data-bag-encryption">Changes for Data Bag Encryption</a><ul>
+<li><a class="reference internal" href="#diagnosing-compatibility-errors">Diagnosing Compatibility Errors</a></li>
+<li><a class="reference internal" href="#how-to-upgrade">How to Upgrade</a></li>
+<li><a class="reference internal" href="#chef-server-versions">Chef Server Versions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#non-recipe-file-evaluation-includes-dependencies">Non-recipe File Evaluation Includes Dependencies</a></li>
+<li><a class="reference internal" href="#knife-configuration-parameter-changes">Knife Configuration Parameter Changes</a></li>
+<li><a class="reference internal" href="#remote-file-mirror-support-may-break-subclasses">Remote File Mirror Support May Break Subclasses</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#chef-server">Chef Server</a><ul>
+<li><a class="reference internal" href="#the-clients-endpoint-returns-json-with-a-json-class-for-edit-put-operations">The /clients endpoint returns JSON with a JSON class for edit (PUT) operations</a></li>
+<li><a class="reference internal" href="#the-admin-and-validator-flags-are-exclusive">The admin and validator flags are exclusive</a></li>
+<li><a class="reference internal" href="#strict-checking-of-top-level-json-keys">Strict checking of top-level JSON keys</a></li>
+<li><a class="reference internal" href="#creating-an-empty-sandbox-is-now-a-400-error">Creating an empty sandbox is now a 400 error</a></li>
+<li><a class="reference internal" href="#error-messages-included-in-server-error-responses-have-changed">Error messages included in server error responses have changed</a></li>
+<li><a class="reference internal" href="#some-error-codes-have-changes">Some error codes have changes</a></li>
+<li><a class="reference internal" href="#knife-reindex-is-not-supported-in-chef-11-server">knife reindex is not supported in Chef 11 Server</a></li>
+<li><a class="reference internal" href="#openid-support-has-been-removed">OpenId support has been removed</a></li>
+<li><a class="reference internal" href="#the-ruby-server-code-has-been-removed">The Ruby server code has been removed</a></li>
+<li><a class="reference internal" href="#knife-cookbook-delete-purge-is-ignored-by-chef-11-server">knife cookbook delete &#8211;purge is ignored by Chef 11 Server</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-notable-changes">Other Notable Changes</a><ul>
+<li><a class="reference internal" href="#output-formatters-are-the-default-output-when-running-in-the-console">Output Formatters are the Default Output when Running in the Console</a></li>
+<li><a class="reference internal" href="#inline-compile-mode-for-lightweight-resources">Inline Compile Mode for Lightweight Resources</a><ul>
+<li><a class="reference internal" href="#without-inline-compilation">Without Inline Compilation</a></li>
+<li><a class="reference internal" href="#with-inline-compilation">With Inline Compilation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#lwrp-class-hierarchy-changes">LWRP Class Hierarchy Changes</a></li>
+<li><a class="reference internal" href="#partial-support-in-templates">Partial Support in Templates</a></li>
+<li><a class="reference internal" href="#chef-apply">chef-apply</a></li>
+<li><a class="reference internal" href="#miscellaneous">Miscellaneous</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="what-s-new-in-chef-11">
+<h1>What&#8217;s New in Chef 11<a class="headerlink" href="#what-s-new-in-chef-11" title="Permalink to this headline">¶</a></h1>
+<p>The following items are new for Chef 11.x and/or are changes from Chef 0.10.x.</p>
+<div class="section" id="chef-client-and-chef-solo">
+<h2>chef-client and chef-solo<a class="headerlink" href="#chef-client-and-chef-solo" title="Permalink to this headline">¶</a></h2>
+<p>The following changes have been made to chef-client and chef-solo. Some of these changes may break recipes (or may change their behavior); other changes may affect workflow or scripts.</p>
+<div class="section" id="shef-is-now-chef-shell">
+<h3>Shef is now chef-shell<a class="headerlink" href="#shef-is-now-chef-shell" title="Permalink to this headline">¶</a></h3>
+<p>Shef has been renamed to chef-shell (CHEF-2925). Recipe mode and attributes mode must now be entered using the <tt class="docutils literal"><span class="pre">recipe_mode</span></tt> and <tt class="docutils literal"><span class="pre">attributes_mode</span></tt> commands.</p>
+</div>
+<div class="section" id="node-attribute-changes">
+<h3>Node attribute changes<a class="headerlink" href="#node-attribute-changes" title="Permalink to this headline">¶</a></h3>
+<p>In order to fix bugs and surprising behaviors with attributes, the implementation of <tt class="docutils literal"><span class="pre">Chef::Node::Attribute</span></tt> has been completely overhauled. The APIs for reading and writing values are now completely separate.</p>
+<div class="section" id="implicit-writes-removed">
+<h4>Implicit writes removed<a class="headerlink" href="#implicit-writes-removed" title="Permalink to this headline">¶</a></h4>
+<p>Node attributes may no longer be set without specifying which precedence level to set. The following example is no longer valid:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">[</span><span class="ss">:my_attribute</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;value&quot;</span>
+<span class="n">node</span><span class="o">.</span><span class="n">my_attribute_2</span> <span class="o">=</span> <span class="s2">&quot;value&quot;</span>
+</pre></div>
+</div>
+<p>When a precedence level was not specified, <tt class="docutils literal"><span class="pre">normal</span></tt> was assumed. For Chef 11.x, the following example replaces the previous example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">.</span><span class="n">normal</span><span class="o">[</span><span class="ss">:my_attribute</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;value&quot;</span>
+<span class="n">node</span><span class="o">.</span><span class="n">normal</span><span class="o">.</span><span class="n">my_attribute_2</span> <span class="o">=</span> <span class="s2">&quot;value&quot;</span>
+</pre></div>
+</div>
+<p>Even with this change, please take a moment to consider if a cookbook should be using default-level attributes instead. In general, normal-level attributes are only required when a value needs to persist across chef-client runs (such as auto-generated passwords) or when a node is a &#8220;special snowflake&#8221;.</p>
+</div>
+<div class="section" id="attribute-value-required">
+<h4>attribute=&#8221;value&#8221; required<a class="headerlink" href="#attribute-value-required" title="Permalink to this headline">¶</a></h4>
+<p>The following example is no longer valid:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">my_attribute</span><span class="p">(</span><span class="s2">&quot;value&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The following example replaces the previous example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">.</span><span class="n">my_attribute</span> <span class="o">=</span> <span class="s2">&quot;value&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="knife-output-changes">
+<h4>Knife Output Changes<a class="headerlink" href="#knife-output-changes" title="Permalink to this headline">¶</a></h4>
+<p>Previously, Knife was adding the ID field to search results for node attributes. With Chef 11.x, Knife groups search results by the name of the node. For example, the old output looks something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search roles:role_name -a ipaddress -fj
+2 items found
+<span class="o">{</span>
+  <span class="s2">&quot;results&quot;</span>: 1,
+  <span class="s2">&quot;rows&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">&quot;ipaddress&quot;</span>: <span class="s2">&quot;ec2-54-14-193-994.compute-9.amazonaws.com&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;i-a82555d2&quot;</span>
+    <span class="o">}</span>
+    <span class="o">{</span>
+      <span class="s2">&quot;ipaddress&quot;</span>: <span class="s2">&quot;ec2-994-79-96-9.compute-9.amazonaws.com&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;i-75555514&quot;</span>
+    <span class="o">}</span>
+ <span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>and the new output looks something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search roles:role_name -a ipaddress -fj
+2 items found
+<span class="o">{</span>
+  <span class="s2">&quot;results&quot;</span>: 1,
+  <span class="s2">&quot;rows&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">&quot;i-a82555d2&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;ipaddress&quot;</span>: <span class="s2">&quot;ec2-54-14-193-994.compute-9.amazonaws.com&quot;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+    <span class="o">{</span>
+      <span class="s2">&quot;i-75555514&quot;</span>: <span class="o">{</span>
+        <span class="s2">&quot;ipaddress&quot;</span>: <span class="s2">&quot;ec2-994-79-96-9.compute-9.amazonaws.com&quot;</span>
+      <span class="o">}</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>This may require that search queries be updated for Chef 11.x.</p>
+<p>This change also affects Ohai plugin output.For example, the old output looks something like:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+  <span class="s2">&quot;rows&quot;</span><span class="p">:</span> <span class="o">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;virtualization&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;system&quot;</span><span class="p">:</span> <span class="s2">&quot;kvm&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;host&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;kvm&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;guests&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;EXAMPLE&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;28&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;virt30.ny4dev.EXAMPLE.com&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and the new output looks something like:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="mi">35</span><span class="p">,</span>
+  <span class="s2">&quot;rows&quot;</span><span class="p">:</span> <span class="o">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;virt18.ny4dev.EXAMPLE.com&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;virtualization&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">&quot;system&quot;</span><span class="p">:</span> <span class="s2">&quot;kvm&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;role&quot;</span><span class="p">:</span> <span class="s2">&quot;host&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;kvm&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">&quot;guests&quot;</span><span class="p">:</span> <span class="p">{</span>
+              <span class="s2">&quot;EXAMPLE&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;3&quot;</span>
+
+              <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="role-and-environment-attribute-changes">
+<h3>Role and Environment Attribute Changes<a class="headerlink" href="#role-and-environment-attribute-changes" title="Permalink to this headline">¶</a></h3>
+<p>Role and environment default and override attributes are visible in attributes files. In Chef 11.x, several changes have been made to attributes to enable you to include more complex logic in your attributes files. Though you should still try to keep your attributes files simple, you can effectively generate attributes composed of other attributes or based on a node&#8217;s platform in attribute files now.</p>
+<div class="section" id="computing-attributes-from-attributes">
+<h4>Computing attributes from attributes<a class="headerlink" href="#computing-attributes-from-attributes" title="Permalink to this headline">¶</a></h4>
+<p>In Chef 0.10.x and lower, code like the following will not work if you intend to modify the &#8220;source&#8221; attributes from roles or environments:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="ss">:app</span><span class="o">][</span><span class="ss">:name</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;my_app&quot;</span>
+<span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="ss">:app</span><span class="o">][</span><span class="ss">:env</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;development&quot;</span>
+
+<span class="c1"># In Chef 10.x, this will be the wrong value if you overwrite</span>
+<span class="c1"># node.default[:app][:name] or :env with roles.</span>
+<span class="c1">#</span>
+<span class="c1"># In Chef 11, it works correctly with role attributes.</span>
+<span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="ss">:app</span><span class="o">][</span><span class="ss">:database</span><span class="o">]</span> <span class="o">=</span><span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">_</span><span class="si">#{</span><span class="n">node</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">env</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+<p>In Chef 0.10.x and lower, default and override attributes are stored as a single nested hash, and role and environment attributes are applied to the node after attribute files are evaluated so that role and environment attributes can overwrite attributes from attributes files. In Chef 11.x, the above code will work as you expect, because role and environment attributes are stored separately from attributes from cookbooks, and are applied when the run_list is expanded (before any cookbook code is run).</p>
+</div>
+<div class="section" id="setting-attributes-by-platform">
+<h4>Setting attributes by platform<a class="headerlink" href="#setting-attributes-by-platform" title="Permalink to this headline">¶</a></h4>
+<p>In Chef 11.x, <tt class="docutils literal"><span class="pre">Chef::Node</span></tt> now includes the platform introspection mixin, so you can use the following methods in attributes files:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">.</span><span class="n">platform?</span><span class="p">(</span><span class="ss">:platform1</span><span class="p">,</span> <span class="ss">:platform2</span><span class="p">)</span>
+<span class="n">node</span><span class="o">.</span><span class="n">value_for_platform</span><span class="p">()</span>
+<span class="n">node</span><span class="o">.</span><span class="n">platform_family?</span><span class="p">(</span><span class="ss">:family1</span><span class="p">,</span> <span class="ss">:family2</span><span class="p">)</span>
+<span class="n">node</span><span class="o">.</span><span class="n">value_for_platform_family</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="behavioral-changes">
+<h4>Behavioral changes<a class="headerlink" href="#behavioral-changes" title="Permalink to this headline">¶</a></h4>
+<p>In Chef 0.10.x, you can set a default or override attribute in a recipe, and it will overwrite the default/override value from any role/environment/attribute file. In Chef 11.x, node.default always sets a cookbook-level default, and node.override always sets a cookbook-level override. Since cookbook-level attributes have lower precedence than role or environment attributes, a default or override attribute set in a recipe will not overwrite a value set by a role or environment.</p>
+<p>For example, given code like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1"># In a role.rb file:</span>
+<span class="n">default_attributes</span> <span class="s2">&quot;app_name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;from-role&quot;</span>
+
+<span class="c1"># In a recipe file:</span>
+<span class="n">node</span><span class="o">.</span><span class="n">default</span><span class="o">[</span><span class="s2">&quot;app_name&quot;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;from-recipe&quot;</span>
+</pre></div>
+</div>
+<p>In Chef 0.10.x, the value of node&#8221;app_name&#8221; will be &#8220;from-recipe&#8221; and in Chef 11.x, the value will be &#8220;from-role&#8221; (assuming there are no competing normal or override attributes).</p>
+<p>Likewise, if you take any action based on the value of attributes when evaluating attributes files, be aware that attributes from roles and environments will now be used to compute the attribute value.</p>
+</div>
+</div>
+<div class="section" id="node-run-state-replaced">
+<h3>node.run_state Replaced<a class="headerlink" href="#node-run-state-replaced" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 0.10.x and lower, you could see which recipes had been evaluated by chef by looking at <tt class="docutils literal"><span class="pre">node.run_state[:seen_recipes]</span></tt>. <tt class="docutils literal"><span class="pre">Chef::Node</span></tt> was not the correct place to track this information, and the previous implementation resulted in bugs where a recipe like <tt class="docutils literal"><span class="pre">nginx::default</span></tt> could be loaded after <tt class="docutils literal"><span class="pre">nginx</span></tt>, even though they are the same recipe.</p>
+<p>In the new implementation, this is tracked by <tt class="docutils literal"><span class="pre">Chef::RunContext</span></tt>. The following example is no longer valid:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">if</span> <span class="n">node</span><span class="o">.</span><span class="n">run_state</span><span class="o">[</span><span class="ss">:seen_recipes</span><span class="o">].</span><span class="n">key</span><span class="p">(</span><span class="s2">&quot;my_recipe&quot;</span><span class="p">)</span>
+  <span class="c1"># etc...</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Use the following approach instead:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1"># Check if a recipe has been loaded:</span>
+<span class="k">if</span> <span class="n">run_context</span><span class="o">.</span><span class="n">loaded_recipe?</span><span class="p">(</span><span class="s2">&quot;my_recipe&quot;</span><span class="p">)</span>
+  <span class="c1"># do something</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="subtractive-merge-removed">
+<h3>Subtractive Merge Removed<a class="headerlink" href="#subtractive-merge-removed" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 0.10.x and previous, you could use special &#8220;knockout prefix&#8221; attribute values beginning with <tt class="docutils literal"><span class="pre">!merge</span></tt> to make the deep merge algorithm remove values from arrays. This feature was very seldom used, confusing, and greatly increased the time and space complexity of the deep merge implementation. This feature is removed in Chef 11.x, and attributes containing the &#8220;knockout prefix&#8221; will trigger an error upon merge.</p>
+<p>If you need to selectively remove elements from arrays in your attributes, you should place this logic in a cookbook. Combined with other fixes to attributes in Chef 11.x, you can put this logic in an attributes file, which is the most natural place for it.</p>
+</div>
+<div class="section" id="chef-rest-run-request-removed">
+<h3>Chef::REST#run_request Removed<a class="headerlink" href="#chef-rest-run-request-removed" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">Chef::REST#run_request</span></tt> method is removed. Use <tt class="docutils literal"><span class="pre">api_request</span></tt> or <tt class="docutils literal"><span class="pre">streaming_request</span></tt> for low-level access, or (better) use the higher-level <tt class="docutils literal"><span class="pre">GET</span></tt>, <tt class="docutils literal"><span class="pre">PUT</span></tt>, <tt class="docutils literal"><span class="pre">POST</span></tt>, <tt class="docutils literal"><span class="pre">DELETE</span></tt>, and <tt class="docutils literal"><span class="pre">HEAD</span></tt> methods.</p>
+</div>
+<div class="section" id="delayed-notifications-changes">
+<h3>Delayed Notifications Changes<a class="headerlink" href="#delayed-notifications-changes" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 0.10.x and lower, delayed notifications are lost when Chef does not converge successfully.</p>
+<p>This fixes addresses the following scenario:</p>
+<ol class="arabic simple">
+<li>Chef reconfigures a service</li>
+<li>A delayed notification to restart the service is queued</li>
+<li>An unrelated resource fails and halts the Chef run</li>
+<li>Subsequent Chef runs don&#8217;t restart the service because it hasn&#8217;t been reconfigured during that run.</li>
+</ol>
+<p>In Chef 11.x, delayed notifications will run after Chef fails, and will be executed even if other delayed notifications fail. Conversely, if Chef fails to configure a service and a restart action has been queued for that service, the service will be restarted and will probably be broken.</p>
+</div>
+<div class="section" id="single-notifies-for-notification">
+<h3>Single Notifies for Notification<a class="headerlink" href="#single-notifies-for-notification" title="Permalink to this headline">¶</a></h3>
+<p>Previously you could specify multiple notifications in a single call to notifies with code like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">notifies</span> <span class="p">(</span> <span class="o">[</span> <span class="p">{</span><span class="n">resources</span><span class="p">(</span><span class="s2">&quot;execute[something]&quot;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:action</span><span class="p">,</span> <span class="ss">:timing</span><span class="o">]</span><span class="p">},</span>
+<span class="p">{</span><span class="n">resources</span><span class="p">(</span><span class="s2">&quot;execute[something]&quot;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:action</span><span class="p">,</span> <span class="ss">:timing</span><span class="o">]</span><span class="p">},</span>
+<span class="p">{</span><span class="n">resources</span><span class="p">(</span><span class="s2">&quot;execute[something]&quot;</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="o">[</span><span class="ss">:action</span><span class="p">,</span> <span class="ss">:timing</span><span class="o">]</span><span class="p">}</span> <span class="o">]</span> <span class="p">)</span>
+</pre></div>
+</div>
+<p>Instead of the above, just put multiple calls to notifies in your resource declaration:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">file</span> <span class="s2">&quot;/tmp/foo&quot;</span> <span class="k">do</span>
+  <span class="n">notifies</span> <span class="ss">:run</span><span class="p">,</span> <span class="s2">&quot;execute[something]&quot;</span>
+  <span class="n">notifies</span> <span class="ss">:run</span><span class="p">,</span> <span class="s2">&quot;execute[another-thing]&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="changes-for-data-bag-encryption">
+<h3>Changes for Data Bag Encryption<a class="headerlink" href="#changes-for-data-bag-encryption" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 0.10.x, objects in encrypted data bag items are serialized to YAML before being encrypted. Unfortunately, discrepancies between YAML engines in different versions of Ruby (in particular, 1.8.7 and 1.9.3) may cause silent corruption of serialized data when decrypting the data bag (the version stored on the Chef Server is untouched and can be correctly deserialized with the same Ruby version that was used to create it, however).</p>
+<p>Because the corruption is silent, there is no way for Chef to detect it; furthermore, all workaround possibilities we&#8217;ve investigated have severe limitations. Additionally, we wanted to modify the encrypted data bag item format to support using a random initialization vector each time a value is encrypted, which provides protection against some forms of cryptanalysis. In order to solve these issues, we&#8217;ve implemented a new encrypted data bag item format:</p>
+<ul class="simple">
+<li>The user interface to encrypted data bags is unchanged. This change only affects the format of the encrypted values.</li>
+<li>Chef 11.x clients will be able to read encrypted data bags created with either Chef 0.10.x or Chef 11.x.</li>
+<li>Chef 0.10.x clients 10.18.0 and above will be able to read encrypted data bags created with either Chef 0.10.x or Chef 11.x</li>
+<li>Chef 0.10.x clients version 10.16.x and lower cannot read encrypted data bags created with Chef 11.x</li>
+<li>Chef 11.x knife commands will only create data bags in the new format.</li>
+<li>Chef 0.10.x knife commands will only create data bags in the old format.</li>
+</ul>
+<div class="section" id="diagnosing-compatibility-errors">
+<h4>Diagnosing Compatibility Errors<a class="headerlink" href="#diagnosing-compatibility-errors" title="Permalink to this headline">¶</a></h4>
+<p>When trying to decrypt a Chef 11.x format data bag item with Chef 10.16.x or lower, you will see an error like this:</p>
+<div class="highlight-bash"><pre>shell$ knife data bag show secret-10-stable bar -c ~/opscode-ops/chef-oss-dev/.chef/knife.rb -s password
+ERROR: knife encountered an unexpected error
+This may be a bug in the 'data bag show' knife command or plugin
+Please collect the output of this command with the `-VV` option before filing a bug report.
+Exception: NoMethodError: undefined method `unpack' for #&lt;Hash:0x007ff5b264e1f0&gt;</pre>
+</div>
+<p>The above error output is from Knife; chef-client will fail with a similar error.</p>
+</div>
+<div class="section" id="how-to-upgrade">
+<h4>How to Upgrade<a class="headerlink" href="#how-to-upgrade" title="Permalink to this headline">¶</a></h4>
+<p>Before upgrading chef on any workstation you use to create/edit encrypted data bag items, upgrade chef-client on all machines that use encrypted data bags to version 10.18.0 or above. Once your chef-client fleet is upgraded, you can start using Chef 11.x on your workstation (the box you create/update encrypted data bag items on).</p>
+<p>In order to get the benefits of improved security with the new data bag item format, it&#8217;s recommended that you re-upload all of your encrypted data bag items once you&#8217;ve migrated to compatible versions of chef-client. To migrate your data bag items, simply edit them with <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">data</span> <span class="pre">bag</span> <span class="pre">edit</span></tt> or upload them with <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">data</span> <span class="pre">bag</span> <span class="pre">from</span> <span class="pre">file</span></tt>, whichever you normally do. Chef 11.x will automatically upload your data bag items in the new format.</p>
+</div>
+<div class="section" id="chef-server-versions">
+<h4>Chef Server Versions<a class="headerlink" href="#chef-server-versions" title="Permalink to this headline">¶</a></h4>
+<p>Because encrypted data bag items are implemented as a client-side layer on top of regular data bag items, the format change is transparent to the server. You can begin using Chef 11.x data bags even if your server is version Chef 0.10.x.</p>
+</div>
+</div>
+<div class="section" id="non-recipe-file-evaluation-includes-dependencies">
+<h3>Non-recipe File Evaluation Includes Dependencies<a class="headerlink" href="#non-recipe-file-evaluation-includes-dependencies" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 0.10.x and lower, library, attribute, lightweight resource, and resource definition files are loaded in undefined order (based on the order given by the Ruby Hash implementation, which differs based on version and vendor patching). In Chef 11.x, these files are loaded according to the following logic:</p>
+<ul class="simple">
+<li>The expanded run_list is converted into a list of cookbooks in the same order</li>
+<li>Each cookbook&#8217;s dependencies are inserted into the cookbook list before the cookbook that depends on them.</li>
+<li>Duplicates are removed</li>
+</ul>
+<p>For chef-client users, there should be no negative impacts from this change, as the previous order was essentially random. For chef-solo users, the new loading logic means that files belonging to cookbooks which exist in the <tt class="docutils literal"><span class="pre">cookbook_path</span></tt> but are not in the expanded <tt class="docutils literal"><span class="pre">run_list</span></tt> or dependencies of the cookbooks in the expanded <tt class="docutils literal"><span class="pre">run_list</span></tt> will no longer be loaded (in Chef 0.10.x, all non-recipe files from all cookbooks in the cookbook path were loaded). Additionally, chef-solo users will now see <tt class="docutils literal"><span class="pre">CookbookNotFound</span></tt> errors when a cookbook is listed as a dependency in the metadata but not present on disk. The error message will look like this:</p>
+<div class="highlight-bash"><pre>FATAL: Chef::Exceptions::CookbookNotFound: Cookbook runit not found. If you're loading runit from another cookbook, make sure you configure the dependency in your metadata</pre>
+</div>
+</div>
+<div class="section" id="knife-configuration-parameter-changes">
+<h3>Knife Configuration Parameter Changes<a class="headerlink" href="#knife-configuration-parameter-changes" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 0.10.x, it is difficult and error-prone to ensure that configuration parameters are applied in the right order. Configuration should be applied in the following order:</p>
+<ol class="arabic simple">
+<li>Default values</li>
+<li>Values set in knife.rb</li>
+<li>Values passed by command line option</li>
+</ol>
+<p>Because of the way the the <tt class="docutils literal"><span class="pre">mixlib-cli</span></tt> library is implemented, it is difficult to determine which values are defaults and which values are user-supplied command line options. Chef 11.x takes advantage of a new mode for <tt class="docutils literal"><span class="pre">mixlib-cli</span></tt> that keeps default values separate from user-supplied values. In the configuration process, Knife automatically applies config:</p>
+<ol class="arabic simple">
+<li>Default values set in the mixlib-cli DSL</li>
+<li>Configuration settings under Chef::Config[:knife]</li>
+<li>User supplied values parsed by mixlib-cli</li>
+</ol>
+<p>Depending on how Knife plugin authors have worked around the Chef 0.10.x behavior, it&#8217;s possible that this change will lead to incorrect values being used for configurable parameters. The Opscode cloud plugins have been reviewed and should work correctly on both Chef 0.10.x and Chef 11.x.</p>
+<p>When writing Knife plugins for Chef 11.x, plugin authors are encouraged to define default settings using the <tt class="docutils literal"><span class="pre">mixlib-config</span></tt> DSL, like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">option</span> <span class="ss">:ssh_user</span><span class="p">,</span>
+  <span class="ss">:short</span> <span class="o">=&gt;</span> <span class="s2">&quot;-x USERNAME&quot;</span><span class="p">,</span>
+  <span class="ss">:long</span> <span class="o">=&gt;</span> <span class="s2">&quot;--ssh-user USERNAME&quot;</span><span class="p">,</span>
+  <span class="ss">:description</span> <span class="o">=&gt;</span> <span class="s2">&quot;The ssh username&quot;</span><span class="p">,</span>
+  <span class="ss">:default</span> <span class="o">=&gt;</span> <span class="s2">&quot;root&quot;</span>
+</pre></div>
+</div>
+<p>and access configurable values via the config hash with symbols, like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1"># The local variable isn&#39;t necessary, it&#39;s just here to clarify the example:</span>
+<span class="n">ssh_user_name</span> <span class="o">=</span> <span class="n">config</span><span class="o">[</span><span class="ss">:ssh_user</span><span class="o">]</span>
+</pre></div>
+</div>
+<p>If compatibility with Chef 0.10.x is required, accessing configuration via a helper function like this will work correctly, but only if default values are NOT set with the <tt class="docutils literal"><span class="pre">mixlib-cli</span></tt> DSL.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">def</span> <span class="nf">locate_config_value</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+  <span class="n">key</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">to_sym</span>
+  <span class="n">config</span><span class="o">[</span><span class="n">key</span><span class="o">]</span> <span class="o">||</span> <span class="no">Chef</span><span class="o">::</span><span class="no">Config</span><span class="o">[</span><span class="ss">:knife</span><span class="o">][</span><span class="n">key</span><span class="o">]</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Default values must be managed manually until support for Chef 0.10.x is removed, for example, like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">ssh_user_name</span> <span class="o">=</span> <span class="n">locate_config_value</span><span class="p">(</span><span class="ss">:ssh_user</span><span class="p">)</span> <span class="o">||</span> <span class="s2">&quot;root&quot;</span>
+</pre></div>
+</div>
+<p>Further information is available in the ticket: CHEF-3497 - Allow knife.rb to implicitly provide all Knife related options - FIX COMMITTED</p>
+</div>
+<div class="section" id="remote-file-mirror-support-may-break-subclasses">
+<h3>Remote File Mirror Support May Break Subclasses<a class="headerlink" href="#remote-file-mirror-support-may-break-subclasses" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 11.x, <strong>remote_file</strong> now supports fetching files from a list of mirrors. As a result, the <tt class="docutils literal"><span class="pre">source</span></tt> parameter of the <strong>remote_file</strong> resource is internally stored as an array. This change is transparent to users of the <strong>remote_file</strong> resource; however, any library code that subclasses the <strong>remote_file</strong> resource&#8212;for example, to provide Amazon S3 support&#8212;will likely need to be updated to support and/or work around this change.</p>
+<p>To effectively revert the change so that the <tt class="docutils literal"><span class="pre">source</span></tt> parameter is a string, add code like this to your resource:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">def</span> <span class="nf">source</span><span class="p">(</span><span class="n">args</span><span class="o">=</span><span class="kp">nil</span><span class="p">)</span>
+  <span class="n">set_or_return</span><span class="p">(</span><span class="ss">:source</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="ss">:kind_of</span><span class="o">=&gt;</span><span class="nb">String</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">after_created</span>
+  <span class="kp">true</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Alternatively, you can update the provider to handle the case that the <tt class="docutils literal"><span class="pre">source</span></tt> parameter is an array.</p>
+</div>
+</div>
+<div class="section" id="chef-server">
+<h2>Chef Server<a class="headerlink" href="#chef-server" title="Permalink to this headline">¶</a></h2>
+<p>The following items are new for Chef 11.x server and/or are changes from Chef 0.10.x.</p>
+<div class="section" id="the-clients-endpoint-returns-json-with-a-json-class-for-edit-put-operations">
+<h3>The /clients endpoint returns JSON with a JSON class for edit (PUT) operations<a class="headerlink" href="#the-clients-endpoint-returns-json-with-a-json-class-for-edit-put-operations" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 0.8-10.x, the server&#8217;s response to a <tt class="docutils literal"><span class="pre">PUT</span></tt> to <tt class="docutils literal"><span class="pre">/clients/:client_name</span></tt> does not include the <tt class="docutils literal"><span class="pre">json_class</span></tt> key, though other calls, such as <tt class="docutils literal"><span class="pre">GET</span></tt>, do include this key. The client-side JSON implementation in Chef uses the presence of the <tt class="docutils literal"><span class="pre">json_class</span></tt> key as an indication that it should &#8220;inflate&#8221; the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the Ruby &#8216;json&#8217; library must be modified to accept a <tt class="docutils literal"><span class="pre">Chef::ApiClient</span></tt> or a hash.</p>
+<p>This change breaks the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">reregister</span></tt> command in Chef 10.16.2 and earlier. Forward compatibility is introduced in Chef 10.18.0.</p>
+</div>
+<div class="section" id="the-admin-and-validator-flags-are-exclusive">
+<h3>The admin and validator flags are exclusive<a class="headerlink" href="#the-admin-and-validator-flags-are-exclusive" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 11.x, clients may not be both admins and validators at the same time. In the current alpha release, you can set the admin flag on the validator but it has no effect. In a future release, you may receive an error when attempting to set the validator flag on a client, or when attempting to create a client with both flags set.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Exact behavior may change before release or in a minor version release after Chef 11.x.</p>
+</div>
+</div>
+<div class="section" id="strict-checking-of-top-level-json-keys">
+<h3>Strict checking of top-level JSON keys<a class="headerlink" href="#strict-checking-of-top-level-json-keys" title="Permalink to this headline">¶</a></h3>
+<p>All API endpoints that process requests to create or update a Chef object validate that the JSON sent by the client does not contain unknown top-level keys. A 400 error response will be returned if unknown top-level keys are encountered.</p>
+</div>
+<div class="section" id="creating-an-empty-sandbox-is-now-a-400-error">
+<h3>Creating an empty sandbox is now a 400 error<a class="headerlink" href="#creating-an-empty-sandbox-is-now-a-400-error" title="Permalink to this headline">¶</a></h3>
+<p>Sandboxes are used as part of the protocol for uploading cookbook content. An empty sandbox cannot be used for anything. Creating such a sandbox may indicate a logic error in client code and is (mildly) wasteful of server resources.</p>
+</div>
+<div class="section" id="error-messages-included-in-server-error-responses-have-changed">
+<h3>Error messages included in server error responses have changed<a class="headerlink" href="#error-messages-included-in-server-error-responses-have-changed" title="Permalink to this headline">¶</a></h3>
+<p>As part of the move to Erchef, error messages have been made more consistent. Code depending on specific error message text may be broken by these changes.</p>
+</div>
+<div class="section" id="some-error-codes-have-changes">
+<h3>Some error codes have changes<a class="headerlink" href="#some-error-codes-have-changes" title="Permalink to this headline">¶</a></h3>
+<p>In a number of cases, Erchef returns a more specific error status than the Chef 0.10.x server. For example, returning 400 instead of 500 for some bad request data situations.</p>
+<p>The <tt class="docutils literal"><span class="pre">chef-server</span></tt> cookbook has been completely rewritten to support an omnibus Chef Server install</p>
+</div>
+<div class="section" id="knife-reindex-is-not-supported-in-chef-11-server">
+<h3>knife reindex is not supported in Chef 11 Server<a class="headerlink" href="#knife-reindex-is-not-supported-in-chef-11-server" title="Permalink to this headline">¶</a></h3>
+<p>You can trigger a reindex of Chef object data using <tt class="docutils literal"><span class="pre">chef-server-ctl</span> <span class="pre">reindex</span></tt> while logged into the Chef Server box. The Knife command is still present in the Chef 11.x chef-client for use with a Chef 0.10.x server.</p>
+</div>
+<div class="section" id="openid-support-has-been-removed">
+<h3>OpenId support has been removed<a class="headerlink" href="#openid-support-has-been-removed" title="Permalink to this headline">¶</a></h3>
+<p>Support for OpenID is no longer in Chef.</p>
+</div>
+<div class="section" id="the-ruby-server-code-has-been-removed">
+<h3>The Ruby server code has been removed<a class="headerlink" href="#the-ruby-server-code-has-been-removed" title="Permalink to this headline">¶</a></h3>
+<p>As part of the move to Erchef, the Ruby API server code along with classes not needed by the client-side of Chef have been removed from the main chef repository.</p>
+</div>
+<div class="section" id="knife-cookbook-delete-purge-is-ignored-by-chef-11-server">
+<h3>knife cookbook delete &#8211;purge is ignored by Chef 11 Server<a class="headerlink" href="#knife-cookbook-delete-purge-is-ignored-by-chef-11-server" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 11.x, the server keeps track of which cookbooks use a given piece of cookbook content (via checksum). When a cookbook version is deleted, associated content will be deleted if not referenced by another cookbook version object. Therefore, there is no need for a purge operation when using the Chef 11.x server.</p>
+</div>
+</div>
+<div class="section" id="other-notable-changes">
+<h2>Other Notable Changes<a class="headerlink" href="#other-notable-changes" title="Permalink to this headline">¶</a></h2>
+<p>Changes that are not expected to be breaking, but are notable improvements.</p>
+<div class="section" id="output-formatters-are-the-default-output-when-running-in-the-console">
+<h3>Output Formatters are the Default Output when Running in the Console<a class="headerlink" href="#output-formatters-are-the-default-output-when-running-in-the-console" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 11.x, when output is to a TTY, Chef will automatically use output formatters to display information about what it&#8217;s doing. To accommodate this, the default log level is now <tt class="docutils literal"><span class="pre">auto</span></tt>, which evaluates to <tt class="docutils literal"><span class="pre">warn</span></tt> when running with a TTY (so log messages will not obscure the output formatter output), and <tt class="docutils literal"><span class="pre">info</span></tt> when running without a TTY (so you get important information about changes being made to the system when output formatters are not active).</p>
+<p>If you prefer one type of output over the other, you can force Chef to use output formatters or logger output with <tt class="docutils literal"><span class="pre">--force-formatter</span></tt> or <tt class="docutils literal"><span class="pre">--force-logger</span></tt>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In previous versions of Chef, bootstrapping templates would generally configure the log level to <tt class="docutils literal"><span class="pre">info</span></tt> in the client.rb file. You may wish to change this to <tt class="docutils literal"><span class="pre">auto</span></tt> or remove the setting from your config file entirely.</p>
+</div>
+</div>
+<div class="section" id="inline-compile-mode-for-lightweight-resources">
+<h3>Inline Compile Mode for Lightweight Resources<a class="headerlink" href="#inline-compile-mode-for-lightweight-resources" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 11.x, there is an optional &#8220;inline compilation&#8221; mode for lightweight resources, which is intended to make notifications work correctly for lightweight resources.</p>
+<div class="section" id="without-inline-compilation">
+<h4>Without Inline Compilation<a class="headerlink" href="#without-inline-compilation" title="Permalink to this headline">¶</a></h4>
+<p>When not using inline compilation (it is disabled by default), any resources created in a lightweight provider&#8217;s action blocks are inserted into the top level resource collection after the lightweight resource it belongs to. For example, given a resource collection like this:</p>
+<ul class="simple">
+<li>top_level_resource_one</li>
+<li>lwrp_resource</li>
+<li>top_level_resource_two</li>
+</ul>
+<p>When <tt class="docutils literal"><span class="pre">lwrp_resource</span></tt> is executed, the resource collection will then be modified like this:</p>
+<ul class="simple">
+<li>top_level_resource_one (already processed)</li>
+<li>lwrp_resource (already processed)</li>
+<li>embedded_resource_one (created by lwrp)</li>
+<li>embedded_resource_two (created by lwrp)</li>
+<li>top_level_resource_two</li>
+</ul>
+<p>This means that the <tt class="docutils literal"><span class="pre">lwrp_resource</span></tt> cannot correctly set its updated status based on the embedded resources, because it has finished executing before its embedded resources are processed.</p>
+</div>
+<div class="section" id="with-inline-compilation">
+<h4>With Inline Compilation<a class="headerlink" href="#with-inline-compilation" title="Permalink to this headline">¶</a></h4>
+<p>Inline compilation is enabled by calling <tt class="docutils literal"><span class="pre">use_inline_resources</span></tt> at the top of your lightweight provider file. When this is enabled, the code in your action block is executed in a self contained chef client run, with its own compile and converge phase. If any embedded resources have been updated, the top-level lightweight resource is marked as updated, and any notifications set on it will be triggered normally. Within the embedded chef run, resources in the top-level resource collection are invisible to the embedded resources, so embedded resources are not able to notify resources in the top-level resource collection.</p>
+</div>
+</div>
+<div class="section" id="lwrp-class-hierarchy-changes">
+<h3>LWRP Class Hierarchy Changes<a class="headerlink" href="#lwrp-class-hierarchy-changes" title="Permalink to this headline">¶</a></h3>
+<p>In Chef 11.x, lightweight resources resources now inherit from a <tt class="docutils literal"><span class="pre">LWRPBase</span></tt> resource instead of directly inheriting from <tt class="docutils literal"><span class="pre">Chef::Resource</span></tt>. Likewise, lightweight resources providers inherit from a <tt class="docutils literal"><span class="pre">LWRPBase</span></tt> provider instead of <tt class="docutils literal"><span class="pre">Chef::Provider</span></tt>. This should not impact existing code for lightweight resources.</p>
+</div>
+<div class="section" id="partial-support-in-templates">
+<h3>Partial Support in Templates<a class="headerlink" href="#partial-support-in-templates" title="Permalink to this headline">¶</a></h3>
+<p>Partials can be used in templates. See here:</p>
+<p>CHEF-3249 - Chef support for template partials - FIX COMMITTED
+<a class="reference external" href="https://github.com/opscode/chef/pull/498">https://github.com/opscode/chef/pull/498</a></p>
+</div>
+<div class="section" id="chef-apply">
+<h3>chef-apply<a class="headerlink" href="#chef-apply" title="Permalink to this headline">¶</a></h3>
+<p>There is now a <tt class="docutils literal"><span class="pre">chef-apply</span> <span class="pre">RECIPE</span></tt> command that will run a single Chef recipe with no <tt class="docutils literal"><span class="pre">JSON/run_list/config</span></tt> file required.</p>
+</div>
+<div class="section" id="miscellaneous">
+<h3>Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Locking is used to prevent simultaneous runs on UNIX-like systems</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">search</span></tt> assumes node search when the object type is omitted.</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">search</span></tt> will search over roles, tags, FQDN, and IP addresses when the given query is not in Apache Solr format (does not contain a colon : character).</li>
+<li>Knife essentials (<tt class="docutils literal"><span class="pre">knife</span> <span class="pre">upload</span></tt>, <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">download</span></tt>, <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">diff</span></tt>, and so on) have been merged to core Chef</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="just_enough_ruby_for_chef.html" title="Just Enough Ruby for Chef"
+             >next</a></li>
+        <li class="right" >
+          <a href="community_plugin_report_handler.html" title="Report Handlers"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

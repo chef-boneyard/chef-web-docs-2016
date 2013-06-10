@@ -1,0 +1,354 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Conditional Executions in Recipes and Resources &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About Resources and Providers" href="resource.html" />
+    <link rel="next" title="Notifications for Recipes and Resources" href="resource_common_notifications.html" />
+    <link rel="prev" title="Run Resources from the Resource Collection" href="resource_common_compile.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_common_notifications.html" title="Notifications for Recipes and Resources"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="resource_common_compile.html" title="Run Resources from the Resource Collection"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" accesskey="U">About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Conditional Executions in Recipes and Resources</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#arguments">Arguments</a></li>
+<li><a class="reference internal" href="#not-if-examples">not_if Examples</a></li>
+<li><a class="reference internal" href="#only-if-examples">only_if Examples</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="conditional-executions-in-recipes-and-resources">
+<h1>Conditional Executions in Recipes and Resources<a class="headerlink" href="#conditional-executions-in-recipes-and-resources" title="Permalink to this headline">¶</a></h1>
+<p>A conditional execution can be used to put additional guards around certain resources so that they are only run when the condition is met. A conditional execution can be used with any resource. The most common reason for using a conditional execution is to ensure that the <tt class="docutils literal"><span class="pre">execute</span></tt> resource produces the same result every time. A conditional execution can be passed as a string or as a block. A strings is executed as a shell command and a block is Ruby code. In both cases, the attribute is <tt class="docutils literal"><span class="pre">true</span></tt> when the command returns <tt class="docutils literal"><span class="pre">0</span></tt>).</p>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>The following attributes can be used to define a conditional execution for a resource:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">not_if</span></tt></td>
+<td>Indicates whether this resource should not be applied. If <tt class="docutils literal"><span class="pre">true</span></tt>, this action should not be performed. If <tt class="docutils literal"><span class="pre">false</span></tt>, this action should always be performed.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">only_if</span></tt></td>
+<td>Indicates whether only this resource is applied. If <tt class="docutils literal"><span class="pre">true</span></tt>, this action should always be performed. If <tt class="docutils literal"><span class="pre">false</span></tt>, this action should never be performed.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Permalink to this headline">¶</a></h2>
+<p>The following arguments can be used with the <tt class="docutils literal"><span class="pre">not_if</span></tt> or <tt class="docutils literal"><span class="pre">only_if</span></tt> attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Argument</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:user</span></tt></td>
+<td><p class="first">Use to specify the user that a command will run as. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;grep adam /etc/passwd&quot;</span><span class="p">,</span> <span class="ss">:user</span> <span class="o">=&gt;</span> <span class="s1">&#39;adam&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:group</span></tt></td>
+<td><p class="first">Use to specify the group that a command will run as. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;grep adam /etc/passwd&quot;</span><span class="p">,</span> <span class="ss">:group</span> <span class="o">=&gt;</span> <span class="s1">&#39;adam&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:environment</span></tt></td>
+<td><p class="first">Use to specify a hash of environment variables to be set. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;grep adam /etc/passwd&quot;</span><span class="p">,</span> <span class="ss">:environment</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s1">&#39;HOME&#39;</span> <span class="o">=&gt;</span> <span class="s2">&quot;/home/adam&quot;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:cwd</span></tt></td>
+<td><p class="first">Use to set the current working directory before running a command. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;grep adam passwd&quot;</span><span class="p">,</span> <span class="ss">:cwd</span> <span class="o">=&gt;</span> <span class="s1">&#39;/etc&#39;</span>
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:timeout</span></tt></td>
+<td><p class="first">Use to set a timeout for a command. For example:</p>
+<div class="last highlight-ruby"><div class="highlight"><pre><span class="n">not_if</span> <span class="s2">&quot;sleep 10000&quot;</span><span class="p">,</span> <span class="ss">:timeout</span> <span class="o">=&gt;</span> <span class="mi">10</span>
+</pre></div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="not-if-examples">
+<h2>not_if Examples<a class="headerlink" href="#not-if-examples" title="Permalink to this headline">¶</a></h2>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">not_if</span></tt> condition to create a file based on a template and using the presence of an attribute on the node to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">not_if</span> <span class="p">{</span> <span class="n">node</span><span class="o">[</span><span class="ss">:some_value</span><span class="o">]</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">not_if</span></tt> condition to create a file based on a template and using Ruby to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">not_if</span> <span class="k">do</span>
+    <span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;/etc/passwd&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">not_if</span></tt> condition to create a file based on a template and using a Ruby block (with curly braces) to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">not_if</span> <span class="p">{</span><span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;/etc/passwd&quot;</span><span class="p">)}</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">not_if</span></tt> condition to create a file based on a template and using a string to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">not_if</span> <span class="s2">&quot;test -f /etc/passwd&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Install a file from a remote location using bash</strong></p>
+<p>The following is an example of how to install the <tt class="docutils literal"><span class="pre">foo123</span></tt> module for Nginx. This module adds shell-style functionality to an Nginx configuration file and does the following:</p>
+<ul class="simple">
+<li>Declares three variables</li>
+<li>Gets the Nginx file from a remote location</li>
+<li>Installs the file using Bash to the path specified by the <tt class="docutils literal"><span class="pre">src_filepath</span></tt> variable</li>
+</ul>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">src_filename</span> <span class="o">=</span> <span class="s2">&quot;foo123-nginx-module-v</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;foo123&#39;</span><span class="o">][</span><span class="s1">&#39;version&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">.tar.gz&quot;</span>
+<span class="n">src_filepath</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Chef</span><span class="o">::</span><span class="no">Config</span><span class="o">[</span><span class="s1">&#39;file_cache_path&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">/</span><span class="si">#{</span><span class="n">src_filename</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="n">extract_path</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="no">Chef</span><span class="o">::</span><span class="no">Config</span><span class="o">[</span><span class="s1">&#39;file_cache_path&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">/nginx_foo123_module/</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;foo123&#39;</span><span class="o">][</span><span class="s1">&#39;checksum&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="n">remote_file</span> <span class="n">src_filepath</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;foo123&#39;</span><span class="o">][</span><span class="s1">&#39;url&#39;</span><span class="o">]</span>
+  <span class="n">checksum</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;nginx&#39;</span><span class="o">][</span><span class="s1">&#39;foo123&#39;</span><span class="o">][</span><span class="s1">&#39;checksum&#39;</span><span class="o">]</span>
+  <span class="n">owner</span> <span class="s1">&#39;root&#39;</span>
+  <span class="n">group</span> <span class="s1">&#39;root&#39;</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+<span class="k">end</span>
+
+<span class="n">bash</span> <span class="s1">&#39;extract_module&#39;</span> <span class="k">do</span>
+  <span class="n">cwd</span> <span class="o">::</span><span class="no">File</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">src_filepath</span><span class="p">)</span>
+  <span class="n">code</span> <span class="o">&lt;&lt;-</span><span class="no">EOH</span>
+<span class="sh">    mkdir -p #{extract_path}</span>
+<span class="sh">    tar xzf #{src_filename} -C #{extract_path}</span>
+<span class="sh">    mv #{extract_path}/*/* #{extract_path}/</span>
+<span class="no">    EOH</span>
+  <span class="n">not_if</span> <span class="p">{</span> <span class="o">::</span><span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="n">extract_path</span><span class="p">)</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This example is similar to the <tt class="docutils literal"><span class="pre">upload_progress_module</span></tt> recipe in the following cookbook: <a class="reference external" href="https://github.com/opscode-cookbooks/nginx">https://github.com/opscode-cookbooks/nginx</a>.</p>
+</div>
+</div>
+<div class="section" id="only-if-examples">
+<h2>only_if Examples<a class="headerlink" href="#only-if-examples" title="Permalink to this headline">¶</a></h2>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">only_if</span></tt> condition to create a file based on a template and using the presence of an attribute on the node to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">only_if</span> <span class="p">{</span> <span class="n">node</span><span class="o">[</span><span class="ss">:some_value</span><span class="o">]</span> <span class="p">}</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">only_if</span></tt> condition to create a file based on a template, and then use Ruby to specify a condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">only_if</span> <span class="k">do</span> <span class="o">!</span> <span class="no">File</span><span class="o">.</span><span class="n">exists?</span><span class="p">(</span><span class="s2">&quot;/etc/passwd&quot;</span><span class="p">)</span> <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>The following example shows how to use the <tt class="docutils literal"><span class="pre">only_if</span></tt> condition to create a file based on a template and using a string to specify the condition:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;/tmp/somefile&quot;</span> <span class="k">do</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">source</span> <span class="s2">&quot;somefile.erb&quot;</span>
+  <span class="n">only_if</span> <span class="s2">&quot;test -f /etc/passwd&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_common_notifications.html" title="Notifications for Recipes and Resources"
+             >next</a></li>
+        <li class="right" >
+          <a href="resource_common_compile.html" title="Run Resources from the Resource Collection"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" >About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

@@ -1,0 +1,327 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Pushy &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Upgrading to Chef Server 11.x" href="upgrade_server.html" />
+    <link rel="prev" title="Standalone Image Files" href="images.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="upgrade_server.html" title="Upgrading to Chef Server 11.x"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="images.html" title="Standalone Image Files"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Pushy</a><ul>
+<li><a class="reference internal" href="#components">Components</a><ul>
+<li><a class="reference internal" href="#pushy-server">Pushy Server</a></li>
+<li><a class="reference internal" href="#pushy-client">Pushy Client</a></li>
+<li><a class="reference internal" href="#workstations">Workstations</a></li>
+<li><a class="reference internal" href="#push-jobs-cookbook">push-jobs Cookbook</a><ul>
+<li><a class="reference internal" href="#whitelist">Whitelist</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#messages">Messages</a><ul>
+<li><a class="reference internal" href="#heartbeat-messages">Heartbeat Messages</a></li>
+<li><a class="reference internal" href="#job-messages">Job Messages</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reference">Reference</a><ul>
+<li><a class="reference internal" href="#knife-pushy">knife-pushy</a></li>
+<li><a class="reference internal" href="#pushy-api">Pushy API</a></li>
+<li><a class="reference internal" href="#ctl-pushy-client">ctl-pushy-client</a></li>
+<li><a class="reference internal" href="#pushy-server-rb">pushy-server.rb</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="pushy">
+<h1>Pushy<a class="headerlink" href="#pushy" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">DRAFT</p>
+</div>
+<p>Pushy is a tool that allows jobs to be run against nodes in a Chef organization independently of the typical Chef run. A job is an action or a command to be executed against a subset of nodes; the nodes against which a job is are determined by the results of a search query made to the Chef Server. Pushy is an extension of the Chef Server API that uses a Ruby client to initiate all connections to the Chef Server. Connections use the same authentication and authorization model as any other request made to the Chef Server. A Knife plugin is used to initiate job creation and job tracking.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Pushy is only available when running Private Chef.</p>
+</div>
+<div class="section" id="components">
+<h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
+<p>Pushy has three main components: a server, a client that is installed on every node in the Chef organization, and one (or more) workstations from which job messages are initiated.</p>
+<p>All communication between these components is done with the following:</p>
+<ul class="simple">
+<li>A heartbeat message between the Pushy server and each managed node</li>
+<li>A job message sent from a workstation</li>
+<li>The Chef Server API and the Pushy API</li>
+<li>A Knife plugin named <tt class="docutils literal"><span class="pre">knife-pushy</span></tt></li>
+<li>Chef Server authentication and authorization</li>
+<li>The ZeroMQ messaging library for message transport</li>
+</ul>
+<p>The following diagram shows the relationship of Pushy components with the rest of Chef:</p>
+<img alt="_images/overview_pushy_quick.png" src="_images/overview_pushy_quick.png" />
+<div class="section" id="pushy-server">
+<h3>Pushy Server<a class="headerlink" href="#pushy-server" title="Permalink to this headline">¶</a></h3>
+<p>The Pushy server is used to send job messages to one (or more) managed nodes.</p>
+<ul class="simple">
+<li>A heartbeat message is used to let all of the nodes in a Chef organization that the Pushy server is available</li>
+<li>A heartbeat message is one-way and does not require acknowledgements from a Pushy client</li>
+<li>The frequency of the heartbeat message is configurable</li>
+</ul>
+<p>The Pushy server listens for heartbeat messages from each Pushy client. If there is no heartbeat from a Pushy client, the Pushy server will mark that node as unavailable for job messages until the heartbeat resumes.</p>
+</div>
+<div class="section" id="pushy-client">
+<h3>Pushy Client<a class="headerlink" href="#pushy-client" title="Permalink to this headline">¶</a></h3>
+<p>The Pushy client is used to receive job messages from the Pushy server and to verify the heartbeat status of the Pushy environment.</p>
+<ul class="simple">
+<li>A heartbeat message is sent to the Pushy server to let it know the node is available</li>
+<li>A heartbeat message is one-way and does not require acknowledgements from the Pushy server</li>
+<li>The frequency of the heartbeat message is configurable</li>
+<li>The same authorization / authentication model used when a chef-client communicates with the Chef Server is used when the Pushy client communicates with the Pushy server</li>
+</ul>
+<p>The Pushy client listens for heartbeat messages from the Pushy server. If there is no heartbeat from the Pushy server, the Pushy client will finish its current job, but then stop accepting any new jobs until the heartbeat from the Pushy server resumes.</p>
+</div>
+<div class="section" id="workstations">
+<h3>Workstations<a class="headerlink" href="#workstations" title="Permalink to this headline">¶</a></h3>
+<p>A workstation is used to manage Pushy jobs, including maintaining the <strong>push-jobs</strong> cookbook, using Knife to start and stop jobs and to manage job lists.</p>
+</div>
+<div class="section" id="push-jobs-cookbook">
+<h3>push-jobs Cookbook<a class="headerlink" href="#push-jobs-cookbook" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>push-jobs</strong> cookbook is used by Pushy to install the Pushy client on managed nodes, and then set up the Pushy client to run as a service. In addition, Pushy relies on a cookbook attribute to manage the whitelist, which is a list of jobs (and commands) that are available to Pushy.</p>
+<div class="section" id="whitelist">
+<h4>Whitelist<a class="headerlink" href="#whitelist" title="Permalink to this headline">¶</a></h4>
+<p>A whitelist is a list of jobs and commands that are used by Pushy. A whitelist is saved as an attribute in the <strong>push-jobs</strong> cookbook. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">[</span><span class="s1">&#39;push_jobs&#39;</span><span class="o">][</span><span class="s1">&#39;whitelist&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;job_name&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;command&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The whitelist is accessed from a recipe using the <tt class="docutils literal"><span class="pre">node['push_jobs']['whitelist]</span></tt> attribute. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">template</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;name&quot;</span>
+  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="n">variables</span><span class="p">(</span><span class="ss">:whitelist</span> <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;push_jobs&#39;</span><span class="o">][</span><span class="s1">&#39;whitelist&#39;</span><span class="o">]</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">exec</span></tt> subcommand to add a job to the whitelist. For example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife <span class="nb">exec</span> -E <span class="s1">&#39;nodes.transform(&quot;name:A_NODE_NAME&quot;) do |n|</span>
+<span class="s1">    n.set[&quot;push_jobs&quot;][&quot;whitelist&quot;][&quot;ntpdate&quot;] = &quot;ntpdate -u time&quot;</span>
+<span class="s1">  end&#39;</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">[&quot;ntpdate&quot;]</span> <span class="pre">=</span> <span class="pre">&quot;ntpdate</span> <span class="pre">-u</span> <span class="pre">time&quot;</span></tt> is added to the whitelist:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default</span><span class="o">[</span><span class="s1">&#39;push_jobs&#39;</span><span class="o">][</span><span class="s1">&#39;whitelist&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">&quot;ntpdate&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;ntpdate -u time&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="messages">
+<h2>Messages<a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h2>
+<p>Pushy sends two types of messages: heartbeat and job.</p>
+<div class="section" id="heartbeat-messages">
+<h3>Heartbeat Messages<a class="headerlink" href="#heartbeat-messages" title="Permalink to this headline">¶</a></h3>
+<p>All heartbeat messaging is done using ZeroMQ and all messages between components are formatted as JSON.</p>
+<ul class="simple">
+<li>A heartbeat message is sent by the Pushy server to every managed node. This lets each of those nodes know that the Pushy server is available. This heartbeat message is one-way; no acknowledgements are returned by the nodes. ZeroMQ (and its PUBLISH / SUBSCRIBE pattern) is used for heartbeat messages sent by the Pushy server. The frequency of this heartbeat message is configurable.</li>
+<li>A heartbeat message is sent by a node to the Pushy server. This lets the Pushy server know which nodes are available. This heartbeat message is one-way; no acknowledgements are returned by the Pushy server. If the Pushy server is unavailable, a node will discontinue heartbeats until the Pushy server heartbeat resumes. ZeroMQ (and its DEALER / ROUTER pattern) is used for heartbeat messages sent by nodes.</li>
+</ul>
+<p>A Pushy job may not be completed if either the Pushy server or a certain number of nodes are unavailable. (The number of nodes that may be unavailable is determined by the <tt class="docutils literal"><span class="pre">quorum</span></tt> setting when the request is made.)</p>
+</div>
+<div class="section" id="job-messages">
+<h3>Job Messages<a class="headerlink" href="#job-messages" title="Permalink to this headline">¶</a></h3>
+<p>All job messaging is done using ZeroMQ and all messages between components are formatted as JSON. ZeroMQ (and its DEALER / ROUTER pattern) is used to send job-related messages between a managed node and the Pushy server. A job message can be queried and reused.</p>
+<ul class="simple">
+<li>A job message involves either job creation or job tracking</li>
+<li>A job message may be sent to one (or more) nodes in a Chef organization and contains a command message that is executed on each node that receives the job message</li>
+<li>A job message is sent to a node from the Chef Server as a request, using the Chef Server API and Pushy API</li>
+<li>A job message is a command; the <tt class="docutils literal"><span class="pre">knife-pushy</span></tt> subcommand defines the arguments available for job messaging</li>
+<li>Only a single job message may be issued to a node at a time; each job message must be completed before another job message may be sent</li>
+<li>The search functionality in Chef Server is used to determine which nodes in the Chef organization will receive a job message</li>
+<li>Each node returns acknowledgements, updates, and results to the Pushy server</li>
+</ul>
+</div>
+</div>
+<div class="section" id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<p>The following sections describe the Knife subcommands, the Pushy API, and configuration settings used by Pushy.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">WILL INCLUDE THESE WHEN FINISHED.</p>
+</div>
+<div class="section" id="knife-pushy">
+<h3>knife-pushy<a class="headerlink" href="#knife-pushy" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://docs.opscode.com/plugin_knife_pushy.html">http://docs.opscode.com/plugin_knife_pushy.html</a></p>
+</div>
+<div class="section" id="pushy-api">
+<h3>Pushy API<a class="headerlink" href="#pushy-api" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://docs.opscode.com/api_pushy.html">http://docs.opscode.com/api_pushy.html</a></p>
+</div>
+<div class="section" id="ctl-pushy-client">
+<h3>ctl-pushy-client<a class="headerlink" href="#ctl-pushy-client" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://docs.opscode.com/ctl_pushy_client.html">http://docs.opscode.com/ctl_pushy_client.html</a></p>
+</div>
+<div class="section" id="pushy-server-rb">
+<h3>pushy-server.rb<a class="headerlink" href="#pushy-server-rb" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://docs.opscode.com/config_rb_pushy_server.html">http://docs.opscode.com/config_rb_pushy_server.html</a></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="upgrade_server.html" title="Upgrading to Chef Server 11.x"
+             >next</a></li>
+        <li class="right" >
+          <a href="images.html" title="Standalone Image Files"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

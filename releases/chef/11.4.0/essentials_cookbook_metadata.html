@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Cookbook Metadata &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Recipes" href="essentials_cookbook_recipes.html" />
+    <link rel="prev" title="About Libraries" href="essentials_cookbook_libraries.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbook_recipes.html" title="About Recipes"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbook_libraries.html" title="About Libraries"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About Cookbook Metadata</a><ul>
+<li><a class="reference internal" href="#error-messages">Error Messages</a></li>
+<li><a class="reference internal" href="#metadata-rb">metadata.rb</a><ul>
+<li><a class="reference internal" href="#settings">Settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-cookbook-metadata">
+<h1>About Cookbook Metadata<a class="headerlink" href="#about-cookbook-metadata" title="Permalink to this headline">¶</a></h1>
+<p>Every cookbook requires a small amount of metadata. Metadata is stored in a file called metadata.rb that lives at the top of each cookbook&#8217;s directory. The contents of the metadata.rb file provides hints to the Chef Server so that cookbooks are deployed to each node correctly.</p>
+<div class="section" id="error-messages">
+<h2>Error Messages<a class="headerlink" href="#error-messages" title="Permalink to this headline">¶</a></h2>
+<p>The Chef Server will only try to distribute the cookbooks that are needed to configure an individual node. This is determined by identifying the roles and recipes that are assigned directly to that system, and then to expand the list of dependencies, and then to deliver that entire set to the node. In some cases, if the dependency is not specified in the cookbook&#8217;s metadata, the Chef Server may not treat that dependency as a requirement, which will result in an error message. If an error message is received from the Chef Server about cookbook distribution, verify the <tt class="docutils literal"><span class="pre">depends</span></tt> entries in the metadata.rb file, and then try again.</p>
+</div>
+<div class="section" id="metadata-rb">
+<h2>metadata.rb<a class="headerlink" href="#metadata-rb" title="Permalink to this headline">¶</a></h2>
+<p>Every cookbook requires a small amount of metadata. Metadata is stored in a file called metadata.rb that lives at the top of each cookbook&#8217;s directory. The contents of the metadata.rb file provides hints to the Chef Server so that cookbooks are deployed to each node correctly.</p>
+<p>A metadata.rb file is never interpreted directly. Rather, the metadata.rb file provides a simple location to store and edit data that is then compiled by the Chef Server and stored as JSON data. Metadata is compiled whenever the following happens: a cookbook is uploaded to the Chef Server and the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">cookbook</span> <span class="pre">metadata</span></tt> sub-command is run. When Knife is used to create a cookbook, a metadata.rb file is created automatically. In general, editing metadata should only be done using the metadata.rb file and then either uploading the cookbook to the Chef Server or by asking the Chef Server to recompile the metadata into JSON data.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A metadata.json file can be edited directly, should temporary changes be required. Any subsequent upload or action that generates metadata will cause the existing metadata.json file to be overwritten with the newly generated metadata. Therefore, any permanent change to metadata that is required should only be made in the metadata.rb file.</p>
+</div>
+<div class="section" id="settings">
+<h3>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">attribute</span></tt></td>
+<td><p class="first">The list of attributes that are required to configure a cookbook. An attribute name is required, followed by any of these options: <tt class="docutils literal"><span class="pre">display_name</span></tt> (the name that appears in the user interface), <tt class="docutils literal"><span class="pre">description</span></tt> (a short description), <tt class="docutils literal"><span class="pre">choice</span></tt> (an array of choices that are presented to a user), <tt class="docutils literal"><span class="pre">calculated</span></tt> (indicates if the default value is calculated by the recipe), <tt class="docutils literal"><span class="pre">type</span></tt> (the type of value, either <tt class="docutils literal"><span class="pre">string</span></tt> or <tt class="docutils literal"><span class="pre">array</span></tt>), <tt class="docutils literal"><span class="pre">required</span></tt> (the level of user input, either <tt class="docutils literal"><span class="pre">required</span></tt>,``recommended``, or <tt class="docutils literal"><span class="pre">optional</span></tt>), <tt class="docutils literal"><span class="pre">recipes</span></tt> (an array of recipes), or <tt class="docutils literal"><span class="pre">default</span></tt> (the attribute&#8217;s default value). For example:</p>
+<div class="last highlight-python"><pre>attribute 'pets/cat/name',
+ :display_name =&gt; "Cat Name",
+ :description =&gt; "The name of your cat",
+ :choice =&gt; \[
+   'kitty kitty',
+   'peanut',
+   'einstein',
+   'honey' \],
+ :type =&gt; "string",
+ :required =&gt; "recommended",
+ :recipes =&gt; \[ 'cats::eat' \],
+ :default =&gt; "kitty kitty"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">conflicts</span></tt></td>
+<td><p class="first">Indicates that a cookbook conflicts with another cookbook or cookbook version. Use a version constraint to define constraints for cookbook versions: <tt class="docutils literal"><span class="pre">&lt;</span></tt> (less than), <tt class="docutils literal"><span class="pre">&lt;=</span></tt> (less than or equal to), <tt class="docutils literal"><span class="pre">=</span></tt> (equal to), <tt class="docutils literal"><span class="pre">&gt;=</span></tt> (greater than or equal to), <tt class="docutils literal"><span class="pre">~&gt;</span></tt> (approximately greater than), or <tt class="docutils literal"><span class="pre">&gt;</span></tt> (greater than).  This field requires that a cookbook with a matching name and version exist on the Chef Server. When the match exists, the Chef Server will ensure that any conflicted cookbooks are not included with the set of cookbooks that are sent to the node when the chef-client runs. For example, if a cookbook conflicts with another cookbook named &#8220;docs&#8221;:</p>
+<div class="highlight-python"><pre>conflicts "dogs"</pre>
+</div>
+<p>Or if the cookbook conflicted with a cookbook named &#8220;dogs&#8221; and greater than version 1.0:</p>
+<div class="last highlight-python"><pre>conflicts "dogs", "&gt; 1.0"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">depends</span></tt></td>
+<td><p class="first">Indicates that a cookbook has a dependency on another cookbook. Use a version constraint to define dependencies for cookbook versions: <tt class="docutils literal"><span class="pre">&lt;</span></tt> (less than), <tt class="docutils literal"><span class="pre">&lt;=</span></tt> (less than or equal to), <tt class="docutils literal"><span class="pre">=</span></tt> (equal to), <tt class="docutils literal"><span class="pre">&gt;=</span></tt> (greater than or equal to), <tt class="docutils literal"><span class="pre">~&gt;</span></tt> (approximately greater than), or <tt class="docutils literal"><span class="pre">&gt;</span></tt> (greater than). This field requires that a cookbook with a matching name and version exists on the Chef Server. When the match exists, the Chef Server will include the dependency as part of the set of cookbooks that are sent to the node when the chef-client runs. It is very important that the <tt class="docutils literal"><span class="pre">depends</span></tt> field contain accurate data. If a dependency statement is inaccurate, Chef may not be able to complete the configuration of the system. For example, to set a dependency a cookbook named &#8220;cats&#8221;:</p>
+<div class="highlight-python"><pre>depends "cats"</pre>
+</div>
+<p>Or, to set a dependency on the same cookbook, but only when the version is less than 1.0:</p>
+<div class="last highlight-python"><pre>depends "cats", "&lt; 1.0"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">description</span></tt></td>
+<td><p class="first">A short description of a cookbook and its functionality. For example:</p>
+<div class="last highlight-python"><pre>description 'A fancy cookbook that manages a herd of cats!'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">grouping</span></tt></td>
+<td><p class="first">Adds a title and description to a group of attributes within a namespace. Takes a name (along with the / notation that defines a nested grouping), a title, and a short description. For example:</p>
+<div class="last highlight-python"><pre>grouping 'pets/cat',
+ :title =&gt; "Cat Options",
+ :description =&gt; "Describe your cat using the options below"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">licensing</span></tt></td>
+<td><p class="first">The type of license under which a cookbook is distributed: <tt class="docutils literal"><span class="pre">apachev2</span></tt>, <tt class="docutils literal"><span class="pre">gplv2</span></tt>, <tt class="docutils literal"><span class="pre">gplv3</span></tt>, <tt class="docutils literal"><span class="pre">mit</span></tt>, or <tt class="docutils literal"><span class="pre">none</span></tt> (default). This option will place the appropriate license notice in the pre-created files. Be aware of the licenses for files inside of a cookbook and be sure to follow any restrictions they describe. For example:</p>
+<div class="highlight-python"><pre>license 'Apache v2.0'</pre>
+</div>
+<p>or:</p>
+<div class="highlight-python"><pre>license 'GPL v3'</pre>
+</div>
+<p>or:</p>
+<div class="highlight-python"><pre>license 'MIT'</pre>
+</div>
+<p>or:</p>
+<div class="last highlight-python"><pre>license 'Proprietary - All Rights Reserved'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">long_description</span></tt></td>
+<td><p class="first">A longer description that ideally contains full instructions on the proper use of a cookbook, including definitions, libraries, dependencies, and so on. There are two ways to use this field: with the contents embedded in the field itself or with the contents pulled from a file at a specified path, such as a README.rdoc located at the top of a cookbook directory. For example, to embed the long description within the field itself:</p>
+<div class="highlight-python"><pre>long_description &lt;&lt;-EOH
+= DESCRIPTION:
+
+Complete Debian/Ubuntu style Apache2 configuration.
+
+= REQUIREMENTS:
+
+Debian or Ubuntu preferred.
+
+Red Hat/CentOS and Fedora can be used but will be converted to
+a Debian/Ubuntu style Apache as it's far easier to manage
+with Chef.
+
+= ATTRIBUTES:
+
+The file attributes/apache.rb contains the following attribute
+types:
+
+* platform specific locations and settings.
+* general settings
+* pre-fork attributes
+* worker attributes
+
+General settings and pre-fork/worker attributes are tunable.
+EOH</pre>
+</div>
+<p>Or to read the contents from a specified file:</p>
+<div class="last highlight-python"><pre>long_description IO.read(File.join
+  (File.dirname(__FILE__), 'README.rdoc')
+)</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">maintainer</span></tt></td>
+<td><p class="first">The name of the person responsible for maintaining a cookbook, either an individual or an organization. For example:</p>
+<div class="last highlight-python"><pre>maintainer 'Adam Jacob'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">maintainer_email</span></tt></td>
+<td><p class="first">The email address for the person responsible for maintaining a cookbook. Only one email can be listed here, so if this needs to be forwarded to multiple people consider using an email address that is already setup for mail forwarding. For example:</p>
+<div class="last highlight-python"><pre>maintainer_email 'adam@example.com'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">name</span></tt></td>
+<td><p class="first">The name of the cookbook. This field is inferred unless specified. For example:</p>
+<div class="last highlight-python"><pre>name 'cats'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">provides</span></tt></td>
+<td><p class="first">Adds a recipe, definition, or resource that is provided by this cookbook, should the auto-populated list be insufficient. For example, for recipes:</p>
+<div class="highlight-python"><pre>provides "cats::sleep"
+provides "cats::eat"</pre>
+</div>
+<p>For definitions:</p>
+<div class="highlight-python"><pre>provides "here(:kitty, :time_to_eat)"</pre>
+</div>
+<p>And for resources:</p>
+<div class="last highlight-python"><pre>provides "service[snuggle]"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">recipe</span></tt></td>
+<td><p class="first">A description for a recipe, mostly for cosmetic value within the Chef Server user interface. For example:</p>
+<div class="highlight-python"><pre>recipe "cats::sleep", "For a crazy 20 hours a day."</pre>
+</div>
+<p>Or:</p>
+<div class="last highlight-python"><pre>recipe "cats::eat", "When they are not sleeping."</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">recommends</span></tt></td>
+<td><p class="first">Adds a dependency on another cookbook that is recommended, but not required. A cookbook will still work even if recommended dependencies are not available. For example:</p>
+<div class="highlight-python"><pre>recommends "dogs"</pre>
+</div>
+<p>Or, to recommend a cookbook named &#8220;dogs&#8221; and for version 1.0 (or higher):</p>
+<div class="last highlight-python"><pre>recommends "dogs", "&gt; 1.0"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">replaces</span></tt></td>
+<td><p class="first">Indicates that this cookbook should replace another (and can be used in-place of that cookbook). For example, to replace a cookbook named &#8220;dogs&#8221; with this cookbook:</p>
+<div class="highlight-python"><pre>replaces "dogs"</pre>
+</div>
+<p>Or to replace a cookbook named dogs, but only for versions prior to 4.0:</p>
+<div class="last highlight-python"><pre>replaces "dogs", "&lt; 4.0"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">suggests</span></tt></td>
+<td><p class="first">Adds a dependency on another cookbook that is suggested, but not required. This field is weaker than <tt class="docutils literal"><span class="pre">recommends</span></tt>; a cookbook will still work even when suggested dependencies are not available. For example:</p>
+<div class="highlight-python"><pre>suggests "cats"</pre>
+</div>
+<p>Or, to suggest a cookbook named &#8220;cats&#8221;, but only for versions 1.0 and higher.</p>
+<div class="last highlight-python"><pre>suggests "cats", "&gt; 1.0"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">supports</span></tt></td>
+<td><p class="first">Indicates that a cookbook has a supported platform. Use a version constraint to define dependencies for platform versions: <tt class="docutils literal"><span class="pre">&lt;</span></tt> (less than), <tt class="docutils literal"><span class="pre">&lt;=</span></tt> (less than or equal to), <tt class="docutils literal"><span class="pre">=</span></tt> (equal to), <tt class="docutils literal"><span class="pre">&gt;=</span></tt> (greater than or equal to), <tt class="docutils literal"><span class="pre">~&gt;</span></tt> (approximately greater than), or <tt class="docutils literal"><span class="pre">&gt;</span></tt> (greater than). To specify more than one platform, use more than one <tt class="docutils literal"><span class="pre">supports</span></tt> field, once for each platform. For example, to support every version of Ubuntu:</p>
+<div class="highlight-python"><pre>supports 'ubuntu'</pre>
+</div>
+<p>Or, to support versions of Ubuntu between 8.04 and 9.10:</p>
+<div class="highlight-python"><pre>supports 'ubuntu', "&gt;= 8.04"</pre>
+</div>
+<p>Or, to support only Ubuntu 9.10:</p>
+<div class="last highlight-python"><pre>supports 'ubuntu', '= 9.10'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">version</span></tt></td>
+<td><p class="first">The current version of a cookbook. Version numbers always follow a simple three-number version sequence. For example:</p>
+<div class="last highlight-python"><pre>version "1.9.0"</pre>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbook_recipes.html" title="About Recipes"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbook_libraries.html" title="About Libraries"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

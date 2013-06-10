@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>sudo Lightweight Resource &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About LWRPs" href="lwrp.html" />
+    <link rel="next" title="supervisor Lightweight Resource" href="lwrp_supervisor.html" />
+    <link rel="prev" title="samba Lightweight Resource" href="lwrp_samba.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_supervisor.html" title="supervisor Lightweight Resource"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="lwrp_samba.html" title="samba Lightweight Resource"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" accesskey="U">About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">sudo Lightweight Resource</a><ul>
+<li><a class="reference internal" href="#sudo">sudo</a><ul>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="sudo-lightweight-resource">
+<h1>sudo Lightweight Resource<a class="headerlink" href="#sudo-lightweight-resource" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>sudo</strong> cookbook is used to install Indicates that a bootstrap operation should be executed using sudo. and configure /etc/sudoers.</p>
+<p>The <strong>sudo</strong> cookbook contains the following lightweight resource: <tt class="docutils literal"><span class="pre">sudo</span></tt>.</p>
+<div class="section" id="sudo">
+<h2>sudo<a class="headerlink" href="#sudo" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>sudo</strong> lightweight resource is used to manage sudo fragment files in /etc/sudoers.d. This lightweight provider has two modes:</p>
+<ul class="simple">
+<li>Natural mode mimics the sudo file interface. This mode will render a sudo fragment in /etc/sudoers.d</li>
+<li>Template mode requires an erb template and a hash of variables. This mode will render a sudo fragment in /etc/sudoers.d and ensure that any resulting sudo fragments pass validation and have the proper permissions to the file system.</li>
+</ul>
+<p>In the event that a sudo fragment does not pass validation, this lightweight resource will fail the Chef run before the fragment can be copied to /etc/sudoers.d. This will prevent corruption of your sudo configuration.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">sudo version 1.7.2 (or newer) is required to use the <strong>sudo</strong> lightweight resource, as it relies on the <tt class="docutils literal"><span class="pre">#includedir</span></tt> directive that is introduced with version 1.7.2. The recipe does not enforce installing the version. To use this lightweight resource, set <tt class="docutils literal"><span class="pre">node['authorization']['sudo']['include_sudoers_d']</span></tt> to <tt class="docutils literal"><span class="pre">true</span></tt>.</p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This lightweight resource is part of the <strong>sudo</strong> cookbook (<a class="reference external" href="http://community.opscode.com/cookbooks/sudo">http://community.opscode.com/cookbooks/sudo</a>).</p>
+</div>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider does not have any actions.</p>
+</div>
+<div class="section" id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">commands</span></tt></td>
+<td>An array of commands that the user or group can execute using sudo. This value must use the full path for each command, otherwise the resulting fragment will fail validation.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">group</span></tt></td>
+<td>The group for which sudo privileges are provided.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">host</span></tt></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nopasswd</span></tt></td>
+<td>Indicates whether a password must be supplied when invoking sudo.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">runas</span></tt></td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">template</span></tt></td>
+<td>A erb template file in the current cookbook (not the <tt class="docutils literal"><span class="pre">sudo</span></tt> cookbook). If this attribute is used, all other attributes will be ignored except for <tt class="docutils literal"><span class="pre">variables</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">user</span></tt></td>
+<td>The user for which sudo privileges are provided.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">variables</span></tt></td>
+<td>A hash of variables that are passed into an erb template file.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>To use the natural (default) mode, do something like:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">sudo</span> <span class="s2">&quot;tomcat&quot;</span> <span class="k">do</span>
+  <span class="n">user</span> <span class="s2">&quot;%tomcat&quot;</span> <span class="c1"># or a username</span>
+  <span class="n">runas</span> <span class="s2">&quot;app_user&quot;</span> <span class="c1"># or &quot;app_user : tomcat&quot;</span>
+  <span class="n">commands</span> <span class="o">[</span><span class="s2">&quot;/etc/init.d/tomcat restart&quot;</span><span class="o">]</span> <span class="c1"># array of commands, will be .join(&quot;,&quot;)</span>
+  <span class="n">host</span> <span class="s2">&quot;ALL&quot;</span>
+  <span class="n">nopasswd</span> <span class="kp">false</span> <span class="c1"># true prepends the runas_spec with NOPASSWD</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>which will generate something like the following in <tt class="docutils literal"><span class="pre">/etc/sudoers.d/tomcat</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1"># this file was generated by chef</span>
+<span class="o">%</span><span class="n">tomcat</span> <span class="no">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">app_user</span><span class="p">)</span> <span class="sr">/etc/ini</span><span class="n">t</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">tomcat</span> <span class="n">restart</span>
+</pre></div>
+</div>
+<p>To use the template mode, do something like:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">sudo</span> <span class="s2">&quot;tomcat&quot;</span>
+  <span class="c1"># this template must exist in the calling cookbook</span>
+  <span class="n">template</span> <span class="s2">&quot;restart_tomcat.erb&quot;</span>
+  <span class="n">variables</span><span class="p">(</span> <span class="ss">:cmds</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s2">&quot;/etc/init.d/tomcat restart&quot;</span> <span class="o">]</span> <span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>which will generate something like the following in <tt class="docutils literal"><span class="pre">/etc/sudoers.d/tomcat</span></tt>:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="c1"># this file was generated by chef</span>
+<span class="o">%</span><span class="n">tomcat</span> <span class="no">ALL</span><span class="o">=</span><span class="p">(</span><span class="n">app_user</span><span class="p">)</span> <span class="sr">/etc/ini</span><span class="n">t</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">tomcat</span> <span class="n">restart</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="lwrp_supervisor.html" title="supervisor Lightweight Resource"
+             >next</a></li>
+        <li class="right" >
+          <a href="lwrp_samba.html" title="samba Lightweight Resource"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="lwrp.html" >About LWRPs</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

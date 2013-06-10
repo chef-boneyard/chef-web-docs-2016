@@ -1,0 +1,313 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Unix Environment Variables &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Environments" href="essentials_environments.html" />
+    <link rel="prev" title="About Data Bags" href="essentials_data_bags.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_environments.html" title="About Environments"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_data_bags.html" title="About Data Bags"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Unix Environment Variables</a><ul>
+<li><a class="reference internal" href="#child-processes-and-inheritance">Child Processes and Inheritance</a></li>
+<li><a class="reference internal" href="#managing-environments-when-using-chef">Managing Environments when Using Chef</a><ul>
+<li><a class="reference internal" href="#using-the-service-s-init-script">Using the Service&#8217;s Init Script</a><ul>
+<li><a class="reference internal" href="#upstart-services">Upstart Services</a></li>
+<li><a class="reference internal" href="#systemd-services">Systemd Services</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#using-env">Using ENV</a></li>
+<li><a class="reference internal" href="#using-resource-attributes">Using Resource Attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-issues">Other Issues</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="unix-environment-variables">
+<h1>Unix Environment Variables<a class="headerlink" href="#unix-environment-variables" title="Permalink to this headline">¶</a></h1>
+<p>In Unix, a process&#8217; environment is a set of key-value pairs made available to the process. Often, programs expect their environment to contain information required for the program to run. The details of how these key-value pairs are accessed depends on the API of the language being used. This article explains how environments of child processes interact with their parent process and how you can use Chef to ensure that services and applications are started with the proper environment.</p>
+<div class="section" id="child-processes-and-inheritance">
+<h2>Child Processes and Inheritance<a class="headerlink" href="#child-processes-and-inheritance" title="Permalink to this headline">¶</a></h2>
+<p>Child processes inherit a copy of their parent&#8217;s environment. In Bash (and other shells) the environment is accessible via shell variables. Shell variables can be added to the environment that is inherited by children processes using the export keyword.</p>
+<p>Consider the following example:</p>
+<div class="highlight-bash"><div class="highlight"><pre>% <span class="nv">WOO</span><span class="o">=</span><span class="s2">&quot;woo&quot;</span> <span class="c">#Set a shell variable</span>
+% <span class="nb">echo</span> <span class="nv">$WOO</span>
+woo
+% bash <span class="c">#Start a new process, a child of our first shell</span>
+% <span class="nb">echo</span> <span class="nv">$WOO</span> <span class="c"># Shell variable is empty because we didn&#39;t export it</span>
+
+% <span class="nb">exit</span> <span class="c"># Return to original shell</span>
+<span class="nb">exit</span>
+% <span class="nb">export </span>WOO <span class="c"># Export variable</span>
+% bash
+% <span class="nb">echo</span> <span class="nv">$WOO</span> <span class="c">#Shell variable now available in children.</span>
+woo
+% <span class="nb">exit</span>
+</pre></div>
+</div>
+<p>As mentioned, the child process gets a copy of its parent&#8217;s environment. This means that any changes made to that environment do not affect the parent process. For example:</p>
+<div class="highlight-bash"><div class="highlight"><pre>% <span class="nv">WOO</span><span class="o">=</span><span class="s2">&quot;woo&quot;</span> <span class="c">#Set a shell variable</span>
+% <span class="nb">echo</span> <span class="nv">$WOO</span>
+woo
+% bash <span class="c">#Start a new process, a child of our first shell</span>
+% <span class="nb">export </span><span class="nv">WOO</span><span class="o">=</span><span class="s2">&quot;hello&quot;</span> <span class="c"># Change and export the shell variable</span>
+% <span class="nb">exit</span> <span class="c"># Return to original shell</span>
+<span class="nb">exit</span>
+% <span class="nb">echo</span> <span class="nv">$WOO</span> <span class="c">#The parent&#39;s value remains unchanged.</span>
+woo
+% <span class="nb">exit</span>
+</pre></div>
+</div>
+<p>The principles mentioned above (a child process receives a copy of its parent&#8217;s environment and cannot affect their parent&#8217;s environment) apply in Ruby and Chef just as they do in Bash.</p>
+<p>In Ruby (and thus Chef), the current environment can be altered via the ENV variable. Any changes made to the environment will also be available to child process started by Chef. For example, consider the following recipe:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ENV<span class="o">[</span><span class="s1">&#39;FOO&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;bar&quot;</span>
+bash <span class="s2">&quot;env_test0&quot;</span> <span class="k">do</span>
+<span class="k">  </span>code<span class="s">&lt;&lt;-EOF</span>
+<span class="s">  echo $FOO</span>
+<span class="s">EOF</span>
+end
+</pre></div>
+</div>
+<p>When run, the bash resource will correctly echo &#8220;bar&#8221; to its standard output.</p>
+<p>However, just as in Bash, changes made in child processes have no affect on the parent, and thus no affect on subsequent child processes:</p>
+<div class="highlight-bash"><div class="highlight"><pre>bash <span class="s2">&quot;env_test1&quot;</span> <span class="k">do</span>
+<span class="k">  </span>code<span class="s">&lt;&lt;-EOF</span>
+<span class="s">  export BAZ=&quot;bar&quot;</span>
+<span class="s">EOF</span>
+end
+
+bash <span class="s2">&quot;env_test2&quot;</span> <span class="k">do</span>
+<span class="k">  </span>code<span class="s">&lt;&lt;-EOF</span>
+<span class="s">  echo $BAZ</span>
+<span class="s">EOF</span>
+end
+</pre></div>
+</div>
+<p>When run, the second bash resource will not cause anything to be echoed to standard out as BAZ is not part of its environment.</p>
+</div>
+<div class="section" id="managing-environments-when-using-chef">
+<h2>Managing Environments when Using Chef<a class="headerlink" href="#managing-environments-when-using-chef" title="Permalink to this headline">¶</a></h2>
+<p>Services and other processes often look to environment variables for important information needed at run time. There are a number of ways to ensure that processes have access to the environment variables they need to run properly.</p>
+<div class="section" id="using-the-service-s-init-script">
+<h3>Using the Service&#8217;s Init Script<a class="headerlink" href="#using-the-service-s-init-script" title="Permalink to this headline">¶</a></h3>
+<p>Ideally, a service&#8217;s init script would contain everything needed to properly start that service, including the necessary environment. Ensuring that the init script itself contains the necessary environment changes ensures that the service will start properly whenever it is being started using its init script, whether that be from Chef&#8217;s service resource or directly from the shell. In classic System V init scripts, the environment can be altered just as it can be altered in any other shell script, by using a shell variable marked with the export keyword:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">export</span> <span class="no">IMPORTANT_VAR</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+</pre></div>
+</div>
+<div class="section" id="upstart-services">
+<h4>Upstart Services<a class="headerlink" href="#upstart-services" title="Permalink to this headline">¶</a></h4>
+<p>For services started using Upstart (the System V-compatible init system used by recent versions of Ubuntu and other distributions), their environment can be altered using env:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">env</span> <span class="no">IMPORTANT_VAR</span><span class="o">=</span><span class="s2">&quot;value&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="systemd-services">
+<h4>Systemd Services<a class="headerlink" href="#systemd-services" title="Permalink to this headline">¶</a></h4>
+<p>For services started using systemd (the System V-compatible init system by the recent versions of Fedora and other distributions), their environment can be altered using the <tt class="docutils literal"><span class="pre">Environment</span></tt> or <tt class="docutils literal"><span class="pre">EnvironmentFile</span></tt> options:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="no">Environment</span><span class="o">=</span><span class="s2">&quot;IMPORTANT_VAR=&#39;value&#39;&quot;</span>
+</pre></div>
+</div>
+<p>If the init script provided by the package does not include the necessary environment variables, you can manage your altered init script using the Chef <strong>template</strong> resource.</p>
+</div>
+</div>
+<div class="section" id="using-env">
+<h3>Using ENV<a class="headerlink" href="#using-env" title="Permalink to this headline">¶</a></h3>
+<p>Another method is to use Ruby&#8217;s predefined ENV variable to set the environment variable. This ensures that any child processes (including the service that a resource may be starting) have this value in their environment. While not technically a Hash, ENV can be manipulated as if it were a Hash. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;IMPORTANT_VAR&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&quot;value&quot;</span>
+
+<span class="c1"># Some service that requires IMPORTANT VAR</span>
+<span class="n">service</span> <span class="s2">&quot;example_service&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:start</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Changes made to ENV only effect the environment of the chef-client process and its children processes. Altering the environment in this way will often ensure that Chef can start the service properly, but will not ensure that the service will start properly when started using other methods.</p>
+</div>
+</div>
+<div class="section" id="using-resource-attributes">
+<h3>Using Resource Attributes<a class="headerlink" href="#using-resource-attributes" title="Permalink to this headline">¶</a></h3>
+<p>If you are starting a processes by using an execute or script resource, you can use the environment attribute to alter the environment that will be passed to the process.</p>
+<div class="highlight-bash"><div class="highlight"><pre>bash <span class="s2">&quot;env_test&quot;</span> <span class="k">do</span>
+<span class="k">  </span>code<span class="s">&lt;&lt;-EOF</span>
+<span class="s">  echo $FOO</span>
+<span class="s">EOF</span>
+  environment <span class="o">{</span> <span class="s1">&#39;FOO&#39;</span> <span class="o">=</span>&gt; <span class="s2">&quot;bar&quot;</span> <span class="o">}</span>
+end
+</pre></div>
+</div>
+<p>Note that the only environment being altered is the environment being passed to the child process being started by the bash resource. This will not affect the environment of chef-client or subsequently started child processes.</p>
+</div>
+</div>
+<div class="section" id="other-issues">
+<h2>Other Issues<a class="headerlink" href="#other-issues" title="Permalink to this headline">¶</a></h2>
+<p><strong>My init script works fine when I&#8217;m logged in but not over ssh or when launched from chef-client running as daemon!</strong></p>
+<p>Shells commonly alter their environment at startup by loading various initialization scripts. The files used for initialization vary based on whether the shell is started as an interactive or non-interactive shell and whether it is is started as a login or non-login shell. When you log in, you are likely starting an interactive, login shell. When you run a command via ssh, it is possible that you are starting a non-interactive shell. This can mean that the process in question is receiving different environments. Ensure that your service or process is being started in a way that ensures its environment has the necessary key-value pairs.</p>
+<p><strong>I want to change the environment for every process!</strong></p>
+<p>To change the environment for new processes, you will need to alter the initialization scripts for your system&#8217;s shell. You can manage these scripts using a Chef template resource; however, there are a few caveats you should be aware of:</p>
+<ul class="simple">
+<li>The environments of existing processes will be unaffected.</li>
+<li>Shells look to different startup files when started with different options. See your shell&#8217;s documentation for the definitive list of files that need to be altered and whether it is possible to alter the environment for every possible invocation of the shell.</li>
+<li>When you first change a shell&#8217;s initialization file, it will have no affect on your current shell or process since its environment has already been initialized.</li>
+<li>From a shell, you can use the source command to reload the given initialization file; however, since child processes do not affect their parent&#8217;s environment, using a script or execute resource to run source from inside a Chef recipe will have no effect on chef-client&#8217;s environment.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_environments.html" title="About Environments"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_data_bags.html" title="About Data Bags"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

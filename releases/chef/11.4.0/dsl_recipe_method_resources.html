@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>resources Method &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About the Recipe DSL" href="dsl_recipe.html" />
+    <link rel="next" title="search Method" href="dsl_recipe_method_search.html" />
+    <link rel="prev" title="registry_value_exists? Method" href="dsl_recipe_method_registry_value_exists.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="dsl_recipe_method_search.html" title="search Method"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="dsl_recipe_method_registry_value_exists.html" title="registry_value_exists? Method"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="dsl_recipe.html" accesskey="U">About the Recipe DSL</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="resources-method">
+<h1>resources Method<a class="headerlink" href="#resources-method" title="Permalink to this headline">¶</a></h1>
+<p>The <tt class="docutils literal"><span class="pre">resources</span></tt> method can be used in a recipe to look up a resource in the resource collection. The <tt class="docutils literal"><span class="pre">resources</span></tt> method&#8217;s return value is the resource that it finds in the resource collection. The preferred syntax for the <tt class="docutils literal"><span class="pre">resources</span></tt> method is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">resources</span><span class="p">(</span><span class="s2">&quot;resource_type[resource_name]&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>but the following syntax can also be used:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">resources</span><span class="p">(</span><span class="ss">:resource_type</span> <span class="o">=&gt;</span> <span class="s2">&quot;resource_name&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>where in either approach <tt class="docutils literal"><span class="pre">resource_type</span></tt> is the name of a Chef resource and <tt class="docutils literal"><span class="pre">resource_name</span></tt> is the name of a resource that can be configured by the Chef resource.</p>
+<p>The <tt class="docutils literal"><span class="pre">resources</span></tt> method can be used to modify a resource later on in a recipe. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">file</span> <span class="s2">&quot;/etc/hosts&quot;</span> <span class="k">do</span>
+  <span class="n">content</span> <span class="s2">&quot;127.0.0.1 localhost.localdomain localhost&quot;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>and then later in the same recipe, or elsewhere:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">f</span> <span class="o">=</span> <span class="n">resources</span><span class="p">(</span><span class="s2">&quot;file[/etc/hosts]&quot;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">mode</span> <span class="mo">00644</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">file</span></tt> is the type of resource and <tt class="docutils literal"><span class="pre">/etc/hosts</span></tt> is the name.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="dsl_recipe_method_search.html" title="search Method"
+             >next</a></li>
+        <li class="right" >
+          <a href="dsl_recipe_method_registry_value_exists.html" title="registry_value_exists? Method"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="dsl_recipe.html" >About the Recipe DSL</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

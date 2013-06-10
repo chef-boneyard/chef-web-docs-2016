@@ -1,0 +1,209 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Knife &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Policy" href="essentials_policy.html" />
+    <link rel="prev" title="Create the Chef Repository" href="essentials_repository_create.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_policy.html" title="About Policy"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_repository_create.html" title="Create the Chef Repository"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Knife</a><ul>
+<li><a class="reference internal" href="#subcommands">Subcommands</a></li>
+<li><a class="reference internal" href="#plugins">Plugins</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="knife">
+<h1>Knife<a class="headerlink" href="#knife" title="Permalink to this headline">¶</a></h1>
+<p>Knife is a command-line tool that provides an interface between a local Chef repository and the Chef Server. Knife helps users of Chef to manage:</p>
+<ul class="simple">
+<li>Nodes</li>
+<li>Cookbooks and recipes</li>
+<li>Roles</li>
+<li>Stores of JSON data (data bags), including encrypted data</li>
+<li>Environments</li>
+<li>Cloud resources, including provisioning</li>
+<li>The installation of Chef on management workstations</li>
+<li>Searching of indexed data on the Chef Server</li>
+</ul>
+<div class="section" id="subcommands">
+<h2>Subcommands<a class="headerlink" href="#subcommands" title="Permalink to this headline">¶</a></h2>
+<p>Opscode provides the following plug-ins for Knife, which work in much the same way as the built-in subcommands (including common options). Each plug-in must be downloaded separately from github and only works with a specific third-party environment:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">azure</span></tt> for Windows Azure</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">bluebox</span></tt> for Blue Box</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">ec2</span></tt> for Amazon EC2</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">eucalyptus</span></tt> for Eucalyptus</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span></tt> for Google Compute Engine</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">hp</span></tt> for HP Cloud Compute</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">linode</span></tt> for Linode</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">openstack</span></tt> for OpenStack</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">rackspace</span></tt> for Rackspace</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">terremark</span></tt> for Terremark</li>
+<li><tt class="docutils literal"><span class="pre">knife</span> <span class="pre">windows</span></tt> for Microsoft Windows desktops and servers using Windows Remote Management</li>
+</ul>
+</div>
+<div class="section" id="plugins">
+<h2>Plugins<a class="headerlink" href="#plugins" title="Permalink to this headline">¶</a></h2>
+<p>A Knife plugin is a set of one (or more) subcommands that can be added to Knife to support additional functionality that is not built-in to the base set of Knife subcommands. Many of the Knife plugins are built by members of the Opscode community and several of them are built and maintained by Opscode. A Knife plugin is installed to the ~/.chef/plugins/knife/ directory, from where it can be run just like any other Knife subcommand.</p>
+<p>Opscode provides the following plugins, which work the same as built-in subcommands (including common options), but must be installed separately (using RubyGems): <tt class="docutils literal"><span class="pre">azure</span></tt>, <tt class="docutils literal"><span class="pre">bluebox</span></tt>, <tt class="docutils literal"><span class="pre">ec2</span></tt>, <tt class="docutils literal"><span class="pre">eucalyptus</span></tt>, <tt class="docutils literal"><span class="pre">google</span></tt>, <tt class="docutils literal"><span class="pre">hp</span></tt>, <tt class="docutils literal"><span class="pre">linode</span></tt>, <tt class="docutils literal"><span class="pre">openstack</span></tt>, <tt class="docutils literal"><span class="pre">rackspace</span></tt>, <tt class="docutils literal"><span class="pre">slicehost</span></tt>, <tt class="docutils literal"><span class="pre">terremark</span></tt>, and <tt class="docutils literal"><span class="pre">windows</span></tt>.</p>
+<p>The Chef community provides many other plugins for Knife: <a class="reference external" href="http://community.opscode.com/">http://community.opscode.com/</a>.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_policy.html" title="About Policy"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_repository_create.html" title="Create the Chef Repository"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

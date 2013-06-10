@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>knife google &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About Knife Plugins" href="plugin_knife.html" />
+    <link rel="next" title="knife hp" href="plugin_knife_hp.html" />
+    <link rel="prev" title="knife eucalyptus" href="plugin_knife_eucalyptus.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="plugin_knife_hp.html" title="knife hp"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="plugin_knife_eucalyptus.html" title="knife eucalyptus"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="plugin_knife.html" accesskey="U">About Knife Plugins</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">knife google</a><ul>
+<li><a class="reference internal" href="#install-this-plugin">Install this plugin</a></li>
+<li><a class="reference internal" href="#bootstrap-and-ssh">Bootstrap and SSH</a></li>
+<li><a class="reference internal" href="#disk-create">disk create</a><ul>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#options">Options</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#disk-delete">disk delete</a><ul>
+<li><a class="reference internal" href="#id1">Syntax</a></li>
+<li><a class="reference internal" href="#id2">Options</a></li>
+<li><a class="reference internal" href="#id3">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#disk-list">disk list</a><ul>
+<li><a class="reference internal" href="#id4">Syntax</a></li>
+<li><a class="reference internal" href="#id5">Options</a></li>
+<li><a class="reference internal" href="#id6">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#server-create">server create</a><ul>
+<li><a class="reference internal" href="#id7">Syntax</a></li>
+<li><a class="reference internal" href="#id8">Options</a></li>
+<li><a class="reference internal" href="#id9">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#server-delete">server delete</a><ul>
+<li><a class="reference internal" href="#id10">Syntax</a></li>
+<li><a class="reference internal" href="#id11">Options</a></li>
+<li><a class="reference internal" href="#id12">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#server-list">server list</a><ul>
+<li><a class="reference internal" href="#id13">Syntax</a></li>
+<li><a class="reference internal" href="#id14">Options</a></li>
+<li><a class="reference internal" href="#id15">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setup">setup</a><ul>
+<li><a class="reference internal" href="#id16">Syntax</a></li>
+<li><a class="reference internal" href="#id17">Options</a></li>
+<li><a class="reference internal" href="#id18">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#zone-list">zone list</a><ul>
+<li><a class="reference internal" href="#id19">Syntax</a></li>
+<li><a class="reference internal" href="#id20">Options</a></li>
+<li><a class="reference internal" href="#id21">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="knife-google">
+<h1>knife google<a class="headerlink" href="#knife-google" title="Permalink to this headline">¶</a></h1>
+<p>Google Compute Engine is a cloud hosting platform that offers scalable and flexible virtual machine computing. The <strong>knife google</strong> subcommand is used to manage API-driven cloud servers that are hosted by Google Compute Engine.</p>
+<p>This subcommand should be installed as a Knife plugin, using RubyGems.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-python"><pre>knife google [ARGUMENT] (options)</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Review the list of <a class="reference internal" href="knife_common_options.html"><em>common options</em></a> available to this (and all) Knife subcommands and plugins.</p>
+</div>
+<div class="section" id="install-this-plugin">
+<h2>Install this plugin<a class="headerlink" href="#install-this-plugin" title="Permalink to this headline">¶</a></h2>
+<p>To install the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span></tt> plugin using RubyGems, run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>gem install knife-google
+</pre></div>
+</div>
+</div>
+<div class="section" id="bootstrap-and-ssh">
+<h2>Bootstrap and SSH<a class="headerlink" href="#bootstrap-and-ssh" title="Permalink to this headline">¶</a></h2>
+<p>Before a bootstrap operation can be run on a node, SSH keys must be set up correctly. In Google Compute Engine SSH keys are stored in project metadata that is copied over to new servers and placed in a user&#8217;s <tt class="docutils literal"><span class="pre">~/.ssh/authorized_keys</span></tt> file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If the SSH keys are not already set up, they can be created using the <tt class="docutils literal"><span class="pre">ssh-keygen</span></tt> program.</p>
+</div>
+<p>Add the SSH key using the <strong>Metadata</strong> page in the Google Compute Engine console. Paste the SSH key in the user&#8217;s <tt class="docutils literal"><span class="pre">~/.ssh/id_rsa.pub</span></tt> file, ensuring to prefix the SSH key with the same user name that would be specified when using the <tt class="docutils literal"><span class="pre">--ssh-user</span></tt> option used by the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">server</span> <span class="pre">create</span></tt> command.</p>
+<p>For example:</p>
+<div class="highlight-bash"><div class="highlight"><pre>user_name:ssh-rsa AYAAB3Nwejwejjfjawlwl990sefjsfC5lPulcP4eZB+z1zcMF
+76gTV4vojT/SWXymTfGpBL2KHTmF4jnGfEKPwjHIiLrZNHM2ISMi/atlKjOoUCVT
+AvUyjqqp3z2KVXSP9P50Kgf8JYWjjXKApiZHkJOHJZ8GGf7aTnRU9NEGLbQK6Q1k
+4UHbVG4ps4kSLWsJ7eVcu981GvlwP3ooiJ6YWcOX9PS58d4SNtq41/XaoLibKt/Y
+Wzd/4tjYwMRVcxJdAy1T2474vkU/Qr7ibFinKeJymgouoQpEGhF64cF2pncCcmR7
+zRk7CzL3mhcma8Zvwj234-2f3/+234/AR#@R#y1EEFsbzGbxOJfEVSTgJfvY7KYp
+329df/2348sd3ARTx99 mymail@myhost
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">user_name:</span></tt> is the prefix added to the SSH key.</p>
+</div>
+<div class="section" id="disk-create">
+<h2>disk create<a class="headerlink" href="#disk-create" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">disk</span> <span class="pre">create</span></tt> argument is used to create a disk hosted by Google Compute Engine. The name of the disk, its size, and the zone in which it will be created must be specified.</p>
+<div class="section" id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google disk create <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">CREDENTIAL_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--compute-credential-file</span> <span class="pre">CREDENTIAL_FILE</span></tt></dt>
+<dd>The credential file used by Google Compute Engine. (This file is created when running the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command.)</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The Google Compute Engine zone in which a disk is located.</dd>
+<dt><tt class="docutils literal"><span class="pre">-s</span> <span class="pre">SIZE</span></tt>, <tt class="docutils literal"><span class="pre">--size</span> <span class="pre">SIZE</span></tt></dt>
+<dd>The size of a disk, in GB.</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>None.</p>
+</div>
+</div>
+<div class="section" id="disk-delete">
+<h2>disk delete<a class="headerlink" href="#disk-delete" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">disk</span> <span class="pre">delete</span></tt> argument is used to delete a disk hosted by Google Compute Engine. If the disk is currently attached to a running server, it will not be deleted.</p>
+<div class="section" id="id1">
+<h3>Syntax<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google disk delete <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Options<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">CREDENTIAL_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--compute-credential-file</span> <span class="pre">CREDENTIAL_FILE</span></tt></dt>
+<dd>The credential file used by Google Compute Engine. (This file is created when running the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command.)</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The Google Compute Engine zone in which a disk is located.</dd>
+</dl>
+</div>
+<div class="section" id="id3">
+<h3>Examples<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>None.</p>
+</div>
+</div>
+<div class="section" id="disk-list">
+<h2>disk list<a class="headerlink" href="#disk-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">disk</span> <span class="pre">list</span></tt> argument is used to view a list of disks that are hosted by Google Compute Engine.</p>
+<div class="section" id="id4">
+<h3>Syntax<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google disk list <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h3>Options<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">CREDENTIAL_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--compute-credential-file</span> <span class="pre">CREDENTIAL_FILE</span></tt></dt>
+<dd>The credential file used by Google Compute Engine. (This file is created when running the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command.)</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The Google Compute Engine zone in which a disk is located.</dd>
+</dl>
+</div>
+<div class="section" id="id6">
+<h3>Examples<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>For example, to view a list of disks, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google disk list
+</pre></div>
+</div>
+<p>to return something similar to the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Name                Zone           Source Snapshot  Size <span class="o">(</span>In GB<span class="o">)</span>  Status
+jay-scratch         us-central2-a                   10            ready
+pd-fuse             us-central2-a                   10            ready
+pd28g               us-central2-a                   28            ready
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="server-create">
+<h2>server create<a class="headerlink" href="#server-create" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">create</span></tt> argument is used to create a new Google Compute Engine cloud instance. This will provision a new image in Google Compute Engine, perform a Chef bootstrap (using the SSH protocol), and then install Chef on the target system so that it can be run as a chef-client and communicate with a Chef Server.</p>
+<div class="section" id="id7">
+<h3>Syntax<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google server create SERVER_NAME <span class="o">[</span>RUN_LIST<span class="o">]</span> <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h3>Options<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">--bootstrap-version</span> <span class="pre">VERSION</span></tt></dt>
+<dd>The version of Chef to install.</dd>
+<dt><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></dt>
+<dd>The template file to be used during a bootstrap operation. Use this option if the specific location of the template file is unknown. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>. If this option is used, Knife will search for the template file in the following order: a <tt class="docutils literal"><span class="pre">bootstrap/</span></tt> folder in the current working directory, a <tt class="docutils literal"><span class="pre">bootstrap/</span></tt> folder in the Chef repository, a <tt class="docutils literal"><span class="pre">bootstrap/</span></tt> folder in <tt class="docutils literal"><span class="pre">~/.chef/</span></tt>, or a bootstrap file shipped with Chef. Do not use the <tt class="docutils literal"><span class="pre">--template-file</span></tt> option when <tt class="docutils literal"><span class="pre">--distro</span></tt> is specified.</dd>
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">CREDENTIAL_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--compute-credential-file</span> <span class="pre">CREDENTIAL_FILE</span></tt></dt>
+<dd>The credential file used by Google Compute Engine. (This file is created when running the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command.)</dd>
+<dt><tt class="docutils literal"><span class="pre">--google-compute-disks</span> <span class="pre">DISK1,DISK2</span></tt></dt>
+<dd>A comma-separated list of disks to be attached.</dd>
+<dt><tt class="docutils literal"><span class="pre">--google-compute-public-ip</span> <span class="pre">IP_ADDRESS</span></tt></dt>
+<dd>The public IP address for Google Compute Engine. Options: <tt class="docutils literal"><span class="pre">EPHEMERAL</span></tt>, a static IP address, or <tt class="docutils literal"><span class="pre">NONE</span></tt>. Default value: <tt class="docutils literal"><span class="pre">EPHEMERAL</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">--google-compute-server-connect-ip</span> <span class="pre">PUBLIC</span></tt></dt>
+<dd>Indicates whether the IP address for Google Compute Engine is <tt class="docutils literal"><span class="pre">PUBLIC</span></tt> or <tt class="docutils literal"><span class="pre">PRIVATE</span></tt>. Default value: <tt class="docutils literal"><span class="pre">PUBLIC</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">--hint</span> <span class="pre">HINT_NAME[=HINT_FILE]</span></tt></dt>
+<dd>Indicates that an Ohai hint will be set on the target of the bootstrap. Use multiple <tt class="docutils literal"><span class="pre">--hint</span></tt> options to specify multiple hints.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IDENTITY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--identity-file</span> <span class="pre">IDENTITY_FILE</span></tt></dt>
+<dd>The SSH identity file used for authentication. Key-based authentication is recommended.</dd>
+<dt><tt class="docutils literal"><span class="pre">-I</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-image</span> <span class="pre">IMAGE</span></tt></dt>
+<dd>The name of the virtual application template or image that will be used to create the virtual machine. Default: <tt class="docutils literal"><span class="pre">gcompute8-standard</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-j</span> <span class="pre">JSON_ATTRIBS</span></tt>, <tt class="docutils literal"><span class="pre">--json-attributes</span> <span class="pre">JSON_ATTRIBS</span></tt></dt>
+<dd>A JSON string that is added to the first run of a chef-client.</dd>
+<dt><tt class="docutils literal"><span class="pre">-m</span> <span class="pre">MACHINE_TYPE</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-machine</span> <span class="pre">MACHINE_TYPE</span></tt></dt>
+<dd>The machine type for the instance running in Google Compute Engine server. For example, <tt class="docutils literal"><span class="pre">n1-highcpu-2</span></tt> or <tt class="docutils literal"><span class="pre">n1-highcpu-2-d</span></tt>. The full list of available machine types: <a class="reference external" href="https://developers.google.com/compute/docs/instances">https://developers.google.com/compute/docs/instances</a>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-M</span> <span class="pre">K=V[,K=V,...]</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-metadata</span> <span class="pre">Key=Value[,Key=Value...]</span></tt></dt>
+<dd>A list of metadata key-value pairs that are associated with an instance.</dd>
+<dt><tt class="docutils literal"><span class="pre">-n</span> <span class="pre">NETWORK_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-network</span> <span class="pre">NETWORK_NAME</span></tt></dt>
+<dd>The name of the network in which an instance is running.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></dt>
+<dd>The name of the node.</dd>
+<dt><tt class="docutils literal"><span class="pre">--[no-]host-key-verify</span></tt></dt>
+<dd>Use <tt class="docutils literal"><span class="pre">--no-host-key-verify</span></tt> to disable host key verification. Default setting: <tt class="docutils literal"><span class="pre">--host-key-verify</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span> <span class="pre">PORT</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-port</span> <span class="pre">PORT</span></tt></dt>
+<dd>The SSH port. Default value: <tt class="docutils literal"><span class="pre">22</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</dd>
+<dt><tt class="docutils literal"><span class="pre">--prerelease</span></tt></dt>
+<dd>Indicates that pre-release Chef gems should be installed.</dd>
+<dt><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></dt>
+<dd>A comma-separated list of roles and/or recipes to be applied.</dd>
+<dt><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">TAG1,TAG2,TAG3</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-tags</span> <span class="pre">TAG1,TAG2,TAG3</span></tt></dt>
+<dd>A list of tags that are associated with an instance.</dd>
+<dt><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></dt>
+<dd>The path to a template file that will be used during a bootstrap operation. Do not use the <tt class="docutils literal"><span class="pre">--distro</span></tt> option when <tt class="docutils literal"><span class="pre">--template-file</span></tt> is specified.</dd>
+<dt><tt class="docutils literal"><span class="pre">-u</span> <span class="pre">USER_DATA_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--user-data</span> <span class="pre">USER_DATA_FILE</span></tt></dt>
+<dd>The user data file used to provision Google Compute Engine.</dd>
+<dt><tt class="docutils literal"><span class="pre">-w</span> <span class="pre">GATEWAY</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-gateway</span> <span class="pre">GATEWAY</span></tt></dt>
+<dd>The SSH tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.</dd>
+<dt><tt class="docutils literal"><span class="pre">-x</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-user</span> <span class="pre">USER_NAME</span></tt></dt>
+<dd>The SSH user name.</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The Google Compute Engine zone in which a disk is located.</dd>
+</dl>
+</div>
+<div class="section" id="id9">
+<h3>Examples<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<p>For example, to create a server:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google server create www1 -m n1-standard-1
+    -I centos-6-v20130325 -Z us-central2-a -i ~/.ssh/id_rsa -x jdoe
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="server-delete">
+<h2>server delete<a class="headerlink" href="#server-delete" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">delete</span></tt> argument is used to delete one or more instances that are running in the Google Compute Engine cloud. To find a specific cloud instance, use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">server</span> <span class="pre">list</span></tt> argument. Use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">node</span> <span class="pre">delete</span></tt> and <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">delete</span></tt> sub-commands to delete associated node and client objects (if required).</p>
+<div class="section" id="id10">
+<h3>Syntax<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google server delete SERVER_NAME <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id11">
+<h3>Options<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">CREDENTIAL_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--compute-credential-file</span> <span class="pre">CREDENTIAL_FILE</span></tt></dt>
+<dd>The credential file used by Google Compute Engine. (This file is created when running the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command.)</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span></tt>, <tt class="docutils literal"><span class="pre">--purge</span></tt></dt>
+<dd>Indicates that all corresponding nodes and clients on the Chef Server will be destroyed, in addition to the Google Compute Engine node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the <tt class="docutils literal"><span class="pre">--node-name</span></tt> option must be used to specify the name of the node.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></dt>
+<dd>The name of the node.</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The Google Compute Engine zone in which a disk is located.</dd>
+</dl>
+</div>
+<div class="section" id="id12">
+<h3>Examples<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<p>For example, to delete a server using the <tt class="docutils literal"><span class="pre">--purge</span></tt> option. which will delete every chef-client and Chef node:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google server delete www1 --purge -Z us-central2-a
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="server-list">
+<h2>server list<a class="headerlink" href="#server-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">list</span></tt> argument is used to find instances that are associated with a Google Compute Engine zone. The results may show instances that are not currently managed by the Chef Server.</p>
+<div class="section" id="id13">
+<h3>Syntax<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google server list <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id14">
+<h3>Options<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">CREDENTIAL_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--compute-credential-file</span> <span class="pre">CREDENTIAL_FILE</span></tt></dt>
+<dd>The credential file used by Google Compute Engine. (This file is created when running the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command.)</dd>
+<dt><tt class="docutils literal"><span class="pre">-Z</span> <span class="pre">ZONE</span></tt>, <tt class="docutils literal"><span class="pre">--google-compute-zone</span> <span class="pre">ZONE</span></tt></dt>
+<dd>The Google Compute Engine zone in which a disk is located.</dd>
+</dl>
+</div>
+<div class="section" id="id15">
+<h3>Examples<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
+<p>For example, to view a list of instances associated with a project named &#8220;dev-01&#8221;, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google server list -p dev-01
+</pre></div>
+</div>
+<p>To view a list of all servers in the <tt class="docutils literal"><span class="pre">us-central2-a</span></tt> zone, including those that may not be managed by Chef, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google server list -Z us-central2-a
+</pre></div>
+</div>
+<p>to return something similar to the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Name              Type           Image                 Public IP        Private IP      Disks               Zone           Status
+chef-svr          n1-standard-1  gcel-12-04-v20130325  103.59.80.113    10.240.45.78                        us-central2-a  running
+chef-workstation  n1-standard-1  gcel-12-04-v20130325  103.59.85.188    10.240.9.140                        us-central2-a  running
+fuse-dev          n1-standard-1  gcel-12-04-v20130225  103.59.80.147    10.240.166.18   pd-fuse             us-central2-a  running
+magfs-c1          n1-standard-2  gcel-12-04-v20130225  103.59.87.217    10.240.61.92                        us-central2-a  running
+magfs-c2          n1-standard-2  gcel-12-04-v20130225  103.59.80.161    10.240.175.240                      us-central2-a  running
+magfs-c3          n1-standard-2  gcel-12-04-v20130325  178.255.120.69   10.240.34.197   jay-scratch         us-central2-a  running
+magfs-svr         n1-standard-4  gcel-12-04-v20130225  103.59.80.178    10.240.81.25    pd28g               us-central2-a  running
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="setup">
+<h2>setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">setup</span></tt> argument is used to set up authorization for a Google Compute Engine account. If the <tt class="docutils literal"><span class="pre">-f</span></tt> parameter is used to override the default credential file, it will also need to be used with all subcommands. Be sure to specify the project identifier (and not its name or number) to prevent 404 errors (even if the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command runs successfully).</p>
+<p>Create a project in Google Cloud Platform, enable Google Compute Engine, and then set up the client identifier. Run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google setup
+</pre></div>
+</div>
+<p>and then provide the project identifier (not the project name or number), the client identifier, the client secret, and authorization tokens when prompted. Open the URL in a browser when promoted. Ensure that the user account associated with the project and client identifier is used when authenticating.</p>
+<p>By default, the credential and token information is stored in <tt class="docutils literal"><span class="pre">~/.google-compute.json</span></tt>. Use the <tt class="docutils literal"><span class="pre">f</span> <span class="pre">&lt;credential_file&gt;</span></tt> flag to override this location.</p>
+<div class="section" id="id16">
+<h3>Syntax<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google setup <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id17">
+<h3>Options<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">CREDENTIAL_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--compute-credential-file</span> <span class="pre">CREDENTIAL_FILE</span></tt></dt>
+<dd>The credential file used by Google Compute Engine. (This file is created when running the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command.)</dd>
+</dl>
+</div>
+<div class="section" id="id18">
+<h3>Examples<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
+<p>None.</p>
+</div>
+</div>
+<div class="section" id="zone-list">
+<h2>zone list<a class="headerlink" href="#zone-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">zone</span> <span class="pre">list</span></tt> argument is used to get the list of available Google Compute Engine zones, including current status, number of deployed servers (and disks), and upcoming maintenance windows.</p>
+<div class="section" id="id19">
+<h3>Syntax<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google zone list <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id20">
+<h3>Options<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-f</span> <span class="pre">CREDENTIAL_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--compute-credential-file</span> <span class="pre">CREDENTIAL_FILE</span></tt></dt>
+<dd>The credential file used by Google Compute Engine. (This file is created when running the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">google</span> <span class="pre">setup</span></tt> command.)</dd>
+</dl>
+</div>
+<div class="section" id="id21">
+<h3>Examples<a class="headerlink" href="#id21" title="Permalink to this headline">¶</a></h3>
+<p>For example, to see a list of all zones, including status and maintenance windows, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife google zone list
+</pre></div>
+</div>
+<p>to return something similar to the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Name            Status  Servers  Disks  Maintainance Window
+europe-west1-a  up      0        0      2013-08-03 19:00:00 +0000 to 2013-08-18 19:00:00 +0000
+europe-west1-b  up      0        0      2013-05-11 19:00:00 +0000 to 2013-05-26 19:00:00 +0000
+us-central1-a   up      0        1      2013-08-17 19:00:00 +0000 to 2013-09-01 19:00:00 +0000
+us-central1-b   up      0        0      2013-06-08 19:00:00 +0000 to 2013-06-23 19:00:00 +0000
+us-central2-a   up      10       6      2013-05-25 19:00:00 +0000 to 2013-06-09 19:00:00 +0000
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="plugin_knife_hp.html" title="knife hp"
+             >next</a></li>
+        <li class="right" >
+          <a href="plugin_knife_eucalyptus.html" title="knife eucalyptus"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="plugin_knife.html" >About Knife Plugins</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

@@ -1,0 +1,233 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>/environments/NAME/roles/NAME &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="Chef Server API" href="api_chef_server.html" />
+    <link rel="next" title="/nodes" href="api_chef_server_nodes.html" />
+    <link rel="prev" title="/environments/NAME/recipes" href="api_chef_server_environments_recipe.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="api_chef_server_nodes.html" title="/nodes"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="api_chef_server_environments_recipe.html" title="/environments/NAME/recipes"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="api_chef_server.html" accesskey="U">Chef Server API</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">/environments/NAME/roles/NAME</a><ul>
+<li><a class="reference internal" href="#get">GET</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="environments-name-roles-name">
+<h1>/environments/NAME/roles/NAME<a class="headerlink" href="#environments-name-roles-name" title="Permalink to this headline">¶</a></h1>
+<p>The <tt class="docutils literal"><span class="pre">/environments/NAME/roles/NAME</span></tt> endpoint has the following methods: <tt class="docutils literal"><span class="pre">GET</span></tt>.</p>
+<div class="section" id="get">
+<h2>GET<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">GET</span></tt> method is used to return the <tt class="docutils literal"><span class="pre">run_list</span></tt> attribute of the role (when the name of the environment is <tt class="docutils literal"><span class="pre">_default</span></tt>) or to return <tt class="docutils literal"><span class="pre">env_run_lists[environment_name]</span></tt> (for non-default environments).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The behavior of this endpoint is identical to <tt class="docutils literal"><span class="pre">GET</span> <span class="pre">/roles/NAME/environments/NAME</span></tt>; it is recommended (but not required) that <tt class="docutils literal"><span class="pre">GET</span> <span class="pre">/roles/NAME/environments/NAME</span></tt> be used instead of this endpoint.</p>
+</div>
+<p>This method has no parameters.</p>
+<p><strong>Request</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre>GET /environments/NAME/roles/NAME
+</pre></div>
+</div>
+<p>where the first instance of <tt class="docutils literal"><span class="pre">NAME</span></tt> is the name of the environment, and the second instance is the name of the role.</p>
+<p><strong>Response</strong></p>
+<p>The response will return something like the following:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;run_list&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="s2">&quot;recipe[recipe_name]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;role[role_name]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;recipe[recipe_name]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;role[role_name]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;recipe[recipe_name]&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;role[role_name]&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Chef will pick up the <tt class="docutils literal"><span class="pre">_default</span></tt> run-list if <tt class="docutils literal"><span class="pre">env_run_list[environment_name]</span></tt> is null or nonexistent.</p>
+<p><strong>Response Codes</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">200</span></tt></td>
+<td>OK. The request was successful.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">401</span></tt></td>
+<td>Unauthorized. The user which made the request is not authorized to perform the action.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">403</span></tt></td>
+<td>Forbidden. The user which made the request is not authorized to perform the action.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">404</span></tt></td>
+<td>Not found. The requested object does not exist.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="api_chef_server_nodes.html" title="/nodes"
+             >next</a></li>
+        <li class="right" >
+          <a href="api_chef_server_environments_recipe.html" title="/environments/NAME/recipes"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="api_chef_server.html" >Chef Server API</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

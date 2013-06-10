@@ -1,0 +1,514 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>directory &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About Resources and Providers" href="resource.html" />
+    <link rel="next" title="dpkg_package" href="resource_dpkg_package.html" />
+    <link rel="prev" title="deploy" href="resource_deploy.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_dpkg_package.html" title="dpkg_package"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="resource_deploy.html" title="deploy"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" accesskey="U">About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">directory</a><ul>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li><a class="reference internal" href="#windows-file-security">Windows File Security</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#providers">Providers</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="directory">
+<h1>directory<a class="headerlink" href="#directory" title="Permalink to this headline">¶</a></h1>
+<p>A <a class="reference external" href="http://docs.opscode.com/resource.html">resource</a> is a key part of a <a class="reference external" href="http://docs.opscode.com/essentials_cookbook_recipes.html">recipe</a> that defines the actions that can be taken against a piece of the system. These actions are identified during each <a class="reference external" href="http://docs.opscode.com/essentials_nodes_chef_run.html">Chef run</a> as the resource collection is compiled. Once identified, each resource (in turn) is mapped to a provider, which then configures each piece of the system.</p>
+<p>The <strong>directory</strong> resource is used to manage a directory, which is a hierarchy of folders that comprises all of the information stored on a computer. The root directory is the top-level, under which the rest of the directory is organized. The <strong>directory</strong> resource uses the <tt class="docutils literal"><span class="pre">name</span></tt> attribute to specify the path to a location in a directory. Typically, permission to access that location in the directory is required.</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>The syntax for using the <strong>directory</strong> resource in a recipe is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
+  <span class="n">some_attribute</span> <span class="s2">&quot;value&quot;</span> <span class="c1"># see attributes section below</span>
+  <span class="o">.</span><span class="n">.</span><span class="o">.</span>
+  <span class="n">action</span> <span class="ss">:action</span> <span class="c1"># see actions section below</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">directory</span></tt> tells Chef to use the <tt class="docutils literal"><span class="pre">Chef::Provider::Directory</span></tt> provider during the Chef run</li>
+<li><tt class="docutils literal"><span class="pre">&quot;name&quot;</span></tt> is the path to the directory, from the root</li>
+<li><tt class="docutils literal"><span class="pre">attribute</span></tt> is zero (or more) of the attributes that are available for this resource</li>
+<li><tt class="docutils literal"><span class="pre">:action</span></tt> is the step that the resource will ask the provider to take during the Chef run</li>
+</ul>
+<p>The following is an example of how the <strong>directory</strong> resource can work when used in a recipe:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;/var/lib/foo&quot;</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="mo">00644</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Also, a variable can be used to define the directory, and then that variable can be used within the recipe itself:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">node</span><span class="o">[</span><span class="s1">&#39;apache&#39;</span><span class="o">][</span><span class="s1">&#39;dir&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="s1">&#39;/etc/apache2&#39;</span>
+
+<span class="n">directory</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;apache&#39;</span><span class="o">][</span><span class="s1">&#39;dir&#39;</span><span class="o">]</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="s1">&#39;apache&#39;</span>
+  <span class="n">group</span> <span class="s1">&#39;apache&#39;</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="actions">
+<h2>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
+<p>This resource has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:create</span></tt></td>
+<td>Default. Use to create a directory.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:delete</span></tt></td>
+<td>Use to delete a directory.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>This resource has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">group</span></tt></td>
+<td>A string or ID that identifies the group owner by group name, including fully qualified group names such as <tt class="docutils literal"><span class="pre">domain\group</span></tt> or <tt class="docutils literal"><span class="pre">group&#64;domain</span></tt>. If this value is not specified, existing groups will remain unchanged and new group assignments will use the default <tt class="docutils literal"><span class="pre">POSIX</span></tt> group (if available).</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">inherits</span></tt></td>
+<td>Microsoft Windows only. Indicates that a file inherits rights from its parent. Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">mode</span></tt></td>
+<td><p class="first">The octal mode for a file.</p>
+<p>UNIX- and Linux-based systems: The octal mode of the file that is passed to chmod. If the value is specified as a quoted string, it will work exactly as if the <tt class="docutils literal"><span class="pre">chmod</span></tt> command was passed. If the value is specified as an integer, prepend a zero (<tt class="docutils literal"><span class="pre">0</span></tt>) to the value to ensure it is interpreted as an octal number. For example, to assign read, write, and execute rights for all users, use <tt class="docutils literal"><span class="pre">0777</span></tt> or <tt class="docutils literal"><span class="pre">'777'</span></tt>; for the same rights, plus the sticky bit, use <tt class="docutils literal"><span class="pre">01777</span></tt> or <tt class="docutils literal"><span class="pre">'1777'</span></tt>.</p>
+<p class="last">Microsoft Windows: The octal mode of the file that is translated into rights for Microsoft Windows security. Values up to <tt class="docutils literal"><span class="pre">0777</span></tt> are allowed (no sticky bits) and mean the same in Microsoft Windows as they do in UNIX, where <tt class="docutils literal"><span class="pre">4</span></tt> equals <tt class="docutils literal"><span class="pre">GENERIC_READ</span></tt>, <tt class="docutils literal"><span class="pre">2</span></tt> equals <tt class="docutils literal"><span class="pre">GENERIC_WRITE</span></tt>, and <tt class="docutils literal"><span class="pre">1</span></tt> equals <tt class="docutils literal"><span class="pre">GENERIC_EXECUTE</span></tt>. This attribute cannot be used to set <tt class="docutils literal"><span class="pre">:full_control</span></tt>. This attribute has no effect if not specified, but when this attribute and <tt class="docutils literal"><span class="pre">rights</span></tt> are both specified, the effects will be cumulative.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">owner</span></tt></td>
+<td>A string or ID that identifies the group owner by user name, including fully qualified user names such as <tt class="docutils literal"><span class="pre">domain\user</span></tt> or <tt class="docutils literal"><span class="pre">user&#64;domain</span></tt>. If this value is not specified, existing owners will remain unchanged and new owner assignments will use the current user (when necessary).</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">path</span></tt></td>
+<td>The path to the directory. Default value: <tt class="docutils literal"><span class="pre">name</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">provider</span></tt></td>
+<td>Optional. Use to specify a provider by using its long name. For example: <tt class="docutils literal"><span class="pre">provider</span> <span class="pre">Chef::Provider::Long::Name</span></tt>. See the Providers section below for the list of providers available to this resource.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">recursive</span></tt></td>
+<td>Indicates whether the directory will be created or deleted recursively. For the <tt class="docutils literal"><span class="pre">owner</span></tt>, <tt class="docutils literal"><span class="pre">group</span></tt>, and <tt class="docutils literal"><span class="pre">mode</span></tt> attributes, the value of this attribute applies only to the leaf directory. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rights</span></tt></td>
+<td>Microsoft Windows only. The permissions for users and groups in a Microsoft Windows environment. For example: <tt class="docutils literal"><span class="pre">rights</span> <span class="pre">&lt;permissions&gt;,</span> <span class="pre">&lt;principal&gt;,</span> <span class="pre">&lt;options&gt;</span></tt> where <tt class="docutils literal"><span class="pre">&lt;permissions&gt;</span></tt> specifies the rights granted to the principal, <tt class="docutils literal"><span class="pre">&lt;principal&gt;</span></tt> is the group or user name, and <tt class="docutils literal"><span class="pre">&lt;options&gt;</span></tt> is a hash with one (or more) advanced rights options.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="windows-file-security">
+<h3>Windows File Security<a class="headerlink" href="#windows-file-security" title="Permalink to this headline">¶</a></h3>
+<p>To support Microsoft Windows security, the <strong>template</strong>, <strong>file</strong>, <strong>remote_file</strong>, <strong>cookbook_file</strong>, <strong>directory</strong>, and <strong>remote_directory</strong> resources support the use of inheritance and access control lists (ACLs) within recipes.</p>
+<p><strong>Access Control Lists (ACLs)</strong></p>
+<p>The <tt class="docutils literal"><span class="pre">rights</span></tt> attribute can be used in a recipe to manage access control lists (ACLs), which allow permissions to be given to multiple users and groups. The syntax for the <tt class="docutils literal"><span class="pre">rights</span></tt> attribute is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">rights</span> <span class="n">permission</span><span class="p">,</span> <span class="n">principal</span><span class="p">,</span> <span class="n">option</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul>
+<li><p class="first"><tt class="docutils literal"><span class="pre">permission</span></tt> is used to specify which rights will be granted to the <tt class="docutils literal"><span class="pre">principal</span></tt>. The possible values are: <tt class="docutils literal"><span class="pre">:read</span></tt>, <tt class="docutils literal"><span class="pre">:write</span></tt>, <tt class="docutils literal"><span class="pre">:full_control</span></tt>, and <tt class="docutils literal"><span class="pre">:deny</span></tt>. These permissions are cumulative. If <tt class="docutils literal"><span class="pre">:write</span></tt> is specified, then it includes <tt class="docutils literal"><span class="pre">:read</span></tt>. If <tt class="docutils literal"><span class="pre">:full_control</span></tt> is specified, then it includes both <tt class="docutils literal"><span class="pre">:write</span></tt> and <tt class="docutils literal"><span class="pre">:read</span></tt>. If <tt class="docutils literal"><span class="pre">:deny</span></tt> is specified, then the user or group will not have rights to the object. (For those who know the Microsoft Windows API: <tt class="docutils literal"><span class="pre">:read</span></tt> corresponds to <tt class="docutils literal"><span class="pre">GENERIC_READ</span></tt> and <tt class="docutils literal"><span class="pre">GENERIC_EXECUTE</span></tt>; <tt class="docutils literal"><span class="pre">:write</span></tt> corresponds to <tt class="docutils literal"><span class="pre">GENERIC_WRITE</span></tt>, <tt class="docutils literal"><span class="pre">GENERIC_READ</span></tt>, and <tt class="docutils literal"><span class="pre">GENERIC_EXECUTE</span></tt>; <tt class="docutils literal"><span class="pre">:full_control</span></tt> corresponds to <tt class="docutils literal"><span class="pre">GENERIC_ALL</span></tt>, which allows a user to change the owner and other metadata about a file.)</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">principal</span></tt> is used to specify a group or user name. This is identical to what is entered in the login box for Microsoft Windows, such as <tt class="docutils literal"><span class="pre">user_name</span></tt>, <tt class="docutils literal"><span class="pre">domain\user_name</span></tt>, or <tt class="docutils literal"><span class="pre">user_name&#64;fully_qualified_domain_name</span></tt>. Chef does not need to know if a principal is a user or a group.</p>
+</li>
+<li><p class="first"><tt class="docutils literal"><span class="pre">option</span></tt> is a hash that contains advanced rights options. For example, the rights to a directory that only applies to its children might look something like: <tt class="docutils literal"><span class="pre">rights</span> <span class="pre">:write,</span> <span class="pre">&quot;domain\group_name&quot;,</span> <span class="pre">:option_type</span> <span class="pre">=&gt;</span> <span class="pre">value</span></tt> where <tt class="docutils literal"><span class="pre">option_type</span></tt> is one of the following:</p>
+<blockquote>
+<div><table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Option Type</p>
+</th>
+<th class="head"><p class="first last">Description</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last"><tt class="docutils literal"><span class="pre">:applies_to_children</span></tt></p>
+</td>
+<td><p class="first last">Use to specify how permissions are applied to children. Possible values: <tt class="docutils literal"><span class="pre">true</span></tt> to inherit both child directories and files;  <tt class="docutils literal"><span class="pre">false</span></tt> to not inherit any child directories or files; <tt class="docutils literal"><span class="pre">:containers_only</span></tt> to inherit only child directories (and not files); <tt class="docutils literal"><span class="pre">:objects_only</span></tt> to recursively inherit files (and not child directories).</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><tt class="docutils literal"><span class="pre">:applies_to_self</span></tt></p>
+</td>
+<td><p class="first last">Indicates whether a permission is applied to the parent directory. Possible values: <tt class="docutils literal"><span class="pre">true</span></tt> to apply to the parent directory or file and its children; <tt class="docutils literal"><span class="pre">false</span></tt> to not apply only to child directories and files.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><tt class="docutils literal"><span class="pre">:one_level_deep</span></tt></p>
+</td>
+<td><p class="first last">Indicates the depth to which permissions will be applied. Possible values: <tt class="docutils literal"><span class="pre">true</span></tt> to apply only to the first level of children; <tt class="docutils literal"><span class="pre">false</span></tt> to apply to all children.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</li>
+</ul>
+<p>The <tt class="docutils literal"><span class="pre">rights</span></tt> attribute can be used as many times as necessary; Chef will apply them to the file or directory as required. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">resource</span> <span class="s2">&quot;x.txt&quot;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:read</span><span class="p">,</span> <span class="s2">&quot;Everyone&quot;</span>
+  <span class="n">rights</span> <span class="ss">:write</span><span class="p">,</span> <span class="s2">&quot;domain\group&quot;</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s2">&quot;group_name_or_user_name&quot;</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s2">&quot;user_name&quot;</span><span class="p">,</span> <span class="n">option</span> <span class="o">=&gt;</span> <span class="ss">:applies_to_children</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Some other important things to know when using the <tt class="docutils literal"><span class="pre">rights</span></tt> attribute:</p>
+<ul class="simple">
+<li>Order independence. It doesn&#8217;t matter if <tt class="docutils literal"><span class="pre">rights</span> <span class="pre">:deny,</span> <span class="pre">&quot;Sally&quot;</span></tt> is placed before or after <tt class="docutils literal"><span class="pre">rights</span> <span class="pre">:read,</span> <span class="pre">&quot;Sally&quot;</span></tt>, Sally will be unable to read the document.</li>
+<li>Only inherited rights remain. All existing explicit rights on the object are removed and replaced.</li>
+<li>If rights are not specified, nothing will be changed. Chef does not clear out the rights on a file or directory if rights are not specified.</li>
+<li>Changing inherited rights can be expensive. Microsoft Windows will propagate rights to all children recursively due to inheritance. This is a normal aspect of Microsoft Windows, so consider the frequency with which this type of action is necessary and take steps to control this type of action if performance is the primary consideration.</li>
+</ul>
+<p><strong>Inheritance</strong></p>
+<p>By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The <tt class="docutils literal"><span class="pre">inherits</span></tt> attribute can be used to specifically tell Chef to apply (or not apply) inherited rights from its parent directory.</p>
+<p>For example, the following example specifies the rights for a directory:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s1">&#39;C:\mordor&#39;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:read</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Minions&#39;</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Sauron&#39;</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>and then the following example specifies how to use inheritance to deny access to the child directory:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s1">&#39;C:\mordor\mount_doom&#39;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Sauron&#39;</span>
+  <span class="n">inherits</span> <span class="kp">false</span> <span class="c1"># Sauron is the only person who should have any sort of access</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>If the <tt class="docutils literal"><span class="pre">:deny</span></tt> permission were to be used instead, something could slip through unless all users and groups were denied.</p>
+<p>Another example also shows how to specify rights for a directory:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s1">&#39;C:\mordor&#39;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:read</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Minions&#39;</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Sauron&#39;</span>
+  <span class="n">rights</span> <span class="ss">:write</span><span class="p">,</span> <span class="s1">&#39;SHIRE\Frodo&#39;</span> <span class="c1"># Who put that there I didn&#39;t put that there</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>but then not use the <tt class="docutils literal"><span class="pre">inherits</span></tt> attribute to deny those rights on a child directory:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s1">&#39;C:\mordor\mount_doom&#39;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:deny</span><span class="p">,</span> <span class="s1">&#39;MORDOR\Minions&#39;</span> <span class="c1"># Oops, not specific enough</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>Because the <tt class="docutils literal"><span class="pre">inherits</span></tt> attribute is not specified, Chef will default it to <tt class="docutils literal"><span class="pre">true</span></tt>, which will ensure that security settings for existing files remain unchanged.</p>
+</div>
+</div>
+<div class="section" id="providers">
+<h2>Providers<a class="headerlink" href="#providers" title="Permalink to this headline">¶</a></h2>
+<p>The following providers are available. Use the short name to call the provider from a recipe:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="15%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Long name</th>
+<th class="head">Short name</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">Chef::Provider::Directory</span></tt></td>
+<td><tt class="docutils literal"><span class="pre">directory</span></tt></td>
+<td>The default provider for all platforms.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The following examples demonstrate various approaches for using resources in recipes. If you want to see examples of how Opscode uses resources in recipes, take a closer look at the cookbooks that Opscode authors and maintains: <a class="reference external" href="https://github.com/opscode-cookbooks">https://github.com/opscode-cookbooks</a>.</p>
+<p><strong>Create a directory</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;/tmp/something&quot;</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="mo">00755</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Create a directory in Microsoft Windows</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;C:</span><span class="se">\t</span><span class="s2">mp</span><span class="se">\s</span><span class="s2">omething.txt&quot;</span> <span class="k">do</span>
+  <span class="n">rights</span> <span class="ss">:full_control</span><span class="p">,</span> <span class="s2">&quot;DOMAIN\User&quot;</span>
+  <span class="n">inherits</span> <span class="kp">false</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Create a directory recursively</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="sx">%w{dir1 dir2 dir3}</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">dir</span><span class="o">|</span>
+  <span class="n">directory</span> <span class="s2">&quot;/tmp/mydirs/</span><span class="si">#{</span><span class="n">dir</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">do</span>
+    <span class="n">mode</span> <span class="mo">00775</span>
+    <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+    <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+    <span class="n">action</span> <span class="ss">:create</span>
+    <span class="n">recursive</span> <span class="kp">true</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Delete a directory</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;/tmp/something&quot;</span> <span class="k">do</span>
+  <span class="n">recursive</span> <span class="kp">true</span>
+  <span class="n">action</span> <span class="ss">:delete</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Set directory permissions using a variable</strong></p>
+<p>The following example shows how read/write/execute permissions can be set using a variable named <tt class="docutils literal"><span class="pre">user_home</span></tt> and then for owners and groups on any matching node in the Chef organization.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">user_home</span> <span class="o">=</span> <span class="s2">&quot;/</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:matching_node</span><span class="o">][</span><span class="ss">:user</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="n">directory</span> <span class="n">user_home</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="n">node</span><span class="o">[</span><span class="ss">:matching_node</span><span class="o">][</span><span class="ss">:user</span><span class="o">]</span>
+  <span class="n">group</span> <span class="n">node</span><span class="o">[</span><span class="ss">:matching_node</span><span class="o">][</span><span class="ss">:group</span><span class="o">]</span>
+  <span class="n">mode</span> <span class="s2">&quot;0755&quot;</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">matching_node</span></tt> represents a type of node in the Chef organization. For example, if the <tt class="docutils literal"><span class="pre">user_home</span></tt> variable specified <tt class="docutils literal"><span class="pre">{node[:nginx]...}</span></tt>, a recipe might look something like this:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">user_home</span> <span class="o">=</span> <span class="s2">&quot;/</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:user</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="n">directory</span> <span class="n">user_home</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:user</span><span class="o">]</span>
+  <span class="n">group</span> <span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:group</span><span class="o">]</span>
+  <span class="n">mode</span> <span class="s2">&quot;0755&quot;</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Set directory permissions for a specific type of node</strong></p>
+<p>The following example shows how permissions can be set for the &#8220;certificates&#8221; directory on any node in the Chef organization that is running Nginx. In this example, permissions are being set for the owner and group as &#8220;root&#8221;, and then read/write permissions are granted to the root.</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="ss">:nginx</span><span class="o">][</span><span class="ss">:dir</span><span class="o">]</span><span class="si">}</span><span class="s2">/shared/certificates&quot;</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">group</span> <span class="s2">&quot;root&quot;</span>
+  <span class="n">mode</span> <span class="s2">&quot;700&quot;</span>
+  <span class="n">recursive</span> <span class="kp">true</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Reload the configuration</strong></p>
+<p>The following example shows how to reload the configuration of a chef-client using the <strong>remote_file</strong> resource to:</p>
+<ul class="simple">
+<li>using an <tt class="docutils literal"><span class="pre">if</span></tt> statement to check whether the plugins on a node are the latest versions</li>
+<li>identify the location from which Ohai plugins are stored</li>
+<li>using the <tt class="docutils literal"><span class="pre">notifies</span></tt> attribute and a <strong>ruby_block</strong> resource to trigger an update (if required) and to then reload the client.rb file.</li>
+</ul>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">directory</span> <span class="n">node</span><span class="o">[</span><span class="ss">:ohai</span><span class="o">][</span><span class="ss">:plugin_path</span><span class="o">]</span> <span class="k">do</span>
+  <span class="n">owner</span> <span class="s2">&quot;chef&quot;</span>
+  <span class="n">recursive</span> <span class="kp">true</span>
+<span class="k">end</span>
+
+<span class="n">ruby_block</span> <span class="s2">&quot;reload_config&quot;</span> <span class="k">do</span>
+  <span class="n">block</span> <span class="k">do</span>
+    <span class="no">Chef</span><span class="o">::</span><span class="no">Config</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="s2">&quot;/etc/chef/client.rb&quot;</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span>
+
+<span class="k">if</span> <span class="n">node</span><span class="o">[</span><span class="ss">:ohai</span><span class="o">].</span><span class="n">key?</span><span class="p">(</span><span class="ss">:plugins</span><span class="p">)</span>
+  <span class="n">node</span><span class="o">[</span><span class="ss">:ohai</span><span class="o">][</span><span class="ss">:plugins</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">plugin</span><span class="o">|</span>
+    <span class="n">remote_file</span> <span class="n">node</span><span class="o">[</span><span class="ss">:ohai</span><span class="o">][</span><span class="ss">:plugin_path</span><span class="o">]</span> <span class="o">+</span><span class="s2">&quot;/</span><span class="si">#{</span><span class="n">plugin</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">do</span>
+      <span class="n">source</span> <span class="n">plugin</span>
+      <span class="n">owner</span> <span class="s2">&quot;chef&quot;</span>
+      <span class="n">notifies</span> <span class="ss">:create</span><span class="p">,</span> <span class="n">resources</span><span class="p">(</span><span class="ss">:ruby_block</span> <span class="o">=&gt;</span> <span class="s2">&quot;reload_config&quot;</span><span class="p">)</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_dpkg_package.html" title="dpkg_package"
+             >next</a></li>
+        <li class="right" >
+          <a href="resource_deploy.html" title="deploy"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" >About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

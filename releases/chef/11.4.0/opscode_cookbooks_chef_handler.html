@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chef_handler Cookbook &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="Cookbooks Authored and Maintained by Opscode" href="opscode_cookbooks.html" />
+    <link rel="next" title="iis Cookbook" href="opscode_cookbooks_iis.html" />
+    <link rel="prev" title="Cookbooks Authored and Maintained by Opscode" href="opscode_cookbooks.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="opscode_cookbooks_iis.html" title="iis Cookbook"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="opscode_cookbooks.html" title="Cookbooks Authored and Maintained by Opscode"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="opscode_cookbooks.html" accesskey="U">Cookbooks Authored and Maintained by Opscode</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chef_handler Cookbook</a><ul>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#chef-handler-lwrp">chef_handler LWRP</a><ul>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#id1">Attributes</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#default">default</a></li>
+<li><a class="reference internal" href="#json-file">json_file</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chef-handler-cookbook">
+<h1>chef_handler Cookbook<a class="headerlink" href="#chef-handler-cookbook" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>chef_handler</strong> cookbook is used to distribute and enable Chef exception and report handlers. This cookbook also exposes a lightweight resource (<tt class="docutils literal"><span class="pre">chef_handler</span></tt>) that allows exception and report handlers to be exposed from within recipes (as opposed to having them hard-coded within the client.rb file).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This cookbook is available from github: <a class="reference external" href="https://github.com/opscode-cookbooks/chef_handler">https://github.com/opscode-cookbooks/chef_handler</a>.</p>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>This cookbook includes the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">node[&quot;chef_handler&quot;][&quot;handler_path&quot;]</span></tt></td>
+<td>The directory in which handlers are dropped. Default value: <tt class="docutils literal"><span class="pre">/var/chef/handlers</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="chef-handler-lwrp">
+<h2>chef_handler LWRP<a class="headerlink" href="#chef-handler-lwrp" title="Permalink to this headline">¶</a></h2>
+<p>A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state.</p>
+<p>The <strong>chef_handler</strong> lightweight resource is used to allow cookbook authors to ship a product-specific handler. This lightweight resource requires, configures, and enables handlers on a node for the current Chef run and can pass arguments to the initializer, which allows initialization data to be pulled from a node&#8217;s attribute data. This lightweight resource should be declared early in the compile phase so it may trigger exceptions during the Chef run. For a base role, recipes that register Chef handlers should come first in the run_list.</p>
+<div class="section" id="actions">
+<h3>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:enable</span></tt></td>
+<td>Use to enable the Chef handler for the current Chef run on the current node.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">:disable</span></tt></td>
+<td>Use to disable the Chef handler for the current Chef run on the current node.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h3>Attributes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This lightweight resource provider has the following attributes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">class_name</span></tt></td>
+<td>The name of the handler class. This can be module name-spaced.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">source</span></tt></td>
+<td>The full path to the handler file or the path to a gem (if the handler ships as part of a Ruby gem).</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">arguments</span></tt></td>
+<td>An array of arguments that are passed to the initializer for the handler class.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">supports</span></tt></td>
+<td>The type of Chef handler to be registered as: <tt class="docutils literal"><span class="pre">:report</span></tt>, <tt class="docutils literal"><span class="pre">:exception</span></tt> or <tt class="docutils literal"><span class="pre">both</span></tt>. Default value: <tt class="docutils literal"><span class="pre">{</span> <span class="pre">:report</span> <span class="pre">=&gt;</span> <span class="pre">true,</span> <span class="pre">:exception</span> <span class="pre">=&gt;</span> <span class="pre">true</span> <span class="pre">}</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>The following sections describe the usage options that are available in this cookbook.</p>
+<div class="section" id="default">
+<h3>default<a class="headerlink" href="#default" title="Permalink to this headline">¶</a></h3>
+<p>Use the <tt class="docutils literal"><span class="pre">default</span></tt> option to ensure that custom handlers are dropped off early in the Chef run so that they are available to all other recipes that need them during the same Chef run.</p>
+</div>
+<div class="section" id="json-file">
+<h3>json_file<a class="headerlink" href="#json-file" title="Permalink to this headline">¶</a></h3>
+<p>Use the <tt class="docutils literal"><span class="pre">json_file</span></tt> option to serialize run status data to a JSON file located at <tt class="docutils literal"><span class="pre">/var/chef/reports</span></tt>. This usage option automatically registers the <tt class="docutils literal"><span class="pre">Chef::Handler::JsonFile</span></tt> handler that is included within Chef.</p>
+</div>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Register the Chef::Handler::JsonFile handler</strong></p>
+<p>To register the <tt class="docutils literal"><span class="pre">Chef::Handler::JsonFile</span></tt> handler that ships as part of the Chef gem:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">chef_handler</span> <span class="s2">&quot;Chef::Handler::JsonFile&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;chef/handler/json_file&quot;</span>
+  <span class="n">arguments</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s1">&#39;/var/chef/reports&#39;</span>
+  <span class="n">action</span> <span class="ss">:enable</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Register the Chef::Handler::JsonFile handler during the compile phase</strong></p>
+<p>To enable a handler during the compile phase:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">chef_handler</span> <span class="s2">&quot;Chef::Handler::JsonFile&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;chef/handler/json_file&quot;</span>
+  <span class="n">arguments</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s1">&#39;/var/chef/reports&#39;</span>
+  <span class="n">action</span> <span class="ss">:nothing</span>
+<span class="k">end</span><span class="o">.</span><span class="n">run_action</span><span class="p">(</span><span class="ss">:enable</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Handle exceptions only</strong></p>
+<p>To handle exceptions only:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">chef_handler</span> <span class="s2">&quot;Chef::Handler::JsonFile&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;chef/handler/json_file&quot;</span>
+  <span class="n">arguments</span> <span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s1">&#39;/var/chef/reports&#39;</span>
+  <span class="n">supports</span> <span class="ss">:exception</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+  <span class="n">action</span> <span class="ss">:enable</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>Enable the CloudkickHandler</strong></p>
+<p>To enable the <tt class="docutils literal"><span class="pre">CloudkickHandler</span></tt>, which was added to the default handler path. This example also passes the <tt class="docutils literal"><span class="pre">oauth</span></tt> key/secret to the handler&#8217;s initializer:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">chef_handler</span> <span class="s2">&quot;CloudkickHandler&quot;</span> <span class="k">do</span>
+  <span class="n">source</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;chef_handler&#39;</span><span class="o">][</span><span class="s1">&#39;handler_path&#39;</span><span class="o">]</span><span class="si">}</span><span class="s2">/cloudkick_handler.rb&quot;</span>
+  <span class="n">arguments</span> <span class="o">[</span><span class="n">node</span><span class="o">[</span><span class="s1">&#39;cloudkick&#39;</span><span class="o">][</span><span class="s1">&#39;oauth_key&#39;</span><span class="o">]</span><span class="p">,</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;cloudkick&#39;</span><span class="o">][</span><span class="s1">&#39;oauth_secret&#39;</span><span class="o">]]</span>
+  <span class="n">action</span> <span class="ss">:enable</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="opscode_cookbooks_iis.html" title="iis Cookbook"
+             >next</a></li>
+        <li class="right" >
+          <a href="opscode_cookbooks.html" title="Cookbooks Authored and Maintained by Opscode"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="opscode_cookbooks.html" >Cookbooks Authored and Maintained by Opscode</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

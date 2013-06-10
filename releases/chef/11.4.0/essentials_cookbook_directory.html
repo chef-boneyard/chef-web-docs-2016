@@ -1,0 +1,200 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Cookbooks Directory &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Definitions" href="essentials_cookbook_definitions.html" />
+    <link rel="prev" title="About Attribute Files" href="essentials_cookbook_attribute_files.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbook_definitions.html" title="About Definitions"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbook_attribute_files.html" title="About Attribute Files"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="cookbooks-directory">
+<h1>Cookbooks Directory<a class="headerlink" href="#cookbooks-directory" title="Permalink to this headline">¶</a></h1>
+<p>The <tt class="docutils literal"><span class="pre">cookbooks/</span></tt> directory is used to store the cookbooks that are used by Chef when configuring the various systems in the organization. This directory contains the cookbooks that are used to configure systems in the infrastructure with Chef. Each cookbook can be configured to contain cookbook-specific copyright, email, and license data.</p>
+<p>To configure cookbook-specific copyright, email, and license data, add the following to the knife.rb file in the Chef repository:</p>
+<div class="highlight-bash"><div class="highlight"><pre>cookbook_copyright <span class="s2">&quot;Example, Com.&quot;</span>
+cookbook_email     <span class="s2">&quot;cookbooks@example.com&quot;</span>
+cookbook_license   <span class="s2">&quot;apachev2&quot;</span>
+</pre></div>
+</div>
+<p>where the <tt class="docutils literal"><span class="pre">cookbook_copyright</span></tt> and <tt class="docutils literal"><span class="pre">cookbook_email</span></tt> are specific to the organization and <tt class="docutils literal"><span class="pre">cookbook_license</span></tt> is either <tt class="docutils literal"><span class="pre">apachev2</span></tt> or <tt class="docutils literal"><span class="pre">none</span></tt>. These settings will be used in the default recipe and in corresponding values in the metadata.rb file, but can be modified in those locations as well (if they should be different from the default values contained in the knife.rb file.)</p>
+<p>To create a cookbook (including all default components), run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook create COOKBOOK_NAME
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">COOKBOOK_NAME</span></tt> is the name of the cookbook that will be created. Any un-needed directory components can be left unused or deleted, if preferred.</p>
+<p>To download a cookbook when git is used for version source control, run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook site install COOKBOOK_NAME
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">COOKBOOK_NAME</span></tt> is the name of a cookbook on <a class="reference external" href="https://cookbooks.opscode.com">https://cookbooks.opscode.com</a>. This will start a process that:</p>
+<blockquote>
+<div><ul class="simple">
+<li>downloads the cookbook from <a class="reference external" href="https://cookbooks.opscode.com">https://cookbooks.opscode.com</a> as a tar.gz archive</li>
+<li>ensures that its using the git master branch, and then checks out the cookbook from a vendor branch (creating a new vendor branch, if required)</li>
+<li>removes the old (existing) version</li>
+<li>expands the tar.gz archive and adds the expanded files to the git index and commits</li>
+<li>creates a tag for the version that was downloaded</li>
+<li>checks out the master branch</li>
+<li>merges the cookbook into the master (to ensure that any local changes or modifications are preserved)</li>
+</ul>
+</div></blockquote>
+<p>To download a cookbook when git is not used for version source control, run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife cookbook site download COOKBOOK_NAME
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">COOKBOOK_NAME</span></tt> is the name of a cookbook on <a class="reference external" href="https://cookbooks.opscode.com">https://cookbooks.opscode.com</a>. This will download the tar.gz file associated with the cookbook and will create a file named COOKBOOK_NAME.tar.gz in the current directory (e.g., ~/chef-repo). Once downloaded, using a version source control system is recommended.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbook_definitions.html" title="About Definitions"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_cookbook_attribute_files.html" title="About Attribute Files"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

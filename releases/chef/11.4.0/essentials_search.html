@@ -1,0 +1,1035 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Search &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Cookbooks" href="essentials_cookbooks.html" />
+    <link rel="prev" title="About Roles" href="essentials_roles.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbooks.html" title="About Cookbooks"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_roles.html" title="About Roles"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About Search</a><ul>
+<li><a class="reference internal" href="#search-indexes">Search Indexes</a><ul>
+<li><a class="reference internal" href="#using-knife">Using Knife</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#query-syntax">Query Syntax</a></li>
+<li><a class="reference internal" href="#partial-search">Partial Search</a><ul>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#keys">Keys</a><ul>
+<li><a class="reference internal" href="#nested-fields">Nested Fields</a></li>
+<li><a class="reference internal" href="#id1">Examples</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#patterns">Patterns</a><ul>
+<li><a class="reference internal" href="#exact-matching">Exact Matching</a></li>
+<li><a class="reference internal" href="#wildcard-matching">Wildcard Matching</a></li>
+<li><a class="reference internal" href="#range-matching">Range Matching</a></li>
+<li><a class="reference internal" href="#fuzzy-matching">Fuzzy Matching</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#boolean-operators">Boolean Operators</a><ul>
+<li><a class="reference internal" href="#and">AND</a></li>
+<li><a class="reference internal" href="#not">NOT</a></li>
+<li><a class="reference internal" href="#or">OR</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#special-characters">Special Characters</a></li>
+<li><a class="reference internal" href="#targets">Targets</a><ul>
+<li><a class="reference internal" href="#roles-in-run-lists">Roles in Run-lists</a></li>
+<li><a class="reference internal" href="#nodes">Nodes</a></li>
+<li><a class="reference internal" href="#api-clients">API Clients</a></li>
+<li><a class="reference internal" href="#environments">Environments</a></li>
+<li><a class="reference internal" href="#data-bags">Data Bags</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-search">
+<h1>About Search<a class="headerlink" href="#about-search" title="Permalink to this headline">¶</a></h1>
+<p>Search indexes allow queries to be made for any type of data that is indexed by the Chef Server, including data bags (and data bag items), environments, nodes, and roles. Chef has a defined query syntax that supports search patterns like exact, wildcard, range, and fuzzy. A search is a full-text query that can be done from several locations, including from within a recipe, by using the <tt class="docutils literal"><span class="pre">search</span></tt> subcommand in Knife, by using the search functionality in the Management Console, or by using the <tt class="docutils literal"><span class="pre">/search</span></tt> or <tt class="docutils literal"><span class="pre">/search/INDEX</span></tt> endpoints in the Chef Server API. The search engine is based on Apache Solr and is run from the Chef Server.</p>
+<p>Many of the examples in this section use Knife, but the search indexes and search query syntax can be used in many locations, including from within recipes and when using the Chef Server API.</p>
+<div class="section" id="search-indexes">
+<h2>Search Indexes<a class="headerlink" href="#search-indexes" title="Permalink to this headline">¶</a></h2>
+<p>A search index is a full-text list of objects that are stored on the Chef Server, against which search queries can be made. Chef builds the following search indexes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Search Index Name</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">client</span></tt></td>
+<td>API client</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">DATA_BAG_NAME</span></tt></td>
+<td>A data bag is a global variable that is stored as JSON data and is accessible from a Chef Server. The name of the search index is the name of the data bag. For example, if the name of the data bag was &#8220;admins&#8221; then a corresponding search query might look something like <tt class="docutils literal"><span class="pre">search(:admins,</span> <span class="pre">&quot;*:*&quot;)</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">environment</span></tt></td>
+<td>An environment is a way to map an organization&#8217;s real-life workflow to what can be configured and managed when using Chef Server.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">node</span></tt></td>
+<td>A node is any server or virtual server that is configured to be maintained by a chef-client.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">role</span></tt></td>
+<td>A role is a way to define certain patterns and processes that exist across nodes in a Chef organization as belonging to a single job function.</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="using-knife">
+<h3>Using Knife<a class="headerlink" href="#using-knife" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>knife search</strong> subcommand is used run a search query for information that is indexed on a Chef Server.</p>
+<p>For example, to search for the IDs of all nodes running on the Amazon EC2 platform, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;ec2:*&#39;</span> -i
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre>4 items found
+
+ip-0A7CA19F.ec2.internal
+
+ip-0A58CF8E.ec2.internal
+
+ip-0A58E134.ec2.internal
+
+ip-0A7CFFD5.ec2.internal
+</pre></div>
+</div>
+<p>To search for the instance type (flavor) of all nodes running on the Amazon EC2 platform, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;ec2:*&#39;</span> -a ec2.instance_type
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre>4 items found
+
+ec2.instance_type:  m1.large
+id:                 ip-0A7CA19F.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip-0A58CF8E.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip-0A58E134.ec2.internal
+
+ec2.instance_type:  m1.large
+id:                 ip-0A7CFFD5.ec2.internal
+</pre></div>
+</div>
+<p>To search for all nodes running Ubuntu, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;platform:ubuntu&#39;</span>
+</pre></div>
+</div>
+<p>To search for all nodes running CentOS in the production environment, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;chef_environment:production AND platform:centos&#39;</span>
+</pre></div>
+</div>
+<p>To find a nested attribute, use a pattern similar to the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node &lt;query_to_run&gt; -a &lt;main_attribute&gt;.&lt;nested_attribute&gt;
+</pre></div>
+</div>
+<p>To build a search query that can find a nested attribute:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node name:&lt;node_name&gt; -a kernel.machine
+</pre></div>
+</div>
+<p>To test a search query that will be used in a <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">ssh</span></tt> command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s2">&quot;role:web AND NOT name:web03&quot;</span>
+</pre></div>
+</div>
+<p>where the query in the previous example will search all servers that have the <tt class="docutils literal"><span class="pre">web</span></tt> role, but not on the server named <tt class="docutils literal"><span class="pre">web03</span></tt>.</p>
+</div>
+</div>
+<div class="section" id="query-syntax">
+<h2>Query Syntax<a class="headerlink" href="#query-syntax" title="Permalink to this headline">¶</a></h2>
+<p>A search query is comprised of two parts: the key and the search pattern. A search query has the following syntax:</p>
+<div class="highlight-python"><pre>key:search_pattern</pre>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">key</span></tt> is a field name that is found in the JSON description of an indexable object on the Chef Server (a role, node, client, environment, or data bag) and <tt class="docutils literal"><span class="pre">search_pattern</span></tt> defines what will be searched for, using one of the following search patterns: exact, wildcard, range, or fuzzy matching. Both <tt class="docutils literal"><span class="pre">key</span></tt> and <tt class="docutils literal"><span class="pre">search_pattern</span></tt> are case-sensitive; <tt class="docutils literal"><span class="pre">key</span></tt> has limited support for multiple character wildcard matching using an asterisk (*) (and as long as it is not the first character).</p>
+</div>
+<div class="section" id="partial-search">
+<h2>Partial Search<a class="headerlink" href="#partial-search" title="Permalink to this headline">¶</a></h2>
+<p>A partial search query allows a search query to be made against specific attribute keys that are stored on the Chef Server. A partial search query can search the same set of objects on the Chef Server as a full search query, including specifying an object index and providing a query that can be matched to the relevant index. While a full search query will return an array of objects that match (each object containing a full set of attributes for the node), a partial search query will return only the values for the attributes that match. One primary benefit of using a partial search query is that it requires less memory and network bandwidth while the chef-client processes the search results.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To use the <tt class="docutils literal"><span class="pre">partial_search</span></tt> method in a recipe, that recipe must contain a dependency on the <tt class="docutils literal"><span class="pre">partial_search</span></tt> cookbook.</p>
+</div>
+<p>To create a partial search query, use the <tt class="docutils literal"><span class="pre">partial_search</span></tt> method, and then specify the key paths for the attributes to be returned. Each key path should be specified as an array of strings and is mapped to an arbitrary short name. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">partial_search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span> <span class="s1">&#39;role:web&#39;</span><span class="p">,</span>
+  <span class="ss">:keys</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;name&#39;</span> <span class="o">]</span><span class="p">,</span>
+             <span class="s1">&#39;ip&#39;</span>   <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;ipaddress&#39;</span> <span class="o">]</span><span class="p">,</span>
+             <span class="s1">&#39;kernel_version&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;kernel&#39;</span><span class="p">,</span> <span class="s1">&#39;version&#39;</span> <span class="o">]</span>
+           <span class="p">}</span>
+<span class="p">)</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">result</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">result</span><span class="o">[</span><span class="s1">&#39;name&#39;</span><span class="o">]</span>
+  <span class="nb">puts</span> <span class="n">result</span><span class="o">[</span><span class="s1">&#39;ip&#39;</span><span class="o">]</span>
+  <span class="nb">puts</span> <span class="n">result</span><span class="o">[</span><span class="s1">&#39;kernel_version&#39;</span><span class="o">]</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>In the previous example, two attributes will be extracted (on the Chef Server) from any node that matches the search query. The result will be a simple hash with keys <tt class="docutils literal"><span class="pre">name</span></tt>, <tt class="docutils literal"><span class="pre">ip</span></tt>, and <tt class="docutils literal"><span class="pre">kernel_version</span></tt>.</p>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The following examples show how partial search can be used in a recipe. First, a recipe without partial search:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">nodes</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span> <span class="s2">&quot;keys_ssh:* NOT name:</span><span class="si">#{</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">nodes</span> <span class="o">&lt;&lt;</span> <span class="n">node</span>
+
+<span class="k">begin</span>
+  <span class="n">other_hosts</span> <span class="o">=</span> <span class="n">data_bag</span><span class="p">(</span><span class="s1">&#39;ssh_known_hosts&#39;</span><span class="p">)</span>
+  <span class="n">other_hosts</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span>
+    <span class="n">host</span> <span class="o">=</span> <span class="n">data_bag_item</span><span class="p">(</span><span class="s1">&#39;ssh_known_hosts&#39;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span><span class="o">.</span><span class="n">to_hash</span>
+    <span class="n">host</span><span class="o">[</span><span class="s1">&#39;ipaddress&#39;</span><span class="o">]</span> <span class="o">||=</span> <span class="n">r</span><span class="o">.</span><span class="n">getaddress</span><span class="p">(</span><span class="n">host</span><span class="o">[</span><span class="s1">&#39;fqdn&#39;</span><span class="o">]</span><span class="p">)</span>
+    <span class="n">host</span><span class="o">[</span><span class="s1">&#39;keys&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="s1">&#39;ssh&#39;</span> <span class="o">=&gt;</span> <span class="p">{}</span>
+    <span class="p">}</span>
+    <span class="n">host</span><span class="o">[</span><span class="s1">&#39;keys&#39;</span><span class="o">][</span><span class="s1">&#39;ssh&#39;</span><span class="o">][</span><span class="s1">&#39;host_rsa_public&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">host</span><span class="o">[</span><span class="s1">&#39;rsa&#39;</span><span class="o">]</span> <span class="k">if</span> <span class="n">host</span><span class="o">.</span><span class="n">has_key?</span><span class="p">(</span><span class="s1">&#39;rsa&#39;</span><span class="p">)</span>
+    <span class="n">host</span><span class="o">[</span><span class="s1">&#39;keys&#39;</span><span class="o">][</span><span class="s1">&#39;ssh&#39;</span><span class="o">][</span><span class="s1">&#39;host_dsa_public&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">host</span><span class="o">[</span><span class="s1">&#39;dsa&#39;</span><span class="o">]</span> <span class="k">if</span> <span class="n">host</span><span class="o">.</span><span class="n">has_key?</span><span class="p">(</span><span class="s1">&#39;dsa&#39;</span><span class="p">)</span>
+    <span class="n">nodes</span> <span class="o">&lt;&lt;</span> <span class="n">host</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>and then the same recipe that uses the <tt class="docutils literal"><span class="pre">partial_search</span></tt> method to provide better and more targeted search results:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">nodes</span> <span class="o">=</span> <span class="n">partial_search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span> <span class="s2">&quot;keys_ssh:* NOT name:</span><span class="si">#{</span><span class="n">node</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+  <span class="ss">:keys</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="s1">&#39;hostname&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;hostname&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;fqdn&#39;</span>     <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;fqdn&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;ipaddress&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;ipaddress&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;host_rsa_public&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;keys&#39;</span><span class="p">,</span> <span class="s1">&#39;ssh&#39;</span><span class="p">,</span> <span class="s1">&#39;host_rsa_public&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;host_dsa_public&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;keys&#39;</span><span class="p">,</span> <span class="s1">&#39;ssh&#39;</span><span class="p">,</span> <span class="s1">&#39;host_dsa_public&#39;</span> <span class="o">]</span>
+    <span class="p">}</span>
+  <span class="p">)</span>
+
+<span class="n">nodes</span> <span class="o">&lt;&lt;</span> <span class="p">{</span>
+  <span class="s1">&#39;hostname&#39;</span>  <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;hostname&#39;</span><span class="o">]</span><span class="p">,</span>
+  <span class="s1">&#39;fqdn&#39;</span>      <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;fqdn&#39;</span><span class="o">]</span><span class="p">,</span>
+  <span class="s1">&#39;ipaddress&#39;</span> <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ipaddress&#39;</span><span class="o">]</span><span class="p">,</span>
+  <span class="s1">&#39;host_rsa_public&#39;</span> <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ssh&#39;</span><span class="o">]</span> <span class="o">&amp;&amp;</span>
+                       <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ssh&#39;</span><span class="o">][</span><span class="s1">&#39;keys&#39;</span><span class="o">]</span> <span class="o">&amp;&amp;</span>
+                       <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ssh&#39;</span><span class="o">][</span><span class="s1">&#39;keys&#39;</span><span class="o">][</span><span class="s1">&#39;host_rsa_public&#39;</span><span class="o">]</span> <span class="p">?</span>
+                       <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ssh&#39;</span><span class="o">][</span><span class="s1">&#39;keys&#39;</span><span class="o">][</span><span class="s1">&#39;host_rsa_public&#39;</span><span class="o">]</span> <span class="p">:</span> <span class="kp">nil</span><span class="p">,</span>
+  <span class="s1">&#39;host_dsa_public&#39;</span> <span class="o">=&gt;</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ssh&#39;</span><span class="o">]</span> <span class="o">&amp;&amp;</span>
+                       <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ssh&#39;</span><span class="o">][</span><span class="s1">&#39;keys&#39;</span><span class="o">]</span> <span class="o">&amp;&amp;</span>
+                       <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ssh&#39;</span><span class="o">][</span><span class="s1">&#39;keys&#39;</span><span class="o">][</span><span class="s1">&#39;host_dsa_public&#39;</span><span class="o">]</span> <span class="p">?</span>
+                       <span class="n">node</span><span class="o">[</span><span class="s1">&#39;ssh&#39;</span><span class="o">][</span><span class="s1">&#39;keys&#39;</span><span class="o">][</span><span class="s1">&#39;host_dsa_public&#39;</span><span class="o">]</span> <span class="p">:</span> <span class="kp">nil</span><span class="p">,</span>
+  <span class="p">}</span>
+
+<span class="k">begin</span>
+  <span class="n">other_hosts</span> <span class="o">=</span> <span class="n">data_bag</span><span class="p">(</span><span class="s1">&#39;ssh_known_hosts&#39;</span><span class="p">)</span>
+  <span class="n">other_hosts</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">h</span><span class="o">|</span>
+    <span class="n">host</span> <span class="o">=</span> <span class="n">data_bag_item</span><span class="p">(</span><span class="s1">&#39;ssh_known_hosts&#39;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span><span class="o">.</span><span class="n">to_hash</span>
+    <span class="n">host</span><span class="o">[</span><span class="s1">&#39;ipaddress&#39;</span><span class="o">]</span> <span class="o">||=</span> <span class="n">r</span><span class="o">.</span><span class="n">getaddress</span><span class="p">(</span><span class="n">host</span><span class="o">[</span><span class="s1">&#39;fqdn&#39;</span><span class="o">]</span><span class="p">)</span>
+    <span class="n">host</span><span class="o">[</span><span class="s1">&#39;host_rsa_public&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">has_key?</span><span class="p">(</span><span class="s1">&#39;rsa&#39;</span><span class="p">)</span> <span class="p">?</span> <span class="n">host</span><span class="o">[</span><span class="s1">&#39;rsa&#39;</span><span class="o">]</span> <span class="p">:</span> <span class="kp">nil</span>
+    <span class="n">host</span><span class="o">[</span><span class="s1">&#39;host_dsa_public&#39;</span><span class="o">]</span> <span class="o">=</span> <span class="n">host</span><span class="o">.</span><span class="n">has_key?</span><span class="p">(</span><span class="s1">&#39;dsa&#39;</span><span class="p">)</span> <span class="p">?</span> <span class="n">host</span><span class="o">[</span><span class="s1">&#39;dsa&#39;</span><span class="o">]</span> <span class="p">:</span> <span class="kp">nil</span>
+    <span class="n">nodes</span> <span class="o">&lt;&lt;</span> <span class="n">host</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>And a different example from a different recipe. First, without partial search:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">def</span> <span class="nf">generate_status_hash</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">client_with_actor</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;search/node?q=*:*&amp;sort=&amp;start=0&amp;rows=20&quot;</span><span class="p">)</span><span class="o">[</span><span class="s2">&quot;rows&quot;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+    <span class="n">result</span><span class="o">[</span><span class="n">n</span><span class="o">.</span><span class="n">name</span><span class="o">]</span> <span class="o">=</span> <span class="n">n</span> <span class="k">unless</span> <span class="n">n</span><span class="o">.</span><span class="n">nil?</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>and then the same recipe using a partial search:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="k">def</span> <span class="nf">generate_status_hash</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="no">Hash</span><span class="o">.</span><span class="n">new</span>
+  <span class="n">args</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;name&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;name&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;platform&#39;</span>   <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;platform&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;platform_version&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;platform_version&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;fqdn&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;fqdn&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;ipaddress&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;ipaddress&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;uptime&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;uptime&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;ohai_time&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;ohai_time&#39;</span> <span class="o">]</span><span class="p">,</span>
+    <span class="s1">&#39;run_list&#39;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s1">&#39;run_list&#39;</span> <span class="o">]</span>
+  <span class="p">}</span>
+  <span class="n">client_with_actor</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;search/node?q=*:*&amp;sort=&amp;start=0&quot;</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span><span class="o">[</span><span class="s2">&quot;rows&quot;</span><span class="o">].</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">n</span><span class="o">.</span><span class="n">inspect</span>
+    <span class="n">result</span><span class="o">[</span><span class="n">n</span><span class="o">[</span><span class="s1">&#39;data&#39;</span><span class="o">][</span><span class="s1">&#39;name&#39;</span><span class="o">]]</span> <span class="o">=</span> <span class="n">n</span><span class="o">[</span><span class="s1">&#39;data&#39;</span><span class="o">]</span> <span class="k">unless</span> <span class="n">n</span><span class="o">.</span><span class="n">nil?</span>
+  <span class="k">end</span>
+  <span class="n">result</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="keys">
+<h2>Keys<a class="headerlink" href="#keys" title="Permalink to this headline">¶</a></h2>
+<p>A key (or field name) is located in the JSON description for the Chef object that is to be searched. Any key that exists in any JSON description for any role, node, chef-client, environment, or data bag can be searched for. To search for the available keys for a particular object, use the <tt class="docutils literal"><span class="pre">show</span></tt> sub-commands for any of the following Knife sub-commands: <tt class="docutils literal"><span class="pre">client</span></tt>, <tt class="docutils literal"><span class="pre">data</span> <span class="pre">bag</span></tt>, <tt class="docutils literal"><span class="pre">environment</span></tt>, <tt class="docutils literal"><span class="pre">node</span></tt>, or <tt class="docutils literal"><span class="pre">role</span></tt>.</p>
+<div class="section" id="nested-fields">
+<h3>Nested Fields<a class="headerlink" href="#nested-fields" title="Permalink to this headline">¶</a></h3>
+<p>A nested key is a key that appears deeper in the JSON data structure. For example, information about a network interface might be several layers deep: <tt class="docutils literal"><span class="pre">node[:network][:interfaces][:en1]</span></tt>. When nested keys are present in a JSON structure, Chef will extract those nested fields to the top-level, flattening them into compound keys that support wildcard search patterns.</p>
+<p>By combining wildcards with range-matching patterns and wildcard queries, it is possible to perform very powerful searches, such as using the vendor part of the MAC address to find every node that has a network card made by the specified vendor.</p>
+<p>Consider the following snippet of JSON data:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span><span class="s2">&quot;network&quot;</span><span class="o">:</span>
+  <span class="p">[</span>
+  <span class="c1">//snipped...</span>
+    <span class="s2">&quot;interfaces&quot;</span><span class="p">,</span>
+      <span class="p">{</span><span class="s2">&quot;en1&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;number&quot;</span><span class="o">:</span> <span class="s2">&quot;1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;flags&quot;</span><span class="o">:</span> <span class="p">[</span>
+          <span class="s2">&quot;UP&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;BROADCAST&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;SMART&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;RUNNING&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;SIMPLEX&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;MULTICAST&quot;</span>
+        <span class="p">],</span>
+        <span class="s2">&quot;addresses&quot;</span><span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;fe80::fa1e:dfff:fed8:63a2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;scope&quot;</span><span class="o">:</span> <span class="s2">&quot;Link&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;prefixlen&quot;</span><span class="o">:</span> <span class="s2">&quot;64&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;family&quot;</span><span class="o">:</span> <span class="s2">&quot;inet6&quot;</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;f8:1e:df:d8:63:a2&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;family&quot;</span><span class="o">:</span> <span class="s2">&quot;lladdr&quot;</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;192.168.0.195&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;netmask&quot;</span><span class="o">:</span> <span class="s2">&quot;255.255.255.0&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;broadcast&quot;</span><span class="o">:</span> <span class="s2">&quot;192.168.0.255&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;family&quot;</span><span class="o">:</span> <span class="s2">&quot;inet&quot;</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;mtu&quot;</span><span class="o">:</span> <span class="s2">&quot;1500&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;media&quot;</span><span class="o">:</span> <span class="p">{</span>
+          <span class="s2">&quot;supported&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;autoselect&quot;</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;options&quot;</span><span class="o">:</span> <span class="p">[</span>
+
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">},</span>
+          <span class="s2">&quot;selected&quot;</span><span class="o">:</span> <span class="p">{</span>
+            <span class="s2">&quot;autoselect&quot;</span><span class="o">:</span> <span class="p">{</span>
+              <span class="s2">&quot;options&quot;</span><span class="o">:</span> <span class="p">[</span>
+
+              <span class="p">]</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="o">:</span> <span class="s2">&quot;active&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;encapsulation&quot;</span><span class="o">:</span> <span class="s2">&quot;Ethernet&quot;</span>
+      <span class="p">},</span>
+  <span class="c1">//snipped...</span>
+</pre></div>
+</div>
+<p>Before this data is indexed on the Chef Server, the nested fields are extracted into the top level, similar to:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="s2">&quot;broadcast&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;192.168.0.255&quot;</span><span class="p">,</span>
+<span class="s2">&quot;flags&quot;</span>     <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;UP&quot;</span><span class="p">,</span> <span class="s2">&quot;BROADCAST&quot;</span><span class="p">,</span> <span class="s2">&quot;SMART&quot;</span><span class="p">,</span> <span class="s2">&quot;RUNNING&quot;</span><span class="p">,</span> <span class="s2">&quot;SIMPLEX&quot;</span><span class="p">,</span> <span class="s2">&quot;MULTICAST&quot;</span><span class="p">]</span>
+<span class="s2">&quot;mtu&quot;</span>       <span class="o">=&gt;</span> <span class="s2">&quot;1500&quot;</span>
+</pre></div>
+</div>
+<p>which allows searches like the following to find data that is present in this node:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s2">&quot;broadcast:192.168.0.*&quot;</span>
+</pre></div>
+</div>
+<p>Or:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s2">&quot;mtu:1500&quot;</span>
+</pre></div>
+</div>
+<p>Or:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s2">&quot;flags:UP&quot;</span>
+</pre></div>
+</div>
+<p>This data is also flattened into various compound keys, which follow the same pattern as the JSON hierarchy and use underscores (&#8220;_&#8221;) to separate the levels of data, similar to:</p>
+<div class="highlight-javascript"><pre># ...snip...
+"network_interfaces_en1_addresses_192.168.0.195_broadcast" =&gt; "192.168.0.255",
+"network_interfaces_en1_addresses_fe80::fa1e:tldr_family"  =&gt; "inet6",
+"network_interfaces_en1_addresses"                         =&gt; ["fe80::fa1e:tldr","f8:1e:df:tldr","192.168.0.195"]
+# ...snip...</pre>
+</div>
+<p>which allows searches like the following to find data that is present in this node:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s2">&quot;network_interfaces_en1_addresses:192.168.0.195&quot;</span>
+</pre></div>
+</div>
+<p>This flattened data structure also supports using wildcard compound keys, which allow searches to omit levels within the JSON data structure that are not important to the search query. In the following example, an asterisk (&#8220;*&#8221;) is used to show where the wildcard can exist when searching for nested key:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="s2">&quot;network_interfaces_*_flags&quot;</span>     <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;UP&quot;</span><span class="p">,</span> <span class="s2">&quot;BROADCAST&quot;</span><span class="p">,</span> <span class="s2">&quot;SMART&quot;</span><span class="p">,</span> <span class="s2">&quot;RUNNING&quot;</span><span class="p">,</span> <span class="s2">&quot;SIMPLEX&quot;</span><span class="p">,</span> <span class="s2">&quot;MULTICAST&quot;</span><span class="p">]</span>
+<span class="s2">&quot;network_interfaces_*_addresses&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;fe80::fa1e:dfff:fed8:63a2&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.0.195&quot;</span><span class="p">,</span> <span class="s2">&quot;f8:1e:df:d8:63:a2&quot;</span><span class="p">]</span>
+<span class="s2">&quot;network_interfaces_en0_media_*&quot;</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;autoselect&quot;</span><span class="p">,</span> <span class="s2">&quot;none&quot;</span><span class="p">,</span> <span class="s2">&quot;1000baseT&quot;</span><span class="p">,</span> <span class="s2">&quot;10baseT/UTP&quot;</span><span class="p">,</span> <span class="s2">&quot;100baseTX&quot;</span><span class="p">]</span>
+<span class="s2">&quot;network_interfaces_en1_*&quot;</span>       <span class="o">=&gt;</span> <span class="p">[</span><span class="s2">&quot;1&quot;</span><span class="p">,</span> <span class="s2">&quot;UP&quot;</span><span class="p">,</span> <span class="s2">&quot;BROADCAST&quot;</span><span class="p">,</span> <span class="s2">&quot;SMART&quot;</span><span class="p">,</span> <span class="s2">&quot;RUNNING&quot;</span><span class="p">,</span> <span class="s2">&quot;SIMPLEX&quot;</span><span class="p">,</span> <span class="s2">&quot;MULTICAST&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;fe80::fa1e:dfff:fed8:63a2&quot;</span><span class="p">,</span> <span class="s2">&quot;f8:1e:df:d8:63:a2&quot;</span><span class="p">,</span> <span class="s2">&quot;192.168.0.195&quot;</span><span class="p">,</span>
+                                     <span class="s2">&quot;1500&quot;</span><span class="p">,</span> <span class="s2">&quot;supported&quot;</span><span class="p">,</span> <span class="s2">&quot;selected&quot;</span><span class="p">,</span> <span class="s2">&quot;en&quot;</span><span class="p">,</span> <span class="s2">&quot;active&quot;</span><span class="p">,</span> <span class="s2">&quot;Ethernet&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For each of the wildcard examples above, the possible values are shown contained within the brackets. When running a search query, the query syntax for wildcards is to simply omit the name of the node (while preserving the underscores), similar to:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">network_interfaces__flags</span>
+</pre></div>
+</div>
+<p>This query will search within the <tt class="docutils literal"><span class="pre">flags</span></tt> node, within the JSON structure, for each of <tt class="docutils literal"><span class="pre">UP</span></tt>, <tt class="docutils literal"><span class="pre">BROADCAST</span></tt>, <tt class="docutils literal"><span class="pre">SMART</span></tt>, <tt class="docutils literal"><span class="pre">RUNNING</span></tt>, <tt class="docutils literal"><span class="pre">SIMPLEX</span></tt>, and <tt class="docutils literal"><span class="pre">MULTICAST</span></tt>.</p>
+</div>
+<div class="section" id="id1">
+<h3>Examples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>To see the available keys for a node, enter the following (for a node named &#8220;staging&#8221;):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife node show staging -Fj | less
+</pre></div>
+</div>
+<p>to return a full JSON description of the node and to view the available keys with which any search query can be based.</p>
+</div></blockquote>
+<p>To use a question mark(&#8221;?&#8221;) to replace a single character in a wildcard search, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;platfor?:ubuntu&#39;</span>
+</pre></div>
+</div>
+<p>To use an asterisk (&#8220;*&#8221;) to replace zero (or more) characters in a wildcard search, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;platfo*:ubuntu&#39;</span>
+</pre></div>
+</div>
+<p>To find all IP address that are on the same network, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;network_interfaces__addresses:192.168*&#39;</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">192.168*</span></tt> is the network address for which the search will be run.</p>
+<p>To use a range search to find IP addresses within a subnet, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;network_interfaces_X_addresses:[192.168.0.* TO 192.168.127.*]&#39;</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">192.168.0.*</span> <span class="pre">TO</span> <span class="pre">192.168.127.*</span></tt> defines the subnet range.</p>
+</div>
+</div>
+<div class="section" id="patterns">
+<h2>Patterns<a class="headerlink" href="#patterns" title="Permalink to this headline">¶</a></h2>
+<p>A search pattern is a way to fine-tune search results by returning anything that matches some type of incomplete search query. There are four types of search patterns that can be used when searching the Chef search indexes: exact, wildcard, range, and fuzzy.</p>
+<div class="section" id="exact-matching">
+<h3>Exact Matching<a class="headerlink" href="#exact-matching" title="Permalink to this headline">¶</a></h3>
+<p>An exact matching search pattern is used to search for a key with a name that exactly matches a search query. If the name of the key contains spaces, quotes must be used in the search pattern to ensure the search query finds the key. The entire query must also be contained within quotes, so as to prevent it from being interpreted by Ruby or a command shell. The best way to ensure that quotes are used consistently is to quote the entire query using single quotes (&#8216; &#8216;) and a search pattern with double quotes (&#8221; &#8221;).</p>
+<p>To search in a specific data bag for a specific data bag item, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search admins <span class="s1">&#39;id:charlie&#39;</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">id</span></tt> is the name of the data bag and <tt class="docutils literal"><span class="pre">charlie</span></tt> is the name of the data bag item. Something similar to the following will be returned:</p>
+<div class="highlight-bash"><div class="highlight"><pre>1 items found
+_rev:       1-39ff4099f2510f477b4c26bef81f75b9
+chef_type:  data_bag_item
+comment:    Charlie the Unicorn
+data_bag:   admins
+gid:        ops
+id:         charlie
+shell:      /bin/zsh
+uid:        1005
+</pre></div>
+</div>
+<p>To search in a specific data bag using a string to find any matching data bag item, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search admins <span class="s1">&#39;comment:&quot;Charlie the Unicorn&quot;&#39;</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">comment</span></tt> is the name of the data bag and <tt class="docutils literal"><span class="pre">Charlie</span> <span class="pre">the</span> <span class="pre">Unicorn</span></tt> is the string that will be used during the search. Something similar to the following will be returned:</p>
+<div class="highlight-bash"><div class="highlight"><pre>1 items found
+_rev:       1-39ff4099f2510f477b4c26bef81f75b9
+chef_type:  data_bag_item
+comment:    Charlie the Unicorn
+data_bag:   admins
+gid:        ops
+id:         charlie
+shell:      /bin/zsh
+uid:        1005
+</pre></div>
+</div>
+</div>
+<div class="section" id="wildcard-matching">
+<h3>Wildcard Matching<a class="headerlink" href="#wildcard-matching" title="Permalink to this headline">¶</a></h3>
+<p>A wildcard matching search pattern is used to query for substring matches that replace zero (or more) characters in the search pattern with anything that could match the replaced character. There are two types of wildcard searches:</p>
+<ul class="simple">
+<li>A question mark (&#8221;?&#8221;) can be used to replace exactly one character (as long as that character is not the first character in the search pattern)</li>
+<li>An asterisk (&#8220;*&#8221;) can be used to replace any number of characters (including zero)</li>
+</ul>
+<p>To search for any node that contains the specified key, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;foo:*&#39;</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">foo</span></tt> is the name of the node.</p>
+<p>To search for a node using a partial name, enter one of the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;name:app*&#39;</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;name:app1*.example.com&#39;</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;name:app?.example.com&#39;</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;name:app1.example.???&#39;</span>
+</pre></div>
+</div>
+<p>to return &#8220;app1.example.com&#8221; (and any other node that matches any of the string searches above).</p>
+</div>
+<div class="section" id="range-matching">
+<h3>Range Matching<a class="headerlink" href="#range-matching" title="Permalink to this headline">¶</a></h3>
+<p>A range matching search pattern is used to query for values that are within a range defined by upper and lower boundaries. A range matching search pattern can be inclusive or exclusive of the boundaries. Use square brackets (&#8220;[ ]&#8221;) to denote inclusive boundaries and curly braces (&#8220;{ }&#8221;) to denote exclusive boundaries and with the following syntax:</p>
+<div class="highlight-python"><pre>boundary TO boundary</pre>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">TO</span></tt> is required (and must be capitalized).</p>
+<p>A data bag named &#8220;sample&#8221; contains four data bag items: &#8220;abc&#8221;, &#8220;bar&#8221;, &#8220;baz&#8221;, and &#8220;quz&#8221;. All of the items in-between &#8220;bar&#8221; and &#8220;foo&#8221;, inclusive, can be searched for using an inclusive search pattern.</p>
+<p>To search using an inclusive range, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search sample <span class="s2">&quot;id:[bar TO foo]&quot;</span>
+</pre></div>
+</div>
+<p>where square brackets (&#8220;[ ]&#8221;) are used to define the range.</p>
+<p>A data bag named &#8220;sample&#8221; contains four data bag items: &#8220;abc&#8221;, &#8220;bar&#8221;, &#8220;baz&#8221;, and &#8220;quz&#8221;. All of the items that are exclusive to &#8220;bar&#8221; and &#8220;foo&#8221; can be searched for using an exclusive search pattern.</p>
+<p>To search using an exclusive range, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search sample <span class="s2">&quot;id:{bar TO foo}&quot;</span>
+</pre></div>
+</div>
+<p>where curly braces (&#8220;{ }&#8221;) are used to define the range.</p>
+</div>
+<div class="section" id="fuzzy-matching">
+<h3>Fuzzy Matching<a class="headerlink" href="#fuzzy-matching" title="Permalink to this headline">¶</a></h3>
+<p>A fuzzy matching search pattern is used to search based on the proximity of two strings of characters. An (optional) integer may be used as part of the search query to more closely define the proximity. A fuzzy matching search pattern has the following syntax:</p>
+<div class="highlight-python"><pre>"search_query"~edit_distance</pre>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">search_query</span></tt> is the string that will be used during the search and <tt class="docutils literal"><span class="pre">edit_distance</span></tt> is the proximity. A tilde (&#8220;~&#8221;) is used to separate the edit distance from the search query.</p>
+<p>To use a fuzzy search pattern enter something similar to:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search client <span class="s2">&quot;name:boo~&quot;</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">boo~</span></tt> defines the fuzzy search pattern. This will return something similar to:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;total&quot;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+  <span class="s2">&quot;rows&quot;</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="s2">&quot;public_key&quot;</span><span class="o">:</span> <span class="s2">&quot;too long didn&#39;t read&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;foo&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;_rev&quot;</span><span class="o">:</span> <span class="s2">&quot;1-f11a58043906e33d39a686e9b58cd92f&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;json_class&quot;</span><span class="o">:</span> <span class="s2">&quot;Chef::ApiClient&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;admin&quot;</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="s2">&quot;chef_type&quot;</span><span class="o">:</span> <span class="s2">&quot;client&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="boolean-operators">
+<h2>Boolean Operators<a class="headerlink" href="#boolean-operators" title="Permalink to this headline">¶</a></h2>
+<p>A Boolean operator can be used to ensure that certain terms are included in the results, are excluded from the results, or are not included even when other aspects of the query match. Chef searches can use the following Boolean operators:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Boolean Operator</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">AND</span></tt></td>
+<td>Use to find a match when both terms exist.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">OR</span></tt></td>
+<td>Use to find a match if either term exists.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">NOT</span></tt></td>
+<td>Use to exclude the term after NOT from the search results.</td>
+</tr>
+</tbody>
+</table>
+<p>Boolean operators must be in ALL CAPS. Parentheses can be used to group clauses and to form sub-queries.</p>
+<div class="section" id="and">
+<h3>AND<a class="headerlink" href="#and" title="Permalink to this headline">¶</a></h3>
+<p>To join queries using the AND boolean operator, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search sample <span class="s2">&quot;id:b* AND animal:dog&quot;</span>
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="o">{</span>
+  <span class="s2">&quot;total&quot;</span>: 1,
+  <span class="s2">&quot;start&quot;</span>: 0,
+  <span class="s2">&quot;rows&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;an item named baz&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;baz&quot;</span>,
+      <span class="s2">&quot;animal&quot;</span>: <span class="s2">&quot;dog&quot;</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Or, to find all of the computers running on the Microsoft Windows platform that are associated with a role named &#8220;jenkins&#8221;, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node <span class="s1">&#39;platform:windows AND roles:jenkins&#39;</span>
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre>2 items found
+
+Node Name:   windows-server-2008r2.domain.com
+Environment: _default
+FQDN:        windows-server-2008r2
+IP:          0000::0000:0000:0000:0000
+Run List:    role<span class="o">[</span>jenkins-windows<span class="o">]</span>
+Roles:       jenkins-windows, jenkins
+Recipes:     jenkins-client::windows, jenkins::node_windows
+Platform:    windows 6.1.7601
+Tags:
+
+Node Name:   123-windows-2008r2-amd64-builder
+Environment: _default
+FQDN:        ABC-1234567890AB
+IP:          123.45.6.78
+Run List:    role<span class="o">[</span>123-windows-2008r2-amd64-builder<span class="o">]</span>
+Roles:       123-windows-2008r2-amd64-builder, jenkins
+Recipes:     jenkins::node_windows, git_windows
+Platform:    windows 6.1.7601
+Tags:
+</pre></div>
+</div>
+</div>
+<div class="section" id="not">
+<h3>NOT<a class="headerlink" href="#not" title="Permalink to this headline">¶</a></h3>
+<p>To negate search results using the NOT boolean operator, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search sample <span class="s2">&quot;(NOT id:foo)&quot;</span>
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="o">{</span>
+  <span class="s2">&quot;total&quot;</span>: 4,
+  <span class="s2">&quot;start&quot;</span>: 0,
+  <span class="s2">&quot;rows&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;an item named bar&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;bar&quot;</span>,
+      <span class="s2">&quot;animal&quot;</span>: <span class="s2">&quot;cat&quot;</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;an item named baz&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;baz&quot;</span>
+      <span class="s2">&quot;animal&quot;</span>: <span class="s2">&quot;dog&quot;</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;an item named abc&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;abc&quot;</span>,
+      <span class="s2">&quot;animal&quot;</span>: <span class="s2">&quot;unicorn&quot;</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;an item named qux&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;qux&quot;</span>,
+      <span class="s2">&quot;animal&quot;</span>, <span class="s2">&quot;penguin&quot;</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="or">
+<h3>OR<a class="headerlink" href="#or" title="Permalink to this headline">¶</a></h3>
+<p>To join queries using the OR boolean operator, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search sample <span class="s2">&quot;id:foo OR id:abc&quot;</span>
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="o">{</span>
+  <span class="s2">&quot;total&quot;</span>: 2,
+  <span class="s2">&quot;start&quot;</span>: 0,
+  <span class="s2">&quot;rows&quot;</span>: <span class="o">[</span>
+    <span class="o">{</span>
+      <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;an item named foo&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;foo&quot;</span>,
+      <span class="s2">&quot;animal&quot;</span>: <span class="s2">&quot;pony&quot;</span>
+    <span class="o">}</span>,
+    <span class="o">{</span>
+      <span class="s2">&quot;comment&quot;</span>: <span class="s2">&quot;an item named abc&quot;</span>,
+      <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;abc&quot;</span>,
+      <span class="s2">&quot;animal&quot;</span>: <span class="s2">&quot;unicorn&quot;</span>
+    <span class="o">}</span>
+  <span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="special-characters">
+<h2>Special Characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h2>
+<p>A special character can be used to fine-tune a search query and to increase the accuracy of the search results. The following characters can be included within the search query syntax, but each occurrence of a special character must be escaped with a backslash ():</p>
+<div class="highlight-python"><pre>+  -  &amp;&amp;  | |  !  ( )  { }  [ ]  ^  "  ~  *  ?  :  \</pre>
+</div>
+<p>For example:</p>
+<div class="highlight-python"><pre>\(1\+1\)\:2</pre>
+</div>
+</div>
+<div class="section" id="targets">
+<h2>Targets<a class="headerlink" href="#targets" title="Permalink to this headline">¶</a></h2>
+<p>A search target is any object that has been indexed on the Chef Server, including roles (and run-lists), nodes, environments, data bags, and any API client.</p>
+<div class="section" id="roles-in-run-lists">
+<h3>Roles in Run-lists<a class="headerlink" href="#roles-in-run-lists" title="Permalink to this headline">¶</a></h3>
+<p>A search query can be made for roles that are at the top-level of a run-list and also for a role that is part of an expanded run-list.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">roles</span></tt> field is updated each time the chef-client is run; changes to a run-list will not affect <tt class="docutils literal"><span class="pre">roles</span></tt> until the next time the chef-client is run on the node.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Role Location</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Top-level</td>
+<td><p class="first">To find a node with a role in the top-level of its run-list, search within the <tt class="docutils literal"><span class="pre">role</span></tt> field (and escaping any special characters with the slash symbol) using the following syntax:</p>
+<div class="highlight-python"><pre>role:ROLE_NAME</pre>
+</div>
+<p class="last">where <tt class="docutils literal"><span class="pre">role</span></tt> (singlular!) indicates the top-level run-list.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Expanded</td>
+<td><p class="first">To find a node with a role in an expanded run-list, search within the <tt class="docutils literal"><span class="pre">roles</span></tt> field (and escaping any special characters with the slash symbol) using the following syntax:</p>
+<div class="highlight-python"><pre>roles:ROLE_NAME</pre>
+</div>
+<p class="last">where <tt class="docutils literal"><span class="pre">roles</span></tt> (plural!) indicates the expanded run-list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>To search a top-level run list for a role named &#8220;load_balancer&#8221;, enter the following (from Knife):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search node role:load_balancer
+</pre></div>
+</div>
+<p>or add the following (to a recipe):</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span> <span class="s1">&#39;role:load_balancer&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>To search an expanded run list for all nodes with the role &#8220;load_balancer&#8221;, enter the following (using Knife):</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ $ </span>knife search node roles:load_balancer
+</pre></div>
+</div>
+<p>or add the following (to a recipe):</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span> <span class="s1">&#39;roles:load_balancer&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="nodes">
+<h3>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h3>
+<p>A node can be searched from a recipe by using the following syntax:</p>
+<div class="highlight-python"><pre>search(:node, "key:attribute")</pre>
+</div>
+<p>A wildcard can be used to replace characters within the search query.</p>
+<p>Chef saves expanded lists of roles (all of the roles that apply to a node, including nested roles) and recipes to the role and recipe attributes on a node. The expanded lists of roles allows for searching within nodes that run a given recipe, even if that recipe is included by a role.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The <tt class="docutils literal"><span class="pre">recipes</span></tt> field is updated each time the chef-client is run; changes to a run-list will not affect <tt class="docutils literal"><span class="pre">recipes</span></tt> until the next time the chef-client is run on the node.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Node Location</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>In a specified recipe</td>
+<td><p class="first">To find a node with a specified recipe in the run-list, search within the <tt class="docutils literal"><span class="pre">run_list</span></tt> field (and escaping any special characters with the slash symbol) using the following syntax:</p>
+<div class="highlight-python"><pre>search(:node, 'run_list:recipe\[foo\:\:bar\]')</pre>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">recipe</span></tt> (singular!) indicates the top-level run-list. Variables can be interpolated into search strings using the Ruby alternate quoting syntax:</p>
+<div class="last highlight-python"><pre>search(:node, %Q{run_list:"recipe[#{the_recipe}]"} )</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td>In an expanded run-list</td>
+<td><p class="first">To find a node with a recipe in an expanded run-list, search within the <tt class="docutils literal"><span class="pre">recipes</span></tt> field (and escaping any special characters with the slash symbol) using the following syntax:</p>
+<div class="highlight-python"><pre>recipes:RECIPE_NAME</pre>
+</div>
+<p class="last">where <tt class="docutils literal"><span class="pre">recipes</span></tt> (plural!) indicates to search within an expanded run-list.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>If you just want to use each result of the search and don&#8217;t care about the aggregate result you can provide a code block to the search method. Each result is then passed to the block:</p>
+<div class="highlight-python"><pre># Print every node matching the search pattern
+search(:node, "*:*") do |matching_node|
+  puts matching_node.to_s
+end</pre>
+</div>
+</div>
+<div class="section" id="api-clients">
+<h3>API Clients<a class="headerlink" href="#api-clients" title="Permalink to this headline">¶</a></h3>
+<p>An API client is any machine that has permission to use the Chef Server API to communicate with the Chef Server. An API client is typically a node (on which the chef-client runs) or a workstation (on which Knife runs), but can also be any other machine configured to use the Chef Server API.</p>
+<p>Sometimes when a role isn&#8217;t fully defined (or implemented), it may be necessary for a machine to connect to a database, search engine, or some other service within an environment by using the settings located on another machine, such as a host name, IP address, or private IP address. The following simplified settings file is for a web server named &#8220;mysqlchef&#8221; and a database server named mysqlchefutil:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">username</span><span class="p">:</span> <span class="s2">&quot;mysql&quot;</span>
+<span class="n">password</span><span class="p">:</span> <span class="s2">&quot;MoveAlong&quot;</span>
+<span class="n">host</span><span class="p">:</span>     <span class="s2">&quot;10.40.64.202&quot;</span>
+<span class="n">port</span><span class="p">:</span>     <span class="s2">&quot;3306&quot;</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">host</span></tt> is the private IP address of the database server. Use the following Knife query to view information about the node:</p>
+<p>To access these settings as part of a recipe that is run on the web server, use code similar to:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">db_server</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span> <span class="s2">&quot;name:mysqlchefutil&quot;</span><span class="p">)</span>
+<span class="n">private_ip</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">#{</span><span class="n">db_server</span><span class="o">[</span><span class="mi">0</span><span class="o">][</span><span class="ss">:rackspace</span><span class="o">][</span><span class="ss">:private_ip</span><span class="o">]</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">puts</span> <span class="n">private_ip</span>
+</pre></div>
+</div>
+<p>where the &#8220;[0]&#8221; is the 0 (zero) index for the db_server identifier. This is because a single document is returned because the node is being searched on its unique name. The identifier <tt class="docutils literal"><span class="pre">private_ip</span></tt> will now have the value of the private IP address of the database server (<tt class="docutils literal"><span class="pre">10.40.64.202</span></tt>) and can be used in templates as a variable, among other possible uses.</p>
+</div>
+<div class="section" id="environments">
+<h3>Environments<a class="headerlink" href="#environments" title="Permalink to this headline">¶</a></h3>
+<p>An environment is a way to map an organization&#8217;s real-life workflow to what can be configured and managed when using Chef Server. Every Chef organization begins with a single environment called the <tt class="docutils literal"><span class="pre">_default</span></tt> environment, which cannot be modified (or deleted). Additional environments can be created, such as production, staging, testing, and development. Generally, an environment is also associated with one (or more) cookbook versions.</p>
+<p>When searching, a Chef environment (<tt class="docutils literal"><span class="pre">chef_environment</span></tt>) is treated much like an attribute. This allows search results to be limited to a specified environment by using Boolean operators and extra search terms. For example, to use Knife to search for all of the servers running CentOS in an environment named &#8220;QA&#8221;, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>knife search node <span class="s2">&quot;chef_environment:QA AND platform:centos&quot;</span>
+</pre></div>
+</div>
+<p>Or, to include the same search in a recipe, use a code block similar to:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">qa_nodes</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span><span class="s2">&quot;chef_environment:QA&quot;</span><span class="p">)</span>
+<span class="n">qa_nodes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">qa_node</span><span class="o">|</span>
+    <span class="c1"># Do useful work specific to qa nodes only</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="data-bags">
+<h3>Data Bags<a class="headerlink" href="#data-bags" title="Permalink to this headline">¶</a></h3>
+<p>A data bag is a global variable that is stored as JSON data and is accessible from a Chef Server. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords).</p>
+<p>Any search for a data bag (or a data bag item) must specify the name of the data bag and then provide the search query string that will be used during the search. For example, to use Knife to search within a data bag named &#8220;admin_data&#8221; across all items, except for the &#8220;admin_users&#8221; item, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife search admin_data <span class="s2">&quot;(NOT id:admin_users)&quot;</span>
+</pre></div>
+</div>
+<p>Or, to include the same search query in a recipe, use a code block similar to:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">search</span><span class="p">(</span><span class="ss">:admin_data</span><span class="p">,</span> <span class="s2">&quot;NOT id:admin_users&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>It may not be possible to know which data bag items will be needed. It may be necessary to load everything in a data bag (but not know what &#8220;everything&#8221; is). Using a search query is the ideal way to deal with that ambiguity, yet still ensure that all of the required data is returned. The following examples show how a recipe can use a series of search queries to search within a data bag named &#8220;admins&#8221;. For example, to find every administrator:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">search</span><span class="p">(</span><span class="ss">:admins</span><span class="p">,</span> <span class="s2">&quot;*:*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or to search for an administrator named &#8220;charlie&#8221;:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">search</span><span class="p">(</span><span class="ss">:admins</span><span class="p">,</span> <span class="s2">&quot;id:charlie&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or to search for an administrator with a group identifier of &#8220;ops&#8221;:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">search</span><span class="p">(</span><span class="ss">:admins</span><span class="p">,</span> <span class="s2">&quot;gid:ops&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Or to search for an administrator whose name begins with the letter &#8220;c&#8221;:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">search</span><span class="p">(</span><span class="ss">:admins</span><span class="p">,</span> <span class="s2">&quot;id:c*&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Data bag items that are returned by a search query can be used as if they were a hash. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">charlie</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="ss">:admins</span><span class="p">,</span> <span class="s2">&quot;id:charlie&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">first</span>
+<span class="c1"># =&gt; variable &#39;charlie&#39; is set to the charlie data bag item</span>
+<span class="n">charlie</span><span class="o">[</span><span class="s2">&quot;gid&quot;</span><span class="o">]</span>
+<span class="c1"># =&gt; &quot;ops&quot;</span>
+<span class="n">charlie</span><span class="o">[</span><span class="s2">&quot;shell&quot;</span><span class="o">]</span>
+<span class="c1"># =&gt; &quot;/bin/zsh&quot;</span>
+</pre></div>
+</div>
+<p>The following recipe can be used to create a user for each administrator by loading all of the items from the &#8220;admins&#8221; data bag, looping through each admin in the data bag, and then creating a user resource so that each of those admins exist:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">admins</span> <span class="o">=</span> <span class="n">data_bag</span><span class="p">(</span><span class="s1">&#39;admins&#39;</span><span class="p">)</span>
+
+<span class="n">admins</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">login</span><span class="o">|</span>
+  <span class="n">admin</span> <span class="o">=</span> <span class="n">data_bag_item</span><span class="p">(</span><span class="s1">&#39;admins&#39;</span><span class="p">,</span> <span class="n">login</span><span class="p">)</span>
+  <span class="n">home</span> <span class="o">=</span> <span class="s2">&quot;/home/</span><span class="si">#{</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+
+  <span class="n">user</span><span class="p">(</span><span class="n">login</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">uid</span>       <span class="n">admin</span><span class="o">[</span><span class="s1">&#39;uid&#39;</span><span class="o">]</span>
+    <span class="n">gid</span>       <span class="n">admin</span><span class="o">[</span><span class="s1">&#39;gid&#39;</span><span class="o">]</span>
+    <span class="n">shell</span>     <span class="n">admin</span><span class="o">[</span><span class="s1">&#39;shell&#39;</span><span class="o">]</span>
+    <span class="n">comment</span>   <span class="n">admin</span><span class="o">[</span><span class="s1">&#39;comment&#39;</span><span class="o">]</span>
+    <span class="n">home</span>      <span class="n">home</span>
+    <span class="n">supports</span>  <span class="ss">:manage_home</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>And then the same recipe, modified to load administrators using a search query (and using an array to store the results of the search query):</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">admins</span> <span class="o">=</span> <span class="o">[]</span>
+
+<span class="n">search</span><span class="p">(</span><span class="ss">:admins</span><span class="p">,</span> <span class="s2">&quot;*:*&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">admin</span><span class="o">|</span>
+  <span class="n">login</span> <span class="o">=</span> <span class="n">admin</span><span class="o">[</span><span class="s2">&quot;id&quot;</span><span class="o">]</span>
+
+  <span class="n">admins</span> <span class="o">&lt;&lt;</span> <span class="n">login</span>
+
+  <span class="n">home</span> <span class="o">=</span> <span class="s2">&quot;/home/</span><span class="si">#{</span><span class="n">login</span><span class="si">}</span><span class="s2">&quot;</span>
+
+  <span class="n">user</span><span class="p">(</span><span class="n">login</span><span class="p">)</span> <span class="k">do</span>
+    <span class="n">uid</span>       <span class="n">admin</span><span class="o">[</span><span class="s1">&#39;uid&#39;</span><span class="o">]</span>
+    <span class="n">gid</span>       <span class="n">admin</span><span class="o">[</span><span class="s1">&#39;gid&#39;</span><span class="o">]</span>
+    <span class="n">shell</span>     <span class="n">admin</span><span class="o">[</span><span class="s1">&#39;shell&#39;</span><span class="o">]</span>
+    <span class="n">comment</span>   <span class="n">admin</span><span class="o">[</span><span class="s1">&#39;comment&#39;</span><span class="o">]</span>
+
+    <span class="n">home</span>      <span class="n">home</span>
+    <span class="n">supports</span>  <span class="ss">:manage_home</span> <span class="o">=&gt;</span> <span class="kp">true</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_cookbooks.html" title="About Cookbooks"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_roles.html" title="About Roles"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

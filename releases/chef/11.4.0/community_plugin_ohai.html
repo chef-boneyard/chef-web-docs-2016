@@ -1,0 +1,246 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Community Ohai Plugins &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="The Chef Community" href="community.html" />
+    <link rel="next" title="Report Handlers" href="community_plugin_report_handler.html" />
+    <link rel="prev" title="Community Knife Plugins" href="community_plugin_knife.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="community_plugin_report_handler.html" title="Report Handlers"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="community_plugin_knife.html" title="Community Knife Plugins"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="community.html" accesskey="U">The Chef Community</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="community-ohai-plugins">
+<h1>Community Ohai Plugins<a class="headerlink" href="#community-ohai-plugins" title="Permalink to this headline">¶</a></h1>
+<p>Ohai is a tool that is used to detect certain properties about a node&#8217;s environment and provide them to the chef-client during every Chef run. The types of properties Ohai reports on include:</p>
+<ul class="simple">
+<li>Platform details</li>
+<li>Networking usage</li>
+<li>Memory usage</li>
+<li>Processor usage</li>
+<li>Kernel data</li>
+<li>Host names</li>
+<li>Fully qualified domain names</li>
+<li>Other configuration details</li>
+</ul>
+<p>When Chef configures the node object during each Chef run, these attributes are used by the chef-client to ensure that certain properties remain unchanged. (These properties are also referred to as <tt class="docutils literal"><span class="pre">automatic</span></tt> attributes.) Ohai is part of the required configuration on each node that is registered with the Chef Server.</p>
+<p>The following Ohai plugins are available in the Chef open source community:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Plugin</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference external" href="https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/dell.rb">dell.rb</a></td>
+<td>Adds some useful Dell server information to Ohai. For example: service tag, express service code, storage info, RAC info, and so on. To use this plugin, OMSA and SMBIOS applications need to be installed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/linux/dpkg.rb">dpkg.rb</a></td>
+<td>Adds dpkg info to Ohai. This collections information about the status of Debian packages and about the various packages that are installed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://bitbucket.org/retr0h/ohai">ipmi.rb</a></td>
+<td>Adds an IPMI mac and IP address to Ohai, where available.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/albertsj1/ohai-plugins/blob/master/kvm_extensions.rb">kvm_extensions.rb</a></td>
+<td>Adds extensions for virtualization attributes to provide additional host and guest information for KVM.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/linux/ladvd.rb">ladvd.rb</a></td>
+<td>Adds ladvd information to Ohai, when it exists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/jespada/ohai-plugins/blob/master/lxc_virtualization.rb">lxc_virtualization.rb</a></td>
+<td>Adds extensions for virtualization attributes to provide host and guest information for Linux containers.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://gist.github.com/1040543">network_addr.rb</a></td>
+<td>Adds extensions for network attributes with additional <tt class="docutils literal"><span class="pre">ipaddrtype_iface</span></tt> attributes to make it semantically easier to retrieve addresses. For example: <tt class="docutils literal"><span class="pre">node['network']['ipaddress_eth0']</span></tt> versus <tt class="docutils literal"><span class="pre">node['network']['interfaces']['eth0']['addresses'].guesswhichisfirst</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/agoddard/ohai-plugins/blob/master/plugins/network_ports.rb">network_ports.rb</a></td>
+<td>Adds extensions for network attributes so that Ohai can detect to which interfaces TCP and UDP ports are bound.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/sbates/Chef-odds-n-ends/blob/master/ohai/parse_host_plugin.rb">parse_host_plugin.rb</a></td>
+<td>Adds the ability to parse a host name using three top-level attribute and five nested attributes.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/stevendanna/ohai-plugins/blob/master/r.rb">r.rb</a></td>
+<td>Adds the ability to collect basic information about the R Project.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/linux/rpm.rb">rpm.rb</a></td>
+<td>Adds RPM Package Manager information to Ohai and collects information about the status of RPM Package Manager packages and about the various packages that are installed.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/spheromak/cookbooks/blob/master/ohai/files/default/sysctl.rb">sysctl.rb</a></td>
+<td>Adds sysctl information to Ohai.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/albertsj1/ohai-plugins/blob/master/vserver.rb">vserver.rb</a></td>
+<td>Adds extensions for virtualization attributes to allow a Linux virtual server host and guest information to be used by Ohai.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/cloudant/ohai_plugins/blob/master/wtf.rb">wtf.rb</a></td>
+<td>Adds the irreverent wtfismyip.com service so that Ohai can determine a machine&#8217;s external IPv4 address and geographical location.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/spheromak/cookbooks/blob/master/ohai/files/default/xenserver.rb">xenserver.rb</a></td>
+<td>Adds extensions for virtualization attributes to load up Citrix XenServer host and guest information.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference external" href="https://github.com/timops/ohai-plugins/blob/master/win32_software.rb">win32_software.rb</a></td>
+<td>Adds the ability for Ohai to use Windows Management Instrumentation (WMI) discover useful information about software that is installed on any node that is running Microsoft Windows.</td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="https://github.com/timops/ohai-plugins/blob/master/win32_svc.rb">win32_svc.rb</a></td>
+<td>Adds the ability for Ohai to query using Windows Management Instrumentation (WMI) to get information about all services that are registered on a node that is running Microsoft Windows.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="community_plugin_report_handler.html" title="Report Handlers"
+             >next</a></li>
+        <li class="right" >
+          <a href="community_plugin_knife.html" title="Community Knife Plugins"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="community.html" >The Chef Community</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

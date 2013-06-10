@@ -1,0 +1,547 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>An Overview of Chef &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="A Quick Overview of Chef" href="chef_quick_overview.html" />
+    <link rel="prev" title="All about Chef ..." href="index.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="chef_quick_overview.html" title="A Quick Overview of Chef"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="index.html" title="All about Chef ..."
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">An Overview of Chef</a><ul>
+<li><a class="reference internal" href="#nodes">Nodes</a></li>
+<li><a class="reference internal" href="#workstations">Workstations</a></li>
+<li><a class="reference internal" href="#chef-server">Chef Server</a><ul>
+<li><a class="reference internal" href="#node-objects">Node Objects</a></li>
+<li><a class="reference internal" href="#policy">Policy</a></li>
+<li><a class="reference internal" href="#cookbooks">Cookbooks</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conclusion">Conclusion</a><ul>
+<li><a class="reference internal" href="#for-more-information">For more information ...</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="an-overview-of-chef">
+<h1>An Overview of Chef<a class="headerlink" href="#an-overview-of-chef" title="Permalink to this headline">¶</a></h1>
+<p>Chef is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. Chef relies on abstract definitions (known as cookbooks and recipes) that are written in Ruby and are managed like source code. Each definition describes how a specific part of your infrastructure should be built and managed. Chef then applies those definitions to servers and applications, as specified, resulting in a fully automated infrastructure. When a new node is brought online, the only thing that Chef needs to know is which cookbooks and recipes to apply.</p>
+<p>The following diagram shows the relationships between the various elements of a Chef organization, including the nodes, the server, and the workstations. These elements work together to provide Chef the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.</p>
+<img alt="_images/overview_chef_draft.png" src="_images/overview_chef_draft.png" />
+<p>Chef comprises three main elements: a server, one (or more) nodes, and at least one workstation.</p>
+<ul class="simple">
+<li>The Chef Server acts as a hub that is available to every node in the Chef organization. This ensures that the right cookbooks (and recipes) are available, that the right policies are being applied, that the node object used during the previous Chef run is available to the current Chef run, and that all of the nodes that will be maintained by Chef are registered and known to the Chef Server.</li>
+<li>The workstation is the location from which cookbooks (and recipes) are authored, policy data (such as roles, environments, and data bags) are defined, data is synchronized with the Chef repository, and data is uploaded to the Chef Server.</li>
+<li>Each node contains a chef-client that performs the various infrastructure automation tasks that each node requires.</li>
+</ul>
+<p>Cookbooks are also a very important element of Chef and will be treated as a separate component (alongside the server, nodes, and the workstation) across the documentation. In general, the cookbooks are authored and managed from the workstation, moved to the Chef server, and then are pulled down to nodes by the chef-client during each Chef run.</p>
+<p>The following sections discuss these elements (and their various components) in more detail.</p>
+<div class="section" id="nodes">
+<h2>Nodes<a class="headerlink" href="#nodes" title="Permalink to this headline">¶</a></h2>
+<p>A node is any server or virtual server that is configured to be maintained by a chef-client. A node can be physical or cloud-based. A Chef organization comprises any combination of physical and cloud-based nodes. A chef-client runs on each node. Ohai is used to collect data about the system so that it is available to the chef-client during every Chef run.</p>
+<p>There are two types of nodes that Chef can manage:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/icon_node_cloud.png" class="first last" src="_images/icon_node_cloud.png" />
+</td>
+<td>A cloud-based node is hosted in an external cloud-based service, such as Amazon Virtual Private Cloud, OpenStack, Rackspace, Google Compute Engine, Linode, or Windows Azure. Plugins are available for Knife that provide support for external cloud-based services. Knife can use these plugins to create instances on cloud-based services. Once created, Chef can be used to deploy, configure, and maintain those instances.</td>
+</tr>
+<tr class="row-odd"><td><img alt="_images/icon_node_physical.png" class="first last" src="_images/icon_node_physical.png" />
+</td>
+<td>A physical node is typically a server or a virtual machine, but it can be any active device attached to a network that is capable of sending, receiving, and forwarding information over a communications channel. In other words, a physical node is any active device attached to a network that can run a chef-client and communicate with a Chef Server.</td>
+</tr>
+</tbody>
+</table>
+<p>Some important components on nodes include:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/icon_chef_client.png" class="first last" src="_images/icon_chef_client.png" />
+</td>
+<td><p class="first">A chef-client is an agent that runs locally on every node that is registered with the Chef Server. When a chef-client is run, it will perform all of the steps that are required to bring the node into the expected state, including:</p>
+<ul class="simple">
+<li>Registering and authenticating the node with the Chef Server</li>
+<li>Building the node object</li>
+<li>Synchronizing cookbooks</li>
+<li>Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies</li>
+<li>Taking the appropriate and required actions to configure the node</li>
+<li>Looking for exceptions and notifications, handling each as required</li>
+</ul>
+<p class="last">Chef uses RSA public key-pairs to authenticate a chef-client with the Chef Server every time a chef-client needs access to data that is stored on the Chef Server. This prevents any node from accessing data that it shouldn&#8217;t and ensures that only nodes that are properly registered with the Chef server can be managed by Chef.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><img alt="_images/icon_ohai.png" class="first last" src="_images/icon_ohai.png" />
+</td>
+<td><p class="first">Ohai is a tool that is used to detect certain properties about a node&#8217;s environment and provide them to the chef-client during every Chef run. The types of properties Ohai reports on include:</p>
+<ul class="simple">
+<li>Platform details</li>
+<li>Networking usage</li>
+<li>Memory usage</li>
+<li>Processor usage</li>
+<li>Kernel data</li>
+<li>Host names</li>
+<li>Fully qualified domain names</li>
+<li>Other configuration details</li>
+</ul>
+<p class="last">When Chef configures the node object during each Chef run, these attributes are used by the chef-client to ensure that certain properties remain unchanged. (These properties are also referred to as <tt class="docutils literal"><span class="pre">automatic</span></tt> attributes.) Ohai is part of the required configuration on each node that is registered with the Chef Server.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="workstations">
+<h2>Workstations<a class="headerlink" href="#workstations" title="Permalink to this headline">¶</a></h2>
+<p>A workstation is a computer that is configured to run Knife, to synchronize with the Chef repository, and interact with a single Chef Server. The workstation is the location from which most users of Chef will do most of their work, including:</p>
+<ul class="simple">
+<li>Developing cookbooks and recipes (and authoring them using Ruby)</li>
+<li>Keeping the Chef repository synchronized with version source control</li>
+<li>Using Knife to upload items from the Chef repository to the Chef Server</li>
+<li>Configuring organizational policy, including defining roles and environments and ensuring that critical data is stored in data bags</li>
+<li>Interacting with nodes, as (or when) required, such as performing a bootstrap operation</li>
+</ul>
+<p>Some important components of workstations include:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/icon_knife.png" class="first last" src="_images/icon_knife.png" />
+</td>
+<td><p class="first">Knife is a command-line tool that provides an interface between a local Chef repository and the Chef Server. Knife helps users of Chef to manage:</p>
+<ul class="simple">
+<li>Nodes</li>
+<li>Cookbooks and recipes</li>
+<li>Roles</li>
+<li>Stores of JSON data (data bags), including encrypted data</li>
+<li>Environments</li>
+<li>Cloud resources, including provisioning</li>
+<li>The installation of Chef on management workstations</li>
+<li>Searching of indexed data on the Chef Server</li>
+</ul>
+<p class="last">Chef uses RSA public key-pairs to authenticate Knife with the Chef Server every time Knife attempts to access the Chef Server. This ensures that each instance of Knife is properly registered with the Chef Server and that only trusted users can make changes to the data.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><img alt="_images/icon_repository.png" class="first last" src="_images/icon_repository.png" />
+</td>
+<td><p class="first">The Chef repository is the location in which the following data objects are stored:</p>
+<ul class="simple">
+<li>Cookbooks (including recipes, versions, cookbook attributes, resources, providers, libraries, and templates)</li>
+<li>Roles</li>
+<li>Data bags</li>
+<li>Environments</li>
+<li>Configuration files (for clients, workstations, and servers)</li>
+</ul>
+<p>The Chef repository is located on a workstation and should be synchronized with a version control system, such as git. All of the data in the Chef repository should be treated like source code.</p>
+<p class="last">Knife is used to upload data to the Chef Server from the Chef repository. Once uploaded, that data is used by Chef to manage all of the nodes that are registered with the Chef Server and to ensure that the correct cookbooks, environments, roles, and other settings are applied to nodes correctly.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Chef assumes that system administrators and developers know best about how the infrastructure should be put together. Chef makes as few decisions on its own as possible. When a decision must be made, Chef uses a reasonable default setting that can be easily changed by the system administrators and developers, most often by defining attributes in cookbooks that take precedence over the default attributes present on nodes.</p>
+</div>
+<div class="section" id="chef-server">
+<h2>Chef Server<a class="headerlink" href="#chef-server" title="Permalink to this headline">¶</a></h2>
+<p>The Chef Server acts as a hub for configuration data. The Chef Server stores cookbooks, the policies that are applied to cookbooks, and metadata that describes each registered node in the infrastructure. Nodes use the chef-client to ask the Chef Server for configuration details, such as recipes, templates, and file distributions. The chef-client then does as much of the configuration work as possible on the nodes themselves (and not on the Chef Server). This scalable approach distributes the configuration effort throughout the organization.</p>
+<p>There are three types of Chef servers:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Server</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/icon_chef_hosted.png" class="first last" src="_images/icon_chef_hosted.png" />
+</td>
+<td><p class="first">Hosted Chef is a version of a Chef Server that is hosted by Opscode. Hosted Chef is cloud-based, scalable, and available (24x7/365), with resource-based access control. Hosted Chef has all of the automation capabilities of Chef, but without requiring it to be set up and managed from behind the firewall.</p>
+<p class="last">Hosted Chef is based on the idea that an infrastructure management tool should be built around a collection of API primitives. By using an API to talk to a cloud provider (such as Amazon Virtual Private Cloud, Windows Azure, or Rackspace), it allows the freedom to think of those primitives as building blocks. Chef only needs to know about the desired state, how it should get there, and what the proper functionality of that desired state should be.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><img alt="_images/icon_chef_private.png" class="first last" src="_images/icon_chef_private.png" />
+</td>
+<td><p class="first">Private Chef is a version of a Chef Server that is designed to provide all of the infrastructure automation capabilities of Chef, set up and managed from within the organization.</p>
+<p class="last">Private Chef evolved out of a need for customers to have the same functionality provided by Hosted Chef, but located behind the firewall. Private Chef is the same as Hosted Chef in every other way. Hosted Chef is the largest Private Chef deployment in the world.</p>
+</td>
+</tr>
+<tr class="row-even"><td>&nbsp;</td>
+<td>The open source Chef Server is a free version of the Chef Server that contains much of the same functionality as Hosted Chef, but requires that each instance be configured and managed locally, including performing data migrations, applying updates to the open source Chef Server, and ensuring that the open source Chef Server scales as the local infrastructure it is supporting grows. The open source Chef Server includes support from the Chef community, but does not include support directly from Opscode.</td>
+</tr>
+</tbody>
+</table>
+<p>An API client is any machine that has permission to use the Chef Server API to communicate with the Chef Server. An API client is typically a node (on which the chef-client runs) or a workstation (on which Knife runs), but can also be any other machine configured to use the Chef Server API.</p>
+<p>In addition to node objects, policy, and cookbooks, a Chef Server includes:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/icon_search.png" class="first last" src="_images/icon_search.png" />
+</td>
+<td>Search indexes allow queries to be made for any type of data that is indexed by the Chef Server, including data bags (and data bag items), environments, nodes, and roles. Chef has a defined query syntax that supports search patterns like exact, wildcard, range, and fuzzy. A search is a full-text query that can be done from several locations, including from within a recipe, by using the <tt class="docutils literal"><span class="pre">search</span></tt> subcommand in Knife, by using the search functionality in the Management Console, or by using the <tt class="docutils literal"><span class="pre">/search</span></tt> or <tt class="docutils literal"><span class="pre">/search/INDEX</span></tt> endpoints in the Chef Server API. The search engine is based on Apache Solr and is run from the Chef Server.</td>
+</tr>
+<tr class="row-odd"><td><img alt="_images/icon_manager.png" class="first last" src="_images/icon_manager.png" />
+</td>
+<td><p class="first">The Chef manager is a web-based interface that provides users of Chef a way to manage the following from the Chef Server:</p>
+<ul class="last simple">
+<li>Nodes</li>
+<li>Cookbooks and recipes</li>
+<li>Roles</li>
+<li>Stores of JSON data (data bags), including encrypted data</li>
+<li>Environments</li>
+<li>Searching of indexed data on the Chef Server</li>
+<li>User accounts and user data for the individuals who have permission to log on to and access the Chef Server</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="node-objects">
+<h3>Node Objects<a class="headerlink" href="#node-objects" title="Permalink to this headline">¶</a></h3>
+<p>For Chef, two important aspects of nodes are groups of attributes and run-lists. An attribute is a specific piece of data about the node, such as a network interface, a file system, the number of clients a service running on a node is capable of accepting, and so on. A run-list is an ordered list of recipes and/or roles that are run in an exact order. The node object consists of the run-list and node attributes, which is a JSON file that is stored on the Chef Server. The chef-client gets a copy of the node object from the Chef Server during each Chef run and places an updated copy on the Chef Server at the end of each Chef run.</p>
+<p>Some important node objects include:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/icon_node_attribute.png" class="first last" src="_images/icon_node_attribute.png" />
+</td>
+<td><p class="first">An attribute is a specific detail about a node. Attributes are used by Chef to understand:</p>
+<ul class="simple">
+<li>The current state of the node</li>
+<li>What the state of the node was at the end of the previous Chef run</li>
+<li>What the state of the node should be at the end of the current Chef run</li>
+</ul>
+<p>Attributes are defined by:</p>
+<ul class="simple">
+<li>The state of the node itself</li>
+<li>Cookbooks (in attribute files and/or recipes)</li>
+<li>Roles</li>
+<li>Environments</li>
+</ul>
+<p>During every Chef run, the chef-client builds the attribute list using:</p>
+<ul class="simple">
+<li>Data about the node collected by Ohai</li>
+<li>The node object that was saved to the Chef Server at the end of the previous Chef run</li>
+<li>The rebuilt node object from the current Chef run, after it is updated for changes to cookbooks (attribute files and/or recipes), roles, and/or environments, and updated for any changes to the state of the node itself</li>
+</ul>
+<p class="last">After the node object is rebuilt, all of attributes are compared, and then the node is updated based on attribute precedence. At the end of every Chef run, the node object that defines the current state of the node is uploaded to the Chef Server so that it can be indexed for search.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><img alt="_images/icon_run_lists.png" class="first last" src="_images/icon_run_lists.png" />
+</td>
+<td>A run-list is an ordered list of roles and/or recipes that are run in an exact order. A run-list is always specific to the node on which it runs, though it is possible for many nodes to have run-lists that are similar or even identical. The items within a run-list are maintained using Knife and are uploaded to the Chef Server and stored as part of the node object for each node. Chef always configures a node in the exact order specified by its run-list and will never run the same recipe twice.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="policy">
+<h3>Policy<a class="headerlink" href="#policy" title="Permalink to this headline">¶</a></h3>
+<p>Policy settings can be used to map the capabilities of Chef to business and operational requirements, such as process and workflow. Roles define server types, such as &#8220;web server&#8221; or &#8220;database server&#8221;. Environments define process, such as &#8220;dev&#8221;, &#8220;staging&#8221;, or &#8220;production&#8221;. Certain types of data, such as passwords, user account data, and other sensitive items can be placed in data bags, which are located in a secure sub-area of Chef that can only be accessed by nodes that have the correct SSL certificates.</p>
+<p>Some important aspects of policy include:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/icon_roles.png" class="first last" src="_images/icon_roles.png" />
+</td>
+<td>A role is a way to define certain patterns and processes that exist across nodes in a Chef organization as belonging to a single job function. Each role consists of zero (or more) attributes and a run list. Each node can have zero (or more) roles assigned to it. When a role is run against a node, the configuration details of that node are compared against the attributes of the role, and then the contents of that role&#8217;s run list are applied to the node&#8217;s configuration details. When a chef-client runs, it merges its own attributes and run lists with those contained within each assigned role.</td>
+</tr>
+<tr class="row-odd"><td><img alt="_images/icon_data_bags.png" class="first last" src="_images/icon_data_bags.png" />
+</td>
+<td>A data bag is a global variable that is stored as JSON data and is accessible from a Chef Server. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords).</td>
+</tr>
+<tr class="row-even"><td><img alt="_images/icon_environments.png" class="first last" src="_images/icon_environments.png" />
+</td>
+<td>An environment is a way to map an organization&#8217;s real-life workflow to what can be configured and managed when using Chef Server. Every Chef organization begins with a single environment called the <tt class="docutils literal"><span class="pre">_default</span></tt> environment, which cannot be modified (or deleted). Additional environments can be created, such as production, staging, testing, and development. Generally, an environment is also associated with one (or more) cookbook versions.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="cookbooks">
+<h3>Cookbooks<a class="headerlink" href="#cookbooks" title="Permalink to this headline">¶</a></h3>
+<p>A cookbook is the fundamental unit of configuration and policy distribution in Chef. Each cookbook defines a scenario, such as everything needed to install and configure MySQL, and then it contains all of the components that are required to support that scenario, including:</p>
+<ul class="simple">
+<li>Attribute values that are set on nodes</li>
+<li>Definitions that allow the creation of reusable collections of resources</li>
+<li>File distributions</li>
+<li>Libraries that extend Chef and/or provide helpers to Ruby code</li>
+<li>Recipes that specify which resources to manage and the order in which those resources will be applied</li>
+<li>Custom resources and providers</li>
+<li>Templates</li>
+<li>Metadata about recipes (including dependencies), version constraints, supported platforms, and so on</li>
+</ul>
+<p>Chef uses Ruby as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. Chef provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.</p>
+<p>Some important components of cookbooks include:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Feature</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/icon_cookbook_attributes.png" class="first last" src="_images/icon_cookbook_attributes.png" />
+</td>
+<td>An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on a node. When a cookbook is loaded during a Chef run, these attributes are compared to the attributes that are already present on the node. When the cookbook attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</td>
+</tr>
+<tr class="row-odd"><td><img alt="_images/icon_cookbook_recipes.png" class="first last" src="_images/icon_cookbook_recipes.png" />
+</td>
+<td><p class="first">A recipe is the most fundamental configuration element within the Chef environment. A recipe:</p>
+<ul class="last simple">
+<li>Is authored using Ruby, which is a programming language designed to read and behave in a predictable manner</li>
+<li>Is mostly a collection of resources in a Ruby syntax with some helper code around it</li>
+<li>Must define everything that is required to configure part of a system</li>
+<li>Must be stored in a cookbook</li>
+<li>May be included in a recipe</li>
+<li>May use the results of a search query and read the contents of a data bag (including an encrypted data bag)</li>
+<li>May have a dependency on one (or more) recipes</li>
+<li>May be tagged to facilitate the creation of arbitrary groupings that exist outside of the normal naming conventions an organization may have</li>
+<li>Must be added to a run-list before it can be used by Chef</li>
+<li>Is always executed in the same order as listed in a run-list</li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><img alt="_images/icon_cookbook_versions.png" class="first last" src="_images/icon_cookbook_versions.png" />
+</td>
+<td>A cookbook version represents a specific set of functionality that is different from the cookbook on which it is based. A version may exist for many reasons, such as ensuring that the correct version of third-party component is being used appropriately or providing an update to a cookbook that fixes a bug or adds a new improvement. A cookbook version can be defined using syntax and operators, it can be associated with environments, cookbook metadata, or run-lists, and it can be frozen (to prevent unwanted updates from being made). A cookbook version is handled just a cookbook with regard to how the repository sees a cookbook version, how cookbook versions are stored on the Chef Server, how cookbook versions are pushed out to nodes, and how cookbook versions are used during a Chef run.</td>
+</tr>
+</tbody>
+</table>
+<p>Chef will run a recipe only when asked. When Chef runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, Chef won&#8217;t change anything.</p>
+<p>In addition to attributes, recipes, and versions, the following items are also part of cookbooks:</p>
+<ul class="simple">
+<li>Resources and providers. A resource is a package, a service, a group of users, and so on. A resource tells Chef which provider to use during a Chef run for various tasks like installing packages, running Ruby code, or accessing directories and file systems. The resource is generic: &#8220;install program A&#8221; while the provider knows what to do with that process on Debian and Ubuntu and Microsoft Windows. A provider defines the steps that are required to bring that piece of the system into the desired state. Chef includes default providers that cover all of the most common scenarios.</li>
+<li>File distributions. A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.</li>
+<li>Definitions. A definition is used to create new resources by stringing together one (or more) existing resources.</li>
+<li>Libraries. A library allows the use of arbitrary Ruby code in a cookbook, either as a way to extend the Chef language or to implement a new class.</li>
+<li>Templates. A template is a file written in markup language that uses Ruby statements to solve complex configuration scenarios.</li>
+<li>Configuration files. A metadata file to ensure that each cookbook is correctly deployed to each node.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<p>The key underlying principle of Chef is that you (the user) knows best about what your environment is, what it should do, and how it should be maintained. Chef is designed to not make assumptions about any of those things. Only the individuals on the ground&#8212;that&#8217;s you and your team&#8212;understand the technical problems and what is required to solve them. Only your team can understand the human problems (skill levels, audit trails, and other internal issues) that are unique to your organization and whether any single technical solution is viable.</p>
+<p>The idea that you know best about what should happen in your organization goes hand-in-hand with the notion that you still need help keeping it all running. It is rare that a single individual knows everything about a very complex problem, let alone knows all of the steps that may be required to solve them. The same is true with tools. Chef provides help with infrastructure management. And Chef can help solve very complicated problems. Chef also has a large community of users who have a lot of experience solving a lot of very complex problems. That Chef community can provide knowledge and support in areas that your organization may not have and (along with Chef) can help your organization solve any complex problem.</p>
+<div class="section" id="for-more-information">
+<h3>For more information ...<a class="headerlink" href="#for-more-information" title="Permalink to this headline">¶</a></h3>
+<p>For history of Chef, where it came from and how it evolved, watch these two (short) videos:</p>
+<ul class="simple">
+<li>Part one: <a class="reference external" href="http://www.youtube.com/watch?v=Ia2ItmjRsw8">http://www.youtube.com/watch?v=Ia2ItmjRsw8</a></li>
+<li>Part two: <a class="reference external" href="http://www.youtube.com/watch?v=Ss6P92L_sCA">http://www.youtube.com/watch?v=Ss6P92L_sCA</a></li>
+</ul>
+<p>For more information about Opscode, cookbooks for Chef, and the Chef community:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.opscode.com">http://www.opscode.com</a></li>
+<li><a class="reference external" href="http://community.opscode.com">http://community.opscode.com</a></li>
+<li><a class="reference external" href="http://community.opscode.com/cookbooks">http://community.opscode.com/cookbooks</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="chef_quick_overview.html" title="A Quick Overview of Chef"
+             >next</a></li>
+        <li class="right" >
+          <a href="index.html" title="All about Chef ..."
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

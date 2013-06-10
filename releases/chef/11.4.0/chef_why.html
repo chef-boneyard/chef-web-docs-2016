@@ -1,0 +1,295 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Why Chef? &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="Install Chef" href="install.html" />
+    <link rel="prev" title="Public and Private Keys" href="chef_private_keys.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="install.html" title="Install Chef"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="chef_private_keys.html" title="Public and Private Keys"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Why Chef?</a><ul>
+<li><a class="reference internal" href="#what-are-the-core-principles-of-chef">What are the core principles of Chef?</a><ul>
+<li><a class="reference internal" href="#idempotence">Idempotence</a></li>
+<li><a class="reference internal" href="#thick-clients-thin-server">Thick Clients, Thin Server</a></li>
+<li><a class="reference internal" href="#order-matters">Order Matters</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#why-was-chef-created">Why was Chef created?</a><ul>
+<li><a class="reference internal" href="#how-can-i-help">How can I help?</a></li>
+<li><a class="reference internal" href="#do-i-really-need-to-know-ruby">Do I really need to know Ruby?</a></li>
+<li><a class="reference internal" href="#can-i-trust-chef">Can I trust Chef?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#who-uses-chef">Who uses Chef?</a></li>
+<li><a class="reference internal" href="#why-the-apache-license">Why the Apache license?</a></li>
+<li><a class="reference internal" href="#comparisons">Comparisons</a><ul>
+<li><a class="reference internal" href="#puppet">Puppet</a></li>
+<li><a class="reference internal" href="#cfengine">Cfengine</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#for-more-information">For more information ...</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="why-chef">
+<h1>Why Chef?<a class="headerlink" href="#why-chef" title="Permalink to this headline">¶</a></h1>
+<p>The idea that you know best about what should happen in your organization goes hand-in-hand with the notion that you still need help keeping it all running. It is rare that a single individual knows everything about a very complex problem, let alone knows all of the steps that may be required to solve them. The same is true with tools. Chef provides help with infrastructure management. And Chef can help solve very complicated problems. Chef also has a large community of users who have a lot of experience solving a lot of very complex problems. That Chef community can provide knowledge and support in areas that your organization may not have and (along with Chef) can help your organization solve any complex problem.</p>
+<div class="section" id="what-are-the-core-principles-of-chef">
+<h2>What are the core principles of Chef?<a class="headerlink" href="#what-are-the-core-principles-of-chef" title="Permalink to this headline">¶</a></h2>
+<p>The key underlying principle of Chef is that you (the user) knows best about what your environment is, what it should do, and how it should be maintained. Chef is designed to not make assumptions about any of those things. Only the individuals on the ground&#8212;that&#8217;s you and your team&#8212;understand the technical problems and what is required to solve them. Only your team can understand the human problems (skill levels, audit trails, and other internal issues) that are unique to your organization and whether any single technical solution is viable.</p>
+<div class="section" id="idempotence">
+<h3>Idempotence<a class="headerlink" href="#idempotence" title="Permalink to this headline">¶</a></h3>
+<p>A recipe can run multiple times on the same system and the results will always be identical. In Chef, a resource is defined in a recipe, which then defines the actions to be performed on the system. Chef ensures that actions are not performed if the resources have not changed and that any action that is performed is done the same way each time. If a recipe is re-run and nothing has change, then Chef will not do anything.</p>
+</div>
+<div class="section" id="thick-clients-thin-server">
+<h3>Thick Clients, Thin Server<a class="headerlink" href="#thick-clients-thin-server" title="Permalink to this headline">¶</a></h3>
+<p>Chef does as much work as possible on the node; a chef-client runs on each node and it only interacts with the Chef Server when it needs to. The Chef Server is designed to distribute of data to each node easily, including all cookbooks, recipes, templates, files, and so on. The Chef Server also retains a copy of the state of the node at the conclusion of every Chef run. This approach ensures that the actual work needed to configure each node in your infrastructure is distributed across the organization, rather than centralized on smaller set of configuration management servers.</p>
+</div>
+<div class="section" id="order-matters">
+<h3>Order Matters<a class="headerlink" href="#order-matters" title="Permalink to this headline">¶</a></h3>
+<p>When Chef configures each node in the system, the order in which that configuration occurs is very important. For example, if Apache is not installed, then it cannot be configured and the daemon cannot be started. Configuration management tools have struggled with this problem for a long time. With Chef, for each node a list of recipes is applied, which in turn specifies resources. Within a recipe, resources are applied in the order in which they are listed. At any point in a recipe other recipes may be included, which assures that all resources are applied. Chef will never apply the same recipe twice. Dependencies are only applied at the recipe level (and never the resource level). This means that dependencies can be tracked between high-level concepts like &#8220;I need to install Apache before I can start my Django application!&#8221; It also means that given the same set of cookbooks, Chef will always execute resources in the same exact order.</p>
+</div>
+</div>
+<div class="section" id="why-was-chef-created">
+<h2>Why was Chef created?<a class="headerlink" href="#why-was-chef-created" title="Permalink to this headline">¶</a></h2>
+<p>Opscode began as a consulting company named HJK Solutions, which built fully automated infrastructure for startups. Everything from installing operating systems to full application development. Over the course of building a dozen or so different startups on the same basic infrastructure timeline (over a one year period), we realized that getting to a place where everyone could have a fully automated infrastructure, regardless of the expertise of their system administrators, was possible. Only a few things stood in the way:</p>
+<ul class="simple">
+<li>A fully automated infrastructure is a fully integrated infrastructure. The different components need to be able to communicate with each other. (Your application informs your infrastructure, just like your infrastructure informs your application.)</li>
+<li>Configuration management is the fundamental bedrock of infrastructure automation. For the infrastructure to be fully automated, it must expose configuration management as a service.</li>
+<li>Share the code that builds the infrastructure is difficult; the available tools required a level of specificity that made sharing difficult.</li>
+<li>No other open source tools met the requirements.</li>
+</ul>
+<p>We solve these problems by:</p>
+<ul class="simple">
+<li>Building a systems integration framework on top of a configuration management system, powered by Ruby and a simple DSL. This approach makes it easy for beginners.</li>
+<li>Making it possible to easily extend the capabilities of Chef and by allowing Chef to take instruction from ad-hoc sources.</li>
+<li>Every decision about Chef was made with an eye to keeping as much as possible inside of cookbooks, which are sharable chunks of automation that are easily reused and extended.</li>
+<li>Sharing an open source version of Chef with everyone, creating an outstanding community, with a license that allows everyone to safely integrate Chef into their environment. Chef (and Ohai) are licensed under the Apache License Version 2.0, a liberal, non-copyleft free software license. We maintain Contributor License Agreements, which allows anyone who uses Chef (or Ohai) to know they are free from any copyright or patent entanglements.</li>
+</ul>
+<p>The goal is to remove people from the process of building automated infrastructure, as much and as often as possible. Chef is the first part of a framework that will allow all of us to do that.</p>
+<div class="section" id="how-can-i-help">
+<h3>How can I help?<a class="headerlink" href="#how-can-i-help" title="Permalink to this headline">¶</a></h3>
+<p>Join the Chef community, participate in the discussion going on right now on IRC, sign up for the Chef mailing Lists, and read the instructions on how to contribute to an Opscode open source project.</p>
+<p>Here are some contributions from the Chef community:</p>
+<p><strong>Workflow:</strong>  <a class="reference external" href="http://berkshelf.com/">Berkshelf</a> | <a class="reference external" href="https://github.com/applicationsonline/librarian">Librarian</a> | <a class="reference external" href="https://github.com/mattray/spiceweasel">Spiceweasel</a></p>
+<p><strong>Development tools:</strong>  <a class="reference external" href="https://github.com/opscode/test-kitchen">test-kitchen</a> | <a class="reference external" href="http://acrmp.github.com/foodcritic/">Food Critic</a> | <a class="reference external" href="http://www.cucumber-chef.org/">cucumber-chef</a> | <a class="reference external" href="https://github.com/chef-workflow">chef-workflow</a> | <a class="reference external" href="https://github.com/acrmp/chefspec">chefspec</a> | <a class="reference external" href="https://rubygems.org/gems/yard-chef/">yard-chef</a> | <a class="reference external" href="http://community.opscode.com/cookbooks">Cookbooks</a></p>
+<p><strong>Discussion:</strong> <a class="reference internal" href="community_guidelines.html"><em>Guidelines</em></a> | <a class="reference internal" href="community_lists.html"><em>lists.opscode.com</em></a> | <a class="reference external" href="http://foodfightshow.org/">Food Fight Show</a> &#8212; <strong>Chat channels:</strong> <a class="reference external" href="http://community.opscode.com/chat/chef">chef</a> | <a class="reference external" href="http://community.opscode.com/chat/chef-hacking">chef-hacking</a> | <a class="reference external" href="http://community.opscode.com/chat/openstack-chef">openstack-chef</a></p>
+<p><strong>Plugins:</strong> <a class="reference internal" href="community_plugin_chef.html"><em>Chef</em></a> | <a class="reference internal" href="community_plugin_knife.html"><em>Knife</em></a> | <a class="reference internal" href="community_plugin_ohai.html"><em>Ohai</em></a> | <a class="reference internal" href="community_plugin_report_handler.html"><em>Report handlers</em></a> | <a class="reference external" href="https://github.com/reset/ridley">Ridley</a></p>
+<p><strong>Documentation</strong> <a class="reference external" href="https://github.com/opscode/chef-docs">Contribute to this documentation</a> | <a class="reference external" href="http://docs.opscode.com/style_guide.html">Style Guide</a></p>
+</div>
+<div class="section" id="do-i-really-need-to-know-ruby">
+<h3>Do I really need to know Ruby?<a class="headerlink" href="#do-i-really-need-to-know-ruby" title="Permalink to this headline">¶</a></h3>
+<p>It helps, but its not required. You can learn <a class="reference internal" href="just_enough_ruby_for_chef.html"><em>Just Enough Ruby for Chef</em></a>.</p>
+</div>
+<div class="section" id="can-i-trust-chef">
+<h3>Can I trust Chef?<a class="headerlink" href="#can-i-trust-chef" title="Permalink to this headline">¶</a></h3>
+<p>Yes, absolutely. Chef will not do anything to your system that isn&#8217;t in a recipe. Because Chef is an open source project, you have full access to the source code.</p>
+</div>
+</div>
+<div class="section" id="who-uses-chef">
+<h2>Who uses Chef?<a class="headerlink" href="#who-uses-chef" title="Permalink to this headline">¶</a></h2>
+<p>Lots of companies, ranging from <a class="reference external" href="http://www.opscode.com/customers/">small startups to the largest companies on the planet</a>.</p>
+</div>
+<div class="section" id="why-the-apache-license">
+<h2>Why the Apache license?<a class="headerlink" href="#why-the-apache-license" title="Permalink to this headline">¶</a></h2>
+<p>The short version is that we had three broad requirements for the license under which we would release open source software:</p>
+<ul class="simple">
+<li>We are an open source company. We make money from our open source software. We wanted a license that allowed us to build a business from the things we created</li>
+<li>We wanted anyone (or any company) whose problems were solved by our software to be able to use it, in any environment they wanted, in whatever way they wanted</li>
+<li>We wanted to build an open and equal community of users. We did not want to reserve any rights for ourselves that we didn’t grant to the all of the other people (and companies) who helped build our software</li>
+</ul>
+<p>For more detail, read <a class="reference external" href="http://www.opscode.com/blog/2009/08/11/why-we-chose-the-apache-license/">the blog post about why we love open source</a>.</p>
+</div>
+<div class="section" id="comparisons">
+<h2>Comparisons<a class="headerlink" href="#comparisons" title="Permalink to this headline">¶</a></h2>
+<p>There are some other applications out there that do things similar to Chef. We believe that we are different (and better) and that by choosing Chef you are choosing the best option.</p>
+<div class="section" id="puppet">
+<h3>Puppet<a class="headerlink" href="#puppet" title="Permalink to this headline">¶</a></h3>
+<p>Puppet evolved from Cfengine and showed potential to be a new kind of configuration management. The original design of Chef was strongly influenced by our own experiences working with and contributing to the Puppet project. That said, Chef does not share any code from Puppet, and is not a &#8220;fork&#8221; of the Puppet project.</p>
+<p>Chef is different from Puppet in a number of important ways:</p>
+<ul class="simple">
+<li>Chef uses Ruby as the configuration language, as opposed to a custom DSL</li>
+<li>Chef is designed from the ground up to integrate with other tools, or to make that integration as simple as possible. Chef is not the canonical representation of your infrastructure. It is a service that exposes data about the state of your infrastructure</li>
+<li>Chef applies resources in the order they are specified in recipes. There is no dependency management. This means multiple Chef runs will always apply the resources under management in the same order, every time</li>
+<li>Chef resources have actions, which can be signaled</li>
+<li>Resources can appear more than once in Chef, and they inherit the attributes of the earlier resource. In other words, you can tell Apache to start and stop in a recipe by specifying the resource twice, with the second one only changing the action attribute</li>
+</ul>
+<p>As Chef grows, the services we expose will likely be integrated with Puppet as well. There is more than one way to do it.</p>
+</div>
+<div class="section" id="cfengine">
+<h3>Cfengine<a class="headerlink" href="#cfengine" title="Permalink to this headline">¶</a></h3>
+<p>Cfengine and Chef aren&#8217;t very similar at all, outside of both applications embracing the concept of Single Copy Nirvana.</p>
+</div>
+</div>
+<div class="section" id="for-more-information">
+<h2>For more information ...<a class="headerlink" href="#for-more-information" title="Permalink to this headline">¶</a></h2>
+<p>For history of Chef, where it came from and how it evolved, watch these two (short) videos:</p>
+<ul class="simple">
+<li>Part one: <a class="reference external" href="http://www.youtube.com/watch?v=Ia2ItmjRsw8">http://www.youtube.com/watch?v=Ia2ItmjRsw8</a></li>
+<li>Part two: <a class="reference external" href="http://www.youtube.com/watch?v=Ss6P92L_sCA">http://www.youtube.com/watch?v=Ss6P92L_sCA</a></li>
+</ul>
+<p>For more information about Opscode, cookbooks for Chef, and the Chef community:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.opscode.com">http://www.opscode.com</a></li>
+<li><a class="reference external" href="http://community.opscode.com">http://community.opscode.com</a></li>
+<li><a class="reference external" href="http://community.opscode.com/cookbooks">http://community.opscode.com/cookbooks</a></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="install.html" title="Install Chef"
+             >next</a></li>
+        <li class="right" >
+          <a href="chef_private_keys.html" title="Public and Private Keys"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

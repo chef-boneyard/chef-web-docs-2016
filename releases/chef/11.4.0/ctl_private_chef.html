@@ -1,0 +1,474 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>private-chef-ctl &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="chef-solo" href="ctl_chef_solo.html" />
+    <link rel="prev" title="chef-server-ctl" href="ctl_chef_server.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="ctl_chef_solo.html" title="chef-solo"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="ctl_chef_server.html" title="chef-server-ctl"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">private-chef-ctl</a><ul>
+<li><a class="reference internal" href="#backup-recover">backup-recover</a></li>
+<li><a class="reference internal" href="#cleanse">cleanse</a></li>
+<li><a class="reference internal" href="#ha-status">ha-status</a></li>
+<li><a class="reference internal" href="#help">help</a></li>
+<li><a class="reference internal" href="#master-recover">master-recover</a></li>
+<li><a class="reference internal" href="#password">password</a></li>
+<li><a class="reference internal" href="#reconfigure">reconfigure</a></li>
+<li><a class="reference internal" href="#show-config">show-config</a></li>
+<li><a class="reference internal" href="#uninstall">uninstall</a></li>
+<li><a class="reference internal" href="#service-subcommands">Service Subcommands</a><ul>
+<li><a class="reference internal" href="#hup">hup</a></li>
+<li><a class="reference internal" href="#int">int</a></li>
+<li><a class="reference internal" href="#kill">kill</a></li>
+<li><a class="reference internal" href="#once">once</a></li>
+<li><a class="reference internal" href="#restart">restart</a></li>
+<li><a class="reference internal" href="#service-list">service-list</a></li>
+<li><a class="reference internal" href="#start">start</a></li>
+<li><a class="reference internal" href="#status">status</a><ul>
+<li><a class="reference internal" href="#high-availability">High Availability</a></li>
+<li><a class="reference internal" href="#log-files">Log Files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#stop">stop</a></li>
+<li><a class="reference internal" href="#tail">tail</a></li>
+<li><a class="reference internal" href="#term">term</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="private-chef-ctl">
+<h1>private-chef-ctl<a class="headerlink" href="#private-chef-ctl" title="Permalink to this headline">¶</a></h1>
+<p>The Chef Server installations that are done using the omnibus installer include a command-line utility named chef-server-ctl. This command-line tool is used to start and stop individual services, reconfigure the Chef Server, run chef-pedant, and tail Chef Server log files.</p>
+<div class="section" id="backup-recover">
+<h2>backup-recover<a class="headerlink" href="#backup-recover" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">backup-recover</span></tt> subcommand is used to force a Private Chef server to attempt to become the backup server. This is the opposite of the <tt class="docutils literal"><span class="pre">master-recover</span></tt> subcommand.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If this command is run on both back-end servers, it will put the back-end cluster into a state where no server holds the DRBD resource.</p>
+</div>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl backup-recover
+</pre></div>
+</div>
+</div>
+<div class="section" id="cleanse">
+<h2>cleanse<a class="headerlink" href="#cleanse" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">cleanse</span></tt> subcommand is used to re-set the server to the state it was in before the first time the <tt class="docutils literal"><span class="pre">reconfigure</span></tt> subcommand is run to destroy all data, configuration files, and logs.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl cleanse
+</pre></div>
+</div>
+</div>
+<div class="section" id="ha-status">
+<h2>ha-status<a class="headerlink" href="#ha-status" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">ha-status</span></tt> subcommand is used to to check the status for services running in a High Availability topology. This command will verify the following:</p>
+<blockquote>
+<div><ul class="simple">
+<li>The Keepalived daemon is enabled in the config</li>
+<li>The DRBD process is enabled in the config</li>
+<li>The underlying block device or logical volume for DRBD has been created and configured</li>
+<li>The DRBD device exists</li>
+<li>The current state of the server is <tt class="docutils literal"><span class="pre">master</span></tt> or <tt class="docutils literal"><span class="pre">backup</span></tt>; any migration processes have completed</li>
+<li>The failover virtual IP address is correctly attached to only the <tt class="docutils literal"><span class="pre">master</span></tt> node</li>
+<li>The DRBD state is correct based on the state of the server being <tt class="docutils literal"><span class="pre">master</span></tt> or <tt class="docutils literal"><span class="pre">backup</span></tt></li>
+<li>The DRBD mount point is correctly mounted to only the <tt class="docutils literal"><span class="pre">master</span></tt> node</li>
+<li>The DRBD replication IP addresses are pingable</li>
+<li>The <tt class="docutils literal"><span class="pre">runit</span></tt> status of the services are correct (up or down) based on the <tt class="docutils literal"><span class="pre">master</span></tt> or <tt class="docutils literal"><span class="pre">backup</span></tt> state of the server</li>
+</ul>
+</div></blockquote>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl ha-status
+</pre></div>
+</div>
+<p>If this command runs successfully, it will return the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span><span class="o">[</span>OK<span class="o">]</span> all checks passed.
+</pre></div>
+</div>
+<p>Otherwise it will print out a list of errors, similar to the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>...
+  <span class="o">[</span>OK<span class="o">]</span> nginx is running correctly, and I am master.
+  <span class="o">[</span>ERROR<span class="o">]</span> nrpe is not running.
+  <span class="o">[</span>OK<span class="o">]</span> opscode-account is running correctly, and I am master.
+...
+  <span class="o">[</span>ERROR<span class="o">]</span> ERRORS WERE DETECTED.
+</pre></div>
+</div>
+</div>
+<div class="section" id="help">
+<h2>help<a class="headerlink" href="#help" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">help</span></tt> subcommand is used to print a list of all available private-chef-ctl commands.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl <span class="nb">help</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="master-recover">
+<h2>master-recover<a class="headerlink" href="#master-recover" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">master-recover</span></tt> subcommand is used to force a Private Chef server to attempt to become the master server. This command is typically run in tandem with the <tt class="docutils literal"><span class="pre">backup-recover</span></tt> subcommand on the back-end peer, unless the back-end peer is no longer available.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl master-recover
+</pre></div>
+</div>
+</div>
+<div class="section" id="password">
+<h2>password<a class="headerlink" href="#password" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">password</span></tt> subcommand is used to change a user&#8217;s password. When Active Directory or LDAP is enabled, this command enables (or disables) the system recovery password for that user. For example:</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl password
+</pre></div>
+</div>
+<p>This subcommand has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">--disable</span></tt></dt>
+<dd>Use this option to disable a user&#8217;s system recovery password.</dd>
+</dl>
+<p><strong>Examples</strong></p>
+<p>For example, to change a user&#8217;s password, enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl password adamjacobs
+</pre></div>
+</div>
+<p>and then enter the password and confirm it:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Enter the new password:  ******
+Enter the new password again:  ******
+</pre></div>
+</div>
+<p>to return:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Password <span class="k">for </span>adamjacobs successfully set.
+</pre></div>
+</div>
+<p>To disable a system recovery password:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl password adamjacobs --disable
+</pre></div>
+</div>
+<p>to return:</p>
+<div class="highlight-bash"><div class="highlight"><pre>Password <span class="k">for </span>adamjacobs successfully disabled <span class="k">for </span>System Recovery.
+</pre></div>
+</div>
+</div>
+<div class="section" id="reconfigure">
+<h2>reconfigure<a class="headerlink" href="#reconfigure" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">reconfigure</span></tt> subcommand is used when changes are made to the private-chef.rb file to reconfigure the server. When changes are made to the private-chef.rb file, they will not be applied to the Private Chef configuration until after this command is run.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl reconfigure
+</pre></div>
+</div>
+</div>
+<div class="section" id="show-config">
+<h2>show-config<a class="headerlink" href="#show-config" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">show-config</span></tt> subcommand is used to view the configuration that will be generated by the <tt class="docutils literal"><span class="pre">reconfigure</span></tt> subcommand. This command is most useful in the early stages of a deployment to ensure that everything is built properly prior to installation.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl show-config
+</pre></div>
+</div>
+</div>
+<div class="section" id="uninstall">
+<h2>uninstall<a class="headerlink" href="#uninstall" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">uninstall</span></tt> subcommand is used to remove the Private Chef application, but without removing any of the data. This subcommand will shut down all services (including the <tt class="docutils literal"><span class="pre">runit</span></tt> process supervisor).</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl uninstall
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">To revert the <tt class="docutils literal"><span class="pre">uninstall</span></tt> subcommand, run the <tt class="docutils literal"><span class="pre">reconfigure</span></tt> subcommand (because the <tt class="docutils literal"><span class="pre">start</span></tt> subcommand is disabled by the <tt class="docutils literal"><span class="pre">uninstall</span></tt> command).</p>
+</div>
+</div>
+<div class="section" id="service-subcommands">
+<h2>Service Subcommands<a class="headerlink" href="#service-subcommands" title="Permalink to this headline">¶</a></h2>
+<p>Private Chef has a built in process supervisor, which ensures that all of the required services are in the appropriate state at any given time. The supervisor starts two processes per service.</p>
+<div class="section" id="hup">
+<h3>hup<a class="headerlink" href="#hup" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">hup</span></tt> subcommand is used to send a <tt class="docutils literal"><span class="pre">SIGHUP</span></tt> to all services. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl hub <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+</div>
+<div class="section" id="int">
+<h3>int<a class="headerlink" href="#int" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">int</span></tt> subcommand is used to send a <tt class="docutils literal"><span class="pre">SIGINT</span></tt> to all services. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl int <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+</div>
+<div class="section" id="kill">
+<h3>kill<a class="headerlink" href="#kill" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">kill</span></tt> subcommand is used to send a <tt class="docutils literal"><span class="pre">SIGKILL</span></tt> to all services. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl <span class="nb">kill</span> <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+</div>
+<div class="section" id="once">
+<h3>once<a class="headerlink" href="#once" title="Permalink to this headline">¶</a></h3>
+<p>The supervisor for Private Chef is configured to restart any service that fails, unless that service has been asked to change its state. The <tt class="docutils literal"><span class="pre">once</span></tt> subcommand is used to tell the supervisor to not attempt to restart any service that fails.</p>
+<p>This command is useful when troubleshooting configuration errors that prevent a service from starting. Run the <tt class="docutils literal"><span class="pre">once</span></tt> subcommand followed by the <tt class="docutils literal"><span class="pre">status</span></tt> subcommand to look for services in a down state and/or to identify which services are in trouble. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl once <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+</div>
+<div class="section" id="restart">
+<h3>restart<a class="headerlink" href="#restart" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">restart</span></tt> subcommand is used to restart all services enabled on Private Chef. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl restart <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+</div>
+<div class="section" id="service-list">
+<h3>service-list<a class="headerlink" href="#service-list" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand is used to display a list of all services available to Private Chef. A service that is enabled is labeled with an asterisk (*).</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl service-list
+</pre></div>
+</div>
+</div>
+<div class="section" id="start">
+<h3>start<a class="headerlink" href="#start" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">start</span></tt> subcommand is used to start all services that are enabled in Private Chef. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl start <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+<p>The Private Chef supervisor is configured to wait seven seconds for a service to respond to a command from the supervisor. If you see output that references a timeout, it means that a signal has been sent to the process, but that the process has yet to actually comply. In general, processes that have timed out are not a big concern, unless they are failing to respond to the signals at all. If a process is not responding, use a command like the <tt class="docutils literal"><span class="pre">kill</span></tt> subcommand to stop the process, investigate the cause (if required), and then use the <tt class="docutils literal"><span class="pre">start</span></tt> subcommand to re-enable it.</p>
+</div>
+<div class="section" id="status">
+<h3>status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">status</span></tt> subcommand is used to show the status of all services available Private Chef. The results will vary based on the configuration of a given server. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl status <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+<div class="section" id="high-availability">
+<h4>High Availability<a class="headerlink" href="#high-availability" title="Permalink to this headline">¶</a></h4>
+<p>On back-end servers in a High Availability topology, Keepalived is used by the clustering service to determine whether a service should be running. If the <tt class="docutils literal"><span class="pre">status</span></tt> subcommand is run against any of these nodes, a few things change:</p>
+<ul class="simple">
+<li>On the back-end node that is currently the backup server, it is normal to see only two running processes: Keepalived and NRPE</li>
+<li>On the back-end node that is currently the master server, it is normal to see all services running. It is also normal to see some services in a down state if the server, on reboot, did not attempt to start the services because Keepalived determines which services are restarted based on the state of the cluster</li>
+</ul>
+<p>A sample status line for a service that is running on the master server in a High Availability topology:</p>
+<div class="highlight-bash"><div class="highlight"><pre>run: opscode-solr: <span class="o">(</span>pid 25341<span class="o">)</span> 239s, normally down; run: log: <span class="o">(</span>pid 5700<span class="o">)</span> 145308s
+</pre></div>
+</div>
+</div>
+<div class="section" id="log-files">
+<h4>Log Files<a class="headerlink" href="#log-files" title="Permalink to this headline">¶</a></h4>
+<p>A typical status line for a service that is running in Private Chef in a Standalone or Standalone topology is similar to the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>run: name_of_service: <span class="o">(</span>pid 1486<span class="o">)</span> 7819s; run: log: <span class="o">(</span>pid 1485<span class="o">)</span> 7819s
+</pre></div>
+</div>
+<p>where:</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">run</span></tt> describes the state in which the supervisor attempts to keep processes. This state is either <tt class="docutils literal"><span class="pre">run</span></tt> or <tt class="docutils literal"><span class="pre">down</span></tt>. If a service is in a <tt class="docutils literal"><span class="pre">down</span></tt> state, it should be stopped</li>
+<li><tt class="docutils literal"><span class="pre">name_of_service</span></tt> is the service name, for example: <tt class="docutils literal"><span class="pre">opscode-solr</span></tt></li>
+<li><tt class="docutils literal"><span class="pre">(pid</span> <span class="pre">1486)</span> <span class="pre">7819s;</span></tt> is the process identifier followed by the amount of time (in seconds) the service has been running</li>
+<li><tt class="docutils literal"><span class="pre">run:</span> <span class="pre">log:</span> <span class="pre">(pid</span> <span class="pre">1485)</span> <span class="pre">7819s</span></tt> is the log process. It is typical for a log process to have a longer run time than a service; this is because the supervisor does not need to restart the log process in order to connect the supervised process</li>
+</ul>
+<p>If the service is down, the status line will appear similar to the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>down: opscode-solr: 3s, normally up; run: log: <span class="o">(</span>pid 1485<span class="o">)</span> 8526s
+</pre></div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">down</span></tt> indicates that the service is in a down state</li>
+<li><tt class="docutils literal"><span class="pre">3s,</span> <span class="pre">normally</span> <span class="pre">up;</span></tt> indicates that the service is normally in a run state and that the supervisor would attempt to restart this service after a reboot</li>
+</ul>
+</div>
+</div>
+<div class="section" id="stop">
+<h3>stop<a class="headerlink" href="#stop" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">stop</span></tt> subcommand is used to stop all services enabled on Private Chef. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl stop <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+</div>
+<div class="section" id="tail">
+<h3>tail<a class="headerlink" href="#tail" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">tail</span></tt> subcommand is used to follow all Private Chef logs for all services. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl tail <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+</div>
+<div class="section" id="term">
+<h3>term<a class="headerlink" href="#term" title="Permalink to this headline">¶</a></h3>
+<p>The <tt class="docutils literal"><span class="pre">term</span></tt> subcommand is used to send a <tt class="docutils literal"><span class="pre">SIGTERM</span></tt> to all services. This command can also be run for an individual service by specifying the name of the service in the command.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>private-chef-ctl term <span class="o">(</span>SERVICE_NAME<span class="o">)</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_service</span></tt> represents the name of any service that is listed after running the <tt class="docutils literal"><span class="pre">service-list</span></tt> subcommand.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="ctl_chef_solo.html" title="chef-solo"
+             >next</a></li>
+        <li class="right" >
+          <a href="ctl_chef_server.html" title="chef-server-ctl"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>knife bluelock &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About Knife Plugins" href="plugin_knife.html" />
+    <link rel="next" title="knife ec2" href="plugin_knife_ec2.html" />
+    <link rel="prev" title="knife bluebox" href="plugin_knife_bluebox.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="plugin_knife_ec2.html" title="knife ec2"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="plugin_knife_bluebox.html" title="knife bluebox"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="plugin_knife.html" accesskey="U">About Knife Plugins</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">knife bluelock</a><ul>
+<li><a class="reference internal" href="#install-this-plugin">Install this plugin</a></li>
+<li><a class="reference internal" href="#images-list">images list</a><ul>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#options">Options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#server-create">server create</a><ul>
+<li><a class="reference internal" href="#id1">Syntax</a></li>
+<li><a class="reference internal" href="#id2">Options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#server-delete">server delete</a><ul>
+<li><a class="reference internal" href="#id3">Syntax</a></li>
+<li><a class="reference internal" href="#id4">Options</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#server-list">server list</a><ul>
+<li><a class="reference internal" href="#id5">Syntax</a></li>
+<li><a class="reference internal" href="#id6">Options</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="knife-bluelock">
+<h1>knife bluelock<a class="headerlink" href="#knife-bluelock" title="Permalink to this headline">¶</a></h1>
+<p>Bluelock is a VMware vCloud Datacenter service provider that provides mid-size and large enterprises flexible IT infrastructure solutions that are hosted in the public cloud.</p>
+<p>This subcommand should be installed as a Knife plugin, using RubyGems.</p>
+<p>This subcommand has the following syntax:</p>
+<div class="highlight-python"><pre>knife bluelock [ARGUMENT] (options)</pre>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Review the list of <a class="reference internal" href="knife_common_options.html"><em>common options</em></a> available to this (and all) Knife subcommands and plugins.</p>
+</div>
+<div class="section" id="install-this-plugin">
+<h2>Install this plugin<a class="headerlink" href="#install-this-plugin" title="Permalink to this headline">¶</a></h2>
+<p>To install the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">bluelock</span></tt> plugin using RubyGems, run the following command:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>gem install knife-bluelock
+</pre></div>
+</div>
+</div>
+<div class="section" id="images-list">
+<h2>images list<a class="headerlink" href="#images-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">images</span> <span class="pre">list</span></tt> argument is used to view a list of images that are running on servers that are hosted by Bluelock, including returning a list of each server (and server ID). The results may show instances that are not currently managed by the Chef Server.</p>
+<div class="section" id="syntax">
+<h3>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife bluelock images list
+</pre></div>
+</div>
+</div>
+<div class="section" id="options">
+<h3>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-username</span> <span class="pre">USER_NAME</span></tt></dt>
+<dd>The user name for the Bluelock account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The password for the Bluelock account.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="server-create">
+<h2>server create<a class="headerlink" href="#server-create" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">create</span></tt> argument is used to create a new Bluelock cloud instance. A comma-separated run-list of roles and/or recipes must be specified.</p>
+<div class="section" id="id1">
+<h3>Syntax<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife bluelock server create NAME <span class="o">[</span>RUN_LIST...<span class="o">]</span> <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Options<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-username</span> <span class="pre">USER_NAME</span></tt></dt>
+<dd>The user name for the Bluelock account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-d</span> <span class="pre">DISTRO</span></tt>, <tt class="docutils literal"><span class="pre">--distro</span> <span class="pre">DISTRO</span></tt></dt>
+<dd>The template file to be used during a bootstrap operation. Use this option if the specific location of the template file is unknown. The following distributions are supported: <tt class="docutils literal"><span class="pre">chef-full</span></tt> (the default bootstrap), <tt class="docutils literal"><span class="pre">centos5-gems</span></tt>, <tt class="docutils literal"><span class="pre">fedora13-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-gems</span></tt>, <tt class="docutils literal"><span class="pre">ubuntu10.04-apt</span></tt>, and <tt class="docutils literal"><span class="pre">ubuntu12.04-gems</span></tt>. If this option is used, Knife will search for the template file in the following order: a <tt class="docutils literal"><span class="pre">bootstrap/</span></tt> folder in the current working directory, a <tt class="docutils literal"><span class="pre">bootstrap/</span></tt> folder in the Chef repository, a <tt class="docutils literal"><span class="pre">bootstrap/</span></tt> folder in <tt class="docutils literal"><span class="pre">~/.chef/</span></tt>, or a bootstrap file shipped with Chef. Do not use the <tt class="docutils literal"><span class="pre">--template-file</span></tt> option when <tt class="docutils literal"><span class="pre">--distro</span></tt> is specified.</dd>
+<dt><tt class="docutils literal"><span class="pre">--[no-]enable-firewall</span></tt></dt>
+<dd>Indicates whether to install a firewall with which public network access can be controlled. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">IMAGE</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-image</span> <span class="pre">IMAGE</span></tt></dt>
+<dd>The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The password for the Bluelock account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-m</span> <span class="pre">MEMORY</span></tt>, <tt class="docutils literal"><span class="pre">--memory</span> <span class="pre">MEMORY</span></tt></dt>
+<dd>The amount of memory, in megabytes. Possible values: <tt class="docutils literal"><span class="pre">512</span></tt>, <tt class="docutils literal"><span class="pre">1024</span></tt>, <tt class="docutils literal"><span class="pre">1536</span></tt>, <tt class="docutils literal"><span class="pre">2048</span></tt>, <tt class="docutils literal"><span class="pre">4096</span></tt>, <tt class="docutils literal"><span class="pre">8192</span></tt>, <tt class="docutils literal"><span class="pre">12288</span></tt>, or <tt class="docutils literal"><span class="pre">16384</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NAME</span></tt></dt>
+<dd>The name of the node.</dd>
+<dt><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--ssh-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The SSH password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) Knife will prompt for the password.</dd>
+<dt><tt class="docutils literal"><span class="pre">-r</span> <span class="pre">RUN_LIST</span></tt>, <tt class="docutils literal"><span class="pre">--run-list</span> <span class="pre">RUN_LIST</span></tt></dt>
+<dd>A comma-separated list of roles and/or recipes to be applied.</dd>
+<dt><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">NAME</span></tt>, <tt class="docutils literal"><span class="pre">--server-name</span> <span class="pre">NAME</span></tt></dt>
+<dd>The name of the server.</dd>
+<dt><tt class="docutils literal"><span class="pre">-T</span> <span class="pre">X,Y,Z</span></tt>, <tt class="docutils literal"><span class="pre">--tcp</span> <span class="pre">X,Y,Z</span></tt></dt>
+<dd>A comma-separated list of local and public TCP ports that will be available.</dd>
+<dt><tt class="docutils literal"><span class="pre">--template-file</span> <span class="pre">TEMPLATE</span></tt></dt>
+<dd>The path to a template file that will be used during a bootstrap operation. Do not use the <tt class="docutils literal"><span class="pre">--distro</span></tt> option when <tt class="docutils literal"><span class="pre">--template-file</span></tt> is specified.</dd>
+<dt><tt class="docutils literal"><span class="pre">-U</span> <span class="pre">X,Y,Z</span></tt>, <tt class="docutils literal"><span class="pre">--udp</span> <span class="pre">X,Y,Z</span></tt></dt>
+<dd>A comma-separated list of local and public UDP ports that will be available.</dd>
+<dt><tt class="docutils literal"><span class="pre">-vcpus</span> <span class="pre">VCPUS</span></tt></dt>
+<dd>The number of virtual CPUs that are available per virtual machine. Possible values: <tt class="docutils literal"><span class="pre">1</span></tt>, <tt class="docutils literal"><span class="pre">2</span></tt>, <tt class="docutils literal"><span class="pre">4</span></tt>, or <tt class="docutils literal"><span class="pre">8</span></tt>.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="server-delete">
+<h2>server delete<a class="headerlink" href="#server-delete" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">delete</span></tt> argument is used to delete one or more instances that are running in the Bluelock cloud. A block represents the on-demand virtual computing resource; a hostname is specific to a block. To find a specific cloud instance, use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">bluelock</span> <span class="pre">server</span> <span class="pre">list</span></tt> argument. Use the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">node</span> <span class="pre">delete</span></tt> and <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">client</span> <span class="pre">delete</span></tt> sub-commands to delete associated node and client objects (if required).</p>
+<div class="section" id="id3">
+<h3>Syntax<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife bluelock server delete SERVER_NAME <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>Options<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-username</span> <span class="pre">USER_NAME</span></tt></dt>
+<dd>The user name for the Bluelock account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The password for the Bluelock account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></dt>
+<dd>The name of the node to be deleted, if different from the server name. This must be used with the <tt class="docutils literal"><span class="pre">--purge</span></tt> option.</dd>
+<dt><tt class="docutils literal"><span class="pre">-p</span></tt>, <tt class="docutils literal"><span class="pre">--purge</span></tt></dt>
+<dd>Indicates that all corresponding nodes on the Chef Server will be destroyed, in addition to the Bluelock node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the <tt class="docutils literal"><span class="pre">--node-name</span></tt> option to specify the correct name for the node.</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="server-list">
+<h2>server list<a class="headerlink" href="#server-list" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">server</span> <span class="pre">list</span></tt> argument is used to find instances that are associated with a Bluelock account.</p>
+<div class="section" id="id5">
+<h3>Syntax<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following syntax:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>knife bluelock server list <span class="o">(</span>options<span class="o">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h3>Options<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<p>This argument has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span> <span class="pre">USER_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-username</span> <span class="pre">USER_NAME</span></tt></dt>
+<dd>The user name for the Bluelock account.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">PASSWORD</span></tt>, <tt class="docutils literal"><span class="pre">--bluelock-password</span> <span class="pre">PASSWORD</span></tt></dt>
+<dd>The password for the Bluelock account.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="plugin_knife_ec2.html" title="knife ec2"
+             >next</a></li>
+        <li class="right" >
+          <a href="plugin_knife_bluebox.html" title="knife bluebox"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="plugin_knife.html" >About Knife Plugins</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

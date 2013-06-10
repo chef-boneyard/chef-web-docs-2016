@@ -1,0 +1,554 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>About Environments &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="About Roles" href="essentials_roles.html" />
+    <link rel="prev" title="Unix Environment Variables" href="essentials_environment_variables.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_roles.html" title="About Roles"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="essentials_environment_variables.html" title="Unix Environment Variables"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">About Environments</a><ul>
+<li><a class="reference internal" href="#the-default-environment">The _default Environment</a></li>
+<li><a class="reference internal" href="#environment-attributes">Environment Attributes</a><ul>
+<li><a class="reference internal" href="#attribute-types">Attribute Types</a></li>
+<li><a class="reference internal" href="#attribute-persistence">Attribute Persistence</a></li>
+<li><a class="reference internal" href="#attribute-precedence">Attribute Precedence</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#environment-formats">Environment Formats</a><ul>
+<li><a class="reference internal" href="#ruby-dsl">Ruby DSL</a></li>
+<li><a class="reference internal" href="#json">JSON</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#create-environments">Create Environments</a></li>
+<li><a class="reference internal" href="#manage-environments">Manage Environments</a><ul>
+<li><a class="reference internal" href="#save-in-a-data-bag">Save in a Data Bag</a></li>
+<li><a class="reference internal" href="#override-attributes-in-roles">Override Attributes in Roles</a></li>
+<li><a class="reference internal" href="#set-for-a-node">Set for a Node</a></li>
+<li><a class="reference internal" href="#move-nodes">Move Nodes</a></li>
+<li><a class="reference internal" href="#set-per-environment-run-lists">Set Per-environment Run-lists</a></li>
+<li><a class="reference internal" href="#search-environments">Search Environments</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="about-environments">
+<h1>About Environments<a class="headerlink" href="#about-environments" title="Permalink to this headline">¶</a></h1>
+<p>An environment is a way to map an organization&#8217;s real-life workflow to what can be configured and managed when using Chef Server. Every Chef organization begins with a single environment called the <tt class="docutils literal"><span class="pre">_default</span></tt> environment, which cannot be modified (or deleted). Additional environments can be created, such as production, staging, testing, and development. Generally, an environment is also associated with one (or more) cookbook versions.</p>
+<div class="section" id="the-default-environment">
+<h2>The _default Environment<a class="headerlink" href="#the-default-environment" title="Permalink to this headline">¶</a></h2>
+<p>Every Chef organization must have at least one environment. Every Chef organization starts out with a single environment that is named <tt class="docutils literal"><span class="pre">_default</span></tt>, which ensures that an environment is always available to the Chef Server. The <tt class="docutils literal"><span class="pre">_default</span></tt> environment cannot be modified in any way. Nodes, roles, run-lists, cookbooks (and cookbook versions), and attributes specific to an organization can only be associated with a custom environment.</p>
+</div>
+<div class="section" id="environment-attributes">
+<h2>Environment Attributes<a class="headerlink" href="#environment-attributes" title="Permalink to this headline">¶</a></h2>
+<p>An attribute can be defined in an environment and then used to override the default settings on a node. When an environment is applied during a Chef run, these attributes are compared to the attributes that are already present on the node. When the environment attributes take precedence over the default attributes, Chef will apply those new settings and values during the Chef run on the node.</p>
+<p>An environment attribute can only be set to be a default attribute or an override attribute. An environment attribute cannot be set to be a normal attribute. Use the <tt class="docutils literal"><span class="pre">default_attribute</span></tt> and <tt class="docutils literal"><span class="pre">override_attribute</span></tt> methods in the Ruby DSL file or the <tt class="docutils literal"><span class="pre">default_attributes</span></tt> and <tt class="docutils literal"><span class="pre">override_attributes</span></tt> hashes in a JSON data file.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, Ohai collects attribute data about each node at the start of the Chef run. See the <a class="reference internal" href="chef_overview_attributes.html"><em>overview of attributes</em></a> for more information about how all of these attributes fit together.</p>
+</div>
+<div class="section" id="attribute-types">
+<h3>Attribute Types<a class="headerlink" href="#attribute-types" title="Permalink to this headline">¶</a></h3>
+<p>There are two types of attributes that can be used with environments:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Attribute Type</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default</span></tt></td>
+<td>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute is automatically reset at the start of every Chef run and has the lowest attribute precedence. A cookbook should be authored to use <tt class="docutils literal"><span class="pre">default</span></tt> attributes as often as possible.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">override</span></tt></td>
+<td>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute is automatically reset at the start of every Chef run and has a higher attribute precedence than <tt class="docutils literal"><span class="pre">default</span></tt>, <tt class="docutils literal"><span class="pre">force_default</span></tt>, and <tt class="docutils literal"><span class="pre">normal</span></tt> attributes. An <tt class="docutils literal"><span class="pre">override</span></tt> attribute is most often specified in a recipe, but can be specified in an attribute file, for a role, and/or for an environment. A cookbook should be authored so that it uses <tt class="docutils literal"><span class="pre">override</span></tt> attributes only when required.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attribute-persistence">
+<h3>Attribute Persistence<a class="headerlink" href="#attribute-persistence" title="Permalink to this headline">¶</a></h3>
+<p>At the beginning of a Chef run, all default, override, and automatic attributes are reset. Chef rebuilds them using data collected by Ohai at the beginning of the Chef run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the Chef run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next Chef run.</p>
+</div>
+<div class="section" id="attribute-precedence">
+<h3>Attribute Precedence<a class="headerlink" href="#attribute-precedence" title="Permalink to this headline">¶</a></h3>
+<p>Attributes are always applied to Chef in the following order:</p>
+<ol class="arabic simple">
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in a recipe</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in an environment</li>
+<li>A <tt class="docutils literal"><span class="pre">default</span></tt> attribute located in role</li>
+<li>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">force_default</span></tt> attribute located in a recipe</li>
+<li>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">normal</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in an attribute file</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in a role</li>
+<li>An <tt class="docutils literal"><span class="pre">override</span></tt> attribute located in an environment</li>
+<li>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute located in an attribute file</li>
+<li>A <tt class="docutils literal"><span class="pre">force_override</span></tt> attribute located in a recipe</li>
+<li>An <tt class="docutils literal"><span class="pre">automatic</span></tt> attribute identified by Ohai at the start of the Chef run</li>
+</ol>
+<p>where the last attribute in the list is the one that is applied to the node.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The attribute precedence order for roles and environments is reversed for <tt class="docutils literal"><span class="pre">default</span></tt> and <tt class="docutils literal"><span class="pre">override</span></tt> attributes. The precedence order for <tt class="docutils literal"><span class="pre">default</span></tt> attributes is environment, then role. The precedence order for <tt class="docutils literal"><span class="pre">override</span></tt> attributes is role, then environment. Applying environment <tt class="docutils literal"><span class="pre">override</span></tt> attributes after role <tt class="docutils literal"><span class="pre">override</span></tt> attributes allows a role to exist in multiple environments.</p>
+</div>
+<p>Attribute precedence, viewed from the same perspective as the Chef overview diagram, where the numbers in the diagram match the order of attribute precedence:</p>
+<img alt="_images/overview_chef_attributes_precedence.png" src="_images/overview_chef_attributes_precedence.png" />
+<p>Attribute precedence, when viewed as a table:</p>
+<img alt="_images/overview_chef_attributes_table.png" src="_images/overview_chef_attributes_table.png" />
+</div>
+</div>
+<div class="section" id="environment-formats">
+<h2>Environment Formats<a class="headerlink" href="#environment-formats" title="Permalink to this headline">¶</a></h2>
+<p>Environment data is stored in two formats: as a Ruby DSL and as JSON data.</p>
+<div class="section" id="ruby-dsl">
+<h3>Ruby DSL<a class="headerlink" href="#ruby-dsl" title="Permalink to this headline">¶</a></h3>
+<p>Chef uses a domain-specific language in Ruby to define recipes and to store settings, such as those which define a role or an environment. These settings are saved as Ruby files and are stored in the Chef repository. When these files are uploaded to the Chef Server, they are converted to JSON. Each time the Chef repository is refreshed, the contents of all domain-specific Ruby files are re-compiled to JSON and are re-uploaded to the Chef Server.</p>
+<p>Domain-specific Ruby attributes for environments include the following:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">cookbook</span></tt></td>
+<td><p class="first">A version constraint for a single cookbook. For example:</p>
+<div class="highlight-python"><pre>cookbook "couchdb", "&lt; 11.0.0"</pre>
+</div>
+<p>Or:</p>
+<div class="highlight-python"><pre>cookbook "my_rails_app", "&lt; 1.2.0"</pre>
+</div>
+<p>Or:</p>
+<div class="last highlight-python"><pre>cookbook "gems", "&lt; 1.4.0"</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">cookbook_versions</span></tt></td>
+<td><p class="first">A version constraint for a group of cookbooks. For example:</p>
+<div class="last highlight-python"><pre>cookbook_versions({
+  "couchdb"=&gt;"= 11.0.0",
+  "my_rails_app"=&gt;"~&gt; 1.2.0"
+})</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">default_attributes</span></tt></td>
+<td><p class="first">Optional. A set of attributes that should be applied to all nodes, assuming the node does not already have a value for the attribute. This is useful for setting global defaults that can then be overridden for specific nodes. If more than one role attempts to set a default value for the same attribute, the last role applied will be the role to set the attribute value. When nested attributes are present, they will be preserved. For example, to specify that a node that has the attribute <tt class="docutils literal"><span class="pre">apache2</span></tt> should listen on ports 80 and 443 (unless ports are already specified):</p>
+<div class="last highlight-python"><pre>default_attributes "apache2" =&gt; { "listen_ports" =&gt; [ "80", "443" ] }</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">description</span></tt></td>
+<td><p class="first">A description of the functionality that is covered. For example:</p>
+<div class="last highlight-python"><pre>description 'The development environment'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">env_run_lists</span></tt></td>
+<td><p class="first">Optional. A list of environments, each specifying a recipe or a role that will be applied to that environment. This setting must specify the <tt class="docutils literal"><span class="pre">_default</span></tt> environment. If the <tt class="docutils literal"><span class="pre">_default</span></tt> environment is set to <tt class="docutils literal"><span class="pre">[]</span></tt> or <tt class="docutils literal"><span class="pre">nil</span></tt>, then the run list will be empty. <strong>jamescott: SEE CHEF-2636.</strong> For example:</p>
+<div class="last highlight-python"><pre>env_run_lists "prod" =&gt; ["recipe[apache2]"],
+                         "staging" =&gt; ["recipe[apache2::staging]"],
+                         "_default" =&gt; []</pre>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">name</span></tt></td>
+<td><p class="first">A unique name within the Chef organization. Each name must be unique and must be made up of letters (upper- and lower-case), numbers, underscores, and hyphens: [A-Z][a-z][0-9] and [_-]. Spaces are not allowed. For example:</p>
+<div class="last highlight-python"><pre>name 'dev01-24'</pre>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">override_attributes</span></tt></td>
+<td><p class="first">Optional. A set of attributes that should be applied to all nodes, even if the node already has a value for an attribute. This is useful for ensuring that certain attributes always have specific values. If more than one role attempts to set an override value for the same attribute, the last role applied will win. When nested attributes are present, they will be preserved. For example:</p>
+<div class="highlight-python"><pre>override_attributes "apache2" =&gt; { "max_children" =&gt; "50" }</pre>
+</div>
+<p>The parameters in a Ruby file are actually Ruby method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example:</p>
+<div class="highlight-python"><pre>override_attributes(
+  :apache2 =&gt; {
+    :prefork =&gt; { :min_spareservers =&gt; "5" }
+  }
+)</pre>
+</div>
+<p>Or:</p>
+<div class="last highlight-python"><pre>override_attributes(
+  :apache2 =&gt; {
+    :prefork =&gt; { :min_spareservers =&gt; "5" }
+  },
+  :tomcat =&gt; {
+    :worker_threads =&gt; "100"
+  }
+)</pre>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A Ruby file for each non-default environment must exist in the <tt class="docutils literal"><span class="pre">environments/</span></tt> subdirectory of the Chef repository. (If the repository does not have this subdirectory, then create it.) Each Ruby file should have the .rb suffix. The complete environment has the following syntax:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;environment_name&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;environment_description&quot;</span>
+<span class="n">cookbook</span> <span class="no">OR</span> <span class="n">cookbook_versions</span>  <span class="s2">&quot;cookbook&quot;</span> <span class="no">OR</span> <span class="s2">&quot;cookbook&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;cookbook_version&quot;</span>
+<span class="n">default_attributes</span> <span class="s2">&quot;node&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;attribute&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;etc.&quot;</span> <span class="o">]</span> <span class="p">}</span>
+<span class="n">override_attributes</span> <span class="s2">&quot;node&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;attribute&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;value&quot;</span><span class="p">,</span> <span class="s2">&quot;etc.&quot;</span> <span class="o">]</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>where both default and override attributes are optional and either a cookbook or cookbook versions (one or more) are specified. For example, an environment named &#8220;dev&#8221; that uses the &#8220;couchdb&#8221; cookbook (version 11.0.0 or higher) that listens on ports 80 and 443:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="nb">name</span> <span class="s2">&quot;dev&quot;</span>
+<span class="n">description</span> <span class="s2">&quot;The development environment&quot;</span>
+<span class="n">cookbook_versions</span>  <span class="s2">&quot;couchdb&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;= 11.0.0&quot;</span>
+<span class="n">default_attributes</span> <span class="s2">&quot;apache2&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;listen_ports&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span> <span class="s2">&quot;443&quot;</span> <span class="o">]</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>Or (using the same scenario) to specify a version constraint for only one cookbook:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">cookbook</span> <span class="s2">&quot;couchdb&quot;</span><span class="p">,</span> <span class="s2">&quot;= 11.0.0&quot;</span>
+</pre></div>
+</div>
+<p>More than one cookbook version can be specified:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">cookbook_versions</span><span class="p">({</span>
+  <span class="s2">&quot;couchdb&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;= 11.0.0&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;my_rails_app&quot;</span><span class="o">=&gt;</span><span class="s2">&quot;~&gt; 1.2.0&quot;</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+<p>Attributes are optional and can be set at the default and override levels. These will be processed according to attribute precedence. An environment attribute will be applied to all nodes within the environment, except in places where it is overridden by an attribute with higher precedence. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">default_attributes</span> <span class="s2">&quot;apache2&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;listen_ports&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s2">&quot;80&quot;</span><span class="p">,</span> <span class="s2">&quot;443&quot;</span> <span class="o">]</span> <span class="p">}</span>
+</pre></div>
+</div>
+<p>will have all nodes in the environment (<tt class="docutils literal"><span class="pre">node[:apache2][:listen_ports]</span></tt>) set to &#8220;80&#8221; and &#8220;443&#8221; unless they were overridden by an attribute with higher precedence. For example:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">override_attributes</span> <span class="s2">&quot;apache2&quot;</span> <span class="o">=&gt;</span> <span class="p">{</span> <span class="s2">&quot;listen_ports&quot;</span> <span class="o">=&gt;</span> <span class="o">[</span> <span class="s2">&quot;99&quot;</span><span class="p">,</span> <span class="s2">&quot;999&quot;</span> <span class="o">]</span> <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="json">
+<h3>JSON<a class="headerlink" href="#json" title="Permalink to this headline">¶</a></h3>
+<p>The JSON format for environments maps directly to the domain-specific Ruby format: the same settings, attributes, and values, and a similar structure and organization. For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;dev&quot;</span><span class="p">,</span>
+  <span class="s">&quot;default_attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">&quot;apache2&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="s">&quot;listen_ports&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s">&quot;80&quot;</span><span class="p">,</span>
+        <span class="s">&quot;443&quot;</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="s">&quot;json_class&quot;</span><span class="p">:</span> <span class="s">&quot;Chef::Environment&quot;</span><span class="p">,</span>
+  <span class="s">&quot;description&quot;</span><span class="p">:</span> <span class="s">&quot;&quot;</span><span class="p">,</span>
+   <span class="s">&quot;cookbook_versions&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">&quot;couchdb&quot;</span><span class="p">:</span> <span class="s">&quot;= 11.0.0&quot;</span>
+  <span class="p">},</span>
+  <span class="s">&quot;chef_type&quot;</span><span class="p">:</span> <span class="s">&quot;environment&quot;</span>
+  <span class="p">}</span>
+</pre></div>
+</div>
+<p>The JSON format has two additional settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_type</span></tt></td>
+<td>This should always be set to <tt class="docutils literal"><span class="pre">environment</span></tt>. Use this setting for any custom process that consumes environment objects outside of Ruby.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">json_class</span></tt></td>
+<td>This should always be set to <tt class="docutils literal"><span class="pre">Chef::Environment</span></tt>. This setting is used internally by Chef to auto-inflate an environment object. If objects are being rebuilt outside of Ruby, ignore it.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="create-environments">
+<h2>Create Environments<a class="headerlink" href="#create-environments" title="Permalink to this headline">¶</a></h2>
+<p>An environment can be created in five different ways:</p>
+<ul class="simple">
+<li>Creating a Ruby file in the environments sub-directory of the Chef repository and then pushing it to the Chef Server.</li>
+<li>Creating a JSON file directly in the Chef repository and then pushing it to the Chef Server.</li>
+<li>Using Knife.</li>
+<li>Using the Management Console (in Hosted Chef, Private Chef, or open source).</li>
+<li>Using the Chef Server REST API.</li>
+</ul>
+<p>Once an environment exists on the Chef Server, a node can be associated with that environment using the <tt class="docutils literal"><span class="pre">chef_environment</span></tt> method.</p>
+</div>
+<div class="section" id="manage-environments">
+<h2>Manage Environments<a class="headerlink" href="#manage-environments" title="Permalink to this headline">¶</a></h2>
+<p>Once created, an environment can be managed in several ways:</p>
+<ul class="simple">
+<li>Using Knife, using the <tt class="docutils literal"><span class="pre">-E</span> <span class="pre">ENVIRONMENT_NAME</span></tt> option for the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">cookbook</span> <span class="pre">upload</span></tt> sub-command and argument.</li>
+<li>Using the Management Console (in Hosted Chef, Private Chef, or open source).</li>
+<li>Using Ruby or JSON files that are stored in a version source control system and pushed to the Chef Server. This approach allows dynamically generated environment data (using Ruby).</li>
+</ul>
+<p>These workflows are mutually exclusive: only the most recent environment changes will be kept on the Chef Server, regardless of the source of those changes. All previous changes are overwritten when environment data is updated.</p>
+<p>The settings for environments can be modified and environments can be integrated into the larger Chef infrastructure by associating them with nodes, using recipes to call specific environment settings, and so on.</p>
+<div class="section" id="save-in-a-data-bag">
+<h3>Save in a Data Bag<a class="headerlink" href="#save-in-a-data-bag" title="Permalink to this headline">¶</a></h3>
+<p>Values that are stored in a data bag are global to the organization and are available to any environment. There are two main strategies that can be used to store per-environment data within a data bag: by using a top-level key that corresponds to the environment or by using separate items for each environment.</p>
+<p>A data bag that is storing a top-level key for an environment might look something like this:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s">&quot;id&quot;</span><span class="p">:</span> <span class="s">&quot;some_data_bag_item&quot;</span><span class="p">,</span>
+  <span class="s">&quot;production&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="c"># Hash with all your data here</span>
+  <span class="p">},</span>
+  <span class="s">&quot;testing&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="c"># Hash with all your data here</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>When using the data bag in a recipe, that data can be accessed from a recipe using code similar to:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">bag_item</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">chef_environment</span><span class="p">][</span><span class="s">&quot;some_other_key&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The other approach is to use separate items for each environment. Depending on the amount of data, it may all fit nicely within a single item. If this is the case, then creating different items for each environment may be a simple approach to providing per-environment values within a data bag. However, this approach is more time-consuming and may not scale to very large environments or when the data must be stored in many data bag items.</p>
+</div>
+<div class="section" id="override-attributes-in-roles">
+<h3>Override Attributes in Roles<a class="headerlink" href="#override-attributes-in-roles" title="Permalink to this headline">¶</a></h3>
+<p>Environment attributes that are used with roles can be overridden. Typically, this is done by using attribute precedence, but sometimes it may be necessary to ensure that specific attributes are used based on the presence of specific environments. This type of scenario is best addressed in using a recipe that relies on a top-level key that is stored in a data bag. For example, to retrieve a value from a data bag based on a specific environment:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">mything</span> <span class="o">=</span> <span class="n">data_bag_item</span><span class="p">(</span><span class="s">&quot;things&quot;</span><span class="p">,</span> <span class="s">&quot;mything&quot;</span><span class="p">)</span>
+<span class="n">attribute_i_want</span> <span class="o">=</span> <span class="n">mything</span><span class="p">[</span><span class="n">node</span><span class="o">.</span><span class="n">chef_environment</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="set-for-a-node">
+<h3>Set for a Node<a class="headerlink" href="#set-for-a-node" title="Permalink to this headline">¶</a></h3>
+<p>A node is considered to be associated with an environment when the <tt class="docutils literal"><span class="pre">chef_environment</span></tt> attribute is set. The <tt class="docutils literal"><span class="pre">chef_environment</span></tt> attribute cannot be set with normal or override attributes (i.e. in a role) because it is actually a method. It must be set explicitly using the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">edit</span></tt> or <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">exec</span></tt> sub-commands, or by using one of the following methods:</p>
+<ul class="simple">
+<li>By editing the <tt class="docutils literal"><span class="pre">chef_environment</span></tt> directly using Knife or a management console.</li>
+<li>By editing the <tt class="docutils literal"><span class="pre">environment</span></tt> configuration details in the knife.rb file and then using the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">bootstrap</span></tt> subcommand to boostrap the changes to the specified environment.</li>
+<li>By setting the <tt class="docutils literal"><span class="pre">environment</span></tt> configuration entry in the chef-client configuration file (by default: /etc/chef/client.rb). When the chef-client runs, it will pick up the value and then set the <tt class="docutils literal"><span class="pre">chef_environment</span></tt> attribute of the node.</li>
+<li>By calling the <tt class="docutils literal"><span class="pre">node.chef_environment(&quot;node_name&quot;)</span></tt> object and then using <tt class="docutils literal"><span class="pre">node.save</span></tt> to update the <tt class="docutils literal"><span class="pre">chef_environment</span></tt> with the attribute specified by <tt class="docutils literal"><span class="pre">node_name</span></tt>. (The <tt class="docutils literal"><span class="pre">chef_environment</span></tt> attribute cannot be accessed using the typical attribute sequence: <tt class="docutils literal"><span class="pre">node[:attribute_name]</span></tt>.)</li>
+</ul>
+</div>
+<div class="section" id="move-nodes">
+<h3>Move Nodes<a class="headerlink" href="#move-nodes" title="Permalink to this headline">¶</a></h3>
+<p>Nodes can be moved between environments, such as from a &#8220;dev&#8221; to a &#8220;production&#8221; environment by using the <tt class="docutils literal"><span class="pre">knife</span> <span class="pre">exec</span></tt> sub-command in Knife. For example:</p>
+<div class="highlight-python"><pre>knife exec -E 'nodes.transform("chef_environment:dev") { |n| n.chef_environment("production") }'</pre>
+</div>
+</div>
+<div class="section" id="set-per-environment-run-lists">
+<h3>Set Per-environment Run-lists<a class="headerlink" href="#set-per-environment-run-lists" title="Permalink to this headline">¶</a></h3>
+<p>A per-environment run-list is a run-list that is associated with a role and a specific environment. More than one environment can be specified in a role, but each specific environment may be associated with only one run-list. If a run-list is not specified, the default run-list will be used. For example:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s">&quot;name&quot;</span><span class="p">:</span> <span class="s">&quot;webserver&quot;</span><span class="p">,</span>
+  <span class="s">&quot;default_attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="p">},</span>
+  <span class="s">&quot;json_class&quot;</span><span class="p">:</span> <span class="s">&quot;Chef::Role&quot;</span><span class="p">,</span>
+  <span class="s">&quot;env_run_lists&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s">&quot;production&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="s">&quot;preprod&quot;</span><span class="p">:</span> <span class="p">[</span>
+
+    <span class="p">],</span>
+    <span class="s">&quot;test&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">&quot;role[base]&quot;</span><span class="p">,</span>
+      <span class="s">&quot;recipe[apache]&quot;</span>
+    <span class="p">],</span>
+    <span class="s">&quot;dev&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s">&quot;role[base]&quot;</span><span class="p">,</span>
+      <span class="s">&quot;recipe[apache]&quot;</span><span class="p">,</span>
+      <span class="s">&quot;recipe[apache::copy_dev_configs]&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="s">&quot;run_list&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">&quot;role[base]&quot;</span><span class="p">,</span>
+    <span class="s">&quot;recipe[apache]&quot;</span>
+  <span class="p">],</span>
+  <span class="s">&quot;description&quot;</span><span class="p">:</span> <span class="s">&quot;The webserver role&quot;</span><span class="p">,</span>
+  <span class="s">&quot;chef_type&quot;</span><span class="p">:</span> <span class="s">&quot;role&quot;</span><span class="p">,</span>
+  <span class="s">&quot;override_attributes&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="search-environments">
+<h3>Search Environments<a class="headerlink" href="#search-environments" title="Permalink to this headline">¶</a></h3>
+<p>When searching, a Chef environment (<tt class="docutils literal"><span class="pre">chef_environment</span></tt>) is treated much like an attribute. This allows search results to be limited to a specified environment by using Boolean operators and extra search terms. For example, to use Knife to search for all of the servers running CentOS in an environment named &#8220;QA&#8221;, enter the following:</p>
+<div class="highlight-bash"><div class="highlight"><pre>knife search node <span class="s2">&quot;chef_environment:QA AND platform:centos&quot;</span>
+</pre></div>
+</div>
+<p>Or, to include the same search in a recipe, use a code block similar to:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">qa_nodes</span> <span class="o">=</span> <span class="n">search</span><span class="p">(</span><span class="ss">:node</span><span class="p">,</span><span class="s2">&quot;chef_environment:QA&quot;</span><span class="p">)</span>
+<span class="n">qa_nodes</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">qa_node</span><span class="o">|</span>
+    <span class="c1"># Do useful work specific to qa nodes only</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="essentials_roles.html" title="About Roles"
+             >next</a></li>
+        <li class="right" >
+          <a href="essentials_environment_variables.html" title="Unix Environment Variables"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

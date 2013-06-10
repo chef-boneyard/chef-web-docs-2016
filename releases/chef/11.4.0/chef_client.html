@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chef-client &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="chef-solo" href="chef_solo.html" />
+    <link rel="prev" title="chef-server.rb" href="config_rb_chef_server.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="chef_solo.html" title="chef-solo"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="config_rb_chef_server.html" title="chef-server.rb"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chef-client</a><ul>
+<li><a class="reference internal" href="#options">Options</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chef-client">
+<h1>chef-client<a class="headerlink" href="#chef-client" title="Permalink to this headline">¶</a></h1>
+<p>A chef-client is an agent that runs locally on every node that is registered with the Chef Server. When a chef-client is run, it will perform all of the steps that are required to bring the node into the expected state, including:</p>
+<ul class="simple">
+<li>Registering and authenticating the node with the Chef Server</li>
+<li>Building the node object</li>
+<li>Synchronizing cookbooks</li>
+<li>Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies</li>
+<li>Taking the appropriate and required actions to configure the node</li>
+<li>Looking for exceptions and notifications, handling each as required</li>
+</ul>
+<p>The chef-client executable can be run as a command-line tool.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A client.rb file is used to specify the configuration details for the chef-client. This file is the default configuration file and is loaded every time the chef-client executable is run. The chef-client executable can be run as a daemon. The configuration file is located at: /etc/chef/client.rb.</p>
+</div>
+<div class="section" id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<p>This command has the following syntax:</p>
+<div class="highlight-python"><pre>chef-client OPTION VALUE OPTION VALUE ...</pre>
+</div>
+<p>This command has the following options:</p>
+<dl class="docutils">
+<dt><tt class="docutils literal"><span class="pre">-A</span></tt>, <tt class="docutils literal"><span class="pre">--fatal-windows-admin-check</span></tt></dt>
+<dd>Indicates that a Chef run should fail if the chef-client does not have administrator privileges in Microsoft Windows.</dd>
+<dt><tt class="docutils literal"><span class="pre">-c</span> <span class="pre">CONFIG</span></tt>, <tt class="docutils literal"><span class="pre">--config</span> <span class="pre">CONFIG</span></tt></dt>
+<dd>The configuration file to use.</dd>
+<dt><tt class="docutils literal"><span class="pre">-d</span></tt>, <tt class="docutils literal"><span class="pre">--daemonize</span></tt></dt>
+<dd>Indicates that the executable will be run as a daemon. This option is only available on machines that run in UNIX or Linux environments. For machines that are running Microsoft Windows that require similar functionality, use the <tt class="docutils literal"><span class="pre">chef-client::service</span></tt> recipe in the <tt class="docutils literal"><span class="pre">chef-client</span></tt> cookbook: <a class="reference external" href="http://community.opscode.com/cookbooks/chef-client">http://community.opscode.com/cookbooks/chef-client</a>. This will install a chef-client service under Microsoft Windows using the Windows Service Wrapper.</dd>
+<dt><tt class="docutils literal"><span class="pre">-E</span> <span class="pre">ENVIRONMENT_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--environment</span> <span class="pre">ENVIRONMENT_NAME</span></tt></dt>
+<dd>The name of the environment.</dd>
+<dt><tt class="docutils literal"><span class="pre">-f</span></tt>, <tt class="docutils literal"><span class="pre">--fork</span></tt></dt>
+<dd>Indicates that a Chef run will be contained in a secondary process with dedicated RAM. When the Chef run is complete the RAM will be returned to the master process. This option helps ensure that a chef-client will use a steady amount of RAM over time because the master process will not run recipes. This option will also help prevent memory leaks (such as those that can be introduced by the code contained within a poorly designed cookbook).</dd>
+<dt><tt class="docutils literal"><span class="pre">-F</span> <span class="pre">FORMAT</span></tt>, <tt class="docutils literal"><span class="pre">--format</span> <span class="pre">FORMAT</span></tt></dt>
+<dd>The output format: <tt class="docutils literal"><span class="pre">summary</span></tt> (default), <tt class="docutils literal"><span class="pre">text</span></tt>, <tt class="docutils literal"><span class="pre">json</span></tt>, <tt class="docutils literal"><span class="pre">yaml</span></tt>, and <tt class="docutils literal"><span class="pre">pp</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">--force-formatter</span></tt></dt>
+<dd>Indicates that formatter output will be used instead of logger output.</dd>
+<dt><tt class="docutils literal"><span class="pre">--force-logger</span></tt></dt>
+<dd>Indicates that logger output will be used instead of formatter output.</dd>
+<dt><tt class="docutils literal"><span class="pre">-g</span> <span class="pre">GROUP</span></tt>, <tt class="docutils literal"><span class="pre">--group</span> <span class="pre">GROUP</span></tt></dt>
+<dd>The group that owns a process. This is required when starting any executable as a daemon.</dd>
+<dt><tt class="docutils literal"><span class="pre">-h</span></tt>, <tt class="docutils literal"><span class="pre">--help</span></tt></dt>
+<dd>Shows help for the chef-client.</dd>
+<dt><tt class="docutils literal"><span class="pre">-i</span> <span class="pre">SECONDS</span></tt>, <tt class="docutils literal"><span class="pre">--interval</span> <span class="pre">SECONDS</span></tt></dt>
+<dd>The interval at which the chef-client is run. This value is configured for the chef-client application run time, rather than in <tt class="docutils literal"><span class="pre">Chef::Config</span></tt>. Default value: <tt class="docutils literal"><span class="pre">1800</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-j</span> <span class="pre">PATH</span></tt>, <tt class="docutils literal"><span class="pre">--json-attributes</span> <span class="pre">PATH</span></tt></dt>
+<dd>The path to a file that contains JSON data. Use this option to override attributes that are set from other locations, such as from within a cookbook or by a role.</dd>
+<dt><tt class="docutils literal"><span class="pre">-k</span> <span class="pre">KEY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--client-key</span> <span class="pre">KEY_FILE</span></tt></dt>
+<dd>The location of the file which contains the client key. Default value: <tt class="docutils literal"><span class="pre">/etc/chef/client.pem</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-K</span> <span class="pre">KEY_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--validation_key</span> <span class="pre">KEY_FILE</span></tt></dt>
+<dd>The location of the file which contains the key used when a chef-client is registered with a Chef Server. A validation key is signed using the <tt class="docutils literal"><span class="pre">validation_client_name</span></tt> for authentication. Default value: <tt class="docutils literal"><span class="pre">/etc/chef/validation.pem</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-l</span> <span class="pre">LEVEL</span></tt>, <tt class="docutils literal"><span class="pre">--log_level</span> <span class="pre">LEVEL</span></tt></dt>
+<dd>The level of logging that will be stored in a log file: <tt class="docutils literal"><span class="pre">debug</span></tt>, <tt class="docutils literal"><span class="pre">info</span></tt>, <tt class="docutils literal"><span class="pre">warn</span></tt>, <tt class="docutils literal"><span class="pre">error</span></tt>, or <tt class="docutils literal"><span class="pre">fatal</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-L</span> <span class="pre">LOGLOCATION</span></tt>, <tt class="docutils literal"><span class="pre">--logfile</span> <span class="pre">c</span></tt></dt>
+<dd>The location in which log file output files will be saved. If this location is set to something other than <tt class="docutils literal"><span class="pre">STDOUT</span></tt>, standard output logging will still be performed (otherwise there would be no output other than to a file). Default value: <tt class="docutils literal"><span class="pre">STDOUT</span></tt>. This is recommended when starting any executable as a daemon.</dd>
+<dt><tt class="docutils literal"><span class="pre">--[no-]color</span></tt></dt>
+<dd>Indicates that color will not be used in the output. Default setting: <tt class="docutils literal"><span class="pre">--color</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-N</span> <span class="pre">NODE_NAME</span></tt>, <tt class="docutils literal"><span class="pre">--node-name</span> <span class="pre">NODE_NAME</span></tt></dt>
+<dd>The name of the node.</dd>
+<dt><tt class="docutils literal"><span class="pre">-o</span> <span class="pre">RUN_LIST_ITEM</span></tt>, <tt class="docutils literal"><span class="pre">--override-runlist</span> <span class="pre">RUN_LIST_ITEM</span></tt></dt>
+<dd>Replace the current run list with the specified items.</dd>
+<dt><tt class="docutils literal"><span class="pre">--once</span></tt></dt>
+<dd>Indicates that the chef-client is run once and that interval and splay options are cancelled.</dd>
+<dt><tt class="docutils literal"><span class="pre">-P</span> <span class="pre">PID_FILE</span></tt>, <tt class="docutils literal"><span class="pre">--pid</span> <span class="pre">PID_FILE</span></tt></dt>
+<dd>The location in which a process identification number (pid) is saved. An executable, when started as a daemon, will write the pid to the specified file. Default value: <tt class="docutils literal"><span class="pre">/tmp/name-of-executable.pid</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-R</span></tt>, <tt class="docutils literal"><span class="pre">--enable-reporting</span></tt></dt>
+<dd>Indicates that data collection reporting during Chef runs is enabled.</dd>
+<dt><tt class="docutils literal"><span class="pre">-s</span> <span class="pre">SECONDS</span></tt>, <tt class="docutils literal"><span class="pre">--splay</span> <span class="pre">SECONDS</span></tt></dt>
+<dd>A number (in seconds) to add to the <tt class="docutils literal"><span class="pre">interval</span></tt> that is used to determine the frequency of chef-client runs. This number can help prevent server load when there are many clients running at the same time. Default value: <tt class="docutils literal"><span class="pre">nil</span></tt>.</dd>
+<dt><tt class="docutils literal"><span class="pre">-S</span> <span class="pre">CHEF_SERVER_URL</span></tt>, <tt class="docutils literal"><span class="pre">--server</span> <span class="pre">CHEF_SERVER_URL</span></tt></dt>
+<dd>The URL for the Chef Server.</dd>
+<dt><tt class="docutils literal"><span class="pre">-u</span> <span class="pre">USER</span></tt>, <tt class="docutils literal"><span class="pre">--user</span> <span class="pre">USER</span></tt></dt>
+<dd>The user that owns a process. This is required when starting any executable as a daemon.</dd>
+<dt><tt class="docutils literal"><span class="pre">-v</span></tt>, <tt class="docutils literal"><span class="pre">--version</span></tt></dt>
+<dd>The version of Chef.</dd>
+<dt><tt class="docutils literal"><span class="pre">-W</span></tt>, <tt class="docutils literal"><span class="pre">--why-run</span></tt></dt>
+<dd>Indicates that the executable will be run in why-run mode, which is a type of Chef run that does everything except modify the system. Use why-run mode to understand why Chef makes the decisions that it makes and to learn more about the current and proposed state of the system.</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p><strong>Start a Chef run when the chef-client is running as a daemon</strong></p>
+<p>A chef-client that is running as a daemon can be woken up and started by sending the process a <tt class="docutils literal"><span class="pre">SIGUSR1</span></tt>. For example, to trigger a Chef run on a machine running Linux:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo killall -USR1 chef-client
+</pre></div>
+</div>
+<p><strong>Start a Chef run manually</strong></p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>ps auxw|grep chef-client
+</pre></div>
+</div>
+<p>to return something like:</p>
+<div class="highlight-bash"><div class="highlight"><pre>root           66066   0.9  0.0  2488880    264 s001  S+   10:26AM   0:03.05
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/bin/ruby /usr/bin/chef-client -i 3600 -s 20
+</pre></div>
+</div>
+<p>and then enter:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span class="nv">$ </span>sudo <span class="nb">kill</span> -USR1 66066
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="chef_solo.html" title="chef-solo"
+             >next</a></li>
+        <li class="right" >
+          <a href="config_rb_chef_server.html" title="chef-server.rb"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

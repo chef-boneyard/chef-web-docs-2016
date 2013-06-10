@@ -1,0 +1,234 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Report Handlers &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="The Chef Community" href="community.html" />
+    <link rel="next" title="What’s New in Chef 11" href="breaking_changes_chef_11.html" />
+    <link rel="prev" title="Community Ohai Plugins" href="community_plugin_ohai.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="breaking_changes_chef_11.html" title="What’s New in Chef 11"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="community_plugin_ohai.html" title="Community Ohai Plugins"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="community.html" accesskey="U">The Chef Community</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="report-handlers">
+<h1>Report Handlers<a class="headerlink" href="#report-handlers" title="Permalink to this headline">¶</a></h1>
+<p>A handler is a feature of Chef that is used to trigger certain behaviors in response to certain situations, typically identified during a Chef run.</p>
+<ul class="simple">
+<li>An exception handler is used to trigger behaviors when a defined aspect of a Chef run fails.</li>
+<li>A report handler is used to trigger behaviors when a defined aspect of a Chef run is successful.</li>
+</ul>
+<p>Both types of handlers can be used to gather data about a Chef run, and when used across the entire Chef organization, can provide rich levels of data about all types of Chef usage that can be used later for trending and analysis.</p>
+<p>The following handlers are available in the Chef open source community:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="88%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Handler</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Airbrake</td>
+<td>A Chef handler that sends exceptions (only) to Airbrake, an application that collects data and aggregates it for review. <a class="reference external" href="https://github.com/morgoth/airbrake_handler">Download Airbrake</a>.</td>
+</tr>
+<tr class="row-odd"><td>Asynchronous Resources</td>
+<td>A Chef handler that asynchronously pushes exception and report handler data to a STOMP queue, from which data can be processed into data storage. <a class="reference external" href="https://github.com/rottenbytes/chef/tree/master/async_handler">Download Asynchronous Resources</a>.</td>
+</tr>
+<tr class="row-even"><td>Campfire</td>
+<td>A Chef handler that collects exception and report handler data and reports it to Campfire, a web-based group chat tool. <a class="reference external" href="https://github.com/ampledata/chef-handler-campfire">Download Campfire</a>.</td>
+</tr>
+<tr class="row-odd"><td>Cloudkick</td>
+<td>A Chef handler that collects exception and report handler data and sends it to Cloudkick, a set of cloud server monitoring and management tools. <a class="reference external" href="https://github.com/ampledata/chef/blob/master/chef/lib/chef/handler/cloudkick_handler.rb">Download Cloudkick</a>.</td>
+</tr>
+<tr class="row-even"><td>DATADOG</td>
+<td>A Chef handler that collects Chef stats and sends them into a DATADOG newsfeed. <a class="reference external" href="https://github.com/DataDog/chef-handler-datadog">Download DATADOG</a>.</td>
+</tr>
+<tr class="row-odd"><td>Graphite</td>
+<td>A Chef handler that collects exception and report handler data and reports it to Graphite, a graphic rendering application. <a class="reference external" href="https://github.com/imeyer/chef-handler-graphite/wiki">Download Graphite</a>.</td>
+</tr>
+<tr class="row-even"><td>Graylog2 / Graylog Extended Log Format (GELF)</td>
+<td>A Chef handler that provides exception and report handler status (including changes) to a Graylog2 server, so that the data can be viewed using Graylog Extended Log Format (GELF). <a class="reference external" href="https://github.com/jellybob/chef-gelf/">Download GELF</a>.</td>
+</tr>
+<tr class="row-odd"><td>Growl</td>
+<td>A Chef handler that collects exception and report handler data and then sends it as a Growl notification. <a class="reference external" href="http://rubygems.org/gems/chef-handler-growl">Download Growl</a>.</td>
+</tr>
+<tr class="row-even"><td>HipChat</td>
+<td>A Chef handler that collects exception handler data and sends it to HipChat, a hosted private chat service for companies and teams. <a class="reference external" href="https://github.com/mojotech/hipchat/blob/master/lib/hipchat/chef.rb">Download HipChat</a>.</td>
+</tr>
+<tr class="row-odd"><td>IRC Snitch</td>
+<td>A Chef handler that notifies administrators (via Internet Relay Chat (IRC)) when a Chef run fails. <a class="reference external" href="https://rubygems.org/gems/chef-irc-snitch">Download IRC Snitch</a>.</td>
+</tr>
+<tr class="row-even"><td>NSCA</td>
+<td>A Chef handler that supports NSCA, an add-on for Nagios. This will allow Chef report and exception handler messages to be passed to Nagios from NSCA. <a class="reference external" href="https://github.com/ranjibd/nsca_handler">Download NSCA</a>.</td>
+</tr>
+<tr class="row-odd"><td>Simple Email</td>
+<td>A Chef handler that collects exception and report handler data and then uses pony to send email reports that are based on Erubis templates. <a class="reference external" href="https://rubygems.org/gems/chef-handler-mail">Download Simple Email</a>.</td>
+</tr>
+<tr class="row-even"><td>SNS</td>
+<td>A Chef handler that notifies exception and report handler data and sends it to a SNS topic. <a class="reference external" href="https://rubygems.org/gems/chef-handler-sns">Download SNS</a>.</td>
+</tr>
+<tr class="row-odd"><td>Splunk Storm</td>
+<td>A Chef handler that supports exceptions and reports for Splunk Storm. <a class="reference external" href="http://ampledata.org/splunk_storm_chef_handler.html">Download Splunk Storm</a>.</td>
+</tr>
+<tr class="row-even"><td>Updated Resources</td>
+<td>A Chef handler that provides a simple way to display resources that were updated during a Chef run. <a class="reference external" href="https://rubygems.org/gems/chef-handler-updated-resources">Download Updated Resources</a>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="breaking_changes_chef_11.html" title="What’s New in Chef 11"
+             >next</a></li>
+        <li class="right" >
+          <a href="community_plugin_ohai.html" title="Community Ohai Plugins"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="community.html" >The Chef Community</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

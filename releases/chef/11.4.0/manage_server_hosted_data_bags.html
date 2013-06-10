@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Manage Data Bags in Hosted Chef &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="Manage the Hosted Chef Server" href="manage_server_hosted.html" />
+    <link rel="next" title="Manage Environments in Hosted Chef" href="manage_server_hosted_environments.html" />
+    <link rel="prev" title="Manage Cookbooks in Hosted Chef" href="manage_server_hosted_cookbooks.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="manage_server_hosted_environments.html" title="Manage Environments in Hosted Chef"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="manage_server_hosted_cookbooks.html" title="Manage Cookbooks in Hosted Chef"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="manage_server_hosted.html" accesskey="U">Manage the Hosted Chef Server</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Manage Data Bags in Hosted Chef</a><ul>
+<li><a class="reference internal" href="#create">Create</a></li>
+<li><a class="reference internal" href="#delete">Delete</a></li>
+<li><a class="reference internal" href="#edit">Edit</a></li>
+<li><a class="reference internal" href="#list">List</a></li>
+<li><a class="reference internal" href="#show">Show</a></li>
+<li><a class="reference internal" href="#data-bag-items">Data Bag Items</a><ul>
+<li><a class="reference internal" href="#id1">Create</a><ul>
+<li><a class="reference internal" href="#editor-tab">Editor Tab</a></li>
+<li><a class="reference internal" href="#source-tab">Source Tab</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#id2">Delete</a></li>
+<li><a class="reference internal" href="#id3">Edit</a></li>
+<li><a class="reference internal" href="#id4">Show</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="manage-data-bags-in-hosted-chef">
+<h1>Manage Data Bags in Hosted Chef<a class="headerlink" href="#manage-data-bags-in-hosted-chef" title="Permalink to this headline">¶</a></h1>
+<p>A data bag is a global variable that is stored as JSON data and is accessible from a Chef Server. A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. The contents of a data bag can vary, but they often include sensitive information (such as database passwords).</p>
+<p>The <strong>Management Console</strong> allows users to create, read, update, and delete data bags and data bag items.</p>
+<div class="section" id="create">
+<h2>Create<a class="headerlink" href="#create" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need the create permission on the global data bag level to create new data bags.</p>
+</div>
+<ol class="arabic simple">
+<li>Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</li>
+<li>Click <strong>Databags</strong> on the main navigation menu.</li>
+<li>Click <strong>Create</strong> on the sub-navigation bar. Enter a name for the data bag and click on the <strong>Create data bag</strong> button.</li>
+</ol>
+</div>
+<div class="section" id="delete">
+<h2>Delete<a class="headerlink" href="#delete" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need delete permissions on a data bag to delete it. If you don&#8217;t have this permission, you will not see a <strong>Delete</strong> link or tab.</p>
+</div>
+<p>To delete a data bag:</p>
+<ol class="arabic simple">
+<li>Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</li>
+<li>Click <strong>Databags</strong> on the main navigation menu.</li>
+<li>Click the <strong>Delete</strong> link next to the name of the data bag you want to delete, and click <strong>OK</strong> on the confirmation message box. Or, click the link of the data bag to view its details, and click <strong>Delete</strong> on the sub navigation menu.</li>
+</ol>
+</div>
+<div class="section" id="edit">
+<h2>Edit<a class="headerlink" href="#edit" title="Permalink to this headline">¶</a></h2>
+<p>To view or edit a specific data bag:</p>
+<ol class="arabic simple">
+<li>Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</li>
+<li>Click <strong>Databags</strong> on the main navigation menu.</li>
+<li>Click on the specific data bag you want to view or edit.</li>
+<li>On the following page you can create items in the data bag.</li>
+</ol>
+</div>
+<div class="section" id="list">
+<h2>List<a class="headerlink" href="#list" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need the list permission on the global data bag level to see the list of data bags.</p>
+</div>
+<p>To list data bags in your organization:</p>
+<ol class="arabic">
+<li><p class="first">Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</p>
+</li>
+<li><p class="first">Click <strong>Data bags</strong> on the main navigation menu.</p>
+<img alt="_images/step_manage_server_hosted_data_bag_list.png" src="_images/step_manage_server_hosted_data_bag_list.png" />
+</li>
+</ol>
+</div>
+<div class="section" id="show">
+<h2>Show<a class="headerlink" href="#show" title="Permalink to this headline">¶</a></h2>
+<p>To view or edit a specific data bag:</p>
+<ol class="arabic">
+<li><p class="first">Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</p>
+</li>
+<li><p class="first">Click <strong>Databags</strong> on the main navigation menu.</p>
+</li>
+<li><p class="first">Click on the specific data bag you want to view or edit.</p>
+<img alt="_images/step_manage_server_hosted_data_bag_view.png" src="_images/step_manage_server_hosted_data_bag_view.png" />
+</li>
+</ol>
+</div>
+<div class="section" id="data-bag-items">
+<h2>Data Bag Items<a class="headerlink" href="#data-bag-items" title="Permalink to this headline">¶</a></h2>
+<p>A data bag is a container of related data bag items, where each individual data bag item is a JSON file. The only structural requirement of a data bag item is that it must have an <tt class="docutils literal"><span class="pre">id</span></tt>:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;id&quot;</span><span class="o">:</span> <span class="s2">&quot;ITEM_NAME&quot;</span>
+  <span class="s2">&quot;key&quot;</span><span class="o">:</span> <span class="s2">&quot;value&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">key</span></tt> and <tt class="docutils literal"><span class="pre">value</span></tt> are the key:value pair for each additional attribute within the data bag item. Knife can load a data bag item by specifying the name of the data bag to which the item belongs and then the filename of the data bag item.</p>
+<div class="section" id="id1">
+<h3>Create<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need create permissions on the parent data bag in order to create a new item within it.</p>
+</div>
+<p>To create a data bag item in a specific data bag:</p>
+<ol class="arabic simple">
+<li>Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</li>
+<li>Click <strong>Databags</strong> on the main navigation menu.</li>
+<li>Click on the specific data bag you want to view or edit.</li>
+<li>Click <strong>Create Item</strong> on the sub navigation bar. You will see a page with a JSON editor.</li>
+<li>Click the <strong>Source</strong> tab in the JSON editor to edit the data bag item directly, or use the tree view on the left and the <strong>Editor</strong> tab to add and edit keys and values. Further directions on these two methods are below. You should not delete the &#8220;id&#8221; key as this contains the name of the data bag item.</li>
+</ol>
+<div class="section" id="editor-tab">
+<h4>Editor Tab<a class="headerlink" href="#editor-tab" title="Permalink to this headline">¶</a></h4>
+<p>To edit a data bag item:</p>
+<ol class="arabic">
+<li><p class="first">Expand the <strong>Data Attributes</strong> tree on the left and click &#8220;id&#8221;.</p>
+</li>
+<li><p class="first">Enter a value for the name of the data bag item, and then click <strong>Save Attribute</strong>. This will be the name of the data bag item when you are completed.</p>
+<img alt="_images/step_manage_server_hosted_data_bag_item_edit_editor_1.png" src="_images/step_manage_server_hosted_data_bag_item_edit_editor_1.png" />
+</li>
+<li><p class="first">Now you can add contents to the data bag. Click on &#8220;json&#8221; from the <strong>Data Attributes</strong> tree on the left, and click the <strong>Editor</strong> tab on the right.</p>
+</li>
+<li><p class="first">Click the green add button under the <strong>Editor</strong> tab:</p>
+</li>
+<li><p class="first">Enter a name as the key and a body as the value and click <strong>Add Attribute</strong>. The following figures show the <strong>Data Attribute</strong> tree and the JSON editor.</p>
+<img alt="_images/step_manage_server_hosted_data_bag_item_edit_editor_2.png" src="_images/step_manage_server_hosted_data_bag_item_edit_editor_2.png" />
+</li>
+<li><p class="first">Add more contents to the data bag by following steps 3 through 5 as many times as needed. Click <strong>Create Databag Item</strong> to save the data bag item.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="source-tab">
+<h4>Source Tab<a class="headerlink" href="#source-tab" title="Permalink to this headline">¶</a></h4>
+<p>To edit the source of a data bag item:</p>
+<ol class="arabic">
+<li><p class="first">Enter the JSON body of your data bag item in the editor, and click the <strong>Load JSON from source</strong> button:</p>
+<p>Here&#8217;s an example with just the name set:</p>
+<img alt="_images/step_manage_server_hosted_data_bag_item_edit_source_1.png" src="_images/step_manage_server_hosted_data_bag_item_edit_source_1.png" />
+<p>You can also add contents to the data bag item by editing the json with further key/value pairs. Here&#8217;s an example:</p>
+<img alt="_images/step_manage_server_hosted_data_bag_item_edit_source_2.png" src="_images/step_manage_server_hosted_data_bag_item_edit_source_2.png" />
+</li>
+<li><p class="first">Click <strong>Create Databag Item</strong> button to save the data bag item when you are done.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>Delete<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">If you do not see a Delete link or tab, you do not have delete permissions on the parent data bag.</p>
+</div>
+<p>To delete a data bag item in a specific data bag:</p>
+<ol class="arabic simple">
+<li>Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</li>
+<li>Click <strong>Databags</strong> on the main navigation menu.</li>
+<li>Click the <strong>Delete</strong> link next to the name of the data bag item you want to delete, and click <strong>OK</strong> on the confirmation message box. Or, click the link of the data bag item to view its details, and click <strong>Delete</strong> on the sub navigation menu.</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h3>Edit<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You need update permissions on the parent data bag in order to edit a data bag item within it.</p>
+</div>
+<p>To edit a data bag item in a specific data bag:</p>
+<ol class="arabic simple">
+<li>Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</li>
+<li>Click <strong>Databags</strong> on the main navigation menu.</li>
+<li>Click the <strong>Edit</strong> link next to the name of the data bag item you want to edit.</li>
+<li>Click <strong>Edit Databag Item</strong> on the sub navigation bar. You will see a page with a JSON editor.</li>
+<li>Click the <strong>Source</strong> tab in the JSON editor to edit the data bag item directly, or use the tree view on the left and the Editor tab to add and edit keys and values. You should not delete the &#8220;id&#8221; key as this contains the name of the data bag item. More information on using the Editor and Source tabs can be found in the sections above.</li>
+</ol>
+</div>
+<div class="section" id="id4">
+<h3>Show<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<p>To view a data bag item:</p>
+<ol class="arabic">
+<li><p class="first">Log on to the <strong>Management Console</strong> and select an organization to use if you are associated with multiple organizations.</p>
+</li>
+<li><p class="first">Click <strong>Databags</strong> on the main navigation menu.</p>
+</li>
+<li><p class="first">Click on the specific data bag that contains the data bag item you want to view.</p>
+</li>
+<li><p class="first">Click on the specific data bag item you want to view. This will show a page similar to this:</p>
+<img alt="_images/step_manage_server_hosted_data_bag_item_view.png" src="_images/step_manage_server_hosted_data_bag_item_view.png" />
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="manage_server_hosted_environments.html" title="Manage Environments in Hosted Chef"
+             >next</a></li>
+        <li class="right" >
+          <a href="manage_server_hosted_cookbooks.html" title="Manage Cookbooks in Hosted Chef"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="manage_server_hosted.html" >Manage the Hosted Chef Server</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

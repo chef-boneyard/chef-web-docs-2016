@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>breakpoint &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="About Resources and Providers" href="resource.html" />
+    <link rel="next" title="chef_gem" href="resource_chef_gem.html" />
+    <link rel="prev" title="batch" href="resource_batch.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_chef_gem.html" title="chef_gem"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="resource_batch.html" title="batch"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" accesskey="U">About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">breakpoint</a><ul>
+<li><a class="reference internal" href="#syntax">Syntax</a></li>
+<li><a class="reference internal" href="#actions">Actions</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a></li>
+<li><a class="reference internal" href="#providers">Providers</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="breakpoint">
+<h1>breakpoint<a class="headerlink" href="#breakpoint" title="Permalink to this headline">¶</a></h1>
+<p>A <a class="reference external" href="http://docs.opscode.com/resource.html">resource</a> is a key part of a <a class="reference external" href="http://docs.opscode.com/essentials_cookbook_recipes.html">recipe</a> that defines the actions that can be taken against a piece of the system. These actions are identified during each <a class="reference external" href="http://docs.opscode.com/essentials_nodes_chef_run.html">Chef run</a> as the resource collection is compiled. Once identified, each resource (in turn) is mapped to a provider, which then configures each piece of the system.</p>
+<p>The <strong>breakpoint</strong> resource is used to add breakpoints to recipes in the same way as any other resource. When Chef is run in chef-shell mode, those breakpoints can be used to debug recipes. Breakpoints are ignored by Chef during an actual Chef run.  In general, breakpoints are used most often in a non-production environment, for the purpose of debugging recipes. After those recipes are debugged and the desired behavior has been tested, the breakpoints are typically removed from the recipes before uploading the cookbooks to a production environment (even if Chef ignores then when building the resource collection during an official Chef run).</p>
+<div class="section" id="syntax">
+<h2>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h2>
+<p>The syntax for using the <strong>breakpoint</strong> resource in a recipe is as follows:</p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">breakpoint</span> <span class="s2">&quot;name&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:break</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where</p>
+<ul class="simple">
+<li><tt class="docutils literal"><span class="pre">:break</span></tt> will tell Chef to stop running a recipe at this point when Chef is being run in chef-shell mode</li>
+</ul>
+</div>
+<div class="section" id="actions">
+<h2>Actions<a class="headerlink" href="#actions" title="Permalink to this headline">¶</a></h2>
+<p>This resource has the following actions:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="73%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Action</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">:break</span></tt></td>
+<td>Use to add a breakpoint to a recipe.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>This resource does not have any attributes.</p>
+</div>
+<div class="section" id="providers">
+<h2>Providers<a class="headerlink" href="#providers" title="Permalink to this headline">¶</a></h2>
+<p>The following providers are available:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="27%" />
+<col width="15%" />
+<col width="58%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Long name</th>
+<th class="head">Short name</th>
+<th class="head">Notes</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">Chef::Provider::Breakpoint</span></tt></td>
+<td>breakpoint</td>
+<td>The default provider for all recipes.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>The following examples demonstrate various approaches for using resources in recipes. If you want to see examples of how Opscode uses resources in recipes, take a closer look at the cookbooks that Opscode authors and maintains: <a class="reference external" href="https://github.com/opscode-cookbooks">https://github.com/opscode-cookbooks</a>.</p>
+<p><strong>A recipe without a breakpoint</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">yum_key</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;elrepo&#39;</span><span class="o">][</span><span class="s1">&#39;key&#39;</span><span class="o">]</span> <span class="k">do</span>
+  <span class="n">url</span>  <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;elrepo&#39;</span><span class="o">][</span><span class="s1">&#39;key_url&#39;</span><span class="o">]</span>
+  <span class="n">action</span> <span class="ss">:add</span>
+<span class="k">end</span>
+
+<span class="n">yum_repository</span> <span class="s2">&quot;elrepo&quot;</span> <span class="k">do</span>
+  <span class="n">description</span> <span class="s2">&quot;ELRepo.org Community Enterprise Linux Extras Repository&quot;</span>
+  <span class="n">key</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;elrepo&#39;</span><span class="o">][</span><span class="s1">&#39;key&#39;</span><span class="o">]</span>
+  <span class="n">mirrorlist</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;elrepo&#39;</span><span class="o">][</span><span class="s1">&#39;url&#39;</span><span class="o">]</span>
+  <span class="n">includepkgs</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;elrepo&#39;</span><span class="o">][</span><span class="s1">&#39;includepkgs&#39;</span><span class="o">]</span>
+  <span class="n">exclude</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;elrepo&#39;</span><span class="o">][</span><span class="s1">&#39;exclude&#39;</span><span class="o">]</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p><strong>The same recipe with breakpoints</strong></p>
+<div class="highlight-ruby"><div class="highlight"><pre><span class="n">breakpoint</span> <span class="s2">&quot;before yum_key node[&#39;yum&#39;][&#39;repo_name&#39;][&#39;key&#39;]&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:break</span>
+<span class="k">end</span>
+
+<span class="n">yum_key</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;repo_name&#39;</span><span class="o">][</span><span class="s1">&#39;key&#39;</span><span class="o">]</span> <span class="k">do</span>
+  <span class="n">url</span>  <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;repo_name&#39;</span><span class="o">][</span><span class="s1">&#39;key_url&#39;</span><span class="o">]</span>
+  <span class="n">action</span> <span class="ss">:add</span>
+<span class="k">end</span>
+
+<span class="n">breakpoint</span> <span class="s2">&quot;after yum_key node[&#39;yum&#39;][&#39;repo_name&#39;][&#39;key&#39;]&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:break</span>
+<span class="k">end</span>
+
+<span class="n">breakpoint</span> <span class="s2">&quot;before yum_repository &#39;repo_name&#39;&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:break</span>
+<span class="k">end</span>
+
+<span class="n">yum_repository</span> <span class="s2">&quot;repo_name&quot;</span> <span class="k">do</span>
+  <span class="n">description</span> <span class="s2">&quot;description&quot;</span>
+  <span class="n">key</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;repo_name&#39;</span><span class="o">][</span><span class="s1">&#39;key&#39;</span><span class="o">]</span>
+  <span class="n">mirrorlist</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;repo_name&#39;</span><span class="o">][</span><span class="s1">&#39;url&#39;</span><span class="o">]</span>
+  <span class="n">includepkgs</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;repo_name&#39;</span><span class="o">][</span><span class="s1">&#39;includepkgs&#39;</span><span class="o">]</span>
+  <span class="n">exclude</span> <span class="n">node</span><span class="o">[</span><span class="s1">&#39;yum&#39;</span><span class="o">][</span><span class="s1">&#39;repo_name&#39;</span><span class="o">][</span><span class="s1">&#39;exclude&#39;</span><span class="o">]</span>
+  <span class="n">action</span> <span class="ss">:create</span>
+<span class="k">end</span>
+
+<span class="n">breakpoint</span> <span class="s2">&quot;after yum_repository &#39;repo_name&#39;&quot;</span> <span class="k">do</span>
+  <span class="n">action</span> <span class="ss">:break</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+<p>where the <tt class="docutils literal"><span class="pre">&quot;name&quot;</span></tt> of each breakpoint is an arbitrary string. In the previous example, <tt class="docutils literal"><span class="pre">&quot;name&quot;</span></tt> is used to indicate if the breakpoint is before or after a resource, and then also to specify which resource.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="resource_chef_gem.html" title="chef_gem"
+             >next</a></li>
+        <li class="right" >
+          <a href="resource_batch.html" title="batch"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="resource.html" >About Resources and Providers</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

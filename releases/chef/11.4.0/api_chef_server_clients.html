@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>/clients &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="up" title="Chef Server API" href="api_chef_server.html" />
+    <link rel="next" title="/clients/NAME" href="api_chef_server_clients_name.html" />
+    <link rel="prev" title="Chef Server API" href="api_chef_server.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="api_chef_server_clients_name.html" title="/clients/NAME"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="api_chef_server.html" title="Chef Server API"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="api_chef_server.html" accesskey="U">Chef Server API</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">/clients</a><ul>
+<li><a class="reference internal" href="#get">GET</a></li>
+<li><a class="reference internal" href="#post">POST</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="clients">
+<h1>/clients<a class="headerlink" href="#clients" title="Permalink to this headline">¶</a></h1>
+<p>The <tt class="docutils literal"><span class="pre">/clients</span></tt> endpoint is used to manage an API client list and their associated RSA public key-pairs.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">In general, the API client list should be managed using Knife or the Chef Server management console, as opposed to the Chef Server API.</p>
+</div>
+<p>The <tt class="docutils literal"><span class="pre">/clients</span></tt> endpoint has the following methods: <tt class="docutils literal"><span class="pre">GET</span></tt> and <tt class="docutils literal"><span class="pre">POST</span></tt>.</p>
+<div class="section" id="get">
+<h2>GET<a class="headerlink" href="#get" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">GET</span></tt> method is used to return the API client list on the Chef Server, including nodes that have been registered with the Chef Server, the chef-validator clients, and the chef-server-webui clients.</p>
+<p>This method has no parameters.</p>
+<p><strong>Request</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre>GET /clients
+</pre></div>
+</div>
+<p><strong>Response</strong></p>
+<p>The response will return something like the following:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;chef-webui&quot;</span><span class="o">:</span> <span class="s2">&quot;http://localhost:4000/clients/chef-webui&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;chef-validator&quot;</span><span class="o">:</span> <span class="s2">&quot;http://localhost:4000/clients/chef-validator&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;adam&quot;</span><span class="o">:</span> <span class="s2">&quot;http://localhost:4000/clients/adam&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p><strong>Response Codes</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">200</span></tt></td>
+<td>OK. The request was successful.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">401</span></tt></td>
+<td>Unauthorized. The user which made the request is not authorized to perform the action.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">403</span></tt></td>
+<td>Forbidden. The user which made the request is not authorized to perform the action.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="post">
+<h2>POST<a class="headerlink" href="#post" title="Permalink to this headline">¶</a></h2>
+<p>The <tt class="docutils literal"><span class="pre">POST</span></tt> method is used to create a new API client.</p>
+<p>This method has no parameters.</p>
+<p><strong>Request</strong></p>
+<div class="highlight-xml"><div class="highlight"><pre>POST /clients
+</pre></div>
+</div>
+<p>with a request body that looks something like:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;name_of_API_client&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;admin&quot;</span><span class="o">:</span> <span class="kc">false</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>where <tt class="docutils literal"><span class="pre">name_of_API_client</span></tt> is the name of the API client to be created and <tt class="docutils literal"><span class="pre">admin</span></tt> indicates whether the API client will be run as an admin API client.</p>
+<p><strong>Response</strong></p>
+<p>The response will return something like the following:</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span class="p">{</span>
+  <span class="s2">&quot;uri&quot;</span><span class="o">:</span> <span class="s2">&quot;http://localhost:4000/clients/monkeypants&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;private_key&quot;</span><span class="o">:</span> <span class="s2">&quot;-----BEGIN PRIVATE KEY-----\n</span>
+<span class="s2">                MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyVPW9YXa5PR0rgEW1updSxygB\n</span>
+<span class="s2">                wmVpDnHurgQ7/gbh+PmY49EZsfrZSbKgSKy+rxdsVoSoU+krYtHvYIwVfr2tk0FP\n</span>
+<span class="s2">                nhAWJaFH654KpuCNG6x6iMLtzGO1Ma/VzHnFqoOeSCKHXDhmHwJAjGDTPAgCJQiI\n</span>
+<span class="s2">                eau6cDNJRiJ7j0/xBwIDAQAB\n</span>
+<span class="s2">                -----END PRIVATE KEY-----&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Store the private key in a safe place. It will be required later (along with the client name) to access the Chef Server when using the Chef Server API.</p>
+<p><strong>Response Codes</strong></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Response Code</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">201</span></tt></td>
+<td>Created. The object was created.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">400</span></tt></td>
+<td>Bad request. The contents of the request are not formatted correctly.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">401</span></tt></td>
+<td>Unauthorized. The user which made the request is not authorized to perform the action.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">403</span></tt></td>
+<td>Forbidden. The user which made the request is not authorized to perform the action.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">409</span></tt></td>
+<td>Conflict. The object already exists.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="api_chef_server_clients_name.html" title="/clients/NAME"
+             >next</a></li>
+        <li class="right" >
+          <a href="api_chef_server.html" title="Chef Server API"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+
+          <li><a href="api_chef_server.html" >Chef Server API</a> &raquo;</li> 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>

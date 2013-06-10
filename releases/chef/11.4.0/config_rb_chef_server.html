@@ -1,0 +1,928 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>chef-server.rb &mdash; Chef Docs</title>
+    
+    <link rel="stylesheet" href="_static/opscode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1-1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/opscode.ico"/>
+    <link rel="top" title="Chef Docs" href="index.html" />
+    <link rel="next" title="chef-client" href="chef_client.html" />
+    <link rel="prev" title="solr.rb" href="config_rb_solr.html" /> 
+  </head>
+  <body>
+<div style="background-color: #212c35; text-align: left; padding: 0px 0px 0px 0px">
+<a href="http://docs.opscode.com/"><img src="_static/opscode_html_logo.png" border="0" alt="Opscode"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="chef_client.html" title="chef-client"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="config_rb_solr.html" title="solr.rb"
+             accesskey="P">previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/opscode_chef_html_logo.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">chef-server.rb</a><ul>
+<li><a class="reference internal" href="#settings">Settings</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+<li><a class="reference internal" href="#bookshelf">Bookshelf</a></li>
+<li><a class="reference internal" href="#chef-expander">Chef Expander</a></li>
+<li><a class="reference internal" href="#chef-pedant">Chef Pedant</a></li>
+<li><a class="reference internal" href="#chef-solr">Chef Solr</a></li>
+<li><a class="reference internal" href="#erchef">Erchef</a></li>
+<li><a class="reference internal" href="#load-balancer">Load Balancer</a></li>
+<li><a class="reference internal" href="#nginx">Nginx</a></li>
+<li><a class="reference internal" href="#postgresql">PostgreSQL</a></li>
+<li><a class="reference internal" href="#rabbitmq">RabbitMQ</a></li>
+<li><a class="reference internal" href="#user">User</a></li>
+<li><a class="reference internal" href="#webui">WebUI</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="chef-server-rb">
+<h1>chef-server.rb<a class="headerlink" href="#chef-server-rb" title="Permalink to this headline">¶</a></h1>
+<p>A chef-server.rb file is used to specify the configuration settings for the Chef Server. This file is the default configuration file. The configuration file is located at: /etc/chef-server/chef-server.rb.</p>
+<div class="section" id="settings">
+<h2>Settings<a class="headerlink" href="#settings" title="Permalink to this headline">¶</a></h2>
+<p>The following sections describe the various settings that are available in the chef-server.rb file.</p>
+<div class="section" id="general">
+<h3>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">api_version</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">11.0.2</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">bootstrap</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">flavor</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">osc</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">notification_email</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">info&#64;example.com</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bookshelf">
+<h3>Bookshelf<a class="headerlink" href="#bookshelf" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">bookshelf['access_key_id']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">generated-by-default</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">bookshelf['data_dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/bookshelf/data</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">bookshelf['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/bookshelf</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">bookshelf['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">bookshelf['ha']</span></tt></td>
+<td>Indicates that the Chef Server is installed as part of a High Availability topology. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">bookshelf['listen']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">bookshelf['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/bookshelf</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">bookshelf['port']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">4321</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">bookshelf['secret_access_key']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">generated-by-default</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">bookshelf['stream_download']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">bookshelf['svlogd_num']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">10</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">bookshelf['svlogd_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">1000000</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">bookshelf['url']</span></tt></td>
+<td>This value will default to the value of the URL for Nginx, which is built from the configured <tt class="docutils literal"><span class="pre">api_fqdn</span></tt> and the SSL port for Nginx.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">bookshelf['vip']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">node['fqdn']</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="chef-expander">
+<h3>Chef Expander<a class="headerlink" href="#chef-expander" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_expander['consumer_id']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">default</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_expander['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/chef-expander</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_expander['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_expander['ha']</span></tt></td>
+<td>Indicates that the Chef Server is installed as part of a High Availability topology. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_expander['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/chef-expander</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_expander['nodes']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">2</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_expander['reindexer_log_directory']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/chef-expander-reindexer</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="chef-pedant">
+<h3>Chef Pedant<a class="headerlink" href="#chef-pedant" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_pedant['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/chef-pedant</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_pedant['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/chef-pedant</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_pedant['log_http_requests']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="chef-solr">
+<h3>Chef Solr<a class="headerlink" href="#chef-solr" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['commit_interval']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">60000</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['data_dir']</span></tt></td>
+<td>The directory in which the index data for Apache Solr is located. Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/chef-solr/data</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/chef-solr</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['ha']</span></tt></td>
+<td>Indicates that the Chef Server is installed as part of a High Availability topology. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['heap_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">nil</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['ip_address']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['java_opts']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">(empty)</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/chef-solr</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['max_commit_docs']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">1000</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['max_field_length']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">100000</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['max_merge_docs']</span></tt></td>
+<td>The maximum number of index segments allowed before they are merged into a single index. Default value: <tt class="docutils literal"><span class="pre">2147483647</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['merge_factor']</span></tt></td>
+<td>The maximum number of document updates that can be stored in memory before being flushed and added to the current index segment. Default value: <tt class="docutils literal"><span class="pre">100</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['new_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">nil</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['poll_seconds']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">20</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['port']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">8983</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_solr['ram_buffer_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">200</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_solr['vip']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="erchef">
+<h3>Erchef<a class="headerlink" href="#erchef" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['auth_skew']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">900</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['bulk_fetch_batch_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">5</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['cache_ttl']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">3600</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['db_pool_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">20</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/erchef</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['ha']</span></tt></td>
+<td>Indicates that the Chef Server is installed as part of a High Availability topology. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['ibrowse_max_pipeline_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">1</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['ibrowse_max_sessions']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">256</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['listen']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/erchef</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['max_cache_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">10000</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['port']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">8000</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['proxy_user']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">pivotal</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['root_metric_key']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">chefAPI</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['s3_bucket']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">bookshelf</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['s3_parallel_ops_fanout']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">20</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['s3_parallel_ops_timeout']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">5000</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['s3_url_ttl']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">900</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['svlogd_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">1000000</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['svlogd_num']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">10</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['umask']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">0022</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['validation_client_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">chef-validator</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">erchef['vip']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">erchef['web_ui_client_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">chef-webui</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="load-balancer">
+<h3>Load Balancer<a class="headerlink" href="#load-balancer" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">lb['api_fqdn']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">node['fqdn']</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">lb['bookshelf']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">lb['cache_cookbook_files']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">lb['chef_server_webui']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">lb['debug']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">lb['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">lb['erchef']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">lb['web_ui_fqdn']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">node['fqdn']</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">lb['vip']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="nginx">
+<h3>Nginx<a class="headerlink" href="#nginx" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['cache_max_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">5000m</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['client_max_body_size']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">250m</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/nginx</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['enable_non_ssl']</span></tt></td>
+<td>Indicates whether port 80 redirects to port 443 are allowed. When this value is set to <tt class="docutils literal"><span class="pre">false</span></tt>, load balancers on the front-end hardware are allowed to do SSL termination of the WebUI and API. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['gzip']</span></tt></td>
+<td>Indicates that gzip compression is enabled. Default value: <tt class="docutils literal"><span class="pre">on</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['gzip_comp_level']</span></tt></td>
+<td>The compression level used with gzip, from least amount of compression (<tt class="docutils literal"><span class="pre">1</span></tt>, fastest) to the most (<tt class="docutils literal"><span class="pre">2</span></tt>, slowest). Default value: <tt class="docutils literal"><span class="pre">2</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['gzip_http_version']</span></tt></td>
+<td>Enables gzip depending on the version of the HTTP request. Default value: <tt class="docutils literal"><span class="pre">1.0</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['gzip_proxied']</span></tt></td>
+<td>The type of compression used based on the request and response. Default value: <tt class="docutils literal"><span class="pre">any</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['gzip_types']</span></tt></td>
+<td>Enables compression for the specified MIME-types. Default value: <tt class="docutils literal"><span class="pre">[</span> <span class="pre">&quot;text/plain&quot;,</span> <span class="pre">&quot;text/css&quot;,</span> <span class="pre">&quot;application/x-javascript&quot;,</span> <span class="pre">&quot;text/xml&quot;,</span> <span class="pre">&quot;application/xml&quot;,</span> <span class="pre">&quot;application/xml+rss&quot;,</span> <span class="pre">&quot;text/javascript&quot;,</span> <span class="pre">&quot;application/json&quot;</span> <span class="pre">]</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['ha']</span></tt></td>
+<td>Indicates that the Chef Server is installed as part of a High Availability topology. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['keepalive_timeout']</span></tt></td>
+<td>The amount of time (in seconds) that a connection will be allowed to stay open. Default value: <tt class="docutils literal"><span class="pre">65</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/nginx</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['non_ssl_port']</span></tt></td>
+<td>The port on which the WebUI and API are bound for non-SSL connections. If this value is <tt class="docutils literal"><span class="pre">nil</span></tt>, this port is disabled. Use <tt class="docutils literal"><span class="pre">nginx['enable_non_ssl']</span> <span class="pre">to</span> <span class="pre">enable</span> <span class="pre">or</span> <span class="pre">disable</span> <span class="pre">|ssl|</span> <span class="pre">redirects</span> <span class="pre">on</span> <span class="pre">this</span> <span class="pre">port</span> <span class="pre">number.</span> <span class="pre">Default</span> <span class="pre">value:</span> <span class="pre">``80</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['sendfile']</span></tt></td>
+<td>Indicates whether <tt class="docutils literal"><span class="pre">sendfile()</span></tt> is used to copy data between file descriptors. Default value: <tt class="docutils literal"><span class="pre">on</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['server_name']</span></tt></td>
+<td>The FQDN of the server. Default value: <tt class="docutils literal"><span class="pre">node['fqdn']</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['ssl_certificate']</span></tt></td>
+<td>The file that contains the SSL certificate. Default value: <tt class="docutils literal"><span class="pre">nil</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['ssl_certificate_key']</span></tt></td>
+<td>The file that contains the private key used by <tt class="docutils literal"><span class="pre">nginx['ssl_certificate']</span></tt>. Default value: <tt class="docutils literal"><span class="pre">nil</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['ssl_ciphers']</span></tt></td>
+<td>The list of supported cipher suites that are used to establish a secure connection. Default value: varies.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['ssl_company_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">YouCorp</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['ssl_country_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">US</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['ssl_email_address']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">you&#64;example.com</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['ssl_locality_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">Seattle</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['ssl_organizational_unit_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">Operations</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['ssl_port']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">443</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['ssl_protocols']</span></tt></td>
+<td>The protocol versions that are enabled. Default value: varies, depending on the configuration of the Chef Server topology.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['ssl_state_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">WA</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['tcp_nodelay']</span></tt></td>
+<td>Indicates whether the Nagle buffering algorithm is enabled. Default value: <tt class="docutils literal"><span class="pre">on</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['tcp_nopush']</span></tt></td>
+<td>Indicates whether TCP/IP transactions are enabled. Default value: <tt class="docutils literal"><span class="pre">on</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['url']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">https://#{node['fqdn']}</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">nginx['worker_connections']</span></tt></td>
+<td>The number of allowed worker connections. Used with <tt class="docutils literal"><span class="pre">nginx['worker_processes']</span></tt> to determine the maximum number of allowed clients. Default value: <tt class="docutils literal"><span class="pre">10240</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">nginx['worker_processes']</span></tt></td>
+<td>The number of allowed worker processes. Used with <tt class="docutils literal"><span class="pre">nginx['worker_connections']</span></tt> to determine the maximum number of allowed clients. Default value: <tt class="docutils literal"><span class="pre">node['cpu']['total'].to_i</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="postgresql">
+<h3>PostgreSQL<a class="headerlink" href="#postgresql" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['checkpoint_completion_target']</span></tt></td>
+<td>A checkpoint tuning setting that uses a completion percentage used to determine how quickly a checkpoint should finish in relation to the completion status of the next checkpoint. For example, if the value is <tt class="docutils literal"><span class="pre">0.5</span></tt>, then a checkpoint will attempt to finish before 50% of the next checkpoint is done. Default value: <tt class="docutils literal"><span class="pre">0.9</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['checkpoint_segments']</span></tt></td>
+<td>The maximum amount (in megabytes) between checkpoints in log file segments. Default value: <tt class="docutils literal"><span class="pre">10</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['checkpoint_timeout']</span></tt></td>
+<td>The amount of time (in minutes) between checkpoints. Default value: <tt class="docutils literal"><span class="pre">5min</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['checkpoint_warning']</span></tt></td>
+<td>A frequency (in seconds) at which message is sent to the server log files if checkpoint segments are being filled faster than their currently configured values. Default value: <tt class="docutils literal"><span class="pre">30s</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['data_dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/postgresql/data</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/postgresql</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['effective_cache_size']</span></tt></td>
+<td>The size of the disk cache that is used for data files. Default value: <tt class="docutils literal"><span class="pre">#{(node['memory']['total'].to_i</span> <span class="pre">/</span> <span class="pre">2)</span> <span class="pre">/</span> <span class="pre">(1024)}MB</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['ha']</span></tt></td>
+<td>Indicates that the Chef Server is installed as part of a High Availability topology. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['home']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/postgresql</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['listen_address']</span></tt></td>
+<td>The connection source to which PostgreSQL will respond. Default value: <tt class="docutils literal"><span class="pre">localhost</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/postgresql</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['max_connections']</span></tt></td>
+<td>The maximum number of concurrent connections that are allowed to access the database. Default value: <tt class="docutils literal"><span class="pre">200</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['md5_auth_cidr_addresses']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">[</span> <span class="pre">]</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['port']</span></tt></td>
+<td>The port on which PostgreSQL will listen. Default value: <tt class="docutils literal"><span class="pre">5432</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['shared_buffers']</span></tt></td>
+<td>The amount of memory that is dedicated to PostgreSQL for data caching. Default value: <tt class="docutils literal"><span class="pre">#{(node['memory']['total'].to_i</span> <span class="pre">/</span> <span class="pre">4)</span> <span class="pre">/</span> <span class="pre">(1024)}MB</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['shmall']</span></tt></td>
+<td>The total amount of available shared memory. Default value: <tt class="docutils literal"><span class="pre">kernel['machine']</span> <span class="pre">=~</span> <span class="pre">/x86_64/</span> <span class="pre">?</span> <span class="pre">4194304</span> <span class="pre">:</span> <span class="pre">1048575</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['shmmax']</span></tt></td>
+<td>The maximum amount of shared memory. Default value: <tt class="docutils literal"><span class="pre">kernel['machine']</span> <span class="pre">=~</span> <span class="pre">/x86_64/</span> <span class="pre">?</span> <span class="pre">17179869184</span> <span class="pre">:</span> <span class="pre">4294967295</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['shell']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/bin/sh</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['sql_password']</span></tt></td>
+<td>The password for the PostgreSQL user account. Default value: <tt class="docutils literal"><span class="pre">snakepliskin</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['sql_ro_password']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">shmunzeltazzen</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['sql_ro_user']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">opscode_chef_ro</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['sql_user']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">opscode_chef</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['svlogd_num']</span></tt></td>
+<td>A retention policy that is based on the number of retained log files for the current set of log files that are managed by svlogd. Default value: <tt class="docutils literal"><span class="pre">10</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['svlogd_size']</span></tt></td>
+<td>The size (in bytes) of the current log file that is managed by svlogd. Default value: <tt class="docutils literal"><span class="pre">1000000</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['trust_auth_cidr_addresses']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">'127.0.0.1/32',</span> <span class="pre">'::1/128'</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['user_path']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/opt/chef-server/embedded/bin:/opt/chef-server/bin:$PATH</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['username']</span></tt></td>
+<td>The user name for the PostgreSQL account.Default value: <tt class="docutils literal"><span class="pre">opscode-pgsql</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">postgresql['vip']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">postgresql['work_mem']</span></tt></td>
+<td>The size (in megabytes) of allowed in-memory sorting. Default value: <tt class="docutils literal"><span class="pre">8MB</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rabbitmq">
+<h3>RabbitMQ<a class="headerlink" href="#rabbitmq" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rabbitmq['consumer_id']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">hotsauce</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rabbitmq['data_dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/rabbitmq/db</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rabbitmq['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/rabbitmq</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rabbitmq['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rabbitmq['ha']</span></tt></td>
+<td>Indicates that the Chef Server is installed as part of a High Availability topology. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rabbitmq['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/rabbitmq</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rabbitmq['node_ip_address']</span></tt></td>
+<td>The IP address for machine on which RabbitMQ is running. Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rabbitmq['node_port']</span></tt></td>
+<td>The port on which RabbitMQ listens. Default value: <tt class="docutils literal"><span class="pre">5672</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rabbitmq['nodename']</span></tt></td>
+<td>The name of the node. Default value: <tt class="docutils literal"><span class="pre">rabbit&#64;localhost</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rabbitmq['password']</span></tt></td>
+<td>The password for the <tt class="docutils literal"><span class="pre">user</span></tt>. Default value: <tt class="docutils literal"><span class="pre">chefrocks</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rabbitmq['user']</span></tt></td>
+<td>The user. Default value: <tt class="docutils literal"><span class="pre">chef</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">rabbitmq['vhost']</span></tt></td>
+<td>The virtual host. Default value: <tt class="docutils literal"><span class="pre">/chef</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">rabbitmq['vip']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="user">
+<h3>User<a class="headerlink" href="#user" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">user['home']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/opt/chef-server/embedded</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">user['shell']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/bin/sh</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">user['username']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">chef_server</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="webui">
+<h3>WebUI<a class="headerlink" href="#webui" title="Permalink to this headline">¶</a></h3>
+<p>This configuration file has the following settings:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="40%" />
+<col width="60%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Setting</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['backlog']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">1024</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['cookie_domain']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">all</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['cookie_secret']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">47b3b8d95dea455baf32155e95d1e64e</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['dir']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">/var/opt/chef-server/chef-server-webui</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['enable']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['environment']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">chefserver</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['ha']</span></tt></td>
+<td>Indicates that the Chef Server is installed as part of a High Availability topology. Default value: <tt class="docutils literal"><span class="pre">false</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['listen']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1:9462</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['log_directory']</span></tt></td>
+<td>The directory in which log files are located. Default value: <tt class="docutils literal"><span class="pre">/var/log/chef-server/chef-server-webui</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['port']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">9462</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['session_key']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">_sandbox_session</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['tcp_nodelay']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">true</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['umask']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">0022</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['vip']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">127.0.0.1</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['web_ui_admin_default_password']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">p&#64;ssw0rd1</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['web_ui_admin_user_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">admin</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['web_ui_client_name']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">chef-webui</span></tt>.</td>
+</tr>
+<tr class="row-odd"><td><tt class="docutils literal"><span class="pre">chef_server_webui['worker_processes']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">2</span></tt>.</td>
+</tr>
+<tr class="row-even"><td><tt class="docutils literal"><span class="pre">chef_server_webui['worker_timeout']</span></tt></td>
+<td>Default value: <tt class="docutils literal"><span class="pre">3600</span></tt>.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="chef_client.html" title="chef-client"
+             >next</a></li>
+        <li class="right" >
+          <a href="config_rb_solr.html" title="solr.rb"
+             >previous</a> |</li>
+        <li><a href="http://docs.opscode.com/chef/knife.html" target="_products">Knife</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/resources.html" target="_products">Resources</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/dsl_recipe.html" target="_products">Recipe DSL</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/chef/lwrps_custom.html" target="_products">LWRPs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/search.html">Search the Docs</a>&#149;</li>
+        <li><a href="http://docs.opscode.com/">Home</a> &raquo;</li>
+ 
+      </ul>
+    </div>
+
+    <div class="footer">
+    This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+
+    <div class="footer">
+        &copy; Copyright This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+    </div>
+
+<!-- Start of Async Google Analytics Code -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+var pluginUrl = (('https:' == document.location.protocol) ? 'https://ssl.' : 'http://www.') + 'google-analytics.com/plugins/ga/inpage_linkid.js';
+_gaq.push(['_setAccount', 'UA-6369228-7']);
+_gaq.push(['_setDomainName', '.opscode.com']);
+_gaq.push(['_setAllowHash', false]);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_addIgnoredRef','opscode.com']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript';
+  ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s); })();
+</script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Async HubSpot Analytics Code -->
+<script type="text/javascript">
+(function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hubspot.com/analytics/'+(Math.ceil(new Date()/r)*r)+'/57718.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+    </script>
+<!-- End of Async HubSpot Analytics Code -->
+
+<!-- Start of Contact Analytics Code -->
+<script type="text/javascript">
+(function() {
+  var didInit = false;
+  function initMunchkin() {
+    if(didInit === false) {
+      didInit = true;
+      Munchkin.init('255-VFB-268');
+    }
+  }
+  var s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.async = true;
+  s.src = document.location.protocol + '//munchkin.marketo.net/munchkin.js';
+  s.onreadystatechange = function() {
+    if (this.readyState == 'complete' || this.readyState == 'loaded') {
+      initMunchkin();
+    }
+  };
+  s.onload = initMunchkin;
+  document.getElementsByTagName('head')[0].appendChild(s);
+})();
+</script>
+<!-- End of Contact Analytics Code -->
+
+
+  </body>
+</html>
