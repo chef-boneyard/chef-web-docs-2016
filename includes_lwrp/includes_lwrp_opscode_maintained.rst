@@ -68,7 +68,5 @@ Custom resources and providers can also be created using the |lwrp| DSL. |opscod
      - |cookbook name windows|
    * - `yum <http://docs.opscode.com/lwrp_yum.html>`_
      - |cookbook name yum|
-   * - `zenoss <http://docs.opscode.com/lwrp_zenoss.html>`_
-     - |cookbook name zenoss|
 
 

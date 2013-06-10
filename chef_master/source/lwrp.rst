@@ -45,7 +45,6 @@ Read more about how to create lightweight resources :doc:`here </lwrp_custom>`; 
    lwrp_webpi
    lwrp_windows
    lwrp_yum
-   lwrp_zenoss
 
 
    lwrp_application
