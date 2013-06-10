@@ -7,7 +7,7 @@ The ``platform_family?`` method can be used in a recipe to ensure that certain a
 
    platform_family?("parameter", "parameter")
 
-where ``"parameter"`` is a comma-separated list, each specifying a platform family, such as |debian|, or |solaris|. The ``platform_family?`` method is typically used with an ``if``, ``elseif``, or ``case`` statement that contains |ruby| code that is specific for the platform family, if detected. For example:
+where ``"parameter"`` is a comma-separated list, each specifying a platform family, such as |debian|, or |redhat enterprise linux|. The ``platform_family?`` method is typically used with an ``if``, ``elseif``, or ``case`` statement that contains |ruby| code that is specific for the platform family, if detected. For example:
 
 .. code-block:: ruby
 
