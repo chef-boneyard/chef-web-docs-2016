@@ -168,11 +168,11 @@ opscode-erchef
 
 opscode-expander
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_expander_reindexer.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_expander.rst
 
 opscode-expander-reindexer
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_expander.rst
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_logs_services_opscode_expander_reindexer.rst
 
 opscode-org-creator
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
