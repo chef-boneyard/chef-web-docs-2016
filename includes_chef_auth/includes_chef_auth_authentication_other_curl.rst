@@ -6,6 +6,8 @@ An API request can be made using |curl|, which is a |bash| shell script that req
 
 .. code-block:: bash
 
+   !/usr/bin/env bash
+
    _chef_dir () {
      # Helper function:
      # Recursive function that searches for chef configuration directory
@@ -41,11 +43,11 @@ An API request can be made using |curl|, which is a |bash| shell script that req
      local canonical_request headers auth_headers
    
      chef_server_url="https://api.opscode.com/organizations/my_org"
-     # '/organizations/ORG_NAME' is needed for Hosted Chef
-     if echo $chef_server_url | grep -q "https://api.opscode.com" ; then
-       endpoint=/${chef_server_url##https://api.opscode.com/}$2
+     # '/organizations/ORG_NAME' is needed for Hosted Chef or Private Chef
+     if echo $chef_server_url | grep -q "/organizations/" ; then
+       endpoint=/organizations/${chef_server_url#*/organizations/}${2%%\?*}
      else
-       endpoint=$2
+       endpoint=${$2%%\?*}
      fi
      path=${chef_server_url}$2
      client_name="chef_user"
@@ -56,20 +58,16 @@ An API request can be made using |curl|, which is a |bash| shell script that req
      hashed_body=$(echo -n "$body" | openssl dgst -sha1 -binary | openssl enc -base64)
      timestamp=$(date -u "+%Y-%m-%dT%H:%M:%SZ")
    
-     canonical_request="Method:$method\
-       nHashed Path:$hashed_path\
-       nX-Ops-Content-Hash:$hashed_body\
-       nX-Ops-Timestamp:$timestamp\
-       nX-Ops-UserId:$client_name"
-     headers="-H X-Ops-Timestamp:$timestamp 
-       -H X-Ops-Userid:$client_name 
-       -H X-Chef-Version:0.10.4 
-       -H Accept:application/json 
-       -H X-Ops-Content-Hash:$hashed_body 
+     canonical_request="Method:$method\nHashed Path:$hashed_path\nX-Ops-Content-Hash:$hashed_body\nX-Ops-Timestamp:$timestamp\nX-Ops-UserId:$client_name"
+     headers="-H X-Ops-Timestamp:$timestamp \
+       -H X-Ops-Userid:$client_name \
+       -H X-Chef-Version:0.10.4 \
+       -H Accept:application/json \
+       -H X-Ops-Content-Hash:$hashed_body \
        -H X-Ops-Sign:version=1.0"
  
-     auth_headers=$(printf "$canonical_request" | openssl rsautl -sign -inkey 
-       "$(_chef_dir)/${client_name}.pem" | openssl enc -base64 | _chomp |  awk '{ll=int(length/60);i=0; 
+     auth_headers=$(printf "$canonical_request" | openssl rsautl -sign -inkey \
+       "$(_chef_dir)/${client_name}.pem" | openssl enc -base64 | _chomp |  awk '{ll=int(length/60);i=0; \
        while (i<=ll) {printf " -H X-Ops-Authorization-%s:%s", i+1, substr($0,i*60+1,60);i=i+1}}')
     
      case $method in
@@ -84,8 +82,10 @@ An API request can be made using |curl|, which is a |bash| shell script that req
        esac
      }
 
-After this shell script is sourced into the local shell, use it similar to the following:
+    chef_api_request "$@"
+
+After saving this shell script to a file named chef_api_request, use it similar to the following:
 
 .. code-block:: bash
 
-   $ chef_api_request GET "/clients"
+   $ bash chef_api_request GET "/clients"
