@@ -41,11 +41,11 @@ An API request can be made using |curl|, which is a |bash| shell script that req
      local canonical_request headers auth_headers
    
      chef_server_url="https://api.opscode.com/organizations/my_org"
-     # '/organizations/ORG_NAME' is needed for Hosted Chef
-     if echo $chef_server_url | grep -q "https://api.opscode.com" ; then
-       endpoint=/${chef_server_url##https://api.opscode.com/}$2
+     # '/organizations/ORG_NAME' is needed for Hosted Chef or Private Chef
+     if echo $chef_server_url | grep -q "/organizations/" ; then
+       endpoint=/organizations/${chef_server_url#*/organizations/}${2%%\?*}
      else
-       endpoint=$2
+       endpoint=${$2%%\?*}
      fi
      path=${chef_server_url}$2
      client_name="chef_user"
