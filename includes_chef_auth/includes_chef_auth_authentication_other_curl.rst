@@ -56,20 +56,16 @@ An API request can be made using |curl|, which is a |bash| shell script that req
      hashed_body=$(echo -n "$body" | openssl dgst -sha1 -binary | openssl enc -base64)
      timestamp=$(date -u "+%Y-%m-%dT%H:%M:%SZ")
    
-     canonical_request="Method:$method\
-       nHashed Path:$hashed_path\
-       nX-Ops-Content-Hash:$hashed_body\
-       nX-Ops-Timestamp:$timestamp\
-       nX-Ops-UserId:$client_name"
-     headers="-H X-Ops-Timestamp:$timestamp 
-       -H X-Ops-Userid:$client_name 
-       -H X-Chef-Version:0.10.4 
-       -H Accept:application/json 
-       -H X-Ops-Content-Hash:$hashed_body 
+     canonical_request="Method:$method\nHashed Path:$hashed_path\nX-Ops-Content-Hash:$hashed_body\nX-Ops-Timestamp:$timestamp\nX-Ops-UserId:$client_name"
+     headers="-H X-Ops-Timestamp:$timestamp \
+       -H X-Ops-Userid:$client_name \
+       -H X-Chef-Version:0.10.4 \
+       -H Accept:application/json \
+       -H X-Ops-Content-Hash:$hashed_body \
        -H X-Ops-Sign:version=1.0"
  
-     auth_headers=$(printf "$canonical_request" | openssl rsautl -sign -inkey 
-       "$(_chef_dir)/${client_name}.pem" | openssl enc -base64 | _chomp |  awk '{ll=int(length/60);i=0; 
+     auth_headers=$(printf "$canonical_request" | openssl rsautl -sign -inkey \
+       "$(_chef_dir)/${client_name}.pem" | openssl enc -base64 | _chomp |  awk '{ll=int(length/60);i=0; \
        while (i<=ll) {printf " -H X-Ops-Authorization-%s:%s", i+1, substr($0,i*60+1,60);i=i+1}}')
     
      case $method in
