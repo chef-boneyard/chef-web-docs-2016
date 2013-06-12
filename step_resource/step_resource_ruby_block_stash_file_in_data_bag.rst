@@ -20,7 +20,7 @@ The following example shows how to use the |resource ruby_block| resource to sta
        item.save
      end
      action :nothing
-     subscribes :create, resources(:bittorrent_torrent => node['bittorrent']['torrent'])
+     subscribes :create, "bittorrent_torrent[#{node['bittorrent']['torrent']}]"
    end
 
 .. note:: This example comes from the ``seed`` recipe in the following cookbook: https://github.com/mattray/bittorrent-cookbook.
