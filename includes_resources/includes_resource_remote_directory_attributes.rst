@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``files_backup``
      - |files_backup resource remote_directory|
    * - ``files_group``
-     - |group windows security|
+     - |windows group_identifier|
    * - ``files_mode``
      - The octal mode for a file.
        

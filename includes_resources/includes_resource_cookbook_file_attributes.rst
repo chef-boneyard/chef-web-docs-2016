@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``cookbook``
      - |cookbook resource cookbook_file|
    * - ``group``
-     - |group windows security|
+     - |windows group_identifier|
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``

@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``checksum``
      - Optional. |checksum file| Default value: ``nil``.
    * - ``group``
-     - |group windows security|
+     - |windows group_identifier|
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
