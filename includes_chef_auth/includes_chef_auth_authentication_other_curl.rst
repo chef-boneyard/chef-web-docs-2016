@@ -6,6 +6,8 @@ An API request can be made using |curl|, which is a |bash| shell script that req
 
 .. code-block:: bash
 
+   !/usr/bin/env bash
+
    _chef_dir () {
      # Helper function:
      # Recursive function that searches for chef configuration directory
@@ -80,8 +82,10 @@ An API request can be made using |curl|, which is a |bash| shell script that req
        esac
      }
 
-After this shell script is sourced into the local shell, use it similar to the following:
+    chef_api_request "$@"
+
+After saving this shell script to a file named chef_api_request, use it similar to the following:
 
 .. code-block:: bash
 
-   $ chef_api_request GET "/clients"
+   $ bash chef_api_request GET "/clients"
