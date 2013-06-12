@@ -65,7 +65,7 @@ To find a nested attribute, use a pattern similar to the following:
 
    $ knife search node <query_to_run> -a <main_attribute>.<nested_attribute>
 
-Another way to find a nested attribute, you can use an under score (_) to separate by attributes, for example a query like this would find all nodes that run a specific version of Ruby:
+To build a search query to use more than one attribute, use an underscore ( _ ) to separate each attribute. For example, the following query will search for all nodes running a specific version of |ruby|:
 
 .. code-block:: bash
 
