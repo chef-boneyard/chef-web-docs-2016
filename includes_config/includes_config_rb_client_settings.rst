@@ -9,19 +9,6 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``cache_options``
-     - |cache_options| For example:
-       ::
- 
-          cache_options({ 
-            :path => "/var/chef/cache/checksums", 
-            :skip_expires => true 
-          })
-   * - ``cache_type``
-     - |cache_type| For example:
-       ::
- 
-          cache_type "BasicFile"
    * - ``chef_server_url``
      - |chef_server_url| For example:
        ::
@@ -185,6 +172,8 @@ This configuration file has the following settings:
        ::
  
           ssl_verify_mode :verify_peer
+   * - ``syntax_check_cache_path``
+     - |syntax_check_cache_path|
    * - ``umask``
      - |umask| For example:
        ::

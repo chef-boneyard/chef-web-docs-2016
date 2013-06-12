@@ -54,19 +54,6 @@ This configuration file has the following settings:
        ::
  
           myopenid.com
-   * - ``cache_type``
-     - |cache_type| For example:
-       ::
- 
-          cache_type "BasicFile"
-   * - ``cache_options``
-     - |cache_options| For example:
-       ::
- 
-          cache_options({ 
-            :path => "/var/chef/cache/checksums", 
-            :skip_expires => true 
-          })
    * - ``client_key``
      - |client_key| For example:
        ::
@@ -350,6 +337,8 @@ This configuration file has the following settings:
        ::
  
           ssl_verify_mode :verify_peer
+   * - ``syntax_check_cache_path``
+     - |syntax_check_cache_path|
    * - ``umask``
      - |umask| For example:
        ::

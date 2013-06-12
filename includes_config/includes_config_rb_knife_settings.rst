@@ -10,19 +10,6 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``cache_options``
-     - |cache_options| For example:
-       ::
- 
-          cache_options({ 
-            :path => "/var/chef/cache/checksums", 
-            :skip_expires => true 
-          })
-   * - ``cache_type``
-     - |cache_type| For example:
-       ::
- 
-          cache_type "BasicFile"
    * - ``chef_server_url``
      - |chef_server_url| For example:
        ::
@@ -70,12 +57,14 @@ This configuration file has the following settings:
      - |node_name| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
  
-          node_name "jtimberman2012"
+          node_name "node_name"
    * - ``no_proxy``
      - |no_proxy| For example:
        ::
 
          no_proxy "localhost, 10.*, *.example.com, *.dev.example.com"
+   * - ``syntax_check_cache_path``
+     - |syntax_check_cache_path|
    * - ``validation_client_name``
      - |validation_client_name| For example:
        ::
