@@ -36,13 +36,13 @@ This argument has the following options:
    |server-name|
 
 ``-T X,Y,Z``, ``--tcp X,Y,Z``
-   |tcp-ports|
+   |tcp_ports|
 
 ``--template-file TEMPLATE``
    |template-file|
 
 ``-U X,Y,Z``, ``--udp X,Y,Z``
-   |udp-ports|
+   |udp_ports|
 
 ``-vcpus VCPUS``
    |vcpus|

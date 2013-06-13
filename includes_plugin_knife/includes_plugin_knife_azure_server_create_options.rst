@@ -63,13 +63,13 @@ This argument has the following options:
    |azure_subscription_id|
 
 ``-t PORT_LIST``, ``--tcp-endpoints PORT_LIST``
-   |tcp-endpoints|
+   |tcp_ports|
 
 ``--template-file TEMPLATE``
    |template-file|
 
 ``-u PORT_LIST``, ``---udp-endpoints PORT_LIST``
-   |udp-endpoints|
+   |udp_ports|
 
 ``--verify-ssl-cert``
    |ssl_certificate|
