@@ -16,12 +16,12 @@ The following examples show how to use cookbook libraries.
 
 Create a Namespace
 -----------------------------------------------------
-.. include:: ../../steps/step_cookbooks_library_create_namespace.rst
+.. include:: ../../step_cookbook_library/step_cookbook_library_create_namespace.rst
 
 Extend a Recipe
 -----------------------------------------------------
-.. include:: ../../steps/step_cookbooks_library_store_attributes_in_file.rst
+.. include:: ../../step_cookbook_library/step_cookbook_library_store_attributes_in_file.rst
 
 Loop Over a Record
 -----------------------------------------------------
-.. include:: ../../steps/step_cookbooks_library_loop_over_records.rst
+.. include:: ../../step_cookbook_library/step_cookbook_library_loop_over_records.rst

@@ -14,12 +14,12 @@ Library Syntax
 
 Example: Extend Recipes using an Attribute File
 =====================================================
-.. include:: ../../steps/step_cookbooks_library_store_attributes_in_file.rst
+.. include:: ../../step_cookbook_library/step_cookbook_library_store_attributes_in_file.rst
 
 Example: Loop over Customer Records
 =====================================================
-.. include:: ../../steps/step_cookbooks_library_loop_over_records.rst
+.. include:: ../../step_cookbook_library/step_cookbook_library_loop_over_records.rst
 
 Example: Create a Namespace
 =====================================================
-.. include:: ../../steps/step_cookbooks_library_create_namespace.rst
+.. include:: ../../step_cookbook_library/step_cookbook_library_create_namespace.rst
