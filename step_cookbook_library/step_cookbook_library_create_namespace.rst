@@ -1,7 +1,9 @@
 .. This is an included how-to. 
 
 
-A database can contain a list of virtual hosts that are used by customers. A custom namespace could be created that looks something like::
+A database can contain a list of virtual hosts that are used by customers. A custom namespace could be created that looks something like:
+
+.. code-block:: ruby
 
    require 'sequel'
    
@@ -39,9 +41,10 @@ A database can contain a list of virtual hosts that are used by customers. A cus
 
 .. note:: The preceding was provided by |opscode| community member "Arjuna (fujin)". Thank you!
 
-After the custom namespace is created, it could then be used in a recipe, like this::
+After the custom namespace is created, it could then be used in a recipe, like this:
 
-   # Using ISP.vhosts in a Recipe
+.. code-block:: ruby
+
    ISP.vhosts.each do |vhost|
      directory vhost[:documentroot] do
        owner vhost[:uid]

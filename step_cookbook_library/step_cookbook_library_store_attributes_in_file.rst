@@ -1,7 +1,9 @@
 .. This is an included how-to. 
 
 
-A customer record is stored in an attribute file that looks like this::
+A customer record is stored in an attribute file that looks like this:
+
+.. code-block:: ruby
 
    mycompany_customers({
      :bob => {
@@ -11,7 +13,9 @@ A customer record is stored in an attribute file that looks like this::
    }
    )
 
-A simple recipe may contain something like this::
+A simple recipe may contain something like this:
+
+.. code-block:: ruby
 
    directory node[:mycompany_customers][:bob][:webdir] do
      owner "bob"
@@ -19,7 +23,9 @@ A simple recipe may contain something like this::
      action :create
    end
 
-Or a less verbose version of the same simple recipe::
+Or a less verbose version of the same simple recipe:
+
+.. code-block:: ruby
 
    directory customer(:bob)[:webdir] do
      owner "bob"
@@ -27,7 +33,9 @@ Or a less verbose version of the same simple recipe::
      action :create
    end
 
-A simple library could be created that extends ``Chef::Recipe::``, like this::
+A simple library could be created that extends ``Chef::Recipe::``, like this:
+
+.. code-block:: ruby
 
    class Chef
      class Recipe    

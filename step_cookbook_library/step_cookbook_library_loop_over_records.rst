@@ -1,7 +1,9 @@
 .. This is an included how-to. 
 
 
-A customer record is stored in an attribute file that looks like this::
+A customer record is stored in an attribute file that looks like this:
+
+.. code-block:: ruby
 
    mycompany_customers({
      :bob => {
@@ -11,7 +13,9 @@ A customer record is stored in an attribute file that looks like this::
    }
    )
 
-If there are many customer records in an environment, a simple recipe can be used to loop over every customer, like this::
+If there are many customer records in an environment, a simple recipe can be used to loop over every customer, like this:
+
+.. code-block:: ruby
 
    all_customers do |name, info|
      directory info[:webdir] do
@@ -21,7 +25,9 @@ If there are many customer records in an environment, a simple recipe can be use
      end
    end
 
-A simple library could be created that extends ``Chef::Recipe::``, like this::
+A simple library could be created that extends ``Chef::Recipe::``, like this:
+
+.. code-block:: ruby
 
    class Chef
      class Recipe
