@@ -60,10 +60,6 @@ Store Keys on Nodes
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_store_on_nodes.rst
 
-Example
------------------------------------------------------
-.. include:: ../../includes_data_bag/includes_data_bag_encryption_example.rst
-
 Use Data Bags
 =====================================================
 Data bags can be accessed in the following ways:
