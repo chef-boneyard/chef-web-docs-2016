@@ -36,7 +36,7 @@ Which is the same as entering:
 
 .. code-block:: bash
 
-   $ knife list data_bags/aardvarks data_bags/aardvarks
+   $ knife list data_bags/aardvarks data_bags/anagrams
 
 to return:
 
