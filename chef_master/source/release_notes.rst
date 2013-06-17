@@ -38,11 +38,27 @@ New attributes (common to all |resource file|-based resources):
      - |force_unlink|
 
 
+Updated File-based Attributes
+-----------------------------------------------------
+The following attributes for |resource file|-based resources have been updated:
+
+New attributes are available:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``source``
+     - |source file_location|
+
+
 New |resource remote_file| Attributes
 -----------------------------------------------------
 The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. In addition:
 
-* The ``source`` attribute was updated to support FTP and local file URIs
+* The ``source`` attribute was updated to support FTP (``ftp://``) and local file (``file://``) URIs
 
 New attributes are available:
 

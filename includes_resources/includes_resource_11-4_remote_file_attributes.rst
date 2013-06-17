@@ -32,4 +32,4 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - Required. |source uri| Default value: ``nil``.
+     - Required. |source file_location chef_11-4| Default value: ``nil``.
