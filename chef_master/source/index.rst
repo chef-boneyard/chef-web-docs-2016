@@ -175,6 +175,6 @@ Cookbooks
    style_guide
    chef_shell
    videos
-
+   release_notes
 
    

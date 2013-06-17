@@ -4,7 +4,7 @@ remote_file
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_remote_file.rst
+.. include:: ../../includes_resources/includes_resource_11-4_remote_file.rst
 
 .. note:: |note remote_file resource fetch from files directory|
 
@@ -14,11 +14,11 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_remote_file_actions.rst
+.. include:: ../../includes_resources/includes_resource_11-4_remote_file_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-4_remote_file_attributes.rst
 
 Windows File Security
 -----------------------------------------------------

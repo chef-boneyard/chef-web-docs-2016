@@ -52,10 +52,6 @@ Store Keys on Nodes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_store_on_nodes.rst
 
-Example
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_data_bag/includes_data_bag_encryption_example.rst
-
 Assign Dependencies
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_cookbook_dependencies.rst
