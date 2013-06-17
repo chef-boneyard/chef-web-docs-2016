@@ -18,7 +18,7 @@ Getting Started
 
 **learnchef.opscode.com:** Install a Workstation `for Mac <https://learnchef.opscode.com/quickstart/workstation-setup/#mac/>`_, `for Linux <https://learnchef.opscode.com/quickstart/workstation-setup/#linux/>`_, or `for Windows <https://learnchef.opscode.com/quickstart/workstation-setup/#windows/>`_ | `Use the Chef Repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
 
-**What's new:** :doc:`Chef 11.0 </breaking_changes_chef_11>`
+**What's new:** :doc:`Chef 11.0 </release_notes>`
 
 
 The Chef Community
@@ -99,7 +99,7 @@ Cookbooks
    chef_quick_overview
    community
 
-   breaking_changes_chef_11
+   release_notes
    just_enough_ruby_for_chef
    chef_overview_cookbooks
    chef_overview_nodes
