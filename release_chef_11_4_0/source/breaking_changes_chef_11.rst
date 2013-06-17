@@ -16,6 +16,21 @@ Node attribute changes
 -----------------------------------------------------
 In order to fix bugs and surprising behaviors with attributes, the implementation of ``Chef::Node::Attribute`` has been completely overhauled. The APIs for reading and writing values are now completely separate.
 
+LWRPs AND Recipes Both Now Automatically Qualify loaded Gems
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Previously, in Chef 10, one could do the following in a recipe:
+
+.. code-block:: ruby
+
+require 'win32/registry'
+registry = Win32::Registry::HKEY_LOCAL_MACHINE
+
+In Chef 11 you must add "::" to the beginning to avoid the automatic addition of a "Chef::" qualifier.
+
+.. code-block:: ruby
+
+registry = ::Win32::Registry::HKEY_LOCAL_MACHINE
+
 Implicit writes removed
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Node attributes may no longer be set without specifying which precedence level to set. The following example is no longer valid:
