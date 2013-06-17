@@ -4,7 +4,7 @@ file
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_file.rst
+.. include:: ../../includes_resources/includes_resource_11-4_file.rst
 
 .. note:: |note file resource use other resources|
 
@@ -14,11 +14,11 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_file_actions.rst
+.. include:: ../../includes_resources/includes_resource_11-4_file_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_file_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-4_file_attributes.rst
 
 Windows File Security
 -----------------------------------------------------

@@ -4,7 +4,7 @@ template
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_template.rst
+.. include:: ../../includes_resources/includes_resource_11-4_template.rst
 
 Syntax
 =====================================================
@@ -12,11 +12,11 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_template_actions.rst
+.. include:: ../../includes_resources/includes_resource_11-4_template_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_template_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-4_template_attributes.rst
 
 Windows File Security
 -----------------------------------------------------

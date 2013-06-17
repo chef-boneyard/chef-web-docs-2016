@@ -4,7 +4,7 @@ cookbook_file
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_cookbook_file.rst
+.. include:: ../../includes_resources/includes_resource_11-4_cookbook_file.rst
 
 Syntax
 =====================================================
@@ -12,11 +12,11 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_cookbook_file_actions.rst
+.. include:: ../../includes_resources/includes_resource_11-4_cookbook_file_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_cookbook_file_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-4_cookbook_file_attributes.rst
 
 Windows File Security
 -----------------------------------------------------
