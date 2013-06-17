@@ -19,7 +19,8 @@ Atomic File Updates
 -----------------------------------------------------
 Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to define behaviors for file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|). These resources have been standardized and are now all fully based on the |resource file| resource.
 
-* File-based providers now create all files with the same default permissions. This default is determined by operating system, file system type, and umask settings. |ssh| operations may error out when using the default permissions when the |resource cookbook_file| or |resource template| resources are used.
+* File-based providers now create all files with the same default permissions. This default is determined by operating system, file system type, and umask settings.
+* |ssh| operations using the |resource cookbook_file| or |resource template| may error out when using the default permissions. Previously, |chef| would create files with ``0600`` permissions. With |chef| 11.6, |chef| may create files with ``0644``.
 * File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute.
 * Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors.
 
