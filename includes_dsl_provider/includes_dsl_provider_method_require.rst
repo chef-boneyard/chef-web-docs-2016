@@ -28,7 +28,7 @@ When a class is an external class (and therefore should not have ``Chef::`` prep
 
 .. code-block:: ruby
 
-   ::Win32::Registry::HKEY_LOCAL_MACHINE
+   ::External::Class::Library
 
 
 
