@@ -34,6 +34,10 @@ new_resource
 -----------------------------------------------------
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_new_resource.rst
 
+require
+-----------------------------------------------------
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_require.rst
+
 updated_by_last_action
 -----------------------------------------------------
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_ruby.rst
