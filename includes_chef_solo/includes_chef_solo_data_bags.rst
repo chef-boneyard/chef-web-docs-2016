@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A data bag is defined using |json|. |chef solo| will look for data bags in ``/var/chef/roles``, but this location can be modified by changing the setting in |solo rb| For example, the following setting in |solo rb|:
+A data bag is defined using |json|. |chef solo| will look for data bags in ``/var/chef/data_bags``, but this location can be modified by changing the setting in |solo rb| For example, the following setting in |solo rb|:
 
 .. code-block:: ruby
 
