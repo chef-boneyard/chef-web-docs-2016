@@ -42,8 +42,6 @@ Updated File-based Attributes
 -----------------------------------------------------
 The following attributes for |resource file|-based resources have been updated:
 
-New attributes are available:
-
 .. list-table::
    :widths: 150 450
    :header-rows: 1
