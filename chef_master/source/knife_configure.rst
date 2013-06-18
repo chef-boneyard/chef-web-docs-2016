@@ -18,7 +18,7 @@ knife.rb Settings
 -----------------------------------------------------
 .. note:: See :doc:`knife.rb </config_rb_knife>` for more information about how to add optional settings to the |knife rb| file.
 
-.. include:: ../../includes_knife/includes_knife_client_create_settings.rst
+.. include:: ../../includes_knife/includes_knife_configure_settings.rst
 
 Examples
 =====================================================
