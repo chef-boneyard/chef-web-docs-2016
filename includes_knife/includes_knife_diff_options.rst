@@ -7,6 +7,9 @@
 
 This subcommand has the following options:
 
+``--diff-filter=[(A|D|M|T)...[*]]``
+   |diff_filter| Default value: ``nil``.
+
 ``--name-only``
    |name only|
 

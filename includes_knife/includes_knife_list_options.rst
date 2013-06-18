@@ -8,6 +8,17 @@ This subcommand has the following options:
 ``-d``
    |d knife list|
 
+``-f``, ``--flat``
+   |flat| Default: ``true``.
+
+``--local``
+   |local_directory| Default: ``true``.
+
+``--1``
+   |one_column| Default: ``true``.
+
+``--p``
+   |use trailing_slash| Default: ``true``.
+
 ``-R``
    |r knife list|
-

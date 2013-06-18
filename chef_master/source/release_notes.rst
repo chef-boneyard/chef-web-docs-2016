@@ -29,7 +29,7 @@ Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to d
         group "bob"
       end
 
-   In |chef| 11.6, |chef| may create files with other permissions---such as ``0644``---when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, and subsequent |ssh| operation could fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example:
+   In |chef| 11.6, |chef| may create files with other permissions---such as ``0644``---when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, and subsequent |ssh| operations could fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example:
 
    .. code-block:: ruby
 
@@ -226,7 +226,56 @@ NEW KNIFE SETTING
 
 New knife-essentials Options
 -----------------------------------------------------
-New settings have been added to the |knife rb| file:
+New options have been added to the following |knife| subcommands:
+
+knife delete
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``--both``
+   |delete_local_and_remote| Default: ``true``.
+
+``--local``
+   |local_object| Default: ``true``.
+
+knife diff
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``--diff-filter=[(A|D|M|T)...[*]]``
+   |diff_filter| Default value: ``nil``.
+
+knife download
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``--[no-]diff``
+   |diff_download| Set to ``false`` to download all files. Default: ``true``.
+
+knife list
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``-f``, ``--flat``
+   |flat| Default: ``true``.
+
+``--local``
+   |local_directory| Default: ``true``.
+
+``--1``
+   |one_column| Default: ``true``.
+
+``--p``
+   |use trailing_slash| Default: ``true``.
+
+knife upload
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``--[no-]freeze``
+   |freeze| Default: ``false``.
+
+``--[no-]diff``
+   |diff_upload| Set to ``false`` to upload all files. Default: ``true``.
+
+
+
+
 
 .. list-table::
    :widths: 200 300
@@ -263,142 +312,115 @@ What's Fixed
 =====================================================
 The following bugs were fixed:
 
-* http://tickets.opscode.com/browse/CHEF-679 --- remote_file acts unexpectedly when it encounters a link
-* http://tickets.opscode.com/browse/CHEF-1162 --- Deploy should redeploy when the deploy directory is removed
-* http://tickets.opscode.com/browse/CHEF-1707 --- unable to set password for user on solaris
-* http://tickets.opscode.com/browse/CHEF-1782 --- remote_file gives deceptive error message replacing remote_file of running process
-* http://tickets.opscode.com/browse/CHEF-1967 --- Mount provider should be able to allow "none" as a valid mountpoint
-* http://tickets.opscode.com/browse/CHEF-2406 --- pretty knife status is ugly on windows
-* http://tickets.opscode.com/browse/CHEF-2420 --- Git resource always re-checks out unchanged annotated tags.
-* http://tickets.opscode.com/browse/CHEF-2467 --- 11: Attributes set in role not available via node object when running shef in client mode.
-* http://tickets.opscode.com/browse/CHEF-2682 --- Redirected API requests can result in confusing error messages
-* http://tickets.opscode.com/browse/CHEF-2694 --- ErrorHandler json format can cause complete meltdown of chef client
-* http://tickets.opscode.com/browse/CHEF-2741 --- deploy resource does not recover from failures partway through operation on future invocations
-* http://tickets.opscode.com/browse/CHEF-2770 --- user_valid_regex is too restrictive
-* http://tickets.opscode.com/browse/CHEF-2840 --- SSL Verification fails using omnibus installer because of missing certs
-* http://tickets.opscode.com/browse/CHEF-3005 --- chef-client ignores port specification in an HTTPS URL
-* http://tickets.opscode.com/browse/CHEF-3192 --- File providers in whyrun branch need cleanup in how they handle tempfiles
-* http://tickets.opscode.com/browse/CHEF-3237 --- Expanding '~/Library/LaunchAgents' fails resolving HOME when running chef-client as root
-* http://tickets.opscode.com/browse/CHEF-3307 --- Name attribute in metadata.rb doesnt seem to actually work
-* http://tickets.opscode.com/browse/CHEF-3332 --- The route resource provider will always delete config file even for :add action
-* http://tickets.opscode.com/browse/CHEF-3366 --- zypper provider for package resource can block
-* http://tickets.opscode.com/browse/CHEF-3386 --- 11: Chef init script improper PID check
-* http://tickets.opscode.com/browse/CHEF-3442 --- Portage package provider souldn't raise an error "Multiple packages found for ..." when the category is specified.
-* http://tickets.opscode.com/browse/CHEF-3452 --- uploading frozen cookbooks shows unfriendly error message
-* http://tickets.opscode.com/browse/CHEF-3471 --- knife bootstrap of a Solaris 10 host is an immediate failure
-* http://tickets.opscode.com/browse/CHEF-3516 --- 11: Some knife commands emit Errno::EPIPE when used in a pipeline
-* http://tickets.opscode.com/browse/CHEF-3535 --- Chef::REST doesn't require 'chef/platform' but uses it
-* http://tickets.opscode.com/browse/CHEF-3557 --- File Security Metadata Reporting is Broken on Windows
-* http://tickets.opscode.com/browse/CHEF-3683 --- 11: Chef::Node objects should be sortable
-* http://tickets.opscode.com/browse/CHEF-3685 --- rspec tests fail because chef-10.16.2.gem does not contain .dotfile
-* http://tickets.opscode.com/browse/CHEF-3690 --- refactor of windows_service.rb has broken chef-client when run as windows service
-* http://tickets.opscode.com/browse/CHEF-3772 --- Managing services on Solaris and SmartOS does not works well.
-* http://tickets.opscode.com/browse/CHEF-3779 --- Add -A (forward SSH agent) option to knife commands
-* http://tickets.opscode.com/browse/CHEF-3781 --- Add knife deps and knife-essentials changes from 1.0.0
-* http://tickets.opscode.com/browse/CHEF-3803 --- mount resource does not update fstab entry when mount options have changed
-* http://tickets.opscode.com/browse/CHEF-3804 --- device_mount_regex in mount provider does not handle symlinks correctly
-* http://tickets.opscode.com/browse/CHEF-3847 --- LanguageIncludeRecipe deprecation warning is incorrect
-* http://tickets.opscode.com/browse/CHEF-3858 --- Unsuccessful decryption of encrypted data bag items does not always cause an error
-* http://tickets.opscode.com/browse/CHEF-3872 --- chef-client fails when run in open source XenServer ( platform xcp )
-* http://tickets.opscode.com/browse/CHEF-3878 --- Chef should have a native partial search library
-* http://tickets.opscode.com/browse/CHEF-3895 --- Cannot Upload Cookbooks
-* http://tickets.opscode.com/browse/CHEF-3903 --- File resource doesn't handle binary correctly on windows
-* http://tickets.opscode.com/browse/CHEF-3920 --- Repeated text in converge_by message for LWRPs when running in why_run mode
-* http://tickets.opscode.com/browse/CHEF-3932 --- Later Knife.deps (i.e. dependency lazy loading) call overrides the earlier block
-* http://tickets.opscode.com/browse/CHEF-3933 --- Gem Package provider incompatible with rubygems 2.0
-* http://tickets.opscode.com/browse/CHEF-3935 --- Logger mutex causes errors in trap handlers with ruby 2.0
-* http://tickets.opscode.com/browse/CHEF-3937 --- Chef::Knife::CookbookUpload is missing [require 'chef/cookbook_uploader'] causing exceptions from ref on line 230
-* http://tickets.opscode.com/browse/CHEF-3938 --- Make gpg checks configurable in the zypper package provider
-* http://tickets.opscode.com/browse/CHEF-3949 --- File Provider Refactor
-* http://tickets.opscode.com/browse/CHEF-3963 --- and_return with should_not_receive is deprecated in rspec
-* http://tickets.opscode.com/browse/CHEF-3978 --- remote_file does not support why-run correctly
-* http://tickets.opscode.com/browse/CHEF-3979 --- remote_file source "downloaded from" is empty, but works
-* http://tickets.opscode.com/browse/CHEF-3982 --- wget/curl dep in chef-full knife bootstrap script fails on Solaris 10
-* http://tickets.opscode.com/browse/CHEF-4010 --- Chef client does not release lock when connection to server failed
-* http://tickets.opscode.com/browse/CHEF-4015 --- suse group provider is broken on openSUSE 12.3 with shadow utils
-* http://tickets.opscode.com/browse/CHEF-4038 --- File diffs in functional tests run very slowly under jenkins on windows 2k8
-* http://tickets.opscode.com/browse/CHEF-4050 --- include etags, last-modified, expires and cache-control header handling in Chef::REST
-* http://tickets.opscode.com/browse/CHEF-4065 --- change chef-client config default to use client_fork
-* http://tickets.opscode.com/browse/CHEF-4082 --- When the file / template has a hardcoded path defined (either set via node attribute or hard coded as in the example), the notifies parameter does not work
-* http://tickets.opscode.com/browse/CHEF-4083 --- Typo in status running chef-client
-* http://tickets.opscode.com/browse/CHEF-4100 --- Chef::Util::FileEdit raise()s if file exists but is just empty -- this is bogus
-* http://tickets.opscode.com/browse/CHEF-4102 --- chef-apply ignores all command line flags
-* http://tickets.opscode.com/browse/CHEF-4114 --- Broken raise of ConfigurationError when log_location not writable
-* http://tickets.opscode.com/browse/CHEF-4115 --- The config file's path isn't shown in exceptions
-* http://tickets.opscode.com/browse/CHEF-4118 --- Event handlers should get run_started events
-* http://tickets.opscode.com/browse/CHEF-4123 --- Chef-10.24.4 break Chef-server bootstrap installation
-* http://tickets.opscode.com/browse/CHEF-4135 --- Malformed arguments to notifies fail without a helpful message
-* http://tickets.opscode.com/browse/CHEF-4153 --- Requiring chef/node throws a NameError
-* http://tickets.opscode.com/browse/CHEF-4158 --- auth_credentials_spec test sets the http_proxy variables twice
-* http://tickets.opscode.com/browse/CHEF-4176 --- Chef 11 Default knife chef_server_url References Chef 10 Servers
-* http://tickets.opscode.com/browse/CHEF-4199 --- usermod for changing groups on SmartOS should use -G
-* http://tickets.opscode.com/browse/CHEF-4208 --- Monkey Patch Dir.rb exception on windows
-* http://tickets.opscode.com/browse/CHEF-4233 --- 'knife upload' of encrypted data bags is adding extra keys to the data bag
-* http://tickets.opscode.com/browse/CHEF-4236 --- resource "file" is non-idempotent when specifying file mode in combination with a non-existing user
-* http://tickets.opscode.com/browse/CHEF-4239 --- git provider breaks if repository path has spaces
-* http://tickets.opscode.com/browse/CHEF-4259 --- Unpacking recipes fails on SmartOS
-* http://tickets.opscode.com/browse/CHEF-4272 --- "knife list" shows files that can't be uploaded
-* http://tickets.opscode.com/browse/CHEF-4274 --- chef-client never runs again after an http timeout to the chef server.
-* http://tickets.opscode.com/browse/CHEF-4275 --- Rubygems 2.0 heuristic is incorrect on some environments upgraded from rubygems 1.8
+* `CHEF-679 <http://tickets.opscode.com/browse/CHEF-679>`_  --- remote_file acts unexpectedly when it encounters a link
+* `CHEF-1162 <http://tickets.opscode.com/browse/CHEF-1162>`_  --- Deploy should redeploy when the deploy directory is removed
+* `CHEF-1707 <http://tickets.opscode.com/browse/CHEF-1707>`_  --- unable to set password for user on solaris
+* `CHEF-1782 <http://tickets.opscode.com/browse/CHEF-1782>`_  --- remote_file gives deceptive error message replacing remote_file of running process
+* `CHEF-1967 <http://tickets.opscode.com/browse/CHEF-1967>`_  --- Mount provider should be able to allow "none" as a valid mountpoint
+* `CHEF-2406 <http://tickets.opscode.com/browse/CHEF-2406>`_  --- pretty knife status is ugly on windows
+* `CHEF-2420 <http://tickets.opscode.com/browse/CHEF-2420>`_  --- Git resource always re-checks out unchanged annotated tags.
+* `CHEF-2467 <http://tickets.opscode.com/browse/CHEF-2467>`_  --- 11: Attributes set in role not available via node object when running shef in client mode.
+* `CHEF-2682 <http://tickets.opscode.com/browse/CHEF-2682>`_  --- Redirected API requests can result in confusing error messages
+* `CHEF-2694 <http://tickets.opscode.com/browse/CHEF-2694>`_  --- ErrorHandler json format can cause complete meltdown of chef client
+* `CHEF-2741 <http://tickets.opscode.com/browse/CHEF-2741>`_  --- deploy resource does not recover from failures partway through operation on future invocations
+* `CHEF-2770 <http://tickets.opscode.com/browse/CHEF-2770>`_  --- user_valid_regex is too restrictive
+* `CHEF-2840 <http://tickets.opscode.com/browse/CHEF-2840>`_  --- SSL Verification fails using omnibus installer because of missing certs
+* `CHEF-3005 <http://tickets.opscode.com/browse/CHEF-3005>`_  --- chef-client ignores port specification in an HTTPS URL
+* `CHEF-3192 <http://tickets.opscode.com/browse/CHEF-3192>`_  --- File providers in whyrun branch need cleanup in how they handle tempfiles
+* `CHEF-3237 <http://tickets.opscode.com/browse/CHEF-3237>`_  --- Expanding '~/Library/LaunchAgents' fails resolving HOME when running chef-client as root
+* `CHEF-3307 <http://tickets.opscode.com/browse/CHEF-3307>`_  --- Name attribute in metadata.rb doesnt seem to actually work
+* `CHEF-3332 <http://tickets.opscode.com/browse/CHEF-3332>`_  --- The route resource provider will always delete config file even for :add action
+* `CHEF-3366 <http://tickets.opscode.com/browse/CHEF-3366>`_  --- zypper provider for package resource can block
+* `CHEF-3386 <http://tickets.opscode.com/browse/CHEF-3386>`_  --- 11: Chef init script improper PID check
+* `CHEF-3442 <http://tickets.opscode.com/browse/CHEF-3442>`_  --- Portage package provider souldn't raise an error "Multiple packages found for ..." when the category is specified.
+* `CHEF-3452 <http://tickets.opscode.com/browse/CHEF-3452>`_  --- uploading frozen cookbooks shows unfriendly error message
+* `CHEF-3471 <http://tickets.opscode.com/browse/CHEF-3471>`_  --- knife bootstrap of a Solaris 10 host is an immediate failure
+* `CHEF-3516 <http://tickets.opscode.com/browse/CHEF-3516>`_  --- 11: Some knife commands emit Errno::EPIPE when used in a pipeline
+* `CHEF-3535 <http://tickets.opscode.com/browse/CHEF-3535>`_  --- Chef::REST doesn't require 'chef/platform' but uses it
+* `CHEF-3557 <http://tickets.opscode.com/browse/CHEF-3557>`_  --- File Security Metadata Reporting is Broken on Windows
+* `CHEF-3683 <http://tickets.opscode.com/browse/CHEF-3683>`_  --- 11: Chef::Node objects should be sortable
+* `CHEF-3685 <http://tickets.opscode.com/browse/CHEF-3685>`_  --- rspec tests fail because chef-10.16.2.gem does not contain .dotfile
+* `CHEF-3690 <http://tickets.opscode.com/browse/CHEF-3690>`_  --- refactor of windows_service.rb has broken chef-client when run as windows service
+* `CHEF-3772 <http://tickets.opscode.com/browse/CHEF-3772>`_  --- Managing services on Solaris and SmartOS does not works well.
+* `CHEF-3779 <http://tickets.opscode.com/browse/CHEF-3779>`_  --- Add -A (forward SSH agent) option to knife commands
+* `CHEF-3781 <http://tickets.opscode.com/browse/CHEF-3781>`_  --- Add knife deps and knife-essentials changes from 1.0.0
+* `CHEF-3803 <http://tickets.opscode.com/browse/CHEF-3803>`_  --- mount resource does not update fstab entry when mount options have changed
+* `CHEF-3804 <http://tickets.opscode.com/browse/CHEF-3804>`_  --- device_mount_regex in mount provider does not handle symlinks correctly
+* `CHEF-3847 <http://tickets.opscode.com/browse/CHEF-3847>`_  --- LanguageIncludeRecipe deprecation warning is incorrect
+* `CHEF-3858 <http://tickets.opscode.com/browse/CHEF-3858>`_  --- Unsuccessful decryption of encrypted data bag items does not always cause an error
+* `CHEF-3872 <http://tickets.opscode.com/browse/CHEF-3872>`_  --- chef-client fails when run in open source XenServer ( platform xcp )
+* `CHEF-3878 <http://tickets.opscode.com/browse/CHEF-3878>`_  --- Chef should have a native partial search library
+* `CHEF-3895 <http://tickets.opscode.com/browse/CHEF-3895>`_  --- Cannot Upload Cookbooks
+* `CHEF-3903 <http://tickets.opscode.com/browse/CHEF-3903>`_  --- File resource doesn't handle binary correctly on windows
+* `CHEF-3920 <http://tickets.opscode.com/browse/CHEF-3920>`_  --- Repeated text in converge_by message for LWRPs when running in why_run mode
+* `CHEF-3932 <http://tickets.opscode.com/browse/CHEF-3932>`_  --- Later Knife.deps (i.e. dependency lazy loading) call overrides the earlier block
+* `CHEF-3933 <http://tickets.opscode.com/browse/CHEF-3933>`_  --- Gem Package provider incompatible with rubygems 2.0
+* `CHEF-3935 <http://tickets.opscode.com/browse/CHEF-3935>`_  --- Logger mutex causes errors in trap handlers with ruby 2.0
+* `CHEF-3937 <http://tickets.opscode.com/browse/CHEF-3937>`_  --- Chef::Knife::CookbookUpload is missing [require 'chef/cookbook_uploader'] causing exceptions from ref on line 230
+* `CHEF-3938 <http://tickets.opscode.com/browse/CHEF-3938>`_  --- Make gpg checks configurable in the zypper package provider
+* `CHEF-3949 <http://tickets.opscode.com/browse/CHEF-3949>`_  --- File Provider Refactor
+* `CHEF-3963 <http://tickets.opscode.com/browse/CHEF-3963>`_  --- and_return with should_not_receive is deprecated in rspec
+* `CHEF-3978 <http://tickets.opscode.com/browse/CHEF-3978>`_  --- remote_file does not support why-run correctly
+* `CHEF-3979 <http://tickets.opscode.com/browse/CHEF-3979>`_  --- remote_file source "downloaded from" is empty, but works
+* `CHEF-3982 <http://tickets.opscode.com/browse/CHEF-3982>`_  --- wget/curl dep in chef-full knife bootstrap script fails on Solaris 10
+* `CHEF-4010 <http://tickets.opscode.com/browse/CHEF-4010>`_  --- Chef client does not release lock when connection to server failed
+* `CHEF-4015 <http://tickets.opscode.com/browse/CHEF-4015>`_  --- suse group provider is broken on openSUSE 12.3 with shadow utils
+* `CHEF-4038 <http://tickets.opscode.com/browse/CHEF-4038>`_  --- File diffs in functional tests run very slowly under jenkins on windows 2k8
+* `CHEF-4050 <http://tickets.opscode.com/browse/CHEF-4050>`_  --- include etags, last-modified, expires and cache-control header handling in Chef::REST
+* `CHEF-4065 <http://tickets.opscode.com/browse/CHEF-4065>`_  --- change chef-client config default to use client_fork
+* `CHEF-4082 <http://tickets.opscode.com/browse/CHEF-4082>`_  --- When the file / template has a hardcoded path defined (either set via node attribute or hard coded as in the example), the notifies parameter does not work
+* `CHEF-4083 <http://tickets.opscode.com/browse/CHEF-4083>`_  --- Typo in status running chef-client
+* `CHEF-4100 <http://tickets.opscode.com/browse/CHEF-4100>`_  --- Chef::Util::FileEdit raise()s if file exists but is just empty -- this is bogus
+* `CHEF-4102 <http://tickets.opscode.com/browse/CHEF-4102>`_  --- chef-apply ignores all command line flags
+* `CHEF-4114 <http://tickets.opscode.com/browse/CHEF-4114>`_  --- Broken raise of ConfigurationError when log_location not writable
+* `CHEF-4115 <http://tickets.opscode.com/browse/CHEF-4115>`_  --- The config file's path isn't shown in exceptions
+* `CHEF-4118 <http://tickets.opscode.com/browse/CHEF-4118>`_  --- Event handlers should get run_started events
+* `CHEF-4123 <http://tickets.opscode.com/browse/CHEF-4123>`_  --- Chef-10.24.4 break Chef-server bootstrap installation
+* `CHEF-4135 <http://tickets.opscode.com/browse/CHEF-4135>`_  --- Malformed arguments to notifies fail without a helpful message
+* `CHEF-4153 <http://tickets.opscode.com/browse/CHEF-4153>`_  --- Requiring chef/node throws a NameError
+* `CHEF-4158 <http://tickets.opscode.com/browse/CHEF-4158>`_  --- auth_credentials_spec test sets the http_proxy variables twice
+* `CHEF-4176 <http://tickets.opscode.com/browse/CHEF-4176>`_  --- Chef 11 Default knife chef_server_url References Chef 10 Servers
+* `CHEF-4199 <http://tickets.opscode.com/browse/CHEF-4199>`_  --- usermod for changing groups on SmartOS should use -G
+* `CHEF-4208 <http://tickets.opscode.com/browse/CHEF-4208>`_  --- Monkey Patch Dir.rb exception on windows
+* `CHEF-4233 <http://tickets.opscode.com/browse/CHEF-4233>`_  --- 'knife upload' of encrypted data bags is adding extra keys to the data bag
+* `CHEF-4236 <http://tickets.opscode.com/browse/CHEF-4236>`_  --- resource "file" is non-idempotent when specifying file mode in combination with a non-existing user
+* `CHEF-4239 <http://tickets.opscode.com/browse/CHEF-4239>`_  --- git provider breaks if repository path has spaces
+* `CHEF-4259 <http://tickets.opscode.com/browse/CHEF-4259>`_  --- Unpacking recipes fails on SmartOS
+* `CHEF-4272 <http://tickets.opscode.com/browse/CHEF-4272>`_  --- "knife list" shows files that can't be uploaded
+* `CHEF-4274 <http://tickets.opscode.com/browse/CHEF-4274>`_  --- chef-client never runs again after an http timeout to the chef server.
+* `CHEF-4275 <http://tickets.opscode.com/browse/CHEF-4275>`_  --- Rubygems 2.0 heuristic is incorrect on some environments upgraded from rubygems 1.8
 
 
 What's Improved
 =====================================================
 The following improvements were made:
 
-* http://tickets.opscode.com/browse/CHEF-1367 --- Make remote_file avoid downloading a file if it hasn't changed
-* http://tickets.opscode.com/browse/CHEF-2506 --- remote_file should respect ETags
-* http://tickets.opscode.com/browse/CHEF-3348 --- 11: Better CHANGELOG formatting
-* http://tickets.opscode.com/browse/CHEF-3364 --- Fix up Smartos Package provider
-* http://tickets.opscode.com/browse/CHEF-3615 --- Encrypted data bag items should use authenticated encryption.
-* http://tickets.opscode.com/browse/CHEF-3664 --- The 'map' variable is defined and never used in the set_or_return method of lib/chef/mixim/params_validate.rb
-* http://tickets.opscode.com/browse/CHEF-3695 --- File provider follows symlinks; Template provider does not (security implications and inconsistency)
-* http://tickets.opscode.com/browse/CHEF-3735 --- typos in resource names should show the typo in the error message/exception
-* http://tickets.opscode.com/browse/CHEF-3749 --- Use HTTPS to download the Omnibus installer
-* http://tickets.opscode.com/browse/CHEF-3819 --- Execute with cwd attribute should check existence of sentiel file according to cwd value
-* http://tickets.opscode.com/browse/CHEF-3942 --- The chef-repo should gitignore .chef directory by default
-* http://tickets.opscode.com/browse/CHEF-3967 --- Use HTTPS when connecting to RubyGems.org
-* http://tickets.opscode.com/browse/CHEF-3987 --- Resource collection has duplicate code in "push" and "<<"
-* http://tickets.opscode.com/browse/CHEF-4011 --- default location of "encrypted_data_bag_secret" should be set in Chef::Config
-* http://tickets.opscode.com/browse/CHEF-4053 --- Add powershell providers in Core Chef
-* http://tickets.opscode.com/browse/CHEF-4054 --- Add windows batch provider to core Chef
-* http://tickets.opscode.com/browse/CHEF-4055 --- Add Win8/2012 to Chef Windows Helper
-* http://tickets.opscode.com/browse/CHEF-4070 --- Support DataBag.list on chef-solo
-* http://tickets.opscode.com/browse/CHEF-4081 --- let knife show/search return more than one attribute using -a
-* http://tickets.opscode.com/browse/CHEF-4088 --- sorting the knife commands is done, but would be cool if you also sort the sub commands...
-* http://tickets.opscode.com/browse/CHEF-4090 --- refactor zypper package provider to make command output visible
-* http://tickets.opscode.com/browse/CHEF-4106 --- Remove obsolete default configuration
-* http://tickets.opscode.com/browse/CHEF-4130 --- knife * edit presents a .js file not a .json file
-* http://tickets.opscode.com/browse/CHEF-4146 --- Update Reporting Client Protocol
-* http://tickets.opscode.com/browse/CHEF-4161 --- remove newlines from knife search -i output
-* http://tickets.opscode.com/browse/CHEF-4220 --- Define helper functions on template resource
-* http://tickets.opscode.com/browse/CHEF-4225 --- Bump windows ruby version to p429 in omnibus-chef
-
-Known Issues
-=====================================================
-The following issues remain in |chef 11-6|. Please review this list before filing new bugs about these issues:
-
-* bug# --- xxxxx.
-* bug# --- xxxxx.
-* bug# --- xxxxx.
-* bug# --- xxxxx.
-* bug# --- xxxxx.
-* bug# --- xxxxx.
-
-
-Frequently Asked Questions
------------------------------------------------------
-
-**xxxxx?**
-
-xxxxx.
-
-**xxxxx?**
-
-xxxxx.
-
-**xxxxx?**
-
-xxxxx.
+* `CHEF-1367 <http://tickets.opscode.com/browse/CHEF-1367>`_ --- Make remote_file avoid downloading a file if it hasn't changed
+* `CHEF-2506 <http://tickets.opscode.com/browse/CHEF-2506>`_  --- remote_file should respect ETags
+* `CHEF-3348 <http://tickets.opscode.com/browse/CHEF-3348>`_  --- 11: Better CHANGELOG formatting
+* `CHEF-3364 <http://tickets.opscode.com/browse/CHEF-3364>`_  --- Fix up Smartos Package provider
+* `CHEF-3615 <http://tickets.opscode.com/browse/CHEF-3615>`_  --- Encrypted data bag items should use authenticated encryption.
+* `CHEF-3664 <http://tickets.opscode.com/browse/CHEF-3664>`_  --- The 'map' variable is defined and never used in the set_or_return method of lib/chef/mixim/params_validate.rb
+* `CHEF-3695 <http://tickets.opscode.com/browse/CHEF-3695>`_  --- File provider follows symlinks; Template provider does not (security implications and inconsistency)
+* `CHEF-3735 <http://tickets.opscode.com/browse/CHEF-3735>`_  --- typos in resource names should show the typo in the error message/exception
+* `CHEF-3749 <http://tickets.opscode.com/browse/CHEF-3749>`_  --- Use HTTPS to download the Omnibus installer
+* `CHEF-3819 <http://tickets.opscode.com/browse/CHEF-3819>`_  --- Execute with cwd attribute should check existence of sentiel file according to cwd value
+* `CHEF-3942 <http://tickets.opscode.com/browse/CHEF-3942>`_  --- The chef-repo should gitignore .chef directory by default
+* `CHEF-3967 <http://tickets.opscode.com/browse/CHEF-3967>`_  --- Use HTTPS when connecting to RubyGems.org
+* `CHEF-3987 <http://tickets.opscode.com/browse/CHEF-3987>`_  --- Resource collection has duplicate code in "push" and "<<"
+* `CHEF-4011 <http://tickets.opscode.com/browse/CHEF-4011>`_  --- default location of "encrypted_data_bag_secret" should be set in Chef::Config
+* `CHEF-4053 <http://tickets.opscode.com/browse/CHEF-4053>`_  --- Add powershell providers in Core Chef
+* `CHEF-4054 <http://tickets.opscode.com/browse/CHEF-4054>`_  --- Add windows batch provider to core Chef
+* `CHEF-4055 <http://tickets.opscode.com/browse/CHEF-4055>`_  --- Add Win8/2012 to Chef Windows Helper
+* `CHEF-4070 <http://tickets.opscode.com/browse/CHEF-4070>`_  --- Support DataBag.list on chef-solo
+* `CHEF-4081 <http://tickets.opscode.com/browse/CHEF-4081>`_  --- let knife show/search return more than one attribute using -a
+* `CHEF-4088 <http://tickets.opscode.com/browse/CHEF-4088>`_  --- sorting the knife commands is done, but would be cool if you also sort the sub commands...
+* `CHEF-4090 <http://tickets.opscode.com/browse/CHEF-4090>`_  --- refactor zypper package provider to make command output visible
+* `CHEF-4106 <http://tickets.opscode.com/browse/CHEF-4106>`_  --- Remove obsolete default configuration
+* `CHEF-4130 <http://tickets.opscode.com/browse/CHEF-4130>`_  --- knife * edit presents a .js file not a .json file
+* `CHEF-4146 <http://tickets.opscode.com/browse/CHEF-4146>`_  --- Update Reporting Client Protocol
+* `CHEF-4161 <http://tickets.opscode.com/browse/CHEF-4161>`_  --- remove newlines from knife search -i output
+* `CHEF-4220 <http://tickets.opscode.com/browse/CHEF-4220>`_  --- Define helper functions on template resource
+* `CHEF-4225 <http://tickets.opscode.com/browse/CHEF-4225>`_  --- Bump windows ruby version to p429 in omnibus-chef
 
 
