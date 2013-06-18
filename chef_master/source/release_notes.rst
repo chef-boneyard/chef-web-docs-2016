@@ -164,10 +164,45 @@ New |knife| Subcommands
 -----------------------------------------------------
 New subcommands have been added to |knife|:
 
-* xxxxx
-* xxxxx
-* xxxxx
-* xxxxx
+* |subcommand knife deps|
+* |subcommand knife edit|
+* |subcommand knife xargs|
+
+knife deps
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_deps.rst
+
+**Syntax**
+
+.. include:: ../../includes_knife/includes_knife_deps_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_knife/includes_knife_deps_options.rst
+
+knife edit
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_edit.rst
+
+**Syntax**
+
+.. include:: ../../includes_knife/includes_knife_edit_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_knife/includes_knife_edit_options.rst
+
+knife xargs
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_xargs.rst
+
+**Syntax**
+
+.. include:: ../../includes_knife/includes_knife_xargs_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_knife/includes_knife_xargs_options.rst
 
 
 NEW OBJECTS
@@ -179,9 +214,19 @@ ADD CHEF HOSTED OBJECTS
 * A command that works with objects in |chef hosted|, including ``acls``, ``groups``, and ``containers``
 
 
-xxxxx
+KNIFE.RB SETTINGS
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
+
+
+xargs
+
+
+edit
+
+
+deps
+
 
 knife-download
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
