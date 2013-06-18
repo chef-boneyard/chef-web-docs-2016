@@ -36,7 +36,7 @@ The Workstation
 
 **Settings:** :doc:`knife.rb </config_rb_knife>` | :doc:`metadata.rb </config_rb_metadata>`
 
-**Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>`
+**Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-apply (executable) </ctl_chef_apply>`
 
 
 The Chef Server 
@@ -172,6 +172,7 @@ Cookbooks
 
    upgrade_server
    ctl_chef_shell
+   ctl_chef_apply
    style_guide
    chef_shell
    videos
