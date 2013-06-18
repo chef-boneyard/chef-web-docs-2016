@@ -274,22 +274,6 @@ knife upload
    |diff_upload| Set to ``false`` to upload all files. Default: ``true``.
 
 
-
-
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Setting
-     - Description
-   * - ``--OPTION_NAME_GOES_HERE``
-     - xxxxx
-   * - ``--concurrency``
-     - Use to enable parallel requests. Default value: ``10`` (where ``10`` equals "ten parallel requests")
-
-
-
 New |knife rb| Settings
 -----------------------------------------------------
 New settings have been added to the |knife rb| file:
@@ -301,7 +285,7 @@ New settings have been added to the |knife rb| file:
    * - Setting
      - Description
    * - ``versioned_cookbooks_true``
-     - Use to append cookbook versions to cookbooks. Set to ``false`` to hide cookbook versions: ``cookbooks/apache``. Set to ``true`` to show cookbook versions: ``cookbooks/apache-1.0.0`` and/or ``cookbooks/apache-1.0.1``. When this setting is ``true``, |subcommand knife download| will download ALL cookbook versions, which can be useful if a full-fidelity backup of data on the |chef server| is required. For example:
+     - |versioned_cookbooks_true| For example:
        ::
  
           versioned_cookbooks_true true
