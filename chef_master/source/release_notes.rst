@@ -119,7 +119,7 @@ Helper Methods
 
 Configuration Settings
 -----------------------------------------------------
-New settings have been added to the |rb client| file:
+New settings have been added to the |client rb| file:
 
 .. list-table::
    :widths: 200 300
