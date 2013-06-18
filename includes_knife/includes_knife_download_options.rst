@@ -5,15 +5,17 @@
 
 This subcommand has the following options:
 
+``--force``
+   |force knife download|
+
 ``-n``, ``--dry-run``
    |dry_run|
-
-``--purge``
-   |purge knife download|
 
 ``--no-recurse``
    |no_recurse_download| Default: ``--recurse``.
 
-``--force``
-   |force knife download|
+``--purge``
+   |purge knife download|
+
+
 
