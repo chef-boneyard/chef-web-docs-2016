@@ -18,7 +18,7 @@ Sub-commands
 
 Verb Sub-commands
 =====================================================
-.. include:: ../../includes_knife/includes_knife_verbs.rst
+.. include:: ../../includes_knife/includes_knife_verbs_chef_11-6.rst
 
 Wildcard Search
 -----------------------------------------------------
