@@ -6,20 +6,16 @@
 This subcommand has the following options:
 
 ``--force``
-   |force knife upload|
+   |force knife download|
 
 ``-n``, ``--dry-run``
    |dry_run|
 
-``--[no-]diff``
-   |diff_upload| Set to ``false`` to upload all files. Default: ``true``.
-
-``--[no-]freeze``
-   |freeze| Default: ``false``.
+``--[no-]recurse``
+   |no_recurse_download| Default: ``--recurse``.
 
 ``--purge``
-   |purge knife upload|
+   |purge knife download|
 
-``--recurse``
-   |no_recurse_upload| Default: ``--recurse``.
+
 

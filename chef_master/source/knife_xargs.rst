@@ -22,7 +22,11 @@ knife.rb Settings
 
 Examples
 =====================================================
-None.
+Use the output of ``knife deps`` to pass a command to ``knife xargs``. For example:
+
+.. code-block:: bash
+
+   $ knife deps nodes/*.json | xargs knife upload
 
 
 

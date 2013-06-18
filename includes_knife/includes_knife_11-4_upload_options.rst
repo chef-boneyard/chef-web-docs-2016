@@ -11,12 +11,6 @@ This subcommand has the following options:
 ``-n``, ``--dry-run``
    |dry_run|
 
-``--[no-]diff``
-   |diff_upload| Set to ``false`` to upload all files. Default: ``true``.
-
-``--[no-]freeze``
-   |freeze| Default: ``false``.
-
 ``--purge``
    |purge knife upload|
 
