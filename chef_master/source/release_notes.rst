@@ -20,7 +20,25 @@ Atomic File Updates
 Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to define behaviors for file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|). These resources have been standardized and are now all fully based on the |resource file| resource.
 
 * File-based providers now create all files with the same default permissions. This default is determined by operating system, file system type, and umask settings.
-* |ssh| operations using the |resource cookbook_file| or |resource template| may error out when using the default permissions. Previously, |chef| would create files with ``0600`` permissions. With |chef| 11.6, |chef| may create files with ``0644``.
+* When |ssh| operations are used with the |resource cookbook_file| or |resource template| resources and the file mode is not specified, it is possible for incorrect permissions to be applied to the file, which may cause remote |ssh| operations to fail. 
+
+
+CUT PENDING REVIEW W/DAN
+CUT PENDING REVIEW W/DAN
+CUT PENDING REVIEW W/DAN
+CUT PENDING REVIEW W/DAN
+CUT PENDING REVIEW W/DAN
+In previous versions of |chef|, when the file mode was not specified, |chef| would create files with ``0600`` permissions. Starting with |chef| 11.6, |chef| may create files with ``0644``. may error out when using the default permissions. Previously, |chef| would create files with ``0600`` permissions. With |chef| 11.6, |chef| may create files with ``0644``. If the permissions that |chef| creates as a result of an |ssh| operation are not the correct permissions for that file, then 
+CUT PENDING REVIEW W/DAN
+CUT PENDING REVIEW W/DAN
+CUT PENDING REVIEW W/DAN
+CUT PENDING REVIEW W/DAN
+CUT PENDING REVIEW W/DAN
+
+
+
+
+
 * File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute.
 * Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors.
 
@@ -95,7 +113,7 @@ New attributes are available:
    * - ``helper``
      - |helper| Default value: ``{}``.
    * - ``helpers``
-     - |helpers| Default value: ``[]`.
+     - |helpers| Default value: ``[]``.
 
 
 Helper Methods
@@ -115,7 +133,7 @@ Helper Methods
 .. include:: ../../step_resource/step_resource_template_library_module.rst
 
 
-Configuration Settings
+New |client rb| Settings
 -----------------------------------------------------
 New settings have been added to the |client rb| file:
 
@@ -151,13 +169,62 @@ New subcommands have been added to |knife|:
 * xxxxx
 * xxxxx
 
-xxxxx
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
+
+NEW OBJECTS
+
+* A command that works with each object in the |chef| repository. The subcommands specify the desired action (the "verb"), and then directory in which that object resides (``clients``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``). For example: ``download cookbooks/``
+
+ADD CHEF HOSTED OBJECTS
+
+* A command that works with objects in |chef hosted|, including ``acls``, ``groups``, and ``containers``
+
 
 xxxxx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
+
+knife-download
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+xxxxx
+
+BECAUSE ALL OBJECTS CAN NOW BE ACCESSED, KNIFE DOWNLOAD NOW CAN PULL A FULL-FIDELITY BACKUP OF THE ENTIRE ORGANIZATION (clients, etc.)
+
+
+NEW KNIFE SETTING
+
+New knife-essentials Options
+-----------------------------------------------------
+New settings have been added to the |knife rb| file:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``--OPTION_NAME_GOES_HERE``
+     - xxxxx
+   * - ``--concurrency``
+     - Use to enable parallel requests. Default value: ``10`` (where ``10`` equals "ten parallel requests")
+
+
+
+New |knife rb| Settings
+-----------------------------------------------------
+New settings have been added to the |knife rb| file:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``versioned_cookbooks_true``
+     - Use to append cookbook versions to cookbooks. Set to ``false`` to hide cookbook versions: ``cookbooks/apache``. Set to ``true`` to show cookbook versions: ``cookbooks/apache-1.0.0`` and/or ``cookbooks/apache-1.0.1``. When this setting is ``true``, |subcommand knife download| will download ALL cookbook versions, which can be useful if a full-fidelity backup of data on the |chef server| is required. For example:
+       ::
+ 
+          versioned_cookbooks_true true
+
 
 
 What's Fixed
