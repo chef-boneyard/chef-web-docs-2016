@@ -87,8 +87,10 @@ About Knife
    knife_cookbook_site
    knife_data_bag
    knife_delete
+   knife_deps
    knife_diff
    knife_download
+   knife_edit
    knife_environment
    knife_exec
    knife_index_rebuild
@@ -104,7 +106,7 @@ About Knife
    knife_tag
    knife_upload
    knife_user
-
+   knife_xargs
 
 
 
