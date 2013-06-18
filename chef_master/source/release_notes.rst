@@ -29,7 +29,7 @@ Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to d
         group "bob"
       end
 
-In |chef| 11.6, |chef| may create files with ``0644`` permissions when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, which may cause a subsequent |ssh| operation to fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example::
+     In |chef| 11.6, |chef| may create files with ``0644`` permissions when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, which may cause a subsequent |ssh| operation to fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example::
 
    .. code-block:: ruby
 
@@ -180,6 +180,8 @@ knife deps
 
 .. include:: ../../includes_knife/includes_knife_deps_options.rst
 
+Many of these settings are also configurable in the |knife rb| file.
+
 knife edit
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_edit.rst
@@ -191,6 +193,8 @@ knife edit
 **Options**
 
 .. include:: ../../includes_knife/includes_knife_edit_options.rst
+
+Many of these settings are also configurable in the |knife rb| file.
 
 knife xargs
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -204,35 +208,17 @@ knife xargs
 
 .. include:: ../../includes_knife/includes_knife_xargs_options.rst
 
+Many of these settings are also configurable in the |knife rb| file.
 
-NEW OBJECTS
+Updates to |knife| Subcommands
+-----------------------------------------------------
+The following updates have been made to |knife| subcommands:
 
-* A command that works with each object in the |chef| repository. The subcommands specify the desired action (the "verb"), and then directory in which that object resides (``clients``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``). For example: ``download cookbooks/``
-
-ADD CHEF HOSTED OBJECTS
-
-* A command that works with objects in |chef hosted|, including ``acls``, ``groups``, and ``containers``
-
-
-KNIFE.RB SETTINGS
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
+* The |knife| essentials group of subcommands can be used with all objects in the |chef| repository and/or on the |chef server|: ``clients/``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``
+* The |knife| essentials group of subcommands can be used with the following objects located in |chef hosted|: ``acls``, ``groups``, and ``containers``
+* The |subcommand knife_download| subcommand can access all objects on the |chef server| and can now be used to pull a full-fidelity backup of the entire |chef| organization
 
 
-xargs
-
-
-edit
-
-
-deps
-
-
-knife-download
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-BECAUSE ALL OBJECTS CAN NOW BE ACCESSED, KNIFE DOWNLOAD NOW CAN PULL A FULL-FIDELITY BACKUP OF THE ENTIRE ORGANIZATION (clients, etc.)
 
 
 NEW KNIFE SETTING
