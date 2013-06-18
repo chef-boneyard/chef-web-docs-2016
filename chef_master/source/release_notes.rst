@@ -20,24 +20,24 @@ Atomic File Updates
 Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to define behaviors for file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|). These resources have been standardized and are now all fully based on the |resource file| resource.
 
 * File-based providers now create all files with the same default permissions. This default is determined by operating system, file system type, and umask settings.
-* When |ssh| operations are used with the |resource cookbook_file| or |resource template| resources and the file mode is not specified, it is possible for incorrect permissions to be applied to the file, which may cause remote |ssh| operations to fail. 
+* When an |ssh| configuration file is created using the |resource cookbook_file| or |resource template| resources and the file mode for that |ssh| configuration file is not specified, it is possible for incorrect permissions to be applied. In previous versions of |chef|, |chef| would attempt to create the file with ``0600`` permissions if the file mode was not specified. For example:
 
+   .. code-block:: ruby
 
-CUT PENDING REVIEW W/DAN
-CUT PENDING REVIEW W/DAN
-CUT PENDING REVIEW W/DAN
-CUT PENDING REVIEW W/DAN
-CUT PENDING REVIEW W/DAN
-In previous versions of |chef|, when the file mode was not specified, |chef| would create files with ``0600`` permissions. Starting with |chef| 11.6, |chef| may create files with ``0644``. may error out when using the default permissions. Previously, |chef| would create files with ``0600`` permissions. With |chef| 11.6, |chef| may create files with ``0644``. If the permissions that |chef| creates as a result of an |ssh| operation are not the correct permissions for that file, then 
-CUT PENDING REVIEW W/DAN
-CUT PENDING REVIEW W/DAN
-CUT PENDING REVIEW W/DAN
-CUT PENDING REVIEW W/DAN
-CUT PENDING REVIEW W/DAN
+      cookbook_file "/home/bob/.ssh/authorized_keys" do
+        owner "bob"
+        group "bob"
+      end
 
+In |chef| 11.6, |chef| may create files with ``0644`` permissions when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, which may cause a subsequent |ssh| operation to fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example::
 
+   .. code-block:: ruby
 
-
+      cookbook_file "/home/bob/.ssh/authorized_keys" do
+        owner "bob"
+        group "bob"
+        mode 0600
+      end
 
 * File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute.
 * Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors.
