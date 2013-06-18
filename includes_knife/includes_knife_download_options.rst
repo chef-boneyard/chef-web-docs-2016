@@ -11,7 +11,7 @@ This subcommand has the following options:
 ``-n``, ``--dry-run``
    |dry_run|
 
-``--no-recurse``
+``--[no-]recurse``
    |no_recurse_download| Default: ``--recurse``.
 
 ``--purge``
