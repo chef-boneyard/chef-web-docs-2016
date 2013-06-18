@@ -71,7 +71,7 @@ The following attributes for |resource file|-based resources have been updated:
      - |source file_location|
 
 
-New |resource remote_file| Attributes
+|resource remote_file| Attributes
 -----------------------------------------------------
 The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. In addition:
 
@@ -97,7 +97,7 @@ New attributes are available:
      - |use_last_modified| Default value: ``true``.
 
 
-New |resource template| Attributes
+|resource template| Attributes
 -----------------------------------------------------
 The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. In addition:
 
@@ -134,7 +134,7 @@ Helper Methods
 .. include:: ../../step_resource/step_resource_template_library_module.rst
 
 
-New |client rb| Settings
+|client rb| Settings
 -----------------------------------------------------
 New settings have been added to the |client rb| file:
 
@@ -161,8 +161,14 @@ New settings have been added to the |client rb| file:
           file_atomic_update false
 
 
-New |knife| Subcommands
+|knife| Subcommands
 -----------------------------------------------------
+The following updates have been made to |knife| subcommands:
+
+* The |knife| essentials group of subcommands can be used with all objects in the |chef| repository and/or on the |chef server|: ``clients/``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``
+* The |knife| essentials group of subcommands can be used with the following objects located in |chef hosted|: ``acls``, ``groups``, and ``containers``
+* The |subcommand knife download| subcommand can access all objects on the |chef server| and can now be used to pull a full-fidelity backup of the entire |chef| organization
+
 New subcommands have been added to |knife|:
 
 * |subcommand knife deps|
@@ -211,20 +217,8 @@ knife xargs
 
 Many of these settings are also configurable in the |knife rb| file.
 
-Updates to |knife| Subcommands
------------------------------------------------------
-The following updates have been made to |knife| subcommands:
 
-* The |knife| essentials group of subcommands can be used with all objects in the |chef| repository and/or on the |chef server|: ``clients/``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``
-* The |knife| essentials group of subcommands can be used with the following objects located in |chef hosted|: ``acls``, ``groups``, and ``containers``
-* The |subcommand knife download| subcommand can access all objects on the |chef server| and can now be used to pull a full-fidelity backup of the entire |chef| organization
-
-
-
-
-NEW KNIFE SETTING
-
-New knife-essentials Options
+Knife Subcommand Options
 -----------------------------------------------------
 New options have been added to the following |knife| subcommands:
 
@@ -274,7 +268,7 @@ knife upload
    |diff_upload| Set to ``false`` to upload all files. Default: ``true``.
 
 
-New |knife rb| Settings
+|knife rb| Settings
 -----------------------------------------------------
 New settings have been added to the |knife rb| file:
 
