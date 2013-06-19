@@ -69,7 +69,7 @@ Community Knife Plugins
    * - `knife-ohno <https://github.com/lnxchk/Ohno>`_
      - Adds the ability to view nodes that haven't checked into the platform for N hours.
    * - `knife-oktawave <https://github.com/marek-siemdaj/knife-oktawave>`_
-     - Adds the ability to manage Oktawave Cloud Instances.
+     - Adds the ability to manage |oktawave cloud instances|.
    * - `knife-onehai <https://github.com/lnxchk/Knife-OneHai>`_
      - Adds the ability to get the last seen time of a single node.
    * - `knife-playground <https://github.com/rubiojr/knife-playground>`_
