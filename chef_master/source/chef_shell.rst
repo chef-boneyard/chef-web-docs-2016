@@ -398,32 +398,51 @@ When |chef| is installed using |rubygems| or a package manager, |chef shell| sho
    Ohai2u danielsdeleo@eigenstate.local!
    chef >
 
-(Use the help command to print a list of supported commands.) Use the recipe command to switch to recipe context:
+(Use the help command to print a list of supported commands.) Use the recipe_mode command to switch to recipe context:
 
 .. code-block:: bash
 
-   $ chef > recipe
-     chef:recipe > 
+   $ chef > recipe_mode
+     chef:recipe_mode > 
 
 Typing is evaluated in the same context as recipes. Create a file resource:
 
 .. code-block:: bash
 
-   $ chef:recipe > file "/tmp/ohai2u_shef"
-       => #<Chef::Resource::File:0x1b691ac @enclosing_provider=nil, @resource_name=:file, @before=nil, 
-          @supports={}, @backup=5, @allowed_actions=[:nothing, :create, :delete, :touch, :create_if_missing],
-          @only_if=nil, @noop=nil, @collection=#<Chef::ResourceCollection:0x1b9926c @insert_after_idx=nil,
-          @resources_by_name={"file[/tmp/ohai2u_shef]"=>0}, @resources=[#<Chef::Resource::File:0x1b691ac ...>]>, 
-          @updated=false, @provider=nil, @node=<Chef::Node:0xdeeaae @name="eigenstate.local">, @recipe_name=nil, 
-          @not_if=nil, @name="/tmp/ohai2u_shef", @action="create", @path="/tmp/ohai2u_shef", 
-          @source_line="/Users/danielsdeleo/ruby/chef/chef/(irb#1) line 1", @params={}, @actions={}, 
-          @cookbook_name=nil, @ignore_failure=false> 
+   $ chef:recipe_mode > file "/tmp/ohai2u_shef"
+       => #<Chef::Resource::File:0x1b691ac 
+          @enclosing_provider=nil, 
+          @resource_name=:file, 
+          @before=nil, 
+          @supports={}, 
+          @backup=5, 
+          @allowed_actions=[:nothing, :create, :delete, :touch, :create_if_missing],
+          @only_if=nil, 
+          @noop=nil, 
+          @collection=#<Chef::ResourceCollection:0x1b9926c 
+          @insert_after_idx=nil,
+          @resources_by_name={"file[/tmp/ohai2u_shef]"=>0}, 
+          @resources=[#<Chef::Resource::File:0x1b691ac ...>]>, 
+          @updated=false, 
+          @provider=nil, 
+          @node=<Chef::Node:0xdeeaae 
+          @name="eigenstate.local">, 
+          @recipe_name=nil, 
+          @not_if=nil, 
+          @name="/tmp/ohai2u_shef", 
+          @action="create", 
+          @path="/tmp/ohai2u_shef", 
+          @source_line="/Users/danielsdeleo/ruby/chef/chef/(irb#1) line 1", 
+          @params={}, 
+          @actions={}, 
+          @cookbook_name=nil, 
+          @ignore_failure=false> 
 
 (The previous example was formatted for presentation.) At this point, |chef shell| has created the resource and put it in the run list, but not yet created the file. To initiate the |chef| run, use the ``run_chef`` command:
 
 .. code-block:: bash
 
-   $ chef:recipe > run_chef
+   $ chef:recipe_mode > run_chef
      [Fri, 15 Jan 2010 10:42:47 -0800] DEBUG: Processing file[/tmp/ohai2u_shef]
      [Fri, 15 Jan 2010 10:42:47 -0800] DEBUG: file[/tmp/ohai2u_shef] using Chef::Provider::File
      [Fri, 15 Jan 2010 10:42:47 -0800] INFO: Creating file[/tmp/ohai2u_shef] at /tmp/ohai2u_shef
@@ -433,37 +452,37 @@ Typing is evaluated in the same context as recipes. Create a file resource:
 
 .. code-block:: bash
 
-   $ chef:recipe > attributes
+   $ chef:recipe_mode > attributes
      chef:attributes > set[:hello] = "ohai2u-again"
        => "ohai2u-again"
      chef:attributes > 
 
-Switch back to recipe context and use the attributes:
+Switch back to recipe_mode context and use the attributes:
 
 .. code-block:: bash
 
-   $ chef:attributes > recipe
+   $ chef:attributes > recipe_mode
        => :attributes 
-     chef:recipe > file "/tmp/#{node.hello}"
+     chef:recipe_mode > file "/tmp/#{node.hello}"
 
 Now, run |chef| again:
 
 .. code-block:: bash
 
-   $ chef:recipe > run_chef
+   $ chef:recipe_mode > run_chef
      [Fri, 15 Jan 2010 10:53:22 -0800] DEBUG: Processing file[/tmp/ohai2u_shef]
      [Fri, 15 Jan 2010 10:53:22 -0800] DEBUG: file[/tmp/ohai2u_shef] using Chef::Provider::File
      [Fri, 15 Jan 2010 10:53:22 -0800] DEBUG: Processing file[/tmp/ohai2u-again]
      [Fri, 15 Jan 2010 10:53:22 -0800] DEBUG: file[/tmp/ohai2u-again] using Chef::Provider::File
      [Fri, 15 Jan 2010 10:53:22 -0800] INFO: Creating file[/tmp/ohai2u-again] at /tmp/ohai2u-again
        => true
-     chef:recipe > 
+     chef:recipe_mode > 
 
 Because the first resource (``file[/tmp/ohai2u_shef]``) is still in the run-list, it gets executed again. And because that file already exists, |chef| doesn't attempt to re-create it. Finally, the files were created using the ``ls`` method:
 
 .. code-block:: bash
 
-   $ chef:recipe > ls("/tmp").grep(/ohai/)
+   $ chef:recipe_mode > ls("/tmp").grep(/ohai/)
        => ["ohai2u-again", "ohai2u_shef"] 
 	 Shell Tutorial
 
