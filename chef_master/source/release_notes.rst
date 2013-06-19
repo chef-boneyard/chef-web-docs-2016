@@ -2,18 +2,15 @@
 Release Notes: Chef 11.6.0
 =====================================================
 
-The following items are new for |chef 11-6| and/or are changes from previous versions of |chef|.
-
+.. include:: ../../includes_chef/includes_chef.rst
 
 What's New
 =====================================================
 The following items are new for |chef 11-6| and/or are changes from previous versions of |chef|.
 
-
 Atomic File Updates
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_common_atomic_update.rst
-
 
 |resource file|-based Resources
 -----------------------------------------------------
@@ -56,7 +53,6 @@ New attributes (common to all |resource file|-based resources):
    * - ``force_unlink``
      - |force_unlink|
 
-
 Updated File-based Attributes
 -----------------------------------------------------
 The following attributes for |resource file|-based resources have been updated:
@@ -69,7 +65,6 @@ The following attributes for |resource file|-based resources have been updated:
      - Description
    * - ``source``
      - |source file_location|
-
 
 |resource remote_file| Attributes
 -----------------------------------------------------
@@ -96,7 +91,6 @@ New attributes are available:
    * - ``use_last_modified``
      - |use_last_modified| Default value: ``true``.
 
-
 |resource template| Attributes
 -----------------------------------------------------
 The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. In addition:
@@ -116,7 +110,6 @@ New attributes are available:
    * - ``helpers``
      - |helpers| Default value: ``[]``.
 
-
 Helper Methods
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_template_helper.rst
@@ -132,7 +125,6 @@ Helper Methods
 **Cookbook Library Modules**
 
 .. include:: ../../step_resource/step_resource_template_library_module.rst
-
 
 |client rb| Settings
 -----------------------------------------------------
@@ -159,7 +151,6 @@ New settings have been added to the |client rb| file:
        ::
  
           file_atomic_update false
-
 
 |knife| Subcommands
 -----------------------------------------------------
@@ -216,7 +207,6 @@ knife xargs
 .. include:: ../../includes_knife/includes_knife_xargs_options.rst
 
 Many of these settings are also configurable in the |knife rb| file.
-
 
 Knife Subcommand Options
 -----------------------------------------------------
@@ -283,8 +273,6 @@ New settings have been added to the |knife rb| file:
        ::
  
           versioned_cookbooks_true true
-
-
 
 What's Fixed
 =====================================================
@@ -367,7 +355,6 @@ The following bugs were fixed:
 * `CHEF-4272 <http://tickets.opscode.com/browse/CHEF-4272>`_  --- "knife list" shows files that can't be uploaded
 * `CHEF-4274 <http://tickets.opscode.com/browse/CHEF-4274>`_  --- chef-client never runs again after an http timeout to the chef server.
 * `CHEF-4275 <http://tickets.opscode.com/browse/CHEF-4275>`_  --- Rubygems 2.0 heuristic is incorrect on some environments upgraded from rubygems 1.8
-
 
 What's Improved
 =====================================================
