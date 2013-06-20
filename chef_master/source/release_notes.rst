@@ -6,7 +6,18 @@ Release Notes: Chef 11.6.0
 
 What's New
 =====================================================
-The following items are new for |chef 11-6| and/or are changes from previous versions of |chef|.
+The following items are new for |chef 11-6| and/or are changes from previous versions of |chef|. The short version:
+
+* **Atomic file updates** Atomic file updates ensure that updates are still made in certain situations, such as if disk space runs out or when a binary is being updated.
+* **Rebuilt file resource** The |resource file| resource has been refactored and is now the base resource for the |resource cookbook_file|, |resource remote_file|, and |resource template| resources.
+* **cookbook_file, remote_file, and template resources now based on file resource** These resources now share the same base functionality as the |resource file| resource.
+* **New common attributes for file-based resources** The ``atomic_update`` and ``force_unlink`` attributes have been added.
+* **New attributes for remote_file resource** The ``ftp_active_mode``, ``headers``, ``use_conditional_get``, ``use_etag``, and ``use_last_modified`` have been added.
+* **New helper methods for the template resource** The ``helper`` and ``helpers`` attributes have been added. Use these to define helper methods to extend templates using by using inline helper methods, inline helper modules, and cookbook library modules.
+* **Updated attributes for file-based resources** The ``source`` attribute has been modified to support FTP and local files.
+* **New settings for the client.rb file** The ``data_bag_decrypt_minimum_version``, ``enable_selinux_file_permission_fixup``, and ``file_atomic_update`` settings have been added.
+* **New subcommands for Knife** |subcommand knife deps|, |subcommand knife edit|, and |subcommand knife xargs| have been added to |chef|.
+* **New options for Knife subcommands** The |subcommand knife delete|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife list|, and |subcommand knife upload| subcommands have new options.
 
 Atomic File Updates
 -----------------------------------------------------
@@ -40,6 +51,8 @@ Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to d
 * File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute.
 * Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors.
 
+New File-based Attributes
+-----------------------------------------------------
 New attributes (common to all |resource file|-based resources):
 
 .. list-table::
