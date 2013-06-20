@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Tags can be added and remove. Machines can be checked to see if they already have a specific tag. To use tags in your recipe simply add the following:
+Tags can be added and removed. Machines can be checked to see if they already have a specific tag. To use tags in your recipe simply add the following:
 
 .. code-block:: ruby
 
