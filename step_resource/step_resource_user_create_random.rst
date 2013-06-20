@@ -5,6 +5,7 @@
 .. code-block:: ruby
 
    user "random" do
+     supports :manage_home => true
      comment "Random User"
      uid 1000
      gid "users"
