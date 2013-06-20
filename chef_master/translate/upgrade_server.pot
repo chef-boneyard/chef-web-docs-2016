@@ -1,0 +1,246 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-20 12:06\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/upgrade_server.rst:34
+# f2fcb5524e214eff81ff7ddf35af5504
+msgid "Upgrading to Chef Server 11.x"
+msgstr ""
+
+#: ../source/upgrade_server.rst:36
+# 229521481cdd44ba9355f8ba3ef6e3bd
+msgid "Upgrading to |chef server 11| from |chef server 10| is a relatively simple process: install the |chef server 11| and then move the data from |chef server 10| to the new one. Because the |chef server 10| database is |couch db| and the |chef server 11| database is |postgresql|, the data cannot be moved directly. Instead, use the following |knife| subcommands:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:38
+# f0b93417533542b4addbe9650d668217
+msgid "``knife download``"
+msgstr ""
+
+#: ../source/upgrade_server.rst:39
+# 62eaa2ee3f984f7e9c32e51728c74a04
+msgid "``knife list``"
+msgstr ""
+
+#: ../source/upgrade_server.rst:40
+# 7e6111d14eb147a983827025d237856d
+msgid "``knife upload``"
+msgstr ""
+
+#: ../source/upgrade_server.rst:42
+# b4b4cb4c949c4a6f91ac7f3865aba10e
+msgid "These subcommands will be used to download the data from |chef server 10| (as |json|), and then upload it to the |chef server 11| server. This approach bypasses the need to interact directly with either database or having to worry about how the data is stored in either location."
+msgstr ""
+
+#: ../source/upgrade_server.rst:44
+# 3c2f61250b14471e85d3f0e2a88a1af4
+msgid "Install the latest version of the ``knife-essentials`` plugin using the following command:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:50
+# bf8b5698c68f427eb1cdee9880638a00
+msgid "For more information about ``knife-essentials``, see https://github.com/jkeiser/knife-essentials."
+msgstr ""
+
+#: ../source/upgrade_server.rst:54
+# 6b2892f39d4f4eb383cca4499736c62f
+msgid "Requirements"
+msgstr ""
+
+#: ../source/upgrade_server.rst:56
+# 8984a59c64484523b9cd21855751c96c
+msgid "A live |chef server 10| server"
+msgstr ""
+
+#: ../source/upgrade_server.rst:57
+# 52ec0a54f3ba493a984fda081f71b5a7
+msgid "A live |chef server 11| server"
+msgstr ""
+
+#: ../source/upgrade_server.rst:58
+# b8c02a40e4a74bdfb8ef366a794f7779
+msgid "A workstation (running |knife|) that can access both the |chef server 10| and |chef server 11| servers"
+msgstr ""
+
+#: ../source/upgrade_server.rst:59
+# 68069d99eb24480e8cbfd66dab61f154
+msgid "The ability to run the ``knife download`` and ``knife upload`` subcommands"
+msgstr ""
+
+#: ../source/upgrade_server.rst:63
+# ec0ae71fab3642438a8a51b218f6dddf
+msgid "Set up Access to |chef server 10|"
+msgstr ""
+
+#: ../source/upgrade_server.rst:64
+# d499ee454edf4443b9fdb207e90e5883
+msgid "Use the following steps to configure a workstation so that it can communicate with the |chef server 10| server:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:66
+# 29d9b0c190794d15a992a597ac971a92
+msgid "Create a directory to use as the location to which data will be downloaded. This topic uses a directory named ``~/transfer``."
+msgstr ""
+
+#: ../source/upgrade_server.rst:67
+# ad45f430d3d84589aa232c67f178b576
+msgid "In the ``~/transfer`` directory, create a file named ``.chef/knife-chef10.rb``. The contents of this file should be similar to the following:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:79
+# f1f7eaf44e92413b91d4a9ec14f6b2d6
+msgid "where ``chef_server_url`` is the URL for the |chef server 10| server from which the data will be downloaded and ``node_name`` is the name of the workstation from which |knife| runs (with admin rights)."
+msgstr ""
+
+#: ../source/upgrade_server.rst:80
+# 832810a618474fc085879338aff1d895
+msgid "Copy the private key for the |chef server 10| server to the ``.chef`` directory. The private key is typically located at ``/etc/chef/webui.pem``. For example:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:85
+#: ../source/upgrade_server.rst:127
+#: ../source/upgrade_server.rst:158
+#: ../source/upgrade_server.rst:191
+# 95a51fdb05e143eb90a49941e7caadc7
+# c9ed139580df4987bb33eaf62be7a07a
+# 41ca073d5bb34c55ae5983fc27159df1
+# 51b02e97ff1f41348646e70d8b2ff70e
+msgid "Verify the configuration by running the following command:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:91
+# c836ee3b3e304223aa9ceb977d161e0a
+msgid "to return a list of all clients, including ``clients/chef-webui.json`` and ``clients/chef-validator.json``."
+msgstr ""
+
+#: ../source/upgrade_server.rst:95
+# a714e662a3aa4362bc56562e06622f72
+msgid "Download Data from |chef server 10|"
+msgstr ""
+
+#: ../source/upgrade_server.rst:96
+# cd06824eced74ba7a3ee8091d2fd4e19
+msgid "To download data from the |chef server 10|, run the following command:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:102
+# 2c018badeda1408ab440269f7776b894
+msgid "This will transfer all of the data on |chef server 10| to the transfer directory."
+msgstr ""
+
+#: ../source/upgrade_server.rst:106
+# a9d2906c836b4d10b4abb35d7a0c939d
+msgid "Set up Access to |chef server 11|"
+msgstr ""
+
+#: ../source/upgrade_server.rst:107
+# 8ad5ae2e2b2d49db8d94cace0e3b4a28
+msgid "Use the following steps to configure a workstation so that it can communicate with the |chef server 11| server:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:109
+# 51f7eab799d448f0b8cfd8a35a32a641
+msgid "In the same ``~/transfer`` directory, create a file named ``.chef/knife.rb``. The contents of this file should be similar to the following:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:121
+# 0e200124ca6c43918a8b60a811c33f5d
+msgid "where ``chef_server_url`` is the URL for the |chef server 11| server to which the data will be uploaded."
+msgstr ""
+
+#: ../source/upgrade_server.rst:122
+# 36ab682e5f14496baf3dd819c56d5207
+msgid "Copy the private key for the |chef server 11| server to the ``.chef`` directory. For example:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:133
+#: ../source/upgrade_server.rst:197
+# ac516ca03f5f4460a99a89889205c0a5
+# 2af5876efb154fcf97e81b97e1674026
+msgid "to return a list of all users, including ``users/admin.json``."
+msgstr ""
+
+#: ../source/upgrade_server.rst:137
+# 379b104ecf5344f5a6799106e5f2339f
+msgid "Update the chef-validator settings"
+msgstr ""
+
+#: ../source/upgrade_server.rst:138
+# f0fb54c387e24efb91716b5b98de2138
+msgid "The |chef validator| client is no longer special; |chef server 11| requires the ``chef-validator`` flag to be set in order for the |chef validator| to be created."
+msgstr ""
+
+#: ../source/upgrade_server.rst:140
+# e4e3ef87159f46edb8cafe7df49019d5
+msgid "Edit the ``clients/chef-validator.json`` file and add ``\"validator\": true`` as a property, like this:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:164
+# e74c6ad7705848f482c31cbee334575e
+msgid "to return a list of all clients, including ``clients/chef-validator.json``."
+msgstr ""
+
+#: ../source/upgrade_server.rst:168
+# 39c81f1521cc447c873163f116a2970b
+msgid "Verify the admin public key"
+msgstr ""
+
+#: ../source/upgrade_server.rst:169
+# 4387ebaac37b41f08f7d2723c0e19c01
+msgid "The ``admin.pem`` private key must be correct for each workstation that will have access to |chef server 11|. |chef server 11| has a new user named ``admin``, whereas many instances of |chef server 10| have an admin client named ``admin``. For |chef 11|, |knife| requires a private key named ``admin.pem``. This naming similarity can be an issue if the name of the client doesn't match the name of the private key."
+msgstr ""
+
+#: ../source/upgrade_server.rst:171
+# 1873efa58900403ea462cd3e4731248d
+msgid "Copy the ``admin.pem`` to each workstation or replace the |chef 11| admin private key with the old private key. To do this, run the following commands:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:178
+# 102725883cee4a289fb8180504328189
+msgid "Replace the public key in ``users/admin.json`` with the results of the previous step:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:185
+# 01c3bdaea89a4eefa3d5033eaaeb6cff
+msgid "Remove the following:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:201
+# 81b1c688af074287bc63be001cbcda39
+msgid "Upload Data to Chef 11"
+msgstr ""
+
+#: ../source/upgrade_server.rst:202
+# 5efdccd498044a3d98f0ecf4c3390ed2
+msgid "To upload data to the |chef server 11|, run the following command:"
+msgstr ""
+
+#: ../source/upgrade_server.rst:208
+# 4a87e0e1a56f434092ae26eeb4de6565
+msgid "This will transfer all of the data in the transfer directory to |chef server 11|."
+msgstr ""
+
+#: ../source/upgrade_server.rst:212
+# 257c1f8be4e14b60ab5832783421bb01
+msgid "Last Steps"
+msgstr ""
+
+#: ../source/upgrade_server.rst:213
+# 77ab2a6a4b98425cafd559054b9f84b6
+msgid "At this point, the |chef server 11| should have all of the data that used to be on the |chef server 10|. Point the DNS or load balancer at the new |chef server|. The |chef client| should continue to run properly on all nodes and each workstation should be able to manage |chef| objects using |knife|. If issues remain, try the IRC channel or email the chef@lists.opscode.com discussion alias. If ``knife-essentials`` is the issue, file an issue in |github| or check the IRC channel."
+msgstr ""
+

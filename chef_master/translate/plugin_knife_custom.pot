@@ -1,0 +1,731 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-20 12:06\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/plugin_knife_custom.rst:34
+# e1d9b6b1f20f4e04a25ca44f1b0cef84
+msgid "Custom Knife Plugins"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife.rst:5
+# 221bfa2c8bf54114961a8f90d4dac72a
+msgid "A |knife| plugin is a set of one (or more) subcommands that can be added to |knife| to support additional functionality that is not built-in to the base set of |knife| subcommands. Many of the |knife| plugins are built by members of the |opscode| community and several of them are built and maintained by |opscode|. A |knife| plugin is installed to the |path knife plugins| directory, from where it can be run just like any other |knife| subcommand."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom.rst:5
+# e98b934e52fc4810a1dc1cb445b2af46
+msgid "|chef| will load |knife| and |knife| plugin commands from the following locations:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom.rst:7
+# c4c27b10919447749f51a8ba5011649f
+msgid "The home directory: ``~/.chef/plugins/knife/``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom.rst:8
+# 36865014021b42b295dd7962c248bdf2
+msgid "A ``.chef/plugins/knife`` directory in the cookbook repository"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom.rst:9
+# feb7c12d039348b5916f4fa2766eaaf8
+msgid "A plugin installed from |rubygems|. (For more information about releasing a plugin on |rubygems|, see: http://guides.rubygems.org/make-your-own-gem/.)"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom.rst:11
+# fc97ec7f170e4ba3bfab560aae52aed3
+msgid "This approach allows |knife| plugins to be reused across projects in the home directory, kept in a repository that is accessible to other team members, and distributable to the |chef| community using |rubygems|."
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:41
+# fe124764530e4bd9b7a13162ffb716e4
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:5
+# d95d946fcf924a1896c3406374fb0200
+msgid "There are many ways to structure a |knife| plugin. The following syntax shows a typical |knife| plugin:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:35
+# 18a4bfdd016e4523a6c8dc19319441df
+msgid "where:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:37
+# f087388adbd54fce8f536e59ba10d4ab
+msgid "``require`` identifies any other |knife| subcommands and/or |knife| plugins required by this plugin"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:38
+# 2c4f6ebbee2b45c1aedf236f03c6e688
+msgid "``module ModuleName`` declares the |knife| plugin as its own namespace"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:39
+# d1818a0fa46f4ee6be04c549b7b0c016
+msgid "``class SubclassName < Chef::Knife`` declares the plugin as a subclass of |knife|, which is in the |chef| namespace. The capitalization of this name is important. For example, ``SubclassName`` would have a |knife| command of ``knife subclass name``, whereas ``Subclassname`` would have a |knife| command of ``knife subclassname``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:40
+# f03084026afd45209a406319a2a58009
+msgid "``deps do`` is a list of dependencies"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:41
+# d10afadf735f4e7dbcfca395746d1317
+msgid "``banner \"knife subcommand argument VALUE (options)\"`` is displayed when a user enters ``knife subclassName --help``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:42
+# 821b863c9d294b1a828d30044d0e8ad5
+msgid "``option :name_of_option`` defines each of the command-line options that are available for this plugin. For example, ``knife subclass -l VALUE`` or ``knife subclass --long-option-name VALUE``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:43
+# 3fb4e7c487c74dacaa5d8e40bfa24dd4
+msgid "``def run`` is the |ruby| code that is executed when the command is run"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:45
+# 413b2cfaaeba408587180fadc95e6c4b
+msgid "and where for each command-line option:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:47
+# d7d46bae7052432391a68957ec0814ca
+msgid "``:short`` defines the short option name"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:48
+# 4543747cdea24fc09634d88b739f25b8
+msgid "``:long`` defines the long option name"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:49
+# 4a07fc93637d43828c4a010a40bc22ff
+msgid "``:description`` defines a description that is displayed when a user enters ``knife subclassName --help``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:50
+# e8571648ec4742299ef69567b3cbe344
+msgid "``:boolean`` defines whether the option is ``true`` or ``false``; if the ``:short`` and ``:long`` names define a ``VALUE``, then this attribute must not be used"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:51
+# 1e25418873e0450bae4c96d9ba7e3b4e
+msgid "``:proc`` defines code that determines the value for this option"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:52
+# 46d8730c0c184a2688c8d288a88cfeaf
+msgid "``:default`` defines a default value"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:54
+# 8ba58167e2c449c4a92e5c2115a0646c
+msgid "The following example shows part of a |knife| plugin named ``knife windows``:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax.rst:111
+# 4d9d4e20d4214ff581174440ec0110b3
+msgid "Take a look at all of the code for this plugin on |github|: https://github.com/opscode/knife-windows/blob/master/lib/chef/knife/winrm.rb."
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:45
+# 5d3c18fe9aaf40d5b01aa9404f35779f
+msgid "Namespace"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_namespace.rst:4
+# 0d044b63c2e74ce9b414d08647e37ff0
+msgid "A |knife| plugin should have its own namespace (even though |knife| will load a command regardless of its namespace). The namespace is declared using the ``module`` method, for example:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_namespace.rst:14
+# ac1645460bb94c2fa0f8a68b89e39259
+msgid "where ``module MyNamespace`` declares that the |knife| plugin has its own namespace, with a namespace of ``MyNamespace``."
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:49
+# fda011f842c04369b3c47c049c678a7e
+msgid "Class Name"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_class_name.rst:5
+# c75ce2c251b4435c817671f6a8a63bff
+msgid "The class name declares a plugin as a subclass of both |knife| and |chef|. For example:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_class_name.rst:11
+# 25ce3ef31d914647badd318fb4581be9
+msgid "where ``SubclassName`` is the class name used by this plugin. The capitalization of this name is important. For example, ``OMG`` would have a |knife| command of ``knife o m g``, whereas ``Omg`` would have a |knife| command of ``knife omg``. Use the capitalization pattern to define the word grouping that best makes sense for the plugin."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_class_name.rst:13
+# c16f2a33d6dc4026b37c08df7771aa79
+msgid "A plugin can override an existing |knife| subcommand by using the same class name as the existing subcommand. For example, to override the current functionality of ``knife cookbook upload``, use the following class name:"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:53
+# 1ea5138fea914233997e1cde9048b96a
+msgid "Banner"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_banner.rst:5
+# 103fd41319c440bb9ad3a4642deab098
+msgid "A banner displays the syntax for the plugin to users when they enter the ``--help`` option. Use the ``banner`` method in the class body similar to the following:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_banner.rst:17
+# 7c8bc1f4810341cd847e8068ec200977
+msgid "and the when a user enters ``knife --help``, the following will be displayed:"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:57
+# 4bae4edfb36a4ddb97b50beb8c28647b
+msgid "Dependencies"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_dependencies.rst:5
+# 165a9933acb240759ad07371619a657a
+msgid "The functionality of other |knife| plugins can be accessed from a plugin by using the ``deps`` method to ensure the necessary files are available. The ``deps`` method acts as a lazy loader, ensuring that dependencies are only loaded into |knife| when the plugin which requires them is run. Use the following syntax just below the class declaration:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_dependencies.rst:17
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:13
+# a26935a0a286433098fe3840205f5f5b
+# 1848691420fd4393b4edd23ba962291d
+msgid "where the actual path may vary from plugin to plugin, but is typically located in the ``chef/knife/`` directory."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_dependencies.rst:19
+# dac090946eca4d5784c294c60b94d507
+msgid "Using the ``deps`` method instead of ``require`` is recommended, especially if the environment in which |knife| is being run contains a lot of plugins and/or any of those plugins have a lot of dependencies and/or requirements on other plugins and |chef| search functionality."
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:61
+# 4b75fa0173bc44d28938d1336a2c006d
+msgid "Requirements"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:5
+# 1f9e441992724fc5a46b56bb99639afd
+msgid "The functionality of other |knife| plugins can be accessed from a plugin by using the ``require`` method to ensure the necessary files are available, and then within the code for the plugin, to create a new object of the class of the plugin to be used."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:7
+# 39a688f000a643e1818797d627b1b469
+msgid "First, ensure that the correct files are available using the following syntax:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:15
+# cd68ea8b499f4a3bb6331a25b857da71
+msgid "Using the ``deps`` method instead of ``require`` is recommended, especially when the environment in which |knife| is being run contains a lot of plugins and/or any of those plugins have a lot of dependencies and/or requirements on other plugins and |chef| search functionality."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:17
+# 4fda16ff0681437499f7c1ae0b9d1f98
+msgid "For example, use the following to require a plugin named ``bootstrap``:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:23
+# f52b416d33fc4621981777907d3874dc
+msgid "Next, for the required plugin, create an object of that plugin, like this:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:29
+# cdb27b311e884e0ab46ffefff958907f
+msgid "and then pass arguments or options to that object. This is done by altering that object's ``config`` and ``name_arg`` variables. For example:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:39
+# c48c97f813504d16b9d71ef3c9d01fd7
+msgid "where the available configuration objects vary from plugin to plugin. Make sure those configuration objects are correct by verifying them in the source files for each plugin."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst:41
+# 07bee4612dbc40909b20ff1fa3427007
+msgid "And then call the object's ``run`` method, like this:"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:65
+# 2df1fb976e5a4502a259cd7571a0227c
+msgid "Options"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:5
+# 8426bde27fd04f46b57a35da1d311461
+msgid "Command-line options can be added to a |knife| plugin using the ``option`` method. An option can have a true/false value:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:16
+# 546a1c4c27c14ce7bd6c1c1b8cbc3675
+msgid "and it can have a string value:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:26
+# 1e1576b4310c411c90ac61f54ab95b19
+msgid "and can specify code that is run to determine the option's value:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:36
+# fec7f061ef184a52825e744a985d77fe
+msgid "where the |knife| command allows a comma-separated list of values and the ``:proc`` attribute converts that list of values into an array."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:38
+# cdbba5b5f3a448b381e8acb2878c8e74
+msgid "When a user enters ``knife --help``, the description attributes are displayed as part of the help. Using the previous examples, something like the following will be displayed:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:48
+# 2551995de42c4861863a69ba53464f28
+msgid "When |knife| runs the command, the options are parsed from the command-line and make the settings available as a hash that can be used to access the ``config`` method. For example, the following option:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:58
+# 9ab0ce1b48344927a8667cd34e4f0057
+msgid "can be used to update the ``run`` method of a class to change its behavior based on the ``config`` flag, similar to the following:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:72
+# 02f39f474bbc4fe28aeff42e6b000320
+msgid "For a |knife| plugin with the ``--omg`` option, run ``knife example --omg`` to return something like:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst:78
+# 43851c7a95a745fbb62cc1ea1be2e6fb
+msgid "or just ``knife example`` to return:"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:69
+# 0f7a53cca9f4478a86af7ee35cea165b
+msgid "Arguments"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:5
+# 8b82c0409d4e4d4a92d630b65ebf7aa9
+msgid "A |knife| plugin can also take command-line arguments that are not specified using the ``option`` flag, for example: ``knife node show NODE``. These arguments are added using the ``name_args`` method. For example:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:27
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:53
+# d259446d4416420380d97bf59e42ac20
+# ce5fc6e15aa34773b03f2dcb733a4579
+msgid "where"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:29
+# 45395cdb9af640bbbe12c0b6c10b244f
+msgid "``unless name_args.size == 1`` is used to check the number of arguments given; the command should fail if the input does not make sense"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:30
+# 3e09ca83bdef4be98003ca78e2cc252e
+msgid "``who = name_args.first`` is used to access arguments using ``name_args``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:31
+# ad754ba860bc4256b87968a8be46a8cb
+msgid "``show_usage`` is used to display the correct usage before exiting (if the command fails)"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:33
+# db991c5d24514efebf78146e89ce1951
+msgid "For example, the following command:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:39
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:52
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:64
+# a44db191fd0446928bb931e6613e4813
+# 69ead86db9b0438eaaa02d69a0867d6f
+# acea956b63624243831f4393cc837afa
+msgid "will return:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:46
+# 45c2af6a608645208988a67d9fa3a975
+msgid "the following command:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst:58
+# d407c868b60c48edb4ab57d22b5f13ce
+msgid "and the following command:"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:73
+# f6a6db2c6ab94d05a8b0031153818caf
+msgid "|knife rb| Settings"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:5
+# 2663e0ba3b724b989c36549b1a1f1923
+msgid "Certain settings defined by a |knife| plugin can be configured so that they can be set using the |knife rb| file. This can be done in two ways:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:7
+# 5c88eb79bcc04ebba9678b3f5372aa8f
+msgid "By using the ``:proc`` attribute of the ``option`` method and code that references ``Chef::Config[:knife][:setting_name]``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:8
+# 4eaaa7e14afe4ca69d2ed2cac7d92b63
+msgid "By specifying the configuration setting directly within the ``def`` |ruby| blocks using either ``Chef::Config[:knife][:setting_name]`` or ``config[:setting_name]``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:10
+# f46d2b9a512743f1a340b5d201b24009
+msgid "An option that is defined in this manner may be configured using the |knife rb| file with the following syntax:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:16
+# 7d3adc746ed347f591d948c0a29f7139
+msgid "This approach can be useful when a particular setting is used a lot. The order of precedence for a |knife| option is:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:18
+# 18abf68979584cc09fafa18def0238e1
+msgid "A value passed via the command line"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:19
+# f6d9dea402e447a89f12451c92000cc5
+msgid "A value saved in the |knife rb| file"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:20
+# 799be495e0e440c680676d0d270e52d1
+msgid "A default value"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:22
+# 7d3b07d122e043b7abef027ecc0714b8
+msgid "The following example shows how the ``knife bootstrap`` subcommand checks for a value in the |knife rb| file by using the ``:proc`` attribute:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:32
+# bf5f3f0193b243c9a3bd75bc76aa28dc
+msgid "where ``Chef::Config[:knife][:ssh_port]`` tells |knife| to check the |knife rb| file for a setting named ``knife[:ssh_port]``."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:34
+# b6307c87f6094ea28553196f6a7bac4d
+msgid "And the following example shows the ``knife bootstrap`` subcommand calling the ``knife ssh`` subcommand for the actual |ssh| part of running a bootstrap operation:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:55
+# f7e6eb5e521c4ac5b290260b02d57a90
+msgid "``ssh = Chef::Knife::Ssh.new`` creates a new instance of the ``Ssh`` subclass named ``ssh``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:56
+# 171be8ab47334fc182725a64506eb548
+msgid "A series of settings in ``knife ssh`` are associated with ``knife bootstrap`` using the  ``ssh.config[:setting_name]`` syntax"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:57
+# 7f15d1081ca24afda97146c8d820363e
+msgid "``Chef::Config[:knife][:setting_name]`` tells |knife| to check the |knife rb| file for various settings"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst:58
+# 023124962eb14a4e81a4f1c245844aae
+msgid "Raises an exception if any aspect of the |ssh| operation fails"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:77
+# 480bad81d16a4e2a874b550243a188b2
+msgid "Search"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_search.rst:5
+# d917ffe32d754e7cb5e2ff971023496e
+msgid "Use the |chef| search functionality within a plugin to return information about the infrastructure to that plugin. Use the ``require`` method to ensure that search functionality is available with the following:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_search.rst:11
+# 6af11c91988b4ad7bc4803f5e69dd517
+msgid "Create a search query object and assign it to a variable:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_search.rst:17
+# ee264506a98e42f6bf94da9f0819ffa3
+msgid "After the search object is created it can be used by the plugin to execute search queries for objects on the |chef server|. For example, using a variable named ``query_nodes`` a plugin could search for nodes with the ``webserver`` role and then return the name of each node found:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_search.rst:27
+# c2fe2fb2045547ce8b0224e72103650b
+msgid "This result can then be used to edit nodes. For example, searching for nodes with the ``webserver`` role, and then changing the run_list for those nodes to a role named ``apache2``:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_search.rst:40
+# 8500c33fca814711aa2be11274453870
+msgid "It's also possible to specify multiple items to add to the run_list:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_search.rst:46
+# 7ad8505b31934abb9366de0ba7671f1b
+msgid "And arguments sent with a plugin command can also be used to search. For example, if the command ``knife envchange \"web*\"`` is sent, then the command will search for any nodes in roles beginning with \"web\" and then change their environment to \"web\":"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:81
+# eb0062f599c04099b38aa40b8078949b
+msgid "User Interaction"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:5
+# 4cb2dbdcb2264e6ea036e185a2f3da41
+msgid "The ``ui`` object provides a set of methods that can be used to define user interactions and to help ensure a consistent user experience across |knife| plugins. The following methods should be used in favor of manually handling user interactions:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:11
+# 5f7c501866c3452fb42d2acc70878c0e
+msgid "Method"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:12
+# cd4c35eb1c7445a78add9b1f7226f5b6
+msgid "Description"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:13
+# 42abde9ceb7d43e8af0a5661a07873c3
+msgid "``ui.ask(*args, &block)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:15
+# 4b13f51361984cf884dac9b21e1a62a6
+msgid "``ui.ask_question(question, opts={})``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:16
+# d4698ddeea4a4519a33d6926e6d60e12
+msgid "Use to ask a user the question contained in ``question``. If ``:default => default_value`` is passed as the second argument, ``default_value`` will be used if the user does not provide an answer. This method will respect the ``--default`` command-line option."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:17
+# b893372773274172b40e746abf203c02
+msgid "``ui.color(string, *colors)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:18
+# 55950ddd793445c9a577b981a03402cf
+msgid "Use to specify a color. For example, from the ``knife rackspace server list`` subcommand:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:32
+# 1da8f613af544bdb8de3ef4ff31989e8
+msgid "and from the ``knife eucalyptus server create`` subcommand:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:43
+# b34488e53af14f36a1ae21344118b12b
+msgid "``ui.color?()``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:44
+# 3fa3e234063f4879a87e744c58bcb68a
+msgid "Indicates that colored output should be used. (Colored output can only be used when output is sent to a terminal.)"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:45
+# 1d717100281941e1bba6a03b753cc9db
+msgid "``ui.confirm(question, append_instructions=true)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:46
+# b1aaf70056924a5eb5fdfb752b6d7654
+msgid "Use to ask a Y/N question. If the user responds with ``N``, immediately exit with status code 3."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:47
+# d95f525b841b479780acc8e2040ef6b1
+msgid "``ui.edit_data(data, parse_output=true)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:48
+# ebc2e9e63250464baeae6789ef09b3a3
+msgid "Use to edit data. This opens the |chef editor|."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:49
+# d7a97829166a48228c4d9dd7e26b73f5
+msgid "``ui.edit_object(klass, name)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:51
+# dda099b63de24ac19e56e5877db1ae82
+msgid "``ui.error``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:52
+# ef920fcc3523403cab707aeece5698af
+msgid "Use to present an error to the user."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:53
+# 771e34294c8d4d749a696794fe916027
+msgid "``ui.fatal``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:54
+# b22d1eadc7264759892174468cfc8c48
+msgid "Use to present a fatal error to the user."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:55
+# 300d249f01824d10aecf93da0afb7134
+msgid "``ui.highline``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:56
+# a61552d139024782ba21dede17343b2c
+msgid "Use to provide direct access to the `Highline object <http://highline.rubyforge.org/doc/>`_ used by many ``ui`` methods."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:57
+# 6620db70ca5548bba34bfcdb9413813f
+msgid "``ui.info``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:58
+# ae0e651b0acc4b88a5afd73253086169
+msgid "Use to present a message to a user."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:59
+# a8e651cecc5642ac8a86a278afe2c0ad
+msgid "``ui.interchange``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:60
+# f6f18588fba54a6bac0de7b4ec989c51
+msgid "Use to determine if the output is a data interchange format such as |json| or |yaml|."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:61
+# a294bfe7613e4b3486e9896b7e7802d4
+msgid "``ui.list(*args)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:63
+# bca93884b9dc42c5ad00c15fb6558a44
+msgid "``ui.msg(message)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:64
+# 5bd5b4b43eb1405dbb2a1a1fec745634
+msgid "Use to present a message to the user."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:65
+# 153593c4e9b34e87be9a8b156a3b8e09
+msgid "``ui.output(data)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:66
+# 0c75580f3e88455fbcc124118d19f522
+msgid "Use to present a data structure to the user. This method will respect the output requested when the ``-F`` command-line option is used. The output will use the generic default presenter."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:67
+# 4b40e3e14fe640778999860418421c4b
+msgid "``ui.pretty_print(data)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:68
+# bfbca4f8cd104681acb0f388b67e9668
+msgid "Use to enable pretty-print output for |json| data."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:69
+# 2236e6c9132e4411af61ab8679435282
+msgid "``ui.use_presenter(presenter_class)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:70
+# 321ae7fbb8de498da9e12951b9cb0aed
+msgid "Use to specify a custom output presenter."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:71
+# 8ecae00f82354a06a259e46daed01cdd
+msgid "``ui.warn(message)``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:72
+# 24eea2355fe342369ffcf2de99b201b5
+msgid "Use to present a warning to the user."
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst:74
+# 60452d1bf0724dceacd5f481579cef68
+msgid "For example, to show a fatal error in a plugin in the same way that it would be shown in |knife| do something similar to the following:"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:85
+# 4c0216b8ddc64893886ab196460dc6ca
+msgid "Create a Plugin"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_create.rst:5
+# d32a959a82784c5f9475b9427ed6907a
+msgid "A |knife| command is a |ruby| class that inherits from the ``Chef::Knife`` class.  A |knife| command is run by calling the ``run`` method on an instance of the command class. For example:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_create.rst:18
+# 81997256b04541fa95f92af05810a339
+msgid "and is run from the command line using:"
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:89
+# 19b058c1a1d84903bc6a1b7a6c840e84
+msgid "Exceptions"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_exceptions.rst:5
+# b514f1af7c8b4460894144a06d27a343
+msgid "In most cases, the exception handling available within |knife| is enough to ensure that exception handling for a plugin is consistent with how |knife| ordinarily behaves. That said, exceptions can also be handled within a |knife| plugin in the same way they are handled in any |ruby| program."
+msgstr ""
+
+#: ../source/plugin_knife_custom.rst:93
+# e22a9363da6c49e2b27b7c5cbbd3f33a
+msgid "Install a Plugin"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_install.rst:5
+# b43fa64f1ffd4219951d3e411aa27c82
+msgid "To install a |knife| plugin from a file, do one of the following:"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_install.rst:7
+# a5846c5a06be4675a33197b4fe68553c
+msgid "Copy the file to the ``~/.chef/plugins/knife`` directory; the file's extension must be ``.rb``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_install.rst:8
+# 441f611aaa464c14aa06ee9d5218d2ba
+msgid "Add the file to the |chef| repository at the ``CHEF_REPO/.chef/plugins/knife``; the file's extension must be ``.rb``"
+msgstr ""
+
+#: ../../includes_plugin_knife/includes_plugin_knife_custom_install.rst:9
+# 9a908decb5544af689683507c7dac68d
+msgid "Install the plugin from |rubygems|"
+msgstr ""
+
