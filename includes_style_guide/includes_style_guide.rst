@@ -494,6 +494,8 @@ Sphinx supports localization into many languages.
 
 .. warning:: .pot files should be recompiled, not modified.
 
+.. warning:: .pot files are built only for the current release of |chef| documentation, which is the same as the ``chef_master`` source collection in |git|.
+
 The .pot file is built using much the same process as a regular Sphinx content build. For example, a regular content build:
 
 .. code-block:: bash
