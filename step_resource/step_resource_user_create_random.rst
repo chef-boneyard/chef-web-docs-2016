@@ -7,9 +7,9 @@
    user "random" do
      supports :manage_home => true
      comment "Random User"
-     uid 1000
+     uid 1234
      gid "users"
      home "/home/random"
-     shell "/bin/zsh"
+     shell "/bin/bash"
      password "$1$JJsvHslV$szsCjVEroftprNn4JHtDi."
    end
