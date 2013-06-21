@@ -44,17 +44,9 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to create a |chef client admin| with the name "exampleorg" and save its private key to a file, enter:
+.. include:: ../../step_knife/step_knife_client_create_admin.rst
 
-.. code-block:: bash
-
-   $ knife client create exampleorg -a -f "/etc/chef/client.pem"
-
-When running the ``create`` argument on |chef hosted| or |chef private|, be sure to omit the ``-a`` option:
-
-.. code-block:: bash
-
-   $ knife client create exampleorg -f "/etc/chef/client.pem"
+.. include:: ../../step_knife/step_knife_client_create_hosted_and_private.rst
 
 delete
 =====================================================

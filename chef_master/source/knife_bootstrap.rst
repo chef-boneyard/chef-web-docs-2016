@@ -24,17 +24,9 @@ knife.rb Settings
 
 Examples
 =====================================================
-To pass an SSH password as part of the command:
+.. include:: ../../step_knife/step_knife_bootstrap_use_ssh_password.rst
 
-.. code-block:: bash
-
-   $ knife bootstrap 192.168.1.1 -x username -P PASSWORD --sudo
-
-To use a file that contains a private key:
-
-.. code-block:: bash
-
-   $ knife bootstrap 192.168.1.1 -x username -i ~/.ssh/id_rsa --sudo
+.. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
 
 The following examples show how to customize the default bootstraps that are included with |chef|. 
 
