@@ -9,8 +9,6 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
-   * - ``gem_binary``
-     - |gem_binary resource package|
    * - ``options``
      - |command options|
    * - ``package_name``
