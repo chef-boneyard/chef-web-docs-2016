@@ -62,13 +62,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to delete a client with the name "client_foo", enter:
-
-.. code-block:: bash
-
-   $ knife client delete client_foo
-
-Type ``Y`` to confirm a deletion.
+.. include:: ../../step_knife/step_knife_client_delete.rst
 
 edit
 =====================================================
@@ -84,11 +78,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to edit a client with the name "exampleorg", enter:
-
-.. code-block:: bash
-
-   $ knife client edit exampleorg
+.. include:: ../../step_knife/step_knife_client_edit.rst
 
 list
 =====================================================
