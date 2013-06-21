@@ -8,6 +8,6 @@ Cookbooks Directory
 
 .. include:: ../../step_knife/step_knife_cookbook_create.rst
 
-.. include:: ../../step_knife/step_knife_cookbook_download_git.rst
+.. include:: ../../step_knife/step_knife_cookbook_site_install.rst
 
-.. include:: ../../step_knife/step_knife_cookbook_download_no_git.rst
+.. include:: ../../step_knife/step_knife_cookbook_site_download.rst

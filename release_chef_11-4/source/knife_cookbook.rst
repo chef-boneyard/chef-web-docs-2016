@@ -54,19 +54,7 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to create a cookbook named "my_cookbook" with copyright, email, license, and readme format options specified, enter:
-
-.. code-block:: bash
-
-   $ knife cookbook create my_cookbook -c "My Name" -e "my@email.com" -l apachev2 -r md
-
-to return something like:
-
-.. code-block:: bash
-
-   ** Creating cookbook my_cookbook
-   ** Creating README for cookbook: my_cookbook
-   ** Creating metadata for cookbook: my_cookbook
+.. include:: ../../step_knife/step_knife_cookbook_create_with_options.rst
 
 
 delete
