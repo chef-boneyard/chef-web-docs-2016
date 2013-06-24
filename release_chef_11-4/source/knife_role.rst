@@ -24,8 +24,6 @@ Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_role_bulk_delete.rst
 
-
-
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_role_create.rst

@@ -16,20 +16,9 @@ Options
 
 Examples
 =====================================================
-For example, enter:
+.. include:: ../../step_knife/step_knife_recipe_list.rst
 
-.. code-block:: bash
 
-   $ knife recipe list 'couchdb::*'
-
-to return:
-
-.. code-block:: bash
-
-   couchdb::main_monitors
-   couchdb::master
-   couchdb::default
-   couchdb::org_cleanu
 
 
 

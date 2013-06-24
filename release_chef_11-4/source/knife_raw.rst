@@ -22,17 +22,8 @@ knife.rb Settings
 
 Examples
 =====================================================
-To view information about a node:
+.. include:: ../../step_knife/step_knife_raw_view_client.rst
 
-.. code-block:: bash
-
-   knife raw /nodes/<node_name>
-
-To view information about a client:
-
-.. code-block:: bash
-
-   knife raw /clients/<client_name>
-
+.. include:: ../../step_knife/step_knife_raw_view_node.rst
 
 
