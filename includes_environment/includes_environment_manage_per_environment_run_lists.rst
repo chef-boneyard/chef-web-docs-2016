@@ -9,29 +9,21 @@ A per-environment run-list is a run-list that is associated with a role and a sp
      },
      "json_class": "Chef::Role",
      "env_run_lists": {
-       "production": [
-    
-       ],
-       "preprod": [
-    
-       ],
-       "test": [
-         "role[base]",
-         "recipe[apache]"
-       ],
-       "dev": [
-         "role[base]",
-         "recipe[apache]",
-         "recipe[apache::copy_dev_configs]"
-       ]
-     },
-     "run_list": [
-       "role[base]",
-       "recipe[apache]"
-     ],
+       "production": [],
+       "preprod": [],
+       "test": [ "role[base]", "recipe[apache]" "recipe[apache::copy_test_configs]" ],
+       "dev": [ "role[base]", "recipe[apache]", "recipe[apache::copy_dev_configs]" ]
+       },
+     "run_list": [ "role[base]", "recipe[apache]" ],
      "description": "The webserver role",
      "chef_type": "role",
      "override_attributes": {
      }
    }
 
+where:
+
+* ``webserver`` is the name of the role
+* ``env_run_lists`` is a hash of per-environment run-lists for ``production``, ``preprod``, ``test``, and ``dev``
+* ``production`` and ``preprod`` use the default run-list because they do not have a per-environment run-list
+* ``run_list`` defines the default run-list
