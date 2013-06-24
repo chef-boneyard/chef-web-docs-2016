@@ -106,7 +106,7 @@ New attributes are available:
 
 |resource template| Attributes
 -----------------------------------------------------
-The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. In addition:
+The |resource template| resource was updated to be fully-based on the |resource file| resource. In addition:
 
 * The ``source`` attribute was updated to support FTP and local file URIs
 
