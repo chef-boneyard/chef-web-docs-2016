@@ -22,22 +22,17 @@ knife.rb Settings
 
 Examples
 =====================================================
-For example, to view a list of roles on the |chef server|:
+.. include:: ../../step_knife/step_knife_list_roles.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_list_roles_and_environments.rst
 
-   $ knife list roles/
+.. include:: ../../step_knife/step_knife_list_everything.rst
 
-To view a list of roles and environments on the |chef server|:
 
-.. code-block:: bash
 
-   $ knife list roles/ environments/
 
-To view a list of absolutely everything on the |chef server|:
 
-.. code-block:: bash
 
-   $ knife list -R /
+
 
 
