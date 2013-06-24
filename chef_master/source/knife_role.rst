@@ -21,12 +21,8 @@ Options
 |no_options|
 
 Examples
-
-For example:
-
-.. code-block:: bash
-
-   $ knife role bulk delete "^[0-9]{3}$"
+-----------------------------------------------------
+.. include:: ../../step_knife/step_knife_role_bulk_delete.rst
 
 create
 =====================================================
@@ -48,32 +44,7 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to add a role named "role1", enter:
-
-.. code-block:: bash
-
-   $ knife role create role1
-   
-In the $EDITOR enter the role data in JSON:
-
-.. code-block:: javascript
-
-   ## sample:
-   {
-      "name": "role1",
-      "default_attributes": {
-      },
-      "json_class": "Chef::Role",
-      "run_list": [
- 
-      ],
-      "description": "",
-      "chef_type": "role",
-      "override_attributes": {
-      }
-   }
-
-When finished, save it.
+.. include:: ../../step_knife/step_knife_role_create.rst
 
 delete
 =====================================================
@@ -89,13 +60,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example:
-
-.. code-block:: bash
-
-   $ knife role delete devops
-
-Type ``Y`` to confirm a deletion.
+.. include:: ../../step_knife/step_knife_role_delete.rst
 
 edit
 =====================================================
@@ -111,32 +76,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to edit the data for a role named "role1", enter:
-
-.. code-block:: bash
-
-   $ knife role edit role1
-   
-Update the role data in JSON:
-
-.. code-block:: javascript
-
-   ## sample:
-   {
-      "name": "role1",
-      "default_attributes": {
-      },
-      "json_class": "Chef::Role",
-      "run_list": [
- 
-      ],
-      "description": "This is the description for the role1 role.",
-      "chef_type": "role",
-      "override_attributes": {
-      }
-   }
-
-When finished, save it.
+.. include:: ../../step_knife/step_knife_role_edit.rst
 
 from file
 =====================================================
@@ -158,11 +98,7 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example:
-
-.. code-block:: bash
-
-   $ knife role from file "path to JSON file"
+.. include:: ../../step_knife/step_knife_role_from_file.rst
 
 list
 =====================================================
@@ -178,11 +114,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to view a list of roles on the |chef server| and display the URI for each role returned, enter:
-
-.. code-block:: bash
-
-   $ knife role list -w
+.. include:: ../../step_knife/step_knife_role_list.rst
 
 show
 =====================================================
@@ -204,18 +136,8 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example:
+.. include:: ../../step_knife/step_knife_common_view_json.rst
 
-.. code-block:: bash
-
-   $ knife role show devops
-
-To view information in |json| format, use the ``-F`` common option as part of the command like this:
-
-.. code-block:: bash
-
-   $ knife role show devops -F json
-
-Other formats available include ``text``, ``yaml``, and ``pp``.
+.. include:: ../../step_knife/step_knife_common_view_json.rst
 
 

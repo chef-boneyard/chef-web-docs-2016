@@ -16,21 +16,6 @@ Options
 
 Examples
 =====================================================
-For example, to show all cookbooks in the ``cookbooks/`` directory:
+.. include:: ../../step_knife/step_knife_show_all_cookbooks.rst
 
-.. code-block:: bash
-
-   $ knife show cookbooks/
-
-or, (if already in the ``cookbooks/`` directory in the local |chef| repository):
-
-.. code-block:: bash
-
-   $ knife show
-
-To show roles and environments:
-
-.. code-block:: bash
-
-   $ knife show roles/ environments/
-
+.. include:: ../../step_knife/step_knife_show_roles_and_environments.rst
