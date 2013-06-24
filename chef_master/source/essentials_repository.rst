@@ -8,15 +8,7 @@ Directory Structure
 =====================================================
 .. include:: ../../includes_repository/includes_repository_directory.rst
 
-The sub-directories in the |chef| repository are:
-
-* ``certificates/``
-* ``.chef/``
-* ``config/``
-* ``cookbooks/``
-* ``data_bags/``
-* ``environments/``
-* ``roles/``
+.. include:: ../../includes_repository/includes_repository_directory_structure.rst
 
 certificates/
 -----------------------------------------------------
@@ -96,11 +88,6 @@ Download
 -----------------------------------------------------
 .. include:: ../../steps/step_repository_create_download.rst
 
-.. toctree::
-   :hidden:
-
-   essentials_repository_structure
-   essentials_repository_structure_chefignore
 
 
 

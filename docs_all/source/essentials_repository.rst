@@ -1,5 +1,5 @@
 =====================================================
-Repository
+About the Repository
 =====================================================
 
 .. include:: ../../includes_repository/includes_repository.rst
@@ -24,54 +24,59 @@ config/
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository_directory_config.rst
 
-The |chef| repository uses two configuration files: ``rake.rb`` (required) and ``knife.rb`` (optional):
+The |chef| repository uses two configuration files: ``rake.rb`` (required) and ``knife.rb`` (optional).
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
+rake.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_config/includes_config_rb_rake.rst
 
-   * - File
-     - Description
-   * - knife.rb
-     - .. include:: ../../includes_config/includes_config_rb_knife.rst
-   * - rake.rb
-     - .. include:: ../../includes_config/includes_config_rb_rake.rst
+.. include:: ../../includes_chef/includes_rake_tasks_included_in_chef_libraries.rst
 
-       .. include:: ../../includes_chef/includes_rake_tasks_included_in_chef_libraries.rst
+knife.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_config/includes_config_rb_knife.rst
 
 cookbooks/
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
-.. include:: ../../steps/step_repository_cookbooks_configure_settings.rst
-
-.. include:: ../../step_knife/step_knife_cookbook_create.rst
-
-.. include:: ../../step_knife/step_knife_cookbook_download_git.rst
-
-.. include:: ../../step_knife/step_knife_cookbook_download_no_git.rst
-
 data_bags/
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository_directory_data_bags.rst
-
-.. include:: ../../steps/step_repository_data_bags_add_subdirectory.rst
-
-.. include:: ../../steps/step_repository_data_bags_upload_data_bag_item.rst
 
 environments/
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository_directory_environments.rst
 
-.. include:: ../../steps/step_repository_roles_upload_environment.rst
-
 roles/
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository_directory_roles.rst 
 
-.. include:: ../../steps/step_repository_roles_upload_role.rst
+chefignore Files
+=====================================================
+.. include:: ../../includes_repository/includes_repository_directory_chefignore.rst 
 
-Create the |chef| Repository
+Examples
+-----------------------------------------------------
+The following examples show how to add entries to the ``chefignore`` file.
+
+**Ignore editor swap files**
+
+.. include:: ../../includes_repository/includes_repository_directory_chefignore_swap_files.rst 
+
+**Ignore top-level Subversion data**
+
+.. include:: ../../includes_repository/includes_repository_directory_chefignore_svn.rst 
+
+**Ignore all files in a directory**
+
+.. include:: ../../includes_repository/includes_repository_directory_chefignore_directories.rst 
+
+Many Users, Same Repo
+=====================================================
+.. include:: ../../includes_repository/includes_repository_many_users_same_repo.rst
+
+Create the Repository
 =====================================================
 .. include:: ../../includes_repository/includes_repository_create.rst
 
@@ -82,6 +87,9 @@ Clone
 Download
 -----------------------------------------------------
 .. include:: ../../steps/step_repository_create_download.rst
+
+
+
 
 
 
