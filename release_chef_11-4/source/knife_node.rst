@@ -22,13 +22,8 @@ Options
 
 Examples
 -----------------------------------------------------
-For example:
+.. include:: ../../step_knife/step_knife_node_bulk_delete.rst
 
-.. code-block:: bash
-
-   $ knife node bulk delete "^[0-9]{3}$"
-
-Type ``Y`` to confirm a deletion.
 
 create
 =====================================================
@@ -44,36 +39,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to add a node, enter:
-
-.. code-block:: bash
-
-   $ knife node create node1
-   
-In the $EDITOR enter the node data in JSON:
-
-.. code-block:: javascript
-
-   ## sample:
-   {
-      "normal": {
-      },
-      "name": "foobar",
-      "override": {
-      },
-      "default": {
-      },
-      "json_class": "Chef::Node",
-      "automatic": {
-      },
-      "run_list": [
-         "recipe[zsh]",
-         "role[webserver]"
-      ],
-      "chef_type": "node"
-   }
-
-When finished, save it.
+.. include:: ../../step_knife/step_knife_node_create.rst
 
 
 delete
@@ -90,11 +56,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to delete a node called "dev", enter:
-
-.. code-block:: bash
-
-   $ knife node delete dev
+.. include:: ../../step_knife/step_knife_node_delete.rst
 
 edit
 =====================================================
@@ -110,36 +72,7 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to edit the data for a node named "node1", enter:
-
-.. code-block:: bash
-
-   $ knife node edit node1 -a
-   
-Update the role data in JSON:
-
-.. code-block:: javascript
-
-   ## sample:
-   {
-      "normal": {
-      },
-      "name": "node1",
-      "override": {
-      },
-      "default": {
-      },
-      "json_class": "Chef::Node",
-      "automatic": {
-      },
-      "run_list": [
-         "recipe[devops]",
-         "role[webserver]"
-      ],
-      "chef_type": "node"
-   }
-
-When finished, save it.
+.. include:: ../../step_knife/step_knife_node_edit.rst
 
 from file
 =====================================================
@@ -161,11 +94,7 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example:
-
-.. code-block:: bash
-
-   $ knife node from file "path to JSON file"
+.. include:: ../../step_knife/step_knife_node_from_file.rst
 
 list
 =====================================================
@@ -209,36 +138,15 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to add a role to a run list, enter:
+.. include:: ../../step_knife/step_knife_node_run_list_add_role.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_node_run_list_add_roles_and_recipes.rst
 
-   $ knife node run_list add node 'role[ROLE_NAME]'
+.. include:: ../../step_knife/step_knife_node_run_list_add_recipe_with_fqdn.rst
 
-To add a recipe to a run list using the fully qualified format, enter:
+.. include:: ../../step_knife/step_knife_node_run_list_add_recipe_with_cookbook.rst
 
-.. code-block:: bash
-
-   $ knife node run_list add node 'recipe[COOKBOOK::RECIPE_NAME]'
-
-To add a recipe to a run list using the cookbook format, enter:
-
-.. code-block:: bash
-
-   $ knife node run_list add node 'COOKBOOK::RECIPE_NAME'
-
-To add the default recipe of a cookbook to a run list, enter:
-
-.. code-block:: bash
-
-   $ knife node run_list add node 'COOKBOOK'
-
-To add roles and recipes to a run list, enter:
-
-.. code-block:: bash
-
-   $ knife node run_list add node 'recipe[COOKBOOK::RECIPE_NAME],COOKBOOK::RECIPE_NAME,role[ROLE_NAME]'
-
+.. include:: ../../step_knife/step_knife_node_run_list_add_default_recipe.rst
 
 run_list remove
 =====================================================
@@ -260,17 +168,9 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to remove a role from a run list, enter:
+.. include:: ../../step_knife/step_knife_node_run_list_remove_role.rst
 
-.. code-block:: bash
-
-   $ knife node run_list remove node 'role[ROLE_NAME]'
-
-To remove a recipe from a run list using the fully qualified format, enter:
-
-.. code-block:: bash
-
-   $ knife node run_list remove node 'recipe[COOKBOOK::RECIPE_NAME]'
+.. include:: ../../step_knife/step_knife_node_run_list_remove_run_list.rst
 
 show
 =====================================================
@@ -286,79 +186,18 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to view all data for a node named "build", enter:
+.. include:: ../../step_knife/step_knife_node_show_all_data.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_node_show_all_data_basic.rst
 
-   $ knife node show build
+.. include:: ../../step_knife/step_knife_node_show_all_data_truncated.rst
 
-to return:
+.. include:: ../../step_knife/step_knife_node_show_attribute.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_node_show_fqdn.rst
 
-   Node Name:   build
-   Environment: _default
-   FQDN:
-   IP:
-   Run List:
-   Roles:
-   Recipes:
-   Platform:
-   
-To view the FQDN for a node named "i-12345678", enter:
+.. include:: ../../step_knife/step_knife_node_show_run_list.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_common_view_json.rst
 
-   $ knife node show i-12345678 -a fqdn
-
-to return:
-
-.. code-block:: bash
-
-   fqdn: ip-10-251-75-20.ec2.internal
-
-To view the run list for a node named "dev", enter:
-
-.. code-block:: bash
-
-   $ knife node show dev -r
-
-To view information in |json| format, use the ``-F`` common option as part of the command like this:
-
-.. code-block:: bash
-
-   $ knife node show i-12345678 -F json
-
-Other formats available include ``text``, ``yaml``, and ``pp``.
-
-To show basic information about a node, truncated and nicely formatted:
-
-.. code-block:: bash
-
-   knife node show <node_name>
-
-To show all information about a node, nicely formatted:
-
-.. code-block:: bash
-
-   knife node show -l <node_name>
-
-To view node information in raw |json|, use the ``-l`` or ``--long`` option:
-
-.. code-block:: bash
-
-   knife node show -l -F json <node_name>
-
-and/or:
-
-.. code-block:: bash
-
-   knife node show -l --format=json <node_name>
-
-To list a single node attribute:
-
-.. code-block:: bash
-
-   knife node show <node_name> -a <attribute_name>
-
-where ``<attribute_name>`` is something like kernel or platform. (This doesn't work for nested attributes like ``node[kernel][machine]`` because ``knife node show`` doesn't understand nested attributes.)
+.. include:: ../../step_knife/step_knife_common_view_json_raw.rst
