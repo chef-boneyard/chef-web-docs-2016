@@ -22,67 +22,26 @@ knife.rb Settings
 
 Examples
 =====================================================
-To find the dependencies for a node:
+.. include:: ../../step_knife/step_knife_deps_node.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_deps_role.rst
 
-   $ knife deps nodes/node_name.json 
+.. include:: ../../step_knife/step_knife_deps_cookbook.rst
 
-To find the dependencies for a cookbook:
+.. include:: ../../step_knife/step_knife_deps_environment.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_deps_combo.rst
 
-   $ knife deps cookbooks/cookbook_name.json
+.. include:: ../../step_knife/step_knife_deps_wildcard.rst
 
-To find the dependencies for a role:
+.. include:: ../../step_knife/step_knife_deps_return_as_tree.rst
 
-.. code-block:: bash
+.. include:: ../../step_knife/step_knife_deps_pass_output_to_knife_upload.rst
 
-   $ knife deps roles/role_name.json
+.. include:: ../../step_knife/step_knife_deps_pass_output_to_knife_xargs.rst
 
-To find the dependencies for an environment:
 
-.. code-block:: bash
 
-   $ knife deps environments/environment_name.json
 
-Use a wildcard to return all the child nodes:
 
-.. code-block:: bash
 
-   $ knife deps environments/*.json
-
-To find the dependencies for a combination of nodes, cookbooks, roles, and/or environments:
-
-.. code-block:: bash
-
-   $ knife deps cookbooks/git.json cookbooks/github.json roles/base.json environments/desert.json nodes/mynode.json
-
-Use the ``--tree`` option to view the results with structure:
-
-.. code-block::  bash
-
-   $ knife deps roles/webserver.json
-
-to return something like:
-
-.. code-block:: bash
-
-   roles/webserver.json
-     roles/base.json
-       cookbooks/github
-         cookbooks/git
-       cookbooks/users
-     cookbooks/apache2
-
-Use the output of ``knife deps`` to pass a command to ``knife upload``. For example:
-
-.. code-block:: bash
-
-   $ knife upload `knife deps nodes/*.json
-
-or to ``knife xargs``:
-
-.. code-block:: bash
-
-   $ knife deps nodes/*.json | xargs knife upload
