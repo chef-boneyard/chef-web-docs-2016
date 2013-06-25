@@ -28,11 +28,8 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example:
+.. include:: ../../step_knife/step_knife_environment_create.rst
 
-.. code-block:: bash
-
-   $ knife environment create dev -d "The development environment."
 
 delete
 =====================================================
@@ -48,13 +45,8 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to delete an environment named "dev", enter:
+.. include:: ../../step_knife/step_knife_environment_delete.rst
 
-.. code-block:: bash
-
-   $ knife environment delete dev
-
-Type ``Y`` to confirm a deletion.
 
 edit
 =====================================================
@@ -70,11 +62,8 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to edit an environment named "devops", enter:
+.. include:: ../../step_knife/step_knife_environment_edit.rst
 
-.. code-block:: bash
-
-   $ knife environment edit devops
 
 from file
 =====================================================
@@ -96,17 +85,7 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example:
-
-.. code-block:: bash
-
-   $ knife environment create devops from file "path to JSON file"
-
-or:
-
-.. code-block:: bash
-
-   $ knife environment edit devops from file "path to JSON file"
+.. include:: ../../step_knife/step_knife_environment_from_file.rst
 
 list
 =====================================================
@@ -122,11 +101,8 @@ Options
 
 Examples
 -----------------------------------------------------
-For example:
+.. include:: ../../step_knife/step_knife_environment_list.rst
 
-.. code-block:: bash
-
-   $ knife environment list -w
 
 show
 =====================================================
@@ -142,34 +118,6 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to view information about the "dev" environment enter:
+.. include:: ../../step_knife/step_knife_environment_show.rst
 
-.. code-block:: bash
-
-   $ knife environment show dev
-   
-to return:
-
-.. code-block:: bash
-
-   % knife environment show dev
-   chef_type:            environment
-   cookbook_versions:
-   default_attributes:
-   description:
-   json_class:           Chef::Environment
-   name:                 dev
-   override_attributes:
-    
-   \\
-   \\ 
-   \\
-   \\
-
-To view information in |json| format, use the ``-F`` common option as part of the command like this:
-
-.. code-block:: bash
-
-   $ knife environment show dev -F json
-
-Other formats available include ``text``, ``yaml``, and ``pp``.
+.. include:: ../../step_knife/step_knife_common_view_json.rst
