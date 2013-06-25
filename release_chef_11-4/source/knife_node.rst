@@ -8,6 +8,7 @@ knife node
 
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
+
 bulk delete
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_bulk_delete.rst
@@ -58,6 +59,7 @@ Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_node_delete.rst
 
+
 edit
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_edit.rst
@@ -73,6 +75,7 @@ Options
 Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_node_edit.rst
+
 
 from file
 =====================================================
@@ -96,6 +99,7 @@ Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_node_from_file.rst
 
+
 list
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_list.rst
@@ -117,6 +121,7 @@ knife.rb Settings
 Examples
 -----------------------------------------------------
 .. include:: ../../step_knife/step_knife_node_list_all.rst
+
 
 run_list add
 =====================================================
@@ -148,6 +153,7 @@ Examples
 
 .. include:: ../../step_knife/step_knife_node_run_list_add_default_recipe.rst
 
+
 run_list remove
 =====================================================
 .. include:: ../../includes_knife/includes_knife_node_run_list_remove.rst
@@ -171,6 +177,7 @@ Examples
 .. include:: ../../step_knife/step_knife_node_run_list_remove_role.rst
 
 .. include:: ../../step_knife/step_knife_node_run_list_remove_run_list.rst
+
 
 show
 =====================================================
