@@ -20,7 +20,7 @@ knife.rb Settings
 
 .. include:: ../../includes_knife/includes_knife_configure_settings.rst
 
-Examples
+Examples 
 =====================================================
 For example, to create a |knife rb| file, enter:
 
