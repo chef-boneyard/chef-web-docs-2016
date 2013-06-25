@@ -22,16 +22,8 @@ knife.rb Settings
 
 Examples
 =====================================================
-For example, to create a |knife rb| file, enter:
+.. include:: ../../step_knife/step_knife_configure_knife_rb.rst
 
-.. code-block:: bash
-
-   $ knife configure
-   
-To configure a |client rb|, enter:
-
-.. code-block:: bash
-
-   $ knife configure client '/directory'
+.. include:: ../../step_knife/step_knife_configure_client_rb.rst
 
 

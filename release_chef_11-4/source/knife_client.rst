@@ -118,11 +118,7 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-For example, to regenerate the RSA key pair for a client named "testclient" and save it to a file named "rsa_key", enter:
-
-.. code-block:: bash
-
-   $ knife client regenerate testclient -f rsa_key
+.. include:: ../../step_knife/step_knife_client_reregister.rst
 
 show
 =====================================================
@@ -138,26 +134,6 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to view a client named "testclient", enter:
+.. include:: ../../step_knife/step_knife_client_show.rst
 
-.. code-block:: bash
-
-   $ knife client show testclient
-
-to return something like:
-
-.. code-block:: bash
-
-   admin:       false
-   chef_type:   client
-   json_class:  Chef::ApiClient
-   name:        testclient
-   public_key:
-
-To view information in |json| format, use the ``-F`` common option as part of the command like this:
-
-.. code-block:: bash
-
-   $ knife client show testclient -F json
-
-Other formats available include ``text``, ``yaml``, and ``pp``.
+.. include:: ../../step_knife/step_knife_common_view_json.rst
