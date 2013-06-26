@@ -42,5 +42,3 @@ Or:
 .. code-block:: ruby
 
    node["app"]["log_location"] is: <%= app_conf("log_location") %>
-
-.. note:: This example and the example for an inline helper module are identical, with one being defined inline as a method and the other being defined inline as a module.

@@ -25,4 +25,3 @@ A template helper module can be defined inline on a per-resource basis. This app
 
 where the ``hello_world``, ``app``, and ``app_conf(setting)`` methods comprise the module that extends a template.
 
-.. note:: This example and the example for an inline helper method are identical, with one being defined inline as a method and the other being defined inline as a module.
