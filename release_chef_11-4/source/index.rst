@@ -115,7 +115,7 @@ Cookbooks
    install_server
    install_server_scenario_vm
    knife
-   knife_all
+   knife_all_11-4
    plugin_knife
    resource
    opscode_cookbooks

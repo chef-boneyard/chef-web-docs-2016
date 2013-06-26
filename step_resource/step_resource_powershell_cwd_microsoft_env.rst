@@ -4,7 +4,7 @@
 
 .. code-block:: ruby
 
-   powershell "cwd-to-win-env-var" do
+   powershell_script "cwd-to-win-env-var" do
      cwd "%TEMP%"
      code <<-EOH
      $stream = [System.IO.StreamWriter] "./temp-write-from-chef.txt"
