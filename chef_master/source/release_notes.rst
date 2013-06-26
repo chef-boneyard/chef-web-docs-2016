@@ -16,7 +16,7 @@ The following items are new for |chef 11-6| and/or are changes from previous ver
 * **New helper methods for the template resource** The ``helper`` and ``helpers`` attributes have been added. Use these to define helper methods to extend templates using by using inline helper methods, inline helper modules, and cookbook library modules.
 * **Updated attributes for file-based resources** The ``source`` attribute has been modified to support FTP and local files.
 * **New |resource batch| resource** Execute a batch script using the |windows cmd exe| interpreter. A temporary file is created and then executed like other script resources.
-* **New |resource powershell_script| resource** Execute a script using the |windows powershell| interpreter just like the |resource script|, but for the |windows| platform and |windows powershell| interpreter.
+* **New |resource powershell_script| resource** Execute a script using the |windows powershell| interpreter just like the |resource script| resource, but designed for the |windows| platform and the |windows powershell| interpreter.
 * **New settings for the client.rb file** The ``data_bag_decrypt_minimum_version``, ``enable_selinux_file_permission_fixup``, and ``file_atomic_update`` settings have been added.
 * **New subcommands for Knife** |subcommand knife deps|, |subcommand knife edit|, and |subcommand knife xargs| have been added to |chef|.
 * **New options for Knife subcommands** The |subcommand knife delete|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife list|, and |subcommand knife upload| subcommands have new options.
