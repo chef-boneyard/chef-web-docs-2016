@@ -68,8 +68,6 @@ New attributes (common to all |resource file|-based resources):
    * - ``force_unlink``
      - |force_unlink|
 
-Updated File-based Attributes
------------------------------------------------------
 The following attributes for |resource file|-based resources have been updated:
 
 .. list-table::
@@ -175,7 +173,7 @@ Attributes
 .. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
 
-|client rb| Settings
+New |client rb| Settings
 -----------------------------------------------------
 New settings have been added to the |client rb| file:
 
@@ -201,7 +199,7 @@ New settings have been added to the |client rb| file:
  
           file_atomic_update false
 
-|knife| Subcommands
+New |knife| Subcommands
 -----------------------------------------------------
 The following updates have been made to |knife| subcommands:
 
@@ -257,7 +255,7 @@ knife xargs
 
 Many of these settings are also configurable in the |knife rb| file.
 
-Knife Subcommand Options
+New Knife Options
 -----------------------------------------------------
 New options have been added to the following |knife| subcommands:
 
