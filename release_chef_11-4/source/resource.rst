@@ -109,8 +109,6 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource desc script_perl|
    * - :doc:`resource_portage_package`
      - |resource desc package_portage|
-   * - :doc:`resource_powershell_script`
-     - |resource desc powershell_script|
    * - :doc:`resource_python`
      - |resource desc script_python|
    * - :doc:`resource_registry_key`
@@ -191,7 +189,6 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_pacman_package
    resource_perl
    resource_portage_package
-   resource_powershell_script
    resource_python
    resource_registry_key
    resource_remote_directory
