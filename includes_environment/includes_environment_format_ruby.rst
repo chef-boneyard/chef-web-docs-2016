@@ -42,13 +42,6 @@ Domain-specific |ruby| attributes for environments include the following:
        ::
 
           description 'The development environment'
-   * - ``env_run_lists``
-     - |ruby dsl environment run list| For example:
-       ::
-
-          env_run_lists "prod" => ["recipe[apache2]"], 
-                                   "staging" => ["recipe[apache2::staging]"], 
-                                   "_default" => []
    * - ``name``
      - |ruby dsl name| For example:
        ::
