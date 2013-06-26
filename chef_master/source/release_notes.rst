@@ -53,7 +53,7 @@ Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to d
 * File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute.
 * Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors.
 
-New File-based Attributes
+File-based Attributes
 -----------------------------------------------------
 New attributes (common to all |resource file|-based resources):
 
@@ -139,7 +139,7 @@ Helper Methods
 
 .. include:: ../../step_resource/step_resource_template_library_module.rst
 
-New |resource batch| Resource 
+|resource batch| Resource 
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_batch.rst
 
@@ -156,7 +156,7 @@ Attributes
 .. include:: ../../includes_resources/includes_resource_batch_attributes.rst
 
 
-New |resource powershell_script| Resource 
+|resource powershell_script| Resource 
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_powershell_script.rst
 
@@ -173,7 +173,7 @@ Attributes
 .. include:: ../../includes_resources/includes_resource_powershell_script_attributes.rst
 
 
-New |client rb| Settings
+|client rb| Settings
 -----------------------------------------------------
 New settings have been added to the |client rb| file:
 
@@ -199,7 +199,7 @@ New settings have been added to the |client rb| file:
  
           file_atomic_update false
 
-New |knife| Subcommands
+|knife| Subcommands
 -----------------------------------------------------
 The following updates have been made to |knife| subcommands:
 
@@ -255,7 +255,7 @@ knife xargs
 
 Many of these settings are also configurable in the |knife rb| file.
 
-New Knife Options
+Knife Options
 -----------------------------------------------------
 New options have been added to the following |knife| subcommands:
 
