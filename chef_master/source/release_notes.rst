@@ -141,7 +141,7 @@ Helper Methods
 
 .. include:: ../../step_resource/step_resource_template_library_module.rst
 
-New batch Resource 
+New |resource batch| Resource 
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_batch.rst
 
@@ -158,7 +158,7 @@ Attributes
 .. include:: ../../includes_resources/includes_resource_batch_attributes.rst
 
 
-New powershell_script Resource 
+New |resource powershell_script| Resource 
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_powershell_script.rst
 
