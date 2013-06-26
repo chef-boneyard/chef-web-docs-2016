@@ -22,7 +22,7 @@ The following is an example of how the |resource powershell_script| resource can
 
 .. code-block:: ruby
 
-   powershell "name_of_script" do
+   powershell_script "name_of_script" do
      cwd Chef::Config[:file_cache_path]
      code <<-EOH
         # some script goes here
