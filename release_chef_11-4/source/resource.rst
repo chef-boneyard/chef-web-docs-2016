@@ -150,7 +150,6 @@ All resources share a set of common actions, attributes, conditional executions,
 
    resource_apt_package
    resource_bash
-   resource_batch
    resource_breakpoint
    resource_chef_gem
    resource_common
