@@ -4,6 +4,8 @@ The following example shows how to use the |resource ruby_block| resource to sta
 
 .. code-block:: ruby
 
+   #  the following code sample comes from the ``seed`` recipe in the following cookbook: https://github.com/mattray/bittorrent-cookbook
+
    ruby_block "share the torrent file" do
      block do
        f = File.open(node['bittorrent']['torrent'],'rb')
@@ -22,5 +24,3 @@ The following example shows how to use the |resource ruby_block| resource to sta
      action :nothing
      subscribes :create, "bittorrent_torrent[#{node['bittorrent']['torrent']}]"
    end
-
-.. note:: This example comes from the ``seed`` recipe in the following cookbook: https://github.com/mattray/bittorrent-cookbook.

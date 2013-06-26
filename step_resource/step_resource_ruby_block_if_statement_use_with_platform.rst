@@ -4,6 +4,8 @@ The following example shows how an ``if`` statement can be used with the ``platf
 
 .. code-block:: ruby
 
+   #  the following code sample comes from the ``client`` recipe in the following cookbook: https://github.com/opscode-cookbooks/mysql
+
    if platform?("windows")
      ruby_block "copy libmysql.dll into ruby path" do
        block do
@@ -15,4 +17,3 @@ The following example shows how an ``if`` statement can be used with the ``platf
      end
    end
 
-.. note:: This example comes from the ``client`` recipe in the following cookbook: https://github.com/opscode-cookbooks/mysql.
