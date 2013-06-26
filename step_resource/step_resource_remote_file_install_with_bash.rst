@@ -8,6 +8,8 @@ The following is an example of how to install the ``foo123`` module for |nginx|.
 
 .. code-block:: ruby
 
+   #  the following code sample is similar to the ``upload_progress_module`` recipe in the ``nginx`` cookbook: https://github.com/opscode-cookbooks/nginx
+
    src_filename = "foo123-nginx-module-v#{node['nginx']['foo123']['version']}.tar.gz"
    src_filepath = "#{Chef::Config['file_cache_path']}/#{src_filename}"
    extract_path = "#{Chef::Config['file_cache_path']}/nginx_foo123_module/#{node['nginx']['foo123']['checksum']}"
@@ -30,4 +32,3 @@ The following is an example of how to install the ``foo123`` module for |nginx|.
      not_if { ::File.exists?(extract_path) }
    end
 
-.. note:: This example is similar to the ``upload_progress_module`` recipe in the following cookbook: https://github.com/opscode-cookbooks/nginx.

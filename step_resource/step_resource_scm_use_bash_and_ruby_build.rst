@@ -20,4 +20,4 @@ The following example shows how |bash| can be used to install a plug-in for |rbe
      environment 'PREFIX' => "/usr/local"
   end
 
-.. note:: If you want to know more about ``ruby-build``, see here: https://github.com/sstephenson/ruby-build.
+To read more about ``ruby-build``, see here: https://github.com/sstephenson/ruby-build.

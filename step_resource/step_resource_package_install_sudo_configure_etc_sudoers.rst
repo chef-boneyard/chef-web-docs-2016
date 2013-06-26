@@ -4,6 +4,8 @@ The following example shows how to install |sudo| and then configure the ``/etc/
 
 .. code-block:: ruby
 
+   #  the following code sample comes from the ``default`` recipe in the ``sudo`` cookbook: https://github.com/opscode-cookbooks/sudo
+
    package 'sudo' do
      action :install
    end
@@ -37,11 +39,10 @@ The following example shows how to install |sudo| and then configure the ``/etc/
      )
    end
 
-where
+where 
 
 * the ``package`` block is used to install |sudo|
 * the ``if`` statement is used to ensure availability of the ``/etc/sudoers.d`` directory
 * the ``template`` block tells |chef| where to find the ``sudoers`` template
 * the ``variables`` attribute is a hash that passes values to template files (that are located in the ``templates/`` directory for the cookbook
 
-.. note:: This example comes from the ``default`` recipe in the following cookbook: https://github.com/opscode-cookbooks/sudo.

@@ -4,6 +4,8 @@ The following example shows how to use the |resource remote_directory| resource 
 
 .. code-block:: ruby
 
+   #  the following code sample comes from the ``reboot_handler`` recipe in the ``windows`` cookbook: https://github.com/opscode-cookbooks/windows
+
    remote_directory node['chef_handler']['handler_path'] do
      source 'handlers'
      recursive true
@@ -16,6 +18,3 @@ The following example shows how to use the |resource remote_directory| resource 
      supports :report => true, :exception => false
      action :enable
    end
-
-.. note:: This example comes from the ``reboot_handler`` recipe in the following cookbook: https://github.com/opscode-cookbooks/windows.
-

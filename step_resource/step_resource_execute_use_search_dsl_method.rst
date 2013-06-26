@@ -4,6 +4,8 @@ The following example shows how to use the ``search`` method in the recipe DSL t
 
 .. code-block:: ruby
 
+   #  the following code sample comes from the openvpn cookbook: https://github.com/opscode-cookbooks/openvpn
+
    search("users", "*:*") do |u|
      execute "generate-openvpn-#{u['id']}" do
        command "./pkitool #{u['id']}"
@@ -42,11 +44,10 @@ The following example shows how to use the ``search`` method in the recipe DSL t
      end
    end
 
-where
+where 
 
 * the search will use both of the ``execute`` blocks, unless the condition specified by the ``not_if`` commands are met
 * the ``environments`` attribute in the first ``execute`` block is being used to define values that appear as variables in the OpenVPN configuration 
 * the ``template`` block tells |chef| which template to use
 
-.. note:: This recipe (users.rb) is part of the openvpn cookbook: https://github.com/opscode-cookbooks/openvpn. The cookbook defines a basic way to get started with openvpn, but a lot of customization (for your environment) may be required, so keep that in mind when looking at the above recipe.
 

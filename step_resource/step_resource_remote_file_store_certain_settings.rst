@@ -25,6 +25,8 @@ and then the methods in the recipe may refer to these values. A recipe that is u
 * Use |bash| to install the package on the node, but only when the package is not already installed
 
 .. code-block:: ruby
+
+   #  the following code sample comes from the ``oc-nginx`` cookbook on |github|: https://github.com/cookbooks/oc-nginx
    
    version = node['python']['version']
    install_path = "#{node['python']['prefix_dir']}/lib/python#{version.split(/(^\d+\.\d+)/)[1]}"
@@ -45,5 +47,3 @@ and then the methods in the recipe may refer to these values. A recipe that is u
      EOF
      not_if { ::File.exists?(install_path) }
    end
-
-.. note:: This example shows just part of the full recipe. To see the whole recipe and the rest of the dependent files, see the following cookbook on |github|: https://github.com/cookbooks/oc-nginx.
