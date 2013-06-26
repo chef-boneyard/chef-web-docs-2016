@@ -28,6 +28,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-**xxxxx**
+**Unzip a file, and then move it**
 
-.. include:: ../../step_resource/step_resource_batch_xxxxx.rst
+.. include:: ../../step_resource/step_resource_batch_unzip_file_and_move.rst

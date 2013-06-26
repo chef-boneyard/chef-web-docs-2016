@@ -9,12 +9,18 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``architecture``
+     - |architecture registry_key| Default value: ``:machine``.
+
+       |architecture registry_key machine|
+
+       .. note:: |note registry_key architecture|
    * - ``code``
      - |code quoted_string| Default value: ``nil``.
    * - ``command``
      - |name command| Default value: ``name``.
    * - ``flags``
-     - |flags| Default value: ``nil``.
+     - |flags| Default value: ``[ -NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File ]``.
    * - ``interpreter``
      - |interpreter| Default value: ``nil``.
    * - ``provider``
