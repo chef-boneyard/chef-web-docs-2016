@@ -68,7 +68,7 @@ New attributes (common to all |resource file|-based resources):
    * - ``force_unlink``
      - |force_unlink|
    * - ``manage_symlink_source``
-     - |manage_symlink_source| Default value: ``true``. (|chef| also emits a warning when a symlink's source file is managed by |chef|.) The default value will be changed to ``false`` in a future version of |chef|.
+     - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, |chef| will manage a symlink's source file and emit a warning. When this value is set to ``true``, |chef| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version of |chef|.
 
 The following attributes for |resource file|-based resources have been updated:
 

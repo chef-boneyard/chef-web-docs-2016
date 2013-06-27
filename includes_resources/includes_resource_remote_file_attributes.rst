@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``manage_symlink_source``
-     - |manage_symlink_source| Default value: ``true``.
+     - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, |chef| will manage a symlink's source file and emit a warning. When this value is set to ``true``, |chef| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version of |chef|.
    * - ``mode``
      - The octal mode for a file.
        
