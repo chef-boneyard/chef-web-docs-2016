@@ -6,7 +6,7 @@ batch
 
 .. include:: ../../includes_resources/includes_resource_batch.rst
 
-.. warning:: This resource will be included in an upcoming version of |chef|. The details about this resource will likely be available before that version of |chef| is released, so please check back. The short version: the ``windows_batch`` lightweight resource is being moved to a core |chef| resource. The documentation about that change will be on this page.
+.. warning:: This resource will be included in the upcoming release of |chef| 11.6.
 
 Syntax
 =====================================================
