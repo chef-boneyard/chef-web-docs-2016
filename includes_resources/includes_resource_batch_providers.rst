@@ -10,6 +10,6 @@ The following providers are available. Use the short name to call the provider f
    * - Long name
      - Short name
      - Notes
-   * - ``Chef::Provider::Windows::Batch``
+   * - ``Chef::Provider::Batch``
      - ``batch``
      - The default provider for the |windows| platform.

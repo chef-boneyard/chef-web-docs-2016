@@ -10,11 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``architecture``
-     - |architecture registry_key| Default value: ``:machine``.
-
-       |architecture registry_key machine|
-
-       .. note:: |note registry_key architecture|
+     - |architecture windows_process|
    * - ``code``
      - |code quoted_string| Default value: ``nil``.
    * - ``command``

@@ -10,11 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``architecture``
-     - |architecture registry_key| Default value: ``:machine``.
-
-       |architecture registry_key machine|
-
-       .. note:: |note registry_key architecture|
+     - |architecture windows_process|
    * - ``command``
      - |name command|
    * - ``code``
@@ -33,4 +29,5 @@ This resource has the following attributes:
      - |returns resource batch|
    * - ``user``
      - |user resource batch|
+
 

@@ -45,6 +45,14 @@
 .. |architecture package| replace:: The architecture of the package that will be installed or upgraded. (This value can also be passed as part of the package name.)
 
 .. |architecture registry_key| replace:: The architecture of the node for which keys will be created or deleted. Possible values: ``:i386`` (for nodes with a 32-bit registry), ``:x86_64`` (for nodes with a 64-bit registry), and ``:machine`` (to have |chef| determine the architecture during the |chef| run).
+
+
+.. UPDATED DESCRIPTION FOR PROCESS-RELATED ARCHITECTURE ATTRIBUTE
+
+.. |architecture windows_process| replace:: The architecture of the process under which a script is executed. Possible values: ``:x86`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes). If these values are not provided in a recipe, |chef| will default to the correct value for the architecture, as determined by |ohai|. An exception will be raised when anything other than ``:x86`` is specified for a 32-bit process.
+
+
+
 .. |artifact_id| replace:: The identifier for an artifact. If this value is not specified, the name of the resource will be used as the identifier.
 
 .. |architecture registry_key machine| replace:: In order to read or write 32-bit registry keys on 64-bit machines running |windows|, the ``architecture`` attribute must be set to ``:i386``. The ``:x86_64`` value can be used to force writing to a 64-bit registry location, but this value is less useful than the default (``:machine``) because |chef| will return an exception if ``:x86_64`` is used and the machine turns out to be a 32-bit machine (whereas with ``:machine``, |chef| will be able to access the registry key on the 32-bit machine).

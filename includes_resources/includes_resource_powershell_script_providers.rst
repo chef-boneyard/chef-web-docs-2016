@@ -11,5 +11,5 @@ The following providers are available. Use the short name to call the provider f
      - Short name
      - Notes
    * - ``Chef::Provider::PowershellScript``
-     - ``powershell``
+     - ``powershell_script``
      - The default provider for all platforms.
