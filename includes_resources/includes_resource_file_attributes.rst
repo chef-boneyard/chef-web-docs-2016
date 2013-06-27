@@ -21,6 +21,8 @@ This resource has the following attributes:
      - |windows group_identifier|
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
+   * - ``manage_symlink_source``
+     - |manage_symlink_source| Default value: ``true``.
    * - ``mode``
      - The octal mode for a file.
        

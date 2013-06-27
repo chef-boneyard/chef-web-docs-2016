@@ -29,6 +29,8 @@ This resource has the following attributes:
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``local``
      - |local resource template|
+   * - ``manage_symlink_source``
+     - |manage_symlink_source| Default value: ``true``.
    * - ``mode``
      - The octal mode for a file.
        

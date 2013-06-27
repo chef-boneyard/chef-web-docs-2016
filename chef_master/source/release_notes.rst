@@ -11,7 +11,7 @@ The following items are new for |chef 11-6| and/or are changes from previous ver
 * **Atomic file updates** Atomic file updates ensure that updates are still made in certain situations, such as if disk space runs out or when a binary is being updated.
 * **Rebuilt file resource** The |resource file| resource has been refactored and is now the base resource for the |resource cookbook_file|, |resource remote_file|, and |resource template| resources.
 * **cookbook_file, remote_file, and template resources now based on file resource** These resources now share the same base functionality as the |resource file| resource.
-* **New common attributes for file-based resources** The ``atomic_update`` and ``force_unlink`` attributes have been added.
+* **New common attributes for file-based resources** The ``atomic_update``, ``force_unlink``, and ``manage_symlink_source`` attributes have been added.
 * **New attributes for remote_file resource** The ``ftp_active_mode``, ``headers``, ``use_conditional_get``, ``use_etag``, and ``use_last_modified`` have been added.
 * **New helper methods for the template resource** The ``helper`` and ``helpers`` attributes have been added. Use these to define helper methods to extend templates using by using inline helper methods, inline helper modules, and cookbook library modules.
 * **Updated attributes for file-based resources** The ``source`` attribute has been modified to support FTP and local files.
@@ -67,6 +67,8 @@ New attributes (common to all |resource file|-based resources):
      - |atomic_update|
    * - ``force_unlink``
      - |force_unlink|
+   * - ``manage_symlink_source``
+     - |manage_symlink_source| Default value: ``true``. (|chef| also emits a warning when a symlink's source file is managed by |chef|.) The default value will be changed to ``false`` in a future version of |chef|.
 
 The following attributes for |resource file|-based resources have been updated:
 

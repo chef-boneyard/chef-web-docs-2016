@@ -25,6 +25,8 @@ This resource has the following attributes:
      - |headers resource remote_file| Default value: ``{}``.
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
+   * - ``manage_symlink_source``
+     - |manage_symlink_source| Default value: ``true``.
    * - ``mode``
      - The octal mode for a file.
        
