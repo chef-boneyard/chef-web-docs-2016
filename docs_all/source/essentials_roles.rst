@@ -46,6 +46,10 @@ Manage Roles
 =====================================================
 .. include:: ../../includes_role/includes_role_manage.rst
 
+Set Per-environment Run-lists
+------------------------------------------------------
+.. include:: ../../includes_role/includes_role_manage_per_environment_run_lists.rst
+
 Deleting Environments from a Role's Run-list
 -----------------------------------------------------
 .. include:: ../../includes_role/includes_role_manage_delete.rst
