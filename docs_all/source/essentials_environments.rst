@@ -70,10 +70,6 @@ Move Nodes Between Environments
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment_manage_move_nodes_between.rst
 
-Set Per-environment Run-lists in Roles
------------------------------------------------------
-.. include:: ../../includes_environment/includes_environment_manage_per_environment_run_lists.rst
-
 Searching Environments
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_environment.rst

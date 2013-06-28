@@ -64,10 +64,6 @@ Move Nodes
 -----------------------------------------------------
 .. include:: ../../includes_environment/includes_environment_manage_move_nodes_between.rst
 
-Set Per-environment Run-lists
------------------------------------------------------
-.. include:: ../../includes_environment/includes_environment_manage_per_environment_run_lists.rst
-
 Search Environments
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_environment.rst
