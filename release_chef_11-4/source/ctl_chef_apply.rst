@@ -2,15 +2,16 @@
 chef-apply
 =====================================================
 
-|chef apply| is a simple tool that allows a single recipe to be run from the command line.
+.. include:: ../../includes_ctl_chef_apply/includes_ctl_chef_apply.rst
 
-This command has the following syntax::
+Options
+=====================================================
+.. include:: ../../includes_ctl_chef_apply/includes_ctl_chef_apply_options.rst
 
-   chef-apply name_of_recipe.rb
+Examples
+=====================================================
 
-This command does not have any options.
-
-For example, to use |chef apply| to run a recipe named ``machinations.rb``, enter the following:
+To use |chef apply| to run a recipe named ``machinations.rb``, enter the following:
 
 .. code-block:: bash
 
