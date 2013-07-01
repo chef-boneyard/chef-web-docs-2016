@@ -45,6 +45,6 @@ If your hostname is not resolvable, you can run the following command to add it 
 
 .. code-block:: bash
 	
-	$ echo -e "127.0.0.2 `hostname` `hostname -s`" | sudo tee -a /etc/hosts
+	$ sudo sed -i -e "1i 127.0.0.2 `hostname` `hostname -s`" /etc/hosts
 
 Note that this is only intended to quickly get you started for a test server which is not intended for production use.  Please consult with local system admins for your best practices about making servers resolvable in DNS.
