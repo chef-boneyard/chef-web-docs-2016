@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The |chef repo hidden| directory is used to store three files that are downloaded from the |chef server|:
+The |chef repo hidden| directory is used to store three files:
 
 * |knife rb|
 * |organization pem|
