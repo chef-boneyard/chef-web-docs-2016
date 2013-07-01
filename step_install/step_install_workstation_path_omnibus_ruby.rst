@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-|chef| includes a stable version of |ruby| as part of the |omnibus installer|. The path to this version of |ruby| must be added to the ``$PATH`` environment variable and saved in the configuration file for the command shell (|bash|, |csh|, and so on). In a command window, type the following:
+|chef| includes a stable version of |ruby| as part of the |omnibus installer|. The path to this version of |ruby| must be added to the ``$PATH`` environment variable and saved in the configuration file for the command shell (|bash|, |csh|, and so on) that is used on the workstation. In a command window, type the following:
 
 .. code-block:: bash
 
