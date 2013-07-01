@@ -41,7 +41,7 @@ This configuration file has the following settings for opscode-solr:
           opscode_solr['ha'] = false
 
    * - ``opscode_solr['heap_size']``
-     - Default value: ``"256M"``. For example:
+     - The minimum amount of memory available to Apache Solr. If there is not enough memory, search queries made by nodes to Apache Solr may fail. The amount of memory that must be available to Apache Solr depends on the number of nodes in the |chef| organization, the frequency of search queries, and other characteristics that are unique to each organization. In general, as the number of nodes increases, so will the amount of memory. The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the minimum amount of memory required often exceeds 3GB. Default value: ``"256M"``. For example:
        ::
 
           opscode_solr['heap_size'] = "256M"
