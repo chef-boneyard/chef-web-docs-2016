@@ -26,6 +26,8 @@ Chef Server Topics
 .. 
 .. **Monitor:** Database | Cookbooks | Log Files | Services | Ports | chef-pedant | Nagios | Graphite
 .. 
+.. **Troubleshooting:** xxxxx | xxxxx | xxxxx
+.. 
 .. **Tools:** :doc:`orgmapper </orgmapper>`
 .. 
 .. **Reference:** :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
