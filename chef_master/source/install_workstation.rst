@@ -73,6 +73,10 @@ Move files to .chef directory
 -----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_chef_directory_move_files.rst
 
+Add Ruby to the $PATH environment variable
+-----------------------------------------------------
+.. include:: ../../step_install/step_install_workstation_path_omnibus_ruby.rst
+
 Verify the |chef| install
 -----------------------------------------------------
 .. include:: ../../step_install/step_install_workstation_verify.rst
