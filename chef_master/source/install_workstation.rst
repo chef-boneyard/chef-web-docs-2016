@@ -29,6 +29,7 @@ The steps for installing |chef| on a machine that runs |linux|, |unix|, or |mac 
 #. Clone the |chef| repository
 #. Create the .chef directory
 #. Move files to the .chef directory
+#. Add omnibus |ruby| to the $PATH environment variable
 #. Verify the |chef| install
 
 See the following sections for more information about each step. 
