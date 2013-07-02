@@ -1,36 +1,20 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Ensure that the systems you are going to install |chef private| on have properly configured host names, and a *resolvable* |fully qualified domain name| (e.g. mychefserver.example.com). 
+.. include:: ../../includes_install/includes_install_server_hostname.rst
 
-Depending on your OS, there are a few different ways to change your hostname. Please note that the following are examples and you should refer to the operating system's manual or local systems administrator for guidance.
+**To verify if a hostname is a FQDN**
 
-For |redhat| and |centos| 6:
+.. include:: ../../step_install/step_install_hostname_is_fqdn.rst
 
-.. code-block:: bash
+**To verify is a hostname is resolvable**
 
-	$ sudo hostname 'mychefserver.example.com'
-	$ sudo sed -ri 's|^HOSTNAME=.*|HOSTNAME="mychefserver.example.com"|' /etc/sysconfig/network
-	
-For |ubuntu|:
+.. include:: ../../step_install/step_install_hostname_is_resolvable.rst
 
-.. code-block:: bash
+**To change a hostname**
 
-	$ sudo hostname 'mychefserver.example.com'
-	$ echo "mychefserver.example.com" | sudo tee /etc/hostname
+.. include:: ../../step_install/step_install_hostname_edit.rst
 
-**Note:** If the host name is not resolvable, for example the host name has not been added to DNS, make sure to modify your system's /etc/hosts file before installing |chef private|. You can either add the hostname to your localhost IP (127.0.0.1) or add a new entry for the host's IP address. 
+**To add a hostname to /etc/hosts**
 
-Run the following command to add it to your localhost entry. For |redhat|, |centos| 6, and |ubuntu|:
-
-.. code-block:: bash
-	
-	$ sudo sed -ri "s|localhost|`hostname -s` `hostname` localhost|" /etc/hosts
-	
-Run the following command to add an entry for your IP address (this command assumes there is none present!). For |redhat|, |centos| 6, and |ubuntu|:
-
-.. code-block:: bash
-	
-	$ echo -e "`ip addr list eth0 |grep \"inet \" |cut -d' ' -f6|cut -d/ -f1`\t`hostname -s` `hostname`" | sudo tee -a /etc/hosts
-
-As mentioned before, the commands above are examples on how to make your FQDN properly set and resolvable, however you **should always** refer to the operating system's manual or local systems administrator for guidance.
+.. include:: ../../step_install/step_install_hostname_add_to_etc_hosts.rst
