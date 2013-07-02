@@ -26,7 +26,7 @@ The syntax for using the |resource registry_key| resource in a recipe is as foll
 where 
 
 * ``registry_key`` tells |chef| to use the ``Chef::Provider::Windows::Registry`` provider during the |chef| run
-* ``"name"`` is the path to the registry
+* ``"name"`` is the path to the registry (including properly escaped |windows| registry key path separators)
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified.
 * |values resource registry_key types|
@@ -36,7 +36,7 @@ The following is an example of how the |resource registry_key| resource can work
 
 .. code-block:: ruby
 
-   registry_key "HKEY_LOCAL_MACHINE\...\System" do
+   registry_key "HKEY_LOCAL_MACHINE\\...\\System" do
      values [{
        :name => "NewRegistryKeyValue",
        :type => :multi_string,
