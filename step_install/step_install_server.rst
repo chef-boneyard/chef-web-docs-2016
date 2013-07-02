@@ -18,6 +18,8 @@ To install |chef server 11|, do the following:
 
    This command will set up all of the required components, including |erchef|, |rabbitmq|, |postgresql|, and all of the cookbooks that are used by |chef solo| to maintain |chef server 11|.
 
+#. Verify the the hostname for the |chef server| by running the ``hostname`` command. The hostname for the |chef server| must be a |fully qualified domain name|.
+
 #. Verify the installation of |chef server 11| by running the following command:
 
    .. code-block:: bash
