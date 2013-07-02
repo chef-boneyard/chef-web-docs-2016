@@ -265,10 +265,10 @@ knife delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ``--both``
-   |delete_local_and_remote| Default: ``true``.
+   |delete_local_and_remote| Default: ``false``.
 
 ``--local``
-   |local_object| Default: ``true``.
+   |local_object| Default: ``false``.
 
 knife diff
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -286,16 +286,16 @@ knife list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ``-f``, ``--flat``
-   |flat| Default: ``true``.
+   |flat| Default: ``false``.
 
 ``--local``
-   |local_directory| Default: ``true``.
+   |local_directory| Default: ``false``.
 
 ``--1``
-   |one_column| Default: ``true``.
+   |one_column| Default: ``false``.
 
 ``--p``
-   |use trailing_slash| Default: ``true``.
+   |use trailing_slash| Default: ``false``.
 
 knife upload
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
