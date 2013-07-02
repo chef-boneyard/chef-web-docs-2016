@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A |windows| registry key can be used as a string in |ruby| code, such as when a |windows| registry key is used as the name of a recipe. In |ruby|, when a registry key is enclosed in a double-quoted string (``" "``), the same backslash character (``\``) that is used to define the |windows| path separator is also used in |ruby| to define an escape character. Therefore, the |windows| path separators must be escaped. For example, the following registry key:
+A |windows| registry key can be used as a string in |ruby| code, such as when a registry key is used as the name of a recipe. In |ruby|, when a registry key is enclosed in a double-quoted string (``" "``), the same backslash character (``\``) that is used to define the registry key path separator is also used in |ruby| to define an escape character. Therefore, the registry key path separators must be escaped. For example, the following registry key:
 
 .. code-block:: ruby
 
