@@ -34,6 +34,6 @@ or:
    end
    
    batch "echo some env vars" do
-     code "echo %TEMP%\necho %SYSTEMDRIVE%\necho %PATH%\necho %WINDIR%"
+     code "echo %TEMP%\\necho %SYSTEMDRIVE%\\necho %PATH%\\necho %WINDIR%"
    end
 
