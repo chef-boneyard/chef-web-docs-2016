@@ -10,6 +10,10 @@ Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_registry_key_syntax.rst
 
+Registry Key Path Separators
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_common_windows_registry_key_path_separators.rst
+
 Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_registry_key_actions.rst
