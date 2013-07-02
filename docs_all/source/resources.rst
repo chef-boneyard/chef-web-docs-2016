@@ -208,16 +208,15 @@ After the resource collection is built
 
 Windows File Security
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security.rst
+.. include:: ../../includes_resources/includes_resource_common_windows_security.rst
 
 **Access Control Lists (ACLs)**
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst
+
+.. include:: ../../includes_resources/includes_resource_common_windows_security_acl.rst
 
 **Inheritance**
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst
 
+.. include:: ../../includes_resources/includes_resource_common_windows_security_inherits.rst
 
 
 Resources
@@ -1772,6 +1771,10 @@ registry_key
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_registry_key_syntax.rst
+
+**Registry Key Path Separators**
+
+.. include:: ../../includes_resources/includes_resource_common_windows_registry_key_path_separators.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

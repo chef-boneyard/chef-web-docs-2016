@@ -20,20 +20,21 @@ All resources share a set of common actions, attributes, conditional executions,
 
    * - Common Item
      - Description
-   * - :doc:`Actions </resource_common_actions>`
+   * - `Actions <http://docs.opscode.com/resource_common.html#actions>`_
      - The ``:nothing`` action can be used with any resource or lightweight resource.
-   * - :doc:`Attributes </resource_common_attributes>`
+   * - `Attributes <http://docs.opscode.com/resource_common.html#attributes>`_
      - The ``ignore_failure``, ``provider``, ``retries``, ``retry_delay``, and ``supports`` attributes can be used with any resource or lightweight resources.
-   * - :doc:`Conditions </resource_common_conditionals>`
+   * - `Conditions <http://docs.opscode.com/resource_common.html#conditionals>`_
      - The ``not_if`` and ``only_if`` conditional executions can be used to put additional guards around certain resources so that they are only run when the condition is met. 
-   * - :doc:`Notifications </resource_common_notifications>`
+   * - `Notifications <http://docs.opscode.com/resource_common.html#notifications>`_
      - The ``notifies`` and ``subscribes`` notifications can be used with any resource.
-   * - :doc:`Relative Paths </resource_common_relative_paths>`
+   * - `Relative Paths <http://docs.opscode.com/resource_common.html#relative-paths>`_
      - The ``#{ENV['HOME']}`` relative path can be used with any resource.
-   * - :doc:`Windows File Security </resource_common_windows_file_security>`
+   * - `Windows File Security <http://docs.opscode.com/resource_common.html#windows-file-security>`_
      - The |resource template|, |resource file|, |resource remote_file|, |resource cookbook_file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes.
-   * - :doc:`Run a Resource during Resource Compilation </resource_common_compile>`
+   * - `Run a Resource during Resource Compilation <http://docs.opscode.com/resource_common.html#run-from-resource-collection>`_
      - Sometimes a resource needs to be run before every other resource or after all resources have been added to the resource collection.
+
 
 |chef| Resources
 -----------------------------------------------------
@@ -156,13 +157,7 @@ All resources share a set of common actions, attributes, conditional executions,
    resource_breakpoint
    resource_chef_gem
    resource_common
-   resource_common_actions
-   resource_common_attributes
-   resource_common_compile
-   resource_common_conditionals
-   resource_common_notifications
-   resource_common_relative_paths
-   resource_common_windows_file_security
+
    resource_cookbook_file
    resource_cron
    resource_csh
