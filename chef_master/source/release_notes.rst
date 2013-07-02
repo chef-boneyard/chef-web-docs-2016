@@ -280,7 +280,7 @@ knife download
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ``--[no-]diff``
-   |diff_download| Set to ``false`` to download all files. Default: ``true``.
+   |diff_download| Set to ``false`` to download all files. Default: ``--diff``.
 
 knife list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -291,20 +291,20 @@ knife list
 ``--local``
    |local_directory| Default: ``false``.
 
-``--1``
+``-1``
    |one_column| Default: ``false``.
 
-``--p``
+``-p``
    |use trailing_slash| Default: ``false``.
 
 knife upload
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 ``--[no-]freeze``
-   |freeze| Default: ``false``.
+   |freeze| Default: ``--no-freeze``.
 
 ``--[no-]diff``
-   |diff_upload| Set to ``false`` to upload all files. Default: ``true``.
+   |diff_upload| Set to ``false`` to upload all files. Default: ``--diff``.
 
 
 |knife rb| Settings
