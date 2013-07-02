@@ -317,11 +317,11 @@ New settings have been added to the |knife rb| file:
 
    * - Setting
      - Description
-   * - ``versioned_cookbooks_true``
+   * - ``versioned_cookbooks``
      - |versioned_cookbooks_true| For example:
        ::
  
-          versioned_cookbooks_true true
+          versioned_cookbooks true
 
 What's Fixed
 =====================================================
