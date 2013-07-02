@@ -85,7 +85,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:platform_version]``
      - |platform-version|
    * - ``knife[:pretty]``
-     - |no-pretty|
+     - |no_pretty|
    * - ``knife[:print_after]``
      - |print-after|
    * - ``knife[:purge]``
