@@ -5,11 +5,11 @@
 
 This subcommand has the following options:
 
-``--force``
-   |force knife upload|
+``--[no-]force``
+   |force knife upload| Default: ``--no-force``.
 
 ``-n``, ``--dry-run``
-   |dry_run|
+   |dry_run| Default: ``false``.
 
 ``--[no-]diff``
    |diff_upload| Set to ``false`` to upload all files. Default: ``true``.
@@ -17,9 +17,9 @@ This subcommand has the following options:
 ``--[no-]freeze``
    |freeze| Default: ``false``.
 
-``--purge``
-   |purge knife upload|
+``--[no-]purge``
+   |purge knife upload| Default: ``--no-purge``.
 
-``--recurse``
+``--[no-]recurse``
    |no_recurse_upload| Default: ``--recurse``.
 

@@ -6,17 +6,17 @@
 This subcommand has the following options:
 
 ``--force``
-   |force knife download|
+   |force knife download| Default: ``--no-force``.
 
 ``-n``, ``--dry-run``
-   |dry_run|
+   |dry_run| Default: ``false``.
 
 ``--[no-]diff``
-   |diff_download| Set to ``false`` to download all files. Default: ``true``.
+   |diff_download| Set to ``false`` to download all files. Default: ``--diff``.
 
 ``--[no-]recurse``
    |no_recurse_download| Default: ``--recurse``.
 
 ``--purge``
-   |purge knife download|
+   |purge knife download| Default: ``--no-purge``.
 

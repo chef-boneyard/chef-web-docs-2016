@@ -9,7 +9,7 @@ This subcommand has the following options:
    |input file|
 
 ``--[no-]pretty``
-   |no-pretty|
+   |no_pretty| Default: ``--pretty``.
 
 ``-m METHOD``, ``--method METHOD``
    |method request type|

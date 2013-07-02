@@ -7,7 +7,7 @@ This subcommand has the following options:
 
 
 ``--local``
-   Use to show files in the local |chef| repository instead of a remote location. Default: ``true``.
+   Use to show files in the local |chef| repository instead of a remote location. Default: ``false``.
 
 
 

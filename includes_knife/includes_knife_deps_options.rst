@@ -7,10 +7,10 @@ This subcommand has the following options:
 
 
 ``--[no-]recurse``
-   Use to recursively list dependencies. This option can only be used when ``--tree`` is set to ``true``. Default: ``--recurse``.
+   Use to recursively list dependencies. This option can only be used when ``--tree`` is set to ``true``. Default: ``--no-recurse``.
 
 ``--remote``
-   Indicates that dependencies will be determined from objects located on the |chef server| instead of the local |chef| repository. Default: ``true``.
+   Indicates that dependencies will be determined from objects located on the |chef server| instead of the local |chef| repository. Default: ``false``.
 
 ``--tree``
-   Indicates that dependencies are shown in a visual tree structure (including duplicates, if they exist). Default: ``true``.
+   Indicates that dependencies are shown in a visual tree structure (including duplicates, if they exist). Default: ``false``.

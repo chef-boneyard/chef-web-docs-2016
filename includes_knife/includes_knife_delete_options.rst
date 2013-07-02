@@ -6,11 +6,11 @@
 This subcommand has the following options:
 
 ``--both``
-   |delete_local_and_remote| Default: ``true``.
+   |delete_local_and_remote| Default: ``false``.
 
 ``--local``
-   |local_object| Default: ``true``.
+   |local_object| Default: ``false``.
 
-``--recurse``
+``--[no-]recurse``
    |no_recurse_delete| Default: ``--no-recurse``.
 

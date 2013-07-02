@@ -6,19 +6,19 @@
 This subcommand has the following options:
 
 ``-d``
-   |d knife list|
+   |d knife list| Default value: ``false``.
 
 ``-f``, ``--flat``
-   |flat| Default: ``true``.
+   |flat| Default: ``false``.
 
 ``--local``
-   |local_directory| Default: ``true``.
+   |local_directory| Default: ``false``.
 
-``--1``
-   |one_column| Default: ``true``.
+``-1``
+   |one_column| Default: ``false``.
 
-``--p``
-   |use trailing_slash| Default: ``true``.
+``-p``
+   |use trailing_slash| Default: ``false``.
 
 ``-R``
-   |r knife list|
+   |r knife list| Default: ``false``.
