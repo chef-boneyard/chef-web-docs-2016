@@ -8,7 +8,7 @@ knife pushy
 
 Install this plugin
 =====================================================
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_pushy.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_install_rubygem.rst
 
 
 job list
