@@ -30,30 +30,9 @@ Examples
 
 **Install a gems file for use in recipes**
 
-.. code-block:: ruby
-
-   chef_gem "right_aws" do
-     action :install
-   end
-   
-   require 'right_aws'
+.. include:: ../../step_resource/step_resource_chef_gem_install_for_use_in_recipes.rst
 
 **Install MySQL for Chef**
 
-.. code-block:: ruby
-
-   execute "apt-get update" do
-     ignore_failure true
-     action :nothing
-   end.run_action(:run) if node['platform_family'] == "debian"
-   
-   node.set['build_essential']['compiletime'] = true
-   include_recipe "build-essential"
-   include_recipe "mysql::client"
-   
-   node['mysql']['client']['packages'].each do |mysql_pack|
-     resources("package[#{mysql_pack}]").run_action(:install)
-   end
-   
-   chef_gem "mysql"
+.. include:: ../../step_resource/step_resource_chef_gem_install_mysql.rst
 
