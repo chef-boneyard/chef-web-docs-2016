@@ -26,10 +26,6 @@ Examples
 =====================================================
 |generic resource statement|
 
-**Install a package**
+**Install a package** 
 
-.. code-block:: ruby
-
-   apt_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_apt_package_install.rst
