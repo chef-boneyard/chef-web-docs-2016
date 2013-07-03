@@ -28,8 +28,4 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   macports_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_macports_package_install.rst
