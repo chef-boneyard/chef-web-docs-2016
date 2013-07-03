@@ -28,8 +28,5 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
+.. include:: ../../step_resource/step_resource_portage_package_install.rst
 
-   portage_package "name of package" do
-     action :install
-   end
