@@ -301,11 +301,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   apt_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_apt_package_install.rst
 
 
 bash
@@ -360,47 +356,6 @@ Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_chef_gem_syntax.rst
 
-Gem Package Options
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_options.rst
-
-Use a Hash
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_package_options_hash.rst
-
-**Example**
-
-.. code-block:: ruby
-
-   chef_gem "bundler" do
-     options(:prerelease => true, :format_executable => false)
-   end
-
-Use a String
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_package_options_string.rst
-
-**Example**
-
-.. code-block:: ruby
-
-   chef_gem "nokogiri" do
-     gem_binary("/opt/ree/bin/gem")
-     options("--prerelease --no-format-executable")
-   end
-
-Use a .gemrc File
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_resources/includes_resource_package_options_gemrc.rst
-
-**Example**
-
-.. code-block:: ruby
-
-   chef_gem "nokogiri" do
-     gem_binary "gem"
-   end
-
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_chef_gem_actions.rst
@@ -419,34 +374,11 @@ Examples
 
 **Install a gems file for use in recipes**
 
-.. code-block:: ruby
-
-   chef_gem "right_aws" do
-     action :install
-   end
-   
-   require 'right_aws'
-
+.. include:: ../../step_resource/step_resource_chef_gem_install_for_use_in_recipes.rst
 
 **Install MySQL for Chef**
 
-.. code-block:: ruby
-
-   execute "apt-get update" do
-     ignore_failure true
-     action :nothing
-   end.run_action(:run) if node['platform_family'] == "debian"
-   
-   node.set['build_essential']['compiletime'] = true
-   include_recipe "build-essential"
-   include_recipe "mysql::client"
-   
-   node['mysql']['client']['packages'].each do |mysql_pack|
-     resources("package[#{mysql_pack}]").run_action(:install)
-   end
-   
-   chef_gem "mysql"
-
+.. include:: ../../step_resource/step_resource_chef_gem_install_mysql.rst
 
 
 cookbook_file
@@ -742,11 +674,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   dpkg_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_dpkg_package_install.rst
 
 
 easy_install_package
@@ -775,11 +703,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   easy_install_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_easy_install_package_install.rst
 
 
 env
@@ -1012,11 +936,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   freebsd_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_freebsd_package_install.rst
 
 
 gem_package
@@ -1243,11 +1163,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   ips_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_ips_package_install.rst
 
 
 link
@@ -1353,11 +1269,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   macports_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_macports_package_install.rst
 
 
 mdadm
@@ -1629,11 +1541,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   pacman_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_pacman_package_install.rst
 
 
 perl
@@ -1687,11 +1595,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   portage_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_portage_package_install.rst
 
 
 
@@ -1916,11 +1820,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   rpm_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_rpm_package_install.rst
 
 
 route
@@ -2237,11 +2137,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   smartos_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_smartos_package_install.rst
 
 
 solaris_package
@@ -2270,11 +2166,7 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   solaris_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_solaris_package_install.rst
 
 
 
