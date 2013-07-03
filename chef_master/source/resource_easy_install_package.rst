@@ -28,8 +28,4 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   easy_install_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_easy_install_package_install.rst
