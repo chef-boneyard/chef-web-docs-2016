@@ -28,8 +28,4 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   freebsd_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_freebsd_package_install.rst
