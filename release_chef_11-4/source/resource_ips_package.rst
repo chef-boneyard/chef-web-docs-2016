@@ -28,8 +28,4 @@ Examples
 
 **Install a package**
 
-.. code-block:: ruby
-
-   ips_package "name of package" do
-     action :install
-   end
+.. include:: ../../step_resource/step_resource_ips_package_install.rst
