@@ -8,7 +8,7 @@ knife ec2
 
 Install this plugin
 =====================================================
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_ec2.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_ec2_install_rubygem.rst
 
 instance data
 =====================================================
@@ -36,17 +36,13 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to launch a new Amazon EC2 instance with the "webserver" role, enter:
+**Launch an instance which has a single Chef role**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_ec2_server_create_instance_with_single_role.rst
 
-   $ knife ec2 server create -r "role[webserver]" -I ami-2d4aa444 --flavor m1.small -G www,default -x ubuntu -N server01
+**Launch an instance which has many Chef roles**
 
-To launch a new Amazon EC2 instance with multiple roles, enter:
-
-.. code-block:: bash
-
-   $ knife ec2 server create -r "role[base],role[webserver]" -I ami-2d4aa444 -G www,default -x ubuntu --node-name server01
+.. include:: ../../step_plugin_knife/step_plugin_knife_ec2_server_create_instance_with_many_roles.rst
 
 server delete
 =====================================================
@@ -62,11 +58,9 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to delete a node called "preprod" in an instance named "operations", enter:
+**Delete an instance**
 
-.. code-block:: bash
-
-   $ knife ec2 server delete operations preprod
+.. include:: ../../step_plugin_knife/step_plugin_knife_ec2_server_delete.rst
 
 server list
 =====================================================

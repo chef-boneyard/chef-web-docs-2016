@@ -8,7 +8,7 @@ knife azure
 
 Install this plugin
 =====================================================
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_azure.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_azure_install_rubygem.rst
 
 Generate the Management Certificate
 =====================================================
@@ -40,22 +40,13 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to provision a medium-sized |centos| machine configured as a web server in the "West US" data center, while also creating new hosted service and storage accounts, enter something like:
+**Provision an instance using new hosted service and storage accounts**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_azure_server_create_use_existing_hosted_service.rst
 
-   $ knife azure server create -r "role[webserver]" --service-location "West US" --ssh-user foo 
-     --ssh--password password --role-name web-apache-0001 --host-name web-apache 
-     --tcp-endpoints 80:80,8080:8080 --source-image name_of_source_image --role-size Medium
+**Provision an instance using new hosted service and storage accounts**
 
-To provision a medium-sized |centos| machine configured as a web server in the "West US" data center, while reusing existing hosted service and storage accounts, enter something like:
-
-.. code-block:: bash
-
-   $ knife azure server create -r "role[webserver]" --service-location "West US" 
-     --hosted-service-name webservers --storage-account webservers-storage --ssh-user foo 
-     --ssh--password password --role-name web-apache-0001 --host-name web-apache 
-     --tcp-endpoints 80:80,8080:8080 --source-image name_of_source_image --role-size Medium
+.. include:: ../../step_plugin_knife/step_plugin_knife_azure_server_create_use_new_hosted_service.rst
 
 server delete
 =====================================================
@@ -71,11 +62,10 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to delete an instance named "devops12", enter:
+**Delete an instance**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_azure_server_delete.rst
 
-   $ knife azure server delete devops12
 
 server describe
 =====================================================
@@ -91,11 +81,10 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to view the details for a role named "admin", enter:
+**View role details**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_azure_server_describe.rst
 
-   $ knife azure server describe admin
 
 server list
 =====================================================

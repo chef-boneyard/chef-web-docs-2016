@@ -8,7 +8,7 @@ knife eucalyptus
 
 Install this plugin
 =====================================================
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_eucalyptus.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_eucalyptus_install_rubygem.rst
 
 flavor list
 =====================================================
@@ -24,11 +24,9 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, enter:
+**View a list of flavors**
 
-.. code-block:: bash
-
-   $ knife eucalyptus flavor list
+.. include:: ../../step_plugin_knife/step_plugin_knife_eucalyptus_flavor_list.rst
 
 image list
 =====================================================
@@ -44,11 +42,11 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, enter:
+**View a list of images**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_eucalyptus_image_list.rst
 
-   $ knife eucalyptus image list
+
 
 server create
 =====================================================
@@ -76,11 +74,9 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to delete an instance named "devops2012", enter:
+**Delete an instance**
 
-.. code-block:: bash
-
-   $ knife eucalyptus server delete devops2012
+.. include:: ../../step_plugin_knife/step_plugin_knife_eucalyptus_server_delete.rst
 
 server list
 =====================================================

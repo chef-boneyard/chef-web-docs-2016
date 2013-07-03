@@ -8,7 +8,7 @@ knife bluebox
 
 Install this plugin
 =====================================================
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_bluebox.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_bluebox_install_rubygem.rst
 
 images list
 =====================================================
@@ -48,11 +48,10 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to delete an instance at block "12345" with a hostname of "dev", enter:
+**Delete an instance**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_bluebox_server_delete.rst
 
-   $ knife bluebox server delete block12345-dev.blueboxgrid.com
 
 server list
 =====================================================

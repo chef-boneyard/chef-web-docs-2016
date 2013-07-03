@@ -8,7 +8,7 @@ knife linode
 
 Install this plugin
 =====================================================
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_linode.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_linode_install_rubygem.rst
 
 datacenter list
 =====================================================

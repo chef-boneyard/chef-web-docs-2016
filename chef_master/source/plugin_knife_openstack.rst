@@ -8,7 +8,7 @@ knife openstack
 
 Install this plugin
 =====================================================
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_openstack.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_openstack_install_rubygem.rst
 
 flavor list
 =====================================================
@@ -24,11 +24,9 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, enter:
+**View a list of flavors**
 
-.. code-block:: bash
-
-   $ knife openstack flavor list
+.. include:: ../../step_plugin_knife/step_plugin_knife_openstack_flavor_list.rst
 
 image list
 =====================================================
@@ -44,11 +42,10 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to view a list of images, enter:
+**View a list of images**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_openstack_image_list.rst
 
-   $ knife openstack image list
 
 server create
 =====================================================
