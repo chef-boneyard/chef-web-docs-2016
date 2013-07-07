@@ -29,15 +29,15 @@ There's a `Makefile` in the root of the repo, that should have the majority of t
 
 Run:
 
-    make all
+    make release
 
-This will build all the documentation into HTML, and place it inside `./build/chef/`.
+This will build *all* the documentation into HTML, and place it inside `./build/chef/`.
 Open `./build/chef/index.html` to view the rendered files locally.
 
 The first time you run the build, it will probably take longer (5-10 min), as it has to generate _every_ file from scratch.
 This will also apply if you've run the `make clean` command, which effectively resets your working environment.
 
-Subsequent runs of `make all` should be relatively fast.
+Subsequent runs of `make release` should be relatively fast, and you can use subsets named: `master, all, server` to build one part.
 
 ## Editing
 
