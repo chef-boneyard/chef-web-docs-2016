@@ -432,10 +432,9 @@ In |chef 11|, the server keeps track of which cookbooks use a given piece of coo
 
 The API request timeout has been reduced to 15 minutes
 -----------------------------------------------------------
-
 In |chef 11|, the timeout on the timestamp embedded in API requests (used to prevent replay attacks) was reduced from 60 to 15 minutes.
 
-To increase the timeout to an hour (in seconds), modify /etc/chef-server/chef-server.rb and add this to the bottom:
+To increase the timeout to an hour (in seconds), modify ``/etc/chef-server/chef-server.rb`` and add this setting:
 
 .. code-block:: ruby
 
