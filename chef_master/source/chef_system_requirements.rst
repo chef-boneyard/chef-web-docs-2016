@@ -141,7 +141,7 @@ The open source |chef server| can run on the following systems:
    * - Operating System
      - Version
      - Architecture
-   * - Enterprise Linux (e.g. RHEL, CentOS)
+   * - Enterprise Linux (e.g. |redhat enterprise linux|, |centos|)
      - 5, 6
      - x86_64
    * - Ubuntu
