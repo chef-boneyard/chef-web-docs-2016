@@ -11,18 +11,14 @@ where "passwords" is the name of the data bag and "mysql" is the name of the dat
 
 .. code-block:: javascript
 
-id:   mysql
-pass:
-  cipher:         aes-256-cbc
-  encrypted_data: JZtwXpuq4Hf5ICcepJ1PGQohIyqjNX6JBc2DGpnL2WApzjAUG9SkSdv75TfKSjX4
-        
-  iv:             VYY2qx9b4r3j0qZ7+RkKHg==
-          
-  version:        1
-user:
-  cipher:         aes-256-cbc
-  encrypted_data: 10BVoNb/plkvkrzVdybPgFFII5GThZ3Op9LNkwVeKpA=
-                
-  iv:             uIqKHZ9skJlN2gpJoml6rQ==
-                  
-  version:        1
+   id:   mysql
+   pass:
+   cipher:         aes-256-cbc
+   encrypted_data: JZtwXpuq4Hf5ICcepJ1PGQohIyqjNX6JBc2DGpnL2WApzjAUG9SkSdv75TfKSjX4
+   iv:             VYY2qx9b4r3j0qZ7+RkKHg==
+   version:        1
+   user:
+   cipher:         aes-256-cbc
+   encrypted_data: 10BVoNb/plkvkrzVdybPgFFII5GThZ3Op9LNkwVeKpA=
+   iv:             uIqKHZ9skJlN2gpJoml6rQ==
+   version:        1
