@@ -54,7 +54,7 @@ This configuration file has the following settings:
    * - ``http_proxy_pass``
      - |http_proxy_pass|
    * - ``node_name``
-     - |node_name| This is typically also the same name as the computer from which |knife| is run. For example:
+     - |node_name workstation| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
  
           node_name "node_name"
