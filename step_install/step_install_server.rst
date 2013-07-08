@@ -24,7 +24,7 @@ To install |chef server 11|, do the following:
 
    .. code-block:: bash
 
-      $ chef-server-ctl test
+      $ sudo chef-server-ctl test
 
    This will run the |chef pedant| test suite against the installed |chef server 11| and will report back that everything is working and installed correctly.
 
