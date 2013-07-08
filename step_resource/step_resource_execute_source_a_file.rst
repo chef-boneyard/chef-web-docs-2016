@@ -9,7 +9,7 @@ The |resource execute| resource cannot be used to source a file (e.g. ``command 
      command "source /tmp/foo.sh"
    end
 
-Instead, use the |resource script| resource or one of the |resource script|-based resources (|resource bash|, |resource csh|, |resource perl|, |resource python|, or |resource ruby|). For example:
+Instead, use the |resource script| resource or one of the |resource script|-based resources (|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource script_python|, or |resource script_ruby|). For example:
 
 .. code-block:: ruby
 
