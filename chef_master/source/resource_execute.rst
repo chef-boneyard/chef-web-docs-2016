@@ -92,3 +92,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_notifies_run_immediately.rst
 
+**Sourcing a file**
+
+.. include:: ../../step_resource/step_resource_execute_source_a_file.rst
+
