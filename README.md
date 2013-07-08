@@ -2,9 +2,15 @@
 
 The source of the Chef Documentation, located at http://docs.opscode.com/
 
+This README focuses on people who want to contribute to the Chef documentation.
+
 ## Setting Up
 
 First, read [CONTRIBUTING](CONTRIBUTING).
+
+Next, read the style guide: http://docs.opscode.com/style_guide.html
+
+Sphinx is the authoring tool used by chef-docs: http://sphinx-doc.org/
 
 Fork & Clone repo to your own account://
 
@@ -44,7 +50,6 @@ Subsequent runs of `make release` should be relatively fast, and you can use sub
 
 Edit any RST files as you would any other text file.
 Sphinx syntax reference can be found here: http://sphinx-doc.org/
-chef-docs style guide can be found here: http://docs.opscode.com/style_guide.html
 
 Always make changes on a 'feature' branch in your own fork, so you can always merge back to `master` cleanly.
 Here's how this might look:
@@ -61,6 +66,10 @@ Here's how this might look:
     git push origin my_new_edit
     
 Once pushed, visit your repo on GitHub, and open a Pull Request against `opscode/chef-docs:master`.
+
+## License
+
+[Creative Commons Attribution 3.0 Unported License](http://creativecommons.org/licenses/by/3.0/)
 
 ## Questions?
 
