@@ -44,7 +44,7 @@ Private Chef 1.x.x
 
 **Architecture:** :doc:`Standalone </private_chef_1x_architecture_standalone>` | :doc:`Tiered </private_chef_1x_architecture_tiered>` | :doc:`High Availability </private_chef_1x_architecture_ha>` | :doc:`Modifications </private_chef_1x_architecture_modifications>`
 
-**Architecture:** :doc:`Prerequisites </private_chef_1x_install_prerequisites>` | :doc:`Standalone </private_chef_1x_install_standalone>` | :doc:`Tiered </private_chef_1x_install_tiered>` | :doc:`High Availability </private_chef_1x_install_ha>` | :doc:`Create Users </private_chef_1x_install_create_users>` | :doc:`Create Organization </private_chef_1x_install_create_organization>` | :doc:`AD / LDAP </private_chef_1x_install_ad_ldap>`
+**Installation:** :doc:`Prerequisites </private_chef_1x_install_prerequisites>` | :doc:`Standalone </private_chef_1x_install_standalone>` | :doc:`Tiered </private_chef_1x_install_tiered>` | :doc:`High Availability </private_chef_1x_install_ha>` | :doc:`Create Users </private_chef_1x_install_create_users>` | :doc:`Create Organization </private_chef_1x_install_create_organization>` | :doc:`AD / LDAP </private_chef_1x_install_ad_ldap>`
 
 **Admin:** :doc:`Configure </private_chef_1x_admin_configure>` | :doc:`Upgrade </private_chef_1x_admin_upgrade>` | :doc:`High Availability </private_chef_1x_admin_ha>` | :doc:`Logs </private_chef_1x_admin_logs>` | :doc:`AD / LDAP </private_chef_1x_admin_ad_ldap>` | :doc:`User Management </private_chef_1x_admin_user_management>` | :doc:`orgmapper </private_chef_1x_admin_orgmapper>` | :doc:`private-chef-ctl </private_chef_1x_admin_private_chef_ctl>`
 
