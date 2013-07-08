@@ -430,6 +430,22 @@ knife cookbook delete --purge is ignored by Chef 11 Server
 -----------------------------------------------------------
 In |chef 11|, the server keeps track of which cookbooks use a given piece of cookbook content (via checksum). When a cookbook version is deleted, associated content will be deleted if not referenced by another cookbook version object. Therefore, there is no need for a purge operation when using the |chef 11| server.
 
+The API request timeout has been reduced to 15 minutes
+-----------------------------------------------------------
+
+In |chef 11|, the timeout on the timestamp embedded in API requests (used to prevent replay attacks) was reduced from 60 to 15 minutes.
+
+To increase the timeout to an hour (in seconds), modify /etc/chef-server/chef-server.rb and add this to the bottom:
+
+.. code-block:: ruby
+
+   erchef['s3_url_ttl'] = 3600
+
+Then reconfigure the server:
+
+.. code-block:: bash
+
+   chef-server-ctl reconfigure
 
 
 
