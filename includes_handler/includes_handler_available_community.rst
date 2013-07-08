@@ -18,7 +18,9 @@ The following handlers are available in the |chef| open source community:
    * - |cloudkick|
      - A |chef| handler that collects exception and report handler data and sends it to |cloudkick|, a set of cloud server monitoring and management tools. `Download Cloudkick <https://github.com/ampledata/chef/blob/master/chef/lib/chef/handler/cloudkick_handler.rb>`_.
    * - |datadog|
-     - A |chef| handler that collects |chef| stats and sends them into a |datadog| newsfeed. `Download DATADOG <https://github.com/DataDog/chef-handler-datadog>`_.
+     - A |chef| handler that collects |chef| stats and sends them into a |datadog| newsfeed. `Download Datadog <https://github.com/DataDog/chef-handler-datadog>`_.
+   * - |flowdock|
+     - A |chef| handler that collects exception and report handler data and sends it to users via the |flowdock| API. `Download Flowdock <https://github.com/DataDog/chef-handler-flowdock>`_.
    * - |graphite|
      - A |chef| handler that collects exception and report handler data and reports it to |graphite|, a graphic rendering application. `Download Graphite <https://github.com/imeyer/chef-handler-graphite/wiki>`_.
    * - |graylog| / |graylog gelf|
