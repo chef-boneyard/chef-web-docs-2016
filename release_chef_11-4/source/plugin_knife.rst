@@ -59,7 +59,6 @@ The following |knife| plug-ins are maintained by |opscode|:
    plugin_knife_authenticated_requests
    plugin_knife_custom
 
-   plugin_knife_pushy
 
 
 
