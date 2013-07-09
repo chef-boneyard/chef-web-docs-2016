@@ -22,7 +22,7 @@ knife.rb Settings
 
 .. include:: ../../includes_knife/includes_knife_bootstrap_settings.rst
 
-Custom Bootstrap Templates
+Custom Templates
 =====================================================
 A custom bootstrap template file (``template_filename.erb``) must be located in a ``bootstrap/`` directory. Use the ``--distro`` option with the ``knife bootstrap`` subcommand to specify the bootstrap template file. For example, a bootstrap template file named "british_sea_power.erb":
 
@@ -30,19 +30,23 @@ A custom bootstrap template file (``template_filename.erb``) must be located in 
 
    $ knife bootstrap 123.456.7.8 -x username -P password --sudo --distro "british_sea_power.erb"
 
+The following examples show how a bootstrap template file can be customized for various platforms.
+
+Ubuntu 12.04
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_bootstrap_example_ubuntu.rst
+
+Debian and Apt
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_bootstrap_example_debian.rst
+
+Microsoft Windows
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_bootstrap_example_windows.rst
+
 Examples
 =====================================================
 .. include:: ../../step_knife/step_knife_bootstrap_use_ssh_password.rst
 
 .. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
-
-The following examples show how to customize the default bootstrap template files that are included with |chef|. 
-
-**Ubuntu 12.04**
-
-.. include:: ../../includes_knife/includes_knife_bootstrap_example_ubuntu.rst
-
-**Debian and Apt**
-
-.. include:: ../../includes_knife/includes_knife_bootstrap_example_debian.rst
 
