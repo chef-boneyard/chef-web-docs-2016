@@ -20,7 +20,7 @@ The following handlers are available in the |chef| open source community:
    * - |datadog|
      - A |chef| handler that collects |chef| stats and sends them into a |datadog| newsfeed. `Download Datadog <https://github.com/DataDog/chef-handler-datadog>`_.
    * - |flowdock|
-     - A |chef| handler that collects exception and report handler data and sends it to users via the |flowdock| API. `Download Flowdock <https://github.com/DataDog/chef-handler-flowdock>`_.
+     - A |chef| handler that collects exception and report handler data and sends it to users via the |flowdock| API. `Download Flowdock <https://github.com/mmarschall/chef-handler-flowdock>`_.
    * - |graphite|
      - A |chef| handler that collects exception and report handler data and reports it to |graphite|, a graphic rendering application. `Download Graphite <https://github.com/imeyer/chef-handler-graphite/wiki>`_.
    * - |graylog| / |graylog gelf|
