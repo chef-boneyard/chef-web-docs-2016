@@ -22,7 +22,7 @@ To run the |omnibus installer|:
       100 23.9M  100 23.9M     0     0    944k       0   0:00:26  0:00:26  --:--:--   838k
       Installing Chef
 
-#. During the installation, a small window will open. When the installation is finished, close that window and then enter the following to verify that |chef| was installed:
+#. When the installation is finished enter the following to verify that |chef| was installed:
 
    .. code-block:: bash
 
@@ -32,7 +32,7 @@ To run the |omnibus installer|:
 
    .. code-block:: bash
 
-      Chef: 10.12.0
+      Chef: 11.4.0
 
 #. After |chef| has been installed, the following folder structure will be present on the local machine::
 
