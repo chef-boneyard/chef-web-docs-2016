@@ -32,7 +32,7 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-File Methods
+Attribute File Methods
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
 
