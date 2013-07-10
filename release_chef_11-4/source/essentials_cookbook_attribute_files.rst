@@ -36,6 +36,6 @@ File Methods
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst
 
-Attribute Precedence
+``attribute?`` Method
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_attribute.rst
