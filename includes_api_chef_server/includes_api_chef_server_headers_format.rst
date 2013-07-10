@@ -7,7 +7,7 @@ All hashing is done using |sha1| and encoded in |base64|. |base64| encoding shou
 .. code-block:: bash
 
    Method:HTTP_METHOD
-   HashedPath:HASHED_PATH
+   Hashed Path:HASHED_PATH
    X-Ops-Content-Hash:HASHED_BODY
    X-Ops-Timestamp:TIME
    X-Ops-UserId:USERID
