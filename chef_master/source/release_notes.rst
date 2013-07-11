@@ -57,8 +57,6 @@ Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to d
 
 .. warning:: For a machine on which |selinux| is enabled, |chef| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy.
 
-supports the same default policy settings. 
-
 File-based Attributes
 -----------------------------------------------------
 New attributes (common to all |resource file|-based resources):
