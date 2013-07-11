@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A role is defined using |json| or the |ruby| DSL. |chef solo| will look for roles in ``/var/chef/roles``, but this location can be modified by changing the setting in |solo rb|. For example, the following setting in |solo rb|:
+A role is defined using |json| or the |ruby| DSL. |chef solo| will look for roles in ``/var/chef/roles``, but this location can be modified by changing the setting for ``role_path`` in |solo rb|. For example, the following setting in |solo rb|:
 
 .. code-block:: ruby
 

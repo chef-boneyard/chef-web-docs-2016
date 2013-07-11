@@ -15,12 +15,13 @@ The following items are new for |chef 11-6| and/or are changes from previous ver
 * **New attributes for remote_file resource** The ``ftp_active_mode``, ``headers``, ``use_conditional_get``, ``use_etag``, and ``use_last_modified`` have been added.
 * **New helper methods for the template resource** The ``helper`` and ``helpers`` attributes have been added. Use these to define helper methods to extend templates using by using inline helper methods, inline helper modules, and cookbook library modules.
 * **Updated attributes for file-based resources** The ``source`` attribute has been modified to support FTP and local files.
-* **Updated default for the mode attribute on the directory resource** The xxxxx.
+* **Updated behavior for the mode attribute** The ``mode`` attribute default behavior is changed for file-based resources and the |resource directory| resource.
 * **New batch resource** Execute a batch script using the |windows cmd exe| interpreter. A temporary file is created and then executed like other script resources.
 * **New powershell_script resource** Execute a script using the |windows powershell| interpreter just like the |resource script| resource, but designed for the |windows| platform and the |windows powershell| interpreter.
 * **New settings for the client.rb file** The ``data_bag_decrypt_minimum_version``, ``enable_selinux_file_permission_fixup``, and ``file_atomic_update`` settings have been added.
 * **New subcommands for Knife** |subcommand knife deps|, |subcommand knife edit|, and |subcommand knife xargs| have been added to |chef|.
 * **New options for Knife subcommands** The |subcommand knife delete|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife list|, and |subcommand knife upload| subcommands have new options.
+* **Support for environments in chef-solo** |chef solo| now supports environments.
 
 
 Atomic File Updates
@@ -143,9 +144,9 @@ Helper Methods
 
 .. include:: ../../step_resource/step_resource_template_library_module.rst
 
-|resource directory| Attributes
+Updated Behavior for ``mode`` Attribute
 -----------------------------------------------------
-The default behavior for the ``mode`` attribute for the |resource directory| resource was updated: 
+The default behavior for the ``mode`` attribute has been updated. For the |resource directory| resource: 
 
 .. list-table::
    :widths: 150 450
@@ -159,6 +160,22 @@ The default behavior for the ``mode`` attribute for the |resource directory| res
        |unix|- and |linux|-based systems: |mode *nix|
        
        |windows|: |mode windows security|
+
+And for each of the file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|): 
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``mode``
+     - |mode resource_file|
+       
+       |unix|- and |linux|-based systems: |mode *nix|
+       
+       |windows|: |mode windows security|
+
 
 |resource batch| Resource 
 -----------------------------------------------------
@@ -341,6 +358,28 @@ New settings have been added to the |knife rb| file:
        ::
  
           versioned_cookbooks true
+
+Environments and |chef solo| 
+-----------------------------------------------------
+|chef solo| now supports environments.
+
+.. include:: ../../includes_chef_solo/includes_chef_solo_environments.rst
+
+solo.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+A new setting has been added to the |solo rb| file:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``environment_path``
+     - |environment_path|  Default value: ``/var/chef/environments``. For example:
+       ::
+ 
+          environment_path "/var/chef/environments"
 
 What's Fixed
 =====================================================
