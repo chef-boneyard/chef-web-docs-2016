@@ -55,6 +55,10 @@ Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to d
 * File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute.
 * Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors.
 
+.. warning:: For a machine on which |selinux| is enabled, |chef| will create files that correctly match the default policy settings as long as the cookbook that defines the action also conforms to same policy.
+
+supports the same default policy settings. 
+
 File-based Attributes
 -----------------------------------------------------
 New attributes (common to all |resource file|-based resources):
