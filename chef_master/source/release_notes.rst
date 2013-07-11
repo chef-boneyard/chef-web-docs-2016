@@ -156,6 +156,8 @@ The default behavior for the ``mode`` attribute has been updated. For the |resou
    * - ``mode``
      - |mode resource_directory|
        
+       The behavior is different depending on the platform.
+       
        |unix|- and |linux|-based systems: |mode *nix|
        
        |windows|: |mode windows security|
@@ -170,6 +172,8 @@ And for each of the file-based resources (|resource cookbook_file|, |resource fi
      - Description
    * - ``mode``
      - |mode resource_file|
+       
+       The behavior is different depending on the platform.
        
        |unix|- and |linux|-based systems: |mode *nix|
        
