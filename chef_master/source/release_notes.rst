@@ -359,7 +359,7 @@ New settings have been added to the |knife rb| file:
  
           versioned_cookbooks true
 
-Environments and |chef solo| 
+|chef solo| Environments
 -----------------------------------------------------
 |chef solo| now supports environments.
 
