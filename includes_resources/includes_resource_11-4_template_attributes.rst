@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``local``
      - |local resource template|
    * - ``mode``
-     - The octal mode for a file.
+     - |mode resource_file_11-4|
        
        |unix|- and |linux|-based systems: |mode *nix|
        

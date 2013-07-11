@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
-     - The octal mode for a file.
+     - |mode resource_directory|
        
        |unix|- and |linux|-based systems: |mode *nix|
        
