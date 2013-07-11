@@ -24,5 +24,5 @@ Roles
 
 Environments
 -----------------------------------------------------
-.. include:: ../../includes_chef_solo/includes_chef_solo_environments.rst
+.. include:: ../../includes_chef_solo/includes_chef_solo_11-4_environments.rst
 
