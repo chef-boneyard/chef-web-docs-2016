@@ -494,10 +494,16 @@ In |chef 11|, lightweight resources resources now inherit from a ``LWRPBase`` re
 
 Partial Support in Templates
 -----------------------------------------------------
-Partials can be used in templates. See here:
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials.rst
 
-CHEF-3249 - |chef| support for template partials - FIX COMMITTED
-https://github.com/opscode/chef/pull/498
+``render`` Method
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst
+
+Template Resource
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_template_resource.rst
+
  
 chef-apply
 -----------------------------------------------------

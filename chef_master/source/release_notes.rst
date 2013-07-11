@@ -15,11 +15,13 @@ The following items are new for |chef 11-6| and/or are changes from previous ver
 * **New attributes for remote_file resource** The ``ftp_active_mode``, ``headers``, ``use_conditional_get``, ``use_etag``, and ``use_last_modified`` have been added.
 * **New helper methods for the template resource** The ``helper`` and ``helpers`` attributes have been added. Use these to define helper methods to extend templates using by using inline helper methods, inline helper modules, and cookbook library modules.
 * **Updated attributes for file-based resources** The ``source`` attribute has been modified to support FTP and local files.
-* **New |resource batch| resource** Execute a batch script using the |windows cmd exe| interpreter. A temporary file is created and then executed like other script resources.
-* **New |resource powershell_script| resource** Execute a script using the |windows powershell| interpreter just like the |resource script| resource, but designed for the |windows| platform and the |windows powershell| interpreter.
+* **Updated default for the mode attribute on the directory resource** The xxxxx.
+* **New batch resource** Execute a batch script using the |windows cmd exe| interpreter. A temporary file is created and then executed like other script resources.
+* **New powershell_script resource** Execute a script using the |windows powershell| interpreter just like the |resource script| resource, but designed for the |windows| platform and the |windows powershell| interpreter.
 * **New settings for the client.rb file** The ``data_bag_decrypt_minimum_version``, ``enable_selinux_file_permission_fixup``, and ``file_atomic_update`` settings have been added.
 * **New subcommands for Knife** |subcommand knife deps|, |subcommand knife edit|, and |subcommand knife xargs| have been added to |chef|.
 * **New options for Knife subcommands** The |subcommand knife delete|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife list|, and |subcommand knife upload| subcommands have new options.
+
 
 Atomic File Updates
 -----------------------------------------------------
@@ -140,6 +142,23 @@ Helper Methods
 **Cookbook Library Modules**
 
 .. include:: ../../step_resource/step_resource_template_library_module.rst
+
+|resource directory| Attributes
+-----------------------------------------------------
+The default behavior for the ``mode`` attribute for the |resource directory| resource was updated: 
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``mode``
+     - |mode resource_directory|
+       
+       |unix|- and |linux|-based systems: |mode *nix|
+       
+       |windows|: |mode windows security|
 
 |resource batch| Resource 
 -----------------------------------------------------
