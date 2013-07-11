@@ -80,6 +80,8 @@ Community Knife Plugins
      - Adds the ability to save a |knife| search query for later use, such as when using ``knife ssh``.
    * - `knife-preflight <https://github.com/jonlives/knife-preflight>`_
      - Adds the ability to check which nodes and roles use a cookbook. This is helpful when making changes to a cookbook.
+   * - `knife-profitbricks <https://github.com/profitbricks/knife-profitbricks>`_
+     - Adds the ability to create, bootstrap, and manage instances in the |profitbricks iaas|.
    * - `knife-rhn <https://github.com/bflad/knife-rhn>`_
      - Adds the ability to manage the |redhat| network.
    * - `knife-rightscale <https://github.com/caryp/knife-rightscale>`_
