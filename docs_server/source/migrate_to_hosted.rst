@@ -1,6 +1,6 @@
-==========================================================
-Migrate to |chef hosted| from an open source |chef server|
-==========================================================
+=====================================================
+Migrate to Hosted Chef
+=====================================================
 
 .. include:: ../../includes_chef/includes_chef_open_source.rst
 
@@ -8,7 +8,7 @@ Migrate to |chef hosted| from an open source |chef server|
 
 .. include:: ../../includes_migrate/includes_migrate_to_hosted.rst
 
-Follow the steps below to migrate from an open source |chef server| to |chef hosted|.
+Follow the steps below to migrate from the open source |chef server| to |chef hosted|.
 
 System Requirements
 =====================================================
@@ -30,19 +30,7 @@ See the following sections for more information about each step.
 
 Backup Data
 -----------------------------------------------------
-To back up the data (including run-lists and node attributes) that is being used with the open source |chef server| server, it must be exported from the open source |chef server| so that it can be uploaded to |chef hosted|. Use the ``backup_export`` |knife| plugin to perform this task.
-
-Using ``backup_export``
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_backup_export_install.rst
-
-Use the ``knife backup export`` sub-command to export all data bags, environments, nodes, and roles that are stored on the |chef server|. These are saved as |json| files within the ``.chef/chef_server_backup`` directory.
-
-.. include:: ../../step_knife_plugin/step_knife_plugin_backup_export_run.rst
-
-Using Knife
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-|knife download|
+To back up the data (including run-lists and node attributes) that is being used with the open source |chef server|, it must be exported from the open source |chef server| so that it can be uploaded to the |chef hosted| server. Use the ``knife download`` subcommand to perform this task.
 
 .. include:: ../../step_knife/step_knife_download_repository.rst
 
@@ -113,17 +101,7 @@ Bootstrapping Nodes
 
 Upload Data
 -----------------------------------------------------
-To restore the data (including run-lists and node attributes) that was being used with the open source |chef server| server, it must be uploaded to the |chef hosted| server. There are two options: use the ``backup_restore`` |knife| plugin or use the ``knife upload`` sub-command.
-
-Using ``backup_restore``
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_backup_restore_install.rst
-
-.. include:: ../../step_knife_plugin/step_knife_plugin_backup_restore_run.rst
-
-Using Knife
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-|knife upload|
+To restore the data (including run-lists and node attributes) that was being used with the open source |chef server| server, it must be uploaded to the |chef hosted| server. Use the ``knife upload`` subcommand to perform this task.
 
 .. include:: ../../step_knife/step_knife_upload_repository.rst
 

@@ -4,39 +4,33 @@
 A completed |private chef rb| configuration file for a four server tiered |chef private| cluster, consisting of:
 
 .. list-table::
-   :widths: 100 100 100 100 100
+   :widths: 100 150 150 100
    :header-rows: 1
 
    * - FQDN
-     - IP Address
-     - Cluster
-     - IP Address
+     - Real IP Address
+     - Cluster IP Address
      - Role
    * - be1.example.com
      - 192.168.4.1
-     - 
      - 
      - backend
    * - fe1.example.com
      - 192.168.4.2
      - 
-     - 
      - frontend
    * - fe2.example.com
      - 192.168.4.3
-     - 
      - 
      - frontend
    * - fe3.example.com
      - 192.168.4.4
      - 
-     - 
      - frontend
    * - chef.example.com
      - 192.168.4.5
      - 
-     - load balanced
-     - VIP
+     - backend VIP
 
 Looks like this:
 
