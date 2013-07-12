@@ -2,50 +2,95 @@
 Chef Single-page Topics  
 =====================================================
 
-.. note:: This page contains the same, exact set of topics that are available from docs.opscode.com. These pages are organized differently. Instead of being broken down into smaller subsets of topics, they are consolidated into single-page groupings and structured more like a traditional TOC. For example, http://docs.opscode.com has individual URLs for every resource, |knife| sub-command, and lightweight resource, whereas this set of topics has three URLs, one each for resources, |knife|, and lightweight resources. If you want everything about search functionality in a single URL, use this one. If you only need to see information about Boolean operators, then this topic does that: http://docs.opscode.com/essentials_search_boolean_operators.html.
-
+.. note:: This page contains the same exact set of topics that are available from docs.opscode.com, just organized differently and in bigger sections.
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-Getting started 
-=====================================================
-:doc:`Chef Overview </chef_overview>` | :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
+**Getting Started**
 
-Essentials
-=====================================================
-**Cookbooks:** :doc:`Attribute Files </essentials_cookbook_attribute_files>` | :doc:`Definitions </essentials_cookbook_definitions>` | :doc:`Files </essentials_cookbook_files>` | :doc:`Libraries </essentials_cookbook_libraries>` | :doc:`Lightweight Resources </lwrps>` (and :doc:`Custom LWRPs </lwrps_custom>`) | :doc:`Metadata </essentials_cookbook_metadata>` | :doc:`Recipes </essentials_cookbook_recipes>` | :doc:`Resources and Providers </essentials_cookbook_resources>` | :doc:`Templates </essentials_cookbook_templates>` | :doc:`Versions </essentials_cookbook_versions>`
+.. raw:: html
 
-**Policy:** :doc:`Data bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/chef_overview.html">Chef Overview</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/just_enough_ruby_for_chef.html">Just Enough Ruby for Chef</a> </br>
 
-**Search:** :doc:`Search </essentials_search>`
+**Cookbook Essentials**
 
-**Nodes and Workstations:** :doc:`chef-client </essentials_chef_client>` | :doc:`Exception and report handlers </essentials_handlers>` | :doc:`The node object </essentials_node_object>` | :doc:`The repository </essentials_repository>`
+.. raw:: html
 
-**Servers:** :doc:`Authentication and Authorization </auth>`
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_attribute_files.html">Attribute Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_definitions.html">Definitions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_files.html">Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_libraries.html">Libraries</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/lwrps.html">Lightweight Resources</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/lwrps_custom.html">Custom Lightweight Resources</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_metadata.html">Metadata</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_recipes.html">Recipes</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_resources.html">Resources and Providers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_templates.html">Templates</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_cookbook_versions.html">Versions</a> </br>
 
-Install and Migrate
-=====================================================
-**Install:** :doc:`Install Chef Server 11.x </install_server>` | :doc:`Install Chef on a Workstation </install_workstation>` | :doc:`Bootstrap a Node </install_bootstrap>`
+**Chef Essentials**
 
-**Scenarios:** :doc:`Install Chef Server 11.x on a Virtual Machine </install_server_scenario_vm>`
+.. raw:: html
 
-**Migrate:** :doc:`Migrate to Hosted Chef </migrate_to_hosted>`
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_data_bags.html">Data Bags</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_environments.html">Environments</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_roles.html">Roles</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_search.html">Search</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_chef_client.html">chef-client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_handlers.html">Exception and Report Handlers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_node_object.html">Node Objects</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_repository.html">Repository</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/auth.html">Authentication and Authorization</a> </br>
 
-Manage the Chef Server
-=====================================================
-:doc:`Hosted Chef </manage_server_hosted>` | :doc:`Open Source Chef </manage_server_open_source>`
 
-References
-=====================================================
-:doc:`chef-client </chef_client>` (executable) | :doc:`Knife </knife>` | :doc:`Knife Plug-ins </knife_plugins>` | :doc:`Ohai </ohai>` | :doc:`Resources and Providers </resources>` | :doc:`Lightweight Resources </lwrps>` | :doc:`Cookbooks Maintained by Opscode </cookbooks_opscode>`
+**Install and Migrate**
 
-Configuration Files
-=====================================================
-:doc:`client.rb </client_rb>` | :doc:`knife.rb </knife_rb>` | :doc:`metadata.rb </metadata_rb>` | :doc:`server.rb </server_rb>` | :doc:`solo.rb </solo_rb>` | :doc:`solr.rb </solr_rb>`
+.. raw:: html
 
-APIs and DSLs
-=====================================================
-:doc:`Chef Server API </api_chef_server>` | :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Recipe DSL </dsl_recipe>`
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server.html">Install Chef Server 11.x</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_workstation.html">Install Chef on a Workstation</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_bootstrap.html">Bootstrap a Node</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server_scenario_vm.html">Install Chef Server 11.x on a Virtual Machine</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/migrate_to_hosted.html">Migrate to Hosted Chef</a> </br>
+
+**Manage the Chef Server**
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/manage_server_hosted.html">Hosted Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/manage_server_open_source.html">Open Source Chef</a> </br>
+
+**Configuration Files**
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/client_rb.html">client.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/knife_rb.html">knife.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/metadata_rb.html">metadata.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/server_rb.html">server.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/solo_rb.html">solo.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/solr_rb.html">solr.rb</a> </br>
+
+**APIs and DSLs**
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/api_chef_server.html">Chef Server API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/api_cookbooks_site.html">Cookbooks Site API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/dsl_recipe.html">Recipe DSL</a> </br>
+
+**Reference**
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/chef_client.html">chef-client (executable)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/knife.html">Knife</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/knife_plugins.html">Knife Plug-ins</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/ohai.html">Ohai</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/resources.html">Resources and Providers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/lwrps.html">Lightweight Resources</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/cookbooks_opscode.html">Cookbooks Maintained by Opscode</a> </br>
 
 .. Hide the TOC from this file. Just keep these alphabetized please.
 
