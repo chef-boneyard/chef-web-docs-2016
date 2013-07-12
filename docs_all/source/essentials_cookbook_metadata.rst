@@ -1,15 +1,3 @@
-=====================================================
-Cookbook Metadata
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/essentials_cookbook_metadata.html BY DESIGN
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
-
-|metadata rb|
-=====================================================
-.. include:: ../../includes_config/includes_config_rb_metadata.rst
-
-Error Messages
-=====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_metadata_error_messages.rst
-
-
+.. include:: ../../chef_master/source/essentials_cookbook_metadata.rst

@@ -1,11 +1,5 @@
-=====================================================
-solr.rb
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/config_rb_solr.html BY DESIGN
 
-.. include:: ../../includes_config/includes_config_rb_solr.rst
+.. include:: ../../chef_master/source/config_rb_solr.rst
 
-Settings
-==========================================================================
-
-.. include:: ../../includes_config/includes_config_rb_solr_settings.rst
 

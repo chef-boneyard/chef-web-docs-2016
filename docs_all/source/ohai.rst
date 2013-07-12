@@ -1,19 +1,3 @@
-=====================================================
-Ohai
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/ohai.html BY DESIGN
 
-.. include:: ../../includes_ohai/includes_ohai.rst
-
-Automatic Attributes
-=====================================================
-.. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
-
-|ohai| Attribute List
-=====================================================
-.. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
-
-Community Plugins
-=====================================================
-.. include:: ../../includes_ohai/includes_ohai_plugins.rst
-
-
+.. include:: ../../chef_master/source/ohai.rst

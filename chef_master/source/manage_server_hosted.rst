@@ -8,34 +8,19 @@ Manage the Hosted Chef Server
 
 The following sections contain more information about how to manage |chef hosted|:
 
-* :doc:`manage_server_hosted_accounts`
-* :doc:`manage_server_hosted_clients`
-* :doc:`manage_server_hosted_cookbooks`
-* :doc:`manage_server_hosted_data_bags`
-* :doc:`manage_server_hosted_environments`
-* :doc:`manage_server_hosted_groups`
-* :doc:`manage_server_hosted_nodes`
-* :doc:`manage_server_hosted_organizations`
-* :doc:`manage_server_hosted_permissions`
-* :doc:`manage_server_hosted_roles`
-* :doc:`manage_server_hosted_search`
-* :doc:`manage_server_hosted_users`
+* `Accounts <http://docs.opscode.com/manage_server_hosted_accounts.html>`_
+* `Clients <http://docs.opscode.com/manage_server_hosted_clients.html>`_
+* `Cookbooks <http://docs.opscode.com/manage_server_hosted_cookbooks.html>`_
+* `Data Bags <http://docs.opscode.com/manage_server_hosted_data_bags.html>`_
+* `Environments <http://docs.opscode.com/manage_server_hosted_environments.html>`_
+* `Groups <http://docs.opscode.com/manage_server_hosted_groups.html>`_
+* `Nodes <http://docs.opscode.com/manage_server_hosted_nodes.html>`_
+* `Organizations <http://docs.opscode.com/manage_server_hosted_organizations.html>`_
+* `Permissions <http://docs.opscode.com/manage_server_hosted_permissions.html>`_
+* `Roles <http://docs.opscode.com/manage_server_hosted_roles.html>`_
+* `Search <http://docs.opscode.com/manage_server_hosted_search.html>`_
+* `Users <http://docs.opscode.com/manage_server_hosted_users.html>`_
 
-.. toctree::
-   :hidden:
-
-   manage_server_hosted_accounts
-   manage_server_hosted_clients
-   manage_server_hosted_cookbooks
-   manage_server_hosted_data_bags
-   manage_server_hosted_environments
-   manage_server_hosted_groups
-   manage_server_hosted_nodes
-   manage_server_hosted_organizations
-   manage_server_hosted_permissions
-   manage_server_hosted_roles
-   manage_server_hosted_search
-   manage_server_hosted_users
 
 
 

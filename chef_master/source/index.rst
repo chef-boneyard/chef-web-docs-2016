@@ -179,3 +179,18 @@ Cookbooks
    release_notes
 
    
+   manage_server_hosted_accounts
+   manage_server_hosted_clients
+   manage_server_hosted_cookbooks
+   manage_server_hosted_data_bags
+   manage_server_hosted_environments
+   manage_server_hosted_groups
+   manage_server_hosted_nodes
+   manage_server_hosted_organizations
+   manage_server_hosted_permissions
+   manage_server_hosted_roles
+   manage_server_hosted_search
+   manage_server_hosted_users
+
+   essentials_node_object_deep_merge
+   essentials_node_object_run_lists

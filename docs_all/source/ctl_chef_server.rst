@@ -1,12 +1,3 @@
-=====================================================
-chef-server-ctl Command Line Reference
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/ctl_chef_server.html BY DESIGN
 
-.. include:: ../../includes_chef_server/includes_chef_server.rst
-
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server.rst
-
-Options
------------------------------------------------------
-.. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server_options.rst
-
+.. include:: ../../chef_master/source/ctl_chef_server.rst

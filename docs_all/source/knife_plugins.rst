@@ -63,7 +63,7 @@ knife azure
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_azure.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_azure_install_rubygem.rst
 
 Generate the Management Certificate
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -173,7 +173,7 @@ knife bluebox
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_bluebox.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_bluebox_install_rubygem.rst
 
 images list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -240,7 +240,7 @@ knife bluelock
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_bluelock.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_bluelock_install_rubygem.rst
 
 images list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -299,7 +299,7 @@ knife ec2
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_ec2.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_ec2_install_rubygem.rst
 
 instance data
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -380,7 +380,7 @@ knife eucalyptus
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_eucalyptus.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_eucalyptus_install_rubygem.rst
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -475,7 +475,7 @@ knife google
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_google.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_google_install_rubygem.rst
 
 Bootstrap and SSH
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -681,7 +681,7 @@ knife hp
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_hp.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_hp_install_rubygem.rst
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -858,7 +858,7 @@ knife linode
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_linode.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_linode_install_rubygem.rst
 
 datacenter list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -977,7 +977,7 @@ knife openstack
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_openstack.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_openstack_install_rubygem.rst
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1064,7 +1064,7 @@ knife rackspace
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_rackspace.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_rackspace_install_rubygem.rst
 
 flavor list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1194,7 +1194,7 @@ knife terremark
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_terremark.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_terremark_install_rubygem.rst
 
 server create
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1273,7 +1273,7 @@ knife windows
 
 Install this plugin
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_knife_plugin/step_knife_plugin_rubygem_windows.rst
+.. include:: ../../step_plugin_knife/step_plugin_knife_windows_install_rubygem.rst
 
 Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
