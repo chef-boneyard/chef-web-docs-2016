@@ -87,11 +87,18 @@ The following attributes for |resource file|-based resources have been updated:
 
 |resource remote_file| Attributes
 -----------------------------------------------------
-The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. In addition:
+The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. Updated attributes:
 
-* The ``source`` attribute was updated to support FTP (``ftp://``) and local file (``file://``) URIs
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
 
-New attributes are available:
+   * - Attribute
+     - Description
+   * - ``source``
+     - |source file_location|
+
+New attributes:
 
 .. list-table::
    :widths: 150 450
@@ -112,11 +119,18 @@ New attributes are available:
 
 |resource template| Attributes
 -----------------------------------------------------
-The |resource template| resource was updated to be fully-based on the |resource file| resource. In addition:
+The |resource template| resource was updated to be fully-based on the |resource file| resource. Updated attributes:
 
-* The ``source`` attribute was updated to support FTP and local file URIs
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
 
-New attributes are available:
+   * - Attribute
+     - Description
+   * - ``source``
+     - |source file_location|
+
+New attributes:
 
 .. list-table::
    :widths: 150 450
@@ -157,7 +171,6 @@ The default behavior for the ``mode`` attribute has been updated. For the |resou
      - Description
    * - ``mode``
      - |mode resource_directory|
-
 
 And for each of the file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|): 
 
