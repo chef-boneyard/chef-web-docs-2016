@@ -32,7 +32,7 @@ This lightweight resource provider has the following attributes:
    * - ``name``
      - |name application|
    * - ``owner``
-     - |owner lwrp application|
+     - |name owner|
    * - ``packages``
      - |packages lwrp application|
    * - ``path``

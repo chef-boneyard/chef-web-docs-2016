@@ -14,7 +14,37 @@ Using Knife
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_search.rst
 
-.. include:: ../../includes_knife/includes_knife_search_examples.rst
+**Search by platform ID**
+
+.. include:: ../../step_knife/step_knife_search_by_platform_ids.rst
+
+**Search by instance type**
+
+.. include:: ../../step_knife/step_knife_search_by_platform_instance_type.rst
+
+**Search by node**
+
+.. include:: ../../step_knife/step_knife_search_by_node.rst
+
+**Search by node and environment**
+
+.. include:: ../../step_knife/step_knife_search_by_node_and_environment.rst
+
+**Search for nested attributes**
+
+.. include:: ../../step_knife/step_knife_search_by_nested_attribute.rst
+
+**Search for multiple attributes**
+
+.. include:: ../../step_knife/step_knife_search_by_query_for_many_attributes.rst
+
+**Search for nested attributes using a search query**
+
+.. include:: ../../step_knife/step_knife_search_by_query_for_nested_attribute.rst
+
+**Use a test query**
+
+.. include:: ../../step_knife/step_knife_search_test_query_for_ssh.rst
 
 Query Syntax
 =====================================================
@@ -38,15 +68,15 @@ Nested Fields
 
 Examples
 -----------------------------------------------------
- .. include:: ../../steps/step_search_key_name.rst
+.. include:: ../../step_search/step_search_key_name.rst
 
-.. include:: ../../steps/step_search_key_wildcard_question_mark.rst
+.. include:: ../../step_search/step_search_key_wildcard_question_mark.rst
 
-.. include:: ../../steps/step_search_key_wildcard_asterisk.rst
+.. include:: ../../step_search/step_search_key_wildcard_asterisk.rst
 
-.. include:: ../../steps/step_search_key_nested_starting_with.rst
+.. include:: ../../step_search/step_search_key_nested_starting_with.rst
 
-.. include:: ../../steps/step_search_key_nested_range.rst
+.. include:: ../../step_search/step_search_key_nested_range.rst
 
 Patterns
 =====================================================
@@ -56,31 +86,31 @@ Exact Matching
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_pattern_exact.rst
 
-.. include:: ../../steps/step_search_pattern_exact_key_and_item.rst
+.. include:: ../../step_search/step_search_pattern_exact_key_and_item.rst
 
-.. include:: ../../steps/step_search_pattern_exact_key_and_item_string.rst
+.. include:: ../../step_search/step_search_pattern_exact_key_and_item_string.rst
 
 Wildcard Matching
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_pattern_wildcard.rst
 
-.. include:: ../../steps/step_search_pattern_wildcard_any_node.rst
+.. include:: ../../step_search/step_search_pattern_wildcard_any_node.rst
 
-.. include:: ../../steps/step_search_pattern_wildcard_node_contains.rst
+.. include:: ../../step_search/step_search_pattern_wildcard_node_contains.rst
 
 Range Matching
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_pattern_range.rst
 
-.. include:: ../../steps/step_search_pattern_range_in_between.rst
+.. include:: ../../step_search/step_search_pattern_range_in_between.rst
 
-.. include:: ../../steps/step_search_pattern_range_exclusive.rst
+.. include:: ../../step_search/step_search_pattern_range_exclusive.rst
 
 Fuzzy Matching
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_pattern_fuzzy.rst
 
-.. include:: ../../steps/step_search_pattern_fuzzy.rst
+.. include:: ../../step_search/step_search_pattern_fuzzy.rst
 
 Boolean Operators
 =====================================================
@@ -88,15 +118,15 @@ Boolean Operators
 
 AND
 -----------------------------------------------------
-.. include:: ../../steps/step_search_boolean_and.rst
+.. include:: ../../step_search/step_search_boolean_and.rst
 
 NOT
 -----------------------------------------------------
-.. include:: ../../steps/step_search_boolean_not.rst
+.. include:: ../../step_search/step_search_boolean_not.rst
 
 OR
 -----------------------------------------------------
-.. include:: ../../steps/step_search_boolean_or.rst
+.. include:: ../../step_search/step_search_boolean_or.rst
 
 Special Characters
 =====================================================
@@ -110,9 +140,9 @@ Roles in Run-lists
 -----------------------------------------------------
 .. include:: ../../includes_search/includes_search_role.rst
 
-.. include:: ../../steps/step_search_target_role_top_level.rst
+.. include:: ../../step_search/step_search_target_role_top_level.rst
 
-.. include:: ../../steps/step_search_target_role_expanded.rst
+.. include:: ../../step_search/step_search_target_role_expanded.rst
 
 Nodes
 -----------------------------------------------------

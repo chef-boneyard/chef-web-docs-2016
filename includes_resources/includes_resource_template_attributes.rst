@@ -24,7 +24,7 @@ This resource has the following attributes:
    * - ``helper``
      - |helper| Default value: ``{}``.
    * - ``helpers``
-     - |helpers| Default value: ``[]`.
+     - |helpers| Default value: ``[]``.
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``local``

@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``atomic_update``
      - |atomic_update|
    * - ``backup``
-     - |backup resource file
+     - |backup resource file|
    * - ``content``
      - |content resource file|
    * - ``cookbook``
