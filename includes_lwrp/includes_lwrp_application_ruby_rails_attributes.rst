@@ -12,11 +12,11 @@ This lightweight resource provider has the following attributes:
    * - ``bundle_command``
      - 
    * - ``bundler``
-     - |bundler lwrp application_ruby_rails|
+     - |use_bundler|
    * - ``bundler_deployment``
-     - |bundler_deployment lwrp application_ruby_rails|
+     - |use_bundler_option_deployment|
    * - ``bundler_without_groups``
-     - |bundler_without_groups lwrp application_ruby_rails|
+     - |bundler_skip_groups|
    * - ``database_master_role``
      - |database_master_role lwrp application_ruby_rails|
    * - ``database_template``

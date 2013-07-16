@@ -10,9 +10,9 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``before_fork``
-     - |before_fork lwrp application_ruby|
+     - |before_fork|
    * - ``bundler``
-     - |bundler lwrp application_ruby_unicorn|
+     - |bundler_unicorn|
    * - ``bundle_command``
      - 
    * - ``port``
