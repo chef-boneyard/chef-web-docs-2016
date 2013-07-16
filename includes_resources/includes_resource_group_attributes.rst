@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``append``
-     - |append resource group|
+     - |append resource group| Default value: ``false``.
    * - ``gid``
      - |gid resource group|
    * - ``group_name``
