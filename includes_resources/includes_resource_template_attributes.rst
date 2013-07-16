@@ -50,4 +50,4 @@ This resource has the following attributes:
    * - ``source``
      - |source file_location| Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: basename of ``name`` plus ``.erb``.
    * - ``variables``
-     - |variables for template|
+     - |variables passed_to_template|

@@ -14,4 +14,4 @@ This lightweight resource provider has the following attributes:
    * - ``supports``
      - |supports lwrp bluepill_service|
    * - ``variables``
-     - |variables for template|
+     - |variables passed_to_template|

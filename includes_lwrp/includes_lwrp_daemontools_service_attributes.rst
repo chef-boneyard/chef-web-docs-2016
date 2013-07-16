@@ -28,4 +28,4 @@ This lightweight resource provider has the following attributes:
    * - ``template``
      - |template lwrp daemontools_service|
    * - ``variables``
-     - |variables for template| Default value: ``{}``.
+     - |variables passed_to_template| Default value: ``{}``.
