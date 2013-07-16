@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``gem_binary``
-     - |gem_binary resource package| Default value: ``nil (API)``.
+     - |gem_binary resource package| By default, the same version of |ruby| that is used by the |chef client| will be installed.
    * - ``options``
      - |command options|
    * - ``package_name``
