@@ -73,32 +73,32 @@ This configuration file has the following settings:
  
           group nil
    * - ``http_proxy``
-     - |http_proxy| For example:
+     - |http_proxy| Default value: ``nil``. For example:
        ::
  
           http_proxy "http://proxy.vmware.com:3128"
    * - ``http_proxy_pass``
-     - |http_proxy_pass| For example:
+     - |http_proxy_pass| Default value: ``nil``. For example:
        ::
  
           http_proxy_pass "1234567890"
    * - ``http_proxy_user``
-     - |http_proxy_user| For example:
+     - |http_proxy_user| Default value: ``nil``. For example:
        ::
  
           http_proxy_user "my_username"
    * - ``http_retry_count``
-     - |http_retry_count| For example:
+     - |http_retry_count| Default value: ``5``. For example:
        ::
  
           http_retry_count 5
    * - ``http_retry_delay``
-     - |http_retry_delay| For example:
+     - |http_retry_delay| Default value: ``5``. For example:
        ::
  
           http_retry_delay 5
    * - ``https_proxy``
-     - |https_proxy| For example:
+     - |https_proxy| Default value: ``nil``. For example:
        ::
  
           https_proxy "http://proxy.vmware.com:3128"

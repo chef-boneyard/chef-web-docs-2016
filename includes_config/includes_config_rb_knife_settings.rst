@@ -40,19 +40,14 @@ This configuration file has the following settings:
             "/var/chef/site-cookbooks" 
           ]
    * - ``http_proxy``
-     - |http_proxy| For example:
+     - |http_proxy| Default value: ``nil``. For example:
        ::
  
           http_proxy "http://proxy.vmware.com:3128"
-   * - ``https_proxy``
-     - |https_proxy| For example:
-       ::
-
-          https_proxy "http://proxy.vmware.com:3128"
    * - ``http_proxy_user``
-     - |http_proxy_user|
+     - |http_proxy_user| Default value: ``nil``.
    * - ``http_proxy_pass``
-     - |http_proxy_pass|
+     - |http_proxy_pass| Default value: ``nil``.
    * - ``node_name``
      - |node_name workstation| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
