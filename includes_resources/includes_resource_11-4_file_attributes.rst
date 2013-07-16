@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``backup``
-     - |backup resource file|
+       |backups_kept| Default value: ``5``.
    * - ``content``
      - |content resource file|
    * - ``group``

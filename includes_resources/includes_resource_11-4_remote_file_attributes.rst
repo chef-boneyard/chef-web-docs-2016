@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``backup``
-     - |backup resource remote_file|
+       |backups_kept| Default value: ``5``.
    * - ``checksum``
      - Optional. |checksum file| Default value: ``nil``.
    * - ``group``
