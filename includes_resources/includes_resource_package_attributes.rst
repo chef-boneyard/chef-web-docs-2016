@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``allow_downgrade``
-     - |allow_downgrade|
+     - |allow_downgrade| Default value: ``false``.
    * - ``arch``
      - |architecture package| Default value: ``nil``. This attribute is only available for the |resource yum_package| resource.
    * - ``flush_cache``
