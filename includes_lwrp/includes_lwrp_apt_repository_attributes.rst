@@ -22,4 +22,4 @@ This lightweight resource provider has the following attributes:
    * - ``repo_name``
      - |name repository| Default value: ``name``.
    * - ``uri``
-     - |uri lwrp apt_repository| Default value: ``nil``.
+     - |uri apt_repository| Default value: ``nil``.
