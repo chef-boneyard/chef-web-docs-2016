@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``atomic_update``
-     - |atomic_update|
+     - |atomic_update| Default value: ``true``.
    * - ``backup``
      - |backup resource file|
    * - ``content``
