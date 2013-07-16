@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``bcast``
      - |bcast resource ifconfig|
    * - ``bootproto``
-     - |bootproto resource ifconfig|
+     - |boot_protocol| Default value: ``nil``.
    * - ``device``
      - |device resource ifconfig|
    * - ``hwaddr``
