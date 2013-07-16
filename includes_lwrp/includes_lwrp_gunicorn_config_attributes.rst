@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``backlog``
-     - |backlog lwrp gunicorn_config|
+     - |backlog_connections| Default value: ``2048``.
    * - ``cookbook``
      - |cookbook lwrp gunicorn_config|
    * - ``group``

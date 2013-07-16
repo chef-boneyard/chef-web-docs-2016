@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``app_module``
      - |app_module lwrp application_python_gunicorn|
    * - ``backlog``
-     - |backlog lwrp application_python_gunicorn|
+     - |backlog_connections|
    * - ``daemon``
      - |daemon lwrp application_python_gunicorn|
    * - ``debug``
