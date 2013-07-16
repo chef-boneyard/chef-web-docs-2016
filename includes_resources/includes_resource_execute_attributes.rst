@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``returns``
      - |returns resource execute|
    * - ``timeout``
-     - |timeout resource execute| Default value: ``3600``.
+     - |timeout command| Default value: ``3600``.
    * - ``user``
      - |user resource execute|
    * - ``umask``
