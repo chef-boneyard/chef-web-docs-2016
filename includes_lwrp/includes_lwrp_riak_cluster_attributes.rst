@@ -16,6 +16,6 @@ This lightweight resource provider has the following attributes:
    * - ``node_name``
      - |name local_riak_node|
    * - ``timeout``
-     - |timeout riak_cluster| Default value: ``30``.
+     - |timeout ring_convergence| Default value: ``30``.
    * - ``riak_admin_path``
      - |path riak_admin| Default value: ``/usr/sbin``.
