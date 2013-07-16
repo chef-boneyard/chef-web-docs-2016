@@ -340,7 +340,7 @@ This configuration file has the following settings:
    * - ``syntax_check_cache_path``
      - |syntax_check_cache_path|
    * - ``umask``
-     - |umask| For example:
+     - |umask| Default value: ``0022``. For example:
        ::
  
           umask 0022
@@ -360,7 +360,7 @@ This configuration file has the following settings:
  
           validation_client_name "chef-validator"
    * - ``verbose_logging``
-     - |verbose_logging| For example, when ``verbose_logging`` is set to ``true`` or ``nil``:
+     - |verbose_logging| Default value: ``nil``. For example, when ``verbose_logging`` is set to ``true`` or ``nil``:
        ::
  
           [date] INFO: *** Chef 0.10.6.rc.1 ***
