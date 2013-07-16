@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``gem_binary``
-     - |gem_binary resource package|
+     - |gem_binary resource package| Default value: ``nil (API)``.
    * - ``options``
      - |command options|
    * - ``package_name``
