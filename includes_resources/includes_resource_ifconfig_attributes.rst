@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``device``
      - |device resource ifconfig|
    * - ``hwaddr``
-     - |hwaddr resource ifconfig|
+     - |hwaddr resource ifconfig| Default value: ``nil``.
    * - ``inet_addr``
      - |inet_addr resource ifconfig|
    * - ``mask``
