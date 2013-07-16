@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``backup``
-       |backups_kept| Default value: ``5``.
+     - |backups_kept| Default value: ``5``.
    * - ``cookbook``
      - |cookbook resource template|
    * - ``group``
