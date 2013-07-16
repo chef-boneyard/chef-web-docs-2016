@@ -30,7 +30,7 @@ This resource has the following attributes:
    * - ``returns``
      - |returns resource execute|
    * - ``timeout``
-     - |timeout resource execute|
+     - |timeout command|
    * - ``user``
      - |user resource execute|
    * - ``umask``
