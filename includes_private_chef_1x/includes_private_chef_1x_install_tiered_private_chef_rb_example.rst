@@ -4,7 +4,7 @@
 A completed |private chef rb| configuration file for a four server tiered |chef private| cluster, consisting of:
 
 .. list-table::
-   :widths: 100 150 150 100
+   :widths: 100 150 150
    :header-rows: 1
 
    * - FQDN
