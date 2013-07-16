@@ -10,6 +10,6 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``block``
-     - |block resource ruby_block|
+     - |block_ruby| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_attribute|
