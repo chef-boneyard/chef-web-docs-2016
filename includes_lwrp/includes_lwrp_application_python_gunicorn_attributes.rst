@@ -42,7 +42,7 @@ This lightweight resource provider has the following attributes:
    * - ``trace``
      - |trace lwrp application_python_gunicorn| Default value: ``false``.
    * - ``umask``
-     - |umask lwrp application_python_gunicorn|
+     - |umask|
    * - ``worker_class``
      - |worker_class|
    * - ``worker_connections``

@@ -70,7 +70,7 @@ This lightweight resource provider has the following attributes:
    * - ``stdout_logfile_maxbytes``
      - |stdout_logfile_maxbytes lwrp supervisor|
    * - ``umask``
-     - |umask lwrp supervisor|
+     - |umask|
    * - ``user``
      - |user lwrp supervisor|
 
