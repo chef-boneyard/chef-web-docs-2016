@@ -11,7 +11,7 @@
 .. |scm_provider resource deploy| replace:: The name of the source control management provider to be used. Default value: ``Chef::Provider::Git``. Optional values: ``Chef::Provider::Subversion``.
 .. |script-path| replace:: A colon-separated path at which |ruby| scripts are located.
 .. |search index| replace:: A search index is a full-text list of objects that are stored on the |chef server|, against which search queries can be made.
-.. |search key| replace:: A key (or field name) is located in the JSON description for the |chef| object that is to be searched.
+.. |search key| replace:: A key (or field name) is located in the JSON description for the object that is to be searched.
 .. |search pattern| replace:: A search pattern is a way to fine-tune search results by returning anything that matches some type of incomplete search query.
 .. |search operator| replace:: A Boolean operator can be used to ensure that certain terms are included in the results, are excluded from the results, or are not included even when other aspects of the query match.
 .. |search partial| replace:: A partial search query allows a search query to be made against specific attribute keys that are stored on the |chef server|.
@@ -42,16 +42,16 @@
 .. |shell resource user| replace:: The login shell. Default value: ``nil``.
 
 
-.. |signing_ca_cert| replace:: The path to where the certificate is located. This setting is generated automatically by |chef| and is passed to |open ssl|. Default value: ``/var/chef/ca/cert.pem``.
-.. |signing_ca_country| replace:: The country code associated with the |ca| policy. This setting is passed by |chef| to |open ssl|.
-.. |signing_ca_domain| replace:: The domain associated with the |ca| policy. This setting is passed by |chef| to |open ssl|.
-.. |signing_ca_email| replace:: The email address associated with the |ca| policy. This setting is passed by |chef| to |open ssl|. Default value: ``opensource.opscode.com``.
-.. |signing_ca_group| replace:: The group associated with the |ca| policy. This setting is passed by |chef| to |open ssl|.
-.. |signing_ca_key| replace:: The path to where the private key is located. This setting is generated automatically by |chef| and is passed to |open ssl|. Default value: ``/var/chef/ca/key.pem``.
-.. |signing_ca_location| replace:: The location associated with the |ca| policy. This setting is passed by |chef| to |open ssl|.
-.. |signing_ca_org| replace:: The organization associated with the |ca| policy. This setting is passed by |chef| to |open ssl|.
-.. |signing_ca_state| replace:: The state (or province) associated with the |ca| policy. This setting is passed by |chef| to |open ssl|.
-.. |signing_ca_user| replace:: The user associated with the |ca| policy. This setting is passed by |chef| to |open ssl|.
+.. |signing_ca_cert| replace:: The path to where the certificate is located. This setting is generated automatically by the |chef client| and is passed to |open ssl|. Default value: ``/var/chef/ca/cert.pem``.
+.. |signing_ca_country| replace:: The country code associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
+.. |signing_ca_domain| replace:: The domain associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
+.. |signing_ca_email| replace:: The email address associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|. Default value: ``opensource.opscode.com``.
+.. |signing_ca_group| replace:: The group associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
+.. |signing_ca_key| replace:: The path to where the private key is located. This setting is generated automatically by the |chef client| and is passed to |open ssl|. Default value: ``/var/chef/ca/key.pem``.
+.. |signing_ca_location| replace:: The location associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
+.. |signing_ca_org| replace:: The organization associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
+.. |signing_ca_state| replace:: The state (or province) associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
+.. |signing_ca_user| replace:: The user associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
 
 .. |size volume| replace:: The size of the volume (in gigabytes).
 
@@ -67,13 +67,13 @@
 .. |socket lwrp supervisor| replace:: The |fcgi| socket for a program.
 .. |socket_mode lwrp supervisor| replace:: A parameter that specifies the permission mode. |unix| only.
 .. |socket_owner lwrp supervisor| replace:: The user and group for a |fcgi| socket. |unix| only.
-.. |solo mode| replace:: Indicates whether |chef| is being run in "solo" mode. This setting determines if the |chef client| should attempt to communicate with a |chef server|. Default value: ``false``.
-.. |solr_data_path| replace:: The location in which the Solr indexes are located. Default value: ``/var/chef/solr/data``.
-.. |solr_heap_size| replace:: The amount of memory allocated to the Java Virtual Machine (JVM) that is being used to run Solr. Default value: ``256M``.
-.. |solr_home_path| replace:: The path to the Solr home directory. Default value: ``/var/chef/solr``.
-.. |solr_java_opts| replace:: The additional options (if any) that are passed to the Solr JVM. Default value: ``nil``.
-.. |solr_jetty_path| replace:: The path to the settings that control the Jetty environment. Default value: ``/var/chef/solr-jetty``.
-.. |solr_url| replace:: The URL for the server from which the Solr search engine is run. Default value: ``http://localhost:8983``.
+.. |solo mode| replace:: Indicates whether the |chef client| is being run in |chef solo| mode. This setting determines if the |chef client| should attempt to communicate with the |chef server|. Default value: ``false``.
+.. |solr_data_path| replace:: The location in which the |apache solr| indexes are located. Default value: ``/var/chef/solr/data``.
+.. |solr_heap_size| replace:: The amount of memory allocated to the |jvm| that is being used to run |apache solr|. Default value: ``256M``.
+.. |solr_home_path| replace:: The path to the |apache solr| home directory. Default value: ``/var/chef/solr``.
+.. |solr_java_opts| replace:: The additional options (if any) that are passed to the |jvm| that is being used to run |apache solr|. Default value: ``nil``.
+.. |solr_jetty_path| replace:: The path to the settings that control the |apache jetty| environment. Default value: ``/var/chef/solr-jetty``.
+.. |solr_url| replace:: The URL for the server from which the |apache solr| search engine is run. Default value: ``http://localhost:8983``.
 .. |sort| replace:: The order in which search results will be sorted.
 .. |sort_reverse| replace:: Indicates that the list will be sorted by last run time, descending.
 
@@ -118,8 +118,8 @@
 .. |ssh-user| replace:: The |ssh| user name.
 .. |ssh_wrapper resource| replace:: The path to the wrapper script used when running |ssh| with |git|. The ``GIT_SSH`` environment variable is set to this.
 
-.. |ssl_ca_file| replace:: The file in which the |open ssl| key is saved. This setting is generated automatically by |chef| and most users will not need to modify it.
-.. |ssl_ca_path| replace:: The path to where the |open ssl| key is located. This setting is generated automatically by |chef| and most users will not need to modify it.
+.. |ssl_ca_file| replace:: The file in which the |open ssl| key is saved. This setting is generated automatically by the |chef client| and most users will not need to modify it.
+.. |ssl_ca_path| replace:: The path to where the |open ssl| key is located. This setting is generated automatically by the |chef client| and most users will not need to modify it.
 
 
 
@@ -127,8 +127,8 @@
 .. |ssl_certificate| replace:: The |ssl| certificate used to verify communication over HTTPS.
 .. |ssl_certificate key| replace:: The certificate key used for |ssl| communication.
 
-.. |ssl_client_cert| replace:: The |open ssl| X509 certificate. This setting is generated automatically by |chef| and most users will not need to modify it.
-.. |ssl_client_key| replace:: The |open ssl| X509 key. This setting is generated automatically by |chef| and most users will not need to modify it.
+.. |ssl_client_cert| replace:: The |open ssl| |x509| certificate. This setting is generated automatically by the |chef client| and most users will not need to modify it.
+.. |ssl_client_key| replace:: The |open ssl| |x509| key. This setting is generated automatically by the |chef client| and most users will not need to modify it.
 .. |ssl_verify_mode| replace:: The verify mode for HTTPS requests. Set to ``:verify_none`` to not send certificate requests. Set to ``:verify_peer`` to send certificate requests to a |chef client|. For users of |chef hosted|, ``:verify_peer`` is recommended as the verification mode; depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified.
 
 .. |start| replace:: The row at which return results will begin.
@@ -158,7 +158,7 @@
 .. |stopwaitsecs lwrp supervisor| replace:: The amount of time (in seconds) to wait (after ``stopsignal``) before a ``SIGKILL`` message is sent.
 
 .. |storage account| replace:: The name of the storage account used with the hosted service.
-.. |strategy lwrp application| replace:: The deploy strategy: ``timestamped_deploy`` or ``deploy_revision`` (default). Use ``deploy_revision`` to ensure that the name of a release sub-directory is based on a revision identifier and puts deployed components under the destination location that is owned by the user who runs the application. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---|chef| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. Use ``timestamped_deploy`` to name a release sub-directory with a timestamp in the form of YYYYMMDDHHMMSS. For example: /my/deploy/dir/releases/20121120162342.
+.. |strategy lwrp application| replace:: The deploy strategy: ``timestamped_deploy`` or ``deploy_revision`` (default). Use ``deploy_revision`` to ensure that the name of a release sub-directory is based on a revision identifier and puts deployed components under the destination location that is owned by the user who runs the application. For users of |git|, this will be the familiar SHA checksum. For users of |svn|, it will be the integer revision number. If a name other than a revision identifier is provided---branch names, tags, and so on---the |chef client| will ignore the alternate names and will look up the revision identifier and use it to name the release sub-directory. Use ``timestamped_deploy`` to name a release sub-directory with a timestamp in the form of YYYYMMDDHHMMSS. For example: /my/deploy/dir/releases/20121120162342.
 
 .. |subnet| replace:: The |amazon vpc| instance in which a node will be created.
 .. |sudo| replace:: Indicates that a bootstrap operation should be executed using |sudo cmd|.
@@ -180,14 +180,14 @@
 
 
 
-.. |supports lwrp bluepill_service| replace:: A list of attributes that controls how |chef| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, |chef| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, |chef| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute. Default value: ``{ :restart => true, :status => true }``.
-.. |supports chef_handler| replace:: The type of |chef| handler to be registered as: ``:report``, ``:exception`` or ``both``. Default value: ``{ :report => true, :exception => true }``.
+.. |supports lwrp bluepill_service| replace:: A list of attributes that controls how the |chef client| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, the |chef client| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, the |chef client| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute. Default value: ``{ :restart => true, :status => true }``.
+.. |supports chef_handler| replace:: The type of handler to be registered as: ``:report``, ``:exception`` or ``both``. Default value: ``{ :report => true, :exception => true }``.
 .. |supports resource mount| replace:: A hash of options for supported mount features. Default value: ``{ :remount => false }``.
-.. |supports resource service| replace:: A list of attributes that controls how |chef| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, |chef| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, |chef| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute. Default value: ``{ :restart => true, :status => true }``.
+.. |supports resource service| replace:: A list of attributes that controls how the |chef client| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, the |chef client| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, the |chef client| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute. Default value: ``{ :restart => true, :status => true }``.
 .. |supports resource user| replace:: A Mash where keys represent features and values are booleans that indicate if that feature is supported. Default value: ``{:manage_home => false, :non_unique => false }``.
 
 .. |svn_arguments resource| replace:: The extra arguments that are passed to the |svn| command.
-.. |svn_info_args resource| replace:: Use when the ``svn info`` command is used by |chef| and arguments need to be passed. (The ``svn_arguments`` command does not work when the ``svn info`` command is used by |chef|.)
+.. |svn_info_args resource| replace:: Use when the ``svn info`` command is used by the |chef client| and arguments need to be passed. (The ``svn_arguments`` command does not work when the ``svn info`` command is used.)
 .. |svn_password resource| replace:: The password for the user that has access to the |svn| repository.
 .. |svn_username resource| replace:: The user name for a user that has access to the |svn| repository.
 

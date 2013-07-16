@@ -22,7 +22,7 @@
 .. |all cookbooks test| replace:: Indicates that all cookbooks will be tested.
 .. |all data bags| replace:: Indicates that all data bags found at the specified path will be uploaded.
 .. |all environments| replace:: Indicates that all environments found at the specified path will be uploaded.
-.. |allow_downgrade| replace:: Indicates that |yum| can downgrade a package to satisfy requested version requirements. Default value: ``false``. This attribute is only available for the ``yum_package`` resource.
+.. |allow_downgrade| replace:: |resource yum_package| resource only. Indicates that |yum| can downgrade a package to satisfy requested version requirements.
 
 .. |amqp_host| replace:: The IP address for the host to which a connection is made.
 .. |amqp_pass| replace:: The password for the ``amqp_user``.
@@ -35,29 +35,29 @@
 .. |api client description| replace:: An |chef api client| is any machine that has permission to use the |api chef server| to communicate with the |chef server|. An |chef api client| is typically a node (on which the |chef client| runs) or a workstation (on which |knife| runs), but can also be any other machine configured to use the |api chef server|.
 
 .. |app_module lwrp application_python_gunicorn| replace:: Set this value to ``django`` to run a |django| application; any other string or symbol will build a |gunicorn| base command.
-.. |append resource group| replace:: Indicates whether members are added to a group. If ``true``, the listed members will be added to a group. Default value: ``false``.
+.. |append resource group| replace:: Indicates whether members are added to a group. If ``true``, the listed members will be added to a group.
 
 .. |application_pool app| replace:: The application pool to which an application belongs.
 .. |application_pool site| replace:: The application pool to which a site belongs.
 .. |application_port| replace:: The port on which the application server will run. 
-.. |application_server_role| replace:: The name of a role for an application server. During a |chef| run, a search will be performed to find application servers.
+.. |application_server_role| replace:: The name of a role for an application server. During a |chef client| run, a search will be performed to find application servers.
 
 .. |architecture package| replace:: The architecture of the package that will be installed or upgraded. (This value can also be passed as part of the package name.)
 
-.. |architecture registry_key| replace:: The architecture of the node for which keys will be created or deleted. Possible values: ``:x86`` (for nodes with a 32-bit registry), ``:x86_64`` (for nodes with a 64-bit registry), and ``:machine`` (to have |chef| determine the architecture during the |chef| run).
-.. |architecture windows_process| replace:: The architecture of the process under which a script is executed. Possible values: ``:x86`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes). If these values are not provided in a recipe, |chef| will default to the correct value for the architecture, as determined by |ohai|. An exception will be raised when anything other than ``:x86`` is specified for a 32-bit process.
+.. |architecture registry_key| replace:: The architecture of the node for which keys will be created or deleted. Possible values: ``:x86`` (for nodes with a 32-bit registry), ``:x86_64`` (for nodes with a 64-bit registry), and ``:machine`` (to have the |chef client| determine the architecture during the |chef client| run).
+.. |architecture windows_process| replace:: The architecture of the process under which a script is executed. Possible values: ``:x86`` (for 32-bit processes) and ``:x86_64`` (for 64-bit processes). If these values are not provided in a recipe, the |chef client| will default to the correct value for the architecture, as determined by |ohai|. An exception will be raised when anything other than ``:x86`` is specified for a 32-bit process.
 
 
 
 .. |artifact_id| replace:: The identifier for an artifact. If this value is not specified, the name of the resource will be used as the identifier.
 
-.. |architecture registry_key machine| replace:: In order to read or write 32-bit registry keys on 64-bit machines running |windows|, the ``architecture`` attribute must be set to ``:i386``. The ``:x86_64`` value can be used to force writing to a 64-bit registry location, but this value is less useful than the default (``:machine``) because |chef| will return an exception if ``:x86_64`` is used and the machine turns out to be a 32-bit machine (whereas with ``:machine``, |chef| will be able to access the registry key on the 32-bit machine).
+.. |architecture registry_key machine| replace:: In order to read or write 32-bit registry keys on 64-bit machines running |windows|, the ``architecture`` attribute must be set to ``:i386``. The ``:x86_64`` value can be used to force writing to a 64-bit registry location, but this value is less useful than the default (``:machine``) because the |chef client| will return an exception if ``:x86_64`` is used and the machine turns out to be a 32-bit machine (whereas with ``:machine``, the |chef client| will be able to access the registry key on the 32-bit machine).
 
 .. |arguments windows_autorun| replace:: The arguments for a program.
 .. |arguments chef_handler| replace:: An array of arguments that are passed to the initializer for the handler class.
 .. |arguments windows_shortcut| replace:: The command-line arguments associate with a shortcut.
 
-.. |atomic_update| replace:: Indicates whether atomic file updates are used on a per-resource basis. Set to ``true`` for atomic file updates. Set to ``false`` for non-atomic file updates. (This setting overrides ``file_atomic_update``, which is a global setting found in the |client rb| file.) Default value: ``true``.
+.. |atomic_update| replace:: Indicates whether atomic file updates are used on a per-resource basis. Set to ``true`` for atomic file updates. Set to ``false`` for non-atomic file updates. (This setting overrides ``file_atomic_update``, which is a global setting found in the |client rb| file.)
 
 .. |attribute| replace:: Indicates that only a single attribute is shown, as defined by the ``ATTR`` value.
 
@@ -68,12 +68,12 @@
 
 .. |attribute ssh| replace:: The attribute that is used when opening the |ssh| connection.
 
-.. |attribute_type automatic| replace:: An ``automatic`` attribute contains data that is identified by |ohai| at the beginning of every |chef| run. An ``automatic`` attribute cannot be modified and always has the highest attribute precedence.
-.. |attribute_type default| replace:: A ``default`` attribute is automatically reset at the start of every |chef| run and has the lowest attribute precedence. A cookbook should be authored to use ``default`` attributes as often as possible.
+.. |attribute_type automatic| replace:: An ``automatic`` attribute contains data that is identified by |ohai| at the beginning of every |chef client| run. An ``automatic`` attribute cannot be modified and always has the highest attribute precedence.
+.. |attribute_type default| replace:: A ``default`` attribute is automatically reset at the start of every |chef client| run and has the lowest attribute precedence. A cookbook should be authored to use ``default`` attributes as often as possible.
 .. |attribute_type force_default| replace:: A ``force_default`` attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over a ``default`` attribute set by a role or an environment.
 .. |attribute_type force_override| replace:: A ``force_override`` attribute is used to ensure that an attribute defined in a cookbook (by an attribute file or by a recipe) takes precedence over an ``override`` attribute set by a role or an environment.
-.. |attribute_type normal| replace:: A ``normal`` attribute is a setting that persists on the target system and is never reset during a |chef| run. A ``normal`` attribute has a higher attribute precedence than a ``default`` attribute.
-.. |attribute_type override| replace:: An ``override`` attribute is automatically reset at the start of every |chef| run and has a higher attribute precedence than ``default``, ``force_default``, and ``normal`` attributes. An ``override`` attribute is most often specified in a recipe, but can be specified in an attribute file, for a role, and/or for an environment. A cookbook should be authored so that it uses ``override`` attributes only when required.
+.. |attribute_type normal| replace:: A ``normal`` attribute is a setting that persists on the target system and is never reset during a |chef client| run. A ``normal`` attribute has a higher attribute precedence than a ``default`` attribute.
+.. |attribute_type override| replace:: An ``override`` attribute is automatically reset at the start of every |chef client| run and has a higher attribute precedence than ``default``, ``force_default``, and ``normal`` attributes. An ``override`` attribute is most often specified in a recipe, but can be specified in an attribute file, for a role, and/or for an environment. A cookbook should be authored so that it uses ``override`` attributes only when required.
 
 .. |authorized_openid_identifiers| replace:: The identifier for the |open id| associated with the |chef server| web UI.
 .. |authorized_openid_providers| replace:: The provider for the |open id| associated with the |chef server| web UI.
