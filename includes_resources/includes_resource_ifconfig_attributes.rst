@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``bcast``
-     - |bcast resource ifconfig|
+     - |broadcast_address| Default value: ``nil``.
    * - ``bootproto``
      - |boot_protocol| Default value: ``nil``.
    * - ``device``
