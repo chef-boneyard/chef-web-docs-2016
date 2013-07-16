@@ -34,4 +34,4 @@ This resource has the following attributes:
    * - ``user``
      - |user resource execute|
    * - ``umask``
-     - |umask resource execute|
+     - |umask|
