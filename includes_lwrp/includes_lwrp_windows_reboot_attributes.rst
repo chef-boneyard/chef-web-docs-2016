@@ -12,4 +12,4 @@ This lightweight resource provider has the following attributes:
    * - ``reason``
      - |reason windows_reboot| Default value: ``Opscode Chef initiated reboot``.
    * - ``timeout``
-     - |timeout windows_reboot| Default value: ``60``.
+     - |timeout reboot| Default value: ``60``.
