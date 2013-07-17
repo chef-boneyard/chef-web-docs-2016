@@ -9,14 +9,8 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
-   * - ``allow_downgrade``
-     - |allow_downgrade|
    * - ``arch``
      - |architecture package|
-   * - ``flush_cache``
-     - |flush_cache resource package|
-   * - ``gem_binary``
-     - |gem_binary resource package|
    * - ``options``
      - |command options|
    * - ``package_name``
