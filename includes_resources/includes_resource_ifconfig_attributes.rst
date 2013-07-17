@@ -28,9 +28,9 @@ This resource has the following attributes:
    * - ``network``
      - |network_address| Default value: ``nil``.
    * - ``onboot``
-     - |onboot resource ifconfig|
+     - |onboot ifconfig| Default value: ``nil``.
    * - ``onparent``
-     - |onparent resource ifconfig|
+     - |onparent ifconfig| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``target``
