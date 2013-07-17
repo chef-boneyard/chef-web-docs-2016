@@ -18,4 +18,4 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``raid_device``
-     - |raid_device resource mdadm|
+     - |raid_device mdadm| Default value: ``name``.
