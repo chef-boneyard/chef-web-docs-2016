@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``arch``
      - |architecture package|
    * - ``flush_cache``
-     - |flush_cache resource yum|
+     - |flush_cache| Default value: ``nil``.
    * - ``options``
      - |command options|
    * - ``package_name``

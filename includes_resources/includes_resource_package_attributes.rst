@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``arch``
      - |architecture package| Default value: ``nil``. This attribute is only available for the |resource yum_package| resource.
    * - ``flush_cache``
-     - |flush_cache resource package|
+     - |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
    * - ``gem_binary``
      - |gem_binary resource package|
    * - ``options``
