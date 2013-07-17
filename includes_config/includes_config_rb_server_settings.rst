@@ -402,12 +402,12 @@ This configuration file has the following settings:
 
        Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Mon, 21 Nov 2011 09:37:39 -0800]``.
    * - ``web_ui_admin_default_password``
-     - |web_ui_admin_default_password| For example:
+     - |web_ui_admin_default_password| Default value: ``p@ssw0rd1``. For example:
        ::
  
           web_ui_admin_default_password "p@ssw0rd1"
    * - ``web_ui_admin_user_name``
-     - |web_ui_admin_user_name| For example:
+     - |web_ui_admin_user_name| Default value: ``admin``. For example:
        ::
  
           web_ui_admin_user_name  "admin"
@@ -417,7 +417,7 @@ This configuration file has the following settings:
  
           web_ui_client_name "chef-webui"
    * - ``web_ui_key``
-     - |web_ui_key| For example:
+     - |web_ui_key| Default value: ``/etc/chef/webui.pem``. For example:
        ::
  
           web_ui_key "/etc/chef/webui.pem"
