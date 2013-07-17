@@ -36,17 +36,17 @@ This resource has the following attributes:
 
           command "/srv/app/scripts/daily_report"
    * - ``day``
-     - |day cron|
+     - |day cron| Default value: ``*``.
    * - ``home``
      - |environment set_home|
    * - ``hour``
-     - |hour cron|
+     - |hour cron| Default value: ``*``.
    * - ``mailto``
      - |environment set_mailto|
    * - ``minute``
-     - |minute cron|
+     - |minute cron| Default value: ``*``.
    * - ``month``
-     - |month cron|
+     - |month cron| Default value: ``*``.
    * - ``path``
      - |environment set_path|
    * - ``provider``
@@ -56,4 +56,4 @@ This resource has the following attributes:
    * - ``user``
      - |name user cron| Default value: ``root``.
    * - ``weekday``
-     - |weekday cron|
+     - |weekday cron| Default value: ``*``.
