@@ -10,15 +10,15 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``device``
-     - |device resource mount|
+     - Required for ``:umount`` and ``:remout`` actions (for the purpose of checking the mount command output for presence). |device mount| Default value: ``nil``.
    * - ``device_type``
-     - |device_type resource mount|
+     - |device_type| Default value: ``:device``.
    * - ``dump``
      - |dump resource mount|
    * - ``fstype``
      - |fstype resource mount|
    * - ``mount_point``
-     - |mount_point resource mount|
+     - |mount_point| Default value: ``name``.
    * - ``options``
      - |options mount| Default value: ``defaults``.
    * - ``pass``
