@@ -138,7 +138,7 @@ This configuration file has the following settings:
  
           pid_file "/tmp/chef-client.pid"
    * - ``rest_timeout``
-     - |rest_timeout| For example:
+     - |rest_timeout| Default value: ``300``. For example:
        ::
  
           rest_timeout 300

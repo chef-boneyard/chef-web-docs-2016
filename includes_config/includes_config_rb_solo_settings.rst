@@ -88,12 +88,12 @@ This configuration file has the following settings:
  
           node_path "/var/chef/node"
    * - ``openid_cstore_couchdb``
-     - |openid_cstore_couchdb| For example:
+     - |openid_cstore_couchdb| Default value: ``false``. For example:
        ::
  
           openid_cstore_couchdb false
    * - ``openid_cstore_path``
-     - |openid_cstore_path| For example:
+     - |openid_cstore_path| Default value: ``/var/chef/openid/cstore``. For example:
        ::
  
           openid_cstore_path "/var/chef/openid/cstore"
@@ -103,7 +103,7 @@ This configuration file has the following settings:
  
           recipe_url "http://path/to/remote/cookbook"
    * - ``rest_timeout``
-     - |rest_timeout| For example:
+     - |rest_timeout| Default value: ``300``. For example:
        ::
  
           rest_timeout 300
