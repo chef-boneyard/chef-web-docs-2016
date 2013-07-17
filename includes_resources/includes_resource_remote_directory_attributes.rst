@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``cookbook``
      - |cookbook resource remote_directory|
    * - ``files_backup``
-     - |files_backup resource remote_directory|
+     - |files_backup| Default value: ``5``.
    * - ``files_group``
      - |windows group_identifier|
    * - ``files_mode``
