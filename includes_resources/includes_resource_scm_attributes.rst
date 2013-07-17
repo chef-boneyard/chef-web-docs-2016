@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``reference``
      - |reference resource scm|
    * - ``repository``
-     - |repository resource scm|
+     - |uri repository|
    * - ``revision``
      - |revision| Default value: ``HEAD``.
    * - ``user``
@@ -33,7 +33,7 @@ For use with |git| only:
    * - Attribute
      - Description
    * - ``additional_remotes``
-     - |additional_remotes resource|
+     - |additional_remotes|
    * - ``depth``
      - |depth resource scm|
    * - ``enable_submodules``

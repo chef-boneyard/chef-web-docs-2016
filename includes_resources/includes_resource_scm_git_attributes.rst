@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``additional_remotes``
-     - |additional_remotes resource|
+     - |additional_remotes|
    * - ``depth``
      - |depth resource scm|
    * - ``destination``
@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``remote``
      - |remote resource|
    * - ``repository``
-     - |repository resource scm|
+     - |uri repository_git|
    * - ``revision``
      - |revision| Default value: ``HEAD``.
    * - ``ssh_wrapper``

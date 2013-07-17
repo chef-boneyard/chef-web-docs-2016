@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``reference``
      - |reference resource scm|
    * - ``repository``
-     - |repository resource scm|
+     - |uri repository_svn|
    * - ``revision``
      - |revision| Default value: ``HEAD``.
    * - ``svn_arguments``

@@ -20,6 +20,6 @@ This lightweight resource provider has the following attributes:
    * - ``keyserver``
      - |keyserver lwrp apt_repository|
    * - ``repo_name``
-     - |name repository| Default value: ``name``.
+     - |name repository_apt| Default value: ``name``.
    * - ``uri``
-     - |uri apt_repository| Default value: ``nil``.
+     - |uri repository_apt| Default value: ``nil``.

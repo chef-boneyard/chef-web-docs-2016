@@ -40,7 +40,7 @@ This resource has the following attributes:
    * - ``repo``
      - |repo resource deploy|
    * - ``repository``
-     - |repository resource deploy|
+     - |uri repository|
    * - ``repository_cache``
      - |repository_cache resource deploy|
    * - ``restart_command``

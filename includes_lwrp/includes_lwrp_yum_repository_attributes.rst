@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``failovermethod``
      - Optional. |failovermethod|
    * - ``includepkgs``
-     - |includepkgs|
+     - |include_packages|
    * - ``key``
      - Optional. |key gnupg|
    * - ``make_cache``
@@ -26,7 +26,7 @@ This lightweight resource provider has the following attributes:
    * - ``mirrorlist``
      - |mirrorlist|
    * - ``repo_name``
-     - |name repository|
+     - |name repository_yum|
    * - ``type``
      - Optional.
    * - ``url``
