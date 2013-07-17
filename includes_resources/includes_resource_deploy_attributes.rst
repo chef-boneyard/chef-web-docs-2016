@@ -38,11 +38,11 @@ This resource has the following attributes:
    * - ``purge_before_symlink``
      - |purge_before_symlink| 
    * - ``repo``
-     - |repo resource deploy|
+     - |repository git_or_svn|
    * - ``repository``
      - |uri repository|
    * - ``repository_cache``
-     - |repository_cache resource deploy|
+     - |repository_cache|
    * - ``restart_command``
      - |restart shell_command| Default value: ``nil``.
    * - ``revision``
