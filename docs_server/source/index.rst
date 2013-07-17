@@ -37,7 +37,7 @@ Chef Server Topics
 .. 
 .. 
 
-Private Chef 1.x.x  
+Private Chef 1.x.x   
 =====================================================
 
 **Engagement:** :doc:`How Consulting Works </private_chef_1x_engage_how_consulting_works>` | :doc:`Pre-Installation Steps </private_chef_1x_engage_preinstall>` | :doc:`Onsite Installation </private_chef_1x_engage_onsite>` | :doc:`Acceptance </private_chef_1x_engage_acceptance>`
