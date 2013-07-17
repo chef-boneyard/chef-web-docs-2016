@@ -43,7 +43,7 @@ The following options can be run with all |knife| sub-commands and plug-ins:
    |print-after|
 
 ``--repo-mode MODE``
-   |repo_mode|
+   |repo_mode| Default value: ``default``.
 
 ``-s URL``, ``--server-url URL``
    |server-url|
