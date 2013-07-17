@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``mount_point``
      - |mount_point resource mount|
    * - ``options``
-     - |options resource mount|
+     - |options mount| Default value: ``defaults``.
    * - ``pass``
      - |pass resource mount|
    * - ``provider``
