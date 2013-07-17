@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``response_file``
-     - |response_file resource package|
+     - Optional. |response_file| Default value: ``nil``.
    * - ``source``
      - |source resource package|
    * - ``version``
