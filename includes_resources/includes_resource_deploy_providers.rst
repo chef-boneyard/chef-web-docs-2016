@@ -13,7 +13,7 @@ The |resource deploy| resource providers are used to determine whether to deploy
    * - ``Chef::Provider::Deploy``
      - ``deploy``
      - When this short name is used, |chef| will determine the correct provider during the |chef| run.
-   * - ``Chef::Provider::Deploy::Revision``
+   * - ``Chef::Provider::Deploy::Branch``
      - ``deploy_branch``
      -  See below for more information.
    * - ``Chef::Provider::Deploy::Revision``

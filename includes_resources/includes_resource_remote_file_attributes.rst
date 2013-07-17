@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``force_unlink``
      - |force_unlink|
    * - ``ftp_active_mode``
-     - |ftp_active_mode| Default value: ``false``.
+     - |ftp_active_mode|
    * - ``group``
      - |windows group_identifier|
    * - ``headers``
