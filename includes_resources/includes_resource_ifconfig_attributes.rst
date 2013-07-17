@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``bootproto``
      - |boot_protocol| Default value: ``nil``.
    * - ``device``
-     - |device resource ifconfig|
+     - |device ifconfig| Default value: ``nil``.
    * - ``hwaddr``
      - |hwaddr resource ifconfig| Default value: ``nil``.
    * - ``inet_addr``
