@@ -2360,25 +2360,25 @@ Examples
 
 yum_package
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_yum_package.rst
+.. include:: ../../includes_resources/includes_resource_package_yum.rst
 
 .. note:: |note yum resource using file names|
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_package_syntax.rst
+.. include:: ../../includes_resources/includes_resource_package_yum_syntax.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_package_actions.rst
+.. include:: ../../includes_resources/includes_resource_package_yum_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_package_attributes.rst
+.. include:: ../../includes_resources/includes_resource_package_yum_attributes.rst
 
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_yum_package_providers.rst
+.. include:: ../../includes_resources/includes_resource_package_yum_providers.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
