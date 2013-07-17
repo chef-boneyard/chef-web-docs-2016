@@ -42,7 +42,7 @@ This resource has the following attributes:
    * - ``repository``
      - |uri repository|
    * - ``repository_cache``
-     - |repository_cache|
+     - |repository_cache| Default value: ``cached-copy``.
    * - ``restart_command``
      - |restart shell_command| Default value: ``nil``.
    * - ``revision``
