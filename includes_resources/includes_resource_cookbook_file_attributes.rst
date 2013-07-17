@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``cookbook``
      - |cookbook resource cookbook_file|
    * - ``force_unlink``
-     - |force_unlink|
+     - |force_unlink| Default value: ``false``.
    * - ``group``
      - |windows group_identifier|
    * - ``inherits``

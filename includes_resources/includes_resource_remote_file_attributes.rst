@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``content``
      - |content resource file|
    * - ``force_unlink``
-     - |force_unlink|
+     - |force_unlink| Default value: ``false``.
    * - ``ftp_active_mode``
      - |ftp_active_mode| Default value: ``false``.
    * - ``group``
