@@ -23,6 +23,13 @@ The following items are new for |chef 11-6| and/or are changes from previous ver
 * **Support for environments in chef-solo** |chef solo| now supports environments.
 
 
+Required Updates
+-----------------------------------------------------
+.. warning:: The following updates must also be made at the same time as any upgrade to |chef 11-6|.
+
+* The |cookbook partial_search| cookbook must be upgraded to version 1.0.2 (or higher)
+
+
 Atomic File Updates
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_common_atomic_update.rst
