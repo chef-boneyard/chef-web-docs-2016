@@ -1,6 +1,9 @@
 =====================================================
 template
 =====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
+
+.. note:: |note cookbook template erubis|
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
@@ -34,9 +37,37 @@ Providers
 =====================================================
 .. include:: ../../includes_resources/includes_resource_template_providers.rst
 
-File Specificity
+Using Templates
 =====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_requirements.rst
+
+File Specificity
+-----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
+
+Host Notation
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_host_notation.rst
+
+Location Specificity
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_location_specificity.rst
+
+Partial Templates
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials.rst
+
+``render`` Method
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst
+
+Transfer Frequency
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_transfer_frequency.rst
+
+Variables
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_cookbooks_template_variables.rst
 
 Examples
 =====================================================
