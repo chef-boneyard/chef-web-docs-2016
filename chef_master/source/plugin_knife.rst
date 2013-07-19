@@ -60,7 +60,7 @@ The following |knife| plug-ins are maintained by |opscode|:
    plugin_knife_custom
 
    plugin_knife_pushy
-
+   plugin_knife_vcloud
 
 
 

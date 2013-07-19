@@ -4,7 +4,7 @@ knife pushy
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin
 =====================================================
