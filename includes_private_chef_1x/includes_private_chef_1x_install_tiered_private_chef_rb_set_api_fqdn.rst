@@ -7,4 +7,4 @@ Add the following line to the |private chef rb| config file:
 
    api_fqdn "FQDN"
 
-Replace ``FQDN`` with the |fully qualified domain name| of the load balanced VIP.
+Replace ``FQDN`` with the |fqdn| of the load balanced VIP.

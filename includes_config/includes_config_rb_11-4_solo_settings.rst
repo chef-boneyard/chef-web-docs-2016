@@ -38,7 +38,7 @@ This configuration file has the following settings:
             "/var/chef/site-cookbooks" 
           ]
    * - ``data_bag_path``
-     - |data_bag_path| For example:
+     - |data_bag_path| Default value: ``/var/chef/databags``. For example:
        ::
  
           data_bag_path "/var/chef/databags"

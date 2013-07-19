@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``comment``
-     - |comment resource user|
+     - |comment user| Default value: ``nil``.
    * - ``gid``
      - |gid resource user|
    * - ``home``

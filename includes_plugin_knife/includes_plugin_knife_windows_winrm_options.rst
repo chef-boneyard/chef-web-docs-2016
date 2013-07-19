@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``-a ATTR``, ``--attribute ATTR``
-   |attribute ssh| The default attribute is the fully-qualified domain name of the host. Other possible values include a public IP address, a private IP address, or a hostname.
+   |attribute ssh| The default attribute is the |fqdn| of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 
 ``-f CA_TRUST_FILE``, ``--ca-trust-file CA_TRUST_FILE``
    |ca-trust-file|

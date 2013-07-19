@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``backup``
      - |backups_kept| Default value: ``5``.
    * - ``content``
-     - |content resource file|
+     - |content file| Default value: ``nil`` (don't modify content).
    * - ``force_unlink``
      - |force_unlink| Default value: ``false``.
    * - ``ftp_active_mode``

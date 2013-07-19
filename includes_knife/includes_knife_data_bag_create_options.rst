@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``DATA_BAG_ITEM``
-   |DATA_BAG_ITEM|
+   |name data_bag_item|
 
 ``--secret SECRET``
    |secret|

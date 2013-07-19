@@ -16,7 +16,7 @@ This configuration file has the following settings:
  
           chef_server_url "http://localhost:4000"
    * - ``client_key``
-     - |client_key| For example:
+     - |client_key| Default value: ``/etc/chef/client.pem``. For example:
        ::
  
           client_key "/etc/chef/client.pem"

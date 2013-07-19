@@ -9,7 +9,7 @@ This argument has the following options:
    |COOKBOOK_VERSION show|
 
 ``-f FQDN``, ``--fqdn FQDN``
-   |fqdn|
+   |name fqdn|
 
 ``FILE_NAME``
    |FILE_NAME|

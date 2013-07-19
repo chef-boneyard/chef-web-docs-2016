@@ -15,17 +15,17 @@ This configuration file has the following settings:
  
           chef_server_url "http://localhost:4000"
    * - ``client_key``
-     - |client_key| For example:
+     - |client_key| Default value: ``/etc/chef/client.pem``. For example:
        ::
  
           client_key "/etc/chef/client.pem"
    * - ``client_registration_retries``
-     - |client_registration_retries| For example:
+     - |client_registration_retries| Default value: ``5``. For example:
        ::
  
           client_registration_retries 5
    * - ``client_url``
-     - |client_url| For example:
+     - |client_url| Default value: ``http://localhost:4042``. For example:
        ::
  
           client_url "http://localhost:4042"
@@ -48,7 +48,7 @@ This configuration file has the following settings:
  
           enable_selinux_file_permission_fixup true
    * - ``environment``
-     - |environment config| For example:
+     - |name environment| This is typically set from the command line (using the ``-E`` option) or in the |client rb| configuration file. For example:
        ::
  
           environment "production"

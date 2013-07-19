@@ -12,13 +12,13 @@ This lightweight resource provider has the following attributes:
    * - ``application_provider``
      - 
    * - ``create_dirs_before_symlink``
-     - |create_dirs_before_symlink lwrp application|
+     - |create_dirs_before_symlink|
    * - ``deploy_key``
      - |deploy_key lwrp application|
    * - ``enable_submodules``
-     - |git| only. |enable_submodules lwrp application|
+     - |git| only. |enable_submodules|
    * - ``environment``
-     - |environment variable_hash|
+     - |environment variables|
    * - ``environment_name``
      - |name environment|
    * - ``force``

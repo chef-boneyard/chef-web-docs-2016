@@ -12,7 +12,7 @@ This argument has the following options:
    |distro|
 
 ``--[no-]enable-firewall``
-   |enable firewall|
+   |firewall enable_bluelock| Default value: ``false``.
 
 ``-i IMAGE``, ``--bluelock-image IMAGE``
    |image|

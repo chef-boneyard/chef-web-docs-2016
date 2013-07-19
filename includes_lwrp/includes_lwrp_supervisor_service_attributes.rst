@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``directory``
      - |directory lwrp supervisor|
    * - ``environment``
-     - |environment lwrp supervisor|
+     - |environment key_value_pairs|
    * - ``exitcodes``
      - |exitcodes lwrp supervisor|
    * - ``numprocs``

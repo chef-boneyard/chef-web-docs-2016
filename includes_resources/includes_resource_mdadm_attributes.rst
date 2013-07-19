@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``chunk``
-     - |chunk resource mdadm|
+     - |chunk_size| Default value: ``16``.
    * - ``devices``
      - |devices resource mdadm|
    * - ``level``

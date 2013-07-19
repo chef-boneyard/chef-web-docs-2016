@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``commands``
-     - |commands lwrp sudo|
+     - |commands sudo|
    * - ``group``
      - |group lwrp sudo|
    * - ``host``

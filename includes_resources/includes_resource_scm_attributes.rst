@@ -35,9 +35,9 @@ For use with |git| only:
    * - ``additional_remotes``
      - |additional_remotes|
    * - ``depth``
-     - |depth resource scm|
+     - |depth git_shallow_clone| Default value: ``nil`` (full clone).
    * - ``enable_submodules``
-     - |enable_submodules resource|
+     - |enable_submodules| Default value: ``false``.
    * - ``remote``
      - |remote resource|
    * - ``ssh_wrapper``

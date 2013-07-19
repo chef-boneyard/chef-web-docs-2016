@@ -14,9 +14,9 @@ This lightweight resource provider has the following attributes:
    * - ``backlog``
      - |backlog_connections|
    * - ``daemon``
-     - |daemon lwrp application_python_gunicorn|
+     - |daemonize gunicorn|
    * - ``debug``
-     - |debug lwrp application_python_gunicorn|
+     - |debug_enabled| Default value: ``false``.
    * - ``host``
      - 
    * - ``keepalive``

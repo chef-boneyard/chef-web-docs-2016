@@ -10,11 +10,11 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``cookbook``
-     - |cookbook lwrp daemontools_service|
+     - |cookbook template_location|
    * - ``directory``
      - Required. |directory lwrp daemontools_service|
    * - ``env``
-     - |env lwrp daemontools_service|
+     - |create_env_directory| Default value: ``{}``.
    * - ``finish``
      - |finish_script| Default value: ``nil``.
    * - ``group``

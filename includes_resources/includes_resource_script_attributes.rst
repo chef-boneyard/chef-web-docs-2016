@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``cwd``
      - |cwd| Default value: ``nil``.
    * - ``environment``
-     - |environment resource execute|
+     - |environment variables|
    * - ``flags``
      - |flags| Default value: ``nil``.
    * - ``group``

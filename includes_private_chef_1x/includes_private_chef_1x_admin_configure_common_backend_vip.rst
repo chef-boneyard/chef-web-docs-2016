@@ -3,7 +3,7 @@
 
 When operating in a Tiered or High Availability scenario, the ``backend_vip`` setting must be configured.
 
-* In the High Availability scenario, this setting should be set to the |fully qualified domain name| and IP address that will be shared among the back-end servers.
+* In the High Availability scenario, this setting should be set to the |fqdn| and IP address that will be shared among the back-end servers.
 * In a Tiered configuration, this setting should point directly to the back-end server. 
 
 For example:

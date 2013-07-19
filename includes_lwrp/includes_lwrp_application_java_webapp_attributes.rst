@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``context_template``
-     - |context_template lwrp application_ruby_rails|
+     - |template context_file| Default value: ``context.xml.erb`` (from this cookbook).
    * - ``database_master_role``
-     - |database_master_role lwrp application_java_webapp|
+     - |database_master_role|

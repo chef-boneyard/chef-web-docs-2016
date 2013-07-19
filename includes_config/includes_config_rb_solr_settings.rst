@@ -55,7 +55,7 @@ This configuration file has the following settings:
  
           myopenid.com
    * - ``client_key``
-     - |client_key| For example:
+     - |client_key| Default value: ``/etc/chef/client.pem``. For example:
        ::
  
           chef_server_url "http://localhost:4000"
@@ -65,12 +65,12 @@ This configuration file has the following settings:
  
           chef_server_url "http://localhost:4000"
    * - ``client_registration_retries``
-     - |client_registration_retries| For example:
+     - |client_registration_retries| Default value: ``5``. For example:
        ::
  
           client_registration_retries 5
    * - ``client_url``
-     - |client_url| For example:
+     - |client_url| Default value: ``http://localhost:4042``. For example:
        ::
  
           client_url "http://localhost:4042"
@@ -83,7 +83,7 @@ This configuration file has the following settings:
             "/var/chef/site-cookbooks" 
           ]
    * - ``cookbook_tarball_path``
-     - |cookbook_tarball_path| For example:
+     - |cookbook_tarball_path| Default value: ``/var/chef/cookbook-tarballs``. For example:
        ::
  
           cookbook_tarball_path "/var/chef/cookbook-tarballs"
@@ -103,12 +103,12 @@ This configuration file has the following settings:
  
           couchdb_version nil
    * - ``data_bag_path``
-     - |data_bag_path| For example:
+     - |data_bag_path| Default value: ``/var/chef/databags``. For example:
        ::
  
           data_bag_path "/var/chef/databags"
    * - ``environment``
-     - |environment config| For example:
+     - |name environment| This is typically set from the command line (using the ``-E`` option) or in the |client rb| configuration file. For example:
        ::
  
           environment "production"

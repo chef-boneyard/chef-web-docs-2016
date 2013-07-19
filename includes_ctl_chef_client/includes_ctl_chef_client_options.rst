@@ -19,7 +19,7 @@ This command has the following options:
    |daemonize| This option is only available on machines that run in |unix| or |linux| environments. For machines that are running |windows| that require similar functionality, use the ``chef-client::service`` recipe in the ``chef-client`` cookbook: http://community.opscode.com/cookbooks/chef-client. This will install a |chef client| service under |windows| using the |windows service wrapper|.
 
 ``-E ENVIRONMENT_NAME``, ``--environment ENVIRONMENT_NAME``
-   |environment chef-client|
+   |name environment|
 
 ``-f``, ``--fork``
    |fork_chef|
@@ -46,7 +46,7 @@ This command has the following options:
    |json_attribs|
 
 ``-k KEY_FILE``, ``--client-key KEY_FILE``
-   |client_key|
+   |client_key| Default value: ``/etc/chef/client.pem``.
 
 ``-K KEY_FILE``, ``--validation_key KEY_FILE``
    |validation_key|

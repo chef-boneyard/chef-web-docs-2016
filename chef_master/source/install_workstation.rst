@@ -12,7 +12,7 @@ The following items are prerequisites for installing |chef| on a workstation:
 * |apple xcode| is installed on machines running |mac os x|; this application can be downloaded from |apple| for free
 * A |github| account; the |chef| repository must be downloaded and/or cloned from |github|
 * Access to a |chef server|, typically a |chef hosted| account or the open source |chef server|; the open source |chef server| may be installed on a virtual machine for demo purposes
-* Access to a machine (physical or virtual) that can be used as the first node; the |fully qualified domain name| or IP address for a machine is required by the ``knife bootstrap`` command during a bootstrap operation
+* Access to a machine (physical or virtual) that can be used as the first node; the |fqdn| or IP address for a machine is required by the ``knife bootstrap`` command during a bootstrap operation
 
 Steps
 =====================================================

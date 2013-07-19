@@ -14,9 +14,9 @@ This resource has the following attributes:
    * - ``backup``
      - |backups_kept| Default value: ``5``.
    * - ``content``
-     - |content resource file|
+     - |content file| Default value: ``nil`` (don't modify content).
    * - ``cookbook``
-     - |cookbook resource cookbook_file|
+     - |cookbook file_location| Default value: ``nil`` (the current cookbook).
    * - ``force_unlink``
      - |force_unlink| Default value: ``false``.
    * - ``group``

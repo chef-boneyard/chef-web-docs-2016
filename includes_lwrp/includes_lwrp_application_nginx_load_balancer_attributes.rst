@@ -16,7 +16,7 @@ This lightweight resource provider has the following attributes:
    * - ``port``
      - |port lwrp application_nginx_load_balancer|
    * - ``server_name``
-     - |server_name lwrp application_nginx_load_balancer|
+     - |server_name lwrp application_nginx_load_balancer| Default value: the |fqdn| for the node.
    * - ``ssl``
      - |use ssl| Default value: ``false``.
    * - ``ssl_certificate``

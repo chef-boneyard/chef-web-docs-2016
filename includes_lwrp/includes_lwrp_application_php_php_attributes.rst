@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``database_master_role``
-     - |database_master_role lwrp application_php|
+     - |database_master_role|
    * - ``local_settings_file``
      - |local_settings_file lwrp application_php|
    * - ``packages``

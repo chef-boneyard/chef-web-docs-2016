@@ -43,4 +43,4 @@ If the original primary can be brought back online, the cluster management scrip
 
 The first thing it will do is attempt to promote itself to |drbd| primary, which will fail if the disk has been written to at all while this host was down, and |keepalived| will be unable to transition back to the original master. This leaves the pair of servers in a good state, with the second back-end box as the |drbd| primary |chef private| master.
 
-|drbd| on the first back-end server will sync to the second back-end server and will become the clean secondary.
+|drbd| on the first back-end server will sync to the second back-end server and will become the clean secondary |fqdn|.

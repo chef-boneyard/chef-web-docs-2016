@@ -20,11 +20,11 @@ This resource has the following attributes:
    * - ``branch``
      - The alias for the revision.
    * - ``create_dirs_before_symlink``
-     - |create_dirs_before_symlink|
+     - |create_dirs_before_symlink| Default value: ``%w{tmp public config}`` (or the same as ``["tmp", "public", "config"]``).
    * - ``deploy_to``
      - |deploy_to|
    * - ``environment``
-     - |environment variable_hash|
+     - |environment variables|
    * - ``group``
      - |group resource deploy|
    * - ``keep_releases``
@@ -67,7 +67,7 @@ The following attributes are for use with |git| only:
    * - Attribute
      - Description
    * - ``enable_submodules``
-     - |enable_submodules resource|
+     - |enable_submodules| Default value: ``false``.
    * - ``git_ssh_wrapper``
      - |git_ssh_wrapper|
    * - ``remote``

@@ -16,7 +16,7 @@ This lightweight resource provider has the following attributes:
    * - ``cwd``
      - |cwd run_command|
    * - ``environment``
-     - |environment variable_hash|
+     - |environment variables|
    * - ``group``
      - |group lwrp powershell|
    * - ``returns``

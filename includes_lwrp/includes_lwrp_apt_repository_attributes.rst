@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``components``
-     - |components array|
+     - |components array| Default value: ``[]``.
    * - ``deb_src``
      - |use debsrc| Default value: ``false``.
    * - ``distribution``

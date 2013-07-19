@@ -12,11 +12,11 @@ This resource has the following attributes:
    * - ``additional_remotes``
      - |additional_remotes|
    * - ``depth``
-     - |depth resource scm|
+     - |depth git_shallow_clone| Default value: ``nil`` (full clone).
    * - ``destination``
      - |destination resource scm|
    * - ``enable_submodules``
-     - |enable_submodules resource|
+     - |enable_submodules| Default value: ``false``.
    * - ``group``
      - |group resource scm|
    * - ``provider``

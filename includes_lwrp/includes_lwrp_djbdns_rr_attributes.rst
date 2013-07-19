@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``cwd``
      - |cwd tinydns|
    * - ``fqdn``
-     - |fqdn|
+     - |name fqdn|
    * - ``ip``
      - Required. |ip_address|
    * - ``type``

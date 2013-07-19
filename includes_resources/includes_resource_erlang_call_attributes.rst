@@ -10,11 +10,11 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``code``
-     - |code resource erlang_call|
+     - |code erlang_call| Default value: ``q()``.
    * - ``cookie``
      - |cookie resource erlang_call|
    * - ``distributed``
-     - |distributed resource directory|
+     - |distributed_erlang_node| Default value: ``false``.
    * - ``name_type``
      - |name_type resource directory|
    * - ``node_name``

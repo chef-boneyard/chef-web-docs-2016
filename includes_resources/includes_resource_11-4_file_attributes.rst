@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``backup``
      - |backups_kept| Default value: ``5``.
    * - ``content``
-     - |content resource file|
+     - |content file| Default value: ``nil`` (don't modify content).
    * - ``group``
      - |windows group_identifier|
    * - ``inherits``

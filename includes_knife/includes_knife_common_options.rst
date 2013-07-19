@@ -19,7 +19,7 @@ The following options can be run with all |knife| sub-commands and plug-ins:
    |editor|
 
 ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
+   |name environment| When this option is added to a command, the command will run only against the named environment.
 
 ``-f FILE_NAME``, ``--file FILE_NAME``
    |file private key|

@@ -7,4 +7,4 @@ To configure |drbd| on the non-bootstrap back-end server, first copy all the con
 
    $ scp -r FQDN:/etc/opscode /etc
 
-Replace ``FQDN`` above with the |fully qualified domain name| of the bootstrap server.
+Replace ``FQDN`` above with the |fqdn| of the bootstrap server.

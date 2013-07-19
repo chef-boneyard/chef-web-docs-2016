@@ -18,9 +18,9 @@ This lightweight resource provider has the following attributes:
    * - ``bundler_without_groups``
      - |bundler_skip_groups|
    * - ``database_master_role``
-     - |database_master_role lwrp application_ruby_rails|
+     - |database_master_role database_yml|
    * - ``database_template``
-     - |database_template lwrp application_ruby_rails|
+     - |template database_yml| Default value: ``database.yml.erb``.
    * - ``gems``
      - |gems lwrp application_ruby_rails|
    * - ``precompile_assets``

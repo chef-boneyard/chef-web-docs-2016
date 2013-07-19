@@ -16,7 +16,7 @@ This lightweight resource provider has the following attributes:
    * - ``ttl``
      - |record_ttl|
    * - ``fqdn``
-     - |fqdn|
+     - |name fqdn|
    * - ``username``
      - |name user api_dns_update|
    * - ``customer``

@@ -10,11 +10,11 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``collectstatic``
-     - |collectstatic lwrp application_python_django|
+     - |collectstatic| Default value: ``false``.
    * - ``database_master_role``
-     - |database_master_role lwrp application_python_django|
+     - |database_master_role|
    * - ``debug``
-     - |debug lwrp application_python_django|
+     - |debug settings_template| Default value: ``false``.
    * - ``legacy_database_settings``
      - |legacy_database_setting lwrp application_python_django|
    * - ``local_settings_file``

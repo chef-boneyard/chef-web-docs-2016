@@ -9,7 +9,7 @@ This argument has the following options:
    |euca-access-key-id|
 
 ``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
-   |environment|
+   |name environment_eucalyptus|
 
 ``--euca-api-endpoint ENDPOINT``
    |euca-api-endpoint|

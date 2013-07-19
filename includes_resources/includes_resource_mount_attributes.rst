@@ -14,9 +14,9 @@ This resource has the following attributes:
    * - ``device_type``
      - |device_type| Default value: ``:device``.
    * - ``dump``
-     - |dump resource mount|
+     - |dump_frequency| Default value: ``0``.
    * - ``fstype``
-     - |fstype resource mount|
+     - Required. |fstype| Default value: ``nil``.
    * - ``mount_point``
      - |mount_point| Default value: ``name``.
    * - ``options``
