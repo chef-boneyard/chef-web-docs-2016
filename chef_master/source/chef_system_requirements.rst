@@ -81,7 +81,7 @@ The following sections describe the various requirements for the three |chef ser
 Before installing |chef private|, ensure that each machine has the following installed and configured properly:
 
 * **Host names** --- Ensure that all systems have properly configured host names.
-* **FQDNs** --- Ensure that all systems have a resolvable |fully qualified domain name|.
+* **FQDNs** --- Ensure that all systems have a resolvable |fqdn|.
 * **NTP** --- Ensure that every server on which |chef private| is running is connected to NTP; |chef private| is sensitive to click drift.
 * **Mail Relay** --- |chef private| uses email to send notifications for various events; a local mail transfer agent should be installed and available to the |chef server|.
 * **cron** --- |chef private| performs periodic maintenance tasks using |cron|.

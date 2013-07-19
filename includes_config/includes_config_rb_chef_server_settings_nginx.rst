@@ -40,7 +40,7 @@ This configuration file has the following settings:
    * - ``nginx['sendfile']``
      - Indicates whether ``sendfile()`` is used to copy data between file descriptors. Default value: ``on``.
    * - ``nginx['server_name']``
-     - The |fully qualified domain name| of the server. Default value: ``node['fqdn']``.
+     - The |fqdn| of the server. Default value: ``node['fqdn']``.
    * - ``nginx['ssl_certificate']``
      - The file that contains the |ssl| certificate. Default value: ``nil``.
    * - ``nginx['ssl_certificate_key']``
