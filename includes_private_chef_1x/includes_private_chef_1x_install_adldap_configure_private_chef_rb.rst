@@ -1,13 +1,14 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Add the following lines to the |private chef rb| file:
+Add the following lines to the attributes file found in the |cookbook private_chef| cookbook:
 
 .. code-block:: ruby
 
-   ldap['host'] = '1.2.3.4'
-   ldap['bind_dn'] = 'cn=bofh,dc=opscode,dc=com'
-   ldap['bind_password'] = 'supersecret'
-   ldap['base_dn'] = 'cn=users,dc=opscode,dc=com'
-   ldap['system_adjective'] = 'corporate'
+   default['private-chef']['ldap']['host'] = '1.2.3.4'
+   default['private-chef']['ldap']['bind_dn'] = 'cn=bofh,dc=opscode,dc=com'
+   default['private-chef']['ldap']['bind_password'] = 'supersecret'
+   default['private-chef']['ldap']['base_dn'] = 'cn=users,dc=opscode,dc=com'
+   default['private-chef']['ldap']['system_adject
 
+This cookbook is located at ``/opt/opscode/embedded/cookbooks/private-chef/attributes/default.rb`` by default.
