@@ -391,7 +391,7 @@ A new setting has been added to the |solo rb| file:
    * - Setting
      - Description
    * - ``environment_path``
-     - |environment_path|  Default value: ``/var/chef/environments``. For example:
+     - |path environment|  Default value: ``/var/chef/environments``. For example:
        ::
  
           environment_path "/var/chef/environments"
