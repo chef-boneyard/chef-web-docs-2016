@@ -27,9 +27,9 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:bare_directories]``
      - |d knife list|
    * - ``knife[:bootstrap_proxy]``
-     - |bootstrap-proxy|
+     - |bootstrap proxy|
    * - ``knife[:bootstrap_version]``
-     - |bootstrap-version|
+     - |bootstrap version|
    * - ``knife[:bootstrap_template]``
      - 
    * - ``knife[:concurrency]``
