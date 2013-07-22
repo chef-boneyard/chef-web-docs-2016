@@ -54,11 +54,12 @@ The following |knife| plug-ins are maintained by |opscode|:
    plugin_knife_openstack
    plugin_knife_rackspace
    plugin_knife_terremark
+   plugin_knife_vcloud
    plugin_knife_windows
 
    plugin_knife_authenticated_requests
    plugin_knife_custom
-
+  
 
 
 
