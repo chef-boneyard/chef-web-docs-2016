@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``destination``
      - |destination resource scm|
    * - ``group``
-     - |group resource scm|
+     - |group deploy| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``reference``

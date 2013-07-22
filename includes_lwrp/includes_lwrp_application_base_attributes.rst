@@ -24,7 +24,7 @@ This lightweight resource provider has the following attributes:
    * - ``force``
      - 
    * - ``group``
-     - |group lwrp application|
+     - |group deploy|
    * - ``migrate``
      - |migrate lwrp application|
    * - ``migration_command``

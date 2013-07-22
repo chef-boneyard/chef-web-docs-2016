@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``environment``
      - |environment variables|
    * - ``group``
-     - |group resource deploy|
+     - |group deploy| Default value: ``nil``.
    * - ``keep_releases``
      - |keep_releases resource deploy|
    * - ``migrate``

@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``enable_submodules``
      - |enable_submodules| Default value: ``false``.
    * - ``group``
-     - |group resource scm|
+     - |group deploy| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``reference``
