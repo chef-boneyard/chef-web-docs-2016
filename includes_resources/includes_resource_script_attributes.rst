@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``flags``
      - |flags| Default value: ``nil``.
    * - ``group``
-     - |group resource execute|
+     - |group command| Default value: ``nil``.
    * - ``interpreter``
      - |interpreter| Default value: ``nil``.
    * - ``path``

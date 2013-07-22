@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``group_name``
      - |group_name resource group|
    * - ``members``
-     - |members resource group|
+     - |group_members| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``system``

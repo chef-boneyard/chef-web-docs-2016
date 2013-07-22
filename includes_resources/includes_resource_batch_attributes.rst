@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``flags``
      - |flags|
    * - ``group``
-     - |group resource batch|
+     - |group command|
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``returns``

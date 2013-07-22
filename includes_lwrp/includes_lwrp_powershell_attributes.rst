@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``environment``
      - |environment variables|
    * - ``group``
-     - |group lwrp powershell|
+     - |group command|
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``timeout``

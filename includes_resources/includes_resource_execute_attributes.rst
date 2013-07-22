@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``environment``
      - |environment variables| Default value: ``nil``.
    * - ``group``
-     - |group resource execute|
+     - |group command| Default value: ``nil``.
    * - ``path``
      - |path resource execute|
    * - ``provider``

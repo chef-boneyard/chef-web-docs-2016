@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``flags``
      - |flags|
    * - ``group``
-     - |group lwrp windows_batch|
+     - |group command|
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``user``
