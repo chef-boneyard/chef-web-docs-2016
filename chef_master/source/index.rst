@@ -89,7 +89,7 @@ Cookbooks
 
  
 
-.. Hide the TOC from this file.
+.. Hide the TOC from this file. 
 
 .. toctree::
    :hidden:
