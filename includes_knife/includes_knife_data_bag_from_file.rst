@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``from file`` argument is used to create a data bag using an existing data bag data as a template. The path to the data bag file must specify one of the following:
+The ``from file`` argument is used to create a data bag from a file. The path to the data bag file must specify one of the following:
 
 * the name of a data bag
 * a relative or absolute path to a file
