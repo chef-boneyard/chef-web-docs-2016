@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``group``
      - |group lwrp powershell|
    * - ``returns``
-     - |returns lwrp powershell|
+     - |return_value cmd| Default value: ``0``.
    * - ``timeout``
      - |timeout command|
    * - ``user``

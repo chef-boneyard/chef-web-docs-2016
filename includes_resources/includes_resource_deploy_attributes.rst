@@ -48,7 +48,7 @@ This resource has the following attributes:
    * - ``revision``
      - |revision| Default value: ``HEAD``.
    * - ``rollback_on_error``
-     - |rollback_on_error resource deploy|
+     - |rollback_on_error| Default value: ``false``.
    * - ``scm_provider``
      - |scm_provider resource deploy|
    * - ``symlinks``

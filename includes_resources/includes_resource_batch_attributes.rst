@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``returns``
-     - |returns resource batch|
+     - |return_value cmd| Default value: ``0``.
    * - ``user``
      - |user resource batch|
 

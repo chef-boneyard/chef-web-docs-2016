@@ -12,7 +12,7 @@ This argument has the following options:
    |purge google|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``-Z ZONE``, ``--google-compute-zone ZONE``
    |zone google|

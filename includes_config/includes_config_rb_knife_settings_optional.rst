@@ -38,9 +38,9 @@ Some of the optional |knife rb| settings are used often, such as the template fi
    * - Setting
      - Description
    * - ``knife[:bootstrap_proxy]``
-     - |bootstrap-proxy|
+     - |bootstrap proxy|
    * - ``knife[:bootstrap_version]``
-     - |bootstrap-version|
+     - |bootstrap version|
    * - ``knife[:distro]``
      - |distro|
    * - ``knife[:ssh_gateway]``

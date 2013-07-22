@@ -25,5 +25,5 @@ This tool has the following options:
    |whyrun_mode|
 
 ``-h``, ``--help``
-   |help chef apply|
+   |help subcommand|
 

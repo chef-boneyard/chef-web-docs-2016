@@ -6,19 +6,19 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--vcloud-username USER_NAME``
-   The |vcloud| user name.
+   |name user vcloud|
 
 ``-K PASSWORD``, ``--vcloud-password PASSWORD``
-   The |vcloud| password.
+   |password vcloud|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   The name of the node.
+   |name node|
 
 ``-p``, ``--purge``
-   Indicates that all nodes and clients will be purged, in addition to the |vcloud| node.
+   |purge node vcloud|
 
 ``-U HOST``, ``--vcloud-host HOST``
-   The |vcloud| API endpoint.
+   |host vcloud|
 
 ``--verify-ssl-cert``
-   Indicates whether SSL certificates are verified.
+   |ssl_certificate verify|

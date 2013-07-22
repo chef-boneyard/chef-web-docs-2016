@@ -16,7 +16,7 @@ This command has the following options:
    |config chef-client|
 
 ``-h``, ``--help``
-   |help chef shell|
+   |help subcommand|
 
 ``-j PATH``, ``--json-attributes PATH``
    |json_attribs|

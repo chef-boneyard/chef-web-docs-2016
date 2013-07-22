@@ -30,10 +30,10 @@ This subcommand has the following options:
    |ssh-password|
 
 ``SEARCH_QUERY``
-   |SEARCH_QUERY SSH|
+   |search_query ssh|
 
 ``SSH_COMMAND``
-   |SSH_COMMAND|
+   |ssh_command|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|

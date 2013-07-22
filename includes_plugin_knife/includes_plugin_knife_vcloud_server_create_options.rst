@@ -6,13 +6,13 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--vcloud-username USER_NAME``
-   The |vcloud| user name.
+   |name user vcloud|
 
 ``--bootstrap-protocol PROTOCOL``
-   The protocol used to bootstrap a |windows| server. Options: ``winrm``.
+   |bootstrap protocol|
 
 ``--bootstrap-proxy PROXY_URL``
-   |bootstrap-proxy|
+   |bootstrap proxy|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -21,19 +21,19 @@ This argument has the following options:
    |image|
 
 ``-K PASSWORD``, ``--vcloud-password PASSWORD``
-   The |vcloud| password.
+   |password vcloud|
 
 ``-m MEMORY``, ``--memory MEMORY``
-   The amount of memory (in megabytes). Possible values: ``512``, ``1024``, ``1536``, ``2048``, ``4096``, ``8192``, ``12288``, or ``16384``.
+   |memory mb|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``--network NETWORK_ID``
-   The |vcloud| network ID.
+  |id network_vcloud|
 
 ``--no-bootstrap``
-   Indicates whether the |chef| bootstrap is enabled.
+   |no_bootstrap|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
@@ -45,10 +45,10 @@ This argument has the following options:
    |template-file|
 
 ``-U HOST``, ``--vcloud-host HOST``
-   The |vcloud| API endpoint.
+   |host vcloud|
 
 ``--vcpus VCPUS``
-   The number of vCPUs per virtual machine. Possible values: ``1``, ``2``, ``4``, or ``8``.
+   |vcpus|
 
 ``--verify-ssl-cert``
-   Indicates whether SSL certificates are verified.
+   |ssl_certificate verify|

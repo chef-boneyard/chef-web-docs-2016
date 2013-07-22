@@ -6,10 +6,10 @@
 This subcommand has the following options:
 
 ``--bootstrap-proxy PROXY_URL``
-   |bootstrap-proxy|
+   |bootstrap proxy|
 
 ``--bootstrap-version VERSION``
-   |bootstrap-version|
+   |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -27,7 +27,7 @@ This subcommand has the following options:
    |json-attributes|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify| Default setting: ``--host-key-verify``.

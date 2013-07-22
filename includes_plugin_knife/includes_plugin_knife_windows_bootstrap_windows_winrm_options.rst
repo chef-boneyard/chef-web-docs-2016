@@ -6,16 +6,16 @@
 This argument has the following options:
 
 ``--bootstrap-proxy PROXY_URL``
-   |bootstrap-proxy|
+   |bootstrap proxy|
 
 ``--bootstrap-version VERSION``
-   |bootstrap-version|
+   |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``--prerelease``
    |prerelease|

@@ -14,7 +14,7 @@ This lightweight resource provider has the following attributes:
    * - ``bindings``
      - |bindings lwrp iis_site|
    * - ``host_header``
-     - |host_header lwrp iis_site|
+     - |host_header| Default value: all host headers.
    * - ``path``
      - |path lwrp iis_pool|
    * - ``port``

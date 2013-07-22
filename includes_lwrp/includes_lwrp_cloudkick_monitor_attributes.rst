@@ -20,4 +20,4 @@ This lightweight resource provider has the following attributes:
    * - ``oauth_secret``
      - |oauth_secret lwrp cloudkick|
    * - ``query``
-     - |query lwrp cloudkick|
+     - |query cloudkick|

@@ -13,7 +13,7 @@ This command has the following options:
    |config chef-client| This is the same configuration file used by |pushy|. Default value: ``Chef::Config.platform_specific_path("/etc/chef/client.rb")``.
 
 ``-h``, ``--help``
-   Indicates that help for |pushy| should be shown.
+   |help subcommand|
 
 ``-k KEY_FILE``, ``--client-key KEY_FILE``
    |client_key|

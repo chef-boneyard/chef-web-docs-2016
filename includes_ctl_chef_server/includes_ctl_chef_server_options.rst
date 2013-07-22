@@ -10,7 +10,7 @@ This command has the following syntax::
 This command has the following options:
 
 ``help``
-   Use to print a list of available |chef server ctl| commands.
+   |help subcommand|
 
 ``reconfigure``
    Use to reconfigure the |chef server|. This option will read from the |path chef server chef server rb| file and apply that configuration to the |chef server|. Any time changes are made to the |chef server rb| file, the |chef server ctl| command should be run with this option.

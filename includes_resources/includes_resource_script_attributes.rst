@@ -30,7 +30,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``returns``
-     - |returns resource execute|
+     - |return_value cmd| Default value: ``0``.
    * - ``timeout``
      - |timeout command|
    * - ``user``

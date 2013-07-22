@@ -10,7 +10,7 @@ This argument has the following options:
    |euca-access-key-id|
 
 ``--bootstrap-version VERSION``
-   |bootstrap-version|
+   |bootstrap version|
 
 ``--euca-api-endpoint ENDPOINT``
    |euca-api-endpoint|
@@ -31,7 +31,7 @@ This argument has the following options:
    |euca-secret-access-key|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify| Default setting: ``--host-key-verify``.

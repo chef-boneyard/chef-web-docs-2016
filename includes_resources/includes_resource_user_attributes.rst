@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``gid``
      - |gid resource user|
    * - ``home``
-     - |home resource user|
+     - |home_directory| Default value: ``nil``.
    * - ``password``
      - |password resource user|
    * - ``provider``

@@ -9,7 +9,7 @@ This argument has the following options:
    |openstack-access-key-id|
 
 ``--bootstrap-version VERSION``
-   |bootstrap-version|
+   |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -30,7 +30,7 @@ This argument has the following options:
    |openstack-secret-access-key|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify| Default setting: ``--host-key-verify``.

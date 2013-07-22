@@ -15,7 +15,7 @@ This sub-command has the following options:
    |id-only|
 
 ``INDEX``
-   |INDEX|
+   |search_index|
 
 ``-l``, ``--long``
    |long|
@@ -36,4 +36,4 @@ This sub-command has the following options:
    |rows|
 
 ``SEARCH_QUERY``
-   |SEARCH_QUERY|
+   |search_query|

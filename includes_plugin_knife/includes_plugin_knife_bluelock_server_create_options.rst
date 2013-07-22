@@ -24,7 +24,7 @@ This argument has the following options:
    |memory mb|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|

@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``headers``
-     - |headers resource http_request|
+     - |headers custom| Default value: ``{}``.
    * - ``message``
      - |message resource http_request|
    * - ``provider``

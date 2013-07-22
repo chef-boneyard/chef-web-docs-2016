@@ -9,7 +9,7 @@ This argument has the following options:
    |linode-api-key|
 
 ``--bootstrap-version VERSION``
-   |bootstrap-version|
+   |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -33,7 +33,7 @@ This argument has the following options:
    |linode-node-name| 
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify| Default setting: ``--host-key-verify``.

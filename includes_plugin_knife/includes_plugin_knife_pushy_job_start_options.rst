@@ -6,8 +6,8 @@
 This argument has the following options:
 
 ``--timeout TIMEOUT``
-   The maximum amount of time (in seconds) by which a job must complete, before it will be stopped.
+   |timeout pushy|
 
 ``-q QUORUM``, ``--quorum QUORUM``
-   The minimum number of nodes that match the search criteria, are available, and acknowledge the job request. This can be expressed as a percentage (e.g. ``50%``) or as an absolute number of nodes (e.g. ``145``). Default value: ``100%``
+   |quorum pushy| Default value: ``100%``
 

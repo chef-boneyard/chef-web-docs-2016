@@ -22,6 +22,6 @@ This lightweight resource provider has the following attributes:
    * - ``group``
      - |group lwrp windows_batch|
    * - ``returns``
-     - 
+     - |return_value cmd| Default value: ``0``.
    * - ``user``
      - |user lwrp windows_batch|

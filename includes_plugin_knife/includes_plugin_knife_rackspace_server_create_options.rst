@@ -6,10 +6,10 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--rackspace-username USER_NAME``
-   |rackspace-username|
+   |name user rackspace|
 
-``--bootstrap-version VERSION"``
-   |bootstrap-version|
+``--bootstrap-version VERSION``
+   |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -27,13 +27,13 @@ This argument has the following options:
    |json-attributes|
 
 ``-K API_KEY``, ``--rackspace-api-key API_KEY``
-   |rackspace-api-key|
+   |rackspace_api_key|
 
 ``-M JSON``, ``--rackspace-metadata JSON``
    |rackspace-metadata|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
@@ -45,7 +45,7 @@ This argument has the following options:
    |run-list|
 
 ``--rackspace-api-auth-url``
-   |rackspace-api-auth-url|
+   |rackspace_api_auth_url| Default: ``auth.api.rackspacecloud.com``.
 
 ``-S NAME``, ``--server-name NAME``
    |server-name|

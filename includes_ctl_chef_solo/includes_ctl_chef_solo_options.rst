@@ -31,7 +31,7 @@ This command has the following options:
    |group chef-client|
 
 ``-h``, ``--help``
-   |help chef-client|
+   |help subcommand|
 
 ``-i SECONDS``, ``--interval SECONDS``
    |interval|

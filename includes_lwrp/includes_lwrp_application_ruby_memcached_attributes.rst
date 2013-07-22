@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``role``
-     - |role lwrp application_ruby_memcached|
+     - |role memcached|

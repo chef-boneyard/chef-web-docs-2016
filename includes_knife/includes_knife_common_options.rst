@@ -28,7 +28,7 @@ The following options can be run with all |knife| sub-commands and plug-ins:
    |format|
 
 ``-h``, ``--help``
-   |help|
+   |help subcommand|
 
 ``-k KEY``, ``--key KEY``
    |key|

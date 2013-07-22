@@ -6,10 +6,10 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--rackspace-username USER_NAME``
-   |rackspace-username|
+   |name user rackspace|
 
 ``-K API_KEY``, ``--rackspace-api-key API_KEY``
-   |rackspace-api-key|
+   |rackspace_api_key|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name purge|
@@ -18,5 +18,5 @@ This argument has the following options:
    |purge node rackspace|
 
 ``--rackspace-api-auth-url``
-   |rackspace-api-auth-url|
+   |rackspace_api_auth_url| Default: ``auth.api.rackspacecloud.com``.
 

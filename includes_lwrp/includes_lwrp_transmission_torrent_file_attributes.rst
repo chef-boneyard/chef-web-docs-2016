@@ -22,10 +22,11 @@ This lightweight resource provider has the following attributes:
    * - ``group``
      - |group lwrp transmission_torrent_file|
    * - ``rpc_host``
-     - |rpc_host lwrp transmission_torrent_file|
-   * - ``rpc_port``
-     - |rpc_port lwrp transmission_torrent_file|
-   * - ``rpc_username``
-     - |rpc_username lwrp transmission_torrent_file|
+     - |rpc_host| Default value: ``localhost``.
    * - ``rpc_password``
-     - |rpc_password lwrp transmission_torrent_file|
+     - |rpc_password|
+   * - ``rpc_port``
+     - |rpc_port| Default value: ``9091``.
+   * - ``rpc_username``
+     - |rpc_username| Default value: ``transmission``.
+

@@ -46,7 +46,7 @@ This lightweight resource provider has the following attributes:
    * - ``revision``
      - |revision| Default value: ``HEAD``.
    * - ``rollback_on_error``
-     - |rollback_on_error lwrp application|
+     - |rollback_on_error|
    * - ``scm_provider``
      - |name scm_provider|
    * - ``strategy``

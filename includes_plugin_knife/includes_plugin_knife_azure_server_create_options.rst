@@ -9,7 +9,7 @@ This argument has the following options:
    |storage account|
 
 ``--bootstrap-version VERSION``
-   |bootstrap-version|
+   |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -18,7 +18,7 @@ This argument has the following options:
    |azure host description|
 
 ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
-   |host-name|
+   |name virtual_machine|
 
 ``--host-name HOST_NAME``
    |azure_host_name|
@@ -33,7 +33,7 @@ This argument has the following options:
    |media location|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
+   |name node| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify| Default setting: ``--host-key-verify``.

@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``group``
      - |windows group_identifier|
    * - ``headers``
-     - |headers resource remote_file| Default value: ``{}``.
+     - |headers custom| Default value: ``{}``.
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``manage_symlink_source``

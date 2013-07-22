@@ -41,19 +41,19 @@ Plugins
 
 The following plugins for |knife| are provided by |opscode|:
 
-* knife-azure
-* knife-bluebox
-* knife-bluelock
-* knife-ec2
-* knife-eucalyptus
-* knife-google
-* knife-hp
-* knife-linode
-* knife-openstack
-* knife-rackspace
-* knife-terremark
-* knife-vcloud
-* knife-windows
+* knife azure
+* knife bluebox
+* knife bluelock
+* knife ec2
+* knife eucalyptus
+* knife google
+* knife hp
+* knife linode
+* knife openstack
+* knife rackspace
+* knife terremark
+* knife vcloud
+* knife windows
 
 
 knife azure

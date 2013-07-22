@@ -9,10 +9,10 @@ This argument has the following options:
    |hp-account|
 
 ``--bootstrap-proxy PROXY_URL``
-   |bootstrap-proxy|
+   |bootstrap proxy|
 
 ``--bootstrap-version VERSION``
-   |bootstrap-version|
+   |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -36,7 +36,7 @@ This argument has the following options:
    |hp-secret|
 
 ``-N NAME``, ``--node-name NAME``
-   |name_node|
+   |name node|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify| Default setting: ``--host-key-verify``.

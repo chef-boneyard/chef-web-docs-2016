@@ -6,13 +6,13 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--vcloud-username USER_NAME``
-   The |vcloud| user name.
+   |name user vcloud|
 
 ``-K PASSWORD``, ``--vcloud-password PASSWORD``
-   The |vcloud| password.
+   |password vcloud|
 
 ``-U HOST``, ``--vcloud-host HOST``
-   The |vcloud| API endpoint.
+   |host vcloud|
 
 ``--verify-ssl-cert``
-   Indicates whether SSL certificates are verified.
+   |ssl_certificate verify|

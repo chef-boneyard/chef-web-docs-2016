@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``--bootstrap-version VERSION``
-   |bootstrap-version|
+   |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -45,7 +45,7 @@ This argument has the following options:
    |google_compute_network|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |name_node|
+   |name node|
 
 ``--[no-]host-key-verify``
    |[no-]host-key-verify| Default setting: ``--host-key-verify``.
