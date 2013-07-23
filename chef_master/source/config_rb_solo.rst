@@ -7,7 +7,7 @@ solo.rb
 Settings
 ==========================================================================
 
-.. include:: ../../includes_config/includes_config_rb_11-4_solo_settings.rst
+.. include:: ../../includes_config/includes_config_rb_solo_settings.rst
 
 
 

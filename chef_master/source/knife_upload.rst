@@ -12,7 +12,7 @@ Options
 =====================================================
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-4_upload_options.rst
+.. include:: ../../includes_knife/includes_knife_upload_options.rst
 
 knife.rb Settings
 -----------------------------------------------------
@@ -34,5 +34,10 @@ Examples
 
 .. include:: ../../step_knife/step_knife_upload_directory_cookbooks_and_role.rst
 
+Use the output of ``knife deps`` to pass a command to ``knife upload``. For example:
+
+.. code-block:: bash
+
+   $ knife upload `knife deps nodes/*.json
 
 

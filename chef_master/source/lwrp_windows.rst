@@ -6,6 +6,8 @@ windows Lightweight Resource
 
 The |cookbook windows| cookbook contains the following lightweight resources: ``windows_auto_run``, ``windows_batch``, ``windows_feature``, ``windows_package``, ``windows_path``, ``windows_reboot``, ``windows_registry``, ``windows_shortcut``, and ``windows_zipfile``.
 
+.. warning:: The |resource batch| resource was added to |chef| in version 11.6 as a core resource. In general, it is recommended to use the |resource batch| resource instead of the ``windows_batch`` lightweight resource included in the |cookbook windows| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer core |chef| resource.
+
 .. note:: These lightweight resources are part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 windows_auto_run

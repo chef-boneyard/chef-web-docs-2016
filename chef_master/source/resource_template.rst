@@ -7,7 +7,7 @@ template
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_11-4_template.rst
+.. include:: ../../includes_resources/includes_resource_template.rst
 
 Syntax
 =====================================================
@@ -15,23 +15,29 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-4_template_actions.rst
+.. include:: ../../includes_resources/includes_resource_template_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-4_template_attributes.rst
+.. include:: ../../includes_resources/includes_resource_template_attributes.rst
+
+.. warning:: For a machine on which |selinux| is enabled, |chef| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy.
+
+Atomic File Updates
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_resource_common_atomic_update.rst
 
 Windows File Security
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_common_windows_security.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security.rst
 
 **Access Control Lists (ACLs)**
 
-.. include:: ../../includes_resources/includes_resource_common_windows_security_acl.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst
 
 **Inheritance**
 
-.. include:: ../../includes_resources/includes_resource_common_windows_security_inherits.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst
 
 Providers
 =====================================================
@@ -44,6 +50,22 @@ Using Templates
 File Specificity
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
+
+Helpers
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_template_helper.rst
+
+Inline Methods
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_resource/step_resource_template_inline_method.rst
+
+Inline Modules
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_resource/step_resource_template_inline_module.rst
+
+Library Modules
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_resource/step_resource_template_library_module.rst
 
 Host Notation
 -----------------------------------------------------
@@ -68,6 +90,7 @@ Transfer Frequency
 Variables
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_variables.rst
+
 
 Examples
 =====================================================
@@ -155,9 +178,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
 
-**Use a partial template**
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_template_resource.rst
 
 
 

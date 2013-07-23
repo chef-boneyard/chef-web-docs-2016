@@ -4,7 +4,7 @@ remote_file
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
-.. include:: ../../includes_resources/includes_resource_11-4_remote_file.rst
+.. include:: ../../includes_resources/includes_resource_remote_file.rst
 
 .. note:: |note remote_file resource fetch from files directory|
 
@@ -14,23 +14,29 @@ Syntax
 
 Actions
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-4_remote_file_actions.rst
+.. include:: ../../includes_resources/includes_resource_remote_file_actions.rst
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-4_remote_file_attributes.rst
+.. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
+
+.. warning:: For a machine on which |selinux| is enabled, |chef| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy.
+
+Atomic File Updates
+-----------------------------------------------------
+.. include:: ../../includes_cookbooks/includes_resource_common_atomic_update.rst
 
 Windows File Security
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_common_windows_security.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security.rst
 
 **Access Control Lists (ACLs)**
 
-.. include:: ../../includes_resources/includes_resource_common_windows_security_acl.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_acl.rst
 
 **Inheritance**
 
-.. include:: ../../includes_resources/includes_resource_common_windows_security_inherits.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_windows_security_inherits.rst
 
 Providers
 =====================================================

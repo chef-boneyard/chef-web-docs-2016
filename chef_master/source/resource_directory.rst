@@ -16,7 +16,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-4_directory_attributes.rst
+.. include:: ../../includes_resources/includes_resource_directory_attributes.rst
 
 Windows File Security
 -----------------------------------------------------
