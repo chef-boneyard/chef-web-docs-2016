@@ -2,6 +2,8 @@
 freebsd Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name freebsd|
 
 The |cookbook freebsd| cookbook contains the following lightweight resource: ``freebsd_port_options``.

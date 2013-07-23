@@ -2,6 +2,8 @@
 application Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. warning:: DRAFT
 
 |cookbook name application|

@@ -2,6 +2,8 @@
 private-chef-ctl
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef.rst
 
 backup-recover

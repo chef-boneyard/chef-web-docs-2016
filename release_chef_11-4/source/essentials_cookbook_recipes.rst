@@ -2,6 +2,8 @@
 About Recipes
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
 
 Recipe Attributes

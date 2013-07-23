@@ -2,6 +2,8 @@
 /nodes
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_node/includes_node.rst
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_nodes.rst

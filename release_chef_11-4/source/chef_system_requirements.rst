@@ -2,6 +2,8 @@
 System Requirements
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 Before installing |chef|:
 
 * Ensure that each machine that will be a node is running a supported operating system

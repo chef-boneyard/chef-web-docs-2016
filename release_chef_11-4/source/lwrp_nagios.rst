@@ -2,6 +2,8 @@
 nagios Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name nagios|
 
 The |cookbook nagios| cookbook contains the following lightweight resource: ``nagios_nrpecheck``.

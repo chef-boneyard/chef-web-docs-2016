@@ -2,6 +2,8 @@
 Platform Resources
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 The following resources are built into |chef|:
 
 .. list-table::

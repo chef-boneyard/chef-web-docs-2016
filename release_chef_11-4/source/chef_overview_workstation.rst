@@ -2,6 +2,8 @@
 Workstations
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_workstation/includes_workstation.rst
 
 Some important components of workstations include:

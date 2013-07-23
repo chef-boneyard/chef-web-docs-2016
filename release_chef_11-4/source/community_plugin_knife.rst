@@ -2,6 +2,8 @@
 Community Knife Plugins
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_knife/includes_knife.rst
 
 .. list-table::

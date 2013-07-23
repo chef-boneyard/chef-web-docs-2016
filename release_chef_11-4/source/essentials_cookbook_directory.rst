@@ -2,6 +2,8 @@
 Cookbooks Directory
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_repository/includes_repository_directory_cookbooks.rst
 
 .. include:: ../../steps/step_repository_cookbooks_configure_settings.rst

@@ -2,6 +2,8 @@
 pacman Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name pacman|
 
 The |cookbook pacman| cookbook contains the following lightweight resources: ``pacman_aur`` and ``pacman_group``.

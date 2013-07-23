@@ -2,6 +2,8 @@
 bluepill Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name bluepill|
 
 The |cookbook bluepill| cookbook contains the following lightweight resource: ``bluepill_service``.

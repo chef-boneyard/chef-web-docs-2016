@@ -2,6 +2,8 @@
 /search/INDEX
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index.rst
 
 .. include:: ../../includes_search/includes_search_query_syntax.rst

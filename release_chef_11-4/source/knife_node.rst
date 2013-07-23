@@ -2,6 +2,8 @@
 knife node
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_node/includes_node.rst
 
 .. include:: ../../includes_knife/includes_knife_node.rst

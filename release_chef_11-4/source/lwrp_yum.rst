@@ -2,6 +2,8 @@
 yum Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name yum|
 
 The |cookbook yum| cookbook contains the following lightweight resources: ``yum_key`` and ``yum_repository``.

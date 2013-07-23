@@ -2,6 +2,8 @@
 /nodes/NAME
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_node_name.rst
 
 DELETE

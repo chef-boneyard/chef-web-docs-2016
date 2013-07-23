@@ -2,6 +2,8 @@
 chef-shell
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef_shell/includes_chef_shell.rst
 
 .. include:: ../../includes_ctl_chef_shell/includes_ctl_chef_shell.rst

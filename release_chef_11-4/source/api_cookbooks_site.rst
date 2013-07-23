@@ -2,6 +2,8 @@
 Cookbooks Site API
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_site.rst
 
 .. note:: |note api cookbooks site using knife|

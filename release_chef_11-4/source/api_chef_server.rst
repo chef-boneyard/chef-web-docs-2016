@@ -2,6 +2,8 @@
 Chef Server API
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_api_chef_server/includes_api_chef_server.rst
 
 Requirements

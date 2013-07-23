@@ -2,6 +2,8 @@
 chef-server-ctl
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server.rst
 
 Options

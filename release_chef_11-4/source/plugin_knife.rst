@@ -2,6 +2,8 @@
 About Knife Plugins
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
 
 * The same :doc:`common options </knife_common_options>` used by |knife| subcommands can also be used by |knife| plug-ins

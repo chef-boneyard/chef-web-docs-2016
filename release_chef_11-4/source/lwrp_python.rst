@@ -2,6 +2,8 @@
 python Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name python|
 
 The |cookbook python| cookbook contains the following lightweight resources: ``python_pip`` and ``python_virtualenv``.

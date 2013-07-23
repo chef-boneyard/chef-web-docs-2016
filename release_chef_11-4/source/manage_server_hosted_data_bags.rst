@@ -2,6 +2,8 @@
 Manage Data Bags in Hosted Chef
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_data_bags.rst

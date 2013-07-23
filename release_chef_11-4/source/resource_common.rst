@@ -2,6 +2,8 @@
 Common Functionality 
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 All resources (and lightweight resources) share a set of common actions, attributes, conditional executions, notifications, and relative path options.
 
 Actions

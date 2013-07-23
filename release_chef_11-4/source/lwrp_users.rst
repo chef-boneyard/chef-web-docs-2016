@@ -2,6 +2,8 @@
 users Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name users|
 
 The |cookbook users| cookbook contains the following lightweight resource: ``users_manage``.

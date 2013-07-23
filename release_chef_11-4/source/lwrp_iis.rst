@@ -2,6 +2,8 @@
 iis Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name iis|
 
 The |cookbook iis| cookbook contains the following lightweight resources: ``iis_app``, ``iis_config``, ``iis_pool``, and ``iis_site``.

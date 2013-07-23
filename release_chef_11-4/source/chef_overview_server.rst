@@ -2,6 +2,8 @@
 The Chef Server
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
 There are three types of |chef| servers:

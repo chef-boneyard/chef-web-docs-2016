@@ -2,6 +2,8 @@
 homebrew Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name homebrew|
 
 The |cookbook homebrew| cookbook contains the following lightweight resource: ``homebrew``.

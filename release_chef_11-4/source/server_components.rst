@@ -2,6 +2,8 @@
 Chef Server Components
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
 .. include:: ../../includes_chef_server/includes_chef_server_component_erchef_background.rst

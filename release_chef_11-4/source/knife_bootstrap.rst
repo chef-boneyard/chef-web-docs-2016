@@ -2,6 +2,8 @@
 knife bootstrap
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef/includes_chef_bootstrap.rst
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst

@@ -2,6 +2,8 @@
 powershell Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name powershell|
 
 The |cookbook powershell| cookbook contains the following lightweight resource: ``powershell``.

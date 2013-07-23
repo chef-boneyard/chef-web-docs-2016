@@ -2,6 +2,8 @@
 Nodes
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_node/includes_node.rst
 
 There are two types of nodes that |chef| can manage:

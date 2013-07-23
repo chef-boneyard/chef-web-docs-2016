@@ -2,6 +2,8 @@
 group
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_group.rst

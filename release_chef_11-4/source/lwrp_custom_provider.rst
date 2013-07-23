@@ -2,6 +2,8 @@
 Lightweight Providers w/Chef Resources
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
 
 .. include:: ../../includes_lwrp/includes_lwrp_custom_provider.rst

@@ -2,9 +2,9 @@
 Knife Reference
 =====================================================
 
-.. include:: ../../includes_knife/includes_knife.rst
+.. warning:: |note doc_version_11-4|
 
-.. note:: This reference contains all of the |knife| subcommands available in |chef|, versions 11.0, 11.2, and 11.4.
+.. include:: ../../includes_knife/includes_knife.rst
 
 Working with Knife
 =====================================================

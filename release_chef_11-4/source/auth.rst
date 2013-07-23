@@ -2,6 +2,8 @@
 Authentication and Authorization
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef_auth/includes_chef_auth.rst
 
 .. list-table::

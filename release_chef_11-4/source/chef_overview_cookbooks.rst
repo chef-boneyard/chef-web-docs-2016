@@ -2,6 +2,8 @@
 Cookbooks
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 |chef| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chef| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.

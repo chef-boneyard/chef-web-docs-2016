@@ -2,6 +2,8 @@
 About Knife
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_knife/includes_knife.rst
 
 .. note:: |note knife quick reference|

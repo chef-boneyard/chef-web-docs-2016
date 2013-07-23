@@ -2,6 +2,8 @@
 Manage Environments in Hosted Chef
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_environment/includes_environment.rst
 
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_environments.rst

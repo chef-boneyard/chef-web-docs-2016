@@ -2,6 +2,8 @@
 Public and Private Keys
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef/includes_chef.rst
 
 How Keys are Used?

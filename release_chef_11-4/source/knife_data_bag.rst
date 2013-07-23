@@ -2,6 +2,8 @@
 knife data bag
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 .. include:: ../../includes_data_bag/includes_data_bag_encryption.rst

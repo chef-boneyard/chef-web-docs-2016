@@ -2,6 +2,8 @@
 chef_handler Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name chef_handler|
 
 The |cookbook chef_handler| cookbook contains the following lightweight resource: ``chef_handler``.

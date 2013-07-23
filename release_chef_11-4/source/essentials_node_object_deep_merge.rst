@@ -2,6 +2,8 @@
 Deep Merge
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_node/includes_node_attribute_deep_merge.rst
 
 The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.

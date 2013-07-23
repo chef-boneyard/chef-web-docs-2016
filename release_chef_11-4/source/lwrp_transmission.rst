@@ -2,6 +2,8 @@
 transmission Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name transmission|
 
 The |cookbook transmission| cookbook contains the following lightweight resource: ``transmission_torrent_file``.

@@ -2,6 +2,8 @@
 apt Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name apt|
 
 The |cookbook apt| cookbook contains the following lightweight resources: ``apt_preference`` and ``apt_repository``.

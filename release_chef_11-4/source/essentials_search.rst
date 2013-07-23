@@ -2,6 +2,8 @@
 About Search
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_search/includes_search.rst
 
 Many of the examples in this section use |knife|, but the search indexes and search query syntax can be used in many locations, including from within recipes and when using the |api chef server|.

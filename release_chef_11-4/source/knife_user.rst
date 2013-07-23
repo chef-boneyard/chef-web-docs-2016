@@ -2,6 +2,8 @@
 knife user
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_knife/includes_knife_user.rst
 
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.

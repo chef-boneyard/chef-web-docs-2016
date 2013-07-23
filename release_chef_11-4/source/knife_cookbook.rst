@@ -2,6 +2,8 @@
 knife cookbook
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 .. include:: ../../includes_knife/includes_knife_cookbook.rst

@@ -2,6 +2,8 @@
 webpi Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name webpi|
 
 The |cookbook webpi| cookbook contains the following lightweight resource: ``webpi_product``.

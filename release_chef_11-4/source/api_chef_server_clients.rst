@@ -2,6 +2,8 @@
 /clients
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |api chef server clients|
 
 .. note:: |note api chef server manage clients with knife|

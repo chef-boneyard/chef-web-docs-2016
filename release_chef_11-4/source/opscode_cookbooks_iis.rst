@@ -2,6 +2,8 @@
 iis Cookbook
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_iis.rst
 
 .. note:: This cookbook is available from |github|: https://github.com/opscode-cookbooks/iis.

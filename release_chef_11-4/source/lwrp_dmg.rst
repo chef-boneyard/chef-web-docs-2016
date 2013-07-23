@@ -2,6 +2,8 @@
 dmg Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name dmg|
 
 The |cookbook dmg| cookbook contains the following lightweight resource: ``dmg_package``.

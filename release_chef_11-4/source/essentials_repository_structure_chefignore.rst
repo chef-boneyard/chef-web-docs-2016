@@ -2,6 +2,8 @@
 chefignore Files
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_repository/includes_repository_directory_chefignore.rst 
 
 Examples

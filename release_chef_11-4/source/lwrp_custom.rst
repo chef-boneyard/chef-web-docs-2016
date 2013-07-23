@@ -2,6 +2,8 @@
 Custom LWRPs
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_lwrp/includes_lwrp.rst
 
 The following sections describe the structure, syntax, and options available for both lightweight resources and lightweight providers:

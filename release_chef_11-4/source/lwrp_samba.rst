@@ -2,6 +2,8 @@
 samba Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name samba|
 
 The |cookbook samba| cookbook contains the following lightweight resource: ``samba_user``.

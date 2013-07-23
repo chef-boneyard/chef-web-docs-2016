@@ -1,6 +1,9 @@
 =====================================================
 Mailing Lists
 =====================================================
+
+.. warning:: |note doc_version_11-4|
+
 Sign up for the |chef| mailing lists at |http lists opscode|. There are a few options:
 
 * ``chef@lists.opscode.com`` --- This list is about |chef| and is for general discussion between users, developers, and other interested parties.

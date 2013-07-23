@@ -2,6 +2,8 @@
 First-run Resources
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. warning:: Use sparingly. Most resources are idempotent by construction and do not require the methods discussed on this page. Whenever possible, it is best to use an idempotent resource.
 
 This page describes how to construct a resource that will perform an action on the first run of chef-client and do nothing on subsequent runs.

@@ -2,6 +2,8 @@
 About the Recipe DSL
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe.rst
 
 Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |ruby| can also be done in a recipe, including ``if`` and ``case`` statements, using the ``include?`` |ruby| method, including recipes in recipes, and checking for dependencies.

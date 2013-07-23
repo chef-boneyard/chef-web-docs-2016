@@ -2,6 +2,8 @@
 About Exception and Report Handlers
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_handler/includes_handler.rst
 
 Handler Properties

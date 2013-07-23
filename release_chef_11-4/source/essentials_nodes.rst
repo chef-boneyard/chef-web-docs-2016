@@ -2,6 +2,8 @@
 Nodes
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_node/includes_node.rst
 
 Cloud vs. Physical Nodes

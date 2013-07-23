@@ -2,6 +2,8 @@
 Unix Environment Variables
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_environment_variables/includes_environment_variables.rst
 
 Child Processes and Inheritance

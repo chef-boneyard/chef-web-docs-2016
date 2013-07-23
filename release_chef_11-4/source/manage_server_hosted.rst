@@ -2,6 +2,8 @@
 Manage the Hosted Chef Server
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef/includes_chef_hosted.rst
 
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted.rst

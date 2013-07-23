@@ -2,6 +2,8 @@
 chef_gem
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
 .. warning:: |note chef_gem vs gem_package|

@@ -2,6 +2,8 @@
 About Roles
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_role/includes_role.rst
 
 Role Attributes

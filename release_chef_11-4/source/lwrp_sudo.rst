@@ -2,6 +2,8 @@
 sudo Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name sudo|
 
 The |cookbook sudo| cookbook contains the following lightweight resource: ``sudo``.

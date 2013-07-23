@@ -2,6 +2,8 @@
 Why Chef?
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef/includes_chef_why_you_know_best.rst
 
 What are the core principles of Chef?

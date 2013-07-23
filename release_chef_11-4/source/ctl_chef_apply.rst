@@ -2,6 +2,8 @@
 chef-apply
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_ctl_chef_apply/includes_ctl_chef_apply.rst
 
 Options

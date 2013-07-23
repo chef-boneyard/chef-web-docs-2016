@@ -2,6 +2,8 @@
 knife environment
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_environment/includes_environment.rst
 
 .. include:: ../../includes_knife/includes_knife_environment.rst

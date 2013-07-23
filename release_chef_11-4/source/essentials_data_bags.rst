@@ -2,6 +2,8 @@
 About Data Bags
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
 Create a Data Bag

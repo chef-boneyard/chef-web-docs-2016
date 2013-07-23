@@ -2,6 +2,8 @@
 About LWRPs
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_lwrp/includes_lwrp.rst
 
 Read more about how to create lightweight resources :doc:`here </lwrp_custom>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below.

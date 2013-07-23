@@ -2,6 +2,8 @@
 knife tag
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef/includes_chef_tags.rst
 
 .. include:: ../../includes_knife/includes_knife_tag.rst

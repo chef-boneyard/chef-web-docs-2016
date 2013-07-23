@@ -2,9 +2,9 @@
 Documentation for Chef 11.0.0, 11.2, and 11.4.0
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_index.rst
+.. warning:: |note doc_version_11-4|
 
-.. warning:: This is documentation for |chef| 11.0, 11.2, and 11.4. For the current version of |chef|, see http://docs.opscode.com.
+.. include:: ../../includes_chef/includes_chef_index.rst
 
 Getting Started 
 =====================================================

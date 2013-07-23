@@ -2,6 +2,8 @@
 About Environments
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_environment/includes_environment.rst
 
 The _default Environment

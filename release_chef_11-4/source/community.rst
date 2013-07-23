@@ -2,6 +2,8 @@
 The Chef Community
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_community/includes_community.rst
 
 .. include:: ../../includes_community/includes_community_contributions.rst

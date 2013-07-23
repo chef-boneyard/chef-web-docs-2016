@@ -2,6 +2,8 @@
 aws Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name aws|
 
 The |cookbook aws| cookbook contains the following lightweight resources: ``aws_ebs_volume``, ``aws_elastic_ip``, ``aws_elastic_lb``, and ``aws_resource_tag``.

@@ -2,6 +2,8 @@
 Chef Community Guidelines
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 The |chef| community is a mixture of professionals and volunteers who come from all over the world and work together to make |chef| better, including mentoring, teaching, and connecting with other members of the |chef| community.
 
 Diversity is one of our biggest strengths, but it can also bring increased communication challenges at times. 

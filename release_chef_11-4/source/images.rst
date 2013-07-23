@@ -2,6 +2,8 @@
 Standalone Image Files
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. note:: This page exists only to ensure that certain large images are uploaded to the ``/_images/`` folder on docs.opscode.com. This is because they do not appear in any of the regular topics, but should be available as a URL in case people need them.
 
 Instead of using this page to view these images, click these links:

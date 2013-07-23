@@ -2,6 +2,8 @@
 gunicorn Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |gunicorn desc| |cookbook name gunicorn|
 
 The |cookbook gunicorn| cookbook contains the following lightweight resources: ``gunicorn_config`` and ``gunicorn_install``.

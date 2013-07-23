@@ -2,6 +2,8 @@
 knife role
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_role/includes_role.rst
 
 .. include:: ../../includes_knife/includes_knife_role.rst

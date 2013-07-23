@@ -2,6 +2,8 @@
 rabbitmq Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name rabbitmq|
 
 The |cookbook rabbitmq| cookbook contains the following lightweight resources: ``rabbitmq_plugin``, ``rabbitmq_user``, and ``rabbitmq_vhost``.

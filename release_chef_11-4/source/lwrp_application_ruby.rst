@@ -2,6 +2,8 @@
 application_ruby Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. warning:: DRAFT
 
 |cookbook name application_ruby|

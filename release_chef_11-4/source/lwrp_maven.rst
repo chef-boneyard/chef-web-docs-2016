@@ -2,6 +2,8 @@
 maven Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name maven|
 
 The |cookbook maven| cookbook contains the following lightweight resource: ``maven``.

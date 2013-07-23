@@ -2,6 +2,8 @@
 chef-client
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef/includes_chef_client.rst
 
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client.rst

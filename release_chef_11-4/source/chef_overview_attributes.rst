@@ -1,6 +1,9 @@
 =====================================================
 About Attributes
 =====================================================
+
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_node/includes_node_attribute.rst
 
 |chef| uses six types of attributes to determine the value that is applied to a node during the |chef| run. In addition, |chef| sources attribute values from up to five locations. The combination of attribute types and sources allows for up to 15 different competing values to be available to |chef| during the |chef| run.

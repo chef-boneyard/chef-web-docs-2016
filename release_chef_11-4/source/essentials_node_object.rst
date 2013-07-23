@@ -2,6 +2,8 @@
 About Node Objects
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_node/includes_node_object.rst
 
 .. include:: ../../includes_node/includes_node_attribute.rst

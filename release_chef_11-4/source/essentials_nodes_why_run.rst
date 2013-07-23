@@ -2,6 +2,8 @@
 why-run Mode
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode.rst
 
 .. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst

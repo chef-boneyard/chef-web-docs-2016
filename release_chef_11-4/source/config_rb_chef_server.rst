@@ -2,6 +2,8 @@
 chef-server.rb
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_config/includes_config_rb_chef_server.rst
 
 Settings

@@ -2,6 +2,8 @@
 php Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name php|
 
 The |cookbook php| cookbook contains the following lightweight resources: ``php_pear`` and ``php_pear_channel``.

@@ -2,6 +2,8 @@
 Manage Groups in Hosted Chef
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_groups.rst
 
 Add User to Group

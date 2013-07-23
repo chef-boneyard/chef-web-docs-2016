@@ -2,6 +2,8 @@
 /cookbooks
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
 .. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_cookbooks.rst

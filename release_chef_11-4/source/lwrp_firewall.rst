@@ -2,6 +2,8 @@
 firewall Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name firewall|
 
 The |cookbook firewall| cookbook contains the following lightweight resources: ``firewall`` and ``firewall_rule``.

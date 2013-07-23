@@ -2,6 +2,8 @@
 What's New in Chef 11
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 The following items are new for |chef 11| and/or are changes from |chef 10|.
 
 chef-client and chef-solo

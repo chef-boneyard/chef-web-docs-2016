@@ -2,6 +2,8 @@
 riak Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name riak|
 
 The |cookbook riak| cookbook contains the following lightweight resource: ``riak_cluster``.

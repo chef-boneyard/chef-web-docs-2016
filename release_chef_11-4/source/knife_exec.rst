@@ -2,6 +2,8 @@
 knife exec
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_knife/includes_knife_exec.rst
 
 Authenticated API Requests

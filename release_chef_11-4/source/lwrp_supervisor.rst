@@ -2,6 +2,8 @@
 supervisor Lightweight Resource
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 |cookbook name supervisor|
 
 The |cookbook supervisor| cookbook contains the following lightweight resources: ``supervisor_fcgi``, ``supervisor_group``, and ``supervisor_service``.

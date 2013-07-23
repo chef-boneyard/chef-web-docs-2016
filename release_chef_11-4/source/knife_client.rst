@@ -2,6 +2,8 @@
 knife client
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 .. include:: ../../includes_security/includes_security_chef_validator.rst
 
 .. include:: ../../includes_knife/includes_knife_client.rst
