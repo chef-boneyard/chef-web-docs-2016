@@ -21,11 +21,11 @@ server:
 
 11-4:
 	mkdir -p $(BUILDDIR)/release/11-4/
-	sphinx-build release_chef_11-4/source $(BUILDDIR)/release/11-4/
+	sphinx-build release_chef_11-4/source $(BUILDDIR)/chef/release/11-4/
 
 11-6:
 	mkdir -p $(BUILDDIR)/release/11-6/
-	sphinx-build release_chef_11-6/source $(BUILDDIR)/release/11-6/
+	sphinx-build release_chef_11-6/source $(BUILDDIR)/chef/release/11-6/
 
 
 upload:	release
