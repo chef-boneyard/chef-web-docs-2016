@@ -43,7 +43,7 @@ This configuration file has the following settings:
  
           data_bag_path "/var/chef/databags"
    * - ``environment_path``
-     - |environment_path|  Default value: ``/var/chef/environments``. For example:
+     - |path environment|  Default value: ``/var/chef/environments``. For example:
        ::
  
           environment_path "/var/chef/environments"
