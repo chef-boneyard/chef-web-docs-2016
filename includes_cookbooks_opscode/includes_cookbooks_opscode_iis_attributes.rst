@@ -10,18 +10,18 @@ This cookbook includes the following attributes:
    * - Attribute
      - Description
    * - ``node['iis']['accept_eula']``
-     - |iis_accept_eula|
+     - |iis_accept_eula| Default value: ``false``.
    * - ``node['iis']['home']``
-     - |iis_home|
+     - |iis_home| Default value: ``%WINDIR%\System32\inetsrv``.
    * - ``node['iis']['conf_dir']``
-     - |iis_conf_dir|
+     - |iis_conf_dir| Default value: ``%WINDIR%\System32\inetsrv\config``.
    * - ``node['iis']['pubroot']``
-     - |iis_pubroot|
+     - |iis_pubroot| Default value: ``%SYSTEMDRIVE%\inetpub``.
    * - ``node['iis']['docroot']``
-     - |iis_docroot|
+     - |iis_docroot| Default value: ``%SYSTEMDRIVE%\inetpub\wwwroot``.
    * - ``node['iis']['log_dir']``
-     - |iis_log_dir|
+     - |iis_log_dir| Default value: ``%SYSTEMDRIVE%\inetpub\logs\LogFiles``.
    * - ``node['iis']['cache_dir']``
-     - |iis_cache_dir|
+     - |iis_cache_dir| Default value: ``%SYSTEMDRIVE%\inetpub\temp``.
 
 
