@@ -6,7 +6,7 @@ The ``/metadata`` endpoint is used to download the |chef client|:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/metadata?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
+   http://www.opscode.com/chef/metadata?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true
 
 where:
 
@@ -15,7 +15,6 @@ where:
 * ``m`` is the machine architecture for the machine on which the |chef client| will be installed. Possible values depend on the platform. For example, for |ubuntu| or |debian|: ``i686`` or ``x86_64`` or for |mac os x|: ``x86_64``.
 * ``v`` is the version of the |chef client| to be installed. A version always takes the form x.y.z, where x, y, and z are decimal numbers that are used to represent major (x), minor (y), and patch (z) versions. A two-part version (x.y) is also allowed. For more information about application versioning, see http://semver.org/. Default value: ``latest``.
 * ``prerelease`` indicates that pre-release versions of |chef client| will be included in the query. Default value: ``false``.
-* ``nightlies`` indicates that nightly versions of |chef client| will be included in the query. Default value: ``false``.
 
 .. warning:: Nightly versions should never be run in a production environment and should be used for testing and validation purposes only.
 
@@ -212,7 +211,7 @@ To use |curl| to get the omnibus package for |ubuntu| 12.04, and return the data
 
 .. code-block:: bash
 
-   curl -H "Accept: application/json" 'https://www.opscode.com/chef/metadata-server?p=ubuntu&pv=12.04&m=x86_64'
+   $ curl -H "Accept: application/json" 'https://www.opscode.com/chef/metadata-server?p=ubuntu&pv=12.04&m=x86_64'
 
 to return something like:
 
@@ -224,3 +223,15 @@ to return something like:
      "sha256": "29fa28a18d48bcc8d8e557d4c2dd94386abb6b20cfc341fff62444401d76351c",
      "url": "https://opscode-omnibus-packages.s3.amazonaws.com/ubuntu/12.04/x86_64/chef-server_11.0.8-1.ubuntu.12.04_amd64.deb"
    }
+
+To use |curl| to return only the SHA for the installer, enter the following:
+
+.. code-block:: bash
+
+   $ curl -s 'https://www.opscode.com/chef/metadata-server?p=ubuntu&pv=12.04&m=x86_64' | awk '$1 == "sha256" { print $2 }'
+
+to return something like:
+
+.. code-block:: bash
+
+   $ 29fa28a18d48bcc8d8e888d4c2dd94386abb6b20cfc341fff62664401d76351c
