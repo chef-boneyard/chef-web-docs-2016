@@ -5,7 +5,7 @@ All about Chef ...
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 
-Getting Started  
+Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
 
@@ -19,11 +19,11 @@ Getting Started
 
 **What's new:** :doc:`Chef 11.6 </release_notes>`
 
-The Community 
+The Community
 =====================================================
 .. include:: ../../includes_community/includes_community_contributions.rst
 
-The Workstation 
+The Workstation
 =====================================================
 **The Basics:** :doc:`About the Workstation </chef_overview_workstation>` | :doc:`The Chef Repository </essentials_repository>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
 
@@ -38,7 +38,7 @@ The Workstation
 **Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-apply (executable) </ctl_chef_apply>`
 
 
-The Server 
+The Server
 =====================================================
 **The basics:** :doc:`About the Chef Server </chef_overview_server>` | :doc:`Server Components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>` | :doc:`Authentication and Authorization </auth>` | :doc:`Private Keys </chef_private_keys>`
 
@@ -59,7 +59,7 @@ The Server
 **APIs:** :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Chef Server API </api_chef_server>`
 
 
-The Nodes 
+The Nodes
 =====================================================
 **The Basics:** :doc:`About Nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The Chef Run </essentials_nodes_chef_run>` | :doc:`Ohai </ohai>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>`
 
@@ -123,6 +123,7 @@ Cookbooks
    chef_solo
    api_chef_server
    api_cookbooks_site
+   api_omnitruck
    api_pushy
    dsl_recipe
    ohai

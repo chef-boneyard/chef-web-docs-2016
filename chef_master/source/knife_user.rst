@@ -6,7 +6,7 @@ knife user
 
 .. note:: |note subcommand_is_open_source_only|
 
-.. note:: |note review_list_of_common_knife_options|
+Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 =====================================================
