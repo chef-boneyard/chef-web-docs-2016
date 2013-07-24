@@ -6,7 +6,7 @@ The ``/download-client`` endpoint is used to download the |chef client|:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/download-client?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
+   http://www.opscode.com/chef/metadata?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
 
 where:
 
@@ -33,15 +33,15 @@ where:
      - ``el``
      - ``5``
      - ``x86_64``
-   * - |centos|
+   * - 
      - ``el``
      - ``5``
      - ``i686``
-   * - |centos|
+   * - 
      - ``el``
      - ``6``
      - ``x86_64``
-   * - |centos|
+   * - 
      - ``el``
      - ``6``
      - ``i686``
@@ -49,7 +49,7 @@ where:
      - ``debian``
      - ``6``
      - ``x86_64``
-   * - |debian|
+   * - 
      - ``debian``
      - ``6``
      - ``i686``
@@ -57,7 +57,7 @@ where:
      - ``freebsd``
      - ``9``
      - ``amd64``
-   * - |freebsd|
+   * - 
      - ``freebsd``
      - ``9``
      - ``i386``
@@ -65,7 +65,7 @@ where:
      - ``mac_os_x``
      - ``10.6``
      - ``x86_64``
-   * - |mac os x|
+   * - 
      - ``mac_os_x``
      - ``10.7``
      - ``x86_64``
@@ -73,19 +73,19 @@ where:
      - ``solaris2``
      - ``5.10``
      - ``i386``
-   * - |solaris|
+   * - 
      - ``solaris2``
      - ``5.11``
      - ``i386``
-   * - |solaris|
+   * - 
      - ``solaris2``
      - ``5.9``
      - ``sparc``
-   * - |solaris|
+   * - 
      - ``solaris2``
      - ``5.10``
      - ``sparc``
-   * - |solaris|
+   * - 
      - ``solaris2``
      - ``5.11``
      - ``sparc``
@@ -93,7 +93,7 @@ where:
      - ``suse``
      - ``12.1``
      - ``x86_64``
-   * - |suse|
+   * - 
      - ``suse``
      - ``12.1``
      - ``i686``
@@ -101,7 +101,7 @@ where:
      - ``sles``
      - ``11.2``
      - ``i686``
-   * - |suse els|
+   * - 
      - ``sles``
      - ``11.2``
      - ``x86_64``
@@ -109,55 +109,55 @@ where:
      - ``ubuntu``
      - ``10.04``
      - ``x86_64``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``10.10``
      - ``x86_64``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``10.04``
      - ``i686``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``10.10``
      - ``i686``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``11.04``
      - ``x86_64``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``11.10``
      - ``x86_64``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``12.04``
      - ``x86_64``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``12.10``
      - ``x86_64``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``13.04``
      - ``x86_64``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``11.04``
      - ``i686``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``11.10``
      - ``i686``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``12.04``
      - ``i686``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``12.10``
      - ``i686``
-   * - |ubuntu|
+   * - 
      - ``ubuntu``
      - ``13.04``
      - ``i686``
@@ -165,23 +165,23 @@ where:
      - ``windows``
      - ``2008r2``
      - ``x86_64``
-   * - |windows|
+   * - 
      - ``windows``
      - ``2003r2``
      - ``i686``
-   * - |windows|
+   * - 
      - ``windows``
      - ``2003r2``
      - ``x86_64``
-   * - |windows|
+   * - 
      - ``windows``
      - ``2008``
      - ``x86_64``
-   * - |windows|
+   * - 
      - ``windows``
      - ``2008``
      - ``i686``
-   * - |windows|
+   * - 
      - ``windows``
      - ``2012``
      - ``x86_64``
