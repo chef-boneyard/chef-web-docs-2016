@@ -73,7 +73,7 @@ The following attributes are for use with |git| only:
    * - ``remote``
      - |remote resource| Default value: ``origin``.
    * - ``shallow_clone``
-     - |shallow_clone resource|
+     - |shallow_clone| Default value: ``false``.
    * - ``ssh_wrapper``
      - |ssh_wrapper resource|
 
