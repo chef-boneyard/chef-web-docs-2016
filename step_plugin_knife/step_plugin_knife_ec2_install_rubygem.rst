@@ -4,7 +4,7 @@ To install the ``knife ec2`` plugin using |rubygems|, run the following command:
 
 .. code-block:: bash
 
-   $ gem install knife-ec2
+   $ /opt/chef/embedded/bin/gem install knife-ec2
 
 
 

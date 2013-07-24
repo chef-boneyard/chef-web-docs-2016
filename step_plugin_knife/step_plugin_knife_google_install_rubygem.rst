@@ -4,7 +4,7 @@ To install the ``knife google`` plugin using |rubygems|, run the following comma
 
 .. code-block:: bash
 
-   $ gem install knife-google
+   $ /opt/chef/embedded/bin/gem install knife-google
 
 
 

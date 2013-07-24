@@ -4,7 +4,7 @@ To install the ``knife windows`` plugin using |rubygems|, run the following comm
 
 .. code-block:: bash
 
-   $ gem install knife-windows
+   $ /opt/chef/embedded/bin/gem install knife-windows
 
 
 

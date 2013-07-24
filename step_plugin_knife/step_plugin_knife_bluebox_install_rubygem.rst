@@ -4,7 +4,7 @@ To install the ``knife bluebox`` plugin using |rubygems|, run the following comm
 
 .. code-block:: bash
 
-   $ gem install knife-bluebox
+   $ /opt/chef/embedded/bin/gem install knife-bluebox
 
 
 

@@ -4,7 +4,7 @@ To install the ``knife vcloud`` plugin using |rubygems|, run the following comma
 
 .. code-block:: bash
 
-   $ gem install knife-vcloud
+   $ /opt/chef/embedded/bin/gem install knife-vcloud
 
 
 

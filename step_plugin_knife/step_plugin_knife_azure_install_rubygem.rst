@@ -4,7 +4,8 @@ To install the ``knife azure`` plugin using |rubygems|, run the following comman
 
 .. code-block:: bash
 
-   $ gem install knife-azure
+   $ /opt/chef/embedded/bin/gem install knife-azure
+
 
 
 

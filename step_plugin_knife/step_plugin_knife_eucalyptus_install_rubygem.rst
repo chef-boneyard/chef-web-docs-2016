@@ -4,7 +4,7 @@ To install the ``knife eucalyptus`` plugin using |rubygems|, run the following c
 
 .. code-block:: bash
 
-   $ gem install knife-eucalyptus
+   $ /opt/chef/embedded/bin/gem install knife-eucalyptus
 
 
 

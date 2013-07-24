@@ -4,7 +4,7 @@ To install the ``knife pushy`` plugin using |rubygems|, run the following comman
 
 .. code-block:: bash
 
-   $ gem install knife-pushy
+   $ /opt/chef/embedded/bin/gem install knife-pushy
 
 
 

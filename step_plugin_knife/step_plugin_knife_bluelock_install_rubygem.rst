@@ -4,7 +4,7 @@ To install the ``knife bluelock`` plugin using |rubygems|, run the following com
 
 .. code-block:: bash
 
-   $ gem install knife-bluelock
+   $ /opt/chef/embedded/bin/gem install knife-bluelock
 
 
 

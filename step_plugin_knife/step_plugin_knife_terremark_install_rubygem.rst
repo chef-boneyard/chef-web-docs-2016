@@ -4,7 +4,7 @@ To install the ``knife terremark`` plugin using |rubygems|, run the following co
 
 .. code-block:: bash
 
-   $ gem install knife-terremark
+   $ /opt/chef/embedded/bin/gem install knife-terremark
 
 
 

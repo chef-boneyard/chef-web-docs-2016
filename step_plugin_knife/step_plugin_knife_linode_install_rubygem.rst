@@ -4,7 +4,7 @@ To install the ``knife linode`` plugin using |rubygems|, run the following comma
 
 .. code-block:: bash
 
-   $ gem install knife-linode
+   $ /opt/chef/embedded/bin/gem install knife-linode
 
 
 

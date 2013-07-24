@@ -4,7 +4,7 @@ To install the ``knife openstack`` plugin using |rubygems|, run the following co
 
 .. code-block:: bash
 
-   $ gem install knife-openstack
+   $ /opt/chef/embedded/bin/gem install knife-openstack
 
 
 
