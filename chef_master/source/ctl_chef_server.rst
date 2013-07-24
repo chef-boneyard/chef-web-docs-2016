@@ -11,7 +11,7 @@ Options
 
 Examples
 =====================================================
-The following examples show how to use ``ctl-chef-server`` to manage services.
+The following examples show how to use |chef server ctl| to manage services.
 
 **View the status of a service**
 

@@ -30,7 +30,7 @@ Chef Server Topics
 .. 
 .. **Tools:** :doc:`orgmapper </orgmapper>`
 .. 
-.. **Reference:** :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
+.. **Reference:** :doc:`chef-server-ctl </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
 .. 
 .. 
 .. 

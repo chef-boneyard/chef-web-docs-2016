@@ -54,7 +54,7 @@ The Server
 
 **Settings:** :doc:`chef-server.rb </config_rb_chef_server>`
 
-**Tools:** :doc:`orgmapper </orgmapper>` | :doc:`ctl-chef-server </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>`
+**Tools:** :doc:`orgmapper </orgmapper>` | :doc:`chef-server-ctl </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>`
 
 **APIs:** :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Chef Server API </api_chef_server>`
 
