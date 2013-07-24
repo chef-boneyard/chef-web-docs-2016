@@ -6,6 +6,7 @@ To install the ``knife ec2`` plugin using |rubygems|, run the following command:
 
    $ /opt/chef/embedded/bin/gem install knife-ec2
 
+where ``/opt/chef/embedded/bin/`` is the path to the location where |chef| expects |knife| plugins to be installed when |chef| was installed using the omnibus installer. If |chef| was installed using |rubygems|, omit the path in the previous example.
 
 
 

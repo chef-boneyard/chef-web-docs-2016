@@ -6,7 +6,7 @@ To install the ``knife eucalyptus`` plugin using |rubygems|, run the following c
 
    $ /opt/chef/embedded/bin/gem install knife-eucalyptus
 
-
+where ``/opt/chef/embedded/bin/`` is the path to the location where |chef| expects |knife| plugins to be installed when |chef| was installed using the omnibus installer. If |chef| was installed using |rubygems|, omit the path in the previous example.
 
 
 
