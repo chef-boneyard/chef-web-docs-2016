@@ -8,6 +8,12 @@ The ``/metadata`` endpoint is used to download the |chef client|:
 
    http://www.opscode.com/chef/metadata?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true
 
+or:
+
+.. code-block:: xml
+
+   http://www.opscode.com/chef/download?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true
+
 where:
 
 * ``p`` is the platform. Possible values: ``debian``, ``el`` (for |centos|), ``freebsd``, ``mac_os_x``, ``solaris2``, ``sles``, ``suse``, ``ubuntu`` or ``windows``.
@@ -189,7 +195,7 @@ To get the latest supported build for |ubuntu| 12.04, enter the following:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/metadata?p=$ubuntu&pv=$12.04&m=$x86_64
+   http://www.opscode.com/chef/download?p=$ubuntu&pv=$12.04&m=$x86_64
 
 to return something like:
 
@@ -203,7 +209,7 @@ Or to get the nightly build for |mac os x| 10.7:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/metadata?p=$osx&pv=$10.7&m=$x86_64&nightlies=true
+   http://www.opscode.com/chef/download?p=$osx&pv=$10.7&m=$x86_64&nightlies=true
 
 To use |curl| to get the omnibus package for |ubuntu| 12.04, and return the data as |json| data, enter the following:
 
@@ -233,3 +239,9 @@ to return something like:
 .. code-block:: bash
 
    $ 29fa28a18d48bcc8d8e888d4c2dd94386abb6b20cfc341fff62664401d76351c
+
+To use |curl| to download a package directly, enter the following:
+
+.. code-block:: bash
+
+   $ curl -L -O 'https://www.opscode.com/chef/download?p=debian&pv=6&m=x86_64'

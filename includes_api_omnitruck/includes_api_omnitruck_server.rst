@@ -8,6 +8,12 @@ The ``/metadata-server`` endpoint is used to download the |chef server|:
 
    http://www.opscode.com/chef/metadata-server?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
 
+or:
+
+.. code-block:: xml
+
+   http://www.opscode.com/chef/download-server?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true
+
 where:
 
 * ``p`` is the platform. Possible values: ``ubuntu`` or ``el`` (for |centos|).
@@ -56,10 +62,16 @@ To get the latest supported build for |ubuntu| 12.04, enter the following:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/metadata-server?p=$ubuntu&pv=$12.04&m=$x86_64
+   http://www.opscode.com/chef/download-server?p=$ubuntu&pv=$12.04&m=$x86_64
 
 Or to get the nightly build for |ubuntu| 12.04:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/metadata-server?p=$ubuntu&pv=$12.04&m=$x86_64&nightlies=true
+   http://www.opscode.com/chef/download-server?p=$ubuntu&pv=$12.04&m=$x86_64&nightlies=true
+
+To use |curl| to download a package directly, enter the following:
+
+.. code-block:: bash
+
+   $ curl -L -O 'https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=x86_64'
