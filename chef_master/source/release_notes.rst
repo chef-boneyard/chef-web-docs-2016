@@ -22,7 +22,7 @@ The following items are new for |chef 11-6| and/or are changes from previous ver
 * **New subcommands for Knife** |subcommand knife deps|, |subcommand knife edit|, and |subcommand knife xargs| have been added to |chef|.
 * **New options for Knife subcommands** The |subcommand knife delete|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife list|, and |subcommand knife upload| subcommands have new options.
 * **Support for environments in chef-solo** |chef solo| now supports environments.
-
+* **New way to force a redeploy when using the deploy resource** To force a redeploy, delete either the deployment directory or the cache file.
 
 Required Updates
 -----------------------------------------------------
@@ -395,6 +395,10 @@ A new setting has been added to the |solo rb| file:
        ::
  
           environment_path "/var/chef/environments"
+
+Force a Redeploy
+-----------------------------------------------------
+Previous versions of |chef| required the cache file to be deleted to force a redeploy. In |chef 11-6|, in addition to deleting the cache file, deleting the deployment directory will also force a redeploy.
 
 What's Fixed
 =====================================================
