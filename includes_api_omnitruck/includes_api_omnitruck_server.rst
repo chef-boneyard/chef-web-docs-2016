@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``/download-server`` endpoint is used to download the |chef server|:
+The ``/metadata-server`` endpoint is used to download the |chef server|:
 
 .. code-block:: xml
 
@@ -56,7 +56,7 @@ To get the latest supported build for |ubuntu| 12.04, enter the following:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/download-server?p=$ubuntu&pv=$12.04&m=$x86_64
+   http://www.opscode.com/chef/metadata-server?p=$ubuntu&pv=$12.04&m=$x86_64
 
 to return something like:
 
@@ -70,4 +70,4 @@ Or to get the nightly build for |ubuntu| 12.04:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/download-server?p=$ubuntu&pv=$12.04&m=$x86_64&nightlies=true
+   http://www.opscode.com/chef/metadata-server?p=$ubuntu&pv=$12.04&m=$x86_64&nightlies=true

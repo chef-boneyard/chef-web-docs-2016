@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``/download-client`` endpoint is used to download the |chef client|:
+The ``/metadata`` endpoint is used to download the |chef client|:
 
 .. code-block:: xml
 
@@ -192,10 +192,10 @@ To get the latest supported build for |ubuntu| 12.04, enter the following:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/download-client?p=$ubuntu&pv=$12.04&m=$x86_64
+   http://www.opscode.com/chef/metadata?p=$ubuntu&pv=$12.04&m=$x86_64
 
 Or to get the nightly build for |mac os x| 10.7:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/download-client?p=$osx&pv=$10.7&m=$x86_64&nightlies=true
+   http://www.opscode.com/chef/metadata?p=$osx&pv=$10.7&m=$x86_64&nightlies=true
