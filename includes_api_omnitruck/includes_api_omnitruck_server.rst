@@ -28,14 +28,14 @@ where:
 **Platform, Platform Version, Machine Architecture Table**
 
 .. list-table::
-   :widths: 200 100 100 100
+   :widths: 320 60 60 60
    :header-rows: 1
  
-   * - 
+   * - Platform
      - p
      - pv
      - m
-   * - |centos|
+   * - |redhat enterprise linux| / |centos|
      - ``el``
      - ``5``
      - ``x86_64``
