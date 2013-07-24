@@ -4,7 +4,9 @@
 
 The ``/download-server`` endpoint is used to download the |chef server|:
 
-http://www.opscode.com/chef/download-server?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
+.. code-block:: xml
+
+   http://www.opscode.com/chef/download-server?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
 
 where:
 

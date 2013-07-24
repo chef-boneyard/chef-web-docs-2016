@@ -4,7 +4,9 @@
 
 The ``/download-client`` endpoint is used to download the |chef client|:
 
-http://www.opscode.com/chef/download-client?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
+.. code-block:: xml
+
+   http://www.opscode.com/chef/download-client?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
 
 where:
 
