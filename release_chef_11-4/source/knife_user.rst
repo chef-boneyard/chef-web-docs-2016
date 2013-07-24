@@ -6,7 +6,9 @@ knife user
 
 .. include:: ../../includes_knife/includes_knife_user.rst
 
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
+.. note:: |note subcommand_is_open_source_only|
+
+.. note:: |note review_list_of_common_knife_options|
 
 create
 =====================================================

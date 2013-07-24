@@ -5,5 +5,5 @@
 
 |knife index rebuild|
 
-.. note:: This subcommand ONLY works when run against the open source |chef server| and will not run against any other flavor of |chef|, including |chef hosted| and |chef private|.
+.. note:: |note subcommand_is_open_source_only|
 
