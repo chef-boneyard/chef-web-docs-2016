@@ -134,7 +134,7 @@ Cookbooks
    ctl_chef_solo
    ctl_pushy_client
    server_types
-   server_components
+   server_components 
 
    auth
 
