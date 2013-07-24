@@ -16,8 +16,6 @@ where:
 * ``v`` is the version of the |chef client| to be installed. A version always takes the form x.y.z, where x, y, and z are decimal numbers that are used to represent major (x), minor (y), and patch (z) versions. A two-part version (x.y) is also allowed. For more information about application versioning, see http://semver.org/. Default value: ``latest``.
 * ``prerelease`` indicates that pre-release versions of |chef client| will be included in the query. Default value: ``false``.
 
-.. warning:: Nightly versions should never be run in a production environment and should be used for testing and validation purposes only.
-
 **Platform, Platform Version, Machine Architecture Table**
 
 .. list-table::
