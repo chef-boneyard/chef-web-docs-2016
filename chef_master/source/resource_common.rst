@@ -76,7 +76,7 @@ only_if Examples
 
 Lazy Attribute Evaluation
 =====================================================
-.. include:: ../../includes_cookbooks/includes_resource_common_lazy_evaluation.rst
+.. include:: ../../includes_resources/includes_resource_common_lazy_evaluation.rst
 
 Notifications
 =====================================================

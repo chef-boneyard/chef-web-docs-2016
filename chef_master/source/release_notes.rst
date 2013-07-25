@@ -38,7 +38,7 @@ Atomic File Updates
 
 Lazy Attribute Evaluation
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_resource_common_lazy_evaluation.rst
+.. include:: ../../includes_resources/includes_resource_common_lazy_evaluation.rst
 
 |resource file|-based Resources
 -----------------------------------------------------

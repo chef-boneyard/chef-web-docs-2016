@@ -105,7 +105,7 @@ The following examples show how to use ``only_if`` as a condition in a recipe:
 
 Lazy Attribute Evaluation
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_resource_common_lazy_evaluation.rst
+.. include:: ../../includes_resources/includes_resource_common_lazy_evaluation.rst
 
 Notifications
 -----------------------------------------------------
