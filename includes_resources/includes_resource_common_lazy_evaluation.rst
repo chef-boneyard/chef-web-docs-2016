@@ -1,0 +1,36 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+
+
+In some cases, the value for an attribute cannot be known until the compile phase of a |chef client| run. In this situation, using lazy evaluation of attribute values can be helpful. Instead of an attribute being assigned a value, it may instead be assigned a code block. The syntax for using lazy evaluation is as follows:
+
+.. code-block:: ruby
+
+   attribute_name lazy { code_block }
+
+where ``lazy`` is used to tell the |chef client| to evaluate the contents of the code block later on in the resource evaluation process (instead of immediately) and ``{ code_block }`` is arbitrary |ruby| code that provides the value.
+
+For example, a resource that is not doing lazy evaluation:
+
+.. code-block:: ruby
+
+   template "template_name" do
+     # some attributes
+     path "/foo/bar"
+   end
+
+and a resource that is doing lazy evaluation:
+
+.. code-block:: ruby
+
+   template "template_name" do
+     # some attributes
+     path lazy { " some Ruby code " }
+   end
+
+In the previous examples, the first resource uses the value ``/foo/bar`` and the second resource uses the value provided by the code block, as long as the contents of that code block are a valid resource attribute.
+
+
+
+

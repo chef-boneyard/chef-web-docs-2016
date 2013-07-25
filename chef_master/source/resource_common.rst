@@ -74,6 +74,10 @@ only_if Examples
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
 
+Lazy Attribute Evaluation
+=====================================================
+.. include:: ../../includes_cookbooks/includes_resource_common_lazy_evaluation.rst
+
 Notifications
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications.rst
