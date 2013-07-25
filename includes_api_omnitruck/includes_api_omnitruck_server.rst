@@ -27,34 +27,7 @@ where:
 
 **Platform, Platform Version, Machine Architecture Table**
 
-.. list-table::
-   :widths: 320 60 60 60
-   :header-rows: 1
- 
-   * - Platform
-     - p
-     - pv
-     - m
-   * - |redhat enterprise linux| / |centos|
-     - ``el``
-     - ``5``
-     - ``x86_64``
-   * - 
-     - ``el``
-     - ``6``
-     - ``x86_64``
-   * - |ubuntu|
-     - ``ubuntu``
-     - ``10.04``
-     - ``x86_64``
-   * - 
-     - ``ubuntu``
-     - ``11.04``
-     - ``x86_64``
-   * - 
-     - ``ubuntu``
-     - ``12.04``
-     - ``x86_64``
+.. include:: ../../includes_chef/includes_supported_versions_server.rst
 
 **Examples**
 
