@@ -118,7 +118,7 @@ This configuration file has the following settings:
  
           sandbox_path "path_to_folder"
    * - ``solo``
-     - |solo mode| For example:
+     - |solo mode| Default value: ``false``. For example:
        ::
  
           solo false

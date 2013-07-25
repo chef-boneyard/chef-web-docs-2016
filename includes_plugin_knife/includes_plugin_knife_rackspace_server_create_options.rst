@@ -48,7 +48,7 @@ This argument has the following options:
    |rackspace_api_auth_url| Default: ``auth.api.rackspacecloud.com``.
 
 ``-S NAME``, ``--server-name NAME``
-   |server-name|
+   |name server|
 
 ``--template-file TEMPLATE``
    |template-file|

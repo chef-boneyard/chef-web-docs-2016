@@ -58,7 +58,7 @@ This command has the following options:
    |log_location| This is recommended when starting any executable as a daemon.
 
 ``--[no-]color``
-   |no-color| Default setting: ``--color``.
+   |no_color| Default setting: ``--color``.
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node name chef-client|

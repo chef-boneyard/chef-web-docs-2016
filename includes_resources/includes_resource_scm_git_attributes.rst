@@ -32,4 +32,4 @@ This resource has the following attributes:
    * - ``ssh_wrapper``
      - |ssh_wrapper resource|
    * - ``user``
-     - |user resource scm|
+     - |user checked_out_code| Default value: ``nil``.

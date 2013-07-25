@@ -10,7 +10,7 @@ The following options can be run with all |knife| sub-commands and plug-ins:
    |color|
 
 ``-d``, ``--disable-editing``
-   |no-editor|
+   |no_editor|
 
 ``--defaults``
    |defaults|
@@ -34,7 +34,7 @@ The following options can be run with all |knife| sub-commands and plug-ins:
    |key|
 
 ``--no-color``
-   |no-color|
+   |no_color|
 
 ``-p PASSWORD``, ``--password PASSWORD``
    |password user|
@@ -46,7 +46,7 @@ The following options can be run with all |knife| sub-commands and plug-ins:
    |repo_mode| Default value: ``default``.
 
 ``-s URL``, ``--server-url URL``
-   |server-url|
+   |url chef_server|
 
 ``-u USER``, ``--user USER``
    |user|

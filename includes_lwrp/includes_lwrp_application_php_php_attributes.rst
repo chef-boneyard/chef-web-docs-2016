@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``packages``
      - |packages lwrp application_php|
    * - ``settings_template``
-     - |settings_template lwrp application_php|
+     - |name template_settings_file| If specified, this file must be located in the ``application`` cookbook. Default value: ``#{local_settings_file}.erb``.

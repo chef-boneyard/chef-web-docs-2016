@@ -30,4 +30,4 @@ This resource has the following attributes:
    * - ``svn_username``
      - |svn_username resource|
    * - ``user``
-     - |user resource scm|
+     - |user checked_out_code| Default value: ``nil``.

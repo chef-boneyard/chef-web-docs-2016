@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``revision``
      - |revision| Default value: ``HEAD``.
    * - ``user``
-     - |user resource scm|
+     - |user checked_out_code| Default value: ``nil``.
 
 For use with |git| only:
 

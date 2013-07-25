@@ -56,7 +56,7 @@ This resource has the following attributes:
    * - ``symlink_before_migrate``
      - |symlink_before_migrate|
    * - ``user``
-     - |user resource deploy|
+     - |user checked_out_code| Default value: ``nil``.
 
 The following attributes are for use with |git| only:
 

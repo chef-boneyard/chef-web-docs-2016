@@ -34,6 +34,6 @@ This resource has the following attributes:
    * - ``timeout``
      - |timeout command|
    * - ``user``
-     - |user resource execute|
+     - |user command| Default value: ``nil``.
    * - ``umask``
      - |umask|

@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--bluelock-username USER_NAME``
-   |username bluelock|
+   |name user bluelock|
 
 ``-K PASSWORD``, ``--bluelock-password PASSWORD``
    |password bluelock|

@@ -36,7 +36,7 @@ This lightweight resource provider has the following attributes:
    * - ``proc_name``
      - |proc_name lwrp application_python_gunicorn|
    * - ``settings_template``
-     - |settings_template lwrp application_python_gunicorn|
+     - |name template_settings_file| If specified, this file must be located in the ``application`` cookbook. Default value: ``se.py.erb`` (from the ``gunicorn`` cookbook).
    * - ``timeout``
      - |timeout worker|
    * - ``trace``

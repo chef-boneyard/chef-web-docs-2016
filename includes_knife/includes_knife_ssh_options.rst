@@ -21,7 +21,7 @@ This subcommand has the following options:
    |manual-list| If there is more than one item in the list, put quotes around the entire list. For example: ``--manual-list "server01 server 02 server 03"``
 
 ``--[no-]host-key-verify``
-   |[no-]host-key-verify| Default setting: ``--host-key-verify``.
+   |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|

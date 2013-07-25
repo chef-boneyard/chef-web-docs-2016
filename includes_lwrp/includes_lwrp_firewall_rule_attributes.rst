@@ -14,9 +14,9 @@ This lightweight resource provider has the following attributes:
    * - ``protocol``
      - |protocol firewall_rule|
    * - ``port``
-     - |port lwrp firewall_rule|
+     - |port number|
    * - ``source``
-     - |source lwrp firewall_rule|
+     - |firewall rule_incoming| Default value: ``0.0.0.0/0`` (from "anywhere").
    * - ``destination``
      - |destination lwrp firewall_rule|
    * - ``position``

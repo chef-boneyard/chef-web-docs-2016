@@ -21,7 +21,7 @@ This argument has the following options:
    |PART|
 
 ``-V PLATFORM_VERSION``, ``--platform-version PLATFORM_VERSION``
-   |platform-version|
+   |platform_version|
 
 ``-w``, ``--with-uri``
    |with_uri|

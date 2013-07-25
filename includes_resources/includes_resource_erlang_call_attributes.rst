@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``distributed``
      - |distributed_erlang_node| Default value: ``false``.
    * - ``name_type``
-     - |name_type resource directory|
+     - |name sname_or_name| Default value: ``sname``.
    * - ``node_name``
      - |node_name resource directory|
    * - ``provider``

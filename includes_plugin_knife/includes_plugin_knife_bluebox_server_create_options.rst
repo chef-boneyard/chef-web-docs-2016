@@ -33,5 +33,4 @@ This argument has the following options:
    |ssh-password|
 
 ``-U KEY``, ``--username USERNAME``
-   |username bluebox|
-
+   |name user bluebox|

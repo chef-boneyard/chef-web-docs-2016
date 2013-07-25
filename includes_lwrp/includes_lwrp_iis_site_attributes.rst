@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``path``
      - |path lwrp iis_pool|
    * - ``port``
-     - |port lwrp iis_site|
+     - |port iis| Default value: ``80``.
    * - ``protocol``
      - |protocol http|
    * - ``site_id``

@@ -26,4 +26,4 @@ This lightweight resource provider has the following attributes:
    * - ``settings``
      - |settings lwrp application_python_django|
    * - ``settings_template``
-     - |settings_template lwrp application_python_django|
+     - |name template_settings_file| If specified, this file must be located in the ``application`` cookbook. Default value: ``settings.py.erb`` (from this cookbook).

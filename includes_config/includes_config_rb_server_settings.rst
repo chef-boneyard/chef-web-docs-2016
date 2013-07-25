@@ -223,12 +223,12 @@ This configuration file has the following settings:
  
           role_path "/var/chef/roles"
    * - ``signing_ca_cert``
-     - |signing_ca_cert| For example:
+     - |signing_ca_cert| Default value: ``/var/chef/ca/cert.pem``. For example:
        ::
  
           signing_ca_cert "/var/chef/ca/cert.pem"
    * - ``signing_ca_key``
-     - |signing_ca_key| For example:
+     - |signing_ca_key| Default value: ``/var/chef/ca/key.pem``. For example:
        ::
  
           signing_ca_key "/var/chef/ca/key.pem"
@@ -273,7 +273,7 @@ This configuration file has the following settings:
  
           signing_ca_email "opensource-cert@opscode.com"
    * - ``solo``
-     - |solo mode| For example:
+     - |solo mode| Default value: ``opensource.opscode.com``. For example:
        ::
  
           solo false

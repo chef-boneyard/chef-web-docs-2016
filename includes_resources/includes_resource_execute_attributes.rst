@@ -28,6 +28,6 @@ This resource has the following attributes:
    * - ``timeout``
      - |timeout command| Default value: ``3600``.
    * - ``user``
-     - |user resource execute|
+     - |user command| Default value: ``nil``.
    * - ``umask``
      - |umask| Default value: ``nil``.

@@ -10,6 +10,6 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``plugin``
-     - |plugin resource ohai|
+     - Optional. |plugin reload_by_ohai| Default value: ``nil`` (all plug-ins are reloaded ).
    * - ``provider``
      - Optional. |provider resource_attribute|

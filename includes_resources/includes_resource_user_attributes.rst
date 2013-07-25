@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``shell``
-     - |shell resource user|
+     - |shell| Default value: ``nil``.
    * - ``supports``
      - |supports resource user|
    * - ``system``

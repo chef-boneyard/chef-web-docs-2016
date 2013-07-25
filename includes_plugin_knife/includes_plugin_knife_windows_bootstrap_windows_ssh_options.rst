@@ -21,7 +21,7 @@ This argument has the following options:
    |name node|
 
 ``--[no-]host-key-verify``
-   |[no-]host-key-verify| Default setting: ``--host-key-verify``.
+   |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|

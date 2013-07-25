@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--bluelock-username USER_NAME``
-   |username bluelock|
+   |name user bluelock|
 
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
@@ -33,7 +33,7 @@ This argument has the following options:
    |run-list|
 
 ``-S NAME``, ``--server-name NAME``
-   |server-name|
+   |name server|
 
 ``-T X,Y,Z``, ``--tcp X,Y,Z``
    |tcp_ports|

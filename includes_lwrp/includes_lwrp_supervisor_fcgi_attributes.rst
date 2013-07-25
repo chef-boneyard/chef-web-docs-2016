@@ -34,45 +34,45 @@ This lightweight resource provider has the following attributes:
    * - ``redirect_stderr``
      - |redirect_stderr lwrp supervisor|
    * - ``serverurl``
-     - |startretries lwrp supervisor|
+     - |startretries|
    * - ``socket``
-     - |socket lwrp supervisor|
+     - |socket fcgi|
    * - ``socket_mode``
-     - |socket_mode lwrp supervisor|
+     - |unix| only. |socket mode|
    * - ``socket_owner``
-     - |socket_owner lwrp supervisor|
+     - |unix| only. |socket owner|
    * - ``startretries``
-     - |startretries lwrp supervisor|
+     - |startretries|
    * - ``startsecs``
-     - |startsecs lwrp supervisor|
+     - |startsecs|
    * - ``stopsignal``
-     - |stopsignal lwrp supervisor|
+     - |stopsignal|
    * - ``stopwaitsecs``
-     - |stopwaitsecs lwrp supervisor|
+     - |stopwaitsecs|
    * - ``stderr_capture_maxbytes``
-     - |stderr_capture_maxbytes lwrp supervisor|
+     - |stderr_capture_maxbytes|
    * - ``stderr_events_enabled``
-     - |stderr_events_enabled lwrp supervisor|
+     - |stderr_events_enabled|
    * - ``stderr_logfile``
-     - |stderr_logfile lwrp supervisor| 
+     - |stderr_logfile| 
    * - ``stderr_logfile_backups``
-     - |stderr_logfile_backups lwrp supervisor|
+     - |stderr_logfile_backups|
    * - ``stderr_logfile_maxbytes``
-     - |stderr_logfile_maxbytes lwrp supervisor|
+     - |stderr_logfile_maxbytes|
    * - ``stdout_capture_maxbytes``
-     - |stdout_capture_maxbytes lwrp supervisor|
+     - |stdout_capture_maxbytes|
    * - ``stdout_events_enabled``
-     - |stdout_events_enabled lwrp supervisor|
+     - |stdout_events_enabled|
    * - ``stdout_logfile``
-     - |stdout_logfile lwrp supervisor|
+     - |stdout_logfile|
    * - ``stdout_logfile_backups``
-     - |stdout_logfile_backups lwrp supervisor|
+     - |stdout_logfile_backups|
    * - ``stdout_logfile_maxbytes``
-     - |stdout_logfile_maxbytes lwrp supervisor|
+     - |stdout_logfile_maxbytes|
    * - ``umask``
      - |umask|
    * - ``user``
-     - |user lwrp supervisor|
+     - |user unix_account|
 
 
 

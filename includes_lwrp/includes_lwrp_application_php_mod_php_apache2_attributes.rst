@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``server_aliases``
-     - |server_aliases lwrp application_php_mod|
+     - |server_aliases|
    * - ``webapp_template``
      - |webapp_template| Default value: ``php.conf.erb``.

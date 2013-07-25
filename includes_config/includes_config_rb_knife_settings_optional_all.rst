@@ -41,7 +41,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:description]``
      - The description for an environment and/or a role.
    * - ``knife[:disable_editing]``
-     - |no-editor|
+     - |no_editor|
    * - ``knife[:distro]``
      - |distro|
    * - ``knife[:download_directory]``
@@ -61,7 +61,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:hide_healthy]``
      - |hide_healthy|
    * - ``knife[:host_key_verify]``
-     - |[no-]host-key-verify|
+     - |no_host_key_verify|
    * - ``knife[:identity_file]``
      - |identity-file|
    * - ``knife[:initial]``
@@ -83,7 +83,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:platform]``
      - |platform|
    * - ``knife[:platform_version]``
-     - |platform-version|
+     - |platform_version|
    * - ``knife[:pretty]``
      - |no_pretty|
    * - ``knife[:print_after]``

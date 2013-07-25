@@ -14,9 +14,9 @@ This lightweight resource provider has the following attributes:
    * - ``application_server_role``
      - |application_server_role| Default value: ``#{application name}_application_server``.
    * - ``port``
-     - |port lwrp application_nginx_load_balancer|
+     - |port nginx| Default value: ``80``.
    * - ``server_name``
-     - |server_name lwrp application_nginx_load_balancer| Default value: the |fqdn| for the node.
+     - |name virtual_host| Default value: the |fqdn| for the node.
    * - ``ssl``
      - |use ssl| Default value: ``false``.
    * - ``ssl_certificate``
