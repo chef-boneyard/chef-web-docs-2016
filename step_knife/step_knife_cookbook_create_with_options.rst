@@ -5,7 +5,7 @@ To create a cookbook named "my_cookbook" with copyright, email, license, and rea
 
 .. code-block:: bash
 
-   $ knife cookbook create my_cookbook -c "My Name" -e "my@email.com" -l apachev2 -r md
+   $ knife cookbook create my_cookbook -C "My Name" -e "my@email.com" -l apachev2 -r md
 
 to return something like:
 

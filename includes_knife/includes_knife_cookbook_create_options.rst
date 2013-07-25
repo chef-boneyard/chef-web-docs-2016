@@ -5,7 +5,7 @@
 
 This argument has the following options:
 
-``-c COPYRIGHT_HOLDER``, ``--copyright COPYRIGHT_HOLDER``
+``-C COPYRIGHT_HOLDER``, ``--copyright COPYRIGHT_HOLDER``
    |copyright|
 
 ``-i LICENSE``, ``--license LICENSE``
