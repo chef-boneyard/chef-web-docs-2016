@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``/metadata-server`` endpoint is used to download the |chef server|:
+The ``/metadata-server`` and/or ``/download-server`` endpoints can be used to download the |chef server|:
 
 .. code-block:: xml
 

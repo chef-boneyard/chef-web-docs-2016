@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``/metadata`` endpoint is used to download the |chef client|:
+The ``/metadata`` and/or ``/download`` endpoints can be used to download the |chef client|:
 
 .. code-block:: xml
 
