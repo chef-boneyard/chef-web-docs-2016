@@ -44,7 +44,7 @@ The Chef Server
 =====================================================
 **The basics:** :doc:`About the Chef Server </chef_overview_server>` | :doc:`Server Components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>` | :doc:`Authentication and Authorization </auth>` | :doc:`Private Keys </chef_private_keys>`
 
-**Install:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) | `Sign up for Private Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>`
+**Install:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) | `Sign up for Private Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>` | :doc:`Download with Omnitruck API </api_omnitruck>`
 
 **The Node Object:** :doc:`About Node Objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep Merge </essentials_node_object_deep_merge>`
 
@@ -65,7 +65,7 @@ The Nodes
 =====================================================
 **The Basics:** :doc:`About Nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The Chef Run </essentials_nodes_chef_run>` | :doc:`Ohai </ohai>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>`
 
-**Install:** :doc:`Install Chef on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>`
+**Install:** :doc:`Install Chef on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Download with Omnitruck API </api_omnitruck>`
 
 **Configure:** :doc:`Exception and Report Handlers </essentials_handlers>`
 
@@ -124,6 +124,7 @@ Cookbooks
    chef_solo
    api_chef_server
    api_cookbooks_site
+   api_omnitruck
    dsl_recipe
    ohai
    orgmapper

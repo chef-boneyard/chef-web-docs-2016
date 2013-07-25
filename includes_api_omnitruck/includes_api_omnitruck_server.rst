@@ -25,26 +25,3 @@ where:
 
 .. warning:: Nightly versions should never be run in a production environment and should be used for testing and validation purposes only.
 
-**Platform, Platform Version, Machine Architecture Table**
-
-.. include:: ../../includes_chef/includes_supported_versions_server.rst
-
-**Examples**
-
-To get the latest supported build for |ubuntu| 12.04, enter the following:
-
-.. code-block:: xml
-
-   http://www.opscode.com/chef/download-server?p=$ubuntu&pv=$12.04&m=$x86_64
-
-Or to get the nightly build for |ubuntu| 12.04:
-
-.. code-block:: xml
-
-   http://www.opscode.com/chef/download-server?p=$ubuntu&pv=$12.04&m=$x86_64&nightlies=true
-
-To use |curl| to download a package directly, enter the following:
-
-.. code-block:: bash
-
-   $ curl -L -O 'https://www.opscode.com/chef/download?p=ubuntu&pv=12.04&m=x86_64'

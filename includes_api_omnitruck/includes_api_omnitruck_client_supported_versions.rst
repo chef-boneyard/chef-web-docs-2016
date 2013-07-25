@@ -1,6 +1,8 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
+The following table lists the versions that are available for the |chef client|:
+
 .. list-table::
    :widths: 320 60 60 60
    :header-rows: 1

@@ -105,6 +105,7 @@ Chef Single-page Topics
    chef_overview
    api_chef_server
    api_cookbooks_site
+   api_omnitruck
    client_rb
    cookbooks_opscode
    dsl_recipe
