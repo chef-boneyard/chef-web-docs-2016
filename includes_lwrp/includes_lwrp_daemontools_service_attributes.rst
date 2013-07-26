@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``group``
      - |group lwrp daemontools_service|
    * - ``log``
-     - |log lwrp daemontools_service|
+     - |use custom_log_script| Default value: ``nil``.
    * - ``owner``
      - |owner directory_service|
    * - ``service_name``

@@ -22,9 +22,9 @@ This lightweight resource provider has the following attributes:
    * - ``keepalive``
      - |keepalive lwrp application_python_gunicorn|
    * - ``logfile``
-     - |logfile lwrp application_python_gunicorn|
+     - |log_location|
    * - ``loglevel``
-     - |loglevel lwrp application_python_gunicorn|
+     - |log_level|
    * - ``max_requests``
      - |worker_max_requests|
    * - ``pidfile``

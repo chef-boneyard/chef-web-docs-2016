@@ -55,7 +55,7 @@ This command has the following options:
    |log_level|
 
 ``-L LOGLOCATION``, ``--logfile c``
-   |log_location| This is recommended when starting any executable as a daemon.
+   |log_location| This is recommended when starting any executable as a daemon. Default value: ``STDOUT``.
 
 ``--[no-]color``
    |no_color| Default setting: ``--color``.

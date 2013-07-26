@@ -12,9 +12,9 @@ This lightweight resource provider has the following attributes:
    * - ``bundle_command``
      - 
    * - ``bundler``
-     - |use_bundler|
+     - |use bundler|
    * - ``bundler_deployment``
-     - |use_bundler_option_deployment|
+     - |use bundler_option_deployment|
    * - ``bundler_without_groups``
      - |bundler_skip_groups|
    * - ``database_master_role``

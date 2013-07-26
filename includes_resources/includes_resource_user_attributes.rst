@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``home``
      - |home_directory| Default value: ``nil``.
    * - ``password``
-     - |password resource user|
+     - |password resource user| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``shell``

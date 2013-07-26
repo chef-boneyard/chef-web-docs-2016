@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``-b``, ``--use-current-branch``
-   |use-current-branch|
+   |use current_branch|
 
 ``-B BRANCH``, ``--branch BRANCH``
    |branch|

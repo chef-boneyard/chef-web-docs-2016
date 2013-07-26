@@ -9,11 +9,11 @@ This argument has the following options:
    |admin client| This option only works when used with the open source |chef server| and will have no effect when used with |chef hosted| or |chef private|.
 
 ``-f FILE_NAME``, ``--file FILE_NAME``
-   |file private key|
+   |file private_key|
 
 ``-p PASSWORD``, ``--password PASSWORD``
    |password user|
 
 ``--user-key FILE_NAME``
-   |file_public_key|
+   |file public_key|
 

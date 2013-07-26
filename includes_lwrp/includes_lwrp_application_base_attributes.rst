@@ -34,7 +34,7 @@ This lightweight resource provider has the following attributes:
    * - ``owner``
      - |name owner|
    * - ``packages``
-     - |packages lwrp application|
+     - |packages array|
    * - ``path``
      - |password application|
    * - ``purge_before_symlink``

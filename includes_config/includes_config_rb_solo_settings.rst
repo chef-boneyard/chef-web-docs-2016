@@ -48,12 +48,12 @@ This configuration file has the following settings:
  
           environment_path "/var/chef/environments"
    * - ``file_cache_path``
-     - |file_cache_path| For example:
+     - |file cache_path| For example:
        ::
  
           file_cache_path "/var/chef/cache"
    * - ``file_backup_path``
-     - |file_backup_path| For example:
+     - |file backup_path| For example:
        ::
  
           file_backup_path "/var/chef/backup"
@@ -73,7 +73,7 @@ This configuration file has the following settings:
  
           log_level :info
    * - ``log_location``
-     - |log_location| For example:
+     - |log_location| Default value: ``STDOUT``. For example:
        ::
  
           log_location STDOUT

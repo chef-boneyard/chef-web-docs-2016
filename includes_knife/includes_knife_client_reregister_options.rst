@@ -6,5 +6,5 @@
 This argument has the following options:
 
 ``-f FILE_NAME``, ``--file FILE_NAME``
-   |file private key|
+   |file private_key|
 

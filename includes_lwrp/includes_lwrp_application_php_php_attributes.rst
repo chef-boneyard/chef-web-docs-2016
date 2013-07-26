@@ -12,8 +12,8 @@ This lightweight resource provider has the following attributes:
    * - ``database_master_role``
      - |database_master_role|
    * - ``local_settings_file``
-     - |local_settings_file lwrp application_php|
+     - |file local_settings| Default value: ``LocalSettings.php``.
    * - ``packages``
-     - |packages lwrp application_php|
+     - |packages array|
    * - ``settings_template``
      - |name template_settings_file| If specified, this file must be located in the ``application`` cookbook. Default value: ``#{local_settings_file}.erb``.

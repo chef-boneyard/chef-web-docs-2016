@@ -18,9 +18,9 @@ This lightweight resource provider has the following attributes:
    * - ``legacy_database_settings``
      - |legacy_database_setting lwrp application_python_django|
    * - ``local_settings_file``
-     - |local_settings_file lwrp application_python_django|
+     - |file local_settings| Default value: ``local_settings.py``.
    * - ``packages``
-     - |packages lwrp application_python_django|
+     - |packages array|
    * - ``requirements``
      - |requirements lwrp application_python_django|
    * - ``settings``

@@ -123,7 +123,7 @@ This configuration file has the following settings:
  
           log_level :info
    * - ``log_location``
-     - |log_location| For example:
+     - |log_location| Default value: ``STDOUT``. For example:
        ::
  
           log_location STDOUT

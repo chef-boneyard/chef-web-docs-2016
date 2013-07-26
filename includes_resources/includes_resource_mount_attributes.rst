@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``options``
      - |options mount| Default value: ``defaults``.
    * - ``pass``
-     - |pass resource mount|
+     - |pass_number| Default value: ``2``.
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``supports``

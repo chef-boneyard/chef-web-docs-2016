@@ -46,8 +46,8 @@ This resource has the following attributes:
    * - ``source``
      - Required. |source file_location| Default value: ``nil``.
    * - ``use_conditional_get``
-     - |use_conditional_get| Default value: ``true``.
+     - |use conditional_get| Default value: ``true``.
    * - ``use_etag``
-     - |use_etag| Default value: ``true``.
+     - |use etag| Default value: ``true``.
    * - ``use_last_modified``
-     - |use_last_modified| Default value: ``true``.
+     - |use last_modified| Default value: ``true``.
