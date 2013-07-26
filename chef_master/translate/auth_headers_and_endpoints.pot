@@ -1,0 +1,338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-25 18:13\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/auth_headers_and_endpoints.rst:34
+# 940219af8d634cb1a48636701debe162
+msgid "Headers and Endpoints"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server.rst:4
+# 10a4afe3263b471ab76896ea1e25a595
+msgid "The |api chef server| is used to provide access to objects on the |chef server|, including nodes, environments, roles, cookbooks (and cookbook versions), and to manage an |chef api client| list and the associated RSA public key-pairs."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:4
+# 3d8a2f110b25469e9e21e9ffea7019d8
+msgid "Authentication to the |chef server| occurs when a specific set of HTTP headers are signed using a private key that is associated with the machine from which the request is made. The request is authorized if the |chef server| can verify the signature using the public key. Only authorized actions are allowed."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:6
+# 347dada5e7c14878b1a131abb13d9560
+msgid "Most authentication requests made to the |chef server| are abstracted from the user. Such as when using |knife| or the |chef server| user interface. In some cases, such as when using the ``knife exec`` subcommand, the authentication requests need to be made more explicitly, but still in a way that does not require authentication headers. In a few cases, such as when using arbitrary |ruby| code or |curl|, it may be necessary to include the full authentication header as part of the request to the |chef server|."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:41
+# 72d34fecfc394aa7b84449f6c7767ddd
+msgid "Header Format"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:5
+# dd4ce619efd34b11b7f598aa409887ab
+msgid "All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters.  Each canonical header should be encoded in the following format:"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:15
+# 310911b3478d4c398d76ca71929e4b0b
+msgid "where:"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:17
+# 67d9e634dee945ca9c3259aa808cb9cf
+msgid "``HTTP_METHOD`` is the method used in the API request (``GET``, ``POST``, and so on)"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:18
+# 3f4ffe237ea54a97a1f79ef52f9b3938
+msgid "``HASHED_PATH`` is the path of the request (``/name_of_endpoint`` for the open source |chef server| and ``/organizations/organization_name/name_of_endpoint`` for |chef hosted| or |chef private|). The ``HASHED_PATH`` must be hashed using |sha1| and encoded using |base64| and must not have repeated forward slashes (``/``) or end in a forward slash (unless the path is ``/``)."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:19
+# f6302868516c473fa304cb9bf2667fcd
+msgid "The private key must be an RSA key in the SSL .pem file format. This signature is then broken into character strings (of not more than 60 characters per line) and placed in the header."
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:21
+# 6bfc392f66604cafb356cfeb41d950ee
+msgid "The |chef server| decrypts this header and ensures its content matches the content of the non-encrypted headers that were in the request. The timestamp of the message is checked to ensure the request was received within a reasonable amount of time. One approach generating the signed headers is to use `mixlib-authentication <https://github.com/opscode/mixlib-authentication>`_, which is a class-based header signing authentication object similar to the one used in |chef|."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:45
+# 368176c32587454c8bb8a92a8895b916
+msgid "Required Headers"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:46
+# df0a0bd0c27141c6bda0f8cf94736985
+msgid "The following authentication headers are required:"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:52
+# 0fa9965057dd473481db8563eab2d7bd
+msgid "Feature"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:53
+# e0d8cf67154d4744980c767561a2cd37
+msgid "Description"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:54
+# a0642932824344118672cefcd08a03cf
+msgid "``Accept``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst:4
+# 10c79d64974347a9b0da26ae97a730e1
+msgid "The format in which response data will be provided, such as ``json``, ``xml``, ``html``, and so on. This header is not required, but is often included to ensure that response data is returned in the desired format."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:56
+# 59060b6adc004af3a3a0567da2ca5ac6
+msgid "``Host``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst:5
+# 9794e5cf9c9041359ee87ed9564f7768
+msgid "The host name (and port number) to which a request is sent. (Port number ``80`` does not need to be specified.) For example: ``api.opscode.com`` (which is the same as ``api.opscode.com:80``) or ``api.opscode.com:443``."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:58
+# 102e95f3dcc9436e863bc154249d9170
+msgid "``X-Chef-Version``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_chef_version.rst:5
+# 38935e6f97784fa7bf718aff76818fd2
+msgid "The version of the |chef| executable from which a request is made. This header ensures that responses are in the correct format. For example: ``11.0.4.x`` or ``0.10.x``."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:60
+# 412e419775514085828b77e2ca2cc358
+msgid "``X-Ops-Authorization-N``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst:5
+# 0340a5a47bb74b64addd5505a6199005
+msgid "One (or more) 60 character segments that comprise the canonical header. A canonical header is signed with the private key used by the client machine from which the request is sent, and is also encoded using |base64|. If more than one segment is required, each should be named sequentially, e.g. ``X-Ops-Authorization-1``, ``X-Ops-Authorization-2``, ``X-Ops-Authorization-N``, where ``N`` represents the integer used by the last header that is part of the request."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:62
+# 5940e2fc2f61478389e24c8d3f61765b
+msgid "``X-Ops-Content-Hash``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst:5
+# e5ec2c6d87a64706bb376340a638e804
+msgid "The body of the request. The body should be hashed using |sha1| and encoded using |base64|. All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:64
+# 2f17db10d5d04d288008a33a2fec52f9
+msgid "``X-Ops-Sign``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst:5
+# 202151fb2560477cb53cbd37d53bff5e
+msgid "Set this header to the following value: ``version=1.0``."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:66
+# a7dca4dd22e34b41bdd4b3f797d1c96b
+msgid "``X-Ops-Timestamp``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_timestamp.rst:5
+# b691892607d64a61b0ef16f8135bf3f0
+msgid "The timestamp, in |iso 8601| format and with |utc| indicated by a trailing ``Z`` and separated by the character ``T``. For example: ``2013-03-10T14:14:44Z``."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:68
+# 6596e30ddb814e54ae3e25deae1165b5
+msgid "``X-Ops-UserId``"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst:5
+# 0a7b96f166fe42769e31e89503045b0c
+msgid "The name of the API client whose private key will be used to create the authorization header."
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:72
+# 0ec08fa6988e44f1af1af5672bd2d1cd
+msgid "Example"
+msgstr ""
+
+#: ../../includes_api_chef_server/includes_api_chef_server_headers_example.rst:5
+# f826b1652a7f4bf6b5e5fc57c5282966
+msgid "The following example shows an authentication request to |chef hosted|:"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:76
+# c576e499fca342ccb0df9e48e2a6f030
+msgid "Endpoints"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:77
+# 710161acdf8341c9aa9938aff8409ed0
+msgid "For |chef hosted| and |chef private|, each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint. For the open source |chef server|, each authentication request must include ``/clients`` as part of the name of the endpoint. For example, the full endpoint for getting a list of roles on |chef hosted| or |chef private|:"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:83
+# 02ddab6dc90f4793a7421a4be1b11de2
+msgid "and for the same request, but to the open source |chef server|:"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:89
+# df88cd4bbd3d401a9f6759bd77b3950b
+msgid "The |api chef server| has the following endpoints:"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:91
+# d05306553a174043909549779be858cc
+msgid ":doc:`api_chef_server_clients`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:92
+# df4fd9d9d48345b8bca735f02b3d36b5
+msgid ":doc:`api_chef_server_clients_name`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:93
+# 8f32e5171fd64db0a735bb0607ac3f43
+msgid ":doc:`api_chef_server_cookbooks`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:94
+# 4d828f3daa354ec6afecba6aa9fa4c72
+msgid ":doc:`api_chef_server_cookbooks_name`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:95
+# 429de218d6fc431d8320288b86f8b42b
+msgid ":doc:`api_chef_server_cookbooks_version`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:96
+# 72b46491def54258ad7a1eb22d816f64
+msgid ":doc:`api_chef_server_data_bag`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:97
+# 250c1933a92c4623b6525ddba2c75919
+msgid ":doc:`api_chef_server_data_bag_item`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:98
+# ae2d3fd196cf476dbf4fbb34180bb753
+msgid ":doc:`api_chef_server_data_bag_name`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:99
+# 60c2b73fedd74edcb70bba51004f864c
+msgid ":doc:`api_chef_server_environments`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:100
+# 827fe05e13194293a97db55d71461ce5
+msgid ":doc:`api_chef_server_environments_name`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:101
+# 5ec7590ea609466483d8cbcb2faeed94
+msgid ":doc:`api_chef_server_environments_cookbook_name`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:102
+# 092a35fd12934d0f9b29bbe967c062d3
+msgid ":doc:`api_chef_server_environments_cookbook_version`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:103
+# a2c31f728fa64112a2c799859b0d3faa
+msgid ":doc:`api_chef_server_environments_cookbooks`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:104
+# 68560495ffc74199a5ab66b1c15fa577
+msgid ":doc:`api_chef_server_environments_node`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:105
+# b6e4d397d4a145f48ca85b73c5ea48ed
+msgid ":doc:`api_chef_server_environments_recipe`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:106
+# 6062b28a520849b2b59f6d33a6e288b4
+msgid ":doc:`api_chef_server_environments_role`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:107
+# 647b14459b9444d2a88d8e08001a04e7
+msgid ":doc:`api_chef_server_nodes`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:108
+# 3eb95d13bb30400bb1cdbd9791e2c36b
+msgid ":doc:`api_chef_server_nodes_name`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:109
+# c2aff4eac21b4101ad4cda6e59ad28c4
+msgid ":doc:`api_chef_server_roles`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:110
+# 4a1ad72a44074201ac0c5d1e342aed7c
+msgid ":doc:`api_chef_server_roles_name`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:111
+# 47c3f5252f314aee81ce5bd9fbe05388
+msgid ":doc:`api_chef_server_roles_name_environments`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:112
+# 0cb75a7c42f641adbeabccc1749d609e
+msgid ":doc:`api_chef_server_roles_name_environments_name`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:113
+# a1ac830d74264638b809fdce5e0c186f
+msgid ":doc:`api_chef_server_sandboxes`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:114
+# 2cfda59fc8aa423ca42e0c3587881f14
+msgid ":doc:`api_chef_server_sandboxes_id`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:115
+# 9e654a20b5fb4923a8901570ec6fb342
+msgid ":doc:`api_chef_server_search`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:116
+# 50d4461a07644f48890c15be1a4eea54
+msgid ":doc:`api_chef_server_search_index`"
+msgstr ""
+
+#: ../source/auth_headers_and_endpoints.rst:117
+# 1c1f49503e2a4a2abba6f4d449723222
+msgid ":doc:`api_chef_server_user`"
+msgstr ""
+

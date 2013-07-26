@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-07-25 18:13\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_node_object_deep_merge.rst:34
+# 160df5802d404acaa5e47b28f48b879d
+msgid "Deep Merge"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:4
+# 7bccff5a0c9043069d16accb011d9c58
+msgid "Attributes are typically stored in cookbooks and recipes, roles, and environments. These attributes are rolled-up to the node level during a |chef| run. For example, a recipe can store attributes using a multi-level hash or array; a group of attributes for web servers might be:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:19
+# ddb9b4fe1a99477a9f620ba03408ff8c
+msgid "But what if all of the web servers are not the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like the preceding example and once just like the following:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:34
+# 0890da8e4dfd4d7192538b230bd566b5
+msgid "But that is not very efficient, especially because most of them are identical. The deep merge capabilities of |chef| allows attributes to be layered across recipes and cookbooks, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:53
+# 690edada3bea4e94bcddbf7ff7f15e26
+msgid "and then a role named ``web.rb``:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:69
+# 347a963cff434ebd95b22ed972bac393
+msgid "Both of these files are similar. They share the same structure. When an attribute is of the same type of data, such as  a hash or an array, the contents are merged. This is true even with different levels of precedence, such as default and override attributes. If the attribute is of a different data type, it is overwritten at higher levels of precedence."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:71
+# 249c292c565b4170b5f3a785ed272b38
+msgid "For example, the ``web.rb`` references the ``baseline.rb`` role. The ``web.rb`` file only provides a value for one attribute: ``:startservers``. When |chef| compares these attributes, the deep merge feature will ensure that ``:startservers`` (and its value of ``30``) will be applied to any node for which the ``web.rb`` attribute structure should be applied."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:73
+# b799478e1fbc44239f09277f49c5ff66
+msgid "This approach will allow a recipe like this:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:80
+# f738871512b54ffab14125cc0a48aa65
+msgid "and a ``run_list`` like this:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:89
+# b276f1c8e8194b098707d841ba0e839c
+msgid "to produce results like this:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge.rst:103
+# 9134a855aa2844eea19c5cd3d57f78cb
+msgid "Even though the ``web.rb`` file does not contain attributes and values for ``minspareservers``, ``maxspareservers``, ``serverlimit``, ``maxclients``, and ``maxrequestsperchild``, the deep merge capabilities pulled them in."
+msgstr ""
+
+#: ../source/essentials_node_object_deep_merge.rst:38
+# ed94183e9d464ecc80265d580ab52630
+msgid "The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes."
+msgstr ""
+
+#: ../source/essentials_node_object_deep_merge.rst:41
+# 5fd7a47e24f741dc98f3fac1b9a36b72
+msgid "Substitution"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:4
+# 19a9d263651243b6853f540c4c283d90
+msgid "The following examples show how the logic works for substituting an existing string using a hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:12
+# ee27b532e5134c3aa03caae6141e5f52
+msgid "For substituting an existing boolean using a hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:20
+# dd15c75a3aaf4295b0669bee8dbb0583
+msgid "For substituting an array with a hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:28
+# 2fa77bbf2c8b4b1e8cf5c5bf8e2a9611
+msgid "When items cannot be merged through substitution, the original data is overwritten."
+msgstr ""
+
+#: ../source/essentials_node_object_deep_merge.rst:45
+# c9e62a367a4f471c939046146f31e329
+msgid "Addition"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_add.rst:4
+# 2be60b204de64f1197714dafa2e2a422
+msgid "The following examples show how the logic works for adding a string using a hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_add.rst:12
+# a9c96a6354c64039b58fea336843821b
+msgid "For adding a string using an array::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_add.rst:20
+# da2bdf53e6d54ecea61d7fbd34460da3
+msgid "For adding a string using a multi-level hash::"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_deep_merge_add.rst:28
+# 760f13e597524c5c83cdb5a62a310fe5
+msgid "For adding a string using a multi-level array::"
+msgstr ""
+
