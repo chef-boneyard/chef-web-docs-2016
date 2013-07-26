@@ -405,6 +405,13 @@ Force a Redeploy
 -----------------------------------------------------
 Previous versions of |chef| required the cache file to be deleted to force a redeploy. In |chef 11-6|, in addition to deleting the cache file, deleting the deployment directory will also force a redeploy.
 
+Known Issues
+=====================================================
+The following issues are known for |chef 11-6| and/or may affect the behavior of your current environment if you upgrade to |chef 11-6|. The short version:
+
+* **File paths in Microsoft Windows** On the |windows| platform, when using the |resource file|, |resource template|, and |resource cookbook_file| resources (or any other resources that may be derived from those resources), the path must include the drive letter. For example: ``"#{ENV['SYSTEMDRIVE']}/etc/config"`` or ``c:/etc/config``.
+
+
 What's Fixed
 =====================================================
 The following bugs were fixed:
