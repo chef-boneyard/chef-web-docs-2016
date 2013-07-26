@@ -6,7 +6,7 @@ Documentation for Chef 11.0, 11.2, and 11.4
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-Getting Started 
+Getting Started  
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
 

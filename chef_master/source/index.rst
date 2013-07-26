@@ -21,7 +21,7 @@ Getting Started
 
 **Docs for Previous Versions of Chef:** `11.0, 11.2, and 11.4 <http://docs.opscode.com/release/11-4/>`_
 
-The Community
+The Community 
 =====================================================
 .. include:: ../../includes_community/includes_community_contributions.rst
 
