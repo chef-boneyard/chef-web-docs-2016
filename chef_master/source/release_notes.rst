@@ -32,6 +32,7 @@ The following items are new for |chef 11-6| and/or are changes from previous ver
 * **New options for Knife subcommands** The |subcommand knife delete|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife list|, and |subcommand knife upload| subcommands have new options.
 * **Support for environments in chef-solo** |chef solo| now supports environments.
 * **New way to force a redeploy when using the deploy resource** To force a redeploy, delete either the deployment directory or the cache file.
+* **Changed behavior for chef-shell** |chef shell| behavior is changed to load recipes while in |chef client| mode. This is by design and represents the behavior as originally intended.
 
 Required Updates
 -----------------------------------------------------
@@ -518,6 +519,7 @@ The following bugs were fixed:
 * `CHEF-4357 <http://tickets.opscode.com/browse/CHEF-4357>`_  --- Chef Client/Solo with --fork spews extra stacktraces and breaks stacktrace logging
 * `CHEF-4365 <http://tickets.opscode.com/browse/CHEF-4365>`_  --- Remote file resource fails when cache control data is corrupted
 * `CHEF-4380 <http://tickets.opscode.com/browse/CHEF-4380>`_  --- package resource with "source" is broken on EL6 using 11.6.0rc3
+* `CHEF-4429 <http://tickets.opscode.com/browse/CHEF-4429>`_  --- All recipes are being loaded in chef-shell while in client mode
 
 What's Improved
 =====================================================
