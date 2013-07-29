@@ -13,7 +13,7 @@ The syntax for using the |resource log| resource in a recipe is as follows:
 
 where 
 
-* ``log`` tells |chef| to use the ``Chef::Provider::Log::ChefLog`` provider during the |chef| run
+* ``log`` tells the |chef client| to use the ``Chef::Provider::Log::ChefLog`` provider during the |chef client| run
 * ``"name"`` is the name of the log entry
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

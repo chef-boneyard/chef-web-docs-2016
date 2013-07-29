@@ -3,7 +3,7 @@
 
 |resource desc chef_gem| This resource is based on the `package <http://docs.opscode.com/resource_package.html>`_ resource. 
 
-The |resource chef_gem| resource works with all of the same attributes and options as the |resource package_gem| resource, but does not accept the ``gem_binary`` attribute because it always uses the ``CurrentGemEnvironment`` under which |chef| is running. In addition to performing actions similar to the |resource package_gem| resource, the |resource chef_gem| resource does the following:
+The |resource chef_gem| resource works with all of the same attributes and options as the |resource package_gem| resource, but does not accept the ``gem_binary`` attribute because it always uses the ``CurrentGemEnvironment`` under which the |chef client| is running. In addition to performing actions similar to the |resource package_gem| resource, the |resource chef_gem| resource does the following:
 
 * Runs its actions immediately, before convergence, allowing a |gem| to be used in a recipe immediately after it is installed
 * Runs ``Gem.clear_paths`` after the action, ensuring that |gem| is aware of changes so that it can be required immediately after it is installed

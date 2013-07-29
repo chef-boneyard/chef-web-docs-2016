@@ -13,10 +13,10 @@ The syntax for using the |resource file| resource in a recipe is as follows:
 
 where 
 
-* ``file`` tells |chef| to use the ``Chef::Provider::File`` provider during the |chef| run
+* ``file`` tells the |chef client| to use the ``Chef::Provider::File`` provider during the |chef client| run
 * ``"name"`` is the name and location of the file
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 The following is an example of how the |resource file| resource can work when used in a recipe:
 

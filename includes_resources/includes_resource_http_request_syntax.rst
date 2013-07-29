@@ -14,11 +14,11 @@ The syntax for using the |resource http_request| resource in a recipe is as foll
 
 where 
 
-* ``http_request`` tells |chef| to use the ``Chef::Provider::HttpRequest`` provider during the |chef| run
+* ``http_request`` tells the |chef client| to use the ``Chef::Provider::HttpRequest`` provider during the |chef client| run
 * ``"name"`` is the message that will be appended to the HTTP request
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``url`` is the URL that will precede ``?message=`` in the HTTP request
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 The following is an example of how the |resource http_request| resource can work when used in a recipe. In this example, the following example will send a ``DELETE`` request to "http://www.opscode.com/some_page?message=please_delete_me".
 

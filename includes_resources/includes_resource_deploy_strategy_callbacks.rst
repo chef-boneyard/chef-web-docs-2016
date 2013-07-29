@@ -24,7 +24,7 @@ Each of these callback types can be used in one of three ways:
 
 * To pass a block of code, such as |ruby| or |python|
 * To specify a file
-* To do neither; |chef| will look for a callback file named after one of the callback types (``before_migrate.rb``, for example) and if the file exists, to evaluate it as if it were a specified file
+* To do neither; the |chef client| will look for a callback file named after one of the callback types (``before_migrate.rb``, for example) and if the file exists, to evaluate it as if it were a specified file
 
 Within a callback, there are two ways to get access to information about the deployment:
 

@@ -13,7 +13,7 @@ The syntax for using the |resource package_freebsd| resource in a recipe is as f
 
 where 
 
-* ``freebsd_package`` tells |chef| to use the ``Chef::Provider::Freebsd`` provider during the |chef| run
+* ``freebsd_package`` tells the |chef client| to use the ``Chef::Provider::Freebsd`` provider during the |chef client| run
 * ``"name"`` is the name of the package
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

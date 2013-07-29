@@ -13,10 +13,10 @@ The syntax for using the |resource execute| resource in a recipe is as follows:
 
 where 
 
-* ``execute`` tells |chef| to use the ``Chef::Provider::Execute`` provider during the |chef| run
+* ``execute`` tells the |chef client| to use the ``Chef::Provider::Execute`` provider during the |chef client| run
 * ``"name"`` is the name of the command that will be run
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 The following is an example of how the |resource execute| resource can work when used in a recipe. In this example, a whitespace array is used to identify the names of the pets that will then be fed (by the command that is run):
 

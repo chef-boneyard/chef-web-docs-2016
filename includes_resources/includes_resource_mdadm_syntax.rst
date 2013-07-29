@@ -13,7 +13,7 @@ The syntax for using the |resource mdadm| resource in a recipe is as follows:
 
 where 
 
-* ``mdadm`` tells |chef| to use the ``Chef::Provider::Mdadm`` provider during the |chef| run
+* ``mdadm`` tells the |chef client| to use the ``Chef::Provider::Mdadm`` provider during the |chef client| run
 * ``"name"`` is the name of the |raid| device
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

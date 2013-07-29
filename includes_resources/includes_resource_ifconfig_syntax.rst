@@ -13,7 +13,7 @@ The syntax for using the |resource ifconfig| resource in a recipe is as follows:
 
 where 
 
-* ``ifconfig`` tells |chef| to use the ``Chef::Provider::Ifconfig`` provider during the |chef| run
+* ``ifconfig`` tells the |chef client| to use the ``Chef::Provider::Ifconfig`` provider during the |chef client| run
 * ``"name"`` is the IP address for the interface
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

@@ -12,7 +12,7 @@ The following providers are available. Use the short name to call the provider f
      - Notes
    * - ``Chef::Provider::Group``
      - group
-     - When this short name is used, |chef| will determine the correct provider during the |chef| run.
+     - When this short name is used, the |chef client| will determine the correct provider during the |chef client| run.
    * - ``Chef::Provider::Group::Aix``
      - group
      - The provider that is used with the |ibm aix| platform.

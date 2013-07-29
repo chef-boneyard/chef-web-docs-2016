@@ -111,6 +111,7 @@ Cookbooks
    chef_overview_attributes
    chef_private_keys
    chef_why
+   debug
    install
    install_server
    install_server_scenario_vm

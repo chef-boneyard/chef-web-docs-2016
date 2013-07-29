@@ -13,7 +13,7 @@ The syntax for using the |resource env| resource in a recipe is as follows:
 
 where 
 
-* ``env`` tells |chef| to use the ``Chef::Provider::Env::Windows`` provider during the |chef| run
+* ``env`` tells the |chef client| to use the ``Chef::Provider::Env::Windows`` provider during the |chef client| run
 * ``"name"`` is the environment key
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
