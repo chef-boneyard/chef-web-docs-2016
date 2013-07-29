@@ -1,5 +1,5 @@
 =====================================================
-Debugging Recipes and |chef client| Runs
+Debug Recipes and |chef client| Runs
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
@@ -13,7 +13,7 @@ Elements of good approaches to building cookbooks and recipes that are reliable 
 
 Ideally, the best way to debug a recipe is to not have to debug it in the first place. That said, the following sections discuss various approaches to debugging recipes and failed |chef client| runs.
 
-Basic Debugging
+Basic
 =====================================================
 Some simple ways to quickly identify common issues that can trigger recipe and/or |chef client| run failures include:
 
@@ -91,7 +91,7 @@ Examples
 
 .. include:: ../../step_resource/step_resource_log_add_message.rst
 
-Advanced Debugging
+Advanced
 =====================================================
 Some more complex ways to debug issues with a |chef client| run include:
 
