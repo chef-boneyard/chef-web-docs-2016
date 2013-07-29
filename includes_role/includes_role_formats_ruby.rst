@@ -40,7 +40,7 @@ Domain-specific |ruby| attributes:
             "max_children" => "50" 
           }
 
-       The parameters in a |ruby| file are actually |ruby| method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example::
+       The parameters in a |ruby| file are |ruby| method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example::
 
           override_attributes(
             :apache2 => { 
@@ -68,7 +68,7 @@ Domain-specific |ruby| attributes:
 
        would apply the ``apache2`` recipe first, then the ``apache2::mod_ssl`` recipe, and then the ``role[monitor]`` recipe.
 
-A |ruby| DSL file for each role must exist in the ``roles/`` subdirectory of the |chef| repository. (If the repository does not have this subdirectory, then create it using |knife|.) Each |ruby| file should have the .rb suffix. The complete roles |ruby| DSL has the following syntax:
+A |ruby| DSL file for each role must exist in the ``roles/`` subdirectory of the |chef repo|. (If the repository does not have this subdirectory, then create it using |knife|.) Each |ruby| file should have the .rb suffix. The complete roles |ruby| DSL has the following syntax:
 
 .. code-block:: javascript
 

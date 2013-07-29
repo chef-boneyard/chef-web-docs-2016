@@ -16,7 +16,7 @@ where
 * ``batch`` tells |chef| to use the ``Chef::Provider::Batch`` provider during the |chef| run
 * ``"name"`` is the name of the batch script or the path to a file which contains it
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 The following is an example of how the |resource batch| resource can work when used in a recipe:
 

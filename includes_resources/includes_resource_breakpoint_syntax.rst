@@ -11,5 +11,5 @@ The syntax for using the |resource breakpoint| resource in a recipe is as follow
 
 where 
 
-* ``:break`` will tell |chef| to stop running a recipe at this point when |chef| is being run in |chef shell| mode
+* ``:break`` will tell the |chef client| to stop running a recipe at this point when the |chef client| is being run in |chef shell| mode
 

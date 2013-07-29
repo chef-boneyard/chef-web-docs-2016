@@ -2,7 +2,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-
 In some cases, the value for an attribute cannot be known until the compile phase of a |chef client| run. In this situation, using lazy evaluation of attribute values can be helpful. Instead of an attribute being assigned a value, it may instead be assigned a code block. The syntax for using lazy evaluation is as follows:
 
 .. code-block:: ruby
