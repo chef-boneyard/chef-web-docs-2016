@@ -35,7 +35,7 @@ This configuration file has the following settings for |nagios|:
           nagios['admin_user'] = "nagiosadmin"
 
    * - ``nagios['alert_email']``
-     - Default value: ``"nobody@example.com"``. For example:
+     - This setting requires ``/usr/bin/mail``. Default value: ``"nobody@example.com"``. For example:
        ::
 
           nagios['alert_email'] = "nobody@example.com"
