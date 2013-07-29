@@ -4,6 +4,13 @@ Release Notes: Chef 11.6.0
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+Known Issues
+=====================================================
+The following issues are known for |chef 11-6| and/or may affect the behavior of your current environment if you upgrade to |chef 11-6|. The short version:
+
+* **File paths in Microsoft Windows** On the |windows| platform, when using the |resource file|, |resource template|, and |resource cookbook_file| resources (or any other resources that may be derived from those resources), the path must include the drive letter. For example: ``"#{ENV['SYSTEMDRIVE']}/etc/config"`` or ``c:/etc/config``.
+* `CHEF-4406 <http://tickets.opscode.com/browse/CHEF-4406>`_  --- response_file fails trying to load preseed templates and falls back to cookbook files
+
 What's New
 =====================================================
 The following items are new for |chef 11-6| and/or are changes from previous versions of |chef|. The short version:
@@ -124,11 +131,11 @@ New attributes:
    * - ``headers``
      - |headers custom| Default value: ``{}``.
    * - ``use_conditional_get``
-     - |use_conditional_get| Default value: ``true``.
+     - |use conditional_get| Default value: ``true``.
    * - ``use_etag``
-     - |use_etag| Default value: ``true``.
+     - |use etag| Default value: ``true``.
    * - ``use_last_modified``
-     - |use_last_modified| Default value: ``true``.
+     - |use last_modified| Default value: ``true``.
 
 |resource template| Attributes
 -----------------------------------------------------
@@ -252,7 +259,7 @@ New settings have been added to the |client rb| file:
  
           enable_selinux_file_permission_fixup true
    * - ``file_atomic_update``
-     - |file_atomic_update| For example:
+     - |file atomic_update| For example:
        ::
  
           file_atomic_update false
@@ -404,12 +411,6 @@ A new setting has been added to the |solo rb| file:
 Force a Redeploy
 -----------------------------------------------------
 Previous versions of |chef| required the cache file to be deleted to force a redeploy. In |chef 11-6|, in addition to deleting the cache file, deleting the deployment directory will also force a redeploy.
-
-Known Issues
-=====================================================
-The following issues are known for |chef 11-6| and/or may affect the behavior of your current environment if you upgrade to |chef 11-6|. The short version:
-
-* **File paths in Microsoft Windows** On the |windows| platform, when using the |resource file|, |resource template|, and |resource cookbook_file| resources (or any other resources that may be derived from those resources), the path must include the drive letter. For example: ``"#{ENV['SYSTEMDRIVE']}/etc/config"`` or ``c:/etc/config``.
 
 
 What's Fixed
