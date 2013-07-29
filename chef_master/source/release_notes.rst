@@ -8,8 +8,12 @@ Known Issues
 =====================================================
 The following issues are known for |chef 11-6| and/or may affect the behavior of your current environment if you upgrade to |chef 11-6|. The short version:
 
-* **File paths in Microsoft Windows** On the |windows| platform, when using the |resource file|, |resource template|, and |resource cookbook_file| resources (or any other resources that may be derived from those resources), the path must include the drive letter. For example: ``"#{ENV['SYSTEMDRIVE']}/etc/config"`` or ``c:/etc/config``.
+.. * **File paths in Microsoft Windows** On the |windows| platform, when using the |resource file|, |resource template|, and |resource cookbook_file| resources (or any other resources that may be derived from those resources), the path must include the drive letter. For example: ``"#{ENV['SYSTEMDRIVE']}/etc/config"`` or ``c:/etc/config``.
+
 * `CHEF-4406 <http://tickets.opscode.com/browse/CHEF-4406>`_  --- response_file fails trying to load preseed templates and falls back to cookbook files
+* `CHEF-4419 <http://tickets.opscode.com/browse/CHEF-4419>`_  --- Absolute file paths with no drive letter for file resources on Windows fails chef-client run
+* `CHEF-4422 <http://tickets.opscode.com/browse/CHEF-4422>`_  --- remote_file fails when source becomes too long
+
 
 What's New
 =====================================================

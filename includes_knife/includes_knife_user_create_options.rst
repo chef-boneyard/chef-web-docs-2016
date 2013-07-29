@@ -16,4 +16,3 @@ This argument has the following options:
 
 ``--user-key FILE_NAME``
    |file public_key|
-
