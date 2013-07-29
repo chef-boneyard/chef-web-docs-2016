@@ -87,7 +87,7 @@ This argument has the following options:
    |template-file|
 
 ``-u USER_DATA_FILE``, ``--user-data USER_DATA_FILE``
-   |user-data|
+   |user data_file_ec2|
 
 ``-w GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh-gateway|

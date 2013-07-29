@@ -26,6 +26,6 @@ This resource has the following attributes:
    * - ``system``
      - |system resource user|
    * - ``uid``
-     - |uid resource user|
+     - |user uid| Default value: ``nil``.
    * - ``username``
      - |name user| Default value: ``name``.

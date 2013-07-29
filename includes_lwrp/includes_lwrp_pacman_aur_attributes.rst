@@ -20,7 +20,7 @@ This lightweight resource provider has the following actions:
    * - ``patches``
      - |patch file_array| Default value: ``[]``.
    * - ``pkgbuild_src``
-     - |use pkgbuild|
+     - |use pkgbuild| Default value: ``false``.
    * - ``version``
      - |version package|
 

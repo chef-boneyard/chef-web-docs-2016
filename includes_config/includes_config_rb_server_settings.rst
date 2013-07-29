@@ -345,7 +345,7 @@ This configuration file has the following settings:
  
           umask 0022
    * - ``user``
-     - |user rb setting| For example:
+     - |user chef_client| Default value: ``nil``. For example:
        ::
  
           user nil

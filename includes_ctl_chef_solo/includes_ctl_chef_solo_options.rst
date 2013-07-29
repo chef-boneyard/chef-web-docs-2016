@@ -61,7 +61,7 @@ This command has the following options:
    |splay|
 
 ``-u USER``, ``--user USER``
-   |user chef-client|
+   |user chef_client|
 
 ``-v``, ``--version``
    |version chef|

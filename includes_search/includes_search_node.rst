@@ -2,14 +2,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-
 A node can be searched from a recipe by using the following syntax::
 
    search(:node, "key:attribute")
 
 A wildcard can be used to replace characters within the search query.
 
-|chef| saves expanded lists of roles (all of the roles that apply to a node, including nested roles) and recipes to the role and recipe attributes on a node. The expanded lists of roles allows for searching within nodes that run a given recipe, even if that recipe is included by a role.
+Expanded lists of roles (all of the roles that apply to a node, including nested roles) and recipes to the role and recipe attributes on a node are saved on the |chef server|. The expanded lists of roles allows for searching within nodes that run a given recipe, even if that recipe is included by a role.
 
 .. note:: The ``recipes`` field is updated each time the |chef client| is run; changes to a run-list will not affect ``recipes`` until the next time the |chef client| is run on the node.
 

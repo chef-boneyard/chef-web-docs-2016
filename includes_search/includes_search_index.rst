@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|search index| |chef| builds the following search indexes:
+|search index| The following search indexes are built:
 
 .. list-table::
    :widths: 200 300

@@ -24,4 +24,4 @@ This lightweight resource provider has the following attributes:
    * - ``timeout``
      - |timeout command|
    * - ``user``
-     - |user lwrp powershell|
+     - |user name_or_id|

@@ -53,17 +53,17 @@ This configuration file has the following settings:
  
           environment "production"
    * - ``file_atomic_update``
-     - |file_atomic_update| For example:
+     - |file atomic_update| For example:
        ::
  
           file_atomic_update false
    * - ``file_backup_path``
-     - |file_backup_path| For example:
+     - |file backup_path| For example:
        ::
  
           file_backup_path "/var/chef/backup"
    * - ``file_cache_path``
-     - |file_cache_path| For example:
+     - |file cache_path| For example:
        ::
  
           file_cache_path "/var/chef/cache"
@@ -190,7 +190,7 @@ This configuration file has the following settings:
  
           umask 0022
    * - ``user``
-     - |user rb setting| For example:
+     - |user chef_client| Default value: ``nil``. For example:
        ::
  
           user nil

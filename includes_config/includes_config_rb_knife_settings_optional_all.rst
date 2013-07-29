@@ -51,7 +51,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:exec]``
      - |exec|
    * - ``knife[:file]``
-     - |file private key|
+     - |file private_key|
    * - ``knife[:force]``
      - |force directory|
    * - ``knife[:fqdn]``
@@ -120,14 +120,14 @@ The following list describes all of the optional settings that can be added to t
      - |ssh-user|
    * - ``knife[:template_file]``
      - |template-file|
-   * - ``knife[:use_current_branch]``
-     - |use-current-branch|
+   * - ``knife[:use current_branch]``
+     - |use current_branch|
    * - ``knife[:use_sudo]``
      - |sudo|
    * - ``knife[:user]`` and/or ``knife[:user_home]``
      - |user|
    * - ``knife[:user_key]``
-     - |file_public_key|
+     - |file public_key|
    * - ``knife[:user_password]``
      - |password user|
    * - ``knife[:yes]``

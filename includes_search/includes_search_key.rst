@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|search key| Any key that exists in any JSON description for any role, node, |chef client|, environment, or data bag can be searched for. To search for the available keys for a particular object, use the ``show`` sub-commands for any of the following |knife| sub-commands: ``client``, ``data bag``, ``environment``, ``node``, or ``role``.
+|search key| Any key that exists in any |json| description for any role, node, |chef client|, environment, or data bag can be searched. To search for the available keys for a particular object, use the ``show`` argument with any of the following |knife| sub-commands: |subcommand knife client|, |subcommand knife data bag|, |subcommand knife environment|, |subcommand knife node|, or |subcommand knife role|. For example: ``knife data bag show``.

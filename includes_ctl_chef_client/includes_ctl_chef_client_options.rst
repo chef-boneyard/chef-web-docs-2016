@@ -79,10 +79,10 @@ This command has the following options:
    |splay|
 
 ``-S CHEF_SERVER_URL``, ``--server CHEF_SERVER_URL``
-   |chef_server_url|
+   |url chef_server|
 
 ``-u USER``, ``--user USER``
-   |user chef-client|
+   |user chef_client|
 
 ``-v``, ``--version``
    |version chef|

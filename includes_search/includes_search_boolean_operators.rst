@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|search operator| |chef| searches can use the following Boolean operators:
+|search operator| Searches can use the following Boolean operators:
 
 .. list-table::
    :widths: 200 300

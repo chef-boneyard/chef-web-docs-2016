@@ -22,6 +22,6 @@ This lightweight resource provider has the following attributes:
    * - ``template``
      - |template lwrp sudo|
    * - ``user``
-     - |user lwrp sudo|
+     - |user sudo|
    * - ``variables``
      - |variables passed_to_template|
