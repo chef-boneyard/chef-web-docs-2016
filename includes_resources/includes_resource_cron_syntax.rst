@@ -13,10 +13,10 @@ The syntax for using the |resource cron| resource in a recipe is as follows:
 
 where 
 
-* ``cron`` tells |chef| to use the ``Chef::Provider::Cron`` provider during the |chef| run
+* ``cron`` tells the |chef client| to use the ``Chef::Provider::Cron`` provider during the |chef client| run
 * ``"name"`` is the name of the cron entry
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 For example, the following will run every hour at 8:00 every Saturday morning, sending an email to "admin@opscode.com" every time it runs.
 

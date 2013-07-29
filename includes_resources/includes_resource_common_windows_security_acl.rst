@@ -26,7 +26,7 @@ where
       * - ``:one_level_deep``
         - Indicates the depth to which permissions will be applied. Possible values: ``true`` to apply only to the first level of children; ``false`` to apply to all children.
 
-The ``rights`` attribute can be used as many times as necessary; |chef| will apply them to the file or directory as required. For example:
+The ``rights`` attribute can be used as many times as necessary; the |chef client| will apply them to the file or directory as required. For example:
 
 .. code-block:: ruby
 

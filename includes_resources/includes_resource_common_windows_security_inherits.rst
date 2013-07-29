@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The ``inherits`` attribute can be used to specifically tell |chef| to apply (or not apply) inherited rights from its parent directory.
+By default, a file or directory inherits rights from its parent directory. Most of the time this is the preferred behavior, but sometimes it may be necessary to take steps to more specifically control rights. The ``inherits`` attribute can be used to specifically tell the |chef client| to apply (or not apply) inherited rights from its parent directory.
 
 For example, the following example specifies the rights for a directory:
 
