@@ -4,13 +4,12 @@ Debugging Recipes and |chef client| Runs
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-Blah.
-
-Elements of good approaches to building recipes and xxxxx that are reliable and easy to debug include:
+Elements of good approaches to building cookbooks and recipes that are reliable include:
 
 * A consistent syntax pattern when constructing recipes
 * Using the same patterns in Ruby
-* xxxxx
+* Using core |chef| resources before creating custom ones
+* Using community-authored lightweight resources before creating custom ones
 
 Ideally, the best way to debug a recipe is to not have to debug it in the first place. That said, the following sections discuss various approaches to debugging recipes and failed |chef client| runs.
 
@@ -104,8 +103,6 @@ Some more complex ways to debug issues with a |chef client| run include:
 
 chef_hander
 -----------------------------------------------------
-xxxxx
-
 .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler.rst
 
 .. note:: This cookbook is available from |github|: https://github.com/opscode-cookbooks/chef_handler.
@@ -160,14 +157,9 @@ Examples
 
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
 
-
-
-
-
-
 chef-shell
 -----------------------------------------------------
-SET THIS UP FOR INCLUDES
+.. SET THIS UP FOR INCLUDES
 
 |chef shell| is a recipe debugging tool for |chef| that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features.
 
@@ -188,8 +180,6 @@ SET THIS UP FOR INCLUDES
 
 breakpoint Resource
 -----------------------------------------------------
-
-
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_breakpoint.rst
@@ -221,8 +211,6 @@ Examples
 **The same recipe with breakpoints**
 
 .. include:: ../../step_resource/step_resource_breakpoint_yes.rst
-
-
 
 ignore_failure Method
 -----------------------------------------------------
