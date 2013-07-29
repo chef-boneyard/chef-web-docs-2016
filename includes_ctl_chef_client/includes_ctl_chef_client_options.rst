@@ -43,7 +43,7 @@ This command has the following options:
    |interval|
 
 ``-j PATH``, ``--json-attributes PATH``
-   |json_attribs|
+   |json attributes|
 
 ``-k KEY_FILE``, ``--client-key KEY_FILE``
    |client_key| Default value: ``/etc/chef/client.pem``.

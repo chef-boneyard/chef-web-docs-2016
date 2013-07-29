@@ -58,7 +58,7 @@ This configuration file has the following settings:
  
           file_backup_path "/var/chef/backup"
    * - ``json_attribs``
-     - |json_attribs| For example:
+     - |json attributes| For example:
        ::
  
           json_attribs nil

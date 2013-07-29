@@ -24,7 +24,7 @@ This subcommand has the following options:
    |identity-file|
 
 ``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
-   |json-attributes|
+   |json first_run_string|
 
 ``-N NAME``, ``--node-name NAME``
    |name node|

@@ -24,7 +24,7 @@ This argument has the following options:
    |image|
 
 ``-j JSON_ATTRIBS``, ``--json-attributes``
-   |json-attributes|
+   |json first_run_string|
 
 ``-K API_KEY``, ``--rackspace-api-key API_KEY``
    |rackspace_api_key|

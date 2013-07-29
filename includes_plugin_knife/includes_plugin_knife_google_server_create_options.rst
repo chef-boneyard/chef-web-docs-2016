@@ -33,7 +33,7 @@ This argument has the following options:
    |google-image|
 
 ``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
-   |json-attributes|
+   |json first_run_string|
 
 ``-m MACHINE_TYPE``, ``--google-compute-machine MACHINE_TYPE``
    |google_compute_machine_type|

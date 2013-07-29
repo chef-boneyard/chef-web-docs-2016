@@ -19,7 +19,7 @@ This command has the following options:
    |help subcommand|
 
 ``-j PATH``, ``--json-attributes PATH``
-   |json_attribs|
+   |json attributes|
 
 ``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
