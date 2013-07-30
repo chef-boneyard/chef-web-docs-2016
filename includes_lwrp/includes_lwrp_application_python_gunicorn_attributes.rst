@@ -40,7 +40,7 @@ This lightweight resource provider has the following attributes:
    * - ``timeout``
      - |timeout worker|
    * - ``trace``
-     - |trace lwrp application_python_gunicorn| Default value: ``false``.
+     - |trace functions_on_server| Default value: ``false``.
    * - ``umask``
      - |umask|
    * - ``worker_class``

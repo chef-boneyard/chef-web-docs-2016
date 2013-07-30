@@ -10,7 +10,7 @@ The following example shows how to modify the default script for |ubuntu| 12.04.
    % gem contents chef | grep ubuntu12.04-gems
    /Users/jtimberman/.rvm/gems/ruby-1.9.2-p180/gems/chef-0.10.2/lib/chef/knife/bootstrap/ubuntu12.04-gems.erb
 
-Copy the template to the |chef| repository in the ``.chef/bootstrap`` directory:
+Copy the template to the |chef repo| in the ``.chef/bootstrap`` directory:
 
 .. code-block:: bash
 
@@ -24,7 +24,7 @@ Modify the template with any editor, then use it with the ``-d`` or ``--distro``
 
    $ knife bootstrap 192.168.1.100 -r 'role[webserver]' -d ubuntu12.04-gems-mine
 
-Alternatively, an example bootstrap template can be found in the |chef| source repository: https://github.com/opscode/chef/blob/master/lib/chef/knife/bootstrap/ubuntu12.04-gems.erb. Copy the template to ``~/.chef-repo/.chef/bootstrap/ubuntu12.04-apt.erb`` and modify the template appropriately.
+Alternatively, an example bootstrap template can be found in the |git| source for the |chef repo|: https://github.com/opscode/chef/blob/master/lib/chef/knife/bootstrap/ubuntu12.04-gems.erb. Copy the template to ``~/.chef-repo/.chef/bootstrap/ubuntu12.04-apt.erb`` and modify the template appropriately.
 
 
 

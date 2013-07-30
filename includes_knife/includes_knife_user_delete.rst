@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``delete`` argument is used to delete a registered |chef| user.
+The ``delete`` argument is used to delete a registered user.
 

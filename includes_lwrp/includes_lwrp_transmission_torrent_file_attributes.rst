@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``path``
      - |path lwrp transmission_torrent_file|
    * - ``torrent``
-     - |torrent lwrp transmission_torrent_file|
+     - |torrent_file|
    * - ``blocking``
      - |blocking lwrp transmission_torrent_file|
    * - ``continue_seeding``

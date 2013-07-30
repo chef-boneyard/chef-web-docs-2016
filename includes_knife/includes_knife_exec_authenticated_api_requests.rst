@@ -44,13 +44,12 @@ and to ensure that the output is visible in the console, add the ``puts`` in fro
 
 where ``puts`` is the shorter version of the ``$stdout.puts`` predefined variable in |ruby|.
 
-
-The following example shows how to add a client named "monkeypants" and the ``/clients`` endpoint, and then return the private key for that user in the console:
+The following example shows how to add a client named "IBM305RAMAC" and the ``/clients`` endpoint, and then return the private key for that user in the console:
 
 .. code-block:: bash
 
    $ client_desc = {
-       "name"  => "monkeypants",
+       "name"  => "IBM305RAMAC",
        "admin" => false
      }
      

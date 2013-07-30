@@ -5,9 +5,8 @@
 
 This subcommand has the following options:
 
-
 ``--local``
-   Use to show files in the local |chef| repository instead of a remote location. Default: ``false``.
+   |local chef_repo| Default: ``false``.
 
 
 

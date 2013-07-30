@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``edit`` argument is used to edit the attributes of an environment. When this argument is run, |knife| will open $EDITOR to enable editing of ENVIRONMENT attributes. When finished, |knife| will update the |chef server| with those changes.
+The ``edit`` argument is used to edit the attributes of an environment. When this argument is run, |knife| will open |chef editor| to enable editing of ``ENVIRONMENT`` attributes. When finished, |knife| will update the |chef server| with those changes.
 

@@ -18,7 +18,7 @@ The ``knife bootstrap`` sub-command will look in three locations for the templat
 #. A bootstrap directory in the ``$PWD/.chef``, e.g. in ``~/chef-repo/.chef``
 #. A bootstrap directory in the users ``$HOME/.chef``
 
-If, in the example above, the second location was used, then create the ``.chef/bootstrap/`` directory in the |chef| repository, and then create the |erb| template file by running commands similar to the following:
+If, in the example above, the second location was used, then create the ``.chef/bootstrap/`` directory in the |chef repo|, and then create the |erb| template file by running commands similar to the following:
 
 .. code-block:: bash
 

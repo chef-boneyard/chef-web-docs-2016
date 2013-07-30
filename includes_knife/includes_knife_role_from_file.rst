@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``from file`` argument is used to create a role using existing JSON data as a template.
+The ``from file`` argument is used to create a role using existing |json| data as a template.
 

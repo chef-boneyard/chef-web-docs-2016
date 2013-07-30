@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``show`` argument is used to show the details of a |chef| user.
+The ``show`` argument is used to show the details of a user.
 

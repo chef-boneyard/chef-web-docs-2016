@@ -9,5 +9,5 @@ The following ``knife node run list add`` settings can be added to the |knife rb
    Use to add the ``--after`` option.
 
 ``knife[:run_list]``
-   Use for the run-list that is passed as part of a the command itself.
+   |knife option_run_list|
 
