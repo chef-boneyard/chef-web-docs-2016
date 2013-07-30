@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|chef| will load |knife| and |knife| plugin commands from the following locations:
+The |chef client| will load |knife| and |knife| plugin commands from the following locations:
 
 * The home directory: ``~/.chef/plugins/knife/``
 * A ``.chef/plugins/knife`` directory in the cookbook repository

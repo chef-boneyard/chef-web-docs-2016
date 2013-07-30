@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the |chef| search functionality within a plugin to return information about the infrastructure to that plugin. Use the ``require`` method to ensure that search functionality is available with the following:
+Use the |chef server| search capabilities from a plugin to return information about the infrastructure to that plugin. Use the ``require`` method to ensure that search functionality is available with the following:
 
 .. code-block:: ruby
 

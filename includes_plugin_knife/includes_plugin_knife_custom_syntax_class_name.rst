@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The class name declares a plugin as a subclass of both |knife| and |chef|. For example:
+The class name declares a plugin as a subclass of both ``Knife`` and ``Chef``. For example:
 
 .. code-block:: ruby
    

@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``bootstrap windows ssh`` argument is used to bootstrap |chef| installations in a |windows| environment, using a command shell that is native to |windows|.
+The ``bootstrap windows ssh`` argument is used to bootstrap |chef client| installations in a |windows| environment, using a command shell that is native to |windows|.
 

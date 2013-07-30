@@ -8,7 +8,7 @@ This subcommand requires |windows remote management| to be installed, and then c
 
    $ winrm quickconfig -q
 
-The following |windows remote management| configuration settings should be updated for |chef|:
+The following |windows remote management| configuration settings should be updated:
 
 .. list-table::
    :widths: 200 300

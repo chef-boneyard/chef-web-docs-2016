@@ -4,4 +4,3 @@
 
 
 The ``server list`` argument is used to find instances that are associated with a |eucalyptus| account. The results may show instances that are not currently managed by the |chef server|.
-
