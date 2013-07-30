@@ -12,7 +12,7 @@ The following providers are available. Use the short name to call the provider f
      - Notes
    * - ``Chef::Provider::Package``
      - ``package``
-     - When this short name is used, |chef| will attempt to determine the correct provider during the |chef| run.
+     - When this short name is used, the |chef client| will attempt to determine the correct provider during the |chef client| run.
    * - ``Chef::Provider::Package::Solaris``
      - ``solaris_package``
      - The provider that is used with the |solaris| platform.

@@ -12,7 +12,7 @@ The following providers are available. Use the short name to call the provider f
      - Notes
    * - ``Chef::Provider::Script``
      - ``script``
-     - When this short name is used, |chef| will determine the correct provider during the |chef| run.
+     - When this short name is used, the |chef client| will determine the correct provider during the |chef client| run.
    * - ``Chef::Provider::Script::Ruby``
      - ``ruby``
      - The provider that is used with the |ruby| command interpreter.

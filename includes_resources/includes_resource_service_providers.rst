@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |resource service| resource does not have service-specific short names. This is because |chef| identifies the platform at the start of every |chef| run based on data collected by |ohai|. |chef| looks up the platform in the `provider_mapping.rb <https://github.com/opscode/chef/blob/master/lib/chef/platform/provider_mapping.rb>`_ file, and then determines the correct provider for that platform. In certain situations, such as when more than one init system is available on a node, a specific provider may need to be identified by using the ``provider`` attribute and the long name for that provider.
+The |resource service| resource does not have service-specific short names. This is because the |chef client| identifies the platform at the start of every |chef client| run based on data collected by |ohai|. The |chef client| looks up the platform in the `provider_mapping.rb <https://github.com/opscode/chef/blob/master/lib/chef/platform/provider_mapping.rb>`_ file, and then determines the correct provider for that platform. In certain situations, such as when more than one init system is available on a node, a specific provider may need to be identified by using the ``provider`` attribute and the long name for that provider.
 
 The following providers are available. Use the short name to call the provider from a recipe:
 
@@ -15,7 +15,7 @@ The following providers are available. Use the short name to call the provider f
      - Notes
    * - ``Chef::Provider::Service::Init``
      - ``service``
-     - When this short name is used, |chef| will determine the correct provider during the |chef| run.
+     - When this short name is used, the |chef client| will determine the correct provider during the |chef client| run.
    * - ``Chef::Provider::Service::Init::Debian``
      - ``service``
      - The provider that is used with the |debian| and |ubuntu| platforms.

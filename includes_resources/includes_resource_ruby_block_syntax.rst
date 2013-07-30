@@ -14,7 +14,7 @@ The syntax for using the |resource ruby_block| resource in a recipe is as follow
 
 where 
 
-* ``ruby_block`` tells |chef| to use the ``Chef::Provider::RubyBlock`` provider during the |chef| run
+* ``ruby_block`` tells the |chef client| to use the ``Chef::Provider::RubyBlock`` provider during the |chef client| run
 * ``"name"`` is the name of the code block
 * ``block`` is the attribute that is used to define the |ruby| block
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

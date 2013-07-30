@@ -13,7 +13,7 @@ The syntax for using the |resource package_rpm| resource in a recipe is as follo
 
 where 
 
-* ``rpm_package`` tells |chef| to use the ``Chef::Provider::Rpm`` provider during the |chef| run
+* ``rpm_package`` tells the |chef client| to use the ``Chef::Provider::Rpm`` provider during the |chef client| run
 * ``"name"`` is the name of the package
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

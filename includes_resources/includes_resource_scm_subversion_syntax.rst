@@ -13,10 +13,10 @@ The syntax for using the subversion resource in a recipe is as follows:
 
 where 
 
-* ``subversion`` tells |chef| to use the ``Chef::Provider::Subversion`` provider during the |chef| run.
+* ``subversion`` tells the |chef client| to use the ``Chef::Provider::Subversion`` provider during the |chef client| run.
 * ``"name"`` is the location in which the source files will be placed and/or synchronized with the files under source control management
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 The following is an example shows the subversion resource:
 
@@ -32,4 +32,4 @@ The following is an example shows the subversion resource:
 where
 
 * the name of the resource is ``CouchDB Edge``
-* the ``repository`` and ``reference`` nodes tell |chef| which repository and revision to use
+* the ``repository`` and ``reference`` nodes tell the |chef client| which repository and revision to use

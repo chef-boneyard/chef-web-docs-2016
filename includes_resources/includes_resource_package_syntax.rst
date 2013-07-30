@@ -13,7 +13,7 @@ The syntax for using the |resource package| resource in a recipe is as follows:
 
 where 
 
-* ``package`` tells |chef| to use one of sixteen different providers during the |chef| run, where the provider that is used by |chef| depends on the platform of the machine on which the |chef| run is taking place
+* ``package`` tells the |chef client| to use one of sixteen different providers during the |chef client| run, where the provider that is used by |chef client| depends on the platform of the machine on which the |chef client| run is taking place
 * ``"name"`` is the name of the package
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

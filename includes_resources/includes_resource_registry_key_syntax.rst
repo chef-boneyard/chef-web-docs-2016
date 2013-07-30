@@ -25,12 +25,12 @@ The syntax for using the |resource registry_key| resource in a recipe is as foll
 
 where 
 
-* ``registry_key`` tells |chef| to use the ``Chef::Provider::Windows::Registry`` provider during the |chef| run
+* ``registry_key`` tells the |chef client| to use the ``Chef::Provider::Windows::Registry`` provider during the |chef client| run
 * ``"name"`` is the path to the registry (including properly escaped |windows| registry key path separators)
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified.
 * |values resource registry_key types|
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 The following is an example of how the |resource registry_key| resource can work when used in a recipe. In this example, a |windows| registry key named "System" will get a new value called "NewRegistryKeyValue" and a mulit-string value named "foo bar":
 

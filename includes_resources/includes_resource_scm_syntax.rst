@@ -13,10 +13,10 @@ The syntax for using the |resource scm| resource in a recipe is as follows:
 
 where 
 
-* ``scm`` tells |chef| to use the ``Chef::Provider::Git`` or ``Chef::Provider::Subversion`` providers during the |chef| run. More specific short names---``git`` and ``subversion``---can be used instead of the ``scm`` short name.
+* ``scm`` tells the |chef client| to use the ``Chef::Provider::Git`` or ``Chef::Provider::Subversion`` providers during the |chef client| run. More specific short names---``git`` and ``subversion``---can be used instead of the ``scm`` short name.
 * ``"name"`` is the location in which the source files will be placed and/or synchronized with the files under source control management
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
-* ``:action`` is the step that the resource will ask the provider to take during the |chef| run
+* ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 The following is an example shows the |resource scm| resource defined as the ``git`` short name:
 
@@ -32,4 +32,4 @@ The following is an example shows the |resource scm| resource defined as the ``g
 where
 
 * the name of the resource is ``#{Chef::Config[:file_cache_path]}/libvpx``
-* the ``repository`` and ``reference`` nodes tell |chef| which repository and revision to use
+* the ``repository`` and ``reference`` nodes tell the |chef client| which repository and revision to use
