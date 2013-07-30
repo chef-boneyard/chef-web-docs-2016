@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``Chef::Log`` class in a lightweight provider to define log entries that are created during a |chef| run. The syntax for a log message is as follows:
+Use the ``Chef::Log`` class in a lightweight provider to define log entries that are created during a |chef client| run. The syntax for a log message is as follows:
 
 .. code-block:: ruby
 

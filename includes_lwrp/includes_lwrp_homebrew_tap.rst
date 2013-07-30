@@ -5,6 +5,6 @@ The |lwrp homebrew tap| lightweight resource is used to run |homebrew| as the de
 
 |homebrew| requires the ``/usr/local`` directory; the user that will run the cookbook must be the owner of that directory. See the |homebrew| FAQ for more information: https://github.com/mxcl/homebrew/wiki/FAQ.
 
-Be sure to add ``recipe[homebrew]`` to the run list for any node that be using |homebrew|. This will ensure that it is available to |chef| and that |homebrew| is installed when it is necessary.
+Be sure to add ``recipe[homebrew]`` to the run list for any node that be using |homebrew|. This will ensure that it is available to the |chef client| and that |homebrew| is installed when it is necessary.
 
 If any nodes require |macports|, be careful about adding an explicit dependency for |homebrew| to metadata, as this will cause the ``homebrew`` cookbook to be downloaded, its library loaded, and the default package provider on the local system to be changed to |homebrew|.

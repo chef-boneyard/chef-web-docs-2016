@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``cluster_name``
      - |name cluster|
    * - ``cluster_members``
-     - |cluster member_nodes| Default value: discovered by |chef| search functionality.
+     - |cluster member_nodes| Default value: discovered by |chef server| search functionality.
    * - ``node_name``
      - |name local_riak_node|
    * - ``timeout``

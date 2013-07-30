@@ -5,9 +5,9 @@
 A lightweight provider can use any conditional statement that can be used in |ruby|: ``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, and ``for``. A condition statement can test for:
 
 * A |ruby| class (such as ``::File`` or ``::String``)
-* A |chef| class (such as ``::Chef::Mixin::ShellOut``)
+* A ``Chef`` class (such as ``::Chef::Mixin::ShellOut``)
 * Conditions present on the node by using ``@current_resource``
-* Conditions present within the resource being processed by |chef| during the |chef| run by using ``new_resource`` or ``@new_resource``
+* Conditions present within the resource being processed by the |chef client| during the |chef client| run by using ``new_resource`` or ``@new_resource``
 * To verify if a resource was updated by using ``updated_by_last_action``, for example: ``@new_resource.updated_by_last_action``
 
 and so on.
