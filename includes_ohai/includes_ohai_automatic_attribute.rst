@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-An automatic attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, and so on. Automatic attributes are detected by |ohai| and are then used by |chef| to ensure that these attribute are handled properly during every |chef| run. The most commonly accessed automatic attributes are:
+An automatic attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, and so on. Automatic attributes are detected by |ohai| and are then used by the |chef client| to ensure that these attribute are handled properly during every |chef client| run. The most commonly accessed automatic attributes are:
 
 
 .. list-table::
