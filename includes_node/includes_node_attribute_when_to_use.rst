@@ -2,11 +2,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-An attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on. An attribute may be unique to a specific node or it can be identical across every node in the organization. Attributes are most commonly set from a cookbook, by using |knife|, or are retrieved by |ohai| from each node prior to every |chef| run. All attributes are indexed for search on the |chef server|. Good candidates for attributes include:
+An attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on. An attribute may be unique to a specific node or it can be identical across every node in the organization. Attributes are most commonly set from a cookbook, by using |knife|, or are retrieved by |ohai| from each node prior to every |chef client| run. All attributes are indexed for search on the |chef server|. Good candidates for attributes include:
 
 * any cross-platform abstraction for an application, such as the path to a configuration files
 * default values for tunable settings, such as the amount of memory assigned to a process or the number of workers to spawn
-* anything that may need to be persisted in node data between |chef| runs
+* anything that may need to be persisted in node data between |chef client| runs
 
 In general, attribute precedence is set to enable cookbooks and roles to define attribute defaults, for normal attributes to define the values that should be specific for a node, and for override attributes to force a certain value, even when a node already has that value specified.
 
