@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-There are two ways to create a |chef| repository when using the |opscode| boilerplate repository as a base:
+There are two ways to create a |chef repo| when using the |opscode| boilerplate repository as a base:
 
 * Clone the |opscode| repository for |chef| from |github|
 * Download the |opscode| repository as a |tar gz| file and place it into local version source control.

@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-It is possible for multiple users to access the |chef server| using the same |knife rb| file. (A user can even access multiple organizations if, for example, each |chef| repository contained the same copy of the |knife rb| file.) This can be done by adding the |knife rb| file to the |chef| repository, and then using environment variables to handle the user-specific credential details and/or sensitive values. For example:
+It is possible for multiple users to access the |chef server| using the same |knife rb| file. (A user can even access multiple organizations if, for example, each instance of the |chef repo| contained the same copy of the |knife rb| file.) This can be done by adding the |knife rb| file to the |chef repo|, and then using environment variables to handle the user-specific credential details and/or sensitive values. For example:
 
 .. code-block:: ruby
 
