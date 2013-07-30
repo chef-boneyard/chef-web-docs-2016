@@ -5,7 +5,7 @@
 
 This command has the following syntax::
 
-   chef-client OPTION VALUE OPTION VALUE ...
+   chef-solo OPTION VALUE OPTION VALUE ...
 
 This command has the following options:
 
