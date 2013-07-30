@@ -14,7 +14,7 @@ Sphinx is the authoring tool used by chef-docs: http://sphinx-doc.org/
 
 Fork & Clone repo to your own account://
 
-    git clone https://github.com/myusername/chef-docs.git
+    git clone https://github.com/opscode/chef-docs.git
     # will take a while, repo is ~800MB
 
 You may wish to use [virtualenv](http://www.virtualenv.org/) & [virtualenvwrapper](http://virtualenvwrapper.readthedocs.org/) (similar to rvm or rbenv), to isolate this Python environment from others, so start out like so:
