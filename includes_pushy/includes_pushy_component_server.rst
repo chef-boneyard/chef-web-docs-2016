@@ -4,7 +4,7 @@
 
 The |pushy| server is used to send job messages to one (or more) managed nodes.
 
-* A heartbeat message is used to let all of the nodes in a |chef| organization that the |pushy| server is available
+* A heartbeat message is used to let all of the nodes in an organization that the |pushy| server is available
 * A heartbeat message is one-way and does not require acknowledgements from a |pushy| client
 * The frequency of the heartbeat message is configurable
 
