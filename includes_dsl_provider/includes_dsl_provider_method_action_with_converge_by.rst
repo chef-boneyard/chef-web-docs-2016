@@ -24,7 +24,7 @@ where:
 * ``:action_name`` corresponds to an action defined by a lightweight resource
 * ``if @current_resource.exists`` is a condition test that is using an instance variable to see if the object already exists; this is an example of a test for idempotency
 * If the object already exists, a ``#{ @new_resource } already exists - nothing to do.`` log entry is created
-* If the object does not already exists, the ``resource`` block is run. This block is a recipe that tells |chef| what to do. A ``#{ @new_resource } created.`` log entry is created
-* ``converge_by`` tells |chef| which message to provide when |chef| is run in |whyrun| mode
+* If the object does not already exists, the ``resource`` block is run. This block is a recipe that tells the |chef client| what to do. A ``#{ @new_resource } created.`` log entry is created
+* ``converge_by`` tells the |chef client| which message to provide when |chef| is run in |whyrun| mode
 
 

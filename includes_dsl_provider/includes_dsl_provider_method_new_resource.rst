@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``new_resource`` method is used to represent a resource as loaded by |chef| during the |chef| run. In other words: what the resource should be. |chef| compares the resource as it exists on the node to the resource that is created during the |chef| run to determine what steps need to be taken to bring the resource into the desired state.
+The ``new_resource`` method is used to represent a resource as loaded by the |chef client| during the |chef client| run. In other words: what the resource should be. The |chef client| compares the resource as it exists on the node to the resource that is created during the |chef client| run to determine what steps need to be taken to bring the resource into the desired state.
 
 For example:
 
@@ -20,6 +20,6 @@ For example:
     end
   end
 
-where |chef| checks to see if the file exists, then if the file is writable, and then attempts to delete the resource. ``path`` is an attribute of the new resource that is defined by the lightweight resource.
+where the |chef client| checks to see if the file exists, then if the file is writable, and then attempts to delete the resource. ``path`` is an attribute of the new resource that is defined by the lightweight resource.
 
 

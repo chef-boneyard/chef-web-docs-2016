@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``converge_by`` method is a wrapper that is used to tell |chef| what do if a resource is run in |whyrun| mode. The syntax for the ``converge_by`` method is:
+The ``converge_by`` method is a wrapper that is used to tell the |chef client| what do if a resource is run in |whyrun| mode. The syntax for the ``converge_by`` method is:
 
 .. code-block:: ruby
 
@@ -11,7 +11,7 @@ The ``converge_by`` method is a wrapper that is used to tell |chef| what do if a
 where:
 
 * ``converge_by()`` is added to an ``action`` block as a wrapper
-* ``"message"`` is the message that |chef| returns when it is run in |whyrun| mode
+* ``"message"`` is the message that the |chef client| returns when it is run in |whyrun| mode
 
 Some examples:
 
@@ -62,6 +62,6 @@ An example of the ``converge_by`` method being used in the `directory <https://g
      update_new_file_state
    end
 
-.. note:: |whyrun| mode is already enabled for core |chef| resources. When core |chef| resources are used as part of the ``action`` block in a lightweight provider, only the ``whyrun_supported?`` is required to allow |chef| to run in |whyrun| mode.
+.. note:: |whyrun| mode is already enabled for core resources. When core resources are used as part of the ``action`` block in a lightweight provider, only the ``whyrun_supported?`` is required to allow the |chef client| to run in |whyrun| mode.
 
 
