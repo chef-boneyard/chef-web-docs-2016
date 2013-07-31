@@ -25,7 +25,7 @@ This may trigger a cluster failover, which will require watching the |keepalived
 
 .. code-block:: bash
 
-   $ private-chef-ctl keepalived tail
+   $ private-chef-ctl tail keepalived
    
    ==> /var/log/opscode/keepalived/cluster.log <==
    Wed, 28 Mar 2012 22:09:14 +0000: Stopping service opscode-expander-reindexer
