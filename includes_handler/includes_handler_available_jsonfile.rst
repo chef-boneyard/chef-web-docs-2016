@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef| includes a handler that serializes run status data to a JSON file. This handler needs to be enabled by adding the following lines of |ruby| code to either |client rb| or |solo rb|:
+The ``JsonFile`` handler is used to serialize run status data to a |json| file. This handler needs to be enabled by adding the following lines of |ruby| code to either |client rb| or |solo rb|:
 
 .. code-block:: ruby
 
@@ -9,7 +9,7 @@
    report_handlers << Chef::Handler::JsonFile.new(:path => "/var/chef/reports")
    exception_handlers << Chef::Handler::JsonFile.new(:path => "/var/chef/reports")
 
-There is a LWRP entry:
+There is a |lwrp| entry:
 
 .. code-block:: ruby
 
@@ -19,7 +19,7 @@ There is a LWRP entry:
      action :enable
    end
 
-The run status data can be loaded and inspected via irb:
+The run status data can be loaded and inspected via |ruby irb|:
 
 .. code-block:: ruby
 

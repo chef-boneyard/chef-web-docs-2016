@@ -72,7 +72,7 @@ Domain-specific |ruby| attributes for environments include the following:
             }
           )  
 
-A |ruby| file for each non-default environment must exist in the ``environments/`` subdirectory of the |chef| repository. (If the repository does not have this subdirectory, then create it.) Each |ruby| file should have the .rb suffix. The complete environment has the following syntax:
+A |ruby| file for each non-default environment must exist in the ``environments/`` subdirectory of the |chef repo|. (If the |chef repo| does not have this subdirectory, then create it.) Each |ruby| file should have the .rb suffix. The complete environment has the following syntax:
 
 .. code-block:: ruby
 
@@ -82,7 +82,7 @@ A |ruby| file for each non-default environment must exist in the ``environments/
    default_attributes "node" => { "attribute" => [ "value", "value", "etc." ] }
    override_attributes "node" => { "attribute" => [ "value", "value", "etc." ] }
 
-where both default and override attributes are optional and either a cookbook or cookbook versions (one or more) are specified. For example, an environment named "dev" that uses the "couchdb" cookbook (version 11.0.0 or higher) that listens on ports 80 and 443:
+where both default and override attributes are optional and either a cookbook or cookbook versions (one or more) are specified. For example, an environment named "dev" that uses the |cookbook couchdb| cookbook (version 11.0.0 or higher) that listens on ports 80 and 443:
 
 .. code-block:: ruby
 

@@ -13,7 +13,7 @@ but the following syntax can also be used:
 
    resources(:resource_type => "resource_name")
 
-where in either approach ``resource_type`` is the name of a |chef| resource and ``resource_name`` is the name of a resource that can be configured by the |chef| resource. 
+where in either approach ``resource_type`` is the name of a resource and ``resource_name`` is the name of a resource that can be configured by the |chef client|. 
 
 The ``resources`` method can be used to modify a resource later on in a recipe. For example:
 

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-If you are starting a processes by using an execute or script resource, you can use the environment attribute to alter the environment that will be passed to the process.
+If processes is started by using the |resource execute| or |resource script| resources (or any of the resources based on those two resources, such as |resource script_bash|), use the ``environment`` attribute to alter the environment that will be passed to the process.
 
 .. code-block:: bash
 
@@ -12,4 +12,4 @@ If you are starting a processes by using an execute or script resource, you can 
      environment { 'FOO' => "bar" }
    end
 
-Note that the only environment being altered is the environment being passed to the child process being started by the bash resource. This will not affect the environment of chef-client or subsequently started child processes.
+The only environment being altered is the one being passed to the child process that is started by the |resource script_bash| resource. This will not affect the environment of the |chef client| or any child processes.

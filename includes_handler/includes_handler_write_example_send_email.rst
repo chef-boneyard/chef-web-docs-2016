@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This example describes a simple handler that sends an email when a |chef| run fails. The handler uses the |pony| library (https://github.com/benprew/pony), which is an "express way to send email in |ruby|". For this example to work, it must be possible to send email via |path user sendmail| or via |smtp| to localhost. The following example shows how to use the |pony| library to send email:
+This example describes a simple handler that sends an email when a |chef client| run fails. The handler uses the |pony| library (https://github.com/benprew/pony), which is an "express way to send email in |ruby|". For this example to work, it must be possible to send email via |path user sendmail| or via |smtp| to localhost. The following example shows how to use the |pony| library to send email:
 
 .. code-block:: ruby
 

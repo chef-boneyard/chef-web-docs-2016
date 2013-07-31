@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To manually install and configure a handler, the |client rb| file must be edited. There is no default install location for handlers. The simplest way to distribute and install them is via |rubygems|, though many methods (|github|, HTTP, and so on) will also work. Once the handler is installed on the system, enable it in the |client rb| file by requiring it. 
+To manually install and configure a handler, the |client rb| file must be edited. There is no default install location for handlers. The simplest way to distribute and install them is via |rubygems|, though other methods such as |github| or HTTP will also work. Once the handler is installed on the system, enable it in the |client rb| file by requiring it. 
 
 For example, if |rubygems| was used to install the handler, adding the following to the |client rb| file will enable it:
 

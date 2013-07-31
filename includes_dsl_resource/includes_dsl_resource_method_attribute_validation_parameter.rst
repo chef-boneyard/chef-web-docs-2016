@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A validation parameter is used to add zero or more validation parameters to an attribute.
+A validation parameter is used to add zero (or more) validation parameters to an attribute.
 
 .. list-table::
    :widths: 150 450
@@ -11,7 +11,7 @@ A validation parameter is used to add zero or more validation parameters to an a
    * - Parameter
      - Description
    * - ``:callbacks``
-     - Use to define a collection of unique keys and values (a Hash) that should return true. For example: ``"Option #{key}'s value #{value} #{message}!"``, which will insert a key into an error message if the Proc does not return true. For example:
+     - Use to define a collection of unique keys and values (a |hash|) that should return true. For example: ``"Option #{key}'s value #{value} #{message}!"``, which will insert a key into an error message if the |ruby proc| object does not return true. For example:
 
        .. code-block:: ruby
        

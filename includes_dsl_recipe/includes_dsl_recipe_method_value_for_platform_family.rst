@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``value_for_platform_family`` method can be used in a recipe to use a hash to select a particular value based on the ``node['platform_family']`` attribute that is detected by |ohai| during every |chef| run. The syntax for the ``value_for_platform_family`` method is as follows:
+The ``value_for_platform_family`` method can be used in a recipe to use a |hash| to select a particular value based on the ``node['platform_family']`` attribute that is detected by |ohai| during every |chef client| run. The syntax for the ``value_for_platform_family`` method is as follows:
 
 .. code-block:: ruby
 

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Child processes inherit a copy of their parent's environment. In Bash (and other shells) the environment is accessible via shell variables. Shell variables can be added to the environment that is inherited by children processes using the export keyword.
+Child processes inherit a copy of their parent's environment. In |bash| (and other shells) the environment is accessible via shell variables. Shell variables can be added to the environment that is inherited by children processes using the export keyword.
 
 Consider the following example:
 
@@ -36,9 +36,9 @@ As mentioned, the child process gets a copy of its parent's environment. This me
    woo
    % exit
 
-The principles mentioned above (a child process receives a copy of its parent's environment and cannot affect their parent's environment) apply in Ruby and Chef just as they do in Bash.
+The principles mentioned above (a child process receives a copy of its parent's environment and cannot affect their parent's environment) apply in |ruby| just as they do in |bash|.
 
-In Ruby (and thus Chef), the current environment can be altered via the ENV variable. Any changes made to the environment will also be available to child process started by Chef. For example, consider the following recipe:
+In |ruby|, the current environment can be altered via the ``ENV`` variable. Any changes made to the environment will also be available to child process started by the |chef client|. For example, consider the following recipe:
 
 .. code-block:: bash
 
@@ -49,9 +49,9 @@ In Ruby (and thus Chef), the current environment can be altered via the ENV vari
    EOF
    end
 
-When run, the bash resource will correctly echo "bar" to its standard output.
+When run, the |resource bash| resource will correctly ``echo "bar"`` to its standard output.
 
-However, just as in Bash, changes made in child processes have no affect on the parent, and thus no affect on subsequent child processes:
+However, just as in |bash|, changes made in child processes have no affect on the parent, and thus no affect on subsequent child processes:
 
 .. code-block:: bash
 
@@ -67,4 +67,4 @@ However, just as in Bash, changes made in child processes have no affect on the 
    EOF
    end
 
-When run, the second bash resource will not cause anything to be echoed to standard out as BAZ is not part of its environment.
+When run, the second |resource bash| resource will not cause anything to be echoed to standard out as ``BAZ`` is not part of its environment.
