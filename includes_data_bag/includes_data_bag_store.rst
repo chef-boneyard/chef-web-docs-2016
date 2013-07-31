@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-When the |chef| repository is cloned from |github|, the following occurs:
+When the |chef repo| is cloned from |github|, the following occurs:
 
 * A directory named ``data_bags`` is created.
 * For each data bag, a sub-directory is created that has the same name as the data bag.

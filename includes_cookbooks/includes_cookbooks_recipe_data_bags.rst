@@ -16,7 +16,7 @@ can be accessed in a recipe, like this:
 
    my_bag = data_bag_item("apps", "my_app")
 
-The data bag item's keys and values can be accessed with a |ruby| hash:
+The data bag item's keys and values can be accessed with a |hash|:
 
 .. code-block:: ruby
 

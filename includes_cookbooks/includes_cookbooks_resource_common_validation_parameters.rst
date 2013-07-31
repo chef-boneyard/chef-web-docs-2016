@@ -22,6 +22,6 @@ The following parameters can be passed to the attribute keyword to validate a pa
    * - ``:name_attribute``
      - Use to specify the name of a resource. Valid value: ``true`` or ``false``.
    * - ``:callbacks``
-     - Use to take a hash of ``Procs``, which should return ``true`` if the argument is valid. The key will be inserted into the error message if the ``Proc`` does not return true: ``"Option #{key}'s value #{value} #{message}!"``.
+     - Use to take a |hash| of |ruby proc|, which should return ``true`` if the argument is valid. The key will be inserted into the error message if the |ruby proc| does not return true: ``"Option #{key}'s value #{value} #{message}!"``.
    * - ``:respond_to``
      - Use to ensure that a value has a given method. Takes one method name or an array of method names.

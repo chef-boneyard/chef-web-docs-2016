@@ -16,7 +16,7 @@ This command has the following options:
    |daemonize| This option is only available on machines that run in |unix| or |linux| environments. For machines that are running |windows| that require similar functionality, use the ``chef-client::service`` recipe in the ``chef-client`` cookbook: http://community.opscode.com/cookbooks/chef-client. This will install a |chef client| service under |windows| using the |windows service wrapper|.
 
 ``-f``, ``--fork``
-   Indicates that a |chef| run will be contained in a secondary process with dedicated RAM. When the |chef| run is complete the RAM will be returned to the master process. This option helps ensure that a |chef client| will use a steady amount of RAM over time because the master process will not run recipes. This option will also help prevent memory leaks (such as those that can be introduced by the code contained within a poorly designed cookbook).
+   Indicates that a |chef client| run will be contained in a secondary process with dedicated RAM. When the |chef client| run is complete the RAM will be returned to the master process. This option helps ensure that a |chef client| will use a steady amount of RAM over time because the master process will not run recipes. This option will also help prevent memory leaks (such as those that can be introduced by the code contained within a poorly designed cookbook).
 
 ``-F FORMATTER``, ``--format FORMATTER``
    The output format.
@@ -67,7 +67,7 @@ This command has the following options:
    |version chef|
 
 ``-W``, ``--why-run``
-   Indicates that the executable will be run in whyrun mode, which is a |chef| run that does everything except modify the system. Use whyrun mode to understand why |chef| makes the decisions that it makes and to learn more about the current and proposed state of the system.
+   Indicates that the executable will be run in whyrun mode, which is a |chef client| run that does everything except modify the system. Use whyrun mode to understand why the |chef client| makes the decisions that it makes and to learn more about the current and proposed state of the system.
 
 
 

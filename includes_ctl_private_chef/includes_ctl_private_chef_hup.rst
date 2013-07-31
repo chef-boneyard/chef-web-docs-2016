@@ -9,7 +9,7 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ private-chef-ctl hub (SERVICE_NAME)
+   $ private-chef-ctl hub name_of_service
 
 where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand.
 

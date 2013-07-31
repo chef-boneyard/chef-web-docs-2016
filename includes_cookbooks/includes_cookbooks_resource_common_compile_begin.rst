@@ -2,11 +2,11 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-To run a resource at the start of the resource collection phase of the |chef| run, set up a ``Chef::Resource`` object, and then call the method that runs the action.
+To run a resource at the start of the resource collection phase of the |chef client| run, set up a ``Chef::Resource`` object, and then call the method that runs the action.
 
 **Update a package cache**
 
-It is important to make sure that an operating system's package cache is up to date before |chef| tries to install packages, otherwise there may be references to versions that no longer exist. For example, on |debian| or |ubuntu| systems, the |apt| cache needs to be updated. Use code similar to the following:
+It is important to make sure that an operating system's package cache is up to date before installing packages, otherwise there may be references to versions that no longer exist. For example, on |debian| or |ubuntu| systems, the |apt| cache needs to be updated. Use code similar to the following:
 
 .. code-block:: ruby
 
@@ -16,7 +16,7 @@ It is important to make sure that an operating system's package cache is up to d
    
    e.run_action(:run)
 
-where ``e`` is created as a ``Chef::Resource::Execute`` |ruby| object. The ``action`` attribute is set to ``:nothing`` so that the ``run_action`` method can be used to tell |chef| to run the specified command. |opscode| provides a cookbook for doing this with |apt| (|debian| or |ubuntu|) and |pacman| (for |archlinux|). The preceding recipe can be placed at the top of a node's run list to ensure it is run before |chef| tries to install any packages.
+where ``e`` is created as a ``Chef::Resource::Execute`` |ruby| object. The ``action`` attribute is set to ``:nothing`` so that the ``run_action`` method can be used to tell the |chef client| to run the specified command. The |cookbook apt| (for |debian| and |ubuntu|) and |cookbook pacman| (for |archlinux|) cookbooks can be used for this purpose. The preceding recipe can be placed at the top of a node's run list to ensure it is run before the |chef client| tries to install any packages.
 
 **An anti-pattern**
 

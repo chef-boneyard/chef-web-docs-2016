@@ -24,7 +24,7 @@ The following arguments can be used with the ``not_if`` or ``only_if`` attribute
           not_if "grep adam /etc/passwd", :group => 'adam'
 
    * - ``:environment``
-     - Use to specify a hash of environment variables to be set. For example:
+     - Use to specify a |hash| of environment variables to be set. For example:
 
        .. code-block:: ruby
 

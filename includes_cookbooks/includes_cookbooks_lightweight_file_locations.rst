@@ -14,7 +14,7 @@ Lightweight resources and providers are loaded from files that are saved in the 
    * - ``resources/``
      - |cookbook directory resources|
 
-The naming patterns of lightweight resources and providers are determined by the name of the cookbook and by the name of the files in the ``resources/`` and ``providers/`` sub-directories. For example, if a cookbook named ``example`` was downloaded to the |chef| repository, it would be located at ``/cookbooks/example/``. If that cookbook contained two resources and two providers, the following files would be part of the ``resources/`` directory:
+The naming patterns of lightweight resources and providers are determined by the name of the cookbook and by the name of the files in the ``resources/`` and ``providers/`` sub-directories. For example, if a cookbook named ``example`` was downloaded to the |chef repo|, it would be located at ``/cookbooks/example/``. If that cookbook contained two resources and two providers, the following files would be part of the ``resources/`` directory:
 
 .. list-table::
    :widths: 120 120 120

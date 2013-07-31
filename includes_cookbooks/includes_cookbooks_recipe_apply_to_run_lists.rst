@@ -9,7 +9,7 @@ A recipe must be assigned to a run-list using the appropriate name, as defined b
          default.rb
          mod_ssl.rb
 
-There are two recipes: a default recipe (that has the same name as the cookbook) and a recipe named mod_ssl. The syntax that applies a recipe to a run-list is similar to:
+There are two recipes: a default recipe (that has the same name as the cookbook) and a recipe named ``mod_ssl``. The syntax that applies a recipe to a run-list is similar to:
 
 .. code-block:: ruby
 

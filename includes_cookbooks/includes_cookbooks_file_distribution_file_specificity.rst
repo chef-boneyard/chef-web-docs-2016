@@ -22,7 +22,7 @@ and a resource that looks something like the following:
      group "root"
    end
 
-where ``resource_type`` is the |resource cookbook_file|, |resource remote_file|, or |resource template| resource. This resource would be matched in the same order as the cookbook directory structure. For a node named "foo.example.com" that is running |ubuntu| 10.04, the second item would be the matching item and the location to which the file identified in the cookbook_resource would be distributed:
+where ``resource_type`` is the |resource cookbook_file|, |resource remote_file|, or |resource template| resource. This resource would be matched in the same order as the cookbook directory structure. For a node named "foo.example.com" that is running |ubuntu| 10.04, the second item would be the matching item and the location to which the file identified in the |resource cookbook_file| resource would be distributed:
 
 .. code-block:: ruby
 

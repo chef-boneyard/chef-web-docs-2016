@@ -25,7 +25,7 @@ Continuing the example above, if you are in the "admins" directory and make chan
 
    $ knife data bag from file admins charlie.json
 
-In some cases, such as when |knife| is not being run from the root directory for |chef|, the full path to the data bag item may be required. For example:
+In some cases, such as when |knife| is not being run from the root directory for the |chef repo|, the full path to the data bag item may be required. For example:
 
 .. code-block:: bash
 

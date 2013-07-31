@@ -10,6 +10,6 @@ The following timers can be used to define when a notification is triggered:
    * - Timer
      - Description
    * - ``:delayed``
-     - Use to specify that a notification should be queued up and then executed at the very end of a |chef| run.
+     - Use to specify that a notification should be queued up and then executed at the very end of a |chef client| run.
    * - ``:immediately``
      - Use to specify that a notification be run immediately.

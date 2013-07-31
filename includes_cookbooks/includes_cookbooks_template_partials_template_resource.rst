@@ -3,7 +3,7 @@
 
 
 
-The |resource template| resource can be used to reference a partial template file by using the ``variables`` attribute, the ``:partials`` option, and a hash of partial template files. For example:
+The |resource template| resource can be used to reference a partial template file by using the ``variables`` attribute, the ``:partials`` option, and a |hash| of partial template files. For example:
 
 .. code-block:: ruby
 

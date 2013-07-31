@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A cookbook will frequently be designed to work across many platforms. A template often needs to be specific to a platform, host, or function of a node. When these differences are minor, they can often be handled with a small amount of logic within the template itself. When these differences are significant, a cookbook can be designed to use many templates. |chef| will determine the correct template based on the rules that are provided to it.
+A cookbook will frequently be designed to work across many platforms. A template often needs to be specific to a platform, host, or function of a node. When these differences are minor, they can often be handled with a small amount of logic within the template itself. When these differences are significant, a cookbook can be designed to use many templates. The |chef client| will determine the correct template based on the rules that are provided to it.
 
 For example, a cookbook that has a directory structure like this::
 

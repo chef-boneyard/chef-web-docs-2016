@@ -18,5 +18,5 @@ The basic syntax of a library::
     
    your_function()
 
-.. note:: In the preceding example, the ``::namespace`` part of the ``Chef::Recipe::namespace`` syntax should only be used when a custom namespace has been added that extends the default |chef| libraries.
+.. note:: In the preceding example, the ``::namespace`` part of the ``Chef::Recipe::namespace`` syntax should only be used when a custom namespace has been added that extends the default libraries.
 

@@ -19,6 +19,6 @@ For example, a resource that is used to install a |tar gz| package for version 1
      action :install
    end
 
-Every resource in |chef| has its own set of actions and attributes. Many attributes have default values. Some attributes are available to all resources; these are sometimes referred to as "meta" attributes and they are commonly used to send notifications to other resources or to set up conditional execution rules. All actions have a default value. Only non-default behaviors of actions and attributes need to be specified.
+Every resource has its own set of actions and attributes. Many attributes have default values. Some attributes are available to all resources; these are sometimes referred to as "meta" attributes and they are commonly used to send notifications to other resources or to set up conditional execution rules. All actions have a default value. Only non-default behaviors of actions and attributes need to be specified.
 
 .. note:: Attributes associated with resources are not the same as attributes associated with nodes.

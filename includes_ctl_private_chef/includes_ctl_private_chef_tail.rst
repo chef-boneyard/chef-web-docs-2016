@@ -9,6 +9,6 @@ This subcommand has the following syntax:
 
 .. code-block:: bash
 
-   $ private-chef-ctl tail (SERVICE_NAME)
+   $ private-chef-ctl tail name_of_service
 
 where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand.

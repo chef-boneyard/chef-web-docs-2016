@@ -1,9 +1,11 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Data can be passed to a definition from more than one recipe. For example, when both ``/etc/aliases`` and |path etc sudoers| require updates from multiple recipes during a single |chef| run. A definition file that reopens resources would look something like:
+Data can be passed to a definition from more than one recipe. For example, when both ``/etc/aliases`` and |path etc sudoers| require updates from multiple recipes during a single |chef client| run. A definition file that reopens resources would look something like:
 
 .. code-block:: ruby
+
+   # example provided by community member "Mithrandir". Thank you!
 
    define :email_alias, :recipients => [] do
      execute "newaliases" do
@@ -27,5 +29,3 @@ Data can be passed to a definition from more than one recipe. For example, when 
      end
      t.variables[:aliases][params[:name]] << [ params[:recipients] ]
    end
-
-.. note:: The preceding example was provided by |opscode| community member "Mithrandir". Thank you!

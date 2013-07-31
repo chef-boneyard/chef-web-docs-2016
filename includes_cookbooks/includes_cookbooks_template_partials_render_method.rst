@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Use the ``render`` method in a |chef| template to reference a partial template file with the following syntax:
+Use the ``render`` method in a template to reference a partial template file with the following syntax:
 
 .. code-block:: ruby
 

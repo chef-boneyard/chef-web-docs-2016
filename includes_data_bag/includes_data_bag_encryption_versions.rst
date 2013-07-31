@@ -14,7 +14,7 @@ For version 0 (default, through |chef| 10.18):
 * Data is encrypted using |aes 256 cbc| (as defined by the |open ssl| package in the |ruby standard library|)
 * |chef| uses `shared secret encryption <https://en.wikipedia.org/wiki/Symmetric-key_algorithm>`_; an encrypted file can only be decrypted by a node or a user with the same shared secret
 * A recipe can load encrypted data as long as the shared secret is present in a file on the node or is accessible from a URI path
-* Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed by |chef| when tracking the data bag item)
+* Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed when tracking the data bag item)
 
 For version 1 (default, starting with |chef| 11.x):
 
