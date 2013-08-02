@@ -8,38 +8,6 @@ Modes
 =====================================================
 .. include:: ../../includes_chef_shell/includes_chef_shell_modes.rst
 
-Breakpoint Resource
-=====================================================
-.. include:: ../../includes_resources/includes_resource_breakpoint.rst
-
-Syntax
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_breakpoint_syntax.rst
-
-Actions
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_breakpoint_actions.rst
-
-Attributes
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
-
-Providers
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
-
-Examples
------------------------------------------------------
-|generic resource statement|
-
-**A recipe without a breakpoint**
-
-.. include:: ../../step_resource/step_resource_breakpoint_no.rst
-
-**The same recipe with breakpoints**
-
-.. include:: ../../step_resource/step_resource_breakpoint_yes.rst
-
 Configure
 =====================================================
 |chef shell| determines which configuration file to load based on the following:
@@ -193,12 +161,40 @@ to return something similar to:
 
 Debug Recipes
 =====================================================
+
 |chef shell| allows the current position in a run-list to be manipulated during a |chef| run. Add breakpoints to a recipe to take advantage of this functionality.
 
 Breakpoint Resource
 -----------------------------------------------------
-A breakpoint is implemented in the same way as any |chef| resource. The |resource breakpoint| resource does not have any attributes. Its default action is ``:break``. When this action is placed in a recipe, |chef| will determine if it is being run in |chef shell| mode, and then if it is running in |chef shell| mode, the |chef| run is paused. (When |chef| is running as the |chef client| or as |chef solo|, the ``:break`` action is ignored.)
+.. include:: ../../includes_resources/includes_resource_breakpoint.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**A recipe without a breakpoint**
+
+.. include:: ../../step_resource/step_resource_breakpoint_no.rst
+
+**The same recipe with breakpoints**
+
+.. include:: ../../step_resource/step_resource_breakpoint_yes.rst
 
 Step Through a Run-list
 -----------------------------------------------------
