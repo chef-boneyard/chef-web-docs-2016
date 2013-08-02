@@ -3,7 +3,7 @@
 
 The ``PUT`` method is used to update a specific |chef api client|. If values are not specified for the ``PUT`` method, the |chef server| will use the existing values rather than assign default values.
 
-.. note:: ``PUT`` supports renames. If ``PUT /user/foo`` is requested with { "name: "bar""}, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``.
+.. note:: ``PUT`` supports renames. If ``PUT /user/foo`` is requested with ``{ "name: "bar""}``, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``.
 
 This method has no parameters.
 

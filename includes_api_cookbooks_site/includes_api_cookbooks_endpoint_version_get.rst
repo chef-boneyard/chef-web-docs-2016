@@ -19,7 +19,7 @@ Or:
 
 **Response**
 
-The response will return details for a cookbook version, including the license under which the cookbook is distributed, the most recent update, version, URI, date of cookbook creation, path to the cookbook's tar.gz file, and so on:
+The response will return details for a cookbook version, including the license under which the cookbook is distributed, the most recent update, version, URI, date of cookbook creation, path to the cookbook's |tar gz| file, and so on:
 
 .. code-block:: ruby
 

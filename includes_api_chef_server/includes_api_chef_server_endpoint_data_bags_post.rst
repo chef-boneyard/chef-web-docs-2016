@@ -11,7 +11,7 @@ This method has no parameters.
 
    POST /data
 
-with a request body that contains the key:value pair for the data bag and looks something like:
+with a request body that contains the key-value pair for the data bag and looks something like:
 
 .. code-block:: javascript
 
@@ -28,9 +28,9 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-      "chef_type" => "xxxxx"
-      "data_bag" => "xxxxx"
-      "id" => "xxxxx"
+      "chef_type" => "environment"
+      "data_bag" => "data123"
+      "id" => "12345"
    }
 
 **Response Codes**
