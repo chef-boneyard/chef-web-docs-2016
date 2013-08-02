@@ -78,7 +78,7 @@ Some organizations choose to have all data bags use the same secret and secret f
    * - ``knife[:secret_file]``
      - |secret-file|
 
-Some settings are better left to |ohai|, which will get the value at the start of the |chef| run:
+Some settings are better left to |ohai|, which will get the value at the start of the |chef client| run:
 
 .. list-table::
    :widths: 200 300
@@ -87,7 +87,7 @@ Some settings are better left to |ohai|, which will get the value at the start o
    * - Setting
      - Description
    * - ``knife[:server_name]``
-     - Same as node_name. Recommended configuration is to allow |ohai| to collect this value during each |chef| run.
+     - Same as node_name. Recommended configuration is to allow |ohai| to collect this value during each |chef client| run.
    * - ``node_name``
      - See the description above for this setting.
 

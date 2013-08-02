@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-On a system with |chef| installed use |ruby| to make an authenticated request to the |chef server| using the |chef| libraries:
+On a system with the |chef client| installed, use |ruby| to make an authenticated request to the |chef server| using the |chef| libraries:
 
 .. code-block:: ruby
 

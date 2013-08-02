@@ -41,8 +41,8 @@ The response will return something similar to:
 
 where:
 
-* ``command_addr`` is xxxxx
-* ``heartbeat`` is xxxxx
+* ``command_addr`` is 
+* ``heartbeat`` is 
 * ``host`` is the host name for the sender
 * ``interval`` is the interval (in seconds) between heartbeat messages
 * ``lifetime`` is the amount of time (in seconds) for which a configuration is good. A node should reload configuration information after this amount of time is expired
@@ -50,7 +50,7 @@ where:
 * ``online_threshold`` is the number of intervals that must be missed before a node is marked as online
 * ``out_addr`` is the URL for the heartbeat broadcast service
 * ``public_key`` is the signing key used by the |pushy| server
-* ``push_jobs`` is xxxxx
+* ``push_jobs`` is 
 
 .. list-table::
    :widths: 200 300

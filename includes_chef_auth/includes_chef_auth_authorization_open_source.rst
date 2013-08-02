@@ -58,7 +58,7 @@ The following API requests require admin privileges:
    * - User Destroy
      - None.
 
-The following API requests require admin privileges or are done by the |chef validator| during the initial |chef| run:
+The following API requests require admin privileges or are done by the |chef validator| during the initial |chef client| run:
 
 .. list-table::
    :widths: 60 420

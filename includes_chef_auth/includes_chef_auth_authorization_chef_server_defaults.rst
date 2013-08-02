@@ -13,13 +13,13 @@ The |chef hosted| and |chef private| servers include default security groups:
    * - Security Group
      - Description
    * - **admins**
-     - The default permissions for all users of |chef| who will be administrators.
+     - The default permissions for all users who will be administrators.
    * - **billing-admins**
-     - The default permissions for all users of |chef| who will need to manage billing information.
+     - The default permissions for all users who will need to manage billing information.
    * - **clients**
      - The default permissions for non-human users, such as the |chef client| that is installed on every node registered with the |chef server| and the workstation, from which |knife| will be used to manage data on the |chef server|.
    * - **users**
-     - The default permissions for all human users of |chef| who are not administrators.
+     - The default permissions for all human users who are not administrators.
 
 The ``admin`` security group is granted ``CREATE`` and ``LIST`` permissions by default and the ``users`` security group is granted the ``LIST`` permission by default. Each individual user, client, and member of the ``clients`` and ``billing-admins`` security groups may be assigned the ``CREATE`` and ``LIST`` permissions, but are not done so by default.
 

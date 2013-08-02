@@ -84,7 +84,7 @@ An API request can be made using |curl|, which is a |bash| shell script that req
 
     chef_api_request "$@"
 
-After saving this shell script to a file named chef_api_request, use it similar to the following:
+After saving this shell script to a file named ``chef_api_request``, use it similar to the following:
 
 .. code-block:: bash
 

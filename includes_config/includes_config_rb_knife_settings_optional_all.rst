@@ -105,7 +105,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:secret_file]``
      - |secret-file|
    * - ``knife[:server_name]``
-     - Same as node_name. Recommended configuration is to allow |ohai| to collect this value during each |chef| run.
+     - Same as node_name. Recommended configuration is to allow |ohai| to collect this value during each |chef client| run.
    * - ``knife[:sort_reverse]``
      - |sort_reverse|
    * - ``knife[:ssh_attribute]``

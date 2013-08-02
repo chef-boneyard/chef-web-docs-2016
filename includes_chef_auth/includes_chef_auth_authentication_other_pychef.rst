@@ -23,4 +23,4 @@ and the following example shows how to make API calls directly:
    api = autoconfigure()
    print api.api_request('GET', '/clients')
 
-The previous examples assume that the current working directory is such that |pychef| can find a valid |chef| configuration file in the same manner as the |chef client| or |knife|. For more about |pychef|, see: https://github.com/coderanger/pychef.
+The previous examples assume that the current working directory is such that |pychef| can find a valid configuration file in the same manner as the |chef client| or |knife|. For more about |pychef|, see: https://github.com/coderanger/pychef.

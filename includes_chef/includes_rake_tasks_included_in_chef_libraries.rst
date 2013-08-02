@@ -17,11 +17,11 @@ The following |rake| commands are not replaced by |knife| sub-commands:
    * - ``install``
      - Calls the following |rake| commands: ``update``, ``roles``, and ``upload_cookbooks``.
    * - ``ssl_cert``
-     - Creates self-signed SSL certificates in the ``certificates/`` directory.
+     - Creates self-signed |ssl| certificates in the ``certificates/`` directory.
    * - ``update``
      - Updates the repository from version control server; understands |git| and |svn|.
 
-The following |rake| commands duplicate functionality in |chef| and may be removed from future updates to the |chef| libraries:
+The following |rake| commands duplicate functionality in |chef| and may be removed from future library updates:
 
 .. list-table::
    :widths: 200 300

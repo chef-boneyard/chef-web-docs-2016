@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
-|chef| provides an |omnibus installer| for the following operating systems and versions:
+The |omnibus installer| can be used to install |chef| on the following operating systems and versions:
 
 * |debian| 6
 * |redhat enterprise linux| 5.x, 6.x
