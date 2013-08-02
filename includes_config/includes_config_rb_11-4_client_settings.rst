@@ -98,7 +98,7 @@ This configuration file has the following settings:
  
           interval 1800
    * - ``json_attribs``
-     - |json attributes | For example:
+     - |json attributes| For example:
        ::
  
           json_attribs nil
