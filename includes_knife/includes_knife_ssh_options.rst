@@ -23,6 +23,9 @@ This subcommand has the following options:
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
+``OTHER``
+   The shell type. Possible values: ``interactive``, ``screen``, ``tmux``, ``macterm``, or ``cssh``. (``csshx`` is deprecated in favor of ``cssh``.)
+
 ``-p PORT``, ``--ssh-port PORT``
    |ssh-port|
 

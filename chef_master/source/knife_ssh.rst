@@ -31,3 +31,5 @@ Examples
 .. include:: ../../step_knife/step_knife_ssh_query_for_nodes.rst
 
 .. include:: ../../step_knife/step_knife_ssh_upgrade_nodes.rst
+
+.. include:: ../../step_knife/step_knife_ssh_shell_type.rst
