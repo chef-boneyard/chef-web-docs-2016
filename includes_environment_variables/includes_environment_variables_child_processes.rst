@@ -49,7 +49,7 @@ In |ruby|, the current environment can be altered via the ``ENV`` variable. Any 
    EOF
    end
 
-When run, the |resource bash| resource will correctly ``echo "bar"`` to its standard output.
+When run, the |resource script_bash| resource will correctly ``echo "bar"`` to its standard output.
 
 However, just as in |bash|, changes made in child processes have no affect on the parent, and thus no affect on subsequent child processes:
 
@@ -67,4 +67,4 @@ However, just as in |bash|, changes made in child processes have no affect on th
    EOF
    end
 
-When run, the second |resource bash| resource will not cause anything to be echoed to standard out as ``BAZ`` is not part of its environment.
+When run, the second |resource script_bash| resource will not cause anything to be echoed to standard out as ``BAZ`` is not part of its environment.
