@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To show only the status nodes on which |chef| ran within the past hour, enter:
+To show only the status nodes on which the |chef client| ran within the past hour, enter:
 
 .. code-block:: bash
 

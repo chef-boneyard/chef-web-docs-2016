@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To pass an SSH password as part of the command:
+To pass an |ssh| password as part of the command:
 
 .. code-block:: bash
 

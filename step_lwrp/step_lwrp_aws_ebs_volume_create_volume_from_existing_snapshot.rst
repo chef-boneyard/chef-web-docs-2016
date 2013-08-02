@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a volume based on an existing volume snapshot
+To create a volume based on an existing volume snapshot:
 
 .. code-block:: ruby
 

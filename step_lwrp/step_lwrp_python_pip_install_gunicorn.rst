@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install latest gunicorn into system path
+To install latest version of |gunicorn| into the system path:
 
 .. code-block:: ruby
 

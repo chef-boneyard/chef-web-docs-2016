@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To verify the |chef api client| list for the |chef| server, enter:
+To verify the |chef api client| list for the |chef server|, enter:
 
 .. code-block:: bash
 

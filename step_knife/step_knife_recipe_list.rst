@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view a list of recipes :
+To view a list of recipes:
 
 .. code-block:: bash
 

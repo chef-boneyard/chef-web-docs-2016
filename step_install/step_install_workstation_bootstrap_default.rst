@@ -1,9 +1,9 @@
 .. This is an included how-to. 
 
 
-Once the workstation is configured, it can be used to install |chef| on one (or more) nodes across the organization using a |knife| bootstrap operation. The ``knife bootstrap`` command is used to |ssh| into the target machine, and then do what is needed to allow the |chef client| to run on the node. It will install the |chef client| executable (if necessary), generate keys, and register the node with the |chef server|. The bootstrap operation requires the IP address or |fqdn| of the target system, the |ssh| credentials (username, password or identity file) for an account that has root access to the node, and (if the operating system is not |ubuntu|, which is the default distribution used by ``knife bootstrap``) the operating system running on the target system.
+Once the workstation is configured, it can be used to install the |chef client| on one (or more) nodes across the organization using a |knife| bootstrap operation. The ``knife bootstrap`` command is used to |ssh| into the target machine, and then do what is needed to allow the |chef client| to run on the node. It will install the |chef client| executable (if necessary), generate keys, and register the node with the |chef server|. The bootstrap operation requires the IP address or |fqdn| of the target system, the |ssh| credentials (username, password or identity file) for an account that has root access to the node, and (if the operating system is not |ubuntu|, which is the default distribution used by ``knife bootstrap``) the operating system running on the target system.
 
-To install |chef| on a node using ``knife bootstrap``:
+To install the |chef client| on a node using ``knife bootstrap``:
 
 #. In a command window, enter the following:
 
@@ -11,7 +11,7 @@ To install |chef| on a node using ``knife bootstrap``:
 
       $ knife bootstrap 123.45.6.789 -x username -P password --sudo
 
-   where ``123.45.6.789`` is the IP address or the FQDN for the node.
+   where ``123.45.6.789`` is the IP address or the |fqdn| for the node.
 
 #. While the bootstrap operation is running, the command window will show something like the following:
 

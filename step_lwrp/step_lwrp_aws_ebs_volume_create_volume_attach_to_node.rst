@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a volume and attach it to a node
+To create a volume and attach it to a node:
 
 .. code-block:: ruby
 

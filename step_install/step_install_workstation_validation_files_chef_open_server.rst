@@ -7,6 +7,6 @@ For a workstation that will interact with the open source |chef server|, do the 
 * Create a |user pem| file. (This private key is created at the same time as the |knife rb| file from the ``knife configure --initial`` command.)
 * Find the |chef validator pem| file on the open source |chef server|. This private key is created by the open source |chef server| on startup and is located in the ``/etc/chef-server`` folder on the server after it is created.
 
-These files will be moved into the |chef repo hidden| directory, which is a hidden directory that must be created in the |chef| repository.
+These files will be moved into the |chef repo hidden| directory, which is a hidden directory that must be created in the |chef repo|.
 
 

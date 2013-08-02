@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To query a node for multiple attributes using a |ruby| script named search_attributes.rb (which looks like):
+To query a node for multiple attributes using a |ruby| script named ``search_attributes.rb`` (which looks like):
 
 .. code-block:: ruby
 

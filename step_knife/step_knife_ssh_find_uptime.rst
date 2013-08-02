@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To find the uptime of all of your Web servers running |ubuntu| on the |amazon ec2| platform, enter:
+To find the uptime of all of web servers running |ubuntu| on the |amazon ec2| platform, enter:
 
 .. code-block:: bash
 

@@ -6,7 +6,7 @@ To edit an item named "charlie" that is contained in a data bag named "admins", 
 
    $ knife data bag edit admins charlie
 
-to open the $EDITOR. Once opened, you can update the data before saving it to the |chef server|. For example, by changing:
+to open the |chef editor|. Once opened, you can update the data before saving it to the |chef server|. For example, by changing:
 
 .. code-block:: bash
 

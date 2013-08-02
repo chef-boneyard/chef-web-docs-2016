@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To schedule a reboot at the end of a |chef| run if a package installs:
+To schedule a reboot at the end of a |chef client| run if a package installs:
 
 .. code-block:: ruby
 

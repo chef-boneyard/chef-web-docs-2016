@@ -5,6 +5,8 @@ A database can contain a list of virtual hosts that are used by customers. A cus
 
 .. code-block:: ruby
 
+   # Sample provided by "Arjuna (fujin)". Thank you!
+   
    require 'sequel'
    
    class Chef::Recipe::ISP
@@ -38,8 +40,6 @@ A database can contain a list of virtual hosts that are used by customers. A cus
        v
      end
    end
-
-.. note:: The preceding was provided by |opscode| community member "Arjuna (fujin)". Thank you!
 
 After the custom namespace is created, it could then be used in a recipe, like this:
 

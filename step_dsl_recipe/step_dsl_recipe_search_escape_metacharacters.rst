@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-When using the ``search`` method in a recipe, be sure to escape metacharacters, such as square brackets, like the following:
+When using the ``search`` method in a recipe, be sure to escape meta characters, such as square brackets, like the following:
 
 .. code-block:: ruby
 
@@ -16,4 +16,4 @@ and NOT like this:
     puts matching_node.to_s
    end
 
-If metacharacters are not escaped properly, the quality of the search query may be compromised.
+If meta characters are not escaped properly, the quality of the search query may be compromised.

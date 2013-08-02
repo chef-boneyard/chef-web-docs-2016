@@ -7,7 +7,7 @@ To edit the data for a node named "node1", enter:
 
    $ knife node edit node1 -a
    
-Update the role data in JSON:
+Update the role data in |json|:
 
 .. code-block:: javascript
 

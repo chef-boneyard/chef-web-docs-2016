@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Example: /etc/apt/sources.list.d/cloudkick.list (signed repository)
+To add |cloudkick|:
 
 .. code-block:: ruby
 

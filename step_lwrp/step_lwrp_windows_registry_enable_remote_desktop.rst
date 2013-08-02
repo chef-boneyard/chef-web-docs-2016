@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To enable |windows remote desktop| and poke the firewall hole
+To enable |windows remote desktop| and poke the firewall hole:
 
 .. code-block:: ruby
 

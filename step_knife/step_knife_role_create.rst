@@ -7,7 +7,7 @@ To add a role named "role1", enter:
 
    $ knife role create role1
    
-In the $EDITOR enter the role data in JSON:
+In the |chef editor| enter the role data in |json|:
 
 .. code-block:: javascript
 

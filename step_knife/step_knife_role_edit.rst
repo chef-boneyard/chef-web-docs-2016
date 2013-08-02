@@ -7,7 +7,7 @@ To edit the data for a role named "role1", enter:
 
    $ knife role edit role1
    
-Update the role data in JSON:
+Update the role data in |json|:
 
 .. code-block:: javascript
 

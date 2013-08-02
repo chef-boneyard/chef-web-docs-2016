@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To show the decrypted contents of the same databag, enter:
+To show the decrypted contents of the same data bag, enter:
 
 .. code-block:: bash
 

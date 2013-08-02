@@ -30,11 +30,11 @@ To install |chef server 11| on a virtual machine:
 
       $ sudo chef-server-ctl reconfigure
 
-   This action will take steps to ensure that the |chef server| is installed and configured correctly. Many of these actions are actual |chef| recipes being run by an instance of |chef solo|. While these actions are being taken, the command window will appear similar to the following:
+   This action will take steps to ensure that the |chef server| is installed and configured correctly. Many of these actions are actual recipes being run by an instance of |chef solo|. While these actions are being taken, the command window will appear similar to the following:
 
    .. image:: ../../images/step_install_server_open_pedant_recipes.png
 
-#. After the |chef server| is reconfigured, verify that the network adapter in the virtual machine is set to "bridge mode".
+#. After the |chef server| is reconfigured, verify that the network adapter in the virtual machine is set to bridge mode.
 
    .. image:: ../../images/step_install_server_open_set_bridge_mode.png
 

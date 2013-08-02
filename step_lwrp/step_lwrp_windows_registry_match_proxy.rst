@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To make the local |windows| proxy match the proxy set for |chef|:
+To make the local |windows| proxy match the proxy set by the |chef client|:
 
 .. code-block:: ruby
 

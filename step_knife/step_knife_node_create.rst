@@ -7,7 +7,7 @@ To add a node, enter:
 
    $ knife node create node1
    
-In the $EDITOR enter the node data in JSON:
+In the |chef editor| enter the node data in |json|:
 
 .. code-block:: javascript
 

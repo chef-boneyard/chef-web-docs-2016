@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-A |chef| workstation is installed correctly when it is able to use |knife| to communicate with the |chef server|.
+A workstation is installed correctly when it is able to use |knife| to communicate with the |chef server|.
 
 To verify that a workstation can connect to the |chef server|:
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To pass the output of ``knife deps`` to ``knife xargs``:
+To pass the output of |subcommand knife deps| to |subcommand knife xargs|:
 
 .. code-block:: bash
 

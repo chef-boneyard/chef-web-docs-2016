@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-There are three ways to use ``knife exec`` to run |ruby| script files. For example:
+There are three ways to use |subcommand knife exec| to run |ruby| script files. For example:
 
 .. code-block:: bash
 

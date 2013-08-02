@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To upload an environment named "production" to the |chef server|, browse to the top level of the |chef| repository and enter:
+To upload an environment named "production" to the |chef server|, browse to the top level of the |chef repo| and enter:
 
 .. code-block:: bash
 

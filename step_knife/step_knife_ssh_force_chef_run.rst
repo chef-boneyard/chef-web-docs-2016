@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To force a |chef client| run on all of your Web servers running |ubuntu| on the |amazon ec2| platform, enter:
+To force a |chef client| run on all of the web servers running |ubuntu| on the |amazon ec2| platform, enter:
 
 .. code-block:: bash
 

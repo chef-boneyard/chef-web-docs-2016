@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Example: /etc/apt/sources.list.d/zenoss.list
+To add |zenoss|:
 
 .. code-block:: ruby
 

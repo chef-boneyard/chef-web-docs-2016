@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the ``template`` resource in a recipe:
+To use the |resource template| resource with a |bluepill| application:
 
 .. code-block:: ruby
 

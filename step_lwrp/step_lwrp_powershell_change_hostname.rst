@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To change the hostname for a computer:
+To change the host name for a computer:
 
 .. code-block:: ruby
 

@@ -7,7 +7,7 @@ The |chef repo hidden| directory is used to store three files:
 * |organization pem|
 * |user pem|
 
-Where ``ORGANIZATION`` and ``USER`` represent strings that are unique to each |chef| organization. These files must be present in the |chef repo hidden| directory in order for a workstation to be able to connect to a |chef server|.
+Where ``ORGANIZATION`` and ``USER`` represent strings that are unique to each organization. These files must be present in the |chef repo hidden| directory in order for a workstation to be able to connect to a |chef server|.
 
 To create the |chef repo hidden| directory:
 

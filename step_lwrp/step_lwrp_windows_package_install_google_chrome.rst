@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the |google chrome|:
+To use |google chrome|:
 
 .. code-block:: ruby
 

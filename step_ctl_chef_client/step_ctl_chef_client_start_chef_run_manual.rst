@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. To start a |chef| run manually, enter something like:
+.. To start a |chef client| run manually, enter something like:
 
 .. code-block:: bash
 

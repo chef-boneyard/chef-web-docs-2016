@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install a specific pip version
+To install a specific version of |python pip|:
 
 .. code-block:: ruby
 

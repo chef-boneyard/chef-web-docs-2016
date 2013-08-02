@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Example: Remove /etc/apt/sources.list.d/zenoss.list
+To remove |zenoss|:
 
 .. code-block:: ruby
 

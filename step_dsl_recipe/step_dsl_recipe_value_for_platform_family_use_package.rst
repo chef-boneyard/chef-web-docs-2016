@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to use the ``platform_family?`` and ``value_for_platform_family`` recipe DSL methods to ensure that the right package is installed.
+The following example shows how to use the ``platform_family?`` and ``value_for_platform_family`` methods to ensure that the right package is installed:
 
 .. code-block:: ruby
 

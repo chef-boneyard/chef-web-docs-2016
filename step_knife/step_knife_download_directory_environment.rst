@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To download an environment named "production" from the |chef server|, browse to the top level of the |chef| repository and enter:
+To download an environment named "production" from the |chef server|, browse to the top level of the |chef repo| and enter:
 
 .. code-block:: bash
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-Example: /etc/apt/sources.list.d/opscode.list (signed repository) v2
+To add ``/etc/apt/sources.list.d/opscode.list``:
 
 .. code-block:: ruby
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view the FQDN for a node named "i-12345678", enter:
+To view the |fqdn| for a node named "i-12345678", enter:
 
 .. code-block:: bash
 

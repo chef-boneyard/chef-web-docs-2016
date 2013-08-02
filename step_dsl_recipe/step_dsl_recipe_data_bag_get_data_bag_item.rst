@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to get data bag items from a data bag named "get_credentials". Each data bag item will be used as a variable, and then a recipe named "foo_user" will use these variables to change the admin password.
+The following example shows how to get data bag items from a data bag named ``get_credentials``. Each data bag item will be used as a variable, and then a recipe named ``foo_user`` will use these variables to change the admin password.
 
 .. code-block:: ruby
 
