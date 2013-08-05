@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This section shows some of the common structural elements that appear a lightweight provider that is built using custom |ruby| code. Remember:
+This section shows some of the common structural elements that appear in a lightweight provider that is built using custom |ruby| code. Remember:
 
 * A lightweight provider tells the |chef client| how to complete a task
 * The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action
@@ -59,7 +59,7 @@ For example:
    require 'chef/mixin/shell_out'
    require 'chef/mixin/language'
    include Chef::Mixin::ShellOut
-   
+
    action :install do
      unless @pmgroup.exists
        run_command_with_systems_locale(
@@ -68,7 +68,7 @@ For example:
        new_resource.updated_by_last_action(true)
      end
    end
-   
+
    action :remove do
      if @pmgroup.exists
        run_command_with_systems_locale(
@@ -77,7 +77,7 @@ For example:
        new_resource.updated_by_last_action(true)
      end
    end
-   
+
    def load_current_resource
      @pmgroup = Chef::Resource::PacmanGroup.new(@new_resource.name)
      @pmgroup.package_name(@new_resource.package_name)
