@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This section shows some of the common structural elements that appear a lightweight provider that is built in a way that leverages core resources (such as |resource file|, |resource template|, or |resource package|). Remember:
+This section shows some of the common structural elements that appear in a lightweight provider that is built in a way that leverages core resources (such as |resource file|, |resource template|, or |resource package|). Remember:
 
 * A lightweight provider tells the |chef client| how to complete a task
 * The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action
@@ -15,9 +15,9 @@ The basic syntax for a lightweight provider that is built to leverage |chef| res
    def whyrun_supported?
      true
    end
-   
+
    use_inline_resources
-   
+
    action :action_name do
      condition test
        resource "resource_name" do
@@ -27,7 +27,7 @@ The basic syntax for a lightweight provider that is built to leverage |chef| res
        end
      end
    end
-   
+
    def test()
      # some Ruby code
    end
@@ -50,7 +50,7 @@ For example:
    def whyrun_supported?
      true
    end
-   
+
    use_inline_resources
 
    action :delete do
@@ -63,7 +63,7 @@ For example:
        end
      end
    end
-   
+
    def user_exists?(name)
      cmdStr = "rabbitmqctl -q list_users |grep '^#{name}\\b'"
      cmd = Mixlib::ShellOut.new(cmdStr)
