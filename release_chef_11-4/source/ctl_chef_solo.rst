@@ -4,7 +4,7 @@ chef-solo
 
 .. warning:: |note doc_version_11-4|
 
-.. include:: ../../includes_chef_solo/includes_chef_solo.rst
+.. include:: ../../includes_chef_solo/includes_chef_solo_11-4.rst
 
 .. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo.rst
 
