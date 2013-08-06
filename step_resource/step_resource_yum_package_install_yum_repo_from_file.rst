@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to install new |yum| repositories from a file, where the installation of the repository triggers a creation of the |yum| cache that forces the internal |chef| cache to reload:
+The following example shows how to install new |yum| repositories from a file, where the installation of the repository triggers a creation of the |yum| cache that forces the internal cache for the |chef client| to reload:
 
 .. code-block:: ruby
 

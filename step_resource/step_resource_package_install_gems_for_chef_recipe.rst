@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. To install a |gems| file only for use in |chef| recipes:
+.. To install a |gem| only for use in recipes:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how a case statement can be used to tell |chef| how to handle different versions of the |jdk|:
+The following example shows how a case statement can be used to tell the |chef client| how to handle different versions of the |jdk|:
 
 .. code-block:: ruby
 

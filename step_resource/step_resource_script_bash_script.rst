@@ -33,4 +33,4 @@ or something like:
      not_if { ::File.exists?("#{key_dir}/server.crt") }
    end
 
-where ``code`` contains the |open ssl| command to be run. The ``not_if`` method tells |chef| not to run the command if the file already exists.
+where ``code`` contains the |open ssl| command to be run. The ``not_if`` method tells the |chef client| not to run the command if the file already exists.

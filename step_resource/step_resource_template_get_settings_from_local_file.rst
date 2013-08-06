@@ -1,11 +1,11 @@
 .. This is an included how-to. 
 
-Should application-specific configuration settings be stored in a cookbook or should they be stored in the application's code base? |chef| doesn't care, so the answer depends on how you want to manage your recipes and how you want to use |chef|. The |resource template| resource can be used to render a template based on settings contained in a local file on disk or to get the settings from a template in a cookbook. Most of the time, the settings are retrieved from a template in a cookbook. The following example shows how the |resource template| resource can be used to retrieve these settings from a local file.
+The |resource template| resource can be used to render a template based on settings contained in a local file on disk or to get the settings from a template in a cookbook. Most of the time, the settings are retrieved from a template in a cookbook. The following example shows how the |resource template| resource can be used to retrieve these settings from a local file.
 
 The following example is based on a few assumptions:
 
 * The environment is a |ruby on rails| application that needs render a file named ``database.yml``
-* Information about the application---the user, their password, the server---is stored in a data bag on the |chef| server
+* Information about the application---the user, their password, the server---is stored in a data bag on the |chef server|
 * The application is already deployed to the system and that only requirement in this example is to render the ``database.yml`` file
 
 The application source tree looks something like::
@@ -53,7 +53,7 @@ The recipe will be similar to the following:
 
 where: 
 
-* the ``search`` method in the recipe DSL is used to find the first node that is the database master (of which there should only be one)
+* the ``search`` method in the |dsl recipe| is used to find the first node that is the database master (of which there should only be one)
 * the ``:adapter`` attribute may also require an attribute to have been set on a role, which then determines the correct adapter
 
 The template will render similar to the following:

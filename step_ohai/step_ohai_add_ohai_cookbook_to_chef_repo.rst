@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To download the ``ohai`` cookbook to the |chef| repository:
+To download the ``ohai`` cookbook to the |chef repo|:
 
 #. Run the following command:
 

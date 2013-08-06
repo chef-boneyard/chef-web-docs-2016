@@ -10,4 +10,4 @@ The following example shows how start a service named "example_service" and imme
      notifies :restart, "service[nginx]", :immediately
    end
 
-where by using the default ``provider`` for the |resource service|, the recipe is telling |chef| to determine the specific provider to be used during the |chef| run based on the platform of the node on which the recipe will run.
+where by using the default ``provider`` for the |resource service|, the recipe is telling the |chef client| to determine the specific provider to be used during the |chef client| run based on the platform of the node on which the recipe will run.

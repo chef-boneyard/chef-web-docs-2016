@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To send a POST request, with a |json| message body and using basic authentication:
+To send a ``POST`` request that has a |json| message body and using basic authentication:
 
 .. code-block:: ruby
 
@@ -11,4 +11,4 @@ To send a POST request, with a |json| message body and using basic authenticatio
      headers({"AUTHORIZATION" => "Basic #{Base64.encode64("username:password")}"})
    end
 
-The message is posted as application/data and not multipart/form-data or application/x-www-form-urlencoded.
+The message is posted as ``application/data`` and not ``multipart/form-data`` or ``application/x-www-form-urlencoded``.

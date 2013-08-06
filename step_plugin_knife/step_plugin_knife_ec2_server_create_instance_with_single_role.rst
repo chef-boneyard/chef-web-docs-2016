@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To launch a new Amazon EC2 instance with the "webserver" role, enter:
+To launch a new |amazon ec2| instance with the "webserver" role, enter:
 
 .. code-block:: bash
 

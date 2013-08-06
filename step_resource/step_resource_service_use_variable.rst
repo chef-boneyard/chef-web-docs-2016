@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to install |crond| using two |chef| resources and a variable:
+The following example shows how to install |crond| using two resources and a variable:
 
 .. code-block:: ruby
 
@@ -30,7 +30,7 @@ The following example shows how to install |crond| using two |chef| resources an
 where 
 
 * ``cron_package`` is a variable that is used to identify which platforms apply to which install packages
-* ``package`` uses the ``cron_package`` variable to determine how to install |crond| on various nodes (with various platforms)
-* ``service`` enables the |crond| service on nodes that have |redhat|, |centos|, |redhat enterprise linux|, |fedora|, or |amazon aws|, and the |cron| service on nodes that run |debian|, |ubuntu|, or |suse|.
+* the |resource package| resource uses the ``cron_package`` variable to determine how to install |crond| on various nodes (with various platforms)
+* the |resource service| resource enables the |crond| service on nodes that have |redhat|, |centos|, |redhat enterprise linux|, |fedora|, or |amazon aws|, and the |cron| service on nodes that run |debian|, |ubuntu|, or |suse|.
 
 

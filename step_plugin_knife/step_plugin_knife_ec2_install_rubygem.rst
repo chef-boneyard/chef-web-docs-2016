@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install the ``knife ec2`` plugin using |rubygems|, run the following command:
+To install the |subcommand knife ec2| plugin using |rubygems|, run the following command:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The following example shows how a template can be used to apply consistent proxy settings for all nodes of the same type across the |chef| organization.
+The following example shows how a template can be used to apply consistent proxy settings for all nodes of the same type:
 
 .. code-block:: ruby
 
@@ -21,5 +21,5 @@ The following example shows how a template can be used to apply consistent proxy
      )
    end
 
-where ``matching_node`` represents a type of node in the |chef| organization (like |nginx|) and ``site_proxy`` represents the type of proxy being used for that type of node (like |nexus|).
+where ``matching_node`` represents a type of node (like |nginx|) and ``site_proxy`` represents the type of proxy being used for that type of node (like |nexus|).
 

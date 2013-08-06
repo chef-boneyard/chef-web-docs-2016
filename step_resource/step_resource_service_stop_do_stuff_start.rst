@@ -45,6 +45,6 @@ The following example shows how to use the |resource execute|, |resource service
 
 where
 
-* the two ``service`` blocks are used to stop, and then restart the |mysql| service
-* the ``execute`` block is used to install |mysql|
-* the ``mount`` block is used to mount the node and enable |mysql|
+* the two |resource service| resources are used to stop, and then restart the |mysql| service
+* the |resource execute| resource is used to install |mysql|
+* the |resource mount| resource is used to mount the node and enable |mysql|

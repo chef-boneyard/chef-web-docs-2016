@@ -41,8 +41,8 @@ The following example shows how to install |sudo| and then configure the ``/etc/
 
 where 
 
-* the ``package`` block is used to install |sudo|
+* the |resource package| resource is used to install |sudo|
 * the ``if`` statement is used to ensure availability of the ``/etc/sudoers.d`` directory
-* the ``template`` block tells |chef| where to find the ``sudoers`` template
+* the |resource template| resource tells |chef| where to find the ``sudoers`` template
 * the ``variables`` attribute is a hash that passes values to template files (that are located in the ``templates/`` directory for the cookbook
 

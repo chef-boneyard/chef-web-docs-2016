@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following examples show two ways of doing the same thing. The first shows a series of packages that will be upgraded:
+The following examples show different ways of doing the same thing. The first shows a series of packages that will be upgraded:
 
 .. code-block:: ruby
 
@@ -20,7 +20,7 @@ The following examples show two ways of doing the same thing. The first shows a 
      action :upgrade
    end
 
-and the next shows how to do the same exact thing, but with a single ``package`` block and a whitespace array (``%w``):
+and the next uses a single |resource package| resource and a whitespace array (``%w``):
 
 .. code-block:: ruby
    

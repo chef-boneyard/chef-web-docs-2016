@@ -6,8 +6,8 @@ Create the |chef| Repository
 
 Clone
 =====================================================
-.. include:: ../../steps/step_repository_create_clone.rst
+.. include:: ../../step_repository/step_repository_create_clone.rst
 
 Download
 =====================================================
-.. include:: ../../steps/step_repository_create_download.rst
+.. include:: ../../step_repository/step_repository_create_download.rst

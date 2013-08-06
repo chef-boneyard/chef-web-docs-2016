@@ -14,7 +14,7 @@ The following example shows how to create a system user using a variable called 
      action :create
    end
 
-where ``matching_node`` represents a type of node in the |chef| organization. For example, if the ``user_home`` variable specified ``{node[:nginx]...}``, a recipe might look something like this:
+where ``matching_node`` represents a type of node. For example, if the ``user_home`` variable specified ``{node[:nginx]...}``, a recipe might look something like this:
 
 .. code-block:: ruby
 

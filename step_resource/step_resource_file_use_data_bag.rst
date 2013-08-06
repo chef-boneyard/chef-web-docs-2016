@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to apply the contents of a data bag named "ssl_certificate" to certain files within the |chef| organization.
+The following example shows how to apply the contents of a data bag named "ssl_certificate" to certain files:
 
 .. code-block:: ruby
 
@@ -24,4 +24,4 @@ The following example shows how to apply the contents of a data bag named "ssl_c
        action :create
      end
 
-where ``matching_node`` represents a type of node in the |chef| organization.
+where ``matching_node`` represents a type of node.

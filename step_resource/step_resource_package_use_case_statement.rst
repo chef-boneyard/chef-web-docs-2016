@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to use a case statement to tell |chef| for which platforms and packages should be installed using |curl|.
+The following example shows how to use a case statement to tell the |chef client| which platforms and packages to install using |curl|.
 
 .. code-block:: ruby
 
@@ -16,7 +16,7 @@ The following example shows how to use a case statement to tell |chef| for which
        package "package_c"
    end
 
-where ``node[:platform]`` for each node is identified by |ohai| during every |chef| run. For example:
+where ``node[:platform]`` for each node is identified by |ohai| during every |chef client| run. For example:
 
 .. code-block:: ruby
 

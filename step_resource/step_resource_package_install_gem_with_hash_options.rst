@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-.. To install a gem with a hash of options:
+.. To install a |gem| with a |hash| of options:
 
 .. code-block:: ruby
 

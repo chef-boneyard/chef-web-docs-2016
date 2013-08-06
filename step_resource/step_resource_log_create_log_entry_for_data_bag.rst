@@ -28,4 +28,4 @@ The following example shows how to create log entries each time the contents of 
    
    end
 
-where ``matching_node`` represents a type of node in the |chef| organization.
+where ``matching_node`` represents a type of node.

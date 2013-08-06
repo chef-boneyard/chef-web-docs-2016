@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-.. To install a gem with an options string:
+.. To install a |gem| with an options string:
 
 .. code-block:: ruby
 

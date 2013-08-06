@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-If you only want people who have access to your |chef| organization to get access to this key, you could add it to an encrypted data bag instead. You could also add the repository, deploy_to, etc., to the data bag if desired as well.
+If you only want certain people to have access to this key, consider adding it to an encrypted data bag. Other options include adding it to the |chef repo|, using ``deploy_to`` attribute and the |resource deploy| resource, and so on.
 
 To add a private key to a node:
 
@@ -13,7 +13,7 @@ To add a private key to a node:
      "deploy_to": "/tmp/private_code"
    }
 
-Remember to convert new lines in the private key to \n when copying it to the data bag. Then you can use a file block within the recipe to add it to the node:
+Convert new lines in the private key to ``\n`` when copying it to the data bag. Then use the |resource file| resource within the recipe to add it to the node:
 
 .. code-block:: ruby
 

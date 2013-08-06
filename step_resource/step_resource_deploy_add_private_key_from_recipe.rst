@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-If there isn't much concern about people being able to view the key, add the private key to ``cookbook/COOKBOOK_NAME/files/default/id_deploy`` and use a ``cookbook_file`` block somewhere in the recipe to add it to the |ssh| file locally on the node.
+If there isn't much concern about people being able to view a private key, add it to ``cookbook/COOKBOOK_NAME/files/default/id_deploy`` and add it to the |ssh| file locally on the node using the |resource cookbook_file| resource.
 
 To add a private key to a node:
 
@@ -12,5 +12,4 @@ To add a private key to a node:
      mode 00600
    end
 
-After this has been added to a recipe, it should be able to deploy the private repository.
 

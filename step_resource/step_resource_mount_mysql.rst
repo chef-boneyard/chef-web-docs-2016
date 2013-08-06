@@ -10,7 +10,7 @@ The following example shows how to use the |resource execute|, |resource service
 
 .. code-block:: ruby
 
-   #  the following code sample comes from the ``server_ec2`` recipe in the ``mysql`` cookbook: https://github.com/opscode-cookbooks/mysql
+   #  the following code sample comes from the server_ec2 recipe in the mysql cookbook: https://github.com/opscode-cookbooks/mysql
 
    if (node.attribute?('ec2') && ! FileTest.directory?(node['mysql']['ec2_path']))
    
@@ -45,7 +45,7 @@ The following example shows how to use the |resource execute|, |resource service
 
 where 
 
-* the two ``service`` blocks are used to stop, and then restart the |mysql| service
-* the ``execute`` block is used to install |mysql|
-* the ``mount`` block is used to mount the node and enable |mysql|
+* the two |resource service| recipes are used to stop, and then restart the |mysql| service
+* the |resource execute| resource is used to install |mysql|
+* the |resource mount| resource is used to mount the node and enable |mysql|
 

@@ -1,12 +1,12 @@
 .. This is an included how-to. 
 
-To search a top-level run list for a role named "load_balancer", enter the following (from |knife|):
+To search a top-level run list for a role named "load_balancer" use the |subcommand knife search| subcommand from the command line or the ``search`` method in a recipe. For example:
 
 .. code-block:: bash
 
    $ knife search node role:load_balancer
 
-or add the following (to a recipe):
+and from within a recipe:
 
 .. code-block:: ruby
 

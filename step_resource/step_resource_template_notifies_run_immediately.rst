@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-By default, notifications are ``:delayed``, that is they are queued up as they are triggered, and then executed at the very end of a |chef| run. To run an action immediately, use ``:immediately``:
+By default, notifications are ``:delayed``, that is they are queued up as they are triggered, and then executed at the very end of a |chef client| run. To run an action immediately, use ``:immediately``:
 
 .. code-block:: ruby
 

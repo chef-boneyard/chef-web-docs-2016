@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The layout of the application matches a Rails app by default, but you can customize it to fit your needs. To customize the application layout:
+The layout of the |resource deploy| resource matches a |ruby on rails| app by default, but this can be customized. To customize the layout, do something like the following:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. To pass an environment variable to a script:
+.. To pass a |windows| environment variable to a script:
 
 .. code-block:: ruby
 

@@ -8,7 +8,7 @@ To deploy without creating symbolic links to a shared folder:
      symlinks {}
    end
 
-When deploying code that is not |ruby on rails| and symbolic links to a shared folder are not wanted, use parentheses () or ``Hash.new`` to avoid ambiguity. For example, using parentheses:
+When deploying code that is not |ruby on rails| and symbolic links to a shared folder are not wanted, use parentheses ``()`` or ``Hash.new`` to avoid ambiguity. For example, using parentheses:
 
 .. code-block:: ruby
 

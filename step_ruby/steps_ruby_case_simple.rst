@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-.. The following example shows a simple example of a ``case`` statement:
+.. The following example shows a simple ``case`` statement:
 
 .. code-block:: ruby
 

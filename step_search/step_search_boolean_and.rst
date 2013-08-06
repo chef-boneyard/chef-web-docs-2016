@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To join queries using the AND boolean operator, enter the following:
+To join queries using the ``AND`` boolean operator, enter the following:
 
 .. code-block:: bash
 

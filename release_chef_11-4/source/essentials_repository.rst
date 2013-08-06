@@ -24,7 +24,7 @@ certificates/
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository_directory_certificates.rst
 
-.. include:: ../../steps/step_repository_certificate_generate.rst
+.. include:: ../../step_repository/step_repository_certificate_generate.rst
 
 .chef/
 -----------------------------------------------------
@@ -92,17 +92,18 @@ Create the Repository
 
 Clone
 -----------------------------------------------------
-.. include:: ../../steps/step_repository_create_clone.rst
+.. include:: ../../step_repository/step_repository_create_clone.rst
 
 Download
 -----------------------------------------------------
-.. include:: ../../steps/step_repository_create_download.rst
+.. include:: ../../step_repository/step_repository_create_download.rst
 
 .. toctree::
    :hidden:
 
    essentials_repository_structure
    essentials_repository_structure_chefignore
+
 
 
 

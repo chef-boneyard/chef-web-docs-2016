@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how the ``only_if`` method can be used to tell |chef| to do something, but only when certain conditions are met. In this case, only if the file already exists.
+The following example shows how the ``only_if`` method can be used to tell the |chef client| to do something, but only when certain conditions are met. In this case, only if a file already exists:
 
 .. code-block:: ruby
 

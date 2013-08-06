@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To negate search results using the NOT boolean operator, enter the following:
+To negate search results using the ``NOT`` boolean operator, enter the following:
 
 .. code-block:: bash
 

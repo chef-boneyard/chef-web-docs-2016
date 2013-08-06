@@ -1,7 +1,6 @@
 .. This is an included how-to. 
 
-The following example shows how to use a case statement to check the platform, and for certain platforms send a notification immediately after installing the ``package_b`` package that will generate a module list.
-
+The following example shows how to use a case statement to check the platform, and for certain platforms send a notification immediately after installing the ``package_b`` package that will generate a module list:
 
 .. code-block:: ruby
 

@@ -80,27 +80,27 @@ Use Ruby
 
 Assign a value
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_recipe_assign_value_to_variable.rst
+.. include:: ../../step_recipe/step_recipe_assign_value_to_variable.rst
 
 Use Case Statement
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_recipe_case_statement.rst
+.. include:: ../../step_recipe/step_recipe_case_statement.rst
 
 Check Conditions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_recipe_check_for_condition.rst
+.. include:: ../../step_recipe/step_recipe_check_for_condition.rst
 
 Execute Conditions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_recipe_execute_expression_by_condition.rst
+.. include:: ../../step_recipe/step_recipe_execute_expression_by_condition.rst
 
 Loop over Array
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_recipe_loop_over_array_of_package_names.rst
+.. include:: ../../step_recipe/step_recipe_loop_over_array_of_package_names.rst
 
 Loop over Hash
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../steps/step_chef_recipe_loop_over_hash_of_package_names.rst
+.. include:: ../../step_recipe/step_recipe_loop_over_hash_of_package_names.rst
 
 Apply to Run-lists
 -----------------------------------------------------
