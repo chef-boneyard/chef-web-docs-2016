@@ -388,6 +388,10 @@ Accessing when AD/LDAP is down
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_adldap_access_when_down.rst
 
 
+SSL Configuration
+=====================================================
+.. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ssl.rst
+
 Configure Private Chef
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_configure.rst
