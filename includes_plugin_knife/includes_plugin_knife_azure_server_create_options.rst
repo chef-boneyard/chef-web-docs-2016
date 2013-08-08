@@ -33,7 +33,7 @@ This argument has the following options:
    |media location|
 
 ``-N NAME``, ``--node-name NAME``
-   |name node| Node names in |chef|, when used with |windows azure|, must be 91 characters or shorter.
+   |name node| Node names, when used with |windows azure|, must be 91 characters or shorter.
 
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.

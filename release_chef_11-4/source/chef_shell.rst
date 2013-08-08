@@ -10,44 +10,12 @@ Modes
 =====================================================
 .. include:: ../../includes_chef_shell/includes_chef_shell_modes.rst
 
-Breakpoint Resource
-=====================================================
-.. include:: ../../includes_resources/includes_resource_breakpoint.rst
-
-Syntax
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_breakpoint_syntax.rst
-
-Actions
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_breakpoint_actions.rst
-
-Attributes
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
-
-Providers
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
-
-Examples
------------------------------------------------------
-|generic resource statement|
-
-**A recipe without a breakpoint**
-
-.. include:: ../../step_resource/step_resource_breakpoint_no.rst
-
-**The same recipe with breakpoints**
-
-.. include:: ../../step_resource/step_resource_breakpoint_yes.rst
-
 Configure
 =====================================================
 |chef shell| determines which configuration file to load based on the following:
 
 #. If a configuration file is specified using the ``-c`` option, |chef shell| will use the specified configuration file
-#. When |chef shell| is started using a named configuration as an argument, |chef shell| will search for a |chef_shell rb| file in that directory under ``~/.chef``. For example, if |chef shell| is started using ``production`` as the named configuration, |chef| will load a configuration file from ``~/.chef/production/chef_shell.rb``
+#. When |chef shell| is started using a named configuration as an argument, |chef shell| will search for a |chef_shell rb| file in that directory under ``~/.chef``. For example, if |chef shell| is started using ``production`` as the named configuration, the |chef shell| will load a configuration file from ``~/.chef/production/chef_shell.rb``
 #. If a named configuration is not provided, |chef shell| will attempt to load the |chef_shell rb| file from the ``.chef`` directory. For example: ``~/.chef/chef_shell.rb``
 #. If a |chef_shell rb| file is not found, |chef shell| will attempt to load the |client rb| file
 #. If a |chef_shell rb| file is not found, |chef shell| will attempt to load the |solo rb| file
@@ -195,16 +163,44 @@ to return something similar to:
 
 Debug Recipes
 =====================================================
-|chef shell| allows the current position in a run-list to be manipulated during a |chef| run. Add breakpoints to a recipe to take advantage of this functionality.
+
+|chef shell| allows the current position in a run-list to be manipulated during a |chef client| run. Add breakpoints to a recipe to take advantage of this functionality.
 
 Breakpoint Resource
 -----------------------------------------------------
-A breakpoint is implemented in the same way as any |chef| resource. The |resource breakpoint| resource does not have any attributes. Its default action is ``:break``. When this action is placed in a recipe, |chef| will determine if it is being run in |chef shell| mode, and then if it is running in |chef shell| mode, the |chef| run is paused. (When |chef| is running as the |chef client| or as |chef solo|, the ``:break`` action is ignored.)
+.. include:: ../../includes_resources/includes_resource_breakpoint.rst
 
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_breakpoint_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**A recipe without a breakpoint**
+
+.. include:: ../../step_resource/step_resource_breakpoint_no.rst
+
+**The same recipe with breakpoints**
+
+.. include:: ../../step_resource/step_resource_breakpoint_yes.rst
 
 Step Through a Run-list
 -----------------------------------------------------
-To explore how using the |resource breakpoint| to manually step through a |chef| run, create a simple recipe in |chef shell|:
+To explore how using the |resource breakpoint| to manually step through a |chef client| run, create a simple recipe in |chef shell|:
 
 .. code-block:: bash
 
@@ -214,7 +210,7 @@ To explore how using the |resource breakpoint| to manually step through a |chef|
      chef:recipe > breakpoint "foo"
      chef:recipe > file "/tmp/after-breakpoint"
 
-and then run |chef|:
+and then run the |chef client|:
 
 .. code-block:: bash
 
@@ -225,7 +221,7 @@ and then run |chef|:
      [Fri, 15 Jan 2010 14:17:49 -0800] DEBUG: Processing [./bin/../lib/chef/mixin/recipe_definition_dsl_core.rb:56:in `new']
      [Fri, 15 Jan 2010 14:17:49 -0800] DEBUG: [./bin/../lib/chef/mixin/recipe_definition_dsl_core.rb:56:in `new'] using Chef::Provider::Breakpoint
 
-|chef| ran the first resource before the breakpoint (``file[/tmp/before-breakpoint]``), but then stopped after execution. |chef| attempted to name the breakpoint after its position in the source file, but |chef| was confused because the resource was entered interactively. From here, |chef shell| can resume the |chef| run:
+The |chef client| ran the first resource before the breakpoint (``file[/tmp/before-breakpoint]``), but then stopped after execution. The |chef client| attempted to name the breakpoint after its position in the source file, but the |chef client| was confused because the resource was entered interactively. From here, |chef shell| can resume the |chef client| run:
 
 .. code-block:: bash
 
@@ -239,7 +235,7 @@ A quick view of the ``/tmp`` directory shows that the following files were creat
    after-breakpoint
    before-breakpoint
 
-The |chef| run can also be rewound, and then stepped through.
+The |chef client| run can also be rewound, and then stepped through.
 
 .. code-block:: bash
 
@@ -260,14 +256,14 @@ The |chef| run can also be rewound, and then stepped through.
      [Fri, 15 Jan 2010 14:40:56 -0800] DEBUG: file[/tmp/after-breakpoint] using Chef::Provider::File
        => 3
 
-From the output, the rewound run-list is shown, but when the resources are executed again, they will repeat their checks for the existence of files. If they exist, |chef| will skip creating them. If the files are deleted, then:
+From the output, the rewound run-list is shown, but when the resources are executed again, they will repeat their checks for the existence of files. If they exist, the |chef client| will skip creating them. If the files are deleted, then:
 
 .. code-block:: bash
 
    $ chef:recipe > ls("/tmp").grep(/breakpoint/).each {|f| rm "/tmp/#{f}" }
        => ["after-breakpoint", "before-breakpoint"]
 
-Rewind, and then resume the |chef| run to get the expected results: 
+Rewind, and then resume the |chef client| run to get the expected results: 
 
 .. code-block:: bash
 
@@ -379,9 +375,9 @@ The following examples show how to use |chef shell| to debug recipes.
 
 "Hello World"
 -----------------------------------------------------
-This example shows how to run |chef shell| in standalone mode. (For |chef solo| or |chef client| modes, you would need to run |chef shell| using the -s or -z command line options, and then take into consideration the necessary configuration settings.)
+This example shows how to run |chef shell| in standalone mode. (For |chef solo| or |chef client| modes, you would need to run |chef shell| using the ``-s`` or ``-z`` command line options, and then take into consideration the necessary configuration settings.)
 
-When |chef| is installed using |rubygems| or a package manager, |chef shell| should already be installed. When |chef| is run from a |git| clone, it will be located in ``chef/bin/chef shell``. To start |chef shell|, just run it without any options. You'll see the loading message, then the banner, and then the |chef shell| prompt:
+When the |chef client| is installed using |rubygems| or a package manager, |chef shell| should already be installed. When the |chef client| is run from a |git| clone, it will be located in ``chef/bin/chef shell``. To start |chef shell|, just run it without any options. You'll see the loading message, then the banner, and then the |chef shell| prompt:
 
 .. code-block:: bash
 
@@ -440,7 +436,7 @@ Typing is evaluated in the same context as recipes. Create a file resource:
           @cookbook_name=nil, 
           @ignore_failure=false> 
 
-(The previous example was formatted for presentation.) At this point, |chef shell| has created the resource and put it in the run list, but not yet created the file. To initiate the |chef| run, use the ``run_chef`` command:
+(The previous example was formatted for presentation.) At this point, |chef shell| has created the resource and put it in the run list, but not yet created the file. To initiate the |chef client| run, use the ``run_chef`` command:
 
 .. code-block:: bash
 
@@ -467,7 +463,7 @@ Switch back to recipe_mode context and use the attributes:
        => :attributes 
      chef:recipe_mode > file "/tmp/#{node.hello}"
 
-Now, run |chef| again:
+Now, run the |chef client| again:
 
 .. code-block:: bash
 
@@ -480,7 +476,7 @@ Now, run |chef| again:
        => true
      chef:recipe_mode > 
 
-Because the first resource (``file[/tmp/ohai2u_shef]``) is still in the run-list, it gets executed again. And because that file already exists, |chef| doesn't attempt to re-create it. Finally, the files were created using the ``ls`` method:
+Because the first resource (``file[/tmp/ohai2u_shef]``) is still in the run-list, it gets executed again. And because that file already exists, the |chef client| doesn't attempt to re-create it. Finally, the files were created using the ``ls`` method:
 
 .. code-block:: bash
 
@@ -498,16 +494,6 @@ To get a list of nodes using a recipe named ``postfix`` use ``search(:node,"reci
    search(:node, 'recipes:postfix\:\:delivery')
 
 .. note:: Single (' ') vs. double (" ") is important. This is because a backslash (\) needs to be included in the string, instead of having |ruby| interpret it as an escape.
-
-
-
-
-
-
-
-
-
-
 
 
 

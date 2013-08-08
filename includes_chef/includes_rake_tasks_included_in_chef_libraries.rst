@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|rake| includes tasks that are installed with the |chef| libraries. To view the tasks that are available, run ``rake -T``. For more information about |rake|, see http://en.wikipedia.org/wiki/Rake_(software).
+|rake| includes tasks that are installed with the |chef client| libraries. To view the tasks that are available, run ``rake -T``. For more information about |rake|, see http://en.wikipedia.org/wiki/Rake_(software).
 
 The following |rake| commands are not replaced by |knife| sub-commands:
 
@@ -21,7 +21,7 @@ The following |rake| commands are not replaced by |knife| sub-commands:
    * - ``update``
      - Updates the repository from version control server; understands |git| and |svn|.
 
-The following |rake| commands duplicate functionality in |chef| and may be removed from future library updates:
+The following |rake| commands duplicate functionality, and may be removed from future library updates:
 
 .. list-table::
    :widths: 200 300

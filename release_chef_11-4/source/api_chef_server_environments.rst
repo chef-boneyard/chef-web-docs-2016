@@ -1,18 +1,4 @@
-=====================================================
-/environments
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_environments.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_environment/includes_environment.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_get.rst
-
-POST
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environments_post.rst
+.. include:: ../../chef_master/source/api_chef_server_environments.rst
 

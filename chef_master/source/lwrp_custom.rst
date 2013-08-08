@@ -35,7 +35,7 @@ Platform vs. Lightweight
 
 More Reading
 =====================================================
-Doug Ireton (a |chef| community member) has a blog with a nice series on LWRPs:
+Doug Ireton (a community member) has a blog with a nice series on LWRPs:
 
 * Part 1: http://dougireton.com/blog/2012/12/31/creating-an-lwrp/
 * Part 2: http://dougireton.com/blog/2013/01/07/creating-an-lwrp-part-2/

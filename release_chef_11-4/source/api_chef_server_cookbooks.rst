@@ -1,15 +1,5 @@
-=====================================================
-/cookbooks
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_cookbooks.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_cookbooks/includes_cookbooks.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbooks_get.rst
+.. include:: ../../chef_master/source/api_chef_server_cookbooks.rst
 
 

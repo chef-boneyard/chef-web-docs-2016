@@ -21,7 +21,7 @@ Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_template_attributes.rst
 
-.. warning:: For a machine on which |selinux| is enabled, |chef| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy.
+.. warning:: |warning selinux_file_based_resources|
 
 Atomic File Updates
 -----------------------------------------------------

@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following example shows how to modify the default script for |ubuntu| 12.04. First, copy the bootstrap template from the default location. If |chef| is installed from a |rubygems|, the full path can be found in the |gem| contents:
+The following example shows how to modify the default script for |ubuntu| 12.04. First, copy the bootstrap template from the default location. If the |chef client| is installed from a |rubygems|, the full path can be found in the |gem| contents:
 
 .. code-block:: bash
 

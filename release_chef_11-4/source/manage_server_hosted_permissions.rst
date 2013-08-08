@@ -1,20 +1,3 @@
-=====================================================
-Manage Permissions in Hosted Chef
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/manage_server_hosted_permissions.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_permissions.rst
-
-Billing Admin
-=====================================================
-.. include:: ../../step_manage_server_hosted/step_manage_server_hosted_permission_billing_admin.rst
-
-Global Permissions
-=====================================================
-.. include:: ../../step_manage_server_hosted/step_manage_server_hosted_permission_global.rst
-
-Object Permissions 
-=====================================================
-.. include:: ../../step_manage_server_hosted/step_manage_server_hosted_permission_object.rst
-
+.. include:: ../../chef_master/source/manage_server_hosted_permissions.rst

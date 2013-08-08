@@ -57,13 +57,6 @@ Examples
 .. include:: ../../step_plugin_knife/step_plugin_knife_rackspace_server_create_instance_with_many_roles.rst
 
 
-
-
-
-
-
-
-
 server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace_server_delete.rst

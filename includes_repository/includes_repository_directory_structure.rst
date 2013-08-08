@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The sub-directories in the |chef| repository are:
+The sub-directories in the |chef repo| are:
 
 .. list-table::
    :widths: 200 300

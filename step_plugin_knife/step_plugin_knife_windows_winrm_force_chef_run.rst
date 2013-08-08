@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To force a |chef| run:
+To force a |chef client| run:
 
 .. code-block:: bash
 

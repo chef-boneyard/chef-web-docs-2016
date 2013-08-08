@@ -4,7 +4,7 @@ Platform Resources
 
 .. warning:: |note doc_version_11-4|
 
-The following resources are built into |chef|:
+The following resources are built in:
 
 .. list-table::
    :widths: 120 400

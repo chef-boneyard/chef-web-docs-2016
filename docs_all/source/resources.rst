@@ -8,7 +8,7 @@ Resources and Providers Reference
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst
 
-This reference describes each of the resources available in the |chef| library, including the list of actions available for the resource, the attributes that can be used, the providers that will do the work (and the provider's shortcut resource name), and examples of using each resource.
+This reference describes each of the resources available to the |chef client|, including the list of actions available for the resource, the attributes that can be used, the providers that will do the work (and the provider's shortcut resource name), and examples of using each resource.
 
 
 Common Functionality for all Resources 
@@ -225,7 +225,7 @@ Windows File Security
 
 Resources
 =====================================================
-The following resources are included with |chef| and have native providers:
+The following resources are included with |chefx| and have native providers:
 
 * apt_package
 * bash

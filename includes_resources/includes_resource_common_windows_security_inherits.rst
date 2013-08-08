@@ -41,4 +41,4 @@ but then not use the ``inherits`` attribute to deny those rights on a child dire
      rights :deny, 'MORDOR\Minions' # Oops, not specific enough
    end
 
-Because the ``inherits`` attribute is not specified, |chef| will default it to ``true``, which will ensure that security settings for existing files remain unchanged.
+Because the ``inherits`` attribute is not specified, the |chef client| will default it to ``true``, which will ensure that security settings for existing files remain unchanged.

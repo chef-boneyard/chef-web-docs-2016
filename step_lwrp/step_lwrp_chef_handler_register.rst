@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To register the ``Chef::Handler::JsonFile`` handler that ships as part of the |chef| gem:
+To register the ``Chef::Handler::JsonFile`` handler that ships as part of the |chefx| gem:
 
 .. code-block:: ruby
 

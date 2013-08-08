@@ -1,19 +1,3 @@
-=====================================================
-/clients/NAME
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_clients_name.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name.rst
-
-DELETE
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_delete.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_get.rst
-
-PUT
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_client_name_put.rst
+.. include:: ../../chef_master/source/api_chef_server_clients_name.rst

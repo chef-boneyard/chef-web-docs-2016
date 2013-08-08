@@ -1,11 +1,3 @@
-=====================================================
-/cookbooks/NAME
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_cookbooks_name.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_cookbook_name_get.rst
+.. include:: ../../chef_master/source/api_chef_server_cookbooks_name.rst

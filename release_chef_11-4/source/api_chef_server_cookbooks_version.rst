@@ -1,21 +1,3 @@
-=====================================================
-/cookbooks/NAME/VERSION
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_cookbooks_version.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version.rst
-
-DELETE
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_delete.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_get.rst
-
-PUT
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_version_put.rst
+.. include:: ../../chef_master/source/api_chef_server_cookbooks_version.rst

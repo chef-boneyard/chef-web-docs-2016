@@ -6,8 +6,6 @@ powershell_script
 
 .. include:: ../../includes_resources/includes_resource_powershell_script.rst
 
-.. warning:: This resource will be included in the upcoming release of |chef| 11.6.
-
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_powershell_script_syntax.rst

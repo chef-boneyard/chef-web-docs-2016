@@ -6,13 +6,13 @@ First-run Resources
 
 .. warning:: Use sparingly. Most resources are idempotent by construction and do not require the methods discussed on this page. Whenever possible, it is best to use an idempotent resource.
 
-This page describes how to construct a resource that will perform an action on the first run of chef-client and do nothing on subsequent runs.
+This page describes how to construct a resource that will perform an action on the first run of the |chef client| and do nothing on subsequent runs.
 
 One case where using a first-run resource would be desired, for example, is to ensure idempotency when a command within an execute resource would move the state of the node away from the desired state if run a second time.
 
 The ideal way to achieve idempotence when using a non-idempotent resource is to inspect the state of the node and condition the resource on that state using the ``not_if`` or ``only_if`` conditional execution resource attributes. However, it may be difficult or impossible to correctly inspect the state of the system, or you may never want to run the command again, even if the system's state is incorrect.
 
-In order to create a resource that runs only on the first run of chef-client:
+In order to create a resource that runs only on the first run of the |chef client|:
 
 #. Set a node attribute after successfully completing the task
 #. Test for the presence of that attribute within the resource.

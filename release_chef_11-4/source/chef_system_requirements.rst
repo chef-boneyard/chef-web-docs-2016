@@ -4,17 +4,17 @@ System Requirements
 
 .. warning:: |note doc_version_11-4|
 
-Before installing |chef|:
+Before installing:
 
 * Ensure that each machine that will be a node is running a supported operating system
 * Ensure that the machine that will run the |chef server| is sufficiently powerful
 * Ensure that any network and firewall settings are configured correctly
 
-Install and configure the |chef server|, then install and configure a workstation, and then run the bootstrap command from the workstation to install |chef| on each node.
+Install and configure the |chef server|, then install and configure a workstation, and then run the bootstrap command from the workstation to install the |chef client| on each node.
 
 Chef (for Nodes and Workstations)
 =====================================================
-|chef| can run on the following systems:
+The |chef client| can run on the following systems:
 
 .. list-table::
    :widths: 200 200 200
@@ -56,9 +56,9 @@ Chef (for Nodes and Workstations)
 
 In addition:
 
-* The recommended amount of RAM available to the |chef client| during a |chef| run is 512MB
+* The recommended amount of RAM available to the |chef client| during a |chef client| run is 512MB
 * Each node and workstation must have access to the |chef server| via HTTPS
-* |knife| plugins require |chef| <VERSION?> or greater; ``knife windows`` requires |chef| <VERSION?>
+* |knife| plugins require |chef client| <VERSION?> or greater; ``knife windows`` requires |chef client| <VERSION?>
 * |ruby| 1.8.7, 1.9.1, or 1.9.2 with |ssl| bindings
 * |rubygems| 1.6.2 or higher; on the |ubuntu| or |debian| platforms, |rubygems| should be installed from source
 * |chef hosted| is compatible with |chef client| version 0.10.0 and greater; older clients must be upgraded before they can connect to |chef hosted|
@@ -75,7 +75,7 @@ The following sections describe the various requirements for the three |chef ser
 |chef hosted| has the following requirements:
 
 * **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 8 and 9)
-* Every node that will be configured by |chef| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
+* Every node that will be configured by the |chef client| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
 
 
 |chef private|
@@ -95,7 +95,7 @@ Before installing |chef private|, ensure that each machine has the following ins
 |chef private| has the following requirements:
 
 * **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 8 and 9)
-* Every node that will be configured by |chef| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
+* Every node that will be configured by the |chef client| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
 
 For a standalone deployment:
 
@@ -143,7 +143,7 @@ The open source |chef server| can run on the following systems:
    * - Operating System
      - Version
      - Architecture
-   * - Enterprise Linux
+   * - Enterprise Linux (e.g. |redhat enterprise linux|, |centos|)
      - 5, 6
      - x86_64
    * - Ubuntu

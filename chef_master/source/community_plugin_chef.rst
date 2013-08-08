@@ -11,7 +11,7 @@ Community Chef Plugins
    * - Plugin
      - Description
    * - chef-deploy
-     - Adds a |gem| that contains resources and providers for deploying |ruby| web applications from |chef| recipes. Download this plugin: https://github.com/ezmobius/chef-deploy.
+     - Adds a |gem| that contains resources and providers for deploying |ruby| web applications from recipes. Download this plugin: https://github.com/ezmobius/chef-deploy.
    * - chef-gelf
      - Adds a handler that reports run status, including changes made to a |graylog| server. Download this plugin: https://github.com/jellybob/chef-gelf.
    * - chef-handler-twitter
@@ -21,15 +21,15 @@ Community Chef Plugins
    * - chef-hatch-repo
      - Adds a |knife| plugin and a |vagrant| provisioner that can launch a self-managed |chef server| in a virtual machine or |amazon ec2|. Download this plugin: https://github.com/xdissent/chef-hatch-repo.
    * - chef-irc-snitch
-     - Adds an exception handler for |chef| runs. Download this plugin: `<https://rubygems.org/gems/chef-irc-snitch>`_.
+     - Adds an exception handler for |chef client| runs. Download this plugin: `<https://rubygems.org/gems/chef-irc-snitch>`_.
    * - chef-jenkins
-     - Adds the ability to use |jenkins| to drive continuous deployment and synchronization of |chef| environments from a |git| repository. Download this plugin: https://github.com/adamhjk/chef-jenkins.
+     - Adds the ability to use |jenkins| to drive continuous deployment and synchronization of environments from a |git| repository. Download this plugin: https://github.com/adamhjk/chef-jenkins.
    * - chef-rundeck
      - Adds a resource endpoint for |rundeck|. Download this plugin: `<http://rubygems.org/gems/chef-rundeck>`_.
    * - chef-solo-search
      - Adds a cookbook library that enables searching of data bags when using |chef solo|. Download this plugin: https://github.com/edelight/chef-solo-search.
    * - chef-trac-hacks
-     - Adds the ability to fill a coordination gap between |amazon aws| and |chef|. Download this plugin: http://trac-hacks.org/wiki/CloudPlugin.
+     - Adds the ability to fill a coordination gap between |amazon aws| and |chefx|. Download this plugin: http://trac-hacks.org/wiki/CloudPlugin.
    * - chef-vim
      - Adds a plugin that makes cookbook navigation quick and easy. Download this plugin: https://github.com/t9md/vim-chef.
    * - chef-vpc-toolkit
@@ -37,6 +37,6 @@ Community Chef Plugins
    * - ironfan
      - Adds the ability to orchestrate complete clusters of machines using an expressive toolset that helps construct scalable and resilient architectures. Download this plugin: https://github.com/infochimps-labs/ironfan.
    * - jclouds-chef
-     - Adds |java| and |clojure| components to the |chef| REST API. Download this plugin: https://github.com/jclouds/jclouds-chef.
+     - Adds |java| and |clojure| components to the |api chef server| REST API. Download this plugin: https://github.com/jclouds/jclouds-chef.
 
 

@@ -49,7 +49,7 @@ Community Knife Plugins
    * - `knife-esx <https://github.com/rubiojr/knife-esx>`_
      - Adds support for |vmware|.
    * - `knife-file <https://github.com/cparedes/knife-file>`_
-     - Adds utilities that help manipulate files in a |chef| repository.
+     - Adds utilities that help manipulate files in a |chef repo|.
    * - `knife-flip <https://github.com/jonlives/knife-flip>`_
      - Adds improvements to ``knife-set-environment`` with added functionality and failsafes.
    * - `knife-gandi <https://rubygems.org/gems/knife-gandi>`_
@@ -65,7 +65,7 @@ Community Knife Plugins
    * - `knife-kvm <https://github.com/rubiojr/knife-kvm>`_
      - Adds |linux| support for |kvm|.
    * - `knife-lastrun <https://github.com/jgoulah/knife-lastrun>`_
-     - Adds key metrics from the last |chef| run on a given node.
+     - Adds key metrics from the last |chef client| run on a given node.
    * - `knife-ohno <https://github.com/lnxchk/Ohno>`_
      - Adds the ability to view nodes that haven't checked into the platform for N hours.
    * - `knife-oktawave <https://github.com/marek-siemdaj/knife-oktawave>`_
@@ -91,7 +91,7 @@ Community Knife Plugins
    * - `knife-rvc <https://github.com/dougm/rvc-knife>`_
      - Integrates a subset of |knife| functionality with |ruby rvc|.
    * - `knife-santoku <https://github.com/knuckolls/knife-santoku>`_
-     - Adds the ability to build processes around |chef|.
+     - Adds the ability to build processes around the |chef client|.
    * - `knife-server <https://github.com/fnichol/knife-server>`_
      - Adds the ability to manage a |chef server|, including bootstrapping a |chef server| on |amazon ec2| or a standalone server and backing up and/or restoring node, role, data bag, and environment data.
    * - `knife-set-environment <https://gist.github.com/961827>`_

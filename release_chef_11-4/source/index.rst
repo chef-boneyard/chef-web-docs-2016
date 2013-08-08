@@ -163,14 +163,25 @@ Cookbooks
    essentials_cookbook_resources
    essentials_cookbook_templates
    essentials_cookbook_versions
-   manage_server_hosted 
-   chef_system_requirements
-   images
+   manage_server_hosted
+   manage_server_hosted_accounts
+   manage_server_hosted_clients
+   manage_server_hosted_cookbooks
+   manage_server_hosted_data_bags
+   manage_server_hosted_environments
+   manage_server_hosted_groups
+   manage_server_hosted_nodes
+   manage_server_hosted_organizations
+   manage_server_hosted_permissions
+   manage_server_hosted_roles
+   manage_server_hosted_search
+   manage_server_hosted_users
 
+
+   chef_system_requirements
    upgrade_server
    ctl_chef_shell
    ctl_chef_apply
-   style_guide
    chef_shell
 
 

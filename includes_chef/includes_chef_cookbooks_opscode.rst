@@ -7,7 +7,7 @@ A cookbook is the fundamental unit of configuration and policy distribution. Eac
 * Attribute values that are set on nodes
 * Definitions that allow the creation of reusable collections of resources
 * File distributions
-* Libraries that extend |chef| and/or provide helpers to |ruby| code
+* Libraries that extend the |chef client| and/or provide helpers to |ruby| code
 * Recipes that specify which resources to manage and the order in which those resources will be applied
 * Custom resources and providers
 * Templates

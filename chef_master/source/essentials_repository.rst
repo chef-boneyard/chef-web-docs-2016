@@ -1,5 +1,5 @@
 =====================================================
-About the Repository
+About the |chef repo|
 =====================================================
 
 .. include:: ../../includes_repository/includes_repository.rst
@@ -24,7 +24,7 @@ config/
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository_directory_config.rst
 
-The |chef| repository uses two configuration files: ``rake.rb`` (required) and ``knife.rb`` (optional).
+The |chef repo| uses two configuration files: ``rake.rb`` (required) and ``knife.rb`` (optional).
 
 rake.rb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -76,7 +76,7 @@ Many Users, Same Repo
 =====================================================
 .. include:: ../../includes_repository/includes_repository_many_users_same_repo.rst
 
-Create the Repository
+Create the |chef repo|
 =====================================================
 .. include:: ../../includes_repository/includes_repository_create.rst
 

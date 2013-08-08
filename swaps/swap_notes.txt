@@ -3,18 +3,20 @@
 
 .. |note xxxxx| replace:: xxxxx                                                  
 
-.. Note strings used in Chef Documentation
+.. Note strings used in the documentation
 ..
 
 .. |note api chef server manage clients with knife| replace:: In general, the |chef api client| list should be managed using |knife| or the |chef server| management console, as opposed to the |api chef server|.
 
-.. |note api cookbooks site using knife| replace:: In general, using |knife| (and the ``knife cookbook site`` sub-command) to manage cookbooks that are located on the Cookbooks site is more efficient than using the |api cookbooks site|. Using |knife| to manage cookbooks that are located on the Cookbooks site is recommended. This document provides information about the |api cookbooks site| in the event that using the API is necessary.
+.. |note api cookbooks site using knife| replace:: In general, using |knife| (and the ``knife cookbook site`` sub-command) to manage cookbooks that are located on the Cookbooks site is more efficient than using the |api cookbooks site| and is the recommended approach for managing cookbooks on that site. This document provides information about the |api cookbooks site| in the event that using the API is necessary.
 
-.. |note chef_gem vs gem_package| replace:: The |resource chef_gem| and |resource package_gem| resources are both used to install |ruby| |gems|. For any machine on which |chef| is installed, there are two instances of |ruby|. One is the standard, system-wide instance of |ruby| and the other is a dedicated instance that is available only to |chef|. Use the |resource chef_gem| resource to install |gems| into the instance of |ruby| that is dedicated to |chef|. Use the |resource package_gem| resource to install all other |gems| (i.e. install |gems| system-wide).
+      
 
-.. |note cookbook template erubis| replace:: |chef| uses |erubis| for templates, which is a fast, secure, and extensible implementation of embedded |ruby|. |erubis| should be familiar to members of the |ruby on rails|, |merb|, or |puppet| communities. For more information about |erubis|, see: |http erubis main|.      
+.. |note chef_gem vs gem_package| replace:: The |resource chef_gem| and |resource package_gem| resources are both used to install |ruby| |gems|. For any machine on which the |chef client| is installed, there are two instances of |ruby|. One is the standard, system-wide instance of |ruby| and the other is a dedicated instance that is available only to the |chef client|. Use the |resource chef_gem| resource to install |gems| into the instance of |ruby| that is dedicated to the |chef client|. Use the |resource package_gem| resource to install all other |gems| (i.e. install |gems| system-wide).
 
-.. |note env resource variable on unix| replace:: On |unix|-based systems, the best way to manipulate environment keys is with the ENV variable in |ruby|; however, this approach does not have the same "permanent" effect as using the ``env`` resource.
+.. |note cookbook template erubis| replace:: The |chef client| uses |erubis| for templates, which is a fast, secure, and extensible implementation of embedded |ruby|. |erubis| should be familiar to members of the |ruby on rails|, |merb|, or |puppet| communities. For more information about |erubis|, see: http://www.kuwata-lab.com/erubis/.      
+
+.. |note env resource variable on unix| replace:: On |unix|-based systems, the best way to manipulate environment keys is with the ``ENV`` variable in |ruby|; however, this approach does not have the same permanent effect as using the |resource env| resource.
 
 .. |note erlang_call resource must be on path| replace:: The ``erl_call`` command needs to be on the path for this resource to work properly.
 
@@ -22,7 +24,7 @@
 
 .. |note file resource use other resources| replace:: Other resources should be used to manage files that are not present on a node. Use |resource cookbook_file| when copying a file from a cookbook, |resource template| when using a template, and |resource remote_file| when transferring files from remote locations.
 
-.. |note install trial for hosted| replace:: If you want to install |chef| and try it out without having to install |chef server| on a physical machine, sign up for |chef hosted|: http://www.opscode.com/hosted-chef/. The first five nodes are free of charge. Once you have signed up you can continue with the installation process. You can decide to use another type of |chef server| later if you want to.
+.. |note install trial for hosted| replace:: To install |chefx| and try it out without having to install the |chef server| on a physical machine, sign up for |chef hosted|: http://www.opscode.com/hosted-chef/. After signing up, continue with the installation process.
 
 .. |note knife quick reference| replace:: The |knife qr| provides an all-in-one quick reference of |knife| commands. View a web-based PNG file here: http://docs.opscode.com/_images/qr_knife_web.png. Or download the source files from here: https://github.com/opscode/quick-reference. Print the front/back source files and laminate them for best effect.
 
@@ -30,7 +32,7 @@
 
 .. |note metadata json| replace:: A |metadata json| file can be edited directly, should temporary changes be required. Any subsequent upload or action that generates metadata will cause the existing |metadata json| file to be overwritten with the newly generated metadata. Therefore, any permanent change to metadata that is required should only be made in the |metadata rb| file.
 
-.. |note registry_key resource recursive| replace:: Be careful when using the ``:delete_key`` action with the ``recursive`` attribute. This will delete the registry key and all of its subkeys and all of the values associated with them. This cannot be undone by |chef|.
+.. |note registry_key resource recursive| replace:: Be careful when using the ``:delete_key`` action with the ``recursive`` attribute. This will delete the registry key, all of its subkeys and all of the values associated with them. This cannot be undone by the |chef client|.
 
 .. |note registry_key architecture| replace:: The ``ARCHITECTURE`` attribute should only specify ``:x86_64`` or ``:i386`` when it is necessary to write 32-bit (``:i386``) or 64-bit (``:x86_64``) values on a 64-bit machine. ``ARCHITECTURE`` will default to ``:machine`` unless a specific value is given.
 
@@ -38,18 +40,19 @@
 
 .. |note remote_file resource fetch from files directory| replace:: Fetching files from the ``files/`` directory in a cookbook should be done with the |resource cookbook_file| resource.
 
-.. |note resource_based_on_package| replace:: In many cases, it is better to use the |resource package| resource instead of this one. This is because when the |resource package| resource is used in a recipe, |chef| will use details that are collected by |ohai| at the start of the |chef| run to determine the correct package application. Using the |resource package| resource allows a recipe to be authored in a way that allows it to be used across many platforms. That said, there are scenarios where using an application-specific package is preferred.
-
+.. |note resource_based_on_package| replace:: In many cases, it is better to use the |resource package| resource instead of this one. This is because when the |resource package| resource is used in a recipe, the |chef client| will use details that are collected by |ohai| at the start of the |chef client| run to determine the correct package application. Using the |resource package| resource allows a recipe to be authored in a way that allows it to be used across many platforms. That said, there are scenarios where using an application-specific package is preferred.
 
 .. |note scm resource use with resource deploy| replace:: This resource is often used in conjunction with the |resource deploy| resource.
 
-.. |note subcommand_is_open_source_only| replace:: This subcommand ONLY works when run against the open source |chef server| and will not run against any other flavor of |chef|, including |chef hosted| and |chef private|.
+.. |note see_attributes_overview| replace:: Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, |ohai| collects attribute data about each node at the start of the |chef client| run. See http://docs.opscode.com/chef_overview_attributes.html for more information about how all of these attributes fit together. 
 
-.. |note doc_version_11-4| replace:: This is documentation for |chef| 11.0, 11.2, and 11.4. For documentation about the current version of |chef|, see http://docs.opscode.com.
+.. |note subcommand_is_open_source_only| replace:: This subcommand ONLY works when run against the open source |chef server| and will not run against |chef hosted| and |chef private|.
+
+.. |note doc_version_11-4| replace:: This is documentation for |chefx| 11.0, 11.2, and 11.4. For documentation about the current version of |chefx|, see http://docs.opscode.com.
 
 .. |note yum resource using file names| replace:: Support for using file names to install packages (as in ``yum_package "/bin/sh"``) is not available because the volume of data required to parse for this is excessive.
 
-
+.. |warning selinux_file_based_resources| replace:: For a machine on which |selinux| is enabled, the |chef client| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy.
 
 
 

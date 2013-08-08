@@ -1,10 +1,10 @@
 =====================================================
-An Overview of |chef|
+An Overview of |chefx|
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-The following diagram shows the relationships between the various elements of a |chef| organization, including the nodes, the server, and the workstations. These elements work together to provide |chef| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
+The following diagram shows the relationships between the various elements of |chefx|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
 .. image:: ../../images/overview_chef_draft.png
 
@@ -16,7 +16,7 @@ Nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
 
-There are two types of nodes that |chef| can manage:
+The following types of nodes can be managed:
 
 .. list-table::
    :widths: 60 420
@@ -63,13 +63,13 @@ Some important components of workstations include:
    * - .. image:: ../../images/icon_repository.png
      - .. include:: ../../includes_repository/includes_repository.rst
 
-|chef| assumes that system administrators and developers know best about how the infrastructure should be put together. |chef| makes as few decisions on its own as possible. When a decision must be made, |chef| uses a reasonable default setting that can be easily changed by the system administrators and developers, most often by defining attributes in cookbooks that take precedence over the default attributes present on nodes.
+|chefx| assumes that system administrators and developers know best about how the infrastructure should be put together. The |chef client| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed by the system administrators and developers, most often by defining attributes in cookbooks that take precedence over the default attributes present on nodes.
 
 Chef Server
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-There are three types of |chef| servers:
+There are three types of |chefx| servers:
 
 .. list-table::
    :widths: 60 420
@@ -80,11 +80,11 @@ There are three types of |chef| servers:
    * - .. image:: ../../images/icon_chef_hosted.png
      - .. include:: ../../includes_chef/includes_chef_hosted.rst
 
-       |chef hosted| is based on the idea that an infrastructure management tool should be built around a collection of API primitives. By using an API to talk to a cloud provider (such as |amazon vpc|, |windows azure|, or |rackspace|), it allows the freedom to think of those primitives as building blocks. |chef| only needs to know about the desired state, how it should get there, and what the proper functionality of that desired state should be.
+       |chef hosted| is based on the idea that an infrastructure management tool should be built around a collection of API primitives. By using an API to talk to a cloud provider (such as |amazon vpc|, |windows azure|, or |rackspace|), it allows the freedom to think of those primitives as building blocks. |chefx| only needs to know about the desired state, how it should get there, and what the proper functionality of that desired state should be.
    * - .. image:: ../../images/icon_chef_private.png
      - .. include:: ../../includes_chef/includes_chef_private.rst
 
-       |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located behind the firewall. |chef private| is the same as |chef hosted| in every other way. |chef hosted| is the largest |chef private| deployment in the world.
+       |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located behind the firewall. |chef private| is the same as |chef hosted| in every other way.
    * - 
      - .. include:: ../../includes_chef/includes_chef_open_source.rst
 
@@ -143,7 +143,7 @@ Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-|chef| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chef| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
+|chefx| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chefx| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
 Some important components of cookbooks include:
 
@@ -160,14 +160,14 @@ Some important components of cookbooks include:
    * - .. image:: ../../images/icon_cookbook_versions.png
      - .. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
 
-|chef| will run a recipe only when asked. When |chef| runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, |chef| won't change anything.
+The |chef client| will run a recipe only when asked. When the |chef client| runs the same recipe more than once, the results will be the same system state each time. When a recipe is run against a system, but nothing has changed on either the system or in the recipe, the |chef client| won't change anything.
 
 In addition to attributes, recipes, and versions, the following items are also part of cookbooks:
 
-* Resources and providers. A resource is a package, a service, a group of users, and so on. A resource tells |chef| which provider to use during a |chef| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. |chef| includes default providers that cover all of the most common scenarios.
+* Resources and providers. A resource is a package, a service, a group of users, and so on. A resource tells the |chef client| which provider to use during a |chef client| run for various tasks, such as installing packages, running |ruby| code, or accessing directories and file systems. A resource is generic: "install program A" while a provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. Default providers exist that cover the most common scenarios.
 * File distributions. A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
 * Definitions. A definition is used to create new resources by stringing together one (or more) existing resources.
-* Libraries. A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef| language or to implement a new class.
+* Libraries. A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chefx| language or to implement a new class.
 * Templates. A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios.
 * Configuration files. A metadata file to ensure that each cookbook is correctly deployed to each node.
 
@@ -181,15 +181,6 @@ Conclusion
 
 For more information ...
 -----------------------------------------------------
-For history of |chef|, where it came from and how it evolved, watch these two (short) videos:
-
-* Part one: |http opscode youtube short part one|
-* Part two: |http opscode youtube short part two|
-
-For more information about |opscode|, cookbooks for |chef|, and the |chef| community:
-
-* |http opscode|
-* |http community|
-* |http community cookbooks|
+.. include:: ../../includes_chef/includes_chef_for_more_info.rst
 
 

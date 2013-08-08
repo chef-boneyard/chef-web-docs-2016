@@ -25,7 +25,7 @@ Requirements
 * A live |chef server 10| server
 * A live |chef server 11| server
 * A workstation (running |knife|) that can access both the |chef server 10| and |chef server 11| servers
-* The ability to run the ``knife download`` and ``knife upload`` subcommands
+* The ability to run the |subcommand knife download| and |subcommand knife upload| subcommands
 
 
 Set up Access to |chef server 10|
@@ -179,4 +179,4 @@ This will transfer all of the data in the transfer directory to |chef server 11|
 
 Last Steps
 ===============================
-At this point, the |chef server 11| should have all of the data that used to be on the |chef server 10|. Point the DNS or load balancer at the new |chef server|. The |chef client| should continue to run properly on all nodes and each workstation should be able to manage |chef| objects using |knife|. If issues remain, try the IRC channel or email the chef@lists.opscode.com discussion alias. If ``knife-essentials`` is the issue, file an issue in |github| or check the IRC channel.
+At this point, the |chef server 11| should have all of the data that used to be on the |chef server 10|. Point the DNS or load balancer at the new |chef server|. The |chef client| should continue to run properly on all nodes and each workstation should be able to manage objects on the |chef server| using |knife|. If issues remain, try the IRC channel or email the chef@lists.opscode.com discussion alias. If ``knife-essentials`` is the issue, file an issue in |github| or check the IRC channel.

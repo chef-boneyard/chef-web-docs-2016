@@ -3,9 +3,9 @@ About Attributes
 =====================================================
 .. include:: ../../includes_node/includes_node_attribute.rst
 
-|chef| uses six types of attributes to determine the value that is applied to a node during the |chef| run. In addition, |chef| sources attribute values from up to five locations. The combination of attribute types and sources allows for up to 15 different competing values to be available to |chef| during the |chef| run.
+The |chef client| uses six types of attributes to determine the value that is applied to a node during the |chef client| run. In addition, the |chef client| sources attribute values from up to five locations. The combination of attribute types and sources allows for up to 15 different competing values to be available to the |chef client| during the |chef client| run.
 
-So how does |chef| determine which value should be applied? Keep reading to learn more about how attributes work with |chef|, including more about the types of attributes, where attributes are saved, and how |chef| chooses which attribute to apply.
+So how does the |chef client| determine which value should be applied? Keep reading to learn more about how attributes work, including more about the types of attributes, where attributes are saved, and how the |chef client| chooses which attribute to apply.
 
 Attribute Types
 =====================================================
@@ -15,9 +15,9 @@ Attribute Types
 
 Attribute Sources
 ===================================================== 
-Attributes are provided to |chef| from the following locations:
+Attributes are provided to the |chef client| from the following locations:
 
-* Nodes (collected by |ohai| at the start of each |chef| run)
+* Nodes (collected by |ohai| at the start of each |chef client| run)
 * Attribute files (in cookbooks)
 * Recipes (in cookbooks)
 * Environments
@@ -29,14 +29,14 @@ If we go back to the `overview of Chef <http://docs.opscode.com/chef_overview.ht
 
 where:
 
-* Many attributes are maintained in the |chef| repository for environments, roles, and cookbooks (attribute files and recipes)
-* Many attributes are collected by |ohai| on each individual node at the start of every |chef| run
-* The attributes that are maintained in the |chef| repository are uploaded to the |chef server| from the workstation, periodically
-* The |chef client| will pull down the node object from the |chef server| (which contains the attribute data from the previous |chef| run), after which all attributes (except ``normal`` are reset)
+* Many attributes are maintained in the |chef repo| for environments, roles, and cookbooks (attribute files and recipes)
+* Many attributes are collected by |ohai| on each individual node at the start of every |chef client| run
+* The attributes that are maintained in the |chef repo| are uploaded to the |chef server| from the workstation, periodically
+* The |chef client| will pull down the node object from the |chef server| (which contains the attribute data from the previous |chef client| run), after which all attributes (except ``normal`` are reset)
 * The |chef client| will update the cookbooks on the node (if required), which updates the attributes contained in attribute files and recipes
 * The |chef client| will update the role and environment data (if required)
 * The |chef client| will rebuild the attribute list and apply attribute precedence while configuring the node
-* The |chef client| pushes the node object to the |chef server| at the end of the |chef| run; the updated node object on the |chef server| is then indexed for search and is stored until the next |chef| run
+* The |chef client| pushes the node object to the |chef server| at the end of the |chef client| run; the updated node object on the |chef server| is then indexed for search and is stored until the next |chef client| run
 
 Automatic (|ohai|)
 -----------------------------------------------------

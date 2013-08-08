@@ -4,7 +4,7 @@ Nodes
 
 .. include:: ../../includes_node/includes_node.rst
 
-There are two types of nodes that |chef| can manage:
+There are two types of nodes that be managed:
 
 .. list-table::
    :widths: 60 420
@@ -30,9 +30,7 @@ Some important components of nodes include:
    * - .. image:: ../../images/icon_ohai.png
      - .. include:: ../../includes_ohai/includes_ohai.rst
 
-The Chef Run
+The chef-client Run
 =====================================================
 .. include:: ../../includes_chef_client/includes_chef_client_run.rst
-
-
 

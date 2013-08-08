@@ -1,19 +1,3 @@
-=====================================================
-/search/INDEX
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_search_index.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index.rst
-
-.. include:: ../../includes_search/includes_search_query_syntax.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_get.rst
-
-POST
-=====================================================
-.. include:: ../../includes_search/includes_search_partial.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst
+.. include:: ../../chef_master/source/api_chef_server_search_index.rst

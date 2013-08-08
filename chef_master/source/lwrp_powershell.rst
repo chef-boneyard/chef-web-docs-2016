@@ -6,7 +6,7 @@ powershell Lightweight Resource
 
 The |cookbook powershell| cookbook contains the following lightweight resource: ``powershell``.
 
-.. warning:: The |resource powershell_script| resource was added to |chef| in version 11.6 as a core resource. In general, it is recommended to use the |resource powershell_script| resource instead of the ``powershell`` lightweight resource included in the |cookbook powershell| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer core |chef| resource.
+.. warning:: The |resource powershell_script| resource was added to |chefx| in version 11.6 as a core resource. In general, it is recommended to use the |resource powershell_script| resource instead of the ``powershell`` lightweight resource included in the |cookbook powershell| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer resource.
 
 powershell
 =====================================================

@@ -46,8 +46,8 @@ The following example shows how to use the ``search`` method in the |dsl recipe|
 
 where 
 
-* the search will use both of the ``execute`` blocks, unless the condition specified by the ``not_if`` commands are met
-* the ``environments`` attribute in the first ``execute`` block is being used to define values that appear as variables in the |openvpn| configuration 
-* the ``template`` block tells |chef| which template to use
+* the search will use both of the |resource execute| resources, unless the condition specified by the ``not_if`` commands are met
+* the ``environments`` attribute in the first |resource execute| resource is being used to define values that appear as variables in the |openvpn| configuration 
+* the |resource template| resource tells the |chef client| which template to use
 
 

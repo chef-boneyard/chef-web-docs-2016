@@ -1,7 +1,3 @@
-=====================================================
-Inline Compile Mode
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/lwrp_common_inline_compile.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst
+.. include:: ../../chef_master/source/lwrp_common_inline_compile.rst

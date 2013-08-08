@@ -1,11 +1,3 @@
-=====================================================
-/environments/NAME/nodes
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_environments_node.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_nodes.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_nodes_get.rst
+.. include:: ../../chef_master/source/api_chef_server_environments_node.rst

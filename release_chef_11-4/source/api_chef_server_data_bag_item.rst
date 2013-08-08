@@ -1,21 +1,3 @@
-=====================================================
-/data/NAME/ITEM
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_data_bag_item.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_data_bag/includes_data_bag_item.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item.rst
-
-DELETE
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_delete.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_get.rst
-
-PUT
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_item_put.rst
+.. include:: ../../chef_master/source/api_chef_server_data_bag_item.rst

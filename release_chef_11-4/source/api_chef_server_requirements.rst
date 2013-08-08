@@ -1,7 +1,3 @@
-=====================================================
-Requirements
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_requirements.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_requirements.rst
+.. include:: ../../chef_master/source/api_chef_server_requirements.rst

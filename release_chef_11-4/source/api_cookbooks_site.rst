@@ -1,31 +1,6 @@
-=====================================================
-Cookbooks Site API
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_cookbooks_site.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_site.rst
-
-.. note:: |note api cookbooks site using knife|
-
-Endpoints
-=====================================================
-The |api cookbooks site| has the following endpoints:
-
-* :doc:`api_cookbooks_site_cookbooks`
-* :doc:`api_cookbooks_site_cookbooks_name`
-* :doc:`api_cookbooks_site_cookbooks_version`
-* :doc:`api_cookbooks_site_search`
-
-
-.. toctree::
-   :hidden:
-
-   api_cookbooks_site_cookbooks
-   api_cookbooks_site_cookbooks_name
-   api_cookbooks_site_cookbooks_version
-   api_cookbooks_site_search
-
+.. include:: ../../chef_master/source/api_cookbooks_site.rst
 
 
 

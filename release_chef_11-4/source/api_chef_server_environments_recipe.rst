@@ -1,14 +1,6 @@
-=====================================================
-/environments/NAME/recipes
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_environments_recipe.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_recipes.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_recipes_get.rst
+.. include:: ../../chef_master/source/api_chef_server_environments_recipe.rst
 
 
 

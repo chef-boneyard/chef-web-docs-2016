@@ -14,7 +14,7 @@ Environment Attributes
 =====================================================
 .. include:: ../../includes_environment/includes_environment_attribute.rst
 
-.. note:: Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, |ohai| collects attribute data about each node at the start of the |chef| run. See the :doc:`overview of attributes </chef_overview_attributes>` for more information about how all of these attributes fit together.
+.. note:: |note see_attributes_overview|
 
 Attribute Types
 -----------------------------------------------------

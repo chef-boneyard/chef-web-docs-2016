@@ -10,7 +10,7 @@ The ``rights`` attribute can be used in a recipe to manage access control lists 
 where
 
 * ``permission`` is used to specify which rights will be granted to the ``principal``. The possible values are: ``:read``, ``:write``, ``:full_control``, ``:modify``, and ``:deny``. These permissions are cumulative. If ``:write`` is specified, then it includes ``:read``. If ``:full_control`` is specified, then it includes both ``:write`` and ``:read``. If ``:deny`` is specified, then the user or group will not have rights to the object. (For those who know the |windows| API: ``:read`` corresponds to ``GENERIC_READ`` and ``GENERIC_EXECUTE``; ``:write`` corresponds to ``GENERIC_WRITE``, ``GENERIC_READ``, and ``GENERIC_EXECUTE``; ``:full_control`` corresponds to ``GENERIC_ALL``, which allows a user to change the owner and other metadata about a file.)
-* ``principal`` is used to specify a group or user name. This is identical to what is entered in the login box for |windows|, such as ``user_name``, ``domain\user_name``, or ``user_name@fully_qualified_domain_name``. |chef| does not need to know if a principal is a user or a group.
+* ``principal`` is used to specify a group or user name. This is identical to what is entered in the login box for |windows|, such as ``user_name``, ``domain\user_name``, or ``user_name@fully_qualified_domain_name``. The |chef client| does not need to know if a principal is a user or a group.
 * ``option`` is a hash that contains advanced rights options. For example, the rights to a directory that only applies to its children might look something like: ``rights :write, "domain\group_name", :option_type => value`` where ``option_type`` is one of the following:
 
    .. list-table::
@@ -41,5 +41,5 @@ Some other important things to know when using the ``rights`` attribute:
 
 * Order independence. It doesn't matter if ``rights :deny, "Sally"`` is placed before or after ``rights :read, "Sally"``, Sally will be unable to read the document.
 * Only inherited rights remain. All existing explicit rights on the object are removed and replaced.
-* If rights are not specified, nothing will be changed. |chef| does not clear out the rights on a file or directory if rights are not specified. 
+* If rights are not specified, nothing will be changed. The |chef client| does not clear out the rights on a file or directory if rights are not specified. 
 * Changing inherited rights can be expensive. |windows| will propagate rights to all children recursively due to inheritance. This is a normal aspect of |windows|, so consider the frequency with which this type of action is necessary and take steps to control this type of action if performance is the primary consideration.

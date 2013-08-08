@@ -1,14 +1,6 @@
-=====================================================
-/environments/NAME/cookbooks
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_environments_cookbooks.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_environment_cookbooks_get.rst
+.. include:: ../../chef_master/source/api_chef_server_environments_cookbooks.rst
 
 
 

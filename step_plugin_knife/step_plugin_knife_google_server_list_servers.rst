@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view a list of all servers in the ``us-central2-a`` zone, including those that may not be managed by |chef|, enter:
+To view a list of all servers in the ``us-central2-a`` zone, including those that may not be managed by the |chef client|, enter:
 
 .. code-block:: bash
 

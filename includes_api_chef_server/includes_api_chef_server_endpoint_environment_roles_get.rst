@@ -32,7 +32,7 @@ The response will return something like the following:
      ]
    }
 
-|chef| will pick up the ``_default`` run-list if ``env_run_list[environment_name]`` is null or nonexistent.
+The |chef client| will pick up the ``_default`` run-list if ``env_run_list[environment_name]`` is null or nonexistent.
 
 **Response Codes**
 

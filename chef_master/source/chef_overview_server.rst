@@ -4,7 +4,7 @@ The Chef Server
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-There are three types of |chef| servers:
+There are three types of |chefx| servers:
 
 .. list-table::
    :widths: 60 420
@@ -15,7 +15,7 @@ There are three types of |chef| servers:
    * - :doc:`Hosted Chef </chef_overview_server_hosted>`
      - .. include:: ../../includes_chef/includes_chef_hosted.rst
 
-       |chef hosted| is based on the idea that an infrastructure management tool should be built around a collection of API primitives. By using an API to talk to a cloud provider (such as |amazon vpc|, |windows azure|, or |rackspace|), it allows the freedom to think of those primitives as building blocks. |chef| only needs to know about the desired state, how it should get there, and what the proper functionality of that desired state should be.
+       |chef hosted| is based on the idea that an infrastructure management tool should be built around a collection of API primitives. By using an API to talk to a cloud provider (such as |amazon vpc|, |windows azure|, or |rackspace|), it allows the freedom to think of those primitives as building blocks. The |chef client| only needs to know about the desired state, how it should get there, and what the proper functionality of that desired state should be.
    * - :doc:`Private Chef </chef_overview_server_private>`
      - .. include:: ../../includes_chef/includes_chef_private.rst
 
@@ -77,8 +77,8 @@ Each type of |chef server| provides the following features:
    * - :doc:`Environments </essentials_environments>`
      - An environment is a way to map an organization’s real-life workflow to what can be configured and managed when using |chef server|.
    * - :doc:`Node Objects </essentials_node_object>`
-     - The node object consists of the run-list and node attributes, which is a |json| file that is stored on the |chef server|. The |chef client| gets a copy of the node object from the |chef server| during each |chef| run and places an updated copy on the |chef server| at the end of each |chef| run.
+     - The node object consists of the run-list and node attributes, which is a |json| file that is stored on the |chef server|. The |chef client| gets a copy of the node object from the |chef server| during each |chef client| run and places an updated copy on the |chef server| at the end of each |chef client| run.
    * - :doc:`Roles </essentials_roles>`
-     - A role is a way to define certain patterns and processes that exist across nodes in a |chef| organization as belonging to a single job function. 
+     - A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function. 
    * - :doc:`Search </essentials_search>`
      - Search indexes allow queries to be made for any type of data that is indexed by the |chef server|, including data bags (and data bag items), environments, nodes, and roles. 

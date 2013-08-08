@@ -5,6 +5,6 @@ The authentication process ensures the |chef server| responds only to requests m
 
 * |chef client|
 * |knife|
-* |chef validator| (only during the first |chef| run on a node)
+* |chef validator| (only during the first |chef client| run on a node)
 
 Each request to the |chef server| from those executables encrypts a special group of HTTP headers along with the private key. The |chef server| then uses the public key to decrypt the headers and verify the contents.

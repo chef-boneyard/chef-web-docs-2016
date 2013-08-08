@@ -8,4 +8,4 @@ The |chef client| will load |knife| and |knife| plugin commands from the followi
 * A ``.chef/plugins/knife`` directory in the cookbook repository
 * A plugin installed from |rubygems|. (For more information about releasing a plugin on |rubygems|, see: http://guides.rubygems.org/make-your-own-gem/.)
 
-This approach allows |knife| plugins to be reused across projects in the home directory, kept in a repository that is accessible to other team members, and distributable to the |chef| community using |rubygems|.
+This approach allows |knife| plugins to be reused across projects in the home directory, kept in a repository that is accessible to other team members, and distributable to the community using |rubygems|.

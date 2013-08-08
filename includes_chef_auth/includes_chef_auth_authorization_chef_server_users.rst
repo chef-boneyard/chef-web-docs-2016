@@ -14,4 +14,4 @@ For example, the user of a workstation is an administrator for the |chef server|
 
 Effectively, it's the private key that the |chef hosted| and |chef private| servers consider to be "users".
 
-The role-based access control model in the |chef hosted| and |chef private| servers also maps to the common users and groups approach to security, where each user of |chef| can be assigned permissions individually, or each user can be assigned to one (or more) groups.
+The role-based access control model in the |chef hosted| and |chef private| servers also maps to the common users and groups approach to security, where each user can be assigned permissions individually, or each user can be assigned to one (or more) groups.

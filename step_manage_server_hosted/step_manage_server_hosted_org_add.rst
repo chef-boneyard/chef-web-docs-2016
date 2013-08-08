@@ -21,7 +21,7 @@ To create a new organization:
 
    .. image:: ../../images/step_manage_server_hosted_org_add_3.png
 
-#. Download your validation key and a sample Knife configuration file. You need to use the validation key to register new clients using this organization. The Knife configuration file allows you to start using |knife| --- the command line tool for |chef| --- immediately.
+#. Download your validation key and a sample Knife configuration file. You need to use the validation key to register new clients using this organization. The Knife configuration file allows you to start using |knife| right away.
 
    .. image:: ../../images/step_manage_server_hosted_org_add_4.jpg
 

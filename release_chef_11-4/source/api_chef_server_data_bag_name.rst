@@ -1,15 +1,3 @@
-=====================================================
-/data/NAME
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_data_bag_name.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_get.rst
-
-POST
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_post.rst
+.. include:: ../../chef_master/source/api_chef_server_data_bag_name.rst

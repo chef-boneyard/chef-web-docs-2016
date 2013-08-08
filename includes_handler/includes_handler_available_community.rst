@@ -18,7 +18,7 @@ The following handlers are available from the open source community:
    * - Cloudkick <https://github.com/ampledata/chef/blob/master/chef/lib/chef/handler/cloudkick_handler.rb>`_
      - A handler that collects exception and report handler data and sends it to |cloudkick|, a set of cloud server monitoring and management tools.
    * - Datadog <https://github.com/DataDog/chef-handler-datadog>`_
-     - A handler that collects |chef| stats and sends them into a |datadog| newsfeed.
+     - A handler that collects |chef client| stats and sends them into a |datadog| newsfeed.
    * - Flowdock <https://github.com/mmarschall/chef-handler-flowdock>`_
      - A handler that collects exception and report handler data and sends it to users via the |flowdock| API..
    * - Graphite <https://github.com/imeyer/chef-handler-graphite/wiki>`_
@@ -30,9 +30,9 @@ The following handlers are available from the open source community:
    * - HipChat <https://github.com/mojotech/hipchat/blob/master/lib/hipchat/chef.rb>`_
      - A handler that collects exception handler data and sends it to |hipchat|, a hosted private chat service for companies and teams.
    * - IRC Snitch <https://rubygems.org/gems/chef-irc-snitch>`_
-     - A handler that notifies administrators (via |irc|) when a |chef| run fails.
+     - A handler that notifies administrators (via |irc|) when a |chef client| run fails.
    * - Nagios NSCA <https://github.com/ranjibd/nsca_handler>`_
-     - A handler that supports |nagios nsca|, an add-on for |nagios|. This will allow |chef| report and exception handler messages to be passed to |nagios| from |nagios nsca|.
+     - A handler that supports |nagios nsca|, an add-on for |nagios|. This will allow the |chef client| to report and exception handler messages to be passed to |nagios| from |nagios nsca|.
    * - Simple Email <https://rubygems.org/gems/chef-handler-mail>`_
      - A handler that collects exception and report handler data and then uses |pony| to send email reports that are based on |erubis| templates.
    * - SNS <https://rubygems.org/gems/chef-handler-sns>`_
@@ -40,4 +40,4 @@ The following handlers are available from the open source community:
    * - Splunk Storm <http://ampledata.org/splunk_storm_chef_handler.html>`_
      - A handler that supports exceptions and reports for |splunk storm|.
    * - Updated Resources <https://rubygems.org/gems/chef-handler-updated-resources>`_
-     - A handler that provides a simple way to display resources that were updated during a |chef| run.
+     - A handler that provides a simple way to display resources that were updated during a |chef client| run.

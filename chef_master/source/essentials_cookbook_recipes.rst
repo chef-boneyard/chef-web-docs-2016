@@ -8,7 +8,7 @@ Recipe Attributes
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
 
-.. note:: Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, |ohai| collects attribute data about each node at the start of the |chef| run. See the `overview of attributes <http://docs.opscode.com/chef_overview_attributes.html>`_ for more information about how all of these attributes fit together.
+.. note:: |note see_attributes_overview|
 
 Attribute Types
 -----------------------------------------------------
@@ -126,15 +126,15 @@ Use Tags
 
 End a |chef| Run 
 -----------------------------------------------------
-Sometimes it may be necessary to end a |chef| run before it completes. There are a few ways to do this:
+Sometimes it may be necessary to end a |chef client| run before it completes. There are a few ways to do this:
 
 * Using the ``return`` keyword and a condition
 * Using the ``raise`` keyword to trigger an unhandled exception
 * Using the ``rescue`` block in |ruby| code
-* Using ``Chef::Application.fatal!`` to log a fatal message to the |chef| logger and ``STDERR``
+* Using ``Chef::Application.fatal!`` to log a fatal message to the logger and ``STDERR``
 * Using an :doc:`exception handler </essentials_handlers>`
 
-The following sections show various approaches to ending a |chef| run.
+The following sections show various approaches to ending a |chef client| run.
 
 Return Keyword
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

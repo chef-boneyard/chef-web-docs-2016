@@ -12,7 +12,7 @@ Authentication
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_validator.rst
 
-During a |chef| Run
+During a |chef client| Run
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst
 

@@ -6,7 +6,7 @@ Directory Structure
 
 .. include:: ../../includes_repository/includes_repository_directory.rst
 
-The sub-directories in the |chef| repository are:
+The sub-directories in the |chef repo| are:
 
 * ``certificates/``
 * ``.chef/``
@@ -30,7 +30,7 @@ config/
 =====================================================
 .. include:: ../../includes_repository/includes_repository_directory_config.rst
 
-The |chef| repository uses two configuration files: ``rake.rb`` (required) and ``knife.rb`` (optional).
+The |chef repo| uses two configuration files: ``rake.rb`` (required) and ``knife.rb`` (optional).
 
 rake.rb
 -----------------------------------------------------

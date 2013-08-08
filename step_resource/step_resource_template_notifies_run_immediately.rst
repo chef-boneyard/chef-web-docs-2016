@@ -9,7 +9,7 @@ By default, notifications are ``:delayed``, that is they are queued up as they a
      notifies :run, "execute[test-nagios-config]", :immediately
    end
 
-and then |chef| would immediately run the following:
+and then the |chef client| would immediately run the following:
 
 .. code-block:: ruby
 

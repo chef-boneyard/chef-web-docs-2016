@@ -43,4 +43,4 @@ The following example shows how to use a data bag named "ssl_certificate" to:
       
    end
 
-where ``matching_node`` represents a type of node in the |chef| organization.
+where ``matching_node`` represents a type of node.

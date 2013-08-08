@@ -1,11 +1,3 @@
-=====================================================
-/roles/NAME/environments/NAME
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_roles_name_environments_name.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environment_name.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_role_name_environment_name_get.rst
+.. include:: ../../chef_master/source/api_chef_server_roles_name_environments_name.rst

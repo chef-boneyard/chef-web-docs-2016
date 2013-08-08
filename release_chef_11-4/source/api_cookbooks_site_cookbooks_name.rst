@@ -1,15 +1,3 @@
-=====================================================
-/cookbooks/NAME
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_cookbooks_site_cookbooks_name.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name.rst
-
-DELETE
-=====================================================
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name_delete.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name_get.rst
+.. include:: ../../chef_master/source/api_cookbooks_site_cookbooks_name.rst

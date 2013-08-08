@@ -1,35 +1,3 @@
-=====================================================
-powershell Lightweight Resource
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/lwrp_powershell.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-|cookbook name powershell|
-
-The |cookbook powershell| cookbook contains the following lightweight resource: ``powershell``.
-
-powershell
-=====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_powershell.rst
-
-.. note:: This lightweight resource is part of the |cookbook powershell| cookbook (http://community.opscode.com/cookbooks/powershell).
-
-Actions
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_powershell_actions.rst
-
-Attributes
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_powershell_attributes.rst
-
-Examples
------------------------------------------------------
-.. include:: ../../step_lwrp/step_lwrp_powershell_change_hostname.rst
-
-.. include:: ../../step_lwrp/step_lwrp_powershell_pass_env_variable.rst
-
-.. include:: ../../step_lwrp/step_lwrp_powershell_set_cwd_attribute.rst
-
-.. include:: ../../step_lwrp/step_lwrp_powershell_use_cwd.rst
-
-.. include:: ../../step_lwrp/step_lwrp_powershell_write_to_interpolated_path.rst
+.. include:: ../../chef_master/source/lwrp_powershell.rst

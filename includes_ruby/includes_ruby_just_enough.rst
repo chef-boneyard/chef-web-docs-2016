@@ -178,11 +178,11 @@ Call a method on something with ``.method_name()``:
 
 To learn more about |ruby|, see the following:
 
-* |http ruby lang org|
-* |http opscode blog btm ruby|
-* |http codeacademy ruby|
-* |http rubycentral book|
-* |http ruby doc org|
+* |url ruby_lang_org|
+* |url ruby_power_of_chef|
+* |url codeacademy|
+* |url ruby_central_book|
+* |url ruby_doc_org|
 
 
 

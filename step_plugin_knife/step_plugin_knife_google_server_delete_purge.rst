@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To delete a server using the ``--purge`` option. which will delete every |chef client| and |chef| node:
+To delete a server using the ``--purge`` option. which will delete every |chef client| and node:
 
 .. code-block:: bash
 

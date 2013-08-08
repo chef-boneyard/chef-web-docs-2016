@@ -1,19 +1,5 @@
-=====================================================
-/data
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_data_bag.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_data_bag/includes_data_bag.rst
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags.rst
-
-GET
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_get.rst
-
-POST
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bags_post.rst
+.. include:: ../../chef_master/source/api_chef_server_data_bag.rst
 
 

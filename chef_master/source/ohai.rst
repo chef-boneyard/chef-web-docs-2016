@@ -9,9 +9,10 @@ Automatic Attributes
 .. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
 
 **Get a list of automatic attributes for a node**
+
 .. include:: ../../includes_ohai/includes_ohai_attribute_list.rst
 
-.. note:: Attributes can be configured in cookbooks (attribute files and recipes), roles, and environments. In addition, |ohai| collects attribute data about each node at the start of the |chef| run. See the `overview of attributes <http://docs.opscode.com/chef_overview_attributes.html>`_ for more information about how all of these attributes fit together.
+.. note:: |note see_attributes_overview|
 
 Attribute Persistence
 -----------------------------------------------------
@@ -23,7 +24,7 @@ Attribute Precedence
 
 Install |ohai|
 =====================================================
-|ohai| is a requirement for |chef| and is installed whenever (and wherever) |chef| is installed. |ohai| can also be installed separately from |chef|.
+|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately from |chefx|.
 
 Install from Github
 -----------------------------------------------------
@@ -39,7 +40,7 @@ Install on Microsoft Windows
 
 Create |ohai| Plugins
 =====================================================
-|ohai| is a requirement for |chef| and is installed whenever (and wherever) |chef| is installed. |ohai| can also be installed separately from |chef|.
+|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately from |chefx|.
 
 Create a Simple Plugin
 -----------------------------------------------------
@@ -66,7 +67,7 @@ Now to fire up irb (and assuming the directory "plugins" is the current folder; 
 
 Use a Mash
 -----------------------------------------------------
-Most of the information we want to lookup would be nested in some way, and |ohai| tends to do this by storing the data in a Mash. This can be done by creating a new mash and setting the attribute to it.
+Most of the information we want to lookup would be nested in some way, and |ohai| tends to do this by storing the data in a mash. This can be done by creating a new mash and setting the attribute to it.
 
 In plugins/canhas.rb:
 
@@ -80,7 +81,7 @@ Work with Platforms
 -----------------------------------------------------
 One of the main reasons for using |ohai| is to gather information regardless of the operating system. Luckily this is made easy by optionally loading recipes based on the platform. With that platform specific calls abstracted away you can keep your code DRY.
 
-The builtin plugins that come with |ohai| use the following trick to load platform specific code. It works by creating a base cross-platform plugin that loads the platform specific plugin from a subdirectory. In plugins/lolcode.rb:
+The built-in plugins that come with |ohai| use the following trick to load platform specific code. It works by creating a base cross-platform plugin that loads the platform specific plugin from a subdirectory. In plugins/lolcode.rb:
 
 .. code-block:: ruby
 
@@ -100,7 +101,7 @@ In plugins/darwin/lolcode.rb:
    languages[:lolcode] = Mash.new unless languages[:lolcode]
    languages[:lolcode][:platform] = "MACKERS"
 
-Checkout ohai's os.rb for the list of platform names.
+Checkout the |ohai| os.rb file for the list of platform names.
 
 All of these examples can be found in the ``ohai-plugin-howto`` |github| repo, you should be able to clone that and run the ruby scripts in the repo's root directory. If you figure out any other handy tricks please fork the project and add them.
 

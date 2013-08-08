@@ -13,7 +13,7 @@ Chef Single-page Topics
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/chef_overview.html">Chef Overview</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/just_enough_ruby_for_chef.html">Just Enough Ruby for Chef</a> </br>
 
-**Cookbook Essentials**
+**Cookbook Essentials** 
 
 .. raw:: html
 

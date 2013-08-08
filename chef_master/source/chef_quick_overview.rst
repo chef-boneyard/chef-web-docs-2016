@@ -1,10 +1,10 @@
 =====================================================
-A Quick Overview of |chef|
+A Quick Overview of |chefx|
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-The following diagram shows the relationships between the various elements of a very simple |chef| organization, including the |chef hosted| server, a workstations, the |chef| repository, and some simple nodes that exist either in |virtualbox| or |amazon aws|.
+The following diagram shows the relationships between the various elements of a very simple organization, including the |chef hosted| server, a workstations, the |chef repo|, and some simple nodes that exist either in |virtualbox| or |amazon aws|.
 
 .. image:: ../../images/overview_chef_quick.png
 
@@ -26,7 +26,7 @@ Repository
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository.rst
 
-|git| is the most common location to store a |chef| repository that is used with a |chef hosted| account.
+|git| is the most common location to store a |chef repo| that is used with a |chef hosted| account.
 
 The Hosted Chef Server
 =====================================================
@@ -38,7 +38,7 @@ Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-|chef| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chef| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
+|chefx| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chefx| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
 Conclusion
 =====================================================
@@ -48,15 +48,6 @@ Conclusion
 
 For more information ...
 -----------------------------------------------------
-For history of |chef|, where it came from and how it evolved, watch these two (short) videos:
-
-* Part one: |http opscode youtube short part one|
-* Part two: |http opscode youtube short part two|
-
-For more information about |opscode|, cookbooks for |chef|, and the |chef| community:
-
-* |http opscode|
-* |http community|
-* |http community cookbooks|
+.. include:: ../../includes_chef/includes_chef_for_more_info.rst
 
 

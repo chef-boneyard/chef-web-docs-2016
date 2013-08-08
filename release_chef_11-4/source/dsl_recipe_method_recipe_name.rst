@@ -1,7 +1,3 @@
-=====================================================
-recipe_name Method
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/dsl_recipe_method_recipe_name.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_recipe_name.rst
+.. include:: ../../chef_master/source/dsl_recipe_method_recipe_name.rst

@@ -1,12 +1,4 @@
-=====================================================
-/sandboxes
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server_sandboxes.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes.rst
-
-POST
-=====================================================
-.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_sandboxes_post.rst
+.. include:: ../../chef_master/source/api_chef_server_sandboxes.rst
 

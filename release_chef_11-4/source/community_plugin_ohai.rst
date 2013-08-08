@@ -1,9 +1,3 @@
-=====================================================
-Community Ohai Plugins
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/community_plugin_ohai.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_ohai/includes_ohai.rst
-
-.. include:: ../../includes_ohai/includes_ohai_plugins.rst
+.. include:: ../../chef_master/source/community_plugin_ohai.rst
