@@ -37,7 +37,7 @@ Some examples:
 
 where the last example shows using a variable (``description``) as the ``"message"`` in the ``converge_by`` block.
 
-An example of the ``converge_by`` method being used in the `directory <https://github.com/opscode/chef/blob/master/lib/chef/provider/directory.rb>`_ provider, which is a core |chef| resource:
+An example of the ``converge_by`` method being used in the `directory <https://github.com/opscode/chef/blob/master/lib/chef/provider/directory.rb>`_ provider, which is a core resource:
 
 .. code-block:: ruby
 

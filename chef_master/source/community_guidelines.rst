@@ -1,12 +1,12 @@
 =====================================================
-Chef Community Guidelines
+Community Guidelines
 =====================================================
 
 The |chefx| community is a mixture of professionals and volunteers who come from all over the world and work together to make |chefx| better, including mentoring, teaching, and connecting with other members of the community.
 
 Diversity is one of our biggest strengths, but it can also bring increased communication challenges at times. 
 
-To that end, as you are working with other members of the |chef| community, please keep in mind the following guidelines, which apply equally to founders, mentors, those who submit new features and pull requests, and to anyone who is seeking help and guidance.
+To that end, as you are working with other members of the community, please keep in mind the following guidelines, which apply equally to founders, mentors, those who submit new features and pull requests, and to anyone who is seeking help and guidance.
 
 The following list isn't exhaustive; it is intended to help all of us communicate well so that the community can work better  together:
 

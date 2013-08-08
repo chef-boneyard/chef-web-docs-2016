@@ -208,7 +208,7 @@ To explore how using the |resource breakpoint| to manually step through a |chef 
      chef:recipe > breakpoint "foo"
      chef:recipe > file "/tmp/after-breakpoint"
 
-and then run |chef|:
+and then run the |chef client|:
 
 .. code-block:: bash
 
@@ -219,7 +219,7 @@ and then run |chef|:
      [Fri, 15 Jan 2010 14:17:49 -0800] DEBUG: Processing [./bin/../lib/chef/mixin/recipe_definition_dsl_core.rb:56:in `new']
      [Fri, 15 Jan 2010 14:17:49 -0800] DEBUG: [./bin/../lib/chef/mixin/recipe_definition_dsl_core.rb:56:in `new'] using Chef::Provider::Breakpoint
 
-|chef| ran the first resource before the breakpoint (``file[/tmp/before-breakpoint]``), but then stopped after execution. The |chef client| attempted to name the breakpoint after its position in the source file, but the |chef client| was confused because the resource was entered interactively. From here, |chef shell| can resume the |chef client| run:
+The |chef client| ran the first resource before the breakpoint (``file[/tmp/before-breakpoint]``), but then stopped after execution. The |chef client| attempted to name the breakpoint after its position in the source file, but the |chef client| was confused because the resource was entered interactively. From here, |chef shell| can resume the |chef client| run:
 
 .. code-block:: bash
 
@@ -375,7 +375,7 @@ The following examples show how to use |chef shell| to debug recipes.
 -----------------------------------------------------
 This example shows how to run |chef shell| in standalone mode. (For |chef solo| or |chef client| modes, you would need to run |chef shell| using the ``-s`` or ``-z`` command line options, and then take into consideration the necessary configuration settings.)
 
-When |chef| is installed using |rubygems| or a package manager, |chef shell| should already be installed. When the |chef client| is run from a |git| clone, it will be located in ``chef/bin/chef shell``. To start |chef shell|, just run it without any options. You'll see the loading message, then the banner, and then the |chef shell| prompt:
+When the |chef client| is installed using |rubygems| or a package manager, |chef shell| should already be installed. When the |chef client| is run from a |git| clone, it will be located in ``chef/bin/chef shell``. To start |chef shell|, just run it without any options. You'll see the loading message, then the banner, and then the |chef shell| prompt:
 
 .. code-block:: bash
 

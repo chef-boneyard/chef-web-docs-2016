@@ -4,17 +4,32 @@ What's New in Chef 11
 
 The following items are new for |chef 11| and/or are changes from |chef 10|.
 
-chef-client and chef-solo
+|chef client| and |chef solo|
 =====================================================
 The following changes have been made to |chef client| and |chef solo|. Some of these changes may break recipes (or may change their behavior); other changes may affect workflow or scripts.
 
-Shef is now chef-shell
+|shef| is now |chef shell|
 -----------------------------------------------------
 |shef| has been renamed to |chef shell| (CHEF-2925). Recipe mode and attributes mode must now be entered using the ``recipe_mode`` and ``attributes_mode`` commands.
 
 Node attribute changes
 -----------------------------------------------------
 In order to fix bugs and surprising behaviors with attributes, the implementation of ``Chef::Node::Attribute`` has been completely overhauled. The APIs for reading and writing values are now completely separate.
+
+LWRPs AND Recipes Both Now Automatically Qualify loaded Gems
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Previously, in Chef 10, one could do the following in a recipe:
+
+.. code-block:: ruby
+
+require 'win32/registry'
+registry = Win32::Registry::HKEY_LOCAL_MACHINE
+
+In Chef 11 you must add "::" to the beginning to avoid the automatic addition of a "Chef::" qualifier.
+
+.. code-block:: ruby
+
+registry = ::Win32::Registry::HKEY_LOCAL_MACHINE
 
 Implicit writes removed
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -193,7 +208,7 @@ Likewise, if you take any action based on the value of attributes when evaluatin
 
 node.run_state Replaced
 -----------------------------------------------------
-In |chef 10| and lower, you could see which recipes had been evaluated by chef by looking at ``node.run_state[:seen_recipes]``. ``Chef::Node`` was not the correct place to track this information, and the previous implementation resulted in bugs where a recipe like ``nginx::default`` could be loaded after ``nginx``, even though they are the same recipe.
+In |chef 10| and lower, you could see which recipes had been evaluated by looking at ``node.run_state[:seen_recipes]``. ``Chef::Node`` was not the correct place to track this information, and the previous implementation resulted in bugs where a recipe like ``nginx::default`` could be loaded after ``nginx``, even though they are the same recipe.
 
 In the new implementation, this is tracked by ``Chef::RunContext``. The following example is no longer valid:
 
@@ -229,12 +244,12 @@ In |chef 10| and lower, delayed notifications are lost when Chef does not conver
 
 This fixes addresses the following scenario:
 
-#. |chef| reconfigures a service
+#. The |chef client| reconfigures a service
 #. A delayed notification to restart the service is queued
-#. An unrelated resource fails and halts the |chef| run
-#. Subsequent |chef| runs don't restart the service because it hasn't been reconfigured during that run.
+#. An unrelated resource fails and halts the |chef client| run
+#. Subsequent |chef client| runs don't restart the service because it hasn't been reconfigured during that run.
 
-In |chef 11|, delayed notifications will run after |chef| fails, and will be executed even if other delayed notifications fail. Conversely, if |chef| fails to configure a service and a restart action has been queued for that service, the service will be restarted and will probably be broken.
+In |chef 11|, delayed notifications will run after the |chef client| run fails, and will be executed even if other delayed notifications fail. Conversely, if the |chef client| fails to configure a service and a restart action has been queued for that service, the service will be restarted and will probably be broken.
 
 Single Notifies for Notification
 -----------------------------------------------------
@@ -260,7 +275,7 @@ Changes for Data Bag Encryption
 -----------------------------------------------------
 In |chef 10|, objects in encrypted data bag items are serialized to |yaml| before being encrypted. Unfortunately, discrepancies between |yaml| engines in different versions of |ruby| (in particular, 1.8.7 and 1.9.3) may cause silent corruption of serialized data when decrypting the data bag (the version stored on the |chef server| is untouched and can be correctly deserialized with the same |ruby| version that was used to create it, however).
 
-Because the corruption is silent, there is no way for |chef| to detect it; furthermore, all workaround possibilities we've investigated have severe limitations. Additionally, we wanted to modify the encrypted data bag item format to support using a random initialization vector each time a value is encrypted, which provides protection against some forms of cryptanalysis. In order to solve these issues, we've implemented a new encrypted data bag item format:
+Because the corruption is silent, there is no way for the |chef client| to detect it; furthermore, all workaround possibilities we've investigated have severe limitations. Additionally, we wanted to modify the encrypted data bag item format to support using a random initialization vector each time a value is encrypted, which provides protection against some forms of cryptanalysis. In order to solve these issues, we've implemented a new encrypted data bag item format:
 
 * The user interface to encrypted data bags is unchanged. This change only affects the format of the encrypted values.
 * |chef 11| clients will be able to read encrypted data bags created with either |chef 10| or |chef 11|.
@@ -271,7 +286,7 @@ Because the corruption is silent, there is no way for |chef| to detect it; furth
 
 Diagnosing Compatibility Errors
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-When trying to decrypt a |chef 11| format data bag item with |chef| 10.16.x or lower, you will see an error like this:
+When trying to decrypt a |chef 11| format data bag item with |chefx| 10.16.x or lower, you will see an error like this:
 
 .. code-block:: bash
 
@@ -281,11 +296,11 @@ When trying to decrypt a |chef 11| format data bag item with |chef| 10.16.x or l
    Please collect the output of this command with the `-VV` option before filing a bug report.
    Exception: NoMethodError: undefined method `unpack' for #<Hash:0x007ff5b264e1f0>
 
-The above error output is from |knife|; |chef client| will fail with a similar error.
+The above error output is from |knife|; the |chef client| will fail with a similar error.
 
 How to Upgrade
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Before upgrading chef on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version 10.18.0 or above. Once your |chef client| fleet is upgraded, you can start using |chef 11| on your workstation (the box you create/update encrypted data bag items on).
+Before upgrading on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version 10.18.0 or above. Once your |chef client| fleet is upgraded, you can start using |chef 11| on your workstation (the box you create/update encrypted data bag items on).
 
 In order to get the benefits of improved security with the new data bag item format, it's recommended that you re-upload all of your encrypted data bag items once you've migrated to compatible versions of |chef client|. To migrate your data bag items, simply edit them with ``knife data bag edit`` or upload them with ``knife data bag from file``, whichever you normally do. |chef 11| will automatically upload your data bag items in the new format.
 
@@ -383,11 +398,11 @@ Chef Server
 =====================================================
 The following items are new for |chef 11| server and/or are changes from |chef 10|.
 
-The /clients endpoint returns JSON with a JSON class for edit (PUT) operations
--------------------------------------------------------------------------------
-In |chef| 0.8-10.x, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation in |chef| uses the presence of the ``json_class`` key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash.
+The /clients endpoint returns |json| with a |json| class for edit (PUT) operations
+----------------------------------------------------------------------------------
+In |chefx| 0.8-10.x, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation uses the presence of the ``json_class`` key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash.
 
-This change breaks the ``knife client reregister`` command in |chef| 10.16.2 and earlier. Forward compatibility is introduced in |chef| 10.18.0.
+This change breaks the ``knife client reregister`` command in |chefx| 10.16.2 and earlier. Forward compatibility is introduced in |chefx| 10.18.0.
 
 The admin and validator flags are exclusive
 -----------------------------------------------------
@@ -397,7 +412,7 @@ In |chef 11|, clients may not be both admins and validators at the same time. In
 
 Strict checking of top-level JSON keys
 -----------------------------------------------------
-All API endpoints that process requests to create or update a |chef| object validate that the |json| sent by the client does not contain unknown top-level keys. A 400 error response will be returned if unknown top-level keys are encountered.
+All API endpoints that process requests to create or update an object validate that the |json| sent by the client does not contain unknown top-level keys. A 400 error response will be returned if unknown top-level keys are encountered.
 
 Creating an empty sandbox is now a 400 error
 -----------------------------------------------------
@@ -415,39 +430,20 @@ The ``chef-server`` cookbook has been completely rewritten to support an omnibus
 
 knife reindex is not supported in Chef 11 Server
 -----------------------------------------------------
-You can trigger a reindex of |chef| object data using ``chef-server-ctl reindex`` while logged into the |chef server| box. The |knife| command is still present in the |chef 11| |chef client| for use with a |chef 10| server.
+You can trigger a reindex of object data using ``chef-server-ctl reindex`` while logged into the |chef server|. The |knife| command is still present in the |chef 11| |chef client| for use with a |chef 10| server.
 
 OpenId support has been removed
 -----------------------------------------------------
-Support for |open id| is no longer in |chef|.
+Support for |open id| is no longer available to the |chef client|.
 
 
 The Ruby server code has been removed
 -----------------------------------------------------
-As part of the move to Erchef, the Ruby API server code along with classes not needed by the client-side of Chef have been removed from the main chef repository.
+As part of the move to Erchef, the Ruby API server code along with classes not needed by the client-side have been removed from the main |chef repo|.
 
 knife cookbook delete --purge is ignored by Chef 11 Server
 -----------------------------------------------------------
 In |chef 11|, the server keeps track of which cookbooks use a given piece of cookbook content (via checksum). When a cookbook version is deleted, associated content will be deleted if not referenced by another cookbook version object. Therefore, there is no need for a purge operation when using the |chef 11| server.
-
-The API request timeout has been reduced to 15 minutes
------------------------------------------------------------
-In |chef 11|, the timeout on the timestamp embedded in API requests (used to prevent replay attacks) was reduced from 60 to 15 minutes.
-
-To increase the timeout to an hour (in seconds), modify ``/etc/chef-server/chef-server.rb`` and add this setting:
-
-.. code-block:: ruby
-
-   erchef['s3_url_ttl'] = 3600
-
-Then reconfigure the server:
-
-.. code-block:: bash
-
-   chef-server-ctl reconfigure
-
-
-
 
 
 Other Notable Changes
@@ -456,11 +452,11 @@ Changes that are not expected to be breaking, but are notable improvements.
 
 Output Formatters are the Default Output when Running in the Console
 ---------------------------------------------------------------------
-In |chef 11|, when output is to a TTY, |chef| will automatically use output formatters to display information about what it's doing. To accommodate this, the default log level is now ``auto``, which evaluates to ``warn`` when running with a TTY (so log messages will not obscure the output formatter output), and ``info`` when running without a TTY (so you get important information about changes being made to the system when output formatters are not active).
+In |chef 11|, when output is to a TTY, the |chef client| will automatically use output formatters to display information about what it's doing. To accommodate this, the default log level is now ``auto``, which evaluates to ``warn`` when running with a TTY (so log messages will not obscure the output formatter output), and ``info`` when running without a TTY (so you get important information about changes being made to the system when output formatters are not active).
 
-If you prefer one type of output over the other, you can force |chef| to use output formatters or logger output with ``--force-formatter`` or ``--force-logger``.
+If you prefer one type of output over the other, you can force the |chef client| to use output formatters or logger output with ``--force-formatter`` or ``--force-logger``.
 
-.. note:: In previous versions of |chef|, bootstrapping templates would generally configure the log level to ``info`` in the |client rb| file. You may wish to change this to ``auto`` or remove the setting from your config file entirely.
+.. note:: In previous versions, bootstrapping templates would generally configure the log level to ``info`` in the |client rb| file. You may wish to change this to ``auto`` or remove the setting from your config file entirely.
 
 Inline Compile Mode for Lightweight Resources
 -----------------------------------------------------
@@ -486,7 +482,7 @@ This means that the ``lwrp_resource`` cannot correctly set its updated status ba
 
 With Inline Compilation
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Inline compilation is enabled by calling ``use_inline_resources`` at the top of your lightweight provider file. When this is enabled, the code in your action block is executed in a self contained chef client run, with its own compile and converge phase. If any embedded resources have been updated, the top-level lightweight resource is marked as updated, and any notifications set on it will be triggered normally. Within the embedded chef run, resources in the top-level resource collection are invisible to the embedded resources, so embedded resources are not able to notify resources in the top-level resource collection.
+Inline compilation is enabled by calling ``use_inline_resources`` at the top of your lightweight provider file. When this is enabled, the code in your action block is executed in a self contained |chef client| run, with its own compile and converge phase. If any embedded resources have been updated, the top-level lightweight resource is marked as updated, and any notifications set on it will be triggered normally. Within the embedded |chef client| run, resources in the top-level resource collection are invisible to the embedded resources, so embedded resources are not able to notify resources in the top-level resource collection.
 
 LWRP Class Hierarchy Changes
 -----------------------------------------------------
@@ -503,18 +499,17 @@ Partial Support in Templates
 Template Resource
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_template_resource.rst
-
  
 chef-apply
 -----------------------------------------------------
-There is now a ``chef-apply RECIPE`` command that will run a single |chef| recipe with no ``JSON/run_list/config`` file required.
+There is now a ``chef-apply RECIPE`` command that will run a single recipe with no ``JSON/run_list/config`` file required.
 
 Miscellaneous
 -----------------------------------------------------
 
 * Locking is used to prevent simultaneous runs on |unix|-like systems
-* ``knife search`` assumes node search when the object type is omitted.
-* ``knife search`` will search over roles, tags, |fqdn|, and IP addresses when the given query is not in |apache solr| format (does not contain a colon : character).
-* |knife| essentials (``knife upload``, ``knife download``, ``knife diff``, and so on) have been merged to core |chef|
+* |subcommand knife search| assumes node search when the object type is omitted
+* |subcommand knife search| will search over roles, tags, |fqdn|, and IP addresses when the given query is not in |apache solr| format (does not contain a colon : character)
+* |knife| essentials (|subcommand knife upload|, |subcommand knife download|, |subcommand knife diff|, and so on) have been merged into |chefx|
 
 

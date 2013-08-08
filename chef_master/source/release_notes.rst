@@ -14,9 +14,9 @@ The following issues are known for |chef 11-6| and/or may affect the behavior of
 
 What's New
 =====================================================
-The following items are new for |chef 11-6| and/or are changes from previous versions of |chef|. The short version:
+The following items are new for |chef 11-6| and/or are changes from previous versions of |chefx|. The short version:
 
-* **Support for SELinux** Support for |selinux| has been improved, including |chef| using the ``restorecon`` command when using |resource file|-based resources, correctly matching default policy settings (when the underlying cookbook also conforms to the same policy settings), and configurable file permission fixup (with the ``enable_selinux_file_permission_fixup`` setting in the |client rb| file).
+* **Support for SELinux** Support for |selinux| has been improved, including the |chef client| using the ``restorecon`` command when using |resource file|-based resources, correctly matching default policy settings (when the underlying cookbook also conforms to the same policy settings), and configurable file permission fixup (with the ``enable_selinux_file_permission_fixup`` setting in the |client rb| file).
 * **Atomic file updates** Atomic file updates ensure that updates are still made in certain situations, such as if disk space runs out or when a binary is being updated.
 * **Lazy attribute evaluation** In some cases, the value for an attribute cannot be known until the compile phase of a |chef client| run. Instead of an attribute being assigned a value, it may instead be assigned a code block, which can then be used during the compile phase to determine the attribute value.
 * **Rebuilt file resource** The |resource file| resource has been refactored and is now the base resource for the |resource cookbook_file|, |resource remote_file|, and |resource template| resources.
@@ -28,7 +28,7 @@ The following items are new for |chef 11-6| and/or are changes from previous ver
 * **New batch resource** Execute a batch script using the |windows cmd exe| interpreter. A temporary file is created and then executed like other script resources.
 * **New powershell_script resource** Execute a script using the |windows powershell| interpreter just like the |resource script| resource, but designed for the |windows| platform and the |windows powershell| interpreter.
 * **New settings for the client.rb file** The ``data_bag_decrypt_minimum_version``, ``enable_selinux_file_permission_fixup``, and ``file_atomic_update`` settings have been added.
-* **New subcommands for Knife** |subcommand knife deps|, |subcommand knife edit|, and |subcommand knife xargs| have been added to |chef|.
+* **New subcommands for Knife** |subcommand knife deps|, |subcommand knife edit|, and |subcommand knife xargs| have been added.
 * **New options for Knife subcommands** The |subcommand knife delete|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife list|, and |subcommand knife upload| subcommands have new options.
 * **Support for environments in chef-solo** |chef solo| now supports environments.
 * **New way to force a redeploy when using the deploy resource** To force a redeploy, delete either the deployment directory or the cache file.
@@ -51,10 +51,10 @@ Lazy Attribute Evaluation
 
 |resource file|-based Resources
 -----------------------------------------------------
-Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to define behaviors for file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|). These resources have been standardized and are now all fully based on the |resource file| resource.
+Prior to |chef 11-6|, the |chef client| relied on the underlying |ruby| implementation to define behaviors for file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|). These resources have been standardized and are now all fully based on the |resource file| resource.
 
 * File-based providers now create all files with the same default permissions. This default is determined by operating system, file system type, and umask settings.
-* When an |ssh| configuration file is created using the |resource cookbook_file| or |resource template| resources and the file mode for that |ssh| configuration file is not specified, it is possible for incorrect permissions to be applied. In previous versions of |chef|, |chef| would attempt to create the file with ``0600`` permissions if the file mode was not specified. For example:
+* When an |ssh| configuration file is created using the |resource cookbook_file| or |resource template| resources and the file mode for that |ssh| configuration file is not specified, it is possible for incorrect permissions to be applied. In previous versions of |chefx|, the |chef client| would attempt to create the file with ``0600`` permissions if the file mode was not specified. For example:
 
    .. code-block:: ruby
 
@@ -63,7 +63,7 @@ Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to d
         group "bob"
       end
 
-   In |chef| 11.6, |chef| may create files with other permissions---such as ``0644``---when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, and subsequent |ssh| operations could fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example:
+   In |chefx| 11.6, the |chef client| may create files with other permissions---such as ``0644``---when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, and subsequent |ssh| operations could fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example:
 
    .. code-block:: ruby
 
@@ -77,7 +77,7 @@ Prior to |chef 11-6|, |chef| relied on the underlying |ruby| implementation to d
 * File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute.
 * Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors.
 
-.. warning:: For a machine on which |selinux| is enabled, |chef| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy.
+.. warning:: For a machine on which |selinux| is enabled, the |chef client| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy.
 
 File-based Attributes
 -----------------------------------------------------
@@ -94,7 +94,7 @@ New attributes (common to all |resource file|-based resources):
    * - ``force_unlink``
      - |force_unlink|
    * - ``manage_symlink_source``
-     - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, |chef| will manage a symlink's source file and emit a warning. When this value is set to ``true``, |chef| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version of |chef|.
+     - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
 
 The following attributes for |resource file|-based resources have been updated:
 
@@ -270,9 +270,9 @@ New settings have been added to the |client rb| file:
 -----------------------------------------------------
 The following updates have been made to |knife| subcommands:
 
-* The |knife| essentials group of subcommands can be used with all objects in the |chef| repository and/or on the |chef server|: ``clients/``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``
+* The |knife| essentials group of subcommands can be used with all objects in the |chef repo| and/or on the |chef server|: ``clients/``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``
 * The |knife| essentials group of subcommands can be used with the following objects located in |chef hosted|: ``acls``, ``groups``, and ``containers``
-* The |subcommand knife download| subcommand can access all objects on the |chef server| and can now be used to pull a full-fidelity backup of the entire |chef| organization
+* The |subcommand knife download| subcommand can access all objects on the |chef server| and can now be used to pull a full-fidelity backup of the entire organization
 
 New subcommands have been added to |knife|:
 
@@ -412,7 +412,7 @@ A new setting has been added to the |solo rb| file:
 
 Force a Redeploy
 -----------------------------------------------------
-Previous versions of |chef| required the cache file to be deleted to force a redeploy. In |chef 11-6|, in addition to deleting the cache file, deleting the deployment directory will also force a redeploy.
+Previous versions of |chefx| required the cache file to be deleted to force a redeploy. In |chef 11-6|, in addition to deleting the cache file, deleting the deployment directory will also force a redeploy.
 
 
 What's Fixed

@@ -1,5 +1,5 @@
 =====================================================
-Community Knife Plugins
+Community Plugins: Knife
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife.rst

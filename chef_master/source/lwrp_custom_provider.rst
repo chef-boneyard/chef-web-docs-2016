@@ -1,5 +1,5 @@
 =====================================================
-Lightweight Providers w/Chef Resources
+Lightweight Providers w/Core Resources
 =====================================================
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_provider.rst
@@ -18,7 +18,7 @@ action
 -----------------------------------------------------
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_action.rst
 
-.. note:: The ``converge_by`` method is not included in the previous syntax example because when |whyrun| mode is enabled in a lightweight provider that leverages core |chef| resources, the ``converge_by`` blocks are already defined by the core |chef| resources.
+.. note:: The ``converge_by`` method is not included in the previous syntax example because when |whyrun| mode is enabled in a lightweight provider that leverages core resources, the ``converge_by`` blocks are already defined by the core resources.
 
 current_resource
 -----------------------------------------------------
@@ -48,7 +48,7 @@ whyrun_supported?
 
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_whyrun_supported.rst
 
-.. note:: When a lightweight provider contains only |chef| resources, the ``converge_by`` method is not required because it is already built into all of the |chef| `resources <http://docs.opscode.com/resource.html>`_.
+.. note:: When a lightweight provider contains only core resources, the ``converge_by`` method is not required because it is already built into all of the core `resources <http://docs.opscode.com/resource.html>`_.
 
 Condition Statements
 =====================================================
@@ -64,7 +64,7 @@ rescue
 
 Examples
 =====================================================
-The following examples show various lightweight providers that use core |chef| resources.
+The following examples show various lightweight providers that use core resources.
 
 aws_ebs_volume
 -----------------------------------------------------
