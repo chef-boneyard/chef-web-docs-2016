@@ -1,24 +1,3 @@
-=====================================================
-knife show
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/knife_show.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_knife/includes_knife_show.rst
-
-Syntax
-=====================================================
-.. include:: ../../includes_knife/includes_knife_show_syntax.rst
-
-Options
-=====================================================
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
-
-|no_options|
-
-Examples
-=====================================================
-.. include:: ../../step_knife/step_knife_show_all_cookbooks.rst
-
-.. include:: ../../step_knife/step_knife_show_roles_and_environments.rst
-
+.. include:: ../../chef_master/source/knife_show.rst

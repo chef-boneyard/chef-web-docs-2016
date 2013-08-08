@@ -116,6 +116,7 @@ Cookbooks
    knife_all_11-4
    plugin_knife
    resource
+   resources
    opscode_cookbooks
    lwrp
    config

@@ -24,7 +24,7 @@ For version 1 (default, starting with |chefx| 11.x):
 * A data bag item is encrypted using a random initialization vector each time a value is encrypted, which helps protect against some forms of cryptanalysis
 * The |chef client| uses `shared secret encryption <https://en.wikipedia.org/wiki/Symmetric-key_algorithm>`_; an encrypted file can only be decrypted by a node or a user with the same shared secret
 * A recipe can load encrypted data as long as the shared secret is present in a file on the node or is accessible from a URI path
-* Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed by |chef| when tracking the data bag item)
+* Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed by the |chef client| when tracking the data bag item)
 
 For version 2 (available, starting with |chefx| 11.6):
 

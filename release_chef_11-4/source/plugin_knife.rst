@@ -2,8 +2,6 @@
 About Knife Plugins
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
 
 * The same :doc:`common options </knife_common_options>` used by |knife| subcommands can also be used by |knife| plug-ins
@@ -58,11 +56,6 @@ The following |knife| plug-ins are maintained by |opscode|:
    plugin_knife_terremark
    plugin_knife_vcloud
    plugin_knife_windows
-
    plugin_knife_authenticated_requests
    plugin_knife_custom
-  
-
-
-
 

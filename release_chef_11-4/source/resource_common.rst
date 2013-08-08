@@ -2,6 +2,8 @@
 Common Functionality 
 =====================================================
 
+.. warning:: |note doc_version_11-4|
+
 All resources (and lightweight resources) share a set of common actions, attributes, conditional executions, notifications, and relative path options.
 
 Actions
@@ -73,6 +75,8 @@ only_if Examples
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_ruby.rst
 
 .. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
+
+.. FOR CHEF 11-6, LAZY ATTRIBUTE EVALUATION WAS ADDED; THIS IS THE ONLY CHANGE BETWEEN VERSIONS
 
 Notifications
 =====================================================

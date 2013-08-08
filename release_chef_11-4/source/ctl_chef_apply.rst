@@ -1,20 +1,3 @@
-=====================================================
-chef-apply
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/ctl_chef_apply.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_ctl_chef_apply/includes_ctl_chef_apply.rst
-
-Options
-=====================================================
-.. include:: ../../includes_ctl_chef_apply/includes_ctl_chef_apply_options.rst
-
-Examples
-=====================================================
-
-To use |chef apply| to run a recipe named ``machinations.rb``, enter the following:
-
-.. code-block:: bash
-
-   $ chef-apply machinations.rb
+.. include:: ../../chef_master/source/ctl_chef_apply.rst

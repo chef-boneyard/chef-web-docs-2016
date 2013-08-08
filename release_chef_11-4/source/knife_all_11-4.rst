@@ -78,7 +78,7 @@ Examples
 
 .. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
 
-The following examples show how to customize the default bootstraps that are included with |chef|. 
+The following examples show how to customize the default bootstraps. 
 
 Ubuntu 12.04
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -348,7 +348,7 @@ Syntax
 
 Options
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_knife/includes_knife_cookbook_download_options.rst
+.. include:: ../../includes_knife/includes_knife_11-4_download_options.rst
 
 **knife.rb Settings**
 

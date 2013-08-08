@@ -1,7 +1,7 @@
 =====================================================
 Mailing Lists
 =====================================================
-Sign up for the mailing lists at |http lists opscode|. There are a few options:
+Sign up for the mailing lists at |url opscode_community_lists|. There are a few options:
 
 * ``chef@lists.opscode.com`` --- This list is for general discussion between users, developers, and other interested parties
 * ``chef-dev@lists.opscode.com`` --- This list is primarily for developers

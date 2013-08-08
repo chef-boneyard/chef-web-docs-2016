@@ -126,7 +126,7 @@ Use Tags
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
 
-End a |chef| Run 
+End a |chef client| Run 
 -----------------------------------------------------
 Sometimes it may be necessary to end a |chef client| run before it completes. There are a few ways to do this:
 
@@ -136,7 +136,7 @@ Sometimes it may be necessary to end a |chef client| run before it completes. Th
 * Using ``Chef::Application.fatal!`` to log a fatal message to the logger and ``STDERR``
 * Using an :doc:`exception handler </essentials_handlers>`
 
-The following sections show various approaches to ending a |chef| run.
+The following sections show various approaches to ending a |chef client| run.
 
 Return Keyword
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

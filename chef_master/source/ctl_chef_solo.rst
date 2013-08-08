@@ -14,24 +14,12 @@ Examples
 =====================================================
 **Use a URL**
 
-.. code-block:: bash
-
-   $ chef-solo -c ~/solo.rb -j ~/node.json -r http://www.example.com/chef-solo.tar.gz
-
-where ``-r`` uses the |resource remote_file| resource to retrieve the |tar gz| archive into the ``file_cache_path``, and then extract it to ``cookbooks_path``.
+.. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_url.rst
 
 **Use a directory**
 
-.. code-block:: bash
-
-   $ chef-solo -c ~/solo.rb -j ~/node.json
-
-where the ``-r URL`` option is not used. |chef solo| will look in the |solo rb| file to determine the directory in which cookbooks are located.
+.. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_directory.rst
 
 **Use a URL for cookbook and JSON data**
 
-.. code-block:: bash
-
-   $ chef-solo -c ~/solo.rb -j http://www.example.com/node.json -r http://www.example.com/chef-solo.tar.gz
-
-where ``-r`` corresponds to ``recipe_url`` and ``-j`` corresponds to ``json_attribs``, both of which are configuration options in |solo rb|.
+.. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_url_for_cookbook_and_json.rst

@@ -1,8 +1,3 @@
-=====================================================
-Common Options
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/knife_common_options.html BY DESIGN
 
-.. warning:: |note doc_version_11-4|
-
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
+.. include:: ../../chef_master/source/knife_common_options.rst

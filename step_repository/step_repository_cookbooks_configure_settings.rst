@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To configure cookbook-specific copyright, email, and license data, add the following to the |knife rb| file in the |chef| repository:
+To configure cookbook-specific copyright, email, and license data, add the following to the |knife rb| file in the |chef repo|:
 
 .. code-block:: bash
 
