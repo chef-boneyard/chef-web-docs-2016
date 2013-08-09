@@ -47,16 +47,16 @@ This configuration file has the following settings:
        ::
  
           environment_path "/var/chef/environments"
-   * - ``file_cache_path``
-     - |file cache_path| For example:
-       ::
- 
-          file_cache_path "/var/chef/cache"
    * - ``file_backup_path``
      - |file backup_path| For example:
        ::
  
           file_backup_path "/var/chef/backup"
+   * - ``file_cache_path``
+     - |file cache_path| For example:
+       ::
+ 
+          file_cache_path "/var/chef/cache"
    * - ``json_attribs``
      - |json attributes| For example:
        ::
