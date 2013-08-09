@@ -372,6 +372,19 @@ knife upload
    |diff_upload| Set to ``false`` to upload all files. Default: ``--diff``.
 
 
+New common options for certain Knife subcommands
+-----------------------------------------------------
+The following options are new for the |subcommand knife delete|, |subcommand knife deps|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife edit|, |subcommand knife list|, |subcommand knife raw|, |subcommand knife show|, |subcommand knife upload|, and |subcommand knife xargs| subcommands:
+
+``--chef-repo-path PATH``
+   The path to the |chef repo|. This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
+
+``--concurrency``
+   The maximum number of simultaneous requests to be sent. Default: ``10``.
+
+``--repo-mode MODE``
+   |repo_mode| Default value: ``default``.
+
 |knife rb| Settings
 -----------------------------------------------------
 New settings have been added to the |knife rb| file:
