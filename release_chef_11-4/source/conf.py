@@ -114,7 +114,6 @@ rst_prolog = """
 .. include:: ../../swaps/swap_desc_x.txt
 .. include:: ../../swaps/swap_desc_y.txt
 .. include:: ../../swaps/swap_desc_z.txt
-.. include:: ../../swaps/swap_http.txt
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 """

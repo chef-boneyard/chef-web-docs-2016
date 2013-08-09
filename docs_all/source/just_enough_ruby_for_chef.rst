@@ -1,3 +1,9 @@
-.. THIS PAGE IS IDENTICAL TO docs.opscode.com/just_enough_ruby_for_chef.html BY DESIGN
+=====================================================
+Just Enough Ruby for |chefx|
+=====================================================
 
-.. include:: ../../chef_master/source/just_enough_ruby_for_chef.rst
+.. include:: ../../includes_ruby/includes_ruby.rst
+
+.. include:: ../../includes_ruby/includes_ruby_dsl.rst
+
+.. include:: ../../includes_ruby/includes_ruby_just_enough.rst

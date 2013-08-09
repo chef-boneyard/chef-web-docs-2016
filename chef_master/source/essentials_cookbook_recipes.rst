@@ -124,7 +124,7 @@ Use Tags
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
 
-End a |chef| Run 
+End a |chef client| Run 
 -----------------------------------------------------
 Sometimes it may be necessary to end a |chef client| run before it completes. There are a few ways to do this:
 

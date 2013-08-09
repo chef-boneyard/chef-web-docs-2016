@@ -77,7 +77,7 @@ Examples
 
 .. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
 
-The following examples show how to customize the default bootstraps that are included with |chef|. 
+The following examples show how to customize the default bootstraps. 
 
 Ubuntu 12.04
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

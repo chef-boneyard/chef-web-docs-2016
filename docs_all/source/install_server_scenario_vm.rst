@@ -1,3 +1,9 @@
-.. THIS PAGE IS IDENTICAL TO docs.opscode.com/install_server_scenario_vm.html BY DESIGN
+=====================================================
+Install the Chef Server on a Virtual Machine
+=====================================================
 
-.. include:: ../../chef_master/source/install_server_scenario_vm.rst
+.. include:: ../../includes_install/includes_install_server_scenario_vm_intro.rst
+
+.. include:: ../../step_install/step_install_server_scenario_vm.rst
+
+.. include:: ../../includes_install/includes_install_server_scenario_vm_outro.rst

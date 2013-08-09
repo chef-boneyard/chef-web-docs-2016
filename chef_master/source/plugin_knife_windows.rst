@@ -28,10 +28,18 @@ Options
 
 Examples
 -----------------------------------------------------
-**Bootstrap a Windows machine using SSH**
+**Find Uptime for Web Servers**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_windows_winrm_find_uptime.rst
 
 **Force a chef-client run**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_windows_winrm_force_chef_run.rst
+
+**Bootstrap a Windows machine using SSH**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_windows_bootstrap_ssh.rst
+
+**Bootstrap a Windows machine using Windows Remote Management**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_windows_bootstrap_winrm.rst

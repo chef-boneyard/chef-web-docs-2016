@@ -9,7 +9,7 @@ Steps
 The following steps describe how to bootstrap a node.
 
 #. Identify the |fqdn| or IP address for the node
-#. Run the ``knife bootstrap`` command
+#. Run the |subcommand knife bootstrap| command
 #. Verify the node on the |chef server|
 
 See the following sections for more information about each step. 

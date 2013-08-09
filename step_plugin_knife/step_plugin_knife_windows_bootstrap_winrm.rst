@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To bootstrap a |windows| machine using |winrm|:
+To bootstrap a |windows| machine using |windows remote management|:
 
 .. code-block:: bash
 

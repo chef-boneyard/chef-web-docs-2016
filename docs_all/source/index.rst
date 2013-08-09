@@ -68,9 +68,7 @@ Chef Single-page Topics
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/client_rb.html">client.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/knife_rb.html">knife.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/metadata_rb.html">metadata.rb</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/server_rb.html">server.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/solo_rb.html">solo.rb</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/solr_rb.html">solr.rb</a> </br>
 
 **APIs and DSLs**
 
@@ -142,9 +140,7 @@ Chef Single-page Topics
    migrate_to_hosted
    ohai
    resources
-   server_rb
    solo_rb
-   solr_rb
    auth
 
 

@@ -17,7 +17,7 @@ The sub-directories in the |chef repo| are:
    * - ``config/``
      - Contains the |rake| configuration file: ``rake.rb``.
    * - ``cookbooks/``
-     - Contains cookbooks that have been downloaded from the |url cookbook| or created locally.
+     - Contains cookbooks that have been downloaded from the |url opscode_cookbooks| or created locally.
    * - ``data_bags/``
      - Stores data bags (and data bag items) in |json| (.json).
    * - ``environments/``
