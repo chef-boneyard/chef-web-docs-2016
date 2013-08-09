@@ -24,11 +24,6 @@ This configuration file has the following settings:
      - |copyright|
    * - ``cookbook_email``
      - |email|
-   * - ``data_bag_encrypt_version``
-     - The minimum required version of data bag encryption. Possible values: ``1`` or ``2``. When all of the machines in an organization are running |chef client| version 11.6 (or higher), it is recommended that this value be set to ``2``. For example:
-       ::
- 
-          data_bag_encrypt_version "2"
    * - ``cookbook_license``
      - |license|
    * - ``cookbook_path``
@@ -39,7 +34,11 @@ This configuration file has the following settings:
             "/var/chef/cookbooks", 
             "/var/chef/site-cookbooks" 
           ]
-   * - ``http_proxy``
+   * - ``data_bag_encrypt_version``
+     - The minimum required version of data bag encryption. Possible values: ``1`` or ``2``. When all of the machines in an organization are running |chef client| version 11.6 (or higher), it is recommended that this value be set to ``2``. For example:
+       ::
+ 
+          data_bag_encrypt_version "2"   * - ``http_proxy``
      - |http_proxy| Default value: ``nil``. For example:
        ::
  
