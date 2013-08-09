@@ -13,4 +13,3 @@ This subcommand has the following options:
 
 ``--[no-]recurse``
    |no_recurse_delete| Default: ``--no-recurse``.
-

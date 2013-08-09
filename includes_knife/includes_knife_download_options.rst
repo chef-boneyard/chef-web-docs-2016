@@ -5,6 +5,12 @@
 
 This subcommand has the following options:
 
+``--chef-repo-path PATH``
+   The path to the |chef repo|. This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
+
+``--concurrency``
+   The maximum number of simultaneous requests to be sent. Default: ``10``.
+
 ``--force``
    |force knife download| Default: ``--no-force``.
 
@@ -20,3 +26,5 @@ This subcommand has the following options:
 ``--purge``
    |purge knife download| Default: ``--no-purge``.
 
+``--repo-mode MODE``
+   The layout of the local repository. Possible values: ``static``, ``everything``, or ``hosted_everything``. Default: ``everything/hosted_everything``.
