@@ -5,6 +5,12 @@
 
 This subcommand has the following options:
 
+``--chef-repo-path PATH``
+   The path to the |chef repo|. This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
+
+``--concurrency``
+   The maximum number of simultaneous requests to be sent. Default: ``10``.
+
 ``--[no-]diff``
    Use to show a diff when a file changes. Default: ``--diff``.
 
@@ -35,7 +41,11 @@ This subcommand has the following options:
 ``-J REPLACE_STRING``, ``--replace-first REPLACE_STRING``
    Use to define a string that will be used to replace the first occurrence of a file name. Default: ``nil``.
 
+``--repo-mode MODE``
+   |repo_mode| Default value: ``default``.
+
 ``-t``
    Indicates that the print command will be run on the command line. Default: ``nil``.
+
 
 

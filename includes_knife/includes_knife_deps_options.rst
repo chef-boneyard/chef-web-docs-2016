@@ -5,6 +5,11 @@
 
 This subcommand has the following options:
 
+``--chef-repo-path PATH``
+   The path to the |chef repo|. This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
+
+``--concurrency``
+   The maximum number of simultaneous requests to be sent. Default: ``10``.
 
 ``--[no-]recurse``
    |no_recurse_deps| This option can only be used when ``--tree`` is set to ``true``. Default: ``--no-recurse``.
@@ -12,5 +17,9 @@ This subcommand has the following options:
 ``--remote``
    |remote deps_on_server| Default: ``false``.
 
+``--repo-mode MODE``
+   |repo_mode| Default value: ``default``.
+
 ``--tree``
    |tree| Default: ``false``.
+

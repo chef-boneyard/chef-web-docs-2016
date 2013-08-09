@@ -5,6 +5,12 @@
 
 This subcommand has the following options:
 
+``--chef-repo-path PATH``
+   The path to the |chef repo|. This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
+
+``--concurrency``
+   The maximum number of simultaneous requests to be sent. Default: ``10``.
+
 ``--[no-]force``
    |force knife upload| Default: ``--no-force``.
 
@@ -23,3 +29,5 @@ This subcommand has the following options:
 ``--[no-]recurse``
    |no_recurse_upload| Default: ``--recurse``.
 
+``--repo-mode MODE``
+   |repo_mode| Default value: ``default``.

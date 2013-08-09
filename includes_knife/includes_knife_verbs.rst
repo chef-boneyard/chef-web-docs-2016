@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife| includes a set of subcommands that are built around common verbs: ``create``, ``delete``, ``deps``, ``download``, ``edit``, ``list``, ``show``, ``upload``, ``xargs``. These subcommands allow |knife| to issue commands that interact with any object stored in the |chef repo| or stored on the |chef server|. Some important principles behind this group of subcommands includes:
+|knife| includes a set of subcommands that are built around common verbs: ``delete``, ``deps``, ``diff``, ``download``, ``edit``, ``list``, ``show``, ``upload``, ``xargs``. These subcommands allow |knife| to issue commands that interact with any object stored in the |chef repo| or stored on the |chef server|. Some important principles behind this group of subcommands includes:
 
 * A command that works with each object in the |chef repo|. The subcommands specify the desired action (the "verb"), and then directory in which that object resides (``clients``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``). For example: ``download cookbooks/``
 * A command that works with certain objects in |chef hosted|, including ``acls``, ``groups``, and ``containers``

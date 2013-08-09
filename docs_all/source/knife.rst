@@ -1652,7 +1652,7 @@ Options
 -----------------------------------------------------
 Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
-|no_options|
+.. include:: ../../includes_knife/includes_knife_show_options.rst
 
 Examples
 -----------------------------------------------------

@@ -11,9 +11,6 @@ This subcommand has the following options:
 ``--concurrency``
    The maximum number of simultaneous requests to be sent. Default: ``10``.
 
-``--local``
-   |local chef_repo| Default: ``false``.
-
 ``--repo-mode MODE``
    |repo_mode| Default value: ``default``.
 
