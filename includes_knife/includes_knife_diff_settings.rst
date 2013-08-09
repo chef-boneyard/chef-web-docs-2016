@@ -5,6 +5,12 @@
 
 The following ``knife diff`` settings can be added to the |knife rb| file:
 
+``knife[:chef_repo_path]``
+   Use to add the ``--chef-repo-path`` option.
+
+``knife[:concurrency]``
+   Use to add the ``--concurrency`` option.
+
 ``knife[:name_only]``
    Use to add the ``--name-only`` option.
 
@@ -14,3 +20,5 @@ The following ``knife diff`` settings can be added to the |knife rb| file:
 ``knife[:recurse]``
    Use to add the ``--recurse`` option.
 
+``knife[:repo_mode]``
+   Use to add the ``--repo-mode`` option.

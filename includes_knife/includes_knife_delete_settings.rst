@@ -5,6 +5,15 @@
 
 The following ``knife delete`` settings can be added to the |knife rb| file:
 
+``knife[:chef_repo_path]``
+   Use to add the ``--chef-repo-path`` option.
+
+``knife[:concurrency]``
+   Use to add the ``--concurrency`` option.
+
 ``knife[:recurse]``
    Use to add the ``--recurse`` option.
+
+``knife[:repo_mode]``
+   Use to add the ``--repo-mode`` option.
 

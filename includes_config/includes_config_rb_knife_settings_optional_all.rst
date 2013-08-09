@@ -32,6 +32,8 @@ The following list describes all of the optional settings that can be added to t
      - |bootstrap version|
    * - ``knife[:bootstrap_template]``
      - 
+   * - ``knife[:chef_repo_path]``
+     - |path chef_repo|
    * - ``knife[:concurrency]``
      - |concurrency|
    * - ``knife[:config_file]``
@@ -94,6 +96,8 @@ The following list describes all of the optional settings that can be added to t
      - |readme-format|
    * - ``knife[:recurse]``
      - Use to recursively delete, disable, or list a directory.
+   * - ``knife[:repo_mode]``
+     - |repo_mode|
    * - ``knife[:repository]``
      - |repository|
    * - ``knife[:run_list]``

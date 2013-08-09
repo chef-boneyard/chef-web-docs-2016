@@ -5,6 +5,12 @@
 
 The following ``knife delete`` settings can be added to the |knife rb| file:
 
+``knife[:chef_repo_path]``
+   Use to add the ``--chef-repo-path`` option.
+
+``knife[:concurrency]``
+   Use to add the ``--concurrency`` option.
+
 ``knife[:diff]``
    Use to add the ``--diff`` option.
 
@@ -35,17 +41,12 @@ The following ``knife delete`` settings can be added to the |knife rb| file:
 ``knife[:replace_first]``
    Use to add the ``--replace-first`` option.
 
+``knife[:repo_mode]``
+   Use to add the ``--repo-mode`` option.
+
 ``knife[:verbose_commands]``
    Use to add the ``-t`` option.
 
-
-
-
-  
-  
-  
-  
-  
   
   
   
