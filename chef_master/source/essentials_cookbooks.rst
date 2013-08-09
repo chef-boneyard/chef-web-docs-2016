@@ -11,15 +11,15 @@ About Cookbooks
    * - Components
      - Description
    * - :doc:`Opscode-authored Cookbooks </opscode_cookbooks>`
-     - |opscode| maintains a collection of cookbooks that are important to |chef| and are widely used by the |chef| community.
+     - |opscode| maintains a collection of cookbooks that are important and are widely used by the |chefx| community.
    * - `Community-authored Cookbooks <http://community.opscode.com/cookbooks>`_
-     - The |chef| community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that by nearly everyone.
+     - The |chefx| community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that by nearly everyone.
    * - :doc:`Recipes </essentials_cookbook_recipes>`
-     - A recipe is the most fundamental configuration element within the |chef| environment.
+     - A recipe is the most fundamental configuration element.
    * - :doc:`Cookbooks Directory Structure </essentials_cookbook_directory>`
-     - The ``cookbooks/`` directory is used to store the cookbooks that are used by |chef| when configuring the various systems in the organization.
+     - The ``cookbooks/`` directory is used to store the cookbooks that are used by the |chef client| when configuring the various systems in the organization.
    * - :doc:`Resources and Providers </essentials_cookbook_resources>`
-     - A resource is a package, a service, a group of users, and so on. A resource tells |chef| which provider to use during a |chef| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. |chef| includes default providers that cover all of the most common scenarios.
+     - A resource is a package, a service, a group of users, and so on. A resource tells the |chef client| which provider to use during a |chef client| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. The |chef client| includes default providers that cover all of the most common scenarios.
    * - :doc:`Lightweight Resources </lwrp_custom>`
      - A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters.
    * - :doc:`Attribute Files </essentials_cookbook_attribute_files>`
@@ -29,7 +29,7 @@ About Cookbooks
    * - :doc:`Files </essentials_cookbook_files>`
      - A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
    * - :doc:`Libraries </essentials_cookbook_libraries>`
-     - A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef| language or to implement a new class.
+     - A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef client| language or to implement a new class.
    * - :doc:`Metadata </essentials_cookbook_metadata>`
      - A metadata file is used to ensure that each cookbook is correctly deployed to each node.
    * - :doc:`Templates </essentials_cookbook_templates>`

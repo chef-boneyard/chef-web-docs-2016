@@ -8,7 +8,7 @@ Elements of good approaches to building cookbooks and recipes that are reliable 
 
 * A consistent syntax pattern when constructing recipes
 * Using the same patterns in Ruby
-* Using core |chef| resources before creating custom ones
+* Using core resources before creating custom ones
 * Using community-authored lightweight resources before creating custom ones
 
 Ideally, the best way to debug a recipe is to not have to debug it in the first place. That said, the following sections discuss various approaches to debugging recipes and failed |chef client| runs.
@@ -161,7 +161,7 @@ chef-shell
 -----------------------------------------------------
 .. SET THIS UP FOR INCLUDES
 
-|chef shell| is a recipe debugging tool for |chef| that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features.
+|chef shell| is a recipe debugging tool for the |chef client| that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features.
 
 |chef shell| is tool that allows |knife| to be run using an |ruby irb| session. |chef shell| currently supports recipe and attribute file syntax, as well as interactive debugging features. |chef shell| has three run modes:
 

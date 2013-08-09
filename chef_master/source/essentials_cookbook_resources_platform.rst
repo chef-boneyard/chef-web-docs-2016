@@ -2,7 +2,7 @@
 Platform Resources
 =====================================================
 
-The following resources are built into |chef|:
+The following core resources are built in:
 
 .. list-table::
    :widths: 120 400

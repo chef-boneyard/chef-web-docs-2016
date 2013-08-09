@@ -2,7 +2,7 @@
 System Requirements
 =====================================================
 
-Before installing |chef|:
+Before installing |chefx|:
 
 * Ensure that each machine that will be a node is running a supported operating system
 * Ensure that the machine that will run the |chef server| is sufficiently powerful
@@ -10,7 +10,7 @@ Before installing |chef|:
 
 Install and configure the |chef server|, then install and configure a workstation, and then run the bootstrap command from the workstation to install the |chef client| on each node.
 
-Chef (for Nodes and Workstations)
+|chefx| (for Nodes and Workstations)
 =====================================================
 The |chef client| can run on the following systems:
 
