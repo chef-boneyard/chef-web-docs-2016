@@ -839,10 +839,6 @@ Examples
 
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
 
-**If a node doesn't have MySQL, install MySQL**
-
-.. include:: ../../step_resource/step_resource_mount_mysql.rst
-
 **Control a service using the execute resource**
 
 .. include:: ../../step_resource/step_resource_execute_control_a_service.rst
@@ -1357,10 +1353,6 @@ Examples
 **Stop a service, do stuff, and then restart it**
 
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
-
-**If a node doesn't have MySQL, install MySQL**
-
-.. include:: ../../step_resource/step_resource_mount_mysql.rst
 
 
 ohai
@@ -2059,10 +2051,6 @@ Examples
 **Stop a service, do stuff, and then restart it**
 
 .. include:: ../../step_resource/step_resource_service_stop_do_stuff_start.rst
-
-**If a node doesn't have MySQL, install MySQL**
-
-.. include:: ../../step_resource/step_resource_mount_mysql.rst
 
 **Control a service using the execute resource**
 
