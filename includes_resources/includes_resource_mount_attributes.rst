@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``device``
-     - Required for ``:umount`` and ``:remout`` actions (for the purpose of checking the mount command output for presence). |device mount| Default value: ``nil``.
+     - Required for ``:umount`` and ``:remount`` actions (for the purpose of checking the mount command output for presence). |device mount| Default value: ``nil``.
    * - ``device_type``
      - |device_type| Default value: ``:device``.
    * - ``dump``
