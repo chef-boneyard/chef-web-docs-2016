@@ -1,5 +1,5 @@
 =====================================================
-What's New in Chef 11
+What's New in Chef 11.0
 =====================================================
 
 The following items are new for |chef 11| and/or are changes from |chef 10|.
@@ -63,7 +63,7 @@ The following example replaces the previous example:
 
    node.default.my_attribute = "value"
 
-Knife Output Changes
+|knife| Output Changes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Previously, |knife| was adding the ID field to search results for node attributes. With |chef 11|, |knife| groups search results by the name of the node. For example, the old output looks something like:
 
@@ -279,14 +279,14 @@ Because the corruption is silent, there is no way for the |chef client| to detec
 
 * The user interface to encrypted data bags is unchanged. This change only affects the format of the encrypted values.
 * |chef 11| clients will be able to read encrypted data bags created with either |chef 10| or |chef 11|.
-* |chef 10| clients 10.18.0 and above will be able to read encrypted data bags created with either |chef 10| or |chef 11|
-* |chef 10| clients version 10.16.x and lower cannot read encrypted data bags created with |chef 11|
+* |chef 10| clients |chef 10-18| and above will be able to read encrypted data bags created with either |chef 10| or |chef 11|
+* |chef 10| clients version |chef 10-16| and lower cannot read encrypted data bags created with |chef 11|
 * |chef 11| knife commands will only create data bags in the new format.
 * |chef 10| knife commands will only create data bags in the old format.
 
 Diagnosing Compatibility Errors
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-When trying to decrypt a |chef 11| format data bag item with |chefx| 10.16.x or lower, you will see an error like this:
+When trying to decrypt a |chef 11| format data bag item with |chef 10-16| or lower, you will see an error like this:
 
 .. code-block:: bash
 
@@ -300,11 +300,11 @@ The above error output is from |knife|; the |chef client| will fail with a simil
 
 How to Upgrade
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Before upgrading on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version 10.18.0 or above. Once your |chef client| fleet is upgraded, you can start using |chef 11| on your workstation (the box you create/update encrypted data bag items on).
+Before upgrading on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version |chef 10-18| or above. Once your |chef client| fleet is upgraded, you can start using |chef 11| on your workstation (the box you create/update encrypted data bag items on).
 
 In order to get the benefits of improved security with the new data bag item format, it's recommended that you re-upload all of your encrypted data bag items once you've migrated to compatible versions of |chef client|. To migrate your data bag items, simply edit them with ``knife data bag edit`` or upload them with ``knife data bag from file``, whichever you normally do. |chef 11| will automatically upload your data bag items in the new format.
 
-Chef Server Versions
+Server Versions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 Because encrypted data bag items are implemented as a client-side layer on top of regular data bag items, the format change is transparent to the server. You can begin using |chef 11| data bags even if your server is version |chef 10|.
 
@@ -325,7 +325,7 @@ For |chef client| users, there should be no negative impacts from this change, a
 
 
 
-Knife Configuration Parameter Changes
+|knife| Configuration Parameter Changes
 -----------------------------------------------------
 In |chef 10|, it is difficult and error-prone to ensure that configuration parameters are applied in the right order. Configuration should be applied in the following order:
 
@@ -339,7 +339,7 @@ Because of the way the the ``mixlib-cli`` library is implemented, it is difficul
 #. Configuration settings under Chef::Config[:knife]
 #. User supplied values parsed by mixlib-cli
 
-Depending on how |knife| plugin authors have worked around the |chef 10| behavior, it's possible that this change will lead to incorrect values being used for configurable parameters. The |opscode| cloud plugins have been reviewed and should work correctly on both |chef 10| and |chef 11|.
+Depending on how |knife| plugin authors have worked around the |chef 10| behavior, it's possible that this change will lead to incorrect values being used for configurable parameters. The |opscode|-maintained cloud plugins have been reviewed and should work correctly on both |chef 10| and |chef 11|.
 
 When writing |knife| plugins for |chef 11|, plugin authors are encouraged to define default settings using the ``mixlib-config`` DSL, like this:
 
@@ -394,15 +394,15 @@ To effectively revert the change so that the ``source`` parameter is a string, a
 
 Alternatively, you can update the provider to handle the case that the ``source`` parameter is an array.
 
-Chef Server
+The Server
 =====================================================
 The following items are new for |chef 11| server and/or are changes from |chef 10|.
 
 The /clients endpoint returns |json| with a |json| class for edit (PUT) operations
 ----------------------------------------------------------------------------------
-In |chefx| 0.8-10.x, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation uses the presence of the ``json_class`` key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash.
+In |chef 8|-|chef 10|, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation uses the presence of the ``json_class`` key as an indication that it should "inflate" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash.
 
-This change breaks the ``knife client reregister`` command in |chefx| 10.16.2 and earlier. Forward compatibility is introduced in |chefx| 10.18.0.
+This change breaks the ``knife client reregister`` command in |chef 10-16| and earlier. Forward compatibility is introduced in |chef 10-18|.
 
 The admin and validator flags are exclusive
 -----------------------------------------------------
@@ -410,7 +410,7 @@ In |chef 11|, clients may not be both admins and validators at the same time. In
 
 .. note:: Exact behavior may change before release or in a minor version release after |chef 11|.
 
-Strict checking of top-level JSON keys
+Strict checking of top-level |json| keys
 -----------------------------------------------------
 All API endpoints that process requests to create or update an object validate that the |json| sent by the client does not contain unknown top-level keys. A 400 error response will be returned if unknown top-level keys are encountered.
 
@@ -428,7 +428,7 @@ In a number of cases, |erchef| returns a more specific error status than the |ch
 
 The ``chef-server`` cookbook has been completely rewritten to support an omnibus |chef server| install
 
-knife reindex is not supported in Chef 11 Server
+knife reindex is not supported in |chef server 11|
 -----------------------------------------------------
 You can trigger a reindex of object data using ``chef-server-ctl reindex`` while logged into the |chef server|. The |knife| command is still present in the |chef 11| |chef client| for use with a |chef 10| server.
 
@@ -441,8 +441,8 @@ The Ruby server code has been removed
 -----------------------------------------------------
 As part of the move to Erchef, the Ruby API server code along with classes not needed by the client-side have been removed from the main |chef repo|.
 
-knife cookbook delete --purge is ignored by Chef 11 Server
------------------------------------------------------------
+knife cookbook delete --purge is ignored by |chef server 11|
+------------------------------------------------------------
 In |chef 11|, the server keeps track of which cookbooks use a given piece of cookbook content (via checksum). When a cookbook version is deleted, associated content will be deleted if not referenced by another cookbook version object. Therefore, there is no need for a purge operation when using the |chef 11| server.
 
 
@@ -500,7 +500,7 @@ Template Resource
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_template_resource.rst
  
-chef-apply
+|chef apply|
 -----------------------------------------------------
 There is now a ``chef-apply RECIPE`` command that will run a single recipe with no ``JSON/run_list/config`` file required.
 
@@ -510,6 +510,6 @@ Miscellaneous
 * Locking is used to prevent simultaneous runs on |unix|-like systems
 * |subcommand knife search| assumes node search when the object type is omitted
 * |subcommand knife search| will search over roles, tags, |fqdn|, and IP addresses when the given query is not in |apache solr| format (does not contain a colon : character)
-* |knife| essentials (|subcommand knife upload|, |subcommand knife download|, |subcommand knife diff|, and so on) have been merged into |chefx|
+* |knife| essentials (|subcommand knife upload|, |subcommand knife download|, |subcommand knife diff|, and so on) have been merged into |chef 11-0|
 
 
