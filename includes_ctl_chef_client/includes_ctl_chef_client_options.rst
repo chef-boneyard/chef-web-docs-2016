@@ -34,7 +34,7 @@ This command has the following options:
    |force_logger|
 
 ``-g GROUP``, ``--group GROUP``
-   |group chef-client|
+   |name group_process_owner|
 
 ``-h``, ``--help``
    |help subcommand|

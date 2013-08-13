@@ -6,7 +6,7 @@ This section shows some of the common structural elements that appear in a light
 
 * A lightweight provider tells the |chef client| how to complete a task
 * The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action
-* At its core, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider
+* At its platform, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider
 
 The basic syntax for a lightweight provider that is built using custom |ruby| code is as follows:
 

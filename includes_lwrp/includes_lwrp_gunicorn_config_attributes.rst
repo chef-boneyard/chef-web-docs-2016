@@ -14,7 +14,7 @@ This lightweight resource provider has the following attributes:
    * - ``cookbook``
      - |cookbook template_location| Default value: ``gunicorn`` (the ``gunicorn`` cookbook).
    * - ``group``
-     - |group lwrp gunicorn_config|
+     - |name group_owner_config_file|
    * - ``listen``
      - |listen lwrp gunicorn_config|
    * - ``owner``

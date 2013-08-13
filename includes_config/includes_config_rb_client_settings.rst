@@ -58,7 +58,7 @@ This configuration file has the following settings:
  
           file_atomic_update false
    * - ``file_backup_path``
-     - |file backup_path| For example:
+     - |path file backup| For example:
        ::
  
           file_backup_path "/var/chef/backup"

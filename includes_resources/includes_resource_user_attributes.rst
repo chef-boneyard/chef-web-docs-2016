@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``comment``
      - |comment user| Default value: ``nil``.
    * - ``gid``
-     - |gid resource user|
+     - |id group| Default value: ``nil``.
    * - ``home``
      - |home_directory| Default value: ``nil``.
    * - ``password``

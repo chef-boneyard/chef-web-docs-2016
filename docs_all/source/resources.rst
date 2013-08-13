@@ -225,7 +225,7 @@ Windows File Security
 
 Resources
 =====================================================
-The following resources are core resources with core providers:
+The following resources are platform resources with built-in providers:
 
 * apt_package
 * bash

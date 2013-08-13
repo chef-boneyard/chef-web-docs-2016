@@ -28,7 +28,7 @@ This command has the following options:
    Indicates that logger output will be used instead of formatter output.
 
 ``-g GROUP``, ``--group GROUP``
-   |group chef-client|
+   |name group_process_owner|
 
 ``-h``, ``--help``
    |help subcommand|

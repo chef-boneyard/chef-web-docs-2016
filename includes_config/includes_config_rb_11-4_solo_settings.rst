@@ -42,16 +42,16 @@ This configuration file has the following settings:
        ::
  
           data_bag_path "/var/chef/databags"
+   * - ``file_backup_path``
+     - |path file backup| For example:
+       ::
+ 
+          file_backup_path "/var/chef/backup"
    * - ``file_cache_path``
      - |file cache_path| For example:
        ::
  
           file_cache_path "/var/chef/cache"
-   * - ``file_backup_path``
-     - |file backup_path| For example:
-       ::
- 
-          file_backup_path "/var/chef/backup"
    * - ``json_attribs``
      - |json attributes| For example:
        ::

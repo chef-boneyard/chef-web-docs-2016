@@ -34,7 +34,7 @@
 
 .. |remote deps_on_server| replace:: Indicates that dependencies will be determined from objects located on the |chef server| instead of the local |chef repo|.
 
-.. |repo_mode| replace:: The layout of the local |chef repo|. The ``default`` repository includes cookbooks, data bags, environments, and roles. The ``everything`` repository adds nodes, |chef api client|, and users.
+.. |repo_mode| replace:: The layout of the local |chef repo|. Possible values: ``static``, ``everything``, or ``hosted_everything``. Use ``static`` for just roles, environments, cookbooks, and data bags. By default, ``everything`` and ``hosted_everything`` are dynamically selected depending on the server type.
 
 .. |repository| replace:: The path to the |chef repo|.
 .. |repository git_or_svn| replace:: The alias for the repository.
@@ -187,7 +187,13 @@
 .. |resource desc template| replace:: The |resource template| resource is used to manage file contents with an embedded |ruby| (erb) template. This resource includes actions and attributes from the |resource file| resource. Template files managed by the |resource template| resource follow the same file specificity rules as the |resource remote_file| and |resource file| resources.
 .. |resource desc user| replace:: The |resource user| resource is used to manage a local user.
 
-
+.. |resource short_actions| replace:: The ``:nothing`` action can be used with any resource or lightweight resource.
+.. |resource short_attributes| replace:: The ``ignore_failure``, ``provider``, ``retries``, ``retry_delay``, and ``supports`` attributes can be used with any resource or lightweight resources.
+.. |resource short_conditions| replace:: The ``not_if`` and ``only_if`` conditional executions can be used to put additional guards around certain resources so that they are only run when the condition is met.
+.. |resource short_notifications| replace:: The ``notifies`` and ``subscribes`` notifications can be used with any resource.
+.. |resource short_relative_paths| replace:: The ``#{ENV['HOME']}`` relative path can be used with any resource.
+.. |resource short_windows_file_security| replace:: The |resource template|, |resource file|, |resource remote_file|, |resource cookbook_file|, |resource directory|, and |resource remote_directory| resources support the use of inheritance and access control lists (ACLs) within recipes.
+.. |resource short_run_during_compile| replace:: Sometimes a resource needs to be run before every other resource or after all resources have been added to the resource collection.
 
 .. |response code 200 ok| replace:: OK. The request was successful.
 .. |response code 201 created| replace:: Created. The object was created.
@@ -238,6 +244,9 @@
 .. |role-size| replace:: The size of the virtual machine: ``ExtraSmall``, ``Small``, ``Medium``, ``Large``, or ``ExtraLarge``.
 .. |role_path| replace:: The location in which role files are located. Default value: ``/var/chef/roles``.
 .. |rollback_on_error| replace:: Indicates whether a resource will roll back to a previously-deployed release if an error occurs when deploying a new release.
+
+.. |route_gateway| replace:: The gateway for the route.
+.. |route_device| replace:: The network interface to which the route applies.
 
 .. |rows| replace:: The number of rows to be returned.
 

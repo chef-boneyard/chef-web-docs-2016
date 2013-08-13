@@ -22,6 +22,6 @@ This lightweight resource provider has the following attributes:
    * - ``database_template``
      - |template database_yml| Default value: ``database.yml.erb``.
    * - ``gems``
-     - |gems lwrp application_ruby_rails|
+     - |gems_array|
    * - ``precompile_assets``
      - |precompile_assets lwrp application_ruby|

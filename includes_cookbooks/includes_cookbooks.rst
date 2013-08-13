@@ -10,5 +10,6 @@ A cookbook is the fundamental unit of configuration and policy distribution. Eac
 * Recipes that specify which resources to manage and the order in which those resources will be applied
 * Custom resources and providers
 * Templates
+* Versions
 * Metadata about recipes (including dependencies), version constraints, supported platforms, and so on
 

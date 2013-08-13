@@ -12,9 +12,9 @@ This resource has the following attributes:
    * - ``append``
      - |append resource group| Default value: ``false``.
    * - ``gid``
-     - |gid resource group|
+     - |id group| Default value: ``nil``.
    * - ``group_name``
-     - |group_name resource group|
+     - |name group| Default value: ``name``.
    * - ``members``
      - |group_members| Default value: ``nil``.
    * - ``provider``

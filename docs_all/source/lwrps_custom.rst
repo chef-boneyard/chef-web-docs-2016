@@ -15,11 +15,11 @@ The following sections describe the structure, syntax, and options available for
    * - `Lightweight Resources <http://docs.opscode.com/lwrp_custom_resource.html>`_
      - A lightweight resource defines custom actions and attributes.
    * - `Lightweight Providers w/Chef Resources <http://docs.opscode.com/lwrp_custom_provider.html>`_
-     - Many lightweight providers are built using only core resources, such as |resource file|, |resource cookbook_file|, |resource template|, and so on. These types of resources use recipes to tell the |chef client| when to use core resources during a |chef client| run.
+     - Many lightweight providers are built using only platform resources, such as |resource file|, |resource cookbook_file|, |resource template|, and so on. These types of resources use recipes to tell the |chef client| when to use platform resources during a |chef client| run.
    * - `Lightweight Providers w/Custom Ruby <http://docs.opscode.com/lwrp_custom_provider_ruby.html>`_
      - Some lightweight providers are built using custom |ruby| code.
 
-.. warning:: It is recommended to not mix platform resources with custom resources in the same lightweight provider. This helps ensure the proper processing of core resources that have been embedded into the resource collection during the |chef client| run.
+.. warning:: It is recommended to not mix platform resources with custom resources in the same lightweight provider. This helps ensure the proper processing of platform resources that have been embedded into the resource collection during the |chef client| run.
 
 File Locations
 =====================================================

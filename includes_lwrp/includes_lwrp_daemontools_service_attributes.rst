@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``finish``
      - |finish_script| Default value: ``nil``.
    * - ``group``
-     - |group lwrp daemontools_service|
+     - |name group_service_directory|
    * - ``log``
      - |use custom_log_script| Default value: ``nil``.
    * - ``owner``

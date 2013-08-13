@@ -2,13 +2,13 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This section shows some of the common structural elements that appear in a lightweight provider that is built in a way that leverages core resources (such as |resource file|, |resource template|, or |resource package|). Remember:
+This section shows some of the common structural elements that appear in a lightweight provider that is built in a way that leverages platform resources (such as |resource file|, |resource template|, or |resource package|). Remember:
 
 * A lightweight provider tells the |chef client| how to complete a task
 * The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action
-* At its core, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider
+* At its platform, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider
 
-The basic syntax for a lightweight provider that is built to leverage core resources is as follows:
+The basic syntax for a lightweight provider that is built to leverage platform resources is as follows:
 
 .. code-block:: ruby
 

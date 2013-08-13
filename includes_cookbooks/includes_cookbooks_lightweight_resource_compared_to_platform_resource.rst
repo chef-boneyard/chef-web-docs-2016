@@ -85,4 +85,4 @@ The preceding code is simple, traditional |ruby|. A number of getter/setter meth
    attribute :path,     :kind_of => String
    attribute :checksum, :regex => /^[a-zA-Z0-9]{64}$/
 
-What this shows are the similarities and differences between resources and lightweight resources. The lightweight resources are easier to write and understand, plus they can offer much the same (if not identical) functionality as the more complex core resources.
+What this shows are the similarities and differences between resources and lightweight resources. The lightweight resources are easier to write and understand, plus they can offer much the same (if not identical) functionality as the more complex platform resources.

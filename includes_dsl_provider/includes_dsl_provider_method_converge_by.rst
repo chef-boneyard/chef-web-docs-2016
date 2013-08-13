@@ -37,7 +37,7 @@ Some examples:
 
 where the last example shows using a variable (``description``) as the ``"message"`` in the ``converge_by`` block.
 
-An example of the ``converge_by`` method being used in the `directory <https://github.com/opscode/chef/blob/master/lib/chef/provider/directory.rb>`_ provider, which is a core resource:
+An example of the ``converge_by`` method being used in the `directory <https://github.com/opscode/chef/blob/master/lib/chef/provider/directory.rb>`_ provider, which is a platform resource:
 
 .. code-block:: ruby
 
@@ -62,6 +62,6 @@ An example of the ``converge_by`` method being used in the `directory <https://g
      update_new_file_state
    end
 
-.. note:: |whyrun| mode is already enabled for core resources. When core resources are used as part of the ``action`` block in a lightweight provider, only the ``whyrun_supported?`` is required to allow the |chef client| to run in |whyrun| mode.
+.. note:: |whyrun| mode is already enabled for platform resources. When platform resources are used as part of the ``action`` block in a lightweight provider, only the ``whyrun_supported?`` is required to allow the |chef client| to run in |whyrun| mode.
 
 

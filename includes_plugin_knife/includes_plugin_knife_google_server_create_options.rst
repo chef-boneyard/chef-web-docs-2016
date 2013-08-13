@@ -18,10 +18,10 @@ This argument has the following options:
    |google_compute_disks|
 
 ``--google-compute-public-ip IP_ADDRESS``
-   |google_compute_public_ip|
+   |google_compute_public_ip| Default value: ``EPHEMERAL``.
 
 ``--google-compute-server-connect-ip PUBLIC``
-   |google_compute_server_connect_ip|
+   |google_compute_server_connect_ip| Default value: ``PUBLIC``.
 
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
@@ -30,7 +30,7 @@ This argument has the following options:
    |identity-file|
 
 ``-I IMAGE``, ``--google-compute-image IMAGE``
-   |google-image|
+   |google_image| Default: ``gcompute8-standard``.
 
 ``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
    |json first_run_string|

@@ -12,12 +12,12 @@ This lightweight resource provider has the following attributes:
    * - ``name``
      - |name firewall_rule|
    * - ``protocol``
-     - |protocol firewall_rule|
+     - |firewall rule_protocol| Default value: ``:all``.
    * - ``port``
      - |port number|
    * - ``source``
-     - |firewall rule_incoming| Default value: ``0.0.0.0/0`` (from "anywhere").
+     - |firewall rule_in| Default value: ``0.0.0.0/0`` (from "anywhere").
    * - ``destination``
-     - |destination lwrp firewall_rule|
+     - |firewall rule_out|
    * - ``position``
-     - |position lwrp firewall_rule|
+     - |firewall rule_position|

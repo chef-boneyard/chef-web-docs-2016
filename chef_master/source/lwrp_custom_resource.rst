@@ -62,7 +62,7 @@ Timers
 
 Examples
 =====================================================
-The following examples show various lightweight providers that use core resources or how to use certain parts of the |dsl resource|.
+The following examples show various lightweight providers that use platform resources or how to use certain parts of the |dsl resource|.
 
 :callbacks
 -----------------------------------------------------

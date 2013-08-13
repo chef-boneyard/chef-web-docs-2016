@@ -10,9 +10,9 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``device``
-     - |device resource route|
+     - |route_device|
    * - ``gateway``
-     - |gateway resource route|
+     - |route_gateway|
    * - ``netmask``
      - |netmask|
    * - ``provider``

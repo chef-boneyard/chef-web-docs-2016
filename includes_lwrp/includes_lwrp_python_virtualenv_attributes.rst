@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``group``
-     - |group lwrp python_virtualenv|
+     - |name group_owner_python_virtualenv|
    * - ``interpreter``
      - |interpreter python| Default value: ``python2.6``.
    * - ``owner``

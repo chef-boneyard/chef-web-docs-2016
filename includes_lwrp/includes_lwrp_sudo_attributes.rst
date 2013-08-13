@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``commands``
      - |commands sudo|
    * - ``group``
-     - |group lwrp sudo|
+     - |name group_sudo|
    * - ``host``
      - 
    * - ``nopasswd``
