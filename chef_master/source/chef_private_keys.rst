@@ -8,7 +8,7 @@ How Keys are Used?
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication.rst
 
-chef-client
+|chef client|
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
 
@@ -18,7 +18,7 @@ Knife
 
 |knife| can also use the |subcommand knife exec| subcommand to make specific, authenticated requests to the |chef server|. |knife| plugins can also make authenticated requests to the |chef server| by leveraging the |subcommand knife exec| subcommand.
 
-chef-validator
+|chef validator|
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_validator.rst
 

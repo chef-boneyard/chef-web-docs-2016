@@ -12,8 +12,8 @@
 We solve these problems by:
 
 * Building a systems integration framework on top of a configuration management system, powered by |ruby| and a simple DSL. This approach makes it easy for beginners.
-* Making it possible to easily extend the capabilities of |chefx| and by allowing the |chef client| to take instruction from ad-hoc sources.
-* Every decision about |chefx| was made with an eye to keeping as much as possible inside of cookbooks, which are sharable chunks of automation that are easily reused and extended.
-* Sharing an open source version with everyone, creating an outstanding community, with a license that allows everyone to safely integrate |chefx| into their environment. |chefx| (and |ohai|) are licensed under the Apache License Version 2.0, a liberal, non-copyleft free software license. We maintain Contributor License Agreements, which allows anyone who uses |chefx| (or |ohai|) to know they are free from any copyright or patent entanglements. 
+* Making it possible to easily extend the capabilities of |chef| by allowing the |chef client| to take instruction from ad-hoc sources.
+* Every decision about |chef| was made with an eye to keeping as much as possible inside of cookbooks, which are sharable chunks of automation that are easily reused and extended.
+* Sharing an open source version with everyone, creating an outstanding community, with a license that allows everyone to safely integrate |chef| into their environment. |chef| (and |ohai|) are licensed under the Apache License Version 2.0, a liberal, non-copyleft free software license. We maintain Contributor License Agreements, which allows anyone who uses |chef| (or |ohai|) to know they are free from any copyright or patent entanglements. 
 
-The goal is to remove people from the process of building automated infrastructure, as much and as often as possible. |chefx| is the first part of a framework that will allow all of us to do that.
+The goal is to remove people from the process of building automated infrastructure, as much and as often as possible. |chef| is the first part of a framework that will allow all of us to do that.

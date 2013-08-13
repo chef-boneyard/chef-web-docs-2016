@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``record_type``
-     - |type record| For example: ``A``, ``CNAME``, and so on.
+     - |record_type| For example: ``A``, ``CNAME``, and so on.
    * - ``rdata``
      - |record_data|
    * - ``ttl``
@@ -20,8 +20,8 @@ This lightweight resource provider has the following attributes:
    * - ``username``
      - |name user api_dns_update|
    * - ``customer``
-     - |customer lwrp dynect_rr|
+     - |id customer_dynect|
    * - ``password``
-     - |password lwrp dynect_rr|
+     - |password customer_dynect|
    * - ``zone``
      - |dns_zone|

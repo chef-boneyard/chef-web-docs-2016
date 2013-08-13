@@ -285,7 +285,7 @@ texinfo_documents = [
 epub_title = u'Chef Docs'
 epub_author = u'Opscode, Inc.'
 epub_publisher = u'Opscode, Inc.'
-epub_copyright = u'2012, Opscode, Inc.'
+epub_copyright = u'Creative Commons Attribution 3.0 Unported License'
 
 # The language of the text. It defaults to the language option
 # or en if the language is not set.

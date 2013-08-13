@@ -1,5 +1,5 @@
 =====================================================
-Just Enough Ruby for |chefx|
+Just Enough Ruby for Chef
 =====================================================
 
 .. include:: ../../includes_ruby/includes_ruby.rst

@@ -1,5 +1,5 @@
 =====================================================
-A Quick Overview of |chefx|
+A Quick Overview of |chef|
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
@@ -28,7 +28,7 @@ Repository
 
 |git| is the most common location to store a |chef repo| that is used with a |chef hosted| account.
 
-The Hosted Chef Server
+The Hosted Server
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
@@ -38,7 +38,7 @@ Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-|chefx| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chefx| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
+The |chef client| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. The |chef client| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
 Conclusion
 =====================================================

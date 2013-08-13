@@ -42,7 +42,7 @@ This argument has the following options:
    |secret-file|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|

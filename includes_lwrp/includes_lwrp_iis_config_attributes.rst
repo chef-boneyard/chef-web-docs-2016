@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``cfg_cmd``
-     - |cfg_cmd lwrp iis_config|
+     - |cfg_cmd|

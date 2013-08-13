@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``-A ID``, ``--openstack-access-key-id ID``
-   |openstack-access-key-id|
+   |id openstack_access_key|
 
 ``--bootstrap-version VERSION``
    |bootstrap version|
@@ -27,7 +27,7 @@ This argument has the following options:
    |image|
 
 ``-K SECRET``, ``--openstack-secret-access-key SECRET``
-   |openstack-secret-access-key|
+   |key openstack_secret_access|
 
 ``-N NAME``, ``--node-name NAME``
    |name node|
@@ -36,7 +36,7 @@ This argument has the following options:
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``--openstack-api-endpoint ENDPOINT``
-   |openstack-api-endpoint|
+   |api openstack_endpoint|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh-password|
@@ -54,7 +54,7 @@ This argument has the following options:
    |ssh-key openstack|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|

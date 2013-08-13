@@ -4,7 +4,9 @@ About Configuration Files
 
 .. warning:: |note doc_version_11-4|
 
-|chefx| relies on |ruby| files to provide configuration details and settings to various components. The files are written using a |ruby| DSL that specifies each setting and its value. Some values are specified as strings, others as integers, floats, hashes, or arrays. In the following sections, the settings are listed alphabetically, with a description of the setting and (in most cases) the available options and values.
+.. include:: ../../includes_chef/includes_chef_generic_config.rst
+
+In the following sections, the settings are listed alphabetically, with a description of the setting and (in most cases) the available options and values.
 
 .. list-table::
    :widths: 150 450

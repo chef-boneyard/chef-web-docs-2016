@@ -1,5 +1,5 @@
 =====================================================
-About Ohai
+About |ohai|
 =====================================================
 
 .. include:: ../../includes_ohai/includes_ohai.rst
@@ -24,7 +24,7 @@ Attribute Precedence
 
 Install |ohai|
 =====================================================
-|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately from |chefx|.
+|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately.
 
 Install from Github
 -----------------------------------------------------
@@ -40,7 +40,7 @@ Install on Microsoft Windows
 
 Create |ohai| Plugins
 =====================================================
-|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately from |chefx|.
+|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately.
 
 Create a Simple Plugin
 -----------------------------------------------------

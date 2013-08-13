@@ -1,5 +1,5 @@
 =====================================================
-|chef client|
+About the chef-client
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_client.rst

@@ -16,11 +16,11 @@ This lightweight resource provider has the following attributes:
    * - ``command``
      - |name command|
    * - ``directory``
-     - |directory lwrp supervisor|
+     - |path directory_chdir|
    * - ``environment``
      - |environment key_value_pairs|
    * - ``exitcodes``
-     - |exitcodes lwrp supervisor|
+     - |exitcodes|
    * - ``numprocs``
      - |number_of_processes|
    * - ``numprocs_start``

@@ -51,7 +51,7 @@ This argument has the following options:
    |name server|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|

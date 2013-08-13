@@ -1,5 +1,5 @@
 =====================================================
-Install the Chef Server on a Virtual Machine
+Install the Server on a Virtual Machine
 =====================================================
 
 .. include:: ../../includes_install/includes_install_server_scenario_vm_intro.rst

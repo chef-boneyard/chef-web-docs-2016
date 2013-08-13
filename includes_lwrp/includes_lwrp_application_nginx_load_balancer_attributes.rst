@@ -26,6 +26,6 @@ This lightweight resource provider has the following attributes:
    * - ``static_files``
      - |static_files lwrp application_nginx_load_balancer|
    * - ``template``
-     - |template lwrp application_nginx_load_balancer|
+     - |template context_file| Default value: ``load_balancer.conf.erb`` (from this cookbook).
 
 

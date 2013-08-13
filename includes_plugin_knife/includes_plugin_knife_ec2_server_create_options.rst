@@ -84,7 +84,7 @@ This argument has the following options:
    |tags|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-u USER_DATA_FILE``, ``--user-data USER_DATA_FILE``
    |user data_file_ec2|

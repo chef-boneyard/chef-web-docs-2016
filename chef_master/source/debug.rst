@@ -1,5 +1,5 @@
 =====================================================
-Debug Recipes and |chef client| Runs
+Debug Recipes and chef-client Runs
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst

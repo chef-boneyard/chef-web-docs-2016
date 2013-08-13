@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``application_pool``
      - |application_pool site|
    * - ``bindings``
-     - |bindings lwrp iis_site|
+     - |bindings|
    * - ``host_header``
      - |host_header| Default value: all host headers.
    * - ``path``

@@ -48,7 +48,7 @@ This subcommand has the following options:
    |sudo|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|

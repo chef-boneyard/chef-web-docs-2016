@@ -10,12 +10,12 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``cookbook``
-     - |cookbook lwrp users|
+     - |name cookbook_authorized_keys|
    * - ``data_bag``
-     - |data_bag lwrp users|
+     - |name data_bag|
    * - ``group_id``
      - |id group|
    * - ``group_name``
      - |name group| This value defaults to the name of the resource if left empty.
    * - ``search_group``
-     - |search_group lwrp users|
+     - |name group_search| This value defaults to the name of the resource if left empty.

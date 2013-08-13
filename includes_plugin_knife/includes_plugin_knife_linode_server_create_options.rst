@@ -48,7 +48,7 @@ This argument has the following options:
    |run-list|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|

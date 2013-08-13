@@ -49,7 +49,7 @@ This command has the following options:
    |client_key| Default value: ``/etc/chef/client.pem``.
 
 ``-K KEY_FILE``, ``--validation_key KEY_FILE``
-   |validation_key|
+   |validation_key| Default value: ``/etc/chef/validation.pem``.
 
 ``-l LEVEL``, ``--log_level LEVEL``
    |log_level|

@@ -6,7 +6,7 @@ windows Lightweight Resource
 
 The |cookbook windows| cookbook contains the following lightweight resources: ``windows_auto_run``, ``windows_batch``, ``windows_feature``, ``windows_package``, ``windows_path``, ``windows_reboot``, ``windows_registry``, ``windows_shortcut``, and ``windows_zipfile``.
 
-.. warning:: The |resource batch| resource was added to |chefx| in version 11.6 as a core resource. In general, it is recommended to use the |resource batch| resource instead of the ``windows_batch`` lightweight resource included in the |cookbook windows| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer resource.
+.. warning:: The |resource batch| resource was added to |chef 11-6| as a core resource. In general, it is recommended to use the |resource batch| resource instead of the ``windows_batch`` lightweight resource included in the |cookbook windows| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer resource.
 
 .. note:: These lightweight resources are part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
@@ -30,6 +30,8 @@ Examples
 windows_batch
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_windows_batch.rst
+
+.. warning:: This lightweight resource has been replaced by a core resource for |chef 11|. See: `batch <http://docs.opscode.com/resource_batch.html>`_ for details about the resource.
 
 Actions
 -----------------------------------------------------
@@ -138,7 +140,7 @@ Examples
 
 windows_registry
 =====================================================
-.. warning:: This lightweight resource has been replaced by a core resource for |chef 11|. See: `registry_key <http://docs.opscode.com/resource_registry_key.html>`_ details about the resource. Also, six helper methods for registry keys have been added to the Recipe DSL: `registry_data_exists? <http://docs.opscode.com/dsl_recipe_method_registry_data_exists.html>`_, `registry_get_subkeys <http://docs.opscode.com/dsl_recipe_method_registry_get_subkeys.html>`_, `registry_get_values <http://docs.opscode.com/dsl_recipe_method_registry_get_values.html>`_, `registry_has_subkeys? <http://docs.opscode.com/dsl_recipe_method_registry_has_subkeys.html>`_, `registry_key_exists? <http://docs.opscode.com/dsl_recipe_method_registry_key_exists.html>`_, and `registry_value_exists? <http://docs.opscode.com/dsl_recipe_method_registry_value_exists.html>`_.
+.. warning:: This lightweight resource has been replaced by a core resource for |chef 11|. See: `registry_key <http://docs.opscode.com/resource_registry_key.html>`_ for details about the resource. Also, six helper methods for registry keys have been added to the Recipe DSL: `registry_data_exists? <http://docs.opscode.com/dsl_recipe_method_registry_data_exists.html>`_, `registry_get_subkeys <http://docs.opscode.com/dsl_recipe_method_registry_get_subkeys.html>`_, `registry_get_values <http://docs.opscode.com/dsl_recipe_method_registry_get_values.html>`_, `registry_has_subkeys? <http://docs.opscode.com/dsl_recipe_method_registry_has_subkeys.html>`_, `registry_key_exists? <http://docs.opscode.com/dsl_recipe_method_registry_key_exists.html>`_, and `registry_value_exists? <http://docs.opscode.com/dsl_recipe_method_registry_value_exists.html>`_.
 
 .. include:: ../../includes_lwrp/includes_lwrp_windows_registry.rst
 

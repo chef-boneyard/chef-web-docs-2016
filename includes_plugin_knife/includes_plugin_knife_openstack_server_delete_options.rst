@@ -6,13 +6,13 @@
 This argument has the following options:
 
 ``-A ID``, ``--openstack-access-key-id ID``
-   |openstack-access-key-id|
+   |id openstack_access_key|
 
 ``-K SECRET``, ``--openstack-secret-access-key SECRET``
-   |openstack-secret-access-key|
+   |key openstack_secret_access|
 
 ``--openstack-api-endpoint ENDPOINT``
-   |openstack-api-endpoint|
+   |api openstack_endpoint|
 
 ``--region REGION``
    |region openstack|

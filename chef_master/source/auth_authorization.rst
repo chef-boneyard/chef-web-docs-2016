@@ -24,7 +24,7 @@ Determine Access
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst
 
-Open Source |chef server|
+Open Source Server
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst
 

@@ -3,5 +3,5 @@
 
 |opscode| provides the following plugins, which work the same as built-in subcommands (including common options), but must be installed separately (using |rubygems|): |subcommand knife azure|, |subcommand knife bluebox|, |subcommand knife ec2|, |subcommand knife eucalyptus|, |subcommand knife google|, |subcommand knife hp|, |subcommand knife linode|, |subcommand knife openstack|, |subcommand knife rackspace|, |subcommand knife terremark|, |subcommand knife vcloud|, and |subcommand knife windows|.
 
-The |chefx| community provides many other plugins for |knife|: http://community.opscode.com/.
+The community provides many other plugins for |knife|: http://community.opscode.com/.
 

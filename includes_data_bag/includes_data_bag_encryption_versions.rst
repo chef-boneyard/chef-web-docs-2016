@@ -7,7 +7,7 @@ The manner by which a data bag is encrypted depends on the version of the |chef 
 
 where R is read, W is write, and D is disable. (Disabling support for older encryption version formats will be in the next version and, if desired, will require a configuration change.)
 
-For version 0 (default, through |chefx| 10.18):
+For version 0 (default, through |chef 10-18|):
 
 * An encrypted data bag is written using |yaml| as the serialization format
 * |base64| encoding is used to preserve special characters in encrypted contents
@@ -16,7 +16,7 @@ For version 0 (default, through |chefx| 10.18):
 * A recipe can load encrypted data as long as the shared secret is present in a file on the node or is accessible from a URI path
 * Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed when tracking the data bag item)
 
-For version 1 (default, starting with |chefx| 11.x):
+For version 1 (default, starting with |chef 11-0|):
 
 * An encrypted data bag is written using |json| as the serialization format
 * |base64| encoding is used to preserve special characters in encrypted contents
@@ -26,7 +26,7 @@ For version 1 (default, starting with |chefx| 11.x):
 * A recipe can load encrypted data as long as the shared secret is present in a file on the node or is accessible from a URI path
 * Only the values of a data bag item are decrypted; keys are still searchable. The values associated with the ``id`` key of a data bag item are not encrypted (because they are needed by the |chef client| when tracking the data bag item)
 
-For version 2 (available, starting with |chefx| 11.6):
+For version 2 (available, starting with |chef 11-6|):
 
 * Same as version 1
 * Can disable version 0 and version 1 data bag encryption formats

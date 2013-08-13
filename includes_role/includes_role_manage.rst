@@ -12,7 +12,7 @@ There are several ways to manage roles:
 * The command line can also be used with |json| files and third-party services, such as |amazon ec2|, where the |json| files can contain per-instance metadata stored in a file on-disk and then read by |chef solo| or |chef client| as required.
 * |chef solo| does not allow roles.
 
-By creating and editing files using the |ruby| DSL or |json|, role data can be dynamically generated with the |ruby| DSL. Roles created and edited using files are compatible with all versions of |chefx|, including |chef solo|. Roles created and edited using files can be kept in version source control, which also keeps a history of what changed when. When roles are created and edited using files, they should not be managed using |knife| or the |chef manager|, as changes will be overwritten.
+By creating and editing files using the |ruby| DSL or |json|, role data can be dynamically generated with the |ruby| DSL. Roles created and edited using files are compatible with all versions of |chef|, including |chef solo|. Roles created and edited using files can be kept in version source control, which also keeps a history of what changed when. When roles are created and edited using files, they should not be managed using |knife| or the |chef manager|, as changes will be overwritten.
 
 A run-list that is associated with a role can be edited using the |chef manager|. The canonical source of a role's data is stored on the |chef server|, which means that keeping role data in version source control can be challenging.
 

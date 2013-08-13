@@ -1,5 +1,5 @@
 =====================================================
-Create the |chef repo|
+Create the chef-repo
 =====================================================
 
 .. include:: ../../includes_repository/includes_repository_create.rst

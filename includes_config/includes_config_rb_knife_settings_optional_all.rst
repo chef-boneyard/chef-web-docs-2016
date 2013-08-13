@@ -89,7 +89,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:pretty]``
      - |no_pretty|
    * - ``knife[:print_after]``
-     - |print-after|
+     - |print_after|
    * - ``knife[:purge]``
      - |purge cookbook|
    * - ``knife[:readme_format]``
@@ -123,13 +123,13 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:ssh_user]``
      - |ssh-user|
    * - ``knife[:template_file]``
-     - |template-file|
+     - |path bootstrap_template|
    * - ``knife[:use current_branch]``
      - |use current_branch|
    * - ``knife[:use_sudo]``
      - |sudo|
    * - ``knife[:user]`` and/or ``knife[:user_home]``
-     - |user|
+     - |user knife|
    * - ``knife[:user_key]``
      - |file public_key|
    * - ``knife[:user_password]``

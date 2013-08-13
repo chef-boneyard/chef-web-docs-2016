@@ -2,7 +2,7 @@
 Community Guidelines
 =====================================================
 
-The |chefx| community is a mixture of professionals and volunteers who come from all over the world and work together to make |chefx| better, including mentoring, teaching, and connecting with other members of the community.
+The community is a mixture of professionals and volunteers who come from all over the world and work together to make |chef| better, including mentoring, teaching, and connecting with other members of the community.
 
 Diversity is one of our biggest strengths, but it can also bring increased communication challenges at times. 
 

@@ -28,7 +28,7 @@ This resource has the following attributes:
    * - ``group``
      - |group deploy| Default value: ``nil``.
    * - ``keep_releases``
-     - |keep_releases resource deploy|
+     - |keep_releases| Default value: ``5``.
    * - ``migrate``
      - |migrate resource deploy|
    * - ``migration_command``
@@ -50,7 +50,7 @@ This resource has the following attributes:
    * - ``rollback_on_error``
      - |rollback_on_error| Default value: ``false``.
    * - ``scm_provider``
-     - |scm_provider resource deploy|
+     - |name scm_provider| Default value: ``Chef::Provider::Git``. Optional values: ``Chef::Provider::Subversion``.
    * - ``symlinks``
      - |symlinks| 
    * - ``symlink_before_migrate``

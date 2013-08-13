@@ -6,13 +6,13 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--terremark-username USER_NAME``
-   |terremark-username|
+   |user terremark|
 
 ``-K PASSWORD``, ``--terremark-password PASSWORD``
-   |terremark-password|
+   |password terremark|
 
 ``--print-after``
-   |print-after|
+   |print_after|
 
 ``-S SERVICE_NAME``, ``--terremark-service SERVICE_NAME``
    |name service|

@@ -40,13 +40,13 @@ The following options can be run with all |knife| sub-commands and plug-ins:
    |password user|
 
 ``--print-after``
-   |print-after|
+   |print_after|
 
 ``-s URL``, ``--server-url URL``
    |url chef_server|
 
 ``-u USER``, ``--user USER``
-   |user|
+   |user knife|
 
 ``-v``, ``--version``
    |version chef|

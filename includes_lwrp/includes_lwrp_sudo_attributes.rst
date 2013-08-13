@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``runas``
      - 
    * - ``template``
-     - |template lwrp sudo|
+     - |template sudo|
    * - ``user``
      - |user sudo|
    * - ``variables``

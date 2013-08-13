@@ -42,7 +42,7 @@ This argument has the following options:
    |run-list|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-U HOST``, ``--vcloud-host HOST``
    |host vcloud|

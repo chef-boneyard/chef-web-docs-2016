@@ -1,5 +1,5 @@
 =====================================================
-Community Plugins: Chef
+Community Plugins: chef-client
 =====================================================
 
 .. include:: ../../includes_handler/includes_handler.rst
@@ -29,7 +29,7 @@ Community Plugins: Chef
    * - chef-solo-search
      - Adds a cookbook library that enables searching of data bags when using |chef solo|. Download this plugin: https://github.com/edelight/chef-solo-search.
    * - chef-trac-hacks
-     - Adds the ability to fill a coordination gap between |amazon aws| and |chefx|. Download this plugin: http://trac-hacks.org/wiki/CloudPlugin.
+     - Adds the ability to fill a coordination gap between |amazon aws| and the |chef client|. Download this plugin: http://trac-hacks.org/wiki/CloudPlugin.
    * - chef-vim
      - Adds a plugin that makes cookbook navigation quick and easy. Download this plugin: https://github.com/t9md/vim-chef.
    * - chef-vpc-toolkit

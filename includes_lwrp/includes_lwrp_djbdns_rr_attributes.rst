@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``ip``
      - Required. |ip_address|
    * - ``type``
-     - |type djbdns_rr| Default value: ``host``.
+     - |record_type| Default value: ``host``.

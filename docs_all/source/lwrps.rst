@@ -239,7 +239,7 @@ application
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_base.rst
 
-.. note:: This lightweight resource is part of the ``application`` cookbook (http://community.opscode.com/cookbooks/application).
+.. note:: This lightweight resource is part of the |cookbook application| cookbook (http://community.opscode.com/cookbooks/application).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -258,7 +258,7 @@ application_java_webapp
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_java_webapp.rst
 
-.. note:: This lightweight resource is part of the ``application_java`` cookbook (http://community.opscode.com/cookbooks/application_java).
+.. note:: This lightweight resource is part of the |cookbook application_java| cookbook (http://community.opscode.com/cookbooks/application_java).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -277,7 +277,7 @@ application_java_tomcat
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_java_tomcat.rst
 
-.. note:: This lightweight resource is part of the ``application_java`` cookbook (http://community.opscode.com/cookbooks/application_java).
+.. note:: This lightweight resource is part of the |cookbook application_java| cookbook (http://community.opscode.com/cookbooks/application_java).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -366,7 +366,7 @@ application_nginx_load_balancer
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_nginx_load_balancer.rst
 
-.. note:: This lightweight resource is part of the ``application_nginx`` cookbook (http://community.opscode.com/cookbooks/application_nginx).
+.. note:: This lightweight resource is part of the |cookbook application_nginx| cookbook (http://community.opscode.com/cookbooks/application_nginx).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -451,7 +451,7 @@ application_php_mod_php_apache2
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_php_mod_php_apache2.rst
 
-.. note:: This lightweight resource is part of the ``application_php`` cookbook (http://community.opscode.com/cookbooks/application_php).
+.. note:: This lightweight resource is part of the |cookbook application_php| cookbook (http://community.opscode.com/cookbooks/application_php).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -518,7 +518,7 @@ application_php_php
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_php_php.rst
 
-.. note:: This lightweight resource is part of the ``application_php`` cookbook (http://community.opscode.com/cookbooks/application_php).
+.. note:: This lightweight resource is part of the |cookbook application_php| cookbook (http://community.opscode.com/cookbooks/application_php).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -537,7 +537,7 @@ application_python_celery
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_python_celery.rst
 
-.. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
+.. note:: This lightweight resource is part of the |cookbook application_python| cookbook (http://community.opscode.com/cookbooks/application_python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -557,7 +557,7 @@ application_python_django
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_python_django.rst
 
-.. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
+.. note:: This lightweight resource is part of the |cookbook application_python| cookbook (http://community.opscode.com/cookbooks/application_python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -575,7 +575,7 @@ application_python_gunicorn
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_python_gunicorn.rst
 
-.. note:: This lightweight resource is part of the ``application_python`` cookbook (http://community.opscode.com/cookbooks/application_python).
+.. note:: This lightweight resource is part of the |cookbook application_python| cookbook (http://community.opscode.com/cookbooks/application_python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -646,7 +646,7 @@ application_ruby_memcached
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_memcached.rst
 
-.. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
+.. note:: This lightweight resource is part of the |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -691,7 +691,7 @@ application_ruby_passenger_apache2
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2.rst
 
-.. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
+.. note:: This lightweight resource is part of the |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -753,7 +753,7 @@ application_ruby_rails
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails.rst
 
-.. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
+.. note:: This lightweight resource is part of the |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -772,7 +772,7 @@ application_ruby_unicorn
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_application_ruby_unicorn.rst
 
-.. note:: This lightweight resource is part of the ``aplication_ruby`` cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
+.. note:: This lightweight resource is part of the |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -791,7 +791,7 @@ apt_preference
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_apt_preference.rst
 
-.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
+.. note:: This lightweight resource is part of the |cookbook apt| cookbook (http://community.opscode.com/cookbooks/apt).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -812,7 +812,7 @@ apt_repository
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_apt_repository.rst
 
-.. note:: This lightweight resource is part of the ``apt`` cookbook (http://community.opscode.com/cookbooks/apt).
+.. note:: This lightweight resource is part of the |cookbook apt| cookbook (http://community.opscode.com/cookbooks/apt).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -841,7 +841,7 @@ aws_ebs_volume
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_aws_ebs_volume.rst
 
-.. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
+.. note:: This lightweight resource is part of the |cookbook aws| cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -867,7 +867,7 @@ aws_elastic_ip
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_ip.rst
 
-.. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
+.. note:: This lightweight resource is part of the |cookbook aws| cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -897,7 +897,7 @@ aws_elastic_lb
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_aws_elastic_lb.rst
 
-.. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
+.. note:: This lightweight resource is part of the |cookbook aws| cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -920,7 +920,7 @@ aws_resource_tag
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_aws_resource_tag.rst
 
-.. note:: This lightweight resource is part of the ``AWS`` cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
+.. note:: This lightweight resource is part of the |cookbook aws| cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -946,7 +946,7 @@ bluepill_service
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_bluepill_service.rst
 
-.. note:: This lightweight resource is part of the ``bluepill`` cookbook (http://community.opscode.com/cookbooks/bluepill).
+.. note:: This lightweight resource is part of the |cookbook bluepill| cookbook (http://community.opscode.com/cookbooks/bluepill).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -970,7 +970,7 @@ chef_handler
 
 .. include:: ../../includes_lwrp/includes_lwrp_chef_handler.rst
 
-.. note:: This lightweight resource is part of the ``chef_handler`` cookbook (http://community.opscode.com/cookbooks/chef_handler).
+.. note:: This lightweight resource is part of the |cookbook chef_handler| cookbook (http://community.opscode.com/cookbooks/chef_handler).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -994,7 +994,7 @@ daemontools_service
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_daemontools_service.rst
 
-.. note:: This lightweight resource is part of the ``daemontools`` cookbook (http://community.opscode.com/cookbooks/daemontools).
+.. note:: This lightweight resource is part of the |cookbook daemontools| cookbook (http://community.opscode.com/cookbooks/daemontools).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1012,7 +1012,7 @@ djbdns_rr
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_djbdns_rr.rst
 
-.. note:: This lightweight resource is part of the ``djbdns`` cookbook (http://community.opscode.com/cookbooks/djbdns).
+.. note:: This lightweight resource is part of the |cookbook djbdns| cookbook (http://community.opscode.com/cookbooks/djbdns).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1032,7 +1032,7 @@ dmg_package
 
 .. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
 
-.. note:: This lightweight resource is part of the ``dmg`` cookbook (http://community.opscode.com/cookbooks/dmg).
+.. note:: This lightweight resource is part of the |cookbook dmg| cookbook (http://community.opscode.com/cookbooks/dmg).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1058,7 +1058,7 @@ dynect_rr
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_dynect_rr.rst
 
-.. note:: This lightweight resource is part of the ``dynect`` cookbook (http://community.opscode.com/cookbooks/dynect). The ``dynect_rest`` |ruby| |gem| is required.
+.. note:: This lightweight resource is part of the |cookbook dynect| cookbook (http://community.opscode.com/cookbooks/dynect). The ``dynect_rest`` |ruby| |gem| is required.
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1076,7 +1076,7 @@ firewall
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_firewall_default.rst
 
-.. note:: This lightweight resource is part of the ``firewall`` cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
+.. note:: This lightweight resource is part of the |cookbook firewall| cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1094,7 +1094,7 @@ firewall_rule
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_firewall_rule.rst
 
-.. note:: This lightweight resource is part of the ``firewall`` cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
+.. note:: This lightweight resource is part of the |cookbook firewall| cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1115,7 +1115,7 @@ freebsd_port_options
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_freebsd_port_options.rst
 
-.. note:: This lightweight resource is part of the ``freebsd`` cookbook (http://community.opscode.com/cookbooks/freebsd).
+.. note:: This lightweight resource is part of the |cookbook freebsd| cookbook (http://community.opscode.com/cookbooks/freebsd).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1137,7 +1137,7 @@ gunicorn_config
 
 .. include:: ../../includes_lwrp/includes_lwrp_gunicorn_config.rst
 
-.. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
+.. note:: This lightweight resource is part of the |cookbook gunicorn| cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1162,7 +1162,7 @@ gunicorn_install
 
 .. include:: ../../includes_lwrp/includes_lwrp_gunicorn_install.rst
 
-.. note:: This lightweight resource is part of the ``gunicorn`` cookbook (http://community.opscode.com/cookbooks/gunicorn).
+.. note:: This lightweight resource is part of the |cookbook gunicorn| cookbook (http://community.opscode.com/cookbooks/gunicorn).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1181,7 +1181,7 @@ homebrew
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_homebrew_tap.rst
 
-.. note:: This lightweight resource is part of the ``homebrew`` cookbook (http://community.opscode.com/cookbooks/homebrew).
+.. note:: This lightweight resource is part of the |cookbook homebrew| cookbook (http://community.opscode.com/cookbooks/homebrew).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1210,7 +1210,7 @@ iis_app
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_app.rst
 
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+.. note:: This lightweight resource is part of the |cookbook iis| cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1229,7 +1229,7 @@ iis_config
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_config.rst
 
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+.. note:: This lightweight resource is part of the |cookbook iis| cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1249,7 +1249,7 @@ iis_module
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_module.rst
 
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+.. note:: This lightweight resource is part of the |cookbook iis| cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1267,7 +1267,7 @@ iis_pool
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_pool.rst
 
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+.. note:: This lightweight resource is part of the |cookbook iis| cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1285,7 +1285,7 @@ iis_site
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_site.rst
 
-.. note:: This lightweight resource is part of the ``iis`` cookbook (http://community.opscode.com/cookbooks/iis).
+.. note:: This lightweight resource is part of the |cookbook iis| cookbook (http://community.opscode.com/cookbooks/iis).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1308,7 +1308,7 @@ maven
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_maven.rst
 
-.. note:: This lightweight resource is part of the ``maven`` cookbook (http://community.opscode.com/cookbooks/maven).
+.. note:: This lightweight resource is part of the |cookbook maven| cookbook (http://community.opscode.com/cookbooks/maven).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1327,7 +1327,7 @@ nagios_nrpecheck
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_nagios_nrpecheck.rst
 
-.. note:: This lightweight resource is part of the ``nagios`` cookbook (http://community.opscode.com/cookbooks/nagios).
+.. note:: This lightweight resource is part of the |cookbook nagios| cookbook (http://community.opscode.com/cookbooks/nagios).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1348,7 +1348,7 @@ pacman_aur
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_pacman_aur.rst
 
-.. note:: This lightweight resource is part of the ``pacman`` cookbook (http://community.opscode.com/cookbooks/pacman).
+.. note:: This lightweight resource is part of the |cookbook pacman| cookbook (http://community.opscode.com/cookbooks/pacman).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1368,7 +1368,7 @@ pacman_group
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_pacman_group.rst
 
-.. note:: This lightweight resource is part of the ``pacman`` cookbook (http://community.opscode.com/cookbooks/pacman).
+.. note:: This lightweight resource is part of the |cookbook pacman| cookbook (http://community.opscode.com/cookbooks/pacman).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1386,7 +1386,7 @@ php_pear
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_php_pear_default.rst
 
-.. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
+.. note:: This lightweight resource is part of the |cookbook php| cookbook (http://community.opscode.com/cookbooks/php).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1414,7 +1414,7 @@ php_pear_channel
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_php_pear_channel.rst
 
-.. note:: This lightweight resource is part of the ``php`` cookbook (http://community.opscode.com/cookbooks/php).
+.. note:: This lightweight resource is part of the |cookbook php| cookbook (http://community.opscode.com/cookbooks/php).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1438,7 +1438,7 @@ powershell
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_powershell.rst
 
-.. note:: This lightweight resource is part of the ``powershell`` cookbook (http://community.opscode.com/cookbooks/powershell).
+.. note:: This lightweight resource is part of the |cookbook powershell| cookbook (http://community.opscode.com/cookbooks/powershell).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1465,7 +1465,7 @@ python_pip
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_python_pip.rst
 
-.. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
+.. note:: This lightweight resource is part of the |cookbook python| cookbook (http://community.opscode.com/cookbooks/python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1489,7 +1489,7 @@ python_virtualenv
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_python_virtualenv.rst
 
-.. note:: This lightweight resource is part of the ``python`` cookbook (http://community.opscode.com/cookbooks/python).
+.. note:: This lightweight resource is part of the |cookbook python| cookbook (http://community.opscode.com/cookbooks/python).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1511,7 +1511,7 @@ rabbitmq_plugin
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_plugin.rst
 
-.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
+.. note:: This lightweight resource is part of the |cookbook rabbitmq| cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1531,7 +1531,7 @@ rabbitmq_user
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_user.rst
 
-.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
+.. note:: This lightweight resource is part of the |cookbook rabbitmq| cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1554,7 +1554,7 @@ rabbitmq_vhost
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_rabbitmq_vhost.rst
 
-.. note:: This lightweight resource is part of the ``rabbitmq`` cookbook (http://community.opscode.com/cookbooks/rabbitmq).
+.. note:: This lightweight resource is part of the |cookbook rabbitmq| cookbook (http://community.opscode.com/cookbooks/rabbitmq).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1573,7 +1573,7 @@ riak_cluster
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_riak_cluster.rst
 
-.. note:: This lightweight resource is part of the ``riak`` cookbook (http://community.opscode.com/cookbooks/riak).
+.. note:: This lightweight resource is part of the |cookbook riak| cookbook (http://community.opscode.com/cookbooks/riak).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1587,11 +1587,12 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_lwrp/step_lwrp_riak_cluster_add_to_cluster.rst
 
+
 samba_user
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_samba_user.rst
 
-.. note:: This lightweight resource is part of the ``samba`` cookbook (http://community.opscode.com/cookbooks/samba).
+.. note:: This lightweight resource is part of the |cookbook samba| cookbook (http://community.opscode.com/cookbooks/samba).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1610,7 +1611,7 @@ sudo
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_sudo.rst
 
-.. note:: This lightweight resource is part of the ``sudo`` cookbook (http://community.opscode.com/cookbooks/sudo).
+.. note:: This lightweight resource is part of the |cookbook sudo| cookbook (http://community.opscode.com/cookbooks/sudo).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1632,7 +1633,7 @@ supervisor_fcgi
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_fcgi.rst
 
-.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
+.. note:: This lightweight resource is part of the |cookbook supervisor| cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1651,7 +1652,7 @@ supervisor_group
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_group.rst
 
-.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
+.. note:: This lightweight resource is part of the |cookbook supervisor| cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1670,7 +1671,7 @@ supervisor_service
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_supervisor_service.rst
 
-.. note:: This lightweight resource is part of the ``supervisor`` cookbook (http://community.opscode.com/cookbooks/supervisor).
+.. note:: This lightweight resource is part of the |cookbook supervisor| cookbook (http://community.opscode.com/cookbooks/supervisor).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1691,7 +1692,7 @@ transmission_torrent_file
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_transmission_torrent_file.rst
 
-.. note:: This lightweight resource is part of the ``transmission`` cookbook (http://community.opscode.com/cookbooks/transmission).
+.. note:: This lightweight resource is part of the |cookbook transmission| cookbook (http://community.opscode.com/cookbooks/transmission).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1712,7 +1713,7 @@ users_manage
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_users_manage.rst
 
-.. note:: This lightweight resource is part of the ``users`` cookbook (http://community.opscode.com/cookbooks/users).
+.. note:: This lightweight resource is part of the |cookbook users| cookbook (http://community.opscode.com/cookbooks/users).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1734,7 +1735,7 @@ webpi_product
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_webpi_product.rst
 
-.. note:: This lightweight resource is part of the ``webpi`` cookbook (http://community.opscode.com/cookbooks/webpi).
+.. note:: This lightweight resource is part of the |cookbook webpi| cookbook (http://community.opscode.com/cookbooks/webpi).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1756,7 +1757,7 @@ windows_auto_run
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_windows_auto_run.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1774,7 +1775,7 @@ windows_batch
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_windows_batch.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1792,7 +1793,7 @@ windows_feature
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_windows_feature.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1817,7 +1818,7 @@ windows_package
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_windows_package.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1850,7 +1851,7 @@ windows_path
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_windows_path.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1872,7 +1873,7 @@ windows_reboot
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_windows_reboot.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1891,11 +1892,9 @@ Examples
 
 windows_registry
 -----------------------------------------------------
-.. warning:: This lightweight resource is being replaced by a resource for |chef 11|. See: http://docs.opscode.com/resource_registry_key.html for preview details about the resource. Also, six helper methods for registry keys will be added to the Recipe DSL. These will be called: ``registry_data_exists?``, ``registry_get_subkeys``, ``registry_get_values``, ``registry_has_subkeys?``, ``registry_key_exists?``, and ``registry_value_exists?``.
-
 .. include:: ../../includes_lwrp/includes_lwrp_windows_registry.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1916,7 +1915,7 @@ windows_shortcut
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_windows_shortcut.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1935,7 +1934,7 @@ windows_zipfile
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_windows_zipfile.rst
 
-.. note:: This lightweight resource is part of the ``windows`` cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1956,7 +1955,7 @@ yum_key
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_yum_key.rst
 
-.. note:: This lightweight resource is part of the ``yum`` cookbook (http://community.opscode.com/cookbooks/yum).
+.. note:: This lightweight resource is part of the |cookbook yum| cookbook (http://community.opscode.com/cookbooks/yum).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1977,7 +1976,7 @@ yum_repository
 -----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_yum_repository.rst
 
-.. note:: This lightweight resource is part of the ``yum`` cookbook (http://community.opscode.com/cookbooks/yum).
+.. note:: This lightweight resource is part of the |cookbook yum| cookbook (http://community.opscode.com/cookbooks/yum).
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

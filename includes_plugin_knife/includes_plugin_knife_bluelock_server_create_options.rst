@@ -39,7 +39,7 @@ This argument has the following options:
    |tcp_ports|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-U X,Y,Z``, ``--udp X,Y,Z``
    |udp_ports|

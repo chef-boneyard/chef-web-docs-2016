@@ -20,4 +20,4 @@ This lightweight resource provider has the following attributes:
    * - ``runtime_version``
      - |version dotnet_runtime|
    * - ``thirty_two_bit``
-     - |thirty_two_bit|
+     - |thirty_two_bit| Default value: ``false``.

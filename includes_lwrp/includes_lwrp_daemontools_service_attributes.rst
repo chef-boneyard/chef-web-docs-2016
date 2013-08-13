@@ -12,7 +12,7 @@ This lightweight resource provider has the following attributes:
    * - ``cookbook``
      - |cookbook template_location|
    * - ``directory``
-     - Required. |directory lwrp daemontools_service|
+     - Required. |directory daemontools|
    * - ``env``
      - |create_env_directory| Default value: ``{}``.
    * - ``finish``
@@ -26,6 +26,6 @@ This lightweight resource provider has the following attributes:
    * - ``service_name``
      - |name service|
    * - ``template``
-     - |template lwrp daemontools_service|
+     - |template daemontools| Default value: ``NAME``.
    * - ``variables``
      - |variables passed_to_template| Default value: ``{}``.

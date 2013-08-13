@@ -66,7 +66,7 @@ This argument has the following options:
    |tcp_ports|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-u PORT_LIST``, ``---udp-endpoints PORT_LIST``
    |udp_ports|

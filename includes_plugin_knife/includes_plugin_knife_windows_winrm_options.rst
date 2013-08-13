@@ -9,7 +9,7 @@ This argument has the following options:
    |attribute ssh| The default attribute is the |fqdn| of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 
 ``-f CA_TRUST_FILE``, ``--ca-trust-file CA_TRUST_FILE``
-   |ca-trust-file|
+   |ca_trust_file|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
@@ -21,7 +21,7 @@ This argument has the following options:
    |manual-list|
 
 ``-p PORT``, ``--winrm-port PORT``
-   |winrm_port|
+   |winrm_port| Default: ``5985``.
 
 ``-P PASSWORD``, ``--winrm-password PASSWORD``
    |winrm_password|

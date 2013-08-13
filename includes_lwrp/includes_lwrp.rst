@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A |lwrp| is a part of a cookbook that is used to extend |chefx| in a way that allows custom actions to be defined, and then used in recipes in much the same way as any core resource. A |lwrp| has two principal components:
+A |lwrp| is a part of a cookbook that is used to extend the |chef client| in a way that allows custom actions to be defined, and then used in recipes in much the same way as any core resource. A |lwrp| has two principal components:
 
 * A `lightweight resource <http://docs.opscode.com/lwrp_custom_resource.html>`_ that defines a set of actions and attributes
 * A lightweight provider that tells the |chef client| how to handle each action, what to do if certain conditions are met, and so on

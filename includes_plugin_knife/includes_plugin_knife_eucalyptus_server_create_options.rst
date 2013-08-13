@@ -52,7 +52,7 @@ This argument has the following options:
    |ssh-key eucalyptus|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
    |ssh-user|

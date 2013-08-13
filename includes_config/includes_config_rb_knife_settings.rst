@@ -65,7 +65,7 @@ This configuration file has the following settings:
  
           validation_client_name "chef-validator"
    * - ``validation_key``
-     - |validation_key| For example:
+     - |validation_key| Default value: ``/etc/chef/validation.pem``. For example:
        ::
  
           validation_key "/etc/chef/validation.pem"

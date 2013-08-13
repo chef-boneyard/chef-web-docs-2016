@@ -14,13 +14,13 @@ This lightweight resource provider has the following attributes:
    * - ``torrent``
      - |torrent_file|
    * - ``blocking``
-     - |blocking lwrp transmission_torrent_file|
+     - |blocking_torrent_file|
    * - ``continue_seeding``
-     - |continue_seeding lwrp transmission_torrent_file|
+     - |continue_seeding_torrent_file|
    * - ``owner``
      - |owner file|
    * - ``group``
-     - |group lwrp transmission_torrent_file|
+     - |id group_torrent_file|
    * - ``rpc_host``
      - |rpc_host| Default value: ``localhost``.
    * - ``rpc_password``

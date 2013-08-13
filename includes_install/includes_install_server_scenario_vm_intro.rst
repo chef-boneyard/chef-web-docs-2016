@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
-The following example walks through the process of setting up the open source version of |chef server 11| in a virtual machine for the purpose of demoing |chefx|. Any type virtual machine software can be used to run the |chef server|; however, this example is based on the following assumptions:
+The following example walks through the process of setting up the open source version of |chef server 11| in a virtual machine for the purpose of a demo. Any type virtual machine software can be used to run the |chef server|; however, this example is based on the following assumptions:
 
 * A computer is running |vmware fusion 5x|
 * A virtual machine is configured in |vmware fusion 5x| in which a 64-bit version of |ubuntu| 12.04 is installed

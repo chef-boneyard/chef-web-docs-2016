@@ -223,7 +223,7 @@ Windows File Security
 
 Resources
 =====================================================
-The following resources are included with |chefx| and have native providers:
+The following resources are core resources with core providers:
 
 * apt_package
 * bash

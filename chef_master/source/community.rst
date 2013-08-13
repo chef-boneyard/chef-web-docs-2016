@@ -1,5 +1,5 @@
 =====================================================
-The Chef Community
+The Community
 =====================================================
 
 .. include:: ../../includes_community/includes_community.rst

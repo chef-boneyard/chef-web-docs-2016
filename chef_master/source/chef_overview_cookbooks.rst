@@ -1,10 +1,10 @@
 =====================================================
-Cookbooks
+Abut Cookbooks
 =====================================================
 
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-|chefx| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chefx| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
+The |chef client| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. The |chef client| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
 Some important components of cookbooks include:
 
@@ -36,13 +36,13 @@ In addition to attributes, recipes, and versions, the following items are also p
    * - :doc:`Files </essentials_cookbook_files>`
      - A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
    * - :doc:`Libraries </essentials_cookbook_libraries>`
-     - A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chefx| language or to implement a new class.
+     - A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef client| language or to implement a new class.
    * - :doc:`Lightweight Resources </lwrp>`
      - A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters.
    * - :doc:`Metadata </essentials_cookbook_metadata>`
      - A metadata file is used to ensure that each cookbook is correctly deployed to each node.\
    * - :doc:`Resources and Providers </resource>`
-     - A resource is a package, a service, a group of users, and so on. A resource tells the |chef client| which provider to use during a |chef client| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. |chefx| includes default providers that cover all of the most common scenarios.
+     - A resource is a package, a service, a group of users, and so on. A resource tells the |chef client| which provider to use during a |chef client| run for various tasks like installing packages, running |ruby| code, or accessing directories and file systems. The resource is generic: "install program A" while the provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. The |chef client| includes default providers that cover all of the most common scenarios.
    * - :doc:`Templates </essentials_cookbook_templates>`
      - A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios.
 
@@ -55,6 +55,6 @@ In addition to attributes, recipes, and versions, the following items are also p
    * - Components
      - Description
    * - :doc:`Cookbooks Maintained by Opscode </opscode_cookbooks>`
-     - |opscode| maintains a collection of cookbooks that are widely used by the |chefx| community.
+     - |opscode| maintains a collection of cookbooks that are widely used by the community.
    * - `Cookbooks Maintained by the Community <http://community.opscode.com/cookbooks>`_
-     - The |chefx| community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that are some of the most popular and are used by nearly everyone.
+     - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that are some of the most popular and are used by nearly everyone.

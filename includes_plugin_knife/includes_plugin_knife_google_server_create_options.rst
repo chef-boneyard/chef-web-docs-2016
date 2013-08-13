@@ -66,7 +66,7 @@ This argument has the following options:
    |google_compute_tags|
 
 ``--template-file TEMPLATE``
-   |template-file|
+   |path bootstrap_template|
 
 ``-u USER_DATA_FILE``, ``--user-data USER_DATA_FILE``
    |google_compute_user_data|

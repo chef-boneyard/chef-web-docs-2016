@@ -1,10 +1,10 @@
 =====================================================
-The Chef Server
+About the Server
 =====================================================
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-There are three types of |chefx| servers:
+There are three types of |chef| servers:
 
 .. list-table::
    :widths: 60 420
@@ -19,7 +19,7 @@ There are three types of |chefx| servers:
    * - :doc:`Private Chef </chef_overview_server_private>`
      - .. include:: ../../includes_chef/includes_chef_private.rst
 
-       |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located behind the firewall. |chef private| is the same as |chef hosted| in every other way. |chef hosted| is the largest |chef private| deployment in the world.
+       |chef private| evolved out of a need for customers to have the same functionality provided by |chef hosted|, but located behind the firewall. |chef private| is the same as |chef hosted| in every other way.
    * - :doc:`Open Source Chef Server </chef_overview_server_open_source>`
      - .. include:: ../../includes_chef/includes_chef_open_source.rst
 

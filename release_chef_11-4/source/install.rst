@@ -4,7 +4,7 @@ Install Chef
 
 .. warning:: |note doc_version_11-4|
 
-|chefx| is installed and configured in three main phases:
+|chef| is installed and configured in three main phases:
 
 #. :doc:`install_server` (or :doc:`install_server_scenario_vm`)
 #. :doc:`install_workstation`

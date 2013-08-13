@@ -1,10 +1,10 @@
 =====================================================
-An Overview of |chefx|
+An Overview of Chef
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-The following diagram shows the relationships between the various elements of |chefx|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
+The following diagram shows the relationships between the various elements of |chef|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
 .. image:: ../../images/overview_chef_draft.png
 
@@ -63,13 +63,13 @@ Some important components of workstations include:
    * - .. image:: ../../images/icon_repository.png
      - .. include:: ../../includes_repository/includes_repository.rst
 
-|chefx| assumes that system administrators and developers know best about how the infrastructure should be put together. The |chef client| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed by the system administrators and developers, most often by defining attributes in cookbooks that take precedence over the default attributes present on nodes.
+System administrators and developers know best about how their infrastructure should be put together. Therefore, the |chef client| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed by the system administrators and developers, most often by defining attributes in cookbooks that take precedence over the default attributes present on nodes.
 
-Chef Server
+The Server
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-There are three types of |chefx| servers:
+There are three types of servers:
 
 .. list-table::
    :widths: 60 420
@@ -80,7 +80,7 @@ There are three types of |chefx| servers:
    * - .. image:: ../../images/icon_chef_hosted.png
      - .. include:: ../../includes_chef/includes_chef_hosted.rst
 
-       |chef hosted| is based on the idea that an infrastructure management tool should be built around a collection of API primitives. By using an API to talk to a cloud provider (such as |amazon vpc|, |windows azure|, or |rackspace|), it allows the freedom to think of those primitives as building blocks. |chefx| only needs to know about the desired state, how it should get there, and what the proper functionality of that desired state should be.
+       |chef hosted| is based on the idea that an infrastructure management tool should be built around a collection of API primitives. By using an API to talk to a cloud provider (such as |amazon vpc|, |windows azure|, or |rackspace|), it allows the freedom to think of those primitives as building blocks. The |chef client| only needs to know about the desired state, how it should get there, and what the proper functionality of that desired state should be.
    * - .. image:: ../../images/icon_chef_private.png
      - .. include:: ../../includes_chef/includes_chef_private.rst
 
@@ -143,7 +143,7 @@ Cookbooks
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-|chefx| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. |chefx| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
+The |chef client| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. A reasonable set of resources are available to the |chef client|, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
 Some important components of cookbooks include:
 
@@ -167,11 +167,9 @@ In addition to attributes, recipes, and versions, the following items are also p
 * Resources and providers. A resource is a package, a service, a group of users, and so on. A resource tells the |chef client| which provider to use during a |chef client| run for various tasks, such as installing packages, running |ruby| code, or accessing directories and file systems. A resource is generic: "install program A" while a provider knows what to do with that process on |debian| and |ubuntu| and |windows|. A provider defines the steps that are required to bring that piece of the system into the desired state. Default providers exist that cover the most common scenarios.
 * File distributions. A file distribution is a specific type of resource that tells a cookbook how to distribute files, including by node, by platform, or by file version.
 * Definitions. A definition is used to create new resources by stringing together one (or more) existing resources.
-* Libraries. A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chefx| language or to implement a new class.
+* Libraries. A library allows the use of arbitrary |ruby| code in a cookbook, either as a way to extend the |chef client| language or to implement a new class.
 * Templates. A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios.
 * Configuration files. A metadata file to ensure that each cookbook is correctly deployed to each node.
-
-
 
 Conclusion
 =====================================================

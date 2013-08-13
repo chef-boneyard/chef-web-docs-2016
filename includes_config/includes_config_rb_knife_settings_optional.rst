@@ -48,7 +48,7 @@ Some of the optional |knife rb| settings are used often, such as the template fi
    * - ``knife[:ssh_port]``
      - |ssh-port|
    * - ``knife[:template_file]``
-     - |template-file|
+     - |path bootstrap_template|
 
 Other |ssh|-related settings that are sometimes helpful when added to the |knife rb| file:
 

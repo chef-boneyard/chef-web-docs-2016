@@ -237,8 +237,8 @@ and then what a list table looks like after it is built:
      - .. include:: ../../includes_style_guide/includes_style_guide_example.rst
    * - No image, just text!
      - .. include:: ../../includes_style_guide/includes_style_guide_example.rst
-   * - |chefx|
-     - |chefx| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure.
+   * - |chef|
+     - |chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure.
 
 Inline Markup
 =====================================================
