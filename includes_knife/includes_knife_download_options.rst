@@ -27,4 +27,5 @@ This subcommand has the following options:
    |purge knife download| Default: ``--no-purge``.
 
 ``--repo-mode MODE``
-   |repo_mode| Default value: ``default``.
+   |repo_mode| Default: ``everything`` / ``hosted_everything``.
+

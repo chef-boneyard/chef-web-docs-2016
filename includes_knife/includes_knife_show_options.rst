@@ -12,6 +12,6 @@ This subcommand has the following options:
    |concurrency| Default: ``10``.
 
 ``--repo-mode MODE``
-   |repo_mode| Default value: ``default``.
+   |repo_mode| Default: ``everything`` / ``hosted_everything``.
 
 

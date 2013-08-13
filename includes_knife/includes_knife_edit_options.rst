@@ -15,6 +15,6 @@ This subcommand has the following options:
    |local chef_repo| Default: ``false``.
 
 ``--repo-mode MODE``
-   |repo_mode| Default value: ``default``.
+   |repo_mode| Default: ``everything`` / ``hosted_everything``.
 
 

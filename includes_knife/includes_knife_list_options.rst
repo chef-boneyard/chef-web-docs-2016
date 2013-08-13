@@ -30,4 +30,4 @@ This subcommand has the following options:
    |r knife list| Default: ``false``.
 
 ``--repo-mode MODE``
-   |repo_mode| Default value: ``default``.
+   |repo_mode| Default: ``everything`` / ``hosted_everything``.

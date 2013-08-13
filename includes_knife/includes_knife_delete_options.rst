@@ -21,4 +21,4 @@ This subcommand has the following options:
    |no_recurse_delete| Default: ``--no-recurse``.
 
 ``--repo-mode MODE``
-   |repo_mode| Default value: ``default``.
+   |repo_mode| Default: ``everything`` / ``hosted_everything``.

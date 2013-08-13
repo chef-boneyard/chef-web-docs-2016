@@ -18,7 +18,7 @@ This subcommand has the following options:
    |remote deps_on_server| Default: ``false``.
 
 ``--repo-mode MODE``
-   |repo_mode| Default value: ``default``.
+   |repo_mode| Default: ``everything`` / ``hosted_everything``.
 
 ``--tree``
    |tree| Default: ``false``.
