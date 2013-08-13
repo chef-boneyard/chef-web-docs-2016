@@ -27,4 +27,4 @@ This subcommand has the following options:
    |purge knife download| Default: ``--no-purge``.
 
 ``--repo-mode MODE``
-   The layout of the local repository. Possible values: ``static``, ``everything``, or ``hosted_everything``. Default: ``everything/hosted_everything``.
+   |repo_mode| Default value: ``default``.
