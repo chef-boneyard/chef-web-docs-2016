@@ -5,10 +5,10 @@ Add the following lines to the attributes file found in the |cookbook private_ch
 
 .. code-block:: ruby
 
-   default['private-chef']['ldap']['host'] = '1.2.3.4'
-   default['private-chef']['ldap']['bind_dn'] = 'cn=bofh,dc=opscode,dc=com'
-   default['private-chef']['ldap']['bind_password'] = 'supersecret'
-   default['private-chef']['ldap']['base_dn'] = 'cn=users,dc=opscode,dc=com'
-   default['private-chef']['ldap']['system_adject
+   default['private_chef']['ldap']['host'] = '1.2.3.4'
+   default['private_chef']['ldap']['bind_dn'] = 'cn=bofh,dc=opscode,dc=com'
+   default['private_chef']['ldap']['bind_password'] = 'supersecret'
+   default['private_chef']['ldap']['base_dn'] = 'cn=users,dc=opscode,dc=com'
+   default['private_chef']['ldap']['system_adject
 
 This cookbook is located at ``/opt/opscode/embedded/cookbooks/private-chef/attributes/default.rb`` by default.
