@@ -6,6 +6,10 @@ About LWRPs
 
 Read more about how to create lightweight resources :doc:`here </lwrp_custom>`; learn how to use the lightweight resources available in cookbooks maintained by |opscode| by clicking one of the links below.
 
+Inline Compile Mode
+=====================================================
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst
+
 |opscode|-maintained
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_opscode_maintained.rst
