@@ -6,13 +6,13 @@ The ``/metadata-server`` and/or ``/download-server`` endpoints can be used to do
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/metadata-server?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true&nightlies=true
+   http://www.opscode.com/chef/download-server?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=false
 
 or:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/download-server?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=true
+   http://www.opscode.com/chef/metadata-server?p=$PLATFORM&pv=$PLATFORM_VERSION&m=$MACHINE_ARCH&v=latest&prerelease=false&nightlies=false
 
 where:
 

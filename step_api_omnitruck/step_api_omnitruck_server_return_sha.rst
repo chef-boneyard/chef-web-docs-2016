@@ -1,7 +1,5 @@
 .. This is an included how-to. 
 
-.. This is an included how-to. 
-
 To use |curl| to return only the SHA for the installer, enter the following:
 
 .. code-block:: bash
