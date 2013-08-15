@@ -14,9 +14,9 @@ Variables
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_variables.rst
 
-Location Specificity
+File Specificity
 =====================================================
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_location_specificity.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_file_distribution_file_specificity.rst
 
 Host Notation
 =====================================================
