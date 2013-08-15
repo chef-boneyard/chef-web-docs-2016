@@ -14,7 +14,7 @@ To create a data bag from a recipe:
 
    users = Chef::DataBag.new
    users.name("users")
-   users.save
+   users.create
 
 To create a data bag item from a recipe:
 
