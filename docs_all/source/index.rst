@@ -49,7 +49,7 @@ Chef Single-page Topics
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server.html">Install Chef Server 11.x</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_workstation.html">Install Chef on a Workstation</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_workstation.html">Install the chef-client on a Workstation</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_bootstrap.html">Bootstrap a Node</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server_scenario_vm.html">Install Chef Server 11.x on a Virtual Machine</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/migrate_to_hosted.html">Migrate to Hosted Chef</a> </br>
