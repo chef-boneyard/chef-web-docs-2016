@@ -1,5 +1,5 @@
 =====================================================
-About the |chef repo|
+About the chef-repo
 =====================================================
 
 .. include:: ../../includes_repository/includes_repository.rst

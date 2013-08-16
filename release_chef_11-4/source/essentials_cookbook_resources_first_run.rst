@@ -1,5 +1,5 @@
 =====================================================
-First-run Resources
+About First-run Resources
 =====================================================
 
 .. warning:: |note doc_version_11-4|

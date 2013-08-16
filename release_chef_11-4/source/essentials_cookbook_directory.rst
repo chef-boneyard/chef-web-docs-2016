@@ -1,5 +1,5 @@
 =====================================================
-Cookbooks Directory
+About the /cookbooks Directory
 =====================================================
 
 .. warning:: |note doc_version_11-4|

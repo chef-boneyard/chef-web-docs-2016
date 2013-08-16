@@ -1,5 +1,5 @@
 =====================================================
-why-run Mode
+About why-run Mode
 =====================================================
 
 .. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode.rst

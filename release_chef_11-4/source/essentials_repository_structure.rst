@@ -1,5 +1,5 @@
 =====================================================
-Directory Structure
+About the Directory Structure
 =====================================================
 
 .. warning:: |note doc_version_11-4|

@@ -1,5 +1,5 @@
 =====================================================
-Platform Resources
+About Platform Resources
 =====================================================
 
 .. warning:: |note doc_version_11-4|
