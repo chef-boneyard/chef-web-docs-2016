@@ -25,7 +25,7 @@ The Community
 =====================================================
 .. include:: ../../includes_community/includes_community_contributions.rst
 
-The Workstation
+The Workstation 
 =====================================================
 **The Basics:** :doc:`About the Workstation </chef_overview_workstation>` | :doc:`The chef-repo </essentials_repository>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
 
