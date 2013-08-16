@@ -6,7 +6,7 @@ An Overview of Enterprise Chef
 
 The following diagram shows the relationships between the various elements of |chef oec|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
-.. image:: ../../images/overview_chef_draft.png
+.. image:: ../../images/overview_chef_oec.png
 
 .. include:: ../../includes_chef/includes_chef_key_elements.rst
 
@@ -28,6 +28,8 @@ The following types of nodes can be managed:
      - .. include:: ../../includes_node/includes_node_cloud.rst
    * - .. image:: ../../images/icon_node_physical.png
      - .. include:: ../../includes_node/includes_node_physical.rst
+   * - .. image:: ../../images/icon_node_virtual.png
+     - .. include:: ../../includes_node/includes_node_virtual.rst
 
 Some important components on nodes include:
 
