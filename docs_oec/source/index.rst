@@ -7,29 +7,13 @@ All About Enterprise Chef ...
 
 Getting Started
 =====================================================
-xxxxx
+If you are new to |chef server oec|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes (long) </oec_overview>`.
 
-.. The first step for Enterprise Chef is to familiarize yourself with the three main components: server, workstation(s), and node(s). All of the configuration work happens in cookbooks. knife is the main tool. There is strong and vibrant community of users out there who build and share plugins for Knife, Ohai, and the chef-client, not to mention thousands of cookbooks that can be downloaded to the chef-repo. Chef requires Ruby, which is a programming language. Like many programming languages, it's a simple language with some flexibility that works very well with Chef. If you aren't familiar with Ruby, it will be essential to learn some. If you are brand new to Chef and just want to try it out, head on over to learnchef and follow the steps there to get a quick installation of a server, workstation, and node so that you can see how all of this works.
+Cookbooks are the fundamental unit of configuration and policy distribution in |chef|. Cookbooks are authored using a programming language called |ruby|. Being an expert in |ruby| is not a requirement, but knowing some basic |ruby| will help you a lot. If you're new to |ruby|, :doc:`familiarize yourself with the basics </just_enough_ruby_for_chef>`.
 
+If you want to try out |chef server oes|, use the hosted |chef server|. First, `sign up for hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_, then :doc:`install the chef-client on a workstation </install_workstation>`, and then :doc:`bootstrap your first node </install_bootstrap>`.
 
-
-
-
-
-
-.. **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
-
-.. **Key concepts:** :doc:`Workstations </chef_overview_workstation>` | :doc:`The Chef Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`LWRPs </lwrp_custom>` | :doc:`Knife </knife>`
-
-.. **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
-
-.. **Try it out:** (1) `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) or `Sign up for Private Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**), then (2) :doc:`Install Chef on a Workstation </install_workstation>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
-
-.. **learnchef.opscode.com:** Install a Workstation `for Mac <https://learnchef.opscode.com/quickstart/workstation-setup/#mac/>`_, `for Linux <https://learnchef.opscode.com/quickstart/workstation-setup/#linux/>`_, or `for Windows <https://learnchef.opscode.com/quickstart/workstation-setup/#windows/>`_ | `Use the Chef Repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
-
-.. **What's new:** :doc:`Release Notes for Chef 11.6 </release_notes>`
-
-.. **The Community:** xxxxx
+Another way to learn about how to use |chef server oec| is the |learnchef| website. It contains a `series of hands-on tutorials <https://learnchef.opscode.com/>`_ that can walk you through the process of setting up a server, a workstation, using the |chef repo|, and converging your first node.
 
 
 The Workstation
@@ -115,12 +99,8 @@ Plugins allow |knife| to interact with all of the major Cloud providers. All |kn
 
 A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/xxxxx/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/xxxxx/plugin_knife_custom.html>`_ can be created.
 
-Reference
------------------------------------------------------
-xxxxx
-
 Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 The following settings files are used to configure behavior for |knife| and how it interacts with nodes and the |chef server|:
 
 .. raw:: html
@@ -128,7 +108,7 @@ The following settings files are used to configure behavior for |knife| and how 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/config_rb_knife.html">knife.rb</a> </br>
 
 Command-line Tools
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 The following command-line tools can be run on the workstation to simulate a |chef client| run locally:
 
 .. raw:: html
@@ -191,7 +171,7 @@ xxxxx:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">standalone</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">ha</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">febe</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">upgrade</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/upgrade_server.html">upgrade</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">migrate_from_xxxxx</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/migrate_to_hosted.html">migrate_to_hosted</a> </br>
 
@@ -256,13 +236,8 @@ Graphite
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
 
-
-Reference
------------------------------------------------------
-xxxxx
-
 Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 The following settings files are used to configure behavior for the |chef server|:
 
 .. raw:: html
@@ -272,7 +247,7 @@ The following settings files are used to configure behavior for the |chef server
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/config_rb_pushy_server.html">pushy-server.rb</a> </br>
 
 Command-line Tools
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 The following command-line tools can be run on the |chef server|:
 
 .. raw:: html
@@ -283,7 +258,7 @@ The following command-line tools can be run on the |chef server|:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/ctl_pushy_client.html">pushy-client</a> </br>
 
 APIs
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 The following APIs can be used to access data on the |chef server|:
 
 .. raw:: html
@@ -313,12 +288,8 @@ The |chef client| can be installed with the :doc:`knife bootstrap </knife_bootst
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
-Reference
------------------------------------------------------
-xxxxx
-
 Settings
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 The following settings files are used to configure behavior for the |chef client|:
 
 .. raw:: html
@@ -327,7 +298,7 @@ The following settings files are used to configure behavior for the |chef client
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/config_rb_solo.html">solo.rb</a> </br>
 
 Command-line Tools
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 The following command-line tools can be run on any node:
 
 .. raw:: html
@@ -726,3 +697,4 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_user
    resource_yum
    server_components
+   upgrade_server
