@@ -9,9 +9,9 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
+   * - ``overwrite``
+     - |use file_overwrite| Default value: ``false``.
    * - ``path_to_location``
      - |path directory_unzip|
    * - ``source``
      - |source windows_zipfile|
-   * - ``overwrite``
-     - |use file_overwrite| Default value: ``false``.
