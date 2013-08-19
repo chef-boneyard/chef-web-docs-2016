@@ -11,33 +11,35 @@ The following handlers are available from the open source community:
      - Description
    * - `Airbrake <https://github.com/morgoth/airbrake_handler>`_
      - A handler that sends exceptions (only) to |airbrake|, an application that collects data and aggregates it for review.
-   * - Asynchronous Resources <https://github.com/rottenbytes/chef/tree/master/async_handler>`_
+   * - `Asynchronous Resources <https://github.com/rottenbytes/chef/tree/master/async_handler>`_
      - A handler that asynchronously pushes exception and report handler data to a |stomp| queue, from which data can be processed into data storage.
-   * - Campfire <https://github.com/ampledata/chef-handler-campfire>`_
+   * - `Campfire <https://github.com/ampledata/chef-handler-campfire>`_
      - A handler that collects exception and report handler data and reports it to |campfire|, a web-based group chat tool.
-   * - Cloudkick <https://github.com/ampledata/chef/blob/master/chef/lib/chef/handler/cloudkick_handler.rb>`_
+   * - `Cloudkick <https://github.com/ampledata/chef/blob/master/chef/lib/chef/handler/cloudkick_handler.rb>`_
      - A handler that collects exception and report handler data and sends it to |cloudkick|, a set of cloud server monitoring and management tools.
-   * - Datadog <https://github.com/DataDog/chef-handler-datadog>`_
+   * - `Datadog <https://github.com/DataDog/chef-handler-datadog>`_
      - A handler that collects |chef client| stats and sends them into a |datadog| newsfeed.
-   * - Flowdock <https://github.com/mmarschall/chef-handler-flowdock>`_
+   * - `Flowdock <https://github.com/mmarschall/chef-handler-flowdock>`_
      - A handler that collects exception and report handler data and sends it to users via the |flowdock| API..
-   * - Graphite <https://github.com/imeyer/chef-handler-graphite/wiki>`_
+   * - `Graphite <https://github.com/imeyer/chef-handler-graphite/wiki>`_
      - A handler that collects exception and report handler data and reports it to |graphite|, a graphic rendering application.
-   * - Graylog2 GELF <https://github.com/jellybob/chef-gelf/>`_
+   * - `Graylog2 GELF <https://github.com/jellybob/chef-gelf/>`_
      - A handler that provides exception and report handler status (including changes) to a |graylog| server, so that the data can be viewed using |graylog gelf|.
-   * - Growl <http://rubygems.org/gems/chef-handler-growl>`_
+   * - `Growl <http://rubygems.org/gems/chef-handler-growl>`_
      - A handler that collects exception and report handler data and then sends it as a |growl| notification.
-   * - HipChat <https://github.com/mojotech/hipchat/blob/master/lib/hipchat/chef.rb>`_
+   * - `HipChat <https://github.com/mojotech/hipchat/blob/master/lib/hipchat/chef.rb>`_
      - A handler that collects exception handler data and sends it to |hipchat|, a hosted private chat service for companies and teams.
-   * - IRC Snitch <https://rubygems.org/gems/chef-irc-snitch>`_
+   * - `IRC Snitch <https://rubygems.org/gems/chef-irc-snitch>`_
      - A handler that notifies administrators (via |irc|) when a |chef client| run fails.
-   * - Nagios NSCA <https://github.com/ranjibd/nsca_handler>`_
+   * - `Nagios NSCA <https://github.com/ranjibd/nsca_handler>`_
      - A handler that supports |nagios nsca|, an add-on for |nagios|. This will allow the |chef client| to report and exception handler messages to be passed to |nagios| from |nagios nsca|.
-   * - Simple Email <https://rubygems.org/gems/chef-handler-mail>`_
+   * - `Simple Email <https://rubygems.org/gems/chef-handler-mail>`_
      - A handler that collects exception and report handler data and then uses |pony| to send email reports that are based on |erubis| templates.
-   * - SNS <https://rubygems.org/gems/chef-handler-sns>`_
+   * - `SNS <https://rubygems.org/gems/chef-handler-sns>`_
      - A handler that notifies exception and report handler data and sends it to a |sns| topic.
-   * - Splunk Storm <http://ampledata.org/splunk_storm_chef_handler.html>`_
+   * - `Splunk Storm <http://ampledata.org/splunk_storm_chef_handler.html>`_
      - A handler that supports exceptions and reports for |splunk storm|.
-   * - Updated Resources <https://rubygems.org/gems/chef-handler-updated-resources>`_
+   * - `Syslog <https://github.com/jblaine/syslog_handler>`_
+     - A handler that logs basic essential information, such as about the success or failure of a |chef client| run.
+   * - `Updated Resources <https://rubygems.org/gems/chef-handler-updated-resources>`_
      - A handler that provides a simple way to display resources that were updated during a |chef client| run.
