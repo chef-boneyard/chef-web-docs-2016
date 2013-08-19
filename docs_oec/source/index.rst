@@ -38,7 +38,7 @@ A workstation must be configured with a |chef client|, must have access to a |ch
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/install_workstation.html">Set up a Workstation</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/install_bootstrap.html">Bootstrap a Node</a> </br>
 
-Knife Subcommands
+Knife
 -----------------------------------------------------
 |knife| is a command-line tool that provides an interface between a local |chef repo| and the |chef server|. All |knife| subcommands share a set of :doc:`common options </knife_common_options>` and :doc:`usage patterns </knife_using>`. 
 
@@ -101,7 +101,7 @@ Plugins allow |knife| to interact with all of the major cloud providers. All |kn
 
 A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/xxxxx/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/xxxxx/plugin_knife_custom.html>`_ can be created.
 
-Settings
+Settings and Tools
 -----------------------------------------------------
 The following settings files are used to configure behavior for |knife| and how it interacts with nodes and the |chef server|:
 
@@ -109,8 +109,6 @@ The following settings files are used to configure behavior for |knife| and how 
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/config_rb_knife.html">knife.rb</a> </br>
 
-Command-line Tools
------------------------------------------------------
 The following command-line tools can be run on the workstation to simulate a |chef client| run locally:
 
 .. raw:: html
@@ -130,29 +128,30 @@ The |chef server| is a centralized location where all of the objects needed by |
 
 .. **Install:** `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) | `Sign up for Private Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>` | :doc:`Download with Omnitruck API </api_omnitruck>`
 
-.. **Manage:** :doc:`Hosted Chef </manage_server_hosted>`
+
 
 Server Essentials
 -----------------------------------------------------
-A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|. The node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/xxxxx/essentials_node_object.html#attributes>`_. 
+The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
 
-All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand).
+* A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
+* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/xxxxx/essentials_node_object.html#attributes>`_. 
+* All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
+* The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
+* The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
+* Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
 
-The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
-
-The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users. Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
-
-Components
+Server Components
 -----------------------------------------------------
-The |chef server oec| acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data. :doc:`Pushy </pushy>` can be used to run jobs against nodes independently of |chef client| runs. :doc:`Graphite </graphite>` can be used to xxxxx.
+The |chef server oec| acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data.
 
 Pushy
 -----------------------------------------------------
-|pushy| is xxxxx.
+:doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs
 
 Graphite
 -----------------------------------------------------
-|graphite| is xxxxx.
+:doc:`Graphite </graphite>` is used to xxxxx.
 
 Reporting
 -----------------------------------------------------
@@ -219,6 +218,8 @@ Web UI
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
 
+.. **Manage:** :doc:`Hosted Chef </manage_server_hosted>`
+
 Knife
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
@@ -231,7 +232,7 @@ Graphite
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
 
-Settings
+Settings and Tools
 -----------------------------------------------------
 The following settings files are used to configure behavior for the |chef server|:
 
@@ -241,8 +242,6 @@ The following settings files are used to configure behavior for the |chef server
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/config_rb_private_chef.html">private-chef.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/config_rb_pushy_server.html">pushy-server.rb</a> </br>
 
-Command-line Tools
------------------------------------------------------
 The following command-line tools can be run on the |chef server|:
 
 .. raw:: html
@@ -294,7 +293,7 @@ xxxxx
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">Knife</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">Ohai</a> </br>
 
-Settings
+Settings and Tools
 -----------------------------------------------------
 The following settings files are used to configure behavior for the |chef client|:
 
@@ -303,8 +302,6 @@ The following settings files are used to configure behavior for the |chef client
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/config_rb_client.html">client.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/config_rb_solo.html">solo.rb</a> </br>
 
-Command-line Tools
------------------------------------------------------
 The following command-line tools can be run on any node:
 
 .. raw:: html
@@ -705,6 +702,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_yum
    server_components
    server_manage_backup_restore
+   server_manage_data
    server_manage_firewalls_and_ports
    server_manage_ha
    server_manage_ldap
@@ -714,4 +712,5 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    server_manage_security
    server_manage_services
    server_manage_users
+   server_manage_webui
    upgrade_server
