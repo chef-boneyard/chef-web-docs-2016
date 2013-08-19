@@ -44,7 +44,7 @@ The most common ways to interact with the |chef server| using the |api chef serv
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_other_ruby.rst
 
-Debut Authentication Issues
+Debugging Authentication Issues
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst
 
