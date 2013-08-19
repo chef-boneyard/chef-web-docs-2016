@@ -2,6 +2,8 @@
 Install the Chef Server
 =====================================================
 
+.. warning: NEEDS UPDATE FOR ENTERPRISE CHEF SERVER
+
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
 The steps below describe the process for installing |chef server 11|.
