@@ -13,6 +13,8 @@ Install Chef
    :hidden:
 
    install_server
+   install_server_oes
+   install_server_hosted
    install_server_scenario_vm
    install_workstation
    install_bootstrap
