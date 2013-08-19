@@ -576,6 +576,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    graphite
    install_bootstrap
    install_server
+   install_server_hosted
    install_workstation
    just_enough_ruby_for_chef
    knife_bootstrap
