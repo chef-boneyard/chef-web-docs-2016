@@ -138,7 +138,7 @@ Cookbooks
    ctl_pushy_client
    server_types
    server_components 
-
+   migrate_to_hosted
    auth
 
    essentials_nodes

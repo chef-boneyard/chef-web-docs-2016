@@ -1,8 +1,8 @@
-To install |chef server 11|, do the following:
+To install |chef server oec|, do the following:
 
 #. Go to http://www.opscode.com/enterprise-chef/.
 
-#. Click the **Get Chef** button and sign up for |chef server oes|.
+#. Click the **Get Chef** button and sign up for |chef server oec|.
 
 #. Complete the form.
 
