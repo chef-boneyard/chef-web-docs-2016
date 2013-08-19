@@ -1,12 +1,12 @@
 =====================================================
-An Overview of Enterprise Chef
+An Overview of Open Source Chef
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_oec.rst
 
-The following diagram shows the relationships between the various elements of |chef oec|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
+The following diagram shows the relationships between the various elements of |chef osc|, including the nodes, the server, and the workstations. These elements work together to provide the |chef client| the information and instruction that it needs so that it can do its job. As you are reviewing the rest of this doc, use the icons in the tables to refer back to this image.
 
-.. image:: ../../images/overview_chef_oec.png
+.. image:: ../../images/overview_chef_osc.png
 
 .. include:: ../../includes_chef/includes_chef_key_elements.rst
 
@@ -67,7 +67,7 @@ Some important components of workstations include:
 
 System administrators and developers know best about how their infrastructure should be put together. Therefore, the |chef client| makes as few decisions on its own as possible. When a decision must be made, the |chef client| uses a reasonable default setting that can be easily changed by the system administrators and developers, most often by defining attributes in cookbooks that take precedence over the default attributes present on nodes.
 
-The Enterprise Server
+The Open Source Server
 =====================================================
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
@@ -81,10 +81,6 @@ In addition to node objects, policy, and cookbooks, a |chef server| includes:
      - Description
    * - .. image:: ../../images/icon_search.png
      - .. include:: ../../includes_search/includes_search.rst
-   * - .. image:: ../../images/icon_manager.png
-     - .. include:: ../../includes_chef/includes_chef_manager.rst
-   * - .. image:: ../../images/icon_pushy.png
-     - .. include:: ../../includes_pushy/includes_pushy.rst
 
 Node Objects
 -----------------------------------------------------
