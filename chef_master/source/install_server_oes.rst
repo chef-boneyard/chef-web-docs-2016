@@ -4,11 +4,11 @@ Install the Enterprise Chef Server
 
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
-The steps below describe the process for installing |chef server oes|.
+The steps below describe the process for installing |chef server oec|.
 
 Steps
 =====================================================
-.. include:: ../../step_install/step_install_server_oes.rst
+.. include:: ../../step_install/step_install_server_oec.rst
 
 About FQDNs and Hostnames
 =====================================================

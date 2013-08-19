@@ -5,7 +5,7 @@ To install the |chef client| on a workstation, you must run the |omnibus install
 
 To run the |omnibus installer|:
 
-#. Run the command that appears (for |unix| and |linux| environments) or download the installer (for |windows| environments). For example, for the |mac os x|:
+#. Run the command that appears (for |unix| and |linux| environments) or download the |omnibus installer| (for |windows| environments). For example, for the |mac os x|:
 
    .. code-block:: bash
 

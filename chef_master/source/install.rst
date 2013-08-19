@@ -19,6 +19,6 @@ Install Chef
    install_workstation
    install_bootstrap
 
-
+   install_omnibus
 
 
