@@ -9,11 +9,20 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``package_name``
-     - |name windows_package| 
-   * - ``source``
-     - |source windows_package|
+   * - ``checksum``
+     - |checksum file|
    * - ``installer_type``
      - |installer_type windows|
    * - ``options``
      - |command options|
+   * - ``package_name``
+     - |name windows_package| 
+   * - ``source``
+     - |source windows_package|
+   * - ``success_codes``
+     - |success_codes| This value must be an array. Default value: ``[0, 42, 127]``.
+   * - ``timeout``
+     - |timeout| Default value: ``600`` (seconds).
+   * - ``version``
+     - |version package_windows_registry|
+
