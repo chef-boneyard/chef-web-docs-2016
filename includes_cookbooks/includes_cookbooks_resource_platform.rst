@@ -9,105 +9,105 @@ The following resources are core resources:
 
    * - Resource
      - Description
-   * - `apt_package <docs.opscode.com/resource_apt_package.html>`_
+   * - `apt_package <http://docs.opscode.com/resource_apt_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_apt.rst
-   * - `bash <docs.opscode.com/resource_bash.html>`_
+   * - `bash <http://docs.opscode.com/resource_bash.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_bash.rst
-   * - `batch <docs.opscode.com/resource_batch.html>`_
+   * - `batch <http://docs.opscode.com/resource_batch.html>`_
      - .. include:: ../../includes_resources/includes_resource_batch.rst
-   * - `breakpoint <docs.opscode.com/resource_breakpoint.html>`_
+   * - `breakpoint <http://docs.opscode.com/resource_breakpoint.html>`_
      - .. include:: ../../includes_resources/includes_resource_breakpoint.rst
-   * - `chef_gem <docs.opscode.com/resource_chef_gem.html>`_
+   * - `chef_gem <http://docs.opscode.com/resource_chef_gem.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_chef_gem.rst
-   * - `cookbook_file <docs.opscode.com/resource_cookbook_file.html>`_
+   * - `cookbook_file <http://docs.opscode.com/resource_cookbook_file.html>`_
      - .. include:: ../../includes_resources/includes_resource_cookbook_file.rst
-   * - `cron <docs.opscode.com/resource_cron.html>`_
+   * - `cron <http://docs.opscode.com/resource_cron.html>`_
      - .. include:: ../../includes_resources/includes_resource_cron.rst
-   * - `csh <docs.opscode.com/resource_csh.html>`_
+   * - `csh <http://docs.opscode.com/resource_csh.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_csh.rst
-   * - `deploy <docs.opscode.com/resource_deploy.html>`_
+   * - `deploy <http://docs.opscode.com/resource_deploy.html>`_
      - .. include:: ../../includes_resources/includes_resource_deploy.rst
-   * - `directory <docs.opscode.com/resource_directory.html>`_
+   * - `directory <http://docs.opscode.com/resource_directory.html>`_
      - .. include:: ../../includes_resources/includes_resource_directory.rst
-   * - `dpkg <docs.opscode.com/resource_dpkg_package.html>`_
+   * - `dpkg <http://docs.opscode.com/resource_dpkg_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_dpkg.rst
-   * - `easy_install_package <docs.opscode.com/resource_easy_install_package.html>`_
+   * - `easy_install_package <http://docs.opscode.com/resource_easy_install_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_easy_install.rst
-   * - `env <docs.opscode.com/resource_env.html>`_
+   * - `env <http://docs.opscode.com/resource_env.html>`_
      - .. include:: ../../includes_resources/includes_resource_env.rst
-   * - `erlang_call <docs.opscode.com/resource_erlang_call.html>`_
+   * - `erlang_call <http://docs.opscode.com/resource_erlang_call.html>`_
      - .. include:: ../../includes_resources/includes_resource_erlang_call.rst
-   * - `execute <docs.opscode.com/resource_execute.html>`_
+   * - `execute <http://docs.opscode.com/resource_execute.html>`_
      - .. include:: ../../includes_resources/includes_resource_execute.rst
-   * - `file <docs.opscode.com/resource_file.html>`_
+   * - `file <http://docs.opscode.com/resource_file.html>`_
      - .. include:: ../../includes_resources/includes_resource_file.rst
-   * - `freebsd_package <docs.opscode.com/resource_freebsd_package.html>`_
+   * - `freebsd_package <http://docs.opscode.com/resource_freebsd_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_freebsd.rst
-   * - `gem_package <docs.opscode.com/resource_gem_package.html>`_
+   * - `gem_package <http://docs.opscode.com/resource_gem_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_gem.rst
-   * - `git <docs.opscode.com/resource_git.html>`_
+   * - `git <http://docs.opscode.com/resource_git.html>`_
      - .. include:: ../../includes_resources/includes_resource_scm_git.rst
-   * - `group <docs.opscode.com/resource_group.html>`_
+   * - `group <http://docs.opscode.com/resource_group.html>`_
      - .. include:: ../../includes_resources/includes_resource_group.rst
-   * - `http_request <docs.opscode.com/resource_http_request.html>`_
+   * - `http_request <http://docs.opscode.com/resource_http_request.html>`_
      - .. include:: ../../includes_resources/includes_resource_http_request.rst
-   * - `ifconfig <docs.opscode.com/resource_ifconfig.html>`_
+   * - `ifconfig <http://docs.opscode.com/resource_ifconfig.html>`_
      - .. include:: ../../includes_resources/includes_resource_ifconfig.rst
-   * - `ips_package <docs.opscode.com/resource_ips_package.html>`_
+   * - `ips_package <http://docs.opscode.com/resource_ips_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_ips.rst
-   * - `link <docs.opscode.com/resource_link.html>`_
+   * - `link <http://docs.opscode.com/resource_link.html>`_
      - .. include:: ../../includes_resources/includes_resource_link.rst
-   * - `log <docs.opscode.com/resource_log.html>`_
+   * - `log <http://docs.opscode.com/resource_log.html>`_
      - .. include:: ../../includes_resources/includes_resource_log.rst
-   * - `macports_package <docs.opscode.com/resource_macports_package.html>`_
+   * - `macports_package <http://docs.opscode.com/resource_macports_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_macports.rst
-   * - `mdadm <docs.opscode.com/resource_mdadm.html>`_
+   * - `mdadm <http://docs.opscode.com/resource_mdadm.html>`_
      - .. include:: ../../includes_resources/includes_resource_mdadm.rst
-   * - `mount <docs.opscode.com/resource_mount.html>`_
+   * - `mount <http://docs.opscode.com/resource_mount.html>`_
      - .. include:: ../../includes_resources/includes_resource_mount.rst
-   * - `ohai <docs.opscode.com/resource_ohai.html>`_
+   * - `ohai <http://docs.opscode.com/resource_ohai.html>`_
      - .. include:: ../../includes_resources/includes_resource_ohai.rst
-   * - `package <docs.opscode.com/resource_package.html>`_
+   * - `package <http://docs.opscode.com/resource_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package.rst
-   * - `pacman_package <docs.opscode.com/resource_pacman_package.html>`_
+   * - `pacman_package <http://docs.opscode.com/resource_pacman_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_pacman.rst
-   * - `perl <docs.opscode.com/resource_perl.html>`_
+   * - `perl <http://docs.opscode.com/resource_perl.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_perl.rst
-   * - `portage_package <docs.opscode.com/resource_portage_package.html>`_
+   * - `portage_package <http://docs.opscode.com/resource_portage_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_portage.rst
-   * - `powershell_script <docs.opscode.com/resource_powershell_script.html>`_
+   * - `powershell_script <http://docs.opscode.com/resource_powershell_script.html>`_
      - .. include:: ../../includes_resources/includes_resource_powershell_script.rst
-   * - `python <docs.opscode.com/resource_python.html>`_
+   * - `python <http://docs.opscode.com/resource_python.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_python.rst
-   * - `registry_key <docs.opscode.com/resource_registry_key.html>`_
+   * - `registry_key <http://docs.opscode.com/resource_registry_key.html>`_
      - .. include:: ../../includes_resources/includes_resource_registry_key.rst
-   * - `remote_directory <docs.opscode.com/resource_remote_directory.html>`_
+   * - `remote_directory <http://docs.opscode.com/resource_remote_directory.html>`_
      - .. include:: ../../includes_resources/includes_resource_remote_directory.rst
-   * - `remote_file <docs.opscode.com/resource_remote_file.html>`_
+   * - `remote_file <http://docs.opscode.com/resource_remote_file.html>`_
      - .. include:: ../../includes_resources/includes_resource_remote_file.rst
-   * - `route <docs.opscode.com/resource_route.html>`_
+   * - `route <http://docs.opscode.com/resource_route.html>`_
      - .. include:: ../../includes_resources/includes_resource_route.rst
-   * - `rpm_package <docs.opscode.com/resource_rpm_package.html>`_
+   * - `rpm_package <http://docs.opscode.com/resource_rpm_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_rpm.rst
-   * - `ruby <docs.opscode.com/resource_ruby.html>`_
+   * - `ruby <http://docs.opscode.com/resource_ruby.html>`_
      - .. include:: ../../includes_resources/includes_resource_script_ruby.rst
-   * - `ruby_block <docs.opscode.com/resource_ruby_block.html>`_
+   * - `ruby_block <http://docs.opscode.com/resource_ruby_block.html>`_
      - .. include:: ../../includes_resources/includes_resource_ruby_block.rst
-   * - `scm <docs.opscode.com/resource_scm.html>`_
+   * - `scm <http://docs.opscode.com/resource_scm.html>`_
      - .. include:: ../../includes_resources/includes_resource_scm.rst
-   * - `script <docs.opscode.com/resource_script.html>`_
+   * - `script <http://docs.opscode.com/resource_script.html>`_
      - .. include:: ../../includes_resources/includes_resource_script.rst
-   * - `service <docs.opscode.com/resource_service.html>`_
+   * - `service <http://docs.opscode.com/resource_service.html>`_
      - .. include:: ../../includes_resources/includes_resource_service.rst
-   * - `smartos_package <docs.opscode.com/resource_smartos_package.html>`_
+   * - `smartos_package <http://docs.opscode.com/resource_smartos_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_smartos.rst
-   * - `solaris_package <docs.opscode.com/resource_solaris_package.html>`_
+   * - `solaris_package <http://docs.opscode.com/resource_solaris_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_solaris.rst
-   * - `subversion <docs.opscode.com/resource_subversion.html>`_
+   * - `subversion <http://docs.opscode.com/resource_subversion.html>`_
      - .. include:: ../../includes_resources/includes_resource_scm_subversion.rst
-   * - `template <docs.opscode.com/resource_template.html>`_
+   * - `template <http://docs.opscode.com/resource_template.html>`_
      - .. include:: ../../includes_resources/includes_resource_template.rst
-   * - `user <docs.opscode.com/resource_user.html>`_
+   * - `user <http://docs.opscode.com/resource_user.html>`_
      - .. include:: ../../includes_resources/includes_resource_user.rst
-   * - `yum_package <docs.opscode.com/resource_yum.html>`_
+   * - `yum_package <http://docs.opscode.com/resource_yum.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_yum.rst
