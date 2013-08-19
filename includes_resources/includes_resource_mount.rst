@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|resource desc mount|
+The |resource mount| resource is used to manage a mounted file system.

@@ -15,4 +15,4 @@ The following providers are available. Use the short name to call the provider f
      - When this short name is used, the |chef client| will attempt to determine the correct provider during the |chef client| run.
    * - ``Chef::Provider::Package::Rubygems``
      - ``gem_package``
-     - |resource desc package_gem|
+     - Can be used with the ``options`` attribute.

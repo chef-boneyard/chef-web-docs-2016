@@ -12,7 +12,7 @@ Resources Syntax
 
 Platform Resources
 =====================================================
-.. include:: ../../includes_resources/includes_resource_platform.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst
 
 Common Functionality
 -----------------------------------------------------

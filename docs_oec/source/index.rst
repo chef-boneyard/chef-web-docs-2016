@@ -7,24 +7,26 @@ All About Enterprise Chef ...
 
 Getting Started
 =====================================================
-If you are new to |chef server oec|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes (long) </oec_overview>`.
+If you are new to |chef server oec|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes </oec_overview>`.
 
 Cookbooks are the fundamental unit of configuration and policy distribution in |chef|. Cookbooks are authored using a programming language called |ruby|. Being an expert in |ruby| is not a requirement, but knowing some basic |ruby| will help you a lot. If you're new to |ruby|, :doc:`familiarize yourself with the basics </just_enough_ruby_for_chef>`.
 
-If you want to try out |chef server oes|, use the hosted |chef server|. First, `sign up for hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_, then :doc:`install the chef-client on a workstation </install_workstation>`, and then :doc:`bootstrap your first node </install_bootstrap>`.
+If you want to try out |chef server oec|, use the hosted |chef server|. First, `sign up for hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_, then :doc:`install the chef-client on a workstation </install_workstation>`, and then :doc:`bootstrap your first node </install_bootstrap>`.
 
-Another way to learn about how to use |chef server oec| is the |learnchef| website. It contains a `series of hands-on tutorials <https://learnchef.opscode.com/>`_ that can walk you through the process of setting up a server, a workstation, using the |chef repo|, and converging your first node.
+Another way to learn about how to use |chef server oec| is the |learnchef| website. It contains a `series of hands-on tutorials <https://learnchef.opscode.com/>`_ that can walk you through the process of setting up a hosted server, a workstation, using the |chef repo|, and then converging your first node.
 
 
 The Workstation
 =====================================================
-The workstation is the location from which most users will do most of their work, including:
+The workstation is the location from which most users will do most of their work. This work includes:
 
 * Developing cookbooks and recipes (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
-* Synchronizing the :doc:`chef-repo </essentials_repository>` with version source control
+* Synchronizing the :doc:`chef-repo </essentials_repository>` with version source control like |git| or |svn|
 * Using |knife| to upload items from the |chef repo| to the |chef server|
-* Configuring :doc:`organizational policy </essentials_policy>`, including :doc:`defining roles </essentials_roles>` and :doc:`environments </essentials_environments>` and ensuring that critical data is stored in :doc:`data bags </essentials_data_bags>`
-* Interacting with nodes, as (or when) required, such as performing a :doc:`bootstrap operation </install_bootstrap>`
+* Configuring :doc:`organizational policy </essentials_policy>`
+* :doc:`Defining roles </essentials_roles>` and :doc:`environments </essentials_environments>`
+* Ensuring that critical data is stored in :doc:`data bags </essentials_data_bags>`
+* Interacting with nodes, such as performing a :doc:`bootstrap operation </install_bootstrap>` or running the :doc:`chef-client </ctl_chef_client>` remotely
 
 Set up a Workstation
 -----------------------------------------------------
@@ -72,11 +74,11 @@ The following |knife| subcommands are built-in:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/knife_user.html">knife user</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/knife_xargs.html">knife xargs</a> </br>
 
-|knife| settings are stored in the :doc:`knife.rb </config_rb_knife>` file. There is a default |knife rb| file and there are :doc:`optional settings </config_rb_knife_optional_settings>` that can be added to the knife.rb file.
+|knife| settings are stored in the :doc:`knife.rb </config_rb_knife>` file. There is a default |knife rb| file and there are :doc:`optional settings </config_rb_knife_optional_settings>` that can be added to the |knife rb| file.
 
 Knife Cloud Plugins
 -----------------------------------------------------
-Plugins allow |knife| to interact with all of the major Cloud providers. All |knife| plugins share the same set of :doc:`common options </knife_common_options>` and built-in |knife| subcommands, plus |knife| plugins can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|.
+Plugins allow |knife| to interact with all of the major cloud providers. All |knife| plugins share the same set of :doc:`common options </knife_common_options>` and built-in |knife| subcommands, plus |knife| plugins can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|.
 
 |opscode| maintains the following |knife| plugins:
 
@@ -132,9 +134,9 @@ The |chef server| is a centralized location where all of the objects needed by |
 
 Server Essentials
 -----------------------------------------------------
-A :doc:`node object </essentials_node_object>` exists for each node that is being managed by |chef|. The node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/xxxxx/essentials_node_object.html#attributes>`_. 
+A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|. The node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/xxxxx/essentials_node_object.html#attributes>`_. 
 
-All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes and the workstation (using the :doc:`knife search </knife_search>` subcommand).
+All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand).
 
 The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
 
@@ -142,7 +144,9 @@ The :doc:`authentication </auth_authentication>` process ensures that requests c
 
 Components
 -----------------------------------------------------
-The |chef server oec| acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data. :doc:`Pushy </pushy>` can be used to run jobs against nodes independently of |chef client| runs.
+The |chef server oec| acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data. :doc:`Pushy </pushy>` can be used to run jobs against nodes independently of |chef client| runs. :doc:`Graphite </graphite>` can be used to xxxxx.
+
+.. also: Reporting
 
 Topologies
 -----------------------------------------------------
@@ -164,67 +168,48 @@ The |chef server| can be installed with the :doc:`knife bootstrap </knife_bootst
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/install_server_scenario_vm.html">Scenario: Install the Enterprise Chef Server on a Virtual Machine</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
-xxxxx:
+Installation scenarios:
 
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">standalone</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">ha</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">febe</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/upgrade_server.html">upgrade</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/upgrade_server.html">upgrade_server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">migrate_from_xxxxx</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/migrate_to_hosted.html">migrate_to_hosted</a> </br>
 
+Options:
 
-Analysis and Tuning
------------------------------------------------------
-xxxxx
+.. raw:: html
 
-Backup and Restore
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">Active Directory / LDAP</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">Offloading Services (?)</a> </br>
 
-Security
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-Firewalls and Ports
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-High Availability
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
 
 Manage the Server
 -----------------------------------------------------
 xxxxx
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_backup_restore.html">Backup and Restore</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_firewalls_and_ports.html">Firewalls and Ports</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_ha.html">High Availability</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_ldap.html">LDAP and Active Directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_logs.html">Logs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_monitor.html">Monitor</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_orgs.html">Organizations</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_security.html">Security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_services.html">Services</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/server_manage_users.html">Users</a> </br>
+
 
 Web UI
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
 
 Knife
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-Monitor the Server
------------------------------------------------------
-xxxxx
-
-Database
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-Cookbooks
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-Log Files
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-xxxxx
-
-Services
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 xxxxx
 
@@ -287,6 +272,17 @@ The |chef client| can be installed with the :doc:`knife bootstrap </knife_bootst
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
+
+Manage the Server
+-----------------------------------------------------
+xxxxx
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">chef-client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">Pushy</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">Knife</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/xxxxx/xxxxx.html">Ohai</a> </br>
 
 Settings
 -----------------------------------------------------
@@ -553,6 +549,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    essentials_repository_create
    essentials_roles
    essentials_search
+   graphite
    install_bootstrap
    install_server
    install_server_scenario_vm
@@ -697,4 +694,14 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_user
    resource_yum
    server_components
+   server_manage_backup_restore
+   server_manage_firewalls_and_ports
+   server_manage_ha
+   server_manage_ldap
+   server_manage_logs
+   server_manage_monitor
+   server_manage_orgs
+   server_manage_security
+   server_manage_services
+   server_manage_users
    upgrade_server
