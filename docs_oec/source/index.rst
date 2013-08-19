@@ -205,7 +205,7 @@ High Availability
 -----------------------------------------------------
 xxxxx
 
-LDAP and Active Directory
+LDAP / Active Directory
 -----------------------------------------------------
 xxxxx
 
