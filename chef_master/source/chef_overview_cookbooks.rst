@@ -6,6 +6,8 @@ About Cookbooks
 
 The |chef client| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL for specific resources. The |chef client| provides a reasonable set of resources, enough to support many of the most common infrastructure automation scenarios; however, this DSL can also be extended when additional resources and capabilities are required.
 
+Components
+=====================================================
 Some important components of cookbooks include:
 
 .. list-table::
@@ -46,6 +48,8 @@ In addition to attributes, recipes, and versions, the following items are also p
    * - :doc:`Templates </essentials_cookbook_templates>`
      - A template is a file written in markup language that uses |ruby| statements to solve complex configuration scenarios.
 
+Community Cookbooks
+=====================================================
 |opscode| maintains a large collection of cookbooks. In addition, there are thousands of cookbooks created and maintained by the community:
 
 .. list-table::
