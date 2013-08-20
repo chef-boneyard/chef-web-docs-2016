@@ -2,9 +2,6 @@
 All about Chef ...  
 =====================================================
 
-.. include:: ../../misc/robots.txt
-   :literal:
-
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 
