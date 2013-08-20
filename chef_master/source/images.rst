@@ -30,6 +30,10 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/overview_chef_attributes_table_300dpi.png
 
+* http://docs.opscode.com/robots.txt
+
+.. image:: ../../misc/robots.txt
+
 
 
 
