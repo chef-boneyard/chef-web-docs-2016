@@ -1,5 +1,5 @@
 =====================================================
-Abut Cookbooks
+About Cookbooks
 =====================================================
 
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
