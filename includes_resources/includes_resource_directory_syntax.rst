@@ -33,7 +33,7 @@ Also, a variable can be used to define the directory, and then that variable can
 
 .. code-block:: ruby
 
-   node['apache']['dir'] = '/etc/apache2'
+   node.default['apache']['dir'] = '/etc/apache2'
    
    directory node['apache']['dir'] do
      owner 'apache'
