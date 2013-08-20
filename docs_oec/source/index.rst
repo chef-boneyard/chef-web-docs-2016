@@ -145,11 +145,7 @@ The |chef server oec| acts as a hub for configuration data. The :doc:`components
 
 Pushy
 -----------------------------------------------------
-:doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs
-
-Graphite
------------------------------------------------------
-:doc:`Graphite </graphite>` is used to xxxxx.
+:doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
 
 Reporting
 -----------------------------------------------------
@@ -577,7 +573,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    essentials_repository_create
    essentials_roles
    essentials_search
-   graphite
    install_bootstrap
    install_server
    install_server_hosted
