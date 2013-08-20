@@ -30,9 +30,6 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/overview_chef_attributes_table_300dpi.png
 
-* http://docs.opscode.com/robots.txt (force upload of robots.txt from Sphinx source directories)
-
-.. image:: ../../misc/robots.txt
 
 
 
