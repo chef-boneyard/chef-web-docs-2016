@@ -230,6 +230,10 @@ Organizations
 -----------------------------------------------------
 xxxxx
 
+Performance Tuning
+-----------------------------------------------------
+xxxxx
+
 Security
 -----------------------------------------------------
 xxxxx
@@ -726,6 +730,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    server_manage_orgs
    server_manage_security
    server_manage_services
+   server_manage_tuning
    server_manage_users
    server_manage_webui
    upgrade_server
