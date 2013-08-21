@@ -144,11 +144,11 @@ Server Components
 The |chef server oec| acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data.
 
 Pushy
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
 
 Reporting
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 |chef server reporting| is xxxxx.
 
 Topologies
