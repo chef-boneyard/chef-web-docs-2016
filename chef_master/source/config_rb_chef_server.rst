@@ -50,7 +50,7 @@ RabbitMQ
 
 User
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_user.rst
+.. include:: ../../includes_config/includes_config_rb_chef_server_settings_users.rst
 
 WebUI
 -----------------------------------------------------
