@@ -188,65 +188,26 @@ Options:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Active Directory / LDAP</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Offloading Services (?)</a> </br>
 
-
-Backup and Restore
+Manage Enterprise Chef
 -----------------------------------------------------
-xxxxx
+The xxxxx:
 
-Firewalls and Ports
------------------------------------------------------
-xxxxx
+.. raw:: html
 
-High Availability
------------------------------------------------------
-xxxxx
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_backup_restore.html">Backup and Restore</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_firewalls_and_ports.html">Firewalls and Ports</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_ha.html">High Availability</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_ldap.html">LDAP / Active Directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_logs.html">Logs</a> </br>
 
-LDAP / Active Directory
------------------------------------------------------
-xxxxx
-
-Logs
------------------------------------------------------
-xxxxx
-
-Manage Data
------------------------------------------------------
-xxxxx
-
-* Knife
-* Pedant?
-
-Monitor
------------------------------------------------------
-xxxxx
-
-* Graphite
-
-Organizations
------------------------------------------------------
-xxxxx
-
-Performance Tuning
------------------------------------------------------
-xxxxx
-
-Security
------------------------------------------------------
-xxxxx
-
-Services
------------------------------------------------------
-xxxxx
-
-Users
------------------------------------------------------
-xxxxx
-
-Web User Interface
------------------------------------------------------
-xxxxx
-
-* User Interface
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_monitor.html">Monitor</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_orgs.html">Organizations</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_tuning.html">Performance Tuning</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/Security.html">server_manage_security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_data.html">Server Data</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_services.html">Services</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_users.html">Users</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_webui.html">Web User Interface</a> </br>
 
 
 Settings and Tools
