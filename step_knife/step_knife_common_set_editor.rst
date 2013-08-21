@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-Some |knife| commands, such as ``knife data bag edit``, require that information to be edited as |json| data using a text editor. For example, the following command:
+Some |knife| commands, such as ``knife data bag edit``, require that information be edited as |json| data using a text editor. For example, the following command:
 
 .. code-block:: bash
 
@@ -15,7 +15,7 @@ will open up the text editor with data similar to:
      "id": "admin_name"
    }
 
-and from where changes to that file can then be made:
+Changes to that file can then be made:
 
 .. code-block:: javascript
 
@@ -24,7 +24,7 @@ and from where changes to that file can then be made:
      "description": "I am passing the time by letting time pass over me ..."
    }
 
-The type of text editor that is used by |knife| can be configured by adding a setting to the |knife rb| file. For example, to configure the text editor to always open |vim|, add the following:
+The type of text editor that is used by |knife| can be configured by adding a setting to the |knife rb| file. For example, to configure the text editor to always open with |vim|, add the following:
 
 .. code-block:: ruby
 
