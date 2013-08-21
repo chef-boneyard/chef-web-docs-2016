@@ -7,6 +7,5 @@
    mdadm "/dev/md0" do
      devices [ "/dev/sda", "/dev/sdb" ]
      level 1
-     chunk 64
      action [ :create, :assemble ]
    end
