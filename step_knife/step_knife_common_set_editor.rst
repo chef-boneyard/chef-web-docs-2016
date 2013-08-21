@@ -24,7 +24,7 @@ and from where changes to that file can then be made:
      "description": "I am passing the time by letting time pass over me ..."
    }
 
-The type of text editor that is used by |knife| can be configured by adding a setting to the |knife rb| file. For example, to configure the |chef editor| to always open |vim|, add the following:
+The type of text editor that is used by |knife| can be configured by adding a setting to the |knife rb| file. For example, to configure the text editor to always open |vim|, add the following:
 
 .. code-block:: ruby
 
