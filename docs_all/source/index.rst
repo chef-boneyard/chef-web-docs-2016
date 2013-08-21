@@ -6,6 +6,8 @@ Chef Single-page Topics
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+Getting Started
+-----------------------------------------------------
 **Getting Started**
 
 .. raw:: html

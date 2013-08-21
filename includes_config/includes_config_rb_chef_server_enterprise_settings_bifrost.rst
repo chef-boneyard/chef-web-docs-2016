@@ -10,10 +10,10 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``bifrost['dir']``
-     - Default value: ````.
+     - Default value: ``xxxxx``.
    * - ``bifrost['ha']``
-     - Default value: ````.
+     - Default value: ``xxxxx``.
    * - ``bifrost['log_directory']``
-     - Default value: ````.
+     - Default value: ``xxxxx``.
    * - ``bifrost['log_rotation']``
-     - Default value: ````.
+     - Default value: ``xxxxx``.

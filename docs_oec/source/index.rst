@@ -255,7 +255,7 @@ The following settings files are used to configure behavior for the |chef server
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server.html">chef-server.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">chef-server.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_private_chef.html">private-chef.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_pushy_server.html">pushy-server.rb</a> </br>
 
@@ -535,7 +535,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    auth_authorization
    chef_shell
    community_plugin_knife
-   config_rb_chef_server
    config_rb_chef_server_enterprise
    config_rb_client
    config_rb_knife
