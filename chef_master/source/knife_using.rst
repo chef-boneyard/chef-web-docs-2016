@@ -8,6 +8,10 @@ JSON Data Format
 =====================================================
 .. include:: ../../includes_knife/includes_knife_using_json.rst
 
+Set the Text Editor
+-----------------------------------------------------
+.. include:: ../../step_knife/step_knife_common_set_editor.rst
+
 Using Quotes
 =====================================================
 .. include:: ../../includes_knife/includes_knife_using_quotes.rst
