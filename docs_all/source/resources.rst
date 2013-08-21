@@ -1296,9 +1296,17 @@ Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 |generic resource statement|
 
+**Create and assemble a RAID 0 array**
+
+.. include:: ../../step_resource/step_resource_mdadm_raid0.rst
+
 **Create and assemble a RAID 1 array**
 
-.. include:: ../../step_resource/step_resource_mdadm_assemble_raid_array.rst
+.. include:: ../../step_resource/step_resource_mdadm_raid1.rst
+
+**Create and assemble a RAID 5 array**
+
+.. include:: ../../step_resource/step_resource_mdadm_raid5.rst
 
 
 mount
