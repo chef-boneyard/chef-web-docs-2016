@@ -536,6 +536,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    chef_shell
    community_plugin_knife
    config_rb_chef_server
+   config_rb_chef_server_enterprise
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
