@@ -6,7 +6,7 @@ private-chef-server.rb
 
 Settings
 =====================================================
-The following sections describe the various settings that are available in the |chef server rb| file.
+The following sections describe the various settings that are available in the private-chef-server.rb file.
 
 General
 -----------------------------------------------------

@@ -217,7 +217,6 @@ The following settings files are used to configure behavior for the |chef server
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">chef-server.rb</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_private_chef.html">private-chef.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_pushy_server.html">pushy-server.rb</a> </br>
 
 The following command-line tools can be run on the |chef server|:
@@ -500,7 +499,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
-   config_rb_private_chef
    config_rb_pushy_server
    config_rb_solo
    ctl_chef_apply
