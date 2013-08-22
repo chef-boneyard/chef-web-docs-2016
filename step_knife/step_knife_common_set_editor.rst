@@ -30,4 +30,4 @@ The type of text editor that is used by |knife| can be configured by adding a se
 
    knife[:editor] = "/usr/bin/vim"
 
-
+.. note:: The previous example will set the default text editor for use with |knife| only. To set the default text editor for the system, use the ``setenv`` command. For example: ``setenv EDITOR /usr/bin/vim``.
