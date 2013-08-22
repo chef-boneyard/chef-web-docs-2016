@@ -28,6 +28,6 @@ The type of text editor that is used by |knife| can be configured by adding a se
 
 .. code-block:: ruby
 
-   $ knife[:editor] = "/usr/bin/vim"
+   knife[:editor] = "/usr/bin/vim"
 
 
