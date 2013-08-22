@@ -10,4 +10,4 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``bootstrap['enable']``
-     - Whether we should attempt to bootstrap the private chef system. Typically turned on only on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``.
+     - Indicates whether an attempt to bootstrap the |chef server oec| is made. Generally only enabled on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``.
