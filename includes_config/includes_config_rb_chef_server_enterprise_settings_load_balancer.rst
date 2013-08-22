@@ -10,7 +10,7 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``lb['api_fqdn']``
-     - Default value: ``node['fqdn']``.
+     - Default value: ``ubuntu.localdomain``.
    * - ``lb['bookshelf']``
      - Default value: ``127.0.0.1``.
    * - ``lb['cache_cookbook_files']``
@@ -23,7 +23,36 @@ This configuration file has the following settings:
      - Default value: ``true``.
    * - ``lb['erchef']``
      - Default value: ``127.0.0.1``.
-   * - ``lb['web_ui_fqdn']``
-     - Default value: ``node['fqdn']``.
+   * - ``lb['upstream']``
+     - Default value:
+       ::
+
+          {"opscode-chef"=>["127.0.0.1"],
+           "opscode-erchef"=>["127.0.0.1"],
+           "opscode-account"=>["127.0.0.1"],
+           "opscode-webui"=>["127.0.0.1"],
+           "opscode-authz"=>["127.0.0.1"],
+          "opscode-solr"=>["127.0.0.1"]}``
    * - ``lb['vip']``
      - Default value: ``127.0.0.1``.
+   * - ``lb['web_ui_fqdn']``
+     - Default value: ``"ubuntu.localdomain"``.
+
+And for the internal load balancers:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``lb_internal['account_port']``
+     - Default value: ``9685``.
+   * - ``lb_internal['authz_port']``
+     - Default value: ``9683``.
+   * - ``lb_internal['chef_port']``
+     - Default value: ``9680``.
+   * - ``lb_internal['enable']``
+     - Default value: ``true``.
+   * - ``lb_internal['vip']``
+     - Default value: ``"127.0.0.1"``.

@@ -15,6 +15,8 @@ This configuration file has the following settings:
      - Default value: ``5``.
    * - ``erchef['cache_ttl']``
      - Default value: ``3600``.
+   * - ``opscode_erchef['couchdb_max_conn']``
+     - Default value: ``"100"``.
    * - ``erchef['db_pool_size']``
      - Default value: ``20``.
    * - ``erchef['dir']``
@@ -47,10 +49,10 @@ This configuration file has the following settings:
      - Default value: ``5000``.
    * - ``erchef['s3_url_ttl']``
      - Default value: ``900``.
-   * - ``erchef['svlogd_size']``
-     - Default value: ``1000000``.
    * - ``erchef['svlogd_num']``
-     - Default value: ``10``.
+     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
+   * - ``erchef['svlogd_size']``
+     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
    * - ``erchef['umask']``
      - Default value: ``0022``.
    * - ``erchef['validation_client_name']``

@@ -36,9 +36,17 @@ keepalived
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_keepalived.rst
 
+ldap
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst
+
 load-balancer
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_load_balancer.rst
+
+logs
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_logs.rst
 
 nginx
 -----------------------------------------------------
@@ -55,6 +63,10 @@ opscode-account
 opscode-certificate
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_certificate.rst
+
+opscode-chef
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_chef.rst
 
 opscode-erchef
 -----------------------------------------------------

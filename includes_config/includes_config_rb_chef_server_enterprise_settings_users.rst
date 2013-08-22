@@ -14,4 +14,4 @@ This configuration file has the following settings:
    * - ``user['shell']``
      - Default value: ``/bin/sh``.
    * - ``user['username']``
-     - Default value: ``chef_server``.
+     - Default value: ``opscode``.

@@ -20,7 +20,7 @@ This configuration file has the following settings:
    * - ``opscode_solr['ha']``
      - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
    * - ``opscode_solr['heap_size']``
-     - Default value: ``nil``.
+     - The amount of memory available to Apache Solr. If there is not enough memory available, search queries made by nodes to Apache Solr may fail. The amount of memory that must be available also depends on the number of nodes in the |chef| organization, the frequency of search queries, and other characteristics that are unique to each organization. In general, as the number of nodes increases, so will the amount of memory. The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the amount of memory that is required often exceeds 3GB. Default value: ``nil``.
    * - ``opscode_solr['ip_address']``
      - Default value: ``127.0.0.1``.
    * - ``opscode_solr['java_opts']``
@@ -43,6 +43,12 @@ This configuration file has the following settings:
      - Default value: ``8983``.
    * - ``opscode_solr['ram_buffer_size']``
      - Default value: ``200``.
+   * - ``opscode_solr['svlogd_size']``
+     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
+   * - ``opscode_solr['svlogd_num']``
+     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained.Default value: ``10``.
+   * - ``opscode_solr['url']``
+     - Default value: ``"http://localhost:8983"``.
    * - ``opscode_solr['vip']``
      - Default value: ``127.0.0.1``.
 

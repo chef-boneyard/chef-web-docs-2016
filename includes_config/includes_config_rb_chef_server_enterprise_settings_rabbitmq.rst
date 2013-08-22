@@ -10,30 +10,42 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``rabbitmq['consumer_id']``
-     - Default value: ``hotsauce``.
+     - Default value: ``"hotsauce"``.
    * - ``rabbitmq['data_dir']``
-     - Default value: ``/var/opt/chef-server/rabbitmq/db``.
+     - Default value: ``"/var/opt/opscode/rabbitmq/db"``.
    * - ``rabbitmq['dir']``
-     - Default value: ``/var/opt/chef-server/rabbitmq``.
+     - Default value: ``"/var/opt/opscode/rabbitmq"``.
    * - ``rabbitmq['enable']``
      - Default value: ``true``.
    * - ``rabbitmq['ha']``
      - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+   * - ``rabbitmq['jobs_password']``
+     - Default value: ``"workcomplete"``.
+   * - ``rabbitmq['jobs_user']``
+     - Default value: ``"jobs"``.
+   * - ``rabbitmq['jobs_vhost']``
+     - Default value: ``"/jobs"``.
    * - ``rabbitmq['log_directory']``
-     - The directory in which log files are located. Default value: ``/var/log/chef-server/rabbitmq``.
+     - The directory in which log files are located. Default value: ``"/var/log/opscode/rabbitmq"``.
    * - ``rabbitmq['node_ip_address']``
-     - The IP address for machine on which |rabbitmq| is running. Default value: ``127.0.0.1``.
+     - The IP address for machine on which |rabbitmq| is running. Default value: ``"127.0.0.1"``.
    * - ``rabbitmq['node_port']``
-     - The port on which |rabbitmq| listens. Default value: ``5672``.
+     - The port on which |rabbitmq| listens. Default value: ``"5672"``.
    * - ``rabbitmq['nodename']``
-     - The name of the node. Default value: ``rabbit@localhost``.
+     - Default value: ``"rabbit@localhost"``.
    * - ``rabbitmq['password']``
-     - The password for the ``user``. Default value: ``chefrocks``.
-   * - ``rabbitmq['user']``
-     - The user. Default value: ``chef``.
-   * - ``rabbitmq['vhost']``
-     - The virtual host. Default value: ``/chef``.
-   * - ``rabbitmq['vip']``
-     - Default value: ``127.0.0.1``.
+     - Default value: ``"chefrocks"``.
+   * - ``rabbitmq['reindexer_vhost']``
+     - Default value: ``"/reindexer"``.
+   * - ``rabbitmq['svlogd_num']``
+     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
 
+   * - ``rabbitmq['svlogd_size']``
+     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile.Default value: ``1000000``.
+   * - ``rabbitmq['user']``
+     - Default value: ``"chef"``.
+   * - ``rabbitmq['vhost']``
+     - Default value: ``"/chef"``.
+   * - ``rabbitmq['vip']``
+     - Default value: ``"127.0.0.1"``.
 

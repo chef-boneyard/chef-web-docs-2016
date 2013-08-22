@@ -1,6 +1,6 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
-
+ 
 This configuration file has the following settings:
 
 .. list-table::
@@ -63,6 +63,10 @@ This configuration file has the following settings:
      - The protocol versions that are enabled. Default value: varies, depending on the configuration of the |chef server| topology.
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
+   * - ``nginx['svlogd_num']``
+     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
+   * - ``nginx['svlogd_size']``
+     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
    * - ``nginx['tcp_nodelay']``
      - Indicates whether the |nagle| buffering algorithm is enabled. Default value: ``on``.
    * - ``nginx['tcp_nopush']``
@@ -73,3 +77,5 @@ This configuration file has the following settings:
      - The number of allowed worker connections. Used with ``nginx['worker_processes']`` to determine the maximum number of allowed clients. Default value: ``10240``.
    * - ``nginx['worker_processes']``
      - The number of allowed worker processes. Used with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``.
+   * - ``nginx['x_forwarded_proto']``
+     - This value can be used to set the protocol (HTTP or HTTPS) of URLs returned within API responses. It should be set to the protocol used to connect to the Private Chef API by your clients. Default value: ``"https"``.

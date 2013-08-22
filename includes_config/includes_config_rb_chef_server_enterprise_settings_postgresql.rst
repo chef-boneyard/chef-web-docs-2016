@@ -41,12 +41,12 @@ This configuration file has the following settings:
      - The port on which |postgresql| will listen. Default value: ``5432``.
    * - ``postgresql['shared_buffers']``
      - The amount of memory that is dedicated to |postgresql| for data caching. Default value: ``#{(node['memory']['total'].to_i / 4) / (1024)}MB``.
+   * - ``postgresql['shell']``
+     - Default value: ``/bin/sh``.
    * - ``postgresql['shmall']``
      - The total amount of available shared memory. Default value: ``kernel['machine'] =~ /x86_64/ ? 4194304 : 1048575``.
    * - ``postgresql['shmmax']``
      - The maximum amount of shared memory. Default value: ``kernel['machine'] =~ /x86_64/ ? 17179869184 : 4294967295``.
-   * - ``postgresql['shell']``
-     - Default value: ``/bin/sh``.
    * - ``postgresql['sql_password']``
      - The password for the |postgresql| user account. Default value: ``snakepliskin``.
    * - ``postgresql['sql_ro_password']``

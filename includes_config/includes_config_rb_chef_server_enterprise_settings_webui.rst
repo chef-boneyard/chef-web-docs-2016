@@ -20,7 +20,7 @@ This configuration file has the following settings:
    * - ``chef_server_webui['enable']``
      - Default value: ``true``.
    * - ``chef_server_webui['environment']``
-     - Default value: ``chefserver``.
+     - Default value: ``privatechef``.
    * - ``chef_server_webui['ha']``
      - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
    * - ``chef_server_webui['listen']``
@@ -31,10 +31,18 @@ This configuration file has the following settings:
      - Default value: ``9462``.
    * - ``chef_server_webui['session_key']``
      - Default value: ``_sandbox_session``.
+   * - ``opscode_webui['svlogd_size']``
+     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
+   * - ``opscode_webui['svlogd_num']``
+     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
    * - ``chef_server_webui['tcp_nodelay']``
      - Default value: ``true``.
    * - ``chef_server_webui['umask']``
      - Default value: ``0022``.
+   * - ``opscode_webui['url']``
+     - Default value: ``"http://127.0.0.1:9462"``.
+   * - ``opscode_webui['validation_client_name']``
+     - Default value: ``"chef"``.
    * - ``chef_server_webui['vip']``
      - Default value: ``127.0.0.1``.
    * - ``chef_server_webui['web_ui_admin_default_password']``

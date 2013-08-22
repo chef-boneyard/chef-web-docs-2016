@@ -9,7 +9,5 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``bootstrap['xxxxx']``
-     - Default value: ``xxxxx``.
-   * - ``bootstrap['xxxxx']``
-     - Default value: ``xxxxx``.
+   * - ``bootstrap['enable']``
+     - Whether we should attempt to bootstrap the private chef system. Typically turned on only on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``.
