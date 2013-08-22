@@ -49,7 +49,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:download_directory]``
      - |dir|
    * - ``knife[:editor]``
-     - Use to set the |chef editor| that is used for all interactive commands.
+     - |editor|
    * - ``knife[:environment]``
      - |name environment|
    * - ``knife[:exec]``

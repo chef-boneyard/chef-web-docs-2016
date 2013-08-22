@@ -29,5 +29,3 @@ The type of text editor that is used by |knife| can be configured by adding or s
 .. code-block:: ruby
 
    knife[:editor] = "/usr/bin/vim"
-
-

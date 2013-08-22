@@ -43,6 +43,8 @@ Some of the optional |knife rb| settings are used often, such as the template fi
      - |bootstrap version|
    * - ``knife[:distro]``
      - |distro|
+   * - ``knife[:editor]``
+     - |editor|
    * - ``knife[:ssh_gateway]``
      - |ssh-gateway| Adding this setting can be helpful when a user cannot |ssh| directly into a host.
    * - ``knife[:ssh_port]``
