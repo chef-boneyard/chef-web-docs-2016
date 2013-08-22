@@ -2,4 +2,4 @@
 Web User Interface
 =====================================================
 
-.. include:: ../../includes_server_monitor/includes_server_webui.rst
+.. include:: ../../includes_server_webui/includes_server_webui.rst
