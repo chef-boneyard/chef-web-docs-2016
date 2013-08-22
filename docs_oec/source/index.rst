@@ -207,7 +207,6 @@ The xxxxx:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_data.html">Server Data</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_services.html">Services</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_users.html">Users</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_webui.html">Web User Interface</a> </br>
 
 
 Settings and Tools
@@ -686,5 +685,4 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    server_manage_services
    server_manage_tuning
    server_manage_users
-   server_manage_webui
    upgrade_server
