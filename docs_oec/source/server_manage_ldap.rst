@@ -19,3 +19,7 @@ Access the WebUI
 Access when LDAP and/or AD is Down
 =====================================================
 .. include:: ../../includes_server_ldap/includes_server_ldap_access_down.rst
+
+Configure LDAP
+=====================================================
+.. include:: ../../includes_server_ldap//includes_server_ldap_configure.rst

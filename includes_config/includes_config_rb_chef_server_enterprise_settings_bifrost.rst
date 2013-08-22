@@ -17,3 +17,11 @@ This configuration file has the following settings:
      - Default value: ``xxxxx``.
    * - ``bifrost['log_rotation']``
      - Default value: ``xxxxx``.
+   * - ``bifrost['sql_password']``
+     - Default value: ``xxxxx``.
+   * - ``bifrost['sql_user']``
+     - Default value: ``xxxxx``.
+   * - ``bifrost['sql_ro_password']``
+     - Default value: ``xxxxx``.
+   * - ``bifrost['sql_ro_user']``
+     - Default value: ``xxxxx``.

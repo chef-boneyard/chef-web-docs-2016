@@ -29,6 +29,8 @@ This configuration file has the following settings:
      - The base directory for CouchDB log data. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/log/opscode/couchdb"``.
    * - ``couchdb['log_level']``
      - The verbosity of the CouchDB logs. Options: ``error`` (default): Only log errors; ``info``: Log high level connection information; ``debug``: Low level debugging information. Default value: ``"error"``.
+   * - ``couchdb['log_rotation']``
+     - Default value: ``xxxxx``.
    * - ``couchdb['max_attachment_chunk_size']``
      - The maximum attachment size. Default value: ``"4294967296"``.
    * - ``couchdb['max_dbs_open']``
