@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``backup``
      - |backups_kept| Default value: ``5``.
    * - ``checksum``
-     - Optional. |checksum file| Default value: ``nil``.
+     - Optional, see ``use_conditional_get``. |checksum file| Default value: ``nil``.
    * - ``content``
      - |content file| Default value: ``nil`` (don't modify content).
    * - ``force_unlink``
