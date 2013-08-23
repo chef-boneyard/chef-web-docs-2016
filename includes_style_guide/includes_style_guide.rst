@@ -468,6 +468,8 @@ What an image looks like after it's built:
 
 .. image:: ../../images/icon_chef_client.png
 
+Images should be 96 dpi and no larger than 600 pixels wide. Ideally, no larger than 550 pixels wide. (This helps ensure that the image can be printed and/or built into other output formats more easily; in some cases, separate 300 dpi files should be maintained for images that require inclusion in formats designed for printing and/or presentations.)
+
 Doc Repositories
 =====================================================
 There are two document repositories for Chef, one that contains the docs and another that contains image files for quick references.
