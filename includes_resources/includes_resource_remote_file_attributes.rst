@@ -13,6 +13,8 @@ This resource has the following attributes:
      - |atomic_update| Default value: ``true``.
    * - ``backup``
      - |backups_kept| Default value: ``5``.
+   * - ``checksum``
+     - Optional. |checksum file| Default value: ``nil``.
    * - ``content``
      - |content file| Default value: ``nil`` (don't modify content).
    * - ``force_unlink``
