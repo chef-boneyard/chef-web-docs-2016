@@ -21,9 +21,9 @@ Current Grizzly Configurations
 .. note::
   **Chef for OpenStack** is under very active development for the Grizzly release and more architectures are being supported.
 
-Please refer to the :doc:`Example Deployment </openstack_example>` for a detailed reference implementation.
-
 OpenStack is very flexible, so additional configurations will continue to be supported in the future.
+
+Please refer to the :doc:`Example Deployment </openstack_example>` for a detailed reference implementation.
 
 .. toctree::
    :hidden:
