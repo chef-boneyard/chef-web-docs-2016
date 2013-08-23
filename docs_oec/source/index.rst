@@ -205,7 +205,7 @@ The xxxxx:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_monitor.html">Monitor</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_orgs.html">Organizations</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_tuning.html">Performance Tuning</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/Security.html">server_manage_security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/Security.html">Security</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_data.html">Server Data</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_services.html">Services</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_users.html">Users</a> </br>
