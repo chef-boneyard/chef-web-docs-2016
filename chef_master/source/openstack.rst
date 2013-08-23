@@ -35,12 +35,21 @@ Community Resources
 -------------------
 We are a community of developers, deployers and integrators who make working with OpenStack consistent and automated. Join us!
 
- * **IRC**: ``#openstack-chef`` is our channel on ``irc.freenode.net``. Many useful conversations and debugging sessions happen there. Archives are available at `community.opscode.com/chat/openstack-chef <http://community.opscode.com/chat/openstack-chef>`_
- * **Mailing List**: `groups.google.com/group/opscode-chef-openstack <http://groups.google.com/group/opscode-chef-openstack>`_ is the mailing list. Traffic is typically a few posts a day, a great place for updates and longer discussions!
- * **OpenStack Chef Wiki**: `wiki.openstack.org <https://wiki.openstack.org/wiki/Chef/GettingStarted>`_
- * **Twitter**: `@chefopenstack <http://twitter.com/chefopenstack>`_
+.. list-table::
+   :widths: 150 450
+   :header-rows: 0
 
-If you have questions or concerns, please email matt@opscode.com.
+   * - IRC
+     - ``#openstack-chef`` is our channel on ``irc.freenode.net``. Many useful conversations and debugging sessions happen there. Archives are available at `community.opscode.com/chat/openstack-chef <http://community.opscode.com/chat/openstack-chef>`_
+   * - Mailing List
+     - `groups.google.com/group/opscode-chef-openstack <http://groups.google.com/group/opscode-chef-openstack>`_ is the mailing list. Traffic is typically a few posts a day, a great place for updates and longer discussions
+   * - OpenStack Chef Wiki
+     - `wiki.openstack.org <https://wiki.openstack.org/wiki/Chef/GettingStarted>`_ most of this information is migrated here
+   * - Twitter
+     - `@chefopenstack <http://twitter.com/chefopenstack>`_
+
+
+If you have questions or concerns outside the mailing list, please email matt@opscode.com.
 
 .. toctree::
    :hidden:
