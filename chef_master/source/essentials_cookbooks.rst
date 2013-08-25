@@ -13,7 +13,7 @@ About Cookbooks
    * - :doc:`Opscode-authored Cookbooks </opscode_cookbooks>`
      - |opscode| maintains a collection of cookbooks that are important and are widely used by the community.
    * - `Community-authored Cookbooks <http://community.opscode.com/cookbooks>`_
-     - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations, to cookbooks that by nearly everyone.
+     - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations, to cookbooks that are used by nearly everyone.
    * - :doc:`Recipes </essentials_cookbook_recipes>`
      - A recipe is the most fundamental configuration element.
    * - :doc:`Cookbooks Directory Structure </essentials_cookbook_directory>`
