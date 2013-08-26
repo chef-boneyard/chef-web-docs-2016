@@ -22,7 +22,7 @@ The Workstation
 =====================================================
 The workstation is the location from which most users will do most of their work. This work includes:
 
-* Developing `cookbooks <http://docs.opscode.com/enterprise/index.html#cookbooks>`_ and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
+* Developing <a href="http://docs.opscode.com/enterprise/index.html#cookbooks">cookbooks</a> and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
 * Synchronizing the :doc:`chef-repo </essentials_repository>` with version source control like |git| or |svn|
 * Using |knife| to upload items from the |chef repo| to the |chef server|
 * Configuring :doc:`organizational policy </essentials_policy>`
@@ -176,13 +176,12 @@ Installation scenarios:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_pre.html">prerequisites</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_standalone.html">standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ha.html">ha</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">febe</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server.html">upgrade_server</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">migrate_from_xxxxx</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">migrate_to_hosted</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_pre.html">Prerequisites</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_standalone.html">Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ha.html">High Availability</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Front End / Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server.html">Upgrade the Server</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
 
 Options:
 
@@ -194,7 +193,7 @@ Options:
 
 Manage Enterprise Chef
 -----------------------------------------------------
-The xxxxx:
+The |chef server| can be managed in the following ways:
 
 .. raw:: html
 
@@ -207,7 +206,7 @@ The xxxxx:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_monitor.html">Monitor</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_orgs.html">Organizations</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_tuning.html">Performance Tuning</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/Security.html">Security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_security.html">Security</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_data.html">Server Data</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_services.html">Services</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_users.html">Users</a> </br>
@@ -262,16 +261,16 @@ The |chef client| can be installed with the :doc:`knife bootstrap </knife_bootst
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
-Manage Server Objects
------------------------------------------------------
-xxxxx
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">chef-client</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Pushy</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Knife</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Ohai</a> </br>
+.. Manage Server Objects
+.. -----------------------------------------------------
+.. xxxxx
+.. 
+.. .. raw:: html
+.. 
+..    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">chef-client</a> </br>
+..    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Pushy</a> </br>
+..    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Knife</a> </br>
+..    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Ohai</a> </br>
 
 Settings and Tools
 -----------------------------------------------------
