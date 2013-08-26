@@ -1,5 +1,5 @@
 =====================================================
-Chef for OpenStack: Deployment Prerequisites: Network
+Deployment Prerequisites: Network
 =====================================================
 
 .. include:: ../../includes_openstack/includes_openstack_deployment_network.rst

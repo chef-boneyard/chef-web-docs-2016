@@ -1,5 +1,5 @@
 =====================================================
-Chef for OpenStack: Architecture: All-in-One
+Architecture: All-in-One
 =====================================================
 
 .. include:: ../../includes_openstack/includes_openstack_architecture_allinone.rst

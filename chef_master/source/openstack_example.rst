@@ -1,5 +1,5 @@
 =====================================================
-Chef for OpenStack: Example Deployment
+Example Deployment
 =====================================================
 
 .. include:: ../../includes_openstack/includes_openstack_example.rst
