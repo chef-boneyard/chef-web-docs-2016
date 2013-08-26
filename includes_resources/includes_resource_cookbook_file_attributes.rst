@@ -44,7 +44,7 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source file_location| Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: basename of ``name``.
+     - The location of a file in the ``/files`` directory within a cookbook that is in the |chef repo|. Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: basename of ``name``.
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.
 
