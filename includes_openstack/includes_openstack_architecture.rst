@@ -23,7 +23,7 @@ Current Grizzly Configurations
 
 OpenStack is very flexible, so additional configurations will continue to be supported in the future.
 
-Please refer to the :doc:`Example Deployment </openstack_example>` for a detailed reference implementation.
+.. include:: ../../includes_openstack/includes_openstack_example_deployment.rst
 
 .. toctree::
    :hidden:

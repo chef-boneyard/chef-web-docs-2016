@@ -17,7 +17,7 @@ This section will cover everything you need to do in preparation for deploying *
    * - :doc:`Images for Glance </openstack_deployment_images>`
      - Source and mirror images for use by the Image Service
 
-Please refer to the :doc:`Example Deployment </openstack_example>` for a detailed reference implementation with hardware, network and operating system configurations explicitly detailed.
+.. include:: ../../includes_openstack/includes_openstack_example_deployment.rst
 
 .. toctree::
    :hidden:
