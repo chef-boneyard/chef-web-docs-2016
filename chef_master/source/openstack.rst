@@ -7,7 +7,7 @@ Chef for OpenStack
 Overview
 -------------------
 
-The purpose of this guide is to help you understand how to deploy and manage your OpenStack deployment with Chef, using the **Chef for OpenStack** cookbooks as a basis. **Chef for OpenStack** is a community project, frequently updated and evolving quickly. This guide is not intended to provide an introduction to OpenStack, there is already a tremendous amount of great content available at http://docs.openstack.org
+The purpose of this guide is to help you understand how to deploy and manage your OpenStack deployment with Chef, using the **Chef for OpenStack** cookbooks as a basis. Chef for OpenStack is a community project, frequently updated and evolving quickly. This guide is not intended to provide an introduction to OpenStack, there is already a tremendous amount of great content available at http://docs.openstack.org
 
 This guide is broken into 6 broad sections:
 
@@ -18,9 +18,11 @@ This guide is broken into 6 broad sections:
    * - Section
      - Description
    * - :doc:`Architecture </openstack_architecture>`
-     - overview of the architecture for **Chef for OpenStack**
+     - overview of the architecture for Chef for OpenStack
    * - :doc:`Development </openstack_development>`
-     - overview of the development ecosystem around **Chef for OpenStack**
+     - overview of the development ecosystem around Chef for OpenStack
+   * - :doc:`Cookbooks </openstack_cookbooks>`
+     - overview of the Chef for OpenStack community cookbooks
    * - :doc:`Deployment Prerequisites </openstack_deployment>`
      - the hardware, network and operating system requirements
    * - :doc:`Installation </openstack_installation>`
@@ -56,6 +58,7 @@ If you have questions or concerns outside the mailing list, please email matt@op
 
    openstack_architecture
    openstack_development
+   openstack_cookbooks
    openstack_deployment
    openstack_installation
    plugin_knife_openstack
