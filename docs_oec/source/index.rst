@@ -149,19 +149,17 @@ Pushy
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
 
-Reporting
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-|chef server reporting| is xxxxx.
-
 Topologies
 -----------------------------------------------------
 The |chef server oec| can be installed in the following configurations:
 
+.. these need to be updated to topology docs, not just the install docs.
+
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_standalone.html">Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_ha.html">High Availability</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_febe.html">Front End / Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ha.html">High Availability</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Front End / Back End</a> </br>
 
 Install Enterprise Chef
 -----------------------------------------------------
@@ -486,6 +484,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    api_chef_server_search
    api_chef_server_search_index
    api_chef_server_user
+   api_cookbooks_site
    api_omnitruck.rst
    api_pushy
    api_pushy_connect
