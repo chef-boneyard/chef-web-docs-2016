@@ -50,6 +50,6 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - The location of a file in the ``/templates`` directory within a cookbook that is in the |chef repo|. Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: basename of ``name``.
+     - The location of a file in the ``/templates`` directory in a cookbook located in the |chef repo|. Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: basename of ``name``.
    * - ``variables``
      - |variables passed_to_template|
