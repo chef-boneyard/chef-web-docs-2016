@@ -176,9 +176,10 @@ Installation scenarios:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">ha</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">febe</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_pre.html">prerequisites</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_standalone.html">standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ha.html">ha</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">febe</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server.html">upgrade_server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">migrate_from_xxxxx</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">migrate_to_hosted</a> </br>
@@ -187,8 +188,9 @@ Options:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Active Directory / LDAP</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Offloading Services (?)</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ldap.html">Active Directory / LDAP</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_users.html">Create Users</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_orgs.html">Create Organizations</a> </br>
 
 Manage Enterprise Chef
 -----------------------------------------------------
@@ -535,7 +537,14 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    essentials_search
    install_bootstrap
    install_server
+   install_server_febe
+   install_server_ha
    install_server_hosted
+   install_server_ldap
+   install_server_orgs
+   install_server_pre
+   install_server_standalone
+   install_server_users
    install_workstation
    just_enough_ruby_for_chef
    knife_bootstrap
