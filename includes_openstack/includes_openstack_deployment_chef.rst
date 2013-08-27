@@ -9,8 +9,8 @@ There are a few specifics for Chef usage within :doc:`Chef for OpenStack </opens
 * Roles do not provide attributes.
 * Search may be short-circuited by attributes providing the value (ie. IP addresses of services).
 * There are currently no data bags used.
-* `Berkshelf <http://berkshelf.com/>`_ manages cookbook versions in the :doc:`OpenStack Chef repository </openstack_cookbooks_repo>`.
-* `Spiceweasel <https://github.com/mattray/spiceweasel>`_ for managing, validating and deploying the cookbooks, roles, environments and data bags with the :doc:`OpenStack Chef repository </openstack_cookbooks_repo>`.
+* `Berkshelf <http://berkshelf.com/>`_ manages cookbook versions in the :doc:`OpenStack Chef repository </openstack_chef_repo>`.
+* `Spiceweasel <https://github.com/mattray/spiceweasel>`_ for managing, validating and deploying the cookbooks, roles, environments and data bags with the :doc:`OpenStack Chef repository </openstack_chef_repo>`.
 * `Strainer <https://github.com/customink/strainer>`_ coordinates the testing against the Chef repository.
 * `Tailor <https://github.com/turboladen/tailor>`_ is used to check Ruby code style.
 * `Foodcritic <http://acrmp.github.io/foodcritic/>`_ is for lint checking the cookbooks.

@@ -23,7 +23,7 @@ This guide is broken into 7 broad sections:
      - the hardware, network and operating system requirements
    * - :doc:`Development </openstack_development>`
      - overview of the development ecosystem around Chef for OpenStack and how to participate
-   * - :doc:`Cookbooks </openstack_cookbooks>`
+   * - :doc:`Cookbooks and Repositories </openstack_cookbooks>`
      - overview of the Chef for OpenStack community cookbooks and their dependencies
    * - :doc:`Installation </openstack_installation>`
      - techniques for installing Chef for Openstack
