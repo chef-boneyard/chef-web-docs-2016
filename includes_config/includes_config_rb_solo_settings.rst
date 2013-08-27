@@ -43,7 +43,7 @@ This configuration file has the following settings:
  
           data_bag_path "/var/chef/databags"
    * - ``environment``
-     - |name environment| This is typically set from the command line (using the ``-E`` option) or in the |client rb| configuration file. For example:
+     - |name environment| For example:
        ::
  
           environment "production"
