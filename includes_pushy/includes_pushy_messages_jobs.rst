@@ -9,5 +9,5 @@ All job messaging is done using |zeromq| and all messages between components are
 * A job message is sent to a node from the |chef server| as a request, using the |api chef server| and |api pushy|
 * A job message is a command; the ``knife-pushy`` subcommand defines the arguments available for job messaging
 * Only a single job message may be issued to a node at a time; each job message must be completed before another job message may be sent
-* The search functionality in |chef server| is used to determine which nodes in the organization will receive a job message
+* The search functionality in |chef server oec| is used to determine which nodes in the organization will receive a job message
 * Each node returns acknowledgements, updates, and results to the |pushy| server
