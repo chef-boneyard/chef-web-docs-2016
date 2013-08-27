@@ -1,0 +1,37 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+A cookbook may have a ``/files`` directory structure like this::
+
+   files/
+      host-foo.example.com
+      ubuntu-10.04
+      ubuntu-10
+      ubuntu
+      redhat-5.8
+      redhat-6.4
+      ...
+      default
+
+and a resource that looks something like the following:
+
+.. code-block:: ruby
+
+   resource_type "/usr/local/bin/apache2_module_conf_generate.pl" do
+     source "apache2_module_conf_generate.pl"
+     mode 0755
+     owner "root"
+     group "root"
+   end
+
+where ``resource_type`` is the |resource cookbook_file| or |resource remote_file| resource. This resource would be matched in the same order as the ``/files`` directory structure. For a node that is running |ubuntu| 10.04, the second item would be the matching item and the location to which the file identified in the |resource cookbook_file| resource would be distributed:
+
+.. code-block:: ruby
+
+   host-foo.example.com/apache2_module_conf_generate.pl
+   ubuntu-10.04/apache2_module_conf_generate.pl
+   ubuntu-10/apache2_module_conf_generate.pl
+   ubuntu/apache2_module_conf_generate.pl
+   default/apache2_module_conf_generate.pl
+
+If the ``apache2_module_conf_generate.pl`` file was located in the cookbook directory under ``files/host-foo.example.com/``, the specified file(s) would only be copied to the machine with the domain name foo.example.com.
