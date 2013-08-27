@@ -48,9 +48,9 @@ This configuration file has the following settings:
    * - ``erchef['s3_url_ttl']``
      - Default value: ``900``.
    * - ``erchef['svlogd_size']``
-     - Default value: ``1000000``.
+     - |svlogd_size| Default value: ``1000000``.
    * - ``erchef['svlogd_num']``
-     - Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
    * - ``erchef['umask']``
      - Default value: ``0022``.
    * - ``erchef['validation_client_name']``

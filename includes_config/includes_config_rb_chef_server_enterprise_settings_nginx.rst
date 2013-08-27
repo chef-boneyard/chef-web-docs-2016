@@ -64,9 +64,9 @@ This configuration file has the following settings:
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
    * - ``nginx['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
    * - ``nginx['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
+     - |svlogd_size| Default value: ``1000000``.
    * - ``nginx['tcp_nodelay']``
      - Indicates whether the |nagle| buffering algorithm is enabled. Default value: ``on``.
    * - ``nginx['tcp_nopush']``

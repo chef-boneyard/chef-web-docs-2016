@@ -38,10 +38,10 @@ This configuration file has the following settings:
    * - ``rabbitmq['reindexer_vhost']``
      - Default value: ``"/reindexer"``.
    * - ``rabbitmq['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
 
    * - ``rabbitmq['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile.Default value: ``1000000``.
+     - |svlogd_size| Default value: ``1000000``.
    * - ``rabbitmq['user']``
      - Default value: ``"chef"``.
    * - ``rabbitmq['vhost']``

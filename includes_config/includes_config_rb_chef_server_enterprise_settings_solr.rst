@@ -44,9 +44,9 @@ This configuration file has the following settings:
    * - ``opscode_solr['ram_buffer_size']``
      - Default value: ``200``.
    * - ``opscode_solr['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
+     - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_solr['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained.Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
    * - ``opscode_solr['url']``
      - Default value: ``"http://localhost:8983"``.
    * - ``opscode_solr['vip']``

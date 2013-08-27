@@ -50,9 +50,9 @@ This configuration file has the following settings:
    * - ``erchef['s3_url_ttl']``
      - Default value: ``900``.
    * - ``erchef['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
    * - ``erchef['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
+     - |svlogd_size| Default value: ``1000000``.
    * - ``erchef['umask']``
      - Default value: ``0022``.
    * - ``erchef['validation_client_name']``

@@ -56,9 +56,9 @@ This configuration file has the following settings:
    * - ``postgresql['sql_user']``
      - Default value: ``opscode_chef``.
    * - ``postgresql['svlogd_num']``
-     - A retention policy that is based on the number of retained log files for the current set of log files that are managed by |svlogd|. Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
    * - ``postgresql['svlogd_size']``
-     - The size (in bytes) of the current log file that is managed by |svlogd|. Default value: ``1000000``.
+     - |svlogd_size| Default value: ``1000000``.
    * - ``postgresql['trust_auth_cidr_addresses']``
      - Default value: ``'127.0.0.1/32', '::1/128'``.
    * - ``postgresql['user_path']``

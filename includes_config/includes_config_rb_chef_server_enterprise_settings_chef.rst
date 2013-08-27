@@ -26,9 +26,9 @@ This configuration file has the following settings:
    * - ``opscode_chef['log_directory']``
      - Default value: ``"/var/log/opscode/opscode-chef"``.
    * - ``opscode_chef['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile.Default value: ``1000000``.
+     - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_chef['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained.Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
    * - ``opscode_chef['port']``
      - Default value: ``9460``.
    * - ``opscode_chef['proxy_user']``

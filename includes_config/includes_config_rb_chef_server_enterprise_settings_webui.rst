@@ -32,9 +32,9 @@ This configuration file has the following settings:
    * - ``chef_server_webui['session_key']``
      - Default value: ``_sandbox_session``.
    * - ``opscode_webui['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
+     - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_webui['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
    * - ``chef_server_webui['tcp_nodelay']``
      - Default value: ``true``.
    * - ``chef_server_webui['umask']``

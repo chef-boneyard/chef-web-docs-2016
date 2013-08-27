@@ -53,13 +53,13 @@ This configuration file has the following settings for opscode-account:
           opscode_account['log_directory'] = "/var/log/opscode/opscode-account"
 
    * - ``opscode_account['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``. For example:
+     - |svlogd_size| Default value: ``1000000``. For example:
        ::
 
           opscode_account['svlogd_size'] = 1000000
 
    * - ``opscode_account['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``. For example:
+     - |svlogd_num| Default value: ``10``. For example:
        ::
 
           opscode_account['svlogd_num'] = 10
