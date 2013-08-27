@@ -225,7 +225,7 @@ The following command-line tools can be run on the |chef server|:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/orgmapper.html">orgmapper</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_chef_server.html">ctl-chef-server</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_private_chef.html">ctl-private-chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_private_chef.html">private-chef-ctl</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_pushy_client.html">pushy-client</a> </br>
 
 APIs
