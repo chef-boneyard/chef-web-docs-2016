@@ -4,7 +4,7 @@
 
 The following diagram shows the relationship of |pushy| components with the rest of |chef server oec|:
 
-.. image:: ../../images/overview_pushy_quick.png
+.. image:: ../../images/overview_pushy.png
 
 
 
