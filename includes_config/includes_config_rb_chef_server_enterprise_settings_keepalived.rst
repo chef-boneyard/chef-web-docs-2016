@@ -10,17 +10,17 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``keepalived['dir']``
-     - Where keepalived will store its on-disk data. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/opt/opscode/keepalived"``.
+     - |directory keepalived| The default value is the recommended value. Default value: ``"/var/opt/opscode/keepalived"``.
    * - ``keepalived['enable']``
-     - Whether the keepalived service is enabled on this server or not. Usually managed by the ``role`` a server has in its ``server`` entry - ``backend`` servers in an ``ha`` ``topology`` will have this enabled. Default value: ``false``.
+     - |enable keepalived| Backend servers in a high availability topologies should have this setting enabled. Default value: ``false``.
    * - ``keepalived['log_directory']``
-     - The base directory for keepalived log data. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/log/opscode/keepalived"``.
-   * - ``keepalived['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
+     - |directory keepalived_logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``.
    * - ``keepalived['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
+     - |svlogd_num| Default value: ``10``.
+   * - ``keepalived['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``.
    * - ``keepalived['service_order']``
-     - The order that keepalived will start and stop services in on transition from Primary to Backup. Changing this order without consulting with your |opscode| Support Engineer will make it very difficult to troubleshoot your ``ha`` cluster. Default value:
+     - |service_order keepalived| |opscode_support| Default value:
        ::
 
           [{"key"=>"couchdb", "service_name"=>"couchdb"},
@@ -43,26 +43,26 @@ This configuration file has the following settings:
            {"key"=>"nginx", "service_name"=>"nginx"}]``. 
 
    * - ``keepalived['smtp_connect_timeout']``
-     - When sending messages about transitions, how long to wait to connect with an STMP server. Default value: ``"30"``.
+     - |smtp connect_timeout| Default value: ``"30"``.
    * - ``keepalived['smtp_server']``
-     - The SMTP server to connect to. Default value: ``"127.0.0.1"``.
+     - |smtp server| Default value: ``"127.0.0.1"``.
    * - ``keepalived['vrrp_instance_advert_int']``
-     - How often should the ``primary`` server advertise, in seconds. Default value: ``"1"``.
+     - |vrrp_instance_advert| Default value: ``"1"``.
    * - ``keepalived['vrrp_instance_interface']``
-     - The interface to send ``vrrp`` traffic over. On systems with dedicated interfaces for keepalived traffic, this should be set to the name of the dedicated interface. Default value: ``"eth0"``.
+     - |vrrp_instance_interface| Should be set to the name of the dedicated interface for |keepalived|. Default value: ``"eth0"``.
    * - ``keepalived['vrrp_instance_ipaddress']``
-     - The virtual IP address to be managed. Typically set by the ``backend_vip`` option. Default value: ``keepalived['vrrp_instance_ipaddress'] = "192.168.4.131"``.
+     - |vrrp_instance_ipaddress| This is typically set by the ``backend_vip`` option. Default value: ``keepalived['vrrp_instance_ipaddress'] = "192.168.4.131"``.
    * - keepalived['vrrp_instance_ipaddress_dev']``
-     - The device to add the virtual IP address to. Default value: ``"eth0"``. 
+     - |vrrp_instance_ipaddress_device| Default value: ``"eth0"``. 
    * - ``keepalived['vrrp_instance_password']``
-     - The secret key for VRRP pairs. This attribute is randomly generated for you when you install the ``bootstrap`` server. You should not need to set it explicitly. Default value: ``"sneakybeaky"``.
+     - |vrrp_instance_password| This value is generated randomly when the bootstrap server is installed and does not need to be set explicitly. Default value: ``"sneakybeaky"``.
    * - ``keepalived['vrrp_instance_priority']``
-     - The priority for this server. By default, both servers have equal priority, which means the cluster will have no preference for which should be primary. Set to a lower value on the host you want to have be preferred. Default value: ``"100"``.
+     - |vrrp_instance_priority| By default, all servers have equal priority. The server with the lowest value will have the highest priority. Default value: ``"100"``.
    * - ``keepalived['vrrp_instance_state']``
-     - The default ``vrrp`` state for this server. Should be the same on both back-end systems. Default value: ``"MASTER"``.
+     - |vrrp_instance_state| This value should be the same for both servers in the backend. Default value: ``"MASTER"``.
    * - ``keepalived['vrrp_instance_virtual_router_id']``
-     - The virtual router ID for this keepalived pair. This should be unique within the multicast domain you are using for keepalived. Default value: ``"1"``.
+     - |vrrp_instance_virtual_router_id| This value should be unique within the multicast domain used for |keepalived|. Default value: ``"1"``.
    * - ``keepalived['vrrp_unicast_bind']``
-     - The unicast cluster IP address used by keepalived to bind to in order to talk to its peer.  This should be undefined in order to use multicast. This will be configured automatically based on settings derived from the ``/etc/opscode/private-chef.rb`` file.  Changing this order without consulting with your |opscode| Support Engineer will make it very difficult to troubleshoot your ``ha`` cluster. Default value: ``<ip address of cluster IP or eth0>``.
+     - |vrrp_unicast_bind| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``<ip address of cluster IP or eth0>``.
    * - ``keepalived['vrrp_unicast_peer']``
-     - The unicast cluster IP address used by keepalived to send to in order to talk to its peer.  This should be undefined in order to use multicast. This will be configured automatically based on settings derived from the ``/etc/opscode/private-chef.rb`` file.  Changing this order without consulting with your |opscode| Support Engineer will make it very difficult to troubleshoot the ``ha`` cluster. Default value: ``<ip address of peer cluster IP or eth0>``.
+     - |vrrp_unicast_peer| To use multicast, leave this value undefined. This value is configured automatically based on settings in |private chef rb|. |opscode_support| Default value: ``<ip address of peer cluster IP or eth0>``.
