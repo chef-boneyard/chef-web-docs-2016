@@ -108,7 +108,7 @@ This configuration file has the following settings for opscode-webui:
           opscode_webui['url'] = "http://127.0.0.1:9462"
 
    * - ``opscode_webui['validation_client_name']``
-     - Default value: ``"chef"``. For example:
+     - |webui validation_client_name| Default value: ``"chef"``. For example:
        ::
 
           opscode_webui['validation_client_name'] = "chef"

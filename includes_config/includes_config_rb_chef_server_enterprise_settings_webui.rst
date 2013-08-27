@@ -42,7 +42,7 @@ This configuration file has the following settings:
    * - ``opscode_webui['url']``
      - Default value: ``"http://127.0.0.1:9462"``.
    * - ``opscode_webui['validation_client_name']``
-     - Default value: ``"chef"``.
+     - |webui validation_client_name| Default value: ``"chef"``.
    * - ``chef_server_webui['vip']``
      - Default value: ``127.0.0.1``.
    * - ``chef_server_webui['web_ui_admin_default_password']``
