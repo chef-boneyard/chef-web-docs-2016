@@ -178,8 +178,15 @@ Installation scenarios:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_standalone.html">Standalone</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ha.html">High Availability</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Front End / Back End</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server.html">Upgrade the Server</a> </br>
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
+
+There are two scenarios for upgrading to |chef server oec| from |chef private|:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability</a> </br>
 
 Options:
 
@@ -216,7 +223,7 @@ The following settings files are used to configure behavior for the |chef server
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">chef-server.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">private-chef-server.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_pushy_server.html">pushy-server.rb</a> </br>
 
 The following command-line tools can be run on the |chef server|:
@@ -695,3 +702,5 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    server_manage_tuning
    server_manage_users
    upgrade_server
+   upgrade_server_ha
+   upgrade_server_standalone

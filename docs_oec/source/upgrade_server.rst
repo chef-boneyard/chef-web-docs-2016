@@ -1,3 +1,10 @@
-.. THIS PAGE IS IDENTICAL TO docs.opscode.com/upgrade_server.html BY DESIGN
+=====================================================
+Upgrade to Enterprise Chef
+=====================================================
 
-.. include:: ../../chef_master/source/upgrade_server.rst
+There are two scenarios for upgrading to |chef server oec| from |chef private|:
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability</a> </br>
+
+
