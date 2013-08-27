@@ -30,7 +30,7 @@ The type of text editor that is used by |knife| can be configured by adding an e
 
    knife[:editor] = "/usr/bin/vim"
 
-In |ruby|, when a |windows| file path is enclosed in a double-quoted string (" "), the same backslash character (\) that is used to define the file path separator is also used in |ruby| to define an escape character. Therefore, the file path separators must be escaped. In addition, spaces in the file path must be replaced with``~1`` so that the length of the file path is not more than 8 characters. For example if EditPad Pro is the text editor and it is located at the following path:
+When a |windows| file path is enclosed in a double-quoted string (" "), the same backslash character (\) that is used to define the file path separator is also used in |ruby| to define an escape character. The |knife rb| file is a |ruby| file; therefore, file path separators must be escaped. In addition, spaces in the file path must be replaced with``~1`` so that the length of the file path is not more than 8 characters. For example if EditPad Pro is the text editor and it is located at the following path:
 
    C:\\Program Files (x86)\EditPad Pro\EditPad.exe
 
