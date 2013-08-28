@@ -124,14 +124,14 @@ This configuration file has the following settings for |nginx|:
           nginx['server_name'] = "ubuntu.localdomain"
 
    * - ``nginx['ssl_certificate']``
-     - Default value: ``nil``. For example:
+     - |ssl_certificate| Default value: ``nil``. For example:
        ::
 
           nginx['ssl_certificate'] = nil
 
 
    * - ``nginx['ssl_certificate_key']``
-     - Default value: ``nil``. For example:
+     - |ssl_certificate key| Default value: ``nil``. For example:
        ::
 
           nginx['ssl_certificate_key'] = nil

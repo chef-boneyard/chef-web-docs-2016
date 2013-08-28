@@ -42,9 +42,9 @@ This configuration file has the following settings:
    * - ``nginx['server_name']``
      - The |fqdn| of the server. Default value: ``node['fqdn']``.
    * - ``nginx['ssl_certificate']``
-     - The file that contains the |ssl| certificate. Default value: ``nil``.
+     - |ssl_certificate| Default value: ``nil``.
    * - ``nginx['ssl_certificate_key']``
-     - The file that contains the private key used by ``nginx['ssl_certificate']``. Default value: ``nil``.
+     - |ssl_certificate key| Default value: ``nil``.
    * - ``nginx['ssl_ciphers']``
      - The list of supported cipher suites that are used to establish a secure connection. Default value: varies.
    * - ``nginx['ssl_company_name']``
