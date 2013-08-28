@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This configuration file has the following settings for keepalived:
+This configuration file has the following settings for |keepalived|:
 
 .. list-table::
    :widths: 200 300
@@ -17,7 +17,7 @@ This configuration file has the following settings for keepalived:
           keepalived['dir'] = "/var/opt/opscode/keepalived"
 
    * - ``keepalived['enable']``
-     -  |enable keepalived| Backend servers in a high availability topologies should have this setting enabled. Default value: ``false``. For example:
+     - |enable keepalived| Backend servers in a high availability topology should have this setting enabled. Default value: ``false``. For example:
        ::
 
           keepalived['enable'] = false

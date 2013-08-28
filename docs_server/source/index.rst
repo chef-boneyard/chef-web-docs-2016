@@ -98,6 +98,7 @@ Contact |opscode| :doc:`Support </private_chef_1x_support>` for additional quest
    private_chef_1x_admin_logs
    private_chef_1x_admin_orgmapper
    private_chef_1x_admin_private_chef_ctl
+   private_chef_1x_admin_ssl
    private_chef_1x_admin_upgrade
    private_chef_1x_admin_user_management
    private_chef_1x_support

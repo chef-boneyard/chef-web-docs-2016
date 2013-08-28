@@ -118,7 +118,7 @@ This configuration file has the following settings:
  
           file_cache_path "/var/chef/cache"
    * - ``file_backup_path``
-     - |file backup_path| For example:
+     - |path file backup| For example:
        ::
  
           file_backup_path "/var/chef/backup"
@@ -412,7 +412,7 @@ This configuration file has the following settings:
  
           web_ui_admin_user_name  "admin"
    * - ``web_ui_client_name``
-     - |web_ui_client_name| For example:
+     - |name client_webui| Default value: ``chef-webui``. For example:
        ::
  
           web_ui_client_name "chef-webui"
