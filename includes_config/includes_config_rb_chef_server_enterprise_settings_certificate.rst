@@ -12,11 +12,11 @@ This configuration file has the following settings:
    * - ``opscode_certificate['dir']``
      - Default value: ``"/var/opt/opscode/opscode-certificate"``.
    * - ``opscode_certificate['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``opscode_certificate['ha']``
-     - Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``opscode_certificate['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-certificate"``.
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-certificate"``.
    * - ``opscode_certificate['log_rotation']``
      - Default value: ``xxxxx``.
    * - ``opscode_certificate['num_certificates_per_worker']``

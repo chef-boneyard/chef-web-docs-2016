@@ -23,19 +23,19 @@ This configuration file has the following settings for opscode-authz:
           opscode_authz['dir'] = "/var/opt/opscode/opscode-authz"
 
    * - ``opscode_authz['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           opscode_authz['enable'] = true
 
    * - ``opscode_authz['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           opscode_authz['ha'] = false
 
    * - ``opscode_authz['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-authz"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-authz"``. For example:
        ::
 
           opscode_authz['log_directory'] = "/var/log/opscode/opscode-authz"

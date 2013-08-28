@@ -1,5 +1,5 @@
 =====================================================
-All about Chef ...  
+All about Chef ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -172,7 +172,7 @@ Cookbooks
    images
 
    pushy
-
+   reporting
    upgrade_server
    ctl_chef_shell
    ctl_chef_apply

@@ -16,9 +16,9 @@ This configuration file has the following settings:
    * - ``opscode_solr['dir']``
      - Default value: ``/var/opt/chef-server/chef-solr``.
    * - ``opscode_solr['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``opscode_solr['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``opscode_solr['heap_size']``
      - The amount of memory available to Apache Solr. If there is not enough memory available, search queries made by nodes to Apache Solr may fail. The amount of memory that must be available also depends on the number of nodes in the |chef| organization, the frequency of search queries, and other characteristics that are unique to each organization. In general, as the number of nodes increases, so will the amount of memory. The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the amount of memory that is required often exceeds 3GB. Default value: ``nil``.
    * - ``opscode_solr['ip_address']``
@@ -26,7 +26,7 @@ This configuration file has the following settings:
    * - ``opscode_solr['java_opts']``
      - Default value: ``(empty)``.
    * - ``opscode_solr['log_directory']``
-     - The directory in which log files are located. Default value: ``/var/log/chef-server/chef-solr``.
+     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-solr``.
    * - ``opscode_solr['max_commit_docs']``
      - Default value: ``1000``.
    * - ``opscode_solr['max_field_length']``

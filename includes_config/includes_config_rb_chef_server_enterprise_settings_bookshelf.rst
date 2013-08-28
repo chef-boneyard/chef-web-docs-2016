@@ -16,13 +16,13 @@ This configuration file has the following settings:
    * - ``bookshelf['dir']``
      - Default value: ``/var/opt/chef-server/bookshelf``.
    * - ``bookshelf['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``bookshelf['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``bookshelf['listen']``
      - Default value: ``127.0.0.1``.
    * - ``bookshelf['log_directory']``
-     - The directory in which log files are located. Default value: ``/var/log/chef-server/bookshelf``.
+     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/bookshelf``.
    * - ``bookshelf['port']``
      - Default value: ``4321``.
    * - ``bookshelf['secret_access_key']``

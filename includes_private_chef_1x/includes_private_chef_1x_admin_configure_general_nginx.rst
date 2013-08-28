@@ -29,7 +29,7 @@ This configuration file has the following settings for |nginx|:
           nginx['dir'] = "/var/opt/opscode/nginx"
 
    * - ``nginx['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           nginx['enable'] = true
@@ -82,7 +82,7 @@ This configuration file has the following settings for |nginx|:
                                  "text/javascript"]
 
    * - ``nginx['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           nginx['ha'] = false
@@ -94,7 +94,7 @@ This configuration file has the following settings for |nginx|:
           nginx['keepalive_timeout'] = 65
 
    * - ``nginx['log_directory']``
-     - Default value: ``"/var/log/opscode/nginx"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/nginx"``. For example:
        ::
 
           nginx['log_directory'] = "/var/log/opscode/nginx"

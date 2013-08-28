@@ -29,13 +29,13 @@ This configuration file has the following settings for opscode-solr:
           opscode_solr['dir'] = "/var/opt/opscode/opscode-solr"
 
    * - ``opscode_solr['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           opscode_solr['enable'] = true
 
    * - ``opscode_solr['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           opscode_solr['ha'] = false
@@ -59,7 +59,7 @@ This configuration file has the following settings for opscode-solr:
           opscode_solr['java_opts'] = ""
 
    * - ``opscode_solr['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-solr"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-solr"``. For example:
        ::
 
           opscode_solr['log_directory'] = "/var/log/opscode/opscode-solr"

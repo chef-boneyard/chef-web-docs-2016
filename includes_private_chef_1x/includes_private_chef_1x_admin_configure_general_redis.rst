@@ -11,64 +11,51 @@ This configuration file has the following settings for |redis|:
    * - Setting
      - Description
    * - ``redis['appendfsync']``
-     - Default value: ``"everysec"``. For example:
+     - |appendfsync| Default value: ``"everysec"``. For example:
        ::
 
           redis['appendfsync'] = "everysec"
-
    * - ``redis['appendonly']``
-     - Default value: ``"no"``. For example:
+     - |appendonly| Set to ``yes`` to dump data to an append-only log file. Default value: ``"no"``. For example:
        ::
 
           redis['appendonly'] = "no"
 
    * - ``redis['bind']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |bind redis| Default value: ``"127.0.0.1"``. For example:
        ::
 
           redis['bind'] = "127.0.0.1"
 
    * - ``redis['databases']``
-     - Default value: ``"16"``. For example:
+     - |database_quantity| Default value: ``"16"``. For example:
        ::
 
           redis['databases'] = "16"
 
    * - ``redis['dir']``
-     - Default value: ``"/var/opt/opscode/redis"``. For example:
+     - |directory redis| Default value: ``"/var/opt/opscode/redis"``. For example:
        ::
 
           redis['dir'] = "/var/opt/opscode/redis"
 
    * - ``redis['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           redis['enable'] = true
 
    * - ``redis['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           redis['ha'] = false
 
    * - ``redis['log_directory']``
-     - Default value: ``"/var/log/opscode/redis"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/redis"``. For example:
        ::
 
           redis['log_directory'] = "/var/log/opscode/redis"
-
-   * - ``redis['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
-
-          redis['svlogd_size'] = 1000000
-
-   * - ``redis['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          redis['svlogd_num'] = 10
 
    * - ``redis['loglevel']``
      - Default value: ``"notice"``. For example:
@@ -77,31 +64,43 @@ This configuration file has the following settings for |redis|:
           redis['loglevel'] = "notice"
 
    * - ``redis['maxmemory']``
-     - Default value: ``"1g"``. For example:
+     - |memory maximum_redis| Default value: ``"1g"``. For example:
        ::
 
           redis['maxmemory'] = "1g"
 
    * - ``redis['maxmemory_policy']``
-     - Default value: ``"volatile-lru"``. For example:
+     - |memory maximum_policy_redis| Default value: ``"volatile-lru"``. For example:
        ::
 
           redis['maxmemory_policy'] = "volatile-lru"
 
    * - ``redis['port']``
-     - Default value: ``"6379"``. For example:
+     - |port redis| Default value: ``"6379"``. For example:
        ::
 
           redis['port'] = "6379"
 
    * - ``redis['root']``
-     - Default value: ``"/var/opt/opscode/redis"``. For example:
+     - |root redis| Default value: ``"/var/opt/opscode/redis"``. For example:
        ::
 
           redis['root'] = "/var/opt/opscode/redis"
 
+   * - ``redis['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          redis['svlogd_num'] = 10
+
+   * - ``redis['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          redis['svlogd_size'] = 1000000
+
    * - ``redis['timeout']``
-     - Default value: ``"300"``. For example:
+     - |timeout redis| Default value: ``"300"``. For example:
        ::
 
           redis['timeout'] = "300"

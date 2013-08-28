@@ -23,7 +23,7 @@ This configuration file has the following settings for opscode-account:
           opscode_account['dir'] = "/var/opt/opscode/opscode-account"
 
    * - ``opscode_account['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           opscode_account['enable'] = true
@@ -35,7 +35,7 @@ This configuration file has the following settings for opscode-account:
           opscode_account['environment'] = "privatechef"
 
    * - ``opscode_account['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           opscode_account['ha'] = false
@@ -47,7 +47,7 @@ This configuration file has the following settings for opscode-account:
           opscode_account['listen'] = "127.0.0.1:9465"
 
    * - ``opscode_account['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-account"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-account"``. For example:
        ::
 
           opscode_account['log_directory'] = "/var/log/opscode/opscode-account"

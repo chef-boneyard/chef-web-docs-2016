@@ -14,15 +14,15 @@ This configuration file has the following settings:
    * - ``opscode_account['dir']``
      - Default value: ``"/var/opt/opscode/opscode-account"``.
    * - ``opscode_account['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``opscode_account['environment']``
      - Default value: ``"privatechef"``.
    * - ``opscode_account['ha']``
-     - Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``opscode_account['listen']``
      - Default value: ``"127.0.0.1:9465"``.
    * - ``opscode_account['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-account"``.
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-account"``.
    * - ``opscode_account['port']``
      - Default value: ``9465``.
    * - ``opscode_account['proxy_user']``

@@ -12,9 +12,9 @@ This configuration file has the following settings:
    * - ``keepalived['dir']``
      - |directory keepalived| The default value is the recommended value. Default value: ``"/var/opt/opscode/keepalived"``.
    * - ``keepalived['enable']``
-     - |enable keepalived| Backend servers in a high availability topologies should have this setting enabled. Default value: ``false``.
+     - |enable service| Backend servers in a high availability topologies should have this setting enabled. Default value: ``false``.
    * - ``keepalived['log_directory']``
-     - |directory keepalived_logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``.
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``.
    * - ``keepalived['svlogd_num']``
      - |svlogd_num| Default value: ``10``.
    * - ``keepalived['svlogd_size']``

@@ -23,7 +23,7 @@ This configuration file has the following settings for |nagios nrpe|:
           nrpe['dir'] = "/var/opt/opscode/nrpe"
 
    * - ``nrpe['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           nrpe['enable'] = true
@@ -35,7 +35,7 @@ This configuration file has the following settings for |nagios nrpe|:
           nrpe['listen'] = "192.168.4.131"
 
    * - ``nrpe['log_directory']``
-     - Default value: ``"/var/log/opscode/nrpe"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/nrpe"``. For example:
        ::
 
           nrpe['log_directory'] = "/var/log/opscode/nrpe"

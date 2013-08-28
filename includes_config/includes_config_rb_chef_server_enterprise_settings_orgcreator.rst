@@ -10,9 +10,9 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``opscode_org_creator['ha']``
-     - Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``opscode_org_creator['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-org-creator"``.
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-org-creator"``.
    * - ``opscode_org_creator['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_org_creator['svlogd_num']``

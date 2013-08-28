@@ -35,7 +35,7 @@ This configuration file has the following settings for opscode-webui:
           opscode_webui['dir'] = "/var/opt/opscode/opscode-webui"
 
    * - ``opscode_webui['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           opscode_webui['enable'] = true
@@ -47,7 +47,7 @@ This configuration file has the following settings for opscode-webui:
           opscode_webui['environment'] = "privatechef"
 
    * - ``opscode_webui['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           opscode_webui['ha'] = false
@@ -59,7 +59,7 @@ This configuration file has the following settings for opscode-webui:
           opscode_webui['listen'] = "127.0.0.1:9462"
 
    * - ``opscode_webui['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-webui"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-webui"``. For example:
        ::
 
           opscode_webui['log_directory'] = "/var/log/opscode/opscode-webui"
@@ -96,7 +96,7 @@ This configuration file has the following settings for opscode-webui:
           opscode_webui['tcp_nodelay'] = true
 
    * - ``opscode_webui['umask']``
-     - Default value: ``"0022"``. For example:
+     - |umask| Default value: ``"0022"``. For example:
        ::
 
           opscode_webui['umask'] = "0022"
@@ -120,13 +120,13 @@ This configuration file has the following settings for opscode-webui:
           opscode_webui['vip'] = "127.0.0.1"
 
    * - ``opscode_webui['worker_processes']``
-     - Default value: ``4``. For example:
+     - |worker_processes| Default value: ``4``. For example:
        ::
 
           opscode_webui['worker_processes'] = 4
 
    * - ``opscode_webui['worker_timeout']``
-     - Default value: ``3600``. For example:
+     - |worker_timeout| Default value: ``3600``. For example:
        ::
 
           opscode_webui['worker_timeout'] = 3600

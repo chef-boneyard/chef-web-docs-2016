@@ -29,13 +29,13 @@ This configuration file has the following settings for |rabbitmq|:
           rabbitmq['dir'] = "/var/opt/opscode/rabbitmq"
 
    * - ``rabbitmq['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           rabbitmq['enable'] = true
 
    * - ``rabbitmq['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           rabbitmq['ha'] = false
@@ -59,43 +59,33 @@ This configuration file has the following settings for |rabbitmq|:
           rabbitmq['jobs_vhost'] = "/jobs"
 
    * - ``rabbitmq['log_directory']``
-     - Default value: ``"/var/log/opscode/rabbitmq"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/rabbitmq"``. For example:
        ::
 
           rabbitmq['log_directory'] = "/var/log/opscode/rabbitmq"
 
-   * - ``rabbitmq['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
 
-          rabbitmq['svlogd_size'] = 1000000
-
-   * - ``rabbitmq['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          rabbitmq['svlogd_num'] = 10
 
    * - ``rabbitmq['node_ip_address']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address rabbitmq| Default value: ``"127.0.0.1"``. For example:
        ::
 
           rabbitmq['node_ip_address'] = "127.0.0.1"
 
    * - ``rabbitmq['node_port']``
-     - Default value: ``"5672"``. For example:
+     - |port rabbitmq| Default value: ``"5672"``. For example:
        ::
 
           rabbitmq['node_port'] = "5672"
 
    * - ``rabbitmq['nodename']``
-     - Default value: ``"rabbit@localhost"``. For example:
+     - |name node| Default value: ``"rabbit@localhost"``. For example:
        ::
 
           rabbitmq['nodename'] = "rabbit@localhost"
 
    * - ``rabbitmq['password']``
-     - Default value: ``"chefrocks"``. For example:
+     - |password rabbitmq| Default value: ``"chefrocks"``. For example:
        ::
 
           rabbitmq['password'] = "chefrocks"
@@ -105,6 +95,18 @@ This configuration file has the following settings for |rabbitmq|:
        ::
 
           rabbitmq['reindexer_vhost'] = "/reindexer"
+
+   * - ``rabbitmq['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          rabbitmq['svlogd_num'] = 10
+
+   * - ``rabbitmq['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          rabbitmq['svlogd_size'] = 1000000
 
    * - ``rabbitmq['user']``
      - Default value: ``"chef"``. For example:

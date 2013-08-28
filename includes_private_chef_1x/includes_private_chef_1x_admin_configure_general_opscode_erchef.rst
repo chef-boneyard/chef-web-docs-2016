@@ -47,13 +47,13 @@ This configuration file has the following settings for opscode-erchef:
           opscode_erchef['dir'] = "/var/opt/opscode/opscode-erchef"
 
    * - ``opscode_erchef['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           opscode_erchef['enable'] = true
 
    * - ``opscode_erchef['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           opscode_erchef['ha'] = false
@@ -65,7 +65,7 @@ This configuration file has the following settings for opscode-erchef:
           opscode_erchef['listen'] = "127.0.0.1"
 
    * - ``opscode_erchef['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-erchef"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-erchef"``. For example:
        ::
 
           opscode_erchef['log_directory'] = "/var/log/opscode/opscode-erchef"

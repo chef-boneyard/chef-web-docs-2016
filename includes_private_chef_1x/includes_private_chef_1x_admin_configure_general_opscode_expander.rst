@@ -23,19 +23,19 @@ This configuration file has the following settings for opscode-expander:
           opscode_expander['dir'] = "/var/opt/opscode/opscode-expander"
 
    * - ``opscode_expander['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           opscode_expander['enable'] = true
 
    * - ``opscode_expander['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           opscode_expander['ha'] = false
 
    * - ``opscode_expander['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-expander"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-expander"``. For example:
        ::
 
           opscode_expander['log_directory'] = "/var/log/opscode/opscode-expander"

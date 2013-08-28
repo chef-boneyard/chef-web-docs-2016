@@ -24,15 +24,15 @@ This configuration file has the following settings:
    * - ``postgresql['effective_cache_size']``
      - The size of the disk cache that is used for data files. Default value: ``#{(node['memory']['total'].to_i / 2) / (1024)}MB``.
    * - ``postgresql['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``postgresql['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``postgresql['home']``
      - Default value: ``/var/opt/chef-server/postgresql``.
    * - ``postgresql['listen_address']``
      - The connection source to which |postgresql| will respond. Default value: ``localhost``.
    * - ``postgresql['log_directory']``
-     - The directory in which log files are located. Default value: ``/var/log/chef-server/postgresql``.
+     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/postgresql``.
    * - ``postgresql['max_connections']``
      - The maximum number of concurrent connections that are allowed to access the database. Default value: ``200``.
    * - ``postgresql['md5_auth_cidr_addresses']``

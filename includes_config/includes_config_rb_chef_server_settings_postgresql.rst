@@ -24,7 +24,7 @@ This configuration file has the following settings:
    * - ``postgresql['effective_cache_size']``
      - The size of the disk cache that is used for data files. Default value: ``#{(node['memory']['total'].to_i / 2) / (1024)}MB``.
    * - ``postgresql['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``postgresql['ha']``
      - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
    * - ``postgresql['home']``

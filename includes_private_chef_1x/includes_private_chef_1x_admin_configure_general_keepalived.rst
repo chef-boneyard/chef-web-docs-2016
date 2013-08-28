@@ -17,13 +17,13 @@ This configuration file has the following settings for |keepalived|:
           keepalived['dir'] = "/var/opt/opscode/keepalived"
 
    * - ``keepalived['enable']``
-     - |enable keepalived| Backend servers in a high availability topology should have this setting enabled. Default value: ``false``. For example:
+     - |enable service| Backend servers in a high availability topology should have this setting enabled. Default value: ``false``. For example:
        ::
 
           keepalived['enable'] = false
 
    * - ``keepalived['log_directory']``
-     - |directory keepalived_logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``. For example:
        ::
 
           keepalived['log_directory'] = "/var/log/opscode/keepalived"

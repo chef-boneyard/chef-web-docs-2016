@@ -47,19 +47,19 @@ This configuration file has the following settings for |couch db|:
           couchdb['dir'] = "/var/opt/opscode/couchdb"
 
    * - ``couchdb['enable']``
-     - Whether the CouchDB service is enabled on this server or not. Usually managed by the ``role`` a server has in its ``server`` entry. Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           couchdb['enable'] = true
 
    * - ``couchdb['ha']``
-     - Whether CouchDB is running in an HA configuration. Typically managed by the ``topology`` of the cluster and the ``role`` this server plays. Causes the CouchDB service to be ``down`` by default. Default value: ``false``. For example:
+     - |use ha| This is typically managed by the topology of the cluster and the role this server plays in that topology. This setting (when ``true``) will set the |couch db| service to be down. Default value: ``false``. For example:
        ::
 
           couchdb['ha'] = false
 
    * - ``couchdb['log_directory']``
-     - The base directory for CouchDB log data. While this attribute can be changed, we recommend you do not deviate from our typical, supported layout. Default value: ``"/var/log/opscode/couchdb"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/couchdb"``. For example:
        ::
 
           couchdb['log_directory'] = "/var/log/opscode/couchdb"
@@ -77,7 +77,7 @@ This configuration file has the following settings for |couch db|:
           couchdb['svlogd_num'] = 10
 
    * - ``couchdb['log_level']``
-     - The verbosity of the CouchDB logs. Options: ``error`` (default): Only log errors; ``info``: Log high level connection information; ``debug``: Low level debugging information. Default value: ``"error"``. For example:
+     - |log_level| Default value: ``"error"``. For example:
        ::
 
           couchdb['log_level'] = "error"

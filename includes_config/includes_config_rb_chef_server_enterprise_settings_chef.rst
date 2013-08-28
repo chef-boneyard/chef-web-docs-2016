@@ -16,15 +16,15 @@ This configuration file has the following settings:
    * - ``opscode_chef['dir']``
      - Default value: ``"/var/opt/opscode/opscode-chef"``.
    * - ``opscode_chef['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``opscode_chef['environment']``
      - Default value: ``"privatechef"``.
    * - ``opscode_chef['ha']``
-     - Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``opscode_chef['listen']``
      - Default value: ``"127.0.0.1:9460"``.
    * - ``opscode_chef['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-chef"``.
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-chef"``.
    * - ``opscode_chef['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_chef['svlogd_num']``

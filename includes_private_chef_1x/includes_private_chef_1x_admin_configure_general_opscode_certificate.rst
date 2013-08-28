@@ -17,19 +17,19 @@ This configuration file has the following settings for opscode-certificate:
           opscode_certificate['dir'] = "/var/opt/opscode/opscode-certificate"
 
    * - ``opscode_certificate['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           opscode_certificate['enable'] = true
 
    * - ``opscode_certificate['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           opscode_certificate['ha'] = false
 
    * - ``opscode_certificate['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-certificate"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-certificate"``. For example:
        ::
 
           opscode_certificate['log_directory'] = "/var/log/opscode/opscode-certificate"

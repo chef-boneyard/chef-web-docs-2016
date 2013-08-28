@@ -10,37 +10,37 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``redis['appendfsync']``
-     - Default value: ``"everysec"``.
+     - |appendfsync| Default value: ``"everysec"``.
    * - ``redis['appendonly']``
-     - Default value: ``"no"``.
+     - |appendonly| Set to ``yes`` to dump data to an append-only log file. Default value: ``"no"``.
    * - ``redis['bind']``
-     - Default value: ``"127.0.0.1"``.
+     - |bind redis| Default value: ``"127.0.0.1"``.
    * - ``redis['databases']``
-     - Default value: ``"16"``.
+     - |database_quantity| Default value: ``"16"``.
    * - ``redis['dir']``
-     - Default value: ``"/var/opt/opscode/redis"``.
+     - |directory redis| Default value: ``"/var/opt/opscode/redis"``.
    * - ``redis['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``redis['ha']``
-     - Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``redis['log_directory']``
-     - Default value: ``"/var/log/opscode/redis"``.
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/redis"``.
    * - ``redis['loglevel']``
      - Default value: ``"notice"``.
    * - ``redis['maxmemory']``
-     - Default value: ``"1g"``.
+     - |memory maximum_redis| Default value: ``"1g"``.
    * - ``redis['maxmemory_policy']``
-     - Default value: ``"volatile-lru"``.
+     - |memory maximum_policy_redis| Default value: ``"volatile-lru"``.
    * - ``redis['port']``
-     - Default value: ``"6379"``.
+     - |port redis| Default value: ``"6379"``.
    * - ``redis['root']``
-     - Default value: ``"/var/opt/opscode/redis"``.
+     - |root redis| Default value: ``"/var/opt/opscode/redis"``.
    * - ``redis['svlogd_num']``
      - |svlogd_num| Default value: ``10``.
    * - ``redis['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``.
    * - ``redis['timeout']``
-     - Default value: ``"300"``.
+     - |timeout redis| Default value: ``"300"``.
    * - ``redis['vip']``
      - Default value: ``"127.0.0.1"``.
    * - ``redis['vm']``

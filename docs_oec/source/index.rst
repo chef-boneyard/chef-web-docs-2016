@@ -95,6 +95,7 @@ Plugins allow |knife| to interact with all of the major cloud providers. All |kn
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_openstack.html">knife openstack</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_pushy.html">knife pushy</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_rackspace.html">knife rackspace</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_reporting.html">knife reporting</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_terremark.html">knife terremark</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_vcloud.html">knife vcloud</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_windows.html">knife windows</a> </br>
@@ -148,6 +149,10 @@ The |chef server oec| acts as a hub for configuration data. The :doc:`components
 Pushy
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
+
+Pushy
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+:doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
 
 Topologies
 -----------------------------------------------------
@@ -455,7 +460,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_tag.html">untag</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
-
+ 
 
 .. Hide the TOC from this file.
 
@@ -631,10 +636,12 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    plugin_knife_openstack
    plugin_knife_pushy
    plugin_knife_rackspace
+   plugin_knife_reporting
    plugin_knife_terremark
    plugin_knife_vcloud
    plugin_knife_windows
    pushy
+   reporting
    resource
    resource_apt_package
    resource_bash

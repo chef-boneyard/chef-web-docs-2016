@@ -92,7 +92,7 @@ This configuration file has the following settings for |nagios|:
           nagios['dir'] = "/var/opt/opscode/nagios"
 
    * - ``nagios['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           nagios['enable'] = true
@@ -124,7 +124,7 @@ This configuration file has the following settings for |nagios|:
           nagios['fcgiwrap_port'] = 9670
 
    * - ``nagios['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           nagios['ha'] = false
@@ -146,7 +146,7 @@ This configuration file has the following settings for |nagios|:
           nagios['interval_length'] = 1
 
    * - ``nagios['log_directory']``
-     - Default value: ``"/var/log/opscode/nagios"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/nagios"``. For example:
        ::
 
           nagios['log_directory'] = "/var/log/opscode/nagios"

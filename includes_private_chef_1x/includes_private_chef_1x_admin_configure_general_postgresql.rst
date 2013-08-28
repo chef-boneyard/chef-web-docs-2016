@@ -23,14 +23,14 @@ This configuration file has the following settings for |postgresql|:
           postgresql['dir'] = "/var/opt/opscode/postgresql"
 
    * - ``postgresql['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           postgresql['enable'] = true
 
 
    * - ``postgresql['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           postgresql['ha'] = false
@@ -49,7 +49,7 @@ This configuration file has the following settings for |postgresql|:
 
 
    * - ``postgresql['log_directory']``
-     - Default value: ``"/var/log/opscode/postgresql"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/postgresql"``. For example:
        ::
 
           postgresql['log_directory'] = "/var/log/opscode/postgresql"

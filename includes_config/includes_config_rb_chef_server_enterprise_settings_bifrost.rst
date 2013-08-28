@@ -11,10 +11,12 @@ This configuration file has the following settings:
      - Description
    * - ``bifrost['dir']``
      - Default value: ``xxxxx``.
+   * - ``bifrost['enable']``
+     - |enable service| Default value: ``true``.
    * - ``bifrost['ha']``
-     - Default value: ``xxxxx``.
+     - |use ha| Default value: ``xxxxx``.
    * - ``bifrost['log_directory']``
-     - Default value: ``xxxxx``.
+     - |directory logs| The default value is the recommended value. Default value: ``xxxxx``.
    * - ``bifrost['log_rotation']``
      - Default value: ``xxxxx``.
    * - ``bifrost['sql_password']``

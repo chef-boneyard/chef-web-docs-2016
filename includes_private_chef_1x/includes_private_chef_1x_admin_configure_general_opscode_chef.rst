@@ -29,7 +29,7 @@ This configuration file has the following settings for opscode-chef:
           opscode_chef['dir'] = "/var/opt/opscode/opscode-chef"
 
    * - ``opscode_chef['enable']``
-     - Default value: ``true``. For example:
+     - |enable service| Default value: ``true``. For example:
        ::
 
           opscode_chef['enable'] = true
@@ -41,7 +41,7 @@ This configuration file has the following settings for opscode-chef:
           opscode_chef['environment'] = "privatechef"
 
    * - ``opscode_chef['ha']``
-     - Default value: ``false``. For example:
+     - |use ha| Default value: ``false``. For example:
        ::
 
           opscode_chef['ha'] = false
@@ -53,7 +53,7 @@ This configuration file has the following settings for opscode-chef:
           opscode_chef['listen'] = "127.0.0.1:9460"
 
    * - ``opscode_chef['log_directory']``
-     - Default value: ``"/var/log/opscode/opscode-chef"``. For example:
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-chef"``. For example:
        ::
 
           opscode_chef['log_directory'] = "/var/log/opscode/opscode-chef"

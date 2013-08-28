@@ -16,7 +16,7 @@ This configuration file has the following settings:
    * - ``nginx['dir']``
      - Default value: ``/var/opt/chef-server/nginx``.
    * - ``nginx['enable']``
-     - Default value: ``true``.
+     - |enable service| Default value: ``true``.
    * - ``nginx['enable_non_ssl']``
      - Indicates whether port 80 redirects to port 443 are allowed. When this value is set to ``false``, load balancers on the front-end hardware are allowed to do |ssl| termination of the WebUI and API. Default value: ``false``.
    * - ``nginx['gzip']``
@@ -30,11 +30,11 @@ This configuration file has the following settings:
    * - ``nginx['gzip_types']``
      - Enables compression for the specified MIME-types. Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
    * - ``nginx['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``nginx['keepalive_timeout']``
      - The amount of time (in seconds) that a connection will be allowed to stay open. Default value: ``65``.
    * - ``nginx['log_directory']``
-     - The directory in which log files are located. Default value: ``/var/log/chef-server/nginx``.
+     - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/nginx``.
    * - ``nginx['non_ssl_port']``
      - The port on which the WebUI and API are bound for non-|ssl| connections. If this value is ``nil``, this port is disabled. Use ``nginx['enable_non_ssl'] to enable or disable |ssl| redirects on this port number. Default value: ``80``.
    * - ``nginx['sendfile']``
