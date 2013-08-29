@@ -8,7 +8,7 @@ Reporting
 
 Reference
 =====================================================
-The following sections describe the |knife| subcommands, the API, and configuration settings used by |reporting|.
+The following sections describe the |knife| subcommands that can be used to generate reports about nodes and |chef client| runs.
 
 .. warning:: WILL INCLUDE THESE WHEN FINISHED.
 

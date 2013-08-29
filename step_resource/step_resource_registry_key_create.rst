@@ -8,7 +8,7 @@
      values [{
        :name => "EnableLUA",
        :type => :dword,
-       :value => 0
+       :data => 0
      }]
      action :create
    end
