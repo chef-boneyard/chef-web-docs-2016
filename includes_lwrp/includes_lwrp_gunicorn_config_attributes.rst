@@ -16,7 +16,7 @@ This lightweight resource provider has the following attributes:
    * - ``group``
      - |name group_owner_config_file|
    * - ``listen``
-     - |listen lwrp gunicorn_config|
+     - |port listen| Default value: ``0.0.0.0:8000`` which will listen on port 8000 for all interfaces.
    * - ``owner``
      - |owner file_config|
    * - ``path``

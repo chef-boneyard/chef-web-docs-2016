@@ -20,6 +20,6 @@ This lightweight resource provider has the following attributes:
    * - ``name``
      - |name port| This is the port for which a port options file will be modified.
    * - ``options``
-     - |options lwrp freebsd|
+     - |options freebsd|
    * - ``source``
-     - |source lwrp freebsd|
+     - |source freebsd|

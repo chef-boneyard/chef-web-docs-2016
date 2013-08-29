@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``version``
      - |version package|
    * - ``virtualenv``
-     - |virtualenv lwrp python_pip|
+     - |virtual_environment|

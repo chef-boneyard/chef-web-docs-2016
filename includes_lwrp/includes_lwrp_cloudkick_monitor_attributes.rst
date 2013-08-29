@@ -14,10 +14,10 @@ This lightweight resource provider has the following attributes:
    * - ``name``
      - |name monitor|
    * - ``notes``
-     - Optional. |notes lwrp cloudkick|
+     - Optional. |notes cloudkick|
    * - ``oauth_key``
-     - |oauth_key lwrp cloudkick|
+     - |oauth_key cloudkick|
    * - ``oauth_secret``
-     - |oauth_secret lwrp cloudkick|
+     - |oauth_secret cloudkick|
    * - ``query``
      - |query cloudkick|
