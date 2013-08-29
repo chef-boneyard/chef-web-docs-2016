@@ -41,6 +41,13 @@ And
 
 will return a list of |chef client| runs that occurred for a node named "foo".
 
+And
+
+.. code-block:: bash
+
+   $ knife runs list foo 30077269-59d0-4283-81f6-8d23cbed3a7a
+
+will return details about that specific |chef client| run.
 
 runs show
 =====================================================
