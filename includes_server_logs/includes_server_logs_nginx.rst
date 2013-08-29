@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``nginx`` service creates both supervisor and administrator logs. The administrator logs contain both access and error logs for each virtual host utilized by |chef private|. Each of the following logs require external log rotation.
+The ``nginx`` service creates both supervisor and administrator logs. The administrator logs contain both access and error logs for each virtual host utilized by |chef server oec|. Each of the following logs require external log rotation.
 
 .. list-table::
    :widths: 60 420

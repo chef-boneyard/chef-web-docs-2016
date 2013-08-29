@@ -15,5 +15,11 @@ To view logs for a specific service:
 
 where ``SERVICENAME`` should be replaced with name of the service for which log files will be viewed.
 
+Another way to view log files is to use the system utility tail:
+
+.. code-block:: bash
+
+   $ tail -50f /var/log/opscode/opscode-chef/current
+
 
 
