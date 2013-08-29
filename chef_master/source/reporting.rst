@@ -4,7 +4,7 @@ Reporting
 
 .. warning:: DRAFT
 
-.. .. include:: ../../includes_reporting/includes_reporting.rst
+.. include:: ../../includes_reporting/includes_reporting.rst
 
 Reference
 =====================================================
