@@ -106,7 +106,7 @@ This configuration file has the following settings for |redis|:
           redis['timeout'] = "300"
 
    * - ``redis['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           redis['vip'] = "127.0.0.1"

@@ -53,13 +53,13 @@ This configuration file has the following settings for opscode-authz:
           opscode_authz['svlogd_num'] = 10
 
    * - ``opscode_authz['port']``
-     - Default value: ``9463``. For example:
+     - |port opscode_authz| Default value: ``9463``. For example:
        ::
 
           opscode_authz['port'] = 9463
 
    * - ``opscode_authz['vip']``
-     - Default value: ``127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``127.0.0.1"``. For example:
        ::
 
           opscode_authz['vip'] = "127.0.0.1"

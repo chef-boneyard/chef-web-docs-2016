@@ -121,7 +121,7 @@ This configuration file has the following settings for |rabbitmq|:
           rabbitmq['vhost'] = "/chef"
 
    * - ``rabbitmq['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| sDefault value: ``"127.0.0.1"``. For example:
        ::
 
           rabbitmq['vip'] = "127.0.0.1"

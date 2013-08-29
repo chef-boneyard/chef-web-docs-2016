@@ -48,4 +48,4 @@ This configuration file has the following settings:
    * - ``couchdb['reduce_limit']``
      - Disable limiting the number of reduces. Default value: ``"false"``.
    * - ``couchdb['vip']``
-     - The IP address that other services needing access to CouchDB should use. This option is typically set by the ``topology`` and ``role`` a server plays. Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.

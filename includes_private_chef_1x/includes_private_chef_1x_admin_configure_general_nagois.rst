@@ -151,35 +151,23 @@ This configuration file has the following settings for |nagios|:
 
           nagios['log_directory'] = "/var/log/opscode/nagios"
 
-   * - ``nagios['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``. For example:
-       ::
-
-          nagios['svlogd_size'] = 1000000
-
-   * - ``nagios['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``. For example:
-       ::
-
-          nagios['svlogd_num'] = 10
-
    * - ``nagios['php_fpm_log_directory']``
      - Default value: ``"/var/log/opscode/php-fpm"``. For example:
        ::
 
           nagios['php_fpm_log_directory'] = "/var/log/opscode/php-fpm"
 
-   * - ``nagios['php_fpm_svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``. For example:
-       ::
-
-          nagios['php_fpm_svlogd_size'] = 1000000
-
    * - ``nagios['php_fpm_svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``. For example:
+     - |svlogd_num| Default value: ``10``. For example:
        ::
 
           nagios['php_fpm_svlogd_num'] = 10
+
+   * - ``nagios['php_fpm_svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          nagios['php_fpm_svlogd_size'] = 1000000
 
    * - ``nagios['php_fpm_port']``
      - Default value: ``9000``. For example:
@@ -192,4 +180,16 @@ This configuration file has the following settings for |nagios|:
        ::
 
           nagios['port'] = 9671
+
+   * - ``nagios['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          nagios['svlogd_num'] = 10
+
+   * - ``nagios['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          nagios['svlogd_size'] = 1000000
 

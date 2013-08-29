@@ -40,18 +40,6 @@ This configuration file has the following settings for opscode-expander:
 
           opscode_expander['log_directory'] = "/var/log/opscode/opscode-expander"
 
-   * - ``opscode_expander['svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``. For example:
-       ::
-
-          opscode_expander['svlogd_size'] = 1000000
-
-   * - ``opscode_expander['svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``. For example:
-       ::
-
-          opscode_expander['svlogd_num'] = 10
-
    * - ``opscode_expander['nodes']``
      - Default value: ``2``. For example:
        ::
@@ -76,4 +64,16 @@ This configuration file has the following settings for opscode-expander:
        ::
 
           opscode_expander['reindexer_svlogd_num'] = 10
+
+   * - ``opscode_expander['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          opscode_expander['svlogd_num'] = 10
+
+   * - ``opscode_expander['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          opscode_expander['svlogd_size'] = 1000000
 

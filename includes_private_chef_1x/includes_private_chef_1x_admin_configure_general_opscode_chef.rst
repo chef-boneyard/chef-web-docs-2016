@@ -58,20 +58,8 @@ This configuration file has the following settings for opscode-chef:
 
           opscode_chef['log_directory'] = "/var/log/opscode/opscode-chef"
 
-   * - ``opscode_chef['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
-
-          opscode_chef['svlogd_size'] = 1000000
-
-   * - ``opscode_chef['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          opscode_chef['svlogd_num'] = 10
-
    * - ``opscode_chef['port']``
-     - Default value: ``9460``. For example:
+     - |port opscode_chef| Default value: ``9460``. For example:
        ::
 
           opscode_chef['port'] = 9460
@@ -87,6 +75,18 @@ This configuration file has the following settings for opscode-chef:
        ::
 
           opscode_chef['sandbox_path'] = "/var/opt/opscode/opscode-chef/sandbox"
+
+   * - ``opscode_chef['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          opscode_chef['svlogd_num'] = 10
+
+   * - ``opscode_chef['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          opscode_chef['svlogd_size'] = 1000000
 
    * - ``opscode_chef['tcp_nodelay']``
      - Default value: ``true``. For example:
@@ -149,7 +149,7 @@ This configuration file has the following settings for opscode-chef:
           opscode_chef['validation_client_name'] = "chef"
 
    * - ``opscode_chef['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           opscode_chef['vip'] = "127.0.0.1"

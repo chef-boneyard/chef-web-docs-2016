@@ -20,7 +20,7 @@ This configuration file has the following settings:
    * - ``opscode_solr['ha']``
      - |use ha| Default value: ``false``.
    * - ``opscode_solr['heap_size']``
-     - The amount of memory available to Apache Solr. If there is not enough memory available, search queries made by nodes to Apache Solr may fail. The amount of memory that must be available also depends on the number of nodes in the |chef| organization, the frequency of search queries, and other characteristics that are unique to each organization. In general, as the number of nodes increases, so will the amount of memory. The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the amount of memory that is required often exceeds 3GB. Default value: ``nil``.
+     - |heap_size solr| The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the amount of memory that is required often exceeds 3GB. Default value: ``nil``.
    * - ``opscode_solr['ip_address']``
      - Default value: ``127.0.0.1``.
    * - ``opscode_solr['java_opts']``
@@ -40,7 +40,7 @@ This configuration file has the following settings:
    * - ``opscode_solr['poll_seconds']``
      - Default value: ``20``.
    * - ``opscode_solr['port']``
-     - Default value: ``8983``.
+     - |port opscode_solr| Default value: ``8983``.
    * - ``opscode_solr['ram_buffer_size']``
      - Default value: ``200``.
    * - ``opscode_solr['svlogd_size']``
@@ -50,7 +50,7 @@ This configuration file has the following settings:
    * - ``opscode_solr['url']``
      - Default value: ``"http://localhost:8983"``.
    * - ``opscode_solr['vip']``
-     - Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``.
 
 
 

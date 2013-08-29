@@ -11,13 +11,13 @@ This configuration file has the following settings for |postgresql|:
    * - Setting
      - Description
    * - ``postgresql['data_dir']``
-     - Default value: ``"/var/opt/opscode/postgresql/data"``. For example:
+     - |directory postgresql_data| Default value: ``"/var/opt/opscode/postgresql/data"``. For example:
        ::
 
           postgresql['data_dir'] = "/var/opt/opscode/postgresql/data"
 
    * - ``postgresql['dir']``
-     - Default value: ``"/var/opt/opscode/postgresql"``. For example:
+     - |directory postgresql| Default value: ``"/var/opt/opscode/postgresql"``. For example:
        ::
 
           postgresql['dir'] = "/var/opt/opscode/postgresql"
@@ -36,13 +36,13 @@ This configuration file has the following settings for |postgresql|:
           postgresql['ha'] = false
 
    * - ``postgresql['home']``
-     - Default value: ``"/opt/opscode/embedded"``. For example:
+     - |directory postgresql_home| Default value: ``"/opt/opscode/embedded"``. For example:
        ::
 
           postgresql['home'] = "/opt/opscode/embedded"
 
    * - ``postgresql['listen_address']``
-     - Default value: ``"localhost"``. For example:
+     - |port listen_postgresql| Default value: ``"localhost"``. For example:
        ::
 
           postgresql['listen_address'] = "localhost"
@@ -54,20 +54,10 @@ This configuration file has the following settings for |postgresql|:
 
           postgresql['log_directory'] = "/var/log/opscode/postgresql"
 
-   * - ``postgresql['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
 
-          postgresql['svlogd_size'] = 1000000
-
-   * - ``postgresql['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          postgresql['svlogd_num'] = 10
 
    * - ``postgresql['max_connections']``
-     - Default value: ``200``. For example:
+     - |max_connections| Default value: ``200``. For example:
        ::
 
           postgresql['max_connections'] = 200
@@ -79,7 +69,7 @@ This configuration file has the following settings for |postgresql|:
           postgresql['md5_auth_cidr_addresses'] = []
 
    * - ``postgresql['port']``
-     - Default value: ``5432``. For example:
+     - |port postgresql| Default value: ``5432``. For example:
        ::
 
           postgresql['port'] = 5432
@@ -126,6 +116,18 @@ This configuration file has the following settings for |postgresql|:
 
           postgresql['sql_user'] = "opscode_chef"
 
+   * - ``postgresql['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          postgresql['svlogd_num'] = 10
+
+   * - ``postgresql['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          postgresql['svlogd_size'] = 1000000
+
    * - ``postgresql['trust_auth_cidr_addresses']``
      - Default value: ``["127.0.0.1/32", "::1/128"]``. For example:
        ::
@@ -133,13 +135,13 @@ This configuration file has the following settings for |postgresql|:
           postgresql['trust_auth_cidr_addresses'] = ["127.0.0.1/32", "::1/128"]
 
    * - ``postgresql['username']``
-     - Default value: ``"opscode-pgsql"``. For example:
+     - |name user postgresql| Default value: ``"opscode-pgsql"``. For example:
        ::
 
           postgresql['username'] = "opscode-pgsql"
 
    * - ``postgresql['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           postgresql['vip'] = "127.0.0.1"

@@ -25,18 +25,18 @@ This configuration file has the following settings:
      - Default value: ``"127.0.0.1:9460"``.
    * - ``opscode_chef['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-chef"``.
-   * - ``opscode_chef['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
-   * - ``opscode_chef['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
    * - ``opscode_chef['port']``
-     - Default value: ``9460``.
+     - |port opscode_chef| Default value: ``9460``.
    * - ``opscode_chef['proxy_user']``
      - Default value: ``"pivotal"``.
    * - ``opscode_chef['sandbox_path']``
      - Default value: ``"/var/opt/opscode/opscode-chef/sandbox"``.
    * - ``opscode_chef['tcp_nodelay']``
      - Default value: ``true``.
+   * - ``opscode_chef['svlogd_num']``
+     - |svlogd_num| Default value: ``10``.
+   * - ``opscode_chef['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_chef['umask']``
      - Default value: ``"0022"``.
    * - ``opscode_chef['upload_internal_port']``
@@ -56,7 +56,7 @@ This configuration file has the following settings:
    * - ``opscode_chef['validation_client_name']``
      - Default value: ``"chef"``.
    * - ``opscode_chef['vip']``
-     - Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.
    * - ``opscode_chef['web_ui_admin_default_password']``
      - Default value: ``"p@ssw0rd1"``.
    * - ``opscode_chef['web_ui_admin_user_name']``

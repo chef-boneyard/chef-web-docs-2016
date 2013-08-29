@@ -34,18 +34,6 @@ This configuration file has the following settings for opscode-certificate:
 
           opscode_certificate['log_directory'] = "/var/log/opscode/opscode-certificate"
 
-   * - ``opscode_certificate['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
-
-          opscode_certificate['svlogd_size'] = 1000000
-
-   * - ``opscode_certificate['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          opscode_certificate['svlogd_num'] = 10
-
    * - ``opscode_certificate['num_certificates_per_worker']``
      - Default value: ``"50"``. For example:
        ::
@@ -59,13 +47,25 @@ This configuration file has the following settings for opscode-certificate:
           opscode_certificate['num_workers'] = "2"
 
    * - ``opscode_certificate['port']``
-     - Default value: ``5140``. For example:
+     - |port opscode_certificate| Default value: ``5140``. For example:
        ::
 
           opscode_certificate['port'] = 5140
 
+   * - ``opscode_certificate['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          opscode_certificate['svlogd_num'] = 10
+
+   * - ``opscode_certificate['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          opscode_certificate['svlogd_size'] = 1000000
+
    * - ``opscode_certificate['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           opscode_certificate['vip'] = "127.0.0.1"

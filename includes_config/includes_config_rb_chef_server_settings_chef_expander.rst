@@ -16,7 +16,7 @@ This configuration file has the following settings:
    * - ``chef_expander['enable']``
      - Default value: ``true``.
    * - ``chef_expander['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``chef_expander['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/chef-expander``.
    * - ``chef_expander['nodes']``

@@ -28,7 +28,7 @@ This configuration file has the following settings:
    * - ``chef_server_webui['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-server-webui``.
    * - ``chef_server_webui['port']``
-     - Default value: ``9462``.
+     - |port opscode_webui| Default value: ``9462``.
    * - ``chef_server_webui['session_key']``
      - Default value: ``_sandbox_session``.
    * - ``opscode_webui['svlogd_size']``

@@ -26,4 +26,4 @@ This configuration file has the following settings:
    * - ``lb['web_ui_fqdn']``
      - Default value: ``node['fqdn']``.
    * - ``lb['vip']``
-     - Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``.

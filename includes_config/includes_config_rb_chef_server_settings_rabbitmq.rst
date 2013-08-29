@@ -18,7 +18,7 @@ This configuration file has the following settings:
    * - ``rabbitmq['enable']``
      - |enable service| Default value: ``true``.
    * - ``rabbitmq['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``rabbitmq['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/rabbitmq``.
    * - ``rabbitmq['node_ip_address']``
@@ -34,6 +34,6 @@ This configuration file has the following settings:
    * - ``rabbitmq['vhost']``
      - The virtual host. Default value: ``/chef``.
    * - ``rabbitmq['vip']``
-     - Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``.
 
 

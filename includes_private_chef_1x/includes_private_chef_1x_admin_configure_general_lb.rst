@@ -56,7 +56,7 @@ This configuration file has the following settings for load balancers:
                             "opscode-solr"=>["127.0.0.1"]}
 
    * - ``lb['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           lb['vip'] = "127.0.0.1"

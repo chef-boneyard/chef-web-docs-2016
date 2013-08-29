@@ -64,18 +64,6 @@ This configuration file has the following settings for |couch db|:
 
           couchdb['log_directory'] = "/var/log/opscode/couchdb"
 
-   * - ``couchdb['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
-
-          couchdb['svlogd_size'] = 1000000
-
-   * - ``couchdb['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          couchdb['svlogd_num'] = 10
-
    * - ``couchdb['log_level']``
      - |log_level| Default value: ``"error"``. For example:
        ::
@@ -118,8 +106,20 @@ This configuration file has the following settings for |couch db|:
 
           couchdb['reduce_limit'] = "false"
 
+   * - ``couchdb['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          couchdb['svlogd_num'] = 10
+
+   * - ``couchdb['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          couchdb['svlogd_size'] = 1000000
+
    * - ``couchdb['vip']``
-     - The IP address that other services needing access to CouchDB should use. This option is typically set by the ``topology`` and ``role`` a server plays. Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           couchdb['vip'] = "127.0.0.1"

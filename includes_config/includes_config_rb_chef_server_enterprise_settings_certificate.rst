@@ -24,10 +24,10 @@ This configuration file has the following settings:
    * - ``opscode_certificate['num_workers']``
      - Default value: ``"2"``.
    * - ``opscode_certificate['port']``
-     - Default value: ``5140``.
+     - |port opscode_certificate| Default value: ``5140``.
    * - ``opscode_certificate['svlogd_num']``
      - |svlogd_num| Default value: ``10``.
    * - ``opscode_certificate['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_certificate['vip']``
-     - Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.

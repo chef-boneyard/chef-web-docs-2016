@@ -30,7 +30,7 @@ This configuration file has the following settings:
    * - ``nginx['gzip_types']``
      - Enables compression for the specified MIME-types. Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
    * - ``nginx['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``nginx['keepalive_timeout']``
      - The amount of time (in seconds) that a connection will be allowed to stay open. Default value: ``65``.
    * - ``nginx['log_directory']``
@@ -64,12 +64,12 @@ This configuration file has the following settings:
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
    * - ``nginx['tcp_nodelay']``
-     - Indicates whether the |nagle| buffering algorithm is enabled. Default value: ``on``.
+     - |use nagle| Default value: ``on``.
    * - ``nginx['tcp_nopush']``
-     - Indicates whether TCP/IP transactions are enabled. Default value: ``on``.
+     - |use tcpip| Default value: ``on``.
    * - ``nginx['url']``
      - Default value: ``https://#{node['fqdn']}``.
    * - ``nginx['worker_connections']``
-     - The number of allowed worker connections. Used with ``nginx['worker_processes']`` to determine the maximum number of allowed clients. Default value: ``10240``.
+     - |worker_connections| Use with ``nginx['worker_processes']`` to determine the maximum number of allowed clients. Default value: ``10240``.
    * - ``nginx['worker_processes']``
-     - The number of allowed worker processes. Used with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``.
+     - |worker_processes| Use with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``.

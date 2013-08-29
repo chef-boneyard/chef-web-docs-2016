@@ -70,18 +70,6 @@ This configuration file has the following settings for opscode-erchef:
 
           opscode_erchef['log_directory'] = "/var/log/opscode/opscode-erchef"
 
-   * - ``opscode_erchef['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
-
-          opscode_erchef['svlogd_size'] = 1000000
-
-   * - ``opscode_erchef['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          opscode_erchef['svlogd_num'] = 10
-
    * - ``opscode_erchef['max_cache_size']``
      - Default value: ``"10000"``. For example:
        ::
@@ -89,13 +77,25 @@ This configuration file has the following settings for opscode-erchef:
           opscode_erchef['max_cache_size'] = "10000"
 
    * - ``opscode_erchef['port']``
-     - Default value: ``8000``. For example:
+     - |port opscode_erchef| Default value: ``8000``. For example:
        ::
 
           opscode_erchef['port'] = 8000
 
+   * - ``opscode_erchef['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          opscode_erchef['svlogd_num'] = 10
+
+   * - ``opscode_erchef['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          opscode_erchef['svlogd_size'] = 1000000
+
    * - ``opscode_erchef['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           opscode_erchef['vip'] = "127.0.0.1"

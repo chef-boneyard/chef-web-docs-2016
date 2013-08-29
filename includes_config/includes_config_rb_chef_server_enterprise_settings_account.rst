@@ -42,7 +42,7 @@ This configuration file has the following settings:
    * - ``opscode_account['validation_client_name']``
      - Default value: ``"chef"``.
    * - ``opscode_account['vip']``
-     - Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.
    * - ``opscode_account['worker_processes']``
      - Default value: ``4``.
 

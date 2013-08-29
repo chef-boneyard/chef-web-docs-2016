@@ -36,7 +36,7 @@ This configuration file has the following settings:
    * - ``erchef['max_cache_size']``
      - Default value: ``10000``.
    * - ``erchef['port']``
-     - Default value: ``8000``.
+     - |port opscode_erchef| Default value: ``8000``.
    * - ``erchef['proxy_user']``
      - Default value: ``pivotal``.
    * - ``erchef['root_metric_key']``
@@ -58,6 +58,6 @@ This configuration file has the following settings:
    * - ``erchef['validation_client_name']``
      - Default value: ``chef-validator``.
    * - ``erchef['vip']``
-     - Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``erchef['web_ui_client_name']``
      - Default value: ``chef-webui``.

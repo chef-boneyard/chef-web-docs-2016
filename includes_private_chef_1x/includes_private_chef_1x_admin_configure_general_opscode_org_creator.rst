@@ -54,7 +54,7 @@ This configuration file has the following settings for opscode-org-creator:
           opscode_org_creator['max_workers'] = 1
 
    * - ``opscode_org_creator['port']``
-     - Default value: ``4369``. For example:
+     - |port opscode_orgcreator| Default value: ``4369``. For example:
        ::
 
           opscode_org_creator['port'] = 4369

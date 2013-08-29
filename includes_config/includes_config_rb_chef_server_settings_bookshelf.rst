@@ -18,7 +18,7 @@ This configuration file has the following settings:
    * - ``bookshelf['enable']``
      - Default value: ``true``.
    * - ``bookshelf['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``bookshelf['listen']``
      - Default value: ``127.0.0.1``.
    * - ``bookshelf['log_directory']``

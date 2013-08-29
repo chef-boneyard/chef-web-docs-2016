@@ -107,7 +107,7 @@ This configuration file has the following settings for opscode-account:
           opscode_account['validation_client_name'] = "chef"
 
    * - ``opscode_account['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           opscode_account['vip'] = "127.0.0.1"

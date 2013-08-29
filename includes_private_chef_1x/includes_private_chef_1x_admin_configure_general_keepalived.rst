@@ -28,18 +28,6 @@ This configuration file has the following settings for |keepalived|:
 
           keepalived['log_directory'] = "/var/log/opscode/keepalived"
 
-   * - ``keepalived['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          keepalived['svlogd_num'] = 10
-
-   * - ``keepalived['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
-
-          keepalived['svlogd_size'] = 1000000
-
    * - ``keepalived['service_order']``
      - |service_order keepalived| |opscode_support| Default value:
        ::
@@ -98,6 +86,18 @@ This configuration file has the following settings for |keepalived|:
        ::
 
           keepalived['smtp_server'] = "127.0.0.1"
+
+   * - ``keepalived['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          keepalived['svlogd_num'] = 10
+
+   * - ``keepalived['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          keepalived['svlogd_size'] = 1000000
 
    * - ``keepalived['vrrp_instance_advert_int']``
      - |vrrp_instance_advert| Default value: ``"1"``. For example:

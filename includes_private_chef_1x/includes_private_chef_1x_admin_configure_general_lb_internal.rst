@@ -35,7 +35,7 @@ This configuration file has the following settings for the internal load balance
           lb_internal['enable'] = true
 
    * - ``lb_internal['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           lb_internal['vip'] = "127.0.0.1"

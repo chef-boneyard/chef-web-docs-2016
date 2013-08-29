@@ -34,7 +34,7 @@ This configuration file has the following settings:
            "opscode-authz"=>["127.0.0.1"],
           "opscode-solr"=>["127.0.0.1"]}``
    * - ``lb['vip']``
-     - Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``lb['web_ui_fqdn']``
      - Default value: ``"ubuntu.localdomain"``.
 
@@ -55,4 +55,4 @@ And for the internal load balancers:
    * - ``lb_internal['enable']``
      - Default value: ``true``.
    * - ``lb_internal['vip']``
-     - Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.

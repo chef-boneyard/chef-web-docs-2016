@@ -18,7 +18,7 @@ This configuration file has the following settings:
    * - ``chef_solr['enable']``
      - Default value: ``true``.
    * - ``chef_solr['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``chef_solr['heap_size']``
      - Default value: ``nil``.
    * - ``chef_solr['ip_address']``
@@ -44,7 +44,7 @@ This configuration file has the following settings:
    * - ``chef_solr['ram_buffer_size']``
      - Default value: ``200``.
    * - ``chef_solr['vip']``
-     - Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``.
 
 
 

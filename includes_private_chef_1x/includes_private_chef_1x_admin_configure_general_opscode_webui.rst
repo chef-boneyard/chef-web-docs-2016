@@ -64,21 +64,8 @@ This configuration file has the following settings for opscode-webui:
 
           opscode_webui['log_directory'] = "/var/log/opscode/opscode-webui"
 
-   * - ``opscode_webui['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
-
-          opscode_webui['svlogd_size'] = 1000000
-
-
-   * - ``opscode_webui['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          opscode_webui['svlogd_num'] = 10
-
    * - ``opscode_webui['port']``
-     - Default value: ``9462``. For example:
+     - |port opscode_webui| Default value: ``9462``. For example:
        ::
 
           opscode_webui['port'] = 9462
@@ -88,6 +75,18 @@ This configuration file has the following settings for opscode-webui:
        ::
 
           opscode_webui['session_key'] = "_sandbox_session"
+
+   * - ``opscode_webui['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          opscode_webui['svlogd_num'] = 10
+
+   * - ``opscode_webui['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          opscode_webui['svlogd_size'] = 1000000
 
    * - ``opscode_webui['tcp_nodelay']``
      - Default value: ``true``. For example:
@@ -114,7 +113,7 @@ This configuration file has the following settings for opscode-webui:
           opscode_webui['validation_client_name'] = "chef"
 
    * - ``opscode_webui['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           opscode_webui['vip'] = "127.0.0.1"

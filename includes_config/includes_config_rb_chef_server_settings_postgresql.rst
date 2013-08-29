@@ -10,37 +10,37 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``postgresql['checkpoint_completion_target']``
-     - A checkpoint tuning setting that uses a completion percentage used to determine how quickly a checkpoint should finish in relation to the completion status of the next checkpoint. For example, if the value is ``0.5``, then a checkpoint will attempt to finish before 50% of the next checkpoint is done. Default value: ``0.9``.
+     - |checkpoint_completion_target| Default value: ``0.9``.
    * - ``postgresql['checkpoint_segments']``
-     - The maximum amount (in megabytes) between checkpoints in log file segments. Default value: ``10``.
+     - |checkpoint_segments| Default value: ``10``.
    * - ``postgresql['checkpoint_timeout']``
-     - The amount of time (in minutes) between checkpoints. Default value: ``5min``.
+     - |checkpoint_timeout| Default value: ``5min``.
    * - ``postgresql['checkpoint_warning']``
-     - A frequency (in seconds) at which message is sent to the server log files if checkpoint segments are being filled faster than their currently configured values. Default value: ``30s``.
+     - |checkpoint_warning| Default value: ``30s``.
    * - ``postgresql['data_dir']``
-     - Default value: ``/var/opt/chef-server/postgresql/data``.
+     - |directory postgresql_data| Default value: ``/var/opt/chef-server/postgresql/data``.
    * - ``postgresql['dir']``
-     - Default value: ``/var/opt/chef-server/postgresql``.
+     - |directory postgresql| Default value: ``/var/opt/chef-server/postgresql``.
    * - ``postgresql['effective_cache_size']``
-     - The size of the disk cache that is used for data files. Default value: ``#{(node['memory']['total'].to_i / 2) / (1024)}MB``.
+     - |effective_cache_size postgresql| Default value: ``#{(node['memory']['total'].to_i / 2) / (1024)}MB``.
    * - ``postgresql['enable']``
      - |enable service| Default value: ``true``.
    * - ``postgresql['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``postgresql['home']``
-     - Default value: ``/var/opt/chef-server/postgresql``.
+     - |directory postgresql_home| Default value: ``/var/opt/chef-server/postgresql``.
    * - ``postgresql['listen_address']``
-     - The connection source to which |postgresql| will respond. Default value: ``localhost``.
+     - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
-     - The directory in which log files are located. Default value: ``/var/log/chef-server/postgresql``.
+     - |directory logs| Default value: ``/var/log/chef-server/postgresql``.
    * - ``postgresql['max_connections']``
-     - The maximum number of concurrent connections that are allowed to access the database. Default value: ``200``.
+     - |max_connections| Default value: ``200``.
    * - ``postgresql['md5_auth_cidr_addresses']``
      - Default value: ``[ ]``.
    * - ``postgresql['port']``
-     - The port on which |postgresql| will listen. Default value: ``5432``.
+     - |port postgresql| Default value: ``5432``.
    * - ``postgresql['shared_buffers']``
-     - The amount of memory that is dedicated to |postgresql| for data caching. Default value: ``#{(node['memory']['total'].to_i / 4) / (1024)}MB``.
+     - |shared_buffers postgresql| Default value: ``#{(node['memory']['total'].to_i / 4) / (1024)}MB``.
    * - ``postgresql['shmall']``
      - The total amount of available shared memory. Default value: ``kernel['machine'] =~ /x86_64/ ? 4194304 : 1048575``.
    * - ``postgresql['shmmax']``
@@ -64,11 +64,11 @@ This configuration file has the following settings:
    * - ``postgresql['user_path']``
      - Default value: ``/opt/chef-server/embedded/bin:/opt/chef-server/bin:$PATH``.
    * - ``postgresql['username']``
-     - The user name for the |postgresql| account.Default value: ``opscode-pgsql``.
+     - |name user postgresql| Default value: ``opscode-pgsql``.
    * - ``postgresql['vip']``
-     - Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``postgresql['work_mem']``
-     - The size (in megabytes) of allowed in-memory sorting. Default value: ``8MB``.
+     - |work_mem| Default value: ``8MB``.
 
 
 

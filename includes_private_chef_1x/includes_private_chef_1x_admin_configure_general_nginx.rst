@@ -99,18 +99,6 @@ This configuration file has the following settings for |nginx|:
 
           nginx['log_directory'] = "/var/log/opscode/nginx"
 
-   * - ``nginx['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
-       ::
-
-          nginx['svlogd_size'] = 1000000
-
-   * - ``nginx['svlogd_num']``
-     - |svlogd_num| Default value: ``10``. For example:
-       ::
-
-          nginx['svlogd_num'] = 10
-
    * - ``nginx['sendfile']``
      - Default value: ``"on"``. For example:
        ::
@@ -203,14 +191,26 @@ This configuration file has the following settings for |nginx|:
 
           nginx['ssl_state_name'] = "WA"
 
+   * - ``nginx['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
+       ::
+
+          nginx['svlogd_size'] = 1000000
+
+   * - ``nginx['svlogd_num']``
+     - |svlogd_num| Default value: ``10``. For example:
+       ::
+
+          nginx['svlogd_num'] = 10
+
    * - ``nginx['tcp_nodelay']``
-     - Default value: ``"on"``. For example:
+     - |use nagle| Default value: ``"on"``. For example:
        ::
 
           nginx['tcp_nodelay'] = "on"
 
    * - ``nginx['tcp_nopush']``
-     - Default value: ``"on"``. For example:
+     - |use tcpip| Default value: ``"on"``. For example:
        ::
 
           nginx['tcp_nopush'] = "on"
@@ -222,19 +222,19 @@ This configuration file has the following settings for |nginx|:
           nginx['url'] = "https://ubuntu.localdomain"
 
    * - ``nginx['worker_connections']``
-     - Default value: ``10240``. For example:
+     - |worker_connections| Use with ``nginx['worker_processes']`` to determine the maximum number of allowed clients. Default value: ``10240``. For example:
        ::
 
           nginx['worker_connections'] = 10240
 
    * - ``nginx['worker_processes']``
-     - Default value: ``4``. For example:
+     - |worker_processes| Use with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``4``. For example:
        ::
 
           nginx['worker_processes'] = 4
 
    * - ``nginx['x_forwarded_proto']``
-     - This value can be used to set the protocol (HTTP or HTTPS) of URLs returned within API responses. It should be set to the protocol used to connect to the Private Chef API by your clients. Default value: ``"https"``. For example:
+     - |x_forwarded_proto| This is the protocol used to connect to |chef private| by a |chef client| or a workstation. Default value: ``"https"``. For example:
        ::
 
           nginx['x_forwarded_protocol'] = "http"

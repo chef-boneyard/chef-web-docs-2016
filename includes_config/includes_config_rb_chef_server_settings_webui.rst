@@ -22,13 +22,13 @@ This configuration file has the following settings:
    * - ``chef_server_webui['environment']``
      - Default value: ``chefserver``.
    * - ``chef_server_webui['ha']``
-     - Indicates that the |chef server| is installed as part of a |ha| topology. Default value: ``false``.
+     - |use ha| Default value: ``false``.
    * - ``chef_server_webui['listen']``
      - Default value: ``127.0.0.1:9462``.
    * - ``chef_server_webui['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/chef-server-webui``.
    * - ``chef_server_webui['port']``
-     - Default value: ``9462``.
+     - |port opscode_webui| Default value: ``9462``.
    * - ``chef_server_webui['session_key']``
      - Default value: ``_sandbox_session``.
    * - ``chef_server_webui['tcp_nodelay']``
@@ -36,7 +36,7 @@ This configuration file has the following settings:
    * - ``chef_server_webui['umask']``
      - |umask| Default value: ``0022``.
    * - ``chef_server_webui['vip']``
-     - Default value: ``127.0.0.1``.
+     - |ip_address virtual| Default value: ``127.0.0.1``.
    * - ``chef_server_webui['web_ui_admin_default_password']``
      - Default value: ``p@ssw0rd1``.
    * - ``chef_server_webui['web_ui_admin_user_name']``

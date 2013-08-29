@@ -40,11 +40,11 @@ This configuration file has the following settings for |nagios nrpe|:
 
           nrpe['log_directory'] = "/var/log/opscode/nrpe"
 
-   * - ``nrpe['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``. For example:
+   * - ``nrpe['port']``
+     - |port nrpe| Default value: ``9672``. For example:
        ::
 
-          nrpe['svlogd_size'] = 1000000
+          nrpe['port'] = 9672
 
    * - ``nrpe['svlogd_num']``
      - |svlogd_num| Default value: ``10``. For example:
@@ -52,9 +52,8 @@ This configuration file has the following settings for |nagios nrpe|:
 
           nrpe['svlogd_num'] = 10
 
-   * - ``nrpe['port']``
-     - Default value: ``9672``. For example:
+   * - ``nrpe['svlogd_size']``
+     - |svlogd_size| Default value: ``1000000``. For example:
        ::
 
-          nrpe['port'] = 9672
-
+          nrpe['svlogd_size'] = 1000000

@@ -10,4 +10,4 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``virtualenv``
-     - |virtualenv lwrp homebrew|
+     - |virtual_environment|

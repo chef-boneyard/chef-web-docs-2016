@@ -42,7 +42,7 @@ This configuration file has the following settings:
    * - ``redis['timeout']``
      - |timeout redis| Default value: ``"300"``.
    * - ``redis['vip']``
-     - Default value: ``"127.0.0.1"``.
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.
    * - ``redis['vm']``
      - Default value:
        ::

@@ -29,7 +29,7 @@ This configuration file has the following settings for |mysql|:
           mysql['sql_user'] = "opscode_chef"
 
    * - ``mysql['vip']``
-     - Default value: ``"127.0.0.1"``. For example:
+     - |ip_address virtual| Default value: ``"127.0.0.1"``. For example:
        ::
 
           mysql['vip'] = "127.0.0.1"

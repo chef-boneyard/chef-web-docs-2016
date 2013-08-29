@@ -68,14 +68,14 @@ This configuration file has the following settings:
    * - ``nginx['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``.
    * - ``nginx['tcp_nodelay']``
-     - Indicates whether the |nagle| buffering algorithm is enabled. Default value: ``on``.
+     - |use nagle| Default value: ``on``.
    * - ``nginx['tcp_nopush']``
-     - Indicates whether TCP/IP transactions are enabled. Default value: ``on``.
+     - |use tcpip| Default value: ``on``.
    * - ``nginx['url']``
      - Default value: ``https://#{node['fqdn']}``.
    * - ``nginx['worker_connections']``
-     - The number of allowed worker connections. Used with ``nginx['worker_processes']`` to determine the maximum number of allowed clients. Default value: ``10240``.
+     - |worker_connections| Use with ``nginx['worker_processes']`` to determine the maximum number of allowed clients. Default value: ``10240``.
    * - ``nginx['worker_processes']``
-     - The number of allowed worker processes. Used with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``.
+     - |worker_processes| Use with ``nginx['worker_connections']`` to determine the maximum number of allowed clients. Default value: ``node['cpu']['total'].to_i``.
    * - ``nginx['x_forwarded_proto']``
-     - This value can be used to set the protocol (HTTP or HTTPS) of URLs returned within API responses. It should be set to the protocol used to connect to the Private Chef API by your clients. Default value: ``"https"``.
+     - |x_forwarded_proto| This is the protocol used to connect to |chef server oec| by a |chef client| or a workstation. Default value: ``"https"``.
