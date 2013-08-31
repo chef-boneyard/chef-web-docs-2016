@@ -13,19 +13,7 @@ This repository uses Berkshelf (https://berkshelf.com) to manage downloading all
 Spiceweasel
 ++++++++++++
 
-There is a Spiceweasel (http://bit.ly/spcwsl) [infrastructure.yml](infrastructure.yml) manifest documenting all the roles and environments required to deploy OpenStack.
-
-To see the commands necessary to push all of the files to the Chef server, run the following command:
-
-```
-spiceweasel infrastructure.yml
-```
-
-To actually deploy the repository to your Chef server, run the following command:
-
-```
-spiceweasel -e infrastructure.yml
-```
+.. include:: ../../includes_openstack/includes_openstack_chef_repo_spiceweasel.rst
 
 Roles
 ------------
