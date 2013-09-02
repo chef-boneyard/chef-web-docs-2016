@@ -16,7 +16,7 @@ If host-based firewalls (iptables, ufw, etc.) are being used, ensure that the fo
    * - 9672
      - nrpe
 
-On the back-end servers:
+On the back-end server:
 
 .. list-table::
    :widths: 60 420
