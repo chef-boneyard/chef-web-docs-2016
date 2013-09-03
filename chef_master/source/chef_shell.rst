@@ -334,33 +334,21 @@ and:
 .. code-block:: bash
 
    $ chef > tracing off
-     #0:(irb):2:Object:-: tracing off
-     #0:./bin/../lib/chef/shef/ext.rb:78:Shell::Extensions::Object:>:       def off
-     #0:./bin/../lib/chef/shef/ext.rb:79:Shell::Extensions::Object:-:         :off
-     #0:./bin/../lib/chef/shef/ext.rb:79:Shell::Extensions::Object:<:         :off
-     #0:./bin/../lib/chef/shef/ext.rb:259:Object:>:   def tracing(on_or_off)
-     #0:./bin/../lib/chef/shef/ext.rb:260:Object:-:     conf.use_tracer = on_or_off.on_off_to_bool
-     #0:./bin/../lib/chef/shef/ext.rb:135:Shell::Extensions::Symbol:>:       def on_off_to_bool
-     #0:./bin/../lib/chef/shef/ext.rb:136:Shell::Extensions::Symbol:-:         self.to_s.on_off_to_bool
-     #0:./bin/../lib/chef/shef/ext.rb:136:Symbol:>:         self.to_s.on_off_to_bool
-     #0:./bin/../lib/chef/shef/ext.rb:136:Symbol:<:         self.to_s.on_off_to_bool
-     #0:./bin/../lib/chef/shef/ext.rb:122:Shell::Extensions::String:>:       def on_off_to_bool
-     #0:./bin/../lib/chef/shef/ext.rb:123:Shell::Extensions::String:-:         case self
-     #0:./bin/../lib/chef/shef/ext.rb:124:Shell::Extensions::String:-:         when "on"
-     #0:./bin/../lib/chef/shef/ext.rb:124:Kernel:>:         when "on"
-     #0:./bin/../lib/chef/shef/ext.rb:124:String:>:         when "on"
-     #0:./bin/../lib/chef/shef/ext.rb:124:String:<:         when "on"
-     #0:./bin/../lib/chef/shef/ext.rb:124:Kernel:<:         when "on"
-     #0:./bin/../lib/chef/shef/ext.rb:126:Shell::Extensions::String:-:         when "off"
-     #0:./bin/../lib/chef/shef/ext.rb:126:Kernel:>:         when "off"
-     #0:./bin/../lib/chef/shef/ext.rb:126:String:>:         when "off"
-     #0:./bin/../lib/chef/shef/ext.rb:126:String:<:         when "off"
-     #0:./bin/../lib/chef/shef/ext.rb:126:Kernel:<:         when "off"
-     #0:./bin/../lib/chef/shef/ext.rb:127:Shell::Extensions::String:-:           false
-     #0:./bin/../lib/chef/shef/ext.rb:127:Shell::Extensions::String:<:           false
-     #0:./bin/../lib/chef/shef/ext.rb:136:Shell::Extensions::Symbol:<:         self.to_s.on_off_to_bool
+     #0:(irb):3:Object:-: tracing off
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:108:Shell::Extensions::ObjectCoreExtensions:>:       def off
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:109:Shell::Extensions::ObjectCoreExtensions:-:         :off
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:110:Shell::Extensions::ObjectCoreExtensions:<:       end
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:273:main:>:       def tracing(on_or_off)
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:274:main:-:         conf.use_tracer = on_or_off.on_off_to_bool
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:161:Shell::Extensions::Symbol:>:       def on_off_to_bool
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:162:Shell::Extensions::Symbol:-:         self.to_s.on_off_to_bool
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:148:Shell::Extensions::String:>:       def on_off_to_bool
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:149:Shell::Extensions::String:-:         case self
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:153:Shell::Extensions::String:-:           false
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:157:Shell::Extensions::String:<:       end
+     #0:/opt/chef/embedded/lib/ruby/gems/1.9.1/gems/chef-11.4.4/lib/chef/shell/ext.rb:163:Shell::Extensions::Symbol:<:       end
      tracing is off
-       => nil 
+      => nil
      chef > 
 
 Help
