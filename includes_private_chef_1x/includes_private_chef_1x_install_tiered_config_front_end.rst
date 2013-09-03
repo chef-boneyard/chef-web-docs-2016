@@ -1,10 +1,16 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-With the bootstrap complete, you can now populate ``/etc/opscode`` on the front-end servers with the files generated during the bootstrap process. Assuming you are logged in as root on your bootstrap server, something like:
+To set up |chef private| on your front-end servers, run:
 
 .. code-block:: bash
 
-   $ scp -r /etc/opscode FQDN:/etc
+   $ private-chef-ctl reconfigure
 
-This command will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install.
+This command may take several minutes to run, during which you will see the output of the |chef| run that is configuring your new |chef private| installation. When it is complete, the following message is shown:
+
+.. code-block:: bash
+
+   Chef Server Reconfigured!
+
+.. note:: |chef private| is composed of many different services, which work together to create a functioning system. One impact of this is that it can take a few minutes for the system to finish starting up. One way to tell that the system is fully ready is to use the top command. You will notice high CPU utilization for several |ruby| processes while the system is starting up. When that utilization drops off, the system is ready.

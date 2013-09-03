@@ -113,7 +113,7 @@ Refer to the operating systems manual or a site systems administrators for instr
 
 private-chef.rb
 -----------------------------------------------------
-Each |chef server oec| cluster has a single configuration file called |private chef rb|. This file descrsibes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |private chef rb|.
+Each |chef server oec| cluster has a single configuration file called |private chef rb|. This file describes the topology of the entire cluster. This file lives in ``/etc/opscode/private-chef.rb`` on each server. Using the text editor of your choice, create a file called |private chef rb|.
 
 Configure topology
 -----------------------------------------------------
