@@ -65,3 +65,4 @@ Examples
 **Reload the configuration**
 
 .. include:: ../../step_resource/step_resource_ruby_block_reload_configuration.rst
+
