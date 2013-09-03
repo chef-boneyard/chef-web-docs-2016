@@ -22,7 +22,7 @@ The Workstation
 =====================================================
 The workstation is the location from which most users will do most of their work. This work includes:
 
-* Developing <a href="http://docs.opscode.com/enterprise/index.html#cookbooks">cookbooks</a> and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
+* Developing `cookbooks <http://docs.opscode.com/enterprise/index.html#cookbooks>`_ and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
 * Synchronizing the :doc:`chef-repo </essentials_repository>` with version source control like |git| or |svn|
 * Using |knife| to upload items from the |chef repo| to the |chef server|
 * Configuring :doc:`organizational policy </essentials_policy>`
