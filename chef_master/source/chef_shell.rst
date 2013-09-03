@@ -202,7 +202,7 @@ To explore how using the |resource breakpoint| to manually step through a |chef 
 
 .. code-block:: bash
 
-   $ chef > recipe
+   $ chef > recipe_mode
      chef:recipe > echo off
      chef:recipe > file "/tmp/before-breakpoint"
      chef:recipe > breakpoint "foo"
@@ -302,7 +302,7 @@ To just load one recipe from the run-list, go into the recipe and use the ``incl
 
 .. code-block:: bash
 
-   $ chef > recipe
+   $ chef > recipe_mode
      chef:recipe > include_recipe "getting-started"
        => [#<Chef::Recipe:0x10256f9e8 @cookbook_name="getting-started",
      ... output truncated ...
@@ -448,7 +448,7 @@ Typing is evaluated in the same context as recipes. Create a file resource:
 
 .. code-block:: bash
 
-   $ chef:recipe_mode > attributes
+   $ chef:recipe_mode > attributes_mode
      chef:attributes > set[:hello] = "ohai2u-again"
        => "ohai2u-again"
      chef:attributes > 
