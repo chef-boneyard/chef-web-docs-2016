@@ -10,26 +10,30 @@ Components
 =====================================================
 .. include:: ../../includes_pushy/includes_pushy_component.rst
 
-.. include:: ../../includes_pushy/includes_pushy_component_diagram.rst
+The following diagram shows the various components of |pushy|:
 
-|pushy| Server
------------------------------------------------------
-.. include:: ../../includes_pushy/includes_pushy_component_server.rst
+.. image:: ../../images/overview_pushy_states.png
 
-|pushy| Client
------------------------------------------------------
-.. include:: ../../includes_pushy/includes_pushy_component_client.rst
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
 
-Workstations
------------------------------------------------------
-.. include:: ../../includes_pushy/includes_pushy_component_workstation.rst
+   * - Components
+     - Description
+   * - **Jobs**
+     - .. include:: ../../includes_pushy/includes_pushy_component_jobs.rst
+   * - **Nodes**
+     - .. include:: ../../includes_pushy/includes_pushy_component_nodes.rst
+   * - **Workstations**
+     - .. include:: ../../includes_pushy/includes_pushy_component_workstations.rst
+
 
 push-jobs Cookbook
------------------------------------------------------
+=====================================================
 The |cookbook pushjobs| cookbook is used by |pushy| to install the |pushy| client on managed nodes, and then set up the |pushy| client to run as a service. In addition, |pushy| relies on a cookbook attribute to manage the whitelist, which is a list of jobs (and commands) that are available to |pushy|.
 
 Whitelist
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_pushy/includes_pushy_whitelist.rst
 
 Messages
