@@ -12,7 +12,7 @@ Components
 
 The following diagram shows the various components of |pushy|:
 
-.. image:: ../../images/overview_pushy.png
+.. image:: ../../images/overview_pushy_states.png
 
 .. list-table::
    :widths: 150 450
