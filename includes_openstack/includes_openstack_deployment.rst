@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This section will cover everything you need to do in preparation for deploying **Chef for OpenStack**.
+This section will cover everything you need to do in preparation for deploying |chef openstack|.
 
 .. list-table::
    :widths: 150 450
@@ -16,7 +16,7 @@ This section will cover everything you need to do in preparation for deploying *
    * - :doc:`Operating Systems </openstack_deployment_os>`
      - Operating system configuration and settings
    * - :doc:`Chef Requirements </openstack_deployment_chef>`
-     - Supported Chef versions and requirements
+     - Supported versions and requirements
    * - :doc:`Images for Glance </openstack_deployment_images>`
      - Source and mirror images for use by the Image Service
 

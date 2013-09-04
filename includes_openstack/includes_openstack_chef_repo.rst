@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This repository contains examples of the roles, environments and other supporting files for deploying an OpenStack **Grizzly** reference architecture using Chef.
+The |chef repo openstack| contains examples of the roles, environments and other supporting files for deploying an |openstack grizzly| reference architecture using |chef|.
 
 https://github.com/stackforge/openstack-chef-repo
 
@@ -11,7 +11,7 @@ Usage
 Berkshelf
 ++++++++++++
 
-This repository uses Berkshelf (https://berkshelf.com) to manage downloading all of the proper cookbook versions, whether from Git or from the Opscode Community site (https://community.opscode.com). The preference is to eventually upstream all cookbook dependencies to the Opscode Community site. The [Berksfile](Berksfile) lists the current dependencies.
+The |chef repo openstack| uses |berkshelf| (https://berkshelf.com) to manage downloading all of the proper cookbook versions, whether from Git or from the |opscode| community website (https://community.opscode.com). The preference is to eventually upstream all cookbook dependencies to the |opscode| community website. A .berksfile (the file type used by |berkshelf|) lists the current cookbook dependencies.
 
 Spiceweasel
 ++++++++++++
