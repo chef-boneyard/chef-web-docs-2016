@@ -1,4 +1,7 @@
-This section will provide you with an overview of the currently supported deployment scenarios for **Chef for OpenStack**. You should already familiar with the projects for the OpenStack "Grizzly" release:
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+This section will provide you with an overview of the currently supported deployment scenarios for |chef openstack|. You should already familiar with the projects for the OpenStack "Grizzly" release:
 
 |grizzly|
 

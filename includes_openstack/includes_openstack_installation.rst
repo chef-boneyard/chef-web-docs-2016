@@ -1,3 +1,6 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
 .. warning:: DRAFT
 
 Having reviewed the :doc:`Architecture </openstack_architecture>` and :doc:`Deployment Prerequisites </openstack_deployment>`, you should be ready to install :doc:`Chef for OpenStack </openstack>`.

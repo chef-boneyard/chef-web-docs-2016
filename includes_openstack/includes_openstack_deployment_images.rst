@@ -1,3 +1,6 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
 The OpenStack documenation has a page specifically for obtaining images for use with the Image service **Glance**.
 
 http://docs.openstack.org/trunk/openstack-image/content/ch_obtaining_images.html

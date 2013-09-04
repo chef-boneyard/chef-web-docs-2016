@@ -1,13 +1,10 @@
 =====================================================
-Chef for OpenStack
+|chef openstack|
 =====================================================
 
 .. warning:: DRAFT
 
-Overview
--------------------
-
-The purpose of this guide is to help you understand how to deploy and manage your OpenStack deployment with Chef, using the **Chef for OpenStack** cookbooks as a basis. Chef for OpenStack is a **community** project around the automated deployment and management of OpenStack. It has the goal of reducing fragmentation and increase collaboration for all Chef users, and is frequently updated and evolving quickly (as is this guide). This guide is not intended to provide an introduction to OpenStack, there is already a tremendous amount of great content available at http://docs.openstack.org
+The purpose of this guide is to help you understand how to deploy and manage your |openstack| deployment with |chef|, using the |chef openstack| cookbooks as a basis. |chef openstack| is a **community** project around the automated deployment and management of |openstack|. It has the goal of reducing fragmentation and increase collaboration for all users, and is frequently updated and evolving quickly (as is this guide). This guide is not intended to provide an introduction to |openstack|, there is already a tremendous amount of great content available at http://docs.openstack.org
 
 This guide is broken into 7 broad sections:
 
@@ -17,36 +14,36 @@ This guide is broken into 7 broad sections:
 
    * - Section
      - Description
-   * - :doc:`Architecture </openstack_architecture>`
-     - overview of the architecture for Chef for OpenStack and several documented implementations
-   * - :doc:`Deployment Prerequisites </openstack_deployment>`
-     - the hardware, network and operating system requirements
-   * - :doc:`Development </openstack_development>`
-     - overview of the development ecosystem around Chef for OpenStack and how to participate
+   * - :doc:`Architecture </openstack_arch>`
+     - About the architecture for |chef openstack| and several documented implementations
+   * - :doc:`Deployment Prerequisites </openstack_deploy>`
+     - About the hardware, network and operating system requirements
+   * - :doc:`Development </openstack_develop>`
+     - About the development ecosystem around |chef openstack| and how to participate
    * - :doc:`Cookbooks and Repositories </openstack_cookbooks>`
-     - overview of the Chef for OpenStack community cookbooks and their dependencies
-   * - :doc:`Installation </openstack_installation>`
-     - techniques for installing Chef for Openstack
+     - About the |chef openstack| community cookbooks and their dependencies
+   * - :doc:`Installation </openstack_install>`
+     - About techniques for installing |chef openstack|
    * - :doc:`knife-openstack </plugin_knife_openstack>`
-     - Using knife-openstack to deploy infrastructure on top of any OpenStack deployment
+     - About using knife-openstack to deploy infrastructure on top of any |openstack| deployment
    * - :doc:`Example Deployment </openstack_example>`
-     - example configuration of a small test lab
+     - An example configuration of a small test lab
 
 Community Resources
--------------------
-We are a community of developers, deployers and integrators who make working with OpenStack consistent and automated. Join us!
+=====================================================
+We are a community of developers, deployers and integrators who make working with |openstack| consistent and automated. Join us!
 
 .. list-table::
    :widths: 150 450
    :header-rows: 0
 
-   * - IRC
+   * - |irc|
      - ``#openstack-chef`` is our channel on ``irc.freenode.net``. Many useful conversations and debugging sessions happen there. Archives are available at `community.opscode.com/chat/openstack-chef <http://community.opscode.com/chat/openstack-chef>`_
    * - Mailing List
      - `groups.google.com/group/opscode-chef-openstack <http://groups.google.com/group/opscode-chef-openstack>`_ is the mailing list. Traffic is typically a few posts a day, a great place for updates and longer discussions
-   * - OpenStack Chef Wiki
+   * - |chef openstack| Wiki
      - `wiki.openstack.org <https://wiki.openstack.org/wiki/Chef/GettingStarted>`_ most of this information is migrated here
-   * - Twitter
+   * - |twitter|
      - `@chefopenstack <http://twitter.com/chefopenstack>`_
 
 

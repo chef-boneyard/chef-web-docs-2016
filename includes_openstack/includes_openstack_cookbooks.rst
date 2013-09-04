@@ -1,3 +1,6 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
 The cookbooks used by :doc:`Chef for OpenStack </openstack>` are hosted on the `OpenStack StackForge repository on GitHub <https://github.com/stackforge/>`_. The :doc:`Development documentation </openstack_development>` covers interacting with the upstream repositories and testing.
 
 Basics

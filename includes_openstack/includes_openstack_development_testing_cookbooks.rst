@@ -1,3 +1,6 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
 This cookbook uses `bundler <http://gembundler.com/>`_, `berkshelf <http://berkshelf.com/>`_, and `strainer <https://github.com/customink/strainer>`_ to isolate dependencies and run tests.
 
 Tests are defined in Strainerfile.

@@ -1,3 +1,6 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
 There are a few specifics for Chef usage within :doc:`Chef for OpenStack </openstack>`:
 
 * The cookbooks are developed and tested almost exclusively with the latest release of the Chef client (currently 11.6).
