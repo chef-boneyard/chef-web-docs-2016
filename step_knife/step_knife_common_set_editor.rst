@@ -40,25 +40,25 @@ the setting in the |knife rb| file would be similar to:
 
    knife[:editor] = "C:\\Progra~1\\EditPa~1\\EditPad.exe"
 
-One approach to working around the double- vs. single-quote issue is to put the single-quotes outside of the double-quotes. For example, for Nodepad++:
+One approach to working around the double- vs. single-quote issue is to put the single-quotes outside of the double-quotes. For example, for |notepad plusplus|:
 
 .. code-block:: ruby
 
    knife[:editor] = '"C:\Program Files (x86)\Notepad++\notepad++.exe -nosession -multiInst"'
 
-for Sublime Text:
+for |sublime|:
 
 .. code-block:: ruby
 
    knife[:editor] = '"C:\Program Files\Sublime Text 2\sublime_text.exe --wait"'
 
-for TextPad:
+for |textpad|:
 
 .. code-block:: ruby
 
    knife[:editor] = '"C:\Program Files (x86)\TextPad 7\TextPad.exe"'
 
-and for Vim:
+and for |vim|:
 
 .. code-block:: ruby
 
