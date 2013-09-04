@@ -14,6 +14,5 @@ The Community
    community_plugin_chef
    community_plugin_knife
    community_plugin_ohai
-   openstack
    plugin_knife_openstack
    community_plugin_report_handler
