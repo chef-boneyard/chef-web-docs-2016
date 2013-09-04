@@ -3,7 +3,7 @@
 
 .. warning:: DRAFT
 
-Having reviewed the :doc:`Architecture </openstack_architecture>` and :doc:`Deployment Prerequisites </openstack_deployment>`, you should be ready to install :doc:`Chef for OpenStack </openstack>`.
+Having reviewed the architecture and deployment prerequisites, you should be ready to install |chef openstack|.
 
 Current Projects and Components
 -------------------------------
@@ -25,7 +25,7 @@ There are a number of configuration options available, here are technologies tha
      - nova-network
    * - Object Storage
      - Swift
-   * - :doc:`Operating Systems </openstack_deployment_os>`
+   * - Operating Systems
      - Ubuntu 12.04
    * - Source builds
      - Omnibus
@@ -35,15 +35,8 @@ There are a number of configuration options available, here are technologies tha
 Installation
 ------------
 
-Make sure you’ve read and understand the prerequisites for installation.
-Check out the OpenStack Chef Repository from GitHub.
-Follow the Librarian Chef instructions to download all of the appropriate cookbooks.
-Edit your environment that you will be using.
-Upload all the roles, environments, cookbooks and data bags as necessary (Spiceweasel).
-On the appropriate nodes, apply the proper roles to deploy.
-Converge the nodes, controller first, then compute.
-Log in to the Horizon Dashboard and either install or download your private key.
-Create a test node.
+Make sure you’ve read and understand the prerequisites for installation. Check out the |chef repo openstack| from |github|. Follow the Librarian Chef instructions to download all of the appropriate cookbooks. Edit your environment that you will be using.
+Upload all the roles, environments, cookbooks and data bags as necessary (Spiceweasel). On the appropriate nodes, apply the proper roles to deploy. Converge the nodes, controller first, then compute. Log in to the Horizon Dashboard and either install or download your private key. Create a test node.
 
 .. list-table::
    :widths: 150 450

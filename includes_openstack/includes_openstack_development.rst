@@ -17,7 +17,7 @@ Issue Tracking
 --------------
 Bugs and feature requests are tracked using the Launchpad project `OpenStack + Chef <https://launchpad.net/openstack-chef>`_. You may see the `list of open bugs <https://bugs.launchpad.net/openstack-chef>`_ or `file a new bug <https://bugs.launchpad.net/openstack-chef/+filebug>`_ there.
 
-If you have an issue for the :doc:`knife-openstack plugin</plugin_knife_openstack>`, you may use `Opscode's Ticket Tracking System <https://tickets.opscode.com>`_.
+If you have an issue for the knife-openstack plugin, you may use the |opscode| `Ticket Tracking System <https://tickets.opscode.com>`_.
 
 Feature Tracking
 ----------------
@@ -33,29 +33,29 @@ The canonical upstream Chef cookbooks and example repository are located in the 
 
    * - Cookbook
      - Description
-   * - :doc:`OpenStack Chef Repo </openstack_chef_repo>`
+   * - OpenStack Chef Repo
      - provides a reference Chef repository with example roles and environments for the OpenStack deployment.
-   * - :doc:`Common </openstack_cookbooks_common>`
+   * - Common
      - provides common libraries and configuration across all of the cookbooks
-   * - :doc:`Ops Database </openstack_cookbooks_ops_database>`
+   * - Ops Database
      - deploys and configures a reference database implementation used by the OpenStack deployment.
-   * - :doc:`Ops Messaging </openstack_cookbooks_ops_messaging>`
+   * - Ops Messaging
      - deploys and configures a reference messaging implementation used by the OpenStack deployment.
-   * - :doc:`Block Storage </openstack_cookbooks_block_storage>`
+   * - Block Storage
      - deploys and configures the OpenStack Block Storage service **Cinder**
-   * - :doc:`Compute </openstack_cookbooks_compute>`
+   * - Compute
      - deploys and configures the OpenStack Compute service **Nova**
-   * - :doc:`Dashboard </openstack_cookbooks_dashboard>`
+   * - Dashboard
      - deploys and configures the OpenStack Dashboard service **Horizon**
-   * - :doc:`Identity </openstack_cookbooks_identity>`
+   * - Identity
      - deploys and configures the OpenStack Identity service **Keystone**
-   * - :doc:`Image </openstack_cookbooks_image>`
+   * - Image
      - deploys and configures the OpenStack Image service **Glance**
-   * - :doc:`Metering </openstack_cookbooks_metering>`
+   * - Metering
      - deploys and configures the OpenStack Metering service **Ceilometer**
-   * - :doc:`Network </openstack_cookbooks_network>`
+   * - Network
      - deploys and configures the OpenStack Network service **Neutron** (formerly 'Quantum')
-   * - :doc:`Object Storage </openstack_cookbooks_object_storage>`
+   * - Object Storage
      - deploys and configures the OpenStack Object Storage service **Swift**
 
 Contributing to the OpenStack Chef Cookbooks

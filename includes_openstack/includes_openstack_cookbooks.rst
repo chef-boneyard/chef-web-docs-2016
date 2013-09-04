@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The cookbooks used by :doc:`Chef for OpenStack </openstack>` are hosted on the `OpenStack StackForge repository on GitHub <https://github.com/stackforge/>`_. The :doc:`Development documentation </openstack_development>` covers interacting with the upstream repositories and testing.
+The cookbooks used by |chef openstack| are hosted on the `OpenStack StackForge repository on GitHub <https://github.com/stackforge/>`_. The development documentation covers interacting with the upstream repositories and testing.
 
 Basics
 ---------------------
@@ -33,42 +33,29 @@ Cookbooks and Repositories
 
    * - Cookbook
      - Description
-   * - :doc:`OpenStack Chef Repo </openstack_chef_repo>`
+   * - OpenStack Chef Repo
      - provides a reference Chef repository with example roles and environments for the OpenStack deployment.
-   * - :doc:`Common </openstack_cookbooks_common>`
+   * - Common
      - provides common libraries and configuration across all of the cookbooks
-   * - :doc:`Ops Database </openstack_cookbooks_ops_database>`
+   * - Ops Database
      - deploys and configures a reference database implementation used by the OpenStack deployment.
-   * - :doc:`Ops Messaging </openstack_cookbooks_ops_messaging>`
+   * - Ops Messaging
      - deploys and configures a reference messaging implementation used by the OpenStack deployment.
-   * - :doc:`Block Storage </openstack_cookbooks_block_storage>`
+   * - Block Storage
      - deploys and configures the OpenStack Block Storage service **Cinder**
-   * - :doc:`Compute </openstack_cookbooks_compute>`
+   * - Compute
      - deploys and configures the OpenStack Compute service **Nova**
-   * - :doc:`Dashboard </openstack_cookbooks_dashboard>`
+   * - Dashboard
      - deploys and configures the OpenStack Dashboard service **Horizon**
-   * - :doc:`Identity </openstack_cookbooks_identity>`
+   * - Identity
      - deploys and configures the OpenStack Identity service **Keystone**
-   * - :doc:`Image </openstack_cookbooks_image>`
+   * - Image
      - deploys and configures the OpenStack Image service **Glance**
-   * - :doc:`Metering </openstack_cookbooks_metering>`
+   * - Metering
      - deploys and configures the OpenStack Metering service **Ceilometer**
-   * - :doc:`Network </openstack_cookbooks_network>`
+   * - Network
      - deploys and configures the OpenStack Network service **Neutron** (formerly 'Quantum')
-   * - :doc:`Object Storage </openstack_cookbooks_object_storage>`
+   * - Object Storage
      - deploys and configures the OpenStack Object Storage service **Swift**
 
-.. toctree::
-   :hidden:
 
-   openstack_cookbooks_common
-   openstack_cookbooks_ops_database
-   openstack_cookbooks_ops_messaging
-   openstack_cookbooks_block_storage
-   openstack_cookbooks_compute
-   openstack_cookbooks_dashboard
-   openstack_cookbooks_identity
-   openstack_cookbooks_image
-   openstack_cookbooks_metering
-   openstack_cookbooks_network
-   openstack_cookbooks_object_storage

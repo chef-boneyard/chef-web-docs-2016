@@ -3,25 +3,23 @@
 
 Installs the OpenStack Dashboard service **Horizon** as part of :doc:`Chef for OpenStack </openstack>`. Horizon is currently installed from packages.
 
-https://github.com/stackforge/cookbook-openstack-dashboard
+This cookbook is located at: https://github.com/stackforge/cookbook-openstack-dashboard
 
-Requirements
-------------
-
-Cookbooks
-++++++++++++
-
-Recipes
-------------
-
-Attributes
-++++++++++++
-
-Usage
-------------
-
-Testing
-------------
-
-.. include:: ../../includes_openstack/includes_openstack_development_testing_cookbooks.rst
-
+.. 
+.. The following is commented out until there is content, after which they will probably be broken down into unique topics and then shared into the openstack.rst TOC structure, rather than be headers within the include_ topic patterns.
+.. 
+.. Requirements
+.. -----------
+.. 
+.. Cookbooks
+.. ++++++++++++
+.. 
+.. Recipes
+.. ------------
+.. 
+.. Attributes
+.. ++++++++++++
+.. 
+.. Usage
+.. ------------
+.. 

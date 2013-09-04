@@ -141,6 +141,7 @@ Getting Started
    metadata_rb
    migrate_to_hosted
    ohai
+   openstack
    resources
    solo_rb
    auth

@@ -3,28 +3,23 @@
 
 This cookbook provides common libraries and configuration across all of the cookbooks in :doc:`Chef for OpenStack </openstack>`.
 
-https://github.com/stackforge/cookbook-openstack-common
+This cookbook is located at: https://github.com/stackforge/cookbook-openstack-common
 
-Requirements
-------------
-
-Cookbooks
-++++++++++++
-
-Libraries
-------------
-
-Recipes
-------------
-
-Attributes
-++++++++++++
-
-Usage
-------------
-
-Testing
-------------
-
-.. include:: ../../includes_openstack/includes_openstack_development_testing_cookbooks.rst
-
+.. 
+.. The following is commented out until there is content, after which they will probably be broken down into unique topics and then shared into the openstack.rst TOC structure, rather than be headers within the include_ topic patterns.
+.. 
+.. Requirements
+.. -----------
+.. 
+.. Cookbooks
+.. ++++++++++++
+.. 
+.. Recipes
+.. ------------
+.. 
+.. Attributes
+.. ++++++++++++
+.. 
+.. Usage
+.. ------------
+.. 

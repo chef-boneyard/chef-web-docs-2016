@@ -1,15 +1,15 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This is a small lab for testing the configuration and deployment of :doc:`OpenStack with Chef </openstack>`. While the hardware is quite modest, the configuration should provide a useful reference implementation.
+This is a small lab for testing the configuration and deployment of |chef openstack|. While the hardware is quite modest, the configuration should provide a useful reference implementation.
 
 lab-repo
 ------------------------------
-Everything in the lab is managed by Chef from the http://github.com/mattray/lab-repo repository. The operating systems for the machines are provisioned by the `pxe_dust <http://ckbk.it/pxe_dust>`_ cookbook, which uses a preseed file to put a minimal operating system in place via PXE. These machines are frequently re-installed and the process takes about 10 minutes.
+Everything in the lab is managed by |chef| from the http://github.com/mattray/lab-repo repository. The operating systems for the machines are provisioned by the `pxe_dust <http://ckbk.it/pxe_dust>`_ cookbook, which uses a preseed file to put a minimal operating system in place via PXE. These machines are frequently re-installed and the process takes about 10 minutes.
 
 Environment
 ++++++++++++++++++++++++++++++
-The `lab Environment <https://github.com/mattray/lab-repo/blob/master/environments/lab.rb>`_  provides overridden attributes. The ``apt`` attributes are for restricting search to the lab. The ``pxe_dust`` attribute is to lock down the Chef client version. The ``authorization`` attributes are for configuring sudo to be passwordless, include the sudoers.d directory and add the 'mray' user to sudoers.
+The `lab Environment <https://github.com/mattray/lab-repo/blob/master/environments/lab.rb>`_  provides overridden attributes. The ``apt`` attributes are for restricting search to the lab. The ``pxe_dust`` attribute is to lock down the |chef client| version. The ``authorization`` attributes are for configuring |sudo| to not require a password, include the sudoers.d directory and add the 'mray' user to sudoers.
 
 Roles
 +++++++++++++++++++++++++++++
@@ -63,7 +63,7 @@ The `users <http://ckbk.it/users>`_ cookbook uses a ``users`` data bag to create
 
 Cookbooks
 ++++++++++++++++++++++++++++++
-All of the cookbook dependencies are managed by a `Berkshelf Berksfile<http://berkshelf.com>`_, usually kept quite up-to-date for the latest cookbook releases.
+All of the cookbook dependencies are managed by a `Berkshelf Berksfile <http://berkshelf.com>`_, usually kept quite up-to-date for the latest cookbook releases.
 
 There is an additional `labsetup cookbook <https://github.com/mattray/lab-repo/blob/master/cookbooks/labsetup/recipes/default.rb>`_ that ensures the network cards are all using DHCP and the network is properly bridged.
 
@@ -109,6 +109,3 @@ boxy.lab.atx
 This is an elderly Shuttle SN95G5 with 2G RAM and an AMD Athlon 64 3500+ CPU. It has a 40 GB SSD boot volume and 2 additional hard drives. An additional gigabit ethernet card and another gigabit USB ethernet have been added.
 
 
-Deployment
-------------------------------
-.. include:: ../../includes_openstack/includes_openstack_chef_repo_spiceweasel.rst

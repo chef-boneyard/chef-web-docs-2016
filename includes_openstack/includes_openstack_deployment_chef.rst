@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-There are a few specifics for |chef| usage within :doc:`Chef for OpenStack </openstack>`:
+There are a few specifics for |chef| usage |chef openstack|:
 
 * Cookbooks are developed and tested with the latest release of the |chef client|
 * Most users are installing the full-stack client using the |omnibus installer|: http://www.opscode.com/chef/install/
@@ -12,8 +12,8 @@ There are a few specifics for |chef| usage within :doc:`Chef for OpenStack </ope
 * Roles do not provide attributes
 * Search may be short-circuited by attributes that provide a value, such as the IP addresses of services
 * Data bags are not used
-* `Berkshelf <http://berkshelf.com/>`_ is used to manage cookbook versions in the :doc:`OpenStack chef-repo </openstack_chef_repo>`
-* `Spiceweasel <https://github.com/mattray/spiceweasel>`_ is used to manage, validate, and deploy cookbooks, roles, environments and data bags to the :doc:`OpenStack chef-repo </openstack_chef_repo>`
+* `Berkshelf <http://berkshelf.com/>`_ is used to manage cookbook versions in the |chef repo openstack|
+* `Spiceweasel <https://github.com/mattray/spiceweasel>`_ is used to manage, validate, and deploy cookbooks, roles, environments and data bags to the |chef repo openstack|
 * `Strainer <https://github.com/customink/strainer>`_ is used to coordinate testing against the |chef repo|
 * `Tailor <https://github.com/turboladen/tailor>`_ is used to validate |ruby| code style
 * `Foodcritic <http://acrmp.github.io/foodcritic/>`_ is used for lint-checking the cookbooks

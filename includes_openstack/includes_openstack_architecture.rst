@@ -13,19 +13,15 @@ The current supported deployment scenarios include the following:
 
    * - Scenario
      - Description
-   * - :doc:`All-in-One Compute </openstack_architecture_allinone>`
+   * - All-in-One Compute
      - A full |openstack compute| deployment on a single host. No object storage.
-   * - :doc:`Single Controller + N Compute </openstack_architecture_1+n>`
+   * - Single Controller + N Compute
      - A single controller with 1 or more |openstack compute| nodes. No object storage.
 
 .. note:: |chef openstack| is under very active development for the |openstack grizzly| release; more architectures will be supported. |openstack| is very flexible, so additional configurations will continue to be supported in the future.
 
 .. include:: ../../includes_openstack/includes_openstack_example_deployment.rst
 
-.. toctree::
-   :hidden:
 
-   openstack_architecture_allinone
-   openstack_architecture_1+n
 
 
