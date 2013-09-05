@@ -5,7 +5,7 @@ This section describes the supported deployment scenarios for |chef openstack| a
 
 .. image:: ../../images/openstack-arch-grizzly-conceptual-v2.jpg
 
-The current supported deployment scenarios include the following:
+There are a number of configuration options available, including block storage, hypervisors, databases, message queuing, networking, object storage, source builds, and so on. The current supported deployment scenarios include the following:
 
 .. list-table::
    :widths: 150 450
@@ -18,9 +18,7 @@ The current supported deployment scenarios include the following:
    * - Single Controller + N Compute
      - A single controller with 1 or more |openstack compute| nodes. No object storage.
 
-.. note:: |chef openstack| is under very active development for the |openstack grizzly| release; more architectures will be supported. |openstack| is very flexible, so additional configurations will continue to be supported in the future.
-
-.. include:: ../../includes_openstack/includes_openstack_example_deployment.rst
+.. note:: |chef openstack| is under very active development for the |openstack grizzly| release. |openstack| is flexible and additional configurations will be supported in the future.
 
 
 

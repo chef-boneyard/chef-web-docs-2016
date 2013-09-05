@@ -30,5 +30,5 @@ and then later in the same recipe, or elsewhere:
    f = resources("file[/etc/hosts]")
    f.mode 00644
 
-where ``file`` is the type of resource and ``/etc/hosts`` is the name.
+where ``file`` is the type of resource, ``/etc/hosts`` is the name, and ``f.mode`` is used to set the ``mode`` attribute on the |resource file| resource.
 

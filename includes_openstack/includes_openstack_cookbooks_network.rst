@@ -1,25 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Installs the OpenStack Network service **Neutron** as part of :doc:`Chef for OpenStack </openstack>`. Neutron is currently installed from packages and may still be referred to as 'Quantum' in the code.
 
-This cookbook is located at: https://github.com/stackforge/cookbook-openstack-network
+Installs |openstack networking|, an |openstack| project that provides an API for defining network connectivity and addressing in the cloud. For more information about |openstack networking|, see http://docs.openstack.org/trunk/openstack-network/admin/content/.
 
-.. 
-.. The following is commented out until there is content, after which they will probably be broken down into unique topics and then shared into the openstack.rst TOC structure, rather than be headers within the include_ topic patterns.
-.. 
-.. Requirements
-.. -----------
-.. 
-.. Cookbooks
-.. ++++++++++++
-.. 
-.. Recipes
-.. ------------
-.. 
-.. Attributes
-.. ++++++++++++
-.. 
-.. Usage
-.. ------------
-.. 
+This cookbook is located at: https://github.com/stackforge/cookbook-openstack-network.

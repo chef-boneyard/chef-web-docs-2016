@@ -2,6 +2,8 @@
 knife openstack
 =====================================================
 
+.. include:: ../../includes_openstack/includes_openstack.rst
+
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack.rst
 
 .. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.

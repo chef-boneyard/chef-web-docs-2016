@@ -1,25 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Installs the OpenStack Identity service **Keystone** as part of :doc:`Chef for OpenStack </openstack>`. Keystone is currently installed from packages.
 
-This cookbook is located at: https://github.com/stackforge/cookbook-openstack-identity
+Installs |openstack keystone|, an |openstack| project that provides identity, token, catalog, and policy services for use within the |openstack| family. For more information about |openstack keystone|, see http://docs.openstack.org/developer/keystone/.
 
-.. 
-.. The following is commented out until there is content, after which they will probably be broken down into unique topics and then shared into the openstack.rst TOC structure, rather than be headers within the include_ topic patterns.
-.. 
-.. Requirements
-.. -----------
-.. 
-.. Cookbooks
-.. ++++++++++++
-.. 
-.. Recipes
-.. ------------
-.. 
-.. Attributes
-.. ++++++++++++
-.. 
-.. Usage
-.. ------------
-.. 
+This cookbook is located at: https://github.com/stackforge/cookbook-openstack-identity.

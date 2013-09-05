@@ -1,10 +1,10 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-There are a few specifics for |chef| usage |chef openstack|:
+Guidelines for |chef openstack|:
 
 * Cookbooks are developed and tested with the latest release of the |chef client|
-* Most users are installing the full-stack client using the |omnibus installer|: http://www.opscode.com/chef/install/
+* Most users will install the full-stack client using the |omnibus installer|: http://www.opscode.com/chef/install/
 * |ruby| 1.9.1 or later is assumed
 * A |chef server| is being used; |chef solo| may not work (patches welcome)
 * Cookbooks expose their configuration via attributes
