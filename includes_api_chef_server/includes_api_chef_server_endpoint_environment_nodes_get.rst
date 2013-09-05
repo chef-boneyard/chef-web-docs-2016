@@ -11,8 +11,6 @@ This method has no parameters.
 
    GET /environments/NAME/nodes
 
-where the first instance of ``NAME`` is the name of the environment, and the second instance is the name of the node.
-
 **Response**
 
 The response will return something like the following:
