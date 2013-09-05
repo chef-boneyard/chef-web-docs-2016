@@ -20,20 +20,22 @@ The response will return something similar to:
    {
      {
        "node_name": "FARQUAD", 
-       "status": "down", 
+       "status": "succeeded", 
        "updated_at": "Tue, 04 Sep 2012 23:17:56 GMT"
      }
      {
        "node_name": "DONKEY", 
-       "status": "down", 
+       "status": "succeeded", 
        "updated_at": "Tue, 04 Sep 2012 23:17:56 GMT"
      }
      {
        "node_name": "FIONA", 
-       "status": "down", 
+       "status": "timed_out", 
        "updated_at": "Tue, 04 Sep 2012 23:17:56 GMT"
      }
    }
+
+The following values are possible: ``new``, ``ready``, ``running``, ``succeeded``, ``failed``, ``aborted``, ``unavailable``, ``nacked``, ``crashed``, ``was_ready``, or ``timed_out``.
 
 .. list-table::
    :widths: 200 300

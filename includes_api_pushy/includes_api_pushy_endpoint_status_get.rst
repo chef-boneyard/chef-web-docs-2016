@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The ``GET`` method is used to get the current server status.
+The ``GET`` method is used to get the current job status.
 
 This method has no parameters.
 
@@ -18,8 +18,10 @@ The response will return something similar to:
 .. code-block:: ruby
 
    {
-     "status": "it's alive"
+     "status": "complete"
    }
+
+The following values are possible: ``new``, ``voting``, ``running``, ``complete``, ``quorum_failed``, ``crashed``, ``aborted``, or ``timed_out``.
 
 .. list-table::
    :widths: 200 300

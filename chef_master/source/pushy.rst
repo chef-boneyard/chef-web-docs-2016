@@ -14,18 +14,18 @@ The following diagram shows the various components of |pushy|:
 
 .. image:: ../../images/overview_pushy_states.png
 
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
 
-   * - Components
-     - Description
-   * - **Jobs**
-     - .. include:: ../../includes_pushy/includes_pushy_component_jobs.rst
-   * - **Nodes**
-     - .. include:: ../../includes_pushy/includes_pushy_component_nodes.rst
-   * - **Workstations**
-     - .. include:: ../../includes_pushy/includes_pushy_component_workstations.rst
+Jobs
+-----------------------------------------------------
+.. include:: ../../includes_pushy/includes_pushy_component_jobs.rst
+
+Nodes
+-----------------------------------------------------
+.. include:: ../../includes_pushy/includes_pushy_component_nodes.rst
+
+Workstations
+-----------------------------------------------------
+.. include:: ../../includes_pushy/includes_pushy_component_workstations.rst
 
 
 push-jobs Cookbook

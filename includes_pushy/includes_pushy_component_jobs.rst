@@ -12,4 +12,3 @@ A heartbeat message is used to let all of the nodes in an organization that the 
 
 
 
-

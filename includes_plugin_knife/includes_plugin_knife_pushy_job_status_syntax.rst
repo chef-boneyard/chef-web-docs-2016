@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife job statuss
+   $ knife job status
 
