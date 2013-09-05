@@ -15,19 +15,19 @@ where:
 
 Some examples:
 
-.. code-block: ruby
+.. code-block:: ruby
 
    converge_by("Create directory #{ @new_resource.path }")
 
-.. code-block: ruby
+.. code-block:: ruby
 
    converge_by("Create user #{ @new_resource }")
 
-.. code-block: ruby
+.. code-block:: ruby
 
    converge_by("attach volume with aws_id=#{vol[:aws_id]} id=#{instance_id} device=#{new_resource.device} and update") do
 
-.. code-block: ruby
+.. code-block:: ruby
 
    description = "create dir #{app_root} and change owner to #{new_resource.owner}"
    converge_by(description) do
