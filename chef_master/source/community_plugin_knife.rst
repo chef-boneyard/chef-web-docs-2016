@@ -92,6 +92,8 @@ Community Plugins: knife
      - Integrates a subset of |knife| functionality with |ruby rvc|.
    * - `knife-santoku <https://github.com/knuckolls/knife-santoku>`_
      - Adds the ability to build processes around the |chef client|.
+   * - `knife-select <https://github.com/hpcloud/knife-select>`_
+     - Adds the ability for selecting the chef server or organisation to interact with.
    * - `knife-server <https://github.com/fnichol/knife-server>`_
      - Adds the ability to manage a |chef server|, including bootstrapping a |chef server| on |amazon ec2| or a standalone server and backing up and/or restoring node, role, data bag, and environment data.
    * - `knife-set-environment <https://gist.github.com/961827>`_
