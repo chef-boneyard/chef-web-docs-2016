@@ -12,7 +12,7 @@ Custom resources and providers can also be created using the |lwrp| DSL. |opscod
      - Description
    * - `apt <http://docs.opscode.com/lwrp_apt.html>`_
      - |cookbook name apt|
-   * - `lwrp_aws <http://docs.opscode.com/aws.html>`_
+   * - `aws <http://docs.opscode.com/aws.html>`_
      - |cookbook name aws|
    * - `bluepill <http://docs.opscode.com/lwrp_bluepill.html>`_
      - |cookbook name bluepill|
