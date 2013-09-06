@@ -207,19 +207,18 @@ The |chef server| can be managed in the following ways:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_backup_restore.html">Backup and Restore</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_firewalls_and_ports.html">Firewalls and Ports</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_ha.html">High Availability</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_ldap.html">LDAP / Active Directory</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_logs.html">Logs</a> </br>
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_monitor.html">Monitor</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_orgs.html">Organizations</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_tuning.html">Performance Tuning</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_security.html">Security</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_data.html">Server Data</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_services.html">Services</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_users.html">Users</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_backup_restore.html">Backup and Restore</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_firewalls_and_ports.html">Firewalls and Ports</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_high_availability.html">High Availability</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_ldap.html">LDAP / Active Directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_logs.html">Logs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_monitor.html">Monitor</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_orgs.html">Organizations</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_tuning.html">Performance Tuning</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_security.html">Security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_data.html">Server Data</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_services.html">Services</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_users.html">Users</a> </br>
 
 
 Settings and Tools
@@ -695,19 +694,19 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    resource_template
    resource_user
    resource_yum
+   server_backup_restore
    server_components
-   server_manage_backup_restore
-   server_manage_data
-   server_manage_firewalls_and_ports
-   server_manage_ha
-   server_manage_ldap
-   server_manage_logs
-   server_manage_monitor
-   server_manage_orgs
-   server_manage_security
-   server_manage_services
-   server_manage_tuning
-   server_manage_users
+   server_data
+   server_firewalls_and_ports
+   server_high_availability
+   server_ldap
+   server_logs
+   server_monitor
+   server_orgs
+   server_security
+   server_services
+   server_tuning
+   server_users
    upgrade_server
    upgrade_server_ha
    upgrade_server_standalone
