@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This configuration file has the following settings for opscode-solr:
+This configuration file has the following settings for the |service solr| service:
 
 .. list-table::
    :widths: 200 300

@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This configuration file has the following settings for opscode-org-creator:
+This configuration file has the following settings for the |service orgcreator| service:
 
 .. list-table::
    :widths: 200 300
