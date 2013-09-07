@@ -12,12 +12,12 @@ The syntax for using the |resource registry_key| resource in a recipe is as foll
        :name => "name",
        :type => :string,
        :data => "data"
-       }
+       },
        {
        :name => "name",
        :type => :string,
        :data => "data"
-       }
+       },
        ...
        ]
      action :action # see actions section below
