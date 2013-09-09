@@ -14,9 +14,9 @@ Use Conditions
 -----------------------------------------------------
 .. include:: ../../step_config/step_config_add_condition.rst
 
-Tuning Services
+Tuning Settings
 =====================================================
-.. include:: ../../step_config/step_config_add_condition.rst
+The following settings are commonly tuned in larger installations.
 
 opscode-account
 -----------------------------------------------------
