@@ -3,8 +3,6 @@
 
 |chef server oec| can be configured to use |ssl| certificates by adding the following settings in the |private chef rb| file:
 
-.. code-block:: ruby
-
 .. list-table::
    :widths: 200 300
    :header-rows: 1
