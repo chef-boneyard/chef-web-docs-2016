@@ -3,8 +3,6 @@
 
 The following settings are often modified from their out-of-the-box default settings as part of the tuning effort for |chef server oec| and the |service solr| service. 
 
-.. note:: |note enterprise_chef_tuning|
-
 Commonly tuned values include:
 
 .. list-table::

@@ -3,8 +3,6 @@
 
 The following settings are often modified from their out-of-the-box default settings as part of the tuning effort for |chef server oec| and the |service drbd| service. 
 
-.. note:: |note enterprise_chef_tuning|s
-
 Commonly tuned values include:
 
 .. list-table::
@@ -17,4 +15,3 @@ Commonly tuned values include:
      - xxxxx. Suggested value: ``xxxxx``.
    * - ``xxxxx``
      - xxxxx. Suggested value: ``xxxxx``.
-
