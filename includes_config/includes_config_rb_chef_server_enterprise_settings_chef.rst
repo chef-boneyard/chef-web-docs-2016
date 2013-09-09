@@ -64,6 +64,6 @@ This configuration file has the following settings:
    * - ``opscode_chef['web_ui_client_name']``
      - Default value: ``"chef-webui"``.
    * - ``opscode_chef['worker_processes']``
-     - Default value: ``4``.
+     - |worker_processes| Default value: ``4``.
    * - ``opscode_chef['worker_timeout']``
      - Default value: ``3600``.

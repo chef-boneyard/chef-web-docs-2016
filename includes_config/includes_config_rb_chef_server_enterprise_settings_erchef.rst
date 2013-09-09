@@ -18,7 +18,7 @@ This configuration file has the following settings:
    * - ``opscode_erchef['couchdb_max_conn']``
      - Default value: ``"100"``.
    * - ``erchef['db_pool_size']``
-     - Default value: ``20``.
+     - |db_pool_size| Default value: ``20``.
    * - ``erchef['dir']``
      - Default value: ``/var/opt/chef-server/erchef``.
    * - ``erchef['enable']``

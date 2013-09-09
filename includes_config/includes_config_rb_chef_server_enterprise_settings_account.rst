@@ -44,7 +44,6 @@ This configuration file has the following settings:
    * - ``opscode_account['vip']``
      - |ip_address virtual| Default value: ``"127.0.0.1"``.
    * - ``opscode_account['worker_processes']``
-     - Default value: ``4``.
-
+     - |worker_processes| Default value: ``4``.
    * - ``opscode_account['worker_timeout']``
      - Default value: ``3600``.

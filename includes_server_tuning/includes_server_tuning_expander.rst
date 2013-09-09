@@ -11,8 +11,6 @@ Commonly tuned values include:
 
    * - Setting
      - Description
-   * - ``xxxxx``
-     - xxxxx. Suggested value: ``xxxxx``.
-   * - ``xxxxx``
-     - xxxxx. Suggested value: ``xxxxx``.
+   * - ``chef_expander['nodes']``
+     - |worker_processes| The |service expander| service runs on the back-end and feeds data to the |service solr| service, which creates and maintains search data used by the |chef server|. Additional memory may be required by these worker processes depending on the frequency and volume of |chef client| runs across the orgnaization, but only if the back-end machines have available CPU and RAM.. Default value: ``2``.
 

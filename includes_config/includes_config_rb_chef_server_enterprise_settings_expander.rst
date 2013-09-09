@@ -20,7 +20,7 @@ This configuration file has the following settings:
    * - ``chef_expander['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-expander``.
    * - ``chef_expander['nodes']``
-     - Default value: ``2``.
+     - |worker_processes| Default value: ``2``.
    * - ``chef_expander['reindexer_log_directory']``
      - Default value: ``/var/log/chef-server/chef-expander-reindexer``.
    * - ``opscode_expander['redindexer_svlogd_num']``
