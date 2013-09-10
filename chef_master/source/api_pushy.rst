@@ -6,10 +6,10 @@ Pushy API
 
 Endpoints
 =====================================================
-Each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint.
+Each authentication request must include ``/organizations/organization_name/pushy/`` as part of the name for the endpoint. For example: ``/organizations/organization_name/pushy/jobs/ID`` or ``/organizations/organization_name/pushy/node_states``.
 
 
-/pushy/connect/NODE_NAME
+connect/NODE_NAME
 -----------------------------------------------------
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name.rst
 
@@ -18,7 +18,7 @@ GET
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name_get.rst
 
 
-/pushy/jobs
+jobs
 -----------------------------------------------------
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs.rst
 
@@ -31,7 +31,7 @@ POST
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_post.rst
 
 
-/pushy/jobs/ID
+jobs/ID
 -----------------------------------------------------
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_id.rst
 
@@ -40,16 +40,16 @@ GET
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_id_get.rst
 
 
-/pushy/node_states
+node_states
 -----------------------------------------------------
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_states.rst
 
 GET
-=====================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_states_get.rst
 
 
-/pushy/node_states/NODE_NAME
+node_states/NODE_NAME
 -----------------------------------------------------
 .. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name.rst
 
