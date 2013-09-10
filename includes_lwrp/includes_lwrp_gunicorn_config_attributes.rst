@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``owner``
      - |owner file_config|
    * - ``path``
-     - |path lwrp gunicorn_config|
+     - |path file_created|
    * - ``pid``
      - |pid lwrp gunicorn_config|
    * - ``preload_app``

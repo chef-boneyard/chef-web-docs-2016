@@ -16,7 +16,7 @@ This lightweight resource provider has the following attributes:
    * - ``host_header``
      - |host_header| Default value: all host headers.
    * - ``path``
-     - |path lwrp iis_pool|
+     - |path iis_pool|
    * - ``port``
      - |port iis| Default value: ``80``.
    * - ``protocol``

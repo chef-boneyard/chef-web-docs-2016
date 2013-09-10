@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``owner``
      - |owner python_virtualenv|
    * - ``path``
-     - |path python_virtualenv|
+     - |path python_virtualenv| Default value: ``\``.

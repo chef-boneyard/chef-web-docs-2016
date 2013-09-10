@@ -9,18 +9,16 @@ This lightweight resource provider has the following attributes:
 
    * - Attribute
      - Description
-   * - ``path``
-     - |path lwrp transmission_torrent_file|
-   * - ``torrent``
-     - |torrent_file|
    * - ``blocking``
      - |blocking_torrent_file|
    * - ``continue_seeding``
      - |continue_seeding_torrent_file|
-   * - ``owner``
-     - |owner file|
    * - ``group``
      - |id group_torrent_file|
+   * - ``owner``
+     - |owner file|
+   * - ``path``
+     - |path torrent_file|
    * - ``rpc_host``
      - |rpc_host| Default value: ``localhost``.
    * - ``rpc_password``
@@ -29,4 +27,6 @@ This lightweight resource provider has the following attributes:
      - |rpc_port| Default value: ``9091``.
    * - ``rpc_username``
      - |rpc_username| Default value: ``transmission``.
+   * - ``torrent``
+     - |torrent_file|
 

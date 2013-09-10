@@ -14,6 +14,6 @@ This lightweight resource provider has the following attributes:
    * - ``application_pool``
      - |application_pool app|
    * - ``path``
-     - |path lwrp iis_app|
+     - |path application_virtual|
    * - ``physical_path``
      - |physical_path lwrp iis_app|
