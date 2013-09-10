@@ -24,7 +24,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path directory| Default value: ``name``.
+     - |path directory| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``recursive``

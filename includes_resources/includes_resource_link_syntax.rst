@@ -6,7 +6,7 @@ The syntax for using the |resource link| resource in a recipe is as follows:
 .. code-block:: ruby
 
    link "name" do
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      action :action # see actions section below
    end
@@ -14,6 +14,6 @@ The syntax for using the |resource link| resource in a recipe is as follows:
 where 
 
 * ``link`` tells the |chef client| to use the ``Chef::Provider::Link`` provider during the |chef client| run
-* ``"name"`` is the name of the link that will be created
+* ``name`` is the name of the resource block; when the ``target_file`` attribute is not specified as part of a recipe, ``name`` is also name of the link
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

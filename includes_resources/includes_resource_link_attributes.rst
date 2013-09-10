@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``target_file``
-     - |name_link| Default value: ``name``.
+     - |name_link| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``to``
      - |to resource link|
 

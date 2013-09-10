@@ -7,7 +7,7 @@ The syntax for using the |resource http_request| resource in a recipe is as foll
 
    http_request "name" do
      url "http://opscode.com/path"
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      action :action # see actions section below
    end
@@ -15,7 +15,7 @@ The syntax for using the |resource http_request| resource in a recipe is as foll
 where 
 
 * ``http_request`` tells the |chef client| to use the ``Chef::Provider::HttpRequest`` provider during the |chef client| run
-* ``"name"`` is the message that will be appended to the HTTP request
+* ``name`` is the name of the resource block; when the ``message`` attribute is not specified as part of a recipe, ``name`` is also the message that is sent by the HTTP request
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``url`` is the URL that will precede ``?message=`` in the HTTP request
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``command``
-     - |name command| Default value: ``name``.
+     - |name command| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``creates``
      - |creates file_exists| Default value: ``nil``.
    * - ``cwd``

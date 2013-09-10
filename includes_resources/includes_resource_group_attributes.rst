@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``gid``
      - |id group| Default value: ``nil``.
    * - ``group_name``
-     - |name group| Default value: ``name``.
+     - |name group| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``members``
      - |group_members| Default value: ``nil``.
    * - ``provider``

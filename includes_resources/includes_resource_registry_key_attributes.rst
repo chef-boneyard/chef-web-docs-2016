@@ -16,7 +16,7 @@ This resource has the following attributes:
 
        .. note:: |note registry_key architecture|
    * - ``key``
-     - |key_name resource registry_key| This attribute defaults to the ``name`` of the resource if not specified.
+     - |key_name resource registry_key| Default value: the ``name`` of the resource block (see Syntax section above).
 
        |key_name resource registry_key hives|
    * - ``provider``

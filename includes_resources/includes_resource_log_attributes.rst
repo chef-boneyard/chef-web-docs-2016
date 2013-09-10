@@ -12,6 +12,6 @@ This resource has the following attributes:
    * - ``level``
      - |level resource log|
    * - ``message``
-     - |message resource log|
+     - |message resource log| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_attribute|

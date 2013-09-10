@@ -18,4 +18,4 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``target``
-     - |target_address| Default value: ``name``.
+     - |target_address| Default value: the ``name`` of the resource block (see Syntax section above).

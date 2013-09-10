@@ -6,7 +6,7 @@ The syntax for using the |resource group| resource in a recipe is as follows:
 .. code-block:: ruby
 
    group "name" do
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      action :action # see actions section below
    end
@@ -14,6 +14,6 @@ The syntax for using the |resource group| resource in a recipe is as follows:
 where 
 
 * ``group`` tells the |chef client| to use one of the following providers during the |chef client| run: ``Chef::Provider::Group``, ``Chef::Provider::Group::Aix``, ``Chef::Provider::Group::Dscl``, ``Chef::Provider::Group::Gpasswd``, ``Chef::Provider::Group::Groupadd``, ``Chef::Provider::Group::Groupmod``, ``Chef::Provider::Group::Pw``, ``Chef::Provider::Group::Suse``, ``Chef::Provider::Group::Usermod``, or ``Chef::Provider::Group::Windows``. The provider that is used by the |chef client| depends on the platform of the machine on which the |chef client| run is taking place
-* ``"name"`` is the name of the group
+* ``name`` is the name of the resource block; when the ``group_name`` attribute is not specified as part of a recipe, ``name`` is also the name of the group
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

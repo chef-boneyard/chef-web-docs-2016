@@ -6,7 +6,7 @@ The syntax for using the |resource directory| resource in a recipe is as follows
 .. code-block:: ruby
 
    directory "name" do
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      action :action # see actions section below
    end
@@ -14,7 +14,7 @@ The syntax for using the |resource directory| resource in a recipe is as follows
 where 
 
 * ``directory`` tells the |chef client| to use the ``Chef::Provider::Directory`` provider during the |chef client| run
-* ``"name"`` is the path to the directory, from the root
+* ``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the path to the directory, from the root
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 

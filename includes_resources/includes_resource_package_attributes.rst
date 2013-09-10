@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``options``
      - |command options| Can be used with |apt|, |debian dpkg|, |gentoo|, |rpm|, and |rubygems|. Default value: ``nil``.
    * - ``package_name``
-     - |name package|
+     - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``response_file``

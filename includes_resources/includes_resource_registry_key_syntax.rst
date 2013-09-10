@@ -6,7 +6,7 @@ The syntax for using the |resource registry_key| resource in a recipe is as foll
 .. code-block:: ruby
 
    registry_key "name" do
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      values [{
        :name => "name",
@@ -26,7 +26,7 @@ The syntax for using the |resource registry_key| resource in a recipe is as foll
 where 
 
 * ``registry_key`` tells the |chef client| to use the ``Chef::Provider::Windows::Registry`` provider during the |chef client| run
-* ``"name"`` is the path to the registry (including properly escaped |windows| registry key path separators)
+* ``name`` is the name of the resource block; when the ``key`` attribute is not specified as part of a recipe, ``name`` is also path to the location in which a registry key is created or from which a registry key is deleted
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``values`` is a hash that contains at least one registry key to be created or deleted. Each registry key in the hash is grouped by brackets in which the ``:name``, ``:type``, and ``:data`` values for that registry key are specified.
 * |values resource registry_key types|

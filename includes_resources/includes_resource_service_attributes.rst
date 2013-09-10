@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``restart_command``
      - |command service_restart|
    * - ``service_name``
-     - |name service| Default value: ``name``.
+     - |name service| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``start_command``
      - |command service_start| Default value: ``nil``.
    * - ``status_command``

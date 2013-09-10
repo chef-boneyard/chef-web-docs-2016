@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``delim``
      - |delim resource directory|
    * - ``key_name``
-     - |key_name resource directory|
+     - |key_name resource directory| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``value``

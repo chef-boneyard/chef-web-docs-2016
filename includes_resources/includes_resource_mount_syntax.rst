@@ -6,7 +6,7 @@ The syntax for using the |resource mount| resource in a recipe is as follows:
 .. code-block:: ruby
 
    mount "name" do
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      fstype "type"
      action :action # see actions section below

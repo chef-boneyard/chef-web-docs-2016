@@ -24,7 +24,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``raid_device``
-     - |raid_device mdadm| Default value: ``name``.
+     - |raid_device mdadm| Default value: the ``name`` of the resource block (see Syntax section above).
 
 
 

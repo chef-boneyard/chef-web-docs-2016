@@ -40,7 +40,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|	
    * - ``path``
-     - |path file| Default value: ``name``.
+     - |path file| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``rights``

@@ -6,7 +6,7 @@ The syntax for using the |resource cron| resource in a recipe is as follows:
 .. code-block:: ruby
 
    cron "name" do
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      action :action # see actions section below
    end

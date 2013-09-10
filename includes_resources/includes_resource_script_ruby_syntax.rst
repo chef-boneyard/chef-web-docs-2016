@@ -6,7 +6,7 @@ The syntax for using the |resource script_ruby| resource in a recipe is as follo
 .. code-block:: ruby
 
    ruby "name" do
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      action :action # see actions section below
    end
@@ -14,7 +14,7 @@ The syntax for using the |resource script_ruby| resource in a recipe is as follo
 where 
 
 * ``ruby`` tells the |chef client| to use the ``Chef::Resource::Script::Ruby`` provider during the |chef client| run
-* ``"name"`` is the name of the script that will be run
+* ``name`` is the name of the resource block; when the ``command`` attribute is not specified as part of a recipe, ``name`` is also the name of the command to be executed
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 

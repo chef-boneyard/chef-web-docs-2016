@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``options``
      - |command options|
    * - ``package_name``
-     - |name package_yum| Default value: ``name``.
+     - |name package_yum| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``response_file``

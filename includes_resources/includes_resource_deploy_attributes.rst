@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``create_dirs_before_symlink``
      - |create_dirs_before_symlink| Default value: ``%w{tmp public config}`` (or the same as ``["tmp", "public", "config"]``).
    * - ``deploy_to``
-     - |deploy_to|
+     - |deploy_to| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``environment``
      - |environment variables|
    * - ``group``

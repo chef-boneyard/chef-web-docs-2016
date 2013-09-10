@@ -28,4 +28,4 @@ This resource has the following attributes:
    * - ``uid``
      - |user uid| Default value: ``nil``.
    * - ``username``
-     - |name user| Default value: ``name``.
+     - |name user| Default value: the ``name`` of the resource block (see Syntax section above).

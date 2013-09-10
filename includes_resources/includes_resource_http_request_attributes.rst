@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``headers``
      - |headers custom| Default value: ``{}``.
    * - ``message``
-     - |message resource http_request|
+     - |message resource http_request| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``url``

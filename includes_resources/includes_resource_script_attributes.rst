@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``code``
      - |code quoted_string| Default value: ``nil``.
    * - ``command``
-     - |name command| Default value: ``name``.
+     - |name command| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``

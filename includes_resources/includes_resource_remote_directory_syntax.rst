@@ -6,7 +6,7 @@ The syntax for using the |resource remote_directory| resource in a recipe is as 
 .. code-block:: ruby
 
    remote_directory "name" do
-     some_attribute "value" # see attributes section below
+     attribute "value" # see attributes section below
      ...
      action :action # see actions section below
    end
@@ -14,6 +14,6 @@ The syntax for using the |resource remote_directory| resource in a recipe is as 
 where 
 
 * ``remote_directory`` tells the |chef client| to use the ``Chef::Provider::Directory::RemoteDirectory`` provider during the |chef client| run
-* ``"name"`` is the name and location of the remote directory
+* ``name`` is the name of the resource block; when the ``path`` attribute is not specified as part of a recipe, ``name`` is also the path to the directory
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run

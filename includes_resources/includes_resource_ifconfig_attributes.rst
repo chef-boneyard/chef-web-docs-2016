@@ -34,4 +34,4 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_attribute|
    * - ``target``
-     - |target resource ifconfig| Default value: ``name``.
+     - |target_interface| Default value: the ``name`` of the resource block (see Syntax section above).
