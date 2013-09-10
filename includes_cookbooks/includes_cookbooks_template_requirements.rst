@@ -6,7 +6,7 @@ To use a template, two things must happen:
 #. A template resource must be added to a recipe
 #. An |erb| template must be added to a cookbook
 
-For example, the following template file and template resource settings can be used to manage a configuration file named |path etc sudoers|. Within a cookbook that uses |sudo|, the following resource could be added to |path recipes default rb|:
+For example, the following template file and template resource settings can be used to manage a configuration file named |path etc sudoers|. Within a cookbook that uses |sudo cmd|, the following resource could be added to |path recipes default rb|:
 
 .. code-block:: ruby
 

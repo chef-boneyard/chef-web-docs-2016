@@ -165,7 +165,7 @@ The `lab Environment <https://github.com/mattray/lab-repo/blob/master/environmen
 
 * The ``apt`` attributes are for restricting search to the lab. 
 * The ``pxe_dust`` attribute is to lock down the |chef client| version. 
-* The ``authorization`` attributes are for configuring |sudo| to not require a password, include the sudoers.d directory and add the 'mray' user to sudoers.
+* The ``authorization`` attributes are for configuring |sudo cmd| to not require a password, include the sudoers.d directory and add the 'mray' user to sudoers.
 
 Roles
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

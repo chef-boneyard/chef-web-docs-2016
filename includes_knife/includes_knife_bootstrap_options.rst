@@ -45,7 +45,7 @@ This subcommand has the following options:
    |run-list|
 
 ``--sudo``
-   |sudo|
+   |sudo bootstrap|
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|
