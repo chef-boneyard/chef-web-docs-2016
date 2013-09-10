@@ -193,7 +193,7 @@ There are two scenarios for upgrading to |chef server oec| from |chef private|:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Standalone</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability</a> </br>
 
-Options:
+Options: 
 
 .. raw:: html
 
@@ -498,11 +498,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    api_cookbooks_site
    api_omnitruck.rst
    api_pushy
-   api_pushy_connect
-   api_pushy_jobs
-   api_pushy_jobs_id
-   api_pushy_node_state
-   api_pushy_node_state_node_name
    auth_authentication
    auth_authorization
    chef_shell

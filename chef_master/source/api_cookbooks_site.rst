@@ -8,23 +8,56 @@ Cookbooks Site API
 
 Endpoints
 =====================================================
-The |api cookbooks site| has the following endpoints:
-
-* :doc:`api_cookbooks_site_cookbooks`
-* :doc:`api_cookbooks_site_cookbooks_name`
-* :doc:`api_cookbooks_site_cookbooks_version`
-* :doc:`api_cookbooks_site_search`
+The |api cookbooks site| has the following endpoints.
 
 
-.. toctree::
-   :hidden:
+/cookbooks
+-----------------------------------------------------
 
-   api_cookbooks_site_cookbooks
-   api_cookbooks_site_cookbooks_name
-   api_cookbooks_site_cookbooks_version
-   api_cookbooks_site_search
+.. include:: ../../includes_cookbooks/includes_cookbooks.rst
+
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_cookbooks.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_cookbooks_post.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_cookbooks_get.rst
 
 
+/cookbooks/NAME
+-----------------------------------------------------
+
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name.rst
+
+DELETE
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name_delete.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_name_get.rst
 
 
+/cookbooks/VERSION
+-----------------------------------------------------
 
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_version.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_version_get.rst
+
+
+/search
+-----------------------------------------------------
+
+.. include:: ../../includes_search/includes_search.rst
+
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_search.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_cookbooks_site/includes_api_cookbooks_endpoint_search_get.rst
