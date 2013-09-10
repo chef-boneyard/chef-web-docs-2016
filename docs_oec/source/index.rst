@@ -210,6 +210,7 @@ The |chef server| can be managed in the following ways:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_high_availability.html">High Availability</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_ldap.html">LDAP / Active Directory</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_logs.html">Logs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_monitor.html">Monitor</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_tuning.html">Performance Tuning</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_security.html">Security</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_services.html">Services</a> </br>
@@ -217,7 +218,6 @@ The |chef server| can be managed in the following ways:
 
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_backup_restore.html">Backup and Restore</a> </br>
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_firewalls_and_ports.html">Firewalls and Ports</a> </br>
-..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_monitor.html">Monitor</a> </br>
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_orgs.html">Organizations</a> </br>
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_data.html">Server Data</a> </br>
 

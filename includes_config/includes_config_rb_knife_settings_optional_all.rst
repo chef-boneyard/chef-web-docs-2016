@@ -129,7 +129,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:use current_branch]``
      - |use current_branch|
    * - ``knife[:use_sudo]``
-     - |sudo|
+     - |sudo bootstrap|
    * - ``knife[:user]`` and/or ``knife[:user_home]``
      - |user knife|
    * - ``knife[:user_key]``
