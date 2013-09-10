@@ -17,16 +17,53 @@ The |api pushy| has the following endpoints:
 * :doc:`api_pushy_node_state_node_name`
 
 
-.. toctree::
-   :hidden:
+/pushy/connect/NODE_NAME
+-----------------------------------------------------
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name.rst
 
-   api_pushy_connect
-   api_pushy_jobs
-   api_pushy_jobs_id
-   api_pushy_node_state
-   api_pushy_node_state_node_name
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name_get.rst
 
 
+/pushy/jobs
+-----------------------------------------------------
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_get.rst
+
+POST
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_post.rst
+
+
+/pushy/jobs/ID
+-----------------------------------------------------
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_id.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_id_get.rst
+
+
+/pushy/node_states
+-----------------------------------------------------
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_states.rst
+
+GET
+=====================================================
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_states_get.rst
+
+
+/pushy/node_states/NODE_NAME
+-----------------------------------------------------
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name.rst
+
+GET
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name_get.rst
 
 
 
