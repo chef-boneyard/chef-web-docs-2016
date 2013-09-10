@@ -8,14 +8,6 @@ Endpoints
 =====================================================
 Each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint.
 
-The |api pushy| has the following endpoints:
-
-* :doc:`api_pushy_connect`
-* :doc:`api_pushy_jobs`
-* :doc:`api_pushy_jobs_id`
-* :doc:`api_pushy_node_state`
-* :doc:`api_pushy_node_state_node_name`
-
 
 /pushy/connect/NODE_NAME
 -----------------------------------------------------
