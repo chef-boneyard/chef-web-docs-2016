@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``fstype``
      - Required. |fstype| Default value: ``nil``.
    * - ``mount_point``
-     - |mount_point| Default value: ``name``.
+     - |mount_point| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``options``
      - |options mount| Default value: ``defaults``.
    * - ``pass``
