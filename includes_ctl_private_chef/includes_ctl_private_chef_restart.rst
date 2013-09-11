@@ -11,7 +11,11 @@ This subcommand has the following syntax:
 
    $ private-chef-ctl restart name_of_service
 
-where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand.
+where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand. When a service is successfully restarted the output should be similar to:
+
+.. code-block:: bash
+
+   $ ok: run: service_name: (pid 12345) 1s
 
 
 
