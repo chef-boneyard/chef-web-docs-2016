@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |service webui| service's ``current`` log contains a history of all requests that were made to the |chef manager|. Errors that may be found in this log are typically the cause of failed HTTP requests that were made to another service. The following is an example log entry for a successful request:
+The |service webui| service's ``current.log`` file contains a history of all requests that were made to the |chef manager|. Errors that may be found in this log are typically the cause of failed HTTP requests that were made to another service. The following is an example log entry for a successful request:
 
 .. code-block:: ruby
 

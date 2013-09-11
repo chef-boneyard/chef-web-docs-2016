@@ -32,8 +32,3 @@ The ``nginx`` service creates both supervisor and administrator logs. The admini
    * - ``/var/log/opscode/nginx/rewrite-port-80.log``
      - The rewrite logs for traffic that uses HTTP instead of HTTPS.
 
-To follow the logs for this service, enter the following command:
-
-.. code-block:: bash
-
-   $ private-chef-ctl tail nginx

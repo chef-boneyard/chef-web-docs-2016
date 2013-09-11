@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef private| has built-in support for easily tailing the logs that are generated. To view all the logs being generated on a |chef private| server, enter the following command:
+|chef server oec| has built-in support for easily tailing the logs that are generated. To view all the logs being generated on a |chef server oec| server, enter the following command:
 
 .. code-block:: bash
 

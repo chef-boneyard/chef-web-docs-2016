@@ -2,11 +2,17 @@
 Logs
 =====================================================
 
-.. .. include:: ../../includes_server_logs/includes_server_logs.rst
+.. include:: ../../includes_server_logs/includes_server_logs.rst
 
 View Logs
 =====================================================
 .. include:: ../../includes_server_logs/includes_server_logs_view.rst
+
+tail Log Files
+-----------------------------------------------------
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_tail.rst
+
+.. include:: ../../step_server_services/step_server_services_general_tail.rst
 
 Supervisor
 =====================================================
@@ -43,6 +49,8 @@ Application Logs
 nginx
 -----------------------------------------------------
 .. include:: ../../includes_server_logs/includes_server_logs_nginx.rst
+
+.. include:: ../../step_server_services/step_server_services_nginx_tail.rst
 
 Read nginx Logs
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

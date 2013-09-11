@@ -28,7 +28,7 @@ A sample log line:
      "version=1.0" "adam" "2012-02-18T00:02:42Z" 
      "2jmj7l5rSw0yVb/vlWAYkK/YBwk=" 871
 
-The meaning of each field is as follows:
+Field descriptions:
 
 .. list-table::
    :widths: 60 420
