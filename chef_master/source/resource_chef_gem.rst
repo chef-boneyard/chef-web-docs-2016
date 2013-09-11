@@ -8,6 +8,8 @@ chef_gem
 
 .. include:: ../../includes_resources/includes_resource_package_chef_gem.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_chef_gem_syntax.rst

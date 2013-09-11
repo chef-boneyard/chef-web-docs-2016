@@ -283,6 +283,8 @@ apt_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_apt.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_apt_syntax.rst
@@ -355,6 +357,8 @@ chef_gem
 .. include:: ../../includes_resources/includes_resource_package_chef_gem.rst
 
 .. warning:: |note chef_gem vs gem_package|
+
+.. note:: |note resource_based_on_package|
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -660,6 +664,8 @@ dpkg_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_dpkg.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_dpkg_syntax.rst
@@ -688,6 +694,8 @@ Examples
 easy_install_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_easy_install.rst
+
+.. note:: |note resource_based_on_package|
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -918,6 +926,8 @@ freebsd_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_freebsd.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_freebsd_syntax.rst
@@ -948,6 +958,8 @@ gem_package
 .. include:: ../../includes_resources/includes_resource_package_gem.rst
 
 .. warning:: |note chef_gem vs gem_package|
+
+.. note:: |note resource_based_on_package|
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1145,6 +1157,8 @@ ips_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_ips.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_ips_syntax.rst
@@ -1250,6 +1264,8 @@ Examples
 macports_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_macports.rst
+
+.. note:: |note resource_based_on_package|
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1527,6 +1543,8 @@ pacman_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_pacman.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_pacman_syntax.rst
@@ -1580,6 +1598,8 @@ None.
 portage_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_portage.rst
+
+.. note:: |note resource_based_on_package|
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1802,35 +1822,6 @@ Examples
 .. include:: ../../step_resource/step_resource_remote_file_use_platform_family.rst
 
 
-rpm_package
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_package_rpm.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_rpm_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_rpm_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_rpm_attributes.rst
-
-Providers
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_rpm_providers.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-|generic resource statement|
-
-**Install a package**
-
-.. include:: ../../step_resource/step_resource_rpm_package_install.rst
-
-
 route
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_route.rst
@@ -1863,6 +1854,35 @@ Examples
 
 .. include:: ../../step_resource/step_resource_route_delete_network.rst
 
+rpm_package
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_package_rpm.rst
+
+.. note:: |note resource_based_on_package|
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_rpm_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_rpm_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_rpm_attributes.rst
+
+Providers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_rpm_providers.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Install a package**
+
+.. include:: ../../step_resource/step_resource_rpm_package_install.rst
 
 ruby
 -----------------------------------------------------
@@ -2119,6 +2139,8 @@ smartos_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_smartos.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_smartos_syntax.rst
@@ -2147,6 +2169,8 @@ Examples
 solaris_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_solaris.rst
+
+.. note:: |note resource_based_on_package|
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -2375,6 +2399,8 @@ yum_package
 .. include:: ../../includes_resources/includes_resource_package_yum.rst
 
 .. note:: |note yum resource using file names|
+
+.. note:: |note resource_based_on_package|
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

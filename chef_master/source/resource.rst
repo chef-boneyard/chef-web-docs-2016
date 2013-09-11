@@ -87,16 +87,16 @@ Resources
    resource_registry_key
    resource_remote_directory
    resource_remote_file
-   resource_rpm_package
    resource_route
+   resource_rpm_package
    resource_ruby
    resource_ruby_block
    resource_scm
+   resource_script
+   resource_service
    resource_smartos_package
    resource_solaris_package
    resource_subversion
-   resource_script
-   resource_service
    resource_template
    resource_user
    resource_yum

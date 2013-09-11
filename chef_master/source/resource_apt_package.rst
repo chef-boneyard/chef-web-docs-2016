@@ -6,6 +6,8 @@ apt_package
 
 .. include:: ../../includes_resources/includes_resource_package_apt.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_apt_syntax.rst

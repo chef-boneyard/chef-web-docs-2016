@@ -6,6 +6,8 @@ dpkg_package
 
 .. include:: ../../includes_resources/includes_resource_package_dpkg.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_dpkg_syntax.rst

@@ -8,6 +8,8 @@ yum_package
 
 .. note:: |note yum resource using file names|
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_yum_syntax.rst

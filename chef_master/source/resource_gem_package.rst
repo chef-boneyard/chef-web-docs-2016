@@ -8,6 +8,8 @@ gem_package
 
 .. include:: ../../includes_resources/includes_resource_package_gem.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_gem_syntax.rst

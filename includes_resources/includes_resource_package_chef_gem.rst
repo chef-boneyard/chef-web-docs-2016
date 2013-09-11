@@ -7,5 +7,3 @@ The |resource chef_gem| resource works with all of the same attributes and optio
 
 * Runs its actions immediately, before convergence, allowing a |gem| to be used in a recipe immediately after it is installed
 * Runs ``Gem.clear_paths`` after the action, ensuring that |gem| is aware of changes so that it can be required immediately after it is installed
-
-.. note:: |note resource_based_on_package|

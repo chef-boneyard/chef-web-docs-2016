@@ -2,5 +2,3 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 The |resource package_easy_install| resource is used to manage packages for the |python| platform.
-
-.. note:: |note resource_based_on_package|

@@ -6,6 +6,8 @@ portage_package
 
 .. include:: ../../includes_resources/includes_resource_package_portage.rst
 
+.. note:: |note resource_based_on_package|
+
 Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_portage_syntax.rst

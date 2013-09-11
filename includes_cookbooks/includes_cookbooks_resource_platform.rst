@@ -29,7 +29,7 @@ The following resources are core resources:
      - .. include:: ../../includes_resources/includes_resource_deploy.rst
    * - `directory <http://docs.opscode.com/resource_directory.html>`_
      - .. include:: ../../includes_resources/includes_resource_directory.rst
-   * - `dpkg <http://docs.opscode.com/resource_dpkg_package.html>`_
+   * - `dpkg_package <http://docs.opscode.com/resource_dpkg_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_dpkg.rst
    * - `easy_install_package <http://docs.opscode.com/resource_easy_install_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_easy_install.rst
