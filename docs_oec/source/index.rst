@@ -467,34 +467,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    :hidden:
 
    api_chef_server
-   api_chef_server_clients
-   api_chef_server_clients_name
-   api_chef_server_cookbooks
-   api_chef_server_cookbooks_name
-   api_chef_server_cookbooks_version
-   api_chef_server_data_bag
-   api_chef_server_data_bag_item
-   api_chef_server_data_bag_name
-   api_chef_server_environments
-   api_chef_server_environments_cookbook_name
-   api_chef_server_environments_cookbook_version
-   api_chef_server_environments_cookbooks
-   api_chef_server_environments_name
-   api_chef_server_environments_node
-   api_chef_server_environments_recipe
-   api_chef_server_environments_role
-   api_chef_server_nodes
-   api_chef_server_nodes_name
-   api_chef_server_principals_name
-   api_chef_server_roles
-   api_chef_server_roles_name
-   api_chef_server_roles_name_environments
-   api_chef_server_roles_name_environments_name
-   api_chef_server_sandboxes
-   api_chef_server_sandboxes_id
-   api_chef_server_search
-   api_chef_server_search_index
-   api_chef_server_user
    api_cookbooks_site
    api_omnitruck.rst
    api_pushy
