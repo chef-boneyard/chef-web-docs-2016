@@ -25,7 +25,7 @@ where
 
 * ``run:`` is the state of the service (``run:`` or ``down:``)
 * ``service_name:`` is the name of the service for which status is returned
-* ``(pid 12345) is the process identifier
+* ``(pid 12345)`` is the process identifier
 * ``12345s`` is the uptime of the service, in seconds
 
 For example:
