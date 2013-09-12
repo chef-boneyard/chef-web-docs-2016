@@ -50,10 +50,10 @@ Resources
    resource_apt_package
    resource_bash
    resource_batch
+   resource_bff_package
    resource_breakpoint
    resource_chef_gem
    resource_common
-
    resource_cookbook_file
    resource_cron
    resource_csh
