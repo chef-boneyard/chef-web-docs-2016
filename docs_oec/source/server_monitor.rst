@@ -21,6 +21,10 @@ Application Checks
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_erlang.rst
 
+|nginx|
+-----------------------------------------------------
+.. include:: ../../includes_server_monitor/includes_server_monitor_application_nginx.rst
+
 |postgresql|
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_postgresql.rst
