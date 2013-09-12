@@ -68,6 +68,7 @@ The following services are part of |chef server oec|:
 * bifrost
 * bookshelf
 * couchdb
+* keepalived
 * nginx
 * opscode-account
 * opscode-certificate
@@ -179,6 +180,44 @@ run once
 tail
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_couchdb_tail.rst
+
+
+keepalived
+-----------------------------------------------------
+.. include:: ../../includes_server_services/includes_server_services_keepalived.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_keepalived_status.rst
+
+start
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_keepalived_start.rst
+
+stop
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_keepalived_stop.rst
+
+**Perform a controlled failover**
+
+.. include:: ../../step_server_services/step_server_services_keepalived_failover.rst
+
+restart
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_keepalived_restart.rst
+
+kill
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_keepalived_kill.rst
+
+run once
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_keepalived_run_once.rst
+
+tail
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_keepalived_tail.rst
+
 
 
 nginx
