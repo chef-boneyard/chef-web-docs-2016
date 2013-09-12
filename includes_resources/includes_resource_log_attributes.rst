@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``level``
-     - |level resource log|
+     - |level log| Default value: ``:info``.
    * - ``message``
      - |message resource log| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``

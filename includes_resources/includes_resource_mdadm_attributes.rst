@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``exists``
      - Indicates whether the RAID array exists. Default value: ``false``.
    * - ``level``
-     - |level resource mdadm|
+     - |level mdadm| Default value: ``1``.
    * - ``metadata``
      - The superblock type for RAID metadata. Default value: ``0.90``.
    * - ``provider``
