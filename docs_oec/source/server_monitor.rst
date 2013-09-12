@@ -37,6 +37,14 @@ Application Checks
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_redis.rst
 
+Disks
+=====================================================
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
+
+Ports
+=====================================================
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_ports.rst
+
 System Checks
 =====================================================
 .. include:: ../../includes_server_monitor/includes_server_monitor_system.rst
@@ -69,6 +77,3 @@ opscode-expanderctl
 
 .. include:: ../../includes_ctl_opscode_expander/includes_ctl_opscode_expander_example.rst
 
-Ports
------------------------------------------------------
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_ports.rst
