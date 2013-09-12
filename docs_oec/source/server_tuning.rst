@@ -18,6 +18,8 @@ Tuning Settings
 =====================================================
 The following settings are commonly tuned in larger installations.
 
+.. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``private-chef-ctl reconfigure`` command.
+
 opscode-account
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_account.rst

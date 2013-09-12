@@ -37,6 +37,10 @@ Application Checks
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_application_redis.rst
 
+Node and/or Workstation
+=====================================================
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_client.rst
+
 Disks
 =====================================================
 .. include:: ../../includes_server_monitor/includes_server_monitor_system_disk.rst
@@ -68,6 +72,12 @@ opscode-erchef
 opscode-expander
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_system_expander.rst
+
+Search Indexes
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search.rst
+
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_expander_search.rst
 
 opscode-expanderctl
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
