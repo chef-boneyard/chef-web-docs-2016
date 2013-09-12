@@ -86,6 +86,10 @@ bifrost
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_bifrost.rst
 
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_bifrost_status.rst
+
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_bifrost_start.rst
@@ -114,6 +118,10 @@ tail
 bookshelf
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_bookshelf.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_bookshelf_status.rst
 
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -144,6 +152,10 @@ couchdb
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_couchdb.rst
 
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_couchdb_status.rst
+
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_couchdb_start.rst
@@ -172,6 +184,10 @@ tail
 nginx
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_nginx.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_nginx_status.rst
 
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -202,6 +218,10 @@ opscode-account
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_account.rst
 
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_account_status.rst
+
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_account_start.rst
@@ -230,6 +250,10 @@ tail
 opscode-certificate
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_certificate.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_certificate_status.rst
 
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -260,6 +284,10 @@ opscode-erchef
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_erchef.rst
 
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_erchef_status.rst
+
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_erchef_start.rst
@@ -288,6 +316,10 @@ tail
 opscode-expander
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_expander.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_expander_status.rst
 
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -318,6 +350,10 @@ opscode-expander-reindexer
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_reindexer.rst
 
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_reindexer_status.rst
+
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_reindexer_start.rst
@@ -346,6 +382,10 @@ tail
 opscode-solr
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_solr.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_solr_status.rst
 
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -376,6 +416,10 @@ opscode-webui
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_webui.rst
 
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_webui_status.rst
+
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_webui_start.rst
@@ -404,6 +448,10 @@ tail
 postgresql
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_postgresql.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_postgresql_status.rst
 
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -434,6 +482,10 @@ rabbitmq
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_rabbitmq.rst
 
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_rabbitmq_status.rst
+
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_rabbitmq_start.rst
@@ -462,6 +514,10 @@ tail
 redis
 -----------------------------------------------------
 .. include:: ../../includes_server_services/includes_server_services_redis.rst
+
+status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_server_services/step_server_services_redis_status.rst
 
 start
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

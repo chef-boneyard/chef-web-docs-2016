@@ -15,7 +15,9 @@ and will return the status for all services. Status can be returned for individu
 
    $ private-chef-ctl status name_of_service
 
-where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand. When service status is requested, the output should be similar to:
+where ``name_of_service`` represents the name of any service that is listed after running the ``service-list`` subcommand. 
+
+When service status is requested, the output should be similar to:
 
 .. code-block:: bash
 
