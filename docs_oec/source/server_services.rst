@@ -198,10 +198,6 @@ stop
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_keepalived_stop.rst
 
-**Perform a controlled failover**
-
-.. include:: ../../step_server_services/step_server_services_keepalived_failover.rst
-
 restart
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_server_services/step_server_services_keepalived_restart.rst
