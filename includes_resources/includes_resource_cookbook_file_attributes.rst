@@ -36,7 +36,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|	
    * - ``path``
-     - |path file| Default value: the ``name`` of the resource block (see Syntax section above).
+     - |path file|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``
@@ -44,7 +44,7 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - The location of a file in the ``/files`` directory in a cookbook located in the |chef repo|. Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: basename of ``name``.
+     - The location of a file in the ``/files`` directory in a cookbook located in the |chef repo|. Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: the ``name`` of the resource block (see Syntax section above).
 
 .. note:: Use the ``owner`` and ``right`` attributes and avoid the ``group`` and ``mode`` attributes whenever possible. The ``group`` and ``mode`` attributes are not true |windows| concepts and are provided more for backward compatibility than for best practice.
 

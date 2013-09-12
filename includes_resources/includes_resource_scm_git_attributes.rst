@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``depth``
      - |depth git_shallow_clone| Default value: ``nil`` (full clone).
    * - ``destination``
-     - |destination resource scm|
+     - |destination resource scm| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``enable_submodules``
      - |enable_submodules| Default value: ``false``.
    * - ``group``

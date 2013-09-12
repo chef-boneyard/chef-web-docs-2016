@@ -9,6 +9,8 @@ This resource has the following attributes:
 
    * - Attribute
      - Description
+   * - ``name``
+     -  Always the same value as the ``name`` of the resource block (see Syntax section above).
    * - ``plugin``
      - Optional. |plugin reload_by_ohai| Default value: ``nil`` (all plug-ins are reloaded ).
    * - ``provider``

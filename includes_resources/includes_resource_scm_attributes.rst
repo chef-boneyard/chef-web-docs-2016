@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``destination``
-     - |destination resource scm|
+     - |destination resource scm| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``group``
      - |group deploy| Default value: ``nil``.
    * - ``provider``
