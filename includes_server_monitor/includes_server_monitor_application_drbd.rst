@@ -9,3 +9,5 @@
 .. code-block:: bash
 
    $ cat /proc/drbd
+
+Use ``private-chef-ctl ha-status`` along with ``/proc/drbd`` to help evaluate the current state of the cluster. Follow the split-brain recovery procedures for |drbd| if the cluster becomes two unconnected pieces.
