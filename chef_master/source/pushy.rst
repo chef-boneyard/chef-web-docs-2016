@@ -36,17 +36,20 @@ Whitelist
 -----------------------------------------------------
 .. include:: ../../includes_pushy/includes_pushy_whitelist.rst
 
-Messages
-=====================================================
-|pushy| sends two types of messages: heartbeat and job.
-
-Heartbeat Messages
------------------------------------------------------
-.. include:: ../../includes_pushy/includes_pushy_messages_heartbeat.rst
-
-Job Messages
------------------------------------------------------
-.. include:: ../../includes_pushy/includes_pushy_messages_jobs.rst
+.. 
+.. Commented out, probably move to new file(s)
+.. 
+.. Messages
+.. =====================================================
+.. Pushy sends two types of messages: heartbeat and job.
+.. 
+.. Heartbeat Messages
+.. -----------------------------------------------------
+.. .. include:: ../../includes_pushy/includes_pushy_messages_heartbeat.rst
+.. 
+.. Job Messages
+.. -----------------------------------------------------
+.. .. include:: ../../includes_pushy/includes_pushy_messages_jobs.rst
 
 Reference
 =====================================================

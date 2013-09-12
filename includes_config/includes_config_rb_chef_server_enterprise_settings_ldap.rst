@@ -22,7 +22,7 @@ This configuration file has the following settings for |ldap|:
    * - ``ldap['port']``
      - The port on which the |ldap| server listens. The default value is an appropriate value for most configurations. Default value: ``389``.
    * - ``ldap['ssl_enabled']``
-     - Indicates that |chef server oec| should make |ssl|-enabled conenctions to the |ldap| server. Be sure |ssl| is enabled on the |ldap| server and that the ``ldap['port']`` setting is updated with the correct value (often ``636``). Default value: ``false``.
+     - Indicates that |chef server oec| should make |ssl|-enabled connections to the |ldap| server. Be sure |ssl| is enabled on the |ldap| server and that the ``ldap['port']`` setting is updated with the correct value (often ``636``). Default value: ``false``.
    * - ``ldap['system_adjective']``
      - A descriptive name for the login system that is displayed to users in the |chef server oec| management console. If a value like "corporate" is used, then the |chef server oec| user interface will display strings like "the corporate login server", "corporate login", or "corporate password." Default value: ``AD/LDAP``.
 
