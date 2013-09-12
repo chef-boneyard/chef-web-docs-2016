@@ -39,7 +39,7 @@ System Checks
 
 ha-status
 -----------------------------------------------------
-.. include:: ../../includes_server_monitor/includes_server_monitor_system_ha.rst
+.. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef_ha_status.rst
 
 opscode-authz
 -----------------------------------------------------

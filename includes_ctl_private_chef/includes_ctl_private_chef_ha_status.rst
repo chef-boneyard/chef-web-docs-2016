@@ -38,3 +38,4 @@ Otherwise it will print out a list of errors, similar to the following:
      [OK] opscode-account is running correctly, and I am master.
    ...
      [ERROR] ERRORS WERE DETECTED.
+
