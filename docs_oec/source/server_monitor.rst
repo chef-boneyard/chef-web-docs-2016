@@ -45,6 +45,10 @@ opscode-authz
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_system_authz.rst
 
+opscode-chef
+-----------------------------------------------------
+.. include:: ../../includes_server_monitor/includes_server_monitor_system_chef.rst
+
 opscode-erchef
 -----------------------------------------------------
 .. include:: ../../includes_server_monitor/includes_server_monitor_system_erchef.rst
