@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Many components of |chef server oec| are written using |erlang| and run on the |beam| virtual machine. One feature of |erlang| and |beam| is the ability to obtain a shell that can interact with the running service:
+Many components of |chef server oec| are written using |erlang| and run on the |beam| virtual machine. One feature of |erlang| and |beam| is the ability to interact with the running service using a command shell. For example:
 
 .. code-block:: bash
 
