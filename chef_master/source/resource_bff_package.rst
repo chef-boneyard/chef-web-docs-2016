@@ -32,4 +32,4 @@ Examples
 
 **Install a package**
 
-.. include:: ../../step_resource/step_resource_dpkg_package_install.rst
+.. include:: ../../step_resource/step_resource_bff_package_install.rst
