@@ -14,5 +14,5 @@ The following providers are available. Use the short name to call the provider f
      - ``package``
      - When this short name is used, the |chef client| will attempt to determine the correct provider during the |chef client| run.
    * - ``Chef::Provider::Package::Aix``
-     - ``dpkg_package``
+     - ``package_bff``
      - The provider that is used with the |ibm aix| platform. Can be used with the ``options`` attribute.
