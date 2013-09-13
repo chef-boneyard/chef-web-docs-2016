@@ -6,6 +6,8 @@ About the Recipe DSL
 
 Because the |dsl recipe| is a |ruby| DSL, then anything that can be done using |ruby| can also be done in a recipe, including ``if`` and ``case`` statements, using the ``include?`` |ruby| method, including recipes in recipes, and checking for dependencies.
 
+.. note:: Read all about the `Recipe DSL <http://docs.opscode.com/chef/dsl_recipe.html>`_ in a single topic.
+
 Use Ruby
 =====================================================
 Common |ruby| techniques can be used with the |dsl recipe| methods.
@@ -44,6 +46,8 @@ Recipe DSL Methods
 =====================================================
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method.rst
 
+.. note:: Read all about the `Recipe DSL <http://docs.opscode.com/chef/dsl_recipe.html>`_ in a single topic. The topics in the tables below provide links to individual pages for each method.
+
 .. list-table::
    :widths: 150 450
    :header-rows: 1
@@ -52,10 +56,10 @@ Recipe DSL Methods
      - Description
    * - :doc:`attribute? </dsl_recipe_method_attribute>`
      - Use in a recipe to include an attribute.
-   * - :doc:`data_bag, data_bag_item </dsl_recipe_method_data_bag>`
-     - Use in a recipe to include a data bag or data bag item.
    * - :doc:`cookbook_name </dsl_recipe_method_cookbook_name>`
      - Use in a recipe to get the name of the cookbook in which a recipe is located.
+   * - :doc:`data_bag, data_bag_item </dsl_recipe_method_data_bag>`
+     - Use in a recipe to include a data bag or data bag item.
    * - :doc:`platform? </dsl_recipe_method_platform>`
      - Use in a recipe to check for the platform.
    * - :doc:`platform_family? </dsl_recipe_method_platform_family>`
