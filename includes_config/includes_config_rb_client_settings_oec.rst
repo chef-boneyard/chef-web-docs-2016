@@ -42,6 +42,16 @@ This configuration file has the following settings:
        ::
  
           data_bag_decrypt_minimum_version "2"
+   * - ``enable_reporting``
+     - Indicates that the |chef client| will send data to the |chef server| for use with |chef server reporting|. For example:
+       ::
+ 
+          enable_reporting true
+   * - ``enable_reporting_url_fatals``
+     - Indicates that the |chef client| run will fail if reporting data cannot be sent to the |chef server| (for any reason). For example:
+       ::
+ 
+          enable_reporting_url_fatals false
    * - ``enable_selinux_file_permission_fixup``
      - |enable_selinux_file_permission_fixup| For example:
        ::
