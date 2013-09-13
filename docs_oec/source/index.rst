@@ -150,7 +150,7 @@ Pushy
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
 
-Pushy
+Reporting
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 :doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
 
