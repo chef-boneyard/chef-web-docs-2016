@@ -80,6 +80,10 @@ Repository
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_repo_spiceweasel.rst
 
+Roles
+=====================================================
+.. include:: ../../includes_openstack/includes_openstack_repo_roles.rst
+
 Cookbooks
 =====================================================
 .. include:: ../../includes_openstack/includes_openstack_cookbooks.rst
@@ -161,10 +165,10 @@ Everything in the lab is managed by |chef| from the http://github.com/mattray/la
 
 Environment
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The `lab Environment <https://github.com/mattray/lab-repo/blob/master/environments/lab.rb>`_  provides overridden attributes. 
+The `lab Environment <https://github.com/mattray/lab-repo/blob/master/environments/lab.rb>`_  provides overridden attributes.
 
-* The ``apt`` attributes are for restricting search to the lab. 
-* The ``pxe_dust`` attribute is to lock down the |chef client| version. 
+* The ``apt`` attributes are for restricting search to the lab.
+* The ``pxe_dust`` attribute is to lock down the |chef client| version.
 * The ``authorization`` attributes are for configuring |sudo cmd| to not require a password, include the sudoers.d directory and add the 'mray' user to sudoers.
 
 Roles
