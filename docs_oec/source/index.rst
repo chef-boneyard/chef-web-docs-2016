@@ -485,6 +485,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    ctl_chef_server
    ctl_chef_shell
    ctl_chef_solo
+   ctl_opscode_reporting
    ctl_private_chef
    ctl_pushy_client
    dsl_recipe
