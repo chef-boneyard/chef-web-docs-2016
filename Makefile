@@ -2,7 +2,7 @@ BUILDDIR = build
 S3BUCKET = chef-docs
 S3OPTIONS = --delete-removed --acl-public --exclude='.doctrees/*' --exclude='chef/.doctrees/*' --config ~/.s3cfg-chef-docs  --add-header "Cache-Control: max-age=900"
 
-release: master enterprise open_source
+release: master enterprise open_source all
 
 # 
 # OTHER BUILDS -- REMOVED FOR THE MOMENT
