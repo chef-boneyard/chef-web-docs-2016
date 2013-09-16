@@ -132,6 +132,7 @@ Cookbooks
    api_pushy
    dsl_recipe
    ohai
+   ohai_custom
    orgmapper
    ctl_chef_client
    ctl_chef_server
