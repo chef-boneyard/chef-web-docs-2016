@@ -28,6 +28,14 @@ Shared Methods
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst
 
+Log Entries
+=====================================================
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_logs.rst
+
+rescue
+-----------------------------------------------------
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_logs_rescue.rst
+
 Examples 
 =====================================================
 The following examples show |ohai| plugins.
