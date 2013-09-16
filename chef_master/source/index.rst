@@ -40,7 +40,7 @@ The Workstation
 **Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-apply (executable) </ctl_chef_apply>`
 
 
-The Server
+The Server 
 =====================================================
 **The basics:** :doc:`About the Chef Server </chef_overview_server>` | :doc:`Server Components </server_components>` | :doc:`Hosted Enterprise Chef </chef_overview_server_hosted>` vs. :doc:`Enterprise Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>` | :doc:`Private Keys </chef_private_keys>`
 
