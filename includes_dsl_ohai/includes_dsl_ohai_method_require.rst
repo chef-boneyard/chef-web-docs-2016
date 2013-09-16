@@ -30,6 +30,26 @@ When a class is an external class (and therefore should not have ``Chef::`` prep
 
    ::External::Class::Library
 
+For example, the |ruby| WMI is required with |windows|:
+
+.. code-block:: ruby
+
+   collect_data(:windows) do
+     require 'ruby-wmi'
+     WIN32OLE.codepage = WIN32OLE::CP_UTF8
+   
+     kernel Mash.new
+   
+     host = WMI::Win32_OperatingSystem.find(:first)
+     kernel[:os_info] = Mash.new
+     host.properties_.each do |p|
+       kernel[:os_info][p.name.wmi_underscore.to_sym] = host.send(p.name)
+     end
+   
+     ...
+   
+   end
+
 
 
 
