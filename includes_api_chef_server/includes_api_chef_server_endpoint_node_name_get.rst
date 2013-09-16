@@ -18,17 +18,17 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-     "overrides": {},
-     "name": "latte",
-     "chef_type": "node",
-     "json_class": "Chef::Node",
-     "attributes": {
-       "hardware_type": "laptop"
-     },
+     "name": "node_name",
+     "chef_environment": "_default",
      "run_list": [
-       "recipe[unicorn]"
-     ],
-     "defaults": {}
+       "recipe[recipe_name]"
+     ]
+     "json_class": "Chef::Node",
+     "chef_type": "node",
+     "automatic": { ... },
+     "normal": { "tags": [ ] },
+     "default": { },
+     "override": { } 
    }
 
 **Response Codes**
