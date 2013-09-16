@@ -5,8 +5,6 @@
 The syntax for an |ohai| plugin is as follows:
 
 .. code-block:: ruby
-   
-   require "ohai/plugins/plugin_name"
 
    Ohai.plugin(:Name) do
      include Ohai::Class::Name
@@ -35,7 +33,6 @@ The syntax for an |ohai| plugin is as follows:
 
 where 
 
-* ``require "ohai/plugins/plugin_name"`` is used to list required |ohai| plugins
 * ``(:Name)`` is used to identify the plugin; when two plugins have the same ``(:Name)``, those plugins are joined together when |ohai| runs
 * ``include`` is a standard |ruby| method that allows an |ohai| plugin to include a class, such as ``Ohai::Mixin::ModuleName``
 * ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin; a sub-attribute can also be defined using the ``attribute/subattribute`` pattern
