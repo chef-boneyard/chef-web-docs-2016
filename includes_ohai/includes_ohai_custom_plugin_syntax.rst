@@ -22,7 +22,7 @@ The syntax for an |ohai| plugin is as follows:
      end
 
      collect_data(:platform) do
-       require "non_ohai_files"
+       require "platform_specific_requirement"
        # some Ruby code
      end
 
@@ -44,7 +44,7 @@ where
 * ``collect_data`` is a block of |ruby| code that is called by |ohai| when it runs. Only a single ``collect_data`` block is run (even if multiple ``collect_data`` blocks exist in the plugin). Each ``collect_data`` block accepts zero (or more) platform parameters, which are matched up against the node on which the plugin is currently running and are used to determine which ``collect_data`` block to use when |ohai| runs
 * ``collect_data(:default)`` is the code block that runs when a node's platform is not defined by another ``collect_data`` block
 * ``collect_data(:platform)`` is a platform-specific code block that is run when a match exists with the node's platform and a platform-specific ``collect_data`` block in the plugin; only one ``collect_data`` block may exist for each platform
-* ``require`` is a standard |ruby| method that is used to list files that may be required by the platform and are not part of the |dsl ohai|; ``require``, when it is specific to a platform, should be defined as part of the ``collect_data`` block that is specific to that platform; an error will be generated if a file is required, but |ohai| cannot find it
+* ``require "platform_specific_requirement"`` is a standard |ruby| method that is used to list files that may be required by the platform and are not part of the |dsl ohai|; ``require``, when it is specific to a platform, should be defined as part of the ``collect_data`` block that is specific to that platform; an error will be generated if a file is required, but |ohai| cannot find it
 * ``Ohai::Log.log_type`` is used to tell the |chef client| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``
 
 
