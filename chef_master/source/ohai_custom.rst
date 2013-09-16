@@ -20,6 +20,10 @@ collect_data
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst
 
+require
+-----------------------------------------------------
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst
+
 Shared Methods
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst
