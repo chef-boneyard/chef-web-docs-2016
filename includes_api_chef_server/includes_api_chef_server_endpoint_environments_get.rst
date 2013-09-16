@@ -18,7 +18,8 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-     "webserver": "http://localhost:4000/environments/webserver"
+     "_default": "https://api.opscode.com/organizations/org_name/environments/_default"
+     "webserver": "https://api.opscode.com/organizations/org_name/environments/webserver"
    }
 
 **Response Codes**

@@ -18,12 +18,13 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-     "name": "dev",
-     "attributes": {},
+     "name": "_default",
+     "override_attributes": { },
+     "cookbook_versions": { },
+     "chef_type": "environment",
+     "description": "The default Chef environment",
      "json_class": "Chef::Environment",
-     "description": "",
-     "cookbook_versions": {},
-     "chef_type": "environment"
+     "default_attributes": { }
    }
 
 **Response Codes**

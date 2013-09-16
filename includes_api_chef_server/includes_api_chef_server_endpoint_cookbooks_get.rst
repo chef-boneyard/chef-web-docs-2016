@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``GET`` method is used to return a hash of all cookbooks and cookbook versions.
+The ``GET`` method is used to return a hash of all cookbooks and cookbook versions. 
 
 This method has the following parameters:
 

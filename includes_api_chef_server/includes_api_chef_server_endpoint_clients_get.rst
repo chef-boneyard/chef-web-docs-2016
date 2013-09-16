@@ -18,9 +18,18 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-     "chef-webui": "http://localhost:4000/clients/chef-webui",
-     "chef-validator": "http://localhost:4000/clients/chef-validator",
-     "adam": "http://localhost:4000/clients/adam"
+     "node1": "https://api.opscode.com/organizations/org_name/clients/node_name",
+     "node2": "https://api.opscode.com/organizations/org_name/clients/node_name"
+   }
+
+or:
+
+.. code-block:: javascript
+
+   {
+     "node1": "http://localhost:4000/clients/node_name",
+     "node2": "http://localhost:4000/clients/node_name",
+     "node3": "http://localhost:4000/clients/node_name"
    }
 
 **Response Codes**

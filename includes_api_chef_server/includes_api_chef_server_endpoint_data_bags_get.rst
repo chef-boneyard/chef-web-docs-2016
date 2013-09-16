@@ -22,7 +22,7 @@ The response will return something like the following:
      "applications": "http://localhost:4000/data/applications"
    }
 
-shown as a list of key-value pairs, where (in the example above) ``users`` and ``applications`` are the keys and "http://localhost:4000/data/foo" are the values.
+shown as a list of key-value pairs, where (in the example above) ``users`` and ``applications`` are the names of data bags and "http://localhost:4000/data/foo" is the path to the data bag.
 
 **Response Codes**
 
