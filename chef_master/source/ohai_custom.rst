@@ -20,14 +20,14 @@ collect_data
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst
 
-shared_methods
+Shared Methods
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst
 
-.. Examples
-.. =====================================================
-.. The following examples show various |ohai| plugins.
-.. 
-.. xxxxx
-.. -----------------------------------------------------
-.. .. include:: ../../includes_ohai/xxxxx.rst
+Examples
+=====================================================
+The following examples show various |ohai| plugins.
+
+Hostnames
+-----------------------------------------------------
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_hostname.rst
