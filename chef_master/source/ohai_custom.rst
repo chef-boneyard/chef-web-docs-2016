@@ -24,7 +24,7 @@ Shared Methods
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst
 
-Examples
+Examples 
 =====================================================
 The following examples show |ohai| plugins.
 
