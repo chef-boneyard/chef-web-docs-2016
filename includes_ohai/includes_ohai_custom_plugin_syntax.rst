@@ -9,7 +9,7 @@ The syntax for an |ohai| plugin is as follows:
    require "ohai_plugin"
    
    Ohai.plugin(:Name) do
-     include xxxxx
+     include Ohai::Class::Name
      provides "xxxxx", "xxxxx"
      depends "xxxx", "xxxxx"
      
