@@ -26,7 +26,7 @@ Shared Methods
 
 Examples
 =====================================================
-The following examples show various |ohai| plugins.
+The following examples show |ohai| plugins.
 
 Hostnames
 -----------------------------------------------------
