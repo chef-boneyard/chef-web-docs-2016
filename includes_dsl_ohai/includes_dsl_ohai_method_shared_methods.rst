@@ -2,12 +2,12 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Shared methods can define behavior that is used by more than one ``collect_data`` block, such as a data structure. The syntax for a shared method is:
+A shared method defines behavior that may be used by more than one ``collect_data`` block, such as a data structure or a hash. The syntax for a shared method is:
 
 .. code-block:: ruby
 
-   def shared_method
-     # some Ruby code
+   def a_shared_method
+     # some Ruby code that defines the shared method
    end
 
 For example, the following shared method is used to collect data about various cloud providers, depending on the cloud provider and the type of IP address:
@@ -20,7 +20,7 @@ For example, the following shared method is used to collect data about various c
      cloud[:private_ips] = Array.new
    end
 
-and then later on in the same plugin, one can reuse the ``cloud`` object:
+and then later on in the same plugin, the ``cloud`` object can be reused:
 
 .. code-block:: ruby
 

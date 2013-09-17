@@ -42,4 +42,6 @@ The following examples show |ohai| plugins.
 
 Hostnames
 -----------------------------------------------------
+.. note:: This is a placeholder example.
+
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_hostname.rst

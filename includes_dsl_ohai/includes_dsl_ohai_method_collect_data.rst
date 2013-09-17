@@ -2,9 +2,12 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``collect_data`` method is a block of |ruby| code that is called by |ohai| when it runs. One (or more) ``collect_data`` blocks can be defined in a plugin, but only a single ``collect_data`` block is ever run. The ``collect_data`` block that is run is determined by the platform on which the node is running, which is then matched up against the available ``collect_data`` blocks in the plugin. If there isn't a matching ``collect_data`` block, the ``collect_data(:default)`` block is used. Only one ``collect_data`` block may exist per platform.
+The ``collect_data`` method is a block of |ruby| code that is called by |ohai| when it runs. One (or more) ``collect_data`` blocks can be defined in a plugin, but only a single ``collect_data`` block is ever run. The ``collect_data`` block that is run is determined by the platform on which the node is running, which is then matched up against the available ``collect_data`` blocks in the plugin. 
 
-The syntax for the ``collect_data`` method is:
+* A ``collect_data(:default)`` block is required
+* A ``collect_data(:platform)`` block is required for each platform
+
+When |ohai| runs, if there isn't a matching ``collect_data`` block for a platform, the ``collect_data(:default)`` block is used. The syntax for the ``collect_data`` method is:
 
 .. code-block:: ruby
 
@@ -23,7 +26,7 @@ or:
 where:
 
 * ``:default`` is the name of the default ``collect_data`` block
-* ``":platform"`` is a platform-specific code block, such as ``:aix`` for |ibm aix| or ``:windows`` for |windows|
+* ``:platform`` is the name of the platform, such as ``:aix`` for |ibm aix| or ``:windows`` for |windows|
 
 Some examples:
 
