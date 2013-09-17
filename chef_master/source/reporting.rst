@@ -6,8 +6,6 @@ Reporting
 
 .. include:: ../../includes_reporting/includes_reporting.rst
 
-.. note:: Reporting requires chef-client 11.6 (or higher) and the server to be Enterprise Chef or hosted Enterprise Chef.
-
 The Reporting Run
 =====================================================
 .. include:: ../../includes_reporting/includes_reporting_run.rst
