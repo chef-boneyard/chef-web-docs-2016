@@ -4,6 +4,8 @@ About |ohai|
 
 .. include:: ../../includes_ohai/includes_ohai.rst
 
+.. include:: ../../includes_ohai/includes_ohai_platforms.rst
+
 Automatic Attributes
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
@@ -24,7 +26,7 @@ Attribute Precedence
 
 Install |ohai|
 =====================================================
-|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately.
+|ohai| is a requirement for the |chef client| and must be installed whenever (and wherever) the |chef client| is installed. |ohai| is always installed as part of the |chef client| installation, but it may be installed separately.
 
 Install from Github
 -----------------------------------------------------
@@ -37,6 +39,10 @@ Install from RubyGems
 Install on Microsoft Windows
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_install_on_windows.rst
+
+
+.. deprecate the following sections on v7 release: "Create Ohai Plugins", "Create a Simple Plugin", "Load a Plugin", "Use a Mash", "Extend a Plugin", and "Work with Platforms"
+
 
 Create |ohai| Plugins
 =====================================================
@@ -51,31 +57,13 @@ When additional data about a system infrastructure is required, a custom |ohai| 
    provides "orly"
    orly "yeah, rly."
 
-Load a Plugin
+Run a Plugin
 -----------------------------------------------------
-To load a plugin, create a "plugins" folder and put the above code in the ``plugins/orly.rb`` file.
-
-Now to fire up irb (and assuming the directory "plugins" is the current folder; if not adjust your path):
-
-.. code-block:: bash
-
-   >> require 'ohai'
-   >> Ohai::Config[:plugin_path] << './plugins'
-   >> o = Ohai::System.new
-   >> o.all_plugins
-   >> o.orly #=> "yea, rly"
+.. include:: ../../step_ohai/step_ohai_plugin_run.rst
 
 Use a Mash
 -----------------------------------------------------
-Most of the information we want to lookup would be nested in some way, and |ohai| tends to do this by storing the data in a mash. This can be done by creating a new mash and setting the attribute to it.
-
-In plugins/canhas.rb:
-
-.. code-block:: ruby
-
-   provides "canhas"
-   canhas Mash.new
-   canhas[:burger] = "want"
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst
 
 Work with Platforms
 -----------------------------------------------------
@@ -118,29 +106,29 @@ In plugins/lolcode.rb:
    languages[:lolcode] = Mash.new
    languages[:lolcode][:version] = "TEH VERSHIONS"
 
-Use the Ohai Cookbook
------------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_add_ohai_cookbook_to_chef_repo.rst
+The ohai Cookbook
+=====================================================
+.. include:: ../../step_ohai/step_ohai_download_cookbook.rst
 
-Change Default Location
+Default Location
 -----------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_change_plugin_path.rst
+.. include:: ../../step_ohai/step_ohai_plugin_change_path.rst
 
-Upload a Custom Plugin
+Upload Custom Plugins
 -----------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_upload_custom_plugin.rst
+.. include:: ../../step_ohai/step_ohai_plugin_upload.rst
 
-Use the ``ohai`` Recipe
+The ``ohai`` Recipe
 -----------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_add_ohai_recipe_to_run_list.rst
+.. include:: ../../step_ohai/step_ohai_add_to_run_list.rst
 
 Load a Plugin
 =====================================================
-.. include:: ../../step_ohai/step_ohai_load_custom_plugin.rst
+.. include:: ../../step_ohai/step_ohai_plugin_load.rst
 
 Disable a Plugin
 =====================================================
-.. include:: ../../step_ohai/step_ohai_disable_plugin.rst
+.. include:: ../../step_ohai/step_ohai_plugin_disable.rst
 
 Community |ohai| Plugins
 =====================================================

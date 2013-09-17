@@ -20,6 +20,14 @@ collect_data
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst
 
+Use a Mash
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst
+
 require
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To upload the |ohai| cookbook to the |chef server|, use |knife| and run the following:
+To upload the |cookbook ohai| cookbook to the |chef server|, use |knife| and run the following:
 
 .. code-block:: bash
 

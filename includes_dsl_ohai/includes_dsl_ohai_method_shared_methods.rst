@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A shared method defines behavior that may be used by more than one ``collect_data`` block, such as a data structure or a hash. The syntax for a shared method is:
+A shared method defines behavior that may be used by more than one ``collect_data`` block, such as a data structure, a hash, or a mash. The syntax for a shared method is:
 
 .. code-block:: ruby
 

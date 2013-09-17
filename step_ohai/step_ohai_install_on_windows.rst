@@ -2,19 +2,19 @@
 
 |ohai| (version 0.6.x or higher) can be run on the following versions of |windows|:
 
-* Windows 7 Ultimate RC1
-* Windows 7 Enterprise
-* Windows XP Professional
-* Windows Vista Ultimate
-* Windows 2000 Server SP4
-* Windows 2003 Server R2 Standard
-* Windows 2008 Server R2 Standard
+* |windows 7 ultimate rc1|
+* |windows 7 enterprise|
+* |windows xp pro|
+* |windows vista ultimate|
+* |windows 2000 server sp4|
+* |windows 2003 server r2 standard|
+* |windows 2008 server r2 standard|
 
 To install |ohai| on |windows|, do the following:
 
 #. Install |ruby| using the one-click installer: http://rubyforge.org/frs/download.php/69034/rubyinstaller-1.8.7-p249-rc2.exe.
 
-#. Install |ohai| and WMI bindings:
+#. Install |ohai| and |windows wmi| bindings:
 
    .. code-block:: bash
 

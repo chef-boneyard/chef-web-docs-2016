@@ -1,14 +1,12 @@
 .. This is an included how-to. 
 
-To download the ``ohai`` cookbook to the |chef repo|:
+To download the |cookbook ohai| cookbook to the |chef repo| run the following command:
 
-#. Run the following command:
+.. code-block:: bash
 
-   .. code-block:: bash
+   $ knife cookbook site install ohai
 
-      $ knife cookbook site install ohai
-
-#. |knife| will return something like the following:
+|knife| will return something similar to:
 
 .. code-block:: bash
 
