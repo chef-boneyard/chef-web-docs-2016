@@ -40,22 +40,15 @@ Install on Microsoft Windows
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_install_on_windows.rst
 
-
-.. deprecate the following sections on v7 release: "Create Ohai Plugins", "Create a Simple Plugin", "Load a Plugin", "Use a Mash", "Extend a Plugin", and "Work with Platforms"
-
+.. deprecate the following sections on v7 release: "Create Ohai Plugins", "Create a Simple Plugin", "Load a Plugin", "Use a Mash", "Extend a Plugin", and "Work with Platforms" and replace with a link to docs.opscode.com/ohai_custom.html.
 
 Create |ohai| Plugins
 =====================================================
-|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately.
+.. include:: ../../includes_ohai/includes_ohai_6.rst
 
 Create a Simple Plugin
 -----------------------------------------------------
-When additional data about a system infrastructure is required, a custom |ohai| plugin can be used to gather that information. An |ohai| plugin is a |ruby| DSL. For example, the following is about as simple as it gets:
-
-.. code-block:: ruby
-
-   provides "orly"
-   orly "yeah, rly."
+.. include:: ../../includes_ohai/includes_ohai_6_create.rst
 
 Run a Plugin
 -----------------------------------------------------
@@ -67,44 +60,11 @@ Use a Mash
 
 Work with Platforms
 -----------------------------------------------------
-One of the main reasons for using |ohai| is to gather information regardless of the operating system. Luckily this is made easy by optionally loading recipes based on the platform. With that platform specific calls abstracted away you can keep your code DRY.
-
-The built-in plugins that come with |ohai| use the following trick to load platform specific code. It works by creating a base cross-platform plugin that loads the platform specific plugin from a subdirectory. In plugins/lolcode.rb:
-
-.. code-block:: ruby
-
-   provides "languages/lolcode"
-   require_plugin "languages"
-   require_plugin "#{os}::lolcode"
-   
-   languages[:lolcode] = Mash.new unless languages[:lolcode]
-   languages[:lolcode][:version] = "TEH VERSHIONS"
-
-In plugins/darwin/lolcode.rb:
-
-.. code-block:: ruby
-
-   provides "languages/lolcode"
-   require_plugin "languages"
-   languages[:lolcode] = Mash.new unless languages[:lolcode]
-   languages[:lolcode][:platform] = "MACKERS"
-
-Checkout the |ohai| os.rb file for the list of platform names.
-
-All of these examples can be found in the ``ohai-plugin-howto`` |github| repo, you should be able to clone that and run the ruby scripts in the repo's root directory. If you figure out any other handy tricks please fork the project and add them.
+.. include:: ../../includes_ohai/includes_ohai_6_platforms.rst
 
 Extend a Plugin
 -----------------------------------------------------
-|ohai| makes it very easy to extend a current plugin with new information. Simply require the plugin you want to extend and extend away. In this example we want to add LOLCODE to languages.
-
-In plugins/lolcode.rb:
-
-.. code-block:: ruby
-
-   provides "languages/lolcode"
-   require_plugin "languages"
-   languages[:lolcode] = Mash.new
-   languages[:lolcode][:version] = "TEH VERSHIONS"
+.. include:: ../../includes_ohai/includes_ohai_6_extend.rst
 
 The ohai Cookbook
 =====================================================
@@ -118,7 +78,7 @@ Upload Custom Plugins
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_plugin_upload.rst
 
-The ``ohai`` Recipe
+Add |ohai| to a Run-list
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_add_to_run_list.rst
 
