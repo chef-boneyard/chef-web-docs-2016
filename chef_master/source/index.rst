@@ -137,6 +137,7 @@ Cookbooks
    ctl_chef_server
    ctl_private_chef
    ctl_chef_solo
+   ctl_ohai
    ctl_pushy_client
    server_types
    server_components 
