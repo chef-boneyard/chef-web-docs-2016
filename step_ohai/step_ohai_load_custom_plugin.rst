@@ -1,20 +1,23 @@
 .. This is an included how-to. 
 
-Load a custom |ohai| plugin by doing the following:
+To load an |ohai| plugin, do the following:
 
-#. Add the following to the end of the ``/etc/chef/client.rb`` file:
+#. Add the following setting to the end of the |client rb| file:
 
-.. code-block:: ruby
-
-   Ohai::Config[:plugin_path]
+   .. code-block:: ruby
    
-   where ``plugin_path`` is something like ``/etc/ohai/plugins``.
+      Ohai::Config[:plugin_path]
+   
+   where ``plugin_path`` is the path to the directory in which |ohai| plugins are located. For example: ``/etc/ohai/plugins``.
 
-#. Test each plugin using the following:
+#. Test each plugin by running the following command:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-   ohai -d plugin_path
+      ohai -d plugin_path
 
-   where ``plugin_path`` is each of the custom |ohai| plugins.
+   where ``plugin_path`` the directory in which |ohai| plugins are located. For example:
 
+   .. code-block:: bash
+
+      ohai -d /etc/ohai/plugins

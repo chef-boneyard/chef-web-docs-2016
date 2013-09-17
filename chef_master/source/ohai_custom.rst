@@ -2,7 +2,7 @@
 Ohai Plugins
 =====================================================
 
-.. warning:: This topic includes descriptions of functionality that do not (yet) exist in a published version of |ohai|.
+.. warning:: This topic includes descriptions of functionality will be available in an upcoming release for |ohai|.
 
 .. include:: ../../includes_ohai/includes_ohai.rst
 

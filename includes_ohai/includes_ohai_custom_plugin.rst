@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-An |ohai| plugin is a way to customize the information that |ohai| looks for at the start of a |chef client| run and to customize the information that is available to the |chef client| when configuring the node.
+A custom |ohai| plugin allows additional attributes to be provided to the |chef client| at the start of the |chef client| run. A custom |ohai| plugin can extend an existing plugin and/or can describe a new set of attributes, depending on what is required.
