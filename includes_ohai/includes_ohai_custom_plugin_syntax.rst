@@ -35,11 +35,11 @@ where
 
 * Required. ``(:Name)`` is used to identify the plugin; when two plugins have the same ``(:Name)``, those plugins are joined together and run as if they were a single plugin
 * ``include`` is a standard |ruby| method that allows an |ohai| plugin to include a class, such as ``Ohai::Mixin::ModuleName``
-* ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin; a sub-attribute can also be defined using the ``attribute/subattribute`` pattern
+* Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin; a sub-attribute can also be defined using the ``attribute/subattribute`` pattern
 * ``depends`` is a comma-separated list of one (or more) attributes that are collected by another plugin; as long as the value is collected by another |ohai| plugin, it can be used by any plugin
 * ``shared_methods`` defines code that can be shared among one (or more) ``collect_data`` blocks; for example, instead of defining a mash for each ``collect_data`` block, the code can be defined as a shared method, and then called from any ``collect_data`` block
 * ``collect_data`` is a block of |ruby| code that is called by |ohai| when it runs; one (or more) ``collect_data`` blocks can be defined in a plugin, but only a single ``collect_data`` block is ever run.
-* Required. ``collect_data(:default)`` is the code block that runs when a node's platform is not defined by a platform-specific ``collect_data`` block
+* ``collect_data(:default)`` is the code block that runs when a node's platform is not defined by a platform-specific ``collect_data`` block
 * ``collect_data(:platform)`` is a platform-specific code block that is run when a match exists between the node's platform and this ``collect_data`` block; only one ``collect_data`` block may exist for each platform
 * ``require "platform_specific_requirement"`` is a standard |ruby| method that is used to list files that may be required by the platform; as a best practice, even though this can be defined at the top of the file (which is a standard approach with |ruby| code), it is recommended for custom |ohai| plugins that platform-specific requirements be grouped under the corresponding platform-specific ``collect_data`` block; an error will be generated if a file is required, but |ohai| cannot find it
 * ``Ohai::Log.log_type`` is used to tell the |chef client| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``

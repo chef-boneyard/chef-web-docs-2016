@@ -22,11 +22,11 @@ The ``require`` method is a standard |ruby| method that can be used to list file
    
    end
 
-|ohai| will attempt to fully qualify the name of any class by prepending ``Chef::`` to the loaded class. For example both:
+|ohai| will attempt to fully qualify the name of any class by prepending ``Ohai::`` to the loaded class. For example both:
 
 .. code-block:: ruby
 
-   require Chef::Mixin::ShellOut
+   require Ohai::Mixin::ShellOut
 
 and:
 
@@ -34,9 +34,9 @@ and:
 
    require Mixin::ShellOut
 
-are both understood by the |ohai| in the same way: ``Chef::Mixin::ShellOut``.
+are both understood by the |ohai| in the same way: ``Ohai::Mixin::ShellOut``.
 
-When a class is an external class (and therefore should not have ``Chef::`` prepended), use ``::`` to let the |ohai| know. For example:
+When a class is an external class (and therefore should not have ``Ohai::`` prepended), use ``::`` to let the |ohai| know. For example:
 
 .. code-block:: ruby
 
