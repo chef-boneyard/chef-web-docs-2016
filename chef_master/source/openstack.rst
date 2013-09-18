@@ -2,8 +2,6 @@
 |chef openstack|
 =====================================================
 
-.. warning:: DRAFT
-
 .. include:: ../../includes_openstack/includes_openstack.rst
 
 This page describes how to use the |chef openstack| cookbooks as the basis for managing an |openstack| deployment with |chef|, as well as how to participate in the development and maintenance process of these cookbooks. For more information about |openstack| itself, see http://docs.openstack.org.
