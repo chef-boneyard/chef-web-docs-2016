@@ -6,7 +6,7 @@ The following |ohai| example shows a plugin can use a ``mixin`` library and also
 
 .. code-block:: ruby
 
-   require 'ohai/os'
+   require 'ohai/mixin/os'
    
    Ohai.plugin(:Os) do
      provides "os", "os_version"
