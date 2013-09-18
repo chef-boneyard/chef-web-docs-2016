@@ -52,7 +52,7 @@ Examples
 =====================================================
 The following examples show different ways of building |ohai| plugins.
 
-Multiple ``collect_data`` Blocks
+``collect_data`` Blocks
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_multiple_collect_data_blocks.rst
 
