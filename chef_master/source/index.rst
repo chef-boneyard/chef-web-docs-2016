@@ -190,7 +190,7 @@ Cookbooks
    videos
    release_notes
    openstack
-   
+   feedback
    manage_server_hosted_accounts
    manage_server_hosted_clients
    manage_server_hosted_cookbooks

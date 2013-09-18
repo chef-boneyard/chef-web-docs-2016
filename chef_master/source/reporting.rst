@@ -26,7 +26,7 @@ http://docs.opscode.com/enterprise/ctl_opscode_reporting.html
 
 Configuration Settings
 -----------------------------------------------------
-|reporting| relies on two settings in the |config rb| file:
+|reporting| relies on two settings in the |client rb| file:
 
 .. list-table::
    :widths: 200 300
