@@ -5,7 +5,7 @@ All about Chef ...
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 
-Getting Started
+Getting Started 
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
 

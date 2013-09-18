@@ -206,7 +206,6 @@ The following command-line tools can be run on any node:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/ctl_chef_solo.html">chef-solo</a> </br>
 
 
-
 Cookbooks
 =====================================================
 A cookbook is the fundamental unit of configuration and policy distribution. A cookbook defines a scenario and contains all of the components that are required to support that scenario.
