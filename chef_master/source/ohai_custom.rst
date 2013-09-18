@@ -32,6 +32,10 @@ require
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst
 
+/common Directory
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_require_common.rst
+
 Shared Methods
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst
@@ -46,13 +50,19 @@ rescue
 
 Examples 
 =====================================================
-The following examples show |ohai| plugins.
+The following examples show different ways of building |ohai| plugins.
 
-Hostnames
+Multiple ``collect_data`` Blocks
 -----------------------------------------------------
-.. note:: This is a placeholder example.
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_multiple_collect_data_blocks.rst
 
-.. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_hostname.rst
+Use a ``mixin`` Library
+-----------------------------------------------------
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_use_mixin_library.rst
+
+Get Kernel Values
+-----------------------------------------------------
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_kernels.rst
 
 
 
