@@ -1,5 +1,5 @@
 =====================================================
-Ohai Plugins
+Ohai Custom Plugins
 =====================================================
 
 .. warning:: This topic includes descriptions of functionality will be available in an upcoming release for |ohai|.
@@ -53,3 +53,11 @@ Hostnames
 .. note:: This is a placeholder example.
 
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_hostname.rst
+
+
+
+
+
+
+
+
