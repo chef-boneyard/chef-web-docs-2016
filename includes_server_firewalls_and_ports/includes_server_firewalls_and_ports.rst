@@ -62,6 +62,6 @@ For back-end servers:
    * - 6379
      - |service redis|
    * - 7788
-     - |service drbd|
+     - |drbd|
 
 Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
