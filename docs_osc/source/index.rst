@@ -363,6 +363,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
 
 Platforms
 =====================================================
+The following topics discuss using |chef server osc| with platforms:
 
 .. raw:: html
 
