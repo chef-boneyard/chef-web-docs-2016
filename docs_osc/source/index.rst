@@ -361,6 +361,12 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
 
+Platforms
+=====================================================
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/openstack.html">OpenStack</a> </br>
 
 .. Hide the TOC from this file.
 
@@ -479,6 +485,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    migrate_to_hosted
    osc_overview
    ohai
+   openstack
    plugin_knife_authenticated_requests
    plugin_knife_azure
    plugin_knife_bluebox

@@ -80,6 +80,13 @@ Getting Started
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/api_cookbooks_site.html">Cookbooks Site API</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/dsl_recipe.html">Recipe DSL</a> </br>
 
+**Platforms**
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/openstack.html">OpenStack</a> </br>
+
+
 **Reference**
 
 .. raw:: html
