@@ -26,7 +26,7 @@ Use a Mash
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_example.rst
 
 require
 -----------------------------------------------------
