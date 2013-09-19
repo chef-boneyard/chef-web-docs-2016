@@ -191,7 +191,7 @@ This configuration file has the following settings:
 
           supports 'ubuntu'
 
-       Or, to support versions of |ubuntu| between 8.04 and 9.10:
+       Or, to support versions of |ubuntu| greater than or equal to 8.04:
        ::
 
           supports 'ubuntu', ">= 8.04"
