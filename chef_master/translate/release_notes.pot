@@ -1,0 +1,2058 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-09-19 10:27\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/release_notes.rst:33
+# 8f5c45e2fb5b41e9a5f5d3332d7ebdfc
+msgid "Release Notes: Chef 11.6.0"
+msgstr ""
+
+#: ../../includes_chef/includes_chef.rst:5
+# 3593a62fb49448e58f1613f898288078
+msgid "|chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. The |chef client| relies on abstract definitions (known as cookbooks and recipes) that are written in |ruby| and are managed like source code. Each definition describes how a specific part of your infrastructure should be built and managed. The |chef client| then applies those definitions to servers and applications, as specified, resulting in a fully automated infrastructure. When a new node is brought online, the only thing the |chef client| needs to know is which cookbooks and recipes to apply."
+msgstr ""
+
+#: ../source/release_notes.rst:38
+# c52b942896a24363af2850c5de389603
+msgid "Known Issues"
+msgstr ""
+
+#: ../source/release_notes.rst:39
+# f8e8def0fd75452ea51a0aa37a58e712
+msgid "The following issues are known for |chef 11-6| and/or may affect the behavior of your current environment if you upgrade to |chef 11-6|:"
+msgstr ""
+
+#: ../source/release_notes.rst:41
+# 9af8536959ee4e82b685a02794d260d9
+msgid "`CHEF-4406 <http://tickets.opscode.com/browse/CHEF-4406>`_  --- response_file fails trying to load preseed templates and falls back to cookbook files"
+msgstr ""
+
+#: ../source/release_notes.rst:42
+# 385ff1e78eaa483a99a61dab05cbda64
+msgid "`CHEF-4419 <http://tickets.opscode.com/browse/CHEF-4419>`_  --- Absolute file paths with no drive letter for file resources on Windows fails chef-client run"
+msgstr ""
+
+#: ../source/release_notes.rst:43
+# 576b1bcb18434e2889097a9c01b1082f
+msgid "`CHEF-4422 <http://tickets.opscode.com/browse/CHEF-4422>`_  --- remote_file fails when source becomes too long"
+msgstr ""
+
+#: ../source/release_notes.rst:46
+# 8cb4174bf341492b843e2796f4734829
+msgid "What's New"
+msgstr ""
+
+#: ../source/release_notes.rst:47
+# c40fe725327e43a6aa649995fce156c4
+msgid "The following items are new for |chef 11-6| and/or are changes from previous versions. The short version:"
+msgstr ""
+
+#: ../source/release_notes.rst:49
+# 96a90f831f454af283687fb2999c89be
+msgid "**Support for SELinux** Support for |selinux| has been improved, including the |chef client| using the ``restorecon`` command when using |resource file|-based resources, correctly matching default policy settings (when the underlying cookbook also conforms to the same policy settings), and configurable file permission fixup (with the ``enable_selinux_file_permission_fixup`` setting in the |client rb| file)."
+msgstr ""
+
+#: ../source/release_notes.rst:50
+# bc2bb8dd6f554a03b046f767079e6f99
+msgid "**Atomic file updates** Atomic file updates ensure that updates are still made in certain situations, such as if disk space runs out or when a binary is being updated."
+msgstr ""
+
+#: ../source/release_notes.rst:51
+# 0c1e5c05c70b44c6b54d0aa0ba863b83
+msgid "**Lazy attribute evaluation** In some cases, the value for an attribute cannot be known until the execute phase of a |chef client| run. Instead of an attribute being assigned a value, it may instead be assigned a code block, which can then be used during the execute phase to determine the attribute value."
+msgstr ""
+
+#: ../source/release_notes.rst:52
+# 1a6079622e7b4765b6b1e9f1330a7e97
+msgid "**Rebuilt file resource** The |resource file| resource has been refactored and is now the base resource for the |resource cookbook_file|, |resource remote_file|, and |resource template| resources."
+msgstr ""
+
+#: ../source/release_notes.rst:53
+# 178984b3d1df46f9b0e2d3cbc0b169a9
+msgid "**New common attributes for file-based resources** The ``atomic_update``, ``force_unlink``, and ``manage_symlink_source`` attributes have been added."
+msgstr ""
+
+#: ../source/release_notes.rst:54
+# f6272b666b0049b387f97136435d2146
+msgid "**New attributes for remote_file resource** The ``ftp_active_mode``, ``headers``, ``use_conditional_get``, ``use_etag``, and ``use_last_modified`` have been added."
+msgstr ""
+
+#: ../source/release_notes.rst:55
+# a20015c0e7a6478280370a3ec744d3bf
+msgid "**New helper methods for the template resource** The ``helper`` and ``helpers`` attributes have been added. Use these to define helper methods to extend templates using by using inline helper methods, inline helper modules, and cookbook library modules."
+msgstr ""
+
+#: ../source/release_notes.rst:56
+# d598a607f181436eb9adeb2a2e98dfc9
+msgid "**Updated attributes for file-based resources** The ``source`` attribute has been modified to support FTP and local files."
+msgstr ""
+
+#: ../source/release_notes.rst:57
+# cfd86b4910e940309a2f478a52ef006f
+msgid "**Updated behavior for the mode attribute** The ``mode`` attribute default behavior is changed for file-based resources and the |resource directory| resource."
+msgstr ""
+
+#: ../source/release_notes.rst:58
+# 041536d070124cbeb358b33b72006058
+msgid "**New batch resource** Execute a batch script using the |windows cmd exe| interpreter. A temporary file is created and then executed like other script resources."
+msgstr ""
+
+#: ../source/release_notes.rst:59
+# fa6dc9c022574e2897b8d19e20e0a338
+msgid "**New powershell_script resource** Execute a script using the |windows powershell| interpreter just like the |resource script| resource, but designed for the |windows| platform and the |windows powershell| interpreter."
+msgstr ""
+
+#: ../source/release_notes.rst:60
+# 1557f5976fa247c29d88062abebf67e4
+msgid "**New settings for the client.rb file** The ``data_bag_decrypt_minimum_version``, ``enable_selinux_file_permission_fixup``, and ``file_atomic_update`` settings have been added."
+msgstr ""
+
+#: ../source/release_notes.rst:61
+# 8c5d950961964516bb3cfcd5d4318c16
+msgid "**New subcommands for Knife** |subcommand knife deps|, |subcommand knife edit|, and |subcommand knife xargs| have been added."
+msgstr ""
+
+#: ../source/release_notes.rst:62
+# 8e6704cbbd674147aedb5a9fc81c87dd
+msgid "**New options for Knife subcommands** The |subcommand knife delete|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife list|, and |subcommand knife upload| subcommands have new options."
+msgstr ""
+
+#: ../source/release_notes.rst:63
+# 52cf7f0ad092427fa511e0f4a2ff8cdf
+msgid "**Support for environments in chef-solo** |chef solo| now supports environments."
+msgstr ""
+
+#: ../source/release_notes.rst:64
+# 3e846066083840d3ac0a1de27cc61904
+msgid "**New way to force a redeploy when using the deploy resource** To force a redeploy, delete either the deployment directory or the cache file."
+msgstr ""
+
+#: ../source/release_notes.rst:65
+# a057396d6196426c9e0d925dffdbe5a4
+msgid "**Changed behavior for chef-shell** |chef shell| behavior is changed to load recipes while in |chef client| mode. This is by design and represents the behavior as originally intended."
+msgstr ""
+
+#: ../source/release_notes.rst:68
+# 051e63f2307f47a98d758831502dba18
+msgid "Required Updates"
+msgstr ""
+
+#: ../source/release_notes.rst:69
+# 5545710809f34f8ab8b1f1df72ffea5a
+msgid "The following updates must also be made at the same time as any upgrade to |chef 11-6|."
+msgstr ""
+
+#: ../source/release_notes.rst:71
+# 9dab6e39efc046c9b1bf177d2eadc0f5
+msgid "If the |cookbook partial_search| cookbook is being used, it must be upgraded to version 1.0.2 (or higher)"
+msgstr ""
+
+#: ../source/release_notes.rst:72
+# e564ce703ae94241a65b3b8d088bcc58
+msgid "If the |cookbook sudo| cookbook is being used, it must be upgraded to version 2.1.4 (or higher)"
+msgstr ""
+
+#: ../source/release_notes.rst:75
+# e0c57c68f4f14ae1871b19e3339e14f1
+msgid "Atomic File Updates"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_common_atomic_update.rst:5
+# 2ebd512016bf46ba9dc48e335014fa03
+msgid "Atomic updates are used with |resource file|-based resources to help ensure that file updates can be made when updating a binary or if disk space runs out."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_common_atomic_update.rst:7
+# eb062789ac4e4592822f3f8e75942894
+msgid "Atomic updates are enabled by default. They can be managed globally using the ``file_atomic_update`` attribute in the |client rb| file. They can be managed on a per-resource basis using the ``atomic_update`` attribute that is available with the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_common_atomic_update.rst:9
+# a9653eb5582048cc9f7f4dd8098e433e
+msgid "On certain platforms, and after a file has been moved into place, the |chef client| may modify file permissions to support features specific to those platforms. On platforms with |selinux| enabled, the |chef client| will fix up the security contexts after a file has been moved into the correct location by running the ``restorecon`` command. On the |windows| platform, the |chef client| will create files so that ACL inheritance works as expected."
+msgstr ""
+
+#: ../source/release_notes.rst:79
+# 885bfe90c858457a9d7786e799eb10cb
+msgid "Lazy Attribute Evaluation"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_common_lazy_evaluation.rst:5
+# 979b5828c0fd40d5a87afecaf7e2369c
+msgid "In some cases, the value for an attribute cannot be known until the execution phase of a |chef client| run. In this situation, using lazy evaluation of attribute values can be helpful. Instead of an attribute being assigned a value, it may instead be assigned a code block. The syntax for using lazy evaluation is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_common_lazy_evaluation.rst:11
+# f412fa2c2b2543118eb23d4460f7bde8
+msgid "where ``lazy`` is used to tell the |chef client| to evaluate the contents of the code block later on in the resource evaluation process (instead of immediately) and ``{ code_block }`` is arbitrary |ruby| code that provides the value."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_common_lazy_evaluation.rst:13
+# b76195f86e4a4412b4dfe1807e5d9e7e
+msgid "For example, a resource that is not doing lazy evaluation:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_common_lazy_evaluation.rst:22
+# 9d5d17408d0c44cfa4d8bdf3a94f743e
+msgid "and a resource that is doing lazy evaluation:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_common_lazy_evaluation.rst:31
+# 25f9a41f966945a284144625de1c66ac
+msgid "In the previous examples, the first resource uses the value ``/foo/bar`` and the second resource uses the value provided by the code block, as long as the contents of that code block are a valid resource attribute."
+msgstr ""
+
+#: ../source/release_notes.rst:83
+# 71127ac11e1a4e18b172e88e22e81acf
+msgid "|resource file|-based Resources"
+msgstr ""
+
+#: ../source/release_notes.rst:84
+# 5670ca12d3f44aa3bc21d3e09ba23f67
+msgid "Prior to |chef 11-6|, the |chef client| relied on the underlying |ruby| implementation to define behaviors for file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|). These resources have been standardized and are now all fully based on the |resource file| resource."
+msgstr ""
+
+#: ../source/release_notes.rst:86
+# de67cb4ad88e4740b7623a3c31e25a9a
+msgid "File-based providers now create all files with the same default permissions. This default is determined by operating system, file system type, and umask settings."
+msgstr ""
+
+#: ../source/release_notes.rst:87
+# 02eec2d8a881423e9fa228d4a207d191
+msgid "When an |ssh| configuration file is created using the |resource cookbook_file| or |resource template| resources and the file mode for that |ssh| configuration file is not specified, it is possible for incorrect permissions to be applied. In previous versions, the |chef client| would attempt to create the file with ``0600`` permissions if the file mode was not specified. For example:"
+msgstr ""
+
+#: ../source/release_notes.rst:96
+# aabb6c27d8004d05bda4eae1c24a8901
+msgid "In |chef 11-6|, the |chef client| may create files with other permissions---such as ``0644``---when the file mode is not specified. This may create situations where the correct permissions for an |ssh| configuration file are not applied, and subsequent |ssh| operations could fail. Use the ``mode`` attribute to ensure the correct permissions are applied to a file. For example:"
+msgstr ""
+
+#: ../source/release_notes.rst:107
+# 024583d2b2b541d89011b89bff53b46d
+msgid "File-based providers now have a defined behavior for when they encounter something other than a file when attempting to update a file. The ``force_unlink`` attribute is used to trigger an error (default) or to overwrite the target with the specified file. See the attributes section (below) for more information about this attribute."
+msgstr ""
+
+#: ../source/release_notes.rst:108
+# 695a5f8335874ed6b8366ba584d83015
+msgid "Many methods that were present in the file-based providers prior to |chef 11-6| have been deprecated. If a custom provider has been authored that subclasses the pre-|chef 11-6| file-based providers, the behavior of that custom provider should be re-tested after upgrading to |chef 11-6| to verify all of the desired behaviors."
+msgstr ""
+
+#: ../source/release_notes.rst:110
+# d1786a9ec6e749fc8c05e12e7ad43f2b
+msgid "For a machine on which |selinux| is enabled, the |chef client| will create files that correctly match the default policy settings only when the cookbook that defines the action also conforms to the same policy."
+msgstr ""
+
+#: ../source/release_notes.rst:113
+# 513fe56bd14d4583b0751e5952c56cde
+msgid "File-based Attributes"
+msgstr ""
+
+#: ../source/release_notes.rst:114
+# 51c5085cbe014d37a5188410e39ed8fc
+msgid "New attributes (common to all |resource file|-based resources):"
+msgstr ""
+
+#: ../source/release_notes.rst:120
+#: ../source/release_notes.rst:135
+#: ../source/release_notes.rst:148
+#: ../source/release_notes.rst:159
+#: ../source/release_notes.rst:180
+#: ../source/release_notes.rst:191
+#: ../source/release_notes.rst:222
+#: ../source/release_notes.rst:233
+#: ../../includes_resources/includes_resource_batch_attributes.rst:10
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:10
+# 3b647b531a6d42559d72c0c57ff1ac9a
+# fe2d5ece29f4433fa0467a59c11eaedd
+# bff1133e66ce4eb89af8399a47f842e0
+# a0b855fb07174ccf8e7db5a1f47a5e10
+# a965994228904d4eb3677b39a0733ea5
+# e1d2c84a94e04353b187e798acba5306
+# 2f39671a3716483fabf2d31fca2a617e
+# 5636566d0056448e852a6154b15d3306
+# c39cd298484d4f22b3eb52d8783dc543
+# ad2d658d15f34f8091b14b4cf540816b
+msgid "Attribute"
+msgstr ""
+
+#: ../source/release_notes.rst:121
+#: ../source/release_notes.rst:136
+#: ../source/release_notes.rst:149
+#: ../source/release_notes.rst:160
+#: ../source/release_notes.rst:181
+#: ../source/release_notes.rst:192
+#: ../source/release_notes.rst:223
+#: ../source/release_notes.rst:234
+#: ../../includes_resources/includes_resource_batch_actions.rst:11
+#: ../../includes_resources/includes_resource_batch_attributes.rst:11
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:11
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:11
+#: ../source/release_notes.rst:282
+#: ../source/release_notes.rst:427
+#: ../source/release_notes.rst:449
+# a6e5ae7fc7f84604a99765f6f682e346
+# 5d7353df552146a99fe0cd154cb27dc4
+# a2bd723128a344e99227b1f4e270ca77
+# ff1e52c4283744058908344f8edacf1d
+# 9e7609ba19e74a7086d32fcdd6e941e6
+# de06ca5526364bfc9d7ebe7883d3672d
+# 70b5e8feac7b442f89a1a61079a6a3a8
+# 066aa49f4a144fb48959851b0fa0103e
+# 3bf7d3992a574019bac31cbdc1bd4531
+# 975dba5c38c14ae793c3494ba09628f3
+# 233d8e42f06e43a793ef4bc34ab154e3
+# 3a7ef2450ba24a59bb19eb5ac1702374
+# ef47519bf09e442db49e7a10fa7a857b
+# 9252b3418cb040a3bbe54c73919a57a3
+# 0b51435a91054fb59bac3332d9d823a0
+msgid "Description"
+msgstr ""
+
+#: ../source/release_notes.rst:122
+# dcf16dd47ac640b3bca2320020105dc7
+msgid "``atomic_update``"
+msgstr ""
+
+#: ../source/release_notes.rst:123
+# b725d583ea2f4de2b6f90954e2f317fa
+msgid "|atomic_update|"
+msgstr ""
+
+#: ../source/release_notes.rst:124
+# e9b136ef00ca4338ae192649a1a8f146
+msgid "``force_unlink``"
+msgstr ""
+
+#: ../source/release_notes.rst:125
+# b9eea14f13d3435b825e4eb5d7d22c7d
+msgid "|force_unlink|"
+msgstr ""
+
+#: ../source/release_notes.rst:126
+# 319e08860d134dcdabac85314766c100
+msgid "``manage_symlink_source``"
+msgstr ""
+
+#: ../source/release_notes.rst:127
+# 755d44cd31c94155801cd65b2c5b5463
+msgid "|manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version."
+msgstr ""
+
+#: ../source/release_notes.rst:129
+# b60d7917fc8148aeb384715e8b58d072
+msgid "The following attributes for |resource file|-based resources have been updated:"
+msgstr ""
+
+#: ../source/release_notes.rst:137
+#: ../source/release_notes.rst:150
+#: ../source/release_notes.rst:182
+# 29c3fbf18b464323a9c3365deb819e47
+# c51848aa47b64619b7e36917bea2ef95
+# 4516cb9a6f174c5f8c4080ed4e12069c
+msgid "``source``"
+msgstr ""
+
+#: ../source/release_notes.rst:138
+#: ../source/release_notes.rst:151
+#: ../source/release_notes.rst:183
+# ed04a5dc98d24e89b61903aff91d29cf
+# 4fc83f3e92df4309b356cdb75a2b4e14
+# dd14a99db96f491cac30681cdc1c647b
+msgid "|source file_location|"
+msgstr ""
+
+#: ../source/release_notes.rst:141
+# d2200a7b135a4390a39bdba353406d54
+msgid "|resource remote_file| Attributes"
+msgstr ""
+
+#: ../source/release_notes.rst:142
+# 34637ef0324f483a9fcf272bef97e540
+msgid "The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. Updated attributes:"
+msgstr ""
+
+#: ../source/release_notes.rst:153
+#: ../source/release_notes.rst:185
+# aa2a9b116a0946cc9f9400cf67588761
+# 39859cbd82664ae8b7373472d5c3ff6e
+msgid "New attributes:"
+msgstr ""
+
+#: ../source/release_notes.rst:161
+# c278d4ea9353425b987c209c4f20af3a
+msgid "``ftp_active_mode``"
+msgstr ""
+
+#: ../source/release_notes.rst:162
+# c6037fb7d4d5402394ce8150edee7d7e
+msgid "|ftp_active_mode| Default value: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:163
+# ae8857b7b39240c3a6258137b630f277
+msgid "``headers``"
+msgstr ""
+
+#: ../source/release_notes.rst:164
+# ea776dba0864423eb5ef4139e8fbdd53
+msgid "|headers custom| Default value: ``{}``."
+msgstr ""
+
+#: ../source/release_notes.rst:165
+# 4ce2b9bd24f64149b680eb23745c8cc1
+msgid "``use_conditional_get``"
+msgstr ""
+
+#: ../source/release_notes.rst:166
+# 5dbb715b4d5d49ffa8b2a79b4a525a34
+msgid "|use conditional_get| Default value: ``true``."
+msgstr ""
+
+#: ../source/release_notes.rst:167
+# 11f0f49844744ab499c164e1c798d3cb
+msgid "``use_etag``"
+msgstr ""
+
+#: ../source/release_notes.rst:168
+# b0794da60c3f4bb28f51d72da2954cdd
+msgid "|use etag| Default value: ``true``."
+msgstr ""
+
+#: ../source/release_notes.rst:169
+# 016d619523084a0b87d6aba4e69aa9be
+msgid "``use_last_modified``"
+msgstr ""
+
+#: ../source/release_notes.rst:170
+# 5adf11d92b9b429391079f2d17a6d0da
+msgid "|use last_modified| Default value: ``true``."
+msgstr ""
+
+#: ../source/release_notes.rst:173
+# bd7ec09b64e841dcb692dcfcaeca7dea
+msgid "|resource template| Attributes"
+msgstr ""
+
+#: ../source/release_notes.rst:174
+# e5600e25400b46be9875ae191ca3b024
+msgid "The |resource template| resource was updated to be fully-based on the |resource file| resource. Updated attributes:"
+msgstr ""
+
+#: ../source/release_notes.rst:193
+# b16af5b8e5c3438cb8db244e730121a0
+msgid "``helper``"
+msgstr ""
+
+#: ../source/release_notes.rst:194
+# 29806165b2e24501978589c8d47a6e20
+msgid "|helper| Default value: ``{}``."
+msgstr ""
+
+#: ../source/release_notes.rst:195
+# 32ea24c04ba04b69b85af307b64409d3
+msgid "``helpers``"
+msgstr ""
+
+#: ../source/release_notes.rst:196
+# a946db9ee50b4046a0d39bf05b342f2d
+msgid "|helpers| Default value: ``[]``."
+msgstr ""
+
+#: ../source/release_notes.rst:199
+# 79511b9cad0749b98c28b177432b3a2a
+msgid "Helper Methods"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_template_helper.rst:5
+# 02f0e3d82dc6408bbc85effc6e3876e7
+msgid "A helper is a method or a module that can be used to extend a template. There are three approaches:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_template_helper.rst:7
+# 1b613ce4ceb04af8b196f4e0bd1278a8
+msgid "An inline helper method"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_template_helper.rst:8
+# 59c4ad71c948440b86699f7b9e767156
+msgid "An inline helper module"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_template_helper.rst:9
+# 2ad1fe0b8165444caae18e4eee132aa8
+msgid "A cookbook library module"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_template_helper.rst:11
+# 9806bd95a1834ab3a9ebd4b6b2bc5c9f
+msgid "Use the ``helper`` attribute in a recipe to define an inline helper method. Use the ``helpers`` attribute to define an inline helper module or a cookbook library module."
+msgstr ""
+
+#: ../source/release_notes.rst:202
+# 08b04b10f7f9464ba370f42fd3978aa9
+msgid "**Inline Helper Methods**"
+msgstr ""
+
+#: ../../step_resource/step_resource_template_inline_method.rst:4
+# ddb45feb618f43ef9cc0eaefbc486f5c
+msgid "A template helper method is always defined inline on a per-resource basis. A simple example:"
+msgstr ""
+
+#: ../../step_resource/step_resource_template_inline_method.rst:12
+# f94c9489f4af492cb88ef5475bd75abd
+msgid "Another way to define an inline helper method is to reference a node object so that repeated calls to one (or more) cookbook attributes can be done efficiently:"
+msgstr ""
+
+#: ../../step_resource/step_resource_template_inline_method.rst:20
+# 7e05b171acfd48de8aa017f5d2c80355
+msgid "An inline helper method can also take arguments:"
+msgstr ""
+
+#: ../../step_resource/step_resource_template_inline_method.rst:28
+# 8247e93459af47858c2c7edbd7ab2706
+msgid "Once declared, a template can then use the helper methods to build a file. For example:"
+msgstr ""
+
+#: ../../step_resource/step_resource_template_inline_method.rst:34
+#: ../../step_resource/step_resource_template_inline_method.rst:40
+# eda846d4b7a94f6a84a849f50f9f77be
+# b89698b942ef401ab1dd0bf1fd11cc65
+msgid "Or:"
+msgstr ""
+
+#: ../source/release_notes.rst:206
+# 3619258cbc7344ff9882aa234fc9b5ad
+msgid "**Inline Helper Modules**"
+msgstr ""
+
+#: ../../step_resource/step_resource_template_inline_module.rst:4
+# 347f530c8b564be4955323d90e58c91f
+msgid "A template helper module can be defined inline on a per-resource basis. This approach can be useful when a template requires more complex information. For example:"
+msgstr ""
+
+#: ../../step_resource/step_resource_template_inline_module.rst:26
+# a4b3cc5f346d4c1a950cdd79e559a582
+msgid "where the ``hello_world``, ``app``, and ``app_conf(setting)`` methods comprise the module that extends a template."
+msgstr ""
+
+#: ../source/release_notes.rst:210
+# 6e13f1a8e1dd4ccb8483b545db61dd9b
+msgid "**Cookbook Library Modules**"
+msgstr ""
+
+#: ../../step_resource/step_resource_template_library_module.rst:4
+# 9d7f898bbbb84a67be46ca76a640cc1c
+msgid "A template helper module can be defined in a library. This is useful when extensions need to be reused across recipes or to make it easier to manage code that would otherwise be defined inline on a per-recipe basis."
+msgstr ""
+
+#: ../source/release_notes.rst:215
+# 83ac0a7f895342d78efa98c14468f926
+msgid "Updated Behavior for ``mode`` Attribute"
+msgstr ""
+
+#: ../source/release_notes.rst:216
+# a0b2f48573364ab0b3e3d01bb1152799
+msgid "The default behavior for the ``mode`` attribute has been updated. For the |resource directory| resource:"
+msgstr ""
+
+#: ../source/release_notes.rst:224
+#: ../source/release_notes.rst:235
+# 22958e267b21482d9f4023de7894d2a8
+# 0e98dab53145493aba13b65580987968
+msgid "``mode``"
+msgstr ""
+
+#: ../source/release_notes.rst:225
+# 8c95779ab9de45abb8aa6bc2057358f3
+msgid "|mode resource_directory|"
+msgstr ""
+
+#: ../source/release_notes.rst:227
+# 0df783ef132b459b9e32adfe40db8633
+msgid "And for each of the file-based resources (|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|):"
+msgstr ""
+
+#: ../source/release_notes.rst:236
+# 19897fb40ff04a39a5e134a876f6d194
+msgid "|mode resource_file|"
+msgstr ""
+
+#: ../source/release_notes.rst:240
+# 8a92b36f55ee40859b1cd3b663dc3331
+msgid "|resource batch| Resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch.rst:4
+# 916155f9ca9247a4aa7c3b72cb3bcbbc
+msgid "The |resource batch| resource for the |windows| platform that is used to execute a batch script using the |windows cmd exe| interpreter, much like how the |resource script| and |resource script|-based resources---|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource script_python|, and |resource script_ruby|---are used. The |resource batch| is specific to the |windows| platform and |windows cmd exe| interpreter. This resource creates and executes a temporary file (similar to how the |resource script| resource behaves), rather than running the command inline. This resource includes actions (``:run`` and ``:nothing``) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) that are inherited from from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../source/release_notes.rst:244
+#: ../source/release_notes.rst:261
+# dbba6b236cb54900b4c0ec47ae163820
+# d31fdeb4c2ef4b81a43ec8b2388e470d
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:4
+# 93706b0aaaa246c48acdfb8dd1c302fc
+msgid "The syntax for using the |resource batch| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:14
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:14
+# c2ec4b3c34574f90a292fcf0c78ad761
+# bb03e1ff12094a81ab349fdde2256a73
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:16
+# 7c674716cb01421b95fbbdf3c7f13154
+msgid "``batch`` tells the |chef client| to use the ``Chef::Provider::Batch`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:17
+# 6f05855cd54b46ceaa76a8e25502c3f6
+msgid "``\"name\"`` is the name of the batch script or the path to a file which contains it"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:18
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:18
+# f0cf5de405a446eca774b1dd460a156a
+# bfcc109a1862424a80edd315d87cb8f9
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:19
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:19
+# 912b4e3ccc7348e889a4fb8ec005a64b
+# a377b934364b46eda29e009ca089d2ce
+msgid "``:action`` is the step that the resource will ask the provider to take during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_syntax.rst:21
+# 736352ef716248048b965c683073492c
+msgid "The following is an example of how the |resource batch| resource can work when used in a recipe:"
+msgstr ""
+
+#: ../source/release_notes.rst:248
+#: ../source/release_notes.rst:265
+# 9d2457b3cce647ff9f9c86cf919426ca
+# 9cfe116fe7ce49779b6393847de05ff4
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_actions.rst:4
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:4
+# c916d84e7fef40a38e4e34a1b6f0f6a5
+# 6ccd0cb0976a4beeb81c91e8fc5b0f86
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_actions.rst:10
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:10
+# 579d95e2e05346829a95beff5033a894
+# 35b710f01ee542e0a064d9e7ea1dba8e
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_actions.rst:12
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:12
+# 4609388bbf414326bad10ceb0622e092
+# 027e2c0253024adfb214fe8f636919b7
+msgid "``:run``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_actions.rst:13
+# 73d2edaf984e48d9a39efa6a92902ba7
+msgid "|resource action run windows_batch|"
+msgstr ""
+
+#: ../source/release_notes.rst:252
+#: ../source/release_notes.rst:269
+# 1d4762764de74fe4a756c2b7a44df9d6
+# 8cf9e7b0d9544d438b272ab4c6e3c458
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:4
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:4
+# efe464e0d3fe41d09adc99ef89f0923e
+# 97055afc18d447eb805d6af4692429a4
+msgid "This resource has the following attributes:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:12
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:12
+# b4d7147331074256b1fe1e6cab2767b8
+# 9fbb809a34da476ca8659e24bf8d98b9
+msgid "``architecture``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:13
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:13
+# 816d601fc0294f6185f6579473b2d288
+# 198e23fc1fda4ffda56a5fbfd8c51105
+msgid "|architecture windows_process|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:14
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:16
+# 4b90215171cd40f3ab3ca1f4f1a51e6b
+# 7f1b4f01143a49c18fe0a93abc4997a3
+msgid "``command``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:15
+# 8d0b90cd8512422c852de0518ca3fc91
+msgid "|name command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:16
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:14
+# c1f3e4120f9e43659f0da142da9d2881
+# af95db28c0c44ff4a8ff3d617c9f2e9a
+msgid "``code``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:17
+# 68c187223b39418391f148e914198f04
+msgid "|code quoted_string|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:18
+# ccd3861749b9419f97d0c2546f271718
+msgid "``creates``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:19
+# 080d117a96414797b53573a298bc35a0
+msgid "|creates file_exists|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:20
+# 03ac834d012b4c5182912b6adf69f88d
+msgid "``cwd``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:21
+# 9d0a335a9cbd449da207c2c285b42c10
+msgid "|cwd run_command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:22
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:18
+# 2348e873c723425ea8f6cf490429f43f
+# 9aa29c8f5d45463e8524ce8d74dbe041
+msgid "``flags``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:23
+# fe2501a98b7a4cdda180411316265b1f
+msgid "|flags|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:24
+# 96027c565e8e416881ca15e92454a4bc
+msgid "``group``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:25
+# 8132b36d8da24100906c883c6719e62d
+msgid "|group command|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:26
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:22
+# 9646abbc791b4c81931a3f37e5ba0000
+# 32012930a2c7418f97e3c075f3fcc3fb
+msgid "``provider``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:27
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:23
+# 8c6f9104ea9c41e895d7abb3719525ac
+# defc31f388154aa2bbf3d99bfdfacc69
+msgid "Optional. |provider resource_attribute|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:28
+# ad7cabe8f35845a8be783308b72092a5
+msgid "``returns``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:29
+# fcdddf91e3674873a6b576fc34164850
+msgid "|return_value cmd| Default value: ``0``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:30
+# f533d8668d3c49c8a548e2f27f422cc1
+msgid "``user``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch_attributes.rst:31
+# d644e77d7435485fbb76712944742d26
+msgid "|user name_or_id|"
+msgstr ""
+
+#: ../source/release_notes.rst:257
+# f3c62f6167b34de8ae6ec5512ac5391c
+msgid "|resource powershell_script| Resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script.rst:4
+# 2f8d989cff42465d886e98df504a6797
+msgid "The |resource powershell_script| resource is a resource for the |windows| platform that is used to execute a script using the |windows powershell| interpreter, much like how the |resource script| and |resource script|-based resources---|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource script_python|, and |resource script_ruby|---are used. The |resource powershell_script| is specific to the |windows| platform and |windows powershell| interpreter. This resource creates and executes a temporary file (similar to how the |resource script| resource behaves), rather than running the command inline. This resource includes actions (``:run`` and ``:nothing``; ) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) that are inherited from from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:4
+# ce3d5a727c3f4a188d75ffb2a8243e17
+msgid "The syntax for using the |resource powershell_script| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:16
+# 9f8a2190784c48028b49138be376a5ff
+msgid "``powershell_script`` tells the |chef client| to use the ``Chef::Provider::PowershellScript`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:17
+# 35109d73ff59486c8d5abc7467e30286
+msgid "``name`` is the name of the resource block; when the ``command`` attribute is not specified as part of a recipe, ``name`` is also the command to be executed"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_syntax.rst:21
+# 82fd2ad351bd4f0eb0f5b6c7b93512be
+msgid "The following is an example of how the |resource powershell_script| resource can work when used in a recipe:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_actions.rst:13
+# aad17658433d4ebbb32a55c38ba5f398
+msgid "Default. |resource action run powershell_script|"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:15
+# 4a2446255aaf4896b84e9946cc429d4c
+msgid "|code quoted_string| Default value: ``nil``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:17
+# 7a34d6a93f984897865ede250830632b
+msgid "|name command| Default value: the ``name`` of the resource block (see Syntax section above)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:19
+# f98dc0fe11a940cb816b3f14b8c2fa08
+msgid "|flags| Default value: ``[ -NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File ]``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:20
+# ae19899ee61d4680b5ec60ba393114fd
+msgid "``interpreter``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script_attributes.rst:21
+# 483255041d2042b0bf7e8fcdc4f91a6b
+msgid "|interpreter| Default value: ``nil``."
+msgstr ""
+
+#: ../source/release_notes.rst:274
+# 85380fcffb444f35bce40093a245e149
+msgid "|client rb| Settings"
+msgstr ""
+
+#: ../source/release_notes.rst:275
+# 9fe1825732f248abad37ec77f6414c13
+msgid "New settings have been added to the |client rb| file:"
+msgstr ""
+
+#: ../source/release_notes.rst:281
+#: ../source/release_notes.rst:426
+#: ../source/release_notes.rst:448
+# b74c57d896b14378962a31e545b4c2ab
+# ba404e02b6124d798d34251e664d0349
+# 006045b234c741d4aece264ff50b23c2
+msgid "Setting"
+msgstr ""
+
+#: ../source/release_notes.rst:283
+# dc5ee01aba12431bb5b5a0f4cecded61
+msgid "``data_bag_decrypt_minimum_version``"
+msgstr ""
+
+#: ../source/release_notes.rst:284
+# c2ac2f46b6414077a3278fb2ef2b7150
+msgid "|data_bag_decrypt_minimum_version| For example: ::"
+msgstr ""
+
+#: ../source/release_notes.rst:288
+# 0ba7985236ba42429272c904fd566642
+msgid "``enable_selinux_file_permission_fixup``"
+msgstr ""
+
+#: ../source/release_notes.rst:289
+# b68e272057a84b679681ea1304eb84e6
+msgid "|enable_selinux_file_permission_fixup| For example: ::"
+msgstr ""
+
+#: ../source/release_notes.rst:293
+# 6756fc742a4a4017b249d551a3b7d442
+msgid "``file_atomic_update``"
+msgstr ""
+
+#: ../source/release_notes.rst:294
+# 72a5681a9af3416b99b69d125ee7fdf3
+msgid "|file atomic_update| For example: ::"
+msgstr ""
+
+#: ../source/release_notes.rst:300
+# f7a9822c34ed4f41bf9987a84ff86a4a
+msgid "|knife| Subcommands"
+msgstr ""
+
+#: ../source/release_notes.rst:301
+# 4c12da29799641f8ab701fb222fdfa2d
+msgid "The following updates have been made to |knife| subcommands:"
+msgstr ""
+
+#: ../source/release_notes.rst:303
+# 0a49ce7f76f2494488faf6ff9a715f2d
+msgid "The |knife| essentials group of subcommands can be used with all objects in the |chef repo| and/or on the |chef server|: ``clients/``, ``cookbooks/``, ``data_bags/``, ``environments/``, ``nodes``, ``roles/``, and ``users``"
+msgstr ""
+
+#: ../source/release_notes.rst:304
+# 833d138804144d25b9b2f5a1f8791027
+msgid "The |knife| essentials group of subcommands can be used with the following objects located in |chef hosted|: ``acls``, ``groups``, and ``containers``"
+msgstr ""
+
+#: ../source/release_notes.rst:305
+# 02603aa9a0744a68b771c36c9622a950
+msgid "The |subcommand knife download| subcommand can access all objects on the |chef server| and can now be used to pull a full-fidelity backup of the entire organization"
+msgstr ""
+
+#: ../source/release_notes.rst:307
+# f59ccb2c7f13409a822d5a7506a343fe
+msgid "New subcommands have been added to |knife|:"
+msgstr ""
+
+#: ../source/release_notes.rst:309
+# 1b6dc37f395e431996f364f6ea334602
+msgid "|subcommand knife deps|"
+msgstr ""
+
+#: ../source/release_notes.rst:310
+# 69fdc43bc74c4eb88f66b7700c3b2f8f
+msgid "|subcommand knife edit|"
+msgstr ""
+
+#: ../source/release_notes.rst:311
+# bae9e26885a74cb4b6c83ab95930ab9c
+msgid "|subcommand knife xargs|"
+msgstr ""
+
+#: ../source/release_notes.rst:314
+# 2b38208e79264d68a2fbc074c87665fe
+msgid "knife deps"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps.rst:6
+# 321b9f271bba48de8c1ddab2d42e25c1
+msgid "|knife deps|"
+msgstr ""
+
+#: ../source/release_notes.rst:317
+#: ../source/release_notes.rst:331
+#: ../source/release_notes.rst:345
+# 98ae5dd73f6d4743bbef09810b1c5625
+# da30f1392d6040a2b20c7d474dc78289
+# 840017c537794bb78366d6052d640e5b
+msgid "**Syntax**"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps_syntax.rst:6
+#: ../../includes_knife/includes_knife_edit_syntax.rst:6
+#: ../../includes_knife/includes_knife_xargs_syntax.rst:6
+# aabe478192f14665845c67744c96829f
+# 8e54a0e0ad1d44a1911ba2ec4f766cee
+# a5d89208ff6b4179a2b901086542c42c
+msgid "This argument has the following syntax:"
+msgstr ""
+
+#: ../source/release_notes.rst:321
+#: ../source/release_notes.rst:335
+#: ../source/release_notes.rst:349
+# adf6763f6077447b977cae96192e530b
+# 08bb87f9cf2c4edbb3fa3cb468425f48
+# 5cbb50076eda4c01bbad877483bf297a
+msgid "**Options**"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps_options.rst:6
+#: ../../includes_knife/includes_knife_edit_options.rst:6
+#: ../../includes_knife/includes_knife_xargs_options.rst:6
+# 947a3bde85c7431cb35c9f24f742c1f7
+# f3126e23e9e046989accb049b9cb31a6
+# 0438debbdec44b1395d4d414e4993138
+msgid "This subcommand has the following options:"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps_options.rst:9
+#: ../../includes_knife/includes_knife_edit_options.rst:9
+#: ../../includes_knife/includes_knife_xargs_options.rst:9
+# 95994e6e6a7047eebebe2315507b697a
+# 7b947bd736a94f1dab9b6c12d0205236
+# 07429b99e0e3480f8dab977c77e89c29
+msgid "|path chef_repo| This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps_options.rst:12
+#: ../../includes_knife/includes_knife_edit_options.rst:12
+#: ../../includes_knife/includes_knife_xargs_options.rst:12
+# 664884e9aaa84bc3b566e83ddca8cb6c
+# d032f4d17cee434ab8359813dfd3977f
+# 40264a6d69ca4834938516a664936729
+msgid "|concurrency| Default: ``10``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps_options.rst:15
+# a9350ac38a2b4a0384602eb220d2579e
+msgid "|no_recurse_deps| This option can only be used when ``--tree`` is set to ``true``. Default: ``--no-recurse``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps_options.rst:18
+# 9f15b32c9f0b45cc94ddc2b008f84af5
+msgid "|remote deps_on_server| Default: ``false``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps_options.rst:21
+#: ../../includes_knife/includes_knife_edit_options.rst:18
+# ab2624e348a04dad8f37b99d4f03810d
+# f5840067028e4d5d9ae3001b45c5527a
+msgid "|repo_mode| Default: ``everything`` / ``hosted_everything``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_deps_options.rst:24
+# 488239e389684bd78f30965c7f00b666
+msgid "|tree| Default: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:325
+#: ../source/release_notes.rst:339
+#: ../source/release_notes.rst:353
+# 4c3ca3a160fe4f5297a7166d1c0928fc
+# 7e96fb9941854c88a68a186f23df8830
+# 4e310e072fee406ab934e7b5d84e4f99
+msgid "Many of these settings are also configurable in the |knife rb| file."
+msgstr ""
+
+#: ../source/release_notes.rst:328
+# f853d75762bf42adbbe2d15aeeeb9061
+msgid "knife edit"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_edit.rst:6
+# 80fc57c426b04efba26461f58780f2c0
+msgid "|knife edit| This subcommand works similar to ``knife cookbook edit``, ``knife data bag edit``, ``knife environment edit``, ``knife node edit``, and ``knife role edit``, but with a single verb (and a single action)."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_edit_options.rst:15
+# 1344d83eaa7547cd974a5088b0559a70
+msgid "|local chef_repo| Default: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:342
+# 018b790c091b483aba6600cafd53406d
+msgid "knife xargs"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs.rst:6
+# 9a271134d05c44daa1132d62ab065d6d
+msgid "|knife xargs|"
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:15
+# 8dee6b92e908499db54f9ecb619d623c
+msgid "Use to show a diff when a file changes. Default: ``--diff``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:18
+# 0577ec16aa4d4d4691ad7b164741bf08
+msgid "Use to prevent changes from being uploaded to the |chef server|. Default: ``false``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:21
+# 8093364103954f49aa4991ae47b4222b
+msgid "Use to force the upload of files even if they haven't been changed. Default: ``--no-force``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:24
+# 373e3673b68b4145aa5c33f7190e4d81
+msgid "Indicates that a command line will be built or executed against a local file. Set to ``false`` to build or execute against a remote file. Default: ``false``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:27
+# 0229b794da1640b3a1a50c5542333f23
+msgid "The maximum number of arguments per command line. Default: ``nil``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:30
+# 99ecefd5573a431fbd2c41a58279259b
+msgid "The maximum size (in characters) for a command line. Default: ``nil``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:33
+# 38c45cff51eb48a2a862a3b52e20d47f
+msgid "Indicates that a ``NULL`` character (``\\0``) will be used as a separator, instead of white space. Default: ``false``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:36
+# bb198f4fbe214760998bd7161d5858f9
+msgid "One (or more) patterns for a command line. If this option is not specified, a list of patterns may be expected on standard input. Default: ``nil``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:39
+# 98cb4efb7a334952b27ced2d2618b316
+msgid "Use to define a string that will be used to replace all occurrences of a file name. Default: ``nil``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:42
+# 848067e9ea4840438d469fb391dd1aab
+msgid "Use to define a string that will be used to replace the first occurrence of a file name. Default: ``nil``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:45
+#: ../source/release_notes.rst:416
+# e4ba7428cfc14d8ab1d0d4bb7db6d761
+# b5923cf38a3f4f4585d6e01944fc1276
+msgid "|repo_mode| Default value: ``default``."
+msgstr ""
+
+#: ../../includes_knife/includes_knife_xargs_options.rst:48
+# 3fb788f82686473aa824b87c10f6dacd
+msgid "Indicates that the print command will be run on the command line. Default: ``nil``."
+msgstr ""
+
+#: ../source/release_notes.rst:356
+# b145d5c129134935bca9d421664758c6
+msgid "Knife Options"
+msgstr ""
+
+#: ../source/release_notes.rst:357
+# 583ba64e0c304f9b8ad81d4a75e504af
+msgid "New options have been added to the following |knife| subcommands:"
+msgstr ""
+
+#: ../source/release_notes.rst:360
+# ee328340d5c14facb3caf01fef6427aa
+msgid "knife delete"
+msgstr ""
+
+#: ../source/release_notes.rst:363
+# ffa298f6962249bca852c4aeb10fa434
+msgid "|delete_local_and_remote| Default: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:366
+# a2cb4aac9d3942b298d37822f60795fc
+msgid "|local_object| Default: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:369
+# 742da0564b50434e87490143e33347ac
+msgid "knife diff"
+msgstr ""
+
+#: ../source/release_notes.rst:372
+# 903d42ff40a2453594222c6ed27f3de0
+msgid "|diff_filter| Default value: ``nil``."
+msgstr ""
+
+#: ../source/release_notes.rst:375
+# ba27a1f49e8a40168fce54b63d2b0690
+msgid "knife download"
+msgstr ""
+
+#: ../source/release_notes.rst:378
+# 387ed9ae86874ad9a48a5a86627604ad
+msgid "|diff_download| Set to ``false`` to download all files. Default: ``--diff``."
+msgstr ""
+
+#: ../source/release_notes.rst:381
+# 9996bdcba44949d983fb778813a550d1
+msgid "knife list"
+msgstr ""
+
+#: ../source/release_notes.rst:384
+# d97182f16fc24efd8a05c67a0aa2729f
+msgid "|flat| Default: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:387
+# ab6a180d962b41b281e677f3cdc543ed
+msgid "|local_directory| Default: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:390
+# 10c47d042245494fab46a662723e35c7
+msgid "|one_column| Default: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:393
+# 7fbf5a9dba0c46a7965ff1c2c4a6006e
+msgid "|use trailing_slash| Default: ``false``."
+msgstr ""
+
+#: ../source/release_notes.rst:396
+# ec1362ceafe14625b5b7baefca577407
+msgid "knife upload"
+msgstr ""
+
+#: ../source/release_notes.rst:399
+# 5ce69852df4343ccb2adac2c7db61a97
+msgid "|freeze| Default: ``--no-freeze``."
+msgstr ""
+
+#: ../source/release_notes.rst:402
+# d41bdfeb1cc243b992979973f6a0176e
+msgid "|diff_upload| Set to ``false`` to upload all files. Default: ``--diff``."
+msgstr ""
+
+#: ../source/release_notes.rst:406
+# babe3370a4bc4aa487214c74659da090
+msgid "New common options for certain Knife subcommands"
+msgstr ""
+
+#: ../source/release_notes.rst:407
+# 7253e2aff46243448618eb733a9f9dd2
+msgid "The following options are new for the |subcommand knife delete|, |subcommand knife deps|, |subcommand knife diff|, |subcommand knife download|, |subcommand knife edit|, |subcommand knife list|, |subcommand knife raw|, |subcommand knife show|, |subcommand knife upload|, and |subcommand knife xargs| subcommands:"
+msgstr ""
+
+#: ../source/release_notes.rst:410
+# 70abfafc046641489a42b4b2aefeac71
+msgid "The path to the |chef repo|. This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb."
+msgstr ""
+
+#: ../source/release_notes.rst:413
+# 2a916401884f46218f60b8899709bc0b
+msgid "The maximum number of simultaneous requests to be sent. Default: ``10``."
+msgstr ""
+
+#: ../source/release_notes.rst:419
+# 6dee4ac5067f4100a462318b48944eec
+msgid "|knife rb| Settings"
+msgstr ""
+
+#: ../source/release_notes.rst:420
+# 5b88bdb64c454a0b8b0684c4375cb796
+msgid "New settings have been added to the |knife rb| file:"
+msgstr ""
+
+#: ../source/release_notes.rst:428
+# 3f54b03723464b16ae2542df7a7e5f02
+msgid "``versioned_cookbooks``"
+msgstr ""
+
+#: ../source/release_notes.rst:429
+# 98cd2520954b451bafee0776bcaba3ba
+msgid "|versioned_cookbooks_true| For example: ::"
+msgstr ""
+
+#: ../source/release_notes.rst:435
+# 65e8028f519d4c7aaafa605be9e601cc
+msgid "|chef solo| Environments"
+msgstr ""
+
+#: ../source/release_notes.rst:436
+# aee00751f55948c4a242726d153062f2
+msgid "|chef solo| now supports environments."
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo_environments.rst:5
+# b9ca9201b17d4053a9978f6989fdb5cd
+msgid "An environment is defined using |json| or the |ruby| DSL. |chef solo| will look for environments in ``/var/chef/environments``, but this location can be modified by changing the setting for ``environment_path`` in |solo rb|. For example, the following setting in |solo rb|:"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo_environments.rst:11
+# 30391dc23b254f5cbe765043486d2742
+msgid "Environment data looks like the following in |json|:"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo_environments.rst:33
+# 270c7d2e24f042c5b0e1c7ca69ad0fea
+msgid "and like the following in the |ruby| DSL:"
+msgstr ""
+
+#: ../source/release_notes.rst:441
+# 344ec78b3fcb4f79ba203918a21cb74c
+msgid "solo.rb"
+msgstr ""
+
+#: ../source/release_notes.rst:442
+# d45cb7e686834fa9af9f21f6b5ee1d1d
+msgid "A new setting has been added to the |solo rb| file:"
+msgstr ""
+
+#: ../source/release_notes.rst:450
+# 127452b5fe2441df926de685a40ee748
+msgid "``environment_path``"
+msgstr ""
+
+#: ../source/release_notes.rst:451
+# a91c16570bab4395a5049ea6c6b607a2
+msgid "|path environment|  Default value: ``/var/chef/environments``. For example: ::"
+msgstr ""
+
+#: ../source/release_notes.rst:457
+# 161cb4a88b3d41f3af67375c110a0824
+msgid "Force a Redeploy"
+msgstr ""
+
+#: ../source/release_notes.rst:458
+# 191fb289072945bdac9a5cef3b6e4f41
+msgid "Previous versions required the cache file to be deleted to force a redeploy. In |chef 11-6|, in addition to deleting the cache file, deleting the deployment directory will also force a redeploy."
+msgstr ""
+
+#: ../source/release_notes.rst:462
+# 7b3f9d91a8c640d7b9e3be3a531e04fc
+msgid "What's Fixed"
+msgstr ""
+
+#: ../source/release_notes.rst:463
+# 68cf50ca133c411494812fe1bc152c7c
+msgid "The following bugs were fixed:"
+msgstr ""
+
+#: ../source/release_notes.rst:465
+# 859838f3f049476dabd3f77e2c4fd5ec
+msgid "`CHEF-679 <http://tickets.opscode.com/browse/CHEF-679>`_  --- remote_file acts unexpectedly when it encounters a link"
+msgstr ""
+
+#: ../source/release_notes.rst:466
+# 573f0d4e49cc4b69bfe44134eeba682a
+msgid "`CHEF-955 <http://tickets.opscode.com/browse/CHEF-955>`_  --- 11: Make git provider respond to a new repo URL"
+msgstr ""
+
+#: ../source/release_notes.rst:467
+# c169abf955a44181b697ca89967b5683
+msgid "`CHEF-972 <http://tickets.opscode.com/browse/CHEF-972>`_  --- resource action should have higher precedence than only_if/not_if"
+msgstr ""
+
+#: ../source/release_notes.rst:468
+# befe9195e1d841e38c0e050a22253650
+msgid "`CHEF-1162 <http://tickets.opscode.com/browse/CHEF-1162>`_  --- Deploy should redeploy when the deploy directory is removed"
+msgstr ""
+
+#: ../source/release_notes.rst:469
+# 9f422482f3374f82ba5a10d8d09fb7a1
+msgid "`CHEF-1707 <http://tickets.opscode.com/browse/CHEF-1707>`_  --- unable to set password for user on solaris"
+msgstr ""
+
+#: ../source/release_notes.rst:470
+# 6a734e7ad7764f98b2ec20c01d8b2dbe
+msgid "`CHEF-1782 <http://tickets.opscode.com/browse/CHEF-1782>`_  --- remote_file gives deceptive error message replacing remote_file of running process"
+msgstr ""
+
+#: ../source/release_notes.rst:471
+# 1ecdd682a02847f7828b67cf6fbfc7b7
+msgid "`CHEF-1967 <http://tickets.opscode.com/browse/CHEF-1967>`_  --- Mount provider should be able to allow \"none\" as a valid mountpoint"
+msgstr ""
+
+#: ../source/release_notes.rst:472
+# e42f363a416b4b2e9a9c6fc50916e31b
+msgid "`CHEF-2406 <http://tickets.opscode.com/browse/CHEF-2406>`_  --- pretty knife status is ugly on windows"
+msgstr ""
+
+#: ../source/release_notes.rst:473
+# bbb63694e61f4131a880ba4c1d1b3edf
+msgid "`CHEF-2420 <http://tickets.opscode.com/browse/CHEF-2420>`_  --- Git resource always re-checks out unchanged annotated tags"
+msgstr ""
+
+#: ../source/release_notes.rst:474
+# e22e911d91f9499f936dcf5b3861433b
+msgid "`CHEF-2467 <http://tickets.opscode.com/browse/CHEF-2467>`_  --- 11: Attributes set in role not available via node object when running shef in client mode"
+msgstr ""
+
+#: ../source/release_notes.rst:475
+# 1e24bf46e09b40d1be83089f22f0a80a
+msgid "`CHEF-2682 <http://tickets.opscode.com/browse/CHEF-2682>`_  --- Redirected API requests can result in confusing error messages"
+msgstr ""
+
+#: ../source/release_notes.rst:476
+# e2d53a653a9c488a8fa46246d8286759
+msgid "`CHEF-2694 <http://tickets.opscode.com/browse/CHEF-2694>`_  --- ErrorHandler json format can cause complete meltdown of chef client"
+msgstr ""
+
+#: ../source/release_notes.rst:477
+# c7c081bcedf845f2851d2bb209854cba
+msgid "`CHEF-2741 <http://tickets.opscode.com/browse/CHEF-2741>`_  --- deploy resource does not recover from failures partway through operation on future invocations"
+msgstr ""
+
+#: ../source/release_notes.rst:478
+# 176a9d78c7654904a071731e024c2a18
+msgid "`CHEF-2770 <http://tickets.opscode.com/browse/CHEF-2770>`_  --- user_valid_regex is too restrictive"
+msgstr ""
+
+#: ../source/release_notes.rst:479
+# 462b7a127957425ba247ce98a3a6e89e
+msgid "`CHEF-2840 <http://tickets.opscode.com/browse/CHEF-2840>`_  --- SSL Verification fails using omnibus installer because of missing certs"
+msgstr ""
+
+#: ../source/release_notes.rst:480
+# 06834e9584324f13be68998875ac287e
+msgid "`CHEF-3005 <http://tickets.opscode.com/browse/CHEF-3005>`_  --- chef-client ignores port specification in an HTTPS URL"
+msgstr ""
+
+#: ../source/release_notes.rst:481
+# 6cd6c1f15d004177ade8ecb226915500
+msgid "`CHEF-3045 <http://tickets.opscode.com/browse/CHEF-3045>`_  --- Chef errors out with 403 when retrieving cookbook_file, template resources on a very long Chef run"
+msgstr ""
+
+#: ../source/release_notes.rst:482
+# f8ac69e846404d1884cc16068f779b0f
+msgid "`CHEF-3192 <http://tickets.opscode.com/browse/CHEF-3192>`_  --- File providers in whyrun branch need cleanup in how they handle tempfiles"
+msgstr ""
+
+#: ../source/release_notes.rst:483
+# 931bfcf81f984aeca6ce7fabd8fc9456
+msgid "`CHEF-3237 <http://tickets.opscode.com/browse/CHEF-3237>`_  --- Expanding '~/Library/LaunchAgents' fails resolving HOME when running chef-client as root"
+msgstr ""
+
+#: ../source/release_notes.rst:484
+# 9e3db532a3414d0b84b8a19afb13a97a
+msgid "`CHEF-3255 <http://tickets.opscode.com/browse/CHEF-3255>`_  --- Knife doesn't filter out older versions of plugins"
+msgstr ""
+
+#: ../source/release_notes.rst:485
+# 0d98ec24095148d888f828e24d199653
+msgid "`CHEF-3332 <http://tickets.opscode.com/browse/CHEF-3332>`_  --- The route resource provider will always delete config file even for :add action"
+msgstr ""
+
+#: ../source/release_notes.rst:486
+# b2d3f4d9ed2d40b68bd8548425dc8881
+msgid "`CHEF-3366 <http://tickets.opscode.com/browse/CHEF-3366>`_  --- zypper provider for package resource can block"
+msgstr ""
+
+#: ../source/release_notes.rst:487
+# f71beb2fbeef4da8b4e0960bab9b23ae
+msgid "`CHEF-3386 <http://tickets.opscode.com/browse/CHEF-3386>`_  --- 11: Chef init script improper PID check"
+msgstr ""
+
+#: ../source/release_notes.rst:488
+# ed5bad92df794d078e4b112578583c0d
+msgid "`CHEF-3442 <http://tickets.opscode.com/browse/CHEF-3442>`_  --- Portage package provider souldn't raise an error \"Multiple packages found for ...\" when the category is specified"
+msgstr ""
+
+#: ../source/release_notes.rst:489
+# 8cddbd2dee8e453fb1867d92e0955514
+msgid "`CHEF-3452 <http://tickets.opscode.com/browse/CHEF-3452>`_  --- uploading frozen cookbooks shows unfriendly error message"
+msgstr ""
+
+#: ../source/release_notes.rst:490
+# ce1f4751ce24483f8bfada33cbce5879
+msgid "`CHEF-3471 <http://tickets.opscode.com/browse/CHEF-3471>`_  --- knife bootstrap of a Solaris 10 host is an immediate failure"
+msgstr ""
+
+#: ../source/release_notes.rst:491
+# dd0f34a5b9d44d9291aeac41208a82bd
+msgid "`CHEF-3516 <http://tickets.opscode.com/browse/CHEF-3516>`_  --- 11: Some knife commands emit Errno::EPIPE when used in a pipeline"
+msgstr ""
+
+#: ../source/release_notes.rst:492
+# 4edb8dd1cec04f138e09f3b589ca2e50
+msgid "`CHEF-3521 <http://tickets.opscode.com/browse/CHEF-3521>`_  --- Chef should set a timeout for yum-dump"
+msgstr ""
+
+#: ../source/release_notes.rst:493
+# 2704a45b1d3a4288becd40dd9bc81173
+msgid "`CHEF-3535 <http://tickets.opscode.com/browse/CHEF-3535>`_  --- Chef::REST doesn't require 'chef/platform' but uses it"
+msgstr ""
+
+#: ../source/release_notes.rst:494
+# 33630d149bd546c58b46cd8a84e63b7d
+msgid "`CHEF-3544 <http://tickets.opscode.com/browse/CHEF-3544>`_  --- 11: Cookbook syntax check should honor chefignore file"
+msgstr ""
+
+#: ../source/release_notes.rst:495
+# cc143d461c114f79bb9a203725c61593
+msgid "`CHEF-3557 <http://tickets.opscode.com/browse/CHEF-3557>`_  --- File Security Metadata Reporting is Broken on Windows"
+msgstr ""
+
+#: ../source/release_notes.rst:496
+# 586f849693d64782acb80830ea7a5052
+msgid "`CHEF-3683 <http://tickets.opscode.com/browse/CHEF-3683>`_  --- 11: Chef::Node objects should be sortable"
+msgstr ""
+
+#: ../source/release_notes.rst:497
+# ac3e1c61c9554c7da22d2359d8ece56b
+msgid "`CHEF-3685 <http://tickets.opscode.com/browse/CHEF-3685>`_  --- rspec tests fail because chef-10.16.2.gem does not contain .dotfile"
+msgstr ""
+
+#: ../source/release_notes.rst:498
+# 1a185e1545c24583b6d7f5cfecbe4adc
+msgid "`CHEF-3690 <http://tickets.opscode.com/browse/CHEF-3690>`_  --- refactor of windows_service.rb has broken chef-client when run as windows service"
+msgstr ""
+
+#: ../source/release_notes.rst:499
+# 5a9e5a1dc99645bb9930c25dee35c679
+msgid "`CHEF-3731 <http://tickets.opscode.com/browse/CHEF-3731>`_  --- Delayed attribute evaluation"
+msgstr ""
+
+#: ../source/release_notes.rst:500
+# 9117fd348219467a939bedd82b88f20b
+msgid "`CHEF-3772 <http://tickets.opscode.com/browse/CHEF-3772>`_  --- Managing services on Solaris and SmartOS does not works well"
+msgstr ""
+
+#: ../source/release_notes.rst:501
+# 1d159db8514b455893fa8bb716009f1a
+msgid "`CHEF-3779 <http://tickets.opscode.com/browse/CHEF-3779>`_  --- Add -A (forward SSH agent) option to knife commands"
+msgstr ""
+
+#: ../source/release_notes.rst:502
+# 7fabf9820c664ec29036677653330ddd
+msgid "`CHEF-3781 <http://tickets.opscode.com/browse/CHEF-3781>`_  --- Add knife deps and knife-essentials changes from 1.0.0"
+msgstr ""
+
+#: ../source/release_notes.rst:503
+# 66bd5fa1dadb42c39e2908e73abd5524
+msgid "`CHEF-3798 <http://tickets.opscode.com/browse/CHEF-3798>`_  --- user provider on Windows tries to set the password even if not provided"
+msgstr ""
+
+#: ../source/release_notes.rst:504
+# dd38de12ad9d4abc862d1ee5b556aa03
+msgid "`CHEF-3803 <http://tickets.opscode.com/browse/CHEF-3803>`_  --- mount resource does not update fstab entry when mount options have changed"
+msgstr ""
+
+#: ../source/release_notes.rst:505
+# 7405ecf6b9e24a01b903773b19f7c6a1
+msgid "`CHEF-3804 <http://tickets.opscode.com/browse/CHEF-3804>`_  --- device_mount_regex in mount provider does not handle symlinks correctly"
+msgstr ""
+
+#: ../source/release_notes.rst:506
+# 4a0331d9ceaa4cc993c7baeb9150c60a
+msgid "`CHEF-3817 <http://tickets.opscode.com/browse/CHEF-3817>`_  --- Overriding duplicate definition *"
+msgstr ""
+
+#: ../source/release_notes.rst:507
+# b27e07c2c1ae492f84d8ae65a15fb872
+msgid "`CHEF-3847 <http://tickets.opscode.com/browse/CHEF-3847>`_  --- LanguageIncludeRecipe deprecation warning is incorrect"
+msgstr ""
+
+#: ../source/release_notes.rst:508
+# cf0b81620d924e5fa4b23a77fc5a48ca
+msgid "`CHEF-3858 <http://tickets.opscode.com/browse/CHEF-3858>`_  --- Unsuccessful decryption of encrypted data bag items does not always cause an error"
+msgstr ""
+
+#: ../source/release_notes.rst:509
+# 9ca54483ac7f46e1a327a79840f12a62
+msgid "`CHEF-3872 <http://tickets.opscode.com/browse/CHEF-3872>`_  --- chef-client fails when run in open source XenServer ( platform xcp )"
+msgstr ""
+
+#: ../source/release_notes.rst:510
+# 928341a412ea460f8d5a53053da806bd
+msgid "`CHEF-3878 <http://tickets.opscode.com/browse/CHEF-3878>`_  --- Chef should have a native partial search library"
+msgstr ""
+
+#: ../source/release_notes.rst:511
+# 06dc57ffdece4f2cb8df8a1fa0536288
+msgid "`CHEF-3895 <http://tickets.opscode.com/browse/CHEF-3895>`_  --- Cannot Upload Cookbooks"
+msgstr ""
+
+#: ../source/release_notes.rst:512
+# 7b784bcecd914d2ca8f30f7a682677b9
+msgid "`CHEF-3903 <http://tickets.opscode.com/browse/CHEF-3903>`_  --- File resource doesn't handle binary correctly on windows"
+msgstr ""
+
+#: ../source/release_notes.rst:513
+# 5f553ab9d0994e89a0b057dc2990abc8
+msgid "`CHEF-3920 <http://tickets.opscode.com/browse/CHEF-3920>`_  --- Repeated text in converge_by message for LWRPs when running in why_run mode"
+msgstr ""
+
+#: ../source/release_notes.rst:514
+# 57804d397e6d4ec88a76455794b48a5e
+msgid "`CHEF-3932 <http://tickets.opscode.com/browse/CHEF-3932>`_  --- Later Knife.deps (i.e. dependency lazy loading) call overrides the earlier block"
+msgstr ""
+
+#: ../source/release_notes.rst:515
+# 908671917cf24f1da0b0f4dc667ae159
+msgid "`CHEF-3933 <http://tickets.opscode.com/browse/CHEF-3933>`_  --- Gem Package provider incompatible with rubygems 2.0"
+msgstr ""
+
+#: ../source/release_notes.rst:516
+# 67672b22d6b24dacbd1d5515ecf8d00e
+msgid "`CHEF-3935 <http://tickets.opscode.com/browse/CHEF-3935>`_  --- Logger mutex causes errors in trap handlers with ruby 2.0"
+msgstr ""
+
+#: ../source/release_notes.rst:517
+# 319d3cbfb03443a3b967327ac5612b0b
+msgid "`CHEF-3937 <http://tickets.opscode.com/browse/CHEF-3937>`_  --- Chef::Knife::CookbookUpload is missing [require 'chef/cookbook_uploader'] causing exceptions from ref on line 230"
+msgstr ""
+
+#: ../source/release_notes.rst:518
+# c5591dc5d072434f807315bd80340f66
+msgid "`CHEF-3938 <http://tickets.opscode.com/browse/CHEF-3938>`_  --- Make gpg checks configurable in the zypper package provider"
+msgstr ""
+
+#: ../source/release_notes.rst:519
+# 90a99809d82a41438e1aab6892967323
+msgid "`CHEF-3949 <http://tickets.opscode.com/browse/CHEF-3949>`_  --- File Provider Refactor"
+msgstr ""
+
+#: ../source/release_notes.rst:520
+# d7f5608987ec4d6b90e3b2f3f8cb277e
+msgid "`CHEF-3963 <http://tickets.opscode.com/browse/CHEF-3963>`_  --- and_return with should_not_receive is deprecated in rspec"
+msgstr ""
+
+#: ../source/release_notes.rst:521
+# cff502e0e8704729940898f4bf00f055
+msgid "`CHEF-3978 <http://tickets.opscode.com/browse/CHEF-3978>`_  --- remote_file does not support why-run correctly"
+msgstr ""
+
+#: ../source/release_notes.rst:522
+# 64615be2cd324343899df3368ea041a0
+msgid "`CHEF-3979 <http://tickets.opscode.com/browse/CHEF-3979>`_  --- remote_file source \"downloaded from\" is empty, but works"
+msgstr ""
+
+#: ../source/release_notes.rst:523
+# 2e2399793c8a40e29e0cd285f0391107
+msgid "`CHEF-3982 <http://tickets.opscode.com/browse/CHEF-3982>`_  --- wget/curl dep in chef-full knife bootstrap script fails on Solaris 10"
+msgstr ""
+
+#: ../source/release_notes.rst:524
+# 21231979227f411e8a5168624ebbed0d
+msgid "`CHEF-4010 <http://tickets.opscode.com/browse/CHEF-4010>`_  --- Chef client does not release lock when connection to server failed"
+msgstr ""
+
+#: ../source/release_notes.rst:525
+# 8c8eb560965f42beabc3da60078d6a77
+msgid "`CHEF-4015 <http://tickets.opscode.com/browse/CHEF-4015>`_  --- suse group provider is broken on openSUSE 12.3 with shadow utils"
+msgstr ""
+
+#: ../source/release_notes.rst:526
+# b94710efbb0d445d9e5c7b9ae3e937e0
+msgid "`CHEF-4022 <http://tickets.opscode.com/browse/CHEF-4022>`_  --- \"knife cookbook download\" of nonexistant cookbook throws NoMethodError"
+msgstr ""
+
+#: ../source/release_notes.rst:527
+# 4bba9063681e499098cafe33abd9fd1d
+msgid "`CHEF-4038 <http://tickets.opscode.com/browse/CHEF-4038>`_  --- File diffs in functional tests run very slowly under jenkins on windows 2k8"
+msgstr ""
+
+#: ../source/release_notes.rst:528
+# d4bbca2eadbb436c8694dbf87006fe77
+msgid "`CHEF-4050 <http://tickets.opscode.com/browse/CHEF-4050>`_  --- include etags, last-modified, expires and cache-control header handling in Chef::REST"
+msgstr ""
+
+#: ../source/release_notes.rst:529
+# cdc2d009d1c8429e87fa8fffa857a7db
+msgid "`CHEF-4065 <http://tickets.opscode.com/browse/CHEF-4065>`_  --- change chef-client config default to use client_fork"
+msgstr ""
+
+#: ../source/release_notes.rst:530
+# eee8279015924aa7a47e0ffa9d6ae571
+msgid "`CHEF-4082 <http://tickets.opscode.com/browse/CHEF-4082>`_  --- When the file / template has a hardcoded path defined (either set via node attribute or hard coded as in the example), the notifies parameter does not work"
+msgstr ""
+
+#: ../source/release_notes.rst:531
+# 6840cadc466545bab5dee2c9a77433ea
+msgid "`CHEF-4083 <http://tickets.opscode.com/browse/CHEF-4083>`_  --- Typo in status running chef-client"
+msgstr ""
+
+#: ../source/release_notes.rst:532
+# 4fc447bff9d64dff87152dfa3a162f8d
+msgid "`CHEF-4100 <http://tickets.opscode.com/browse/CHEF-4100>`_  --- Chef::Util::FileEdit raise()s if file exists but is just empty -- this is bogus"
+msgstr ""
+
+#: ../source/release_notes.rst:533
+# 6ddefd296d484ebb8bdbce91283d9176
+msgid "`CHEF-4102 <http://tickets.opscode.com/browse/CHEF-4102>`_  --- chef-apply ignores all command line flags"
+msgstr ""
+
+#: ../source/release_notes.rst:534
+# 1daad5667a3544a6b54be794032591aa
+msgid "`CHEF-4114 <http://tickets.opscode.com/browse/CHEF-4114>`_  --- Broken raise of ConfigurationError when log_location not writable"
+msgstr ""
+
+#: ../source/release_notes.rst:535
+# 70005cf9060e41fa9f215fcedd269663
+msgid "`CHEF-4115 <http://tickets.opscode.com/browse/CHEF-4115>`_  --- The config file's path isn't shown in exceptions"
+msgstr ""
+
+#: ../source/release_notes.rst:536
+# 11eb04594c8643fdba6bbe5bd23eae37
+msgid "`CHEF-4118 <http://tickets.opscode.com/browse/CHEF-4118>`_  --- Event handlers should get run_started events"
+msgstr ""
+
+#: ../source/release_notes.rst:537
+# e6ba3fa22249435785b57a623174e7f7
+msgid "`CHEF-4123 <http://tickets.opscode.com/browse/CHEF-4123>`_  --- Chef-10.24.4 break Chef-server bootstrap installation"
+msgstr ""
+
+#: ../source/release_notes.rst:538
+# 3f058add3fb24a96b928715720c549bc
+msgid "`CHEF-4135 <http://tickets.opscode.com/browse/CHEF-4135>`_  --- Malformed arguments to notifies fail without a helpful message"
+msgstr ""
+
+#: ../source/release_notes.rst:539
+# 475db4cd52a54b3687b288b57bf7b51a
+msgid "`CHEF-4153 <http://tickets.opscode.com/browse/CHEF-4153>`_  --- Requiring chef/node throws a NameError"
+msgstr ""
+
+#: ../source/release_notes.rst:540
+# 353f94bdf6ee40d78e8fd80175a1f674
+msgid "`CHEF-4158 <http://tickets.opscode.com/browse/CHEF-4158>`_  --- auth_credentials_spec test sets the http_proxy variables twice"
+msgstr ""
+
+#: ../source/release_notes.rst:541
+# ef0080f9e1ab4c1a9fb7f0d8de0b0b3f
+msgid "`CHEF-4176 <http://tickets.opscode.com/browse/CHEF-4176>`_  --- Chef 11 Default knife chef_server_url References Chef 10 Servers"
+msgstr ""
+
+#: ../source/release_notes.rst:542
+# b45f89c3870a4d90a7fcba5db5cb92df
+msgid "`CHEF-4199 <http://tickets.opscode.com/browse/CHEF-4199>`_  --- usermod for changing groups on SmartOS should use -G"
+msgstr ""
+
+#: ../source/release_notes.rst:543
+# b7276ba1f4fc4485a6f06cf3ef330200
+msgid "`CHEF-4204 <http://tickets.opscode.com/browse/CHEF-4204>`_  --- Chef::Provider::User::Useradd doesn't deal with apostrophes in users' full names"
+msgstr ""
+
+#: ../source/release_notes.rst:544
+# 395b81948c934147b4fc8b75ac894a65
+msgid "`CHEF-4208 <http://tickets.opscode.com/browse/CHEF-4208>`_  --- Monkey Patch Dir.rb exception on windows"
+msgstr ""
+
+#: ../source/release_notes.rst:545
+# 737397cacd814b4eb4391855cde57bc2
+msgid "`CHEF-4233 <http://tickets.opscode.com/browse/CHEF-4233>`_  --- 'knife upload' of encrypted data bags is adding extra keys to the data bag"
+msgstr ""
+
+#: ../source/release_notes.rst:546
+# 588d81fc89fb4e59bf21afdf82abf94c
+msgid "`CHEF-4236 <http://tickets.opscode.com/browse/CHEF-4236>`_  --- resource \"file\" is non-idempotent when specifying file mode in combination with a non-existing user"
+msgstr ""
+
+#: ../source/release_notes.rst:547
+# 8b2af790918e4528a4ed7541a61c8e9c
+msgid "`CHEF-4239 <http://tickets.opscode.com/browse/CHEF-4239>`_  --- git provider breaks if repository path has spaces"
+msgstr ""
+
+#: ../source/release_notes.rst:548
+# eebb97509e0c4fcab823b0ca103aba24
+msgid "`CHEF-4259 <http://tickets.opscode.com/browse/CHEF-4259>`_  --- Unpacking recipes fails on SmartOS"
+msgstr ""
+
+#: ../source/release_notes.rst:549
+# 1343fb721d1042c9b52851d826197eb4
+msgid "`CHEF-4272 <http://tickets.opscode.com/browse/CHEF-4272>`_  --- \"knife list\" shows files that can't be uploaded"
+msgstr ""
+
+#: ../source/release_notes.rst:550
+# dbfa678248c2420eba7a361cc3ea1a5a
+msgid "`CHEF-4274 <http://tickets.opscode.com/browse/CHEF-4274>`_  --- chef-client never runs again after an http timeout to the chef server"
+msgstr ""
+
+#: ../source/release_notes.rst:551
+# caaadac92f9d4843a186fad00aa1cd76
+msgid "`CHEF-4275 <http://tickets.opscode.com/browse/CHEF-4275>`_  --- Rubygems 2.0 heuristic is incorrect on some environments upgraded from rubygems 1.8"
+msgstr ""
+
+#: ../source/release_notes.rst:552
+# c05365fd5e044450ac0ad5a546538304
+msgid "`CHEF-4305 <http://tickets.opscode.com/browse/CHEF-4305>`_  --- Usermod on CentOS/RHEL 5 requires the -d option to appear before -m in argv list"
+msgstr ""
+
+#: ../source/release_notes.rst:553
+# d8e188a232e143589b9115a98dfe0562
+msgid "`CHEF-4312 <http://tickets.opscode.com/browse/CHEF-4312>`_  --- File Provider Refactor Breaks Cookbooks That Depend on Managing Content via Symlink"
+msgstr ""
+
+#: ../source/release_notes.rst:554
+# 3751735d226743e7b3224f0c016a709c
+msgid "`CHEF-4314 <http://tickets.opscode.com/browse/CHEF-4314>`_  --- atomic gem doesn't compile on sparc and older 32bit redhat"
+msgstr ""
+
+#: ../source/release_notes.rst:555
+# 76223c8c733c464ab6ec43a6ac145240
+msgid "`CHEF-4327 <http://tickets.opscode.com/browse/CHEF-4327>`_  --- directory resource broken on Windows 2012"
+msgstr ""
+
+#: ../source/release_notes.rst:556
+# 85bcc12547dc4092bf5eae5c77a54922
+msgid "`CHEF-4328 <http://tickets.opscode.com/browse/CHEF-4328>`_  --- native Windows service won't start in Windows 2012"
+msgstr ""
+
+#: ../source/release_notes.rst:557
+# a6022f0fc4ff4c23948c8926bcf49633
+msgid "`CHEF-4333 <http://tickets.opscode.com/browse/CHEF-4333>`_  --- package resource broken on 11.6.0rc0 on EL6"
+msgstr ""
+
+#: ../source/release_notes.rst:558
+# c5a1ef6aa208414d86dcc81f6def6ebd
+msgid "`CHEF-4336 <http://tickets.opscode.com/browse/CHEF-4336>`_  --- Knife cookbook upload cannot upload cookbooks with custom metadata name"
+msgstr ""
+
+#: ../source/release_notes.rst:559
+# ba8cfdb2b0bd4337af404ca78741cf69
+msgid "`CHEF-4341 <http://tickets.opscode.com/browse/CHEF-4341>`_  --- File Resources Erroneously Trigger Notifications When Managing Symlink Source"
+msgstr ""
+
+#: ../source/release_notes.rst:560
+# bc4606dfd869495aa2e9d94839fe3e8f
+msgid "`CHEF-4349 <http://tickets.opscode.com/browse/CHEF-4349>`_  --- NoMethodError for NilClass#version installing a package on OpenSuSE 12.3 (11.6 RC)"
+msgstr ""
+
+#: ../source/release_notes.rst:561
+# bfa3458d6d2441cc8e6d34ad1820cd11
+msgid "`CHEF-4350 <http://tickets.opscode.com/browse/CHEF-4350>`_  --- knife cookbook site share broken on 11.6.0"
+msgstr ""
+
+#: ../source/release_notes.rst:562
+# e69334ced3a349fea121b934dbd8052d
+msgid "`CHEF-4357 <http://tickets.opscode.com/browse/CHEF-4357>`_  --- Chef Client/Solo with --fork spews extra stacktraces and breaks stacktrace logging"
+msgstr ""
+
+#: ../source/release_notes.rst:563
+# c859a2a289c0468d8bb05c0e7b2d26fb
+msgid "`CHEF-4365 <http://tickets.opscode.com/browse/CHEF-4365>`_  --- Remote file resource fails when cache control data is corrupted"
+msgstr ""
+
+#: ../source/release_notes.rst:564
+# 63c9b689e0444962b01f6ba37a47e710
+msgid "`CHEF-4380 <http://tickets.opscode.com/browse/CHEF-4380>`_  --- package resource with \"source\" is broken on EL6 using 11.6.0rc3"
+msgstr ""
+
+#: ../source/release_notes.rst:565
+# 58588eed5d8a45b783319d2a7330e1ed
+msgid "`CHEF-4429 <http://tickets.opscode.com/browse/CHEF-4429>`_  --- All recipes are being loaded in chef-shell while in client mode"
+msgstr ""
+
+#: ../source/release_notes.rst:568
+# 47566c56475245d280232ecd5a41dd96
+msgid "What's Improved"
+msgstr ""
+
+#: ../source/release_notes.rst:569
+# 2241d70bd2054788bbf067e9d0a388f7
+msgid "The following improvements were made:"
+msgstr ""
+
+#: ../source/release_notes.rst:571
+# 24858657c14f44fd8e822668de1925c5
+msgid "`CHEF-1367 <http://tickets.opscode.com/browse/CHEF-1367>`_  --- Make remote_file avoid downloading a file if it hasn't changed"
+msgstr ""
+
+#: ../source/release_notes.rst:572
+# 54e47bc1a8e54b7caa7660b6b0f4497f
+msgid "`CHEF-2506 <http://tickets.opscode.com/browse/CHEF-2506>`_  --- remote_file should respect ETags"
+msgstr ""
+
+#: ../source/release_notes.rst:573
+# 36ca55be65b84b04bd2629279432f058
+msgid "`CHEF-3348 <http://tickets.opscode.com/browse/CHEF-3348>`_  --- 11: Better CHANGELOG formatting"
+msgstr ""
+
+#: ../source/release_notes.rst:574
+# 9c64760860b54e3697f0bd52aa6a9c8f
+msgid "`CHEF-3364 <http://tickets.opscode.com/browse/CHEF-3364>`_  --- Fix up Smartos Package provider"
+msgstr ""
+
+#: ../source/release_notes.rst:575
+# ab81c824bccf48a7849a909ef269a814
+msgid "`CHEF-3615 <http://tickets.opscode.com/browse/CHEF-3615>`_  --- Encrypted data bag items should use authenticated encryption."
+msgstr ""
+
+#: ../source/release_notes.rst:576
+# 4f61f482cd584f5f9b661cc4b4dec5e0
+msgid "`CHEF-3664 <http://tickets.opscode.com/browse/CHEF-3664>`_  --- The 'map' variable is defined and never used in the set_or_return method of lib/chef/mixim/params_validate.rb"
+msgstr ""
+
+#: ../source/release_notes.rst:577
+# dda534697bd14414b4ab63b823b86b98
+msgid "`CHEF-3695 <http://tickets.opscode.com/browse/CHEF-3695>`_  --- File provider follows symlinks; Template provider does not (security implications and inconsistency)"
+msgstr ""
+
+#: ../source/release_notes.rst:578
+# 123d41ccbad148f892a7e4918e589f38
+msgid "`CHEF-3735 <http://tickets.opscode.com/browse/CHEF-3735>`_  --- typos in resource names should show the typo in the error message/exception"
+msgstr ""
+
+#: ../source/release_notes.rst:579
+# 70b14b1915964d1c8f739c27099686e3
+msgid "`CHEF-3749 <http://tickets.opscode.com/browse/CHEF-3749>`_  --- Use HTTPS to download the Omnibus installer"
+msgstr ""
+
+#: ../source/release_notes.rst:580
+# 5558f851452440ccbf81ac0d8358ba44
+msgid "`CHEF-3819 <http://tickets.opscode.com/browse/CHEF-3819>`_  --- Execute with cwd attribute should check existence of sentiel file according to cwd value"
+msgstr ""
+
+#: ../source/release_notes.rst:581
+# 5d69952bef874aa785ba879bc8deb63a
+msgid "`CHEF-3942 <http://tickets.opscode.com/browse/CHEF-3942>`_  --- The chef-repo should gitignore .chef directory by default"
+msgstr ""
+
+#: ../source/release_notes.rst:582
+# 606d8aa0c5ee4d06a0f7fb4d38035793
+msgid "`CHEF-3967 <http://tickets.opscode.com/browse/CHEF-3967>`_  --- Use HTTPS when connecting to RubyGems.org"
+msgstr ""
+
+#: ../source/release_notes.rst:583
+# f33a6b1e5eb842b891d8ba08529c1ae1
+msgid "`CHEF-3987 <http://tickets.opscode.com/browse/CHEF-3987>`_  --- Resource collection has duplicate code in \"push\" and \"<<\""
+msgstr ""
+
+#: ../source/release_notes.rst:584
+# cae45fc088f346ebabea5d5aaeae5acc
+msgid "`CHEF-4011 <http://tickets.opscode.com/browse/CHEF-4011>`_  --- default location of \"encrypted_data_bag_secret\" should be set in Chef::Config"
+msgstr ""
+
+#: ../source/release_notes.rst:585
+# 4f6acc795e864269904a6f8f8861f148
+msgid "`CHEF-4053 <http://tickets.opscode.com/browse/CHEF-4053>`_  --- Add powershell providers in Core Chef"
+msgstr ""
+
+#: ../source/release_notes.rst:586
+# 3c2df4cdbe064d669aec5743769b5922
+msgid "`CHEF-4054 <http://tickets.opscode.com/browse/CHEF-4054>`_  --- Add windows batch provider to core Chef"
+msgstr ""
+
+#: ../source/release_notes.rst:587
+# 98bc581e853444d4b85fc3591ca251a0
+msgid "`CHEF-4055 <http://tickets.opscode.com/browse/CHEF-4055>`_  --- Add Win8/2012 to Chef Windows Helper"
+msgstr ""
+
+#: ../source/release_notes.rst:588
+# ef61bff1ef5d45a3b9b0d0d45fe81a22
+msgid "`CHEF-4070 <http://tickets.opscode.com/browse/CHEF-4070>`_  --- Support DataBag.list on chef-solo"
+msgstr ""
+
+#: ../source/release_notes.rst:589
+# 135d4a1b7f75488588d7bc159a8a05c3
+msgid "`CHEF-4076 <http://tickets.opscode.com/browse/CHEF-4076>`_  --- knife node run list set [list of roles/recipes]"
+msgstr ""
+
+#: ../source/release_notes.rst:590
+# f050e17f32c947e7adb438dcc47cadee
+msgid "`CHEF-4081 <http://tickets.opscode.com/browse/CHEF-4081>`_  --- let knife show/search return more than one attribute using -a"
+msgstr ""
+
+#: ../source/release_notes.rst:591
+# 3da3168d110b4fc694f87c775fd5aef7
+msgid "`CHEF-4088 <http://tickets.opscode.com/browse/CHEF-4088>`_  --- sorting the knife commands is done, but would be cool if you also sort the sub commands..."
+msgstr ""
+
+#: ../source/release_notes.rst:592
+# 59afeb3b8a984f098255070eeebebc90
+msgid "`CHEF-4090 <http://tickets.opscode.com/browse/CHEF-4090>`_  --- refactor zypper package provider to make command output visible"
+msgstr ""
+
+#: ../source/release_notes.rst:593
+# 7693a6fc7f5c4cea8233ab9259ce54b8
+msgid "`CHEF-4106 <http://tickets.opscode.com/browse/CHEF-4106>`_  --- Remove obsolete default configuration"
+msgstr ""
+
+#: ../source/release_notes.rst:594
+# e660c8a3dc1046fb9c5a0f7124ff5d20
+msgid "`CHEF-4130 <http://tickets.opscode.com/browse/CHEF-4130>`_  --- knife * edit presents a .js file not a .json file"
+msgstr ""
+
+#: ../source/release_notes.rst:595
+# a10ee9e560fb4e30833b9e53204cc931
+msgid "`CHEF-4146 <http://tickets.opscode.com/browse/CHEF-4146>`_  --- Update Reporting Client Protocol"
+msgstr ""
+
+#: ../source/release_notes.rst:596
+# c1109117bb354b2d941f1f7601a67417
+msgid "`CHEF-4161 <http://tickets.opscode.com/browse/CHEF-4161>`_  --- remove newlines from knife search -i output"
+msgstr ""
+
+#: ../source/release_notes.rst:597
+# 23682154e9264f2899b46d22e5ac0176
+msgid "`CHEF-4220 <http://tickets.opscode.com/browse/CHEF-4220>`_  --- Define helper functions on template resource"
+msgstr ""
+
+#: ../source/release_notes.rst:598
+# e0b7a1ddc18a439f9bd9fb0a1317b0ee
+msgid "`CHEF-4225 <http://tickets.opscode.com/browse/CHEF-4225>`_  --- Bump windows ruby version to p429 in omnibus-chef"
+msgstr ""
+
+#: ../source/release_notes.rst:601
+# 68ea7210fc3145d0a7ce579201cc3ecd
+msgid "New Features"
+msgstr ""
+
+#: ../source/release_notes.rst:602
+# 323f1c4e37c444b3abae6ea11a14aafb
+msgid "The following features were added:"
+msgstr ""
+
+#: ../source/release_notes.rst:604
+# 19b4d3b549ce4fbb9b93ce1d670fa0e3
+msgid "`CHEF-1031 <http://tickets.opscode.com/browse/CHEF-1031>`_  --- remote file resource should handle ftp urls"
+msgstr ""
+
+#: ../source/release_notes.rst:605
+# 83614307fb004236ab5d80acac4e6466
+msgid "`CHEF-1761 <http://tickets.opscode.com/browse/CHEF-1761>`_  --- Change signal TERM to quit after the running jobs are finished"
+msgstr ""
+
+#: ../source/release_notes.rst:606
+# 4a8bace8bfd745b4a6ce1814e0d78ea1
+msgid "`CHEF-2750 <http://tickets.opscode.com/browse/CHEF->`_  --- git SCM/Deploy Resource should have an option to require a \"git submodule sync\""
+msgstr ""
+
+#: ../source/release_notes.rst:607
+# 681c3c879375413393cc8f634f1422d9
+msgid "`CHEF-2821 <http://tickets.opscode.com/browse/CHEF-2821>`_  --- add \"--sudo-use-password\" option to knife bootstrap to tell sudo to read --ssh-password from stdin"
+msgstr ""
+
+#: ../source/release_notes.rst:608
+# 50bd4599876e45dbbea7d3af103307c4
+msgid "`CHEF-3029 <http://tickets.opscode.com/browse/CHEF-3029>`_  --- ifconfig provider for debian/ubuntu platforms"
+msgstr ""
+
+#: ../source/release_notes.rst:609
+# 39b120e4c45947a8aad1f7ee635768cf
+msgid "`CHEF-3356 <http://tickets.opscode.com/browse/CHEF-3356>`_  --- Support for environments from json and ruby dsl files on chef-solo"
+msgstr ""
+
+#: ../source/release_notes.rst:610
+# 60282563aa2547fa851db70365beb76c
+msgid "`CHEF-3481 <http://tickets.opscode.com/browse/CHEF-3481>`_  --- Chef should respect SELinux security contexts"
+msgstr ""
+
+#: ../source/release_notes.rst:611
+# ad198c1663cf4bd58fa6f0320dccd70a
+msgid "`CHEF-3786 <http://tickets.opscode.com/browse/CHEF-3786>`_  --- remote_file: support authenticated HTTP/HTTPS requests"
+msgstr ""
+
+#: ../source/release_notes.rst:612
+# bebbd181456e4fee8ee30ee66808f3d1
+msgid "`CHEF-3880 <http://tickets.opscode.com/browse/CHEF-3880>`_  --- Recognize GCEL as a platform"
+msgstr ""
+
+#: ../source/release_notes.rst:613
+# 1aa22aff987445759fa10dc3ef999979
+msgid "`CHEF-3919 <http://tickets.opscode.com/browse/CHEF-3919>`_  --- Modify Chef::Platform to allow \"greater than\" conditionals"
+msgstr ""
+
+#: ../source/release_notes.rst:614
+# b3a4f4194c92422ebc87ba6dbbc9fc4d
+msgid "`CHEF-4154 <http://tickets.opscode.com/browse/CHEF-4154>`_  --- file provider support for configuring bool, policy, restorecon"
+msgstr ""
+
