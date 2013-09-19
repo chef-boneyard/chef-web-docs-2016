@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|chef server oec| can operate in a High Availability configuration that provides automated failover for stateful components in the system architecture. The High Availability configuration splits servers into two segments: front-end and back-end servers. The front-end servers handle requests to the user interface and requests that use the |api chef server|. The back-end servers handle data storage and retrieval, which consists of:
+|chef server oec| can operate in a high availability configuration that provides automated failover for stateful components in the system architecture. This configuration splits servers into two segments: front-end and back-end servers. The front-end servers handle requests to the user interface and requests that use the |api chef server|. The back-end servers handle data storage and retrieval, which consists of:
 
 * |couch db|
 * |postgresql|
@@ -14,7 +14,7 @@ Failover on the back-end servers is achieved using the following:
 
 * Asynchronous block level replication of logical volume managers using |drbd|, positioned between two back-end servers
 * A primary and backup cluster election using |vrrp| over unicast TCP/IP and |keepalived|
-* |keepalived| a virtual IP address to the primary server based on the results of the election
+* A virtual IP address to the primary server, maintained based on the results of the election done by |keepalived|
 
 .. image:: ../../images/oec_ha.png
 
