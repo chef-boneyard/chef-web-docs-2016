@@ -27,7 +27,7 @@ This configuration file has the following settings:
            :default => "kitty kitty"
 
    * - ``conflicts``
-     - |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named "docs":
+     - |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named "dogs":
        ::
 
           conflicts "dogs"
