@@ -25,7 +25,7 @@ Getting Started
 
 
 
-The Community  
+The Community
 =====================================================
 .. include:: ../../includes_community/includes_community_contributions.rst
 
