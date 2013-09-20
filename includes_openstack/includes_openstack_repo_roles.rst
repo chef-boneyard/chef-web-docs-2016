@@ -11,30 +11,50 @@ There are quite a few roles in the repository. The intention is that they may be
      - Description
    * - allinone-compute
      - This will deploy all of the services for Openstack Compute to function on a single box. The run list is the ``os-compute-single-controller`` and ``os-compute-worker`` roles.
+   * - os-compute-single-controller
+     - Roll-up role for all of the OpenStack Compute services on a single, non-HA controller. The run list is the ``os-ops-database`` role, the ``openstack-ops-database::openstack-db`` recipe, the  ``os-ops-messaging``, ``os-identity``, ``os-image``, ``os-network``, ``os-compute-setup``, ``os-compute-conductor``, ``os-compute-scheduler``, ``os-compute-api``, ``os-block-storage``, ``os-compute-cert``, ``os-compute-vncproxy`` and ``os-dashboard`` roles.
    * - os-base
      - The OpenStack Base role is included in every other role with a recipe in its run list. The run list is the ``openstack-common::default`` and ``openstack-common::logging`` recipes.
    * - os-block-storage
-     - Configures OpenStack block storage, configured by attributes.. The run list is the ``openstack-block-storage::api``, ``openstack-block-storage::scheduler``, ``openstack-block-storage::volume`` and ``openstack-block-storage::identity_registration`` recipes.
-   * - os-compute-single-controller
-     - Roll-up role for all of the OpenStack Compute services on a single, non-HA controller. The run list is the ``os-ops-database``, ``os-ops-messaging``, ``os-identity``, ``os-image``, ``os-network``, ``os-compute-scheduler``, ``os-compute-api``, ``os-block-storage``, ``os-compute-cert``, ``os-compute-vncproxy`` and ``os-dashboard`` roles.
+     - Roll-up role for all of the OpenStack Block Storage services. The run list is the ``os-block-storage-api``, ``os-block-storage-scheduler``, ``os-block-storage-volume`` roles and the ``openstack-block-storage::identity_registration`` recipe.
+   * - os-block-storage-api
+     - Block Storage API service. The run list is the ``openstack-block-storage::api`` recipe.
+   * - os-block-storage-scheduler
+     - Block Storage scheduler service. The run list is the ``openstack-block-storage::scheduler`` recipe.
+   * - os-block-storage-volume
+     - Block Storage volume service. The run list is the ``openstack-block-storage::volume`` recipe.
    * - os-compute-api
-     - Role for all the Compute API services. The run list is the ``openstack-compute::api-ec2``, ``openstack-compute::api-os-compute``, ``openstack-compute::api-metadata`` and ``openstack-compute::identity_registration`` recipes.
+     - Roll-up role for all the Compute API services. The run list is the ``os-compute-api-ec2``, ``os-compute-api-os-compute``, ``os-compute-api-metadata`` roles and the ``openstack-compute::identity_registration`` recipe.
+   * - os-compute-api-ec2
+     - Role for the Compute EC2 API service. The run list is the ``openstack-compute::api-ec2`` recipe.
+   * - os-compute-api-os-compute
+     - Role for the Compute OpenStack API service. The run list is the ``openstack-compute::api-os-compute`` recipe.
+   * - os-compute-api-metadata
+     - Role for the Compute metadata service. The run list is the ``openstack-compute::api-metadata`` recipe.
    * - os-compute-cert
      - OpenStack Compute Cert service. The run list is the ``openstack-compute::nova-cert`` recipe.
+   * - os-compute-conductor
+     - OpenStack Compute conductor service. The run list is the ``openstack-compute::conductor`` recipe.
    * - os-compute-scheduler
      - Nova scheduler. The run list is the ``openstack-compute::scheduler`` recipe.
+   * - os-compute-setup
+     - Nova setup and identity registration. The run list is the ``openstack-compute::setup`` and ``openstack-compute::identity-registration`` recipes.
    * - os-compute-vncproxy
      - Nova VNC Proxy. The run list is the ``openstack-compute::vncproxy`` recipe.
    * - os-compute-worker
      - The Compute worker node, most likely with a hypervisor. The run list is the ``openstack-compute::compute`` recipe.
    * - os-dashboard
-     - Horizon Dashboard service. The run list is the ``openstack-ops-database::openstack-db`` and ``openstack-dashboard::server`` recipes.
+     - Horizon Dashboard service. The run list is the ``openstack-dashboard::server`` recipe.
    * - os-identity
      - The Keystone Identity service. The run list is the ``openstack-identity::server`` and ``openstack-identity::registration`` recipes.
    * - os-image
-     - The Glance Image service. The run list is the ``openstack-ops-database::openstack-db``, ``openstack-image::registry``, ``openstack-image::api`` and ``openstack-image::identity_registration`` recipes.
+     - Roll-up role of the Glance Image service. The run list is the ``openstack-image::identity_registration`` recipe and the ``os-image-registry`` and ``os-image-api`` roles.
+   * - os-image-api
+     - The Glance Image API service. The run list is the ``openstack-image::api`` recipe.
+   * - os-image-api
+     - The Glance Image registry service. The run list is the ``openstack-image::registry`` recipe.
    * - os-network
-     - Configures OpenStack networking, managed by attribute for either nova-network or quantum. The run list is the ``openstack-network::default`` recipe.
+     - Configures OpenStack networking, managed by attribute for either nova-network or quantum. The run list is the ``openstack-network::common`` recipe.
    * - os-object-storage-account
      - The Swift object storage account service. The run list is the ``openstack-object-storage::account`` recipe.
    * - os-object-storage-container
