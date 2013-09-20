@@ -120,6 +120,10 @@ Configure
 -----------------------------------------------------
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_config_private_chef_on_frontend.rst
 
+Backups
+-----------------------------------------------------
+.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst
+
 Success!
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_install_ha_success.rst
