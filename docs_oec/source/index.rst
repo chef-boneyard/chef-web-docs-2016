@@ -201,7 +201,7 @@ Options:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_users.html">Create Users</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_orgs.html">Create Organizations</a> </br>
 
-Manage Enterprise Chef
+Manage Enterprise Chef 
 -----------------------------------------------------
 The |chef server| can be managed in the following ways:
 
