@@ -52,6 +52,6 @@ will match cookbooks that are greater than version 2.6.5, but less than version 
 
    < 2.3.4
 
-or will match cookbooks less than or equal to a specific version number:
+or will match cookbooks less than or equal to a specific version number::
 
    <= 2.6.5
