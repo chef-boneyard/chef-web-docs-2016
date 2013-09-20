@@ -19,7 +19,7 @@ This resource is the base resource for several other resources used for package 
 * :doc:`pacman_package </resource_pacman_package>`
 * :doc:`portage_package </resource_portage_package>`
 * :doc:`rpm_package </resource_rpm_package>`
-* :doc:`smartos_package </resource_smartos_package>`
+* :doc:`smart_o_s_package </resource_smartos_package>`
 * :doc:`solaris_package </resource_solaris_package>`
 * :doc:`yum_package </resource_yum>`
 

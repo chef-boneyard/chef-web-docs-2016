@@ -1,5 +1,5 @@
 =====================================================
-smartos_package
+smart_o_s_package
 =====================================================
 
 .. include:: ../../includes_resources/includes_resource_generic.rst

@@ -13,6 +13,6 @@ The following providers are available. Use the short name to call the provider f
    * - ``Chef::Provider::Package``
      - ``package``
      - When this short name is used, the |chef client| will attempt to determine the correct provider during the |chef client| run.
-   * - ``Chef::Provider::Package::Smartos``
-     - ``smartos_package``
+   * - ``Chef::Provider::Package::SmartOS``
+     - ``smart_o_s_package``
      - The provider that is used with the |smartos| platform.

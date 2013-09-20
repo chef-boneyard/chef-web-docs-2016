@@ -47,7 +47,7 @@ The following providers are available. Use the short name to call the provider f
      - ``chef_gem``
      - Can be used with the ``options`` attribute.
    * - ``Chef::Provider::Package::Smartos``
-     - ``smartos_package``
+     - ``smart_o_s_package``
      - 
    * - ``Chef::Provider::Package::Solaris``
      - ``solaris_package``
