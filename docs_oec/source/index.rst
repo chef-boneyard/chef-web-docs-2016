@@ -154,7 +154,7 @@ Reporting
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 :doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
 
-Topologies
+Deployment Scenarios
 -----------------------------------------------------
 The |chef server oec| can be installed in the following configurations:
 
@@ -162,9 +162,10 @@ The |chef server oec| can be installed in the following configurations:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_standalone.html">Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ha.html">High Availability</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Front End / Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_standalone.html">Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_ha.html">Scaled Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_fe.html">Scaled Front End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_febe.html">Scaled Front and Back Ends</a> </br>
 
 Install Enterprise Chef
 -----------------------------------------------------
@@ -181,8 +182,9 @@ Installation scenarios:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_pre.html">Prerequisites</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_standalone.html">Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ha.html">High Availability</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Front End / Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_be.html">Scaled Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_fe.html">Scaled Front End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Scaled Front and Back Ends</a> </br>
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
 
@@ -516,8 +518,9 @@ The following topics discuss using |chef server oec| with platforms:
    essentials_search
    install_bootstrap
    install_server
+   install_server_be
+   install_server_fe
    install_server_febe
-   install_server_ha
    install_server_hosted
    install_server_ldap
    install_server_orgs
@@ -668,6 +671,10 @@ The following topics discuss using |chef server oec| with platforms:
    server_backup_restore
    server_components
    server_data
+   server_deploy_be
+   server_deploy_fe
+   server_deploy_febe
+   server_deploy_standalone
    server_firewalls_and_ports
    server_high_availability
    server_ldap
