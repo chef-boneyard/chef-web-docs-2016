@@ -163,7 +163,7 @@ The |chef server oec| can be installed in the following configurations:
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_standalone.html">Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_ha.html">Scaled Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_be.html">Scaled Back End</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_fe.html">Scaled Front End</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_febe.html">Scaled Front and Back Ends</a> </br>
 
