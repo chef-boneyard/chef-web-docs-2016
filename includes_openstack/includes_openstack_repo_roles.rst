@@ -38,7 +38,7 @@ There are quite a few roles in the repository. The intention is that they may be
    * - os-compute-scheduler
      - Nova scheduler. The run list is the ``openstack-compute::scheduler`` recipe.
    * - os-compute-setup
-     - Nova setup and identity registration. The run list is the ``openstack-compute::setup`` and ``openstack-compute::identity-registration`` recipes.
+     - Nova setup and identity registration. The run list is the ``openstack-compute::nova-setup`` and ``openstack-compute::identity-registration`` recipes.
    * - os-compute-vncproxy
      - Nova VNC Proxy. The run list is the ``openstack-compute::vncproxy`` recipe.
    * - os-compute-worker
