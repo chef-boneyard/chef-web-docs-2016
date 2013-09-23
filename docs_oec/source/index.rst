@@ -272,17 +272,6 @@ The |chef client| can be installed with the :doc:`knife bootstrap </knife_bootst
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
-.. Manage Server Objects
-.. -----------------------------------------------------
-.. xxxxx
-.. 
-.. .. raw:: html
-.. 
-..    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">chef-client</a> </br>
-..    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Pushy</a> </br>
-..    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Knife</a> </br>
-..    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/xxxxx.html">Ohai</a> </br>
-
 Settings and Tools
 -----------------------------------------------------
 The following settings files are used to configure behavior for the |chef client|:
