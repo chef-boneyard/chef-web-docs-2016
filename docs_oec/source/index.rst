@@ -237,7 +237,6 @@ The following command-line tools can be run on the |chef server|:
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/orgmapper.html">orgmapper</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_chef_server.html">ctl-chef-server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_private_chef.html">private-chef-ctl</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_pushy_client.html">pushy-client</a> </br>
 
@@ -474,7 +473,6 @@ The following topics discuss using |chef server oec| with platforms:
    config_rb_solo
    ctl_chef_apply
    ctl_chef_client
-   ctl_chef_server
    ctl_chef_shell
    ctl_chef_solo
    ctl_opscode_reporting 
