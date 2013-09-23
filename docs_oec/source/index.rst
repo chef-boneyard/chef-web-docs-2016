@@ -156,9 +156,9 @@ Reporting
 
 Deployment Scenarios
 -----------------------------------------------------
-The |chef server oec| can be installed in the following configurations:
+.. include:: ../../includes_server_deploy/includes_server_deploy.rst
 
-.. these need to be updated to topology docs, not just the install docs.
+The following sections discuss these deployment configuration options in greater detail:
 
 .. raw:: html
 
@@ -166,6 +166,8 @@ The |chef server oec| can be installed in the following configurations:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_be.html">Scaled Back End</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_fe.html">Scaled Front End</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_febe.html">Scaled Front and Back Ends</a> </br>
+
+.. note:: For more information about signing up for hosted |chef server oec|, see https://getchef.opscode.com/signup.
 
 Install Enterprise Chef
 -----------------------------------------------------
