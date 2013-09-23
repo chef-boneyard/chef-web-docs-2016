@@ -270,7 +270,7 @@ The following resources are platform resources with built-in providers:
 * scm
 * script
 * service
-* smartos_package
+* smart_o_s_package
 * solaris_package
 * subversion
 * template
@@ -2135,7 +2135,7 @@ Examples
 .. include:: ../../step_resource/step_resource_execute_control_a_service.rst
 
 
-smartos_package
+smart_o_s_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_smartos.rst
 
