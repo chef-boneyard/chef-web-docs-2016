@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``metadata``
      - The superblock type for RAID metadata. Default value: ``0.90``.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``raid_device``
      - |raid_device mdadm| Default value: the ``name`` of the resource block (see Syntax section above).
 

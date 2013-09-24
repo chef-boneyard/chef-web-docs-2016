@@ -32,6 +32,6 @@ This resource has the following attributes:
    * - ``onparent``
      - |onparent ifconfig| Default value: ``nil``.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``target``
      - |target_interface| Default value: the ``name`` of the resource block (see Syntax section above).

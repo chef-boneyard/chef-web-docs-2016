@@ -24,6 +24,6 @@ This resource has the following attributes:
    * - ``pass``
      - |pass_number| Default value: ``2``.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``supports``
      - |supports resource mount|

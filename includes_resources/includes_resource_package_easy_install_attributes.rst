@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``package_name``
      - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``python_binary``
      - The location of the |python| binary.
    * - ``response_file``

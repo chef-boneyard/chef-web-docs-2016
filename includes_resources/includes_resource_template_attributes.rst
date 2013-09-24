@@ -44,7 +44,7 @@ This resource has the following attributes:
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``

@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``pattern``
      - |pattern process_table| Default value: ``service_name``.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``reload_command``
      - |command service_reload| Default value: ``nil``.
    * - ``restart_command``

@@ -20,7 +20,7 @@ This resource has the following attributes:
 
        |key_name resource registry_key hives|
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``recursive``
      - |recursive resource registry_key|
 

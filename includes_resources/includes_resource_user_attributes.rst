@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``password``
      - |password resource user| Default value: ``nil``.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``shell``
      - |shell| Default value: ``nil``.
    * - ``supports``

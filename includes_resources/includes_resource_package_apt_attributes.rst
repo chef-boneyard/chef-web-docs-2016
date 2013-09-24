@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``package_name``
      - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``response_file``
      - Optional. |response_file| Default value: ``nil``.
    * - ``source``

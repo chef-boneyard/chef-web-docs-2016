@@ -42,7 +42,7 @@ This resource has the following attributes:
    * - ``path``
      - |path file| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``

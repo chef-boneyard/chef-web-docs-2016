@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``key_name``
      - |key_name resource directory| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``value``
      - |value resource directory|
 

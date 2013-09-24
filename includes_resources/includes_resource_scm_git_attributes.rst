@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``group``
      - |group deploy| Default value: ``nil``.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``reference``
      - |reference resource scm|
    * - ``remote``

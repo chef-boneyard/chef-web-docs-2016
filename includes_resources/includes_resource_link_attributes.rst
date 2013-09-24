@@ -16,7 +16,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner resource link|
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``target_file``
      - |name_link| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``to``

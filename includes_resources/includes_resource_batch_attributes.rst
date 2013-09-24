@@ -24,7 +24,7 @@ This resource has the following attributes:
    * - ``group``
      - |group command|
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``user``

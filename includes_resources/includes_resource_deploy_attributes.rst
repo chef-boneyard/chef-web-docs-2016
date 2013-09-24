@@ -34,7 +34,7 @@ This resource has the following attributes:
    * - ``migration_command``
      - |migration_command resource deploy|
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``purge_before_symlink``
      - |purge_before_symlink| 
    * - ``repo``

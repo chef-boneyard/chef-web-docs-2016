@@ -50,7 +50,7 @@ This resource has the following attributes:
    * - ``path``
      - |environment set_path|
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``shell``
      - |environment set_shell|
    * - ``user``

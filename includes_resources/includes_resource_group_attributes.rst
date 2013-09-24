@@ -18,6 +18,6 @@ This resource has the following attributes:
    * - ``members``
      - |group_members| Default value: ``nil``.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``system``
      - |system resource group|

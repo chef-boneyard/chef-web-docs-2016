@@ -63,7 +63,7 @@ Getting Started
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/manage_server_hosted.html">Hosted Enterprise Chef</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/manage_server_open_source.html">Open Source Chef</a> </br>
 
-**Configuration Files**
+**Configuration Files** 
 
 .. raw:: html
 

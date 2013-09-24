@@ -16,6 +16,6 @@ This resource has the following attributes:
    * - ``netmask``
      - |netmask|
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``target``
      - |target_address| Default value: the ``name`` of the resource block (see Syntax section above).

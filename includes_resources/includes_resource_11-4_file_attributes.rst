@@ -30,6 +30,6 @@ This resource has the following attributes:
    * - ``path``
      - |path file| Default value: ``name``.
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
    * - ``rights``
      - |windows| only. |rights windows security|

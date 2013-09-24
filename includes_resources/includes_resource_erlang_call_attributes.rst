@@ -20,4 +20,4 @@ This resource has the following attributes:
    * - ``node_name``
      - |node_name resource directory|
    * - ``provider``
-     - Optional. |provider resource_attribute|
+     - Optional. |provider resource_parameter|
