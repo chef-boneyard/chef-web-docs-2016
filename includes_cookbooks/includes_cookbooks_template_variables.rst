@@ -17,7 +17,7 @@ A statement is delimited by ``<%`` and ``-%>``. For example::
 
 Using a |ruby| expression is the most common approach because this is how all variables sent to a template are referenced. Whenever a template needs to use an ``each``, ``if``, or ``end``, use a |ruby| statement.
 
-When a template is rendered, |ruby| expressions and statements are evaluated by the |chef client|. The variables listed in the resource's variables attribute and the node object are identified. The |chef client| then passes these variables to the template, where they will be accessible as instance variables within the template; a node object can be accessed just as if it were part of a recipe, using the same node.
+When a template is rendered, |ruby| expressions and statements are evaluated by the |chef client|. The variables listed in the resource's variables parameter and the node object are evaluated. The |chef client| then passes these variables to the template, where they will be accessible as instance variables within the template; the node object can be accessed just as if it were part of a recipe, using the same syntax.
 
 For example, a simple template resource like this:
 
