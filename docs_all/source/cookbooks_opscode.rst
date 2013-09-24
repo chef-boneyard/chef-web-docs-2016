@@ -6,7 +6,7 @@ Cookbooks Authored and Maintained by Opscode
 
 This reference describes the cookbooks that are authored and maintained by |opscode|.
 
-.. note:: This topic is being updated and many more cookbooks will be added to this page. For all of the cookbooks in the opscode-cookbooks repository, see: https://github.com/opscode-cookbooks/. 
+.. note:: For all of the cookbooks in the opscode-cookbooks repository, see: https://github.com/opscode-cookbooks/. 
 
 Cookbooks
 =====================================================
