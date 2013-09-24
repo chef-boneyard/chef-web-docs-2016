@@ -19,4 +19,4 @@ All data bags are stored in the ``data_bags`` directory of the |chef repo|. This
             |_standard_packages.json
             |_global_shell_settings.json
 
-where ``_admins``, ``_db_users``, ``_db_config``, ``_standard_packages``, and ``_global_shell_settings`` are the names of individual data bags and all of the files that end with ``.json`` are the individual data bag items. 
+where ``admins``, ``db_users``, ``db_config``, ``standard_packages``, and ``global_shell_settings`` are the names of individual data bags and all of the files that end with ``.json`` are the individual data bag items. 
