@@ -5,25 +5,25 @@ The ``value_for_platform_family`` method can be used in a recipe to use a |hash|
 
 .. code-block:: ruby
 
-   value_for_platform( { platform_family => value } )
+   value_for_platform_family( { platform_family => value } )
 
-where ``platform_family`` is a comma-separated list, each specifying a platform family, such as |fedora|, |suse|, or |redhat enterprise linux|, and ``value`` specifies the value that will be used if the node's platform family matches ``value_for_platform_family``. If each value only has a single platform, then the syntax is like the following:
+where ``platform_family`` is a comma-separated list, each specifying a platform family, such as |fedora|, |suse|, or |redhat enterprise linux|, and ``value`` specifies the value that will be used if the node's platform family matches ``value_for_platform_family``. If each value only has a single platform family, then the syntax is like the following:
 
 .. code-block:: ruby
 
-   value_for_platform(
-     "platform" => { "version" => "value" },
-     "platform" => { "version" => "value" },
-     "platform" => "value"
+   value_for_platform_family(
+     "platform_family" => { "version" => "value" },
+     "platform_family" => { "version" => "value" },
+     "platform_family" => "value"
    )
 
-but when each value has more than one platform, the syntax changes to:
+but when each value has more than one platform_family, the syntax changes to:
 
 .. code-block:: ruby
 
-   value_for_platform(
-     ["platform", "platform", "platform", "platform" ] => "value",
-     ["platform", "platform"] => "value",
+   value_for_platform_family(
+     ["platform_family", "platform_family", "platform_family", "platform_family" ] => "value",
+     ["platform_family", "platform_family"] => "value",
      "default" => "value"
    )
 
