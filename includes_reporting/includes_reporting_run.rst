@@ -17,4 +17,4 @@ When reports are generated as part of a |chef client| run, in addition to what n
    * - **Generate Reporting ID**
      - At the beginning of the |chef client| run, the |chef client| pings |reporting| to notify it that a |chef client| run is starting and to generate a unique identifier for the |chef client| run so that it can be associated with the reporting data.
    * - **Send the Reporting Data to the Server**
-     - At the end of the |chef client| run, the |chef client| pings |reporting| and sends it the data that was collected during the |chef client| run.
+     - At the end of the |chef client| run, the |chef client| pings |reporting|, and then sends the data that was collected during the |chef client| run to the |chef server| so that it can be added to the |reporting| database.
