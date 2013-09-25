@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To get metadata information (as |json) data, enter the following:
+To get metadata information (as |json|) data, enter the following:
 
 .. code-block:: bash
 
