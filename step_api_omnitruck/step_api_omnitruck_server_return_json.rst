@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use |curl| to get the omnibus package for |ubuntu| 12.04, and return the data as |json| data, enter the following:
+To get metadata information (as |json) data, enter the following:
 
 .. code-block:: bash
 

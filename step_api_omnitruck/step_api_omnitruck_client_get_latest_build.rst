@@ -4,7 +4,7 @@ To get the latest supported build for |ubuntu| 12.04, enter the following:
 
 .. code-block:: xml
 
-   http://www.opscode.com/chef/download?p=$ubuntu&pv=$12.04&m=$x86_64
+   http://www.opscode.com/chef/metadata?p=ubuntu&pv=12.04&m=x86_64
 
 to return something like:
 
