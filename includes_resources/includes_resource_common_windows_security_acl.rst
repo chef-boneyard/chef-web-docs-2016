@@ -17,7 +17,7 @@ where
       :widths: 60 420
       :header-rows: 1
    
-      * - Option Types
+      * - Option Type
         - Description
       * - ``:applies_to_children``
         - Use to specify how permissions are applied to children. Possible values: ``true`` to inherit both child directories and files;  ``false`` to not inherit any child directories or files; ``:containers_only`` to inherit only child directories (and not files); ``:objects_only`` to recursively inherit files (and not child directories).
