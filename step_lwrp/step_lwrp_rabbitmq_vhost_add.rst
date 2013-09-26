@@ -4,7 +4,7 @@ To add a virtual host:
 
 .. code-block:: ruby
 
-   ruby rabbitmq_vhost "/nova" do 
+   rabbitmq_vhost "/nova" do 
      action :add
    end
 
