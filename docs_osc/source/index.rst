@@ -279,7 +279,6 @@ The following resources are built-in and can be used in any recipe:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_route.html">route</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_rpm_package.html">rpm_package</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_ruby_block.html">ruby_block</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_scm.html">scm</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_script.html">script</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_service.html">service</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_subversion.html">subversion</a> </br>
@@ -546,7 +545,6 @@ The following topics discuss using |chef server osc| with platforms:
    resource_route
    resource_ruby
    resource_ruby_block
-   resource_scm
    resource_smartos_package
    resource_solaris_package
    resource_subversion
