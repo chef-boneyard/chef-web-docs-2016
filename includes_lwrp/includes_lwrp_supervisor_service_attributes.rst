@@ -32,7 +32,7 @@ This lightweight resource provider has the following attributes:
    * - ``redirect_stderr``
      - |redirect_stderr lwrp supervisor|
    * - ``serverurl``
-     - |startretries|
+     - |serverurl lwrp supervisor|
    * - ``service_name``
      - |name service|
    * - ``startretries``
