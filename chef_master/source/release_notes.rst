@@ -141,18 +141,7 @@ New attributes:
 
 |resource template| Attributes
 -----------------------------------------------------
-The |resource template| resource was updated to be fully-based on the |resource file| resource. Updated attributes:
-
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``source``
-     - |source file_location|
-
-New attributes:
+The |resource template| resource has the following new attributes:
 
 .. list-table::
    :widths: 150 450
