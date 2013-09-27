@@ -2,15 +2,31 @@
 Upgrade to Enterprise Chef
 =====================================================
 
-.. this topic still needs a lot of work
+The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |dpkg|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete.
 
 To upgrade to |chef server oec|, do the following:
 
+#. Stop all of the machines:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl stop
+
+#. Run |dpkg| on all machines:
+
+   .. code-block:: bash
+      
+      $ dpkg -i or rpm -U <new package>
+
+#. Upgrade the machines in the following order: backend machines (bootstrap server first, if used) and then front end servers (in any order), with the following command:
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl upgrade
+
+And then after the upgrade process is complete, each of the machines should be cleaned up to remove old data (like the now-unused |couch db| for |chef server| data):
+
 .. code-block:: bash
-
-   /code private-chef-ctl stop on all machines
-   dpkg -i or rpm -U <new package> on all machines
-   private-chef-ctl upgrade on all machines (you need to do this in the right order, to follow)
-   private-chef-ctl cleanup on all machines
-
+   
+   $ private-chef-ctl cleanup
 
