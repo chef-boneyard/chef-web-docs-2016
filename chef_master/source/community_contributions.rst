@@ -89,10 +89,6 @@ It does not require you to:
 
 It is our goal to run a successful, truly open source business. To that end, we are protecting our own rights by making them explicit in our choice of licensing: you have the same rights to our open source software that we do.
 
-
-FAQs
------------------------------------------------------
-
 **How should I update the header file of my contribution to properly credit earlier contributors and recognize copyrights?**
 
 You need to put attribution about the origins of some of the code in the NOTICE file for your app. On an individual header, you can add yourself as an author/copyright holder, placing text in the header file saying that your new work is based on previous work, and referencing the original header below.
@@ -125,9 +121,6 @@ The CLA is beneficial to our contributors and users because:
 * It makes clear what is required of our contributors.
 * The most important thing about the CLA is that it doesn't give Opscode any special rights - it just makes things more explicit.
 
-FAQs
------------------------------------------------------
-
 **Can you accept my contribution without a CLA (I'll sign it later, I promise!)?**
 
 No. We must have a signed CLA before we can merge your changes to any of our projects.
@@ -151,9 +144,6 @@ Contribution Process
 Contribute Changes to Opscode-Managed Apache Licensed Cookbooks at the Community Site. All other cookbooks require no CLA. Once you have signed a CLA and have a ticket referencing your request, see How to Contribute to Opscode Cookbooks. Opscode doesn't maintain all the cookbooks on the community site, and individual maintainers choose whatever license they like. Contact those authors to find out what their contribution process is.
 
 If you have created your own cookbook you would like to share with the community, read about adding a cookbook to the community site.
-
-FAQs
------------------------------------------------------
 
 **Do I have to use GitHub for my fork of the repository?**
 
