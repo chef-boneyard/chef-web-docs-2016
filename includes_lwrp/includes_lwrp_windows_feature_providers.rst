@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Use the following provider when using the |resource package| resource in a recipe when the |lwrp homebrew tap| lightweight resource:
+Use the following provider when the |lwrp windows feature| lightweight resource:
 
 .. list-table::
    :widths: 130 80 40 250
