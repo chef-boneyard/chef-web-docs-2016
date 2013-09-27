@@ -2,9 +2,15 @@
 Upgrade to Enterprise Chef
 =====================================================
 
-There are two scenarios for upgrading to |chef server oec| from |chef private|:
+.. this topic still needs a lot of work
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability</a> </br>
+To upgrade to |chef server oec|, do the following:
+
+.. code-block:: bash
+
+   /code private-chef-ctl stop on all machines
+   dpkg -i or rpm -U <new package> on all machines
+   private-chef-ctl upgrade on all machines (you need to do this in the right order, to follow)
+   private-chef-ctl cleanup on all machines
 
 
