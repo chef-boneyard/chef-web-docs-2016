@@ -12,7 +12,7 @@ chef_handler
 
 .. include:: ../../includes_lwrp/includes_lwrp_chef_handler.rst
 
-.. note:: This lightweight resource is part of the |cookbook chef_handler| cookbook (http://community.opscode.com/cookbooks/chef_handler).
+.. note:: This lightweight resource is part of the |cookbook chef_handler| cookbook (https://github.com/opscode-cookbooks/chef_handler).
 
 Actions
 -----------------------------------------------------

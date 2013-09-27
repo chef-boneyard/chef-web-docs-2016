@@ -12,7 +12,7 @@ dmg_package
 
 .. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
 
-.. note:: This lightweight resource is part of the |cookbook dmg| cookbook (http://community.opscode.com/cookbooks/dmg).
+.. note:: This lightweight resource is part of the |cookbook dmg| cookbook (https://github.com/opscode-cookbooks/dmg).
 
 Actions
 -----------------------------------------------------

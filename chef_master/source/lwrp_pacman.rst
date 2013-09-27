@@ -6,7 +6,7 @@ pacman Lightweight Resource
 
 The |cookbook pacman| cookbook contains the following lightweight resources: ``pacman_aur`` and ``pacman_group``.
 
-.. note:: These lightweight resources are part of the |cookbook pacman| cookbook (http://community.opscode.com/cookbooks/pacman).
+.. note:: These lightweight resources are part of the |cookbook pacman| cookbook (https://github.com/opscode-cookbooks/pacman).
 
 pacman_aur
 =====================================================

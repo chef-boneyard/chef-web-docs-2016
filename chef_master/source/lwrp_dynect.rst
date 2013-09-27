@@ -10,7 +10,7 @@ dynect_rr
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_dynect_rr.rst
 
-.. note:: This lightweight resource is part of the |cookbook dynect| cookbook (http://community.opscode.com/cookbooks/dynect). The ``dynect_rest`` |ruby| |gem| is required.
+.. note:: This lightweight resource is part of the |cookbook dynect| cookbook (https://github.com/opscode-cookbooks/dynect). The ``dynect_rest`` |ruby| |gem| is required.
 
 Actions
 -----------------------------------------------------

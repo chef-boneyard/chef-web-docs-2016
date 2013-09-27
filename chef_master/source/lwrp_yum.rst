@@ -6,7 +6,7 @@ yum Lightweight Resource
 
 The |cookbook yum| cookbook contains the following lightweight resources: ``yum_key`` and ``yum_repository``.
 
-.. note:: These lightweight resources are part of the |cookbook yum| cookbook (http://community.opscode.com/cookbooks/yum).
+.. note:: These lightweight resources are part of the |cookbook yum| cookbook (https://github.com/opscode-cookbooks/yum).
 
 yum_key
 =====================================================

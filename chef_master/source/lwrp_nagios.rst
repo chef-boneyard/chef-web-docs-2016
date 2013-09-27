@@ -10,7 +10,7 @@ nagios_nrpecheck
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_nagios_nrpecheck.rst
 
-.. note:: This lightweight resource is part of the |cookbook nagios| cookbook (http://community.opscode.com/cookbooks/nagios).
+.. note:: This lightweight resource is part of the |cookbook nagios| cookbook (https://github.com/opscode-cookbooks/nagios).
 
 Actions
 -----------------------------------------------------

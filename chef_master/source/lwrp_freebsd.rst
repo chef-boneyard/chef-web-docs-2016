@@ -10,7 +10,7 @@ freebsd_port_options
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_freebsd_port_options.rst
 
-.. note:: This lightweight resource is part of the |cookbook freebsd| cookbook (http://community.opscode.com/cookbooks/freebsd).
+.. note:: This lightweight resource is part of the |cookbook freebsd| cookbook (https://github.com/opscode-cookbooks/freebsd).
 
 Actions
 -----------------------------------------------------

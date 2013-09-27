@@ -10,7 +10,7 @@ daemontools_service
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_daemontools_service.rst
 
-.. note:: This lightweight resource is part of the |cookbook daemontools| cookbook (http://community.opscode.com/cookbooks/daemontools).
+.. note:: This lightweight resource is part of the |cookbook daemontools| cookbook (https://github.com/opscode-cookbooks/daemontools).
 
 Actions
 -----------------------------------------------------

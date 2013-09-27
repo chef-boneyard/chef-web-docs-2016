@@ -6,7 +6,7 @@ iis Lightweight Resource
 
 The |cookbook iis| cookbook contains the following lightweight resources: ``iis_app``, ``iis_config``, ``iis_module``, ``iis_pool``, and ``iis_site``.
 
-.. note:: These lightweight resources are part of the |cookbook iis| cookbook (http://community.opscode.com/cookbooks/iis).
+.. note:: These lightweight resources are part of the |cookbook iis| cookbook (https://github.com/opscode-cookbooks/iis).
 
 iis_app
 =====================================================

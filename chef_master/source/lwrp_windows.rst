@@ -8,7 +8,7 @@ The |cookbook windows| cookbook contains the following lightweight resources: ``
 
 .. warning:: The |resource batch| resource was added to |chef 11-6| as a core resource. In general, it is recommended to use the |resource batch| resource instead of the ``windows_batch`` lightweight resource included in the |cookbook windows| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer resource.
 
-.. note:: These lightweight resources are part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
+.. note:: These lightweight resources are part of the |cookbook windows| cookbook (https://github.com/opscode-cookbooks/windows).
 
 windows_auto_run
 =====================================================

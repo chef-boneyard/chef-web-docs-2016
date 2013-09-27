@@ -12,7 +12,7 @@ powershell
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_powershell.rst
 
-.. note:: This lightweight resource is part of the |cookbook powershell| cookbook (http://community.opscode.com/cookbooks/powershell).
+.. note:: This lightweight resource is part of the |cookbook powershell| cookbook (https://github.com/opscode-cookbooks/powershell).
 
 Actions
 -----------------------------------------------------

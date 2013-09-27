@@ -10,7 +10,7 @@ riak_cluster
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_riak_cluster.rst
 
-.. note:: This lightweight resource is part of the |cookbook riak| cookbook (http://community.opscode.com/cookbooks/riak).
+.. note:: This lightweight resource is part of the |cookbook riak| cookbook (https://github.com/opscode-cookbooks/riak).
 
 Actions
 -----------------------------------------------------

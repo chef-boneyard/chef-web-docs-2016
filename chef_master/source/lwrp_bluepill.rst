@@ -10,7 +10,7 @@ bluepill_service
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_bluepill_service.rst
 
-.. note:: This lightweight resource is part of the |cookbook bluepill| cookbook (http://community.opscode.com/cookbooks/bluepill).
+.. note:: This lightweight resource is part of the |cookbook bluepill| cookbook (https://github.com/opscode-cookbooks/bluepill).
 
 Actions
 -----------------------------------------------------

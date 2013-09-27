@@ -6,7 +6,7 @@ firewall Lightweight Resource
 
 The |cookbook firewall| cookbook contains the following lightweight resources: ``firewall`` and ``firewall_rule``.
 
-.. note:: These lightweight resources are part of the |cookbook firewall| cookbook (http://community.opscode.com/cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
+.. note:: These lightweight resources are part of the |cookbook firewall| cookbook (https://github.com/opscode-cookbooks/firewall), which provides a set of primitives for managing firewalls and associated rules.
 
 firewall
 =====================================================

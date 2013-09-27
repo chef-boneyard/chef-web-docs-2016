@@ -10,7 +10,7 @@ maven
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_maven.rst
 
-.. note:: This lightweight resource is part of the |cookbook maven| cookbook (http://community.opscode.com/cookbooks/maven).
+.. note:: This lightweight resource is part of the |cookbook maven| cookbook (https://github.com/opscode-cookbooks/maven).
 
 Actions
 -----------------------------------------------------

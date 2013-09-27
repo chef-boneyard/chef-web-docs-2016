@@ -6,7 +6,7 @@ aws Lightweight Resource
 
 The |cookbook aws| cookbook contains the following lightweight resources: ``aws_ebs_volume``, ``aws_elastic_ip``, ``aws_elastic_lb``, and ``aws_resource_tag``.
 
-.. note:: These lightweight resources are part of the |cookbook aws| cookbook (http://community.opscode.com/cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
+.. note:: These lightweight resources are part of the |cookbook aws| cookbook (https://github.com/opscode-cookbooks/aws), which provides libraries, resources, and providers that can be used to configure and manage |amazon aws| components using the |amazon ec2| API.
 
 |amazon aws| Credentials
 =====================================================

@@ -6,7 +6,7 @@ supervisor Lightweight Resource
 
 The |cookbook supervisor| cookbook contains the following lightweight resources: ``supervisor_fcgi``, ``supervisor_group``, and ``supervisor_service``.
 
-.. note:: These lightweight resources are part of the |cookbook supervisor| cookbook (http://community.opscode.com/cookbooks/supervisor).
+.. note:: These lightweight resources are part of the |cookbook supervisor| cookbook (https://github.com/opscode-cookbooks/supervisor).
 
 supervisor_fcgi
 =====================================================

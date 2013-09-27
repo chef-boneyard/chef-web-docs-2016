@@ -10,7 +10,7 @@ users_manage
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_users_manage.rst
 
-.. note:: This lightweight resource is part of the |cookbook users| cookbook (http://community.opscode.com/cookbooks/users).
+.. note:: This lightweight resource is part of the |cookbook users| cookbook (https://github.com/opscode-cookbooks/users).
 
 Actions
 -----------------------------------------------------

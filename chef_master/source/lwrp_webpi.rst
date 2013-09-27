@@ -10,7 +10,7 @@ webpi_product
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_webpi_product.rst
 
-.. note:: This lightweight resource is part of the |cookbook webpi| cookbook (http://community.opscode.com/cookbooks/webpi).
+.. note:: This lightweight resource is part of the |cookbook webpi| cookbook (https://github.com/opscode-cookbooks/webpi).
 
 Actions
 -----------------------------------------------------

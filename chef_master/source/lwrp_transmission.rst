@@ -10,7 +10,7 @@ transmission_torrent_file
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_transmission_torrent_file.rst
 
-.. note:: This lightweight resource is part of the |cookbook transmission| cookbook (http://community.opscode.com/cookbooks/transmission).
+.. note:: This lightweight resource is part of the |cookbook transmission| cookbook (https://github.com/opscode-cookbooks/transmission).
 
 Actions
 -----------------------------------------------------

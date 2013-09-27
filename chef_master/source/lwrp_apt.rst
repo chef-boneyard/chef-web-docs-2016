@@ -6,7 +6,7 @@ apt Lightweight Resource
 
 The |cookbook apt| cookbook contains the following lightweight resources: ``apt_preference`` and ``apt_repository``.
 
-.. note:: These lightweight resources are part of the |cookbook apt| cookbook (http://community.opscode.com/cookbooks/apt).
+.. note:: These lightweight resources are part of the |cookbook apt| cookbook (https://github.com/opscode-cookbooks/apt).
 
 apt_preference
 =====================================================

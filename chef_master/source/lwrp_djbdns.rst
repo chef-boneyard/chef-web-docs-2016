@@ -10,7 +10,7 @@ djbdns_rr
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_djbdns_rr.rst
 
-.. note:: This lightweight resource is part of the |cookbook djbdns| cookbook (http://community.opscode.com/cookbooks/djbdns).
+.. note:: This lightweight resource is part of the |cookbook djbdns| cookbook (https://github.com/opscode-cookbooks/djbdns).
 
 Actions
 -----------------------------------------------------
