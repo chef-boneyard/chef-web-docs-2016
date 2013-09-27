@@ -4,7 +4,7 @@ iis Lightweight Resource
 
 |cookbook name iis|
 
-The |cookbook iis| cookbook contains the following lightweight resources: ``iis_app``, ``iis_config``, ``iis_pool``, and ``iis_site``.
+The |cookbook iis| cookbook contains the following lightweight resources: ``iis_app``, ``iis_config``, ``iis_module``, ``iis_pool``, and ``iis_site``.
 
 .. note:: These lightweight resources are part of the |cookbook iis| cookbook (http://community.opscode.com/cookbooks/iis).
 
@@ -44,19 +44,19 @@ Examples
 .. include:: ../../step_lwrp/step_lwrp_iis_config_set_up_logging.rst
 
 iis_module
------------------------------------------------------
+=====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_iis_module.rst
 
 Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_module_actions.rst
 
 Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_lwrp/includes_lwrp_iis_module_attributes.rst
 
 Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../step_lwrp/step_lwrp_iis_module_add.rst
 
 
