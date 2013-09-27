@@ -1,0 +1,5 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+
+|juniper| is a leading provider of network routing, switching and security solutions for enterprises and service providers. |junos| is the operating system that runs on |juniper| routing, switching and security platforms, providing a consistent and simple interface that results in higher operational efficiencies for |juniper| customers. |juniper| offers simple, flexible and agile architectures that solve some of the most difficult problems in the data center today; the company’s data center switch offerings—the EX Series and QFX Series—drive benefits across the broader data center infrastructure, delivering greater efficiencies in applications, compute, storage, and other technology areas.

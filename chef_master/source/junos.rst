@@ -4,7 +4,9 @@
 
 .. warning:: This is a draft for future functionality that will be added to Chef.
 
-.. include:: ../../includes_junos/includes_junos.rst
+.. include:: ../../includes_juniper/includes_juniper.rst
+
+.. include:: ../../includes_juniper/includes_juniper_junos.rst
 
 The netdev Cookbook
 =====================================================
