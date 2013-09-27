@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-26 11:41\n"
+"POT-Creation-Date: 2013-09-27 15:26\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,312 +17,282 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/chef_why.rst:33
-# 442e1c553ae843aba90b8a9cec5f47fa
+# 13609dbda9574e64a1ab0349faa8acf2
 msgid "Why Chef?"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_you_know_best.rst:5
-# 8f7f8de9dcdb4588a390b0cbd3619649
+# b206f11558d2435e83f7b89c99368ffb
 msgid "The idea that you know best about what should happen in your organization goes hand-in-hand with the notion that you still need help keeping it all running. It is rare that a single individual knows everything about a very complex problem, let alone knows all of the steps that may be required to solve them. The same is true with tools. |chef| provides help with infrastructure management. And |chef| can help solve very complicated problems. |chef| also has a large community of users who have a lot of experience solving a lot of very complex problems. That community can provide knowledge and support in areas that your organization may not have and (along with |chef|) can help your organization solve any complex problem."
 msgstr ""
 
 #: ../source/chef_why.rst:38
-# b296e6e0f10a462ca5bddb78187c9d68
+# 6b82f3f6fcb74816ab4b95f3ce11a8b6
 msgid "What are the core principles?"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_principles.rst:5
-# 7274a491819a4dcf9ed302120938d66e
+# f799fd3e780745aba4a10e81dc680a79
 msgid "The key underlying principle of |chef| is that you (the user) knows best about what your environment is, what it should do, and how it should be maintained. The |chef client| is designed to not make assumptions about any of those things. Only the individuals on the ground---that's you and your team---understand the technical problems and what is required to solve them. Only your team can understand the human problems (skill levels, audit trails, and other internal issues) that are unique to your organization and whether any single technical solution is viable."
 msgstr ""
 
 #: ../source/chef_why.rst:43
-# 77d4c5fc11db4c928ff116850ce9ff57
+# 6cce33bc4ccc4962a200cb6cd72f0e11
 msgid "Idempotence"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_principles_idempotence.rst:5
-# 305292facc06421e9da2cf80d7b54e5e
+# 0fdd8ab034b94269a5ebe3a385e3386d
 msgid "A recipe can run multiple times on the same system and the results will always be identical. A resource is defined in a recipe, which then defines the actions to be performed on the system. The |chef client| ensures that actions are not performed if the resources have not changed and that any action that is performed is done the same way each time. If a recipe is re-run and nothing has change, then the |chef client| will not do anything."
 msgstr ""
 
 #: ../source/chef_why.rst:47
-# b7f1b0ef82c844a7a2c0fbfb7a9ca63f
+# 9fb797ac695940458eb82907f93a5be4
 msgid "Thick Clients, Thin Server"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_principles_thin_client.rst:5
-# e8ee953e42a84395a95f9e0554c96fe7
+# 666efede8f974c4d8fd5a1f17af70f64
 msgid "|chef| does as much work as possible on the node and as little as possible on the server. A |chef client| runs on each node and it only interacts with the |chef server| when it needs to. The |chef server| is designed to distribute of data to each node easily, including all cookbooks, recipes, templates, files, and so on. The |chef server| also retains a copy of the state of the node at the conclusion of every |chef client| run. This approach ensures that the actual work needed to configure each node in your infrastructure is distributed across the organization, rather than centralized on smaller set of configuration management servers."
 msgstr ""
 
 #: ../source/chef_why.rst:51
-# 18d36358a5d943a4bc1b644015a26032
+# d0109075c1634222935d867854a56af9
 msgid "Order Matters"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_principles_order_matters.rst:5
-# a9b694b9df294cb5bf50fcd6a4f54ad0
+# 01d0127ec97d46b09bf7049ac6aba9be
 msgid "When the |chef client| configures each node in the system, the order in which that configuration occurs is very important. For example, if |apache| is not installed, then it cannot be configured and the daemon cannot be started. Configuration management tools have struggled with this problem for a long time. For each node a list of recipes is applied. Within a recipe, resources are applied in the order in which they are listed. At any point in a recipe other recipes may be included, which assures that all resources are applied. The |chef client| will never apply the same recipe twice. Dependencies are only applied at the recipe level (and never the resource level). This means that dependencies can be tracked between high-level concepts like \"I need to install |apache| before I can start my |django| application!\" It also means that given the same set of cookbooks, the |chef client| will always execute resources in the same exact order."
 msgstr ""
 
 #: ../source/chef_why.rst:55
-# b0979e580a1f4fc2b3e25136998b9374
+# 3fd30a7080e54c3f8cc001328d3c0bfa
 msgid "Why was Chef created?"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:5
-# 9445a83bbc38431883ee496cd6867ddb
+# 87804a53c03641a8b633622ea4b7441d
 msgid "|opscode| began as a consulting company named HJK Solutions, which built fully automated infrastructure for startups. Everything from installing operating systems to full application development. Over the course of building a dozen or so different startups on the same basic infrastructure timeline (over a one year period), we realized that getting to a place where everyone could have a fully automated infrastructure, regardless of the expertise of their system administrators, was possible. Only a few things stood in the way:"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:7
-# eef9faf79cb14d1b9e674cfeac22b6f2
+# ec8ffc2edff44e0aab28a4dd3d052663
 msgid "A fully automated infrastructure is a fully integrated infrastructure. The different components need to be able to communicate with each other. (Your application informs your infrastructure, just like your infrastructure informs your application.)"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:8
-# 909f1ed16a044e35a4ae1bccfa55ecd2
+# 80f661ed2a1f4f8099d3cf33d050635c
 msgid "Configuration management is the fundamental bedrock of infrastructure automation. For the infrastructure to be fully automated, it must expose configuration management as a service."
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:9
-# b85bf802ac6843f2ae2bb9790247153e
+# a51d8cb35f6e46359a70c436e031ab45
 msgid "Share the code that builds the infrastructure is difficult; the available tools required a level of specificity that made sharing difficult."
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:10
-# b996242a0dbe4ab1a1d1111cf485e65d
+# d397839bc2094e7887e569c68aa8e00a
 msgid "No other open source tools met the requirements."
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:12
-# 39bac8aedc364d7c9cacce3cec0df560
+# 14aaefd85ea040d287f61b218373d613
 msgid "We solve these problems by:"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:14
-# 8c084377fce64ce68308a729e811f44c
+# 840efa5cc6a04111b732f9bdc3a9424b
 msgid "Building a systems integration framework on top of a configuration management system, powered by |ruby| and a simple DSL. This approach makes it easy for beginners."
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:15
-# f03429ee76664d31bdc22e7eedb86b70
+# f1a0fbb6fcc740c59ce5899f4d0a06b7
 msgid "Making it possible to easily extend the capabilities of |chef| by allowing the |chef client| to take instruction from ad-hoc sources."
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:16
-# 58169c6dba774f5db0008549127fe353
+# cec1a26f74a143a999fd8a124f255665
 msgid "Every decision about |chef| was made with an eye to keeping as much as possible inside of cookbooks, which are sharable chunks of automation that are easily reused and extended."
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:17
-# 6d26ee399cfb4d48a7b162d23257ae4a
+# 1bc5b07dce9f4c6d956975e169e6dfe5
 msgid "Sharing an open source version with everyone, creating an outstanding community, with a license that allows everyone to safely integrate |chef| into their environment. |chef| (and |ohai|) are licensed under the Apache License Version 2.0, a liberal, non-copyleft free software license. We maintain Contributor License Agreements, which allows anyone who uses |chef| (or |ohai|) to know they are free from any copyright or patent entanglements."
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_origins.rst:19
-# 0768e170f84d404a8dbc21087a04b013
+# c3e178d3289549aaafcd7cd054400cf4
 msgid "The goal is to remove people from the process of building automated infrastructure, as much and as often as possible. |chef| is the first part of a framework that will allow all of us to do that."
 msgstr ""
 
 #: ../source/chef_why.rst:59
-# 7758814e447c438ea80cbfc2f2266e29
+# 465bc9608e284425b30febe8384dd631
 msgid "How can I help?"
 msgstr ""
 
 #: ../source/chef_why.rst:60
-# 6321c893654c40fabf68534cced1184e
+# 0161d54386804fb9af43134377eacc64
 msgid "Join the community, participate in the discussion going on right now on IRC, sign up for the mailing Lists, and read the instructions on how to contribute to an |opscode| open source project."
 msgstr ""
 
-#: ../../includes_community/includes_community_contributions.rst:4
-# 360a590f88d042b28169380f6defab66
-msgid "Here are some contributions from the community:"
-msgstr ""
-
-#: ../../includes_community/includes_community_contributions.rst:6
-# 83c3a7de5072454482c65f88f2961ad1
-msgid "**Workflow:**  `Berkshelf <http://berkshelf.com/>`_ | `Librarian <https://github.com/applicationsonline/librarian>`_ | `Spiceweasel <https://github.com/mattray/spiceweasel>`_"
-msgstr ""
-
-#: ../../includes_community/includes_community_contributions.rst:8
-# 38078c50ceae4a878d715d1a64c449cd
-msgid "**Development tools:**  `test-kitchen <https://github.com/opscode/test-kitchen>`_ | `Food Critic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `chefspec <https://github.com/acrmp/chefspec>`_ | `yard-chef <https://rubygems.org/gems/yard-chef/>`_ | `Cookbooks <http://community.opscode.com/cookbooks>`_ | `Jenkins Plugin <https://github.com/melezhik/chef-plugin/>`_"
-msgstr ""
-
-#: ../../includes_community/includes_community_contributions.rst:10
-# f1475ee7dac74052b6c34e2b4ab43f39
-msgid "**Discussion:** :doc:`Guidelines </community_guidelines>` | :doc:`lists.opscode.com </community_lists>` | `Food Fight Show <http://foodfightshow.org/>`_ --- **Chat channels:** `chef <http://community.opscode.com/chat/chef>`_ | `chef-hacking <http://community.opscode.com/chat/chef-hacking>`_ | `openstack-chef <http://community.opscode.com/chat/openstack-chef>`_"
-msgstr ""
-
-#: ../../includes_community/includes_community_contributions.rst:12
-# 44f79315a9d84aa5aa1c84e15f9ae8d9
-msgid "**Plugins:** :doc:`Chef </community_plugin_chef>` | :doc:`Knife </community_plugin_knife>` | :doc:`Ohai </community_plugin_ohai>` | :doc:`Report handlers </community_plugin_report_handler>` | `Ridley <https://github.com/reset/ridley>`_"
-msgstr ""
-
-#: ../../includes_community/includes_community_contributions.rst:16
-# 007fd4dbfc6c482d9fae27053044711e
-msgid "**Documentation:** `Contribute to this documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.opscode.com/style_guide.html>`_"
-msgstr ""
-
 #: ../source/chef_why.rst:65
-# f95e5cee44f049f08c07c354d16cb453
+# 0bad023321b44f1397fa03ae93623998
 msgid "Do I really need to know Ruby?"
 msgstr ""
 
 #: ../source/chef_why.rst:66
-# 27f4b2ea7fe947a3b61c658ac4d5d159
+# c75914bb1b0d4e8db83492d71705afc7
 msgid "It helps, but its not required. You can learn :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`."
 msgstr ""
 
 #: ../source/chef_why.rst:69
-# f433c87e57274cb5a78f1d9cdffda084
+# 2cf27aa22a754c19b87d981f66d9b069
 msgid "Can I trust Chef?"
 msgstr ""
 
 #: ../source/chef_why.rst:70
-# ca88e1dfcebf4f6a8d20e10af6a84053
+# 091ab65a0b24427db34f69fafaabcdce
 msgid "Yes, absolutely. The |chef client| will not do anything to your system that isn't in a recipe. Because |chef| is an open source project, you have full access to the source code."
 msgstr ""
 
 #: ../source/chef_why.rst:74
-# 52bb7d347dab4c01b09da21809d05380
+# 6704c5dd953b4fb4a036e84260e8739f
 msgid "Who uses Chef?"
 msgstr ""
 
 #: ../source/chef_why.rst:75
-# 6eec376eb70b496696caf8786d4c52a9
+# 8fc30d574d3b4e3fb4046a3da45ea673
 msgid "Lots of companies, ranging from `small startups to the largest companies on the planet <http://www.opscode.com/customers/>`_."
 msgstr ""
 
 #: ../source/chef_why.rst:78
-# eec068a231c14492b0e34866f29d560d
+# e249777556154848a022982809cb28b4
 msgid "Why the Apache license?"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_apache_license.rst:5
-# e72b0344b5964f62b74efe80992a369e
+# 33d70b4f7a7b4f43bff01743bb1c7892
 msgid "The short version of why |opscode| chose the |apache| license for |chef| is because we defined three broad requirements for a license under which we would release open source software:"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_apache_license.rst:7
-# 806eb5d56c154018a59d021249d6249c
+# 108899343c3446c8b58a8f3934518b29
 msgid "We are an open source company and we make money from our open source software so we wanted a license that allowed us to build a business from the things we created"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_apache_license.rst:8
-# 26c0e778427f45458a2e4660ff8de88d
+# 2247ec10b8284696a6ce5306ebc34cc0
 msgid "We wanted anyone (or any company) whose problems were solved by our software to be able to use it, in any environment they wanted, in whatever way they wanted"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_apache_license.rst:9
-# f56a83e094be4bd4989a1ebea86b3890
+# 0f1f4220de60476fa1a88d79ca550a13
 msgid "We wanted to build an open and equal community of users and did not want to reserve any rights for ourselves that we didn’t grant to the all of the other people (and companies) who helped build our software"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_why_apache_license.rst:11
-# 6988f45d71834ec59c840c62b1123d7f
+# 98836bb8b1314c9891a4a013b27f2440
 msgid "For more detail, read `the blog post about why we love open source <http://www.opscode.com/blog/2009/08/11/why-we-chose-the-apache-license/>`_."
 msgstr ""
 
 #: ../source/chef_why.rst:83
-# 41093cc105e34f72859c0b0f85582dce
+# d78f85a6e81c469a86f3a7fb7b41b76e
 msgid "Comparisons"
 msgstr ""
 
 #: ../source/chef_why.rst:84
-# 43bfb3a9893d4a4baf40b442b102a634
+# a476f383f1e447d4a2263b912a754784
 msgid "There are other applications out there that do things similar to |chef|. We believe that we are different (and better) and that by choosing |chef| you are choosing the best option."
 msgstr ""
 
 #: ../source/chef_why.rst:87
-# 24bd512659b449c5a6a7785f4b4a955f
+# af30bea21cdd4c218ef375f2c483bbb4
 msgid "|puppet|"
 msgstr ""
 
 #: ../source/chef_why.rst:88
-# 2f9b562646f940fc8ef19cf6559e4cd3
+# c52eb179641247e992c97be33e8811ba
 msgid "|puppet| evolved from |cfengine| and showed potential to be a new kind of configuration management. The original design of |chef| was strongly influenced by our own experiences working with and contributing to the |puppet| project. That said, |chef| does not share any code from |puppet|, and is not a \"fork\" of the |puppet| project."
 msgstr ""
 
 #: ../source/chef_why.rst:90
-# 5987b533a5e14a9aad7209cdfe1979ed
+# 7efb2f51ed374d469ef1fec48a4e6d51
 msgid "|chef| is different from |puppet| in a number of important ways:"
 msgstr ""
 
 #: ../source/chef_why.rst:92
-# 759089294bb24b269ac8bba794fe5299
+# f8529620ff7047f7b1607788d8d1c598
 msgid "|chef| uses |ruby| as the configuration language, as opposed to a custom DSL"
 msgstr ""
 
 #: ../source/chef_why.rst:93
-# e9f83153a12640d89f06bcd960ba0cdc
+# 07f91d2d8dae4b7bb179110933154843
 msgid "|chef| is designed from the ground up to integrate with other tools, or to make that integration as simple as possible. |chef| is not the canonical representation of your infrastructure. It is a service that exposes data about the state of your infrastructure"
 msgstr ""
 
 #: ../source/chef_why.rst:94
-# b4b5feee50ba44e38d4a4bd3a1a85191
+# 5faebd6b808a4072880a06883bd497f4
 msgid "The |chef client| applies resources in the order they are specified in recipes. There is no dependency management. This means multiple |chef client| runs will always apply the resources under management in the same order, every time"
 msgstr ""
 
 #: ../source/chef_why.rst:95
-# bfa7d83d6ceb4da3a28a3e1bd26c8925
+# 90d90e8e6e8e4fbb9764ee3890ec3950
 msgid "Resources have actions, which can be signaled"
 msgstr ""
 
 #: ../source/chef_why.rst:96
-# 79ffa31c7d0e4718b535f22cc220924f
+# a948b5d6d9344e25853a1f6a38a2a4b3
 msgid "Resources can appear more than once and they inherit the attributes of the earlier resource. In other words, you can tell |apache| to start and stop in a recipe by specifying the resource twice, with the second one only changing the action attribute"
 msgstr ""
 
 #: ../source/chef_why.rst:99
-# 7f9f0ebe5aa447a3a71e3339a05338d4
+# 6ebe40f8abe4473e939316b1f099dd96
 msgid "|cfengine|"
 msgstr ""
 
 #: ../source/chef_why.rst:100
-# 3532dd308c394900a8280472f740acdb
+# 87b3c47d17a347cdaa1a265373cddb04
 msgid "|cfengine| and |chef| aren't very similar at all, outside of both applications embracing the concept of Single Copy Nirvana."
 msgstr ""
 
 #: ../source/chef_why.rst:103
-# 9623bd5a793942459c3d54470b171c31
+# cec2b74893754f4886e366a032db6c39
 msgid "For more information ..."
 msgstr ""
 
 #: ../../includes_chef/includes_chef_for_more_info.rst:5
-# c27f11a2b6464ce884aaff106e86e646
+# e13c8cbba6b041aaa4f8c4656cf6956d
 msgid "For a history of |chef|, where it came from and how it evolved, watch these two (short) videos:"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_for_more_info.rst:7
-# 350993a098e647c98b9dedcb92bb6ef1
+# be2d6d17dd2d43b190b82b5b0e8f3168
 msgid "Part one: |url opscode_youtube_short_part_one|"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_for_more_info.rst:8
-# 33dc8d3bec1e4052a9cdda2ee17209dc
+# 0c4c7fa19999443b8c1fed261558df3d
 msgid "Part two: |url opscode_youtube_short_part_two|"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_for_more_info.rst:10
-# 5e58baaa7f2046fb82668f4bc7bd76dc
+# 4edc188f8db744d5a8ee4bd4e7547f6c
 msgid "For more information about |opscode|, cookbooks, and the community:"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_for_more_info.rst:12
-# 28006c63839548bca079edd906a7548f
+# c47bc7d79c7b4b189a695432a59fcb19
 msgid "|url opscode|"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_for_more_info.rst:13
-# 93a401e7dd5942edbb48e83a5073a197
+# ebd29f7d6cf44612be2ea437e9e043fd
 msgid "|url opscode_community|"
 msgstr ""
 
 #: ../../includes_chef/includes_chef_for_more_info.rst:14
-# 19a7f9201ae04321aac07573c8f237b9
+# fafd4c14fa634d5db02edf848cb11277
 msgid "|url opscode_cookbooks|"
 msgstr ""
 
