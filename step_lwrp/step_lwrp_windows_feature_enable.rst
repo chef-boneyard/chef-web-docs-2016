@@ -8,7 +8,7 @@ To enable a node as a DHCP server:
      action :install
    end
 
-or to enable a note as TFTP:
+or to enable a node as TFTP:
 
 .. code-block:: ruby
 
