@@ -181,7 +181,7 @@ Cookbooks
    manage_server_hosted 
    chef_system_requirements
    images
-
+   junos
    pushy
    reporting
    upgrade_server

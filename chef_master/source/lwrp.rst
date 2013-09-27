@@ -35,6 +35,7 @@ Inline Compile Mode
    lwrp_iis
    lwrp_maven
    lwrp_nagios
+   lwrp_netdev
    lwrp_pacman
    lwrp_php
    lwrp_powershell
