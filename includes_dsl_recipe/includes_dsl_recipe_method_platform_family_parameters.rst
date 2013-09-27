@@ -19,20 +19,18 @@ The following parameters can be used with the ``platform_family?`` method:
      - |gentoo|
    * - ``mac_os_x``
      - |mac os x|
-   * - ``omnios``
-     - |omnios|
    * - ``openbsd``
      - |open bsd|
    * - ``rhel``
      - |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat enterprise linux|
    * - ``slackware``
      - |slackware|
-   * - ``solaris2``
-     - |nexenta core|, |open indiana|, |solaris open|, |oracle solaris|, |smartos|, |solaris|, |solaris2|
    * - ``suse``
      - |suse|, |suse els|
    * - ``windows``
      - |windows|
+
+.. note:: For |solaris|-related platforms, the ``platform_family`` method does not support the |solaris| platform family and will default back to ``platform_family = platform``. For example, if the platform is |omnios|, the ``platform_family`` is ``omnios``, if the platform is |smartos|, the ``platform_family`` is ``smartos``, and so on.
 
 For example:
 
