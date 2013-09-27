@@ -10,6 +10,7 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Default. Use to create an aggregated Ethernet bundle.
+     - Default. Use to create a link aggregation group (LAG).
    * - ``:delete``
-     - Use to delete an aggregated Ethernet bundle.
+     - Use to delete a link aggregation group (LAG).
+

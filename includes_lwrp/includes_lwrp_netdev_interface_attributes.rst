@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``description``
-     - The description of the |junos| interface.
+     - The description of the interface.
    * - ``duplex``
      - The duplex mode for the interface. Possible values: ``auto``, ``half``, or ``full``. Default value: ``auto``.
    * - ``enable``
@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``mtu``
      - The maximum transmission unit (MTU) for the interface.
    * - ``name``
-     - The name of the |junos| interface.
+     - The name of the interface.
    * - ``speed``
      - The speed for the interface. Possible values: ``auto``, ``100m``, ``1g``, ``10g``, ``40g``, ``56g``, or ``100g``. Default value: ``auto``.
 

@@ -10,9 +10,9 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``description``
-     - The description of the |junos| interface.
+     - The description of the interface.
    * - ``name``
-     - The name of the |junos| interface.
+     - The name of the interface.
    * - ``tagged_vlans``
      - An array of VLANs that carry traffic on a trunk interface.
    * - ``untagged_vlan``

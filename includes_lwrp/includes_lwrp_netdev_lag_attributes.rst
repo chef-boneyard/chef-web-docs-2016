@@ -12,9 +12,9 @@ This lightweight resource provider has the following attributes:
    * - ``lacp``
      - The Link Aggregation Control Protocol (LACP) mode. Possible values: ``active`` (active mode), ``disable`` (not used), or ``passive`` (passive mode).
    * - ``links``
-     - An array of interfaces to be configured as members of an aggregated Ethernet bundle.
+     - An array of interfaces to be configured as members of a link aggregation group (LAG).
    * - ``minimum_links``
-     - The minimum number of physical links that are required to ensure the availability of the aggregated Ethernet bundle.
+     - The minimum number of physical links that are required to ensure the availability of the link aggregation group (LAG).
    * - ``name``
-     - The name of the aggregated Ethernet bundle.
+     - The name of the link aggregation group (LAG).
 
