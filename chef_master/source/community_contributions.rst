@@ -21,45 +21,6 @@ After the account has been created and the CLA has been submitted, pull requests
 
 |opscode|-managed open source projects are here: https://github.com/opscode.
 
-
-Licensing and Copyright
-=====================================================
-Why is your software Apache Licensed? Opscode uses the Apache License Version 2 because it provides the same level of freedom for our users that we desire for ourselves. Based upon the Apache Licensing FAQ...
-
-It allows you to:
-
-* freely download and use Opscode software, in whole or in part, for personal, company internal, or commercial purposes;
-* use Opscode software in packages or distributions that you create.
-
-It forbids you to:
-
-* redistribute any piece of Opscode-originated software without proper attribution;
-* use any marks owned by Opscode in any way that might state or imply that Opscode endorses your distribution;
-* use any marks owned by Opscode in any way that might state or imply that you created the Opscode software in question.
-
-It requires you to:
-
-* include a copy of the license in any redistribution you may make that includes Opscode software;
-* provide clear attribution to Opscode for any distributions that include Opscode software.
-
-It does not require you to:
-* include the source of the Opscode software itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it;
-* submit changes that you make to the software back to Opscode (though such feedback is encouraged).
-
-It is our goal to run a successful, truly open source business. To that end, we are protecting our own rights by making them explicit in our choice of licensing: you have the same rights to our open source software that we do.
-
-**How should I update the header file of my contribution to properly credit earlier contributors and recognize copyrights?**
-
-You need to put attribution about the origins of some of the code in the NOTICE file for your app. On an individual header, you can add yourself as an author/copyright holder, placing text in the header file saying that your new work is based on previous work, and referencing the original header below.
-
-If the original file is lacking the license header, please let us know, so we can add one. Even in their absence, they are covered by the Apache 2 license.
-
-**Do I need the agreement of anyone else whose authorship/copyright I come across?**
-You can re-use the work without having to get the agreement of the original authors, as long as you're not going to be changing the licensing terms at all (ie: you maintain and fulfill Apache 2 licensing requirements) and you don't modify the fact that the code you are incorporating remains copyrighted by the original authors.
-The Apache License grants these rights to those who receive a copy of the software.
-
-
-
 CLAs and CCLAs
 =====================================================
 A CLA must be filled out by every contributor to an Opscode-managed open source project.
@@ -96,8 +57,6 @@ The point of contact from your CCLA should email legal@opscode.com with the full
 
 If you need to update the point of contact for the CCLA, the current contact should email legal@opscode.com with the full name and email address of the new contact. If the existing contact is no longer available, please contact us and we will help you out.
 
-
-
 Contribution Process
 =====================================================
 Contribute Changes to Opscode-Managed Apache Licensed Cookbooks at the Community Site. All other cookbooks require no CLA. Once you have signed a CLA and have a ticket referencing your request, see How to Contribute to Opscode Cookbooks. Opscode doesn't maintain all the cookbooks on the community site, and individual maintainers choose whatever license they like. Contact those authors to find out what their contribution process is.
@@ -115,9 +74,6 @@ When working on the code, having patches associated with tickets helps other con
 **You use GitHub, why don't you use GitHub Pull Requests?**
 
 We use JIRA for our open source projects and for our own internal projects: managing all the details of the code base, and fulfilling license requirements for our joint benefit. We also interact regularly with the GitHub issues/pull request system. You are welcome to open a pull request, and link to that when updating the Jira ticket for a contribution. 
-
-
-
 
 
 The Opscode "Obvious Fix" Rule
@@ -171,3 +127,42 @@ Things that would still require signing a CLA before submitting would likely inc
 * A translation;
 * Extensive or creative comments.
 
+
+
+
+
+Licensing and Copyright
+=====================================================
+Why is your software Apache Licensed? Opscode uses the Apache License Version 2 because it provides the same level of freedom for our users that we desire for ourselves. Based upon the Apache Licensing FAQ...
+
+It allows you to:
+
+* freely download and use Opscode software, in whole or in part, for personal, company internal, or commercial purposes;
+* use Opscode software in packages or distributions that you create.
+
+It forbids you to:
+
+* redistribute any piece of Opscode-originated software without proper attribution;
+* use any marks owned by Opscode in any way that might state or imply that Opscode endorses your distribution;
+* use any marks owned by Opscode in any way that might state or imply that you created the Opscode software in question.
+
+It requires you to:
+
+* include a copy of the license in any redistribution you may make that includes Opscode software;
+* provide clear attribution to Opscode for any distributions that include Opscode software.
+
+It does not require you to:
+* include the source of the Opscode software itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it;
+* submit changes that you make to the software back to Opscode (though such feedback is encouraged).
+
+It is our goal to run a successful, truly open source business. To that end, we are protecting our own rights by making them explicit in our choice of licensing: you have the same rights to our open source software that we do.
+
+**How should I update the header file of my contribution to properly credit earlier contributors and recognize copyrights?**
+
+You need to put attribution about the origins of some of the code in the NOTICE file for your app. On an individual header, you can add yourself as an author/copyright holder, placing text in the header file saying that your new work is based on previous work, and referencing the original header below.
+
+If the original file is lacking the license header, please let us know, so we can add one. Even in their absence, they are covered by the Apache 2 license.
+
+**Do I need the agreement of anyone else whose authorship/copyright I come across?**
+
+You can re-use the work without having to get the agreement of the original authors, as long as you're not going to be changing the licensing terms at all (ie: you maintain and fulfill Apache 2 licensing requirements) and you don't modify the fact that the code you are incorporating remains copyrighted by the original authors. The Apache License grants these rights to those who receive a copy of the software.
