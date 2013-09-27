@@ -11,9 +11,7 @@ Unless the fix is an "Obvious Fix" (see below), contributing to an |opscode|-man
 #. Sign up for an account on the Open Source Ticket Tracking System. This will create an identical account for you on the Wiki. We match the email address from your CLA to this account.
 #. Fill out a Contributor License Agreement. If your contribution is happening on behalf of a company, they should sign a Corporate Contributor License Agreement. Please complete and digitally sign the form, the process and submittal fully managed for you through Echosign. This will take 3-5 minutes. You'll be emailed a copy when we've received it. We'll process it, and send you an introduction email. You'll then appear as a approved contributor, and be upgraded to a Developer on the Ticket Tracking System: allowing you to modify and transition ticket status.
 
-GitHub Pull Requests
------------------------------------------------------
-A one-time CLA submittal - and relating pull requests to trouble ticket(s) - provides for managing submittals across the projects, for fulfilling Apache licensing, and resulting in your successful and appreciated contribution to the community.
+After the account has been created and the CLA has been submitted and, pull requests may be made in |github| against any |opscode|-managed open source project. Thanks in advance for your contributions to this community!
 
 Individual Contributions
 -----------------------------------------------------
