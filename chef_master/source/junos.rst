@@ -2,7 +2,7 @@
 |juniper chef|
 =====================================================
 
-.. warning:: This is a draft for future functionality that will be added to Chef.
+.. warning:: This is a draft for future functionality that will be added to both |chef server oec| and |chef server osc|.
 
 .. include:: ../../includes_juniper/includes_juniper.rst
 
