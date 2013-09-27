@@ -1,5 +1,5 @@
 =====================================================
-windows Lightweight Resource
+windows Lightweight Resources
 =====================================================
 
 |cookbook name windows|

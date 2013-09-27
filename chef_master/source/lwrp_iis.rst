@@ -1,5 +1,5 @@
 =====================================================
-iis Lightweight Resource
+iis Lightweight Resources
 =====================================================
 
 |cookbook name iis|

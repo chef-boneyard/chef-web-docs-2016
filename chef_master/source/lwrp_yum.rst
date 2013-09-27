@@ -1,5 +1,5 @@
 =====================================================
-yum Lightweight Resource
+yum Lightweight Resources
 =====================================================
 
 |cookbook name yum|

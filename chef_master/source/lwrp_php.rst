@@ -1,5 +1,5 @@
 =====================================================
-php Lightweight Resource
+php Lightweight Resources
 =====================================================
 
 |cookbook name php|

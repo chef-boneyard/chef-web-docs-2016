@@ -1,5 +1,5 @@
 =====================================================
-aws Lightweight Resource
+aws Lightweight Resources
 =====================================================
 
 |cookbook name aws|

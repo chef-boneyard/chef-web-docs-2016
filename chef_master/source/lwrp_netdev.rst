@@ -1,5 +1,5 @@
 =====================================================
-netdev Lightweight Resource
+netdev Lightweight Resources
 =====================================================
 
 .. warning:: This is a draft for future functionality that will be added to Chef.

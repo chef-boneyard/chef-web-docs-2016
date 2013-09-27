@@ -1,5 +1,5 @@
 =====================================================
-python Lightweight Resource
+python Lightweight Resources
 =====================================================
 
 |cookbook name python|

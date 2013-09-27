@@ -1,5 +1,5 @@
 =====================================================
-pacman Lightweight Resource
+pacman Lightweight Resources
 =====================================================
 
 |cookbook name pacman|

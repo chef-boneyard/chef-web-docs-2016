@@ -1,5 +1,5 @@
 =====================================================
-supervisor Lightweight Resource
+supervisor Lightweight Resources
 =====================================================
 
 |cookbook name supervisor|

@@ -1,5 +1,5 @@
 =====================================================
-apt Lightweight Resource
+apt Lightweight Resources
 =====================================================
 
 |cookbook name apt|

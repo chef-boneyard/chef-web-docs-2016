@@ -1,5 +1,5 @@
 =====================================================
-rabbitmq Lightweight Resource
+rabbitmq Lightweight Resources
 =====================================================
 
 |cookbook name rabbitmq|
