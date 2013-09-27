@@ -4,11 +4,7 @@ netdev Lightweight Resources
 
 .. warning:: This is a draft for future functionality that will be added to Chef.
 
-.. include:: ../../includes_juniper/includes_juniper.rst
-
-.. include:: ../../includes_juniper/includes_juniper_junos.rst
-
-|cookbook name netdev|
+The |cookbook netdev| cookbook is used to install and configure networking hardware by |juniper| and Arista.
 
 The |cookbook netdev| cookbook contains the following lightweight resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
 
