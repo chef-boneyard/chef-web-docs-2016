@@ -10,8 +10,7 @@
 
 The netdev Cookbook
 =====================================================
-xxxxx
-
+The |cookbook netdev| cookbook provides the ability to manage hardware on which the |junos| operating system is installed, including routers, switches, and VLANs.
 
 netdev Lightweight Resources
 -----------------------------------------------------
