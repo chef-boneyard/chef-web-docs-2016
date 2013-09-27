@@ -6,7 +6,7 @@ Thank you for contributing to an |opscode| Open Source project!
 
 Getting Started
 =====================================================
-To contribute to an |opscode| open source project you must first: 
+Unless the fix is an "Obvious Fix" (see below), contributing to an |opscode|-managed open source project requires you to:
 
 #. Sign up for an account on the Open Source Ticket Tracking System. This will create an identical account for you on the Wiki. We match the email address from your CLA to this account.
 #. Fill out a Contributor License Agreement. If your contribution is happening on behalf of a company, they should sign a Corporate Contributor License Agreement. Please complete and digitally sign the form, the process and submittal fully managed for you through Echosign. This will take 3-5 minutes. You'll be emailed a copy when we've received it. We'll process it, and send you an introduction email. You'll then appear as a approved contributor, and be upgraded to a Developer on the Ticket Tracking System: allowing you to modify and transition ticket status.
