@@ -4,11 +4,5 @@ To download the entire |chef repo| from the |chef server|, browse to the top lev
 
 .. code-block:: bash
 
-   $ knife download
-
-or from anywhere in the |chef repo|, enter:
-
-.. code-block:: bash
-
    $ knife download /
 
