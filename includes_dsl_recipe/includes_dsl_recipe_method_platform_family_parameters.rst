@@ -17,12 +17,22 @@ The following parameters can be used with the ``platform_family?`` method:
      - |fedora|
    * - ``gentoo``
      - |gentoo|
+   * - ``mac_os_x``
+     - |mac os x|
+   * - ``omnios``
+     - |omnios|
+   * - ``openbsd``
+     - |open bsd|
    * - ``rhel``
      - |amazon linux|, |centos|, |oracle linux|, |scientific linux|, |redhat enterprise linux|
    * - ``slackware``
      - |slackware|
+   * - ``solaris2``
+     - |nexenta core|, |open indiana|, |solaris open|, |oracle solaris|, |smartos|, |solaris|, |solaris2|
    * - ``suse``
      - |suse|, |suse els|
+   * - ``windows``
+     - |windows|
 
 For example:
 
