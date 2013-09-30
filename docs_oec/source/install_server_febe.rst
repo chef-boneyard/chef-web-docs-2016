@@ -1,6 +1,3 @@
-=====================================================
-Scaled Front End and Back End
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/install_server_febe.html BY DESIGN
 
-This scenario has all of the same requirements as the scaled front end and scaled back end scenarios.
-
+.. include:: ../../chef_master/source/install_server_febe.rst

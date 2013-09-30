@@ -74,7 +74,6 @@ About Knife
    * - :doc:`knife_user`
      - |knife user|
 
-
 .. toctree::
    :hidden:
 
@@ -107,10 +106,3 @@ About Knife
    knife_upload
    knife_user
    knife_xargs
-
-
-
-
-
-
-

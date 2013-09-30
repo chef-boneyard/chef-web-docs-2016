@@ -1,6 +1,3 @@
-=====================================================
-Scaled Back End
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/server_deploy_be.html BY DESIGN
 
-.. include:: ../../includes_server_deploy/includes_server_deploy_be.rst
-
+.. include:: ../../chef_master/source/server_deploy_be.rst

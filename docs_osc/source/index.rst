@@ -383,6 +383,7 @@ The following topics discuss using |chef server osc| with platforms:
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
+   config_rb_metadata
    config_rb_solo
    ctl_chef_apply
    ctl_chef_client

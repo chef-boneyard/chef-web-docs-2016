@@ -56,25 +56,58 @@ The Workstation
 **Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-apply (executable) </ctl_chef_apply>`
 
 
-The Server 
+The Server
 =====================================================
-**The basics:** :doc:`About the Chef Server </chef_overview_server>` | :doc:`Server Components </server_components>` | :doc:`Hosted Enterprise Chef </chef_overview_server_hosted>` vs. :doc:`Enterprise Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>` | :doc:`Private Keys </chef_private_keys>`
+The |chef server| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
+
+Server Essentials
+-----------------------------------------------------
+The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
+
+* A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
+* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_. 
+* All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
+* The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
+* The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
+* Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
+
+|chef server oec|
+-----------------------------------------------------
+|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes additional functionality like |reporting| and built-in support for high availability deployment scenarios.
+
+**Deployment Scenarios:** :doc:`Standalone </server_deploy_standalone>` | :doc:`Scaled Back End </server_deploy_be>` | :doc:`Scaled Front End </server_deploy_fe>` | :doc:`Scaled Front and Back Ends </server_deploy_febe>`
+
+**Install:** :doc:`Prerequisites </install_server_pre>` | :doc:`Install the Enterprise Chef Server </install_server>` | :doc:`Download the chef-client using the Omnitruck API </api_omnitruck>`
+
+**Install Scenarios:** :doc:`Standalone </install_server_standalone>` | :doc:`Scaled Back End </install_server_be>` | :doc:`Scaled Front End </install_server_fe>` | :doc:`Scaled Front and Back Ends </install_server_febe>` | :doc:`Migrate to Hosted Enterprise Chef </migrate_to_hosted>` | :doc:`Upgrade from Private Chef </upgrade_server>`
+
+**Install Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
+
+**Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>` 
+
+**Components:** :doc:`Reporting </reporting>` | :doc:`orgmapper </orgmapper>`
+
+**Settings and Tools:** :doc:`private-chef-server.rb </config_rb_chef_server_enterprise>` | :doc:`private-chef-ctl </ctl_private_chef>`
+
+|chef server osc|
+-----------------------------------------------------
+|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|.
 
 **Install:** `Sign up for Hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) | `Install Enterprise Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>` | :doc:`Download with Omnitruck API </api_omnitruck>`
+
+**Settings and Tools:** :doc:`chef-server.rb </config_rb_chef_server>` | :doc:`chef-server-ctl </ctl_chef_server>`
+
+Common Features
+-----------------------------------------------------
+The following features are available in both |chef server oec| and |chef server osc|:
 
 **The Node Object:** :doc:`About Node Objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep Merge </essentials_node_object_deep_merge>`
 
 **Search:** :doc:`About Search </essentials_search>`
 
-**Security:** :doc:`Authentication </auth_authentication>` | :doc:`Authorization </auth_authorization>` | :doc:`Headers and Endpoints </api_chef_server>`
+**Security:** :doc:`Authentication </auth_authentication>` | :doc:`Authorization </auth_authorization>` | :doc:`Headers and Endpoints </api_chef_server>` | :doc:`Private Keys </chef_private_keys>`
 
 **Policy:** :doc:`About Policy </essentials_policy>` | :doc:`Data Bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
-
-**Manage:** :doc:`Hosted Chef </manage_server_hosted>`
-
-**Settings:** :doc:`chef-server.rb </config_rb_chef_server>`
-
-**Tools:** :doc:`orgmapper </orgmapper>` | :doc:`chef-server-ctl </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>`
 
 **APIs:** :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Chef Server API </api_chef_server>`
 
@@ -114,13 +147,17 @@ Cookbooks
 .. toctree::
    :hidden:
 
-   chef_overview
-   chef_quick_overview
-   community
-   community_contributions
-
+   api_chef_server
+   api_cookbooks_site
+   api_omnitruck
+   api_pushy
+   auth
+   auth_authentication
+   auth_authorization
    breaking_changes_chef_11
-   just_enough_ruby_for_chef
+   chef_client
+   chef_overview
+   chef_overview_attributes
    chef_overview_cookbooks
    chef_overview_nodes
    chef_overview_server
@@ -128,59 +165,27 @@ Cookbooks
    chef_overview_server_open_source
    chef_overview_server_private
    chef_overview_workstation
-   chef_overview_attributes
    chef_private_keys
+   chef_quick_overview
+   chef_shell
+   chef_solo
+   chef_system_requirements
    chef_why
-   debug
-   install
-   install_server
-   install_server_scenario_vm
-   knife
-   plugin_knife
-   resource
-   opscode_cookbooks
-   lwrp
+   community
+   community_contributions
    config
    config_rb_chef_server
-   chef_client
-   chef_solo
-   api_chef_server
-   api_cookbooks_site
-   api_omnitruck
-   api_pushy
-   dsl_recipe
-   ohai
-   ohai_custom
-   orgmapper
+   ctl_chef_apply
    ctl_chef_client
    ctl_chef_server
-   ctl_private_chef
+   ctl_chef_shell
    ctl_chef_solo
    ctl_ohai
+   ctl_private_chef
    ctl_pushy_client
-   server_types
-   server_components 
-   migrate_to_hosted
-   auth
-   auth_authorization
-   auth_authentication
-
-   essentials_nodes
-   essentials_nodes_chef_run
-   essentials_nodes_why_run
+   debug
+   dsl_recipe
    essentials_chef_client
-   essentials_handlers
-   essentials_repository
-   essentials_repository_create
-   essentials_knife
-   essentials_policy
-   essentials_node_object
-   essentials_data_bags
-   essentials_environment_variables
-   essentials_environments
-   essentials_roles
-   essentials_search
-   essentials_cookbooks
    essentials_cookbook_attribute_files
    essentials_cookbook_directory
    essentials_cookbook_definitions
@@ -191,21 +196,31 @@ Cookbooks
    essentials_cookbook_resources
    essentials_cookbook_templates
    essentials_cookbook_versions
-   manage_server_hosted 
-   chef_system_requirements
-   images
-   junos
-   pushy
-   reporting
-   upgrade_server
-   ctl_chef_shell
-   ctl_chef_apply
-   style_guide
-   chef_shell
-   videos
-   release_notes
-   openstack
+   essentials_cookbooks
+   essentials_data_bags
+   essentials_environment_variables
+   essentials_environments
+   essentials_handlers
+   essentials_knife
+   essentials_nodes
+   essentials_nodes_chef_run
+   essentials_nodes_why_run
+   essentials_node_object
+   essentials_node_object_deep_merge
+   essentials_node_object_run_lists
+   essentials_policy
+   essentials_repository
+   essentials_repository_create
+   essentials_roles
+   essentials_search
    feedback
+   images
+   install
+   junos
+   just_enough_ruby_for_chef
+   knife
+   lwrp
+   manage_server_hosted 
    manage_server_hosted_accounts
    manage_server_hosted_clients
    manage_server_hosted_cookbooks
@@ -218,6 +233,36 @@ Cookbooks
    manage_server_hosted_roles
    manage_server_hosted_search
    manage_server_hosted_users
+   migrate_to_hosted
+   ohai
+   ohai_custom
+   openstack
+   opscode_cookbooks
+   orgmapper
+   plugin_knife
+   pushy
+   release_notes
+   reporting
+   resource
+   server_backup_restore
+   server_components 
+   server_data
+   server_deploy_be
+   server_deploy_fe
+   server_deploy_febe
+   server_deploy_standalone
+   server_firewalls_and_ports
+   server_high_availability
+   server_ldap
+   server_logs
+   server_monitor
+   server_orgs
+   server_security
+   server_services
+   server_tuning
+   server_types
+   server_users
+   style_guide
+   upgrade_server
+   videos
 
-   essentials_node_object_deep_merge
-   essentials_node_object_run_lists

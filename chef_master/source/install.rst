@@ -12,13 +12,18 @@ Install Chef
 .. toctree::
    :hidden:
 
-   install_server
-   install_server_oes
-   install_server_hosted
-   install_server_scenario_vm
-   install_workstation
    install_bootstrap
-
    install_omnibus
-
-
+   install_server
+   install_server_be
+   install_server_fe
+   install_server_febe
+   install_server_hosted
+   install_server_ldap
+   install_server_oes
+   install_server_orgs
+   install_server_pre
+   install_server_scenario_vm
+   install_server_standalone
+   install_server_users
+   install_workstation

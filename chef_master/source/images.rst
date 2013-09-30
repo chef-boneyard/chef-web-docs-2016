@@ -34,9 +34,6 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/oec_ha.png
 
-* http://docs.opscode.com/robots.txt
-
-.. image:: ../../misc/robots.txt
 
 
 

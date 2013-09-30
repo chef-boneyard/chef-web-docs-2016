@@ -1,5 +1,3 @@
-=====================================================
-Organizations
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/server_orgs.html BY DESIGN
 
-.. include:: ../../includes_server_orgs/includes_server_orgs.rst
+.. include:: ../../chef_master/source/server_orgs.rst

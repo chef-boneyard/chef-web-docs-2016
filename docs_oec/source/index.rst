@@ -124,7 +124,7 @@ The following command-line tools can be run on the workstation to simulate a |ch
 
 The Server
 =====================================================
-The |chef server| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
+The |chef server oec| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
 
 .. **The basics:** :doc:`About the Chef Server </chef_overview_server>` | :doc:`Server Components </server_components>` | :doc:`Hosted Chef </chef_overview_server_hosted>` vs. :doc:`Private Chef </chef_overview_server_private>` vs. :doc:`Open Source Chef </chef_overview_server_open_source>` | :doc:`Authentication and Authorization </auth>` | :doc:`Private Keys </chef_private_keys>`
 
@@ -149,8 +149,9 @@ The |chef server oec| acts as a hub for configuration data. The :doc:`components
 
 In addition to the built-in features of |chef server oec|, the following optional components are available:
 
-.. * **Pushy** :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
 * **Reporting** :doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
+
+.. * **Pushy** :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
 
 Deployment Scenarios
 -----------------------------------------------------
@@ -176,7 +177,7 @@ The |chef server| can be installed via download or by using the |api omnitruck|:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server.html">Install the Enterprise Chef Server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
-Installation scenarios: 
+Installation scenarios:
 
 .. raw:: html
 
@@ -464,6 +465,7 @@ The following topics discuss using |chef server oec| with platforms:
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
+   config_rb_metadata
    config_rb_pushy_server
    config_rb_solo
    ctl_chef_apply
@@ -666,5 +668,3 @@ The following topics discuss using |chef server oec| with platforms:
    server_tuning
    server_users
    upgrade_server
-   upgrade_server_ha
-   upgrade_server_standalone
