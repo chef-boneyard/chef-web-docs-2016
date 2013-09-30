@@ -4,17 +4,18 @@ S3OPTIONS = --delete-removed --acl-public --exclude='.doctrees/*' --exclude='che
 
 release: master enterprise open_source all
 
-# 
+#
 # OTHER BUILDS -- REMOVED FOR THE MOMENT
-# 
+#
 #  server 11-4 11-6
-# 
+#
 
 clean:
 	@rm -rf $(BUILDDIR)
 
 master:
 	mkdir -p $(BUILDDIR)
+	cp -r misc/robots.txt build/
 	sphinx-build chef_master/source $(BUILDDIR)
 
 all:
