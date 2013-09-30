@@ -360,7 +360,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
 
-Platforms
+Platforms 
 =====================================================
 The following topics discuss using |chef server osc| with platforms:
 

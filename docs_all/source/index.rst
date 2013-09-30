@@ -56,7 +56,7 @@ Getting Started
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server_scenario_vm.html">Install Chef Server 11.x on a Virtual Machine</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
 
-**Manage the Chef Server**
+**Manage the Chef Server** 
 
 .. raw:: html
 

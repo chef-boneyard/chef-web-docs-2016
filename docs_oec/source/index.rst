@@ -175,7 +175,7 @@ The |chef server| can be installed with the :doc:`knife bootstrap </knife_bootst
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server.html">Install the Enterprise Chef Server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
-Installation scenarios:
+Installation scenarios: 
 
 .. raw:: html
 
