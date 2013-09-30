@@ -2,6 +2,8 @@
 knife reporting
 =====================================================
 
+.. include:: ../../includes_reporting/includes_reporting.rst
+
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_reporting.rst
 
 .. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.

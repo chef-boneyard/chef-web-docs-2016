@@ -2,15 +2,15 @@
 Scaled Front End
 =====================================================
 
-The Tiered installation allows you to install |chef server oec| on multiple servers, in order to scale portions of the service horizontally. It does not provide high availability for the back-end data services, but instead relies on the ability to quickly restore the state of the server from a backup or from source code control. |opscode| generally recommends a High Availability installation rather than a Tiered installation, whenever possible.
+The scaled front end installation allows you to install |chef server oec| on multiple servers, in order to scale portions of the service horizontally. It does not provide high availability for the back-end data services, but instead relies on the ability to quickly restore the state of the server from a backup or from source code control. |opscode| generally recommends a High Availability installation rather than a scaled front end installation, whenever possible.
 
 We refer to all the servers in a particular installation of |chef server oec| as a cluster.
 
-The Tiered installation consists of multiple front-end servers talking to a single back-end server. This allows for a higher level of concurrency on API requests, while scaling the back-end server vertically to handle the increased I/O load.
+The scaled front end installation consists of multiple front-end servers talking to a single back-end server. This allows for a higher level of concurrency on API requests, while scaling the back-end server vertically to handle the increased I/O load.
 
 System Requirements
 =====================================================
-A Tiered installation scenario has the following system requirements:
+A scaled front end installation scenario has the following system requirements:
 
 * 8 total cores 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
 * 16GB RAM
@@ -21,11 +21,11 @@ A Tiered installation scenario has the following system requirements:
 * 40 GB of free disk space in ``/var``
 * A back-end server; all other systems will be front-end servers.
 
-.. note:: While you can certainly run |chef server oec| on smaller systems, our assumption with the Tiered installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
+.. note:: While you can certainly run |chef server oec| on smaller systems, our assumption with the scaled front end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
 
 Network Requirements
 =====================================================
-|chef server oec| has the following network requirements for a tiered installation:
+|chef server oec| has the following network requirements for a scaled front end installation:
 
 Load Balancing
 -----------------------------------------------------
@@ -171,7 +171,7 @@ Replace ``FQDN`` with the |fqdn| of the load balanced VIP.
 
 Example
 -----------------------------------------------------
-A completed |private chef rb| configuration file for a four server tiered |chef server oec| cluster, consisting of:
+A completed |private chef rb| configuration file for a four server |chef server oec| cluster, consisting of:
 
 .. list-table::
    :widths: 100 150 150
@@ -298,5 +298,5 @@ This command will copy all the files from the bootstrap server to another system
 
 Success!
 =====================================================
-Congratulations, you have installed |chef server oec| in a Tiered configuration. Continue with the User Management section of this guide.
+Congratulations, you have installed |chef server oec| in a scaled front end configuration. Continue with the User Management section of this guide.
 

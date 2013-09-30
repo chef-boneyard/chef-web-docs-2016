@@ -2,11 +2,11 @@
 Standalone
 =====================================================
 
-The Standalone installation of |chef server oec| creates a working installation on a single server. This installation is typically useful when you are installing |chef server oec| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
+The standalone installation of |chef server oec| creates a working installation on a single server. This installation is typically useful when you are installing |chef server oec| in a virtual machine, for proof-of-concept deployments, or as a part of a development or testing loop.
 
 System Requirements
 =====================================================
-A Standalone installation scenario has the following system requirements:
+A standalone installation scenario has the following system requirements:
 
 * 4 total cores, 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
 * 4 GB of RAM
@@ -42,7 +42,7 @@ For |ubuntu|:
 
 Configure
 =====================================================
-|chef server oec| is now installed on your server, but is not configured for use. To configure it for a Standalone installation, simply run:
+|chef server oec| is now installed on your server, but is not configured for use. To configure it for a standalone installation, simply run:
 
 .. code-block:: bash
 
@@ -58,4 +58,4 @@ This command may take several minutes to run, during which the output of the |ch
 
 Success!
 =====================================================
-Congratulations, a Standalone |chef server oec| server is installed.
+Congratulations, a standalone |chef server oec| server is installed.

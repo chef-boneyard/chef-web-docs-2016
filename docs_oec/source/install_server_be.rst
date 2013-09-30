@@ -2,15 +2,15 @@
 Scaled Back End
 =====================================================
 
-The High Availability installation allows you to install |chef server oec| on multiple servers, in order to scale portions of the service horizontally, with a highly available back-end infrastructure. This is the recommended configuration for production utilization of |chef server oec|.
+The scaled back end installation allows |chef server oec| to be installed on multiple servers in order to scale portions of the service horizontally, with a highly available back-end infrastructure. This is the recommended configuration for production utilization of |chef server oec|.
 
 We refer to all the servers in a particular installation of |chef server oec| as a cluster.
 
-The High Availability installation consists of multiple front-end servers talking to a pair of clustered back-end servers. This allows for a higher level of concurrency on API requests, while scaling the back-end servers vertically to handle the increased I/O load.
+The scaled back end installation consists of multiple front-end servers talking to a pair of clustered back-end servers. This allows for a higher level of concurrency on API requests, while scaling the back-end servers vertically to handle the increased I/O load.
 
 System Requirements
 =====================================================
-A High Availability installation scenario has the following system requirements:
+A scaled back end installation scenario has the following system requirements:
 
 * 8 total cores 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
 * 16GB RAM
@@ -21,11 +21,11 @@ A High Availability installation scenario has the following system requirements:
 * 40 GB of free disk space in ``/var``
 * Two back-end servers; as many front-end servers as required.
 
-.. note:: While |chef server oec| can be run on smaller systems, our assumption with the High Availability installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
+.. note:: While |chef server oec| can be run on smaller systems, our assumption with the scaled back end installation is that it is intended for production use. The above configuration is rated at 1,500 nodes converging every 5 minutes.
 
 Network Requirements
 =====================================================
-|chef server oec| has the following network requirements for a high availability installation:
+|chef server oec| has the following network requirements for a scaled back end installation:
 
 Networking
 -----------------------------------------------------
@@ -329,7 +329,7 @@ For |ubuntu|:
 
 Configure |drbd| on the back-end bootstrap server
 =====================================================
-In the High Availability configuration, setup of |chef server oec| happens in two phases - the first phase configures |drbd|, and then pauses to allow you to finish establishing |drbd| replication before moving on:
+In the scaled back end configuration, setup of |chef server oec| happens in two phases - the first phase configures |drbd|, and then pauses to allow you to finish establishing |drbd| replication before moving on:
 
 .. code-block:: bash
 
@@ -524,7 +524,7 @@ This command may take several minutes to run, during which you will see the outp
 
 Success!
 =====================================================
-Congratulations, |chef server oec| is installed in a High Availability configuration.
+Congratulations, |chef server oec| is installed in a scaled back end configuration.
 
 Using GRE Tunnels
 =====================================================

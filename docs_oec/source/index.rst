@@ -11,9 +11,9 @@ Getting Started
 =====================================================
 If you are new to |chef server oec|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes </oec_overview>`.
 
-Cookbooks are the fundamental unit of configuration and policy distribution. Cookbooks are authored using a programming language called |ruby|. Being an expert in |ruby| is not a requirement, but knowing some basic |ruby| will help you a lot. If you're new to |ruby|, :doc:`familiarize yourself with the basics </just_enough_ruby_for_chef>`.
+Cookbooks are the fundamental unit of configuration and policy distribution. They are authored using |ruby|, which is a programming language with a simple, easy to follow syntax. Being an expert in |ruby| programming is not a requirement for authoring cookbooks because most of the structures found in cookbooks are just patterns; knowing :doc:`some basic Ruby </just_enough_ruby_for_chef>` will help a lot.
 
-If you want to try out |chef server oec|, use the hosted |chef server|. First, `sign up for hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_, then :doc:`install the chef-client on a workstation </install_workstation>`, and then :doc:`bootstrap your first node </install_bootstrap>`.
+If you want to try out |chef server oec|, you can use the hosted |chef server|. First, `sign up for hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_, then :doc:`install the chef-client on a workstation </install_workstation>`, and then :doc:`bootstrap your first node </install_bootstrap>`.
 
 Another way to learn how to use |chef server oec| is the |learnchef| website. It contains a `series of hands-on tutorials <https://learnchef.opscode.com/>`_ that can walk you through the process of setting up a hosted server, a workstation, using the |chef repo|, and then converging your first node.
 
@@ -52,7 +52,7 @@ The following |knife| subcommands are built-in:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_client.html">knife client</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_configure.html">knife configure</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_cookbook.html">knife cookbook</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_cookbook_site.html">knife cookbook site</a> (<a href="http://docs.opscode.com/enterprise/api_cookbooks_site.html">which uses the Cookbooks Site API</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_cookbook_site.html">knife cookbook site</a> (which uses the <a href="http://docs.opscode.com/enterprise/api_cookbooks_site.html">Cookbooks Site API</a>)</br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_data_bag.html">knife data bag</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_delete.html">knife delete</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_deps.html">knife deps</a> </br>
@@ -93,12 +93,13 @@ Plugins allow |knife| to interact with all of the major cloud providers. All |kn
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_hp.html">knife hp</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_linode.html">knife linode</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_openstack.html">knife openstack</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_pushy.html">knife pushy</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_rackspace.html">knife rackspace</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_reporting.html">knife reporting</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_terremark.html">knife terremark</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_vcloud.html">knife vcloud</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_windows.html">knife windows</a> </br>
+
+..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_pushy.html">knife pushy</a> </br>
 
 A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/enterprise/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/enterprise/plugin_knife_custom.html>`_ can be created.
 
@@ -148,7 +149,7 @@ The |chef server oec| acts as a hub for configuration data. The :doc:`components
 
 In addition to the built-in features of |chef server oec|, the following optional components are available:
 
-* **Pushy** :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
+.. * **Pushy** :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
 * **Reporting** :doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
 
 Deployment Scenarios
@@ -168,7 +169,7 @@ The following sections discuss these deployment configuration options in greater
 
 Install Enterprise Chef
 -----------------------------------------------------
-The |chef server| can be installed with the :doc:`knife bootstrap </knife_bootstrap>` subcommand from a workstation or by downloading the |chef client| to the node directly using the |api omnitruck|.
+The |chef server| can be installed via download or by using the |api omnitruck|:
 
 .. raw:: html
 
