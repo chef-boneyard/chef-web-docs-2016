@@ -2,37 +2,31 @@
 Community Contributions
 =====================================================
 
-Thank you for contributing to an |opscode| Open Source project!
+We are glad you want to contribute to Chef! Here's how:
 
-Getting Started
+#. Create an account on the open source ticket tracking system: http://tickets.opscode.com
+#. Sign the contributor licensing agreement (CLA) or corporate contributor license agreement (CCLA): https://secure.echosign.com/public/hostedForm?formid=PJIF5694K6L; both individuals and companies must sign the contributor licensing agreement unless the fix is an "Obvious Fix"
+#. Create a ticket for the change on the bug tracker
+#. Link to your patch as a rebased git branch or pull request from the ticket; pull requests may be made in |github| against any |opscode|-managed open source project
+#. Resolve the ticket as fixed
+
+We regularly review contributions and will get back to you if we have any suggestions or concerns.
+
+|opscode|-managed open source projects are located here: https://github.com/opscode.
+
+
+About CLAs and CCLAs
 =====================================================
-Unless the fix is an "Obvious Fix" (see below), contributing to an |opscode|-managed open source project requires you to:
+A contributor licensing agreement (CLA) and/or a company contributor licensing agreement (CCLA) must be filled out by every contributor to an |opscode|-managed open source project.
 
-#. Sign up for an account on the Open Source Ticket Tracking System. This will create an identical account for you on the Wiki. We match the email address from your CLA to this account.
-#. Fill out a Contributor License Agreement. If your contribution is happening on behalf of a company, they should sign a Corporate Contributor License Agreement. Please complete and digitally sign the form, the process and submittal fully managed for you through Echosign. This will take 3-5 minutes. You'll be emailed a copy when we've received it. We'll process it, and send you an introduction email. You'll then appear as a approved contributor, and be upgraded to a Developer on the Ticket Tracking System: allowing you to modify and transition ticket status.
+The CLA (and CCLA) makes everyone's rights clear
 
-After the account has been created and the CLA has been submitted, pull requests may be made in |github| against any |opscode|-managed open source project. Thanks in advance for your contributions to this community! To make individual contributions to an |opscode| open source project: 
-
-#. Fork the project you would like to contribute to on GitHub.
-#. Create a ticket on http://tickets.opscode.com, providing any useful information on the issue.
-#. Provide instructions on the ticket which GitHub repository and branch should be pulled from, and set the ticket status to "Fix Provided" when you are complete.
-#. We'll test, verify and merge your changes and then close the ticket.
-#. Want to know more about the workflow? Check out the Code Review page.
-
-|opscode|-managed open source projects are here: https://github.com/opscode.
-
-CLAs and CCLAs
-=====================================================
-A CLA must be filled out by every contributor to an Opscode-managed open source project.
-
-The CLA (and CCLA) makes everyone's rights clear. It states:
-
-* You grant copyright license for your contributions to Opscode
-* You grant patent license for your contributions to Opscode
-* Your contribution is entirely voluntary
-* Your work is your original creation
-* You are not required to provide support for your contributions
-* You should read and understand the entire CLA before signing it. Our description of it is not legally binding.
+* You (or your company) grant copyright license for your contributions to Opscode
+* You (or your company) grant patent license for your contributions to Opscode
+* The contribution is entirely voluntary
+* The work is your original creation
+* You (or your company) are not required to provide support for your contributions
+* You (or your company) should read and understand the entire CLA (or CCLA) before signing it. Our description of it is not legally binding.
 
 The CLA is beneficial to our contributors and users because:
 
@@ -41,42 +35,35 @@ The CLA is beneficial to our contributors and users because:
 * It makes clear what is required of our contributors.
 * The most important thing about the CLA is that it doesn't give Opscode any special rights - it just makes things more explicit.
 
-**Can you accept my contribution without a CLA (I'll sign it later, I promise!)?**
+Opscode does not merge any pull requests made against an |opscode|-managed open source repository until that pull request is associated with a signed CLA (or CCLA), with two exceptions: "Obvious Fixes" and pull requests made against the documentation repository (https://github.com/opscode/chef-docs).
 
-No. We must have a signed CLA before we can merge your changes to any of our projects.
-
-**When do I need to have my company sign a CCLA?**
-
-If you are contributing to an Opscode project while doing work on company time, or utilizing company resources, you should have your company sign a CCLA.
-
-**How do I add additional employees to my existing CCLA?**
-
-The point of contact from your CCLA should email legal@opscode.com with the full name and email address of the individuals account on tickets.opscode.com that they would like added.
-
-**How do I change the point of contact on my existing CCLA?**
-
-If you need to update the point of contact for the CCLA, the current contact should email legal@opscode.com with the full name and email address of the new contact. If the existing contact is no longer available, please contact us and we will help you out.
-
-Contribution Process
+About the Apache License
 =====================================================
-Contribute Changes to Opscode-Managed Apache Licensed Cookbooks at the Community Site. All other cookbooks require no CLA. Once you have signed a CLA and have a ticket referencing your request, see How to Contribute to Opscode Cookbooks. Opscode doesn't maintain all the cookbooks on the community site, and individual maintainers choose whatever license they like. Contact those authors to find out what their contribution process is.
+Opscode uses the Apache License Version 2 because it provides the same level of freedom for our users that we desire for ourselves. Based upon the Apache Licensing FAQ, it allows you to:
 
-If you have created your own cookbook you would like to share with the community, read about adding a cookbook to the community site.
+* freely download and use Opscode software, in whole or in part, for personal, company internal, or commercial purposes;
+* use Opscode software in packages or distributions that you create.
 
-**Do I have to use GitHub for my fork of the repository?**
+It forbids you to:
 
-Nope - but it makes everyone's lives easier if you do. We'll be happy to pull from any repository you like.
+* redistribute any piece of Opscode-originated software without proper attribution;
+* use any marks owned by Opscode in any way that might state or imply that Opscode endorses your distribution;
+* use any marks owned by Opscode in any way that might state or imply that you created the Opscode software in question.
 
-**Why do I need to have a ticket associated with my patch?**
+It requires you to:
 
-When working on the code, having patches associated with tickets helps other contributors understand why a change was made. This is important in distributed software projects where you can't go over and ask a colleague about the code. It also helps us coordinate the changelog for future releases, and provides for recognizing community participation.
+* include a copy of the license in any redistribution you may make that includes Opscode software;
+* provide clear attribution to Opscode for any distributions that include Opscode software; attribution can be done in the NOTICE file for an application, by adding yourself as an author/copyright holder to the HEADER for an individual file, and by placing text in a header file saying that new work is based on previous work
+* reuse work as long as the licensing terms of the reused work remains unchanged (i.e. The Apache License Version 2 also applies to the reused work)
 
-**You use GitHub, why don't you use GitHub Pull Requests?**
+It does not require you to:
 
-We use JIRA for our open source projects and for our own internal projects: managing all the details of the code base, and fulfilling license requirements for our joint benefit. We also interact regularly with the GitHub issues/pull request system. You are welcome to open a pull request, and link to that when updating the Jira ticket for a contribution. 
+* include the source of the Opscode software itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it;
+* submit changes that you make to the software back to Opscode (though such feedback is encouraged).
 
+It is our goal to run a successful, truly open source business. To that end, we are protecting our own rights by making them explicit in our choice of licensing: you have the same rights to our open source software that we do.
 
-The Opscode "Obvious Fix" Rule
+The "Obvious Fix" Rule
 =====================================================
 |opscode|'s contribution policy is aimed at encouraging broad participation from our community, and minimizing risks to |chef| and our community due to inappropriate contributions of the intellectual property of others.
 
@@ -128,41 +115,3 @@ Things that would still require signing a CLA before submitting would likely inc
 * Extensive or creative comments.
 
 
-
-
-
-Licensing and Copyright
-=====================================================
-Why is your software Apache Licensed? Opscode uses the Apache License Version 2 because it provides the same level of freedom for our users that we desire for ourselves. Based upon the Apache Licensing FAQ...
-
-It allows you to:
-
-* freely download and use Opscode software, in whole or in part, for personal, company internal, or commercial purposes;
-* use Opscode software in packages or distributions that you create.
-
-It forbids you to:
-
-* redistribute any piece of Opscode-originated software without proper attribution;
-* use any marks owned by Opscode in any way that might state or imply that Opscode endorses your distribution;
-* use any marks owned by Opscode in any way that might state or imply that you created the Opscode software in question.
-
-It requires you to:
-
-* include a copy of the license in any redistribution you may make that includes Opscode software;
-* provide clear attribution to Opscode for any distributions that include Opscode software.
-
-It does not require you to:
-* include the source of the Opscode software itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it;
-* submit changes that you make to the software back to Opscode (though such feedback is encouraged).
-
-It is our goal to run a successful, truly open source business. To that end, we are protecting our own rights by making them explicit in our choice of licensing: you have the same rights to our open source software that we do.
-
-**How should I update the header file of my contribution to properly credit earlier contributors and recognize copyrights?**
-
-You need to put attribution about the origins of some of the code in the NOTICE file for your app. On an individual header, you can add yourself as an author/copyright holder, placing text in the header file saying that your new work is based on previous work, and referencing the original header below.
-
-If the original file is lacking the license header, please let us know, so we can add one. Even in their absence, they are covered by the Apache 2 license.
-
-**Do I need the agreement of anyone else whose authorship/copyright I come across?**
-
-You can re-use the work without having to get the agreement of the original authors, as long as you're not going to be changing the licensing terms at all (ie: you maintain and fulfill Apache 2 licensing requirements) and you don't modify the fact that the code you are incorporating remains copyrighted by the original authors. The Apache License grants these rights to those who receive a copy of the software.
