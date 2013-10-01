@@ -2,14 +2,11 @@
 Reporting
 =====================================================
 
-.. warning:: This is a draft for future functionality that will be added to Enterprise Chef.
-
 .. include:: ../../includes_reporting/includes_reporting.rst
 
 The Reporting Run
 =====================================================
 .. include:: ../../includes_reporting/includes_reporting_run.rst
-
 
 knife-reporting
 =====================================================
