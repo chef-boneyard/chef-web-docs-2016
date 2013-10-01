@@ -39,7 +39,7 @@ Here are some contributions from the community:
 
 .. **Chef for OpenStack:** :doc:`Overview </openstack>` | :doc:`knife-openstack </plugin_knife_openstack>`
 
-**Documentation:** `Contribute to this documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.opscode.com/style_guide.html>`_
+**Contributions:** `Contribute to Open Source Chef <http://docs.opscode.com/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.opscode.com/style_guide.html>`_
 
 The Workstation 
 =====================================================
