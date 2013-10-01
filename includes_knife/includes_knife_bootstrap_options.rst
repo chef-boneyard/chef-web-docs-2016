@@ -60,7 +60,7 @@ This subcommand has the following options:
    |path bootstrap_template|
 
 ``--use-sudo-password``
-   Indicates that a bootstrap operation is done using |sudo|, with the password specified by the ``-P`` (or ``--ssh-password``) option.
+   Indicates that a bootstrap operation is done using |sudo cmd|, with the password specified by the ``-P`` (or ``--ssh-password``) option.
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|
