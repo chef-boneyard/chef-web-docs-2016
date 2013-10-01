@@ -27,17 +27,15 @@ Why was Chef created?
 
 How can I help?
 -----------------------------------------------------
-Join the community, participate in the discussion going on right now on IRC, sign up for the mailing Lists, and read the instructions on how to contribute to an |opscode| open source project.
-
-.. include:: ../../includes_community/includes_community_contributions.rst
+`Join the community <http://docs.opscode.com/#the-community>`_, participate in the discussion going on right now on IRC, sign up for the mailing Lists, and read the instructions on how to contribute to an |opscode| open source project. For more information about participating in the community, see 
 
 Do I really need to know Ruby?
 -----------------------------------------------------
-It helps, but its not required. You can learn :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`.
+It helps, but its not required. Many recipes are just structure and patterns that use |ruby| as the definition language. Having actual |ruby| coding skills? Helpful, but not required, especially to get started. You can learn :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`.
 
 Can I trust Chef?
 -----------------------------------------------------
-Yes, absolutely. The |chef client| will not do anything to your system that isn't in a recipe. Because |chef| is an open source project, you have full access to the source code.
+Yes, absolutely. The |chef client| will not do anything to your system that isn't in a recipe. Because |chef| is an open source project, you have full access to the source code and visibility into how it all works.
 
 
 Who uses Chef?
