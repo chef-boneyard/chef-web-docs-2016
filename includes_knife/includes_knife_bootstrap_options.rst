@@ -5,6 +5,9 @@
 
 This subcommand has the following options:
 
+``-A``, ``--forward-agent``
+   Indicates that SSH agent forwarding is enabled.
+
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|
 
@@ -44,11 +47,20 @@ This subcommand has the following options:
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
+``--secret SECRET``
+   |secret|
+
+``--secret-file FILE``
+   |secret-file|
+
 ``--sudo``
    |sudo bootstrap|
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|
+
+``--use-sudo-password``
+   Indicates that a bootstrap operation is done using |sudo|, with the password specified by the ``-P`` (or ``--ssh-password``) option.
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh-user|
