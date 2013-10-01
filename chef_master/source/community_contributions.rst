@@ -5,7 +5,7 @@ Community Contributions
 We are glad you want to contribute to Chef! Here's how:
 
 #. Create an account on the open source ticket tracking system: http://tickets.opscode.com
-#. Sign the contributor licensing agreement (CLA) or corporate contributor license agreement (CCLA): https://secure.echosign.com/public/hostedForm?formid=PJIF5694K6L; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.opscode.com/community_contributions.html#the-obvious-fix-rule>`_
+#. Sign the contributor licensing agreement (`CLA <http://docs.opscode.com/community_contributions.html#about-clas-and-cclas>`_) or corporate contributor license agreement (`CCLA <http://docs.opscode.com/community_contributions.html#about-clas-and-cclas>`_): https://secure.echosign.com/public/hostedForm?formid=PJIF5694K6L; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.opscode.com/community_contributions.html#the-obvious-fix-rule>`_
 #. Create a ticket for the change on the bug tracker
 #. Link to your patch as a rebased git branch or pull request from the ticket; pull requests may be made in |github| against any |opscode|-managed open source project
 #. Resolve the ticket as fixed
