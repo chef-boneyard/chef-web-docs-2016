@@ -4,6 +4,8 @@ Chef Server Topics
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+.. warning:: This documentation is about Private Chef. For documentation about the newly-released Enterprise Chef, see docs.opscode.com/enterprise.
+
 .. 
 .. 
 .. Chef Server 11.x
