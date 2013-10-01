@@ -10,10 +10,10 @@ This resource has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - Default. |resource action install yum|
+     - Default. |resource action install package|
    * - ``:upgrade``
-     - |resource action upgrade yum|
+     - |resource action upgrade package|
    * - ``:remove``
-     - |resource action remove yum|
+     - |resource action remove package|
    * - ``:purge``
      - |resource action purge package|

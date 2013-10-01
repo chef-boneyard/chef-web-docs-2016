@@ -16,14 +16,14 @@ This lightweight resource provider has the following attributes:
    * - ``debug``
      - |debug settings_template| Default value: ``false``.
    * - ``legacy_database_settings``
-     - |legacy_database_setting lwrp application_python_django|
+     - |legacy_database_setting| Default value: ``false``.
    * - ``local_settings_file``
      - |file local_settings| Default value: ``local_settings.py``.
    * - ``packages``
      - |packages array|
    * - ``requirements``
-     - |requirements lwrp application_python_django|
+     - |path requirements_file|
    * - ``settings``
-     - |settings lwrp application_python_django|
+     - |settings django_template|
    * - ``settings_template``
      - |name template_settings_file| If specified, this file must be located in the ``application`` cookbook. Default value: ``settings.py.erb`` (from this cookbook).

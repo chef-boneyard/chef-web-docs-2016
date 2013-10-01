@@ -14,7 +14,7 @@ This lightweight resource provider has the following attributes:
    * - ``create_dirs_before_symlink``
      - |create_dirs_before_symlink|
    * - ``deploy_key``
-     - |deploy_key lwrp application|
+     - |key application_deploy|
    * - ``enable_submodules``
      - |git| only. |enable_submodules|
    * - ``environment``
@@ -26,9 +26,9 @@ This lightweight resource provider has the following attributes:
    * - ``group``
      - |group deploy|
    * - ``migrate``
-     - |migrate lwrp application|
+     - |migrate command_run| Default value: ``false``.
    * - ``migration_command``
-     - |migration_command lwrp application|
+     - |migration command_string|
    * - ``name``
      - |name application|
    * - ``owner``
@@ -38,9 +38,9 @@ This lightweight resource provider has the following attributes:
    * - ``path``
      - |password application|
    * - ``purge_before_symlink``
-     - |purge_before_symlink lwrp application|
+     - |purge_before_symlink|
    * - ``repository``
-     - |repository lwrp application|
+     - |repository application|
    * - ``restart_command``
      - |restart shell_command| Default value: ``nil``.
    * - ``revision``
@@ -50,8 +50,8 @@ This lightweight resource provider has the following attributes:
    * - ``scm_provider``
      - |name scm_provider|
    * - ``strategy``
-     - |strategy lwrp application|
+     - |strategy|
    * - ``symlink_before_migrate``
-     - |symlink_before_migrate lwrp application|
+     - |symlink_before_migrate|
    * - ``symlinks``
-     - |symlinks lwrp application|
+     - |symlinks|

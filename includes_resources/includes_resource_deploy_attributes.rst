@@ -30,13 +30,13 @@ This resource has the following attributes:
    * - ``keep_releases``
      - |keep_releases| Default value: ``5``.
    * - ``migrate``
-     - |migrate resource deploy|
+     - |migrate command_run| Default value: ``false``.
    * - ``migration_command``
-     - |migration_command resource deploy|
+     - |migration command_string|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``purge_before_symlink``
-     - |purge_before_symlink| 
+     - |purge_before_symlink| Default value: ``%w{log tmp/pids public/system}`` (or the same as ``["log", "tmp/pids", "public/system"]``.
    * - ``repo``
      - |repository git_or_svn|
    * - ``repository``
@@ -52,9 +52,9 @@ This resource has the following attributes:
    * - ``scm_provider``
      - |name scm_provider| Default value: ``Chef::Provider::Git``. Optional values: ``Chef::Provider::Subversion``.
    * - ``symlinks``
-     - |symlinks| 
+     - |symlinks| Default value: ``{"system" => "public/system", "pids" => "tmp/pids", "log" => "log"}``.
    * - ``symlink_before_migrate``
-     - |symlink_before_migrate|
+     - |symlink_before_migrate| Default value: ``{"config/database.yml" => "config/database.yml"}``.
    * - ``user``
      - |user checked_out_code| Default value: ``nil``.
 
