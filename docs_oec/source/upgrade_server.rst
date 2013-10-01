@@ -2,7 +2,7 @@
 Upgrade to Enterprise Chef
 =====================================================
 
-The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |dpkg|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete.
+The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |debian dpkg|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete.
 
 To upgrade to |chef server oec|, do the following:
 
@@ -12,7 +12,7 @@ To upgrade to |chef server oec|, do the following:
       
       $ private-chef-ctl stop
 
-#. Run |dpkg| on all machines:
+#. Run |debian dpkg| on all machines:
 
    .. code-block:: bash
       
@@ -24,7 +24,7 @@ To upgrade to |chef server oec|, do the following:
       
       $ private-chef-ctl upgrade
 
-And then after the upgrade process is complete, each of the machines should be cleaned up to remove old data (like the now-unused |couch db| for |chef server| data):
+And then after the upgrade process is complete, each of the machines should be cleaned up to remove old data:
 
 .. code-block:: bash
    
