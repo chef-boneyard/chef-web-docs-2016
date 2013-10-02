@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``port``
      - |port iis| Default value: ``80``.
    * - ``protocol``
-     - |protocol http|
+     - |protocol http| Default value: ``:http``.
    * - ``site_id``
      - |id site| If this is not specified, |microsoft iis| will generate a unique identifier.
    * - ``site_name``
