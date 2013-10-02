@@ -1,23 +1,7 @@
 =====================================================
-Cookbooks Authored and Maintained by Opscode
+chef_handler Cookbook
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_cookbooks_opscode.rst
-
-This reference describes the cookbooks that are authored and maintained by |opscode|.
-
-.. note:: For all of the cookbooks in the opscode-cookbooks repository, see: https://github.com/opscode-cookbooks/. 
-
-Cookbooks
-=====================================================
-The following cookbooks are authored and maintained by |opscode|:
-
-* chef_handler
-
-See below for more information about each of these cookbooks.
-
-chef_handler
------------------------------------------------------
 .. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler.rst
 
 .. note:: This cookbook is available from |github|: https://github.com/opscode-cookbooks/chef_handler.
