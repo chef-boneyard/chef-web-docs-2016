@@ -12,13 +12,13 @@ This subcommand has the following options:
    |concurrency|
 
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
-   |ssh-gateway|
+   |ssh_gateway|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTIFY_FILE``
    |identity-file|
 
 ``-m``, ``--manual-list``
-   |manual-list| If there is more than one item in the list, put quotes around the entire list. For example: ``--manual-list "server01 server 02 server 03"``
+   |manual_list| If there is more than one item in the list, put quotes around the entire list. For example: ``--manual-list "server01 server 02 server 03"``
 
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.
@@ -27,10 +27,10 @@ This subcommand has the following options:
    The shell type. Possible values: ``interactive``, ``screen``, ``tmux``, ``macterm``, or ``cssh``. (``csshx`` is deprecated in favor of ``cssh``.)
 
 ``-p PORT``, ``--ssh-port PORT``
-   |ssh-port|
+   |ssh_port|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``SEARCH_QUERY``
    |search_query ssh|
@@ -39,5 +39,5 @@ This subcommand has the following options:
    |ssh_command|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
-   |ssh-user|
+   |ssh_user|
 

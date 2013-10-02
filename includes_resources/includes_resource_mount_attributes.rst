@@ -26,4 +26,4 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``supports``
-     - |supports resource mount|
+     - |supports mount| Default value: ``{ :remount => false }``.

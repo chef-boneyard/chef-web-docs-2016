@@ -45,7 +45,7 @@ This argument has the following options:
    |azure_pem_filename|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -75,7 +75,7 @@ This argument has the following options:
    |ssl_certificate|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
-   |ssh-user|
+   |ssh_user|
 
 ``-z SIZE``, ``--role-size SIZE``
    |role-size|

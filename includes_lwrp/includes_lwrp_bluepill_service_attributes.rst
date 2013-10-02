@@ -12,6 +12,6 @@ This lightweight resource provider has the following attributes:
    * - ``service_name``
      - |name service| A recipe that uses the |lwrp bluepill service| lightweight resource must contain a template resource for the pill and it must be named ``NAME.pill.erb`` where ``NAME`` is the ``service_name`` attribute.
    * - ``supports``
-     - |supports lwrp bluepill_service|
+     - |supports service| Default value: ``{ :restart => true, :status => true }``.
    * - ``variables``
      - |variables passed_to_template|

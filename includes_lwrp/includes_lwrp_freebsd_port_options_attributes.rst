@@ -22,4 +22,4 @@ This lightweight resource provider has the following attributes:
    * - ``options``
      - |options freebsd|
    * - ``source``
-     - |source freebsd|
+     - |source freebsd| For example: ``source "freebsd-php5-options.erb"``.

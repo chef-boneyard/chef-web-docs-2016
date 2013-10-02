@@ -24,4 +24,4 @@ This lightweight resource provider has the following attributes:
    * - ``gems``
      - |gems_array|
    * - ``precompile_assets``
-     - |precompile_assets lwrp application_ruby|
+     - |precompile_assets|

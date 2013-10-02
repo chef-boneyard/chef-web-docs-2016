@@ -24,10 +24,10 @@ This argument has the following options:
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
-   |ssh-port|
+   |ssh_port|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -45,5 +45,5 @@ This argument has the following options:
    |path bootstrap_template|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
-   |ssh-user|
+   |ssh_user|
 

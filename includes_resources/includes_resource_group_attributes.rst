@@ -20,4 +20,4 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``system``
-     - |system resource group|
+     - |system group| Default value: ``nil``.

@@ -26,4 +26,4 @@ This resource has the following attributes:
    * - ``stop_command``
      - |command service_stop| Default value: ``nil``.
    * - ``supports``
-     - |supports resource service|
+     - |supports service| Default value: ``{ :restart => true, :status => true }``.

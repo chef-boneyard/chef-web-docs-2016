@@ -143,10 +143,10 @@ This configuration file has the following settings:
  
           rest_timeout 300
    * - ``splay``
-     - |splay| For example:
+     - |splay| Default value: ``nil``. For example:
        ::
  
-          splay
+          splay nil
    * - ``ssl_ca_file``
      - |ssl_ca_file| For example:
        ::

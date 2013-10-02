@@ -18,6 +18,6 @@ This lightweight resource provider has the following attributes:
    * - ``dmg_name``
      - |name apple_disk_image| Default value: ``nil``.
    * - ``source``
-     - |source dmg_package|
+     - |source dmg_package| Default value: ``nil``.
    * - ``volumes_dir``
      - |directory apple_disk_image| Default value: ``app``.

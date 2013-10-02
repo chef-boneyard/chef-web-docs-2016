@@ -6,16 +6,16 @@
 This argument has the following options:
 
 ``-A ID``, ``--euca-access-key-id ID``
-   |euca-access-key-id|
+   |key eucalyptus_access_id|
 
 ``--euca-api-endpoint ENDPOINT``
-   |euca-api-endpoint|
+   |api eucalyptus_endpoint|
 
 ``-k KEY``, ``--key KEY``
    |key|
 
 ``-K SECRET``, ``--euca-secret-access-key SECRET``
-   |euca-secret-access-key|
+   |key eucalyptus_access_secret|
 
 ``--region REGION``
    |region eucalyptus|

@@ -26,6 +26,6 @@ This resource has the following attributes:
    * - ``response_file``
      - Optional. |response_file| Default value: ``nil``.
    * - ``source``
-     - |source resource package|
+     - Optional. |source resource package|
    * - ``version``
      - |version package| Default value: ``nil``.

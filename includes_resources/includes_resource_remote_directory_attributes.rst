@@ -36,4 +36,4 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source resource remote_directory|
+     - |source remote_directory|

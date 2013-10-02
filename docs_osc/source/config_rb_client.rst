@@ -1,3 +1,10 @@
-.. THIS PAGE IS IDENTICAL TO docs.opscode.com/config_rb_client.html BY DESIGN
+=====================================================
+client.rb
+=====================================================
 
-.. include:: ../../chef_master/source/config_rb_client.rst
+.. include:: ../../includes_config/includes_config_rb_client.rst
+
+Settings
+==========================================================================
+
+.. include:: ../../includes_config/includes_config_rb_client_settings_osc.rst

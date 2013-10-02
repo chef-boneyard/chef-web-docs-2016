@@ -12,6 +12,6 @@ This lightweight resource provider has the following attributes:
    * - ``group_name``
      - |name group|
    * - ``priority``
-     - |priority lwrp supervisor_group|
+     - |priority group|
    * - ``programs``
-     - |programs lwrp supervisor_group|
+     - |programs supervisor_group| Default value: ``[]``.

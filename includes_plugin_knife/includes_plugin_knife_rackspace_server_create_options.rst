@@ -36,7 +36,7 @@ This argument has the following options:
    |name node|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -54,5 +54,5 @@ This argument has the following options:
    |path bootstrap_template|
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
-   |ssh-user|
+   |ssh_user|
 

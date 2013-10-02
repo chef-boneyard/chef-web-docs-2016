@@ -27,7 +27,7 @@ This argument has the following options:
    |name node|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|

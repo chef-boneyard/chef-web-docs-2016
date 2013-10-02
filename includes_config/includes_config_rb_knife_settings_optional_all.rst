@@ -75,7 +75,7 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:latest]``
      - |latest|
    * - ``knife[:manual]``
-     - |manual-list|
+     - |manual_list|
    * - ``knife[:method]``
      - |method request type|
    * - ``knife[:name_only]``
@@ -117,13 +117,13 @@ The following list describes all of the optional settings that can be added to t
    * - ``knife[:ssh_attribute]``
      - |attribute ssh|
    * - ``knife[:ssh_gateway]``
-     - |ssh-gateway|
+     - |ssh_gateway|
    * - ``knife[:ssh_password]``
-     - |ssh-password|
+     - |ssh_password|
    * - ``knife[:ssh_port]``
-     - |ssh-port|
+     - |ssh_port|
    * - ``knife[:ssh_user]``
-     - |ssh-user|
+     - |ssh_user|
    * - ``knife[:template_file]``
      - |path bootstrap_template|
    * - ``knife[:use current_branch]``

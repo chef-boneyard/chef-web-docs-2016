@@ -28,6 +28,6 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``recursive``
-     - |recursive resource directory|
+     - |recursive directory|
    * - ``rights``
      - |windows| only. |rights windows security|

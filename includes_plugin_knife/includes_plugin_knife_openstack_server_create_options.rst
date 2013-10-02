@@ -39,7 +39,7 @@ This argument has the following options:
    |api openstack_endpoint|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -51,13 +51,13 @@ This argument has the following options:
    |region openstack|
 
 ``-S KEY``, ``--ssh-key KEY``
-   |ssh-key openstack|
+   |ssh_key openstack|
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
-   |ssh-user|
+   |ssh_user|
 
 ``-Z ZONE"``, ``--availability-zone ZONE``
    |availability_zone| Default: ``us-east-1b``.

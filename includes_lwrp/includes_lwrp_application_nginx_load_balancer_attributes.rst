@@ -24,7 +24,7 @@ This lightweight resource provider has the following attributes:
    * - ``ssl_certificate_key``
      - |ssl_certificate key|
    * - ``static_files``
-     - |static_files lwrp application_nginx_load_balancer|
+     - |static_files| Default value: ``{}``.
    * - ``template``
      - |template context_file| Default value: ``load_balancer.conf.erb`` (from this cookbook).
 

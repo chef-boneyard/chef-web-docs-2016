@@ -24,9 +24,9 @@ This lightweight resource provider has the following attributes:
    * - ``pid``
      - |pid lwrp gunicorn_config|
    * - ``preload_app``
-     - |preload_app lwrp gunicorn_config|
+     - |preload_app| Default value: ``false``.
    * - ``server_hooks``
-     - |server_hooks lwrp gunicorn_config|
+     - |server_hooks| Default value: ``{}`` (no server hooks).
    * - ``template``
      - |template file_config| Default value: ``gunicorn.py.erb`` (included as part of the ``gunicorn`` cookbook).
    * - ``worker_class``

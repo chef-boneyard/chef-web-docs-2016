@@ -18,7 +18,7 @@ This argument has the following options:
    |keytab-file|
 
 ``-m``, ``--manual-list``
-   |manual-list|
+   |manual_list|
 
 ``-p PORT``, ``--winrm-port PORT``
    |winrm_port| Default: ``5985``.
@@ -36,10 +36,10 @@ This argument has the following options:
    |kerberos-service| 
 
 ``SEARCH_QUERY``
-   |SEARCH_QUERY SSH|
+   |search_query ssh|
 
 ``SSH_COMMAND``
-   |SSH_COMMAND|
+   |ssh_command|
 
 ``-t TRANSPORT``, ``--winrm-transport TRANSPORT``
    |winrm_transport|

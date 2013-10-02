@@ -18,7 +18,7 @@ This lightweight resource provider has the following attributes:
    * - ``port``
      - 
    * - ``preload_app``
-     - |preload_app lwrp application_ruby|
+     - |preload_app| Default value: ``false``.
    * - ``worker_processes``
      - |worker_processes|
    * - ``worker_timeout``

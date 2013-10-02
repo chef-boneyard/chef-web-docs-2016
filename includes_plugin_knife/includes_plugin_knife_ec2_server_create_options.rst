@@ -57,10 +57,10 @@ This argument has the following options:
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
-   |ssh-port|
+   |ssh_port|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -75,7 +75,7 @@ This argument has the following options:
    |subnet|
 
 ``-S KEY``, ``--ssh-key KEY``
-   |ssh-key amazon ec2|
+   |ssh_key amazon_ec2|
 
 ``-server-connect-attribute ATTRIBUTE``
    |attribute ssh| This should be an |amazon ec2| server attribute.
@@ -90,10 +90,10 @@ This argument has the following options:
    |user data_file_ec2|
 
 ``-w GATEWAY``, ``--ssh-gateway GATEWAY``
-   |ssh-gateway|
+   |ssh_gateway|
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
-   |ssh-user|
+   |ssh_user|
 
 ``-Z ZONE"``, ``--availability-zone ZONE``
    |availability_zone| Default: ``us-east-1b``.

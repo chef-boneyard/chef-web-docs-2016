@@ -26,15 +26,15 @@ This lightweight resource provider has the following attributes:
    * - ``numprocs_start``
      - |number_of_processes_start|
    * - ``priority``
-     - |priority lwrp supervisor_fcgi|
+     - |priority process|
    * - ``process_name``
-     - |process_name lwrp supervisor|
+     - |name process_supervisor|
    * - ``program_name``
      - |name program|
    * - ``redirect_stderr``
-     - |redirect_stderr lwrp supervisor|
+     - |redirect_stderr|
    * - ``serverurl``
-     - |serverurl lwrp supervisor|
+     - |url server_supervisor|
    * - ``socket``
      - |socket fcgi|
    * - ``socket_mode``

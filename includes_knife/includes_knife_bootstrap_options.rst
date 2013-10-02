@@ -6,7 +6,7 @@
 This subcommand has the following options:
 
 ``-A``, ``--forward-agent``
-   Indicates that SSH agent forwarding is enabled.
+   |forward_agent|
 
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|
@@ -18,7 +18,7 @@ This subcommand has the following options:
    |distro|
 
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
-   |ssh-gateway|
+   |ssh_gateway|
 
 ``--hint HINT_NAME[=HINT_FILE]``
    |hint|
@@ -36,10 +36,10 @@ This subcommand has the following options:
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
-   |ssh-port|
+   |ssh_port|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -60,8 +60,8 @@ This subcommand has the following options:
    |path bootstrap_template|
 
 ``--use-sudo-password``
-   Indicates that a bootstrap operation is done using |sudo cmd|, with the password specified by the ``-P`` (or ``--ssh-password``) option.
+   |use sudo_password|
 
 ``-x USERNAME``, ``--ssh-user USERNAME``
-   |ssh-user|
+   |ssh_user|
 

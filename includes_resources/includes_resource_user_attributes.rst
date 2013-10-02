@@ -16,15 +16,15 @@ This resource has the following attributes:
    * - ``home``
      - |home_directory| Default value: ``nil``.
    * - ``password``
-     - |password resource user| Default value: ``nil``.
+     - |password shadow_hash| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``shell``
      - |shell| Default value: ``nil``.
    * - ``supports``
-     - |supports resource user|
+     - |supports user| Default value: ``:manage_home => false, :non_unique => false``.
    * - ``system``
-     - |system resource user|
+     - |system user| Default value: ``nil``.
    * - ``uid``
      - |user uid| Default value: ``nil``.
    * - ``username``

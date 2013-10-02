@@ -7,13 +7,13 @@
 This argument has the following options:
 
 ``-A ID``, ``--euca-access-key-id ID``
-   |euca-access-key-id|
+   |key eucalyptus_access_id|
 
 ``--bootstrap-version VERSION``
    |bootstrap version|
 
 ``--euca-api-endpoint ENDPOINT``
-   |euca-api-endpoint|
+   |api eucalyptus_endpoint|
 
 ``-f FLAVOR``, ``--flavor FLAVOR``
    |flavor|
@@ -28,7 +28,7 @@ This argument has the following options:
    |image|
 
 ``-K SECRET``, ``--euca-secret-access-key SECRET``
-   |euca-secret-access-key|
+   |key eucalyptus_access_secret|
 
 ``-N NAME``, ``--node-name NAME``
    |name node|
@@ -37,7 +37,7 @@ This argument has the following options:
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -49,13 +49,13 @@ This argument has the following options:
    |region eucalyptus|
 
 ``-S KEY``, ``--ssh-key KEY``
-   |ssh-key eucalyptus|
+   |ssh_key eucalyptus|
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
-   |ssh-user|
+   |ssh_user|
 
 ``-Z ZONE``, ``--availability-zone ZONE``
    |availability_zone| Default: ``us-east-1b``.

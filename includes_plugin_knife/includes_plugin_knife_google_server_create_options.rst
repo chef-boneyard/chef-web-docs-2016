@@ -51,10 +51,10 @@ This argument has the following options:
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``-p PORT``, ``--ssh-port PORT``
-   |ssh-port| Default value: ``22``.
+   |ssh_port| Default value: ``22``.
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -72,10 +72,10 @@ This argument has the following options:
    |google_compute_user_data|
 
 ``-w GATEWAY``, ``--ssh-gateway GATEWAY``
-   |ssh-gateway|
+   |ssh_gateway|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
-   |ssh-user|
+   |ssh_user|
 
 ``-Z ZONE``, ``--google-compute-zone ZONE``
    |zone google|

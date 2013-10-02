@@ -36,7 +36,7 @@ This argument has the following options:
    |no_bootstrap|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|

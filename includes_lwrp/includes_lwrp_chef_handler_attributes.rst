@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``arguments``
      - |arguments chef_handler|
    * - ``supports``
-     - |supports chef_handler|
+     - |supports chef_handler| Default value: ``{ :report => true, :exception => true }``.

@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``-A ID``, ``--hp-account ID``
-   |hp-account|
+   |key hp_account|
 
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|
@@ -24,7 +24,7 @@ This argument has the following options:
    |groups|
 
 ``--hp-auth URI``
-   |hp-auth|
+   |uri hp_auth|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
@@ -33,7 +33,7 @@ This argument has the following options:
    |image|
 
 ``-K SECRET``, ``--hp-secret SECRET``
-   |hp-secret|
+   |key hp_secret|
 
 ``-N NAME``, ``--node-name NAME``
    |name node|
@@ -42,7 +42,7 @@ This argument has the following options:
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``--prerelease``
    |prerelease|
@@ -51,17 +51,17 @@ This argument has the following options:
    |run-list|
 
 ``-S KEY``, ``--ssh-key KEY``
-   |ssh-key hp|
+   |ssh_key hp|
 
 ``-T ID``, ``--hp-tenant ID``
-   |hp-tenant|
+   |id hp_tenant|
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|
 
 ``-x USER_NAME``, ``--ssh-user USER_NAME``
-   |ssh-user|
+   |ssh_user|
 
 ``-Z ZONE``, ``--hp-zone ZONE``
-   |hp-zone|
+   |zone hp|
 

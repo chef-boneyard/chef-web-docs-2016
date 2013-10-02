@@ -30,7 +30,7 @@ This argument has the following options:
    |name node|
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
-   |ssh-password|
+   |ssh_password|
 
 ``-U KEY``, ``--username USERNAME``
    |name user bluebox|

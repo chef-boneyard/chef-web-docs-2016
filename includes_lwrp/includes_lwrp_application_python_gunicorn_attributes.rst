@@ -32,9 +32,9 @@ This lightweight resource provider has the following attributes:
    * - ``port``
      - 
    * - ``preload_app``
-     - |preload_app lwrp application_python_gunicorn|
+     - |preload_app| Default value: ``false``.
    * - ``proc_name``
-     - |proc_name lwrp application_python_gunicorn|
+     - |name gunicorn_process|
    * - ``settings_template``
      - |name template_settings_file| If specified, this file must be located in the ``application`` cookbook. Default value: ``se.py.erb`` (from the ``gunicorn`` cookbook).
    * - ``timeout``

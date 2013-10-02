@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``recursive``
-     - |recursive resource registry_key|
+     - |recursive registry_key|
 
        .. note:: |note registry_key resource recursive|
    * - ``values``

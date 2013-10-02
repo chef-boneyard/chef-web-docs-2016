@@ -46,9 +46,9 @@ Some of the optional |knife rb| settings are used often, such as the template fi
    * - ``knife[:editor]``
      - |editor|
    * - ``knife[:ssh_gateway]``
-     - |ssh-gateway| Adding this setting can be helpful when a user cannot |ssh| directly into a host.
+     - |ssh_gateway| Adding this setting can be helpful when a user cannot |ssh| directly into a host.
    * - ``knife[:ssh_port]``
-     - |ssh-port|
+     - |ssh_port|
    * - ``knife[:template_file]``
      - |path bootstrap_template|
 
@@ -63,9 +63,9 @@ Other |ssh|-related settings that are sometimes helpful when added to the |knife
    * - ``knife[:ssh_attribute]``
      - |attribute ssh|
    * - ``knife[:ssh_password]``
-     - |ssh-password|
+     - |ssh_password|
    * - ``knife[:ssh_user]``
-     - |ssh-user|
+     - |ssh_user|
 
 Some organizations choose to have all data bags use the same secret and secret file, rather than have a unique secret and secret file for each data bag. To use the same secret and secret file for all data bags, add the following to |knife rb|:
 

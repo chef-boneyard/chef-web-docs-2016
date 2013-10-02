@@ -6,20 +6,20 @@
 This argument has the following options:
 
 ``-A ID``, ``--hp-account ID``
-   |hp-account|
+   |key hp_account|
 
 ``--hp-auth URI``
-   |hp-auth|
+   |uri hp_auth|
 
 ``-K SECRET``, ``--hp-secret SECRET``
-   |hp-secret|
+   |key hp_secret|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
    |node-name purge|
 
 ``-T ID``, ``--hp-tenant ID``
-   |hp-tenant|
+   |id hp_tenant|
 
 ``-Z ZONE``, ``--hp-zone ZONE``
-   |hp-zone|
+   |zone hp|
 

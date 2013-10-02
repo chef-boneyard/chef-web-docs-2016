@@ -6,6 +6,13 @@
 .. S
 .. 
 
+
+
+
+
+
+
+
 .. |sandbox_path| replace:: The location in which cookbook files are stored (temporarily) during upload.
 
 .. |script-path| replace:: A colon-separated path at which |ruby| scripts are located.
@@ -35,9 +42,9 @@
 
 .. |server_aliases| replace:: An array of server aliases.
 
-.. |server_hooks lwrp gunicorn_config| replace:: A hash with values that are rendered as |gunicorn| server hook functions named after the hash item's key name. Default value: ``{}`` (no server hooks).
-.. |serverurl lwrp application_php_mod| replace:: An array of server aliases.
-.. |serverurl lwrp supervisor| replace:: The URL passed in the environment to the sub-process process.
+.. |server_hooks| replace:: A hash with values that are rendered as |gunicorn| server hook functions named after the hash item's key name.
+
+
 
 .. |service_order keepalived| replace:: The order by which |keepalived| will start and stop services when transitioning from a primary server to a backup.
 
@@ -79,54 +86,42 @@
 .. |socket mode| replace:: A parameter that specifies the permission mode.
 .. |socket owner| replace:: The user and group for a |fcgi| socket.
 .. |solo mode| replace:: Indicates whether the |chef client| is being run in |chef solo| mode. This setting determines if the |chef client| should attempt to communicate with the |chef server|.
-.. |solr_data_path| replace:: The location in which the |apache solr| indexes are located. Default value: ``/var/chef/solr/data``.
-.. |solr_heap_size| replace:: The amount of memory allocated to the |jvm| that is being used to run |apache solr|. Default value: ``256M``.
-.. |solr_home_path| replace:: The path to the |apache solr| home directory. Default value: ``/var/chef/solr``.
-.. |solr_java_opts| replace:: The additional options (if any) that are passed to the |jvm| that is being used to run |apache solr|. Default value: ``nil``.
-.. |solr_jetty_path| replace:: The path to the settings that control the |apache jetty| environment. Default value: ``/var/chef/solr-jetty``.
-.. |solr_url| replace:: The URL for the server from which the |apache solr| search engine is run. Default value: ``http://localhost:8983``.
+.. |solr_data_path| replace:: The location in which the |apache solr| indexes are located.
+.. |solr_heap_size| replace:: The amount of memory allocated to the |jvm| that is being used to run |apache solr|.
+.. |solr_home_path| replace:: The path to the |apache solr| home directory.
+.. |solr_java_opts| replace:: The additional options (if any) that are passed to the |jvm| that is being used to run |apache solr|.
+.. |solr_jetty_path| replace:: The path to the settings that control the |apache jetty| environment.
+.. |solr_url| replace:: The URL for the server from which the |apache solr| search engine is run.
 .. |sort| replace:: The order in which search results will be sorted.
 .. |sort_reverse| replace:: Indicates that the list will be sorted by last run time, descending.
 
 
-.. |source dmg_package| replace:: The remote URL for the |apple disk image| to be download. Default value: ``nil``.
-
-.. |source freebsd| replace:: A template that is used to create the port options file. For example: ``source "freebsd-php5-options.erb"``.
-
-
-
-
-.. |source file_location chef_11-4| replace:: The location (URI) of the source file.
-
+.. |source dmg_package| replace:: The remote URL for the |apple disk image| to be download.
+.. |source freebsd| replace:: A template that is used to create the port options file.
 .. |source file_location| replace:: The location (URI) of the source file. This value may also specify HTTP (``http://``), FTP (``ftp://``),  or local (``file://``) source file locations.
-
+.. |source file_location chef_11-4| replace:: The location (URI) of the source file.
+.. |source template| replace:: The location of a file in the ``/templates`` directory in a cookbook located in the |chef repo|.
 .. |source windows_package| replace:: A URI or a local path that specifies the source of a |windows| installer.
 .. |source windows_zipfile| replace:: A URI or a local path that specifies the source of a |zip| file.
 
 
 
-.. |source resource remote_file| replace:: The base name of the source file (and inferred from the ``path`` attribute).
-.. |source resource template| replace:: The location of the template source file. Default value: ``nil``.
+.. |source resource package| replace:: The package source for providers that use a local file.
+.. |source remote_directory| replace:: The base name of the source file (and inferred from the ``path`` attribute).
 
-
-.. |source resource package| replace:: Optional. The package source for providers that use a local file.
-.. |source resource remote_directory| replace:: The base name of the source file (and inferred from the ``path`` attribute).
-
-
-.. |source resource yum| replace:: Indicates that the ``yum localinstall`` command will be used. When this attribute is specified, |yum| will use repositories to satisfy any remote dependencies. Default value: none.
 .. |source-image| replace:: The name of the disk image that will be used to create the virtual machine.
 
-.. |splay| replace:: A number (in seconds) to add to the ``interval`` that is used to determine the frequency of |chef client| runs. This number can help prevent server load when there are many clients running at the same time. Default value: ``nil``.
+.. |splay| replace:: A number (in seconds) to add to the ``interval`` that is used to determine the frequency of |chef client| runs. This number can help prevent server load when there are many clients running at the same time.
 
 .. |ssh_command| replace:: The command that will be run against the results of a search query.
-.. |ssh-gateway| replace:: The |ssh| tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
-.. |ssh-key amazon ec2| replace:: The |ssh| key for the |amazon ec2| environment.
-.. |ssh-key eucalyptus| replace:: The |ssh| key for the |eucalyptus| environment.
-.. |ssh-key hp| replace:: The |ssh| key for the |hp cloud| environment.
-.. |ssh-key openstack| replace:: The |ssh| key for the |openstack| environment.
-.. |ssh-password| replace:: The |ssh| password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) |knife| will prompt for the password.
-.. |ssh-port| replace:: The |ssh| port.
-.. |ssh-user| replace:: The |ssh| user name.
+.. |ssh_gateway| replace:: The |ssh| tunnel or gateway that is used to run a bootstrap action on a machine that is not accessible from the workstation.
+.. |ssh_key amazon_ec2| replace:: The |ssh| key for the |amazon ec2| environment.
+.. |ssh_key eucalyptus| replace:: The |ssh| key for the |eucalyptus| environment.
+.. |ssh_key hp| replace:: The |ssh| key for the |hp cloud| environment.
+.. |ssh_key openstack| replace:: The |ssh| key for the |openstack| environment.
+.. |ssh_password| replace:: The |ssh| password. This can be used to pass the password directly on the command line. If this option is not specified (and a password is required) |knife| will prompt for the password.
+.. |ssh_port| replace:: The |ssh| port.
+.. |ssh_user| replace:: The |ssh| user name.
 .. |ssh_wrapper resource| replace:: The path to the wrapper script used when running |ssh| with |git|. The ``GIT_SSH`` environment variable is set to this.
 
 .. |ssl_ca_file| replace:: The file in which the |open ssl| key is saved. This setting is generated automatically by the |chef client| and most users will not need to modify it.
@@ -150,18 +145,18 @@
 .. |startretries| replace:: The number of serial failure attempts |python supervisor| will allow when attempting to start a program before giving up.
 .. |startsecs| replace:: The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.
 
-.. |static_files lwrp application_nginx_load_balancer| replace:: A hash that maps URLs to files. Default value: ``{}``.
+.. |static_files| replace:: A hash that maps URLs to files.
 
 .. |stdin chef_apply| replace:: Use to execute a resource using standard input.
 
 .. |stderr_capture_maxbytes| replace:: The maximum number of bytes written to capture for ``stderr_logfile``.
 .. |stderr_events_enabled| replace:: Indicates whether events are omitted from ``stderr_logfile``.
-.. |stderr_logfile| replace:: The location of the STDERR logfile.
+.. |stderr_logfile| replace:: The location of the ``STDERR`` logfile.
 .. |stderr_logfile_backups| replace:: The number of ``stderr_logfile`` backups to keep.
 .. |stderr_logfile_maxbytes| replace:: The maximum size (in bytes) that may be consumed by ``stderr_logfile`` before it is rotated.
 .. |stdout_capture_maxbytes| replace:: The maximum number of bytes written to capture for ``stdout_logfile``.
 .. |stdout_events_enabled| replace:: Indicates whether events are omitted from ``stdout_logfile``.
-.. |stdout_logfile| replace:: The location of the STDOUT logfile.
+.. |stdout_logfile| replace:: The location of the ``STDOUT`` logfile.
 .. |stdout_logfile_backups| replace:: The number of ``stdout_logfile`` backups to keep.
 .. |stdout_logfile_maxbytes| replace:: The maximum size (in bytes) that may be consumed by ``stdout_logfile`` before it is rotated.
 
@@ -188,20 +183,24 @@
 .. |supervisor_inet_password| replace:: The password used during authentication to the HTTP server. This setting supports both clear text and SHA-1 hashed passwords (that are prefixed by ``{SHA}``).
 .. |supervisor_dir| replace:: The location of supervisor configuration files.
 .. |supervisor_log_dir| replace:: The location of supervisor log files.
-.. |supervisor_logfile_maxbytes| replace:: The maximum size (in bytes) of the ``supervisord`` log file. When this file reaches this size, it will be rotated. Default value: ``50MB``.
-.. |supervisor_logfile_backups| replace:: The number of backups of the log file that will be kept. Default value: ``10``.
-.. |supervisor_loglevel| replace:: The minimum severity level for logged messages. Default value ``info``.
+
+
+
+
+
+
+
+
+
 .. |supervisor_minfds| replace:: The minimum number of file descriptors that must be available before ``supervisord`` will start successfully.
 .. |supervisor_minprocs| replace:: The minimum number of process descriptors that must be available before ``supervisord`` will start successfully.
 .. |supervisor_version| replace:: Sets the version of ``supervisor`` to install; must be version 3.0 (or higher) to use ``minprocs`` and ``minfds``.
 
 
-
-.. |supports lwrp bluepill_service| replace:: A list of attributes that controls how the |chef client| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, the |chef client| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, the |chef client| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute. Default value: ``{ :restart => true, :status => true }``.
-.. |supports chef_handler| replace:: The type of handler to be registered as: ``:report``, ``:exception`` or ``both``. Default value: ``{ :report => true, :exception => true }``.
-.. |supports resource mount| replace:: A hash of options for supported mount features. Default value: ``{ :remount => false }``.
-.. |supports resource service| replace:: A list of attributes that controls how the |chef client| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, the |chef client| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, the |chef client| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute. Default value: ``{ :restart => true, :status => true }``.
-.. |supports resource user| replace:: A Mash where keys represent features and values are booleans that indicate if that feature is supported. Default value: ``:manage_home => false, :non_unique => false``.
+.. |supports chef_handler| replace:: The type of handler to be registered as: ``:report``, ``:exception`` or ``both``.
+.. |supports mount| replace:: A hash of options for supported mount features.
+.. |supports service| replace:: A list of attributes that controls how the |chef client| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, the |chef client| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, the |chef client| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute.
+.. |supports user| replace:: A Mash where keys represent features and values are booleans that indicate if that feature is supported.
 
 .. |svlogd_num| replace:: The number of |svlogd| log files to retain.
 .. |svlogd_size| replace:: The size (in bytes) of the |svlogd| log file.
@@ -219,8 +218,8 @@
 
 .. |syntax_check_cache_path| replace:: All files in a cookbook must contain valid |ruby| syntax. Use this setting to specify the location in which |knife| caches information about files that have been checked for valid |ruby| syntax.
 
-.. |system resource group| replace:: Indicates whether a group is a system group (``true``) or is not a system group (``false``). Default value: ``nil``.
-.. |system resource user| replace:: Indicates that a system user should be created. This attribute may be used with ``useradd`` as the provider to create a system user which passes the ``-r`` flag to ``useradd``. Default value: ``nil``.
+.. |system group| replace:: Indicates whether a group is a system group (``true``) or is not a system group (``false``).
+.. |system user| replace:: Indicates that a system user should be created. This attribute may be used with ``useradd`` as the provider to create a system user which passes the ``-r`` flag to ``useradd``.
 
 
 

@@ -278,32 +278,32 @@ This configuration file has the following settings:
  
           solo false
    * - ``solr_data_path````.
-     - |solr_data_path| For example:
+     - |solr_data_path| Default value: ``/var/chef/solr/data``. For example:
        ::
  
           solr_data_path "/var/chef/solr/data"
    * - ``solr_heap_size``
-     - |solr_heap_size| For example:
+     - |solr_heap_size| Default value: ``256M``. For example:
        ::
  
           solr_heap_size 256M
    * - ``solr_home_path``
-     - |solr_home_path| For example:
+     - |solr_home_path| Default value: ``/var/chef/solr``. For example:
        ::
  
           solr_home_path "/var/chef/solr"
    * - ``solr_java_opts``
-     - |solr_java_opts| For example:
+     - |solr_java_opts| Default value: ``nil``. For example:
        ::
  
           solr_java_opts nil
    * - ``solr_jetty_path``
-     - |solr_jetty_path| For example:
+     - |solr_jetty_path| Default value: ``/var/chef/solr-jetty``. For example:
        ::
  
           solr_jetty_path "/var/chef/solr-jetty"
    * - ``solr_url``
-     - |solr_url| For example:
+     - |solr_url| Default value: ``http://localhost:8983``. For example:
        ::
  
           solr_url "http://localhost:8983"
