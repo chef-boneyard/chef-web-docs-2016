@@ -38,7 +38,8 @@ This configuration file has the following settings:
      - The minimum required version of data bag encryption. Possible values: ``1`` or ``2``. When all of the machines in an organization are running |chef client| version 11.6 (or higher), it is recommended that this value be set to ``2``. For example:
        ::
  
-          data_bag_encrypt_version "2"   * - ``http_proxy``
+          data_bag_encrypt_version "2"   
+   * - ``http_proxy``
      - |http_proxy| Default value: ``nil``. For example:
        ::
  
@@ -47,6 +48,12 @@ This configuration file has the following settings:
      - |http_proxy_user| Default value: ``nil``.
    * - ``http_proxy_pass``
      - |http_proxy_pass| Default value: ``nil``.
+   * - ``https_proxy``
+     - |https_proxy| The hosted |chef server oec| uses an HTTPS connection. Default value: ``nil``.
+   * - ``http_proxy_user``
+     - |https_proxy_user| Default value: ``nil``.
+   * - ``http_proxy_pass``
+     - |https_proxy_pass| Default value: ``nil``.
    * - ``node_name``
      - |node_name workstation| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
