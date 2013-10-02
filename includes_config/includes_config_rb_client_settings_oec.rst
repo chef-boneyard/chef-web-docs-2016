@@ -43,12 +43,20 @@ This configuration file has the following settings:
  
           data_bag_decrypt_minimum_version "2"
    * - ``enable_reporting``
-     - Indicates that the |chef client| will send data to the |chef server oec| server for use with |chef server reporting|. For example:
+     - |enable reporting| 
+
+       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef private| organization.
+
+       For example:
        ::
  
           enable_reporting true
    * - ``enable_reporting_url_fatals``
-     - Indicates that the |chef client| run will fail if reporting data cannot be sent to the |chef server oec| server (for any reason). For example:
+     - |enable reporting_url_fatals|
+
+       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef private| organization.
+
+       For example:
        ::
  
           enable_reporting_url_fatals false
@@ -163,10 +171,10 @@ This configuration file has the following settings:
  
           rest_timeout 300
    * - ``splay``
-     - |splay| For example:
+     - |splay| Default value: ``nil``. For example:
        ::
  
-          splay
+          splay nil
    * - ``ssl_ca_file``
      - |ssl_ca_file| For example:
        ::

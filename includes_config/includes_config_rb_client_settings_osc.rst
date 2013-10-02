@@ -42,24 +42,6 @@ This configuration file has the following settings:
        ::
  
           data_bag_decrypt_minimum_version "2"
-   * - ``enable_reporting``
-     - |enable reporting| 
-
-       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef private| organization.
-
-       For example:
-       ::
- 
-          enable_reporting true
-   * - ``enable_reporting_url_fatals``
-     - |enable reporting_url_fatals|
-
-       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef private| organization.
-
-       For example:
-       ::
- 
-          enable_reporting_url_fatals false
    * - ``enable_selinux_file_permission_fixup``
      - |enable_selinux_file_permission_fixup| For example:
        ::
@@ -264,7 +246,3 @@ This configuration file has the following settings:
           [date] INFO: Report handlers complete
 
        Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Mon, 21 Nov 2011 09:37:39 -0800]``.
-   * - ``whitelist``
-     - The path to the attribute file that contains the whitelist used by |pushy|.
-
-       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef private| organization.
