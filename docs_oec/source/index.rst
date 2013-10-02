@@ -367,7 +367,7 @@ The following resources are built-in and can be used in any recipe:
 
 LWRPs
 -----------------------------------------------------
-A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much like a platform resource, including sharing all of the common functionality available to platform resources. A lightweight resource can also be :doc:`compiled inline </lwrp_common_inline_compile>` during the |chef client| run. A |lwrp| is created by defining a lightweight resource and a lightweight provider:
+A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much like a platform resource, including sharing all of the common functionality available to platform resources. A |lwrp| is created by defining a lightweight resource and a lightweight provider:
 
 .. raw:: html
 
@@ -440,7 +440,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
  
 
-Platforms 
+Platforms
 =====================================================
 The following topics discuss using |chef server oec| with platforms:
 
@@ -545,7 +545,6 @@ The following topics discuss using |chef server oec| with platforms:
    lwrp_bluepill
    lwrp_chef_handler
    lwrp_custom
-   lwrp_common_inline_compile
    lwrp_custom_provider_ruby
    lwrp_custom_provider
    lwrp_custom_resource

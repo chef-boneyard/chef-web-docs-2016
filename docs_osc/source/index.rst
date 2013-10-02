@@ -288,7 +288,7 @@ The following resources are built-in and can be used in any recipe:
 
 LWRPs
 -----------------------------------------------------
-A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much like a platform resource, including sharing all of the common functionality available to platform resources. A lightweight resource can also be :doc:`compiled inline </lwrp_common_inline_compile>` during the |chef client| run. A |lwrp| is created by defining a lightweight resource and a lightweight provider:
+A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much like a platform resource, including sharing all of the common functionality available to platform resources. A |lwrp| is created by defining a lightweight resource and a lightweight provider:
 
 .. raw:: html
 
@@ -454,7 +454,6 @@ The following topics discuss using |chef server osc| with platforms:
    lwrp_bluepill
    lwrp_chef_handler
    lwrp_custom
-   lwrp_common_inline_compile
    lwrp_custom_provider_ruby
    lwrp_custom_provider
    lwrp_custom_resource
