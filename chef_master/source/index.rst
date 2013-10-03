@@ -266,4 +266,4 @@ Cookbooks
    style_guide
    upgrade_server
    videos
-
+   windows
