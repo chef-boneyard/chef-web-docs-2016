@@ -38,7 +38,7 @@ Windows File Security
 
 .. include:: ../../includes_resources/includes_resource_common_windows_security_inherits.rst
 
-Prevent Redownloads
+Prevent Re-downloads
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_remote_file_redownload.rst
 
