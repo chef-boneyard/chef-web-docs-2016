@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``host``
      - 
    * - ``keepalive``
-     - |keepalive lwrp application_python_gunicorn|
+     - |keepalive request_time|
    * - ``logfile``
      - |log_location|
    * - ``loglevel``
@@ -28,7 +28,7 @@ This lightweight resource provider has the following attributes:
    * - ``max_requests``
      - |worker_max_requests|
    * - ``pidfile``
-     - |pidfile lwrp application_python_gunicorn|
+     - |name pid_file|
    * - ``port``
      - 
    * - ``preload_app``

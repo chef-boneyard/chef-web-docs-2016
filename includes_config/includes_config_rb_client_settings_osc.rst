@@ -53,12 +53,12 @@ This configuration file has the following settings:
  
           environment "production"
    * - ``file_atomic_update``
-     - |file atomic_update| For example:
+     - |file atomic_update| Default value: ``false``. For example:
        ::
  
           file_atomic_update false
    * - ``file_backup_path``
-     - |path file backup| For example:
+     - |path file_backup| Default value: ``/var/chef/backup``. For example:
        ::
  
           file_backup_path "/var/chef/backup"
@@ -103,7 +103,7 @@ This configuration file has the following settings:
  
           https_proxy "http://proxy.vmware.com:3128"
    * - ``interval``
-     - |interval| For example:
+     - |interval| Default value: ``1800``. For example:
        ::
  
           interval 1800
@@ -143,7 +143,7 @@ This configuration file has the following settings:
  
           node_path "/var/chef/node"
    * - ``pid_file``
-     - |pid_file| For example:
+     - |path pid_file| Default value: ``/tmp/name-of-executable.pid``. For example:
        ::
  
           pid_file "/tmp/chef-client.pid"

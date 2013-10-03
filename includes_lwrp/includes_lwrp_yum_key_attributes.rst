@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``key``
-     - |key lwrp yum_key|
+     - |key gnupg|
    * - ``url``
      - |url key_download|

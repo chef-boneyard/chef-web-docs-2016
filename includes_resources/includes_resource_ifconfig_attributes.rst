@@ -22,7 +22,7 @@ This resource has the following attributes:
    * - ``mask``
      - |netmask| Default value: ``nil``.
    * - ``metric``
-     - |metric resource ifconfig|
+     - |routing_metric| Default value: ``nil``.
    * - ``mtu``
      - |maximum_transmission_unit| Default value: ``nil``.
    * - ``network``

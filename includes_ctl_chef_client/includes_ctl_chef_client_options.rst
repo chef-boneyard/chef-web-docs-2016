@@ -40,7 +40,7 @@ This command has the following options:
    |help subcommand|
 
 ``-i SECONDS``, ``--interval SECONDS``
-   |interval|
+   |interval| Default value: ``1800``.
 
 ``-j PATH``, ``--json-attributes PATH``
    |json attributes|
@@ -70,7 +70,7 @@ This command has the following options:
    |once|
 
 ``-P PID_FILE``, ``--pid PID_FILE``
-   |pid_file|
+   |path pid_file| Default value: ``/tmp/name-of-executable.pid``.
 
 ``-R``, ``--enable-reporting``
    |enable_reporting|

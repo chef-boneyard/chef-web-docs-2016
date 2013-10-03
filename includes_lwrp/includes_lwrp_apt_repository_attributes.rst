@@ -16,9 +16,9 @@ This lightweight resource provider has the following attributes:
    * - ``distribution``
      - |name distribution| For example: ``lucid``.
    * - ``key``
-     - |key lwrp apt_repository|
+     - |key apt_repository| Default value: ``nil``.
    * - ``keyserver``
-     - |keyserver lwrp apt_repository|
+     - |keyserver apt_repository| Default value: ``nil``.
    * - ``repo_name``
      - |name repository_apt| Default value: ``name``.
    * - ``uri``

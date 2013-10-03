@@ -53,7 +53,7 @@ This configuration file has the following settings:
  
           environment_path "/var/chef/environments"
    * - ``file_backup_path``
-     - |path file backup| For example:
+     - |path file_backup| Default value: ``/var/chef/backup``. For example:
        ::
  
           file_backup_path "/var/chef/backup"
@@ -113,7 +113,7 @@ This configuration file has the following settings:
  
           rest_timeout 300
    * - ``role_path``
-     - |role_path| For example:
+     - |path roles_chef| Default value: ``/var/chef/roles``. For example:
        ::
  
           role_path "/var/chef/roles"

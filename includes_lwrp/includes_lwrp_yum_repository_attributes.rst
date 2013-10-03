@@ -16,7 +16,7 @@ This lightweight resource provider has the following attributes:
    * - ``enabled``
      - |use repo| Default value: ``1`` (enabled).
    * - ``failovermethod``
-     - Optional. |failovermethod|
+     - Optional. |failover_method| Default value: ``roundrobin``.
    * - ``includepkgs``
      - |include_packages|
    * - ``key``

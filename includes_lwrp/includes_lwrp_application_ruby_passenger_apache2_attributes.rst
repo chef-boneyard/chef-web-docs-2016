@@ -10,7 +10,7 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``params``
-     - |params lwrp application_ruby_passenger|
+     - |params|
    * - ``server_aliases``
      - |server_aliases|
    * - ``webapp_template``

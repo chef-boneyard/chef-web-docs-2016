@@ -32,7 +32,7 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``purge``
-     - |purge resource remote_directory|
+     - |purge target_directory| Default value: ``false``.
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``

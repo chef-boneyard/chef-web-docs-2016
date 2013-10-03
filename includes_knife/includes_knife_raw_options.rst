@@ -18,7 +18,7 @@ This subcommand has the following options:
    |no_pretty| Default: ``--pretty``.
 
 ``-m METHOD``, ``--method METHOD``
-   |method request type|
+   |method request type| Default value: ``GET``.
 
 ``--repo-mode MODE``
    |repo_mode| Default: ``everything`` / ``hosted_everything``.

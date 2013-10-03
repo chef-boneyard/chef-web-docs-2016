@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``interpreter``
      - |interpreter| Default value: ``nil``.
    * - ``path``
-     - |path resource execute|
+     - |path resource execute| Default value: ``nil`` (uses system path).
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``returns``

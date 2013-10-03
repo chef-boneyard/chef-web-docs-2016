@@ -16,4 +16,4 @@ This lightweight resource provider has the following attributes:
    * - ``path``
      - |path application_virtual|
    * - ``physical_path``
-     - |physical_path lwrp iis_app|
+     - |path application_physical|

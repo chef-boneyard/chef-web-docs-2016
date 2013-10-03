@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``group``
      - |group resource link|
    * - ``link_type``
-     - |link_type resource link|
+     - |link_type| Default value: ``symbolic``.
    * - ``owner``
      - |owner resource link|
    * - ``provider``

@@ -22,7 +22,7 @@ This lightweight resource provider has the following attributes:
    * - ``path``
      - |path file_created|
    * - ``pid``
-     - |pid lwrp gunicorn_config|
+     - |name pid_file| Default value: `` `` (no file).
    * - ``preload_app``
      - |preload_app| Default value: ``false``.
    * - ``server_hooks``

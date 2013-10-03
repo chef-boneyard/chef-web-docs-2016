@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``local``
-     - |local resource template|
+     - |local_template| Default value: ``false``.
    * - ``manage_symlink_source``
      - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
    * - ``mode``
