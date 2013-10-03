@@ -286,7 +286,7 @@ The following resources are built-in and can be used in any recipe:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_user.html">user</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_yum.html">yum_package</a> </br>
 
-LWRPs
+LWRPs 
 -----------------------------------------------------
 A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much like a platform resource, including sharing all of the common functionality available to platform resources. A |lwrp| is created by defining a lightweight resource and a lightweight provider:
 

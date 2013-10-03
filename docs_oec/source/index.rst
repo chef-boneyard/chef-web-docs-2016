@@ -220,7 +220,7 @@ The |chef server| can be managed in the following ways:
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_orgs.html">Organizations</a> </br>
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_data.html">Server Data</a> </br>
 
-Settings and Tools
+Settings and Tools 
 -----------------------------------------------------
 The following settings files are used to configure behavior for the |chef server|:
 
