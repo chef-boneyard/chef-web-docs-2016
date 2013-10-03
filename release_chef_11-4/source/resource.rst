@@ -88,7 +88,6 @@ Resources
    resource_route
    resource_ruby
    resource_ruby_block
-   resource_scm
    resource_smartos_package
    resource_solaris_package
    resource_subversion

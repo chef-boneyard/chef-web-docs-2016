@@ -11,9 +11,7 @@ The full list of cookbooks maintained by Opscode is `here <https://github.com/op
    :hidden:
 
    opscode_cookbooks_chef_handler
-   opscode_cookbooks_iis
-   opscode_cookbooks_python
-   opscode_cookbooks_supervisor
+
 
 
 

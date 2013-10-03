@@ -93,8 +93,6 @@ The following resources are core resources:
      - .. include:: ../../includes_resources/includes_resource_script_ruby.rst
    * - `ruby_block <http://docs.opscode.com/release/11-4/resource_ruby_block.html>`_
      - .. include:: ../../includes_resources/includes_resource_ruby_block.rst
-   * - `scm <http://docs.opscode.com/release/11-4/resource_scm.html>`_
-     - .. include:: ../../includes_resources/includes_resource_scm.rst
    * - `script <http://docs.opscode.com/release/11-4/resource_script.html>`_
      - .. include:: ../../includes_resources/includes_resource_script.rst
    * - `service <http://docs.opscode.com/release/11-4/resource_service.html>`_
