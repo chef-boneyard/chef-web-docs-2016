@@ -18,7 +18,7 @@ This resource has the following attributes:
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``local``
-     - |local resource template|
+     - |local_template| Default value: ``false``.
    * - ``mode``
      - |mode resource_file_11-4|
        
