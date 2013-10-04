@@ -2,7 +2,7 @@
 Upgrade to Enterprise Chef
 =====================================================
 
-The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |debian dpkg|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete.
+The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |debian dpkg| or |rpm|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete.
 
 To upgrade to |chef server oec|, do the following:
 
