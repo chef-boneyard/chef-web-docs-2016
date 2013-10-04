@@ -12,7 +12,7 @@ This argument has the following options:
    |password vcloud|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |name node|
+   |node_name purge| This must be used with the ``--purge`` option.
 
 ``-p``, ``--purge``
    |purge node vcloud|

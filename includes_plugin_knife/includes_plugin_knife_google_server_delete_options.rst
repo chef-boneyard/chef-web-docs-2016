@@ -8,11 +8,11 @@ This argument has the following options:
 ``-f CREDENTIAL_FILE``, ``--compute-credential-file CREDENTIAL_FILE``
    |credential_file google|
 
+``-N NAME``, ``--node-name NAME``
+   |node_name purge| This must be used with the ``--purge`` option.
+
 ``-p``, ``--purge``
    |purge google|
-
-``-N NAME``, ``--node-name NAME``
-   |name node|
 
 ``-Z ZONE``, ``--google-compute-zone ZONE``
    |zone google|

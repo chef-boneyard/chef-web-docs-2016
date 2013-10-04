@@ -10,10 +10,6 @@ Install this plugin
 =====================================================
 .. include:: ../../step_plugin_knife/step_plugin_knife_azure_install_rubygem.rst
 
-Generate the Management Certificate
-=====================================================
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_certificate.rst
-
 image list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure_image_list.rst

@@ -12,7 +12,7 @@ This argument has the following options:
    |aws_access_key_secret|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node-name purge|
+   |node_name purge| This must be used with the ``--purge`` option.
 
 ``-p``, ``--purge``
    |purge amazon ec2|

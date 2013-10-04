@@ -5,6 +5,9 @@
 
 This argument has the following options:
 
+``--azure-publish-settings-file FILE_NAME``
+   |file azure_publish_settings|
+
 ``-H HOST_NAME``, ``--azure_host_name HOST_NAME``
    |azure_host_name|
 
