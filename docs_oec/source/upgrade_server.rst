@@ -18,6 +18,8 @@ To upgrade to |chef server oec|, do the following:
       
       $ dpkg -D10 -i <new package>
 
+   where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See http://manpages.ubuntu.com/manpages/lucid/man1/dpkg.1.html for more information about this option.
+   
    For |rpm|:
 
    .. code-block:: bash
