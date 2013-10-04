@@ -12,11 +12,17 @@ To upgrade to |chef server oec|, do the following:
       
       $ private-chef-ctl stop
 
-#. Run |debian dpkg| on all machines:
+#. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
 
    .. code-block:: bash
       
-      $ dpkg -i or rpm -U <new package>
+      $ dpkg -D10 -i <new package>
+
+   For |rpm|:
+
+   .. code-block:: bash
+      
+      $ pm -Uvh <new package>
 
 #. Upgrade the machines in the following order: backend machines (bootstrap server first, if used) and then front end servers (in any order), with the following command:
 
