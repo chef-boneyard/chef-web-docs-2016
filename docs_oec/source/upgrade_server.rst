@@ -22,7 +22,7 @@ To upgrade to |chef server oec|, do the following:
 
    .. code-block:: bash
       
-      $ pm -Uvh <new package>
+      $ rpm -Uvh <new package>
 
 #. Upgrade the machines in the following order: backend machines (bootstrap server first, if used) and then front end servers (in any order), with the following command:
 
