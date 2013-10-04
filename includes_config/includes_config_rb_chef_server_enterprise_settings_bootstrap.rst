@@ -12,4 +12,4 @@ This configuration file has the following settings for bootstrap:
    * - ``bootstrap['enable']``
      - Indicates whether an attempt to bootstrap the |chef server oec| is made. Generally only enabled on systems that have bootstrap enabled via a ``server`` entry. Default value: ``true``.
    * - ``bootstrap['bootstrap_server']``
-     - Default value: ``xxxxx``.
+     - 

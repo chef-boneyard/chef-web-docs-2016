@@ -9,7 +9,7 @@ This configuration file has the following settings for |orgmapper|:
 
    * - Setting
      - Description
-   * - ``orgmapper['xxxxx']``
-     - Default value: ``xxxxx``.
-   * - ``org-creator['xxxxx']``
-     - Default value: ``xxxxx``.
+   * - ``orgmapper['']``
+     - 
+   * - ``org-creator['']``
+     - 

@@ -10,20 +10,20 @@ The |service bifrost| service has the following settings:
    * - Setting
      - Description
    * - ``bifrost['dir']``
-     - Default value: ``xxxxx``.
+     - 
    * - ``bifrost['enable']``
      - |enable service| Default value: ``true``.
    * - ``bifrost['ha']``
-     - |use ha| Default value: ``xxxxx``.
+     - |use ha|
    * - ``bifrost['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``xxxxx``.
    * - ``bifrost['log_rotation']``
-     - Default value: ``xxxxx``.
+     - 
    * - ``bifrost['sql_password']``
-     - Default value: ``xxxxx``.
+     - 
    * - ``bifrost['sql_user']``
-     - Default value: ``xxxxx``.
+     - 
    * - ``bifrost['sql_ro_password']``
-     - Default value: ``xxxxx``.
+     - 
    * - ``bifrost['sql_ro_user']``
-     - Default value: ``xxxxx``.
+     - 
