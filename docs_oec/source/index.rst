@@ -189,7 +189,8 @@ Installation scenarios:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server.html">Upgrade from Private Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Standalone Upgrade</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability Upgrade</a> </br>
 
 Options: 
 
@@ -666,4 +667,5 @@ The following topics discuss using |chef server oec| with platforms:
    server_services
    server_tuning
    server_users
-   upgrade_server
+   upgrade_server_ha
+   upgrade_server_standalone
