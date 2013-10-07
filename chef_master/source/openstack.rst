@@ -157,6 +157,8 @@ Example Deployment
 
 This is a small lab for testing the configuration and deployment of |chef openstack|. While the hardware is quite modest, the configuration should provide a useful reference implementation.
 
+.. image:: ../../images/openstack-lab.png
+
 lab-repo
 -----------------------------------------------------
 Everything in the lab is managed by |chef| from the http://github.com/mattray/lab-repo repository. The operating systems for the machines are provisioned by the `pxe_dust <http://ckbk.it/pxe_dust>`_ cookbook, which uses a preseed file to put a minimal operating system in place via PXE. These machines are frequently re-installed and the process takes about 10 minutes.
@@ -166,8 +168,9 @@ Environment
 The `lab Environment <https://github.com/mattray/lab-repo/blob/master/environments/lab.rb>`_  provides overridden attributes.
 
 * The ``apt`` attributes are for restricting search to the lab.
-* The ``pxe_dust`` attribute is to lock down the |chef client| version.
 * The ``authorization`` attributes are for configuring |sudo cmd| to not require a password, include the sudoers.d directory and add the 'mray' user to sudoers.
+* The ``dnsmasq`` attributes are for configuring DHCP, DNS and TFTP on the private 'admin' network.
+* The ``pxe_dust`` attribute is to lock down the |chef client| version.
 
 Roles
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -175,7 +178,7 @@ This example uses two roles: ``lab-admin`` and ``lab-base``.
 
 lab-admin
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-This role is for the admin node that provides PXE-booting and apt repository proxying.
+This role is for the admin node that provides DHCP, DNS, TFTP, PXE-booting and apt repository proxying.
 
 .. code-block:: ruby
 
@@ -225,55 +228,41 @@ Cookbooks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 All of the cookbook dependencies are managed by a `Berkshelf Berksfile <http://berkshelf.com>`_, usually kept quite up-to-date for the latest cookbook releases.
 
-There is an additional `labsetup cookbook <https://github.com/mattray/lab-repo/blob/master/cookbooks/labsetup/recipes/default.rb>`_ that ensures the network cards are all using DHCP and the network is properly bridged.
-
 Network
 -----------------------------------------------------
 There are 3 separate 1 gigabit networks.
 
-Public 10.0.0.0/24
+Admin 10.0.0.0/24
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This network is bridged to the Internet by a DD-WRT router providing DHCP. The router directs ``dhcp-boot`` requests to ``mom.lab.atx`` (10.0.0.2) for PXE-booting.
+This network is used by the various OpenStack services and for PXE-booting. DHCP is provided by the ``lab-admin`` node. Nodes connect to it via eth0.
 
-Private 10.1.0.0/24
+Public 172.16.100.0/24
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This is the network the various OpenStack services connect to each other. DHCP is provided by another DD-WRT router.
+This network is bridged to the Internet by a router providing DHCP. Nodes connect to it via eth1.
 
-Storage 10.2.0.0/24
+Storage 192.160.0.0/24
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This is intended for Storage services connect to each other (Swift or Ceph). DHCP is provided by yet another DD-WRT router. It is currently turned off.
+This is intended for storage services to connect to each other (Swift or Ceph). DHCP is provided by a DD-WRT router. It is currently unused.
 
 Hardware
 -----------------------------------------------------
-There are currently 6 machines in this lab environment.
+There are currently 5 machines in this lab environment.
 
 mom.lab.atx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This is a utility server providing PXE OS installation, apt-cacher-ng proxying and mirroring of Chef installers and other files. It is an old IBM T43 ThinkPad with 2 GB of RAM and a 60 GB hard drive. It has the `lab-admin` role applied and is running Debian 7.1.
+This is a utility server providing the services in the ``lab-admin`` role: DHCP, DNS, TFTP, apt-cacher-ng proxying and mirroring of Chef installers and other files. It is an old IBM T43 ThinkPad with 2 GB of RAM and a 60 GB hard drive. It is currently running Debian 7.1.
 
 crushinator.lab.atx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-The primary box used for single-machine testing, it is a Shuttle SH55 with an Intel i7 processor, 16 GB of RAM and a 40 GB SSD. An additional gigabit ethernet card and another gigabit USB ethernet have been added.
+The primary box used for single-machine testing, it is a Shuttle SH55 with an Intel i7 processor, 16 GB of RAM, a 40 GB SSD and 500 GB hard drive. An additional gigabit ethernet card and another gigabit USB ethernet have been added.
 
-ignar.lab.atx
+ignar.lab.atx/larry.lab.atx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This machine is a Lenovo H405 IdeaCentres upgraded with a 40 GB SSD, 8 GB RAM and an additional gigabit ethernet card. Typically they are used as the Compute nodes.
-
-larry.lab.atx
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-This machine is identical to ignar.lab.atx.
+These machines are Lenovo H405 IdeaCentres upgraded with a 40 GB SSD, 500 GB hard drives, 8 GB RAM, an additional gigabit ethernet card and a gigabit USB ethernet. Typically they are used as the Compute nodes.
 
 lrrr.lab.atx
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-This machine is a white box with only 2 gigs of RAM and an Intel Core 2 that is supposed to support VT extensions, but kernel panics when VMs are launched. It has been loaded with a 40 GB SSD boot volume and 4 additional hard drives to be used when testing storage configurations. An additional gigabit ethernet card and another gigabit USB ethernet have been added.
-
-boxy.lab.atx
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-This is an elderly Shuttle SN95G5 with 2G RAM and an AMD Athlon 64 3500+ CPU. It has a 40 GB SSD boot volume and 2 additional hard drives. An additional gigabit ethernet card and another gigabit USB ethernet have been added.
-
-
-
-
+This machine is a white box with only 2 gigs of RAM and an Intel Core 2 that is supposed to support VT extensions, but kernel panics when VMs are launched. It has been loaded with a 40 GB SSD boot volume and 5 additional hard drives to be used when testing storage configurations. An additional 2 gigabit ethernet cards have been added.
 
 
 For More Information ...

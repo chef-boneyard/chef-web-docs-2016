@@ -6,7 +6,7 @@ Having reviewed the architecture and deployment prerequisites, you should be rea
 
 * Be sure to read and understand the prerequisites for installation
 * Check out the |chef repo openstack| from |github|
-* Follow the Librarian Chef instructions to download all of the appropriate cookbooks
+* Follow the Berkshelf instructions to download all of the appropriate cookbooks
 * Edit the environment that will be used
 * Upload all the roles, environments, cookbooks and data bags as necessary (using |spiceweasel|). On the appropriate nodes, apply the proper roles to deploy
 * Converge the nodes, controller first, then compute
