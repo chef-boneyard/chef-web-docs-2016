@@ -265,5 +265,8 @@ Cookbooks
    server_users
    style_guide
    upgrade_server
+   upgrade_server_ha
+   upgrade_server_open_source
+   upgrade_server_standalone
    videos
    windows
