@@ -42,6 +42,21 @@ This configuration file has the following settings:
        ::
  
           data_bag_decrypt_minimum_version "2"
+   * - ``diff_disabled``
+     - |diff_disabled| Default value: ``false``. For example:
+       ::
+ 
+          diff_disabled false
+   * - ``diff_filesize_threshold``
+     - |diff_filesize_threshold| Default value: ``10000000``. For example:
+       ::
+ 
+          diff_filesize_threshold 10000000
+   * - ``diff_output_threshold``
+     - |diff_output_threshold| Default value: ``1000000``. For example:
+       ::
+ 
+          diff_output_threshold 1000000
    * - ``enable_selinux_file_permission_fixup``
      - |enable_selinux_file_permission_fixup| For example:
        ::
