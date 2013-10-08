@@ -51,7 +51,7 @@ The following examples show how to use common attributes in a recipe.
 
 .. include:: ../../step_resource/step_resource_service_use_provider_and_supports_attributes.rst
 
-Conditional Execution
+Guards
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional.rst
 
