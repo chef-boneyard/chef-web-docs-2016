@@ -18,12 +18,13 @@ The response will return the |json| for the environment that was deleted, someth
 .. code-block:: javascript
 
    {
-     "name": "dev",
-     "attributes": {},
-     "json_class": "Chef::Environment",
-     "description": "",
-     "cookbook_versions": {},
-     "chef_type": "environment"
+     "name":"backend",
+     "description":"",
+     "cookbook_versions":{},
+     "json_class":"Chef::Environment",
+     "chef_type":"environment",
+     "default_attributes":{},
+     "override_attributes":{}
    }
 
 **Response Codes**

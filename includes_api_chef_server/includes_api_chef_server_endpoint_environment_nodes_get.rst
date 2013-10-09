@@ -18,9 +18,9 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-     "blah": "https://api.opscode.com/org/directory/nodes/blah",
-     "boxer": "https://api.opscode.com/org/directory/nodes/boxer",
-     "blarrrrgh": "https://api.opscode.com/org/directory/nodes/blarrrrgh"
+     "blah": "https://api.opscode.com/org/org_name/nodes/_default",
+     "boxer": "https://api.opscode.com/org/org_name/nodes/frontend",
+     "blarrrrgh": "https://api.opscode.com/org/org_name/nodes/backend"
    }
 
 **Response Codes**

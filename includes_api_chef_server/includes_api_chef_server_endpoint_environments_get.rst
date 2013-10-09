@@ -18,7 +18,7 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-     "_default": "https://api.opscode.com/organizations/org_name/environments/_default"
+     "_default": "https://api.opscode.com/organizations/org_name/environments/_default",
      "webserver": "https://api.opscode.com/organizations/org_name/environments/webserver"
    }
 

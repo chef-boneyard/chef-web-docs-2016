@@ -19,12 +19,12 @@ The response will return something like the following:
 
    {
      "name": "_default",
-     "override_attributes": { },
-     "cookbook_versions": { },
-     "chef_type": "environment",
      "description": "The default Chef environment",
      "json_class": "Chef::Environment",
+     "chef_type": "environment",
      "default_attributes": { }
+     "override_attributes": { },
+     "cookbook_versions": { },
    }
 
 **Response Codes**
