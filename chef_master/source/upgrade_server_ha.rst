@@ -62,7 +62,7 @@ To upgrade to |chef server oec|, do the following:
       
       $ private-chef-ctl start
 
-#. And then after the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and that everything looks satisfactory, remove old data by running the following command on each machine:
+#. After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and that everything looks satisfactory, remove old data by running the following command on each machine:
 
    .. code-block:: bash
    
