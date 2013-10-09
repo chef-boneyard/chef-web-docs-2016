@@ -2,7 +2,7 @@
 |windows|
 =====================================================
 
-.. warning:: This page collects information that is unique to |windows|, as it relates to using |chef server oec| and/or |chef server osc|.
+.. note:: This page collects information that is unique to |windows|, as it relates to using |chef server oec| and/or |chef server osc|.
 
 The |chef client| is installed to C:\chef and it's main configuration file is located at C:\chef\client.rb.
 
