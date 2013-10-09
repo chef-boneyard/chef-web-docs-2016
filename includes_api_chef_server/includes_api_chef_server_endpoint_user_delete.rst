@@ -9,7 +9,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   DELETE /user/NAME
+   DELETE /users/NAME
 
 **Response**
 

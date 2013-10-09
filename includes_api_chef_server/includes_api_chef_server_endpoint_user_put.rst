@@ -7,7 +7,7 @@ The ``PUT`` method is used to update a specific user. If values are not specifie
 
 If values are missing, they will not be overwritten. If ``public_key`` is null, the public key will not be overwritten.
 
-.. note:: ``PUT`` supports renames. If ``PUT /user/foo`` is requested with ``{ "name: "bar""}``, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``.
+.. note:: ``PUT`` supports renames. If ``PUT /users/foo`` is requested with ``{ "name: "bar""}``, then it will rename ``foo`` to ``bar`` and all of the content previously associated with ``foo`` will be associated with ``bar``.
 
 This method has no parameters.
 
@@ -15,7 +15,7 @@ This method has no parameters.
 
 .. code-block:: xml
 
-   PUT /user/NAME
+   PUT /users/NAME
 
 with a request body that looks something like:
 
