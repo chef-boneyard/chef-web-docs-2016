@@ -60,7 +60,7 @@ For |ubuntu|:
 
    $ apt-get install ntp
 
-In addition, the |chef server oec| server requires that any node on which the |chef client| runs also have an accurate clock that is synchronized very closely with the clock on the server. If the clocks are not synchronized closely, the authentication process may fail. This may occur when the clocks are out-of-sync by more than 15 minutes and will trigger a ``401 Unauthorized`` response when trying to access the |chef server oec| using the |api chef server|. For example: 
+In addition, the |chef server oec| server requires that any node on which the |chef client| runs also have an accurate clock that is synchronized very closely with the clock on the server. If the clocks are not synchronized closely, the authentication process may fail. This may occur when the clocks are out-of-sync by more than 15 minutes and will trigger a ``401 Unauthorized`` response when trying to access the |chef server oec| using the |api chef server|. The ``401 Unauthorized`` response will be similar to: 
 
 .. code-block:: bash
 
