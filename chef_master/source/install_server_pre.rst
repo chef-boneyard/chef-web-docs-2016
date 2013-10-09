@@ -60,7 +60,18 @@ For |ubuntu|:
 
    $ apt-get install ntp
 
-In addition, the |chef server oec| server requires that any node on which the |chef client| runs also have an accurate clock that is synchronized very closely with the clock on the server. If the clocks are not synchronized closely, the authentication process may fail.
+In addition, the |chef server oec| server requires that any node on which the |chef client| runs also have an accurate clock that is synchronized very closely with the clock on the server. If the clocks are not synchronized closely, the authentication process may fail. This may occur when the clocks are out-of-sync by more than 15 minutes and will trigger a ``401 Unauthorized`` response when trying to access the |chef server oec| using the |api chef server|. For example: 
+
+.. code-block:: bash
+
+   [Tue, 01 Nov 2011 16:55:23 -0700] INFO: *** Chef 11.X.X ***
+   [Tue, 01 Nov 2011 16:55:23 -0700] INFO: Client key /etc/chef/client.pem is not present - registering
+   [Tue, 01 Nov 2011 16:55:24 -0700] INFO: HTTP Request Returned 401 Unauthorized: 
+       Failed to authenticate as ORGANIZATION-validator. Synchronize the clock on your host.
+   [Tue, 01 Nov 2011 16:55:24 -0700] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+   [Tue, 01 Nov 2011 16:55:24 -0700] FATAL: Net::HTTPServerException: 401 "Unauthorized"
+
+In this situation, re-sync the system clocks with the |ntp| server and then re-run the |chef client|.
 
 Mail Relay
 -----------------------------------------------------
