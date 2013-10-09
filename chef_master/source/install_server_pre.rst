@@ -60,6 +60,7 @@ For |ubuntu|:
 
    $ apt-get install ntp
 
+In addition, the |chef server oec| server requires that any node on which the |chef client| runs also have an accurate clock that is synchronized very closely with the clock on the server. If the clocks are not synchronized closely, the authentication process may fail.
 
 Mail Relay
 -----------------------------------------------------
