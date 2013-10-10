@@ -2,7 +2,7 @@
 Bootstrap a Node
 =====================================================
 
-.. include:: ../../includes_chef_server/includes_chef_server.rst
+A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|. The |subcommand knife bootstrap| subcommand is used to run a bootstrap operation that installs the |chef client| on the target node.
 
 Steps
 =====================================================
