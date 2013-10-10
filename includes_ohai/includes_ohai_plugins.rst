@@ -12,9 +12,9 @@ The following |ohai| plugins are available from the open source community:
    * - `dell.rb <https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/dell.rb>`_
      - Adds some useful Dell server information to |ohai|. For example: service tag, express service code, storage info, RAC info, and so on. To use this plugin, OMSA and SMBIOS applications need to be installed.
    * - `dpkg.rb <https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/linux/dpkg.rb>`_
-     - Adds |debian dpkg| info to |ohai|. This collections information about the status of |debian| packages and about the various packages that are installed.
+     - Adds |debian dpkg| info to |ohai| so that information about the status of |debian| packages and various installed packages can be collected.
    * - `ipmi.rb <https://bitbucket.org/retr0h/ohai>`_
-     - Adds an |ipmi| mac and IP address to |ohai|, where available.
+     - Adds a |mac address| and an IP address to |ohai|, where available.
    * - `kvm_extensions.rb <https://github.com/albertsj1/ohai-plugins/blob/master/kvm_extensions.rb>`_
      - Adds extensions for virtualization attributes to provide additional host and guest information for |kvm|.
    * - `ladvd.rb <https://github.com/demonccc/chef-repo/blob/master/plugins/ohai/linux/ladvd.rb>`_
@@ -40,6 +40,6 @@ The following |ohai| plugins are available from the open source community:
    * - `xenserver.rb <https://github.com/spheromak/cookbooks/blob/master/ohai/files/default/xenserver.rb>`_
      - Adds extensions for virtualization attributes to load up |xenserver| host and guest information.
    * - `win32_software.rb <https://github.com/timops/ohai-plugins/blob/master/win32_software.rb>`_
-     - Adds the ability for |ohai| to use |windows wmi| discover useful information about software that is installed on any node that is running |windows|.
+     - Adds the ability for |ohai| to use |windows wmi| to discover useful information about software that is installed on any node that is running |windows|.
    * - `win32_svc.rb <https://github.com/timops/ohai-plugins/blob/master/win32_svc.rb>`_
      - Adds the ability for |ohai| to query using |windows wmi| to get information about all services that are registered on a node that is running |windows|.
