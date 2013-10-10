@@ -23,10 +23,6 @@ Options
 -----------------------------------------------------
 |no_options|
 
-Examples
------------------------------------------------------
-None.
-
 
 job start
 =====================================================
@@ -42,55 +38,18 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to search for nodes assigned the role "webapp", and where 90% of those nodes must be available, enter:
+**Run a job**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_start_run_job.rst
 
-   $ knife job start -quorum 90% 'chef-client' --search 'role:webapp`
+**Run a job using quorum percentage**
 
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_start_search_by_quorum.rst
 
-To search for a specific set of nodes (named ``chico``, ``harpo``, ``groucho``, ``gummo``, ``zeppo``), and where 90% of those nodes must be available, enter:
+**Run a job using node names**
 
-.. code-block:: bash
-
-   $ knife job start --quorum 90% 'chef-client' chico harpo groucho gummo zeppo
-
-to return something similar to:
-
-.. code-block:: bash
-
-   Started. Job ID: GUID12345abc
-     quorum_failed
-     Command: chef-client
-     Created_at: date
-     unavailable: zeppo
-     was_ready:
-       gummo
-       groucho
-       chico
-       harpo
-     On_timeout: 3600
-     Status: quorum_failed
-
-.. note:: If quorum had been set at 80% (``--quorum 80%``), then quorum would have passed with the previous example.
-
-
-
-Use the ``knife job start`` subcommand to run a job with the following syntax:
-
-.. code-block:: bash
-
-   $ knife job start job_name node_name
-
-For example, to run a job named ``add-glasses`` against a node named "ricardosalazar", enter the following:
-
-.. code-block:: bash
-
-   $ knife job start add-glasses 'ricardosalazar'
-
-
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_start_search_by_nodes.rst
  
-
 
 job status
 =====================================================
@@ -106,19 +65,9 @@ Options
 
 Examples
 -----------------------------------------------------
-For example, to view the status of a job that has the identifier of "235", enter:
+**View job status by job identifier**
 
-.. code-block:: bash
-
-   $ knife job status 235
-
-to return something similar to:
-
-.. code-block:: bash
-
-   Node name   Status      Last updated
-   foo         Failed      2012-05-04 00:00
-   bar         Done        2012-05-04 00:01
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_status_by_id.rst
 
 
 node status
@@ -133,6 +82,3 @@ Options
 -----------------------------------------------------
 |no_options|
 
-Examples
------------------------------------------------------
-None.
