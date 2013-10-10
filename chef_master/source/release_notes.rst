@@ -11,6 +11,7 @@ The following issues are known for |chef 11-6| and/or may affect the behavior of
 * `CHEF-4406 <http://tickets.opscode.com/browse/CHEF-4406>`_  --- response_file fails trying to load preseed templates and falls back to cookbook files
 * `CHEF-4419 <http://tickets.opscode.com/browse/CHEF-4419>`_  --- Absolute file paths with no drive letter for file resources on Windows fails chef-client run
 * `CHEF-4422 <http://tickets.opscode.com/browse/CHEF-4422>`_  --- remote_file fails when source becomes too long
+* `CHEF-4435 <http://tickets.opscode.com/browse/CHEF-4435>`_  --- Chef::DataBag.save does a PUT getting a 405 from the chef server; as a result of changes to the |api chef server|, a |chef client| must be version 11.6 (or higher) when using the ``knife data bag from file`` argument with the |chef oec| or |chef osc| version 11 servers.
 
 What's New
 =====================================================
