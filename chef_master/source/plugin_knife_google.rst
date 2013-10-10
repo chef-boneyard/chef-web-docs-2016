@@ -26,10 +26,6 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_create_options.rst
 
-Examples
------------------------------------------------------
-None.
-
 disk delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_delete.rst
@@ -41,10 +37,6 @@ Syntax
 Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_disk_delete_options.rst
-
-Examples
------------------------------------------------------
-None.
 
 disk list
 =====================================================
@@ -135,10 +127,6 @@ Syntax
 Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_setup_options.rst
-
-Examples
------------------------------------------------------
-None.
 
 zone list
 =====================================================

@@ -22,10 +22,6 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_vcloud_image_list_options.rst
 
-Examples
------------------------------------------------------
-None.
-
 network list
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_vcloud_network_list.rst
@@ -37,10 +33,6 @@ Syntax
 Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_vcloud_network_list_options.rst
-
-Examples
------------------------------------------------------
-None.
 
 server create
 =====================================================
@@ -54,11 +46,6 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_vcloud_server_create_options.rst
 
-Examples
------------------------------------------------------
-None.
-   
-
 server delete
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_vcloud_server_delete.rst
@@ -70,10 +57,6 @@ Syntax
 Options
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_vcloud_server_delete_options.rst
-
-Examples
------------------------------------------------------
-None.
 
 server list
 =====================================================
