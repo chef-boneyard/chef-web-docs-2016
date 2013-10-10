@@ -27,31 +27,19 @@ Options
 
 Examples
 -----------------------------------------------------
-For example:
+**View all chef-client runs for an organization**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_list_by_organization.rst
 
-   $ knife runs list
+**View all chef-client runs for a single node**
 
-will return a list of |chef client| runs by organization, i.e. a list of all |chef client| runs that took place for every single node managed by the |chef server|.
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_list_by_node.rst
 
-And
+**View a specific chef-client run**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_list_by_run_id.rst
 
-   $ knife runs list foo
-
-will return a list of |chef client| runs that occurred for a node named "foo".
-
-And
-
-.. code-block:: bash
-
-   $ knife runs list foo 30077269-59d0-4283-81f6-8d23cbed3a7a
-
-will return details about that specific |chef client| run.
-
-runs show
+runs show 
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_reporting_runs_show.rst
 
@@ -65,18 +53,10 @@ Options
 
 Examples
 -----------------------------------------------------
-For example:
+**Show runs by node**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_show_by_node.rst
 
-   $ knife runs show foo
+**Show runs by run identifier**
 
-will return a detailed list of all |chef client| runs that occurred on a node named "foo".
-
-And:
-
-.. code-block:: bash
-
-   $ knife runs show bar 30077269-59d0-4283-81f6-8d23cbed3a7a
-
-will return details about a specific |chef client| run that occurred on a node named "bar".
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_show_by_run_id.rst
