@@ -35,7 +35,7 @@ The following resources are core resources:
      - .. include:: ../../includes_resources/includes_resource_package_easy_install.rst
    * - `env <http://docs.opscode.com/release/11-4/resource_env.html>`_
      - .. include:: ../../includes_resources/includes_resource_env.rst
-   * - `erlang_call <http://docs.opscode.com/release/11-4/resource_erlang_call.html>`_
+   * - `erl_call <http://docs.opscode.com/release/11-4/resource_erlang_call.html>`_
      - .. include:: ../../includes_resources/includes_resource_erlang_call.rst
    * - `execute <http://docs.opscode.com/release/11-4/resource_execute.html>`_
      - .. include:: ../../includes_resources/includes_resource_execute.rst
@@ -97,7 +97,7 @@ The following resources are core resources:
      - .. include:: ../../includes_resources/includes_resource_script.rst
    * - `service <http://docs.opscode.com/release/11-4/resource_service.html>`_
      - .. include:: ../../includes_resources/includes_resource_service.rst
-   * - `smartos_package <http://docs.opscode.com/release/11-4/resource_smartos_package.html>`_
+   * - `smart_o_s_package <http://docs.opscode.com/release/11-4/resource_smartos_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_smartos.rst
    * - `solaris_package <http://docs.opscode.com/release/11-4/resource_solaris_package.html>`_
      - .. include:: ../../includes_resources/includes_resource_package_solaris.rst

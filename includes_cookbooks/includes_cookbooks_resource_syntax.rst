@@ -21,4 +21,4 @@ For example, a resource that is used to install a |tar gz| package for version 1
 
 Every resource has its own set of actions and parameters. Many parameters have default values. Some parameters are available to all resources; these are sometimes referred to as "meta parameters" and they are commonly used to send notifications to other resources or to set up conditional execution rules. All actions have a default value. Only non-default behaviors of actions and parameters need to be specified.
 
-.. note:: the attribute keyword associated with resources in the LWRP DSL is not the same as the 'attributes' that make up node objects
+.. note:: The attribute keyword associated with resources in the LWRP DSL is not the same as the 'attributes' that make up node objects
