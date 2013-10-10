@@ -10,3 +10,4 @@ The ``from file`` argument is used to create a data bag on the |chef server| fro
 
 If the name of a data bag is specified, |knife| will search for the data bag in ``./data_bags/bag_name/file``. Once opened, the |json| file should be a hash that contains at least an ID key which represents the name of the data bag item.
 
+.. warning:: A |chef client| must be version 11.6 (or higher) when using the ``knife data bag from file`` argument with the |chef oec| or |chef osc| version 11 servers.
