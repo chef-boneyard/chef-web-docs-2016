@@ -2,11 +2,21 @@
 |windows|
 =====================================================
 
-.. note:: This page collects information that is unique to |windows|, as it relates to using |chef server oec| and/or |chef server osc|.
+.. note:: This page collects information about |chef| that is specific to using |chef| with |windows|.
 
-The |chef client| is installed to C:\chef and it's main configuration file is located at C:\chef\client.rb.
+The |chef client| has specific components that are designed to support unique aspects of the |windows| platform, including |windows powershell|, |microsoft iis|, and |microsoft sqlserver|.
 
-The |chef client| can be used to manage machines that run on the following |windows| versions:
+* The |chef client| is installed on a machine running |windows| by using a |microsoft installer package|
+* Three resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource powershell_script|, and |resource registry_key|
+* Two |knife| plugins dedicated to the |windows| platform are available: |knife azure| is used to manage virtual instances in |windows azure|; |knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers
+* Four cookbooks provide application-specific support for `PowerShell 2.0 <https://github.com/opscode-cookbooks/powershell>`_, `IIS 7.0/7.5/8.0 <https://github.com/opscode-cookbooks/iis>`_, `SQL Server <https://github.com/opscode-cookbooks/database>`_, and for configuring various settings and behaviors on a machine that is running `Windows <https://github.com/opscode-cookbooks/windows>`_ 
+* Support for both :i386 and :x86_64 architectures
+
+All of the most important core resources built into the |chef client|---:doc:`cookbook_file </resource_cookbook_file>`, :doc:`directory </resource_directory>`, :doc:`env </resource_env>`, :doc:`execute </resource_execute>`, :doc:`file </resource_file>`, :doc:`group </resource_group>`, :doc:`http_request </resource_http_request>`, :doc:`link </resource_link>`, :doc:`mount </resource_mount>`, :doc:`package </resource_package>`, :doc:`remote_directory </resource_remote_directory>`, :doc:`remote_file </resource_remote_file>`, :doc:`ruby_block </resource_ruby_block>`, :doc:`service </resource_service>`, :doc:`template </resource_template>` , and :doc:`user </resource_user>`---work the same way in |windows| as they do on any |unix|- or |linux|-based platform.
+
+The file-based resources---|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|---have attributes that support unique requirements within the |windows| platform, including ``inherits`` (for file inheritence), ``mode`` (for octal modes), and ``rights`` (for access control lists, or ACLs).
+
+The |chef client| can be used to manage machines that run on the following versions of |windows|:
 
 .. list-table::
    :widths: 200 200 200
@@ -22,11 +32,13 @@ The |chef client| can be used to manage machines that run on the following |wind
      - 2008 R2, 2012
      - x86_64
 
-In addition:
+(The recommended amount of RAM available to the |chef client| during a |chef client| run is 512MB. Each node and workstation must have access to the |chef server| via HTTPS. |ruby| version 1.9.1 or |ruby| version 1.9.2 with |ssl| bindings is required.)
 
-* The recommended amount of RAM available to the |chef client| during a |chef client| run is 512MB
-* Each node and workstation must have access to the |chef server| via HTTPS
-* |ruby| 1.9.1, or 1.9.2 with |ssl| bindings
+The |microsoft installer package| for |windows| is available at http://www.opscode.com/chef/install/. From the drop-downs, select the operating system (``Windows``), then the version, and then the architecture.
+
+After the |chef client| is installed, it is located at ``C:\chef``. The main configuration file for the |chef client| is located at ``C:\chef\client.rb``.
+
+The following sections are pulled in from the larger docs.opscode.com site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
 
 Knife
 =====================================================
