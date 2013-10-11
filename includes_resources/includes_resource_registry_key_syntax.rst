@@ -45,3 +45,14 @@ The following is an example of how the |resource registry_key| resource can work
      action :create
    end
 
+and the following example shows how multiple registry key entries can be configured using a single resource block with key values based on node attributes:
+
+.. code-block:: ruby
+
+   registry_key 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\name_of_registry_key' do
+     values [{:name => 'key_name', :type => :string, :data => 'C:\Windows\System32\file_name.bmp'},
+             {:name => 'key_name', :type => :string, :data => node['node_name']['attribute']['value']},
+             {:name => 'key_name', :type => :string, :data => node['node_name']['attribute']['value']}
+            ]
+     action :create
+   end 
