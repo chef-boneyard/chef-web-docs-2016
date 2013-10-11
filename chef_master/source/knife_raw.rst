@@ -26,5 +26,22 @@ Examples
 
 .. include:: ../../step_knife/step_knife_raw_view_node.rst
 
+To delete a data bag, enter a command similar to:
+
+.. code-block:: bash
+
+   $ knife raw -m DELETE /data/foo
+
+to return something similar to:
+
+.. code-block:: bash
+
+   {
+     "name":"foo",
+     "json_class":"Chef::DataBag",
+     "chef_type":"data_bag"
+   }
+
+
 
 
