@@ -45,3 +45,7 @@ Examples
 **Use re-directed keys**
 
 .. include:: ../../step_resource/step_resource_registry_key_redirect.rst
+
+**Set proxy settings to be the same as those used by the chef-client**
+
+.. include:: ../../step_resource/step_resource_registry_key_set_proxy_settings_to_same_as_chef_client.rst
