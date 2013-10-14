@@ -71,7 +71,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
 * Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
 
-|chef server oec|
+|chef server oec| 
 -----------------------------------------------------
 |chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes additional functionality like |reporting| and built-in support for high availability deployment scenarios.
 
