@@ -5,6 +5,9 @@
 
 This subcommand has the following options:
 
+``-a ATTR``, ``--attribute ATTR``
+   |attribute_show|
+
 ``--chef-repo-path PATH``
    |path chef_repo| This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
 

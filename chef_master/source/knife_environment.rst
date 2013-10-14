@@ -115,7 +115,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-|no_options|
+.. include:: ../../includes_knife/includes_knife_environment_show_options.rst
 
 Examples
 -----------------------------------------------------

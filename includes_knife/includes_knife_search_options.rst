@@ -6,7 +6,7 @@
 This sub-command has the following options:
 
 ``-a ATTR``, ``--attribute ATTR``
-   |attribute|
+   |attribute_show|
 
 ``-b ROW``, ``--start ROW``
    |start|

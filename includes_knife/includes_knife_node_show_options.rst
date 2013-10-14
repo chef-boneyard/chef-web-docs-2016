@@ -6,7 +6,7 @@
 This argument has the following options:
 
 ``-a ATTR``, ``--attribute ATTR``
-   |attribute|
+   |attribute_show|
 
 ``-l``, ``--long``
    |long|
