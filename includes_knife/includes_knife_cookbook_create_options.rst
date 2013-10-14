@@ -8,7 +8,7 @@ This argument has the following options:
 ``-C COPYRIGHT_HOLDER``, ``--copyright COPYRIGHT_HOLDER``
    |copyright|
 
-``-i LICENSE``, ``--license LICENSE``
+``-I LICENSE``, ``--license LICENSE``
    |license|
 
 ``-m EMAIL``, ``--email EMAIL``
