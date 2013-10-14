@@ -11,6 +11,9 @@ This subcommand has the following options:
 ``--concurrency``
    |concurrency| Default: ``10``.
 
+``--local``
+   |show_local_files|
+
 ``--repo-mode MODE``
    |repo_mode| Default: ``everything`` / ``hosted_everything``.
 
