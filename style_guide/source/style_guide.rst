@@ -489,9 +489,9 @@ Sphinx supports localization into many languages.
 
 .pot files
 -----------------------------------------------------
-.pot files are used by localization teams as an intermediate step in-between the native English content and the localized content. Opscode needs to build the .pot files so that localization teams can feed them into their tools as part of their localization process.
+.pot files are used by localization teams as an intermediate step in-between the native English content and the localized content. Opscode builds the .pot files periodically so that localization teams can feed them into their tools as part of their localization process.
 
-.. warning:: .pot files should be recompiled, not modified.
+.. warning:: .pot files should be recompiled, not modified. Pull requests made against .pot files will be rejected; however, if the pull requests does point out an error in the docs, the error will be fixed in the original source file, of course.
 
 The .pot file is built using much the same process as a regular Sphinx content build. For example, a regular content build:
 
