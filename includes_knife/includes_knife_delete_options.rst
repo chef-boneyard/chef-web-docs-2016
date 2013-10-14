@@ -17,7 +17,7 @@ This subcommand has the following options:
 ``--local``
    |local_object| Default: ``false``.
 
-``--[no-]recurse``
+``-r``, ``--[no-]recurse``
    |no_recurse_delete| Default: ``--no-recurse``.
 
 ``--repo-mode MODE``
