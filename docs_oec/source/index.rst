@@ -227,7 +227,7 @@ The following settings files are used to configure behavior for the |chef server
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">private-chef-server.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">private-chef.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_pushy_server.html">pushy-server.rb</a> </br>
 
 The following command-line tools can be run on the |chef server|:

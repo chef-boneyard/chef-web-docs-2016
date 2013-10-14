@@ -87,7 +87,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Components:** :doc:`Reporting </reporting>` | :doc:`orgmapper </orgmapper>`
 
-**Settings and Tools:** :doc:`private-chef-server.rb </config_rb_chef_server_enterprise>` | :doc:`private-chef-ctl </ctl_private_chef>`
+**Settings and Tools:** :doc:`private-chef.rb </config_rb_chef_server_enterprise>` | :doc:`private-chef-ctl </ctl_private_chef>`
 
 |chef server osc|
 -----------------------------------------------------

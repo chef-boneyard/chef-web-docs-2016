@@ -1,5 +1,5 @@
 =====================================================
-private-chef-server.rb
+private-chef.rb
 =====================================================
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
