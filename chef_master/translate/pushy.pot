@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs 0.0.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-14 11:24\n"
+"POT-Creation-Date: 2013-10-14 12:45\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,187 +17,187 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/pushy.rst:33
-# 3cc701323192454ea01785ea8978be8d
+# cb2ddd2b531c45baaaa342fcc5adc2c2
 msgid "Pushy"
 msgstr ""
 
 #: ../source/pushy.rst:35
-# 6b6689b2fbe14a468e99fdb07413729f
+# f9fd5849934b4035b5768707a19b02b2
 msgid "DRAFT"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy.rst:5
-# f050d94cf70b437e8c90528aba64217f
+# 6897f6db8fcc403c85c4998090184f1c
 msgid "|pushy| is a tool that allows jobs to be run against nodes in an organization independently of a |chef client| run and also without any need for a |chef client| to be present on the target node. A job is an action or a command to be executed against a subset of nodes; the nodes against which a job is are determined by the results of a search query made to the |chef server|. |pushy| is an extension of the |api chef server| that uses a |ruby| client to initiate all connections to the |chef server|. Connections use the same authentication and authorization model as any other request made to the |chef server|. A |knife| plugin is used to initiate job creation and job tracking."
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy.rst:7
-# d103cfcfa5b648149a288cabc8614a56
+# 2c54fd16e4624cc7867299673a9c773c
 msgid "|pushy| is only available when running |chef server oec|."
 msgstr ""
 
 #: ../source/pushy.rst:40
-# b5660294e9464c08a6b5ee2024dda748
+# dc18d173172244c3811797e9cf5fa65c
 msgid "Components"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component.rst:5
-# abbda000cec4438cbb4645debea1198a
+# b61fba8040e343808f9a57eaf81876d4
 msgid "|pushy| has three main components: jobs (managed by the |pushy| server, a client that is installed on every node in the organization, and one (or more) workstations from which job messages are initiated."
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component.rst:7
-# 68ce104ad1c74fbd9ef5286aa65a3bcc
+# c39cdabb7d524d75bbaae279cfde49cb
 msgid "All communication between these components is done with the following:"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component.rst:9
-# aac8229f0eb94dad912087bd9ead74f5
+# fa2ac48c976e4dfebbed464cdbb54666
 msgid "A heartbeat message between the |pushy| server and each managed node"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component.rst:10
-# d10b0e500ff7403583bd4011250b96d9
+# 65e9514db528438593329f2ada5129b8
 msgid "A |knife| plugin named ``knife-pushy`` with four subcommands: ``job list``, ``job start``, ``job status``, and ``node status``"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component.rst:11
-# ff5e3a207d4545c0b9a37813e450a80a
+# 1a3314304115485fb416f773a1898019
 msgid "Various job messages sent from a workstation to the |pushy| server"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component.rst:12
-# 15d803d41dcf4155bf3112a03ac0a6c0
+# 96d26ac09fe0485786fb759313501ac1
 msgid "A single job message that is sent (per job) from the |pushy| server to one (or more) nodes that are being managed by an |chef server oec| server"
 msgstr ""
 
 #: ../source/pushy.rst:43
-# 0d954f64312440e29fb610d48957c364
+# ca2aab82d2a44925bde12160aa24432c
 msgid "The following diagram shows the various components of |pushy|:"
 msgstr ""
 
 #: ../source/pushy.rst:49
-# b8f3bc791401489abd988be2abd87933
+# 75a11b21e6864c92b10d2066b7f9fe10
 msgid "Jobs"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component_jobs.rst:5
-# b4a786ab61804f14b06f12e2d6139d49
+# f8418b0ff4c6407196b7e7a21cb327ed
 msgid "The |pushy| server is used to send job messages to one (or more) managed nodes and also to manage the list of jobs that are available to be run against nodes."
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component_jobs.rst:7
-# 2b1d919b37da44a3b05fc24a38d7d60b
+# 6eb87e9176314acc895cd82a4d7ed766
 msgid "A heartbeat message is used to let all of the nodes in an organization that the |pushy| server is available. The |pushy| server listens for heartbeat messages from each |pushy| client. If there is no heartbeat from a |pushy| client, the |pushy| server will mark that node as unavailable for job messages until the heartbeat resumes."
 msgstr ""
 
 #: ../source/pushy.rst:53
-# c6b4b75ad83e4c3fb2518cec62a9c489
+# 275e6e133838469a9c4cc7c686f77ee7
 msgid "Nodes"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component_nodes.rst:5
-# ac6c9d3319b6495caa17d92d3f28be8e
+# 3550586d84ee4a58b59dfc6f529091ed
 msgid "The |pushy| client is used to receive job messages from the |pushy| server and to verify the heartbeat status of the |pushy| environment. The |pushy| client uses the same authorization / authentication model as the |chef client|. The |pushy| client listens for heartbeat messages from the |pushy| server. If there is no heartbeat from the |pushy| server, the |pushy| client will finish its current job, but then stop accepting any new jobs until the heartbeat from the |pushy| server resumes."
 msgstr ""
 
 #: ../source/pushy.rst:57
-# d3bfef0bed404b3cb8d84e9b4033a7ae
+# 5510e2d2aa0b42659447e695e8dda5b5
 msgid "Workstations"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_component_workstations.rst:5
-# adc9465b2eb74a6cba10a302715ca4e5
+# 2562876252ca4622919a930c8bfde7f5
 msgid "A workstation is used to manage |pushy| jobs, including maintaining the |cookbook pushjobs| cookbook, using |knife| to start and stop jobs, view job status, and to manage job lists."
 msgstr ""
 
 #: ../source/pushy.rst:62
-# b1d543ee61ca4e809ecba98ff5b00a50
+# 1ab4c99d302a4ffa9b3cb10840f811c4
 msgid "push-jobs Cookbook"
 msgstr ""
 
 #: ../source/pushy.rst:63
-# 0c812bac48d54c8eb8439cd3417a6eda
+# 81bab8e9b43241a19351527a0bcddd97
 msgid "The |cookbook pushjobs| cookbook is used by |pushy| to install the |pushy| client on managed nodes, and then set up the |pushy| client to run as a service. In addition, |pushy| relies on a cookbook attribute to manage the whitelist, which is a list of jobs (and commands) that are available to |pushy|."
 msgstr ""
 
 #: ../source/pushy.rst:66
-# 807a541669f5441da4692d7761eea295
+# 2a72d7f79fcd4c1cba5c2ec309d66ad1
 msgid "Whitelist"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_whitelist.rst:5
-# b08b3bc922e543758aad9f2bf17794dc
+# f9415f9f5c6943d3a89794a2d175e110
 msgid "A whitelist is a list of jobs and commands that are used by |pushy|. A whitelist is saved as an attribute in the |cookbook pushjobs| cookbook. For example:"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_whitelist.rst:13
-# 341c3e1bf7804d2bbd6802866d9419b0
+# 903df2b0fa3b4701aa8a72635abd3ad6
 msgid "The whitelist is accessed from a recipe using the ``node['push_jobs']['whitelist]`` attribute. For example:"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_whitelist.rst:23
-# 2af8aede114c4ae58c1a9c8d325e404e
+# 6d905cce34da41728a4a26fcc3a05451
 msgid "Use the ``knife exec`` subcommand to add a job to the whitelist. For example:"
 msgstr ""
 
 #: ../../includes_pushy/includes_pushy_whitelist.rst:31
-# 8c713fcc7a37455e83ea55f4f95fd81c
+# c480f0d4de3e405bb870e4900e0b2b89
 msgid "where ``[\"ntpdate\"] = \"ntpdate -u time\"`` is added to the whitelist:"
 msgstr ""
 
 #: ../source/pushy.rst:85
-# 798b9dd6d5e54206b53ad872b5fd42b4
+# f8a5a13709bd45ef9b424ccd361dfcd7
 msgid "Reference"
 msgstr ""
 
 #: ../source/pushy.rst:86
-# dd3407c1e70e4f5fb3937b381b6c170c
+# d1ad66b923124e4794cfd6a36114abcc
 msgid "The following sections describe the |knife| subcommands, the |api pushy|, and configuration settings used by |pushy|."
 msgstr ""
 
 #: ../source/pushy.rst:88
-# ce54f95912b84011a125444f73ea55de
+# 0b5d9eec22ad4c7395d599e0b83a6784
 msgid "WILL INCLUDE THESE WHEN FINISHED."
 msgstr ""
 
 #: ../source/pushy.rst:91
-# c93dca191ca7415795f002ccf93264aa
+# 9db7a4c1661a4a3fbb4b637adf752b22
 msgid "knife-pushy"
 msgstr ""
 
 #: ../source/pushy.rst:92
-# bf38f96f33f646edaa6932106c5657a0
+# deaee62889814ef2a899024a4e96499c
 msgid "http://docs.opscode.com/plugin_knife_pushy.html"
 msgstr ""
 
 #: ../source/pushy.rst:95
-# 07834a5064a541baac07a5d46aeab9df
+# 78b8ff49afc24338a772b72aa3115719
 msgid "Pushy API"
 msgstr ""
 
 #: ../source/pushy.rst:96
-# 55e1162fc80e49d9a4b74aed1284782a
+# dea42db5411a468bbf0dad75a9d26ffb
 msgid "http://docs.opscode.com/api_pushy.html"
 msgstr ""
 
 #: ../source/pushy.rst:99
-# 90cb9a9d208a497182a6f38e1b3705bf
+# 5723b1f963de4142b5644d2b434eabca
 msgid "ctl-pushy-client"
 msgstr ""
 
 #: ../source/pushy.rst:100
-# 9f94398a8a404445b043e248d0ed2e0f
+# 6765e4e063134a6f8a33ab9775803e3f
 msgid "http://docs.opscode.com/ctl_pushy_client.html"
 msgstr ""
 
 #: ../source/pushy.rst:103
-# ed0c374bc8814e418f929047cb65597f
+# 3be74ad2db034bfda444f99096578044
 msgid "pushy-server.rb"
 msgstr ""
 
 #: ../source/pushy.rst:104
-# ab27a9e4aafc4fbe847893bde665bfda
+# 1104500fea81447fb1ac45fe5b5853d9
 msgid "http://docs.opscode.com/config_rb_pushy_server.html"
 msgstr ""
 
