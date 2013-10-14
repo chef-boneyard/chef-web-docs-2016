@@ -8,7 +8,7 @@ This sub-command has the following options:
 ``-a ATTR``, ``--attribute ATTR``
    |attribute|
 
-``-b ROW``, ``-start ROW``
+``-b ROW``, ``--start ROW``
    |start|
 
 ``-i``, ``--id-only``
