@@ -4,4 +4,4 @@
 
 Installs |openstack nova|, an |openstack| project that provides a fabric controller that enables hosting and management of cloud computing systems. For more information about |openstack nova|, see http://docs.openstack.org/developer/nova/.
 
-This cookbook is located at: https://github.com/stackforge/cookbook-openstack-network.
+This cookbook is located at: https://github.com/stackforge/cookbook-openstack-compute.
