@@ -5,8 +5,11 @@
 
 This subcommand has the following options:
 
-``--client DIRECTORY``
-   |client|
+``--admin-client-name NAME``
+   The name of the client, typically the name of the admin client.
+
+``--admin-client-key PATH``
+   The path to the private key used by the client, typically a file named ``admin.pem``.
 
 ``-i``, ``--initial``
    |initial|
@@ -14,3 +17,8 @@ This subcommand has the following options:
 ``-r REPO``, ``--repository REPO``
    |repository|
 
+``--validation-client-name NAME``
+   The name of the validation client.
+
+``--validation-key PATH``
+   The path to the validation key used by the client, typically a file named ``validation.pem``.
