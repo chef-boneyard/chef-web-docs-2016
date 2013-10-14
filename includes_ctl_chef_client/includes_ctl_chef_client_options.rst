@@ -21,7 +21,7 @@ This command has the following options:
 ``-E ENVIRONMENT_NAME``, ``--environment ENVIRONMENT_NAME``
    |name environment|
 
-``-f``, ``--fork``
+``--[no-]fork``
    |fork_chef|
 
 ``-F FORMAT``, ``--format FORMAT``
