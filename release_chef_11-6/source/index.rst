@@ -1,5 +1,5 @@
 =====================================================
-All about Chef ...
+Documentation for Chef 11.6 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
