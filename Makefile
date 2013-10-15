@@ -40,7 +40,7 @@ server:
 
 oec_11-0:
 	mkdir -p $(BUILDDIR)/release/oec_11-0/
-	sphinx-build release_oec-11-0/source $(BUILDDIR)/chef/release/oec_11-0/
+	sphinx-build release_oec_11-0/source $(BUILDDIR)/chef/release/oec_11-0/
 
 enterprise:
 	mkdir -p $(BUILDDIR)/enterprise/
