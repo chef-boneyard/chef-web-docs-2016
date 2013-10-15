@@ -42,7 +42,7 @@ To upgrade to |chef server oec|, do the following:
 
    If the upgrade process times out, re-run the command until it finishes successfully.
 
-#. Copy the entire ``/etc/opscode`` directory from the back end master to all front and back end nodes.
+#. Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes.
 
 #. Upgrade the back end secondary machine with the following command:
 
