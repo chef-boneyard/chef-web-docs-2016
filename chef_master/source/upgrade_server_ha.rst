@@ -32,7 +32,7 @@ To upgrade to |chef server oec|, do the following:
       
       $ rpm -Uvh <new package>
 
-#. Identify the original back end primary and secondary machines. The original primary is the same machine on which the initial bootstrap operation was run and will have a setting in the ``private-chef.rb`` that sets ``:bootstrap => true``. The upgrade process for the back end machines requires the original primary machine be upgraded before the original secondary machine. This may require using failover to move the original primary machine back into a state where it is the primary back end machine.
+#. Identify the original back end primary and secondary machines. The original primary is the same machine on which the initial bootstrap operation was run and will have a setting in the ``private-chef.rb`` file that sets ``:bootstrap => true``. The upgrade process for the back end machines requires the original primary machine to be upgraded before the original secondary machine. This may require using failover to move the original primary machine back into a state where it is the current primary back end machine.
 
 #. Upgrade the back end primary machine with the following command:
 
