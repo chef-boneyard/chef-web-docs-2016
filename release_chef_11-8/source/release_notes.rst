@@ -30,6 +30,10 @@ Required Updates
 * xxxxx
 * xxxxx
 
+|chef zero|
+-----------------------------------------------------
+.. include:: ../includes_chef_zero.rst
+
 |chef client| Local Mode
 -----------------------------------------------------
 The |chef client| can be run in local mode using the ``--local-mode`` option:
