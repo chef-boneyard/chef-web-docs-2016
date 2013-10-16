@@ -5,6 +5,8 @@
 
 |knife user|
 
+.. note:: |note subcommand_is_open_source_only|
+
 This subcommand has the following syntax:
 
 .. code-block:: bash

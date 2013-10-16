@@ -4,8 +4,6 @@ knife user
 
 .. include:: ../../includes_knife/includes_knife_user.rst
 
-.. note:: |note subcommand_is_open_source_only|
-
 Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
