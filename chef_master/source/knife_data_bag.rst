@@ -1,5 +1,5 @@
 =====================================================
-knife data bag
+knife data bag 
 =====================================================
 
 .. include:: ../../includes_data_bag/includes_data_bag.rst

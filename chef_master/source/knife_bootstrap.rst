@@ -1,5 +1,5 @@
 =====================================================
-knife bootstrap
+knife bootstrap 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_bootstrap.rst

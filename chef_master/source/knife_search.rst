@@ -1,5 +1,5 @@
 =====================================================
-knife search
+knife search 
 =====================================================
 
 .. include:: ../../includes_search/includes_search.rst

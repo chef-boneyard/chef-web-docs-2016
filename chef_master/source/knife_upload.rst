@@ -34,10 +34,6 @@ Examples
 
 .. include:: ../../step_knife/step_knife_upload_directory_cookbooks_and_role.rst
 
-Use the output of ``knife deps`` to pass a command to ``knife upload``. For example:
-
-.. code-block:: bash
-
-   $ knife upload `knife deps nodes/*.json
+.. include:: ../../step_knife/step_knife_upload_pass_to_knife_deps.rst
 
 
