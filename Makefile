@@ -28,19 +28,19 @@ server:
 
 11-4:
 	mkdir -p $(BUILDDIR)/release/11-4/
-	sphinx-build release_chef_11-4/source $(BUILDDIR)/chef/release/11-4/
+	sphinx-build release_chef_11-4/source $(BUILDDIR)/release/11-4/
 
 11-6:
 	mkdir -p $(BUILDDIR)/release/11-6/
-	sphinx-build release_chef_11-6/source $(BUILDDIR)/chef/release/11-6/
+	sphinx-build release_chef_11-6/source $(BUILDDIR)/release/11-6/
 
 11-8:
 	mkdir -p $(BUILDDIR)/release/11-8/
-	sphinx-build release_chef_11-8/source $(BUILDDIR)/chef/release/11-8/
+	sphinx-build release_chef_11-8/source $(BUILDDIR)/release/11-8/
 
 oec_11-0:
 	mkdir -p $(BUILDDIR)/release/oec_11-0/
-	sphinx-build release_oec_11-0/source $(BUILDDIR)/chef/release/oec_11-0/
+	sphinx-build release_oec_11-0/source $(BUILDDIR)/release/oec_11-0/
 
 enterprise:
 	mkdir -p $(BUILDDIR)/enterprise/
