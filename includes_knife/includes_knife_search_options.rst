@@ -15,7 +15,7 @@ This sub-command has the following options:
    |id-only|
 
 ``INDEX``
-   |search_index|
+   |search_index| Default index: ``node``.
 
 ``-l``, ``--long``
    |long|
