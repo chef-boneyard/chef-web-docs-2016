@@ -5,7 +5,7 @@
 
 |knife user|
 
-.. note:: |note subcommand_is_open_source_only|
+.. note:: This subcommand ONLY works when run against the open source |chef server| and will not run against |chef server oec| (including hosted |chef server oec|), or |chef private|.
 
 This subcommand has the following syntax:
 
