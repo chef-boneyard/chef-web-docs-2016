@@ -82,7 +82,7 @@ The Nodes
 **Tools:** :doc:`chef-client (executable) </ctl_chef_client>` | :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-solo (executable) </ctl_chef_solo>`
 
 
-Cookbooks  
+Cookbooks
 =====================================================
 **The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` | `Cookbooks Maintained by Opscode <https://github.com/opscode-cookbooks>`_
 
