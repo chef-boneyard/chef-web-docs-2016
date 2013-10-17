@@ -65,7 +65,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_bootstrap_options.rst
 
@@ -100,7 +100,7 @@ client
 
 .. include:: ../../includes_knife/includes_knife_client.rst
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
    
 bulk delete
 -----------------------------------------------------
@@ -246,7 +246,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_configure_options.rst
 
@@ -270,7 +270,7 @@ cookbook
 
 .. include:: ../../includes_knife/includes_knife_cookbook.rst
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 bulk delete
 -----------------------------------------------------
@@ -514,7 +514,7 @@ cookbook site
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook.rst
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 download
 -----------------------------------------------------
@@ -662,7 +662,7 @@ data bag
 
 .. include:: ../../includes_knife/includes_knife_data_bag.rst
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 -----------------------------------------------------
@@ -812,7 +812,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_11-4_delete_options.rst
 
@@ -840,7 +840,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_deps_options.rst
 
@@ -883,7 +883,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_11-4_diff_options.rst
 
@@ -914,7 +914,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_11-4_download_options.rst
 
@@ -951,7 +951,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_edit_options.rst
 
@@ -977,7 +977,7 @@ environment
 
 .. include:: ../../includes_knife/includes_knife_environment.rst
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 -----------------------------------------------------
@@ -1112,7 +1112,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_exec_options.rst
 
@@ -1147,7 +1147,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 |no_options|
 
@@ -1169,7 +1169,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_11-4_list_options.rst
 
@@ -1196,7 +1196,7 @@ node
 
 .. include:: ../../includes_knife/includes_knife_node.rst
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 bulk delete
 -----------------------------------------------------
@@ -1403,7 +1403,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_raw_options.rst
 
@@ -1432,7 +1432,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 |no_options|
 
@@ -1449,7 +1449,7 @@ role
 
 .. include:: ../../includes_knife/includes_knife_role.rst
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 bulk delete
 -----------------------------------------------------
@@ -1602,7 +1602,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_search_options.rst
 
@@ -1654,7 +1654,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_show_options.rst
 
@@ -1678,7 +1678,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_ssh_options.rst
 
@@ -1714,7 +1714,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_status_options.rst
 
@@ -1744,7 +1744,7 @@ tag
 
 .. include:: ../../includes_knife/includes_knife_tag.rst
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 -----------------------------------------------------
@@ -1807,7 +1807,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_11-4_upload_options.rst
 
@@ -1841,7 +1841,7 @@ user
 
 .. note:: |note subcommand_is_open_source_only|
 
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
 -----------------------------------------------------
@@ -1966,7 +1966,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-Review the list of `common options <http://http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 .. include:: ../../includes_knife/includes_knife_xargs_options.rst
 
