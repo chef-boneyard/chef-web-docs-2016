@@ -5,7 +5,7 @@ A template is an |erb| template. An |erb| template allows |ruby| code to be embe
 
    ``<%= "my name is #{$ruby}" %>``
 
-A statement is delimited by ``<%`` and ``%>``. For example::
+A statement is delimited by ``<%`` and ``-%>``. For example::
 
    if false
       # this won't happen
