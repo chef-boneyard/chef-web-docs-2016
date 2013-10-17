@@ -54,25 +54,37 @@ Arguments
 
 not_if Examples
 -----------------------------------------------------
-.. include:: ../../step_resource/step_resource_template_add_file_not_if_attribute_has_value.rst
 
-.. include:: ../../step_resource/step_resource_template_add_file_not_if_ruby.rst
+**Update if not already updated**
 
-.. include:: ../../step_resource/step_resource_template_add_file_not_if_ruby_with_curly_braces.rst
+.. include:: ../../step_recipe/step_recipe_guard_notif_do_not_update_if_already_updated.rst
 
-.. include:: ../../step_resource/step_resource_template_add_file_not_if_string.rst
+**Ensure a node can resolve a host**
 
-**Install a file from a remote location using bash**
+.. include:: ../../step_recipe/step_recipe_guard_notif_ensure_node_can_resolve_host.rst
 
-.. include:: ../../step_resource/step_resource_remote_file_install_with_bash.rst
+**Prevent installs on older versions**
+
+.. include:: ../../step_recipe/step_recipe_guard_notif_prevent_install_on_older_versions.rst
+
+**Set the administrator if not already set**
+
+.. include:: ../../step_recipe/step_recipe_guard_notif_set_administrator_unless_already_set.rst
 
 only_if Examples
 -----------------------------------------------------
-.. include:: ../../step_resource/step_resource_template_add_file_only_if_attribute_has_value.rst
 
-.. include:: ../../step_resource/step_resource_template_add_file_only_if_ruby.rst
+**Install packages only when necessary**
 
-.. include:: ../../step_resource/step_resource_template_add_file_only_if_string.rst
+.. include:: ../../step_recipe/step_recipe_guard_onlyif_certain_packages.rst
+
+**Remove a recipe if it belongs to a specific run-list**
+
+.. include:: ../../step_recipe/step_recipe_guard_onlyif_remove_recipe.rst
+
+**Re-register ASP.Net if it's already installed**
+
+.. include:: ../../step_recipe/step_recipe_guard_onlyif_reregister_aspdotnet.rst
 
 Lazy Attribute Evaluation
 =====================================================
