@@ -90,7 +90,7 @@ Attributes
 
 New Man Pages
 -----------------------------------------------------
-The man pages built into |knife| are now synchronized with the same topics from docs.opscode.com so that they are current as of the release of the |chef client| 11.8.0 release. They are published using the same process, so the information in each topic is identical. That said, docs.opscode.com pages are updated more frequently, but changes made there will be rolled back into the |chef client| on a regular basis so that the man pages are as current as possible.
+The man pages built into |knife| are now synchronized with the same topics from docs.opscode.com so that they are current with the |chef client| 11.8.0 release. The man pages and online topics are published using the same process, so the information in each topic is identical. That said, docs.opscode.com pages are updated more frequently, but changes made there will be rolled back into the |chef client| on a regular basis so that the man pages are as current as possible.
 
 What's Fixed
 =====================================================
