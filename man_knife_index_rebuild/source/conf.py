@@ -56,7 +56,10 @@ copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unp
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
-today = 'Chef 11.8'
+# 
+# This is being used to define the version number for Chef, for now.
+# 
+today = 'Chef 11.8.0'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
