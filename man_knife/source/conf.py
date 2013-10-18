@@ -38,7 +38,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'knife deps'
+project = u'knife'
 # copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -127,7 +127,7 @@ rst_prolog = """
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'knife-deps', u'The man page for the knife deps subcommand.',
+    ('index', 'knife', u'The man page for the knife command line tool.',
      [u'Opscode'], 1)
 ]
 

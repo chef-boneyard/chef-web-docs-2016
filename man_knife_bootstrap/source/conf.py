@@ -39,7 +39,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'knife bootstrap'
-copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License'
+# copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

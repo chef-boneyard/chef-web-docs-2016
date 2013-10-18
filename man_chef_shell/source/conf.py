@@ -38,7 +38,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'knife deps'
+project = u'chef-shell'
 # copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -56,9 +56,6 @@ project = u'knife deps'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
-# 
-# This is being used to define the version number for Chef, for now.
-# 
 today = 'Chef 11.8.0'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
@@ -127,7 +124,7 @@ rst_prolog = """
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'knife-deps', u'The man page for the knife deps subcommand.',
+    ('index', 'chef-shell', u'The man page for the chef-shell command line tool.',
      [u'Opscode'], 1)
 ]
 
