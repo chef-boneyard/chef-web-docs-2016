@@ -8,10 +8,6 @@ Community Plugins: chef-client
    :widths: 60 420
    :header-rows: 1
 
-
-
-
-
    * - Plugin
      - Description
    * - `chef-deploy <https://github.com/ezmobius/chef-deploy>`_
