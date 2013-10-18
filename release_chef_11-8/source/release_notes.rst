@@ -20,7 +20,7 @@ The following items are new for |chef 11-8| and/or are changes from previous ver
 * **Local mode for the chef-client** The |chef client| can now be run in local mode, which allows the |chef client| to run against the local |chef repo| as if it were running against a |chef server|.
 * **New configuration settings** Three configuration settings have been added to support the use of local mode: ``chef_zero[:enabled]``, ``chef_zero[:port]``, and ``local_mode``.
 * **New bff_package resource** Install a package on the |ibm aix| platform using |ibm bffcreate|.
-* **New man pages for Knife** The man pages built into |knife| are now synchronized with the same topics from docs.opscode.com and are current as of the |chef client| 11.8.0 release. 
+* **New man pages for Knife** The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.opscode.com and are current as of the |chef client| 11.8.0 release. 
 
 Required Updates
 -----------------------------------------------------
@@ -90,8 +90,8 @@ Attributes
 
 New Man Pages
 -----------------------------------------------------
+The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.opscode.com and are current as of the |chef client| 11.8.0 release. The man pages and online topics are published using the same process, which means that the information published to each format is identical. That said, the docs.opscode.com pages are updated more frequently than man pages will be; changes made to the topics on docs.opscode.com after this release will be included in future updates of the |chef client|.
 
-The man pages built into |knife| are now synchronized with the same topics from docs.opscode.com and are current as of the |chef client| 11.8.0 release. The man pages and online topics are published using the same process, which means that the information published to each format is identical. That said, the docs.opscode.com pages are updated more frequently than man pages will be; changes made to the topics on docs.opscode.com after the release of the |chef client| 11.8.0 will be included in future updates of the |chef client|.
 
 What's Fixed
 =====================================================
