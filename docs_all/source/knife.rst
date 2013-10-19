@@ -1839,8 +1839,6 @@ user
 
 .. include:: ../../includes_knife/includes_knife_user.rst
 
-.. note:: |note subcommand_is_open_source_only|
-
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
 create
