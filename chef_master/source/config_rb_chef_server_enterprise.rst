@@ -1,12 +1,12 @@
 =====================================================
-private-chef.rb
+|enterprise rb|
 =====================================================
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
 Settings
 =====================================================
-The following sections describe the various settings that are available in the private-chef-server.rb file.
+The following sections describe the various settings that are available in the |enterprise rb| file.
 
 General
 -----------------------------------------------------
