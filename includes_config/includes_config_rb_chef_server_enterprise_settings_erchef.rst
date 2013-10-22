@@ -9,55 +9,55 @@ The |service erchef| service has the following settings:
 
    * - Setting
      - Description
-   * - ``erchef['auth_skew']``
+   * - ``opscode_erchef['auth_skew']``
      - Default value: ``900``.
-   * - ``erchef['bulk_fetch_batch_size']``
+   * - ``opscode_erchef['bulk_fetch_batch_size']``
      - Default value: ``5``.
-   * - ``erchef['cache_ttl']``
+   * - ``opscode_erchef['cache_ttl']``
      - Default value: ``3600``.
    * - ``opscode_erchef['couchdb_max_conn']``
      - Default value: ``"100"``.
-   * - ``erchef['db_pool_size']``
+   * - ``opscode_erchef['db_pool_size']``
      - |db_pool_size| Default value: ``20``.
-   * - ``erchef['dir']``
+   * - ``opscode_erchef['dir']``
      - Default value: ``/var/opt/chef-server/erchef``.
-   * - ``erchef['enable']``
+   * - ``opscode_erchef['enable']``
      - |enable service| Default value: ``true``.
-   * - ``erchef['ha']``
+   * - ``opscode_erchef['ha']``
      - |use ha| Default value: ``false``.
-   * - ``erchef['ibrowse_max_pipeline_size']``
+   * - ``opscode_erchef['ibrowse_max_pipeline_size']``
      - Default value: ``1``.
-   * - ``erchef['ibrowse_max_sessions']``
+   * - ``opscode_erchef['ibrowse_max_sessions']``
      - Default value: ``256``.
-   * - ``erchef['listen']``
+   * - ``opscode_erchef['listen']``
      - Default value: ``127.0.0.1``.
-   * - ``erchef['log_directory']``
+   * - ``opscode_erchef['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/erchef``.
-   * - ``erchef['max_cache_size']``
+   * - ``opscode_erchef['max_cache_size']``
      - Default value: ``10000``.
-   * - ``erchef['port']``
+   * - ``opscode_erchef['port']``
      - |port opscode_erchef| Default value: ``8000``.
-   * - ``erchef['proxy_user']``
+   * - ``opscode_erchef['proxy_user']``
      - Default value: ``pivotal``.
-   * - ``erchef['root_metric_key']``
+   * - ``opscode_erchef['root_metric_key']``
      - Default value: ``chefAPI``.
-   * - ``erchef['s3_bucket']``
+   * - ``opscode_erchef['s3_bucket']``
      - Default value: ``bookshelf``.
-   * - ``erchef['s3_parallel_ops_fanout']``
+   * - ``opscode_erchef['s3_parallel_ops_fanout']``
      - Default value: ``20``.
-   * - ``erchef['s3_parallel_ops_timeout']``
+   * - ``opscode_erchef['s3_parallel_ops_timeout']``
      - Default value: ``5000``.
-   * - ``erchef['s3_url_ttl']``
+   * - ``opscode_erchef['s3_url_ttl']``
      - Default value: ``900``.
-   * - ``erchef['svlogd_num']``
+   * - ``opscode_erchef['svlogd_num']``
      - |svlogd_num| Default value: ``10``.
-   * - ``erchef['svlogd_size']``
+   * - ``opscode_erchef['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``.
-   * - ``erchef['umask']``
+   * - ``opscode_erchef['umask']``
      - Default value: ``0022``.
-   * - ``erchef['validation_client_name']``
+   * - ``opscode_erchef['validation_client_name']``
      - Default value: ``chef-validator``.
-   * - ``erchef['vip']``
+   * - ``opscode_erchef['vip']``
      - |ip_address virtual| Default value: ``127.0.0.1``.
-   * - ``erchef['web_ui_client_name']``
+   * - ``opscode_erchef['web_ui_client_name']``
      - Default value: ``chef-webui``.
