@@ -17,13 +17,16 @@ In the |chef editor| enter the role data in |json|:
       "default_attributes": {
       },
       "json_class": "Chef::Role",
-      "run_list": [
- 
+      "run_list": ['recipe[cookbook_name::recipe_name],
+                    role[role_name]'
       ],
       "description": "",
       "chef_type": "role",
       "override_attributes": {
       }
    }
+
+
+
 
 When finished, save it.

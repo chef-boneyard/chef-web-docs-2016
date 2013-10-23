@@ -17,8 +17,8 @@ Update the role data in |json|:
       "default_attributes": {
       },
       "json_class": "Chef::Role",
-      "run_list": [
- 
+      "run_list": ['recipe[cookbook_name::recipe_name],
+                    role[role_name]'
       ],
       "description": "This is the description for the role1 role.",
       "chef_type": "role",

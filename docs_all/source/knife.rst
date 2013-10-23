@@ -1308,7 +1308,11 @@ Examples
 
 run_list add
 -----------------------------------------------------
+.. include:: ../../includes_node/includes_node_run_list.rst
+
 .. include:: ../../includes_knife/includes_knife_node_run_list_add.rst
+
+.. include:: ../../includes_node/includes_node_run_list_format.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -1448,6 +1452,8 @@ role
 .. include:: ../../includes_role/includes_role.rst
 
 .. include:: ../../includes_knife/includes_knife_role.rst
+
+.. note:: To add a role to a node and then build out the run-list for that node, use the `knife node <http://docs.opscode.com/knife_node>`_ sub-command and its ``run_list add`` argument.
 
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 

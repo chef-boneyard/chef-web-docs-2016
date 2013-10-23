@@ -11,5 +11,4 @@ This subcommand has the following syntax:
 
    $ knife role [ARGUMENT] (options)
 
-.. note:: Use the ``knife node`` subcommand (and the ``run_list add node`` argument) to add a role to a node on the |chef server|.
 

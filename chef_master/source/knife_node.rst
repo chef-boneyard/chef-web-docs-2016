@@ -125,7 +125,11 @@ Examples
 
 run_list add
 =====================================================
+.. include:: ../../includes_node/includes_node_run_list.rst
+
 .. include:: ../../includes_knife/includes_knife_node_run_list_add.rst
+
+.. include:: ../../includes_node/includes_node_run_list_format.rst
 
 Syntax
 -----------------------------------------------------
