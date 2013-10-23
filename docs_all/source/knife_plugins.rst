@@ -1177,6 +1177,10 @@ Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_requirements.rst
 
+Domain Authentication
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_domain_authentication.rst
+
 bootstrap windows ssh
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh.rst
