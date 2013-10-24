@@ -30,9 +30,9 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/overview_chef_attributes_table_300dpi.png
 
-* http://docs.opscode.com/_images/oec_ha.png
+* http://docs.opscode.com/_images/oec_server_deploy_febe_300dpi.png
 
-.. image:: ../../images/oec_ha.png
+.. image:: ../../images/oec_server_deploy_febe_300dpi.png
 
 
 
