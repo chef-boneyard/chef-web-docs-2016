@@ -34,15 +34,15 @@ Validation Parameters
 -----------------------------------------------------
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst
 
-Conditional Executions
+Guards
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional.rst
 
-Conditional Attributes
+Guard Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_attributes.rst
 
-Conditional Arguments
+Guard Arguments
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_arguments.rst
 
