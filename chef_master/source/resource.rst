@@ -28,7 +28,7 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource short_actions|
    * - `Attributes <http://docs.opscode.com/resource_common.html#attributes>`_
      - |resource short_attributes|
-   * - `Conditions <http://docs.opscode.com/resource_common.html#conditionals>`_
+   * - `Guards <http://docs.opscode.com/resource_common.html#conditionals>`_
      - |resource short_conditions|
    * - `Notifications <http://docs.opscode.com/resource_common.html#notifications>`_
      - |resource short_notifications|
