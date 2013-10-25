@@ -128,6 +128,11 @@ The Official Guide to Chef
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="xxxxx">xxxxx</a> </br>
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="xxxxx">xxxxx</a> </br>
 
+   &nbsp;&nbsp;&nbsp;   <a href="xxxxx">Libraries</a> </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="xxxxx">Defining Resources and Providers</a> </br>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <a href="xxxxx">xxxxx</a> </br>
+
+
 **Chapter Eleven :: Cookbook Versions** 
 
 .. raw:: html
