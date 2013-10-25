@@ -40,3 +40,9 @@ To upgrade to |chef server oec|, do the following:
 
    This process will remove old services, old data, messages about old services not running, and so on.
 
+#. Start |chef server oec|:
+
+   .. code-block:: bash
+   
+      $ private-chef-ctl start
+
