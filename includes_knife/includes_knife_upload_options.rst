@@ -11,17 +11,17 @@ This subcommand has the following options:
 ``--concurrency``
    |concurrency| Default: ``10``.
 
-``--[no-]force``
-   |force knife upload| Default: ``--no-force``.
-
-``-n``, ``--dry-run``
-   |dry_run| Default: ``false``.
-
 ``--[no-]diff``
    |diff_upload| Set to ``false`` to upload all files. Default: ``true``.
 
+``--[no-]force``
+   |force knife upload| Default: ``--no-force``.
+
 ``--[no-]freeze``
    |freeze| Default: ``false``.
+
+``-n``, ``--dry-run``
+   |dry_run| Default: ``false``.
 
 ``--[no-]purge``
    |purge knife upload| Default: ``--no-purge``.
