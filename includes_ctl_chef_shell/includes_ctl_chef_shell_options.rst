@@ -21,7 +21,7 @@ This command has the following options:
 ``-j PATH``, ``--json-attributes PATH``
    |json attributes|
 
-``-l LEVEL``, ``--log_level LEVEL``
+``-l LEVEL``, ``--log-level LEVEL``
    |log_level|
 
 ``-s``, ``--solo``

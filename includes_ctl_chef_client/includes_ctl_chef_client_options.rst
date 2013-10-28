@@ -51,7 +51,7 @@ This command has the following options:
 ``-K KEY_FILE``, ``--validation_key KEY_FILE``
    |validation_key| Default value: ``/etc/chef/validation.pem``.
 
-``-l LEVEL``, ``--log_level LEVEL``
+``-l LEVEL``, ``--log-level LEVEL``
    |log_level|
 
 ``-L LOGLOCATION``, ``--logfile c``
