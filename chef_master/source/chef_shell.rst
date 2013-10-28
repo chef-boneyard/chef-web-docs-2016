@@ -4,6 +4,8 @@ chef-shell
 
 .. include:: ../../includes_chef_shell/includes_chef_shell.rst
 
+.. note:: |chef shell| is configured using the :doc:`chef-shell (executable) </ctl_chef_shell>`.
+
 Modes
 =====================================================
 .. include:: ../../includes_chef_shell/includes_chef_shell_modes.rst
