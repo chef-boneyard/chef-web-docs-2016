@@ -458,6 +458,7 @@ The following topics discuss using |chef server osc| with platforms:
    lwrp_custom_provider_ruby
    lwrp_custom_provider
    lwrp_custom_resource
+   lwrp_custom_resource_library
    lwrp_daemontools
    lwrp_djbdns
    lwrp_dmg

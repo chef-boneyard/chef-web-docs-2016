@@ -62,7 +62,7 @@ Inline Compile Mode
    lwrp_custom_provider
    lwrp_custom_provider_ruby
    lwrp_custom_resource
-
+   lwrp_custom_resource_library
 
 
 

@@ -21,6 +21,8 @@ The following sections describe the structure, syntax, and options available for
 
 .. warning:: It is recommended to not mix platform resources with custom resources in the same lightweight provider. This helps ensure the proper processing of platform resources that have been embedded into the resource collection during the |chef client| run.
 
+In addition to the commonly-used lightweight resources and lightweight providers, a custom resource can also be defined using the ``/libraries`` directory. These resources cannot use the |dsl recipe| and must use a specific syntax to call the core |chef client| resources, but are otherwise used in the same way in a recipe as any other resource. For more information about library resources, see :doc:`Library Resources </lwrp_custom_resource_library>`.
+
 File Locations
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_file_locations.rst
