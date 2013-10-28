@@ -15,9 +15,15 @@ This tool has the following options:
 ``-f FILE_NAME``, ``--file FILE_NAME``
    The file against which |ohai| will run.
 
-``-l LEVEL``, ``--log_level LEVEL``
-   |log_level|
-
 ``-h``, ``--help``
    |help subcommand|
+
+``-l LEVEL``, ``--log-level LEVEL``
+   |log_level|
+
+``-L LOGLOCATION``, ``--logfile c``
+   |log_location|
+
+``-v``, ``--version``
+   |version chef|
 
