@@ -6,8 +6,6 @@ LDAP and Active Directory
 
 Configure LDAP
 =====================================================
-The |enterprise rb| file contains the settings required to configure |ldap| or |microsoft ad|.
-
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst
 
 .. include:: ../../includes_server_ldap//includes_server_ldap_configure.rst

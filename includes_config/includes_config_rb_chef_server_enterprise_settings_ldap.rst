@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This configuration file has the following settings for |ldap|:
+The |enterprise rb| file contains the settings required to configure |ldap| or |microsoft ad|:
 
 .. list-table::
    :widths: 200 300
