@@ -8,6 +8,9 @@ This subcommand has the following options:
 ``-a SSH_ATTR``, ``--attribute SSH_ATTR``
    |attribute ssh| The default attribute is the |fqdn| of the host. Other possible values include a public IP address, a private IP address, or a hostname.
 
+``-A``, ``--forward-agent``
+   |forward_agent|
+
 ``-C NUM``, ``--concurrency NUM``
    |concurrency|
 
