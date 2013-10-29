@@ -18,8 +18,8 @@ The response will return something like the following:
 .. code-block:: javascript
 
    {
-     "node1": "https://api.opscode.com/organizations/org_name/clients/node_name",
-     "node2": "https://api.opscode.com/organizations/org_name/clients/node_name"
+     "client1": "https://api.opscode.com/organizations/org_name/clients/client_name",
+     "client2": "https://api.opscode.com/organizations/org_name/clients/client_name"
    }
 
 or:
@@ -27,9 +27,9 @@ or:
 .. code-block:: javascript
 
    {
-     "node1": "http://localhost:4000/clients/node_name",
-     "node2": "http://localhost:4000/clients/node_name",
-     "node3": "http://localhost:4000/clients/node_name"
+     "client1": "http://localhost:4000/clients/client_name",
+     "client2": "http://localhost:4000/clients/client_name",
+     "client3": "http://localhost:4000/clients/client_name"
    }
 
 **Response Codes**
