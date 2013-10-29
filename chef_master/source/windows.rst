@@ -53,6 +53,10 @@ Use knife-windows
 
 For more information about the |subcommand knife windows| plugin, see :doc:`windows </plugin_knife_windows>`.
 
+Ports
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_ports.rst
+
 |microsoft msiexec|
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_windows/includes_windows_msiexec.rst
@@ -243,8 +247,24 @@ Options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_bootstrap_windows_ssh_options.rst
 
-Examples
+winrm
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm.rst
+
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_ports.rst
+
+Syntax
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_syntax.rst
+
+Options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_options.rst
+
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 **Find Uptime for Web Servers**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_windows_winrm_find_uptime.rst

@@ -11,6 +11,10 @@ Use knife-windows
 
 For more information about the |subcommand knife windows| plugin, see :doc:`windows </plugin_knife_windows>`.
 
+Ports
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_ports.rst
+
 |microsoft msiexec|
 -----------------------------------------------------
 .. include:: ../../includes_windows/includes_windows_msiexec.rst

@@ -34,6 +34,8 @@ winrm
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm.rst
 
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_ports.rst
+
 Syntax
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows_winrm_syntax.rst
