@@ -41,6 +41,32 @@ After the |chef client| is installed, it is located at ``C:\chef``. The main con
 
 The following sections are pulled in from the larger docs.opscode.com site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
 
+
+Install the |chef client| on Windows
+=====================================================
+.. include:: ../../includes_windows/includes_windows_install_overview.rst
+
+
+Use knife-windows
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
+
+For more information about the |subcommand knife windows| plugin, see :doc:`windows </plugin_knife_windows>`.
+
+|microsoft msiexec|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_windows/includes_windows_msiexec.rst
+
+Use MSI Installer
+-----------------------------------------------------
+A |microsoft installer package| is available for installing the |chef client| on a |windows| machine.
+
+.. include:: ../../step_install/step_install_windows.rst
+
+Use an Existing Process
+-----------------------------------------------------
+.. include:: ../../includes_windows/includes_windows_system_center.rst
+
 Knife
 =====================================================
 .. include:: ../../includes_knife/includes_knife.rst
