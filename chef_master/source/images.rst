@@ -34,6 +34,10 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/oec_server_deploy_febe_300dpi.png
 
+* http://docs.opscode.com/_images/reporting_run_300dpi.png
+
+.. image:: ../../images/reporting_run_300dpi.png
+
 
 
 
