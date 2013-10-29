@@ -4,10 +4,10 @@
 
 The |chef client| can be installed on machines running |windows| in the following ways:
 
-* By using the :doc:`knife windows </plugin_knife_windows>` plugin to bootstrap the |chef client|; this process requires that the target node be accessible via HTTP or HTTPS
+* By using the :doc:`knife windows </plugin_knife_windows>` plugin to bootstrap the |chef client|; this process requires that the target node be accessible via HTTP (port 5985), HTTPS (port 5986), or |ssh| (port 22)
 * By downloading the |chef client| to the target node, and then running the |microsoft installer package| locally
 * By using an existing process already in place for managing |windows| machines, such as |windows server system_center|
 
-The |chef client| must be run as a service for it to be able to run at a defined interval. If the |chef client| is not run as a service, then the |chef client| must be run from the command line.
+To run the |chef client| at periodic intervals (so that it can check in with the |chef server| automatically), configure the |chef client| to run as a service or as a scheduled task. (The |chef client| can be configured to run as a service during the setup process.)
 
 .. note:: Verify that ``C:\opscode\chef\bin`` and ``embedded\bin`` are added to the ``PATH`` environment variable in |windows|. This is typically set during the installation of the |chef client|; if these values are not in the ``PATH`` environment variable, the |chef client| will not run properly.
