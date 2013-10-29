@@ -11,7 +11,10 @@ This subcommand has the following options:
 ``--concurrency``
    |concurrency| Default: ``10``.
 
-``--force``
+``--cookbook-version VERSION``
+   The version of a cookbook to be downloaded.
+
+``--[no-]force``
    |force knife download| Default: ``--no-force``.
 
 ``-n``, ``--dry-run``
@@ -23,7 +26,7 @@ This subcommand has the following options:
 ``--[no-]recurse``
    |no_recurse_download| Default: ``--recurse``.
 
-``--purge``
+``--[no-]purge``
    |purge knife download| Default: ``--no-purge``.
 
 ``--repo-mode MODE``
