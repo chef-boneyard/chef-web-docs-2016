@@ -4,7 +4,7 @@
 
 The |chef client| can be installed on machines running |windows| in the following ways:
 
-* By using the :doc:`knife windows </plugin_knife_windows>` plugin to bootstrap the |chef client|; this process requires that the target node be accessible via HTTP (port 5985), HTTPS (port 5986), or |ssh| (port 22)
+* By using the :doc:`knife windows </plugin_knife_windows>` plugin to bootstrap the |chef client|; this process requires the target node be available via |ssh| (port 22) or by using the HTTP or HTTPS ports that are required by |windows remote management|
 * By downloading the |chef client| to the target node, and then running the |microsoft installer package| locally
 * By using an existing process already in place for managing |windows| machines, such as |windows server system_center|
 
