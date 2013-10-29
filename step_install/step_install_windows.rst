@@ -1,3 +1,6 @@
+.. This is an included how-to. 
+
+
 To install the |chef client| on |windows|, do the following:
 
 #. Go to http://www.opscode.com/chef/install.
@@ -36,8 +39,3 @@ then:
 
    .. note:: The |chef client| needs to be run as a service for it to be able to regularly check in with the |chef server|. This is an option in the MSI that can be selected manually when running the MSI or a command line that is run after the MSI has finished installing the |chef client|.
 
-#. After the |chef client| is installed (and if this option was not selected in the MSI), run the following command to enable the |chef client| to run as a service:
-
-   .. code-block:: bash
-   
-      $ chef-server-mgr -a install

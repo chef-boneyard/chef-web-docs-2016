@@ -1,5 +1,6 @@
 .. This is an included how-to. 
 
+
 To install |chef server 11| on a virtual machine:
 
 #. Go to http://www.opscode.com/chef/install. Select a platform, version, and architecture, and then choose the version of the |chef server| to be downloaded. The name of the package will be displayed after the version is selected. Right-click the name of the package and copy the link location.

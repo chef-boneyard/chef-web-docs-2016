@@ -21,6 +21,11 @@ A |microsoft installer package| is available for installing the |chef client| on
 
 .. include:: ../../step_install/step_install_windows.rst
 
+Run as a Service
+-----------------------------------------------------
+.. include:: ../../step_install/step_install_windows_as_service.rst
+
+
 Use an Existing Process
 =====================================================
 .. include:: ../../includes_windows/includes_windows_install_system_center.rst

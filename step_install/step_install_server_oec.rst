@@ -1,3 +1,6 @@
+.. This is an included how-to. 
+
+
 To install |chef server oec|, do the following:
 
 #. Go to http://www.opscode.com/enterprise-chef/.
