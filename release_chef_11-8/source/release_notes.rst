@@ -7,13 +7,6 @@ Release Notes: Chef 11.8.0
 .. warning:: This document is tracking the features that will be added to the |chef client| 11.8.0 release.
 
 
-Known Issues
-=====================================================
-The following issues are known for |chef 11-8| and/or may affect the behavior of your current environment if you upgrade to |chef 11-8|:
-
-* `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
-* `CHEF-xxxxx <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- xxxxx
-
 What's New
 =====================================================
 The following items are new for |chef 11-8| and/or are changes from previous versions. The short version:
@@ -22,15 +15,6 @@ The following items are new for |chef 11-8| and/or are changes from previous ver
 * **New configuration settings** Three configuration settings have been added to support the use of local mode: ``chef_zero[:enabled]``, ``chef_zero[:port]``, and ``local_mode``.
 * **New bff_package resource** Install a package on the |ibm aix| platform using |ibm bffcreate|.
 * **New man pages for Knife** The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.opscode.com and are current as of the |chef client| 11.8.0 release. 
-
-Required Updates
------------------------------------------------------
-.. Change this to "No updates required." in the event that there are no required updates.
-
-.. warning:: The following updates must also be made at the same time as any upgrade to |chef 11-8|.
-
-* xxxxx
-* xxxxx
 
 |chef zero|
 -----------------------------------------------------
