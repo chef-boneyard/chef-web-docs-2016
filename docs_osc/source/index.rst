@@ -418,6 +418,7 @@ The following topics discuss using |chef server osc| with platforms:
    install_bootstrap
    install_server
    install_server_scenario_vm
+   install_windows
    install_workstation
    just_enough_ruby_for_chef
    knife_bootstrap

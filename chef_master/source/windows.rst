@@ -65,7 +65,7 @@ A |microsoft installer package| is available for installing the |chef client| on
 
 Use an Existing Process
 -----------------------------------------------------
-.. include:: ../../includes_windows/includes_windows_system_center.rst
+.. include:: ../../includes_windows/includes_windows_install_system_center.rst
 
 Knife
 =====================================================

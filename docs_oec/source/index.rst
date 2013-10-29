@@ -511,6 +511,7 @@ The following topics discuss using |chef server oec| with platforms:
    install_server_pre
    install_server_standalone
    install_server_users
+   install_windows
    install_workstation
    just_enough_ruby_for_chef
    knife_bootstrap
