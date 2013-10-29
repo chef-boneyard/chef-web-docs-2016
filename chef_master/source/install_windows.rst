@@ -19,6 +19,10 @@ Ports
 -----------------------------------------------------
 .. include:: ../../includes_windows/includes_windows_msiexec.rst
 
+ADDLOCAL Options
+-----------------------------------------------------
+.. include:: ../../includes_windows/includes_windows_msiexec_addlocal.rst
+
 Use MSI Installer
 =====================================================
 A |microsoft installer package| is available for installing the |chef client| on a |windows| machine.
