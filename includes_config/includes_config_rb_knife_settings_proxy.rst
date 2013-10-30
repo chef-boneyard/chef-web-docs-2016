@@ -32,8 +32,8 @@ If the |chef server| is configured to use HTTPS (such as the hosted |chef server
      - Description
    * - ``https_proxy``
      - |https_proxy| (The hosted |chef server oec| uses an HTTPS connection.) Default value: ``nil``.
-   * - ``http_proxy_user``
+   * - ``https_proxy_user``
      - |https_proxy_user| Default value: ``nil``.
-   * - ``http_proxy_pass``
+   * - ``https_proxy_pass``
      - |https_proxy_pass| Default value: ``nil``.
 
