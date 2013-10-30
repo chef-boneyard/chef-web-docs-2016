@@ -10,6 +10,6 @@
 
 The |pushy| client can run on the following platforms:
 
-* platform
-* platform
-* platform
+* |ubuntu| 10.04, 10.10, 12.04, and 12.10
+* |centos| 5 and 6
+* |windows|

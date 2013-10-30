@@ -219,6 +219,7 @@ Cookbooks
    feedback
    images
    install
+   install_pushy
    junos
    just_enough_ruby_for_chef
    knife
