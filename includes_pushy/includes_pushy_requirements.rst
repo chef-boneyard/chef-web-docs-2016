@@ -5,6 +5,7 @@
 |pushy| has the following requirements:
 
 * |chef server oec| version 11.0.1 (or later)
+* To use the ``push-jobs`` cookbook to configure the |pushy| client, the |chef client| must also be present on the node (because only the |chef client| can use a cookbook to configure a node)
 * TCP protocol ports 10000-10003
 
 The |pushy| client can run on the following platforms:

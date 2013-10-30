@@ -22,11 +22,11 @@ To set up the |pushy| server:
 
       $ opscode-push-jobs-server-ctl reconfigure
 
-#. Restart all |pushy| components:
+#. Restart the |pushy| components:
 
    .. code-block:: bash
 
-      $ opscode-push-jobs-server-ctl restart
+      $ private-chef-ctl restart opscode-pushy-server
 
 #. Verify the installation:
 
@@ -39,33 +39,21 @@ To set up the |pushy| server:
 =====================================================
 To set up the |pushy| client:
 
-#. Download and install the package appropriate for the target node's platform and operating system
-#. Configure the |pushy| client to run as a background daemon; the |windows| MSI will configure the |pushy| client to run as a service
-#. Configure the command whitelist for each node, which describes the list of commands the |pushy| client will execute when it runs; requests to execute commands that are not in the whitelist will be rejected. Add the following to the |client rb| file on each node that will be managed by |pushy|:
+#. Add the ``push-jobs`` cookbook to the run-list for each of the nodes on which |pushy| is to be configured
+#. Run the |chef client| to configure |pushy| for that node
+#. Verify that the |pushy| client is running as a daemon or as a service:
 
-   .. code-block:: ruby
+   .. code-block:: bash
 
-      whitelist({ "command1" => "value", "command2" => "value", "chef-client" => "chef-client" })
+      $ knife node status node_name
 
-   where ``command1`` and ``command2`` represent the actual commands that are in the whitelist.
+   for a specific node and:
 
-   ``chef-client`` is the only job available, after the initial install. To support more jobs, they must be added to the whitelist. To add more jobs, add the following attribute to a node, role, or environment:
+   .. code-block:: bash
 
-   .. code-block:: ruby
+      $ knife node status
 
-      ['opscode_push_jobs']['whitelist']
-
-   with a value of a hash similar to:
-
-   .. code-block:: ruby
-
-      { 
-        "chef-client": "sudo chef-client", 
-        "chef_client_with_special_run_list": "sudo chef-client -o recipe[special_recipe]",
-        "remove_everything": "rm -rf /" 
-      }
-
-#. Verify that the |pushy| client is running as a daemon or as a service.
+   for all nodes.
 
 
 |pushy| Workstation
@@ -73,9 +61,40 @@ To set up the |pushy| client:
 To set up the |pushy| workstation, install the |subcommand knife pushy| plugin. Once installed, the following subcommands will be available: ``knife node status``, ``knife job list``, ``knife job start``, and ``knife job status``. 
 
 
-
 push-jobs Cookbook
-=====================================================
-The push-jobs cookbook can be used to configure |pushy| as a client on a target node. Download the cookbook. Modify the ``node'opscode_push_jobs''whitelist'`` attribute in the default attributes file to add new entries to the whitelist. Add this cookbook to the run-list for any node that will be managed by |pushy|. After the |chef client| runs have occurred on nodes that will run the |pushy| client, run the ``knife node status show all nodes`` command to verify that nodes are running |pushy|.
+-----------------------------------------------------
+The ``push-jobs`` cookbook is used by the |chef client| to configure |pushy| as a client on a target node. This cookbook is also used to define the whitelist, which is a list of commands that |pushy| may execute when it runs. A command that is not in the whitelist will not be executed by |pushy|.
 
+The ``push-jobs`` cookbook should be managed like any other cookbook, i.e. "downloaded from |github|, managed using version source control, and uploaded to the |chef server|".
 
+The ``push-jobs`` cookbook should be added to the run-list of any node that will also be managed using |pushy|.
+
+The whitelist is defined using the ``node'opscode_push_jobs''whitelist'`` in the default attributes file:
+
+.. code-block:: ruby
+
+   default['push_jobs']['whitelist']   = { 
+        "job_name" => "command", 
+        "job_name" => "command", 
+        "chef-client" => "chef-client" }
+
+where ``job_name`` represents each of the jobs that are defined in the whitelist and ``command`` is the command line that will be run on the target node. The ``chef-client`` job is the only job in the whitelist after the initial installation of |pushy|.
+
+After the whitelist is defined, add the jobs to the |client rb| file on each node that will be managed by |pushy|:
+
+.. code-block:: ruby
+
+   whitelist({ "job_name" => "command", 
+               "job_name" => "command", 
+               "chef-client" => "chef-client" 
+             })
+
+For example:
+
+.. code-block:: ruby
+
+   { 
+     "chef-client": "sudo chef-client", 
+     "chef_client_with_special_run_list": "sudo chef-client -o recipe[special_recipe]",
+     "remove_everything": "rm -rf /" 
+   }
