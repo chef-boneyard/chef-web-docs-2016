@@ -7,7 +7,7 @@
 * |chef server oec| version 11.0.1 (or later)
 * |chef client| version xxxxx (or later)
 
-The |pushy client| can run on the following platforms:
+The |pushy| client can run on the following platforms:
 
 * platform
 * platform
