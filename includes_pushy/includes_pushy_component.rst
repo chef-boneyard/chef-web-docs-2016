@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|pushy| has three main components: jobs (managed by the |pushy| server, a client that is installed on every node in the organization, and one (or more) workstations from which job messages are initiated. 
+|pushy| has three main components: jobs (managed by the |pushy| server), a client that is installed on every node in the organization, and one (or more) workstations from which job messages are initiated. 
 
 All communication between these components is done with the following:
 
