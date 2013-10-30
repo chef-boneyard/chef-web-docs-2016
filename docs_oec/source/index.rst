@@ -150,8 +150,7 @@ The |chef server oec| acts as a hub for configuration data. The :doc:`components
 In addition to the built-in features of |chef server oec|, the following optional components are available:
 
 * **Reporting** :doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
-
-.. * **Pushy** :doc:`Pushy </pushy>` is used to run jobs against nodes independently of |chef client| runs.
+* **Push Jobs** :doc:`Push Jobs </pushy>` (sometimes referred to as "Pushy") is used to run jobs against nodes independently of |chef client| runs.
 
 Deployment Scenarios
 -----------------------------------------------------
@@ -267,6 +266,7 @@ The |chef client| can be installed with the :doc:`knife bootstrap </knife_bootst
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_windows.html">Install the chef-client on a machine running Microsoft Windows</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
 Settings and Tools
@@ -501,6 +501,7 @@ The following topics discuss using |chef server oec| with platforms:
    essentials_roles
    essentials_search
    install_bootstrap
+   install_pushy
    install_server
    install_server_be
    install_server_fe
