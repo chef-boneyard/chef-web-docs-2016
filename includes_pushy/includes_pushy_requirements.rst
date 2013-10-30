@@ -5,3 +5,4 @@
 |pushy| has the following requirements:
 
 * |chef server oec| version 11.0.1 (or later)
+* |chef client| version xxxxx (or later)
