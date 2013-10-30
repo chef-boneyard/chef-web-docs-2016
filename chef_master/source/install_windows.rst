@@ -33,7 +33,10 @@ Run as a Service
 -----------------------------------------------------
 .. include:: ../../step_install/step_install_windows_as_service.rst
 
-
 Use an Existing Process
 =====================================================
 .. include:: ../../includes_windows/includes_windows_install_system_center.rst
+
+PATH System Variable
+=====================================================
+.. include:: ../../includes_windows/includes_windows_environment_variable_path.rst

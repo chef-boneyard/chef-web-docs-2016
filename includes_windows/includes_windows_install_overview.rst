@@ -10,4 +10,7 @@ The |chef client| can be installed on machines running |windows| in the followin
 
 To run the |chef client| at periodic intervals (so that it can check in with the |chef server| automatically), configure the |chef client| to run as a service or as a scheduled task. (The |chef client| can be configured to run as a service during the setup process.)
 
-.. note:: Verify that ``C:\opscode\chef\bin`` and ``embedded\bin`` are added to the ``PATH`` environment variable in |windows|. This is typically set during the installation of the |chef client|; if these values are not in the ``PATH`` environment variable, the |chef client| will not run properly.
+
+
+
+

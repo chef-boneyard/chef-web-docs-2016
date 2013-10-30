@@ -79,6 +79,10 @@ Use an Existing Process
 -----------------------------------------------------
 .. include:: ../../includes_windows/includes_windows_install_system_center.rst
 
+PATH System Variable
+-----------------------------------------------------
+.. include:: ../../includes_windows/includes_windows_environment_variable_path.rst
+
 Knife
 =====================================================
 .. include:: ../../includes_knife/includes_knife.rst
