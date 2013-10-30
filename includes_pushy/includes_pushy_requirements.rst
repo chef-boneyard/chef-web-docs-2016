@@ -6,6 +6,7 @@
 
 * |chef server oec| version 11.0.1 (or later)
 * |chef client| version xxxxx (or later)
+* TCP protocol ports 10000-10003
 
 The |pushy| client can run on the following platforms:
 
