@@ -9,7 +9,7 @@ Install |pushy|
 =====================================================
 To set up the |pushy| server:
 
-#. Download the package appropriate for the server's platform and operating system
+#. Contact |opscode| and get the package that is appropriate for your |chef server oec| server's platform and operating system
 #. Install the package on the same machine that is running |chef server oec| 11.0.1. For example on |ubuntu|:
 
    .. code-block:: bash
