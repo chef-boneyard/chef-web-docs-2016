@@ -8,3 +8,5 @@ On |windows|, the |chef client| must have two entries added to the ``PATH`` envi
 * ``C:\opscode\chef\embedded\bin``
 
 This is typically done during the installation of the |chef client| automatically. If these values (for any reason) are not in the ``PATH`` environment variable, the |chef client| will not run properly.
+
+.. image:: ../../images/includes_windows_environment_variable_path.png
