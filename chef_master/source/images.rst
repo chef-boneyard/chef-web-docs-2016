@@ -38,6 +38,10 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/reporting_run_300dpi.png
 
+* http://docs.opscode.com/_images/overview_pushy_states_300dpi.png
+
+.. image:: ../../images/overview_pushy_states_300dpi.png
+
 
 
 
