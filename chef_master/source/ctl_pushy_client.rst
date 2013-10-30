@@ -1,5 +1,5 @@
 =====================================================
-pushy-client
+ctl-pushy-client
 =====================================================
 
 .. include:: ../../includes_pushy/includes_pushy.rst

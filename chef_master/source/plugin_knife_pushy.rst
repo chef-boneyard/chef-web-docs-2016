@@ -51,7 +51,7 @@ Examples
 .. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_start_search_by_nodes.rst
  
 
-job status
+job status 
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_status.rst
 

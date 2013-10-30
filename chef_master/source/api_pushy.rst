@@ -4,9 +4,9 @@ Pushy API
 
 .. include:: ../../includes_api_pushy/includes_api_pushy.rst
 
-Endpoints
+Endpoints 
 =====================================================
-Each authentication request must include ``/organizations/organization_name/pushy/`` as part of the name for the endpoint. For example: ``/organizations/organization_name/pushy/jobs/ID`` or ``/organizations/organization_name/pushy/node_states``.
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint.rst
 
 
 connect/NODE_NAME

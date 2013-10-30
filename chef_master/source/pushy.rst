@@ -55,20 +55,155 @@ Reference
 =====================================================
 The following sections describe the |knife| subcommands, the |api pushy|, and configuration settings used by |pushy|.
 
-.. warning:: WILL INCLUDE THESE WHEN FINISHED.
 
 knife-pushy
 -----------------------------------------------------
-http://docs.opscode.com/plugin_knife_pushy.html
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy.rst
+
+.. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
+
+Install this plugin
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_install_rubygem.rst
+
+job list
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_list.rst
+
+Syntax
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_list_syntax.rst
+
+Options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|no_options|
+
+job start
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_start.rst
+
+Syntax
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_start_syntax.rst
+
+Options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_start_options.rst
+
+Examples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**Run a job**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_start_run_job.rst
+
+**Run a job using quorum percentage**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_start_search_by_quorum.rst
+
+**Run a job using node names**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_start_search_by_nodes.rst
+
+job status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_status.rst
+
+Syntax
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_job_status_syntax.rst
+
+Options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|no_options|
+
+Examples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**View job status by job identifier**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_pushy_job_status_by_id.rst
+
+node status
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_node_status.rst
+
+Syntax
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_pushy_node_status_syntax.rst
+
+Options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|no_options|
+
+
 
 Pushy API
 -----------------------------------------------------
-http://docs.opscode.com/api_pushy.html
+.. include:: ../../includes_api_pushy/includes_api_pushy.rst
+
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint.rst
+
+connect/NODE_NAME
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name.rst
+
+GET
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name_get.rst
+
+jobs
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs.rst
+
+GET
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_get.rst
+
+POST
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_post.rst
+
+jobs/ID
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_id.rst
+
+GET
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_jobs_id_get.rst
+
+node_states
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_states.rst
+
+GET
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_states_get.rst
+
+node_states/NODE_NAME
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name.rst
+
+GET
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_api_pushy/includes_api_pushy_endpoint_node_name_get.rst
+
+
 
 ctl-pushy-client
 -----------------------------------------------------
-http://docs.opscode.com/ctl_pushy_client.html
+.. include:: ../../includes_pushy/includes_pushy.rst
+
+.. include:: ../../includes_ctl_pushy_client/includes_ctl_pushy_client.rst
+
+Options
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ctl_pushy_client/includes_ctl_pushy_client_options.rst
+
+
 
 pushy-server.rb
 -----------------------------------------------------
-http://docs.opscode.com/config_rb_pushy_server.html
+.. include:: ../../includes_config/includes_config_rb_pushy_server.rst
+
+Settings
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_config/includes_config_rb_pushy_server_settings.rst
