@@ -5,7 +5,6 @@
 |pushy| has the following requirements:
 
 * |chef server oec| version 11.0.1 (or later)
-* Any |chef client| that is supported by the |chef server oec| server hosting |pushy|
 * TCP protocol ports 10000-10003
 
 The |pushy| client can run on the following platforms:
