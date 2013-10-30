@@ -4,4 +4,7 @@
 
 |pushy| is a tool that allows jobs to be run against nodes in an organization independently of a |chef client| run and also without any need for a |chef client| to be present on the target node. A job is an action or a command to be executed against a subset of nodes; the nodes against which a job is are determined by the results of a search query made to the |chef server|. |pushy| is an extension of the |api chef server| that uses a |ruby| client to initiate all connections to the |chef server|. Connections use the same authentication and authorization model as any other request made to the |chef server|. A |knife| plugin is used to initiate job creation and job tracking. 
 
-.. warning:: |pushy| is only available when running |chef server oec|.
+.. warning:: |pushy| is only available when running |chef server oec| version 11.0.1 (or higher). (|chef server oec| version 11.0.0 must be upgraded to version 11.0.1 using the same steps as the :doc:`high availability </upgrade_server_ha>` or :doc:`standalone </upgrade_server_standalone>` configurations, but using the ``private-chef-ctl reconfigure`` command in place of all instances of the ``private-chef-ctl upgrade`` command.)
+
+
+
