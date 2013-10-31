@@ -118,7 +118,7 @@ This configuration file has the following settings:
  
           file_cache_path "/var/chef/cache"
    * - ``file_backup_path``
-     - |path file backup| For example:
+     - |path file_backup| For example:
        ::
  
           file_backup_path "/var/chef/backup"
@@ -203,7 +203,7 @@ This configuration file has the following settings:
  
           openid_cstore_path "/var/chef/openid/cstore"
    * - ``pid_file``
-     - |pid_file| For example:
+     - |path pid_file| For example:
        ::
  
           pid_file "/tmp/executable.pid"
@@ -218,7 +218,7 @@ This configuration file has the following settings:
  
           rest_timeout 300
    * - ``role_path``
-     - |role_path| For example:
+     - |path roles_chef| For example:
        ::
  
           role_path "/var/chef/roles"
