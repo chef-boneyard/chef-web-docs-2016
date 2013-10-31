@@ -17,7 +17,7 @@ The following items are new for |chef 11-8| and/or are changes from previous ver
 
 |chef zero|
 -----------------------------------------------------
-.. include:: ../includes_chef_zero.rst
+.. include:: ../../includes_chef/includes_chef_zero.rst
 
 |chef client| Local Mode
 -----------------------------------------------------
@@ -26,7 +26,7 @@ The |chef client| can be run in local mode using the ``--local-mode`` option:
 ``-z``, ``--local-mode``
    |local_mode|
 
-.. include:: ../includes_chef_client_local_mode.rst
+.. include:: ../../includes_chef_client/includes_chef_client_local_mode.rst
 
 
 New Configuration Settings
