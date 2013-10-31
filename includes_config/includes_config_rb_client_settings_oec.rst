@@ -282,4 +282,4 @@ This configuration file has the following settings:
    * - ``whitelist``
      - The path to the attribute file that contains the whitelist used by |pushy|.
 
-       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef private| organization.
+       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef server oec| organization.
