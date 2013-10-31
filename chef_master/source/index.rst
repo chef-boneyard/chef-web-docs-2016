@@ -245,8 +245,8 @@ Cookbooks
    orgmapper
    plugin_knife
    pushy
-   release_notes
    reporting
+   release_notes
    resource
    server_backup_restore
    server_components 
