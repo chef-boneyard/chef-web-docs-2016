@@ -25,5 +25,5 @@ This tool has the following options:
    |log_location|
 
 ``-v``, ``--version``
-   |version chef|
+   |version ohai|
 
