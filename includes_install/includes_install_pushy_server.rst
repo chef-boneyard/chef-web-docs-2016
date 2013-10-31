@@ -10,11 +10,19 @@ To set up the |pushy| server:
 
       $ dpkg -i opscode-push-jobs-server_0.0.1+20130307070157.git.98.c04f587-1.ubuntu.10.04_amd64.deb
 
-#. Reconfigure the |chef server oec| server:
+#. Reconfigure the |pushy| server:
 
    .. code-block:: bash
 
       $ opscode-push-jobs-server-ctl reconfigure
+
+   This step is required for each of the servers in the |chef server oec| deployment. For example, in a configuration with two back end servers and three front end servers, this command would need to be run on all five machines. After this has been completed, run the following command on each of the back end servers:
+
+   .. code-block:: bash
+
+      $ private-chef-ctl reconfigure
+
+   This ensures that the |keepalived| scripts are regenerated so they are aware of |pushy|.
 
 #. Restart the |pushy| components:
 
