@@ -54,7 +54,7 @@ will return something similar to:
    status:      nacked
    updated_at:  Tue, 29 Oct 2013 21:23:04 GMT
 
-To add other commands, append them to the whitelist for roles, environments, and nodes. For example, to set all of the nodes in the ``dev`` environment to accept a |pushy| command to restart |apache|, run the following command:
+To add commands, simply append them to the whitelist for roles, environments, and nodes. For example, to set all of the nodes in the ``dev`` environment to accept a |pushy| command to restart |apache|, run the following command:
 
 .. code-block:: bash
 
