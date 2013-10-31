@@ -50,3 +50,5 @@ The response will return something like the following:
      - |response code 403 forbidden|
    * - ``409``
      - |response code 409 conflict|
+   * - ``413``
+     - |response code 413 entity_too_large|

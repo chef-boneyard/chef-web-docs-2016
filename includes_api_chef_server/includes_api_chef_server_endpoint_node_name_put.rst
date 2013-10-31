@@ -49,3 +49,5 @@ The response will return the updated node.
      - |response code 403 forbidden|
    * - ``404``
      - |response code 404 not found|
+   * - ``413``
+     - |response code 413 entity_too_large|

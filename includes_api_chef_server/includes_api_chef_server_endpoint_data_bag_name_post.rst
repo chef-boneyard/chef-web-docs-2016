@@ -46,3 +46,5 @@ This method has no response body.
      -  |response code 404 not found|
    * - ``409``
      - |response code 409 conflict|
+   * - ``413``
+     - |response code 413 entity_too_large|

@@ -70,3 +70,5 @@ A response looks something like the following:
      - |response code 404 not found|
    * - ``412``
      - |response code 412 cookbook version|
+   * - ``413``
+     - |response code 413 entity_too_large|

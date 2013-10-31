@@ -63,3 +63,5 @@ The response will return something like the following:
      - |response code 401 unauthorized|
    * - ``403``
      - |response code 403 forbidden|
+   * - ``413``
+     - |response code 413 entity_too_large|

@@ -62,3 +62,5 @@ If a new private key was generated, both the private and public keys are returne
      - |response code 404 not found|
    * - ``409``
      - |response code 409 unauthorized| (This response code is only returned when a user is renamed, but a user already exists with that name.)
+   * - ``413``
+     - |response code 413 entity_too_large|

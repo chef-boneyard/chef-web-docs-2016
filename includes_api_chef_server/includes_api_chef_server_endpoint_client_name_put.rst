@@ -62,3 +62,5 @@ The response will return something like the following:
      - |response code 404 not found|
    * - ``409``
      - |response code 409 unauthorized| (This response code is only returned when a client is renamed, but a client already exists with that name.)
+   * - ``413``
+     - |response code 413 entity_too_large|

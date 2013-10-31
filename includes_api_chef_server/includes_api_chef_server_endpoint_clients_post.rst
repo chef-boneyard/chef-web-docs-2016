@@ -58,3 +58,5 @@ Store the private key in a safe place. It will be required later (along with the
      - |response code 403 forbidden|
    * - ``409``
      - |response code 409 conflict|
+   * - ``413``
+     - |response code 413 entity_too_large|
