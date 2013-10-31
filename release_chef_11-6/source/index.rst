@@ -75,7 +75,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 |chef server oec| 
 -----------------------------------------------------
-|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes additional functionality like |reporting| and built-in support for high availability deployment scenarios.
+|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes support for high availability deployment scenarios.
 
 **Deployment Scenarios:** :doc:`Standalone </server_deploy_standalone>` | :doc:`Scaled Back End </server_deploy_be>` | :doc:`Scaled Front End </server_deploy_fe>` | :doc:`Scaled Front and Back Ends </server_deploy_febe>`
 
@@ -84,8 +84,6 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 **Install Scenarios:** :doc:`Standalone </install_server_standalone>` | :doc:`Scaled Back End </install_server_be>` | :doc:`Scaled Front End </install_server_fe>` | :doc:`Scaled Front and Back Ends </install_server_febe>` | :doc:`Migrate to Hosted Enterprise Chef </migrate_to_hosted>` | :doc:`Upgrade from Private Chef </upgrade_server>`
 
 **Install Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
-
-**Add-ons:** :doc:`Reporting </reporting>` | :doc:`Push Jobs </pushy>`
 
 **Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>` 
 
@@ -152,7 +150,6 @@ Cookbooks
    api_chef_server
    api_cookbooks_site
    api_omnitruck
-   api_pushy
    auth
    auth_authentication
    auth_authorization
@@ -183,9 +180,7 @@ Cookbooks
    ctl_chef_shell
    ctl_chef_solo
    ctl_ohai
-   ctl_opscode_reporting
    ctl_private_chef
-   ctl_pushy_client
    debug
    dsl_recipe
    essentials_chef_client
@@ -219,7 +214,6 @@ Cookbooks
    feedback
    images
    install
-   install_pushy
    junos
    just_enough_ruby_for_chef
    knife
@@ -244,9 +238,7 @@ Cookbooks
    opscode_cookbooks
    orgmapper
    plugin_knife
-   pushy
    release_notes
-   reporting
    resource
    server_backup_restore
    server_components 
