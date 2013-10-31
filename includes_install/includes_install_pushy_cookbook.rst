@@ -34,5 +34,5 @@ For example:
    { 
      "chef-client": "sudo chef-client", 
      "chef_client_with_special_run_list": "sudo chef-client -o recipe[special_recipe]",
-     "remove_everything": "rm -rf /" 
+     "sv restart apache" 
    }
