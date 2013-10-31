@@ -58,8 +58,8 @@ This configuration file has the following settings:
           grouping 'pets/cat',
            :title => "Cat Options",
            :description => "Describe your cat using the options below"
-   * - ``licensing``
-     - |license| For example:
+   * - ``license``
+     - |license metadata_rb| For example:
        ::
 
           license 'Apache v2.0'
