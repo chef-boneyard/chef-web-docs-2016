@@ -19,7 +19,7 @@ Getting Started
 
 **Docs for Specific Platforms:** :doc:`OpenStack </openstack>` | :doc:`Windows </windows>`
 
-**What's new:** :doc:`Release Notes for Chef 11.6 </release_notes>`
+**What's new:** :doc:`Release Notes for Chef 11.8 </release_notes>`
 
 **Docs for Previous Versions of Chef:** `11.6 <http://docs.opscode.com/release/11-6/>`_ | `11.0, 11.2, and 11.4 <http://docs.opscode.com/release/11-4/>`_ | :doc:`Documentation Feedback </feedback>`
 
