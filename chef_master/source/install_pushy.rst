@@ -22,7 +22,7 @@ To set up the |pushy| server:
 
       $ opscode-push-jobs-server-ctl reconfigure
 
-#. Restart the |pushy| components:
+#. (This step is typically not required.) Restart the |pushy| components:
 
    .. code-block:: bash
 
