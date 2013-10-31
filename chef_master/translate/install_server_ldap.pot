@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Chef Docs 0.0.1\n"
+"Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-14 12:45\n"
+"POT-Creation-Date: 2013-10-31 12:18\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,119 +17,159 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/install_server_ldap.rst:33
-# 51470defe33d4a9288169f31fa6bd3e1
+# d07b34ba2494478bae70a11a7766badc
 msgid "Active Directory and LDAP"
 msgstr ""
 
 #: ../source/install_server_ldap.rst:35
-# 702a3c7aea36411e8167b5c87f98d61b
+# de3136dfb6ca436a97f563716c312b17
 msgid "|chef server oec| supports |microsoft ad| and |ldap| authentication, allowing users to log in using their corporate credentials instead of having a separate |chef| password."
 msgstr ""
 
 #: ../source/install_server_ldap.rst:38
-# fff4cbf5b06d4a9dbab559a753ed21cd
-msgid "Configure"
+# 1f04a5a41b4e4c06a8a2b725c2a5be59
+msgid "Configure LDAP"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:39
-# 3fc639d1bfa048798a1965f9836ae491
-msgid "To configure your system to point at an |microsoft ad| or |ldap| login server, you first need to gather some information."
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:4
+# f1e808f166224e4c897e08983acc19f6
+msgid "The |enterprise rb| file contains the settings required to configure |ldap| or |microsoft ad|:"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:42
-# 1ddf01649cd44348a150352d94d845c4
-msgid "The Host and Port"
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:10
+# f8ce681cebfa4d50bb04ba64e21bc47c
+msgid "Setting"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:43
-# 124043fcd4ee4daeacd4a9bda6c7a664
-msgid "The host and port of your |microsoft ad| or |ldap| server. The port defaults to ``389``, which is often the correct setting."
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:11
+# c0b90314abca4e518fd61feeb23b23cb
+msgid "Description"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:52
-# 90d35460d9244fbea06fb980c5748dab
-msgid "The Bind User"
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:12
+# 4d0c1f5c7e224e7987018c47acebef68
+msgid "``ldap['base_dn']``"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:53
-# 1c01aad557bb4ff1b6fcfde64cc5ed1b
-msgid "|chef server oec| needs to do an |ldap| search before it can log in a user, and many |microsoft ad| and |ldap| systems do not allow an anonymous bind. If your system allows an anonymous bind, you can skip this step and leave the ``bind_dn`` and ``bind_password`` settings blank."
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:13
+# 438be83d42994725b80d9603b3e3eea0
+msgid "|ldap base_dn| For |microsoft ad|, this is typically ``cn=users`` and then the domain. For example: ``'cn=users,dc=opscode,dc=com'``. Default value: ``nil``."
 msgstr ""
 
-#: ../source/install_server_ldap.rst:55
-# c74afb0548e24d3fa1b31470e16cedfc
-msgid "If your system does not allow an anonymous bind, you will need a user with ``READ`` access to the directory. The user must be specified as an |ldap| distinguished name, similar to the following:"
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:14
+# 32e0023ed7264ebcb1f3e460a88845af
+msgid "``ldap['bind_dn']``"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:63
-# 6e88c55801264a1280ef199e078cd97e
-msgid "The Base DN"
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:15
+# 42ab587b681c4c63ab195e07677a61a1
+msgid "|ldap bind_dn| This is often the administrator or manager user. This user needs to have read access to all |ldap| users that require authentication. |chef server oec| must do an |ldap| search before any user can log in. Many |microsoft ad| and |ldap| systems do not allow an anonymous bind. If anonymous bind is allowed, leave the ``bind_dn`` setting blank. If anonymous bind is not allowed, a user with ``READ`` access to the directory is required. This user must be specified as an |ldap| distinguished name similar to ``'cn=user_name,dc=domain_name,dc=com'``. Default value: ``nil``."
 msgstr ""
 
-#: ../source/install_server_ldap.rst:64
-# 22bfbf010958459195b19f41d758b3d9
-msgid "This is the root |ldap| node that contains all users. For |microsoft ad|, this is typically ``cn=users`` and then the domain."
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:16
+# eb3b3f5900764de9bae4bcaef0e98988
+msgid "``ldap['bind_password']``"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:71
-# 9b85bf81621c4deebc18998aac3e43f1
-msgid "The Login Server Name"
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:17
+# add9fe3b430043b09cdf3ea603cc82ad
+msgid "|ldap bind_password| Leave this value unset if anonymous bind is sufficient. Default value: ``nil``."
 msgstr ""
 
-#: ../source/install_server_ldap.rst:72
-# 6e6dccd5424e4cef90beaba153f29ac8
-msgid "When the |chef server oec| management server gives the user information about the authentication server, it may return strings like \"The AD/LDAP server is down.\"``\" or \"Log in using your AD/LDAP credentials\". If a different word instead of |microsoft ad| or |ldap| (such as \"corporate\") is preferred, modify the system adjective. For example:"
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:18
+# f44c193ea90a489fa7943378e3f8a10d
+msgid "``ldap['host']``"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:79
-# 14e975a835e64b16ae2101ed11625c9c
-msgid "private-chef.rb"
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:19
+# b7846923a9dc46c88d2da2aea47b8b18
+msgid "|ldap host| Be sure the |chef server oec| is able to resolve any host names. Default value: ``nil``."
 msgstr ""
 
-#: ../source/install_server_ldap.rst:80
-# f6f4e4de4daa49d29b95ff54b9b323b4
-msgid "Add the following lines to the attributes file found in the |cookbook private_chef| cookbook:"
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:20
+# d816f0f55997421e87eb059053dfe517
+msgid "``ldap['login_attribute']``"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:90
-# e4c423534b2b4f83a9f8d4a3cf2c670e
-msgid "This cookbook is located at ``/opt/opscode/embedded/cookbooks/private-chef/attributes/default.rb`` by default."
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:21
+# b180adb879624ea7b93d4717b2023a9a
+msgid "|ldap login_attribute| For |microsoft ad|, this is typically ``sAMAccountName``. For |open ldap|, this is typically ``uid``. Default value: ``sAMAccountName``."
 msgstr ""
 
-#: ../source/install_server_ldap.rst:93
-# 37a69416052b4905b3c6c9dc37895a2e
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:22
+# 9a71bb02e8114eb697276b711866b94d
+msgid "``ldap['port']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:23
+# c2dfc02b62934072990112150768432f
+msgid "|ldap port| The default value is an appropriate value for most configurations. Default value: ``389``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:24
+# 7c698ad8747845f190e719fb391b45cb
+msgid "``ldap['ssl_enabled']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:25
+# ed9cc50b54e74698b1aea9b64ecc5ca1
+msgid "|ldap ssl_enabled| Be sure |ssl| is enabled on the |ldap| server and that the ``ldap['port']`` setting is updated with the correct value (often ``636``). Default value: ``false``."
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:26
+# 797c6b72c1ca4e819d11654a84289a9f
+msgid "``ldap['system_adjective']``"
+msgstr ""
+
+#: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst:27
+# c65328b7e9df45ea8e89d4941d0f1ede
+msgid "|ldap system_adjective| If a value like \"corporate\" is used, then the |chef server oec| user interface will display strings like \"the corporate login server\", \"corporate login\", or \"corporate password.\" Default value: ``AD/LDAP``."
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_configure.rst:5
+# 605a34ec0de44b83a8512ece1e509dfe
+msgid "When the settings for |ldap| or |microsoft ad| are changed in the |enterprise rb| file, run the following command after saving those changes:"
+msgstr ""
+
+#: ../../includes_server_ldap/includes_server_ldap_configure.rst:11
+# b2fb531b6dcd406fa784af8c1f201a1b
+msgid "At this point, all users will be able to use their |microsoft ad| or |ldap| username and password to log in to |chef server oec|. The first time they log in, they can either create a new account linked to their |microsoft ad| credentials or link an existing |chef server oec| account to their |microsoft ad| credentials."
+msgstr ""
+
+#: ../source/install_server_ldap.rst:44
+# 09522f516dc1435ea67c618a0e8819db
 msgid "Reconfigure"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:94
-# 3d1d049c7c7049fc9a0c99bb8364f504
+#: ../source/install_server_ldap.rst:45
+# be420a15bc3846139d3cd28772a77514
 msgid "When this is done, run:"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:100
-#: ../source/install_server_ldap.rst:110
-# cc8a63312e8e4210bacbc4cc4d99122d
-# 61e6651cf3934f398aa0b4e106806ad6
+#: ../source/install_server_ldap.rst:51
+#: ../source/install_server_ldap.rst:61
+# dde06a24d00c4313a4ec7e2e0d940c9d
+# d11ea1cd9ffb43c4a10d84ba9dd6fdc6
 msgid "At this point, all users will use their |microsoft ad| or |ldap| username and password to log in to |chef server oec|. The first time they log in, they can either create a new account linked to their |microsoft ad| credentials or link an existing |chef server oec| account to their |microsoft ad| credentials."
 msgstr ""
 
-#: ../source/install_server_ldap.rst:103
-# 9b49dd0727004738badd5ed20c0f3ee2
+#: ../source/install_server_ldap.rst:54
+# ed6f4b4f148f49f29e01de21454cb88f
 msgid "Verify"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:104
-# d3a8e7a1e8f34e729245e51b043f714d
+#: ../source/install_server_ldap.rst:55
+# 812ff3a5747d4156a846196013469137
 msgid "Try logging in to |chef server oec| by going to the |chef server oec| management console. Log out if you need to. If |microsoft ad| or |ldap| is configured correctly, you will be asked either to create a new |chef server oec| account or link an existing |chef server oec| account."
 msgstr ""
 
-#: ../source/install_server_ldap.rst:107
-# 7e2bf2a257424701b988b0a843301bfd
+#: ../source/install_server_ldap.rst:58
+# 21dfa9d2d9084e32b9d3059f54e161ab
 msgid "Success!"
 msgstr ""
 
-#: ../source/install_server_ldap.rst:108
-# a933c301cd2540899f295b2980b26b71
+#: ../source/install_server_ldap.rst:59
+# 37c3564125f946ab9d01ae5eb9b6db11
 msgid "Congratulations! You have now set up |chef server oec| to work with |microsoft ad| or |ldap|."
 msgstr ""
 
