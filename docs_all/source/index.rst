@@ -50,6 +50,7 @@ Chef Single-page Topics
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server.html">Install Chef Server 11.x</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_workstation.html">Install the chef-client on a Workstation</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_windows.html">Install the chef-client on a Machine Running Microsoft Windows</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_bootstrap.html">Bootstrap a Node</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server_scenario_vm.html">Install Chef Server 11.x on a Virtual Machine</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
@@ -134,6 +135,7 @@ Chef Single-page Topics
    install_bootstrap
    install_server
    install_server_scenario_vm
+   install_windows
    install_workstation
    just_enough_ruby_for_chef
    knife_rb
