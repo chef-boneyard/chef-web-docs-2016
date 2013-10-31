@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_pushy/includes_pushy.rst
 
+:doc:`Install Push Jobs </install_pushy>` using the ``push-jobs`` cookbook and a |chef client| run on each of the target nodes.
+
 Requirements
 =====================================================
 .. include:: ../../includes_pushy/includes_pushy_requirements.rst
