@@ -76,21 +76,21 @@ The following sections describe the various requirements for the three |chef ser
 * Every node that will be configured by the |chef client| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
 
 
-|chef private|
+|chef server oec|
 -----------------------------------------------------
-Before installing |chef private|, ensure that each machine has the following installed and configured properly:
+Before installing |chef server oec|, ensure that each machine has the following installed and configured properly:
 
 * **Host names** --- Ensure that all systems have properly configured host names.
 * **FQDNs** --- Ensure that all systems have a resolvable |fqdn|.
 * **NTP** --- Ensure that every server on which |chef private| is running is connected to NTP; |chef private| is sensitive to click drift.
-* **Mail Relay** --- |chef private| uses email to send notifications for various events; a local mail transfer agent should be installed and available to the |chef server|.
+* **Mail Relay** --- |chef server oec| uses email to send notifications for various events; a local mail transfer agent should be installed and available to the |chef server|.
 * **cron** --- |chef private| performs periodic maintenance tasks using |cron|.
 * **git** --- |git| must be installed so that various internal services can confirm revisions.
 * **libfreetype and libpng** --- |chef private| requires these libraries.
 * **Apache Qpid** --- This daemon must be disabled on |centos| and |redhat| systems.
-* **Required users** --- If the environment in which |chef private| will run has restrictions on the creation of local user and group accounts, ensure that the correct users already exist.
+* **Required users** --- If the environment in which |chef server oec| will run has restrictions on the creation of local user and group accounts, ensure that the correct users already exist.
 
-|chef private| has the following requirements:
+|chef server oec| has the following requirements:
 
 * **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 8 and 9)
 * Every node that will be configured by the |chef client| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
