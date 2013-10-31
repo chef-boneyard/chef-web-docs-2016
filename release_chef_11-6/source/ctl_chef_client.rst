@@ -10,7 +10,7 @@ chef-client
 
 Options
 =====================================================
-.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_options.rst
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_11-6_options.rst
 
 Run with Elevated Privileges
 =====================================================

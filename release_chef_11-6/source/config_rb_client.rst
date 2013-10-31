@@ -7,7 +7,7 @@ client.rb
 Settings
 ==========================================================================
 
-.. include:: ../../includes_config/includes_config_rb_client_settings.rst
+.. include:: ../../includes_config/includes_config_rb_11-6_client_settings.rst
 
 Disable Ohai Plugins
 ==========================================================================
