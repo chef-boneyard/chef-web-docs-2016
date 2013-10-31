@@ -4,8 +4,6 @@ Release Notes: Chef 11.8.0
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-.. warning:: This document is tracking the features that will be added to the |chef client| 11.8.0 release.
-
 
 What's New
 =====================================================
