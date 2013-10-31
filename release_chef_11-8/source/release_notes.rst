@@ -29,7 +29,7 @@ The |chef client| can be run in local mode using the ``--local-mode`` option:
 .. include:: ../../includes_chef_client/includes_chef_client_local_mode.rst
 
 
-New Configuration Settings
+New Config Settings
 -----------------------------------------------------
 Three new settings are available for the |knife rb| and |client rb| configuration files:
 
