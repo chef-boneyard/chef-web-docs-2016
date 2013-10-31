@@ -372,7 +372,9 @@ and what it looks like after it's built:
 
 Literal
 -----------------------------------------------------
-These should be used sparingly, but sometimes there is a need for a block of text that doesn't fit neatly into one of the options available for ``code-block``, such as showing a directory structure, basic syntax, or pseudocode. What it looks like as reST::
+These should be used sparingly, but sometimes there is a need for a block of text that doesn't fit neatly into one of the options available for ``code-block``, such as showing a directory structure, basic syntax, or pseudocode. Use a double colon (::) at the end of the preceding paragraph, add a hard return, and then indent the literal text. What it looks like as reST::
+
+   Use a double colon (::) at the end of the preceding paragraph. What it looks like as reST::
 
       a block of literal text indented three spaces
       with more
@@ -555,7 +557,6 @@ Opscode has added this configuration setting to every conf.py file to help strea
    .. include:: ../../swaps/swap_desc_y.txt
    .. include:: ../../swaps/swap_desc_z.txt
    .. include:: ../../swaps/swap_http.txt
-   .. include:: ../../swaps/swap_names.txt
    .. include:: ../../swaps/swap_notes.txt
    """
 
