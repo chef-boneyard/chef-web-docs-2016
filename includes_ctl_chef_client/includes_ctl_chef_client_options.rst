@@ -21,7 +21,7 @@ This command has the following options:
 ``-E ENVIRONMENT_NAME``, ``--environment ENVIRONMENT_NAME``
    |name environment|
 
-``-f``, ``--[no-]fork``
+``-f``, ``--fork``
    |fork_chef|
 
 ``-F FORMAT``, ``--format FORMAT``
@@ -45,13 +45,13 @@ This command has the following options:
 ``-j PATH``, ``--json-attributes PATH``
    |json attributes|
 
-``-k KEY_FILE``, ``--client_key KEY_FILE``
+``-k KEY_FILE``, ``--client-key KEY_FILE``
    |client_key| Default value: ``/etc/chef/client.pem``.
 
 ``-K KEY_FILE``, ``--validation_key KEY_FILE``
    |validation_key| Default value: ``/etc/chef/validation.pem``.
 
-``-l LEVEL``, ``--log-level LEVEL``
+``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
 
 ``-L LOGLOCATION``, ``--logfile c``
@@ -90,6 +90,8 @@ This command has the following options:
 ``-W``, ``--why-run``
    |whyrun_mode|
 
+``-z``, ``--local-mode``
+   |local_mode|
 
 
 

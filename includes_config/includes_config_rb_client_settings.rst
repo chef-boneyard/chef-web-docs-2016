@@ -14,6 +14,16 @@ This configuration file has the following settings:
        ::
  
           chef_server_url "http://localhost:4000"
+   * - ``chef_zero[:enabled]``
+     - |chef_zero_enabled| Default value: ``false``. For example:
+       ::
+ 
+          chef_zero[:enabled]true
+   * - ``chef_zero[:port]``
+     - |chef_zero_port| Default value: ``8889``. For example:
+       ::
+ 
+          chef_zero[:port] 8889
    * - ``client_key``
      - |client_key| Default value: ``/etc/chef/client.pem``. For example:
        ::
@@ -145,6 +155,11 @@ This configuration file has the following settings:
        ::
  
           json_attribs nil
+   * - ``local_mode``
+     - |local_mode| For example:
+       ::
+ 
+          local_mode true
    * - ``lockfile``
      - |lockfile| For example:
        ::
@@ -282,4 +297,4 @@ This configuration file has the following settings:
    * - ``whitelist``
      - The path to the attribute file that contains the whitelist used by |pushy|.
 
-       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef server oec| organization.
+       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef private| organization.

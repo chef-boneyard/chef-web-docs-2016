@@ -15,6 +15,16 @@ This configuration file has the following settings:
        ::
  
           chef_server_url "http://localhost:4000"
+   * - ``chef_zero[:enabled]``
+     - |chef_zero_enabled| Default value: ``false``. For example:
+       ::
+ 
+          chef_zero[:enabled]true
+   * - ``chef_zero[:port]``
+     - |chef_zero_port| Default value: ``8889``. For example:
+       ::
+ 
+          chef_zero[:port] 8889
    * - ``client_key``
      - |client_key| Default value: ``/etc/chef/client.pem``. For example:
        ::
@@ -38,7 +48,12 @@ This configuration file has the following settings:
      - The minimum required version of data bag encryption. Possible values: ``1`` or ``2``. When all of the machines in an organization are running |chef client| version 11.6 (or higher), it is recommended that this value be set to ``2``. For example:
        ::
  
-          data_bag_encrypt_version "2"   
+          data_bag_encrypt_version "2"
+   * - ``local_mode``
+     - |local_mode| For example:
+       ::
+ 
+          local_mode true
    * - ``node_name``
      - |node_name workstation| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
@@ -61,9 +76,9 @@ This configuration file has the following settings:
        ::
  
           validation_key "/etc/chef/validation.pem"
-   * - ``versioned_cookbooks``
+   * - ``versioned_cookbooks_true``
      - |versioned_cookbooks_true| For example:
        ::
  
-          versioned_cookbooks true
+          versioned_cookbooks_true true
 
