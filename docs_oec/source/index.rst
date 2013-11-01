@@ -167,9 +167,9 @@ The following sections discuss these deployment configuration options in greater
 
 .. note:: For more information about signing up for hosted |chef server oec|, see https://getchef.opscode.com/signup.
 
-Install Enterprise Chef
+Install |chef server oec|
 -----------------------------------------------------
-The |chef server| can be installed via download or by using the |api omnitruck|:
+The |chef server oec| server can be installed via download or by using the |api omnitruck|:
 
 .. raw:: html
 

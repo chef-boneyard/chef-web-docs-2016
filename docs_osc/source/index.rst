@@ -135,7 +135,7 @@ Server Components
 -----------------------------------------------------
 The |chef server osc| acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data.
 
-Install Enterprise Chef
+Install |chef server osc|
 -----------------------------------------------------
 The |chef server osc| can be installed with the :doc:`knife bootstrap </knife_bootstrap>` subcommand from a workstation or by downloading the |chef client| to the node directly using the |api omnitruck|.
 
