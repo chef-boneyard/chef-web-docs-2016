@@ -1,5 +1,5 @@
 =====================================================
-|windows|
+|windows chef|
 =====================================================
 
 .. note:: This page collects information about |chef| that is specific to using |chef| with |windows|.
