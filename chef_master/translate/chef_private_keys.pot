@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-31 12:18\n"
+"POT-Creation-Date: 2013-10-31 17:02\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,159 +17,159 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/chef_private_keys.rst:33
-# 05fd0cbe64eb4670a4df579ecfa00347
+# b19da1c14196428493c212f4aead9307
 msgid "Public and Private Keys"
 msgstr ""
 
 #: ../../includes_chef/includes_chef.rst:5
-# d6fb8d2b95a94f2cba2bb2501054d445
+# 3d2bd872234a4c08ab8b4ceb32987333
 msgid "|chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. The |chef client| relies on abstract definitions (known as cookbooks and recipes) that are written in |ruby| and are managed like source code. Each definition describes how a specific part of your infrastructure should be built and managed. The |chef client| then applies those definitions to servers and applications, as specified, resulting in a fully automated infrastructure. When a new node is brought online, the only thing the |chef client| needs to know is which cookbooks and recipes to apply."
 msgstr ""
 
 #: ../source/chef_private_keys.rst:38
-# d92ab17f7b6c49a8a92d0dccb31166ee
+# 618fdb164dd8413d82217c8cecd21c40
 msgid "How Keys are Used?"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:4
-# ba600442941d40aab1a9d30ee1f50746
+# ad5dd1fcd8de4d239d53d3beee80e220
 msgid "The authentication process ensures the |chef server| responds only to requests made by trusted users. A public key encryption is used for all server types: |chef hosted|, |chef private|, and the open source |chef server|. When a node and/or a workstation is configured to run the |chef client|, both public and private keys are created. The public key is stored on the |chef server|, while the private key is returned to the user for safe keeping. (The private key is a .pem file located in the ``.chef`` directory or in ``/etc/chef``.) The following executables use the |api chef server| when communicating with the |chef server|:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:6
 #: ../source/chef_private_keys.rst:42
-# 8134b679b87c4524bb28839c0c5cc673
-# d6bc486b3f55403bbe3c7a5cba99c339
+# 45c9c6331e0242beb7795ed30b394ad3
+# 220b94ac3577464991a79af25bb5c741
 msgid "|chef client|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:7
-# 7b2a2c82976a4290afdbb0107dcae41f
+# 82b5c4f715fe47c282381715bc6d84eb
 msgid "|knife|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:8
-# 67d84d9284884fbc9131d165857164a7
+# 9b0abb7f7ab5485e8c01fd736550560a
 msgid "|chef validator| (only during the first |chef client| run on a node)"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:10
-# e7a6456f7bce4b98bc07f2d96d7adc32
+# 4b42a49f536347dfb1ce58b24a923088
 msgid "Each request to the |chef server| from those executables encrypts a special group of HTTP headers along with the private key. The |chef server| then uses the public key to decrypt the headers and verify the contents."
 msgstr ""
 
 #: ../../includes_security/includes_security_key_pairs_chef_client.rst:5
-# 34094e292cab4178a98b8b950597e6ed
+# fbdc3e41ef2f461986d1b21ee6d2de67
 msgid "RSA public key-pairs are used to authenticate the |chef client| with the |chef server| every time a |chef client| needs access to data that is stored on the |chef server|. This prevents any node from accessing data that it shouldn't and it ensures that only nodes that are properly registered with the |chef server| can be managed."
 msgstr ""
 
 #: ../source/chef_private_keys.rst:46
-# f7cd9893b31e44979fa3e2194d16b476
+# 9d76ebc06d6e4759a2654d372b35e116
 msgid "Knife"
 msgstr ""
 
 #: ../../includes_security/includes_security_key_pairs_knife.rst:5
-# 20f7e2d6f8ee46be860b89d435e051a9
+# 1ba86b22d72542e9b7298045dc394ea1
 msgid "RSA public key-pairs are used to authenticate |knife| with the |chef server| every time |knife| attempts to access the |chef server|. This ensures that each instance of |knife| is properly registered with the |chef server| and that only trusted users can make changes to the data."
 msgstr ""
 
 #: ../source/chef_private_keys.rst:49
-# a58a325fc7554416af5c4e2c202bf8d7
+# 31f738e4a4f24a0993ff4bd3dd64bab5
 msgid "|knife| can also use the |subcommand knife exec| subcommand to make specific, authenticated requests to the |chef server|. |knife| plugins can also make authenticated requests to the |chef server| by leveraging the |subcommand knife exec| subcommand."
 msgstr ""
 
 #: ../source/chef_private_keys.rst:52
-# f4d28f719f26486fb3c79e3ef8d9cadd
+# a735d773e9654bf2bc789285ebb0b24a
 msgid "|chef validator|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_chef_validator.rst:5
-# 568cfe37e7ea4ed7abdf357238ebc643
+# d7e1a31f8108456496b603578c1ad54e
 msgid "Every request from the |chef client| to the |chef server| must be an authenticated request using the |api chef server|. When the |chef client| starts a |chef client| run, a check is done to see if the client key exists on the node at ``/etc/chef/client.pem``. If the key exists, it is used as part of the authentication request to the |chef server|. If the key does not exist, the |chef client| will use the key assigned to the |chef validator| (``/etc/chef/validation.pem``) to ensure that each node can make an authenticated request to the |chef server| during its first |chef client| run. The key pair used by the |chef validator| is created when the|chef client| is installed on a node, either manually or using a |knife| bootstrap operation. If the |chef validator| is unable to make an authentication request to the |chef server|, the |chef client| run fails."
 msgstr ""
 
 #: ../source/chef_private_keys.rst:57
-# 4b9ec812f4354e50a8aa081286ce1236
+# a296381dbd994042bd46e859b71d4438
 msgid "Where are Keys Stored?"
 msgstr ""
 
 #: ../source/chef_private_keys.rst:58
-# 6f818d7d8a1d440e9b3c00a45f2e1e3d
+# dc2ae216c622477295d1deb0af76c7e4
 msgid "Keys are stored in different locations, depending on if the location is a node or a workstation."
 msgstr ""
 
 #: ../source/chef_private_keys.rst:61
-# cd8f04e8c95d4376ae443c2b7b0696b8
+# 6c5c13c2e5244688b2f458c4722b18a7
 msgid "Nodes"
 msgstr ""
 
 #: ../source/chef_private_keys.rst:62
-# 30c77862517f4f0ab580751cdde27389
+# 2c3eb227425346539c7ec1900a8ddca1
 msgid "Each node stores its private key locally. This private key is generated as part of the bootstrap process that initially installs the |chef client| on the node. The first time |chef client| runs on that node, it uses the |chef validator| to authenticate, but then on each subsequent run it uses the private key generated for that client by the |chef server|."
 msgstr ""
 
 #: ../source/chef_private_keys.rst:65
-# 4ebcfe0ea7f14e28b55ac86ad1395f93
+# 69a090be2df843008d82acd6f51f2515
 msgid "Workstations"
 msgstr ""
 
 #: ../source/chef_private_keys.rst:66
-# 4bf88a0afbfd4435a7ad3f43b441d898
+# a2ad2765e2d74d3a87f63d8e5da4f7f1
 msgid "Each workstation stores its private key in the |chef repo|. This private key is generated by the |chef server| and must be download from the server and copied to the ``.chef`` directory in the |chef repo|. If a new private key is required, simply regenerate it from the |chef server| and re-copy it to the |chef repo|."
 msgstr ""
 
 #: ../../includes_repository/includes_repository.rst:5
-# 0ad4e0670be34fed8eaee826c07bf049
+# 11af232590ea45eeafa0dec0aacc2829
 msgid "The |chef repo| is the location in which the following data objects are stored:"
 msgstr ""
 
 #: ../../includes_repository/includes_repository.rst:7
-# b915104669034784ae53159a1bbe8a13
+# 3faebad575ba49d39a44f37aa2d71075
 msgid "Cookbooks (including recipes, versions, cookbook attributes, resources, providers, libraries, and templates)"
 msgstr ""
 
 #: ../../includes_repository/includes_repository.rst:8
-# 00e201bbaa0d4a319d56479fff35016f
+# 11bc0748e3ff4362861746527f953232
 msgid "Roles"
 msgstr ""
 
 #: ../../includes_repository/includes_repository.rst:9
-# 547ad8e9869c4794ba28056c6c47c22e
+# 2a5c8fb9893c4f149b1687087ec23a47
 msgid "Data bags"
 msgstr ""
 
 #: ../../includes_repository/includes_repository.rst:10
-# a149fdd7b4604ae59e5cac5a122a8475
+# 717e6dbc80014922bebf05deda7ccb53
 msgid "Environments"
 msgstr ""
 
 #: ../../includes_repository/includes_repository.rst:11
-# 425780fe845648cc8420a771ec1bbbb7
+# 2fa53d9d00a74da7a8e08696b8a898e2
 msgid "Configuration files (for clients, workstations, and servers)"
 msgstr ""
 
 #: ../../includes_repository/includes_repository.rst:13
-# 77826ae128e948bb8ff650f1af3aa55c
+# d155e91aed7a457bb6d11a9ef9c98daa
 msgid "The |chef repo| is located on a workstation and should be synchronized with a version control system, such as |git|. All of the data in the |chef repo| should be treated like source code."
 msgstr ""
 
 #: ../../includes_repository/includes_repository.rst:15
-# c806e5e2a04a46409e072ce72300adae
+# c79b7f2f998a4288bcc22c58ccd534c5
 msgid "|knife| is used to upload data to the |chef server| from the |chef repo|. Once uploaded, that data is used by the |chef client| to manage all of the nodes that are registered with the |chef server| and to ensure that the correct cookbooks, environments, roles, and other settings are applied to nodes correctly."
 msgstr ""
 
 #: ../../includes_repository/includes_repository_directory_chef.rst:5
-# 3a272c1a8d764c36bfb16e39871e7265
+# 10d6ce45620c4c8988ea2fe66c1ecfa8
 msgid "The ``.chef/`` directory is a hidden directory that is used to store .pem validation that are provided by the |chef server| and a |knife rb| file. These files are required for interaction with a |chef server|."
 msgstr ""
 
 #: ../source/chef_private_keys.rst:74
-# 9d7be7839a6c4c958f4076b9b142c907
+# 736fbd0abf774876a088f014ee9396d5
 msgid "Generating Keys"
 msgstr ""
 
 #: ../source/chef_private_keys.rst:75
-# 002c361310df496a814bb149d0d8d3df
+# 2a982d8c92fc49e3865d0ce824c2b073
 msgid "The |chef server| generates two types of private keys: one for nodes and workstations (typically referred to as a \"client key\") and the other for the organization. If (for any reason) a new key is required, the |chef server| can re-generate these keys."
 msgstr ""
 
