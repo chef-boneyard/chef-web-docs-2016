@@ -6,7 +6,7 @@
 
 The |chef client| has specific components that are designed to support unique aspects of the |windows| platform, including |windows powershell|, |microsoft iis|, and |microsoft sqlserver|.
 
-* The |chef client| is :doc:`installed on a machine </install_windows>` running |windows| by using a |microsoft installer package|
+* The |chef client| is `installed on a machine <http://docs.opscode.com/windows.html#install-the-chef-client-on-windows>`_ running |windows| by using a |microsoft installer package|
 * Three resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource powershell_script|, and |resource registry_key|
 * Two |knife| plugins dedicated to the |windows| platform are available: |subcommand knife azure| is used to manage virtual instances in |windows azure|; |subcommand knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers
 * Four cookbooks provide application-specific support for `PowerShell 2.0 <https://github.com/opscode-cookbooks/powershell>`_, `IIS 7.0/7.5/8.0 <https://github.com/opscode-cookbooks/iis>`_, `SQL Server <https://github.com/opscode-cookbooks/database>`_, and for configuring various settings and behaviors on a machine that is running `Windows <https://github.com/opscode-cookbooks/windows>`_ 
