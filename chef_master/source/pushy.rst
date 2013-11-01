@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_pushy/includes_pushy.rst
 
+.. note:: |pushy| does not work with hosted |chef server oec|.
+
 :doc:`Install Push Jobs </install_pushy>` using the ``push-jobs`` cookbook and a |chef client| run on each of the target nodes.
 
 Requirements
