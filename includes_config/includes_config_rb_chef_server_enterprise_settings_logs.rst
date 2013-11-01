@@ -7,6 +7,8 @@ This configuration file has the following settings for log files:
    :widths: 200 300
    :header-rows: 1
 
+   * - Setting
+     - Description
    * - ``log_retention['bifrost']``
      - For configuration file retention times on the /var/log/opscode/bifrost directory. And files with mtimes older than this number of days will be deleted. Default value: ``14``.
    * - ``log_retention['bookshelf']``
