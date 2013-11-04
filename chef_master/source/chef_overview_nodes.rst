@@ -16,6 +16,8 @@ There are two types of nodes that be managed:
      - .. include:: ../../includes_node/includes_node_cloud.rst
    * - .. image:: ../../images/icon_node_physical.png
      - .. include:: ../../includes_node/includes_node_physical.rst
+   * - .. image:: ../../images/icon_node_virtual.png
+     - .. include:: ../../includes_node/includes_node_virtual.rst
 
 Some important components of nodes include:
 
