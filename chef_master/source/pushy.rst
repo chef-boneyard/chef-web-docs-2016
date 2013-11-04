@@ -4,7 +4,7 @@
 
 .. include:: ../../includes_pushy/includes_pushy.rst
 
-.. note:: |pushy| does not work with hosted |chef server oec|.
+.. note:: |pushy| is an add-on feature for on-premise installations of the |chef server oec| server only.
 
 :doc:`Install Push Jobs </install_pushy>` using the ``push-jobs`` cookbook and a |chef client| run on each of the target nodes.
 
