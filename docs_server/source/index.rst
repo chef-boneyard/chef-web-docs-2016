@@ -1,5 +1,5 @@
 =====================================================
-Chef Server Topics
+Private Chef Server Topics 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
