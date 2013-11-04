@@ -5,14 +5,16 @@ Configuration of |chef private| SSL using certificate authority-verified certifi
 certificate and private key file obtained from your certifying authority in the correct files after the
 initial configuration of |chef private|.
 
-Initial configuration of |chef private| is done automatically using Opscode's self-signed certificate to create the
-certificate and private key files for nginx.
+Initial configuration of |chef private| is done automatically using an |opscode| self-signed certificate to create the
+certificate and private key files for |nginx|.
 
 The locations of the certificate and private key files are 
 
 * ``/var/opt/opscode/nginx/ca/FQDN.cert``
 * ``/var/opt/opscode/nginx/ca/FQDN.pem``
 
-As the FQDN will have already been configured previously, we can just replace the contents of the two files above 
+As the |fqdn| will have already been configured previously, we can just replace the contents of the two files above 
 with your certifying authority's files.
+
+.. warning:: The |fqdn| for the |chef private| server should not exceed 64 characters when using |openssl|. |openssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef private| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef private| server is longer than 64 characters, the ``private-chef-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty.
 
