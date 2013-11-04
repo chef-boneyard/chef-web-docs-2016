@@ -105,8 +105,6 @@ Chef Single-page Topics
 
    chef_pedant
    ctl_chef_server
-
-
    chef_client
    chef_overview
    api_chef_server
