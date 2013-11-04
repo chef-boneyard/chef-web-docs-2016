@@ -45,7 +45,7 @@ This command has the following options:
 ``-j PATH``, ``--json-attributes PATH``
    |json attributes|
 
-``-k KEY_FILE``, ``--client-key KEY_FILE``
+``-k KEY_FILE``, ``--client_key KEY_FILE``
    |client_key| Default value: ``/etc/chef/client.pem``.
 
 ``-K KEY_FILE``, ``--validation_key KEY_FILE``
