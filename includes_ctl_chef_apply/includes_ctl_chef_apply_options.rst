@@ -12,7 +12,7 @@ This tool has the following options:
 ``-e RECIPE_TEXT``, ``--execute RECIPE_TEXT``
    |execute chef_apply|
 
-``-l LEVEL``, ``--log-level LEVEL``
+``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
 
 ``-s``, ``--stdin``

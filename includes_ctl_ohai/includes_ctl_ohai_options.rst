@@ -18,7 +18,7 @@ This tool has the following options:
 ``-h``, ``--help``
    |help subcommand|
 
-``-l LEVEL``, ``--log-level LEVEL``
+``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
 
 ``-L LOGLOCATION``, ``--logfile c``
