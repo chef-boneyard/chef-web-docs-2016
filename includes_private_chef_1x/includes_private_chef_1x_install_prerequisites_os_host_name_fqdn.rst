@@ -3,7 +3,7 @@
 
 .. include:: ../../includes_install/includes_install_server_hostname.rst
 
-.. warning:: The |fqdn| for the |chef private| server should not exceed 64 characters when using |openssl|. |openssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef private| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef private| server is longer than 64 characters, the ``private-chef-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty.
+.. warning:: The |fqdn| for the |chef private| server should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef private| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef private| server is longer than 64 characters, the ``private-chef-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty.
 
 **To verify if a hostname is a FQDN**
 
