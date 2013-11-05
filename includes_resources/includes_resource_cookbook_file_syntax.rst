@@ -18,12 +18,12 @@ where
 * ``attribute`` is zero (or more) of the attributes that are available for this resource
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
-The following is an example of how the |resource cookbook_file| resource can work when used in a recipe. In this example, a cookbook file named "/tmp/cookbook_test_file" will be created, but only if the cookbook is not already there. The file that will be used to create the cookbook file is located in "/tmp/test" in the current cookbook, which is different than the destination path and filename on the node where the file will be created. Backups will not be kept.
+The following is an example of how the |resource cookbook_file| resource can work when used in a recipe. In this example,
+because the ``source`` attribute is unspecified, the name of the resource (``"cookbook_test_file"``) defines the default location in which the |chef client| will look for the source file: ``/cookbook_name/files/default/cookbook_test_file``. The ``path`` attribute defines the location in which the file is to be created. The ``:create_if_missing`` action ensures that nothing happens if the file already exists.
 
 .. code-block:: ruby
 
-   cookbook_file "/tmp/cookbook_test_file" do
-     backup false
-     path "/tmp/test"
+   cookbook_file "cookbook_test_file" do
+     path "/tmp/test_file"
      action :create_if_missing
    end
