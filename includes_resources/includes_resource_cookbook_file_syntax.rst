@@ -19,7 +19,7 @@ where
 * ``:action`` is the step that the resource will ask the provider to take during the |chef client| run
 
 The following is an example of how the |resource cookbook_file| resource can work when used in a recipe. In this example,
-because the ``source`` attribute is unspecified, the name of the resource (``"cookbook_test_file"``) defines the name the source file. The |chef client| will look for this source file in the ``/cookbook_name/files/default/`` directory. The ``path`` attribute defines the location in which the file is to be created. The ``:create_if_missing`` action ensures that nothing happens if the file already exists.
+because the ``source`` attribute is unspecified, the name of the resource (``"cookbook_test_file"``) defines the name the source file. The |chef client| will look for this source file in the ``/cookbook_name/files/default/`` directory. The ``path`` attribute defines the location in which the file will be created. The ``:create_if_missing`` action ensures that nothing happens if the file already exists.
 
 .. code-block:: ruby
 
