@@ -25,6 +25,8 @@ then:
 
    .. image:: ../../images/step_install_windows_03.png
 
+   .. note:: The |chef client| must be run as a service for it to be able to regularly check in with the |chef server|. Select the **Chef Client Service** option to have the MSI configure the |chef client| as a service.
+
 then:
 
    .. image:: ../../images/step_install_windows_04.png
@@ -36,6 +38,4 @@ then:
 then:
 
    .. image:: ../../images/step_install_windows_06.png
-
-   .. note:: The |chef client| needs to be run as a service for it to be able to regularly check in with the |chef server|. This is an option in the MSI that can be selected manually when running the MSI or a command line that is run after the MSI has finished installing the |chef client|.
 
