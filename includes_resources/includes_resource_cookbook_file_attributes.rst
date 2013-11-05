@@ -36,7 +36,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|	
    * - ``path``
-     - |path file|
+     - |path file_cookbook|
 
        |windows|: A path that begins with a forward slash (``/``) will point to the root of the current working directory of the |chef client| process. This path can vary from system to system. Therefore, using a path that begins with a forward slash (``/``) is not recommended.
    * - ``provider``

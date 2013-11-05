@@ -28,7 +28,7 @@ This resource has the following attributes:
    * - ``owner``
      - |owner windows security|
    * - ``path``
-     - |path file|
+     - |path file_cookbook|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``rights``
