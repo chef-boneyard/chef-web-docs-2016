@@ -1,0 +1,4 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+An organization is the top-level entity for role-based access control in |chef server oec|. Each organization contains the default groups (|opscode manage group admins|, |opscode manage group clients|, and |opscode manage group users|, plus |opscode manage group billing| for hosted |chef server oec|), at least one user and at least one node (on which the |chef client| is installed). The on-premise |chef server oec| server supports multiple organizations. The |chef server oec| server includes a single default organization that is defined during setup. Additional organizations can be created after the initial setup and configuration of the |chef server oec| server. 

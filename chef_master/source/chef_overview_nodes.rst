@@ -28,7 +28,7 @@ Some important components of nodes include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_chef_client.png
-     - .. include:: ../../includes_chef/includes_chef_client.rst
+     - .. include:: ../../includes_chef_client/includes_chef_client.rst
    * - .. image:: ../../images/icon_ohai.png
      - .. include:: ../../includes_ohai/includes_ohai.rst
 

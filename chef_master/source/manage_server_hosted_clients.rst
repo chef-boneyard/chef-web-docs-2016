@@ -2,7 +2,7 @@
 Manage Clients in Hosted Chef
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_client.rst
+.. include:: ../../includes_chef_client/includes_chef_client.rst
 
 .. include:: ../../includes_manage_server_hosted/includes_manage_server_hosted_clients.rst
 

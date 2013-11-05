@@ -1,0 +1,4 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+A group is used to define access to object types and objects in the |chef server| and also to assign permissions that determine what types of tasks are available to members of that group who are authorized to perform them. Individual users who are members of a group will inherit the permissions assigned to the group. The |chef server oec| server includes the following default groups: |opscode manage group admins|, |opscode manage group clients|, and |opscode manage group users|. For users of hosted |chef server oec|, an additional default group is provided: |opscode manage group billing|.
