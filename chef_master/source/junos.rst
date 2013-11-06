@@ -6,13 +6,11 @@
 
 .. include:: ../../includes_juniper/includes_juniper.rst
 
+.. image:: ../../images/overview_junos.png
+
 .. include:: ../../includes_juniper/includes_juniper_junos.rst
 
-The netdev Cookbook
-=====================================================
-The |cookbook netdev| cookbook provides the ability to manage hardware on which the |junos| operating system is installed, including routers, switches, and VLANs.
-
-netdev Lightweight Resources
+The netdev Lightweight Resources
 -----------------------------------------------------
 |cookbook name netdev|
 
