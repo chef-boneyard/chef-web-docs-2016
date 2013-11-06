@@ -1,0 +1,10 @@
+.. This is an included how-to. 
+
+
+To set permissions list for a node object:
+
+#. Open |opscode manage|.
+#. Click |opscode manage nodes|.
+#. Select a node.
+#. Click the |opscode manage tab_permissions| tab.
+#. For each group listed under **Name**, select or de-select the |opscode manage permission read|, |opscode manage permission update|, |opscode manage permission delete|, and |opscode manage permission grant| permissions.

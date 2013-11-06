@@ -48,39 +48,3 @@ The |chef server oec| supports using as many organizations as required. This can
 
 
 
-Tasks
-=====================================================
-The following tasks are available for managing organizations.
-
-Add an Organization
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_add.rst
-
-Delete an Organization
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_delete.rst
-
-
-Reset the Validation Key
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_reset_key.rst
-
-
-Generate the Knife Configuration File
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_generate_config.rst
-
-
-Invite Users
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_invite_user.rst
-
-
-Leave an Organization
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_leave.rst
-
-
-Get the Starter Kit
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_get_starter_kit.rst
