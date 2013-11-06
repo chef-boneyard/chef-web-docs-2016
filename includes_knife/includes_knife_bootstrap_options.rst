@@ -8,6 +8,9 @@ This subcommand has the following options:
 ``-A``, ``--forward-agent``
    |forward_agent|
 
+``--bootstrap--no-proxy NO_PROXY_URL_or_IP``
+   |bootstrap no_proxy|
+
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|
 
