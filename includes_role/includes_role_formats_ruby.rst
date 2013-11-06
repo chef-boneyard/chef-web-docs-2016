@@ -27,6 +27,8 @@ Domain-specific |ruby| attributes:
 
           env_run_lists "prod" => ["recipe[apache2]"], 
                         "staging" => ["recipe[apache2::staging]"
+       
+       .. warning:: Using ``env_run_lists`` with roles is discouraged can be difficult to maintain over time. Instead, consider using multiple roles to define the required behavior.
    * - ``name``
      - |ruby dsl name| For example:
        ::
