@@ -14,6 +14,6 @@ It is possible to initiate jobs from the |chef client|, such as from within a re
    * - ``pushy_job_writers``
      - Use to create and initiate jobs.
 
-These groups do not exist by default, even after |pushy| has been installed to the |chef server|.
+These groups do not exist by default, even after |pushy| has been installed to the |chef server|. If these groups are not created, only members of the ``admin`` security group will be able to create, initiate, and view jobs.
 
 <insert To create a group topic here?>
