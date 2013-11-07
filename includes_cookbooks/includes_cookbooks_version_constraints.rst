@@ -20,11 +20,11 @@ The following operators can be used with cookbook versions:
    * - <
      - Less than
    * - >=
-     - Greater than or equal to
+     - Greater than or equal to; also known as "optimistically greater than" (or "optimistic")
    * - <=
      - Less than or equal to
    * - ~>
-     - Approximately greater than
+     - Approximately greater than; also known as "pessimistically greater than" (or "pessimistic")
 
 For example, a version constraint for "equals version 1.0.7" is expressed like this::
 
