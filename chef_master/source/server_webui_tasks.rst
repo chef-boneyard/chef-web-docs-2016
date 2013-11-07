@@ -2,7 +2,9 @@
 Enterprise Chef Server Manage UI Web Tasks
 =====================================================
 
-Tasks.
+.. warning:: This topic is a work in progress.
+
+Tasks. Will eventually be alphabetical, for all tasks in the web user interface.
 
 Add an Organization
 =====================================================
@@ -12,6 +14,9 @@ Delete an Organization
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_delete.rst
 
+Switch Organizations
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_switch.rst
 
 Reset the Validation Key
 =====================================================
@@ -56,7 +61,7 @@ Set Environment
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_details_set_environment.rst
 
-Add User or Group to Node Permissions
+Add User or Group
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_permissions_add.rst
 
@@ -107,3 +112,187 @@ Search Nodes
 View Nodes
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_view_all.rst
+
+
+
+
+
+
+Download a Cookbook File
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_file_download.rst
+
+View a Cookbook File
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_file_view.rst
+
+View Cookbook Files
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_files.rst
+
+Add User or Group
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_add.rst
+
+Set Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_set.rst
+
+View Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_view.rst
+
+View Cookbook Details
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_view_details.rst
+
+View all Cookbooks
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbooks_view.rst
+
+
+
+
+Add a Data Bag Item
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_add_item.rst
+
+Add a Data Bag
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_add.rst
+
+Delete a Data Bag Item
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_delete_item.rst
+
+Delete a Data Bag
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_delete.rst
+
+Edit a Data Bag Item
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_edit_item.rst
+
+Add User or Group
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_add.rst
+
+Set Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_set.rst
+
+View Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_view.rst
+
+View a Data Bag Item
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_view_items.rst
+
+View all Data Bags
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bags_view.rst
+
+
+
+
+
+Add Environment
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_add.rst
+
+Delete Environment
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_delete.rst
+
+Edit Environment Details
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_edit_details.rst
+
+Add User or Group
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_add.rst
+
+Set Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_set.rst
+
+View Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_view.rst
+
+Edit Default Attributes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_default_edit.rst
+
+View Default Attributes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_default_view.rst
+
+Edit Override Attributes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_override_edit.rst
+
+View Override Attributes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_override_view.rst
+
+View Environment Details
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_details.rst
+
+View all Environments
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environments_view.rst
+
+
+
+
+
+Add Role
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_add.rst
+
+Delete Role
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_delete.rst
+
+Edit Run-list
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_edit_run_list.rst
+
+Add User or Group
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_add.rst
+
+Set Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_set.rst
+
+View Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_view.rst
+
+Edit Default Attributes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_default_edit.rst
+
+View Default Attributes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_default_view.rst
+
+Edit Override Attributes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_override_edit.rst
+
+View Override Attributes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_override_view.rst
+
+View Environment Details
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_details.rst
+
+View all Environments
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_roles_view.rst
