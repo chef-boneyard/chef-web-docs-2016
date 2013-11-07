@@ -19,7 +19,7 @@ This command has the following options:
    |fork_chef|
 
 ``-F FORMAT``, ``--format FORMAT``
-   |format chef_ctls|
+   |format chef_ctls| Other formatting options are available by using 3rd party formatters.
 
 ``--force-formatter``
    |force_formatter|
