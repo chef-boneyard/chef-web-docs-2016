@@ -17,6 +17,15 @@ The most popular core resources in the |chef client|---:doc:`cookbook_file </res
 
 The file-based resources---|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|---have attributes that support unique requirements within the |windows| platform, including ``inherits`` (for file inheritence), ``mode`` (for octal modes), and ``rights`` (for access control lists, or ACLs).
 
+.. note:: The |windows| platform does not support running as an alternate user unless full credentials (a username and password or equivalent) are specified.
+
+The following sections are pulled in from the larger docs.opscode.com site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
+
+
+Install the |chef client| on Windows
+=====================================================
+.. include:: ../../includes_windows/includes_windows_install_overview.rst
+
 The |chef client| can be used to manage machines that run on the following versions of |windows|:
 
 .. list-table::
@@ -38,14 +47,6 @@ The |chef client| can be used to manage machines that run on the following versi
 The |microsoft installer package| for |windows| is available at http://www.opscode.com/chef/install/. From the drop-downs, select the operating system (``Windows``), then the version, and then the architecture.
 
 After the |chef client| is installed, it is located at ``C:\chef``. The main configuration file for the |chef client| is located at ``C:\chef\client.rb``.
-
-The following sections are pulled in from the larger docs.opscode.com site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
-
-
-Install the |chef client| on Windows
-=====================================================
-.. include:: ../../includes_windows/includes_windows_install_overview.rst
-
 
 Use knife-windows
 -----------------------------------------------------
