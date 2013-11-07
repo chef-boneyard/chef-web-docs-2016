@@ -43,5 +43,5 @@ The following handlers are available from the open source community:
      - A handler that logs basic essential information, such as about the success or failure of a |chef client| run.
    * - `Updated Resources <https://rubygems.org/gems/chef-handler-updated-resources>`_
      - A handler that provides a simple way to display resources that were updated during a |chef client| run.
-   * - `Zookeeper <http://onddo.github.io/chef-handler-zookeeper/>`_
+   * - `ZooKeeper <http://onddo.github.io/chef-handler-zookeeper/>`_
      - A Chef report handler to send Chef run notifications to |zookeeper|.
