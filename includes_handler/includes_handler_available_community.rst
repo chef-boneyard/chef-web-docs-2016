@@ -35,7 +35,7 @@ The following handlers are available from the open source community:
      - A handler that supports |nagios nsca|, an add-on for |nagios|. This will allow the |chef client| to report and exception handler messages to be passed to |nagios| from |nagios nsca|.
    * - `Simple Email <https://rubygems.org/gems/chef-handler-mail>`_
      - A handler that collects exception and report handler data and then uses |pony| to send email reports that are based on |erubis| templates.
-   * - `SNS <https://rubygems.org/gems/chef-handler-sns>`_
+   * - `SNS <http://onddo.github.io/chef-handler-sns/>`_
      - A handler that notifies exception and report handler data and sends it to a |sns| topic.
    * - `Splunk Storm <http://ampledata.org/splunk_storm_chef_handler.html>`_
      - A handler that supports exceptions and reports for |splunk storm|.
@@ -43,3 +43,5 @@ The following handlers are available from the open source community:
      - A handler that logs basic essential information, such as about the success or failure of a |chef client| run.
    * - `Updated Resources <https://rubygems.org/gems/chef-handler-updated-resources>`_
      - A handler that provides a simple way to display resources that were updated during a |chef client| run.
+   * - `ZooKeeper <http://onddo.github.io/chef-handler-zookeeper/>`_
+     - A Chef report handler to send Chef run notifications to |zookeeper|.
