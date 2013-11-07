@@ -5,12 +5,6 @@
 
 This subcommand has the following options:
 
-``--chef-repo-path PATH``
-   |path chef_repo| This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
-
-``--concurrency``
-   |concurrency| Default: ``10``.
-
 ``-i FILE``, ``--input FILE``
    |input file|
 
@@ -19,6 +13,3 @@ This subcommand has the following options:
 
 ``-m METHOD``, ``--method METHOD``
    |method request type| Default value: ``GET``.
-
-``--repo-mode MODE``
-   |repo_mode| Default: ``everything`` / ``hosted_everything``.
