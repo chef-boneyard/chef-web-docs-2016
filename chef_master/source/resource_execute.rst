@@ -12,9 +12,7 @@ Syntax
 =====================================================
 .. include:: ../../includes_resources/includes_resource_execute_syntax.rst
 
-Using Guards
------------------------------------------------------
-../../includes_cookbooks/includes_cookbooks_resource_common_conditional_execute_resource.rst
+.. note:: .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_execute_resource.rst
 
 Actions
 =====================================================
