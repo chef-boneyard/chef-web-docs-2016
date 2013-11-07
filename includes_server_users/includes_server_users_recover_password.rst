@@ -5,4 +5,4 @@ If the |chef server oec| password is forgotten or lost, it can be reset by click
 
 .. image:: ../../images/server_users_forgot_password.png
 
-.. note:: This does not apply to |microsoft ad| or |ldap|.
+.. note:: This does not apply to |windows ad| or |ldap|.

@@ -1,6 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
 If password recovery methods are not working, an administrator can reset a user's password. To reset a password, log on to |chef server oec| and run the following command:
 
 .. code-block:: bash
@@ -27,6 +28,6 @@ and then:
    Enter the new password again:  ******
    Password for adamjacobs successfully set.
 
-.. note:: In |microsoft ad| or |ldap| mode, this sets the user’s system recovery password.
+.. note:: In |windows ad| or |ldap| mode, this sets the user’s system recovery password.
 
 
