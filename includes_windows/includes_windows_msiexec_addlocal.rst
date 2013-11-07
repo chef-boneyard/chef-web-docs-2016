@@ -15,8 +15,8 @@ The ``ADDLOCAL`` parameter adds two setup options that are specific to the |chef
    * - ``ChefClientService``
      - Use to configure the |chef client| as a service in |windows|.
 
-For example:
+First install the |chef client|, and then enable it to run as a service. For example:
 
 .. code-block:: bash
 
-   $ msiexec /qb /i c:\inst\chef-client-11.4.4-2.windows.msi ADDLOCAL="ChefClientFeature,ChefClientService"
+   $ msiexec /qb /i C:\inst\chef-client-11.8.0-1.windows.msi ADDLOCAL="ChefClientFeature" ADDLOLCAL="ChefClientService"
