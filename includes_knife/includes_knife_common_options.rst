@@ -4,7 +4,7 @@
 The following options can be run with all |knife| sub-commands and plug-ins:
 
 ``-c CONFIG``, ``--config CONFIG``
-   |config|
+   |config| For example, when |knife| is run from a node that is configured to be managed by the |chef server|, this option is used to allow |knife| to use the same credentials as the |chef client| when communicating with the |chef server|.
 
 ``--color``
    |color|
