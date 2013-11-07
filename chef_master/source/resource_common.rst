@@ -44,6 +44,8 @@ Guards
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional.rst
 
+.. note:: .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_execute_resource.rst
+
 Attributes
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_conditional_attributes.rst
