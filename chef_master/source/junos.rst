@@ -10,13 +10,6 @@
 
 .. include:: ../../includes_juniper/includes_juniper_junos.rst
 
-What is |juniper chef|?
-
-* The ability to use the |chef client| to manage and configure routers, switches, and VLANs that run the |junos| operating system
-* An open source, community cookbook managed by |opscode| that is used to create recipes that define how these devices should be managed
-* A dedicated installer package that is used to install the |chef client| on nodes running |junos|
-* Once installed, these nodes are managed like any other node
-
 The netdev Lightweight Resources
 -----------------------------------------------------
 |cookbook name netdev|
