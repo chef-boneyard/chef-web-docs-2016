@@ -6,7 +6,9 @@ execute
 
 .. include:: ../../includes_resources/includes_resource_execute.rst
 
-.. note:: |note execute resource intepreter|
+|note execute resource intepreter|
+
+.. note:: The |windows| platform does not support running as an alternate user unless full credentials (a username and password or equivalent) are specified.
 
 Syntax
 =====================================================
