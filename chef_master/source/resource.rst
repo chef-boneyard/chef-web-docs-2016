@@ -101,6 +101,8 @@ Resources
    resource_user
    resource_yum
 
+   resource_examples
+
 
 
 
