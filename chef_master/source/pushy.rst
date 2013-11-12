@@ -49,7 +49,7 @@ Whitelist
 .. 
 .. Messages
 .. =====================================================
-.. |push jobs| sends two types of messages: heartbeat and job.
+.. xxxxx sends two types of messages: heartbeat and job.
 .. 
 .. Heartbeat Messages
 .. -----------------------------------------------------
