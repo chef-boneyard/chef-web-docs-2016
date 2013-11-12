@@ -6,7 +6,7 @@ An API request can be made using |curl|, which is a |bash| shell script that req
 
 .. code-block:: bash
 
-   !/usr/bin/env bash
+   #!/usr/bin/env bash
 
    _chef_dir () {
      # Helper function:
