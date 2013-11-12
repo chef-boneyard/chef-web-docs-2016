@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-31 17:02\n"
+"POT-Creation-Date: 2013-11-12 00:21\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,89 +17,89 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/auth.rst:33
-# 453a71ba876e45cc817c2ce0b78dcee6
+# c97f6fdfd4914f52bcb33a14ce259257
 msgid "Authentication and Authorization"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth.rst:5
-# 58598460720c4264a94e315aa0ed241f
+# 6c3cca6173ac49ed9b47dde78ce7bd62
 msgid "All communication with the |chef server| must be authenticated using the |api chef server|, which is a REST API that allows requests to made to the |chef server|. Only authenticated requests will be authorized. Most of the time, and especially when using |knife|, the |chef client|, or the |chef server| web interface, the use of the |api chef server| is transparent. In some cases, the use of the |api chef server| requires more detail, such as when making the request in |ruby| code, with a |knife| plugin, or when using |curl|."
 msgstr ""
 
 #: ../source/auth.rst:38
-# 7ea52e31baa94671b5c637d3ccfaf691
+# 86e89b6aa1a146fa8018853d0226f7a6
 msgid "Authentication"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:4
-# 28f7e136dafb49db98a92b36979d3504
+# 2a0057bfe2e64137b8d5146a51dcd7dd
 msgid "The authentication process ensures the |chef server| responds only to requests made by trusted users. A public key encryption is used for all server types: |chef hosted|, |chef private|, and the open source |chef server|. When a node and/or a workstation is configured to run the |chef client|, both public and private keys are created. The public key is stored on the |chef server|, while the private key is returned to the user for safe keeping. (The private key is a .pem file located in the ``.chef`` directory or in ``/etc/chef``.) The following executables use the |api chef server| when communicating with the |chef server|:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:6
-# e2a657781e7b4a5ebe5198e659d520eb
+# 1c7721fe0f2e49b6bda9c033b69a4df7
 msgid "|chef client|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:7
-# 9280b92bba1e4ef090ef41564dc8a711
+# a390a42364c24837bd2c1da714a0b098
 msgid "|knife|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:8
-# ef14dcfb05104e2aaa39996897c48e12
+# 6b84c9284ae4418891c9a2dd80b1206d
 msgid "|chef validator| (only during the first |chef client| run on a node)"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication.rst:10
-# 0c927332723e49a7a8318963ebaadfc5
+# a01565a1a2564526b1b9ef25f32ea264
 msgid "Each request to the |chef server| from those executables encrypts a special group of HTTP headers along with the private key. The |chef server| then uses the public key to decrypt the headers and verify the contents."
 msgstr ""
 
 #: ../source/auth.rst:42
-# 046d173321d344e398db9ee6b8c40d91
+# 5cffa0431e7c41b4be3e321579c3189d
 msgid "|chef validator|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_chef_validator.rst:5
-# 7a0d4de7cae1474db3a8c57125ef2a4c
-msgid "Every request from the |chef client| to the |chef server| must be an authenticated request using the |api chef server|. When the |chef client| starts a |chef client| run, a check is done to see if the client key exists on the node at ``/etc/chef/client.pem``. If the key exists, it is used as part of the authentication request to the |chef server|. If the key does not exist, the |chef client| will use the key assigned to the |chef validator| (``/etc/chef/validation.pem``) to ensure that each node can make an authenticated request to the |chef server| during its first |chef client| run. The key pair used by the |chef validator| is created when the|chef client| is installed on a node, either manually or using a |knife| bootstrap operation. If the |chef validator| is unable to make an authentication request to the |chef server|, the |chef client| run fails."
+# 6fb63de69ba84402bc5486b736c02865
+msgid "Every request from the |chef client| to the |chef server| must be an authenticated request using the |api chef server|. When the |chef client| starts a |chef client| run, a check is done to see if the client key exists on the node at ``/etc/chef/client.pem``. If the key exists, it is used as part of the authentication request to the |chef server|. If the key does not exist, the |chef client| will use the key assigned to the |chef validator| (``/etc/chef/validation.pem``) to ensure that each node can make an authenticated request to the |chef server| during its first |chef client| run. The key pair used by the |chef validator| is created when the |chef client| is installed on a node, either manually or using a |knife| bootstrap operation. If the |chef validator| is unable to make an authentication request to the |chef server|, the |chef client| run fails."
 msgstr ""
 
 #: ../source/auth.rst:46
-# c922129ff852412a89951d3ab3628053
+# 8be2f7344e57415d9ff1cf89e55b7643
 msgid "During a |chef client| Run"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst:5
-# 1308632dee0d4c3bb3ed3726da424325
+# 7c49c2deba4c4a1cb4dc1aaa0256b2af
 msgid "As part of `every chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_, the |chef client| authenticates to the |chef server| using an RSA private key and the |api chef server|."
 msgstr ""
 
 #: ../source/auth.rst:50
-# b91e3e4a41684b118299f08ff3683f48
+# 27b0d4a6c3b744f2871e7d06aced1a8e
 msgid "From the Web Interface"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_webui.rst:5
-# a843a6f6ea7f44378e87a931849c4f6b
+# ec8b271c92a94f558a42b193fb9b1f40
 msgid "The |chef server| user interface uses the |api chef server| to perform most operations. This ensures that authentication requests to the |chef server| are authorized. This authentication process is handled automatically and is not something that users of |chef hosted| or the open source |chef server| will need to manage. For |chef private|, the authentication keys used by the web interface will need to be maintained by the individual administrators who are responsible for managing the server."
 msgstr ""
 
 #: ../source/auth.rst:54
-# 577f3cdaff5c4e76b2301ffa1f7b7e9e
+# 4843c2af7f8546d79a0e9bfe676b787a
 msgid "knife exec"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:5
-# c821153770dd473b9fad5fa7bbc101b8
+# a851b7b6ca564f4491aa89b926c9e03a
 msgid "The ``knife exec`` subcommand can be used to make authenticated API requests to the |chef server| using the following methods:"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:11
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:11
-# 3f651999fa284672b681ed1be66c0b26
-# ba8760bb49bb4c5988e7590031fb2481
+# 070f8051da984c58a67d4c22c08a544f
+# f4e3b7a0de3a4767a52c2311f8731aef
 msgid "Method"
 msgstr ""
 
@@ -109,752 +109,752 @@ msgstr ""
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:33
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:14
 #: ../source/auth.rst:130
-# 65e525081e9a4dae9b10039f20371e64
-# 4327e65209104d23bff04d1023197631
-# e39cec0e45eb42139bb2e91e168e9308
-# 29d75cb3deb246109f3fc27efa563901
-# a3391820095543c4afe3d14059519214
-# 08cf7e6e8bc244859d744d06504d5b8b
+# 58fc77a3e4c0479d872a7aafe0b08178
+# 3de68208d6334935b9c7596ee836ad02
+# 8fca7b1ec4af45d0b8645726919ae732
+# 6e5a8dd960b34d3496cefac55660e724
+# b8e7d2c6a0b046479b230b3dade8dcce
+# aded65afbdbf4fb7b876d35e006a0265
 msgid "Description"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:13
-# d6de432d4b814735bb583ad49f50196b
+# 3336ad161aa04bc88d94d96cc32a1012
 msgid "``api.delete``"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:14
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:14
-# f865dba8c87e49dea8c4f26408a44dc9
-# f202cfb08acb487bb0bcc387b8ba5a65
+# 2da5cb709af9427d82dd03dece1d2f45
+# 4b3a8cd0eadf49519c610ebce0e509dd
 msgid "Use to delete an object from the |chef server|."
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:15
-# 070d0477f55448f6b45786d2c5c0dfaa
+# 7b6a8115496d4ae29736f7e0feb73e5d
 msgid "``api.get``"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:16
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:16
-# 1c8d182a9d4b4f2b9fd1a6f12746c1d0
-# 3e67a28f59be485994526e84bdc46215
+# 4edab05cc0e44b508defc066d78adaf8
+# 420e78ac1ee74ff2877d930f0a6fc3f1
 msgid "Use to get the details of an object on the |chef server|."
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:17
-# 5f7bdcbb8b5f4f49b70c2486cf508976
+# 0a7b35714b174685bc48598ff8694be3
 msgid "``api.post``"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:18
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:18
-# 0de90fa86dd54f1196f96dcf5929debd
-# 74ceb8feb79f4b7381693175ad1e24ad
+# d94c5ab3a639499f838a2405eeaa83b1
+# 976e86a412314159a6061a0d457110ca
 msgid "Use to add an object to the |chef server|."
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:19
-# 9bcc243e949e423f8472641aca7ff5db
+# ddc34379b6aa4f5498d6e349176ddb44
 msgid "``api.put``"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:20
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:20
-# 4413735ecc554720bbb269344065be9d
-# 89c2eba375e440d5a4784769159ddb98
+# 7d336f0b496c483b92aa96103a4ca385
+# 6cecdcec3eed4509bd95d5ce9a33ef97
 msgid "Use to update an object on the |chef server|."
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:22
-# b69231c4e04b4fc2bf99527603f6919e
+# 3e5af82b561c4ded88ee11c983620a2f
 msgid "These methods are used with the ``-E`` option, which executes that string locally on the workstation using |chef shell|. These methods have the following syntax:"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:28
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:15
-# 98a7119aaf9a416d93bbea6907ed941a
-# eb6ba0dc3e8f46f3a8aebf6c59e5aca1
+# 14830203e1234877b16ac4b000079537
+# 7be38a27300f44ab8a383b1514cfeba2
 msgid "where:"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:30
-# 3bb7cabf91974c0ea3b93aa84521f75a
+# 96a9951251f74e2e9a87e7354d0de835
 msgid "``api.method`` is the corresponding authentication method --- ``api.delete``, ``api.get``, ``api.post``, or ``api.put``"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:31
-# f12ac4812f574091ba3241bf22ea72c0
+# b272227aa9f44d75ad03b2cc6e4b4256
 msgid "``/endpoint`` is an endpoint in the |api chef server|"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:33
-# 864554708ebb4afc9a4425da32417049
+# daf6e1568cfb4436a850c3fc6fcf98c9
 msgid "For example, to get the data for a node named \"Example_Node\":"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:39
-# 95a8e4ae4dae4cb9a767ac3fbc755a60
+# 2f3eb9f907224aa69fa2fff10776abed
 msgid "and to ensure that the output is visible in the console, add the ``puts`` in front of the API authorization request:"
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:45
-# d9776759d916476bad2f66fa93b031cd
+# c96727e0d5ee415eb0d1d5208856523b
 msgid "where ``puts`` is the shorter version of the ``$stdout.puts`` predefined variable in |ruby|."
 msgstr ""
 
 #: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst:47
-# e646b939d2674283998b9216e4763394
+# 5c69ed63ccc2499bb2cc8ef385111750
 msgid "The following example shows how to add a client named \"IBM305RAMAC\" and the ``/clients`` endpoint, and then return the private key for that user in the console:"
 msgstr ""
 
 #: ../source/auth.rst:58
-# 0fbbd91e9c1342139422cc6fb911d9b6
+# 86fa1bfeb7664e73941e9379dda61f2e
 msgid "|knife| Plugins"
 msgstr ""
 
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:5
-# ad90e1a1ba1a4393b705302a2ad5c01e
+# ffc90d1f0114474cb49069d879963c34
 msgid "A |knife| plugin can be used to make authenticated API requests to the |chef server| using the following methods:"
 msgstr ""
 
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:13
-# e30cab81ec2f40eba9fd85d6fb150c62
+# 3ae266f6db0f43ecab4f9f9ae5cc1972
 msgid "``rest.delete_rest``"
 msgstr ""
 
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:15
-# 528e214c965a4906bf9183946afd54fe
+# 0375d923377042fba14bd9009bfba3d7
 msgid "``rest.get_rest``"
 msgstr ""
 
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:17
-# 4cc639b83ec74b45a4ceccf4f1720a62
+# fb0a9457e0774aa681ced0c70ed9de15
 msgid "``rest.post_rest``"
 msgstr ""
 
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:19
-# 50ffe63c1f274e65b0de0ddc866f885a
+# a1d56220ac0a44209b4093a85a266dc2
 msgid "``rest.put_rest``"
 msgstr ""
 
 #: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst:22
-# 62fec774e07840d586157be0b159527e
+# c132163dc5294975af19377a7aa7e357
 msgid "For example:"
 msgstr ""
 
 #: ../source/auth.rst:62
-# 0da8289b22a84f0282c594ac1e07b3b1
+# 772ef4d9d3144b1eaf92b21f964063a3
 msgid "Other Options"
 msgstr ""
 
 #: ../source/auth.rst:63
-# 9fd77f36106848a39effca235ec53c5b
+# f2ae0e5da11149bcb2bab7e8059e2a0a
 msgid "The most common ways to interact with the |chef server| using the |api chef server| abstract the API from the user. That said, the |api chef server| can be interacted with directly. The following sections describe a few of the ways that are available for doing that."
 msgstr ""
 
 #: ../source/auth.rst:66
-# 44635620e2ae473d82e0edb01c32ce6e
+# 8c1ebaa3a65d4b3dac25f65b2a6fc3f8
 msgid "|curl|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_other_curl.rst:5
-# 33dc55f5327849f58aea27ebbc5b3ef7
+# 8c0943cf7ed94b3fbfa282b21cd00a29
 msgid "An API request can be made using |curl|, which is a |bash| shell script that requires two utilities: awk and openssl. The following example shows how an authenticated request can be made using the |api chef server| and |curl|:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_other_curl.rst:87
-# 5f47b898dab44a8194248a41d361fa7d
+# e3d04235e1b94c04bd2ef795954330f0
 msgid "After saving this shell script to a file named ``chef_api_request``, use it similar to the following:"
 msgstr ""
 
 #: ../source/auth.rst:70
-# 40027a8b45d94bee80b0a2c429c72415
+# 35d5a1dd7b834d3fad8090e4f6f69aaa
 msgid "|pychef|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_other_pychef.rst:5
-# 7281ae0fdd3d479ca0c86ba99d62f6ab
+# dcb4d738557f497197d20d15e5b4f041
 msgid "An API request can be made using |pychef|, which is a |python| library that meets the ``Mixlib::Authentication`` requirements so that it can easily interact with the |chef server|. The following example shows how an authenticated request can be made using the |api chef server| and |pychef|:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_other_pychef.rst:17
-# 1cd2574c16e5415f850632454110375e
+# a4c79ff300b342d389a0b24476f91c69
 msgid "and the following example shows how to make API calls directly:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_other_pychef.rst:26
-# 964455bdb33746938ec13a82c036ecc6
+# 439ec83915c149b895545114f4948feb
 msgid "The previous examples assume that the current working directory is such that |pychef| can find a valid configuration file in the same manner as the |chef client| or |knife|. For more about |pychef|, see: https://github.com/coderanger/pychef."
 msgstr ""
 
 #: ../source/auth.rst:74
-# a5a1079886a74811bc3f2825dedafdde
+# d459e18dfe8f4ebb920da9f11308a123
 msgid "|ruby|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_other_ruby.rst:5
-# ea07cf3f7dcc4b56be3a762117af8eaf
+# 8517668b4b854e8db1b9df87e11cbc14
 msgid "On a system with the |chef client| installed, use |ruby| to make an authenticated request to the |chef server|:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_other_ruby.rst:21
-# 6871589857f14675852c887e58058179
+# d0f47356e4de446eb399c78a89a21496
 msgid "or:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_other_ruby.rst:108
-# d7442dfcaf2a4e68845061efa0ce3592
+# be51a0e385d24778b9a25e9d6abcbcf5
 msgid "Another way |ruby| can be used with the |api chef server| is to get objects from the |chef server|, and then interact with the returned data using |ruby| methods. Whenever possible, the |api chef server| will return an object of the relevant type. The returned object is then available to be called by other methods. For example, the ``api.get`` method can be used to return a node named \"foobar\", and then ``.destroy`` can be used to delete that node:"
 msgstr ""
 
 #: ../source/auth.rst:78
-# 5e8ba202ec7044e3804cb31f10ff187b
+# 01f599df0d9c45a08184691f08458861
 msgid "Debug Authentication Issues"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst:5
-# fc92a0be9b1d4e97b3a8b20690696cdf
+# a96cad822f4340d1861df369a9871e91
 msgid "In some cases, the |chef client| may receive a 401 response to the authentication request and a 403 response to an authorization request. An authentication error error may look like the following:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst:12
-# f56ca336393347888bb04f06484e4ab8
+# 57443ea3cda44866a48d41d2591682b5
 msgid "To debug authentication problems, determine which |chef client| is attempting to authenticate. This is often found in the log messages for that |chef client|. Debug logging can be enabled on a |chef client| using the following command:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst:18
-# cf0fc8a4a5044b7596d8b934c4c22d5a
+# 7af1ab9827654f1099deb95df665e2cf
 msgid "When debug logging is enabled, a log entry will look like the following:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst:24
-# 9017798cbcc6485f91d987e03216a792
+# 4c1a70a4179544d59250b94a3a9d0ba0
 msgid "If the authentication request occurs during the initial |chef client| run, the issue is most likely with the private key."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst:26
-# 0e3a5e6c33ba46438c026d7a27d93db0
+# 02cb8d77df104ea9abc99b85afe2b977
 msgid "If the authentication is happening on the node, there are a number of common causes:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst:28
-# 7b4ce51a7c85450c8d3e9f89966278e7
+# 6303ec2a8ebe4e42b553b6778a20a870
 msgid "The ``client.pem`` file is incorrect. This can be fixed by deleting the ``client.pem`` file and re-running the |chef client|. When the |chef client| re-runs, it will re-attempt to register with the |chef server| and generate the correct key."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst:29
-# 75138ad919f14e668e9eab8c84b6cea9
+# e8795f3007d24a45a182ccdff3f3d0ca
 msgid "A ``node_name`` is different from the one used during the initial |chef client| run. This can happen for a number of reasons. For example, if the |client rb| file does not specify the correct node name and the host name has recently changed. This issue can be resolved by explicitly setting the node name in the |client rb| file or by using the ``-N`` option for the |chef client| executable."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authentication_debug.rst:30
-# 19c895de8caf471f932153bbe456f8da
+# b01d3c3be6334fb1a33eb5fdf0a5540e
 msgid "The system clock has drifted from the actual time by more than 15 minutes. This can be fixed by syncing the clock with an |ntp| server."
 msgstr ""
 
 #: ../source/auth.rst:82
-# fb278c6f50a1445c80bb8b9ad11aa2ed
+# 5f8e75fcad244c78847e1d605e8d5529
 msgid "Authorization"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization.rst:5
-# 845126d3fe324227836159fd7f7071d4
+# aea447ba92df465ab631fa0ab875e8e4
 msgid "Users of the |chef server| can only perform authorized actions. The |chef server| has two authorization models:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization.rst:7
-# 2739c08a66a44393baf0028c64adb5fd
+# 08e53ee6e9bd47b6bbde3aa90605ade4
 msgid "|chef hosted| and |chef private| use a role-based access control (RBAC) model"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization.rst:8
-# f93f5bd946f94111b4f3d4fe2ab13e9f
+# 409139c067784872acb2db637ec1d50b
 msgid "The open source |chef server| has a single tenant access control model"
 msgstr ""
 
 #: ../source/auth.rst:86
-# 87a49bf71dc24bbfa5d0e2449ed6f793
+# f9b89dd07d3d4df6b3656fe84f60d4fa
 msgid "|chef hosted| and |chef private|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server.rst:5
-# ca515cf1d9094b2ea881d0ae7a592558
+# e264e92487e349aaa49d799779c02a69
 msgid "Every object on the |chef hosted| or |chef private| server is secured using role-based access control (RBAC). These objects include cookbooks, node objects, roles, environments, data bags, and search indexes. Each object has an associated access control list (ACL) that defines up to five access control entries (ACEs): ``create``, ``delete``, ``grant``, ``read``, and ``update``. Each object can only be accessed after a user sends an authentication request to the |chef server|, and only after the |chef server| authorizes that request and applies the ACL and ACE settings for that user."
 msgstr ""
 
 #: ../source/auth.rst:90
-# 9f53c646b92a410690be23f7c65b8fa7
+# 4b9f863eeb614e9f9b716a3926bcba6c
 msgid "Permissions"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:5
-# fc207a5e03144a62a3fa3f8af96c7a82
+# 630ceaadac8f4d8f81a3235f09ce0ad5
 msgid "There are two types of permissions: global and object-specific."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:7
-# 7b5ac85b63254da39cd33b6a2e590028
+# ffed30de504e45d1ab497b2f3292f821
 msgid "Global permissions:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:13
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:32
-# 768755b17f49457884840596189e53a1
-# b2243dd03da04aee883cdf0a738e7f6e
+# 98bc518a4f8949baa0d1595a7f37fc04
+# 531347c398114c8c82a5eed7a9b58159
 msgid "Permission"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:15
-# bcb0506711c346ca965cf05b0d731daf
+# d0dfdff0a3a547d5b1d2be8d81cd26f4
 msgid "**CREATE**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:16
-# 9ac4e09519004d61af64b1f67c6877cd
+# 63a7688084bf4b8691b7446ce317dfe1
 msgid "Allows a user to create new objects of the given type. Any user who creates an object will be automatically granted object-level permissions to that object."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:17
-# 324b957e5a2b4f59a32b08874fb3fd25
+# cc2dbbf43ef8490b9f434b618503017a
 msgid "**LIST (READ)**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:18
-# 5841b502d5354b03a4d421e7d51d50dd
+# dc50e4ce589a46b48542878b3b6efff2
 msgid "Allows a user to view all of the objects of the given type."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:20
-# 44648b05dfb747a69c5f37e8bf8b1655
+# 979bcf87638f431e8b9c31fea6d47894
 msgid "The following entities may be assigned ``CREATE`` and ``LIST`` permissions:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:22
-# 7a83d9c0bcdc4efdb2df7a2ebdbd73b8
+# 0e6adf1694a44022b83aed0de7a6e124
 msgid "Individual users who have permission to log on to the |chef hosted| or |chef private| web user interface"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:23
-# 0ec6ba0ad0a14b20a3f7f05bd955eb65
+# 750018954be647f69343697d38547ba7
 msgid "Every node that will be managed by the |chef client| and every workstation from which |knife| will be used to manage data on the |chef server|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:24
-# 81c08d637848425b87d0500c4c0bfe6f
+# 457417bbd53e42bf97c15f56bf95f9ba
 msgid "The ``admin``, ``clients``, ``users``, and ``billing-admin`` security groups, plus any custom security groups that may be added"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:26
-# 74176ce7606641c2a9f7dc17bf45d604
+# 74f696fad23040229351a79d780248b4
 msgid "Object-specific permissions:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:34
-# e9a2eb77145d40fea0abd1c40f670ac8
+# 8bdef12cd9474a9d8dc6947140c76493
 msgid "**DELETE**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:35
-# 76198c7f01fb4a38baf66ec530d01e29
+# e263badeb50e4613a8e8b6349f3602d6
 msgid "Allows a user to delete an object."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:36
-# 2adaf816d82b4d2b90539fdcd6446cce
+# efbb138c54084baaa83843cf18622a8e
 msgid "**GRANT**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:37
-# 57e4c4608da9446fbf76103e8d9f8989
+# c29b2878a420453681674d47ea7b790a
 msgid "Allows a user to define permissions to an object for another user."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:38
-# fbf51c2a54f14b958efa30ca0edcefd1
+# d63313ca70f24b9d8e14c7393d352d5a
 msgid "**READ**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:39
-# 0d76382949124287a6cf956fb2802e22
+# df24e55e31e043b9b99c087900616251
 msgid "Allows a user to view the current state of an object."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:40
-# 4372f0e7b42e4669a51c1ca05af76951
+# 20f1f04b0cf04c38b1aad5cbbe94d6de
 msgid "**UPDATE**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst:41
-# 6acff08ee50d43fc98f3d2d8922cebdd
+# 96c5fbd148fe4d7da497a57a065ee90f
 msgid "Allows a user to update the state of an object."
 msgstr ""
 
 #: ../source/auth.rst:94
-# efdd6d8fdb7540698dbb7f0bfce1a2f8
+# a031fb08494d45678c93de14855ef40c
 msgid "Users"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst:5
-# 1d216a10a11e44509979e9e4fa52c3b8
+# 206b83e7c31045d8b758da48cbc52c4f
 msgid "So what are users?"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst:7
-# 24fa148d5681450da3bd9371c1e26956
+# 0908b6829df94ec8885c577edd9d55c2
 msgid "A user is typically an individual who interacts with the |chef hosted| or |chef private| servers through the user interface or from a workstation using |knife|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst:8
-# 5af597e8a3ff42c19602ee634779a909
+# 2b20c7b285d245678a1f0d8655b4ac06
 msgid "A user, for the purposes of discussing role-based access control, is also the |chef client|, which requires access to the |chef server| to pull down cookbooks, get the latest node object, update the node object at the end of a |chef client| run, and so on"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst:9
-# 6d2bd6b1d77b4444b59fd224bb81cf93
+# 2f0b87ec5b4e449c86a0c242a4aa33fd
 msgid "A user can also be any other entity that requires access to the |chef server|, such as a custom subcommand in a |knife| plugin, a custom |curl| or |ruby| script, a string that is executed using the ``knife exec`` subcommand, and so on"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst:11
-# ccf2bcf6dddb4dcd8e6f78e18758d0a6
+# f9aca0328d01406a9b0a1facdf903814
 msgid "The |chef hosted| and |chef private| servers recognize users based on private keys, where each private key is effectively a user that can send authorization requests via the |api chef server|. The private keys are typically assigned to the |chef client| and to the user of a workstation, from which that user will execute |knife| subcommands and other actions."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst:13
-# cb79558380eb4fb3a3138cf4de4a2c58
+# 206bc82add924071b5801ff673745803
 msgid "For example, the user of a workstation is an administrator for the |chef server|. That user also uses two custom |knife| plugins and (occasionally) needs ad hoc access to the |chef server| from the command line, sometimes |curl| and sometimes using the ``knife exec`` subcommand. This user can use the same private key for each of these actions and when requests are authorized, the |chef hosted| or |chef private| servers will apply the same role-based access control model to all of those actions."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst:15
-# 5602ecd19c6b4e67936ad44c170b6d84
+# 9663384ae33c4050ae9caa78a3128033
 msgid "Effectively, it's the private key that the |chef hosted| and |chef private| servers consider to be \"users\"."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst:17
-# c33a0e77a7634d68b4cac5e95eadc42e
+# d8d0aaa17d694cb697fa4e131ffd844d
 msgid "The role-based access control model in the |chef hosted| and |chef private| servers also maps to the common users and groups approach to security, where each user can be assigned permissions individually, or each user can be assigned to one (or more) groups."
 msgstr ""
 
 #: ../source/auth.rst:98
-# 278c129c06c94d6e92adff1b6bf99053
+# 2ebfdd17e4644991a393f2e2208d1738
 msgid "Default Settings"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:5
-# 4f8b520b175f4ff582aa381eddf9304f
+# d2604d3b8e4f4125bd8b1129a8daef64
 msgid "In general, most users do not need to do anything with the out-of-the-box security groups and default settings, as they are sufficient to ensure that all users, nodes, workstations, and admins have the right access to the right things, including as the number of nodes managed by the |chef client| increases and as varying types of data are uploaded to the |chef server|."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:7
-# fababeeaf35845e1888cfb9eb9ee3fa9
+# b194f42b813c42fdaa8b855e17640dfd
 msgid "The |chef hosted| and |chef private| servers include default security groups:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:13
-# 1af3c0586915420cbd9b00aeda1e5585
+# 8d82cfe0bb5f40c1ba76ec1a39670ef1
 msgid "Security Group"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:15
-# 6d322d81825649aa91e84702b99d3279
+# 76654a4f9a3f43b1bbd3cf8bdad47906
 msgid "**admins**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:16
-# bb21c36b063f49b393487e74a8068c31
+# ff7065d2ce874754ae78f62a601699a8
 msgid "The default permissions for all users who will be administrators."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:17
-# 95d85cb1ff7d4fe6a974da9b9cd123dc
+# 25477dc3452e4f5b9a3b15f513915f13
 msgid "**billing-admins**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:18
-# 5210831b93b349e5b13f874509e2feb3
+# 5bbfd57849e240efb66cfc0517166f7a
 msgid "The default permissions for all users who will need to manage billing information."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:19
-# 5f24229e8b824f819412611f591dac9b
+# c7016347e4984a1ca80d163d79b0b213
 msgid "**clients**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:20
-# a4e98e2cebcc4ae89ae89709c7aef707
+# 4c6e8e9973074d3d8c17bdb3952d9877
 msgid "The default permissions for non-human users, such as the |chef client| that is installed on every node registered with the |chef server| and the workstation, from which |knife| will be used to manage data on the |chef server|."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:21
-# ee62e1d4ba3f4c37bd4b9585af705387
+# bd8b9b0673634aa9b9629d6cbea9a606
 msgid "**users**"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:22
-# 4fc819548c4e47b7850805adc43fc022
+# da5ee9bc9458442180d1250450615c98
 msgid "The default permissions for all human users who are not administrators."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:24
-# b556b5c97bb44e048a12a6675c1dc11f
+# f0ad0690882544b9a9e578b7961c3405
 msgid "The ``admin`` security group is granted ``CREATE`` and ``LIST`` permissions by default and the ``users`` security group is granted the ``LIST`` permission by default. Each individual user, client, and member of the ``clients`` and ``billing-admins`` security groups may be assigned the ``CREATE`` and ``LIST`` permissions, but are not done so by default."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst:26
-# 4ab3db7c43344fe9aa12cbcabc59ad2b
+# 09860f17bed144dd9f6d4816a4fe9880
 msgid "In ``admin`` security group is also granted ``DELETE``, ``GRANT``, ``READ``, and ``UPDATE`` permission to all objects on the |chef server|. When users create new objects, users will be automatically granted ``DELETE``, ``GRANT``, ``READ``, and ``UPDATE`` permission those objects."
 msgstr ""
 
 #: ../source/auth.rst:102
-# 0a98e03acca340e1b752e58ff460a8e2
+# b63d953d735c4b8a875c7b428d29a9d4
 msgid "Determine Access"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst:5
-# 8319271b1e0840ab876ae07beef8bcdc
+# 4ecbce8eca11415bae09791a04eeb794
 msgid "When a user makes a request to the |chef hosted| or |chef private| servers using the |api chef server|, whether that user has permission to perform the requested action is determined by the following process:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst:7
-# 906166fa48414cb2954162bf7f585d0b
+# 0a57bb69b6124c03a8376d18f9facea8
 msgid "If the request requires ``LIST`` or ``CREATE`` permissions, check to see if that user has those permissions to the object type for which the request has been authorized."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst:8
-# b0c4ebcbaf9f48c79bbe335abd9079e8
+# 51d8340144e64eb085a0f1b7f2c30a2c
 msgid "If no, recursively check if the user is a member of a security group that has ``LIST`` or ``CREATE`` permissions to the object type. If yes, perform the action."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst:10
-# b6b07bebc02a447d863c67c06f4590e3
+# 25323d8817bc473bb76401bb5bfcc9d9
 msgid "and/or:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst:12
-# a9dc4160f78541aa9546ebd1be0ea55e
+# dbaf1f24922546a49597591b64981576
 msgid "If the request requires ``READ``, ``UPDATE``, ``DELETE``, or ``GRANT`` permissions, check to see if that user has those permissions to the object type for which the request has been authorized."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst:13
-# 6b90e747781e4aab9990dd3fc983e580
+# 8d69aeb936cc4b6481d6435178582e13
 msgid "If no, recursively check if the user is a member of a security group that has ``READ``, ``UPDATE``, ``DELETE``, or ``GRANT`` permissions to the object type. If yes, perform the action."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst:15
-# a9358b5acdaf409d8e67ca0a3f00bf84
+# 9b6f5af234104c738c390b247286aea6
 msgid "Group permissions are set using the |chef manager| in the |chef hosted| or |chef private| user interface."
 msgstr ""
 
 #: ../source/auth.rst:106
-# f826a4262e5f401ab3eeb178d14819cc
+# 1548b4095e5544e1b12b162b41bf9163
 msgid "Open Source |chef server|"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:5
-# e6c671b0cdc84ab6919e68afd1e1e200
+# d4765036c03e4aee9c96cc7132e2d1fe
 msgid "The open source |chef server| has a single tenant access control model. All objects---roles, nodes, cookbooks, data bags, search indexes, and so on---are stored in the same virtual space and are accessible to any API request (as long as the request can be authorized). All users are granted ``admin``, ``normal``, or ``validator`` rights:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:7
-# 77f36000c2584ff083d77663d71f3611
+# fb9a4931505544ffa08d4d36d04eac7a
 msgid "``admin`` rights allow tasks such as create, read, update, or delete for all nodes"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:8
-# d88adbc7f74d4196a35cc7df628d1d73
+# 29df18b4e69741ab9a8e8267c70988a6
 msgid "``normal`` rights are only actionable only on per-node basis"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:10
-# 2f9ee24c4e774e8f8769c961457d5966
+# 6d5c4cab100d47f88d6fe39bed223a20
 msgid "The following tables list the various API requests that may be made to the open source |chef server|. Any requests that are not listed can be done as long the API requests is authenticated properly."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:12
-# fef1130a2c894dd1a104b1f28658430c
+# 351d1c51e8834fecb07b7f9e6844f5b7
 msgid "The following API requests require admin privileges:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:18
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:67
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:78
-# c627e2aeeab641008d129b029d3ac94a
-# 9fa5d5cc2de94c1493f3e47cf5f1ef2a
-# 2ab4f7fae8cd482297371ad38e21d2aa
+# 0b61d81fb6d24d4cac6db8bc07c5d542
+# 6c1b72df51b444599f0061452ab58450
+# 567b5ea9a9564709a96e60834c6be751
 msgid "Request"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:19
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:68
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:79
-# 5649257cc1254a5b9df9ab6b32deb643
-# 62186ef2c5b243d385efac26e86f9bb2
-# f3ece2b4c749449597156b6f5e3a6d29
+# 0ccbe9bb633744f7946c4e354d2ce54b
+# 5201213d4b1e485d89e3edf97563f215
+# 621ccccfd91046d0a88fac66993118ab
 msgid "Equivalent Knife Command"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:20
-# 4c714ea4e2e94d0a8c1d8642e98a9b53
+# e495eb1db57743b8bfe49bb6f3aa2cbc
 msgid "Client Index"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:21
-# bcead230670d4d22aeaa2b2211925d1a
+# caa70293bb7745a68c5a44b1f5afd8bf
 msgid "``knife client list``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:22
-# a785e849224d48c5b839f0df519adb1d
+# e53d9ab995d647de88e80a1963133a8d
 msgid "Client Update"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:23
-# d135e68451624495bb5e276ddfc974e0
+# 794d5b6ee3df4e16b4faf746d0c6550f
 msgid "``knife client edit NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:24
-# 7a9c9bf98d0e4037aedef05c8403c02b
+# fffbbed8bbab40a88ea7c5bf13a92990
 msgid "Client Destroy"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:25
-# 77f40f4464384b7aa2ffb8f2833288cf
+# 08f93d9903ec4d91960ca1b8bf17de02
 msgid "``knife client delete NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:26
-# 9d11951db8e348c687366b0d29b6850b
+# 1cb01e96c8454d9ab474a02b9de0777c
 msgid "Cookbook Update"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:27
-# 6bf2e1758f6649638f3fda8dc94c7501
+# 8a87ccbcc04e482e8ace35ef1bfda6bc
 msgid "``knife cookbook upload COOKBOOK``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:28
-# f335bb01028e48459da0bdd62f7ca15a
+# 1f1321eefe074ad6ae550f4901820703
 msgid "Cookbook Destroy"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:29
-# 3913144e1b6c4434b8a33cdba0146466
+# df62710afae946f39f700fb79b2f17ae
 msgid "``knife cookbook delete COOKBOOK``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:30
-# 0e23cd71be5d40c9a4cd46929e15efb0
+# 715e5e004cbc499e82ccc5d4deaf4458
 msgid "Data Bag Create"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:31
-# cc3b8a3236b645218442168e1f27556b
+# 4dab70bc8581495d97c147f2099dcc51
 msgid "``knife data bag create BAG_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:32
-# c2ce3fb5de6944d8aa3223042ef1e111
+# d9a8e2e2c1d641bb989fdf84ef309233
 msgid "Data Bag Destroy"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:33
-# 31074562d79041c4bd0a0095cb84c219
+# 5bad6f9637bd4591bb062d62eb025825
 msgid "``knife data bag delete BAG_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:34
-# 38389f8133db47818cc9060ba3349b07
+# f2b7476d7546416aadc56e62bf765d97
 msgid "Data Bag Item Create"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:35
-# fd8a05ecb59941439c18016ee0f946c1
+# 4bcdbd28153747218326f554a8ee90e9
 msgid "``knife data bag create BAG_NAME ITEM_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:36
-# b606e7e3fc674440b39f9d1e6511bbae
+# f9d2a940f290448a94e7f466db81c6cc
 msgid "Data Bag Item Update"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:37
-# 4066954fbaaf4051b40c1a13f9037d98
+# 284a1b6a049641b7a2109cc04109c2ce
 msgid "``knife data bag edit BAG_NAME ITEM_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:38
-# 53e6b3a07371472a9f1df9fbe245f65e
+# 889dc5d493ed49e7825c307506210737
 msgid "Data Bag Item Destroy"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:39
-# 6d2e2c9a592d42e4bc432af9375be8d4
+# 1612b9e904194138bbdce40d488f2972
 msgid "``knife data bag delete BAG_NAME ITEM_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:40
-# b349ccdc2f7e4ee8ad7e9a3cfcd6fd7c
+# 0b6ba8af12924d4481e6502af80904e6
 msgid "Environment Create"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:41
-# 389214c6e0064904accb1d1c25e1c05b
+# 3f46f983aaf9428b97008365d95d8726
 msgid "``knife environment create ENV_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:42
-# 19bbced7e88a48088ebbfb77d7e4688d
+# d2f7ea9c689942fe8f7dedae070aaf8f
 msgid "Environment Update"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:43
-# 6df8ca1bd0154c04a27496b229af3f3c
+# a9b332a8e6694e7fb3aaab4911aac4f5
 msgid "``knife environment edit ENV_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:44
-# 8c29820816d34ffe856e8846b0c91250
+# aa6200b3d5b24f6a8429784745b048a4
 msgid "Environment Destroy"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:45
-# b2eec7c791c84c49ad494978f51673bb
+# 0168addd4b1f4fd19302c191d83fac03
 msgid "``knife environment delete ENV_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:46
-# 72453d900aeb428d8c4c1ff3469b6088
+# 18f2178b990d4cdab85ee8b7fce0bda9
 msgid "Role Create"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:47
-# 90e088fce5b243adba2f888788bbf35b
+# 7788a6089ae1469cab0f2b28c68cdd8c
 msgid "``knife role create ROLE_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:48
-# 875a02fcec1b4e62892201068339fc86
+# e2b3e819afee4c35bc3f49cb97fd16df
 msgid "Role Update"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:49
-# 064485e122fb4543896024e8b4ce7be1
+# e3f4143ac7d04179a60d6fe864295d6b
 msgid "``knife role edit ROLE_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:50
-# 75df55e6c78c49fd9775a26e6cfbf0f4
+# 75f8b48fe90f4d01952f9177f97150c3
 msgid "Role Destroy"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:51
-# b7428a2a23c245abacd5924df3ea70da
+# 0666ce632b4d4e689177142fd348d32c
 msgid "``knife role delete ROLE_NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:52
-# 0dc51f260f5542fe98621f12eb7f01c3
+# 1a82b530d536454482a987621b16e4e3
 msgid "Search Reindex"
 msgstr ""
 
@@ -863,261 +863,261 @@ msgstr ""
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:57
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:59
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:87
-# b74f8784b1b3496a90e484b514cb0ef2
-# 2d958a52cd2a4b31bcc2f1bcc7a5f214
-# 6cd9bca09c3f4b9ebbe9bf556d4e2182
-# fd8e99157b6d4925b79a7311d7115915
-# ae95a0a32aac4f9b8e35b284ce9dc195
+# b724ff1c34cd4e9283f47b2c5db64738
+# 165474c2fedb4852a3520528ba940afe
+# db5fb30481c340dd937dfd79a2372525
+# 7d22da000caf403fb0ead4fe34684ef0
+# 3209112e109143b78c490f58ee1a14d2
 msgid "None."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:54
-# 224a05f76b9e4354b298cea7e8e91a01
+# a296dfa32c8945a581bd352d48962ad0
 msgid "User Create"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:56
-# e8ac9b5c183243b994369214a8792a8c
+# 16ffc95041f8473fbb3c20baef4b53f3
 msgid "User Update"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:58
-# acd30c675bbf4be98232bdeaea21d9d9
+# f73bc64c134c4e6995b2c6f60b7f15cd
 msgid "User Destroy"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:61
-# 58e1c4a0da6547fe85a9a8755d2e4ad8
+# 8940eaca3d3d4e2190ef1685eaf04767
 msgid "The following API requests require admin privileges or are done by the |chef validator| during the initial |chef client| run:"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:69
-# 308fc7067c484580b0a153a348e46d8a
+# e91fb583e98b43f7b8a788655418b4c5
 msgid "Client Create"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:70
-# 8d9cbca889394ea484877e72ccb793d3
+# c44f1bfcd2204d45a833e57fa2bf05aa
 msgid "``knife client create``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:72
-# f972f416d5c74ea9a552519cd1e6f3c6
+# 711a8c9674d6416db4c292db04b64207
 msgid "The following API requests require admin privileges or for the action to be taken against the location from which the request originated. For example, a node may request that it be deleted, even if the node does not have admin privileges."
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:80
-# 0cab9b15b2e94baab6e8fcbf5ae4235b
+# 34df0dd4adfd43e2b1756509d0e1b3b3
 msgid "Client Show"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:81
-# fad3521725614d0b9d18ba8272a1d7c3
+# 042f8b75e98d483bb546b6a77c226a30
 msgid "``knife client show NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:82
-# 7bace3572d68420d973587de59025c48
+# 11c70a81b86d4009939c33c0a977a6d1
 msgid "Node Update"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:83
-# 474b7511e9f044eda863c66c6f3a14d3
+# 5061239717e742fa80906a8fe8580da0
 msgid "``knife node edit NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:84
-# 14f10da4f5ce4381abde05e681a25e0a
+# 335b78a091fc48388715816fc5d53dbf
 msgid "Node Destroy"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:85
-# 52f3997072184b69983722578c7434db
+# a4e0ff7dab204ca1acbe6751c4290137
 msgid "``knife node delete NAME``"
 msgstr ""
 
 #: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst:86
-# ddb073ba66e84979ab361eb9632ae906
+# 21be72752cc54262a9eef7db36ae34e0
 msgid "Node Cookbooks"
 msgstr ""
 
 #: ../source/auth.rst:110
-# 3379618a51de4225a1ac43994f510c25
+# 2507951c628b4bf8b9495a09b72bc7c9
 msgid "|api chef server|"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server.rst:4
-# c5fa53ec7360404c934f733a940294d0
+# 7f996b208e174c5198d4853931a01c9b
 msgid "The |api chef server| is used to provide access to objects on the |chef server|, including nodes, environments, roles, cookbooks (and cookbook versions), and to manage an |chef api client| list and the associated RSA public key-pairs."
 msgstr ""
 
 #: ../source/auth.rst:114
-# 2c1f2ec8543f485c82a1ab4bdb4955c9
+# c82a404e8de843dab88956ac277701de
 msgid "Authentication Headers"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:4
-# 9a4e87449ba84b78ae6ed12088d830ab
+# 5f69419c6be7427f9f03862f84e2cff4
 msgid "Authentication to the |chef server| occurs when a specific set of HTTP headers are signed using a private key that is associated with the machine from which the request is made. The request is authorized if the |chef server| can verify the signature using the public key. Only authorized actions are allowed."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers.rst:6
-# 0462267844184a5ea5815200e49f3b45
+# c11de131917f40b9a207ed055e562c12
 msgid "Most authentication requests made to the |chef server| are abstracted from the user. Such as when using |knife| or the |chef server| user interface. In some cases, such as when using the |subcommand knife exec| subcommand, the authentication requests need to be made more explicitly, but still in a way that does not require authentication headers. In a few cases, such as when using arbitrary |ruby| code or |curl|, it may be necessary to include the full authentication header as part of the request to the |chef server|."
 msgstr ""
 
 #: ../source/auth.rst:118
-# 6a4ad49f195f493bb13ec28698ba3111
+# a08e5984b5334a3388e247f2eef7b5cd
 msgid "Header Format"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:5
-# 0edbee3ee6dd459999074b2acd017343
+# 8d258a15f66f4d159f2e0ec96e46bb6b
 msgid "All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters.  Each canonical header should be encoded in the following format:"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:17
-# d1887779a26442f9bc63611f9a1d3bf8
+# af221ae2baed40eba3256f807246ebe0
 msgid "``HTTP_METHOD`` is the method used in the API request (``GET``, ``POST``, and so on)"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:18
-# 53f9bb210ae646d9b4c6a910d7726e04
+# 73737c76b37d4c1c90e3bce7bb015135
 msgid "``HASHED_PATH`` is the path of the request (``/name_of_endpoint`` for the open source |chef server| and ``/organizations/organization_name/name_of_endpoint`` for |chef hosted| or |chef private|). The ``HASHED_PATH`` must be hashed using |sha1| and encoded using |base64| and must not have repeated forward slashes (``/``) or end in a forward slash (unless the path is ``/``)."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:19
-# dc23b2b45b994d2e94cdba6964626ca3
+# 2b04d205028645f4a5c4ebf6224eb6e7
 msgid "The private key must be an RSA key in the SSL .pem file format. This signature is then broken into character strings (of not more than 60 characters per line) and placed in the header."
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_format.rst:21
-# 170b18acee5a41edab85648ebdf7e97e
+# af5bcfa04a0f40919f0cc8347df63284
 msgid "The |chef server| decrypts this header and ensures its content matches the content of the non-encrypted headers that were in the request. The timestamp of the message is checked to ensure the request was received within a reasonable amount of time. One approach generating the signed headers is to use `mixlib-authentication <https://github.com/opscode/mixlib-authentication>`_, which is a class-based header signing authentication object similar to the one used by the |chef client|."
 msgstr ""
 
 #: ../source/auth.rst:122
-# c43307804d8d4144a5b15fd7bdc1d924
+# ad7201b8eec54e47a7385bcb9166271f
 msgid "Required Headers"
 msgstr ""
 
 #: ../source/auth.rst:123
-# baa8e14b1e0946b5850606d73845377c
+# 9c950712f2f0466ea788c301cc9571da
 msgid "The following authentication headers are required:"
 msgstr ""
 
 #: ../source/auth.rst:129
-# 46121c2704d343d7af8c8c0a1e593ba6
+# 76eaf35dd4364a81a2874a0ca9ed6792
 msgid "Feature"
 msgstr ""
 
 #: ../source/auth.rst:131
-# af70871928d94b8cbdbfd63737c930fe
+# e4243d88580a4f1a9b3827c735d5490d
 msgid "``Accept``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_accept.rst:4
-# eb4b506916c54ac2b7eecc76f79eba28
+# 883d0e243a4a43ed97b65456b278089c
 msgid "The format in which response data will be provided, such as ``json``, ``xml``, ``html``, and so on. This header is not required, but is often included to ensure that response data is returned in the desired format."
 msgstr ""
 
 #: ../source/auth.rst:133
-# 4575bd763dd544b8a953b722c7e7e4b0
+# fa9e73d496cc45e1b12f070a65598768
 msgid "``Host``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_host.rst:5
-# 156c567e71984197a47f7a748af36ac6
+# 6712529e3b0e4af1b3ce3fb08f28b1d8
 msgid "The host name (and port number) to which a request is sent. (Port number ``80`` does not need to be specified.) For example: ``api.opscode.com`` (which is the same as ``api.opscode.com:80``) or ``api.opscode.com:443``."
 msgstr ""
 
 #: ../source/auth.rst:135
-# 94f9a3d7eeb94e1dbcc23c097021ae42
+# d2ba63335087426ea35d6600421cf7da
 msgid "``X-Chef-Version``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_chef_version.rst:5
-# fdf95258e0364bec90758842637f2f49
+# a539885ed80f49b0900dbe2a5f552285
 msgid "The version of the |chef client| executable from which a request is made. This header ensures that responses are in the correct format. For example: ``11.0.4.x`` or ``0.10.x``."
 msgstr ""
 
 #: ../source/auth.rst:137
-# ef1e52a3aedc4285b6f112fb75daa993
+# 542e981d29a447c4951c727bfeaa1e2b
 msgid "``X-Ops-Authorization-N``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_authorization.rst:5
-# 3936f0bd143a42d98c52536288d9967d
+# 001b35df55bf436cbd13ad8116454c84
 msgid "One (or more) 60 character segments that comprise the canonical header. A canonical header is signed with the private key used by the client machine from which the request is sent, and is also encoded using |base64|. If more than one segment is required, each should be named sequentially, e.g. ``X-Ops-Authorization-1``, ``X-Ops-Authorization-2``, ``X-Ops-Authorization-N``, where ``N`` represents the integer used by the last header that is part of the request."
 msgstr ""
 
 #: ../source/auth.rst:139
-# c5aad77dff4b4043969de32c0fa5d7ad
+# 9bc0e8df954149c18874c25e6a2a86a5
 msgid "``X-Ops-Content-Hash``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_content_hash.rst:5
-# de8645d9e07248bcbd281f85936f9b2e
+# 7d954edf481d4c71b506119e0c7a2a0b
 msgid "The body of the request. The body should be hashed using |sha1| and encoded using |base64|. All hashing is done using |sha1| and encoded in |base64|. |base64| encoding should have line breaks every 60 characters."
 msgstr ""
 
 #: ../source/auth.rst:141
-# 7a2392513b994d24bf49bed28c393785
+# 580c1d9d6b6149d8b2fd27589a3c9f39
 msgid "``X-Ops-Sign``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_sign.rst:5
-# e2f0bb10f6b645278acb4c25037e21af
+# 8a1310b473184adc951992bb1ae72bf9
 msgid "Set this header to the following value: ``version=1.0``."
 msgstr ""
 
 #: ../source/auth.rst:143
-# e8981ed14640450c8826984c7e4ad8e5
+# 95cb390a27174ca3abdcb4e59a65548e
 msgid "``X-Ops-Timestamp``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_timestamp.rst:5
-# 27bca78ba6c948ee93b3c4047e3e2c67
+# e6059a2e0bf2402590b567edf8b0c793
 msgid "The timestamp, in |iso 8601| format and with |utc| indicated by a trailing ``Z`` and separated by the character ``T``. For example: ``2013-03-10T14:14:44Z``."
 msgstr ""
 
 #: ../source/auth.rst:145
-# 2050008efff04f14a51a2647152ff091
+# 4d762bb8f7164b1190db81e3a7552cce
 msgid "``X-Ops-UserId``"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_x_ops_userid.rst:5
-# 76a93fc4bb0149808efd8dfad2b9f93c
+# 89aff0117f1c433387a75b27872253ab
 msgid "The name of the |chef api client| whose private key will be used to create the authorization header."
 msgstr ""
 
 #: ../source/auth.rst:149
-# 484a210087e0401eb8176697c3957c9b
+# 825d873fff8044789910abea655cf953
 msgid "Example"
 msgstr ""
 
 #: ../../includes_api_chef_server/includes_api_chef_server_headers_example.rst:5
-# 2fa9310022b149068651df2d9488a0bf
+# 517aeea3d3274d8b82cfe69c81095e21
 msgid "The following example shows an authentication request to |chef hosted|:"
 msgstr ""
 
 #: ../source/auth.rst:153
-# c1b1d9007ab54e28b113f0ccd226cc57
+# 21d54643105c442596fdaea221519a35
 msgid "Endpoints"
 msgstr ""
 
 #: ../source/auth.rst:154
-# c5c85de4588c44e3a923caba5b8712bc
+# 1bfe346cc301418eb91785a1a9481c4c
 msgid "For |chef hosted| and |chef private|, each authentication request must include ``/organizations/organization_name`` as part of the name for the endpoint. For the open source |chef server|, each authentication request must include ``/clients`` as part of the name of the endpoint. For example, the full endpoint for getting a list of roles on |chef hosted| or |chef private|:"
 msgstr ""
 
 #: ../source/auth.rst:160
-# 71d96d96f95b4784b81daea16ad14a36
+# 406b2bb5a8734e33b8df4ce6b1d81b07
 msgid "and for the same request, but to the open source |chef server|:"
 msgstr ""
 
 #: ../source/auth.rst:166
-# 5bf98ab9d88b41eea79ee63a9a17363c
+# 8a3da29805614e5dba337021705268e6
 msgid "For more information about the |api chef server| endpoints see :doc:`api_chef_server`."
 msgstr ""
 

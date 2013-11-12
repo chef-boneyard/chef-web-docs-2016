@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-31 17:02\n"
+"POT-Creation-Date: 2013-11-12 00:21\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,87 +17,92 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/server_security.rst:33
-# 23339ff253f543eb9f4a76574073477a
+# ca72a382adf54a049788f3dcca965a49
 msgid "Security"
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl.rst:4
-# 60071a5fa9d64e76910a85549972656d
+# bdc9441c47484a0d9782977fc45fd067
 msgid "Configuration of |ssl| for |chef server oec| by using certificate authority-verified certificates is done by placing the certificate and private key file obtained from the certifying authority in the correct files after the initial configuration of |chef server oec|."
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl.rst:6
-# d7ab1190ef5744e0b415709cf8d9bb07
+# 9d7b3105dfc44c95a6d90aac20ce882a
 msgid "Initial configuration of |chef server oec| is done automatically using a self-signed certificate to create the certificate and private key files for |nginx|."
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl.rst:8
-# 25d88bcabdde41abbc7b477290be6ab8
+# 8e85cf6cbfd64e33beae047a072c67bf
 msgid "The locations of the certificate and private key files are"
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl.rst:10
-# f4f940393b42460481c9e8d41240a99b
+# 75e09e591fde4b68b800f0f7fd930ee4
 msgid "``/var/opt/opscode/nginx/ca/FQDN.cert``"
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl.rst:11
-# 5cefc57dbda5405c9edfa40eb3d5dafe
+# 41717384c63c4dbc8573e7cb3050922a
 msgid "``/var/opt/opscode/nginx/ca/FQDN.pem``"
 msgstr ""
 
 #: ../../includes_server_security/includes_server_security_ssl.rst:13
-# b940dc2d4b0844e68135de5a70a23293
+# b8ea1d8b5bd6452ab4ecf3579cdd30bc
 msgid "As the |fqdn| will have already been configured previously, simply replace the contents of these two files with the certifying authority's files."
 msgstr ""
 
-#: ../source/server_security.rst:38
-# cb9a821ddb104cecaf02a9f21a73144d
+#: ../source/server_security.rst:37
+# bb183016a2aa42cb8645d0132cccefa2
+msgid "The |fqdn| for the |chef server oec| server should not exceed 64 characters when using |open ssl|. |open ssl| requires the ``CN`` in a certificate to be no longer than 64 characters. By default, |chef server oec| uses the |fqdn| of the server to determine the common name (``CN``). If the |fqdn| of the |chef server oec| server is longer than 64 characters, the ``private-chef-ctl reconfigure`` command will not fail, but an empty certificate file will be created. |nginx| will not start if a certificate file is empty."
+msgstr ""
+
+#: ../source/server_security.rst:40
+# 1399811dee314910b69d5f62cad9b99d
 msgid "Add Custom SSL Certificates"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:4
-# 6535345a9aa94902be8d50e634d1229c
+# 26f65009731444fdbaa955266883e83c
 msgid "|chef server oec| can be configured to use |ssl| certificates by adding the following settings in the |private chef rb| file:"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:10
-# e0e5fbb377dd44368fd1f41ea4cc46d7
+# 4f4aa2cd3b304a8a91c8e4b42ce2036a
 msgid "Setting"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:11
-# a67962e8bda14bb7b04ddccf15d32f43
+# 7f575a7d1c3541369a4c420c9ac21b8f
 msgid "Description"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:12
-# 3f80ca9e120043bbb8adf19a7f9ca7b4
+# 61d25c50f31641f19eb3962d552dd607
 msgid "``nginx['ssl_certificate']``"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:13
-# ae57261a38784789a17879d1872686ef
+# b8f1f6be11f747c4bd385d4633a3bb21
 msgid "|ssl_certificate|"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:14
-# d02132a9976c478ea894e370df712366
+# 2a01960b3831464bb08e496a69d94f96
 msgid "``nginx['ssl_certificate_key']``"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:15
-# 3681f7782f3d4eccaaddacaac751634f
+# fabb5462552b451f9c2a11ffac010d73
 msgid "|ssl_certificate key|"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:17
-# ae7109b0c75740dbab5cd83c06cb453a
+# 30a04c3c24ed41aeb62cd4870dc5e7fd
 msgid "and setting their values to define the path to the certificate and the path to the certificate key, similar to the following:"
 msgstr ""
 
 #: ../../step_server_security/step_server_security_ssl_custom_certificates.rst:24
-# 1f1b9384adfa4c46bfc1eeacf3bc6612
+# c74efea20b334bfbb0409ccb8c8c62be
 msgid "Save the file, and then run the following command:"
 msgstr ""
 
