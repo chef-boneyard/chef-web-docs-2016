@@ -40,7 +40,7 @@ Some important components on nodes include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_chef_client.png
-     - .. include:: ../../includes_chef/includes_chef_client.rst
+     - .. include:: ../../includes_chef_client/includes_chef_client.rst
        
        .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
    * - .. image:: ../../images/icon_ohai.png

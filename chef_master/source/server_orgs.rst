@@ -48,11 +48,11 @@ The |chef server oec| supports using as many organizations as required. This can
 * Sharing the same physical hardware and support team across organizations
 
 
-|pushy| Groups
+|push jobs| Groups
 =====================================================
 
-.. include:: ../../includes_pushy/includes_pushy.rst
+.. include:: ../../includes_push_jobs/includes_push_jobs.rst
 
-.. include:: ../../includes_server_rbac/includes_server_rbac_groups_pushy.rst
+.. include:: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst
 
 

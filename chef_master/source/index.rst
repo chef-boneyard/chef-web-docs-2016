@@ -85,7 +85,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Install Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
 
-**Add-ons:** :doc:`Reporting </reporting>` | :doc:`Push Jobs </pushy>`
+**Add-ons:** :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>`
 
 **Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>` 
 
@@ -152,7 +152,7 @@ Cookbooks
    api_chef_server
    api_cookbooks_site
    api_omnitruck
-   api_pushy
+   api_push_jobs
    auth
    auth_authentication
    auth_authorization
@@ -185,7 +185,7 @@ Cookbooks
    ctl_ohai
    ctl_opscode_reporting
    ctl_private_chef
-   ctl_pushy_client
+   ctl_push_jobs_client
    debug
    dsl_recipe
    essentials_chef_client
@@ -219,7 +219,7 @@ Cookbooks
    feedback
    images
    install
-   install_pushy
+   install_push_jobs
    junos
    just_enough_ruby_for_chef
    knife
@@ -245,6 +245,7 @@ Cookbooks
    orgmapper
    plugin_knife
    pushy
+   push_jobs
    reporting
    release_notes
    resource

@@ -99,7 +99,7 @@ Plugins allow |knife| to interact with all of the major cloud providers. All |kn
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_vcloud.html">knife vcloud</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_windows.html">knife windows</a> </br>
 
-..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_pushy.html">knife pushy</a> </br>
+..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_push_jobs.html">knife push jobs</a> </br>
 
 A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/enterprise/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/enterprise/plugin_knife_custom.html>`_ can be created.
 
@@ -150,7 +150,7 @@ The |chef server oec| acts as a hub for configuration data. The :doc:`components
 In addition to the built-in features of |chef server oec|, the following optional components are available:
 
 * **Reporting** :doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
-* **Push Jobs** :doc:`Push Jobs </pushy>` (sometimes referred to as "Pushy") is used to run jobs against nodes independently of |chef client| runs.
+* **Push Jobs** :doc:`Push Jobs </push_jobs>` is used to run jobs against nodes independently of |chef client| runs.
 
 Deployment Scenarios
 -----------------------------------------------------
@@ -227,7 +227,7 @@ The following settings files are used to configure behavior for the |chef server
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">private-chef.rb</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_pushy_server.html">pushy-server.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_push_jobs_server.html">push-jobs-server.rb</a> </br>
 
 The following command-line tools can be run on the |chef server|:
 
@@ -235,7 +235,7 @@ The following command-line tools can be run on the |chef server|:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/orgmapper.html">orgmapper</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_private_chef.html">private-chef-ctl</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_pushy_client.html">pushy-client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_push_jobs_client.html">push_jobs-client</a> </br>
 
 APIs
 -----------------------------------------------------
@@ -245,7 +245,7 @@ The following APIs can be used to access data on the |chef server|:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_chef_server.html">Chef Server API</a> </br>
 
-..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_pushy.html">Pushy API</a> </br>
+..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_push_jobs.html">Push Jobs API</a> </br>
 
 
 
@@ -457,7 +457,7 @@ The following topics discuss using |chef server oec| with platforms:
    api_chef_server
    api_cookbooks_site
    api_omnitruck.rst
-   api_pushy
+   api_push_jobs
    auth_authentication
    auth_authorization
    chef_shell
@@ -467,7 +467,7 @@ The following topics discuss using |chef server oec| with platforms:
    config_rb_knife
    config_rb_knife_optional_settings
    config_rb_metadata
-   config_rb_pushy_server
+   config_rb_push_jobs_server
    config_rb_solo
    ctl_chef_apply
    ctl_chef_client
@@ -475,7 +475,7 @@ The following topics discuss using |chef server oec| with platforms:
    ctl_chef_solo
    ctl_opscode_reporting 
    ctl_private_chef
-   ctl_pushy_client
+   ctl_push_jobs_client
    dsl_recipe
    essentials_chef_client
    essentials_cookbook_attribute_files
@@ -501,7 +501,7 @@ The following topics discuss using |chef server oec| with platforms:
    essentials_roles
    essentials_search
    install_bootstrap
-   install_pushy
+   install_push_jobs
    install_server
    install_server_be
    install_server_fe
@@ -593,13 +593,13 @@ The following topics discuss using |chef server oec| with platforms:
    plugin_knife_hp
    plugin_knife_linode
    plugin_knife_openstack
-   plugin_knife_pushy
+   plugin_knife_push_jobs
    plugin_knife_rackspace
    plugin_knife_reporting
    plugin_knife_terremark
    plugin_knife_vcloud
    plugin_knife_windows
-   pushy
+   push_jobs
    reporting
    resource
    resource_apt_package

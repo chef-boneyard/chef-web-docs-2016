@@ -40,7 +40,7 @@ Some important components on nodes include:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_chef_client.png
-     - .. include:: ../../includes_chef/includes_chef_client.rst
+     - .. include:: ../../includes_chef_client/includes_chef_client.rst
        
        .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
    * - .. image:: ../../images/icon_ohai.png
@@ -83,8 +83,8 @@ In addition to node objects, policy, and cookbooks, a |chef server| includes:
      - .. include:: ../../includes_search/includes_search.rst
    * - .. image:: ../../images/icon_manager.png
      - .. include:: ../../includes_chef/includes_chef_manager.rst
-   * - .. image:: ../../images/icon_pushy.png
-     - .. include:: ../../includes_pushy/includes_pushy.rst
+   * - .. image:: ../../images/icon_push_jobs.png
+     - .. include:: ../../includes_push_jobs/includes_push_jobs.rst
 
 Node Objects
 -----------------------------------------------------
