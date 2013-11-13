@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following |ohai| example shows part of a file that getsß initial kernel attribute values:
+The following |ohai| example shows part of a file that gets initial kernel attribute values:
 
 .. code-block:: ruby
 
