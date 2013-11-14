@@ -1,12 +1,11 @@
 .. This is an included how-to. 
 
 
-To reset the validation key:
+To reset a user's validation key:
 
 #. Open |opscode manage|.
-#. Click |opscode manage admin|.
-#. Click |opscode manage admin_orgs|.
-#. Click |opscode manage admin_orgs_reset_validation_key|.
+#. From the drop-down list next to your username, select |opscode manage button_view_account|.
+#. Under |opscode manage admin_users|, click |opscode manage admin_users_reset_key|.
 #. In the |opscode manage db_reset_key| dialog box, confirm that the key should be regenerated and click the |opscode manage button_regenerate_key| button:
 
    .. image:: ../../images/step_manage_webui_admin_organization_reset_key.png

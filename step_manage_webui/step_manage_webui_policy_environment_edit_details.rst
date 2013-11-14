@@ -9,4 +9,3 @@ To edit the details of an environment:
 #. Select an environment.
 #. Click the |opscode manage tab_details| tab.
 #. Click **Edit**.
-#. xxxxx
