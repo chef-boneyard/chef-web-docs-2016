@@ -1,5 +1,5 @@
 =====================================================
-Chef Single-page Topics 
+Chef Single-page Topics
 =====================================================
 
 .. note:: This page contains the same exact set of topics that are available from docs.opscode.com, just organized differently and in bigger sections.
