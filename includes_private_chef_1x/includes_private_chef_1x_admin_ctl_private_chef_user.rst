@@ -10,7 +10,7 @@ The following commands are available for user management:
    * - Command
      - Description
    * - ``password``
-     - Use this command to change a user's password. When |microsoft ad| or |ldap| is enabled, this command enables (or disables) the system recovery password for that user. For example:
+     - Use this command to change a user's password. When |windows ad| or |ldap| is enabled, this command enables (or disables) the system recovery password for that user. For example:
 
        .. code-block:: bash
 

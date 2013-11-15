@@ -3,7 +3,7 @@
 
 A new user account must be created before using |chef private|.
 
-.. note:: If your server is in |microsoft ad| or |ldap| mode, signup is unnecessary and users can simply log in to |chef private| using their credentials.
+.. note:: If your server is in |windows ad| or |ldap| mode, signup is unnecessary and users can simply log in to |chef private| using their credentials.
 
 Visiting the |chef private| management console will present users with a **Login** page, which contains a **Sign Up** link:
 

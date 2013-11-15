@@ -2,7 +2,7 @@
 
 .. To start |orgmapper|:
 
-Log in to the server that is hosting the |chef private| back-end. (In an high availability configuration, this should be the current primary server in that configuration.)
+Log in to the server that is hosting the back-end. (In a |ha| configuration, this should be the current primary server in that configuration.)
 
 .. code-block:: bash
 

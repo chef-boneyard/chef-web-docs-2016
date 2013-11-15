@@ -10,6 +10,6 @@ If other password recovery methods are not working for a user, an administrator 
    Enter the new password again:  ******
    Password for adamjacobs successfully set.
 
-.. note:: In |microsoft ad| or |ldap| mode, this sets the user’s System Recovery password.
+.. note:: In |windows ad| or |ldap| mode, this sets the user’s System Recovery password.
 
 

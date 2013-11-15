@@ -1,44 +1,8 @@
 =====================================================
-Private Chef Server Topics 
-=====================================================
-
-.. include:: ../../includes_chef/includes_chef.rst
-
-.. warning:: This documentation is about Private Chef. For documentation about the newly-released Enterprise Chef, see docs.opscode.com/enterprise.
-
-.. 
-.. 
-.. Chef Server 11.x
-.. =====================================================
-.. .. note:: This section is a work in progress.
-.. 
-.. **The basics:** :doc:`Chef Overview </chef_overview>` | Engagement with Opscode | Opscode Support | System Requirements | :doc:`Components </server_components>`
-.. 
-.. **Components:** Nginx | Erchef | Bookshelf | chef-webui | Search Index Queues (RabbitMQ | chef-expander | chef-solr) | PostgreSQL
-.. 
-.. **Topologies:** Standalone | Tiered | High Availability | Options
-.. 
-.. **Install:** Open Source **Private Chef:** Standalone | Tiered | High Availability **Hosted Chef::** Sign Up
-.. 
-.. **Migrate:** Open Source >> Hosted Chef | chef-pedant | Ommibus
-.. 
-.. **System Analysis and Tuning:** Settings | Performance | Backup / Restore | Security | Hardening | Firewall | High Availability | Ports (Chef 11 runs on ports 80 and 443)
-.. 
-.. **Manage:** Open Source | Hosted Chef | Private Chef
-.. 
-.. **Monitor:** Database | Cookbooks | Log Files | Services | Ports | chef-pedant | Nagios | Graphite
-.. 
-.. **Troubleshooting:** xxxxx | xxxxx | xxxxx
-.. 
-.. **Tools:** :doc:`orgmapper </orgmapper>`
-.. 
-.. **Reference:** :doc:`chef-server-ctl </ctl_chef_server>` | :doc:`private-chef-ctl </ctl_private_chef>` | chef-server.rb | private-chef-server.rb | Chef Server API | Files, Folders, and Directories
-.. 
-.. 
-.. 
-
 Private Chef 1.x.x  
 =====================================================
+
+.. warning:: This documentation is about |chef private|. For documentation about the newly-released |chef server oec|, see docs.opscode.com/enterprise.
 
 **Engagement:** :doc:`How Consulting Works </private_chef_1x_engage_how_consulting_works>` | :doc:`Pre-Installation Steps </private_chef_1x_engage_preinstall>` | :doc:`Onsite Installation </private_chef_1x_engage_onsite>` | :doc:`Acceptance </private_chef_1x_engage_acceptance>`
 
@@ -57,21 +21,6 @@ Contact |opscode| :doc:`Support </private_chef_1x_support>` for additional quest
 .. toctree::
    :hidden:
 
-   chef_pedant
-   ctl_chef_server
-   ctl_private_chef
-   install_server
-   install_server_scenario_vm
-   chef_overview
-   api_chef_server
-   api_cookbooks_site
-   manage_server_hosted
-   manage_server_open_source
-   migrate_to_hosted
-   config_server_rb
-   config_solo_rb
-   config_solr_rb
-   server_components
    private_chef_1x
    private_chef_1x_engage
    private_chef_1x_engage_acceptance
@@ -102,7 +51,7 @@ Contact |opscode| :doc:`Support </private_chef_1x_support>` for additional quest
    private_chef_1x_admin_upgrade
    private_chef_1x_admin_user_management
    private_chef_1x_support
-   orgmapper
+
 
 
 

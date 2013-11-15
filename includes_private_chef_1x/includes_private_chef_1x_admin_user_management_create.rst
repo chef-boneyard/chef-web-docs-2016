@@ -13,4 +13,4 @@ Once the user is created, download the private key. The private key is used for 
 
 .. image:: ../../images/private_chef_1x_download_private_key.png
 
-.. note:: If the |chef private| server is in |microsoft ad| or |ldap| mode, signup is unnecessary; log in to |chef private| using |microsoft ad| or |ldap| credentials.
+.. note:: If the |chef private| server is in |windows ad| or |ldap| mode, signup is unnecessary; log in to |chef private| using |windows ad| or |ldap| credentials.

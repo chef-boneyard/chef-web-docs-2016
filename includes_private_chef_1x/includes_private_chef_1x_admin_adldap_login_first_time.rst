@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-For users who have not previously logged into |chef private|, they will log in using their |microsoft ad| or |ldap| credentials. After the initial login, each user will be presented with a screen asking them if they would like to create a new user with an account name derived from their login name, or if they would like to link their |microsoft ad| or |ldap| account to an existing |chef private| user account.
+For users who have not previously logged into |chef private|, they will log in using their |windows ad| or |ldap| credentials. After the initial login, each user will be presented with a screen asking them if they would like to create a new user with an account name derived from their login name, or if they would like to link their |windows ad| or |ldap| account to an existing |chef private| user account.
 
 .. image:: ../../images/private_chef_1x_link_new_account.png 
 

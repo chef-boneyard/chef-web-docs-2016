@@ -79,15 +79,15 @@ The following sections describe the various requirements for the three |chef ser
 -----------------------------------------------------
 Before installing |chef server oec|, ensure that each machine has the following installed and configured properly:
 
-* **Host names** --- Ensure that all systems have properly configured host names.
-* **FQDNs** --- Ensure that all systems have a resolvable |fqdn|.
-* **NTP** --- Ensure that every server on which |chef private| is running is connected to NTP; |chef private| is sensitive to click drift.
-* **Mail Relay** --- |chef server oec| uses email to send notifications for various events; a local mail transfer agent should be installed and available to the |chef server|.
-* **cron** --- |chef private| performs periodic maintenance tasks using |cron|.
-* **git** --- |git| must be installed so that various internal services can confirm revisions.
-* **libfreetype and libpng** --- |chef private| requires these libraries.
-* **Apache Qpid** --- This daemon must be disabled on |centos| and |redhat| systems.
-* **Required users** --- If the environment in which |chef server oec| will run has restrictions on the creation of local user and group accounts, ensure that the correct users already exist.
+* **Host names** --- Ensure that all systems have properly configured host names
+* **FQDNs** --- Ensure that all systems have a resolvable |fqdn|
+* **NTP** --- Ensure that every server is connected to NTP; the |chef server| is sensitive to click drift
+* **Mail Relay** --- |chef server oec| uses email to send notifications for various events; a local mail transfer agent should be installed and available to the |chef server|
+* **cron** --- Periodic maintenance tasks are performed using |cron|
+* **git** --- |git| must be installed so that various internal services can confirm revisions
+* **libfreetype and libpng** --- These libraries are required
+* **Apache Qpid** --- This daemon must be disabled on |centos| and |redhat| systems
+* **Required users** --- If the environment in which |chef server oec| will run has restrictions on the creation of local user and group accounts, ensure that the correct users already exist
 
 |chef server oec| has the following requirements:
 

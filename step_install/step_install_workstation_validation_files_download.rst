@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-For a workstation that will interact with either |chef hosted| and |chef private|, log on and download the following files:
+For a workstation that will interact with |chef server oec| (including hosted |chef server oec|), log on and download the following files:
 
 * |knife rb|. This configuration file can be downloaded from the **Organizations** page.
 * |organization pem|. This private key can be downloaded from the **Organizations** page.

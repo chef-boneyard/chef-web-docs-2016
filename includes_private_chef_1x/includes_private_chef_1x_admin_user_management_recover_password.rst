@@ -5,4 +5,4 @@ If the |chef private| password is forgotten or lost, it can be reset by clicking
 
 .. image:: ../../images/private_chef_1x_forgot_password.png
 
-.. note:: This does not apply to |microsoft ad| or |ldap|.
+.. note:: This does not apply to |windows ad| or |ldap|.
