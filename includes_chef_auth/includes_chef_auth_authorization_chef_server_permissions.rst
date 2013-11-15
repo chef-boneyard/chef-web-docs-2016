@@ -19,7 +19,7 @@ Global permissions:
 
 The following entities may be assigned ``CREATE`` and ``LIST`` permissions: 
 
-* Individual users who have permission to log on to the |chef hosted| or |chef private| web user interface
+* Individual users who have permission to log on to the |chef server oec| web user interface
 * Every node that will be managed by the |chef client| and every workstation from which |knife| will be used to manage data on the |chef server|
 * The ``admin``, ``clients``, ``users``, and ``billing-admin`` security groups, plus any custom security groups that may be added
 

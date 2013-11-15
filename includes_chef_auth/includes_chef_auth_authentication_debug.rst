@@ -19,7 +19,7 @@ To debug authentication problems, determine which |chef client| is attempting to
 
    .. code-block:: bash
    
-      [Wed, 05 Oct 2011 22:05:35 +0000] DEBUG: Signing the request as SOMENODENAMEHERE
+      [Wed, 05 Oct 2011 22:05:35 +0000] DEBUG: Signing the request as NODE_NAME
 
 If the authentication request occurs during the initial |chef client| run, the issue is most likely with the private key.
 
