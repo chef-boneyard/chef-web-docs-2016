@@ -2,8 +2,6 @@
 All About Enterprise Chef ... 
 =====================================================
 
-.. warning:: These topics are a preview collection of topics for the upcoming release of Enterprise Chef 11. As such, there may be placeholder text strings in certain locations as the documentation nears completion.
-
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
 
 
