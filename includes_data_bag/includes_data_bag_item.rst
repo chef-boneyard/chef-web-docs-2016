@@ -6,7 +6,7 @@ A data bag is a container of related data bag items, where each individual data 
 .. code-block:: javascript
 
    {
-     "id": "ITEM_NAME"
+     "id": "ITEM_NAME",
      "key": "value"
    }
 
