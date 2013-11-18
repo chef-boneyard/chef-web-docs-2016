@@ -10,7 +10,7 @@ The |service solr| service has the following settings:
    * - Setting
      - Description
    * - ``opscode_solr['commit_interval']``
-     - Default value: ``60000``.
+     - |solr_commit_interval| |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds).
    * - ``opscode_solr['data_dir']``
      - The directory in which the index data for |apache solr| is located. Default value: ``/var/opt/chef-server/chef-solr/data``.
    * - ``opscode_solr['dir']``
@@ -28,7 +28,7 @@ The |service solr| service has the following settings:
    * - ``opscode_solr['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-solr``.
    * - ``opscode_solr['max_commit_docs']``
-     - Default value: ``1000``.
+     - |solr_max_commit_docs| |solr_update_frequency_caveat| Default value: ``1000`` (every 1000 documents).
    * - ``opscode_solr['max_field_length']``
      - Default value: ``100000``.
    * - ``opscode_solr['max_merge_docs']``

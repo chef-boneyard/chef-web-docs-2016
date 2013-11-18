@@ -40,6 +40,10 @@ opscode-solr
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_solr.rst
 
+Update Frequency
+-----------------------------------------------------
+.. include:: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst
+
 opscode-webui
 -----------------------------------------------------
 .. include:: ../../includes_server_tuning/includes_server_tuning_webui.rst

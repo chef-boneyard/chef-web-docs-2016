@@ -10,7 +10,7 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``chef_solr['commit_interval']``
-     - Default value: ``60000``.
+     - |solr_commit_interval| |solr_update_frequency_caveat| Default value: ``60000`` (every 60 seconds).
    * - ``chef_solr['data_dir']``
      - The directory in which the index data for |apache solr| is located. Default value: ``/var/opt/chef-server/chef-solr/data``.
    * - ``chef_solr['dir']``
@@ -28,7 +28,7 @@ This configuration file has the following settings:
    * - ``chef_solr['log_directory']``
      - The directory in which log files are located. Default value: ``/var/log/chef-server/chef-solr``.
    * - ``chef_solr['max_commit_docs']``
-     - Default value: ``1000``.
+     - |solr_max_commit_docs| |solr_update_frequency_caveat| Default value: ``1000`` (every 1000 documents).
    * - ``chef_solr['max_field_length']``
      - Default value: ``100000``.
    * - ``chef_solr['max_merge_docs']``
