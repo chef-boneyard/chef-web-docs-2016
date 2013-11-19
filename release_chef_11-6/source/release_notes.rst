@@ -97,17 +97,6 @@ New attributes (common to all |resource file|-based resources):
    * - ``manage_symlink_source``
      - |manage_symlink_source| Possible values: ``nil``, ``true``, or ``false``. When this value is set to ``nil``, the |chef client| will manage a symlink's source file and emit a warning. When this value is set to ``true``, the |chef client| will manage a symlink's source file and not emit a warning. Default value: ``nil``. The default value will be changed to ``false`` in a future version.
 
-The following attributes for |resource file|-based resources have been updated:
-
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``source``
-     - |source file_location|
-
 |resource remote_file| Attributes
 -----------------------------------------------------
 The |resource remote_file| resource was updated to be fully-based on the |resource file| resource. Updated attributes:
@@ -119,7 +108,7 @@ The |resource remote_file| resource was updated to be fully-based on the |resour
    * - Attribute
      - Description
    * - ``source``
-     - |source file_location|
+     - Required. |source file_location| Default value: ``nil``.
 
 New attributes:
 
@@ -142,7 +131,18 @@ New attributes:
 
 |resource template| Attributes
 -----------------------------------------------------
-The |resource template| resource has the following new attributes:
+The |resource template| resource was updated to be fully-based on the |resource file| resource. Updated attributes:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``source``
+     - |source template| Can be used to distribute specific files to specific platforms. Default value: the ``name`` of the resource block.
+
+New attributes:
 
 .. list-table::
    :widths: 150 450
@@ -170,6 +170,19 @@ Helper Methods
 **Cookbook Library Modules**
 
 .. include:: ../../step_resource/step_resource_template_library_module.rst
+
+|resource cookbook_file| Attributes
+-----------------------------------------------------
+The |resource cookbook_file| resource was updated to be fully-based on the |resource file| resource. Updated attributes:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``source``
+     - |source cookbook_file| Can be used to distribute specific files to specific platforms. Default value: the ``name`` of the resource block.
 
 Updated Behavior for ``mode`` Attribute
 -----------------------------------------------------
