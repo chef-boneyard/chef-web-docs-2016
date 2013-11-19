@@ -15,8 +15,6 @@ This resource has the following attributes:
      - |group deploy| Default value: ``nil``.
    * - ``provider``
      - Optional. |provider resource_parameter|
-   * - ``reference``
-     - |reference resource scm|
    * - ``repository``
      - |uri repository_svn|
    * - ``revision``
