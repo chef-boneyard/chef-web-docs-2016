@@ -278,6 +278,14 @@ View Node Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_permissions_view.rst
 
+View Node Run-list
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_nodes_view_run_list.rst
+
+View Node Tags
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_nodes_view_tags.rst
+
 View Nodes
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_view_all.rst
