@@ -18,6 +18,10 @@ Add Environment
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_add.rst
 
+Add Group
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_groups_add.rst
+
 Add Organization
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_add.rst
@@ -34,29 +38,13 @@ Add Role to Run-list
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_add_role_or_recipe.rst
 
-Add User/Group to Cookbook
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_add.rst
-
-Add User/Group to Data Bag
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_add.rst
-
-Add User/Group to Environment
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_add.rst
-
-Add User/Group to Node
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_node_permissions_add.rst
-
-Add User/Group to Role
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_add.rst
-
 Add Tag
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_tags_add.rst
+
+Change Password
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_users_change_password.rst
 
 Delete Data Bag
 =====================================================
@@ -69,6 +57,10 @@ Delete Data Bag Item
 Delete Environment
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_delete.rst
+
+Delete Group
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_groups_delete.rst
 
 Delete Node
 =====================================================
@@ -134,11 +126,7 @@ Get Starter Kit
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_get_starter_kit.rst
 
-Invite A User
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_users_invite_user.rst
-
-Invite Users
+Invite a User
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_invite_user.rst
 
@@ -166,11 +154,11 @@ Reset Node Validation Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_reset_key.rst
 
-Reset User Key
+Reset User Validation Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_reset_key.rst
 
-Reset Validation Key
+Reset Organization Validation Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_reset_key.rst
 
@@ -181,6 +169,14 @@ Search Nodes
 Set Environment
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_details_set_environment.rst
+
+Set Global Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_global_permission_set.rst
+
+Set Group Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_groups_permissions_set.rst
 
 Set Permissions to a Cookbook
 =====================================================
@@ -209,6 +205,34 @@ Set Tag
 Switch Organization
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_switch.rst
+
+Update Global Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_global_permission_add.rst
+
+Update Group Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_groups_permissions_add.rst
+
+Update Permissions to Cookbooks
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_add.rst
+
+Update Permissions to Data Bags
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_add.rst
+
+Update Permissions to Environments
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_add.rst
+
+Update Permissions to Nodes
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_node_permissions_add.rst
+
+Update Permissions to Roles
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_add.rst
 
 View All Cookbook Files
 =====================================================
@@ -270,6 +294,22 @@ View Environment Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_view.rst
 
+View Global Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_global_permission_view.rst
+
+View Group Details
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_groups_view_details.rst
+
+View Group Members
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_groups_view_members.rst
+
+View Group Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_groups_permissions_view.rst
+
 View Node Attributes
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_attributes.rst
@@ -309,6 +349,10 @@ View Role Permissions
 View User Account Details
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_view_account.rst
+
+
+
+
 
 
 

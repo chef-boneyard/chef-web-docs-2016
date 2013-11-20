@@ -1,12 +1,13 @@
 .. This is an included how-to. 
 
 
-To view permissions for a node:
+To view group permissions:
 
 #. Open |opscode manage|.
-#. Click |opscode manage nodes|.
-#. Select a node.
-#. Click the |opscode manage tab_permissions| tab.
+#. Click |opscode manage admin|.
+#. Click |opscode manage admin_groups|.
+#. Select a group.
+#. Click the |opscode manage tab_group_permissions| tab.
 
    where:
 

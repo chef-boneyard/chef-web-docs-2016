@@ -13,4 +13,4 @@ For example:
 
    include_recipe "apache2::mod_ssl"
 
-If a recipe is included more than once in a recipe, only the first inclusion will be processed and any subsequent inclusion will be ignored.
+If the ``include_recipe`` method is used more than once to include a recipe, only the first inclusion is processed and any subsequent inclusions are ignored.
