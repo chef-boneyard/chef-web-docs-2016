@@ -307,4 +307,88 @@ View User Account Details
 
 
 
+List of Reporting Tasks
+=====================================================
+ (placeholder)
+
+Show Runs for Date Range
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_show_runs.rst
+
+View Finished Runs
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_finished_runs.rst
+
+View Failed Runs
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_number_of_failed_runs.rst
+
+View Succcessful Runs
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_number_of_successful_runs.rst
+
+View Run Summary
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_summary.rst
+
+View Runs Still Running
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_runs_still_running.rst
+
+View Runs with Errors
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_runs_with_errors.rst
+
+View Time Elapsed
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_time_elapsed_for_completed_runs.rst
+
+View Dashboard
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard.rst
+
+Filter Reports by Environment
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_filter_by_environment.rst
+
+Filter Reports by Status
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_filter_by_status.rst
+
+Show Runs for Organization
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_show_runs.rst
+
+View Run-specific Details
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_details_run_details.rst
+
+View Run Details
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_details.rst
+
+View Error Log
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_error_log.rst
+
+View Run List
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_run_list.rst
+
+View History
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history.rst
+
+View chef-client Runs by Node
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_node.rst
+
+View chef-client Runs by Organization
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_org.rst
+
+View chef-client Runs by Run ID
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_run_id.rst
+
 
