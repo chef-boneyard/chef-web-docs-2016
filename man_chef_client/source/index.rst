@@ -2,7 +2,7 @@
 chef-client
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef_client.rst
+.. include:: ../../includes_chef_client/includes_chef_client.rst
 
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client.rst
 
