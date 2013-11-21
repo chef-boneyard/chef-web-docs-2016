@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``gateway``
      - |route_gateway|
    * - ``netmask``
-     - |netmask|
+     - |netmask| For example: ``255.255.255.0``.
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``target``

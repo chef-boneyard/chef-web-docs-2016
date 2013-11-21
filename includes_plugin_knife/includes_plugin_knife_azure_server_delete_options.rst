@@ -18,7 +18,7 @@ This argument has the following options:
    |azure_host_name|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node_name purge| This must be used with the ``-p`` (purge) option.
+   |node_purge| This must be used with the ``-p`` (purge) option.
 
 ``-p FILE_NAME``, ``--azure-mgmt-cert FILE_NAME``
    |azure_pem_filename|

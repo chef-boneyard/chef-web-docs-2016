@@ -15,7 +15,7 @@ This argument has the following options:
    |key hp_secret|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node_name purge|
+   |node_purge| 
 
 ``-T ID``, ``--hp-tenant ID``
    |id hp_tenant|

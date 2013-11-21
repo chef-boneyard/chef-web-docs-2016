@@ -18,6 +18,6 @@ This resource has the following attributes:
    * - ``name_type``
      - |name sname_or_name| Default value: ``sname``.
    * - ``node_name``
-     - |node_name resource directory|
+     - |node_hostname| Default value: ``chef@localhost``.
    * - ``provider``
      - Optional. |provider resource_parameter|

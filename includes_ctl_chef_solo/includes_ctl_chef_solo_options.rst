@@ -52,7 +52,7 @@ This command has the following options:
    |no_color| Default setting: ``--color``.
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node name chef-client|
+   |name node|
 
 ``-o RUN_LIST_ITEM``, ``--override-runlist RUN_LIST_ITEM``
    |override_runlist|

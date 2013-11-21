@@ -83,7 +83,7 @@ This configuration file has the following settings:
  
           log_location STDOUT
    * - ``node_name``
-     - |node_name| For example:
+     - |name node| For example:
        ::
  
           node_name "mynode.example.com"

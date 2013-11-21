@@ -133,17 +133,17 @@ This configuration file has the following settings:
  
           log_location STDOUT
    * - ``no_proxy``
-     - |no_proxy| For example:
+     - |no_proxy| Default value: ``nil``. For example:
        ::
  
           no_proxy "*.vmware.com,10.*"
    * - ``node_name``
-     - |node_name| In general, leaving this setting blank and letting |ohai| assign the |fqdn| of the node as the ``node_name`` during each |chef client| run is the recommended approach. For example:
+     - |name node| This is used to determine which configuration should be applied and to set the ``client_name`` (which is the name used when authenticating to a |chef server|). The default value is set automatically to be the |fqdn| of the |chef client|, as detected by |ohai|. In general, leaving this setting blank and letting |ohai| assign the |fqdn| of the node as the ``node_name`` during each |chef client| run is the recommended approach. For example:
        ::
  
           node_name "mynode.example.com"
    * - ``node_path``
-     - |node_path| For example:
+     - |node_path| Default value: ``/var/chef/node``. For example:
        ::
  
           node_path "/var/chef/node"

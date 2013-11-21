@@ -12,7 +12,7 @@ This argument has the following options:
    |rackspace_api_key|
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node_name purge| This must be used with the ``--purge`` option.
+   |node_purge| This must be used with the ``--purge`` option.
 
 ``-p``, ``--purge``
    |purge node rackspace|

@@ -9,7 +9,7 @@ This argument has the following options:
    |credential_file google|
 
 ``-N NAME``, ``--node-name NAME``
-   |node_name purge| This must be used with the ``--purge`` option.
+   |node_purge| This must be used with the ``--purge`` option.
 
 ``-p``, ``--purge``
    |purge google|

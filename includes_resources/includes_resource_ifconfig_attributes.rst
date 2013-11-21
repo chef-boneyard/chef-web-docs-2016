@@ -20,7 +20,7 @@ This resource has the following attributes:
    * - ``inet_addr``
      - |internet_host_address| Default value: ``nil``.
    * - ``mask``
-     - |netmask| Default value: ``nil``.
+     - |netmask| For example: ``255.255.255.0``. Default value: ``nil``.
    * - ``metric``
      - |routing_metric| Default value: ``nil``.
    * - ``mtu``

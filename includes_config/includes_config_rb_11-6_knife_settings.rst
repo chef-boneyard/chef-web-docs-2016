@@ -40,12 +40,12 @@ This configuration file has the following settings:
  
           data_bag_encrypt_version "2"   
    * - ``node_name``
-     - |node_name workstation| This is typically also the same name as the computer from which |knife| is run. For example:
+     - |name node| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
  
           node_name "node_name"
    * - ``no_proxy``
-     - |no_proxy| For example:
+     - |no_proxy| Default value: ``nil``. For example:
        ::
 
          no_proxy "localhost, 10.*, *.example.com, *.dev.example.com"

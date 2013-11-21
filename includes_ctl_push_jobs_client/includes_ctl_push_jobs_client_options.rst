@@ -25,7 +25,7 @@ This command has the following options:
    |log_location| This is recommended when starting any executable as a daemon.
 
 ``-N NODE_NAME``, ``--node-name NODE_NAME``
-   |node name chef-client|
+   |name node|
 
 ``-S URL``, ``--server URL``
    |chef_server_url|
