@@ -22,7 +22,7 @@ Add Group
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_groups_add.rst
 
-Add Organization
+Add Org
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_add.rst
 
@@ -66,7 +66,7 @@ Delete Node
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_delete.rst
 
-Delete Organization
+Delete Org
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_delete.rst
 
@@ -86,7 +86,7 @@ Edit Data Bag Item
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_edit_item.rst
 
-Edit Environment Default Attribute
+Edit Environment Defaults
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_default_edit.rst
 
@@ -94,7 +94,7 @@ Edit Environment Details
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_edit_details.rst
 
-Edit Environment Override Attribute
+Edit Environment Overrides
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_override_edit.rst
 
@@ -106,11 +106,11 @@ Edit Node Run-list
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_edit.rst
 
-Edit Role Default Attribute
+Edit Role Defaults
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_default_edit.rst
 
-Edit Role Override Attribute
+Edit Role Overrides
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_override_edit.rst
 
@@ -130,7 +130,7 @@ Invite a User
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_invite_user.rst
 
-Leave Organization
+Leave Org
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_leave.rst
 
@@ -138,27 +138,27 @@ Log Out
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_log_out.rst
 
-Remove a Recipe from a Run-list
+Remove Recipe from Run-list
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_remove_role_or_recipe.rst
 
-Remove a Role from a Run-list
+Remove Role from Run-list
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_remove_role_or_recipe.rst
 
-Remove a User from Organization
+Remove User from Org
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_remove_from_org.rst
 
-Reset Node Validation Key
+Reset Node Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_reset_key.rst
 
-Reset User Validation Key
+Reset User Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_reset_key.rst
 
-Reset Organization Validation Key
+Reset Org Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_reset_key.rst
 
@@ -166,9 +166,21 @@ Search Nodes
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_search.rst
 
+Set Cookbook Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_set.rst
+
+Set Data Bag Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_set.rst
+
 Set Environment
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_details_set_environment.rst
+
+Set Environment Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_set.rst
 
 Set Global Permissions
 =====================================================
@@ -178,23 +190,11 @@ Set Group Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_groups_permissions_set.rst
 
-Set Permissions to a Cookbook
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_set.rst
-
-Set Permissions to a Data Bag
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_set.rst
-
-Set Permissions to an Environment
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_set.rst
-
-Set Permissions to a Node
+Set Node Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_permissions_set.rst
 
-Set Permissions to a Role
+Set Role Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_set.rst
 
@@ -202,9 +202,21 @@ Set Tag
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_tags_set.rst
 
-Switch Organization
+Switch Orgs
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_switch.rst
+
+Update Cookbook Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_add.rst
+
+Update Data Bag Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_add.rst
+
+Update Environment Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_add.rst
 
 Update Global Permissions
 =====================================================
@@ -214,23 +226,11 @@ Update Group Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_groups_permissions_add.rst
 
-Update Permissions to Cookbooks
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_add.rst
-
-Update Permissions to Data Bags
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_add.rst
-
-Update Permissions to Environments
-=====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_add.rst
-
-Update Permissions to Nodes
+Update Node Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_permissions_add.rst
 
-Update Permissions to Roles
+Update Role Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_add.rst
 
@@ -278,7 +278,7 @@ View Data Bag Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_view.rst
 
-View Environment Default Attributes
+View Environment Defaults
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_default_view.rst
 
@@ -286,7 +286,7 @@ View Environment Details
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_details.rst
 
-View Environment Override Attributes
+View Environment Overrides
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_override_view.rst
 
@@ -330,7 +330,7 @@ View Nodes
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_view_all.rst
 
-View Role Default Attributes
+View Role Defaults
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_default_view.rst
 
@@ -338,7 +338,7 @@ View Role Details
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_details.rst
 
-View Role Override Attributes
+View Role Overrides
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_override_view.rst
 
@@ -363,26 +363,6 @@ List of Reporting Tasks
 =====================================================
  (placeholder)
 
-Show Runs for Date Range
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_show_runs.rst
-
-View Run Counts
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_counts.rst
-
-View Run Durations
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_durations.rst
-
-View Runs Summary
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_summary.rst
-
-View Dashboard
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard.rst
-
 Filter Reports by Environment
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history_filter_by_environment.rst
@@ -391,40 +371,58 @@ Filter Reports by Status
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history_filter_by_status.rst
 
-Show Runs for Organization
+Show Runs for Date Range
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_show_runs.rst
+
+Show Runs for Org
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history_show_runs.rst
 
-View Run-specific Details
+View Dashboard
 -----------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_details_run_details.rst
-
-View Run Details
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_details.rst
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard.rst
 
 View Error Log
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_error_log.rst
 
-View Run List
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_run_list.rst
-
 View History
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history.rst
 
-View chef-client Runs by Node
+View Run Counts
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_counts.rst
+
+View Run Details
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_details.rst
+
+View Run Durations
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_durations.rst
+
+View Run-specific Details
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_details_run_details.rst
+
+View Run List
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_history_view_run_list.rst
+
+View Runs by Node
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_node.rst
 
-View chef-client Runs by Organization
+View Runs by Org
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_org.rst
 
-View chef-client Runs by Run ID
+View Runs by Run ID
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_view_chef_client_runs_by_run_id.rst
 
-
+View Runs Summary
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_summary.rst

@@ -15,18 +15,18 @@ To view all of the nodes:
       * - Setting
         - Description
       * - ``Node Name``
-        - The name of the node.
+        - |name node|
       * - ``Platform``
-        - The platform on which the node is running.
+        - |platform_node|
       * - ``FQDN``
-        - The |fqdn| for the node.
+        - |node_fqdn|
       * - ``IP Address``
-        - The IP address for the node.
+        - |ip_address node|
       * - ``Uptime``
-        - The amount of time the node has been running.
+        - |node_uptime|
       * - ``Last Check-in``
-        - The time of the most recent check-in by the |chef client| running on that node.
+        - |node_last_checkin|
       * - ``Environment``
-        - The environment to which the node is assigned.
+        - |node_environment|
       * - ``Actions``
         - The |opscode manage| web user interface tasks available for this node.
