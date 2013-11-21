@@ -5,6 +5,6 @@ To run the |chef client| at periodic intervals (so that it can check in with the
 
    .. code-block:: bash
    
-      $ chef-server-mgr -a install
+      $ chef-service-manager -a install
 
 After the |chef client| is configured to run as a service, the default file path is: ``c:\chef\chef-client.log``.
