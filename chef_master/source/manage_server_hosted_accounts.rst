@@ -28,8 +28,5 @@ Cancel Subscription
 =====================================================
 .. include:: ../../step_manage_server_hosted/step_manage_server_hosted_account_cancel.rst
 
-Edit
-=====================================================
-.. include:: ../../step_manage_server_hosted/step_manage_server_hosted_account_edit.rst
 
 
