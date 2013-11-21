@@ -53,7 +53,7 @@ A validation parameter is used to add zero (or more) validation parameters to an
        
        .. code-block:: ruby
        
-          :kind_of => Integer
+          :kind_of => Fixnum
        
        .. code-block:: ruby
        
