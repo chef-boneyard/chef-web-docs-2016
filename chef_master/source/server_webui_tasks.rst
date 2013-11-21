@@ -367,33 +367,17 @@ Show Runs for Date Range
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_show_runs.rst
 
-View Finished Runs
+View Run Counts
 -----------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_finished_runs.rst
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_counts.rst
 
-View Failed Runs
+View Run Durations
 -----------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_number_of_failed_runs.rst
+.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_durations.rst
 
-View Succcessful Runs
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_number_of_successful_runs.rst
-
-View Run Summary
+View Runs Summary
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_summary.rst
-
-View Runs Still Running
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_runs_still_running.rst
-
-View Runs with Errors
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_runs_with_errors.rst
-
-View Time Elapsed
------------------------------------------------------
-.. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_time_elapsed_for_completed_runs.rst
 
 View Dashboard
 -----------------------------------------------------

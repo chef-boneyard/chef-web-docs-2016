@@ -10,4 +10,6 @@ To view the |chef client| runs summary:
 
    .. image:: ../../images/step_manage_webui_reports_dashboard_view_run_summary.png
 
-   .. image:: ../../images/step_manage_webui_reports_dashboard_view_run_summary_graph.png
+
+
+
