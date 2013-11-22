@@ -183,7 +183,7 @@ This configuration file has the following settings:
  
           ssl_client_key ""
    * - ``ssl_verify_mode``
-     - |ssl_verify_mode| For example, on an |ubuntu| system:
+     - |ssl_verify_mode_11-6| For example, on an |ubuntu| system:
        ::
  
           ssl_verify_mode :verify_peer

@@ -9,3 +9,7 @@ Security
 Add Custom SSL Certificates
 =====================================================
 .. include:: ../../step_server_security/step_server_security_ssl_custom_certificates.rst
+
+|chef client| SSL Settings
+=====================================================
+.. include:: ../../includes_server_security/includes_server_security_ssl_config_settings.rst
