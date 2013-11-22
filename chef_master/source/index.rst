@@ -87,7 +87,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Add-ons:** :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>`
 
-**Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>` 
+**Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>` 
 
 **Settings and Tools:** :doc:`private-chef.rb </config_rb_chef_server_enterprise>` | :doc:`private-chef-ctl </ctl_private_chef>` | :doc:`orgmapper </orgmapper>`
 
