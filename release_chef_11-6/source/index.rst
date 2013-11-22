@@ -168,7 +168,6 @@ Cookbooks
    chef_quick_overview
    chef_shell
    chef_solo
-   chef_system_requirements
    chef_why
    community
    community_contributions

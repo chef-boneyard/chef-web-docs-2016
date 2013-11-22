@@ -183,9 +183,6 @@ Cookbooks
    manage_server_hosted_roles
    manage_server_hosted_search
    manage_server_hosted_users
-
-
-   chef_system_requirements
    upgrade_server
    ctl_chef_shell
    ctl_chef_apply
