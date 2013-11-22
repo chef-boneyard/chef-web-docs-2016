@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-When running the ``create`` argument on |chef hosted| or |chef private|, be sure to omit the ``-a`` option:
+When running the ``create`` argument on |chef server oec|, be sure to omit the ``-a`` option:
 
 .. code-block:: bash
 

@@ -3,6 +3,6 @@
 
 A user is an individual account that is created to allow access to the |chef server|. For example:
 
-* A |chef hosted| account
+* A hosted |chef server oec| account
 * The user who operates the workstation from which a |chef server| will be managed
 

@@ -4,7 +4,7 @@ A Quick Overview of |chef|
 
 .. include:: ../../includes_chef/includes_chef.rst
 
-The following diagram shows the relationships between the various elements of a very simple organization, including the |chef hosted| server, a workstations, the |chef repo|, and some simple nodes that exist either in |virtualbox| or |amazon aws|.
+The following diagram shows the relationships between the various elements of a very simple organization, including the hosted |chef server oec| server, a workstations, the |chef repo|, and some simple nodes that exist either in |virtualbox| or |amazon aws|.
 
 .. image:: ../../images/overview_chef_quick.png
 
@@ -26,7 +26,7 @@ Repository
 -----------------------------------------------------
 .. include:: ../../includes_repository/includes_repository.rst
 
-|git| is the most common location to store a |chef repo| that is used with a |chef hosted| account.
+|git| is the most commonly-used location to store a |chef repo| that is used with a hosted |chef server oec| account, but |git| is not required.
 
 The Hosted Server
 =====================================================
