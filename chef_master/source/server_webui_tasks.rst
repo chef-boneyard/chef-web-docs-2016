@@ -363,15 +363,15 @@ List of Reporting Tasks
 =====================================================
  (placeholder)
 
-Filter Reports by Environment
+Filter by Environment
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history_filter_by_environment.rst
 
-Filter Reports by Status
+Filter by Status
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history_filter_by_status.rst
 
-Show Runs for Date Range
+Show Runs by Date Range
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_show_runs.rst
 
