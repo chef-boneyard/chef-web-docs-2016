@@ -4,6 +4,8 @@ Upgrade Private Chef
 
 There are two upgrade scenarios for |chef private|: standalone and high availability.
 
+.. warning:: This topic is not about how to upgrade from |chef private| to |chef server oec| 11. For information about how to upgrade from |chef private| to |chef server oec|, see the topics for `standalone <http://docs.opscode.com/upgrade_server_standalone.html>`_ and/or `high availability <http://docs.opscode.com/upgrade_server_ha.html>`_ upgrades.
+
 Standalone Upgrade
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_upgrade_standalone.rst
