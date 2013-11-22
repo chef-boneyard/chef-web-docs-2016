@@ -32,7 +32,6 @@ In the following sections, the settings are listed alphabetically, with a descri
    config_rb_knife
    config_rb_knife_optional_settings
    config_rb_metadata
-   config_rb_pushy_server
    config_rb_solo
 
 

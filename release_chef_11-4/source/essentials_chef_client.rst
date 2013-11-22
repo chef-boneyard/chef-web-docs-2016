@@ -4,7 +4,7 @@ About the chef-client
 
 .. warning:: |note doc_version_11-4|
 
-.. include:: ../../includes_chef/includes_chef_client.rst
+.. include:: ../../includes_chef_client/includes_chef_client.rst
 
 |chef validator|
 =====================================================

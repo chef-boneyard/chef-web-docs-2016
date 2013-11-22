@@ -105,7 +105,7 @@ The following features are available in both |chef server oec| and |chef server 
 
 **Search:** :doc:`About Search </essentials_search>`
 
-**Security:** :doc:`Authentication </auth_authentication>` | :doc:`Authorization </auth_authorization>` | :doc:`Headers and Endpoints </api_chef_server>` | :doc:`Private Keys </chef_private_keys>`
+**Security:** :doc:`Authentication and Authorization </auth>` | :doc:`Headers and Endpoints </api_chef_server>` | :doc:`Private Keys </chef_private_keys>`
 
 **Policy:** :doc:`About Policy </essentials_policy>` | :doc:`Data Bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
 
@@ -153,7 +153,6 @@ Cookbooks
    auth
    auth_authentication
    auth_authorization
-   breaking_changes_chef_11
    chef_client
    chef_overview
    chef_overview_attributes
@@ -211,7 +210,6 @@ Cookbooks
    essentials_roles
    essentials_search
    feedback
-   images
    install
    junos
    just_enough_ruby_for_chef
@@ -236,7 +234,7 @@ Cookbooks
    openstack
    opscode_cookbooks
    orgmapper
-   plugin_knife
+   plugin_knife 
    release_notes
    resource
    server_backup_restore
@@ -251,7 +249,6 @@ Cookbooks
    server_ldap
    server_logs
    server_monitor
-   server_orgs
    server_security
    server_services
    server_tuning
@@ -262,5 +259,4 @@ Cookbooks
    upgrade_server_ha
    upgrade_server_open_source
    upgrade_server_standalone
-   videos
    windows

@@ -252,6 +252,6 @@ This configuration file has the following settings:
 
        Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Mon, 21 Nov 2011 09:37:39 -0800]``.
 ..   * - ``whitelist``
-..     - The path to the attribute file that contains the whitelist used by |pushy|.
+..     - The path to the attribute file that contains the whitelist used by |push jobs|.
 ..
-..       .. warning:: This setting is available only when using |pushy|, a tool that runs jobs against nodes in a |chef private| organization.
+..       .. warning:: This setting is available only when using |push jobs|, a tool that runs jobs against nodes in a |chef private| organization.

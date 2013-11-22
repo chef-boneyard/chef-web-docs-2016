@@ -1,27 +1,3 @@
-=====================================================
-sudo Lightweight Resource
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/lwrp_sudo.html BY DESIGN
 
-|cookbook name sudo|
-
-The |cookbook sudo| cookbook contains the following lightweight resource: ``sudo``.
-
-sudo
-=====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_sudo.rst
-
-.. note:: This lightweight resource is part of the |cookbook sudo| cookbook (https://github.com/opscode-cookbooks/sudo).
-
-Actions
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_sudo_actions.rst
-
-Attributes
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_sudo_attributes.rst
-
-Examples
------------------------------------------------------
-.. include:: ../../step_lwrp/step_lwrp_sudo_mode_default.rst
-
-.. include:: ../../step_lwrp/step_lwrp_sudo_mode_template.rst
+.. include:: ../../chef_master/source/lwrp_sudo.rst

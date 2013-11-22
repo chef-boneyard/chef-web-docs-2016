@@ -1,21 +1,30 @@
 =====================================================
-|windows|
+|windows chef|
 =====================================================
 
 .. note:: This page collects information about |chef| that is specific to using |chef| with |windows|.
 
 The |chef client| has specific components that are designed to support unique aspects of the |windows| platform, including |windows powershell|, |microsoft iis|, and |microsoft sqlserver|.
 
-* The |chef client| is installed on a machine running |windows| by using a |microsoft installer package|
+* The |chef client| is `installed on a machine <http://docs.opscode.com/windows.html#install-the-chef-client-on-windows>`_ running |windows| by using a |microsoft installer package|
 * Three resources dedicated to the |windows| platform are built into the |chef client|: |resource batch|, |resource powershell_script|, and |resource registry_key|
 * Two |knife| plugins dedicated to the |windows| platform are available: |subcommand knife azure| is used to manage virtual instances in |windows azure|; |subcommand knife windows| is used to interact with and manage physical nodes that are running |windows|, such as desktops and servers
 * Four cookbooks provide application-specific support for `PowerShell 2.0 <https://github.com/opscode-cookbooks/powershell>`_, `IIS 7.0/7.5/8.0 <https://github.com/opscode-cookbooks/iis>`_, `SQL Server <https://github.com/opscode-cookbooks/database>`_, and for configuring various settings and behaviors on a machine that is running `Windows <https://github.com/opscode-cookbooks/windows>`_ 
 * Support for both :i386 and :x86_64 architectures
-* Six helpers are present in the |dsl recipe| to help verify the registry as a script runs---``registry_data_exists?``, ``registry_get_subkeys``, ``registry_get_values``, ``registry_has_subkeys?``, ``registry_key_exists?``, and ``registry_value_exists?``---these helpers ensure the |resource powershell_script| resource is idempotent
+* Six helpers are present in the |dsl recipe| to help verify the registry during a |chef client| run---``registry_data_exists?``, ``registry_get_subkeys``, ``registry_get_values``, ``registry_has_subkeys?``, ``registry_key_exists?``, and ``registry_value_exists?``---these helpers ensure the |resource powershell_script| resource is idempotent
 
 The most popular core resources in the |chef client|---:doc:`cookbook_file </resource_cookbook_file>`, :doc:`directory </resource_directory>`, :doc:`env </resource_env>`, :doc:`execute </resource_execute>`, :doc:`file </resource_file>`, :doc:`group </resource_group>`, :doc:`http_request </resource_http_request>`, :doc:`link </resource_link>`, :doc:`mount </resource_mount>`, :doc:`package </resource_package>`, :doc:`remote_directory </resource_remote_directory>`, :doc:`remote_file </resource_remote_file>`, :doc:`ruby_block </resource_ruby_block>`, :doc:`service </resource_service>`, :doc:`template </resource_template>` , and :doc:`user </resource_user>`---work the same way in |windows| as they do on any |unix|- or |linux|-based platform.
 
 The file-based resources---|resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template|---have attributes that support unique requirements within the |windows| platform, including ``inherits`` (for file inheritence), ``mode`` (for octal modes), and ``rights`` (for access control lists, or ACLs).
+
+.. note:: The |windows| platform does not support running as an alternate user unless full credentials (a username and password or equivalent) are specified.
+
+The following sections are pulled in from the larger docs.opscode.com site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
+
+
+Install the |chef client| on Windows
+=====================================================
+.. include:: ../../includes_windows/includes_windows_install_overview.rst
 
 The |chef client| can be used to manage machines that run on the following versions of |windows|:
 
@@ -38,14 +47,6 @@ The |chef client| can be used to manage machines that run on the following versi
 The |microsoft installer package| for |windows| is available at http://www.opscode.com/chef/install/. From the drop-downs, select the operating system (``Windows``), then the version, and then the architecture.
 
 After the |chef client| is installed, it is located at ``C:\chef``. The main configuration file for the |chef client| is located at ``C:\chef\client.rb``.
-
-The following sections are pulled in from the larger docs.opscode.com site and represents the documentation that is specific to the |windows| platform, compiled here into a single-page reference.
-
-
-Install the |chef client| on Windows
-=====================================================
-.. include:: ../../includes_windows/includes_windows_install_overview.rst
-
 
 Use knife-windows
 -----------------------------------------------------
@@ -831,7 +832,7 @@ registry_value_exists? Method
 
 |chef client|
 =====================================================
-.. include:: ../../includes_chef/includes_chef_client.rst
+.. include:: ../../includes_chef_client/includes_chef_client.rst
 
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_options_windows.rst
 
