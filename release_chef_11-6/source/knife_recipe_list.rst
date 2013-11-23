@@ -1,19 +1,3 @@
-=====================================================
-knife recipe list 
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/knife_recipe_list.html BY DESIGN
 
-.. include:: ../../includes_knife/includes_knife_recipe_list.rst
-
-Syntax
-=====================================================
-.. include:: ../../includes_knife/includes_knife_recipe_list_syntax.rst
-
-Options
-=====================================================
-.. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
-
-|no_options|
-
-Examples
-=====================================================
-.. include:: ../../step_knife/step_knife_recipe_list.rst
+.. include:: ../../chef_master/source/knife_recipe_list.rst

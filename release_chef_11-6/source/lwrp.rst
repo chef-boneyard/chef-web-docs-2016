@@ -48,16 +48,6 @@ Inline Compile Mode
    lwrp_webpi
    lwrp_windows
    lwrp_yum
-
-
-   lwrp_application
-   lwrp_application_java
-   lwrp_application_nginx
-   lwrp_application_php
-   lwrp_application_python
-   lwrp_application_ruby
-
-
    lwrp_custom
    lwrp_custom_provider
    lwrp_custom_provider_ruby

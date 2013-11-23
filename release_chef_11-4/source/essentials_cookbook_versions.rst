@@ -2,8 +2,6 @@
 About Versions
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_cookbooks/includes_cookbooks_version.rst
 
 Syntax

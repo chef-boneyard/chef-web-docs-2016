@@ -2,8 +2,6 @@
 About Templates
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
 
 .. note:: |note cookbook template erubis|

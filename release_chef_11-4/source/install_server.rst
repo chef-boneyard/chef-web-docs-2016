@@ -2,8 +2,6 @@
 Install Chef Server 11.x
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
 The steps below describe the process for installing |chef server 11|.

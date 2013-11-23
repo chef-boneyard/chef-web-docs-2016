@@ -2,8 +2,6 @@
 About Attribute Files
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute_file.rst

@@ -1,36 +1,3 @@
-=====================================================
-About Nodes
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/chef_overview_nodes.html BY DESIGN
 
-.. include:: ../../includes_node/includes_node.rst
-
-There are two types of nodes that be managed:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Feature
-     - Description
-   * - .. image:: ../../images/icon_node_cloud.png
-     - .. include:: ../../includes_node/includes_node_cloud.rst
-   * - .. image:: ../../images/icon_node_physical.png
-     - .. include:: ../../includes_node/includes_node_physical.rst
-
-Some important components of nodes include:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Feature
-     - Description
-   * - .. image:: ../../images/icon_chef_client.png
-     - .. include:: ../../includes_chef_client/includes_chef_client.rst
-   * - .. image:: ../../images/icon_ohai.png
-     - .. include:: ../../includes_ohai/includes_ohai.rst
-
-The |chef client| Run
-=====================================================
-.. include:: ../../includes_chef_client/includes_chef_client_run.rst
-
+.. include:: ../../chef_master/source/chef_overview_nodes.rst

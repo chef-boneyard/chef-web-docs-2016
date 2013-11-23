@@ -41,9 +41,9 @@ The community is one of the best features of |chef| because it is populated by a
 
 .. **Chef for OpenStack:** :doc:`Overview </openstack>` | :doc:`knife-openstack </plugin_knife_openstack>`
 
-**Contributions:** `Contribute to Open Source Chef <http://docs.opscode.com/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.opscode.com/style_guide.html>`_
+**Contributions:** `Contribute to Open Source Chef <http://docs.opscode.com/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_
 
-The Workstation 
+The Workstation  
 =====================================================
 **The Basics:** :doc:`About the Workstation </chef_overview_workstation>` | :doc:`The chef-repo </essentials_repository>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
 
@@ -211,7 +211,6 @@ Cookbooks
    essentials_search
    feedback
    install
-   junos
    just_enough_ruby_for_chef
    knife
    lwrp
@@ -254,7 +253,6 @@ Cookbooks
    server_tuning
    server_types
    server_users
-   style_guide
    upgrade_server
    upgrade_server_ha
    upgrade_server_open_source

@@ -1,5 +1,5 @@
 =====================================================
-About Configuration Files
+About Configuration Files 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_generic_config.rst

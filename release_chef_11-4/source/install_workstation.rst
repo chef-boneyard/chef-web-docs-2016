@@ -2,8 +2,6 @@
 Install Chef 11.x on a Workstation
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_chef/includes_chef.rst
 
 Prerequisites

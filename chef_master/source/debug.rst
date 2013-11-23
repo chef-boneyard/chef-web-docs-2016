@@ -28,7 +28,6 @@ Using an empty run-list is an effective way to determine if the failed |chef cli
 
 * configuration settings in the |knife rb| file
 * permissions for the user to both the |chef server| and to the node on which the |chef client| run is to take place
-* blargh
 
 Knife
 -----------------------------------------------------

@@ -2,8 +2,6 @@
 About Policy
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_chef/includes_chef_policy.rst
 
 .. list-table::

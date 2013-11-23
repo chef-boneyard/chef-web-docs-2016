@@ -2,8 +2,6 @@
 knife download
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_knife/includes_knife_download.rst
 
 Syntax

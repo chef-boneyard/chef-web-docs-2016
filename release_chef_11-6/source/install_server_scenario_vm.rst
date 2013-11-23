@@ -1,9 +1,3 @@
-=====================================================
-Install the Server on a Virtual Machine
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/install_server_scenario_vm.html BY DESIGN
 
-.. include:: ../../includes_install/includes_install_server_scenario_vm_intro.rst
-
-.. include:: ../../step_install/step_install_server_scenario_vm.rst
-
-.. include:: ../../includes_install/includes_install_server_scenario_vm_outro.rst
+.. include:: ../../chef_master/source/install_server_scenario_vm.rst

@@ -1,7 +1,3 @@
-=====================================================
-Report Handlers
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/community_plugin_report_handler.html BY DESIGN
 
-.. include:: ../../includes_handler/includes_handler.rst
-
-.. include:: ../../includes_handler/includes_handler_available_community.rst
+.. include:: ../../chef_master/source/community_plugin_report_handler.rst

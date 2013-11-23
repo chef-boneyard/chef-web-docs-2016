@@ -1,11 +1,3 @@
-=====================================================
-ohai
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/ctl_ohai.html BY DESIGN
 
-.. include:: ../../includes_ohai/includes_ohai.rst
-
-.. include:: ../../includes_ctl_ohai/includes_ctl_ohai.rst
-
-Options
-=====================================================
-.. include:: ../../includes_ctl_ohai/includes_ctl_ohai_options.rst
+.. include:: ../../chef_master/source/ctl_ohai.rst

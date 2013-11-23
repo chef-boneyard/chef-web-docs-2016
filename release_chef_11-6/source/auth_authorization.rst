@@ -1,30 +1,3 @@
-=====================================================
-Authorization
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/auth_authorization.html BY DESIGN
 
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization.rst
-
-|chef hosted| and |chef private|
-=====================================================
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server.rst
-
-Permissions
------------------------------------------------------
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_permissions.rst
-
-Users
------------------------------------------------------
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_users.rst
-
-Default Settings
------------------------------------------------------
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_defaults.rst
-
-Determine Access
------------------------------------------------------
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server_workflow.rst
-
-Open Source Server
-=====================================================
-.. include:: ../../includes_chef_auth/includes_chef_auth_authorization_open_source.rst
-
+.. include:: ../../chef_master/source/auth_authorization.rst

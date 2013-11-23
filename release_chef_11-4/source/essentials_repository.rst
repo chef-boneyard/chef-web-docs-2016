@@ -2,8 +2,6 @@
 About the chef-repo
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_repository/includes_repository.rst
 
 Directory Structure

@@ -2,8 +2,6 @@
 Install Chef
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 |chef| is installed and configured in three main phases:
 
 #. :doc:`install_server` (or :doc:`install_server_scenario_vm`)

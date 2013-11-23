@@ -1,6 +1,3 @@
-=====================================================
-About the Open Source Server
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/chef_overview_server_open_source.html BY DESIGN
 
-.. include:: ../../includes_chef/includes_chef_open_source.rst
-
+.. include:: ../../chef_master/source/chef_overview_server_open_source.rst

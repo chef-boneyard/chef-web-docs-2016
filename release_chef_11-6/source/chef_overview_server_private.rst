@@ -1,7 +1,3 @@
-=====================================================
-About the Enterprise Server
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/chef_overview_server_private.html BY DESIGN
 
-.. include:: ../../includes_chef/includes_chef_private.rst
-
-|chef server oec| evolved out of a need for customers to have the same functionality provided by |chef server oec|, but located behind the firewall.
+.. include:: ../../chef_master/source/chef_overview_server_private.rst

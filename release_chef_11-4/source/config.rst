@@ -2,8 +2,6 @@
 About Configuration Files
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_chef/includes_chef_generic_config.rst
 
 In the following sections, the settings are listed alphabetically, with a description of the setting and (in most cases) the available options and values.

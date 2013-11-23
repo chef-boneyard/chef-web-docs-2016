@@ -168,7 +168,7 @@ Cookbooks
    essentials_cookbook_metadata
    essentials_cookbook_recipes
    essentials_cookbook_resources
-   essentials_cookbook_templates
+   essentials_cookbook_templates 
    essentials_cookbook_versions
    manage_server_hosted
    manage_server_hosted_accounts

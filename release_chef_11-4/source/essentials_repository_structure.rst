@@ -2,8 +2,6 @@
 About the Directory Structure
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_repository/includes_repository_directory.rst
 
 The sub-directories in the |chef repo| are:

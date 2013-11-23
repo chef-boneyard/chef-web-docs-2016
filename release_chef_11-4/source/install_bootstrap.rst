@@ -2,8 +2,6 @@
 Bootstrap a Node
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_chef_server/includes_chef_server.rst
 
 Steps

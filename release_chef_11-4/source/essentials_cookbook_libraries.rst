@@ -2,8 +2,6 @@
 About Libraries
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_cookbooks/includes_cookbooks_library.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_library_common_uses.rst
