@@ -1,5 +1,5 @@
 =====================================================
-|chef openstack|: Architecture
+|chef openstack|: Vagrant
 =====================================================
 
-.. include:: ../../includes_openstack/includes_openstack_architecture.rst
+.. include:: ../../includes_openstack/includes_openstack_repo_vagrant.rst
