@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 09:45\n"
+"POT-Creation-Date: 2013-11-25 13:38\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,871 +17,876 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/breaking_changes_chef_11.rst:33
-# 6b15a2f2da2d4547a08c9b45620f94dd
+# dcf37956a0ad4ada916ed88ac621b322
 msgid "What's New in Chef 11.0"
 msgstr ""
 
 #: ../source/breaking_changes_chef_11.rst:35
-# 3b88206154944beeb2fb0040b1096464
+# aeaa9461f723431e92f3d5683d177d90
 msgid "The following items are new for |chef 11| and/or are changes from |chef 10|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:38
-# 783a993c4ecb48a2b8ee6568c95cc467
+#: ../source/breaking_changes_chef_11.rst:37
+# f7eb9b8d58af4e8ca8bf49283c63ca93
+msgid "The |chef client| 11.2 release is updated for Ruby 1.9.3-p484, which resolves a security vulnerability that existed when using prior versions of |ruby|."
+msgstr ""
+
+#: ../source/breaking_changes_chef_11.rst:40
+# d0607892ebf14eebbfec9e48b8ad96de
 msgid "|chef client| and |chef solo|"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:39
-# 0387709fa74b4892a8c11b60ba959595
+#: ../source/breaking_changes_chef_11.rst:41
+# 356a2198406a445ba6457b89194a242b
 msgid "The following changes have been made to |chef client| and |chef solo|. Some of these changes may break recipes (or may change their behavior); other changes may affect workflow or scripts."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:42
-# caba7baf432940d68e5d8a53dde4a68b
+#: ../source/breaking_changes_chef_11.rst:44
+# 127542a94c5c4f939ff00f87b3920a87
 msgid "|shef| is now |chef shell|"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:43
-# c4535fa1bdd74a088110b4f3d561c20a
+#: ../source/breaking_changes_chef_11.rst:45
+# fb666baa121f48788dc4b187dc9869ba
 msgid "|shef| has been renamed to |chef shell| (CHEF-2925). Recipe mode and attributes mode must now be entered using the ``recipe_mode`` and ``attributes_mode`` commands."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:46
-# 91d01eaf98d3437a88f9f57919a92c9d
+#: ../source/breaking_changes_chef_11.rst:48
+# fd846294e59b49139210a83ceb7fec8d
 msgid "Node attribute changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:47
-# 5a636f713f1f4d559696137662d74e23
+#: ../source/breaking_changes_chef_11.rst:49
+# a0eafaf41286427684700b031fe57d60
 msgid "In order to fix bugs and surprising behaviors with attributes, the implementation of ``Chef::Node::Attribute`` has been completely overhauled. The APIs for reading and writing values are now completely separate."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:50
-# f6225b6278234f79a3fc0751a57811b0
+#: ../source/breaking_changes_chef_11.rst:52
+# 6b7a664aea2849789f83307528508690
 msgid "LWRPs AND Recipes Both Now Automatically Qualify loaded Gems"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:51
-# 80d6cbd2960f4c429f98e28ce4923353
+#: ../source/breaking_changes_chef_11.rst:53
+# d6f3fb8121d9498db1c9a50f00dfbb50
 msgid "Previously, in Chef 10, one could do the following in a recipe:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:58
-# 81cb8c03ff064990aae216ce4083ba9f
+#: ../source/breaking_changes_chef_11.rst:60
+# 09d28ed3746445d98cde7c03d8586fbf
 msgid "In Chef 11 you must add \"::\" to the beginning to avoid the automatic addition of a \"Chef::\" qualifier."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:66
-# 2dfbeeebcadd4dda953c20acbd7bea62
+#: ../source/breaking_changes_chef_11.rst:68
+# 0eead1297ba1490c99432dd0c1023006
 msgid "Implicit writes removed"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:67
-# f97d802bb3d64b3c97e078a0fb0bdfce
+#: ../source/breaking_changes_chef_11.rst:69
+# 049f8cd27f74492f893bb1691132b02a
 msgid "Node attributes may no longer be set without specifying which precedence level to set. The following example is no longer valid:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:74
-# c262793aa8ff457b94e55238cacb6395
+#: ../source/breaking_changes_chef_11.rst:76
+# d2e5926c1a634cf6a8c39a70a6335c43
 msgid "When a precedence level was not specified, ``normal`` was assumed. For |chef 11|, the following example replaces the previous example:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:81
-# 79ed3f97ed5b493daf14f16e96d3a998
+#: ../source/breaking_changes_chef_11.rst:83
+# 97d8d2577c5c43fea1d1c1e798ef918c
 msgid "Even with this change, please take a moment to consider if a cookbook should be using default-level attributes instead. In general, normal-level attributes are only required when a value needs to persist across |chef client| runs (such as auto-generated passwords) or when a node is a \"special snowflake\"."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:84
-# a3748c68c3c84dd0a004275cf5563a12
+#: ../source/breaking_changes_chef_11.rst:86
+# ec1331ee4e96469ebcdd8ea843fa00b5
 msgid "attribute=\"value\" required"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:85
-# a816e115aec04d1ca8c74aba7aa98535
+#: ../source/breaking_changes_chef_11.rst:87
+# 464b8c6faa384d699d301ab684c8a4fc
 msgid "The following example is no longer valid:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:91
-# f2e77fc00965428ba53ce429bf0ae422
+#: ../source/breaking_changes_chef_11.rst:93
+# 7a7f8d8efd5249b998260c9033df4197
 msgid "The following example replaces the previous example:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:98
-# 9860b64980604878ac4cf08a342707f8
+#: ../source/breaking_changes_chef_11.rst:100
+# 1795ea5b773b40b5b0ac4ecb9fa52e96
 msgid "|knife| Output Changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:99
-# 22ead50935ac40a2bb4f9e68c42f069b
+#: ../source/breaking_changes_chef_11.rst:101
+# 0be03cefcec24d00a2c3ef623bfa260b
 msgid "Previously, |knife| was adding the ID field to search results for node attributes. With |chef 11|, |knife| groups search results by the name of the node. For example, the old output looks something like:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:119
-#: ../source/breaking_changes_chef_11.rst:166
-# d7da22d3da774195adaee62912230b07
-# 8d4554f8d2ad473591df276690843824
+#: ../source/breaking_changes_chef_11.rst:121
+#: ../source/breaking_changes_chef_11.rst:168
+# cee3b61497c5439292fdb3daf61a99d1
+# 11e0bd906f574ba8a0f934dee668edfa
 msgid "and the new output looks something like:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:141
-# c92a741e89c142788566336ed2157973
+#: ../source/breaking_changes_chef_11.rst:143
+# 774d0bf9b655497683c37d2831c6de66
 msgid "This may require that search queries be updated for |chef 11|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:143
-# a816c0da2b494872aa1ace17ba711e01
+#: ../source/breaking_changes_chef_11.rst:145
+# 832c1e7aa5744bb3b3a8118c085f588d
 msgid "This change also affects |ohai| plugin output.For example, the old output looks something like:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:191
-# cc47131e537a482e9f0b54c12f17d3b5
+#: ../source/breaking_changes_chef_11.rst:193
+# fe555fef028b494b804406bbb671bb76
 msgid "Role and Environment Attribute Changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:192
-# a3dc7140a26d4bef93c28786dbbcf7a6
+#: ../source/breaking_changes_chef_11.rst:194
+# b3375653e19442c6a02a884138775511
 msgid "Role and environment default and override attributes are visible in attributes files. In |chef 11|, several changes have been made to attributes to enable you to include more complex logic in your attributes files. Though you should still try to keep your attributes files simple, you can effectively generate attributes composed of other attributes or based on a node's platform in attribute files now."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:195
-# 1420e0e3d2e240f98586924fe293e4ce
+#: ../source/breaking_changes_chef_11.rst:197
+# f7a8f26149d549b2bf7046d9d3b962c3
 msgid "Computing attributes from attributes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:196
-# 2883823801ed430faf07196263cbaa0d
+#: ../source/breaking_changes_chef_11.rst:198
+# 9a0521f0b5a44b9283eaf29efd1184fd
 msgid "In |chef 10| and lower, code like the following will not work if you intend to modify the \"source\" attributes from roles or environments:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:209
-# 5d03cb0a061e4b7e8b5081a28865e176
+#: ../source/breaking_changes_chef_11.rst:211
+# 45ed70eb25f940f2835af2db451ce601
 msgid "In |chef 10| and lower, default and override attributes are stored as a single nested hash, and role and environment attributes are applied to the node after attribute files are evaluated so that role and environment attributes can overwrite attributes from attributes files. In |chef 11|, the above code will work as you expect, because role and environment attributes are stored separately from attributes from cookbooks, and are applied when the run_list is expanded (before any cookbook code is run)."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:212
-# 52464210fff542e281d1c3c33656dc8b
+#: ../source/breaking_changes_chef_11.rst:214
+# 1837de57962b4d89840d9fe71813245f
 msgid "Setting attributes by platform"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:213
-# f1312d8817124638a94dc1285dccfef4
+#: ../source/breaking_changes_chef_11.rst:215
+# 42a2a41aa6774a70b4e9a67b2b00e767
 msgid "In |chef 11|, ``Chef::Node`` now includes the platform introspection mixin, so you can use the following methods in attributes files:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:223
-# 89eb9d8a386a45cc878defcabe8af6d7
+#: ../source/breaking_changes_chef_11.rst:225
+# d9286d4ae7ce4fc9a3cde42a9827448f
 msgid "Behavioral changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:224
-# 0d397754d3e74634bcc44fbe3aa2be79
+#: ../source/breaking_changes_chef_11.rst:226
+# 24c1e7269caf42d4bf7f4b19bc0013d5
 msgid "In |chef 10|, you can set a default or override attribute in a recipe, and it will overwrite the default/override value from any role/environment/attribute file. In |chef 11|, node.default always sets a cookbook-level default, and node.override always sets a cookbook-level override. Since cookbook-level attributes have lower precedence than role or environment attributes, a default or override attribute set in a recipe will not overwrite a value set by a role or environment."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:226
-# da62add60cf24e6b9a61c5ba10a19ad9
+#: ../source/breaking_changes_chef_11.rst:228
+# 23f9f09507ee468991edd7feb4fde7a6
 msgid "For example, given code like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:236
-# 30633088c1f64c7e9ffd30b042144ee6
+#: ../source/breaking_changes_chef_11.rst:238
+# bc49cc90ee1b470ab8cfddf15e95d7fd
 msgid "In |chef 10|, the value of node\"app_name\" will be \"from-recipe\" and in |chef 11|, the value will be \"from-role\" (assuming there are no competing normal or override attributes)."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:238
-# e7ea1d99e74649afa7cb51d04f6ba1cc
+#: ../source/breaking_changes_chef_11.rst:240
+# 6de4872824b149e5a7edee0f07292445
 msgid "Likewise, if you take any action based on the value of attributes when evaluating attributes files, be aware that attributes from roles and environments will now be used to compute the attribute value."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:241
-# 1602d634a9db4a3382b36c663bda47a4
+#: ../source/breaking_changes_chef_11.rst:243
+# 18aaae0592944a3e97f5c0a76ca6a18a
 msgid "node.run_state Replaced"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:242
-# f1317b6f44f945e890c1010f63ad3a5b
+#: ../source/breaking_changes_chef_11.rst:244
+# 8932ff6105404dde8225285f08b41fdf
 msgid "In |chef 10| and lower, you could see which recipes had been evaluated by looking at ``node.run_state[:seen_recipes]``. ``Chef::Node`` was not the correct place to track this information, and the previous implementation resulted in bugs where a recipe like ``nginx::default`` could be loaded after ``nginx``, even though they are the same recipe."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:244
-# 6ddc23a6c7be4c7eafea0f442b114272
+#: ../source/breaking_changes_chef_11.rst:246
+# 2e81851399574048a10adf3d6a1b803a
 msgid "In the new implementation, this is tracked by ``Chef::RunContext``. The following example is no longer valid:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:252
-# 97ea6bda6b6a48ff94085826c5d25437
+#: ../source/breaking_changes_chef_11.rst:254
+# 30ad5d5699dc407092247c1e0800239f
 msgid "Use the following approach instead:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:262
-# acb39c6efb2f449eae0e627b9b4e4d02
+#: ../source/breaking_changes_chef_11.rst:264
+# 2ac67a2ca6d14ab0b8bbf3f97e019c57
 msgid "Subtractive Merge Removed"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:263
-# 4c61499176234c2ab6d9b2c8aff91a0a
+#: ../source/breaking_changes_chef_11.rst:265
+# be68909ae554486b8372ac5e5fdd501d
 msgid "In |chef 10| and previous, you could use special \"knockout prefix\" attribute values beginning with ``!merge`` to make the deep merge algorithm remove values from arrays. This feature was very seldom used, confusing, and greatly increased the time and space complexity of the deep merge implementation. This feature is removed in |chef 11|, and attributes containing the \"knockout prefix\" will trigger an error upon merge."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:265
-# 78c41f3002ac4da8a5bbc610553f6b5e
+#: ../source/breaking_changes_chef_11.rst:267
+# 6841ddc0adf14959a02486dc882dd8e2
 msgid "If you need to selectively remove elements from arrays in your attributes, you should place this logic in a cookbook. Combined with other fixes to attributes in |chef 11|, you can put this logic in an attributes file, which is the most natural place for it."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:268
-# 40f88e747c6a476991a40aba9765ffe3
+#: ../source/breaking_changes_chef_11.rst:270
+# 07c6547defd443bc9e165433e572acd6
 msgid "Chef::REST#run_request Removed"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:269
-# 3dc830c284384989b78f84fa1352cddd
+#: ../source/breaking_changes_chef_11.rst:271
+# 53c9c44aec8f46e3b851ddccb1157888
 msgid "The ``Chef::REST#run_request`` method is removed. Use ``api_request`` or ``streaming_request`` for low-level access, or (better) use the higher-level ``GET``, ``PUT``, ``POST``, ``DELETE``, and ``HEAD`` methods."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:273
-# 79b17f51064f47349ab8b2cb8fe3c1ce
+#: ../source/breaking_changes_chef_11.rst:275
+# 260edf4bd7ea407ca2b322b07cc59081
 msgid "Delayed Notifications Changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:274
-# d7c1e1fa69444e50b9791d4c111e7c69
+#: ../source/breaking_changes_chef_11.rst:276
+# 51c0637fed5e4e94bcb719d8893ea7b6
 msgid "In |chef 10| and lower, delayed notifications are lost when Chef does not converge successfully."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:276
-# 8bcd0b49671743d697297e2c4792a70e
+#: ../source/breaking_changes_chef_11.rst:278
+# 47a75367dce048ca90c7852b152b406c
 msgid "This fixes addresses the following scenario:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:278
-# aeda4b80de1b47deaff91e7ab97122bc
+#: ../source/breaking_changes_chef_11.rst:280
+# e9ee1f6b97044f41925171e08030c3f9
 msgid "The |chef client| reconfigures a service"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:279
-# a2e4f5586f3c4786a67c9d1934c633ee
+#: ../source/breaking_changes_chef_11.rst:281
+# ff8abc9b60604f7182a6ea51a6a3e577
 msgid "A delayed notification to restart the service is queued"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:280
-# d8ddb7c682c541438a7225e1feb60df0
+#: ../source/breaking_changes_chef_11.rst:282
+# c28f793af6de402d81c4cdfe7b3b6ff7
 msgid "An unrelated resource fails and halts the |chef client| run"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:281
-# 9dca3b0a6ee34c128b868c312348d9b9
+#: ../source/breaking_changes_chef_11.rst:283
+# 296a3d3c6f96496bad0f566f60d04972
 msgid "Subsequent |chef client| runs don't restart the service because it hasn't been reconfigured during that run."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:283
-# c27c3be400fa48aeb3c2365e8f44f3be
+#: ../source/breaking_changes_chef_11.rst:285
+# e48c193badeb468fa67c4d2cea856cd4
 msgid "In |chef 11|, delayed notifications will run after the |chef client| run fails, and will be executed even if other delayed notifications fail. Conversely, if the |chef client| fails to configure a service and a restart action has been queued for that service, the service will be restarted and will probably be broken."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:286
-# 068bc3fa12374475b9a5778e6a02a940
+#: ../source/breaking_changes_chef_11.rst:288
+# 83a479ea9dd8485889baa32402dab1dc
 msgid "Single Notifies for Notification"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:287
-# 4cfbf5cc890a4a7594d2b3a0691a1e3a
+#: ../source/breaking_changes_chef_11.rst:289
+# c2fb13935f1e47af8e64df5382e896c5
 msgid "Previously you could specify multiple notifications in a single call to notifies with code like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:295
-# 73a37e98a9084ea89a90ffa9c3fafc59
+#: ../source/breaking_changes_chef_11.rst:297
+# ee70cb391d0544ac9bebce30df40e734
 msgid "Instead of the above, just put multiple calls to notifies in your resource declaration:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:306
-# 5cb1afe1911d408b8e2acc91ec452ca1
+#: ../source/breaking_changes_chef_11.rst:308
+# cf0a13836897448e9464f7feb290d468
 msgid "Changes for Data Bag Encryption"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:307
-# 72c71cadd0604a20b29ee21767c06677
+#: ../source/breaking_changes_chef_11.rst:309
+# 41d44db8fdf449e3b5ceebbc2f18defd
 msgid "In |chef 10|, objects in encrypted data bag items are serialized to |yaml| before being encrypted. Unfortunately, discrepancies between |yaml| engines in different versions of |ruby| (in particular, 1.8.7 and 1.9.3) may cause silent corruption of serialized data when decrypting the data bag (the version stored on the |chef server| is untouched and can be correctly deserialized with the same |ruby| version that was used to create it, however)."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:309
-# 3392c28574034cd29f0efacb3818fdb9
+#: ../source/breaking_changes_chef_11.rst:311
+# c9ecda4004e34540b0720e9325e3d6bb
 msgid "Because the corruption is silent, there is no way for the |chef client| to detect it; furthermore, all workaround possibilities we've investigated have severe limitations. Additionally, we wanted to modify the encrypted data bag item format to support using a random initialization vector each time a value is encrypted, which provides protection against some forms of cryptanalysis. In order to solve these issues, we've implemented a new encrypted data bag item format:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:311
-# 34906400d42840368111b3ac8f2e8dae
+#: ../source/breaking_changes_chef_11.rst:313
+# 5bc93835f27042b4a3a869ea0c5b35d8
 msgid "The user interface to encrypted data bags is unchanged. This change only affects the format of the encrypted values."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:312
-# 6f46a23db556406b8bd64a4e1340f41f
+#: ../source/breaking_changes_chef_11.rst:314
+# e1c9f47ca1764bf2943edb80da942125
 msgid "|chef 11| clients will be able to read encrypted data bags created with either |chef 10| or |chef 11|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:313
-# f752645940a44c9db5f07308500a24ed
+#: ../source/breaking_changes_chef_11.rst:315
+# 22855df4a7b2490bb58961fe76554b4f
 msgid "|chef 10| clients |chef 10-18| and above will be able to read encrypted data bags created with either |chef 10| or |chef 11|"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:314
-# f586208a102145e0b8b371331b5a3263
+#: ../source/breaking_changes_chef_11.rst:316
+# 805a339a55be4d76b695031e5d8b4528
 msgid "|chef 10| clients version |chef 10-16| and lower cannot read encrypted data bags created with |chef 11|"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:315
-# 9c72c511732741d79d1633b6b999eb74
+#: ../source/breaking_changes_chef_11.rst:317
+# 33dc0e92b7f144a8870c2dd65b107edc
 msgid "|chef 11| knife commands will only create data bags in the new format."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:316
-# 481bea4ad66a4b6389430dd3d8f1386c
+#: ../source/breaking_changes_chef_11.rst:318
+# 068bface2ca2441ea886ab2614d769d5
 msgid "|chef 10| knife commands will only create data bags in the old format."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:319
-# a568c8e4efb84077bb6a107261c6191d
+#: ../source/breaking_changes_chef_11.rst:321
+# 70d5af48cdd24d90a564fdb0a82f020a
 msgid "Diagnosing Compatibility Errors"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:320
-# 281737d85c7c4c669c2be94a5901a5f6
+#: ../source/breaking_changes_chef_11.rst:322
+# 967e70dc4472478aa1dbfa9cb3623162
 msgid "When trying to decrypt a |chef 11| format data bag item with |chef 10-16| or lower, you will see an error like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:330
-# f63992974394473d8bda14fbcdbe2a01
+#: ../source/breaking_changes_chef_11.rst:332
+# f11d249e3d914f6eb0c2661422f2161c
 msgid "The above error output is from |knife|; the |chef client| will fail with a similar error."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:333
-# 65257c0199bb46b68b40a676a279f0c1
+#: ../source/breaking_changes_chef_11.rst:335
+# 8ba2343ed4e0435c91d2a50b366bed27
 msgid "How to Upgrade"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:334
-# fc2db6d1cf134cd28535b75c4c4a0201
+#: ../source/breaking_changes_chef_11.rst:336
+# 28b7d19195ae4d0686b8f874d1c2efeb
 msgid "Before upgrading on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version |chef 10-18| or above. Once your |chef client| fleet is upgraded, you can start using |chef 11| on your workstation (the box you create/update encrypted data bag items on)."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:336
-# d255126f0b3844b3b3d435650a51cdf5
+#: ../source/breaking_changes_chef_11.rst:338
+# 19bc3491a65f48a9bc76f4e122a6dc08
 msgid "In order to get the benefits of improved security with the new data bag item format, it's recommended that you re-upload all of your encrypted data bag items once you've migrated to compatible versions of |chef client|. To migrate your data bag items, simply edit them with ``knife data bag edit`` or upload them with ``knife data bag from file``, whichever you normally do. |chef 11| will automatically upload your data bag items in the new format."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:339
-# edf62057f349491d9f970859a4426f81
+#: ../source/breaking_changes_chef_11.rst:341
+# 764a22def8594cb191c0abfab20c51f3
 msgid "Server Versions"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:340
-# af5fd14557014bd0b308da9a704b1164
+#: ../source/breaking_changes_chef_11.rst:342
+# 46a7cd5a3bcf4e3c8e1aed7680e0cb21
 msgid "Because encrypted data bag items are implemented as a client-side layer on top of regular data bag items, the format change is transparent to the server. You can begin using |chef 11| data bags even if your server is version |chef 10|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:344
-# 0e3407e87bd24205846de2aa77933166
+#: ../source/breaking_changes_chef_11.rst:346
+# 45f477e9340f43afbf53d8b0e6b09cd8
 msgid "Non-recipe File Evaluation Includes Dependencies"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:345
-# 18910afa25da4017b08b1bbc1ec4e8e8
+#: ../source/breaking_changes_chef_11.rst:347
+# 22fab5cf34a24ea8ad7811adf2b9b56f
 msgid "In |chef 10| and lower, library, attribute, lightweight resource, and resource definition files are loaded in undefined order (based on the order given by the |ruby| Hash implementation, which differs based on version and vendor patching). In |chef 11|, these files are loaded according to the following logic:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:347
-# fc6cd4e964eb4d84b049b8a514817651
+#: ../source/breaking_changes_chef_11.rst:349
+# 79861f56160444a09e6e51df3b84602c
 msgid "The expanded run_list is converted into a list of cookbooks in the same order"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:348
-# 4dc1c2e44cbe4b63a38a383b536e85f3
+#: ../source/breaking_changes_chef_11.rst:350
+# d4d7336d38164494a33107ce0a256e32
 msgid "Each cookbook's dependencies are inserted into the cookbook list before the cookbook that depends on them."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:349
-# 39ee35f8aff845a2b9593ff48379a37f
+#: ../source/breaking_changes_chef_11.rst:351
+# c794f142ce184fe99c759b65ec4c012f
 msgid "Duplicates are removed"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:351
-# 7271252c268649d889194f5985f298b3
+#: ../source/breaking_changes_chef_11.rst:353
+# 4ab0692e073146ebaf767662f2612e5f
 msgid "For |chef client| users, there should be no negative impacts from this change, as the previous order was essentially random. For |chef solo| users, the new loading logic means that files belonging to cookbooks which exist in the ``cookbook_path`` but are not in the expanded ``run_list`` or dependencies of the cookbooks in the expanded ``run_list`` will no longer be loaded (in |chef 10|, all non-recipe files from all cookbooks in the cookbook path were loaded). Additionally, |chef solo| users will now see ``CookbookNotFound`` errors when a cookbook is listed as a dependency in the metadata but not present on disk. The error message will look like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:360
-# 5d22bf9c0e3a4b9f8c3c48fcaf73e65d
+#: ../source/breaking_changes_chef_11.rst:362
+# efd27c0d50a6415e947f072228fc6352
 msgid "|knife| Configuration Parameter Changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:361
-# 952a01c8d54a4714a9de5530e31a06cb
+#: ../source/breaking_changes_chef_11.rst:363
+# dbbb2d6349564b49860a9fff89a03acf
 msgid "In |chef 10|, it is difficult and error-prone to ensure that configuration parameters are applied in the right order. Configuration should be applied in the following order:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:363
-# dcab87bbe2604392b38e5b2f2933e622
+#: ../source/breaking_changes_chef_11.rst:365
+# 0779d32fde6b462fbed4185c40915148
 msgid "Default values"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:364
-# a471b5b52b4048eda99ef8f23dde5c51
+#: ../source/breaking_changes_chef_11.rst:366
+# bdbd272bb71840c1a495545d468576a7
 msgid "Values set in |knife rb|"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:365
-# 921cc2e70f294368b4c9b3c756b9e050
+#: ../source/breaking_changes_chef_11.rst:367
+# a8f17d5d8bf04f4dbee4b41271c45684
 msgid "Values passed by command line option"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:367
-# 90ec2575348e4d5c9542d038654e4042
+#: ../source/breaking_changes_chef_11.rst:369
+# b3872b9b3a1444e88c8f513ab373f2ef
 msgid "Because of the way the the ``mixlib-cli`` library is implemented, it is difficult to determine which values are defaults and which values are user-supplied command line options. |chef 11| takes advantage of a new mode for ``mixlib-cli`` that keeps default values separate from user-supplied values. In the configuration process, |knife| automatically applies config:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:369
-# 6eaa58a29ef645dc8ea2a38517ad86a1
+#: ../source/breaking_changes_chef_11.rst:371
+# 96350fde04b044dd9eda7d7f66c26104
 msgid "Default values set in the mixlib-cli DSL"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:370
-# aa664bb2cf354d94bf0256f17dca0317
+#: ../source/breaking_changes_chef_11.rst:372
+# c4c759263f2f4e66ad1a05ad13c1c217
 msgid "Configuration settings under Chef::Config[:knife]"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:371
-# 77d2c350abb44f8692d45b421f2d23a9
+#: ../source/breaking_changes_chef_11.rst:373
+# f7797d75ddea4bf688e0b716af4dea58
 msgid "User supplied values parsed by mixlib-cli"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:373
-# bbb241f7c16240f4baebde4c538fc360
+#: ../source/breaking_changes_chef_11.rst:375
+# cfc47ab814d043eb8e86b5c89b2c2371
 msgid "Depending on how |knife| plugin authors have worked around the |chef 10| behavior, it's possible that this change will lead to incorrect values being used for configurable parameters. The |opscode|-maintained cloud plugins have been reviewed and should work correctly on both |chef 10| and |chef 11|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:375
-# 48816575a9f248f692bdcfd80c28cdf2
+#: ../source/breaking_changes_chef_11.rst:377
+# 4c76dc002fc449eaab6fa2caa7ef2f0f
 msgid "When writing |knife| plugins for |chef 11|, plugin authors are encouraged to define default settings using the ``mixlib-config`` DSL, like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:385
-# 28800f8b6bff447796d177e07ae7f332
+#: ../source/breaking_changes_chef_11.rst:387
+# 888ee7d52d1647a4a24a178874f53f62
 msgid "and access configurable values via the config hash with symbols, like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:392
-# dd9c7236254a4bd58e0c1e61ac914da2
+#: ../source/breaking_changes_chef_11.rst:394
+# 96636850a3d04247b74f9b122ea7b34f
 msgid "If compatibility with |chef 10| is required, accessing configuration via a helper function like this will work correctly, but only if default values are NOT set with the ``mixlib-cli`` DSL."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:401
-# 2234fa44b7a249a588ad5adca18ba18d
+#: ../source/breaking_changes_chef_11.rst:403
+# b8b9044a74314d2290da67bafdd72cb0
 msgid "Default values must be managed manually until support for |chef 10| is removed, for example, like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:407
-# 0db8dfb4c8514db2ac44452015449775
+#: ../source/breaking_changes_chef_11.rst:409
+# 3d39e5a7769d4de9a305bac3eeab4774
 msgid "Further information is available in the ticket: CHEF-3497 - Allow |knife rb| to implicitly provide all |knife| related options - FIX COMMITTED"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:411
-# c5c965d742ee476a83cde77a433a1ec9
+#: ../source/breaking_changes_chef_11.rst:413
+# 556323259df843ad921a72bdbcdfc8ca
 msgid "Remote File Mirror Support May Break Subclasses"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:412
-# 7c9b853d5212463a82e247f2ee185eca
+#: ../source/breaking_changes_chef_11.rst:414
+# 88dd17ff9988467eb6a105ee9ae592f0
 msgid "In |chef 11|, |resource remote_file| now supports fetching files from a list of mirrors. As a result, the ``source`` parameter of the |resource remote_file| resource is internally stored as an array. This change is transparent to users of the |resource remote_file| resource; however, any library code that subclasses the |resource remote_file| resource---for example, to provide |amazon s3| support---will likely need to be updated to support and/or work around this change."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:414
-# 9ba950496eb54745baff2d4e2009712b
+#: ../source/breaking_changes_chef_11.rst:416
+# 434aff26c0454c92a42a8e2ec1abd73b
 msgid "To effectively revert the change so that the ``source`` parameter is a string, add code like this to your resource:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:426
-# 9d894add20da4eb6aafd4cbfc5cbd391
+#: ../source/breaking_changes_chef_11.rst:428
+# 897850220f3342d7a75698b84374110c
 msgid "Alternatively, you can update the provider to handle the case that the ``source`` parameter is an array."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:429
-# 2b2cfbf4efe54aa59648a31d75c58b26
+#: ../source/breaking_changes_chef_11.rst:431
+# 4f9f8333d0974cf8b1f8e204036c8032
 msgid "The Server"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:430
-# 008b9c0746ab44b4987e4d82dc7ab889
+#: ../source/breaking_changes_chef_11.rst:432
+# 5ba420a50048432088318fd605160602
 msgid "The following items are new for |chef 11| server and/or are changes from |chef 10|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:433
-# fa0370a12c7a4d75a66bd25b7ef6728c
+#: ../source/breaking_changes_chef_11.rst:435
+# e5a35c6541284b9d9633c626620fd5a4
 msgid "The /clients endpoint returns |json| with a |json| class for edit (PUT) operations"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:434
-# ce52ecd521fc4e40b904409c491bf4a8
+#: ../source/breaking_changes_chef_11.rst:436
+# bcb7d678fbfd4ab089e333879e393050
 msgid "In |chef 8|-|chef 10|, the server's response to a ``PUT`` to ``/clients/:client_name`` does not include the ``json_class`` key, though other calls, such as ``GET``, do include this key. The client-side |json| implementation uses the presence of the ``json_class`` key as an indication that it should \"inflate\" the response into an instance of that class (otherwise, a plain hash object is returned). As a result, code that modifies a client (such as requesting a new key from the server) and parses the response with the |ruby| 'json' library must be modified to accept a ``Chef::ApiClient`` or a hash."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:436
-# 8730287ad2404ffc829d465d41bd4178
+#: ../source/breaking_changes_chef_11.rst:438
+# 7fa14f9c3b6649988a067081569ac6cf
 msgid "This change breaks the ``knife client reregister`` command in |chef 10-16| and earlier. Forward compatibility is introduced in |chef 10-18|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:439
-# 632978a212614fca938b3028411030c8
+#: ../source/breaking_changes_chef_11.rst:441
+# 7a1465cbb97b4666ae712bfd11ec2d12
 msgid "The admin and validator flags are exclusive"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:440
-# 7b4cb084350b4a0086c9f22b89142848
+#: ../source/breaking_changes_chef_11.rst:442
+# 5e8832f3a06d4d7ea7dba2fdc0aeac72
 msgid "In |chef 11|, clients may not be both admins and validators at the same time. In the current alpha release, you can set the admin flag on the validator but it has no effect. In a future release, you may receive an error when attempting to set the validator flag on a client, or when attempting to create a client with both flags set."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:442
-# 4fad47b28f2b4283867a9213e9ee88e3
+#: ../source/breaking_changes_chef_11.rst:444
+# 79b72d4647aa41c890291efcb6d4d432
 msgid "Exact behavior may change before release or in a minor version release after |chef 11|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:445
-# cdd1857860004c55b35ebd4c68510e5e
+#: ../source/breaking_changes_chef_11.rst:447
+# 5e86f2dc894b42248a1c76f88babfeb2
 msgid "Strict checking of top-level |json| keys"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:446
-# 636dee47fbd1497d9f04f78571527d20
+#: ../source/breaking_changes_chef_11.rst:448
+# 6a1c73275352487fbd71c713516de777
 msgid "All API endpoints that process requests to create or update an object validate that the |json| sent by the client does not contain unknown top-level keys. A 400 error response will be returned if unknown top-level keys are encountered."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:449
-# 172d657d29b04c97915fd92e68b480f1
+#: ../source/breaking_changes_chef_11.rst:451
+# a1c075518ef44742941ec97a2813cba2
 msgid "Creating an empty sandbox is now a 400 error"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:450
-# 0daaf94a311a466db24afebd9e9ca73c
+#: ../source/breaking_changes_chef_11.rst:452
+# a352192a49f147bd803a574b3192edc3
 msgid "Sandboxes are used as part of the protocol for uploading cookbook content. An empty sandbox cannot be used for anything. Creating such a sandbox may indicate a logic error in client code and is (mildly) wasteful of server resources."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:453
-# 78a915912cea45d8b3baa3a3d52f6a39
+#: ../source/breaking_changes_chef_11.rst:455
+# 7bb3c81d562a4c7aa44a151320a47aae
 msgid "Error messages included in server error responses have changed"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:454
-# 8023b4aa965c41d58f681da01cddc5ae
+#: ../source/breaking_changes_chef_11.rst:456
+# fffba39543814bee8549d3fc6d54bbd3
 msgid "As part of the move to |erchef|, error messages have been made more consistent. Code depending on specific error message text may be broken by these changes."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:457
-# 83c2ee38454842d9985b87672e3e6fb8
+#: ../source/breaking_changes_chef_11.rst:459
+# e7934017b9f84a7fac75c049c1993c62
 msgid "Some error codes have changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:458
-# d524629a0c6a45a3a2d32e7fde9703da
+#: ../source/breaking_changes_chef_11.rst:460
+# 7614c0a6dcbf46ee84981355007db2a8
 msgid "In a number of cases, |erchef| returns a more specific error status than the |chef 10| server. For example, returning 400 instead of 500 for some bad request data situations."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:460
-# 86113ed543b04e0ab43fa7c93de17973
+#: ../source/breaking_changes_chef_11.rst:462
+# 85f7e2c96b884ea9885629176bf5c23e
 msgid "The ``chef-server`` cookbook has been completely rewritten to support an omnibus |chef server| install"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:463
-# fe3a51eed8534a099e1de97a86521089
+#: ../source/breaking_changes_chef_11.rst:465
+# f9cc6982b55c4b80aa6896792b17d8cf
 msgid "knife reindex is not supported in |chef server 11|"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:464
-# 0587ffd007b842c09b881e3bca7674d4
+#: ../source/breaking_changes_chef_11.rst:466
+# 9af6f21e5b2b463abdc77d5723f722c9
 msgid "You can trigger a reindex of object data using ``chef-server-ctl reindex`` while logged into the |chef server|. The |knife| command is still present in the |chef 11| |chef client| for use with a |chef 10| server."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:467
-# bad2ffec2af443e0a6595e206f7e064b
+#: ../source/breaking_changes_chef_11.rst:469
+# 7fe7fab407594e9b9d2d67cdca6d5319
 msgid "OpenId support has been removed"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:468
-# 98b8f9d697fb409c95a89a2888324fd2
+#: ../source/breaking_changes_chef_11.rst:470
+# 178b0adb2b294d57919174d920c33e3b
 msgid "Support for |open id| is no longer available to the |chef client|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:472
-# 584fb9a72f354525b06073df0184944c
+#: ../source/breaking_changes_chef_11.rst:474
+# d3a4b47768fb4ad8b5c13991df66a1a6
 msgid "The Ruby server code has been removed"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:473
-# 267c76959a224c0586752102932f0657
+#: ../source/breaking_changes_chef_11.rst:475
+# 0629be7b4f684d7080626cb9104202b3
 msgid "As part of the move to Erchef, the Ruby API server code along with classes not needed by the client-side have been removed from the main |chef repo|."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:476
-# e88d75577e364ba9b3fb318392005cb8
+#: ../source/breaking_changes_chef_11.rst:478
+# 51d33189fc3541cf83be01369a662f7a
 msgid "knife cookbook delete --purge is ignored by |chef server 11|"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:477
-# 8bb9afe850334f409d0763a0dfc07b6a
+#: ../source/breaking_changes_chef_11.rst:479
+# 32f4ceefbcde48888a9197c855eb4f5b
 msgid "In |chef 11|, the server keeps track of which cookbooks use a given piece of cookbook content (via checksum). When a cookbook version is deleted, associated content will be deleted if not referenced by another cookbook version object. Therefore, there is no need for a purge operation when using the |chef 11| server."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:481
-# 97cfa71572f44e43b220f54978587bc3
+#: ../source/breaking_changes_chef_11.rst:483
+# 7dc075278a6645899269662e077f38a5
 msgid "Other Notable Changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:482
-# 592698c03cf74ad491ca47a828d5e544
+#: ../source/breaking_changes_chef_11.rst:484
+# 2290529d8c03460ebc90f67769161bb6
 msgid "Changes that are not expected to be breaking, but are notable improvements."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:485
-# ba2b11718bc64185883c397c49059d1b
+#: ../source/breaking_changes_chef_11.rst:487
+# cfc46cddd9944a63972266622dc4d509
 msgid "Output Formatters are the Default Output when Running in the Console"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:486
-# 5f0a0babaa814c97b1644265a26fe76e
+#: ../source/breaking_changes_chef_11.rst:488
+# 83550c137699415c9e75362e59aab68f
 msgid "In |chef 11|, when output is to a TTY, the |chef client| will automatically use output formatters to display information about what it's doing. To accommodate this, the default log level is now ``auto``, which evaluates to ``warn`` when running with a TTY (so log messages will not obscure the output formatter output), and ``info`` when running without a TTY (so you get important information about changes being made to the system when output formatters are not active)."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:488
-# fbd171a1a7a74fad813ed846bf580005
+#: ../source/breaking_changes_chef_11.rst:490
+# 15ea835a9c0d4feea40f326e11e80db3
 msgid "If you prefer one type of output over the other, you can force the |chef client| to use output formatters or logger output with ``--force-formatter`` or ``--force-logger``."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:490
-# c2d0826c2b5743e98c903a2374cac83d
+#: ../source/breaking_changes_chef_11.rst:492
+# c420c5f908fb4543a47a62668a31c92b
 msgid "In previous versions, bootstrapping templates would generally configure the log level to ``info`` in the |client rb| file. You may wish to change this to ``auto`` or remove the setting from your config file entirely."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:493
-# 53e49b1f723a4373b257ed151a2a4e10
+#: ../source/breaking_changes_chef_11.rst:495
+# f210f378cc754b95b791acb33830b6a3
 msgid "Inline Compile Mode for Lightweight Resources"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:494
-# 6fbddfae419641519a1e2d052d046720
+#: ../source/breaking_changes_chef_11.rst:496
+# 0b60c8454e664a648a1ece77c6bba78c
 msgid "In |chef 11|, there is an optional \"inline compilation\" mode for lightweight resources, which is intended to make notifications work correctly for lightweight resources."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:497
-# 35e1f7dbb6b14472b189b629cc6e8d6e
+#: ../source/breaking_changes_chef_11.rst:499
+# 21a653fe065e4b26825df09c16b064f6
 msgid "Without Inline Compilation"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:498
-# d88835331f644386a7cd983a6522c17e
+#: ../source/breaking_changes_chef_11.rst:500
+# d3d0f691017249f19c35d7d4cdd8591d
 msgid "When not using inline compilation (it is disabled by default), any resources created in a lightweight provider's action blocks are inserted into the top level resource collection after the lightweight resource it belongs to. For example, given a resource collection like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:500
-# 56678f7f44254fddaf490f35e3028521
+#: ../source/breaking_changes_chef_11.rst:502
+# b3de8e8b2d394a7a82c6985fa6d49d89
 msgid "top_level_resource_one"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:501
-# 5aae8f5ba00a4f96ba1bc9c5f8f62d4b
+#: ../source/breaking_changes_chef_11.rst:503
+# 6b4b4c17899d48cc9365c4be1f41fa5b
 msgid "lwrp_resource"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:502
-#: ../source/breaking_changes_chef_11.rst:510
-# 7ddb7e94574248338b4b88b8c1d66150
-# 727674acca9e4f88ad58b61c040ba56b
+#: ../source/breaking_changes_chef_11.rst:504
+#: ../source/breaking_changes_chef_11.rst:512
+# 904e1c8ca6ac4b37857162d6835f584d
+# 9e29f209314b45e0b6f3517e838e6482
 msgid "top_level_resource_two"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:504
-# d84cfe9e81704196a6606c169324e907
+#: ../source/breaking_changes_chef_11.rst:506
+# 5f9166cc09d64aef9c84a87868175c8d
 msgid "When ``lwrp_resource`` is executed, the resource collection will then be modified like this:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:506
-# c3641fc318224f418041a93c30ffb911
+#: ../source/breaking_changes_chef_11.rst:508
+# ec49b0f2a35d4e7080fb9ca10d33ede0
 msgid "top_level_resource_one (already processed)"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:507
-# 93a89f178628457b93c2ebdd71e257ef
+#: ../source/breaking_changes_chef_11.rst:509
+# 198f9974f5a64ec78017672652b901a9
 msgid "lwrp_resource (already processed)"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:508
-# 190dfe6e86c743edba351639afee6d33
+#: ../source/breaking_changes_chef_11.rst:510
+# 346c33e316ab4eed854773eb55ddbc8c
 msgid "embedded_resource_one (created by lwrp)"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:509
-# 8f202828bf4f47fc8a9600db2f7c10b1
+#: ../source/breaking_changes_chef_11.rst:511
+# 26bcf3eb77d944ab93e58b1ffc1f3b17
 msgid "embedded_resource_two (created by lwrp)"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:512
-# 21f9d65528da42e6b50395cf13b16092
+#: ../source/breaking_changes_chef_11.rst:514
+# 8fb8adbf29cc4725b69bea3e571a5640
 msgid "This means that the ``lwrp_resource`` cannot correctly set its updated status based on the embedded resources, because it has finished executing before its embedded resources are processed."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:515
-# 8157a04b9f9e45f3863e48303a955172
+#: ../source/breaking_changes_chef_11.rst:517
+# 2e24e77ec4ef43d981c76099b4bda92c
 msgid "With Inline Compilation"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:516
-# b5401f3fcae14278822cd5d2ead5aa04
+#: ../source/breaking_changes_chef_11.rst:518
+# 914945ae4eac49fb8cd62cdf8d775e3e
 msgid "Inline compilation is enabled by calling ``use_inline_resources`` at the top of your lightweight provider file. When this is enabled, the code in your action block is executed in a self contained |chef client| run, with its own compile and converge phase. If any embedded resources have been updated, the top-level lightweight resource is marked as updated, and any notifications set on it will be triggered normally. Within the embedded |chef client| run, resources in the top-level resource collection are invisible to the embedded resources, so embedded resources are not able to notify resources in the top-level resource collection."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:519
-# 576d72425220481b85eeb2a582fcd94b
+#: ../source/breaking_changes_chef_11.rst:521
+# b3414a6972dd43feae07ac9883f28dc4
 msgid "LWRP Class Hierarchy Changes"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:520
-# e2ed926b50474a84bef666959edc0a7c
+#: ../source/breaking_changes_chef_11.rst:522
+# 45e31feb5a9044c7b390e4d0af6266e1
 msgid "In |chef 11|, lightweight resources resources now inherit from a ``LWRPBase`` resource instead of directly inheriting from ``Chef::Resource``. Likewise, lightweight resources providers inherit from a ``LWRPBase`` provider instead of ``Chef::Provider``. This should not impact existing code for lightweight resources."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:523
-# 203a78141b7d4527ad84f3096a0d7f28
+#: ../source/breaking_changes_chef_11.rst:525
+# c66f8eae18bf4de0849324869eaa6379
 msgid "Partial Support in Templates"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials.rst:5
-# 37e40f79cd2241998f71cf1adc794adb
+# b6cdb788da3445abaadb2dc1ea220527
 msgid "A template can be built in a way that allows it to contain references to one (or more) smaller template files. (These smaller template files are also referred to as partials.) A partial can be referenced from a template file in one of the following ways:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials.rst:7
-# 8e5a6887a39944579765d778ccff7119
+# a39b5754018045a190617023fa4911ba
 msgid "By using the |ruby| ``render`` method in the template file"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials.rst:8
-# 906fcecf5eeb4708a9dc0196698e8607
+# 10013f4172e94ad89b5ce85cccddf476
 msgid "By using the |resource template| resource and the ``variables`` parameter."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:527
-# 0310cc0bd0e3483f9164fe91dc9c2f36
+#: ../source/breaking_changes_chef_11.rst:529
+# f5b1bcff764140f099433e058e1c9a0d
 msgid "``render`` Method"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:5
-# 2a9775122b3d4d7bafb0b57277a09178
+# 2cbd25b7e33340c69b7b4401f9d934f6
 msgid "Use the ``render`` method in a template to reference a partial template file with the following syntax:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:11
-# cd65f72b43cb4fde920cfcf5907603e6
+# 313fb37e4d3049cbbe0eac3ba27607dd
 msgid "where ``partial_name.txt.erb`` is the name of the partial template file and ``:option`` is one (or more) of the following options:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:17
-# eca39f852df54895b9a56b71a9eb531d
+# b81292bc50af4475a4b1b313b0645f1f
 msgid "Option"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:18
-# 1041ec4c460541b8ae65259dda7eed35
+# 9c37a420dd724a2e9221ab26afd03df6
 msgid "Description"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:19
-# 8cc1e25a306c49649f504a3f5c9512b5
+# 8e49113fcbeb4ecbacd5e2e9cc8b9bb1
 msgid "``:cookbook``"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:20
-# 2aeee5401de545aab8d9cb6ac329416d
+# cf902bda50714c5d8be963483e418c65
 msgid "By default, a partial template file is assumed to be located in the cookbook that contains the top-level template. Use this option to specify the path to a different cookbook"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:21
-# 4e4bfda37b6e4c8086d33f2fe2107ce4
+# 827e0eb1a9d4455baadb127f28c7af7c
 msgid "``:local``"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:22
-# ac3c75caa1d74fafaa943d0747f64ae2
+# 61c5330cab86405487912a8962fdc585
 msgid "Indicates that the name of the partial template file should be interpreted as a path to a file in the local file system or looked up in a cookbook using the normal rules for template files. Set to ``true`` to interpret as a path to a file in the local file system and to ``false`` to use the normal rules for template files"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:23
-# 10beaced42a643798c67b3696747cfed
+# c242be926cf34f9882a99b77ee12136f
 msgid "``:source``"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:24
-# 3b910b498e8c40c298890fb134c5beb4
+# 71d234b5f1ce48fda8eb342b9f46a6f4
 msgid "By default, a partial template file is identified by its file name. Use this option to specify a different name or a local path to use (instead of the name of the partial template file)"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:25
-# 828344ebef1f4bd590194e3cdc30ee69
+# cc2b5c3cc29348b8b5d0e2430965c60a
 msgid "``:variables``"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:26
-# e01fad6ac63d4807b3df8071b8e9512d
+# 430f0c665bd94281a8af594fe3c9dd65
 msgid "A hash of ``variable_name => value`` that will be made available to the partial template file. When this option is used, any variables that are defined in the top-level template that are required by the partial template file must have them defined explicitly using this option"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst:28
-# 68626ebe26a54ec993dd05762d0f4389
+# 0e2ee1b0fe35494c95668b2a549c2b84
 msgid "For example:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:531
-# 06792e6fa4ee4b529dfca1c18fc90539
+#: ../source/breaking_changes_chef_11.rst:533
+# a3ffada3632b4606bfc5047c91ccc8e5
 msgid "Template Resource"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_template_resource.rst:6
-# 8250af4d521f4a39bfef77ed72d01499
+# e730b5145bdc446194f97bb54ea08f88
 msgid "The |resource template| resource can be used to reference a partial template file by using the ``variables`` parameter, the ``:partials`` option, and a |hash| of partial template files. For example:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_template_partials_template_resource.rst:18
-# 631a9b7b55b44af482940006e831435d
+# 4390330e73ae46308b7e288107fa0956
 msgid "where each of the partial template files can then be combined using normal |ruby| template patterns within a template file, such as:"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:535
-# 5b2f45da64a94de8af5b9aad8051ea23
+#: ../source/breaking_changes_chef_11.rst:537
+# d2ed2a75d58f44f0aa049380e9e3bfa5
 msgid "|chef apply|"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:536
-# 64ab74383e58424b89c1772dacdbec95
+#: ../source/breaking_changes_chef_11.rst:538
+# 6815cc77344b4034899ac3bf76f89587
 msgid "There is now a ``chef-apply RECIPE`` command that will run a single recipe with no ``JSON/run_list/config`` file required."
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:539
-# af683d351e8e41798ee240eac6c39308
+#: ../source/breaking_changes_chef_11.rst:541
+# 18339c8a7d0d4e36b48c9a2866818e69
 msgid "Miscellaneous"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:541
-# b22b40ba31f44a45991b15d8ca28e887
+#: ../source/breaking_changes_chef_11.rst:543
+# dbe301d44c9241089af38cbf63b51e3f
 msgid "Locking is used to prevent simultaneous runs on |unix|-like systems"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:542
-# afae08db834f467b96a0894e9498c1c2
+#: ../source/breaking_changes_chef_11.rst:544
+# 2626615e4621479abdf5f126a5e7db8f
 msgid "|subcommand knife search| assumes node search when the object type is omitted"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:543
-# c1c722e6926147dbad6bac5187ad66af
+#: ../source/breaking_changes_chef_11.rst:545
+# 32173050a70944298d72c36b98af6981
 msgid "|subcommand knife search| will search over roles, tags, |fqdn|, and IP addresses when the given query is not in |apache solr| format (does not contain a colon : character)"
 msgstr ""
 
-#: ../source/breaking_changes_chef_11.rst:544
-# e3a0467a88ab4964a98cf2c850c96f9a
+#: ../source/breaking_changes_chef_11.rst:546
+# b0ceec32d5cc4d7fa911392bac15db86
 msgid "|knife| essentials (|subcommand knife upload|, |subcommand knife download|, |subcommand knife diff|, and so on) have been merged into |chef 11-0|"
 msgstr ""
 
