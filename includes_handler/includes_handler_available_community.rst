@@ -15,7 +15,7 @@ The following handlers are available from the open source community:
      - A handler that asynchronously pushes exception and report handler data to a |stomp| queue, from which data can be processed into data storage.
    * - `Campfire <https://github.com/ampledata/chef-handler-campfire>`_
      - A handler that collects exception and report handler data and reports it to |campfire|, a web-based group chat tool.
-   * - `Cloudkick <https://github.com/ampledata/chef/blob/master/chef/lib/chef/handler/cloudkick_handler.rb>`_
+   * - `Cloudkick <https://github.com/ampledata/chef-handler-campfire>`_
      - A handler that collects exception and report handler data and sends it to |cloudkick|, a set of cloud server monitoring and management tools.
    * - `Datadog <https://github.com/DataDog/chef-handler-datadog>`_
      - A handler that collects |chef client| stats and sends them into a |datadog| newsfeed.
