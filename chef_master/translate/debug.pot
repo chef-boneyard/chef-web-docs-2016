@@ -1,0 +1,954 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-25 09:45\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/debug.rst:33
+# fa8f0a1a8e714dccb26f596a24feb2a3
+msgid "Debug Recipes and chef-client Runs"
+msgstr ""
+
+#: ../../includes_chef/includes_chef.rst:5
+# 43db4b38f89c45ebb7368d78afe4cecf
+msgid "|chef| is a systems and cloud infrastructure automation framework that makes it easy to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure. The |chef client| relies on abstract definitions (known as cookbooks and recipes) that are written in |ruby| and are managed like source code. Each definition describes how a specific part of your infrastructure should be built and managed. The |chef client| then applies those definitions to servers and applications, as specified, resulting in a fully automated infrastructure. When a new node is brought online, the only thing the |chef client| needs to know is which cookbooks and recipes to apply."
+msgstr ""
+
+#: ../source/debug.rst:37
+# d2a01f3be1874789805b2d76e411178a
+msgid "Elements of good approaches to building cookbooks and recipes that are reliable include:"
+msgstr ""
+
+#: ../source/debug.rst:39
+# 1e74765a176349cd942c48ef11699689
+msgid "A consistent syntax pattern when constructing recipes"
+msgstr ""
+
+#: ../source/debug.rst:40
+# 0027e8bd9b3d46c4bc20c26e2de33285
+msgid "Using the same patterns in Ruby"
+msgstr ""
+
+#: ../source/debug.rst:41
+# 68e50f2883064943bb936c9380a92137
+msgid "Using platform resources before creating custom ones"
+msgstr ""
+
+#: ../source/debug.rst:42
+# 2f64166f1ee04912b8c6dcd6744c470e
+msgid "Using community-authored lightweight resources before creating custom ones"
+msgstr ""
+
+#: ../source/debug.rst:44
+# 0dc79bc16c354dd6905b2190b9d61752
+msgid "Ideally, the best way to debug a recipe is to not have to debug it in the first place. That said, the following sections discuss various approaches to debugging recipes and failed |chef client| runs."
+msgstr ""
+
+#: ../source/debug.rst:47
+# a568ad6b0ea9446cac74f2e37e76edca
+msgid "Basic"
+msgstr ""
+
+#: ../source/debug.rst:48
+# 358d9453ae0042039b4bea1f19de1755
+msgid "Some simple ways to quickly identify common issues that can trigger recipe and/or |chef client| run failures include:"
+msgstr ""
+
+#: ../source/debug.rst:50
+# 75e9cd6e9c824d46a96d9f529624e329
+msgid "Using an empty run-list"
+msgstr ""
+
+#: ../source/debug.rst:51
+# 467345285169480dae70de15dcd0e028
+msgid "Using verbose logging with |knife|"
+msgstr ""
+
+#: ../source/debug.rst:52
+# a7c7d20b976a4b3fa6ceba91732c18f2
+msgid "Using logging with the |chef client|"
+msgstr ""
+
+#: ../source/debug.rst:53
+# 5c97b7d3cd2c4dc3bb811378fd6989cb
+msgid "Using the |resource log| resource in a recipe to define custom logging"
+msgstr ""
+
+#: ../source/debug.rst:56
+# c54fc4f528a34e19976b8ed32ce26777
+msgid "Empty Run-lists"
+msgstr ""
+
+#: ../source/debug.rst:57
+# 113eb4ff2d0b47749df03ae40f43ede7
+msgid "Using an empty run-list is an effective way to determine if the failed |chef client| run has anything to do with the recipes within the run-list. This is often an indicator that the underlying cause of the |chef client| run failure is a configuration issue. If a failure persists even if the run-list is empty, check the following:"
+msgstr ""
+
+#: ../source/debug.rst:59
+# c9a3e2efd83640a7a5c47f17b907e84f
+msgid "configuration settings in the |knife rb| file"
+msgstr ""
+
+#: ../source/debug.rst:60
+# 3ecc870804fa470ea257e49f7033a5d8
+msgid "permissions for the user to both the |chef server| and to the node on which the |chef client| run is to take place"
+msgstr ""
+
+#: ../source/debug.rst:63
+# 94a91e600f124e439f165630de0a14cb
+msgid "Knife"
+msgstr ""
+
+#: ../source/debug.rst:64
+# 909fc561dba24d4a839ff5720325e1a9
+msgid "Use the verbose logging that is built into |knife|:"
+msgstr ""
+
+#: ../source/debug.rst:67
+# 9d565392738649448a6a6e4186b9e93d
+msgid "|verbose|"
+msgstr ""
+
+#: ../source/debug.rst:69
+# 5b7d7cade8164b25a5ba8e1dbd9bbb00
+msgid "Plugins do not always support verbose logging."
+msgstr ""
+
+#: ../source/debug.rst:72
+# 8a3e0fa6020944aaac4912f9e583ce68
+msgid "chef-client"
+msgstr ""
+
+#: ../source/debug.rst:73
+# a6f49da1290b41b89dbe878e9b252b62
+msgid "Use the verbose logging that is built into the |chef client|:"
+msgstr ""
+
+#: ../source/debug.rst:76
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:46
+# 61c02cd9f8664fba8317eeb436d30716
+# 796efddd646c426798ef406d9f37a094
+msgid "|log_level|"
+msgstr ""
+
+#: ../source/debug.rst:79
+# 149b0897fc174933a5860955c3637fcc
+msgid "|log_location| This is recommended when starting any executable as a daemon. Default value: ``STDOUT``."
+msgstr ""
+
+#: ../source/debug.rst:82
+# 26c0052e6bdc4bc8805624f8b18e0cbc
+msgid "log Resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_generic.rst:4
+#: ../../includes_resources/includes_resource_generic.rst:4
+# b4e382ee1bc34c6184d2981be9529d65
+# 28cab35ba19c428880277489553e1dfd
+msgid "A `resource <http://docs.opscode.com/resource.html>`_ is a key part of a `recipe <http://docs.opscode.com/essentials_cookbook_recipes.html>`_ that defines the actions that can be taken against a piece of the system. These actions are identified during each `chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_ as the resource collection is compiled. Once identified, each resource (in turn) is mapped to a provider, which then configures each piece of the system."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log.rst:4
+# e4c4d8190c6b493e8088a053b9415e6f
+msgid "The |resource log| resource is used to create log entries from a recipe."
+msgstr ""
+
+#: ../source/debug.rst:88
+#: ../source/debug.rst:217
+# 458f9a0796a14de3945674d983133cd9
+# 439a5d5480d44b5ab6fc5af158cf1050
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_syntax.rst:4
+# dcf829d198794fbfb55a79a8df8987e1
+msgid "The syntax for using the |resource log| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_syntax.rst:14
+#: ../../includes_resources/includes_resource_breakpoint_syntax.rst:12
+# 93e70a6d0e9a4bd9a7c566c2d094b5c6
+# 4b40c882e37b4c5f90bd2c24e8428245
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_syntax.rst:16
+# 5e151511b26f4bb987bfecc2ae0dc62e
+msgid "``log`` tells the |chef client| to use the ``Chef::Provider::Log::ChefLog`` provider during the |chef client| run"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_syntax.rst:17
+# 70844c763e4248498986e68be1809fe6
+msgid "``name`` is the name of the resource block; when the ``message`` attribute is not specified as part of a recipe, ``name`` is also the message to be added to a log file"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_syntax.rst:18
+# 2ed3f6376b54451f884be76ceb2d6559
+msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_syntax.rst:19
+# 2f33b77c7a6b4a689cfe324d1d88e56f
+msgid "``:action`` is the step that the resource will ask the provider to take during the |chef client| run"
+msgstr ""
+
+#: ../source/debug.rst:92
+#: ../source/debug.rst:221
+# 1793b4e53316423b915718022259c338
+# b2f95a153eb248cd9adc76c8a195d66c
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_actions.rst:4
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:4
+# 23d5288facb3414791f4def0bc234319
+# c4c1694cc7784a10b8de562078a420e1
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_actions.rst:10
+#: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst:10
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:10
+# e08638efe9bf496f821539be708f59e4
+# 2acdb0603eb3449eba24c531c1afc305
+# 179578baa62e4b178c59d0b225f4881c
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_actions.rst:11
+#: ../../includes_resources/includes_resource_log_attributes.rst:11
+#: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_attributes.rst:11
+#: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst:11
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:11
+#: ../source/debug.rst:202
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:11
+#: ../source/debug.rst:253
+# 363f16e87d70482ebfe30cd24635a30b
+# 85e528a93aae4df0952f003c8145b3a6
+# 378f4ee7e4de4cc4ae659aa558818421
+# 43397bcd7552434999ca09af434ae656
+# 2f6f1086fd1541b5835b31f73d26b64b
+# b3243bf73512461ba3aaee887f064ee5
+# 302c1e41411443d89b81d077818c14ec
+# 41874f9bea0849c7802b84f0bbd3508d
+msgid "Description"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_actions.rst:12
+# 8c208337b8e64622bd88397fb87ac804
+msgid "``:write``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_actions.rst:13
+# 7311ff94713a45acba60f9a7f5bc529f
+msgid "Default. |resource action write log|"
+msgstr ""
+
+#: ../source/debug.rst:96
+#: ../source/debug.rst:140
+#: ../source/debug.rst:225
+# 3704873aeeee4cd39e950b138ca6dff6
+# 5a14c3714c444abeb922f63bd3e24cd0
+# f9092f77acce4235a1a3e0483a56d25c
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_attributes.rst:4
+# ab7ce29319f44c2a8b25603019e0ce38
+msgid "This resource has the following attributes:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_attributes.rst:10
+#: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_attributes.rst:10
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:10
+#: ../source/debug.rst:252
+# a96411e3130d4326b008d66ebd031d46
+# c05a57c969d14242809b865e35b53fdb
+# 6c0669ce0ceb4b3bb1bbb0eeed9b74a8
+# 15edec862f1f42afbebbfb1767a47a10
+msgid "Attribute"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_attributes.rst:12
+# c9024ef515544057a3285e49a2b78174
+msgid "``level``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_attributes.rst:13
+# 3dc5540d9d01492aa47cd37a34d7df35
+msgid "|level log| Default value: ``:info``."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_attributes.rst:14
+# 47a7179eb17f48cb95014b267c03d400
+msgid "``message``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_attributes.rst:15
+# c5a82b5cd55a481eb379b368db1a315a
+msgid "|message resource log| Default value: the ``name`` of the resource block (see Syntax section above)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_attributes.rst:16
+# 1d504fbc4d484e84922634f3c693e32d
+msgid "``provider``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_attributes.rst:17
+# c0807ef3e87048f981d978c24eb66b60
+msgid "Optional. |provider resource_parameter|"
+msgstr ""
+
+#: ../source/debug.rst:100
+#: ../source/debug.rst:229
+# bfe9f7960c944a7eb6cf1757dacc832f
+# d9008f9aa6e343db8ecbe52b4ef32616
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_providers.rst:4
+# 10765af8b2a04e59912f88b42582f0eb
+msgid "The following providers are available. Use the short name to call the provider from a recipe:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_providers.rst:10
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:10
+# c4b88003cab04426a05fcae70400c497
+# 238fa0cfcd7e457a956d8eab408a3437
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_providers.rst:11
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:11
+# caeeae8801294cbd98b5fbc98ea8e960
+# 6a08146f44dc4510a8c9a8c9edd0fc73
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_providers.rst:12
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:12
+# 39bea91cd21e4689942847a27fa48e81
+# 31b931fabb614f3d960c44a820306b01
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_providers.rst:13
+# ea8d003e2c2e4758bb8629507eb5ba36
+msgid "``Chef::Provider::Log::ChefLog``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_providers.rst:14
+# 6f08f0954596462eb382ab52ed6d0aaf
+msgid "``log``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log_providers.rst:15
+# 36c39f995e8044c896dbe80fc73d739d
+msgid "The default provider for all platforms."
+msgstr ""
+
+#: ../source/debug.rst:104
+#: ../source/debug.rst:170
+#: ../source/debug.rst:233
+#: ../source/debug.rst:269
+# bf2b75d90bd941178760fb8a3772f831
+# ced9a401a4f34deea0584b0bb9255d85
+# 2edac516bb7040c680ce5a9f7f1e2853
+# 2d6992f1d9c142e4a54b77265972222b
+msgid "Examples"
+msgstr ""
+
+#: ../source/debug.rst:105
+#: ../source/debug.rst:234
+# dc48131c130d4b28b8f5b1b5306f763e
+# f028857cde10444abd81b4846ea6eac7
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/debug.rst:107
+# 8d310fc20722415cadecc4b1363780e3
+msgid "**Set default logging level**"
+msgstr ""
+
+#: ../source/debug.rst:111
+# 97767bd0968643dc932399770ddce084
+msgid "**Set debug logging level**"
+msgstr ""
+
+#: ../source/debug.rst:115
+# 59c302c8c99b4125aeecc05cb14af86a
+msgid "**Create log entry when the contents of a data bag are used**"
+msgstr ""
+
+#: ../source/debug.rst:119
+# 72c83e5461f3484297be7ab752e565ac
+msgid "**Add a message to a log file**"
+msgstr ""
+
+#: ../source/debug.rst:124
+# 164c9db98d184218af39a6a5924d115c
+msgid "Advanced"
+msgstr ""
+
+#: ../source/debug.rst:125
+# ceb3e087f45349a1872baaeca2abcaaa
+msgid "Some more complex ways to debug issues with a |chef client| run include:"
+msgstr ""
+
+#: ../source/debug.rst:127
+# 3d0e8551758848beacc3761c19695648
+msgid "Using the |cookbook chef_handler| cookbook"
+msgstr ""
+
+#: ../source/debug.rst:128
+# 8f170660998346668d98a2abc10276cd
+msgid "Using the |chef shell| and the |resource breakpoint| resource to add breakpoints to recipes, and to then step through the recipes using the breakpoints"
+msgstr ""
+
+#: ../source/debug.rst:129
+# 19f49f0e03da4707991cfca44261d49d
+msgid "Using the ``ignore_failure`` method in a recipe to force the |chef client| to move past an error to see what else is going on in the recipe, outside of a known failure"
+msgstr ""
+
+#: ../source/debug.rst:130
+# 86643874a11846e689db1f818b2ee2bd
+msgid "Using |chef solo| to run targeted |chef client| runs for specific scenarios"
+msgstr ""
+
+#: ../source/debug.rst:134
+# b72c6185b0d34f599459f1d22dc3b191
+msgid "chef_hander"
+msgstr ""
+
+#: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler.rst:4
+# dd5ae6dbd7cd4d66a8a1fa830194886c
+msgid "|cookbook name chef_handler| This cookbook also exposes the |lwrp chef handler| lightweight resource, which allows exception and report handlers to be exposed from within recipes, as opposed to having them hard-coded within the |client rb| file."
+msgstr ""
+
+#: ../source/debug.rst:137
+# 1e207bf87e284603889ce81dc2260c0a
+msgid "This cookbook is available from |github|: https://github.com/opscode-cookbooks/chef_handler."
+msgstr ""
+
+#: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_attributes.rst:4
+# 6649ed5d8b8e41da846a096f3f85d12f
+msgid "This cookbook includes the following attributes:"
+msgstr ""
+
+#: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_attributes.rst:12
+# 1ec693a7b47744adb2842c4ab14965d1
+msgid "``node[\"chef_handler\"][\"handler_path\"]``"
+msgstr ""
+
+#: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_attributes.rst:13
+# 6e3418a47c114c27b60a12639faecd18
+msgid "|path chef_handler_directory| Default value: ``/var/chef/handlers``."
+msgstr ""
+
+#: ../source/debug.rst:144
+# 65d24ff779d948d9af7ca3b9052fcaa4
+msgid "chef_handler LWRP"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst:4
+# ccd9693615bf4a508fe971e26d08ad15
+msgid "A lightweight resource is a custom resource that creates an abstract approach for defining a set of actions and (for each action) a set of attributes and validation parameters. A lightweight resource relies on a lightweight provider to take the necessary steps to bring a piece of the system to a desired state."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler.rst:4
+# 5947f7cde32a41ecaaf03a47b860bb52
+msgid "The |lwrp chef handler| lightweight resource is used to allow cookbook authors to ship a product-specific handler. This lightweight resource requires, configures, and enables handlers on a node for the current |chef client| run and can pass arguments to the initializer, which allows initialization data to be pulled from a node's attribute data. This lightweight resource should be declared early in the compile phase so it may trigger exceptions during the |chef client| run. For a base role, recipes that register handlers should come first in the run_list."
+msgstr ""
+
+#: ../source/debug.rst:149
+# d06b43ec98ba44d290fa1328439656ae
+msgid "**Actions**"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst:4
+# f08dc53377cb44e685dc7ba56b206333
+msgid "This lightweight resource provider has the following actions:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst:12
+# eb290390dc394bff9ae4a4fe4caad94e
+msgid "``:enable``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst:13
+# da04656d2dc942b0b6eeadc9dbc29f47
+msgid "|lwrp action enable chef_handler|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst:14
+# 42cfcae9fb0b4e539042c170a6d90de0
+msgid "``:disable``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst:15
+# 2beb7bab567c4b12ae339231d02b5a3d
+msgid "|lwrp action disable chef_handler|"
+msgstr ""
+
+#: ../source/debug.rst:153
+# d8d4a7cde73f4b77a0b3de81f6cc27fe
+msgid "**Attributes**"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:4
+# d4d59fa24c8e4a56a15c150af382f832
+msgid "This lightweight resource provider has the following attributes:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:12
+# 9193cb0aa5ed40af877e69d1c2faa923
+msgid "``class_name``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:13
+# 65df8ac7dbcb4862a33067b994cfc35e
+msgid "|name class_chef_handler|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:14
+# 19d39cdd8b67457aa3e526e707ddf556
+msgid "``source``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:15
+# a326505f0d6d4c86ad2355dad7808a1f
+msgid "|path chef_handler|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:16
+# a8fc01c77acc45c5a9a2624b7874fb04
+msgid "``arguments``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:17
+# 926b0d8fba6445b9b736c61af8fefb93
+msgid "|arguments chef_handler|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:18
+# 73c1b88db2ea4dbf916a0a6e1651fb78
+msgid "``supports``"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst:19
+# eb580135a76b41a68f09f764748da37c
+msgid "|supports chef_handler| Default value: ``{ :report => true, :exception => true }``."
+msgstr ""
+
+#: ../source/debug.rst:158
+# 52fd20af14eb41fa8893076a100caae8
+msgid "Usage"
+msgstr ""
+
+#: ../source/debug.rst:159
+# fb1a7cfd4ccb420aa0cea9cb5dcee1b1
+msgid "The following sections describe the usage options that are available in this cookbook."
+msgstr ""
+
+#: ../source/debug.rst:161
+# 24ae4ee48d7e40bca58bf15254ad29c7
+msgid "**default**"
+msgstr ""
+
+#: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_usage_default.rst:4
+# f22b0849a9c2420fb92f03b91c895768
+msgid "Use the ``default`` option to ensure that custom handlers are dropped off early in the |chef client| run so that they are available to all other recipes that need them during the same run."
+msgstr ""
+
+#: ../source/debug.rst:165
+# 7aed745cd62d48d699db7021082a5144
+msgid "**json_file**"
+msgstr ""
+
+#: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_usage_json_file.rst:4
+# 05414d02abf444bb84029bab0ff093f7
+msgid "Use the ``json_file`` option to serialize run status data to a |json| file located at ``/var/chef/reports``. This usage option automatically registers the ``Chef::Handler::JsonFile`` handler."
+msgstr ""
+
+#: ../source/debug.rst:173
+# 879955688fc44c418087ccbbece02660
+msgid "**Register the Chef::Handler::JsonFile handler**"
+msgstr ""
+
+#: ../../step_lwrp/step_lwrp_chef_handler_register.rst:3
+# 012fda42ee584261b7f4bed226d038ec
+msgid "To register the ``Chef::Handler::JsonFile`` handler:"
+msgstr ""
+
+#: ../source/debug.rst:177
+# 65a85814e1e74ebdad0501311fe52f68
+msgid "**Register the Chef::Handler::JsonFile handler during the compile phase**"
+msgstr ""
+
+#: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst:3
+# 83554d981a884d54a64553a7057d4bab
+msgid "To enable a handler during the compile phase:"
+msgstr ""
+
+#: ../source/debug.rst:181
+# 0b382ab7552b44338a919893354df300
+msgid "**Handle exceptions only**"
+msgstr ""
+
+#: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst:3
+# 616020e017bf4a4fb02d19a2c916dd2e
+msgid "To handle exceptions only:"
+msgstr ""
+
+#: ../source/debug.rst:185
+# 4b5f2efef57c49cdbca6f5c1d8162883
+msgid "**Enable the CloudkickHandler**"
+msgstr ""
+
+#: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst:3
+# c1fd21e8d51545fbaff3b96e802eb812
+msgid "To enable the ``CloudkickHandler``, which was added to the default handler path. This example also passes the ``oauth`` key/secret to the handler's initializer:"
+msgstr ""
+
+#: ../source/debug.rst:190
+# 71b57d070adf48acb70c361a1ebc295a
+msgid "chef-shell"
+msgstr ""
+
+#: ../source/debug.rst:193
+# 32701c99fbe148219fd9af63ae847a00
+msgid "|chef shell| is a recipe debugging tool for the |chef client| that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features."
+msgstr ""
+
+#: ../source/debug.rst:195
+# 14b0c68099cf454da45734845a713d19
+msgid "|chef shell| is tool that allows |knife| to be run using an |ruby irb| session. |chef shell| currently supports recipe and attribute file syntax, as well as interactive debugging features. |chef shell| has three run modes:"
+msgstr ""
+
+#: ../source/debug.rst:201
+# c6ebdabfb57b4bf08db2120c9f243862
+msgid "Mode"
+msgstr ""
+
+#: ../source/debug.rst:203
+# 7daf296fdc364816afac10246e9f67be
+msgid "Standalone"
+msgstr ""
+
+#: ../source/debug.rst:204
+# fc8d75e916984327b008cb7466a014ce
+msgid "No cookbooks are loaded, and the run list is empty. This mode is the default."
+msgstr ""
+
+#: ../source/debug.rst:205
+# 5b389f133755498882a6c2815c237ee9
+msgid "Solo"
+msgstr ""
+
+#: ../source/debug.rst:206
+# 75c8307076fb42b9bbaf90d28c6abf63
+msgid "|chef shell| acts as a |chef solo| client. It attempts to load the |chef solo| configuration file and |json| attributes. If the |json| attributes set a run list, it will be honored. Cookbooks will be loaded in the same way that |chef solo| loads them. |chef solo| mode is activated with the ``-s`` or ``--solo`` command line option, and |json| attributes are specified in the same way as for |chef solo|, with ``-j /path/to/chef-solo.json``."
+msgstr ""
+
+#: ../source/debug.rst:207
+# 99d6ee6b14464af2bc00dea61d646271
+msgid "Client"
+msgstr ""
+
+#: ../source/debug.rst:208
+# b0f7a03c47cd48fa9746d83162b7cd06
+msgid "|chef shell| acts as a |chef client|. During startup, it reads the |chef client| configuration file and contacts the |chef server| to get attributes and cookbooks. The run list will be set in the same way as normal |chef client| runs. |chef client| mode is activated with the ``-z`` or ``--client`` options. You can also specify the configuration file with ``-c CONFIG`` and the server URL with ``-S SERVER_URL``."
+msgstr ""
+
+#: ../source/debug.rst:211
+# f67324a742f0416b841cb6b5deb2ad2e
+msgid "breakpoint Resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint.rst:5
+# 6f48533295d249ca9cc37ba348e4edad
+msgid "The |resource breakpoint| resource is used to add breakpoints to recipes in the same way as any other resource. When the |chef client| is run in |chef shell| mode, those breakpoints can be used to debug recipes. Breakpoints are ignored by the |chef client| during an actual |chef client| run.  In general, breakpoints are used most often in a non-production environment, for the purpose of debugging recipes. After those recipes are debugged and the desired behavior has been tested, the breakpoints are typically removed from the recipes before uploading the cookbooks to a production environment (even if the |chef client| ignores them when building the resource collection during an official |chef client| run)."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_syntax.rst:4
+# 362af0205d0442948345d5416722cb4d
+msgid "The syntax for using the |resource breakpoint| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_syntax.rst:14
+# 4839f0fbaaa64e729114505bc3221856
+msgid "``:break`` will tell the |chef client| to stop running a recipe; can only be used when the |chef client| is being run in |chef shell| mode"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:12
+# de92a02eb17244a4b48a99b68376dd09
+msgid "``:break``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:13
+# a22b0ebaf773493e973e105531af35ae
+msgid "Use to add a breakpoint to a recipe."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_attributes.rst:4
+# 6df6eee222ad46a89f7189db3cad1860
+msgid "This resource does not have any attributes."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:4
+# 8df8e2cc31fe4531b082d2309faec598
+msgid "The following providers are available:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:13
+# c55a97279e86473394b65864c70d7173
+msgid "``Chef::Provider::Breakpoint``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:14
+# 90150cfe7dfe4a3ba3c216dd97133b4b
+msgid "breakpoint"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:15
+# 99cdebeeb9c9432da150c3962dc77c0f
+msgid "The default provider for all recipes."
+msgstr ""
+
+#: ../source/debug.rst:236
+# 85464845852f40b3923bc632a7507d8e
+msgid "**A recipe without a breakpoint**"
+msgstr ""
+
+#: ../source/debug.rst:240
+# c5152fbb33a94450a3688d5f291fffaf
+msgid "**The same recipe with breakpoints**"
+msgstr ""
+
+#: ../../step_resource/step_resource_breakpoint_yes.rst:37
+# 95de4f166ea34d2bb2dc00aed2dfbe96
+msgid "where the ``\"name\"`` of each breakpoint is an arbitrary string. In the previous example, ``\"name\"`` is used to indicate if the breakpoint is before or after a resource, and then also to specify which resource."
+msgstr ""
+
+#: ../source/debug.rst:245
+# 1c2542ff62fc442bb09544f999aa4141
+msgid "ignore_failure Method"
+msgstr ""
+
+#: ../source/debug.rst:246
+# 22bf99d8ae0840ee939b8f8f3aaa1495
+msgid "All resources share a set of common actions, attributes, and so on. Use the following attribute in a resource to help identify where an issue within a recipe may be located:"
+msgstr ""
+
+#: ../source/debug.rst:254
+# 575aa5200e584e81acdd5bb331e707c0
+msgid "``ignore_failure``"
+msgstr ""
+
+#: ../source/debug.rst:255
+# cd372529275b4e5fbbf7e958d3c5bdc8
+msgid "|ignore_failure| Default value: ``false``."
+msgstr ""
+
+#: ../source/debug.rst:259
+# ca92fc1aad3b4ae2b90d8bb7f38f1afb
+msgid "chef-solo"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo.rst:4
+# c0f3057e89c84f4ebd72937a929e1017
+msgid "|chef solo| is an open source version of the |chef client| that allows using cookbooks with nodes without requiring access to a |chef server|. |chef solo| runs locally and requires that a cookbook (and any of its dependencies) be on the same physical disk as the node. |chef solo| is a limited-functionality version of the |chef client| and **does not support** the following:"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo.rst:6
+# 29d299c19b08424193404cc4ab8e008c
+msgid "Node data storage"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo.rst:7
+# ab7d7942468d4ca3bba5b4e356e69a9e
+msgid "Search indexes"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo.rst:8
+# a9382d2625e8487fb96bb1d62fe0fda6
+msgid "Centralized distribution of cookbooks"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo.rst:9
+# 62a17ab05495434b930c3cd872abba72
+msgid "A centralized API that interacts with and integrates infrastructure components"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo.rst:10
+# ec633e6f3e674389939eba520b8bc2a0
+msgid "Authentication or authorization"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo.rst:11
+# 6aaacf45a0f5411da51eb174e5888423
+msgid "Persistent attributes"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo.rst:4
+# 40c38df8d05748e2a4dc76bc413ebe42
+msgid "The |chef solo| executable can be run as a command-line tool."
+msgstr ""
+
+#: ../source/debug.rst:265
+# dac9a94c7bed4f2c80379256cebfcfc7
+msgid "Options"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:6
+# d7450bbb7b7840f4bb918b52e8eca5c4
+msgid "This command has the following syntax::"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:10
+# da95ce024462433babfe0c272b1d229a
+msgid "This command has the following options:"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:13
+# bcd5107803e741919f512dd495ad85b7
+msgid "|config chef-client|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:16
+# 1c25d5ab690d4d3d8a57f9afbb8404a0
+msgid "|daemonize| This option is only available on machines that run in |unix| or |linux| environments. For machines that are running |windows| that require similar functionality, use the ``chef-client::service`` recipe in the ``chef-client`` cookbook: http://community.opscode.com/cookbooks/chef-client. This will install a |chef client| service under |windows| using the |windows service wrapper|."
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:19
+# c8c83061b3304e50bb7b3cdb088c53b2
+msgid "|name environment|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:22
+# 0e0225c573254a64a3d8dde24d46fd47
+msgid "|fork_chef|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:25
+# 3d8d001f455141e39a36cba810018819
+msgid "|format chef_ctls| Other formatting options are available by using 3rd party formatters."
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:28
+# ee32b3b53b044805b75725c530b7e2d7
+msgid "|force_formatter|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:31
+# 25a4b1f738214553ad9dffe56e74f9d1
+msgid "|force_logger|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:34
+# 5094a31fcc3c4521963feba8a9fa0e22
+msgid "|name group_process_owner|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:37
+# 1086d63377f44b90a831f06e993974fe
+msgid "|help subcommand|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:40
+# f416c09417ea401e90216a3312d12ddc
+msgid "|interval|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:43
+# c6ea099ea20245c9aff8a67894e1de07
+msgid "|json attributes|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:49
+# daa408ba32054fd0a60aa58b325b1c93
+msgid "|log_location| This is recommended when starting any executable as a daemon."
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:52
+# 49236be2a0de4cd19b6a60d39e9bcfca
+msgid "|no_color| Default setting: ``--color``."
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:55
+# db4fe7a84264488ba0e92045ff9c1058
+msgid "|name node|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:58
+# 1421a115322c4e70900779e1cb307b50
+msgid "|override_runlist|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:61
+# 5cd133606dcf4b7287c6e4fdfbcb32cb
+msgid "|recipe_url|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:64
+# c8c434d4bc7040eebd2642c11768ee9d
+msgid "|splay|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:67
+# 2ebcf9bbef5f433d8aa0f4a724106ff1
+msgid "|user chef_client|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:70
+# 0437cd9f91ed41f7abe8c1d98b0eec62
+msgid "|version chef|"
+msgstr ""
+
+#: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst:73
+# ee687d964612433abd129fe90d3c0452
+msgid "|whyrun_mode|"
+msgstr ""
+
+#: ../source/debug.rst:270
+# e9355be990064719a2c2eb8ce465e1dd
+msgid "**Use a URL**"
+msgstr ""
+
+#: ../source/debug.rst:276
+# 872f59df3b0f4f559df315a72f5102de
+msgid "where ``-r`` uses the |resource remote_file| resource to retrieve the |tar gz| archive into the ``file_cache_path``, and then extract it to ``cookbooks_path``."
+msgstr ""
+
+#: ../source/debug.rst:278
+# 9662e468b1014edab3851db2f91e524d
+msgid "**Use a directory**"
+msgstr ""
+
+#: ../source/debug.rst:284
+# aa0f834d5ac64b6b83c8a3a2c90eced6
+msgid "where the ``-r URL`` option is not used. |chef solo| will look in the |solo rb| file to determine the directory in which cookbooks are located."
+msgstr ""
+
+#: ../source/debug.rst:286
+# 2771a8a371884e55b193ec7fdc9aa7ac
+msgid "**Use a URL for cookbook and JSON data**"
+msgstr ""
+
+#: ../source/debug.rst:292
+# 64f6838fd5554e918631c33d51836bb3
+msgid "where ``-r`` corresponds to ``recipe_url`` and ``-j`` corresponds to ``json_attribs``, both of which are configuration options in |solo rb|."
+msgstr ""
+

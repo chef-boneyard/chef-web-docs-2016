@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-25 09:45\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/openstack_example.rst:33
+# 665e3ae2aeb744b1bbd4e203e89aad6a
+msgid "|chef openstack|: Example Deployment"
+msgstr ""
+
+#: ../source/openstack_example.rst:35
+# 1d34bed0378847e8a60566ce860ef963
+msgid "This is a small lab for testing the configuration and deployment of |chef openstack|. While the hardware is quite modest, the configuration should provide a useful reference implementation."
+msgstr ""
+
+#: ../source/openstack_example.rst:40
+# 0e3234a43aa44aa8bb88184a97f372d8
+msgid "lab-repo"
+msgstr ""
+
+#: ../source/openstack_example.rst:41
+# e43bc1a0322d4e13b645a65b24bc9dba
+msgid "Everything in the lab is managed by |chef| from the http://github.com/mattray/lab-repo repository. The operating systems for the machines are provisioned by the `pxe_dust <http://ckbk.it/pxe_dust>`_ cookbook, which uses a preseed file to put a minimal operating system in place via PXE. These machines are frequently re-installed and the process takes about 10 minutes."
+msgstr ""
+
+#: ../source/openstack_example.rst:44
+# f88dc168f8a74b5689d523db50210cd1
+msgid "Environment"
+msgstr ""
+
+#: ../source/openstack_example.rst:45
+# ce2c989263fd4cda9aba3233d63cd43a
+msgid "The `lab Environment <https://github.com/mattray/lab-repo/blob/master/environments/lab.rb>`_  provides overridden attributes."
+msgstr ""
+
+#: ../source/openstack_example.rst:47
+# 98a3971babd543fc9dc8ba1f5cb043aa
+msgid "The ``apt`` attributes are for restricting search to the lab."
+msgstr ""
+
+#: ../source/openstack_example.rst:48
+# a57b700ab9c74a1380953c67834a0bdf
+msgid "The ``authorization`` attributes are for configuring |sudo cmd| to not require a password, include the sudoers.d directory and add the 'mray' user to sudoers."
+msgstr ""
+
+#: ../source/openstack_example.rst:49
+# 2555cf11370146b1b6e37fca3a54cf34
+msgid "The ``dnsmasq`` attributes are for configuring DHCP, DNS and TFTP on the private 'admin' network."
+msgstr ""
+
+#: ../source/openstack_example.rst:50
+# fde7c04ecfc64c4ba0774cdba73be7a0
+msgid "The ``pxe_dust`` attribute is to lock down the |chef client| version."
+msgstr ""
+
+#: ../source/openstack_example.rst:53
+# 3c26f8dfc4904e78a05be871a0207d77
+msgid "Roles"
+msgstr ""
+
+#: ../source/openstack_example.rst:54
+# 135c9bd77afd470f8e0e84076b582d5d
+msgid "This example uses two roles: ``lab-admin`` and ``lab-base``."
+msgstr ""
+
+#: ../source/openstack_example.rst:57
+# 2ddb19931a7d4d91b89d3cf3c6f5be78
+msgid "lab-admin"
+msgstr ""
+
+#: ../source/openstack_example.rst:58
+# ece0de5310ae48278e18e49410062c7c
+msgid "This role is for the admin node that provides DHCP, DNS, TFTP, PXE-booting and apt repository proxying."
+msgstr ""
+
+#: ../source/openstack_example.rst:76
+# f5b6ae910b2f4b82b6cb10e120215d81
+msgid "lab-base"
+msgstr ""
+
+#: ../source/openstack_example.rst:77
+# 1048d9ed062e487b9677ca19d8c23a68
+msgid "The base role ensures that the apt repository proxy is used, NTP and SSH are configured and the sysadmins in the users data bag are all installed. After this role is applied, the machines are available for whatever purpose they are needed."
+msgstr ""
+
+#: ../source/openstack_example.rst:93
+# 5fa41113929342a6b9155aef47079840
+msgid "Data Bags"
+msgstr ""
+
+#: ../source/openstack_example.rst:94
+# 6919bfa7d1e3435fa8fddb7eef69483c
+msgid "This example uses two data bags: ``pxe_dust`` and ``users``."
+msgstr ""
+
+#: ../source/openstack_example.rst:97
+# 2aff7ab4c8ff4738aeb0ad6cb0504084
+msgid "pxe_dust"
+msgstr ""
+
+#: ../source/openstack_example.rst:98
+# a4a33c8f9e0e40f7872e694556208589
+msgid "The `pxe_dust <http://ckbk.it/pxe_dust>`_ cookbook uses a ``pxe_dust`` data bag to track which operating systems to install and what configuration options are used. Because the machines in the lab are quite diverse, there are individidual data bag items for machines that have unique configurations (ie. 32-bit vs. 64-bit or boot eth1 vs. eth0)."
+msgstr ""
+
+#: ../source/openstack_example.rst:101
+# 86ce9fa683b741ea89e13f8bc4a5e82c
+msgid "users"
+msgstr ""
+
+#: ../source/openstack_example.rst:102
+# 0b54426d81bf4a2584fa857255109939
+msgid "The `users <http://ckbk.it/users>`_ cookbook uses a ``users`` data bag to create the users on the systems and install their SSH credentials."
+msgstr ""
+
+#: ../source/openstack_example.rst:105
+# 8cbd6956971a4cfb930b9137ea1c8bb0
+msgid "Cookbooks"
+msgstr ""
+
+#: ../source/openstack_example.rst:106
+# 6c859ae62b7842ae8c71ddc31550bd2e
+msgid "All of the cookbook dependencies are managed by a `Berkshelf Berksfile <http://berkshelf.com>`_, usually kept quite up-to-date for the latest cookbook releases."
+msgstr ""
+
+#: ../source/openstack_example.rst:109
+# 498dca2c82744153a6b4e608851a1e64
+msgid "Network"
+msgstr ""
+
+#: ../source/openstack_example.rst:110
+# 05becd1e02514a249081b49bc66aceb1
+msgid "There are 3 separate 1 gigabit networks."
+msgstr ""
+
+#: ../source/openstack_example.rst:113
+# 46c81857430f449a8f79097bcf26f683
+msgid "Admin 10.0.0.0/24"
+msgstr ""
+
+#: ../source/openstack_example.rst:114
+# 6d99f730f96f43e082b023b3b5eaadb1
+msgid "This network is used by the various OpenStack services and for PXE-booting. DHCP is provided by the ``lab-admin`` node. Nodes connect to it via eth0."
+msgstr ""
+
+#: ../source/openstack_example.rst:117
+# d2854dee981243e1be4ada3597ea9bac
+msgid "Public 172.16.100.0/24"
+msgstr ""
+
+#: ../source/openstack_example.rst:118
+# b15965865e2348ddaf0018192b29d809
+msgid "This network is bridged to the Internet by a router providing DHCP. Nodes connect to it via eth1."
+msgstr ""
+
+#: ../source/openstack_example.rst:121
+# ba755540610d495ea3e5a3132a69ed97
+msgid "Storage 192.160.0.0/24"
+msgstr ""
+
+#: ../source/openstack_example.rst:122
+# f5c77078666d4c318416a12921277c21
+msgid "This is intended for storage services to connect to each other (Swift or Ceph). DHCP is provided by a DD-WRT router. It is currently unused."
+msgstr ""
+
+#: ../source/openstack_example.rst:125
+# bbbfb185070840d48543117609903769
+msgid "Hardware"
+msgstr ""
+
+#: ../source/openstack_example.rst:126
+# 12b37d50d29e482a81656ae892e243e1
+msgid "There are currently 5 machines in this lab environment."
+msgstr ""
+
+#: ../source/openstack_example.rst:129
+# 6bcb951fc5df4dc29607257862290890
+msgid "mom.lab.atx"
+msgstr ""
+
+#: ../source/openstack_example.rst:130
+# a82218581fc9458a8ae9e63156f08c18
+msgid "This is a utility server providing the services in the ``lab-admin`` role: DHCP, DNS, TFTP, apt-cacher-ng proxying and mirroring of Chef installers and other files. It is an old IBM T43 ThinkPad with 2 GB of RAM and a 60 GB hard drive. It is currently running Debian 7.1."
+msgstr ""
+
+#: ../source/openstack_example.rst:133
+# fe27411ba39a4bc89eae17e4bad382dc
+msgid "crushinator.lab.atx"
+msgstr ""
+
+#: ../source/openstack_example.rst:134
+# 236717f05188486b878e34784a6360cd
+msgid "The primary box used for single-machine testing, it is a Shuttle SH55 with an Intel i7 processor, 16 GB of RAM, a 40 GB SSD and 500 GB hard drive. An additional gigabit ethernet card and another gigabit USB ethernet have been added."
+msgstr ""
+
+#: ../source/openstack_example.rst:137
+# 36f760be71d840ffa9b5159856250d8c
+msgid "ignar.lab.atx/larry.lab.atx"
+msgstr ""
+
+#: ../source/openstack_example.rst:138
+# f3ddd153d04843afb4776829c00af1a0
+msgid "These machines are Lenovo H405 IdeaCentres upgraded with a 40 GB SSD, 500 GB hard drives, 8 GB RAM, an additional gigabit ethernet card and a gigabit USB ethernet. Typically they are used as the Compute nodes."
+msgstr ""
+
+#: ../source/openstack_example.rst:141
+# b412bb7a5d2d4ed0a58fceeeb7544f62
+msgid "lrrr.lab.atx"
+msgstr ""
+
+#: ../source/openstack_example.rst:142
+# 6dada8824c9f404d9646c512ecac44a2
+msgid "This machine is a white box with only 2 gigs of RAM and an Intel Core 2 that is supposed to support VT extensions, but kernel panics when VMs are launched. It has been loaded with a 40 GB SSD boot volume and 5 additional hard drives to be used when testing storage configurations. An additional 2 gigabit ethernet cards have been added."
+msgstr ""
+

@@ -1,0 +1,573 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-25 09:45\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_environments.rst:33
+# 346d45b23a2c4c69b74a6e4a0ed5c5c5
+msgid "About Environments"
+msgstr ""
+
+#: ../../includes_environment/includes_environment.rst:4
+# 137b52287ec5407195d49805ad89f6da
+msgid "An environment is a way to map an organization's real-life workflow to what can be configured and managed when using |chef server|. Every organization begins with a single environment called the ``_default`` environment, which cannot be modified (or deleted). Additional environments can be created to reflect each organization's patterns and workflow. For example, creating ``production``, ``staging``, ``testing``, and ``development`` environments. Generally, an environment is also associated with one (or more) cookbook versions."
+msgstr ""
+
+#: ../source/essentials_environments.rst:38
+# 2f5a9a6238c94ee7b2ff14c51eb983df
+msgid "The _default Environment"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_default.rst:4
+# a73653c15dd1414baa871f318607920a
+msgid "Every organization must have at least one environment. Every organization starts out with a single environment that is named ``_default``, which ensures that at least one environment is always available to the |chef server|. The ``_default`` environment cannot be modified in any way. Nodes, roles, run-lists, cookbooks (and cookbook versions), and attributes specific to an organization can only be associated with a custom environment."
+msgstr ""
+
+#: ../source/essentials_environments.rst:42
+# 3e0d94c911c04485b2558ef8b4073741
+msgid "Environment Attributes"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute.rst:4
+# ec62eaf80dc64e7ca4855be317140a72
+msgid "An attribute can be defined in an environment and then used to override the default settings on a node. When an environment is applied during a |chef client| run, these attributes are compared to the attributes that are already present on the node. When the environment attributes take precedence over the default attributes, the |chef client| will apply those new settings and values during the |chef client| run on the node."
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute.rst:6
+# 554cceeb70354e52a06d3e82ec8b4e83
+msgid "An environment attribute can only be set to be a default attribute or an override attribute. An environment attribute cannot be set to be a ``normal`` attribute. Use the ``default_attribute`` and ``override_attribute`` methods in the |ruby| DSL file or the ``default_attributes`` and ``override_attributes`` hashes in a |json| data file."
+msgstr ""
+
+#: ../source/essentials_environments.rst:45
+# 82153eed4fc2480da0a891d9bc89348c
+msgid "|note see_attributes_overview|"
+msgstr ""
+
+#: ../source/essentials_environments.rst:48
+# 0055d411f86c49cabe4c3db74159e8ac
+msgid "Attribute Types"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute_type.rst:4
+# 0a9e63737b0d4552b7e271dcb1084bef
+msgid "There are two types of attributes that can be used with environments:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute_type.rst:10
+# c3efc52972e64f56ba93248d807416df
+msgid "Attribute Type"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute_type.rst:11
+#: ../../includes_environment/includes_environment_format_ruby.rst:11
+#: ../../includes_environment/includes_environment_format_json.rst:31
+# 4307ba483be64acf9b46a0979bfd37c4
+# cf0ce52b64834ff18735746e8eb1db57
+# 5c8362e3f4654eea9e015230379ff5e8
+msgid "Description"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute_type.rst:12
+# 05ee63b0b2a44774b1ad49bf09be3d6a
+msgid "``default``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute_type.rst:13
+# 6029b0e58bbd43fdbf98045f84c17d20
+msgid "|attribute_type default|"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute_type.rst:14
+# c2989a9f24854eec8909d04b860c0492
+msgid "``override``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_attribute_type.rst:15
+# e5a525110c1d4ee0a200d7acd0bdc216
+msgid "|attribute_type override|"
+msgstr ""
+
+#: ../source/essentials_environments.rst:52
+# e78a02aa49a7466ebc1619ce33985e42
+msgid "Attribute Persistence"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_persistence.rst:4
+# 56973b291cfa4f208200832c8e47e45e
+msgid "At the beginning of a |chef client| run, all default, override, and automatic attributes are reset. The |chef client| rebuilds them using data collected by |ohai| at the beginning of the |chef client| run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the |chef client| run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next |chef client| run."
+msgstr ""
+
+#: ../source/essentials_environments.rst:56
+# bfd74ad546b84830ae006e8d9ee7b734
+msgid "Attribute Precedence"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:4
+# b415071f526b4f7588bcf5c2ce6f51fe
+msgid "Attributes are always applied by the |chef client| in the following order:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:6
+# 2d59d637ee6a49f293c7cd6d2de2e103
+msgid "A ``default`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:7
+# f824b39c489e4d328bf0ec28650d2d96
+msgid "A ``default`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:8
+# 64695d5e35594f859eaf63e9d4b8ae40
+msgid "A ``default`` attribute located in an environment"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:9
+# de2bed14304c455c91c2c26da0ff3373
+msgid "A ``default`` attribute located in role"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:10
+# 30bd65c0c02d4f3a80d9e0c7c593471e
+msgid "A ``force_default`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:11
+# 4aadf4f30bf14fcd83f29f21e8a3a08f
+msgid "A ``force_default`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:12
+# a427738e04e8445c9c010eb935df9b72
+msgid "A ``normal`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:13
+# 4afb9200f18942dcad0e43374d1a516e
+msgid "A ``normal`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:14
+# 930dad32a1d74937aeb1eb46988e48b8
+msgid "An ``override`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:15
+# 0e26984283984a7294a9944ec43c0fa7
+msgid "An ``override`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:16
+# ab489ba5b19e4d94bbc17453aa2444cf
+msgid "An ``override`` attribute located in a role"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:17
+# 1813bbff099b4d51bab2115f0644acc6
+msgid "An ``override`` attribute located in an environment"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:18
+# aed511e7e1204a1d91577fa9bab29729
+msgid "A ``force_override`` attribute located in a cookbook attribute file"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:19
+# e416c36234f246daabfde0b13bef11f2
+msgid "A ``force_override`` attribute located in a recipe"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:20
+# b77884d1170f4426bef9e0e67fb4e06a
+msgid "An ``automatic`` attribute identified by |ohai| at the start of the |chef client| run"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:22
+# 55454d3300fa4d1094527cd3e4e54472
+msgid "where the last attribute in the list is the one that is applied to the node."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:24
+# 7efe8ba848704d80977c565dea5ede99
+msgid "The attribute precedence order for roles and environments is reversed for ``default`` and ``override`` attributes. The precedence order for ``default`` attributes is environment, then role. The precedence order for ``override`` attributes is role, then environment. Applying environment ``override`` attributes after role ``override`` attributes allows the same role to be used across multiple environments, yet ensuring that values can be set that are specific to each environment (when required). For example, the role for an application server may exist in all environments, yet one environment may use a database server that is different from other environments."
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:26
+# d0372ea84dd243d4b40b060d17126905
+msgid "Attribute precedence, viewed from the same perspective as the overview diagram, where the numbers in the diagram match the order of attribute precedence:"
+msgstr ""
+
+#: ../../includes_node/includes_node_attribute_precedence.rst:30
+# a04e8fedd3be4b309886700c4c7f5ad0
+msgid "Attribute precedence, when viewed as a table:"
+msgstr ""
+
+#: ../source/essentials_environments.rst:60
+# 33010c178f054917bec90790ca927748
+msgid "Environment Formats"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format.rst:4
+# 6717b86b73b84dd6aa1d50ec110ef766
+msgid "Environment data is stored in two formats: as a |ruby| DSL and as |json| data."
+msgstr ""
+
+#: ../source/essentials_environments.rst:64
+# 63cf4ddff15a413a81e1ee6b8dccc3fc
+msgid "Ruby DSL"
+msgstr ""
+
+#: ../../includes_ruby/includes_ruby_dsl.rst:5
+# eea3fda363fd48e9b2c3ebe4e6e2bd4f
+msgid "The |chef client| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL (domain-specific language) that is used for specific resources. These settings are saved as |ruby| files and are stored in the |chef repo|. When these files are uploaded to the |chef server|, they are converted to |json|. Each time the |chef repo| is refreshed, the contents of all domain-specific |ruby| files are re-compiled to |json| and are re-uploaded to the |chef server|."
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:4
+# 00710b83e47948658a23a16b81b0c4a2
+msgid "Domain-specific |ruby| attributes for environments include the following:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:10
+#: ../../includes_environment/includes_environment_format_json.rst:30
+# 8afa29e51ef04036a4988843269aa81a
+# 32deb054132c484580053e68e6a54024
+msgid "Setting"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:12
+# 95a5ddc9b86e42f0ad15ab7ceafce2b5
+msgid "``cookbook``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:13
+# 4adb186deeee49539a4edd3ab0d05c54
+msgid "|ruby dsl cookbook| For example: ::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:18
+#: ../../includes_environment/includes_environment_format_ruby.rst:23
+# 471cb1d583a74230b761ea00d36efff2
+# 778cda884f664b728e21cdf261b0a117
+msgid "Or: ::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:27
+# ba3c0f50bf284667a21fa936fb0fef90
+msgid "``cookbook_versions``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:28
+# 824d0c68313d4fe9bb26ed4787ae35a8
+msgid "|ruby dsl cookbook version| For example: ::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:35
+# 2c9d10613cf54f849524d933e27292e8
+msgid "``default_attributes``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:36
+# 3429c4035fbb4718a40634f3bb05128d
+msgid "|ruby dsl default attribute| For example, to specify that a node that has the attribute ``apache2`` should listen on ports 80 and 443 (unless ports are already specified): ::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:40
+# 2d9e03a984184f6db32b9955bb410d68
+msgid "``description``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:41
+# e61ac1a97dcb4c278dfdac9de0e69ca4
+msgid "|ruby dsl description| For example: ::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:45
+# b01b547297dd48ee80f5999f58c4b889
+msgid "``name``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:46
+# bf51f3b59d0b42c1bdd9ec6bb6675927
+msgid "|ruby dsl name| For example: ::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:50
+# a99796c3dabc428bb1701a92a23e3bec
+msgid "``override_attributes``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:51
+# c75728bcedce450ca082b4494ddbbf04
+msgid "|ruby dsl override attribute| For example: ::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:56
+# 0495d36f92c64fccb6c9cef565b67a98
+msgid "The parameters in a |ruby| file are actually |ruby| method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:64
+# d496e67e846e4b618adc38cd3529ba21
+msgid "Or::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:75
+# 8dd7e0a49f794359a7b353bb07b93b46
+msgid "A |ruby| file for each non-default environment must exist in the ``environments/`` subdirectory of the |chef repo|. (If the |chef repo| does not have this subdirectory, then create it.) Each |ruby| file should have the .rb suffix. The complete environment has the following syntax:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:85
+# 889c7c9ebe594d48a751742e712f3752
+msgid "where both default and override attributes are optional and either a cookbook or cookbook versions (one or more) are specified. For example, an environment named \"dev\" that uses the |cookbook couchdb| cookbook (version 11.0.0 or higher) that listens on ports 80 and 443:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:94
+# 90c2230ca6884cf0ba50e59cef8e4b63
+msgid "Or (using the same scenario) to specify a version constraint for only one cookbook:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:100
+# a25af17fa43f45b380d9e55bbad3dc8b
+msgid "More than one cookbook version can be specified:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:109
+# 08ec262c0a7a4ed996244d7bd5d703b0
+msgid "Attributes are optional and can be set at the default and override levels. These will be processed according to attribute precedence. An environment attribute will be applied to all nodes within the environment, except in places where it is overridden by an attribute with higher precedence. For example:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_ruby.rst:115
+# 62ff8c7fe0874d2f9e2d3449262821aa
+msgid "will have all nodes in the environment (``node[:apache2][:listen_ports]``) set to \"80\" and \"443\" unless they were overridden by an attribute with higher precedence. For example:"
+msgstr ""
+
+#: ../source/essentials_environments.rst:70
+# 8e2527a53e4c486d84932f2de5fcccd9
+msgid "JSON"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_json.rst:4
+# 670ddd111333406d956b3b557cef8c57
+msgid "The |json| format for environments maps directly to the domain-specific |ruby| format: the same settings, attributes, and values, and a similar structure and organization. For example::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_json.rst:24
+# 6a49fadf3b8247b3ae5ea598c540a7f2
+msgid "The |json| format has two additional settings:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_json.rst:32
+# a61084050466408197fd69a4615d7167
+msgid "``chef_type``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_json.rst:33
+# 0a140c1354fe4caabb30992d18601a93
+msgid "|json dsl environment chef type|"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_json.rst:34
+# 51c19ce82738446f9da9eb7330d20064
+msgid "``json_class``"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_format_json.rst:35
+# e7164d3e43704e5ba1daac88b20a4371
+msgid "|json dsl environment json class|"
+msgstr ""
+
+#: ../source/essentials_environments.rst:74
+# 1f6b0823df4b4c8eb95b8fd85a6b6522
+msgid "Create Environments"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_create.rst:4
+# 8e1111ec4af24b10a22f4febcf5e83e8
+msgid "An environment can be created in five different ways:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_create.rst:6
+# c694300609554a73b45cec3bc30be2ad
+msgid "Creating a |ruby| file in the environments sub-directory of the |chef repo| and then pushing it to the |chef server|"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_create.rst:7
+# a40d0e3919c443a1af16a0204a5398a1
+msgid "Creating a |json| file directly in the |chef repo| and then pushing it to the |chef server|"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_create.rst:8
+# 883d0b4892bc4cee8cac8cdfabc214f6
+msgid "Using |knife|"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_create.rst:9
+#: ../../includes_environment/includes_environment_manage.rst:7
+# 1de4834f3cfc4df7a3e084f9fa6bdfec
+# d434963d48424c478b7847b2c9070b57
+msgid "Using the |chef manager| web user interface"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_create.rst:10
+# b77b8b07b64845d0af81062a8b5f4f43
+msgid "Using the |chef server| REST API"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_create.rst:12
+# 1988b10e0b0441b7a564f098a93883c1
+msgid "Once an environment exists on the |chef server|, a node can be associated with that environment using the ``chef_environment`` method."
+msgstr ""
+
+#: ../source/essentials_environments.rst:78
+# b66e90aceeac40758d02ff78955bf472
+msgid "Manage Environments"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage.rst:4
+# 97c579b18c4f4c878382fff154308270
+msgid "Once created, an environment can be managed in several ways:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage.rst:6
+# 0cc3506a5c8b4587bf8e18949609a58f
+msgid "Using |knife|, using the ``-E ENVIRONMENT_NAME`` option for the ``knife cookbook upload`` sub-command and argument"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage.rst:8
+# 7279866adf294841ba4fa3dbf0e5a8d5
+msgid "Using |ruby| or |json| files that are stored in a version source control system and pushed to the |chef server|. This approach allows dynamically generated environment data (using |ruby|)"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage.rst:10
+# d2f2ab44906e40dfb2f088dd4acc8d55
+msgid "These workflows are mutually exclusive: only the most recent environment changes will be kept on the |chef server|, regardless of the source of those changes. All previous changes are overwritten when environment data is updated."
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage.rst:12
+# 66022614051d4aa0a268cc57682e981b
+msgid "The settings for environments can be modified and environments can be integrated into the larger infrastructure by associating them with nodes, using recipes to call specific environment settings, and so on."
+msgstr ""
+
+#: ../source/essentials_environments.rst:82
+# 4cebc3d3262c4ee29d846ae1a730de44
+msgid "Save in a Data Bag"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst:4
+# 02b4f157d72642a68637b89b3c99d350
+msgid "Values that are stored in a data bag are global to the organization and are available to any environment. There are two main strategies that can be used to store per-environment data within a data bag: by using a top-level key that corresponds to the environment or by using separate items for each environment."
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst:6
+# 75504a74ebf24fd38f3b5b606a43d2e6
+msgid "A data bag that is storing a top-level key for an environment might look something like this::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst:18
+# 3c4dffe8332f4745bfeabfb6dc212230
+msgid "When using the data bag in a recipe, that data can be accessed from a recipe using code similar to::"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_save_in_data_bag.rst:22
+# cc3cb99692a3459ab7aa8d1f30bf962f
+msgid "The other approach is to use separate items for each environment. Depending on the amount of data, it may all fit nicely within a single item. If this is the case, then creating different items for each environment may be a simple approach to providing per-environment values within a data bag. However, this approach is more time-consuming and may not scale to very large environments or when the data must be stored in many data bag items."
+msgstr ""
+
+#: ../source/essentials_environments.rst:86
+# f2431b7bf203485299a27a79cb34c846
+msgid "Override Attributes in Roles"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_override_in_roles.rst:4
+# 236175e055f340fe991693df71f4f6b3
+msgid "Environment attributes that are used with roles can be overridden. Typically, this is done by using attribute precedence, but sometimes it may be necessary to ensure that specific attributes are used based on the presence of specific environments. This type of scenario is best addressed in using a recipe that relies on a top-level key that is stored in a data bag. For example, to retrieve a value from a data bag based on a specific environment::"
+msgstr ""
+
+#: ../source/essentials_environments.rst:90
+# e07a4007d9d44910a5e1a18080823c1b
+msgid "Set for a Node"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_set_on_node.rst:4
+# 0741ef632c044022adb9186b21f95012
+msgid "A node is considered to be associated with an environment when the ``chef_environment`` attribute is set. The ``chef_environment`` attribute cannot be set with normal or override attributes (i.e. in a role) because it is actually a method. It must be set explicitly using the ``knife edit`` or ``knife exec`` sub-commands, or by using one of the following methods:"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_set_on_node.rst:6
+# 953e96539ee742dd928a62e6e1a846d1
+msgid "By editing the ``chef_environment`` directly using |knife| or a management console"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_set_on_node.rst:7
+# 3b75a0b76b884a1fafb0d4ae8f3b7e95
+msgid "By editing the ``environment`` configuration details in the |knife rb| file and then using the ``knife bootstrap`` subcommand to bootstrap the changes to the specified environment"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_set_on_node.rst:8
+# edac2544a9f44614a56f663d7497bc84
+msgid "By setting the ``environment`` configuration entry in the |client rb| file (by default: /etc/chef/client.rb). When the |chef client| runs, it will pick up the value and then set the ``chef_environment`` attribute of the node"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_set_on_node.rst:9
+# 9ce58dd378dd4695bdb07c723dc8c640
+msgid "By calling the ``node.chef_environment(\"node_name\")`` object and then using ``node.save`` to update the ``chef_environment`` with the attribute specified by ``node_name``. (The ``chef_environment`` attribute cannot be accessed using the typical attribute sequence: ``node[:attribute_name]``.)"
+msgstr ""
+
+#: ../source/essentials_environments.rst:94
+# e38c20f4b98b455db04044b94ed22cc5
+msgid "Set using |chef solo|"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo_environments.rst:5
+# c76389fb4ae14645b338686e2f5b5a26
+msgid "An environment is defined using |json| or the |ruby| DSL. |chef solo| will look for environments in ``/var/chef/environments``, but this location can be modified by changing the setting for ``environment_path`` in |solo rb|. For example, the following setting in |solo rb|:"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo_environments.rst:11
+# 072fde70e5f94f07b5a8711de8043c0b
+msgid "Environment data looks like the following in |json|:"
+msgstr ""
+
+#: ../../includes_chef_solo/includes_chef_solo_environments.rst:33
+# b7012803d6fe49e992fdba6b868c45a2
+msgid "and like the following in the |ruby| DSL:"
+msgstr ""
+
+#: ../source/essentials_environments.rst:98
+# c2a17dfe52fd4d0f995fc2b625441b16
+msgid "Move Nodes"
+msgstr ""
+
+#: ../../includes_environment/includes_environment_manage_move_nodes_between.rst:4
+# 8e15890340744fe3b95a1558bcb4c98b
+msgid "Nodes can be moved between environments, such as from a \"dev\" to a \"production\" environment by using the |subcommand knife exec| sub-command. For example::"
+msgstr ""
+
+#: ../source/essentials_environments.rst:102
+# 8d798251d42a4e15b67eb4c84bf2b195
+msgid "Search Environments"
+msgstr ""
+
+#: ../../includes_search/includes_search_environment.rst:4
+# 7d0adee40edc49208dfe0c294dcf7675
+msgid "When searching, an environment is an attribute. This allows search results to be limited to a specified environment by using Boolean operators and extra search terms. For example, to use |knife| to search for all of the servers running |centos| in an environment named \"QA\", enter the following:"
+msgstr ""
+
+#: ../../includes_search/includes_search_environment.rst:10
+# d2f56a1c9d14419f8cba530dd0169871
+msgid "Or, to include the same search in a recipe, use a code block similar to:"
+msgstr ""
+

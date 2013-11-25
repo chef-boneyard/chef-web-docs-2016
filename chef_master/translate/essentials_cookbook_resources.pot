@@ -1,0 +1,800 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-11-25 09:45\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_cookbook_resources.rst:33
+# 82de30a9b5db42798bdb48d6c8244ab3
+msgid "About Resources and Providers"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource.rst:4
+# f076b134ae3d45f182dc7a76422bfc3d
+msgid "A resource is a key part of a recipe. A resource defines the actions that can be taken, such as when a package should be installed, whether a service should be enabled or restarted, which groups, users, or groups of users should be created, where to put a collection of files, what the name of a new directory should be, and so on. During a |chef client| run, each resource is identified and then associated with a provider. The provider then does the work to complete the action defined by the resource. Each resource is processed in the same order as they appear in a recipe. The |chef client| ensures that the same actions are taken the same way everywhere and that actions produce the same result every time. A resource is implemented within a recipe using |ruby|."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_provider.rst:4
+# a10426edba6d4e7eb0059a18deb2af3c
+msgid "Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state. These steps are de-coupled from the request itself. The request is made in a recipe and is defined by a lightweight resource. The steps are then defined by a lightweight provider."
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:40
+# e99ccb0f457942f78f96886079be7705
+msgid "Resources Syntax"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst:4
+# 165ae2edc9154b0ab43e33a7a64e3831
+msgid "A resource is a |ruby| block with four components: a type, a name, one (or more) attributes (with values), and one (or more) actions. The syntax for a resource is like this:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst:13
+# 06096b6b54f04aadac35b3ff2f6b179c
+msgid "For example, a resource that is used to install a |tar gz| package for version 1.16.1 may look something like this:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst:22
+# b447bb51fb8d49f2948722ac55723fa5
+msgid "Every resource has its own set of actions and attribute. Most attributes have default values. Some attributes are available to all resources, for example some attributes are used to send notifications to other resources, whereas others are used to set up conditional execution rules."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst:24
+# 11e5e2c39240420dacbb112815efe1dc
+msgid "All actions have a default value. Only non-default behaviors of actions and attributes need to be specified. For example, the |resource package| resource's default action is to install and the name of the package defaults to the ``\"name\"`` of the resource, therefore it is possible to write a resource block like this:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst:30
+# 5903c80bafc64aa39e4b748bd0e26fb2
+msgid "and the |chef client| will use the default action (``:install``) to install the ``tar`` package."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_syntax.rst:32
+# 055a6b7bceeb4ddfb728618004db4117
+msgid "The attribute keyword associated with resources in the LWRP DSL is not the same as the 'attributes' that make up node objects"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:44
+# 5254bd02449242478857725283472e6d
+msgid "Platform Resources"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:4
+# 2ad20ca0a88c4fc3b108b81bbc239bf6
+msgid "The following resources are core resources:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:10
+# 75bffcae4c934132baaa84a59f4a8ec2
+msgid "Resource"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:11
+#: ../source/essentials_cookbook_resources.rst:56
+# dc5edd640a04420fb4cd8337be919b65
+# 1e7299e1a6014992b296bb634db6760b
+msgid "Description"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:12
+# 3c77bfe238b548aeb5a326cdacad0a1c
+msgid "`apt_package <http://docs.opscode.com/resource_apt_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_apt.rst:4
+# e1393c05e7d44d3eb8f23226f0cd7d3e
+msgid "The |resource package_apt| resource is used to manage packages for the |debian| and |ubuntu| platforms."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:14
+# a07c40547e6347d2b93fc5469f0bdcd4
+msgid "`bash <http://docs.opscode.com/resource_bash.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_bash.rst:4
+# 3d7914b41bd34ce287c0a891e0339e63
+msgid "The |resource script_bash| resource is used to execute scripts using the |bash| interpreter and includes all of the actions and attributes that are available to the |resource execute| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_bash.rst:6
+# 80e06fb43d7f4921b0abe7bc565b4c96
+msgid "The |resource script_bash| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:16
+# 3d5555af9773457387aaa112991da24b
+msgid "`batch <http://docs.opscode.com/resource_batch.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_batch.rst:4
+# a72e976f906e4ae0b8a13bf6fcb5693e
+msgid "The |resource batch| resource for the |windows| platform is used to execute a batch script using the |windows cmd exe| interpreter. The |resource batch| creates and executes a temporary file (similar to how the |resource script| resource behaves), rather than running the command inline. This resource inherited actions (``:run`` and ``:nothing``) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:18
+# b737a64dddb849d7be4844ce898b82f7
+msgid "`breakpoint <http://docs.opscode.com/resource_breakpoint.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint.rst:5
+# 81c81676a42e4eb1a69d1be831f94a9d
+msgid "The |resource breakpoint| resource is used to add breakpoints to recipes in the same way as any other resource. When the |chef client| is run in |chef shell| mode, those breakpoints can be used to debug recipes. Breakpoints are ignored by the |chef client| during an actual |chef client| run.  In general, breakpoints are used most often in a non-production environment, for the purpose of debugging recipes. After those recipes are debugged and the desired behavior has been tested, the breakpoints are typically removed from the recipes before uploading the cookbooks to a production environment (even if the |chef client| ignores them when building the resource collection during an official |chef client| run)."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:20
+# 7d0238d9e00b43fb8340c5595cf8c72e
+msgid "`chef_gem <http://docs.opscode.com/resource_chef_gem.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_chef_gem.rst:4
+# 89c5a864d7984a4f88a0927729eb0380
+msgid "The |resource chef_gem| resource is used to install a |gem| only for the instance of |ruby| that is dedicated to the |chef client|. When a package is installed from a local file, it must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_chef_gem.rst:6
+# b6c921a0e8b54d11abc1a0baca6b46a8
+msgid "The |resource chef_gem| resource works with all of the same attributes and options as the |resource package_gem| resource, but does not accept the ``gem_binary`` attribute because it always uses the ``CurrentGemEnvironment`` under which the |chef client| is running. In addition to performing actions similar to the |resource package_gem| resource, the |resource chef_gem| resource does the following:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_chef_gem.rst:8
+# af35d4acde7b447ebbcbea4e39ba74fe
+msgid "Runs its actions immediately, before convergence, allowing a |gem| to be used in a recipe immediately after it is installed"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_chef_gem.rst:9
+# 1c388308101c4770bea7ee832f11034c
+msgid "Runs ``Gem.clear_paths`` after the action, ensuring that |gem| is aware of changes so that it can be required immediately after it is installed"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:22
+# 6de189760bc243a89ece9e79109e414e
+msgid "`cookbook_file <http://docs.opscode.com/resource_cookbook_file.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cookbook_file.rst:4
+# cb58c275309e45f4b0acc2e64726608d
+msgid "The |resource cookbook_file| resource is used to transfer files from a sub-directory of the ``files/`` directory in a cookbook to a specified path that is located on the host running the |chef client| or |chef solo|. The file in a cookbook is selected according to file specificity, which allows different source files to be used based on the hostname, host platform (operating system, distro, or as appropriate), or platform version. Files that are located under ``COOKBOOK_NAME/files/default`` can be used on any platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:24
+# 1b541ef574b24a3cbe79c1cb5a08ec12
+msgid "`cron <http://docs.opscode.com/resource_cron.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cron.rst:4
+# 05c036567c414ceba205c57988489eb2
+msgid "The |resource cron| resource is used to manage |cron| entries for time-based job scheduling. Attributes for a schedule will default to ``*`` if not provided. The |resource cron| resource requires access to a |crontab| program, typically |cron|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_cron.rst:6
+# 1f5a0843f58944ea871ca218bc0c7aef
+msgid "The |resource cron| resource should only be used to modify an entry in a |crontab| file. Use the |resource cookbook_file| or |resource template| resources to add a |crontab| file to the |crond| directory. The |lwrp cron_d| lightweight resource (found in the |cookbook cron| cookbook) is another option for managing |crontab| files."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:26
+# 15c28eefaf894a65912de6b787caa55a
+msgid "`csh <http://docs.opscode.com/resource_csh.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_csh.rst:4
+# 38449282710a4845b37f621631085461
+msgid "The |resource script_csh| resource is used to execute scripts using the |csh| interpreter and includes all of the actions and attributes that are available to the |resource execute| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_csh.rst:6
+# 0221f7fc2ca24199b11320f388897a85
+msgid "The |resource script_csh| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:28
+# f8067861f9b344be93a67a988876b7c6
+msgid "`deploy <http://docs.opscode.com/resource_deploy.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_deploy.rst:4
+# 02c00fe03d5d4ed495747fa6cf585281
+msgid "The |resource deploy| resource is used to manage and control deployments. This is a popular resource, but is also complex, having the most attributes, multiple providers, the added complexity of callbacks, plus four attributes that support layout modifications from within a recipe."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:30
+# 16b7a5725a1546ff84356f73584a2823
+msgid "`directory <http://docs.opscode.com/resource_directory.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_directory.rst:4
+# 9680af2c37194d90b7881d7e4fac8064
+msgid "The |resource directory| resource is used to manage a directory, which is a hierarchy of folders that comprises all of the information stored on a computer. The root directory is the top-level, under which the rest of the directory is organized. The |resource directory| resource uses the ``name`` attribute to specify the path to a location in a directory. Typically, permission to access that location in the directory is required."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:32
+# ac089cc422fc42a280744e7dd451f3d1
+msgid "`dpkg_package <http://docs.opscode.com/resource_dpkg_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_dpkg.rst:4
+# a332525b038d48bdbddb97ac15f0a33c
+msgid "The |resource package_dpkg| resource is used to manage packages for the |debian dpkg| platform. When a package is installed from a local file, it must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:34
+# 7f65ec15c8344900bead3afc4e310d1e
+msgid "`easy_install_package <http://docs.opscode.com/resource_easy_install_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_easy_install.rst:4
+# bf83ddd0657f445b8ebf39df3f74dc68
+msgid "The |resource package_easy_install| resource is used to manage packages for the |python| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:36
+# 7d1dcbbb75f64ea095423c4ca510ad34
+msgid "`env <http://docs.opscode.com/resource_env.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_env.rst:4
+# 125e510122094869b175c737074f0dfe
+msgid "The |resource env| resource is used to manage environment keys in |windows|. After an environment key is set, |windows| must be restarted before the environment key will be available to the |windows task scheduler|."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:38
+# e7ec3c4cfa004ba3b4aa9c965596d8f0
+msgid "`erl_call <http://docs.opscode.com/resource_erlang_call.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_erlang_call.rst:4
+# 74a5f051d9074f088fd216541988051e
+msgid "The |resource erlang_call| resource is used to connect to a node located within a distributed |erlang| system. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:40
+# 21c56a7e638748219cb14e8c7d34fe4e
+msgid "`execute <http://docs.opscode.com/resource_execute.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_execute.rst:4
+# 85217b4968bd43dc9e4416c980a9d904
+msgid "The |resource execute| resource is used to execute a command. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:42
+# 7018d5d897164b9ba712c826ec3e76e5
+msgid "`file <http://docs.opscode.com/resource_file.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_file.rst:4
+# de6c86ee3d5f47f39a05d117f55496cb
+msgid "The |resource file| resource is used to manage files that are present on a node, including setting or updating the contents of those files."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:44
+# af857fcfdf3e44a0b705a9e1ddcc27db
+msgid "`freebsd_package <http://docs.opscode.com/resource_freebsd_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_freebsd.rst:4
+# 43d18c88f8314a7980e9550659b6e95e
+msgid "The |resource package_freebsd| resource is used to manage packages for the |freebsd| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:46
+# 39d9f93d812442c4950cbf93c18c5cce
+msgid "`gem_package <http://docs.opscode.com/resource_gem_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_gem.rst:4
+# 09065ddc6a20416e9c5f3262cebe618f
+msgid "The |resource package_gem| resource is used to manage |gem| packages that are only included in recipes. When a package is installed from a local file, it must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:48
+# a95897dddd774b73b56bfab91ce410a9
+msgid "`git <http://docs.opscode.com/resource_git.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_scm_git.rst:4
+# 82a5960cb6e04cb4b6b8f18cfacbda08
+msgid "The |resource scm_git| resource is used to manage source control resources that exist in a |git| repository. |git| version 1.6.5 (or higher) is required to use all of the functionality in the |resource scm_git| resource."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:50
+# d6b16998dc02407a8b287dfa6db96d95
+msgid "`group <http://docs.opscode.com/resource_group.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_group.rst:4
+# 76ba0bf0e9b648e39cdeb62ee8b27a9d
+msgid "The |resource group| resource is used to manage a local group."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:52
+# 2048180eae554d2ebde39927f04cc222
+msgid "`http_request <http://docs.opscode.com/resource_http_request.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_http_request.rst:4
+# ec61016b345043b7b3a6bb15defe7ceb
+msgid "The |resource http_request| resource is used to send an HTTP request (GET, PUT, POST, DELETE, HEAD, or OPTIONS) with an arbitrary message. This resource is useful when custom callbacks are necessary."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:54
+# cfa8bd31c63b4fbaa2930e7f09333afc
+msgid "`ifconfig <http://docs.opscode.com/resource_ifconfig.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_ifconfig.rst:4
+# df07c585157e4b799db8bb9ae2cd5e0f
+msgid "The |resource ifconfig| resource is used to manage interfaces."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:56
+# e81c801a9157429c9d72e5338eccdc32
+msgid "`ips_package <http://docs.opscode.com/resource_ips_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_ips.rst:4
+# a087be0ed6b34cc49434feb410b7d0e1
+msgid "The |resource package_ips| resource is used to manage packages for the |ips| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:58
+# b3f8dd2eb8254e7082d833486b146b3e
+msgid "`link <http://docs.opscode.com/resource_link.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_link.rst:4
+# 1b37ce04e8924adb88a1164e296be4b6
+msgid "The |resource link| resource is used to create symbolic or hard links."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:60
+# 2bdcc7408edf48a4aa7a135de5ffb5fc
+msgid "`log <http://docs.opscode.com/resource_log.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_log.rst:4
+# ebfc2f7d4c40445db1ec686f9313be21
+msgid "The |resource log| resource is used to create log entries from a recipe."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:62
+# 1959127c50594bf1a2f71134438c08f1
+msgid "`macports_package <http://docs.opscode.com/resource_macports_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_macports.rst:4
+# 5226c65b98284162b738592fab4392ac
+msgid "The |resource package_macports| resource is used to manage packages for the |mac os x| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:64
+# a7d0ee16c438440699f90f6917ed0c88
+msgid "`mdadm <http://docs.opscode.com/resource_mdadm.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_mdadm.rst:4
+# 88d4fd563b2c43bfa7e7acd37180fed3
+msgid "The |resource mdadm| resource is used to manage |raid| devices in a |linux| environment using the |mdadm| utility. The |resource mdadm| provider will create and assemble an array, but it will not create the config file that is used to persist the array upon reboot. If the config file is required, it must be done by specifying a template with the correct array layout, and then by using the |resource mount| provider to create a file systems table (fstab) entry."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:66
+# 7381851b17234fc2840b8062fd46eedb
+msgid "`mount <http://docs.opscode.com/resource_mount.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_mount.rst:5
+# 702c1627f3da4142a2689329d5280db7
+msgid "The |resource mount| resource is used to manage a mounted file system."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:68
+# a106e170a6554d3ab5674b5e7c6bad97
+msgid "`ohai <http://docs.opscode.com/resource_ohai.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_ohai.rst:4
+# 3a105e3616f84c90aa04679623c90534
+msgid "The |resource ohai| resource is used to reload the |ohai| configuration on a node, which allows recipes that change system attributes (like adding a user) to refer to those attributes later on during the |chef client| run."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:70
+# d77a2dd243e546859a61139208ba7a3a
+msgid "`package <http://docs.opscode.com/resource_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package.rst:4
+# b9f1e41f24694b81952c99cf69067cce
+msgid "The |resource package| resource is used to manage packages. When the package is installed from a local file (such as with |rubygems|, |debian dpkg|, or |rpm|), the file must be added to the node using the |resource remote_file| or |resource cookbook_file| resources."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:72
+# aea74cf9cf864e87b54b0c52a2e0d46d
+msgid "`pacman_package <http://docs.opscode.com/resource_pacman_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_pacman.rst:4
+# 4ec78abb6bc242aba349b09365ad361b
+msgid "The |resource package_pacman| resource is used to manage packages for the |pacman| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:74
+# ca70a76eda194910a0d32e100975c0f6
+msgid "`perl <http://docs.opscode.com/resource_perl.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_perl.rst:4
+# 4fd87bc54f794860869cf07cf2b690fa
+msgid "The |resource script_perl| resource is used to execute scripts using the |perl| interpreter and includes all of the actions and attributes that are available to the |resource execute| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_perl.rst:6
+# d7741a937ff04c11820ca4151232483b
+msgid "The |resource script_perl| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:76
+# 92dcca70db594a0e819703e2c7d048cb
+msgid "`portage_package <http://docs.opscode.com/resource_portage_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_portage.rst:4
+# f23ea053abeb4954ae1995a9726cdb0e
+msgid "The |resource package_portage| resource is used to manage packages for the |gentoo| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:78
+# e6c37b92cc454dd1b4327864bf22c6ed
+msgid "`powershell_script <http://docs.opscode.com/resource_powershell_script.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_powershell_script.rst:4
+# 695b46845a554fb1bb433897f64d4085
+msgid "The |resource powershell_script| resource is a resource for the |windows| platform that is used to execute a script using the |windows powershell| interpreter, much like how the |resource script| and |resource script|-based resources---|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource script_python|, and |resource script_ruby|---are used. The |resource powershell_script| is specific to the |windows| platform and |windows powershell| interpreter. This resource creates and executes a temporary file (similar to how the |resource script| resource behaves), rather than running the command inline. This resource includes actions (``:run`` and ``:nothing``; ) and attributes (``creates``, ``cwd``, ``environment``, ``group``, ``path``, ``timeout``, and ``user``) that are inherited from the |resource execute| resource. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:80
+# 1f297c3f51f64d519507e3fd00852673
+msgid "`python <http://docs.opscode.com/resource_python.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_python.rst:4
+# e1453a6f8624438891a885fcc8785e7b
+msgid "The |resource script_python| resource is used to execute scripts using the |python| interpreter and includes all of the actions and attributes that are available to the |resource execute| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_python.rst:6
+# aed0c285b9994961b9b9cf1d31193f66
+msgid "The |resource script_python| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:82
+# d749ec45a90d4a53aadefba560243cc8
+msgid "`registry_key <http://docs.opscode.com/resource_registry_key.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key.rst:4
+# 33869aff2d444a8fa33fbff3fab2b7b8
+msgid "The |resource registry_key| resource is used to create and delete registry keys in |windows|."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_registry_key.rst:6
+# 310752dcd4be4ec2b9a245f157bbd567
+msgid "64-bit versions of |windows| have a 32-bit compatibility layer in the registry that reflects and redirects certain keys (and their sub-keys) into specific locations. By default, the registry functionality will default to the machine architecture of the system that is being configured. The |chef client| can access any reflected or redirected registry key. The |chef client| can write to any 64-bit registry location. (This behavior is not affected by the |chef client| running as a 32-bit application.) For more information, see: |url msdn_registry_key|."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:84
+# 2f1dd051d481469ba5475de27ec86976
+msgid "`remote_directory <http://docs.opscode.com/resource_remote_directory.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_remote_directory.rst:4
+# 435addcfadc142018973973f4c381064
+msgid "The |resource remote_directory| resource is used to recursively transfer a directory from a cookbook's files or default directory. A remote directory will obey file specificity; the directory that will be copied should be located under COOKBOOK_NAME/files/default/REMOTE_DIRECTORY. A host-or distribution-specific path can also be used."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:86
+# ede53287ab734d369982503791cc6af3
+msgid "`remote_file <http://docs.opscode.com/resource_remote_file.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_remote_file.rst:4
+# 5dd008baad9245099c3bcdd090d58748
+msgid "The |resource remote_file| resource is used to transfer a file from a remote location using file specificity. This resource is similar to the |resource file| resource."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:88
+# 4dc81bbf694148eb8d96b4054a157cb9
+msgid "`route <http://docs.opscode.com/resource_route.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_route.rst:4
+# 118bf67596974a2aaafd673fdad81d97
+msgid "The |resource route| resource is used to manage the system routing table in a |linux| environment."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:90
+# 2166e453f63543ee99790909d3ab7b2b
+msgid "`rpm_package <http://docs.opscode.com/resource_rpm_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_rpm.rst:4
+# 0592c77d53d64473b63fd4a76195742d
+msgid "The |resource package_rpm| resource is used to manage packages for the |rpm| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:92
+# 0cf0ec0eeb5e41409aa7dd94d61463c6
+msgid "`ruby <http://docs.opscode.com/resource_ruby.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_ruby.rst:4
+# a5a3f2d232f842109cbd2f56e12b8638
+msgid "The |resource script_ruby| resource is used to execute scripts using the |ruby| interpreter and includes all of the actions and attributes that are available to the |resource execute| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script_ruby.rst:6
+# af415c43449541dc991e11872e54f795
+msgid "The |resource script_ruby| script resource (which is based on the |resource script| resource) is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:94
+# 702ad94db82b4737a6ff891e7b1abc4f
+msgid "`ruby_block <http://docs.opscode.com/resource_ruby_block.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_ruby_block.rst:4
+# e6fe077552754dc7b0f97d18882db08d
+msgid "The |resource ruby_block| resource is used to execute |ruby| code during a |chef client| run. |ruby| code in the ``ruby_block`` resource is evaluated with other resources during convergence, whereas |ruby| code outside of a ``ruby_block`` resource is evaluated before other resources, as the recipe is compiled."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:96
+# 2c5c0e538dd44a978c5b693511eacd82
+msgid "`script <http://docs.opscode.com/resource_script.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script.rst:4
+# cb93b14e249b4294948df305047ec763
+msgid "The |resource script| resource is used to execute scripts using the specified interpreter (|bash|, |csh|, |perl|, |python|, or |ruby|) and includes all of the actions and attributes that are available to the |resource execute| resource."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_script.rst:6
+# a9c0d76503d64c39a5c1c6906ed72dbb
+msgid "The |resource script| resource is different from the |resource ruby_block| resource because |ruby| code that is run with this resource is created as a temporary file and executed like other script resources, rather than run inline. Commands that are executed with this resource are (by their nature) not idempotent, as they are typically unique to the environment in which they are run. Use the ``not_if`` and ``only_if`` meta parameters to guard the use of this resource for idempotence."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:98
+# 231401f64de943abbde6b307df9054e0
+msgid "`service <http://docs.opscode.com/resource_service.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_service.rst:4
+# e5aa33addd5548ea9fa9f7b6861015cb
+msgid "The |resource service| resource is used to manage a service."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:100
+# c0f405e8b831411ca6861563edd290a2
+msgid "`smart_o_s_package <http://docs.opscode.com/resource_smartos_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_smartos.rst:4
+# 0471c04235af413586954b5a9e5427e6
+msgid "The |resource package_smartos| resource is used to manage packages for the |smartos| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:102
+# 22088e3d279143798f7b3b4356243757
+msgid "`solaris_package <http://docs.opscode.com/resource_solaris_package.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_solaris.rst:4
+# cdd0b0a528d349f38a49178fc45ac691
+msgid "The |resource package_solaris| resource is used to manage packages for the |solaris| platform."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:104
+# e2a17f23aada47a6a9f57abea8181cd8
+msgid "`subversion <http://docs.opscode.com/resource_subversion.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_scm_subversion.rst:4
+# dc541a943395443182448a5d03e1a047
+msgid "The |resource scm_subversion| resource is used to manage source control resources that exist in a |svn| repository."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:106
+# 8e085873f26b4cae86d282916e83bc1a
+msgid "`template <http://docs.opscode.com/resource_template.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_template.rst:4
+# 0b5d4dda349e40708b0b4ac32aaffbe6
+msgid "The |resource template| resource is used to manage file contents with an embedded |ruby| (erb) template. This resource includes actions and attributes from the |resource file| resource. Template files managed by the |resource template| resource follow the same file specificity rules as the |resource remote_file| and |resource file| resources."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:108
+# 38b73ea763d142848343db6c4cbe644a
+msgid "`user <http://docs.opscode.com/resource_user.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_user.rst:4
+# 801895cc96774473a65ac7fcb9298c69
+msgid "The |resource user| resource is used to manage a local user."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_platform.rst:110
+# cb261a2c7cde4d6fb4c8a43716f3bc84
+msgid "`yum_package <http://docs.opscode.com/resource_yum.html>`_"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_package_yum.rst:4
+# 6aa974278c6b42569b3d5cdec4dd9d09
+msgid "The |resource yum_package| resource is used to install, upgrade, and remove packages with |yum| for the |redhat| and |centos| platforms. The |resource yum_package| resource is able to resolve ``provides`` data for packages much like |yum| can do when it is run from the command line. This allows a variety of options for installing packages, like minimum versions, virtual provides, and library names."
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:48
+# 4e9cdd5e2f4e442ab36dab7de2622d1a
+msgid "Common Functionality"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:49
+# 14f0e1bb49e349139f0f5e9a40d540e9
+msgid "All resources share a set of common actions, attributes, conditional executions, notifications, and relative path options."
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:55
+# 8276d512699047eca123c907b5487c71
+msgid "Common Item"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:57
+# 8f4930e98f984901a4ef2849badac20d
+msgid "`Actions <http://docs.opscode.com/resource_common.html#actions>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:58
+# e87987a9b96540a1a7ae5dbe7c748025
+msgid "|resource short_actions|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:59
+# f115d41eaff540a7b8b4065f777a53d8
+msgid "`Attributes <http://docs.opscode.com/resource_common.html#attributes>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:60
+# 27e9fc0508df4656a249f60189031709
+msgid "|resource short_attributes|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:61
+# 5f23d8db43764c8692fff5ea815d7b85
+msgid "`Conditions <http://docs.opscode.com/resource_common.html#conditionals>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:62
+# 750fa30d7aec4901bbbf7afbaa388399
+msgid "|resource short_conditions|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:63
+# d618692b8d29491e8909f02b3fe851e3
+msgid "`Notifications <http://docs.opscode.com/resource_common.html#notifications>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:64
+# 4af97212ada14335863984271866240f
+msgid "|resource short_notifications|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:65
+# ccadb1814dab40f8a545f956f0c3e054
+msgid "`Relative Paths <http://docs.opscode.com/resource_common.html#relative-paths>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:66
+# b11acf573c3b4d6083f526a174120268
+msgid "|resource short_relative_paths|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:67
+# 4357d5bfcc9843beb1fbee7e0c1ee4d7
+msgid "`Windows File Security <http://docs.opscode.com/resource_common.html#windows-file-security>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:68
+# 3a2bd2ed2c0341b5aaf51292e27db782
+msgid "|resource short_windows_file_security|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:69
+# 39291e27d40c4395901018f713709d83
+msgid "`Run a Resource during Resource Compilation <http://docs.opscode.com/resource_common.html#run-from-resource-collection>`_"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:70
+# dc8d351be7de45c082f98d6b56f68161
+msgid "|resource short_run_during_compile|"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:73
+# 3631561bd71f44d1a1ef991cef15cf49
+msgid "First-run Resources"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:5
+# f5e04acca75a4db18708141661dd7363
+msgid "Use sparingly. Most resources are idempotent by construction and do not require the methods discussed on this page. Whenever possible, it is best to use an idempotent resource."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:7
+# 4e69533d66694978918fddac701193d0
+msgid "This page describes how to construct a resource that will perform an action on the first run of chef-client and do nothing on subsequent runs."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:9
+# 1f40dc4f624b42cabcd46310c3a907fd
+msgid "One case where using a first-run resource would be desired, for example, is to ensure idempotency when a command within an execute resource would move the state of the node away from the desired state if run a second time."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:11
+# 34f709da50ab40788ae6e9640b1dd103
+msgid "The ideal way to achieve idempotence when using a non-idempotent resource is to inspect the state of the node and condition the resource on that state using the ``not_if`` or ``only_if`` conditional execution resource attributes. However, it may be difficult or impossible to correctly inspect the state of the system, or you may never want to run the command again, even if the system's state is incorrect."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:13
+# 6be5dfd8d0944d53bf88b67295777870
+msgid "In order to create a resource that runs only on the first run of chef-client:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:15
+# 47deea920dde4241afe2f166a7d2eaa9
+msgid "Set a node attribute after successfully completing the task"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:16
+# 14922f829861484a9a977ce0394055bf
+msgid "Test for the presence of that attribute within the resource."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:18
+# 3131d095622a49f5876681d8cc0c33b8
+msgid "The following code will run the command \"command to run once\" on the first run of the |chef client| and will not run it upon subsequent runs:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:36
+# 9fc3a785c1704acba473c375e3e41f56
+msgid "This method has a couple of benefits over other possible approaches. Like any other attribute, the flag will be searchable:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_resource_first_run.rst:42
+# 2f6d817c8f0442fb8ae5a22a31b91b5b
+msgid "All of the flags can be unset using knife:"
+msgstr ""
+
+#: ../source/essentials_cookbook_resources.rst:77
+# 9816ff28d5f045879fb444cc56de3339
+msgid "Platform Providers"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst:4
+# d727c397ef23401a878809d9429f97c2
+msgid "The ``Chef::Platform`` class maps providers to platforms (and platform versions). |ohai|, as part of every |chef client| run, verifies the ``platform`` and ``platform_version`` attributes on each node. The |chef client| then uses those values to identify the correct provider, build an instance of that provider, identify the current state of the resource, do the specified action, and then mark the resource as updated (if changes were made). For example, given the following resource:"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_provider_platform.rst:15
+# ffccaa5cd19a46399a83a5835c108df5
+msgid "The |chef client| will look up the provider for the ``directory`` resource, which happens to be ``Chef::Provider::Directory``, call ``load_current_resource`` to create a new resource called ``directory[\"/tmp/folder\"]``, and then, based on the current state of the directory, do the specified action, which in this case is to create a directory called ``/tmp/folder``. If the directory already exists, nothing will happen. If the directory was changed in any way, the resource is marked as updated."
+msgstr ""
+
