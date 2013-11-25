@@ -76,9 +76,9 @@ This configuration file has the following settings:
        ::
  
           validation_key "/etc/chef/validation.pem"
-   * - ``versioned_cookbooks_true``
+   * - ``versioned_cookbooks``
      - |versioned_cookbooks_true| For example:
        ::
  
-          versioned_cookbooks_true true
+          versioned_cookbooks true
 
