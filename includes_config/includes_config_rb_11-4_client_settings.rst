@@ -24,11 +24,6 @@ This configuration file has the following settings:
        ::
  
           client_registration_retries 5
-   * - ``client_url``
-     - |client_url| For example:
-       ::
- 
-          client_url "http://localhost:4042"
    * - ``cookbook_path``
      - |cookbook_path subdirectory| For example:
        ::
