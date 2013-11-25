@@ -39,8 +39,6 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Plugins:** :doc:`Chef </community_plugin_chef>` | :doc:`Knife </community_plugin_knife>` | :doc:`Ohai </community_plugin_ohai>` | :doc:`Report handlers </community_plugin_report_handler>` | `Ridley <https://github.com/reset/ridley>`_
 
-.. **Chef for OpenStack:** :doc:`Overview </openstack>` | :doc:`knife-openstack </plugin_knife_openstack>`
-
 **Contributions:** `Contribute to Open Source Chef <http://docs.opscode.com/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_
 
 The Workstation  
@@ -230,7 +228,6 @@ Cookbooks
    migrate_to_hosted
    ohai
    ohai_custom
-   openstack
    opscode_cookbooks
    orgmapper
    plugin_knife 
