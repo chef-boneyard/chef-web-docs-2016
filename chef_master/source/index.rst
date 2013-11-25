@@ -183,7 +183,7 @@ Cookbooks
    ctl_chef_shell
    ctl_chef_solo
    ctl_ohai
-   ctl_opscode_reporting
+   ctl_reporting
    ctl_private_chef
    ctl_push_jobs_client
    debug

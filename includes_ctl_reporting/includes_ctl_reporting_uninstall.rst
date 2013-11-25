@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``uninstall`` subcommand is used to remove the |chef server oec| application, but without removing any of the data. This subcommand will shut down all services (including the ``runit`` process supervisor).
+The ``uninstall`` subcommand is used to remove the |reporting| add-on to |chef server oec|, but without removing any of the data. This subcommand will shut down all services (including the ``runit`` process supervisor).
 
 This subcommand has the following syntax:
 

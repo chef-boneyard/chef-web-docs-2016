@@ -471,7 +471,7 @@ The following topics discuss using |chef server oec| with platforms:
    ctl_chef_client
    ctl_chef_shell
    ctl_chef_solo
-   ctl_opscode_reporting 
+   ctl_reporting 
    ctl_private_chef
    ctl_push_jobs_client
    dsl_recipe

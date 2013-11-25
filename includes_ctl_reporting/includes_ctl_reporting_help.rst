@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``help`` subcommand is used to print a list of all available |private chef ctl| commands. 
+The ``help`` subcommand is used to print a list of all available |reporting ctl| commands. 
 
 This subcommand has the following syntax:
 
