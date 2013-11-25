@@ -4,6 +4,8 @@ What's New in Chef 11.0
 
 The following items are new for |chef 11| and/or are changes from |chef 10|.
 
+.. note:: The |chef client| 11.2 release is updated for Ruby 1.9.3-p484, which resolves a security vulnerability that existed when using prior versions of |ruby|.
+
 |chef client| and |chef solo|
 =====================================================
 The following changes have been made to |chef client| and |chef solo|. Some of these changes may break recipes (or may change their behavior); other changes may affect workflow or scripts.
