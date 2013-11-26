@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``run_status`` object is initialized by the |chef client| before the ``report`` method is run for any handler. The ``run_status`` keeps track of the status of the |chef client| run and contains the following properties:
+The ``run_status`` object is initialized by the |chef client| before the ``report`` method is run for any handler. The ``run_status`` keeps track of the status of the |chef client| run and will contain some (or all) of the following properties:
 
 .. list-table::
    :widths: 200 300
@@ -32,4 +32,6 @@ The ``run_status`` object is initialized by the |chef client| before the ``repor
      - |handler method_success| A report handler runs when the ``success?`` indicator is ``true``.
    * - ``updated_resources``
      - |handler method_updated_resources|
+
+.. note:: These properties are not always available. For example, a start handler runs at the beginning of the |chef client| run, which means that properties like ``end_time`` and ``elapsed_time`` are still unknown and will be unavailable to the ``run_status`` object.
 
