@@ -59,7 +59,7 @@ default.rb (Recipe)
 
 
 
-Community Handlers -- DONE
+Community Handlers
 =====================================================
 .. include:: ../../includes_handler/xincludes_handler_community_handlers.rst
 
