@@ -163,7 +163,7 @@ POST
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_data_bag_name_post.rst
 
 
-/data/NAME/item
+/data/NAME/ITEM
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_item.rst
 
