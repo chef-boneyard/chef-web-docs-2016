@@ -16,7 +16,7 @@ A handler is a class that inherits from ``Chef::Handler`` and implements the ``r
    * - ``exception``
      - |handler method_exception|
    * - ``formatted_exception``
-     - |handler method_formatted_exception|
+     - |handler method_formatted_string|
    * - ``node``
      - |handler method_node|
    * - ``all_resources``
