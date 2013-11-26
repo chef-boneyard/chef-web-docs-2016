@@ -217,6 +217,7 @@ Cookbooks
    essentials_roles
    essentials_search
    feedback
+   handlers
    images
    install
    install_push_jobs
