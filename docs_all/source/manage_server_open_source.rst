@@ -10,7 +10,7 @@ Manage the Open Source Chef Server
 
 Manage API Clients
 =====================================================
-.. include:: ../../includes_chef/includes_chef_client.rst
+.. include:: ../../includes_chef_client/includes_chef_client.rst
 
 .. include:: ../../includes_manage_server_open_source/includes_manage_server_open_source_clients.rst
 
