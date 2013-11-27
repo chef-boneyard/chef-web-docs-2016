@@ -74,7 +74,9 @@ default.rb (Recipe)
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions_recipe.rst
 
-
+Start Handlers
+-----------------------------------------------------
+.. include:: ../../includes_handler/xincludes_handler_custom_type_start.rst
 
 
 Community Handlers
