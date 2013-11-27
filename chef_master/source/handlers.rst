@@ -2,6 +2,8 @@
 About Handlers
 =====================================================
 
+.. warning:: This topic is a draft topic, intended to replace/update docs.opscode.com/essentials_handlers.html.
+
 .. include:: ../../includes_handler/xincludes_handler.rst
 
 Handler Types
