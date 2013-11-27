@@ -44,6 +44,22 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_custom_interface_report.rst
 
+Optional Interfaces
+-----------------------------------------------------
+The following interfaces may be used in a handler in the same way as the ``report`` interface to override the default handler behavior in the |chef client|. That said, the following interfaces are not typically used in a handler and, for the most part, are completely unnecessary for a handler to work properly and/or as desired.
+
+``data`` Interface
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/xincludes_handler_custom_interface_data.rst
+
+``run_report_safely`` Interface
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/xincludes_handler_custom_interface_run_report_safely.rst
+
+``run_report_unsafe`` Interface
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/xincludes_handler_custom_interface_run_report_unsafe.rst
+
 Example: Cookbook Versions Handler
 -----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions.rst
