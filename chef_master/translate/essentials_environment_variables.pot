@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-25 13:38\n"
+"POT-Creation-Date: 2013-11-27 12:28\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,177 +17,177 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/essentials_environment_variables.rst:33
-# 0d14ca4cf8be4f35a925f7c15444c4e5
+# 5c93b93cb598451aa74ae96bfa48f2f2
 msgid "Unix Environment Variables"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables.rst:4
-# 2da4a62e77e045b7bbdb54ee705c27da
+# 692c2f9d081a4e1bb10da1c162bae1c6
 msgid "In |unix|, a process' environment is a set of key-value pairs made available to the process. Often, programs expect their environment to contain information required for the program to run. The details of how these key-value pairs are accessed depends on the API of the language being used. This article explains how environments of child processes interact with their parent process and how to ensure that services and applications are started with the proper environment."
 msgstr ""
 
 #: ../source/essentials_environment_variables.rst:38
-# 5457185da5f24081a9f1ba94f12ab59c
+# 0f19c89dcb0f45b1862c00ffaecd3431
 msgid "Child Processes and Inheritance"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_child_processes.rst:4
-# 36e1047309dd4a0ba891bfc6e288a979
+# 5fce827368bb4243b4e16f5b34b9b0af
 msgid "Child processes inherit a copy of their parent's environment. In |bash| (and other shells) the environment is accessible via shell variables. Shell variables can be added to the environment that is inherited by children processes using the export keyword."
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_child_processes.rst:6
-# 798145b8b69d4f80a9d3b1d1c37c4ea3
+# e4423e9568a1478bbade41ec40d21352
 msgid "Consider the following example:"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_child_processes.rst:24
-# 250f9ef5bf644634a645df7c24c4e3e4
+# 679422e6717c4cb3a904bd6d91cebfea
 msgid "As mentioned, the child process gets a copy of its parent's environment. This means that any changes made to that environment do not affect the parent process. For example:"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_child_processes.rst:39
-# 5fb2ae68de84452d81a35c2aebf53b12
+# bf536387f1a24477bee9576c579da228
 msgid "The principles mentioned above (a child process receives a copy of its parent's environment and cannot affect their parent's environment) apply in |ruby| just as they do in |bash|."
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_child_processes.rst:41
-# b8776ec5e05541f381788570d277d18f
+# 9d74206e86c54021a322dd46187f6f5a
 msgid "In |ruby|, the current environment can be altered via the ``ENV`` variable. Any changes made to the environment will also be available to child process started by the |chef client|. For example, consider the following recipe:"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_child_processes.rst:52
-# 4833fdbcfdeb4c198dd354ac4ddb271e
+# 027f94c69d7945d89a3e66a3d3ec0797
 msgid "When run, the |resource script_bash| resource will correctly ``echo \"bar\"`` to its standard output."
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_child_processes.rst:54
-# 86947424619042ef9c066771f5ba42be
+# 53616bc1d80144f08637d3727ae2d7f0
 msgid "However, just as in |bash|, changes made in child processes have no affect on the parent, and thus no affect on subsequent child processes:"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_child_processes.rst:70
-# 06db071d818446c4affa6bfe5529c207
+# 699a8287910940de811724c216545312
 msgid "When run, the second |resource script_bash| resource will not cause anything to be echoed to standard out as ``BAZ`` is not part of its environment."
 msgstr ""
 
 #: ../source/essentials_environment_variables.rst:42
-# 372242d12dfa4eaf9a52422926df8d43
+# 4b4a9cd3318b430596a9c34f2ca9d276
 msgid "Managing Environments when Using Chef"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access.rst:4
-# c2867c2a1ba64409bdc61d290627e404
+# 48ef2f2435534a189dbc6144844f4eb8
 msgid "Services and other processes often look to environment variables for important information needed at run time. There are a number of ways to ensure that processes have access to the environment variables they need to run properly."
 msgstr ""
 
 #: ../source/essentials_environment_variables.rst:46
-# bb03ba2438dd4f2bb15890a26b763f36
+# 8db50f3d21344b67809d7138f73a268e
 msgid "Using the Service's Init Script"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access_init.rst:4
-# ade59f3c4f634d8682a13f787284e4c2
+# c12a3d3d98874755a362ed9a2d1aa645
 msgid "Ideally, a service's init script would contain everything needed to properly start that service, including the necessary environment. Ensuring that the init script itself contains the necessary environment changes ensures that the service will start properly whenever it is being started using its init script, whether that be from the |resource service| resource or directly from the shell. In classic |unix systemv| init scripts, the environment can be altered just as it can be altered in any other shell script, by using a shell variable marked with the export keyword:"
 msgstr ""
 
 #: ../source/essentials_environment_variables.rst:50
-# 32ca5795cc074ea7aaa068b8e9083735
+# 51625d6c86cc4f97be34f01a431fba48
 msgid "Upstart Services"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access_init_upstart.rst:4
-# 5e2462e5875d4cf697ead3a442da3ef2
+# 9480c1525d804c1ebb0d942e3a25a8dd
 msgid "For services started using |upstart| (the |unix systemv|-compatible init system used by recent versions of |ubuntu| and other distributions), their environment can be altered using ``env``:"
 msgstr ""
 
 #: ../source/essentials_environment_variables.rst:54
-# 2bf4b9e5dbb1461e8d9e8cc46f7dfda5
+# c41014e824c64113918c8f23f8ef9f84
 msgid "Systemd Services"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access_init_systemd.rst:4
-# 663390f946534d7bafcd4a68c66cd22a
+# b2caa487df6b4186861a83edab9a09f8
 msgid "For services started using |systemd| (the |unix systemv|-compatible init system by the recent versions of |fedora| and other distributions), their environment can be altered using the ``Environment`` or ``EnvironmentFile`` options:"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access_init_systemd.rst:10
-# 2008563e534c46f89eb4f419448bbb88
+# 4b51fd338d704b4da8c3681aee8bd971
 msgid "If the init script provided by the package does not include the necessary environment variables, you can manage your altered init script using the |resource template| resource."
 msgstr ""
 
 #: ../source/essentials_environment_variables.rst:58
-# 88ff9febfe8b42b78e3e77f4fba16486
+# d4085780d8ae4af5b71ff0c2a3f85d99
 msgid "Using ENV"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access_env.rst:4
-# ec58d4627ac847918a61083a776f6d06
+# 7fb7afc412a14042aff998b28d6ced94
 msgid "Another method is to use the |ruby| predefined ``ENV`` variable to set the environment variable. This ensures that any child processes (including the service that a resource may be starting) have this value in their environment. While not technically a |hash|, ``ENV`` can be manipulated as if it were. For example:"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access_env.rst:15
-# c170d208ac9d4f2984240acd2d2baa7b
+# 2450f95f44a24542abd12add1eaee78d
 msgid "Changes made to ``ENV`` only effect the environment of the |chef client| process and child processes. Altering the environment in this way will often ensure that the |chef client| can start a service properly, but will not ensure that a service will start properly when started using other methods."
 msgstr ""
 
 #: ../source/essentials_environment_variables.rst:62
-# 5eb4b3fa9b0143349487935021dacce7
+# e82cc816298249cfb2a3885c0371f58b
 msgid "Using Resource Attributes"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access_resource_attributes.rst:4
-# fc314c212b1b4fb983ed91ac178414b7
+# 91d9565154964da89d3fc6fb77f21937
 msgid "If processes is started by using the |resource execute| or |resource script| resources (or any of the resources based on those two resources, such as |resource script_bash|), use the ``environment`` attribute to alter the environment that will be passed to the process."
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_access_resource_attributes.rst:15
-# 4d68bef56a9049bc967e7b45d5ba83c4
+# 623a3a1f8f3a44d9a2ca6998f26098c0
 msgid "The only environment being altered is the one being passed to the child process that is started by the |resource script_bash| resource. This will not affect the environment of the |chef client| or any child processes."
 msgstr ""
 
 #: ../source/essentials_environment_variables.rst:66
-# aba8d1971733418f9b9d8ef44d082d3f
+# 86b23e07ba954cf9a2fdeb7a61275069
 msgid "Other Issues"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_faq.rst:4
-# 65a7ab03b7674f1c8ee6e5ac70015ce8
+# c8919ebe47b24e6cb03e4ce174adcbbc
 msgid "**My init script works fine when I'm logged in but not over ssh or when launched from the chef-client running as daemon!**"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_faq.rst:6
-# d55f6d4ea29b49449c8724baa806852a
+# db499960092b4fbca5b8d3f5e6629849
 msgid "Shells commonly alter their environment at startup by loading various initialization scripts. The files used for initialization vary based on whether the shell is started as an interactive or non-interactive shell and whether it is is started as a login or non-login shell. When a user first logs in, most often an interactive login shell is started. When a command is run via |ssh|, this is often a non-interactive shell. This can mean that the process in question is receiving different environments. Ensure that a service or process is being started in a way that ensures its environment has the necessary key-value pairs."
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_faq.rst:8
-# 0b415289e8aa4f4988e793adbe8cc5c7
+# d3970a3cdb204a73a585bd78866866aa
 msgid "**I want to change the environment for every process!**"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_faq.rst:10
-# e9a1d20d31204396a405e60d82139278
+# 7a77777d7d1c48f2a0dac46f0512e890
 msgid "To change the environment for new processes, alter the initialization scripts for the system shell. These scripts can be managed using the |resource template| resource; however, there are a few caveats:"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_faq.rst:12
-# b1fbc141c1104dc4a0720db735a869ff
+# 3156aaee65f14df39927e405a9a51a5b
 msgid "The environments of existing processes will be unaffected"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_faq.rst:13
-# 3e8c5f8497704efe92b05560f002831f
+# 13ed065414584c9a89e8d4121c6dfd94
 msgid "Shells look to different startup files when started with different options. See the shell-specific documentation for the definitive list of files that need to be altered and whether it is possible to alter the environment for every possible invocation of the shell"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_faq.rst:14
-# d6584e268da24a31a43001293f017109
+# 4c7ce174747243149523d1ecc9af0f8d
 msgid "When a shell's initialization file is first changed, it will have no affect on your current shell or process since its environment has already been initialized"
 msgstr ""
 
 #: ../../includes_environment_variables/includes_environment_variables_faq.rst:15
-# bd681e831d094c3ab6ed365b6794a696
+# 717e7394a93c4b5688db69d4d4593349
 msgid "From a shell, the source command can be used to reload a given initialization file; however, since child processes do not affect their parent's environment, using a script or execute resource to run source from inside a recipe will have no effect on the environment for the |chef client|"
 msgstr ""
 
