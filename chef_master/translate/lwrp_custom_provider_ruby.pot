@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-11-27 12:28\n"
+"POT-Creation-Date: 2013-11-27 22:25\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,106 +17,106 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/lwrp_custom_provider_ruby.rst:33
-# f8ac1c74473641e2956317a1d1b31958
+# fe8a1eda56ad4fb8a590cd464def0994
 msgid "Lightweight Providers w/Custom Ruby"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_provider.rst:4
-# bf4affab57494edcbcda533f54d6be8b
+# 3c236cc869b94a348f3c89fd05eacb26
 msgid "Where a resource represents a piece of the system (and its desired state), a provider defines the steps that are needed to bring that piece of the system from its current state into the desired state. These steps are de-coupled from the request itself. The request is made in a recipe and is defined by a lightweight resource. The steps are then defined by a lightweight provider."
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider.rst:5
-# 1e7e0bd5f4314613b83610d2439e39fc
+# fd8ac29c524e4e319a704abb9d795b1a
 msgid "A lightweight provider is a custom provider that defines the steps that are required to complete one (or more) actions defined by a lightweight resource. A lightweight provider and lightweight resource work together, each being defined in the same cookbook (the ``/providers`` and ``/resources`` subdirectories, respectively); together, they are referred as a |lwrp| (or \"lightweight resource/provider\"). A lightweight provider is always authored using |ruby|. Anything that can be done using |ruby| can be done in a lightweight provider. In addition to using |ruby|, the |dsl provider| provides additional methods that are specific to the |chef client|."
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:40
-# 87ae0cc50dae4a998e55e2106de73a5f
+# dc05a78314134e128ad073a23c090d8e
 msgid "Syntax"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:5
-# e78e2a888a174bb095fe04944ecf9821
+# 26a90fb9c34642a880d571e41346cf60
 msgid "This section shows some of the common structural elements that appear in a lightweight provider that is built using custom |ruby| code. Remember:"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:7
-# ab168deffd174149b746a4554ed31975
+# 5aad876220134c31b8da30a7b278ef43
 msgid "A lightweight provider tells the |chef client| how to complete a task"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:8
-# 1dc4a14b832c4482ac62612d63a68742
+# a033bee32f5943ad91866820438cf3a3
 msgid "The structure of a lightweight provider will vary, depending on the complexity of the tasks required to complete an action"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:9
-# b8309622e3ec41c48146ef9f788e62c3
+# b8d7e3dcf9dc47a0a9db27ead93fca51
 msgid "At its platform, a lightweight provider is just |ruby| code, which means that anything that can be done in |ruby| can be done in a lightweight provider"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:11
-# edf32ce8335d49ee8bbc13fc2b09e5c5
+# 210b52303c8d42d6b4ba6cd57477175e
 msgid "The basic syntax for a lightweight provider that is built using custom |ruby| code is as follows:"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:39
 #: ../../includes_dsl_provider/includes_dsl_provider_method_action_with_converge_by.rst:22
 #: ../../includes_dsl_provider/includes_dsl_provider_method_converge_by.rst:11
-# c0d0ff23818648d589ba55309b76caa0
-# a0a96ec6c3a444438639ec02c64d35f7
-# a3c8116271bf446aa0fa77535439a877
+# 66381a1f185648d180bdc1a6f45093ea
+# fad92960a637424db591a2f4a152f938
+# 0d077a24a0a04fe5bd1c70eb6973a75e
 msgid "where:"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:41
-# 97348d2c51b046e7a4b23b5bcdb744c7
+# dc2433911e7e47888eae3a1cd68465a1
 msgid "``require`` is a standard |ruby| method that allows a lightweight provider to require modules that are not located in the current cookbook, such as a file located in the ``chef/mixin`` directory"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:42
-# 9b0bdc5965734056807faabe68d36a5e
+# 42d605325eab403caae8e2ebbe6ddc9a
 msgid "``include`` is a standard |ruby| method that allows a lightweight provider to include a class, such as ``Chef::Mixin::ShellOut`` or ``Windows::Helper``"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:43
-# cc9c3dd7d30845c0b7b05c92dd4b1316
+# f59d59672f9a4b07b412c01a74e307ad
 msgid "``whyrun_supported?`` indicates whether a lightweight provider can be run in |whyrun| mode"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:44
-# 0f166e4d032c46f3844b74bf8e2768cd
+# 7b851b9e73e14a90b06b4da27ea2e845
 msgid "``action`` is the code block that tells the |chef client| what to do when the ``:action_name`` is used in a recipe"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:45
-# 3303cd9188d24c37a677696c01ee2414
+# c5b153f8aa00443c9b191689bef1416f
 msgid "``converge_by()`` is used to provide a ``\"message\"`` to be returned when a resource is run in |whyrun| mode"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:46
-# dc38c326b5774f0aaa2aa5c8005c788b
+# edeb68fbb34e4e7eb44cf53aa10d7b02
 msgid "``condition`` is a |ruby| condition statement (``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, or ``for``)"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:47
-# 0af8c33cf08c44d3814cdd3bec767a8b
+# f2ccd53f1f4b4b839a7c16839e45e7fc
 msgid "``test`` is used to test for idempotence; ``test`` can be defined inline within the ``action`` block, defined as a method using a ``def`` block elsewhere in the lightweight provider (shown as ``def test()``), or defined using any other pattern that is available in |ruby|"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:48
-# a2a046967b794f549f642db789567abd
+# 3e65b65debcd4985a41a02661f0ce1ad
 msgid "``Chef::Log.log_type`` is used to tell the |chef client| to create a log entry, where ``log_type`` is one of the following types: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:49
-# 97121477a90a4c819c1dcdaba68a0adf
+# 8191f5fb8fb844e8a5055f3c248ca80f
 msgid "``updated_by_last_action`` is used to notify that a node was updated successfully"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_syntax_ruby.rst:51
-# 4cd24d6bc1384bea8980468d078c33b4
+# 264c322cc0e04310bbe434d07527bae5
 msgid "Also, commonly used methods (but not shown in the previous example) are ``current_resource``, ``load_current_resource``, and ``new_resource``."
 msgstr ""
 
@@ -126,357 +126,357 @@ msgstr ""
 #: ../../includes_dsl_provider/includes_dsl_provider_method_new_resource.rst:7
 #: ../../includes_dsl_provider/includes_dsl_provider_method_require.rst:7
 #: ../../includes_lwrp/includes_lwrp_custom_provider_library.rst:7
-# 0b56679eaf024ca7809f8018c03f74f0
-# 5ec10d85e87e45069fc0ae253176d27d
-# eac7cb50cc6a473c953ae5c276848276
-# 7fbc453da4924817a5841ed1e58bf41c
-# 7a92d2062f874a7cb96a0ca0c6567cf8
-# 3bd55a1b0cda47419c946cbf5df5b2a1
+# 3c5b51f221554709a89c98a7bb7c8139
+# 7939f9d39bad427c83a267fd64a326da
+# a854c4eb8caa45339d92c07f9229958d
+# 8f0a71fec8364e8cb8928c211c4a35d6
+# ae8e62755481424daabfdda9b38d9f6a
+# b81d9dc7586b4542a9ae43ce88521d9e
 msgid "For example:"
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:44
-# d367dc541ef7444488061ea97f8959d4
+# f2531adf8813499fabd02c5805598b0f
 msgid "|dsl provider| Methods"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider.rst:5
-# 4e7945d5abe44966ac8bf4f9e568c4af
+# d3eaf5f7b75649a79d19f2eb2d8737a3
 msgid "The |dsl provider| is a |ruby| DSL that is used to help define a lightweight provider and to ensure that a lightweight provider takes the correct actions when it is called from a recipe. The |dsl provider| is a small DSL with just a few methods that are specific to the |chef client|. Because the |dsl provider| is a |ruby| DSL, anything that can be done using |ruby| can also be done when defining a lightweight provider."
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:48
-# 00c35ccd03794635b2048bdb157bcfd5
+# 378832ee7d4648148c5f05872e36b09d
 msgid "action"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_action_with_converge_by.rst:5
-# db3cb1c496f9484797bc6a72455fc129
+# b6673cc145284c67997880c4d7b66c1a
 msgid "The ``action`` method is used to define the steps that will be taken for each of the possible actions defined by the lightweight resource. Each action must be defined in separate ``action`` blocks within the same file. The syntax for the ``action`` method is as follows:"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_action_with_converge_by.rst:24
-# c88c39a1fd0143e3a52a9b99b02ca919
+# 41782543e0a546438b5602f9043203c0
 msgid "``:action_name`` corresponds to an action defined by a lightweight resource"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_action_with_converge_by.rst:25
-# d8fc614d2f124471873fa3e8ecda2229
+# bea612fc99e7428b8b831fb18d92f3c5
 msgid "``if @current_resource.exists`` is a condition test that is using an instance variable to see if the object already exists; this is an example of a test for idempotency"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_action_with_converge_by.rst:26
-# ad4523cece784c498833d8ea8decd44c
+# a45522fc045a40be9463519321f4c7fb
 msgid "If the object already exists, a ``#{ @new_resource } already exists - nothing to do.`` log entry is created"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_action_with_converge_by.rst:27
-# e8a0af967808499399da2f49b97feacb
+# 9ec1bf2db3be466fb3a1e455f92f8dd3
 msgid "If the object does not already exists, the ``resource`` block is run. This block is a recipe that tells the |chef client| what to do. A ``#{ @new_resource } created.`` log entry is created"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_action_with_converge_by.rst:28
-# f9384942969743ecb0f21aca9e0f2abf
+# f06dcb8c7e924f238737dff2c09610e7
 msgid "``converge_by`` tells the |chef client| which message to provide when the |chef client| is run in |whyrun| mode"
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:52
-# 34eb7ff012f84aa68fc9cc86b767deef
+# ea8fae47bebf4c60aae1f282f48d6cf2
 msgid "converge_by"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_converge_by.rst:5
-# ecb62032d94b4f2f8afe7a7a089a78b8
+# 16150e85258f40198ce91765df4407a9
 msgid "The ``converge_by`` method is a wrapper that is used to tell the |chef client| what do if a resource is run in |whyrun| mode. The syntax for the ``converge_by`` method is:"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_converge_by.rst:13
-# 4f748b46c36942cb9ec1da1cbea12f92
+# 4860d4f9da834861be68196a3470411a
 msgid "``converge_by()`` is added to an ``action`` block as a wrapper"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_converge_by.rst:14
-# 94e2ed51dcce493d932bfdf52ad21f5d
+# e0941ea27d5a434d88761488369d8da0
 msgid "``\"message\"`` is the message that the |chef client| returns when it is run in |whyrun| mode"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_converge_by.rst:16
-# 136b6cccd090469eb0382b614950f774
+# df5dbbc1ee0444c384423eac27c322b7
 msgid "Some examples:"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_converge_by.rst:38
-# 070ed043d72f446bb09c33515c45fa9a
+# 95a748d16591435ebc481a86ee5a17d8
 msgid "where the last example shows using a variable (``description``) as the ``\"message\"`` in the ``converge_by`` block."
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_converge_by.rst:40
-# 6384380b5ba44c3a859cf970be231732
+# 83cdf9369d724143b95f3b8c24d08149
 msgid "An example of the ``converge_by`` method being used in the `directory <https://github.com/opscode/chef/blob/master/lib/chef/provider/directory.rb>`_ provider, which is a platform resource:"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_converge_by.rst:65
-# a9349571dfe04caf8fe2cc85468ad096
+# 3349ade0119f479c87f35590f7ea3fed
 msgid "|whyrun| mode is already enabled for platform resources. When platform resources are used as part of the ``action`` block in a lightweight provider, only the ``whyrun_supported?`` is required to allow the |chef client| to run in |whyrun| mode."
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:56
-# ba36659e23854bff990e19bbb1a83fa7
+# d14f7151cc404c26918d0885182a1bcc
 msgid "current_resource"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_current_resource.rst:5
-# af672ee7d385483999a2497a9167c9a3
+# 922f503af28f4285ad5694cce7c42a9a
 msgid "The ``current_resource`` method is used to represent a resource as it exists on the node at the beginning of the |chef client| run. In other words: what the resource is currently. The |chef client| compares the resource as it exists on the node to the resource that is created during the |chef client| run to determine what steps need to be taken to bring the resource into the desired state. This method is often used as an instance variable (``@current_resource``)."
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_current_resource.rst:25
-# 7c609b75d98b4c3484ff5b2f53390b1f
+# a54c48123ab2408990555966b9fd4903
 msgid "where the ``unless`` conditional statement checks to make sure the resource doesn't already exist on a node, and then runs a series of commands when it doesn't. If the resource already exists, the log entry would be \"Foo app already exists - nothing to do.\""
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:60
-# 00ec0b1db7244af096657ad50f1fa7df
+# d2254fb0e5bc4d72a1c30c262feffbc9
 msgid "load_current_resource"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_load_current_resource.rst:5
-# c7148a0d48844eb29fe7a5c468d20849
+# 6fdf6306422c4a52a6318b163a429c41
 msgid "The ``load_current_resource`` method is used to find a resource on a node based on a collection of attributes. These attributes are defined in a lightweight resource and are loaded by the |chef client| when processing a recipe during a |chef client| run. This method will ask the |chef client| to look on the node to see if a resource exists with specific matching attributes."
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:64
-# 917dce2863cc4ea89c3c06c60bd9a3cf
+# 722928e1fc5a4cb5a9d2b80766020664
 msgid "new_resource"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_new_resource.rst:5
-# 4d2e79edd8a34fd4a82785eb7bdcf560
+# f67330cc43cb4a19b34112acbe18126f
 msgid "The ``new_resource`` method is used to represent a resource as loaded by the |chef client| during the |chef client| run. In other words: what the resource should be. The |chef client| compares the resource as it exists on the node to the resource that is created during the |chef client| run to determine what steps need to be taken to bring the resource into the desired state."
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_new_resource.rst:23
-# cc800aacebd74ecc97b51ae81ccadb3b
+# ce7b0f98883646589e0cb10b89bf2a7c
 msgid "where the |chef client| checks to see if the file exists, then if the file is writable, and then attempts to delete the resource. ``path`` is an attribute of the new resource that is defined by the lightweight resource."
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:68
-# 5eb93ef92f894c82a235b7a4d260f6ee
+# b18d292187eb48318e8d508dd6202b37
 msgid "require"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_require.rst:5
-# d0b30fea5f93489abe811d3f73f1317b
+# 49aa2e487aa74fdaa8c43fb91103d76a
 msgid "The ``require`` method is used point the |chef client| to the location of an external class library."
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_require.rst:13
-# 51a91d87d8d54135a7cc850b202b6eed
+# 7d0cc386aac1456ca9199aaec81fb90f
 msgid "The |chef client| will attempt to fully qualify the name of any class by prepending ``Chef::`` to the loaded class. For example both:"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_require.rst:19
-# 217618a54aef459f97b9119aa6f0f23d
+# 21f10e6acf1e4c779868f2346be20cd5
 msgid "and:"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_require.rst:25
-# 71a7c9ad389e47bfae375a309883bc69
+# 7aab4125d27048878d2417c684a95034
 msgid "are both understood by the |chef client| in the same way: ``Chef::Mixin::ShellOut``."
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_require.rst:27
-# 6e9afa20e3c341d59c2622f051118088
+# ea6ba8b51d4a44ab989a63517245e3ef
 msgid "When a class is an external class (and therefore should not have ``Chef::`` prepended), use ``::`` to let the |chef client| know. For example:"
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:72
-# 9dacab300d9e48ae9e59418b32f4fe9b
+# 83d591c7cec6450b9a8c851037ea736a
 msgid "updated_by_last_action"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_updated_by_last_action_ruby.rst:5
-# f9620691e0b7434b8f44604ef4248cb7
+# c108d95c02ac42d39adcdea7130e399d
 msgid "The ``updated_by_last_action`` method is used to notify a lightweight resource that a node was updated successfully. For example, the ``bluepill_service`` lightweight resource in the |cookbook bluepill| cookbook uses this method:"
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:76
-# 0ffabbe3983c424ba4ef78fe145cfdc2
+# d2456e18c9c34fabb002397e1c8ee3b7
 msgid "whyrun_supported?"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_whyrun_mode.rst:5
-# 5de06b8e3afd4cbc819b71a85e79f7bd
+# 1b1cf2947a3f4bbca3c1048ad5de5ec1
 msgid "|whyrun| mode is a way to see what the |chef client| would have configured, had an actual |chef client| run occurred. This approach is similar to the concept of \"no-operation\" (or \"no-op\"): decide what should be done, but then don't actually do anything until it's done right. This approach to configuration management can help identify where complexity exists in the system, where inter-dependencies may be located, and to verify that everything will be configured in the desired manner."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_whyrun_mode.rst:7
-# 3b7078cc9f304ac3a0cc72d579b7373b
+# f182d1e0dce241f5a587cea0042881bd
 msgid "When |whyrun| mode is enabled, a |chef client| run will occur that does everything up to the point at which configuration would normally occur. This includes getting the configuration data, authenticating to the |chef server|, rebuilding the node object, expanding the run list, getting the necessary cookbook files, resetting node attributes, identifying the resources, and building the resource collection and does not include mapping each resource to a provider or configuring any part of the system."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_whyrun_mode.rst:9
-# 4d486128d5a644978563e24f1c23cfa9
+# c051faab4bc54d46aa81a8120cdae5cd
 msgid "why-run mode is not a replacement for running cookbooks in a test environment that mirrors the production environment. |opscode| uses why-run mode to learn more about what is going on, but also test-kitchen on developer systems, along with an internal |openstack| cloud and external cloud providers to test more thoroughly."
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:5
-# d73775df6d8c4a6b866edd92c55fba48
+# 6b465270872a47f99bd5c7a6fc5c0517
 msgid "When the |chef client| is run in |whyrun| mode, certain assumptions are made:"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:7
-# 7f3b0a12e48748fea07c16752dd9cc7d
+# c0e569b77e1d41278028fcf0f36cd463
 msgid "If the |resource service| resource cannot find the appropriate command to verify the status of a service, |whyrun| mode will assume that the command would have been installed by a previous resource and that the service would not be running"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:8
-# 532f783cfd9c447dbe5e3fc06d612924
+# e52f88fcd4464898971fb0356add9270
 msgid "For ``not_if`` and ``only_if`` attribute, |whyrun| mode will assume these are commands or blocks that are safe to run. These conditions are not designed to be used to change the state of the system, but rather to help facilitate idempotency for the resource itself. That said, it may be possible that these attributes are being used in a way that modifies the system state"
 msgstr ""
 
 #: ../../includes_chef_client/includes_chef_client_whyrun_mode_assumptions.rst:9
-# fbbce868fd8142278f6fe95310f29c14
+# 9b5f1fda16b9469d991488234470d7f6
 msgid "The closer the current state of the system is to the desired state, the more useful |whyrun| mode will be. For example, if a full run-list is run against a fresh system, that run-list may not be completely correct on the first try, but also that run-list will produce more output than smaller run-list"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_whyrun_supported.rst:5
-# ee5f0ae538e842559c582a7bb3bf01b4
+# eb08b0bd32204305a6c2bfb78fac94d2
 msgid "The ``whyrun_supported?`` method is used to set a lightweight provider to support |whyrun| mode. The syntax for the ``whyrun_supported?`` method is as follows:"
 msgstr ""
 
 #: ../../includes_dsl_provider/includes_dsl_provider_method_whyrun_supported.rst:13
-# 386ca9e738d44f4b889e1e2a437861e9
+# 199fb5f48f364296bd7051723dd048b6
 msgid "where ``whyrun_supported?`` is set to ``true`` for any lightweight provider that supports using |whyrun| mode. When |whyrun| mode is supported by the a lightweight provider, the ``converge_by`` method is used to define the strings that are logged by the |chef client| when it is run in |whyrun| mode."
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:84
-# 1fe49e1666284cf6b491b94af5285e51
+# d148f348e5c443ea8448cb5edad339a0
 msgid "Condition Statements"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:5
-# d0d6d038407d41f782025592572b4e8a
+# a80338c93949418983b8c204c6220ca3
 msgid "A lightweight provider can use any conditional statement that can be used in |ruby|: ``if``, ``else``, ``elseif``, ``unless``, ``while``, ``until``, ``case``, and ``for``. A condition statement can test for:"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:7
-# 318e9b6e5d9843a994138d5eda8c12c9
+# b485249c722a4c0a926d249af30c50ef
 msgid "A |ruby| class (such as ``::File`` or ``::String``)"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:8
-# 153ec99ed0e54b04b62c3878defd1272
+# 3492ef4ffbba459e8147e45914e97276
 msgid "A ``Chef`` class (such as ``::Chef::Mixin::ShellOut``)"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:9
-# 80aab7456c064ad194086ff0362328e0
+# fa410a8e45be48e58257311d6f8fe3c5
 msgid "Conditions present on the node by using ``@current_resource``"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:10
-# bc5059244522464e8ecb791cfd7d2307
+# 67808cd8bb35416dad8229d08a8b3b6c
 msgid "Conditions present within the resource being processed by the |chef client| during the |chef client| run by using ``new_resource`` or ``@new_resource``"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:11
-# 9152ff1c652648a1b5f3ba8e72581f9f
+# cd7e8192b70649ba8850b195ebce4e09
 msgid "To verify if a resource was updated by using ``updated_by_last_action``, for example: ``@new_resource.updated_by_last_action``"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:13
-# 33593739282249b6b25678b7bb1200a1
+# 2bc706d8474442f0a7abe4ea9bb870ad
 msgid "and so on."
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:15
-# 0962b45b0ea24fe7bbbc5dbff016a8b5
+# d56890aa9501465c9cc73cbd49207f03
 msgid "For example, an ``if`` statement is used to check if a file exists (``::File.exists?``), and then if the file exists to delete a key from that file."
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_conditions.rst:29
-# 58a5f9c5954047bbab245e6f23e3f464
+# 4b2d43e3c3784f459fb9048916cc3698
 msgid "In the following example an ``unless`` statement is used to add a key, unless that node object already has that key assigned to it:"
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:88
-# b8c1a22cfb58483ea86431872a9e9802
+# 500f52aabceb479ab5668af896ffb8cd
 msgid "Log Entries"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst:5
-# bf276af5528a4b18a297fc81506f62bc
+# 6a9670c63cc74d32a5c1243de80129e1
 msgid "Use the ``Chef::Log`` class in a lightweight provider to define log entries that are created during a |chef client| run. The syntax for a log message is as follows:"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst:11
-# 6564192849a24bb08928f242a20f4539
+# 2606a4c6e16a49e3b2edd2c85bac397b
 msgid "where"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst:13
-# 6a7d25d8a8184cd6bf7b67c57e69fab1
+# 1f3058e8a2444dabad82db8aa9b03fca
 msgid "``log_type`` can be ``.debug``, ``.info``, ``.warn``, ``.error``, or ``.fatal``"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst:14
-# fc3c07db11ad4aed8f7d4e360de82750
+# f46553638edc4c7fbb270f1f012f7a82
 msgid "``\"message\"`` is the message that is logged. For example: ``\"#{@new_resource} added module '#{@new_resource.module_name}'\"`` or ``\"#{@new_resource} module already exists - nothing to do\"``"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst:16
-# 9548d78bcfb2498682c02ac5a4ca3a18
+# 6e7852d3b11848179b320fb67ed12e83
 msgid "For example, from the ``repository.rb`` provider in the |cookbook yum| cookbook:"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst:27
-# b179d58304ee440484a11b8c93b325d0
+# 9c4f6f27d0ee4d20845a66e8fdaa2ccf
 msgid "where the ``Chef::Log`` class appends ``.info`` as the log type. If the name of the repo was \"foo\", then the log message would be \"Adding foo repository to /etc/yum.repos.d/foo.repo\"."
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_logs.rst:29
-# f1acb0db0c8a45b1b6b717a53bf27c2c
+# eb441dabe6e54dd6be6a5712754a08a2
 msgid "Another example shows two log entries, one that is triggered when a service is being restarted, and then another that is triggered after the service has been restarted:"
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:92
-# 6874cfc8b2334e3f9ba510d827824735
+# dca03b7c070a42f79e37c15462d25556
 msgid "rescue"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_logs_rescue.rst:5
-# f746a47ded1d4f33a93f3df26d1f2d12
+# ec6862a5c6774c7cb95845d8b7299738
 msgid "Use the ``rescue`` clause to make sure that a log message is always provided. For example:"
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:96
-# 823fc0bf6e00429e9392dd1aa59adb0c
+# 128203fe909a46208b170e6c5bdbfcd1
 msgid "Libraries"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_library.rst:5
-# a7ed5391a8fc41b59d2974cac7c7dc9f
+# e67c4e6b0fca470b837dcf331d3a1c55
 msgid "A lightweight provider can extend another provider class. This can be done as a ``mixin``, which is then placed in a library under the ``library/`` directory of any cookbook that will use the extended provider class. The lightweight provider is then written to include that library in its implementation so that it has access to the extended platform resource. Use the ``include`` method in the lightweight provider to ensure that a lightweight provider has access to an external library."
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:100
-# fd9a2cccb5094c6b85e9590f1ade2ed0
+# 4c8d58d88c8f4b198b11a46b7546583b
 msgid "Examples"
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:101
-# 226223a225c3492ea750c8439e6ec5c0
+# 4f02938973444843b24d5d65d37f36d0
 msgid "The following examples show various lightweight providers that rely on custom |ruby| code."
 msgstr ""
 
 #: ../source/lwrp_custom_provider_ruby.rst:104
-# 093d5eaae5314698b5604efbe78108af
+# a4305519e6a64669b6c8298b62e2870f
 msgid "rbenv_global"
 msgstr ""
 
 #: ../../includes_lwrp/includes_lwrp_custom_provider_example_rbenv_global.rst:5
-# 8e6deca10173400a9d295cf71e1c83b6
+# e1055c2c83e74ab0b8585ab705f94751
 msgid "The ``rbenv_global`` lightweight provider from the `chef-rbenv <https://github.com/fnichol/chef-rbenv>`_ cookbook shows a custom lightweight provider that  sets the global version of |ruby|:"
 msgstr ""
 
