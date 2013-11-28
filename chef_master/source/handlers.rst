@@ -50,52 +50,57 @@ Optional Interfaces
 -----------------------------------------------------
 The following interfaces may be used in a handler in the same way as the ``report`` interface to override the default handler behavior in the |chef client|. That said, the following interfaces are not typically used in a handler and, for the most part, are completely unnecessary for a handler to work properly and/or as desired.
 
-``data`` Interface
+``data``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_interface_data.rst
 
-``run_report_safely`` Interface
+``run_report_safely``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_interface_run_report_safely.rst
 
-``run_report_unsafe`` Interface
+``run_report_unsafe``
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_interface_run_report_unsafe.rst
-
-Example: Cookbook Versions Handler
------------------------------------------------------
-.. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions.rst
-
-cookbook_versions.rb (Handler)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions_handler.rst
-
-default.rb (Recipe)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions_recipe.rst
 
 Start Handlers
 -----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_custom_type_start.rst
 
-Example: Reporting Handler
+
+Example: Cookbook Versions Handler
+=====================================================
+.. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions.rst
+
+cookbook_versions.rb (Handler)
 -----------------------------------------------------
+.. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions_handler.rst
+
+default.rb (Recipe)
+-----------------------------------------------------
+.. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions_recipe.rst
+
+
+
+
+
+Example: Reporting Handler
+=====================================================
 .. include:: ../../includes_handler/xincludes_handler_custom_example_reporting.rst
 
 start_handler.rb (Handler)
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_handler.rst
 
 Install
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install.rst
 
 |cookbook chef_client|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install_cookbook.rst
 
 |client rb|
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install_config.rst
 
 Community Handlers
