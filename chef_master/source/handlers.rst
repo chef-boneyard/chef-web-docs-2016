@@ -78,6 +78,25 @@ Start Handlers
 -----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_custom_type_start.rst
 
+Example: Reporting Handler
+-----------------------------------------------------
+.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting.rst
+
+start_handler.rb (Handler)
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_handler.rst
+
+Install
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install.rst
+
+|cookbook chef_client|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install_cookbook.rst
+
+|client rb|
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install_config.rst
 
 Community Handlers
 =====================================================

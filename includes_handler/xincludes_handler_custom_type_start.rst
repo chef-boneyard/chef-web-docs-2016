@@ -18,3 +18,10 @@ The basic syntax for a custom start handler is as follows:
      end
    end
 
+A start handler is a newer feature within the larger set of handler functionality. They became necessary when |opscode| started building add-ons for |chef server oec|. The |reporting| add-on is designed to create reporting data based on a |chef client| run. And since |reporting| needs to be able to collect data for the entire |chef client| run, |reporting| needs to be enabled before anything else happens. This is done with a custom start handler, which is uses the |cookbook chef_client| cookbook to install the start handler each node for which reporting metrics will be generated.
+
+
+
+
+
+
