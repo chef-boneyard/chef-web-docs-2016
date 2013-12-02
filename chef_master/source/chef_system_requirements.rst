@@ -10,9 +10,9 @@ Before installing |chef|:
 
 Install and configure the |chef server|, then install and configure a workstation, and then run the bootstrap command from the workstation to install the |chef client| on each node.
 
-Nodes and Workstations
+|chef client|
 =====================================================
-The |chef client| can run on the following systems:
+The |chef client| can run on any node or workstation that runs one of the following systems:
 
 .. list-table::
    :widths: 200 200 200
