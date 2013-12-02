@@ -48,7 +48,7 @@ will match cookbooks that are greater than or equal to version 2.6, but less tha
 
    ~> 2.6.5
 
-will match cookbooks that are greater than version 2.6.5, but less than version 2.7.0. Or, a pessimistic version constraint that matches cookbooks less than a version number::
+will match cookbooks that are greater than or equal to version 2.6.5, but less than version 2.7.0. Or, a pessimistic version constraint that matches cookbooks less than a version number::
 
    < 2.3.4
 
