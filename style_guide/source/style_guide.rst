@@ -487,7 +487,7 @@ Localization
 =====================================================
 Sphinx supports localization into many languages.
 
-.pot files
+.pot files 
 -----------------------------------------------------
 .pot files are used by localization teams as an intermediate step in-between the native English content and the localized content. Opscode builds the .pot files periodically so that localization teams can feed them into their tools as part of their localization process.
 
