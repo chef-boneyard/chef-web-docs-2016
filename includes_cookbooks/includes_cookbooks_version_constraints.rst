@@ -44,7 +44,7 @@ A pessimistic version constraint is one that will find the upper limit version n
 
    ~> 2.6
 
-will match cookbooks that are greater than version 2.6, but less than version 3.0. Or, a pessimistic version constraint for patch version numbers::
+will match cookbooks that are greater than or equal to version 2.6, but less than version 3.0. Or, a pessimistic version constraint for patch version numbers::
 
    ~> 2.6.5
 
