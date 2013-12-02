@@ -57,9 +57,9 @@ In addition:
 * The recommended amount of RAM available to the |chef client| during a |chef client| run is 512MB
 * Each node and workstation must have access to the |chef server| via HTTPS
 * |ruby| 1.8.7, 1.9.1, 1.9.2, and 1.9.3. In general, using the version of |ruby| that is installed by the |omnibus installer| is recommended. |ruby| 1.8.7 will be deprecated in an upcoming release of the |chef client|. |ruby| 2.0 has been tested with the |chef client| and should present no issues when running the |chef client|; however, |ruby| 2.0 is not an officially supported version of |ruby| for the |chef client| (yet), but will become one in an upcoming version of the |chef client|.
-* |rubygems| 1.6.2 or higher; on the |ubuntu| or |debian| platforms, |rubygems| should be installed from source
 * |chef hosted| is compatible with |chef client| version 0.10.0 and greater; older clients must be upgraded before they can connect to |chef hosted|
 
+.. * |rubygems| 1.6.2 or higher; on the |ubuntu| or |debian| platforms, |rubygems| should be installed from source
 
 The Server
 =====================================================
