@@ -1,7 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |json| format for environments maps directly to the domain-specific |ruby| format: the same settings, attributes, and values, and a similar structure and organization. For example::
+The |json| format for environments maps directly to the domain-specific |ruby| format: the same settings, attributes, and values, and a similar structure and organization, just formatted as |json|. When an environment is defined as |json| the file that contains that data must be defined as a file that ends with ``.json``). For example:
+
+.. code-block:: javascript
 
    {
      "name": "dev",

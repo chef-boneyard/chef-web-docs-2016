@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Domain-specific |ruby| attributes for environments include the following:
+Each environment is defined as a |ruby| file (i.e. a file that ends with ``.rb``). Each environment file should contain the following domain-specific attributes:
 
 .. list-table::
    :widths: 200 300
@@ -72,7 +72,7 @@ Domain-specific |ruby| attributes for environments include the following:
             }
           )  
 
-A |ruby| file for each non-default environment must exist in the ``environments/`` subdirectory of the |chef repo|. (If the |chef repo| does not have this subdirectory, then create it.) Each |ruby| file should have the .rb suffix. The complete environment has the following syntax:
+A |ruby| file for each non-default environment must exist in the ``environments/`` subdirectory of the |chef repo|. (If the |chef repo| does not have this subdirectory, then it should be created.) The complete environment has the following syntax:
 
 .. code-block:: ruby
 
