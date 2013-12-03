@@ -1,16 +1,16 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-**Vagrant** (https://vagrantup.com) is a virtualization framework for managing development environments, it may be used for testing the :doc:`All-in-One </openstack_architecture_allinone>` configuration in the |chef repo openstack|. Vagrant is an unsupported external third-party tool that may be used with |chef|, but is not required for using the |chef repo openstack|.
+**Vagrant** (https://vagrantup.com) is a virtualization framework for managing development environments, it may be used for testing the All-in-One configuration in the |chef repo openstack|. |vagrant| is an unsupported external third-party tool that may be used with |chef|, but is not required for using the |chef repo openstack|.
 
 Installation
 ------------
 
-Vagrant supports a number of virtualization and cloud back-ends. For our purposes Virtualbox (https://www.virtualbox.org) is used.
+|vagrant| supports a number of virtualization and cloud back-ends. For our purposes |virtualbox| (https://www.virtualbox.org) is used.
 
-Install Vagrant 1.2.1 or later from packages. You may download it from https://downloads.vagrantup.com.
+Install |vagrant| 1.2.1 or later from packages. You may download it from https://downloads.vagrantup.com.
 
-Our test configuration requires a number of Vagrant plugins, install the following plugins in exactly this order:
+Our test configuration requires a number of |vagrant| plugins, install the following plugins in exactly this order:
 
 .. code-block:: bash
 
@@ -21,7 +21,7 @@ Our test configuration requires a number of Vagrant plugins, install the followi
 Vagrantfile
 -----------
 
-Vagrant uses a **Vagrantfile** for managing its configuration. Within the |chef repo openstack| there is a Vagrantfile that configures the Virtualbox VM for our purposes. A few parts of that file are listed here:
+|vagrant| uses a **Vagrantfile** for managing its configuration. Within the |chef repo openstack| there is a Vagrantfile that configures the |virtualbox| virtual machine for our purposes. A few parts of that file are listed here:
 
 .. code-block:: ruby
 
@@ -40,7 +40,7 @@ Vagrant uses a **Vagrantfile** for managing its configuration. Within the |chef 
      # Omnibus plugin configuration
      config.omnibus.chef_version = :latest
 
-This is enabling and configuring the use of the Berkshelf, Chef Zero and Omnibus plugins for Vagrant.
+This is enabling and configuring the use of the |berkshelf|, |chef zero| and |omnibus installer| plugins for |vagrant|.
 
 .. code-block:: ruby
 
@@ -50,7 +50,7 @@ This is enabling and configuring the use of the Berkshelf, Chef Zero and Omnibus
      config.vm.network "forwarded_port", guest: 8773, host: 8773    # compute-ec2-api
      config.vm.network "forwarded_port", guest: 8774, host: 8774    # compute-api
 
-This forwards ports from the Vagrant VM for accessing the OpenStack Dashboard and APIs. You may also access the Chef Zero installation with a custom knife.rb configuration file.
+This forwards ports from the |vagrant| virtual machine for accessing the |openstack| dashboard and APIs. You may also access the |chef zero| installation with a custom |knife rb| configuration file.
 
 .. code-block:: ruby
 
@@ -64,7 +64,7 @@ This forwards ports from the Vagrant VM for accessing the OpenStack Dashboard an
        vb.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
      end
 
-This creates addtional network cards and networks for the Vagrant VM and increases the available memory and CPUs.
+This creates additional network cards and networks for the |vagrant| virtual machine and increases the available memory and CPUs.
 
 .. code-block:: ruby
 
@@ -83,7 +83,7 @@ This creates addtional network cards and networks for the Vagrant VM and increas
      end
    end
 
-Vagrant is configured to use the chef_client provisioner with the ``vagrant`` environment and the ``allinone-compute`` role for the ``run_list``. The Virtualbox images used are provided by the Opscode Bento project (https://github.com/opscode/bento).
+|vagrant| is configured to use the chef_client provisioner with the ``vagrant`` environment and the ``allinone-compute`` role for the ``run_list``. The |virtualbox| images used are provided by the Bento project (https://github.com/opscode/bento).
 
 Environment
 -----------
@@ -153,13 +153,13 @@ Environment
 Vagrant Usage
 -------------
 
-From the |chef repo openstack|, launch the ``ubuntu1204`` VM with Vagrant. This will take several minutes as it does the ``chef-client`` run for the ``allinone-compute``.
+From the |chef repo openstack|, launch the ``ubuntu1204`` virtual machine with |vagrant|. This will take several minutes as it does the ``chef-client`` run for the ``allinone-compute``.
 
 .. code-block:: bash
 
     $ vagrant up ubuntu1204
 
-SSH into the ``ubuntu1204`` VM with Vagrant.
+SSH into the ``ubuntu1204`` virtual machine with |vagrant|.
 
 .. code-block:: bash
 
@@ -174,14 +174,14 @@ SSH into the ``ubuntu1204`` VM with Vagrant.
     Last login: Sat May 11 05:55:03 2013 from 10.0.2.2
     vagrant@ubuntu1204:~$
 
-All commands after this are actually run from within the VM. ``sudo`` to the ``root`` user and source the ``openrc`` file to configure the shell environment for OpenStack.
+All commands after this are actually run from within the VM. ``sudo`` to the ``root`` user and source the ``openrc`` file to configure the shell environment for |openstack|.
 
 .. code-block:: bash
 
     vagrant@ubuntu1204:~$ sudo su -
     root@ubuntu1204:~# source /root/openrc
 
-There are several basic checks that may be run to establish that the OpenStack deployment is operating properly. List the Nova Compute services that are running:
+There are several basic checks that may be run to establish that the |openstack| deployment is operating properly. List the |openstack nova| compute services that are running:
 
 .. code-block:: bash
 
@@ -283,7 +283,7 @@ List the images and favors of machines available for creating instances:
     | 5  | m1.xlarge | 16384     | 160  | 0         |      | 8     | 1.0         | True      | {}          |
     +----+-----------+-----------+------+-----------+------+-------+-------------+-----------+-------------+
 
-The ``cirros`` Linux base image is installed during the installation because the `node['openstack']['image']['image_upload']` attribute is set to `true` in the `vagrant` Environment. Now create an instance named ``test1`` with the size of ``m1.tiny`` and image type of ``cirros`` (this will may take a few minutes).
+The ``cirros`` |linux| base image is installed during the installation because the `node['openstack']['image']['image_upload']` attribute is set to `true` in the `vagrant` environment. Now create an instance named ``test1`` with the size of ``m1.tiny`` and image type of ``cirros`` (this will may take a few minutes).
 
 .. code-block:: bash
 
@@ -350,7 +350,7 @@ SSH into the instance with the user 'cirros' and the password 'cubswin:)':
 
 .. Depending on the IP address of your Vagrant instance, you may connect to the OpenStack Dashboard at http://...:8443
 
-When you are finished with your testing, exit and destroy the Vagrant virtual machine:
+When you are finished with your testing, exit and destroy the |vagrant| virtual machine:
 
 .. code-block:: bash
 
