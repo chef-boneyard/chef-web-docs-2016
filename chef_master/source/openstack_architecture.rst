@@ -41,7 +41,7 @@ Environments
 
 |chef openstack|: |vagrant|
 =====================================================
-.. include:: ../../includes_openstack/includes_openstack_repo_vagrant.rst
+.. include:: ../../includes_openstack/includes_openstack_architecture_vagrant.rst
 
 Vagrantfile
 -----------------------------------------------------
