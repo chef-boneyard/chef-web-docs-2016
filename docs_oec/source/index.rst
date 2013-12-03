@@ -189,6 +189,8 @@ Installation scenarios:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Standalone Upgrade</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability Upgrade</a> </br>
 
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_reporting.html">Install the Reporting Add-on</a> </br>
+
 Options: 
 
 .. raw:: html
@@ -500,6 +502,7 @@ The following topics discuss using |chef server oec| with platforms:
    essentials_search
    install_bootstrap
    install_push_jobs
+   install_reporting
    install_server
    install_server_be
    install_server_fe
