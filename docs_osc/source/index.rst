@@ -367,7 +367,7 @@ The following topics discuss using |chef server osc| with platforms:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/openstack.html">OpenStack</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/openstack.html">OpenStack</a> </br>
 
 .. Hide the TOC from this file.
 
@@ -488,7 +488,6 @@ The following topics discuss using |chef server osc| with platforms:
    migrate_to_hosted
    osc_overview
    ohai
-   openstack
    plugin_knife_authenticated_requests
    plugin_knife_azure
    plugin_knife_bluebox
