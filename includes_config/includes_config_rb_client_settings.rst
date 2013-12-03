@@ -170,6 +170,11 @@ This configuration file has the following settings:
        ::
  
           log_location STDOUT
+   * - ``no_lazy_load``
+     - |no_lazy_load| Default value: ``false``. For example:
+       ::
+ 
+          no_lazy_load false
    * - ``no_proxy``
      - |no_proxy| Default value: ``nil``. For example:
        ::

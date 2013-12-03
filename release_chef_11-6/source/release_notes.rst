@@ -268,6 +268,11 @@ New settings have been added to the |client rb| file:
        ::
  
           file_atomic_update false
+   * - ``no_lazy_load``
+     - |no_lazy_load| Default value: ``false``. For example:
+       ::
+ 
+          no_lazy_load false
 
 |knife| Subcommands
 -----------------------------------------------------
