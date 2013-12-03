@@ -88,32 +88,7 @@ pygments_style = 'emacs'
 
 # A string of reStructuredText that will be included at the beginning of every source file that is read.
 rst_prolog = """
-.. include:: ../../swaps/swap_desc_a.txt
-.. include:: ../../swaps/swap_desc_b.txt
-.. include:: ../../swaps/swap_desc_c.txt
-.. include:: ../../swaps/swap_desc_d.txt
-.. include:: ../../swaps/swap_desc_e.txt
-.. include:: ../../swaps/swap_desc_f.txt
-.. include:: ../../swaps/swap_desc_g.txt
-.. include:: ../../swaps/swap_desc_h.txt
-.. include:: ../../swaps/swap_desc_i.txt
-.. include:: ../../swaps/swap_desc_j.txt
-.. include:: ../../swaps/swap_desc_k.txt
-.. include:: ../../swaps/swap_desc_l.txt
-.. include:: ../../swaps/swap_desc_m.txt
-.. include:: ../../swaps/swap_desc_n.txt
-.. include:: ../../swaps/swap_desc_o.txt
-.. include:: ../../swaps/swap_desc_p.txt
-.. include:: ../../swaps/swap_desc_q.txt
-.. include:: ../../swaps/swap_desc_r.txt
-.. include:: ../../swaps/swap_desc_s.txt
-.. include:: ../../swaps/swap_desc_t.txt
-.. include:: ../../swaps/swap_desc_u.txt
-.. include:: ../../swaps/swap_desc_v.txt
-.. include:: ../../swaps/swap_desc_w.txt
-.. include:: ../../swaps/swap_desc_x.txt
-.. include:: ../../swaps/swap_desc_y.txt
-.. include:: ../../swaps/swap_desc_z.txt
+.. include:: ../../swaps/swap_descriptions.txt
 .. include:: ../../swaps/swap_names.txt
 .. include:: ../../swaps/swap_notes.txt
 """
@@ -123,7 +98,7 @@ rst_prolog = """
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = 'opscode'
+html_theme = 'chef'
 #html_theme = 'default'
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -136,7 +111,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Chef 11.8.0 Documentation"
+html_title = "Chef 11.8.x Documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -155,9 +130,13 @@ html_favicon = "opscode.ico"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-# If not '', a 'Last updated on:' timestamp is inserted at every page bottom,
-# using the given strftime format.
-#html_last_updated_fmt = '%b %d, %Y'
+# This setting is being used by Chef to override a version # stamp inserted
+# at every page bottom, using a string. For example: chef-client 11.6.x. Or:
+# Enterprise Chef Server 11.0.x. And yeah, this is just a hack, but it's the
+# hack that achieved the desired behavior. Plus, there's 0% chance that we'll
+# ever want to insert a datetime stamp in the docs.
+
+html_last_updated_fmt = 'chef-client, version 11.8.x'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -187,10 +166,12 @@ html_split_index = False
 #html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
-html_show_sphinx = False
+#html_show_sphinx = False
 
-# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
-html_show_copyright = True
+# This is set to "False" because we don't want to show the default copyright, but
+# do want to show the custom string defined by the "copyright" general setting (above).
+
+html_show_copyright = False
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -201,122 +182,5 @@ html_show_copyright = True
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Chef 11.8.0 Documentation'
+htmlhelp_basename = 'Chef 11.8.x Documentation'
 
-
-# -- Options for LaTeX output --------------------------------------------------
-
-latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
-
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title, author, documentclass [howto/manual]).
-latex_documents = [
-  ('index', 'Chef 11.8.0 Documentation.tex', u'Chef 11.8.0 Documentation',
-   u'Opscode, Inc.', 'manual'),
-]
-
-# The name of an image file (relative to this directory) to place at the top of
-# the title page.
-latex_logo = "../../images/opscode_color_text.png"
-
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
-#latex_use_parts = False
-
-# If true, show page references after internal links.
-#latex_show_pagerefs = False
-
-# If true, show URL addresses after external links.
-#latex_show_urls = False
-
-# Documents to append as an appendix to all manuals.
-#latex_appendices = []
-
-# If false, no module index is generated.
-#latex_domain_indices = True
-
-
-# -- Options for manual page output --------------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    ('index', 'Chef 11.8.0 Documentation', u'Chef 11.8.0 Documentation',
-     [u'Opscode, Inc.'], 1)
-]
-
-# If true, show URL addresses after external links.
-#man_show_urls = False
-
-
-# -- Options for Texinfo output ------------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-  ('index', 'Chef 11.8.0 Documentation', u'Chef 11.8.0 Documentation',
-   u'Opscode, Inc.', 'Chef 11.8.0 Documentation', 'Chef 11.8.0 Documentation',
-   'Miscellaneous'),
-]
-
-# Documents to append as an appendix to all manuals.
-#texinfo_appendices = []
-
-# If false, no module index is generated.
-#texinfo_domain_indices = True
-
-# How to display URL addresses: 'footnote', 'no', or 'inline'.
-#texinfo_show_urls = 'footnote'
-
-
-# -- Options for Epub output ---------------------------------------------------
-
-# Bibliographic Dublin Core info.
-epub_title = u'Chef 11.8.0 Documentation'
-epub_author = u'Opscode, Inc.'
-epub_publisher = u'Opscode, Inc.'
-epub_copyright = u'2013, Opscode, Inc.'
-
-# The language of the text. It defaults to the language option
-# or en if the language is not set.
-#epub_language = ''
-
-# The scheme of the identifier. Typical schemes are ISBN or URL.
-#epub_scheme = ''
-
-# The unique identifier of the text. This can be a ISBN number
-# or the project homepage.
-#epub_identifier = ''
-
-# A unique identification for the text.
-#epub_uid = ''
-
-# A tuple containing the cover image and cover page html template filenames.
-#epub_cover = ()
-
-# HTML files that should be inserted before the pages created by sphinx.
-# The format is a list of tuples containing the path and title.
-#epub_pre_files = []
-
-# HTML files shat should be inserted after the pages created by sphinx.
-# The format is a list of tuples containing the path and title.
-#epub_post_files = []
-
-# A list of files that should not be packed into the epub file.
-#epub_exclude_files = []
-
-# The depth of the table of contents in toc.ncx.
-#epub_tocdepth = 3
-
-# Allow duplicate toc entries.
-#epub_tocdup = True
