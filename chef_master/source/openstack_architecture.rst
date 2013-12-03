@@ -31,6 +31,30 @@ There are a number of configuration options available, including block storage, 
 =====================================================
 .. include:: ../../includes_openstack/includes_openstack_architecture_allinone.rst
 
+Roles
+-----------------------------------------------------
+.. include:: ../../includes_openstack/includes_openstack_architecture_allinone_roles.rst
+
+Environments
+-----------------------------------------------------
+.. include:: ../../includes_openstack/includes_openstack_architecture_allinone_environments.rst
+
 |chef openstack|: |vagrant|
 =====================================================
 .. include:: ../../includes_openstack/includes_openstack_repo_vagrant.rst
+
+Vagrantfile
+-----------------------------------------------------
+.. include:: ../../includes_openstack/includes_openstack_architecture_vagrant_vagrantfile.rst
+
+Install
+-----------------------------------------------------
+.. include:: ../../includes_openstack/includes_openstack_architecture_vagrant_configure.rst
+
+Environments
+-----------------------------------------------------
+.. include:: ../../includes_openstack/includes_openstack_architecture_vagrant_environment.rst
+
+Usage
+-----------------------------------------------------
+.. include:: ../../includes_openstack/includes_openstack_architecture_vagrant_usage.rst
