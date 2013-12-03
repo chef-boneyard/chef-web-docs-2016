@@ -4,6 +4,15 @@ Reporting
 
 .. include:: ../../includes_reporting/includes_reporting.rst
 
+
+:doc:`Install Reporting </install_reporting>` using the |reporting| add-on package.
+
+Requirements
+=====================================================
+.. include:: ../../includes_reporting/includes_reporting_requirements.rst
+
+.. warning:: |reporting| is only available when running |chef server oec| version 11.0.1 (or higher).
+
 The Reporting Run
 =====================================================
 .. include:: ../../includes_reporting/includes_reporting_run.rst
@@ -103,10 +112,10 @@ Configuration Settings
    * - ``enable_reporting``
      - Indicates that the |chef client| will send data to the |chef server oec| server for use with |chef server reporting|. For example:
        ::
- 
+
           enable_reporting true
    * - ``enable_reporting_url_fatals``
      - Indicates that the |chef client| run will fail if reporting data cannot be sent to the |chef server oec| server (for any reason). For example:
        ::
- 
+
           enable_reporting_url_fatals false
