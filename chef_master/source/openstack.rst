@@ -52,12 +52,9 @@ If you have questions or concerns outside the mailing list, please email matt@op
    :hidden:
 
    openstack_architecture
-   openstack_architecture_1+n
-   openstack_architecture_allinone
    openstack_cookbooks
    openstack_deploy
    openstack_develop
    openstack_example
    openstack_install
    openstack_repository
-   openstack_vagrant

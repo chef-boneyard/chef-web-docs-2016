@@ -6,7 +6,7 @@ This section describes the supported deployment scenarios for |chef openstack| a
 
 .. image:: ../../images/openstack-arch-grizzly-conceptual-v2.jpg
 
-There are a number of configuration options available, including block storage, hypervisors, databases, message queuing, networking, object storage, source builds, and so on. The current supported deployment scenarios include the following:
+There are a number of configuration options available, including block storage, hypervisors, databases, message queuing, networking, object storage, source builds, and so on. The current supported deployment scenarios includ:
 
 .. list-table::
    :widths: 150 450
@@ -14,9 +14,23 @@ There are a number of configuration options available, including block storage, 
 
    * - Scenario
      - Description
-   * - :doc:`All-in-One Compute </openstack_architecture_allinone>`
-     - A full |openstack compute| deployment on a single host or with :doc:`Vagrant </openstack_vagrant>`. No object storage.
-   * - :doc:`Single Controller + N Compute </openstack_architecture_1+n>`
+   * - All-in-One Compute
+     - A full |openstack compute| deployment on a single host. No object storage.
+   * - Single Controller + N Compute
      - A single controller with 1 or more |openstack compute| nodes. No object storage.
+   * - |vagrant|
+     - A virtual instance on a single host using |vagrant|.
 
 .. note:: |chef openstack| is under very active development for the |openstack grizzly| release. |openstack| is flexible and additional configurations will be supported in the future.
+
+|chef openstack|: Single Controller + N Compute
+=====================================================
+.. include:: ../../includes_openstack/includes_openstack_architecture_1+n.rst
+
+|chef openstack|: All-in-One Compute
+=====================================================
+.. include:: ../../includes_openstack/includes_openstack_architecture_allinone.rst
+
+|chef openstack|: |vagrant|
+=====================================================
+.. include:: ../../includes_openstack/includes_openstack_repo_vagrant.rst

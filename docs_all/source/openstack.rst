@@ -22,9 +22,11 @@ There are a number of configuration options available, including block storage, 
    * - Scenario
      - Description
    * - All-in-One Compute
-     - A full |openstack compute| deployment on a single host or with :doc:`Vagrant </openstack_vagrant>`. No object storage.
+     - A full |openstack compute| deployment on a single host. No object storage.
    * - Single Controller + N Compute
      - A single controller with 1 or more |openstack compute| nodes. No object storage.
+   * - |vagrant|
+     - A virtual instance on a single host using |vagrant|.
 
 .. note:: |chef openstack| is under very active development for the |openstack grizzly| release. |openstack| is flexible and additional configurations will be supported in the future.
 
@@ -36,6 +38,9 @@ All-in-One
 -----------------------------------------------------
 .. include:: ../../includes_openstack/includes_openstack_architecture_1+n.rst
 
+Vagrant
+-----------------------------------------------------
+.. include:: ../../includes_openstack/includes_openstack_repo_vagrant.rst
 
 Deployment Prerequisites
 =====================================================
