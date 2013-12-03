@@ -65,7 +65,7 @@ This configuration file has the following settings:
    * - ``enable_reporting``
      - |enable reporting| 
 
-       .. warning:: This setting is available only when using |reporting|, a tool that runs jobs against nodes in a |chef server oec| organization.
+       .. warning:: This setting is available only when using |reporting|, an add-on for |chef server oec| that collects reporting data about nodes.
 
        For example:
        ::
@@ -74,7 +74,7 @@ This configuration file has the following settings:
    * - ``enable_reporting_url_fatals``
      - |enable reporting_url_fatals|
 
-       .. warning:: This setting is available only when using |reporting|, a tool that runs jobs against nodes in a |chef server oec| organization.
+       .. warning:: This setting is available only when using |reporting|, an add-on for |chef server oec| that collects reporting data about nodes.
 
        For example:
        ::

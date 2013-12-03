@@ -44,29 +44,17 @@ Options
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-For example:
+**View all chef-client runs for an organization**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_list_by_organization.rst
 
-   $ knife runs list
+**View all chef-client runs for a single node**
 
-will return a list of |chef client| runs by organization, i.e. a list of all |chef client| runs that took place for every single node managed by the |chef server|.
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_list_by_node.rst
 
-And
+**View a specific chef-client run**
 
-.. code-block:: bash
-
-   $ knife runs list foo
-
-will return a list of |chef client| runs that occurred for a node named "foo".
-
-And
-
-.. code-block:: bash
-
-   $ knife runs list foo 30077269-59d0-4283-81f6-8d23cbed3a7a
-
-will return details about that specific |chef client| run.
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_list_by_run_id.rst
 
 runs show
 -----------------------------------------------------
@@ -82,21 +70,13 @@ Options
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-For example:
+**Show runs by node**
 
-.. code-block:: bash
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_show_by_node.rst
 
-   $ knife runs show foo
+**Show runs by run identifier**
 
-will return a detailed list of all |chef client| runs that occurred on a node named "foo".
-
-And:
-
-.. code-block:: bash
-
-   $ knife runs show bar 30077269-59d0-4283-81f6-8d23cbed3a7a
-
-will return details about a specific |chef client| run that occurred on a node named "bar".
+.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_show_by_run_id.rst
 
 
 Configuration Settings
@@ -110,12 +90,20 @@ Configuration Settings
    * - Setting
      - Description
    * - ``enable_reporting``
-     - |enable reporting| For example:
-       ::
+     - |enable reporting| 
 
+       .. warning:: This setting is available only when using |reporting|, an add-on for |chef server oec| that collects reporting data about nodes.
+
+       For example:
+       ::
+ 
           enable_reporting true
    * - ``enable_reporting_url_fatals``
-     - |enable reporting_url_fatals| For example:
-       ::
+     - |enable reporting_url_fatals|
 
+       .. warning:: This setting is available only when using |reporting|, an add-on for |chef server oec| that collects reporting data about nodes.
+
+       For example:
+       ::
+ 
           enable_reporting_url_fatals false
