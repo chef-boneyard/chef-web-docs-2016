@@ -434,7 +434,7 @@ The following topics discuss using |chef server oec| with platforms:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/openstack.html">OpenStack</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/openstack.html">OpenStack</a> </br>
 
 .. Hide the TOC from this file.
 
@@ -562,7 +562,6 @@ The following topics discuss using |chef server oec| with platforms:
    migrate_to_hosted
    oec_overview
    ohai
-   openstack
    orgmapper
    plugin_knife_authenticated_requests
    plugin_knife_azure
