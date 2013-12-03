@@ -5,7 +5,7 @@ All about Chef ...
 .. include:: ../../includes_chef/includes_chef_index.rst
 
 
-Getting Started 
+Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
 
@@ -25,7 +25,7 @@ Getting Started
 
 
 
-The Community 
+The Community
 =====================================================
 The community is one of the best features of |chef| because it is populated by all of the people who use |chef|. This also means that the community is a great place to bounce ideas around, ask questions, and to find ways to help make |chef| better.
 
@@ -43,7 +43,7 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Contributions:** `Contribute to Open Source Chef <http://docs.opscode.com/community_contributions.html>`_ | `Contribute to the Documentation <https://github.com/opscode/chef-docs>`_ | `Style Guide <http://docs.opscode.com/style_guide.html>`_
 
-The Workstation 
+The Workstation
 =====================================================
 **The Basics:** :doc:`About the Workstation </chef_overview_workstation>` | :doc:`The chef-repo </essentials_repository>` | :doc:`Knife </knife>` | :doc:`Debug Recipes </chef_shell>`
 
@@ -67,13 +67,13 @@ Server Essentials
 The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
 
 * A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
-* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_. 
+* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_.
 * All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
 * The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
 * Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
 
-|chef server oec| 
+|chef server oec|
 -----------------------------------------------------
 |chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes additional functionality like |reporting| and built-in support for high availability deployment scenarios.
 
@@ -87,7 +87,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Add-ons:** :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>`
 
-**Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>` 
+**Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>`
 
 **Settings and Tools:** :doc:`private-chef.rb </config_rb_chef_server_enterprise>` | :doc:`private-chef-ctl </ctl_private_chef>` | :doc:`orgmapper </orgmapper>`
 
@@ -144,7 +144,7 @@ Cookbooks
 **LWRPs in Cookbooks:** :doc:`About LWRPs </lwrp>` | :doc:`Common Functionality </resource_common>` --- **LWRPs Maintained by Opscode:**  :doc:`apt </lwrp_apt>` | :doc:`aws </lwrp_aws>` | :doc:`bluepill </lwrp_bluepill>` | :doc:`chef_handler </lwrp_chef_handler>` | :doc:`daemontools </lwrp_daemontools>` | :doc:`djbdns </lwrp_djbdns>` | :doc:`dmg </lwrp_dmg>` | :doc:`dynect </lwrp_dynect>` | :doc:`firewall </lwrp_firewall>` | :doc:`freebsd </lwrp_freebsd>` | :doc:`gunicorn </lwrp_gunicorn>` | :doc:`homebrew </lwrp_homebrew>` | :doc:`iis </lwrp_iis>` | :doc:`maven </lwrp_maven>` | :doc:`nagios </lwrp_nagios>` | :doc:`pacman </lwrp_pacman>` | :doc:`php </lwrp_php>` | :doc:`powershell </lwrp_powershell>` | :doc:`python </lwrp_python>` | :doc:`rabbitmq </lwrp_rabbitmq>` | :doc:`riak </lwrp_riak>` | :doc:`samba </lwrp_samba>` | :doc:`sudo </lwrp_sudo>` | :doc:`supervisor </lwrp_supervisor>` | :doc:`transmission </lwrp_transmission>` | :doc:`users </lwrp_users>` | :doc:`webpi </lwrp_webpi>` | :doc:`windows </lwrp_windows>` | :doc:`yum </lwrp_yum>` --- **Single Page:** `Lightweight Resources <http://docs.opscode.com/chef/lwrps.html>`_
 
 
-.. Hide the TOC from this file. 
+.. Hide the TOC from this file.
 
 .. toctree::
    :hidden:
@@ -221,11 +221,12 @@ Cookbooks
    images
    install
    install_push_jobs
+   install_reporting
    junos
    just_enough_ruby_for_chef
    knife
    lwrp
-   manage_server_hosted 
+   manage_server_hosted
    manage_server_hosted_accounts
    manage_server_hosted_clients
    manage_server_hosted_cookbooks
@@ -251,7 +252,7 @@ Cookbooks
    release_notes
    resource
    server_backup_restore
-   server_components 
+   server_components
    server_data
    server_deploy_be
    server_deploy_fe
