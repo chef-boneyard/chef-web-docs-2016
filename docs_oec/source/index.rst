@@ -1,5 +1,5 @@
 =====================================================
-All About Enterprise Chef ... 
+All About Enterprise Chef ...  
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
@@ -505,6 +505,7 @@ The following topics discuss using |chef server oec| with platforms:
    essentials_roles
    essentials_search
    install_bootstrap
+   install_manager
    install_push_jobs
    install_reporting
    install_server
@@ -582,6 +583,7 @@ The following topics discuss using |chef server oec| with platforms:
    lwrp_webpi
    lwrp_windows
    lwrp_yum
+   manager
    migrate_to_hosted
    oec_overview
    ohai

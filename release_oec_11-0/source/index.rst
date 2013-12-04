@@ -1,5 +1,5 @@
 =====================================================
-Documentation for Enterprise Chef 11.0
+Documentation for Enterprise Chef 11.0.x
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst

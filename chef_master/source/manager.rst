@@ -2,15 +2,33 @@
 |chef manager|
 =====================================================
 
-.. warning:: This topic is about an add-on for Enterprise Chef server that will be available soon.
-
 .. include:: ../../includes_manager/includes_manager.rst
 
+.. note:: |chef manager| is an add-on to |chef server oec| and must be :doc:`installed on the same physical hardware </install_manager>` as the |chef server oec| server.
 
-Install the :doc:`Management Console </install_manager>` using the |reporting| add-on package.
-
-Requirements
+Nodes
 =====================================================
-.. include:: ../../includes_system_requirements/includes_system_requirements_manager.rst
+.. include:: ../../includes_node/includes_node.rst
 
-.. warning:: |reporting| is only available when running |chef server oec| version 11.0.1 (or higher).
+.. image:: ../../images/step_manage_webui_nodes.png
+
+Reports
+=====================================================
+.. include:: ../../includes_reporting/includes_reporting.rst
+
+.. image:: ../../images/step_manage_webui_reports.png
+
+Policy
+=====================================================
+.. include:: ../../includes_chef/includes_chef_policy.rst
+
+.. image:: ../../images/step_manage_webui_policy.png
+
+Admin
+=====================================================
+.. include:: ../../includes_manager/includes_manager_admin.rst
+
+.. include:: ../../includes_server_rbac/includes_server_rbac.rst
+
+.. image:: ../../images/step_manage_webui_admin.png
+

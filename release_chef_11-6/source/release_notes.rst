@@ -404,7 +404,7 @@ New settings have been added to the |knife rb| file:
    * - Setting
      - Description
    * - ``versioned_cookbooks``
-     - |versioned_cookbooks_true| For example:
+     - |versioned_cookbooks| For example:
        ::
  
           versioned_cookbooks true
