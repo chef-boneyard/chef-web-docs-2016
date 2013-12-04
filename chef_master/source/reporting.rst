@@ -4,8 +4,7 @@ Reporting
 
 .. include:: ../../includes_reporting/includes_reporting.rst
 
-
-:doc:`Install Reporting </install_reporting>` using the |reporting| add-on package.
+Install :doc:`Reporting </install_reporting>` using the |reporting| add-on package.
 
 Requirements
 =====================================================
@@ -19,8 +18,6 @@ The Reporting Run
 
 knife-reporting
 =====================================================
-.. include:: ../../includes_reporting/includes_reporting.rst
-
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_reporting.rst
 
 .. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
