@@ -1,5 +1,5 @@
 =====================================================
-|chef manage| Tasks
+|chef manager| Tasks
 =====================================================
 
 .. warning:: This topic is a work in progress.
