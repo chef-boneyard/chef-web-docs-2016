@@ -147,6 +147,7 @@ The |chef server oec| acts as a hub for configuration data. The :doc:`components
 
 In addition to the built-in features of |chef server oec|, the following optional components are available:
 
+* **Chef Manager** :doc:`Chef Manager </manager>` provides a web user interface that can be used to manage |chef server oec|.
 * **Reporting** :doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
 * **Push Jobs** :doc:`Push Jobs </push_jobs>` is used to run jobs against nodes independently of |chef client| runs.
 
@@ -190,6 +191,8 @@ Installation scenarios:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability Upgrade</a> </br>
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_reporting.html">Install the Reporting Add-on</a> </br>
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manage.html">Install the Manager Add-on</a> </br>
 
 Options: 
 

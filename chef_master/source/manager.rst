@@ -1,5 +1,5 @@
 =====================================================
-Management Console
+|chef manager|
 =====================================================
 
 .. warning:: This topic is about an add-on for Enterprise Chef server that will be available soon.
