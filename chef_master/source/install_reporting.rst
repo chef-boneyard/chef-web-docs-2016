@@ -8,7 +8,7 @@ Install |reporting|
 
 Requirements
 =====================================================
-.. include:: ../../includes_reporting/includes_reporting_requirements.rst
+.. include:: ../../includes_system_requirements/includes_system_requirements_reporting.rst
 
 |reporting| Server
 =====================================================
