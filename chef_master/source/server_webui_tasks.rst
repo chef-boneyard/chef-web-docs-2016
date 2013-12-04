@@ -1,10 +1,10 @@
 =====================================================
-Enterprise Chef Server Manage UI Web Tasks
+|chef manage| Tasks
 =====================================================
 
 .. warning:: This topic is a work in progress.
 
-This topic is an alphabetical list of the various tasks that can be performed when using |opscode manage|, the web user interface for |chef server oec|.
+This topic is an alphabetical list of the various tasks that can be performed when using |webui|, the web user interface for |chef server oec|.
 
 Add Data Bag
 =====================================================

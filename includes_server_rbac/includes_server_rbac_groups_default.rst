@@ -9,12 +9,12 @@
 
    * - Group
      - Description
-   * - |opscode manage group admins|
+   * - |webui group admins|
      - |group default_admins| 
-   * - |opscode manage group billing|
+   * - |webui group billing|
      - |group default_billing_admins| 
-   * - |opscode manage group clients|
+   * - |webui group clients|
      - |group default_clients| 
-   * - |opscode manage group users|
+   * - |webui group users|
      - |group default_users| 
 
