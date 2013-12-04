@@ -367,6 +367,7 @@ The following topics discuss using |chef server osc| with platforms:
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/openstack.html">OpenStack</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/windows.html">Microsoft Windows</a> </br>
 
 .. Hide the TOC from this file.
 
