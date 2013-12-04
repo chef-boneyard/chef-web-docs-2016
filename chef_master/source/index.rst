@@ -84,7 +84,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Install Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
 
-**Add-ons:** :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>`
+**Add-ons:** | :doc:`Manager </manager>` :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>`
 
 **Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>`
 
@@ -219,7 +219,7 @@ Cookbooks
    handlers
    images
    install
-   install_manage
+   install_manager
    install_push_jobs
    install_reporting
    junos
@@ -239,6 +239,7 @@ Cookbooks
    manage_server_hosted_roles
    manage_server_hosted_search
    manage_server_hosted_users
+   manager
    migrate_to_hosted
    ohai
    ohai_custom
