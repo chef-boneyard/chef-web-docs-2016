@@ -3,8 +3,8 @@
 
 To set permissions list for a node object:
 
-#. Open |opscode manage|.
-#. Click |opscode manage nodes|.
+#. Open |webui|.
+#. Click |webui nodes|.
 #. Select a node.
-#. Click the |opscode manage tab_permissions| tab.
-#. For each group listed under **Name**, select or de-select the |opscode manage permission read|, |opscode manage permission update|, |opscode manage permission delete|, and |opscode manage permission grant| permissions.
+#. Click the |webui tab_permissions| tab.
+#. For each group listed under **Name**, select or de-select the |webui permission read|, |webui permission update|, |webui permission delete|, and |webui permission grant| permissions.

@@ -3,7 +3,7 @@
 
 To view a data bag:
 
-#. Open |opscode manage|.
-#. Click |opscode manage policy|.
-#. Click |opscode manage policy_data_bags|.
+#. Open |webui|.
+#. Click |webui policy|.
+#. Click |webui policy_data_bags|.
 #. Select a data bag.

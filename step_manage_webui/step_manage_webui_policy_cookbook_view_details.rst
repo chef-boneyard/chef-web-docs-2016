@@ -3,10 +3,10 @@
 
 To view cookbook details:
 
-#. Open |opscode manage|.
-#. Click |opscode manage policy|.
-#. Click |opscode manage policy_cookbooks|.
+#. Open |webui|.
+#. Click |webui policy|.
+#. Click |webui policy_cookbooks|.
 #. Select a cookbook.
-#. Click the |opscode manage tab_details| tab:
+#. Click the |webui tab_details| tab:
 
    .. image:: ../../images/step_manage_webui_policy_cookbook_view_details.png

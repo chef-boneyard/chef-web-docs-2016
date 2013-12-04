@@ -3,12 +3,12 @@
 
 To view |chef client| details:
 
-#. Log on to |opscode manage|.
-#. Click |opscode manage reports|.
-#. Click |opscode manage reports_run_history|.
+#. Log on to |webui|.
+#. Click |webui reports|.
+#. Click |webui reports_run_history|.
 #. Select the range of |chef client| runs to show, the correct environment, and correct status.
 #. Select a |chef client| run.
-#. Select the |opscode manage tab_details| tab:
+#. Select the |webui tab_details| tab:
 
    .. image:: ../../images/step_manage_webui_reports_history_view_details.png
 
@@ -33,4 +33,4 @@ To view |chef client| details:
       * - ``Diff``
         - The difference between the current state and the previous state. This setting is available for files managed by the |resource cookbook_file|, |resource file|, |resource remote_file|, and |resource template| resources.
       * - ``Parameters``
-        - Opens the |opscode manage db_run_details| dialog box, which lists all of the parameters on the node that were changed during the |chef client| run.
+        - Opens the |webui db_run_details| dialog box, which lists all of the parameters on the node that were changed during the |chef client| run.

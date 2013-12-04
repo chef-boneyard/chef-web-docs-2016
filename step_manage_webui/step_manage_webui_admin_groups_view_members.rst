@@ -3,12 +3,12 @@
 
 To view group member details:
 
-#. Open |opscode manage|.
-#. Click |opscode manage admin|.
-#. Click |opscode manage admin_groups|.
+#. Open |webui|.
+#. Click |webui admin|.
+#. Click |webui admin_groups|.
 #. Select a group.
-#. Click the |opscode manage tab_members| tab.
-#. Click the |opscode manage button_add_permission| button and enter the name of the user or group to be added.
+#. Click the |webui tab_members| tab.
+#. Click the |webui button_add_permission| button and enter the name of the user or group to be added.
 
    where:
 

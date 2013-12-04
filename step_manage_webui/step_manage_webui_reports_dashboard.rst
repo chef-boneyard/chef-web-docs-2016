@@ -3,6 +3,6 @@
 
 To view the reports dashboard:
 
-#. Log on to |opscode manage|.
-#. Click |opscode manage reports|.
-#. Click |opscode manage reports_dashboard|.
+#. Log on to |webui|.
+#. Click |webui reports|.
+#. Click |webui reports_dashboard|.

@@ -3,8 +3,8 @@
 
 To view all of the nodes:
 
-#. Open |opscode manage|.
-#. Click |opscode manage nodes|.
+#. Open |webui|.
+#. Click |webui nodes|.
 
    where:
 
@@ -29,4 +29,4 @@ To view all of the nodes:
       * - ``Environment``
         - |node_environment|
       * - ``Actions``
-        - The |opscode manage| web user interface tasks available for this node.
+        - The |webui| web user interface tasks available for this node.

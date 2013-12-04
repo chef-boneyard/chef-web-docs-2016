@@ -3,8 +3,8 @@
 
 To view default attributes for a role:
 
-#. Open |opscode manage|.
-#. Click |opscode manage policy|.
-#. Click |opscode manage policy_roles|.
+#. Open |webui|.
+#. Click |webui policy|.
+#. Click |webui policy_roles|.
 #. Select a role.
-#. Click the |opscode manage tab_attributes| tab.
+#. Click the |webui tab_attributes| tab.

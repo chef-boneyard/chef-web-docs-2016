@@ -3,8 +3,8 @@
 
 To search nodes:
 
-#. Open |opscode manage|.
-#. Click |opscode manage nodes|.
+#. Open |webui|.
+#. Click |webui nodes|.
 #. In the search box in the upper right, enter the search query and click the search icon.
 
    .. image:: ../../images/step_manage_webui_nodes_search.png

@@ -3,6 +3,6 @@
 
 To view all environments uploaded to the |chef server| organization:
 
-#. Open |opscode manage|.
-#. Click |opscode manage policy|.
-#. Click |opscode manage policy_environments|.
+#. Open |webui|.
+#. Click |webui policy|.
+#. Click |webui policy_environments|.

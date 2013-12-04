@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To log out of |opscode manage|:
+To log out of |webui|:
 
-#. Open |opscode manage|.
-#. From the drop-down list next to your username, select |opscode manage button_log_out|.
+#. Open |webui|.
+#. From the drop-down list next to your username, select |webui button_log_out|.

@@ -3,13 +3,13 @@
 
 To delete a group:
 
-#. Open |opscode manage|.
-#. Click |opscode manage admin|.
-#. Click |opscode manage admin_groups|.
+#. Open |webui|.
+#. Click |webui admin|.
+#. Click |webui admin_groups|.
 #. Select a group.
-#. Click |opscode manage button_delete_group|.
+#. Click |webui button_delete_group|.
 
    .. image:: ../../images/step_manage_webui_admin_groups_delete.png
 
-.. note:: The |opscode manage group admins|, |opscode manage group billing| (hosted |chef server oec| only), |opscode manage group clients|, and |opscode manage group users| are required groups for |chef server oec| and cannot be deleted.
+.. note:: The |webui group admins|, |webui group billing| (hosted |chef server oec| only), |webui group clients|, and |webui group users| are required groups for |chef server oec| and cannot be deleted.
 

@@ -3,10 +3,10 @@
 
 To view |chef client| runs still running:
 
-#. Log on to |opscode manage|.
-#. Click |opscode manage reports|.
-#. Click |opscode manage reports_dashboard|.
-#. The |chef client| runs that are still running are shown under the |opscode manage reports_name_counts| header:
+#. Log on to |webui|.
+#. Click |webui reports|.
+#. Click |webui reports_dashboard|.
+#. The |chef client| runs that are still running are shown under the |webui reports_name_counts| header:
 
    .. image:: ../../images/step_manage_webui_reports_dashboard_view_run_counts.png
 

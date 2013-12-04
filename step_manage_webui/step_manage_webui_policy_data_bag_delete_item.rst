@@ -3,11 +3,11 @@
 
 To delete a data bag item:
 
-#. Open |opscode manage|.
-#. Click |opscode manage policy|.
-#. Click |opscode manage policy_data_bags|.
+#. Open |webui|.
+#. Click |webui policy|.
+#. Click |webui policy_data_bags|.
 #. Select a data bag.
-#. Select the |opscode manage tab_items| tab.
+#. Select the |webui tab_items| tab.
 #. Select a data bag.
 #. Click **Delete**.
 

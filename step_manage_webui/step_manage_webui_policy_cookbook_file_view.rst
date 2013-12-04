@@ -3,11 +3,11 @@
 
 To view a cookbook file:
 
-#. Open |opscode manage|.
-#. Click |opscode manage policy|.
-#. Click |opscode manage policy_cookbooks|.
+#. Open |webui|.
+#. Click |webui policy|.
+#. Click |webui policy_cookbooks|.
 #. Select a cookbook.
-#. Click the |opscode manage tab_content| tab.
+#. Click the |webui tab_content| tab.
 #. Select the file type: **Attributes**, **Definitions**, **Files**, **Recipes**, **Templates**, or **Root Files**.
 #. Select a file:
 

@@ -3,9 +3,9 @@
 
 To view group details:
 
-#. Open |opscode manage|.
-#. Click |opscode manage admin|.
-#. Click |opscode manage admin_groups|.
+#. Open |webui|.
+#. Click |webui admin|.
+#. Click |webui admin_groups|.
 #. Select a group.
-#. Click the |opscode manage tab_details| tab.
+#. Click the |webui tab_details| tab.
 

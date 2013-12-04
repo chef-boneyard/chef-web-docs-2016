@@ -3,8 +3,8 @@
 
 To get the starter kit:
 
-#. Open |opscode manage|.
-#. Click |opscode manage admin|.
-#. Click |opscode manage admin_orgs|.
-#. Click |opscode manage admin_orgs_starter_kit|.
+#. Open |webui|.
+#. Click |webui admin|.
+#. Click |webui admin_orgs|.
+#. Click |webui admin_orgs_starter_kit|.
 #. Follow the steps on the starter kit page.
