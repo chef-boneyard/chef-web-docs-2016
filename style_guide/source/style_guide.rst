@@ -507,11 +507,11 @@ and then for the .pot files:
 
 with the very important difference of the ``/build`` vs. ``/translate`` folders for the output.
 
-.pot files should be checked into the github repository like every other source file and even though they are output of the source files, should be treated as if they are source files.
+.pot files should be checked into the github repository like every other source file and even though they are output of the source files, should be treated as if they are source files. 
 
 .. note:: The /translate folder in the github source contains a regularly updated set of .pot files. That said, it is recommended that if you want to localize the Chef documentation, check with Opscode (send email to docs@opscode.com) and let us know that you want to participate in the localization process and we can sync up. Or just update the .pot files locally to make sure they are the most current versions of the .pot files.
 
-conf.py Settings
+conf.py Settings 
 =====================================================
 Every Sphinx build has a configuration file.
 

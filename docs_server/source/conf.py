@@ -170,7 +170,7 @@ html_split_index = False
 # This is set to "False" because we don't want to show the default copyright, but
 # do want to show the custom string defined by the "copyright" general setting (above).
 
-html_show_copyright = False
+html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
