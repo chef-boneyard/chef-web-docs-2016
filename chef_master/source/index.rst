@@ -220,6 +220,7 @@ Cookbooks
    handlers
    images
    install
+   install_manage
    install_push_jobs
    install_reporting
    junos
