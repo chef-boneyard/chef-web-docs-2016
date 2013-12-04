@@ -43,7 +43,6 @@ Chef Single-page Topics
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_repository.html">Repository</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/auth.html">Authentication and Authorization</a> </br>
 
-
 **Install and Migrate**
 
 .. raw:: html

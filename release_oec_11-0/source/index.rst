@@ -4,7 +4,6 @@ Documentation for Enterprise Chef 11.0
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
 
-
 Getting Started
 =====================================================
 If you are new to |chef server oec|, familiarize yourself with its main components: :doc:`the server, workstations, and nodes </oec_overview>`.

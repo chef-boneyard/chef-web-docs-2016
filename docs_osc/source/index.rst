@@ -169,7 +169,6 @@ The following APIs can be used to access data on the |chef server|:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/api_chef_server.html">Chef Server API</a> </br>
 
 
-
 The Nodes
 =====================================================
 .. include:: ../../includes_node/includes_node.rst
