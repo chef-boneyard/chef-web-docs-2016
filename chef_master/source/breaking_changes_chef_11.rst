@@ -10,6 +10,16 @@ The following items are new for |chef 11| and/or are changes from |chef 10|.
 =====================================================
 The following changes have been made to |chef client| and |chef solo|. Some of these changes may break recipes (or may change their behavior); other changes may affect workflow or scripts.
 
+Custom API usage and Databag Population require Chef 11.6.0 or greater 
+----------------------------------------------------------------------
+
+.. code-block:: bash 
+
+knife data bag from_file
+
+This example will fail with Chef < 11.6.0 and EC11 or OSS, as the /data endpoint has become more RESTfully correct.
+See https://tickets.opscode.com/browse/CHEF-4435 for details.
+
 |shef| is now |chef shell|
 -----------------------------------------------------
 |shef| has been renamed to |chef shell| (CHEF-2925). Recipe mode and attributes mode must now be entered using the ``recipe_mode`` and ``attributes_mode`` commands.
