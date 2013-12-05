@@ -1,5 +1,5 @@
 =====================================================
-All About Enterprise Chef ...  
+All About Enterprise Chef ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst

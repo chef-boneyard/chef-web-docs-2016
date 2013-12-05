@@ -39,7 +39,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Chef 11.0.0 > 11.4.0 Documentation'
-copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License'
+copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -136,7 +136,7 @@ html_static_path = ['_static']
 # hack that achieved the desired behavior. Plus, there's 0% chance that we'll
 # ever want to insert a datetime stamp in the docs.
 
-html_last_updated_fmt = 'chef-client, version 11.4.x'
+html_last_updated_fmt = 'chef-client, version 11.0.x => 11.4.x'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
