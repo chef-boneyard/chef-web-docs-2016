@@ -19,7 +19,7 @@ Getting Started
 
 **What's new:** :doc:`Release Notes for Chef 11.6 </release_notes>`
 
-**Docs for Previous Versions of Chef:** `11.0, 11.2, and 11.4 <http://docs.opscode.com/release/11-4/>`_ | :doc:`Documentation Feedback </feedback>`
+**Docs for Previous Versions of Chef:** `11.0, 11.2, and 11.4 <http://docs.opscode.com/release/11-4/>`_
 
 
 
@@ -205,7 +205,6 @@ Cookbooks
    essentials_repository_create
    essentials_roles
    essentials_search
-   feedback
    install
    just_enough_ruby_for_chef
    knife
