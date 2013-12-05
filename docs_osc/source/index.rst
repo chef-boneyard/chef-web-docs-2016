@@ -1,5 +1,5 @@
 =====================================================
-All About Open Source Chef ... 
+All About Open Source Chef ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_osc.rst
