@@ -2,8 +2,6 @@
 knife client 
 =====================================================
 
-.. include:: ../../includes_security/includes_security_chef_validator.rst
-
 .. include:: ../../includes_knife/includes_knife_client.rst
 
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
