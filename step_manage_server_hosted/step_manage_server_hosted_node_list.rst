@@ -6,6 +6,6 @@ To list nodes in your organization:
 
 #. Click **Nodes** on the main navigation menu.
 
-   .. image:: ../../images/step_manage_server_hosted_node_list.png
+   .. image:: ../../images_old/step_manage_server_hosted_node_list.png
 
    If a specific environment is selected on the top of the page, then only the nodes in that environment will be shown. You also need list permissions on the global nodes level to list the nodes.

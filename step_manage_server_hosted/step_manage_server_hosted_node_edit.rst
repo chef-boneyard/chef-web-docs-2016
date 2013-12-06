@@ -12,11 +12,11 @@ To edit a node:
 
 #. To add a role or recipe to the node being edited, drag it from **Available Roles** or **Available Recipes** to **Run List**:
 
-   .. image:: ../../images/step_manage_server_hosted_node_edit_1.png
+   .. image:: ../../images_old/step_manage_server_hosted_node_edit_1.png
 
 #. To remove a role or recipe from the node being edited, drag it from the **Run List** back to an **Available** section:
 
-   .. image:: ../../images/step_manage_server_hosted_node_edit_2.png
+   .. image:: ../../images_old/step_manage_server_hosted_node_edit_2.png
 
 #. Click **Save Node** to save.
 

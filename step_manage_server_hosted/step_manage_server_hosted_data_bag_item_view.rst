@@ -10,4 +10,4 @@ To view a data bag item:
 
 #. Click on the specific data bag item you want to view. This will show a page similar to this:
 
-   .. image:: ../../images/step_manage_server_hosted_data_bag_item_view.png
+   .. image:: ../../images_old/step_manage_server_hosted_data_bag_item_view.png

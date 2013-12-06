@@ -5,4 +5,4 @@
 
 When |windows ad| or |ldap| is enabled, the login page will authenticate users using those credentials.
 
-.. image:: ../../images/private_chef_1x_ad_ldap_login.png 
+.. image:: ../../images_old/private_chef_1x_ad_ldap_login.png 

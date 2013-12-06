@@ -8,5 +8,5 @@ To list roles in your organization:
 
 #. Click **Roles** on the main navigation menu.
 
-   .. image:: ../../images/step_manage_server_hosted_role_list.png
+   .. image:: ../../images_old/step_manage_server_hosted_role_list.png
 

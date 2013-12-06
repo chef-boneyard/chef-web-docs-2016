@@ -12,7 +12,7 @@ To edit a specific group in your organization:
 
 This will direct you to a page where you can select which users, clients, and groups to include in this group:
 
-   .. image:: ../../images/step_manage_server_hosted_group_edit.png
+   .. image:: ../../images_old/step_manage_server_hosted_group_edit.png
 
    If you don't see an **Edit** link or tab, you don't have update permissions on that group.
 

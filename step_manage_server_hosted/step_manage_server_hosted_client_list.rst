@@ -8,5 +8,5 @@ To see a list of the clients in the organization:
 
 #. Select the **Clients** tab and you will see a list similar to this:
 
-   .. image:: ../../images/step_manage_server_hosted_client_list.png
+   .. image:: ../../images_old/step_manage_server_hosted_client_list.png
 

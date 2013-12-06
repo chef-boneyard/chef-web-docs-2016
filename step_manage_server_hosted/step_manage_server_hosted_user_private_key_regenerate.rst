@@ -8,4 +8,4 @@ The **Change Password** section of the account management tool, also allows you 
 #. Click **Get a new key**
 #. Your new key will now download. Please save this in a safe location.
 
-   .. image:: ../../images/step_manage_server_hosted_user_regenerate_private_key.png
+   .. image:: ../../images_old/step_manage_server_hosted_user_regenerate_private_key.png

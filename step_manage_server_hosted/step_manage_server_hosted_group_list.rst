@@ -10,4 +10,4 @@ To list groups in your organization:
 
 This will direct you to this page where it lists out the groups in your organization:
 
-   .. image:: ../../images/step_manage_server_hosted_group_list.png
+   .. image:: ../../images_old/step_manage_server_hosted_group_list.png

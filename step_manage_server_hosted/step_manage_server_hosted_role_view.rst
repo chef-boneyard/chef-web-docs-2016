@@ -12,5 +12,5 @@ To view a specific role:
 
 #. Click on the name of the specific role you want to view. This will bring you to a page where you can see the run_list and attributes for the role:
 
-   .. image:: ../../images/step_manage_server_hosted_role_view.png
+   .. image:: ../../images_old/step_manage_server_hosted_role_view.png
 

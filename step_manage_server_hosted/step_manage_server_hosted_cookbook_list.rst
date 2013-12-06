@@ -8,6 +8,6 @@ To list cookbooks in the organization:
 
 #. Click **Cookbooks** on the main navigation menu. This will display the list of cookbooks that have been uploaded to |chef hosted|:
 
-   .. image:: ../../images/step_manage_server_hosted_cookbook_list.png
+   .. image:: ../../images_old/step_manage_server_hosted_cookbook_list.png
 
 

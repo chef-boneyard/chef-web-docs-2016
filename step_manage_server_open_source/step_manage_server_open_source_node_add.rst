@@ -8,9 +8,9 @@ In order to create a node:
 #. Click **Create** on the sub navigation bar.
 #. Give the node a name.
 
-.. image:: ../../images/step_manage_server_open_source_node_create_1.png
+.. image:: ../../images_old/step_manage_server_open_source_node_create_1.png
 
 #. Edit the node, as described in the next section. Continue with your normal edit steps and click **Create Node** to save the new node.
 
-.. image:: ../../images/step_manage_server_open_source_node_create_2.png
+.. image:: ../../images_old/step_manage_server_open_source_node_create_2.png
 

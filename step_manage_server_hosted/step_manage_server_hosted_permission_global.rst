@@ -12,4 +12,4 @@ To view and update the global level permissions on an object type (Roles in this
 
 #. Click the **Permissions** tab on the sub-navigation menu, select or deselect the permission checkboxes as appropriate, and click **Update Permissions**.
 
-   .. image:: ../../images/step_manage_server_hosted_permission_global.png
+   .. image:: ../../images_old/step_manage_server_hosted_permission_global.png

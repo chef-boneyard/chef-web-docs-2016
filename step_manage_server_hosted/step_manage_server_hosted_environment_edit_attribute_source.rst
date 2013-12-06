@@ -6,5 +6,5 @@ To edit an environment attribute:
 
 #. Click the **Create Environment or Update Environment** button to save the environment.
 
-   .. image:: ../../images/step_manage_server_hosted_environment_edit_source.png
+   .. image:: ../../images_old/step_manage_server_hosted_environment_edit_source.png
 

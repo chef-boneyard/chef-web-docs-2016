@@ -12,8 +12,8 @@ You can also change who is the billing admin, the users that are able to see and
 
 #. Click on the edit link next to the ``billing-admins`` group: 
 
-   .. image:: ../../images/step_manage_server_hosted_permission_billing_admin_1.png
+   .. image:: ../../images_old/step_manage_server_hosted_permission_billing_admin_1.png
 
 #. Check the checkbox for any users you want to be billing admins, and then click on the **Save Group** button:
 
-   .. image:: ../../images/step_manage_server_hosted_permission_billing_admin_2.png
+   .. image:: ../../images_old/step_manage_server_hosted_permission_billing_admin_2.png

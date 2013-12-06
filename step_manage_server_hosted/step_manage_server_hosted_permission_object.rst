@@ -10,4 +10,4 @@ To view and update the object-level permissions on a specific object (a role, in
 
 #. Click the **Permissions** tab on the sub-navigation menu, select or deselect the permission checkboxes as appropriate, and click **Update Permissions**.
 
-   .. image:: ../../images/step_manage_server_hosted_permission_object.png
+   .. image:: ../../images_old/step_manage_server_hosted_permission_object.png

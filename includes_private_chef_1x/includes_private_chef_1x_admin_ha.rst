@@ -16,7 +16,7 @@ Failover on the back-end servers is achieved using the following:
 * A primary and backup cluster election using |vrrp| over unicast TCP/IP and |keepalived|
 * |keepalived| a virtual IP address to the primary server based on the results of the election
 
-.. image:: ../../images/private_chef_1x_ha_topology.png
+.. image:: ../../images_old/private_chef_1x_ha_topology.png
 
 The front-end servers require load-balancers. |company_name| recommends:
 

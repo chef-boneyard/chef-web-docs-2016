@@ -3,5 +3,5 @@
 
 From any point within the |chef manager|, you may visit your user profile page. Just click the user name in the upper right portion of the screen.
 
-.. image:: ../../images/private_chef_1x_user_profile_click_me.png
+.. image:: ../../images_old/private_chef_1x_user_profile_click_me.png
 

@@ -7,4 +7,4 @@ If you lose your password, you can recover it using the email address currently 
 #. You will be redirected to a password reset page. Enter your email address and press submit.
 #. Follow the directions that are sent in the email you will receive.
 
-   .. image:: ../../images/step_manage_server_hosted_user_password_recover.png
+   .. image:: ../../images_old/step_manage_server_hosted_user_password_recover.png

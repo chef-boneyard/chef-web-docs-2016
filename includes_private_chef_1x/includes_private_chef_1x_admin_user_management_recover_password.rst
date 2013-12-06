@@ -3,6 +3,6 @@
 
 If the |chef private| password is forgotten or lost, it can be reset by clicking the **Forgot your password?** link on the login page. After entering the user account name, an email will be sent to that contains a link that can be used to reset a password.
 
-.. image:: ../../images/private_chef_1x_forgot_password.png
+.. image:: ../../images_old/private_chef_1x_forgot_password.png
 
 .. note:: This does not apply to |windows ad| or |ldap|.

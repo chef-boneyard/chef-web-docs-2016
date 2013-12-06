@@ -12,4 +12,4 @@ To view a specific group in your organization:
 
 This will display the list of users and clients within the group, as well as the groups it is a part of:
 
-   .. image:: ../../images/step_manage_server_hosted_group_view.png
+   .. image:: ../../images_old/step_manage_server_hosted_group_view.png

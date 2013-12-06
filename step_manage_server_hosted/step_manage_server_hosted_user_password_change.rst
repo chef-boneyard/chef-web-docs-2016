@@ -7,4 +7,4 @@ From the **Change Password** page of the **Account Management** tool, you can re
 #. Enter your old password and your new password.
 #. Click **Change Password**.
 
-   .. image:: ../../images/step_manage_server_hosted_user_password_change.png
+   .. image:: ../../images_old/step_manage_server_hosted_user_password_change.png

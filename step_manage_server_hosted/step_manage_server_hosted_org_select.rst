@@ -8,7 +8,7 @@ To see which organization is currently selected, or to view the list of associat
 
 #. Click organizations in the upper right of the screen, next to your username.
 
-   .. image:: ../../images/step_manage_server_hosted_org_select.png
+   .. image:: ../../images_old/step_manage_server_hosted_org_select.png
 
 #. On the **Organizations** page, click the **Select** link next to the organization you want to select to use. If there are no associated organizations listed, please make sure your user account is associated with an organization or contact |company_name| support.
 

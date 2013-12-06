@@ -3,7 +3,7 @@
 
 Clicking the **Edit** link on the user profile page will allow any user to modify their profile.
 
-.. image:: ../../images/private_chef_1x_user_profile_edit_link.png
+.. image:: ../../images_old/private_chef_1x_user_profile_edit_link.png
 
 From here the following details can be modified:
 

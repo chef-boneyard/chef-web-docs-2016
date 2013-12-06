@@ -8,5 +8,5 @@ To list environments in your organization:
 
 #. Click **Environments** on the main navigation menu.
 
-   .. image:: ../../images/step_manage_server_hosted_environment_list.png
+   .. image:: ../../images_old/step_manage_server_hosted_environment_list.png
 

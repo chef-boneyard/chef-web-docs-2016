@@ -12,7 +12,7 @@ To move a node:
 
 #. Select the environment from the drop down box under **Environment**.
 
-   .. image:: ../../images/step_manage_server_hosted_environment_move_node.png
+   .. image:: ../../images_old/step_manage_server_hosted_environment_move_node.png
 
 #. Click on the **Save Node** button.
 

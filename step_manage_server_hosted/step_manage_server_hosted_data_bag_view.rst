@@ -9,4 +9,4 @@ To view or edit a specific data bag:
 
 #. Click on the specific data bag you want to view or edit.
 
-   .. image:: ../../images/step_manage_server_hosted_data_bag_view.png
+   .. image:: ../../images_old/step_manage_server_hosted_data_bag_view.png

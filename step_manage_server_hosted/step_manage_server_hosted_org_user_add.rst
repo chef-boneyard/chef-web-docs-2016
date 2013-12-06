@@ -14,7 +14,7 @@ To associate a user with the current organization:
 
 #. Enter the users you want to associate to the organization shown, separated by comma if there is more than one. And then click on the **Invite** button:
 
-   .. image:: ../../images/step_manage_server_hosted_org_user_add_1.png
+   .. image:: ../../images_old/step_manage_server_hosted_org_user_add_1.png
 
    Afterwards you should see this user appear in the **Pending User Invites** section of the **Users** tab.
 
@@ -22,6 +22,6 @@ To associate a user with the current organization:
 
 #. The user will need to click on organizations in the upper right hand corner. Then they can click on the **Accept** link next to the invite at the bottom of the page:
 
-   .. image:: ../../images/step_manage_server_hosted_org_user_add_2.png
+   .. image:: ../../images_old/step_manage_server_hosted_org_user_add_2.png
 
 

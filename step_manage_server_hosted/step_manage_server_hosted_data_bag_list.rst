@@ -8,5 +8,5 @@ To list data bags in your organization:
 
 #. Click **Data bags** on the main navigation menu.
 
-   .. image:: ../../images/step_manage_server_hosted_data_bag_list.png
+   .. image:: ../../images_old/step_manage_server_hosted_data_bag_list.png
 

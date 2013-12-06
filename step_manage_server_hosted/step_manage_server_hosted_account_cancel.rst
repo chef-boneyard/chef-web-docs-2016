@@ -6,10 +6,10 @@ From the **View/Edit Plan** page of the **Account Management** tool, you can can
 
 #. Select the **Cancel** button.
 
-   .. image:: ../../images/step_manage_server_hosted_account_cancel_1.png
+   .. image:: ../../images_old/step_manage_server_hosted_account_cancel_1.png
 
 #. Carefully read the presented warning.
 #. Enter a reason for cancellation.
 #. Press **Submit**
 
-   .. image:: ../../images/step_manage_server_hosted_account_cancel_2.png
+   .. image:: ../../images_old/step_manage_server_hosted_account_cancel_2.png

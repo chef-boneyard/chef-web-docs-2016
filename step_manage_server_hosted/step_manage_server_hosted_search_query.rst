@@ -10,10 +10,10 @@ For example, if you want to search a client whose name is "foobar":
 
 #. In the text box under the "Client" search index, enter "clientname:foobar" and click on the Search client button.
 
-   .. image:: ../../images/step_manage_server_hosted_search_index_1.png
+   .. image:: ../../images_old/step_manage_server_hosted_search_index_1.png
 
    The results will look like this if there is a client named "foobar":
 
-   .. image:: ../../images/step_manage_server_hosted_search_index_2.png
+   .. image:: ../../images_old/step_manage_server_hosted_search_index_2.png
 
    If you leave the search box empty, it returns all the objects of that type. Searching for Environments, Data Bags, Nodes, and Roles work the same way.

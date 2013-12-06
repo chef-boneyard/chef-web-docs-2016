@@ -10,7 +10,7 @@ To view the contents of a specific cookbook:
 
 #. Click the version of the cookbook you want to view. This may take longer for very large cookbooks.
 
-   .. image:: ../../images/step_manage_server_hosted_cookbook_view.png
+   .. image:: ../../images_old/step_manage_server_hosted_cookbook_view.png
 
 #. Click on **Library Files**, **Attribute Files**, **Definition Files**, **Recipe Files**, or **Template Files** to view the contents of the cookbook. If you do not see one of these links, the cookbook does not have files of that type.
 

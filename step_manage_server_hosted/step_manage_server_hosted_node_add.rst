@@ -14,7 +14,7 @@ To create a node:
 
 #. Click **Create** on the sub navigation bar.
 
-   .. image:: ../../images/step_manage_server_hosted_node_add.png
+   .. image:: ../../images_old/step_manage_server_hosted_node_add.png
 
 #. Give the node a name and select an **Environment** for the node.
 
