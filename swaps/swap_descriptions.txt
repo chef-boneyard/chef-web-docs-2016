@@ -321,6 +321,9 @@
 .. |enable_reporting| replace:: Indicates that data collection reporting is enabled during a |chef client| run.
 .. |enable_selinux_file_permission_fixup| replace:: |selinux| environments only. Indicates whether the |chef client| will attempt to apply the correct file permissions to an updated file by using the ``restorecon`` command. Set this value to ``false`` to prevent the |chef client| from attempting this action.
 .. |enable_submodules| replace:: Use to perform a sub-module initialization and update.
+.. |enable gzip| replace:: Indicates that |gzip| compression is enabled.
+.. |enable ipv6| replace:: Indicates whether |ipv6| addresses are enabled.
+.. |enable non_ssl| replace:: Indicates whether port 80 redirects to port 443 are allowed. When this value is set to ``false``, load balancers on the front-end hardware are allowed to do |ssl| termination of the WebUI and API.
 .. |enable reporting| replace:: Indicates that the |chef client| will send data to the |chef server oec| server for use with |reporting|.
 .. |enable reporting_url_fatals| replace:: Indicates that the |chef client| run will fail if reporting data cannot be sent to the |chef server oec| server (for any reason).
 .. |enable service| replace:: Indicates whether the service is enabled.
@@ -423,10 +426,10 @@
 .. |grouping| replace:: Adds a title and description to a group of attributes within a namespace. Takes a name (along with the / notation that defines a nested grouping), a title, and a short description.
 .. |groups| replace:: A comma-separated list of security groups.
 .. |gunicorn desc| replace:: |gunicorn| is a web service gateway interface server for |unix| that is a pre-fork worker model from the |ruby| |ruby unicorn| project.
-
-
-
-
+.. |gzip compression_level| replace:: The compression level used with |gzip|, from least amount of compression (``1``, fastest) to the most (``2``, slowest).
+.. |gzip http_version| replace:: Enables |gzip| depending on the version of the HTTP request.
+.. |gzip proxied| replace:: The type of compression used based on the request and response.
+.. |gzip types| replace:: Enables compression for the specified MIME-types.
 
 
 
@@ -1102,6 +1105,7 @@
 .. |port iis| replace:: The port on which a |microsoft iis| site will listen.
 .. |port listen| replace:: The port on which the application will bind. This value must be a string in the form: ``HOST``, ``HOST:PORT``, or ``unix:PATH``.
 .. |port listen_postgresql| replace:: The connection source to which |postgresql| will respond.
+.. |port non_ssl_nginx| replace:: The port on which the WebUI and API are bound for non-|ssl| connections. If this value is ``nil``, this port is disabled.
 .. |port nginx| replace:: The port to which the |nginx| service will bind.
 .. |port nrpe| replace:: The port on which the |service nrpe| service will listen.
 .. |port number| replace:: The port number.
@@ -1366,6 +1370,7 @@
 .. |secret| replace:: The encryption key that is used for values contained within a data bag.
 .. |secret-file| replace:: The path to the file that contains the encryption key.
 .. |server_aliases| replace:: An array of server aliases.
+.. |server_fqdn| replace:: The |fqdn| for the server.
 .. |server_hooks| replace:: A hash with values that are rendered as |gunicorn| server hook functions named after the hash item's key name.
 .. |service_order keepalived| replace:: The order by which |keepalived| will start and stop services when transitioning from a primary server to a backup.
 .. |settings django_template| replace:: A hash of additional settings that will be made available to a template.
@@ -1432,6 +1437,7 @@
 .. |ssl_certificate| replace:: The |ssl| certificate used to verify communication over HTTPS.
 .. |ssl_certificate key| replace:: The certificate key used for |ssl| communication.
 .. |ssl_certificate verify| replace:: Indicates whether SSL certificates are verified.
+.. |ssl_ciphers| replace:: The list of supported cipher suites that are used to establish a secure connection.
 .. |ssl_client_cert| replace:: The |open ssl| |x509| certificate. This setting is generated automatically by the |chef client| and most users will not need to modify it.
 .. |ssl_client_key| replace:: The |open ssl| |x509| key. This setting is generated automatically by the |chef client| and most users will not need to modify it.
 .. ssl_verify_mode is also in the server_security.html topic.
@@ -1557,6 +1563,7 @@
 .. |use nagle| replace:: Indicates whether the |nagle| buffering algorithm is enabled.
 .. |use pkgbuild| replace:: Indicates that a custom ``PKGBUILD`` file will be used. When ``true``, the |lwrp pacman aur| lightweight resource will look for a ``cookbook_file`` named ``PKGBUILD`` to use as package instructions.
 .. |use repo| replace:: Indicates that a repository is enabled.
+.. |use sendfile| replace:: Indicates whether ``sendfile()`` is used to copy data between file descriptors.
 .. |use ssl| replace:: Indicates whether |ssl| is being used.
 .. |use sudo_password| replace:: Indicates that a bootstrap operation is done using |sudo cmd|, with the password specified by the ``-P`` (or ``--ssh-password``) option.
 .. |use tcpip| replace:: Indicates whether |tcpip| transactions are enabled.
@@ -1603,6 +1610,7 @@
 .. |version package_version_assumed| replace:: The version of a package to be installed or upgraded. If a version is not specified, the latest version is assumed.
 .. |version package_windows_registry| replace:: The version number of a package, as indicated by the ``DisplayVersion`` property for an ``Uninstall`` registry key. If the version number equals the display version, the package will be installed.
 .. |version push jobs| replace:: The version of |push jobs|.
+.. |version protocols_ssl| replace:: The |ssl| protocol versions that are enabled.
 .. |versioned_cookbooks| replace:: Use to append cookbook versions to cookbooks. Set to ``false`` to hide cookbook versions: ``cookbooks/apache``. Set to ``true`` to show cookbook versions: ``cookbooks/apache-1.0.0`` and/or ``cookbooks/apache-1.0.1``. When this setting is ``true``, |subcommand knife download| will download ALL cookbook versions, which can be useful if a full-fidelity backup of data on the |chef server| is required.
 .. |virtual_environment| replace:: The name of the virtual environment.
 .. |vrrp_instance_advert| replace:: The frequency (in seconds) at which the primary |vrrp| server should advertise.

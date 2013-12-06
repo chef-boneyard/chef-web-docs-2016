@@ -18,37 +18,37 @@ This configuration file has the following settings for |nginx|:
    * - ``nginx['enable']``
      - |enable service| Default value: ``true``.
    * - ``nginx['enable_ipv6']``
-     - Enables IPv6. Default value: ``false``.
+     - |enable ipv6| Default value: ``false``.
    * - ``nginx['enable_non_ssl']``
-     - Indicates whether port 80 redirects to port 443 are allowed. When this value is set to ``false``, load balancers on the front-end hardware are allowed to do |ssl| termination of the WebUI and API. Default value: ``false``.
+     - |enable non_ssl| Default value: ``false``.
    * - ``nginx['gzip']``
-     - Indicates that |gzip| compression is enabled. Default value: ``on``.
+     - |enable gzip| Default value: ``on``.
    * - ``nginx['gzip_comp_level']``
-     - The compression level used with |gzip|, from least amount of compression (``1``, fastest) to the most (``2``, slowest). Default value: ``2``.
+     - |gzip compression_level| Default value: ``2``.
    * - ``nginx['gzip_http_version']``
-     - Enables |gzip| depending on the version of the HTTP request. Default value: ``1.0``.
+     - |gzip http_version| Default value: ``1.0``.
    * - ``nginx['gzip_proxied']``
-     - The type of compression used based on the request and response. Default value: ``any``.
+     - |gzip proxied| Default value: ``any``.
    * - ``nginx['gzip_types']``
-     - Enables compression for the specified MIME-types. Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
+     - |gzip types| Default value: ``[ "text/plain", "text/css", "application/x-javascript", "text/xml", "application/xml", "application/xml+rss", "text/javascript", "application/json" ]``.
    * - ``nginx['ha']``
      - |use ha| Default value: ``false``.
    * - ``nginx['keepalive_timeout']``
-     - The amount of time (in seconds) that a connection will be allowed to stay open. Default value: ``65``.
+     - |worker_max_keepalive| Default value: ``65``.
    * - ``nginx['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/nginx``.
    * - ``nginx['non_ssl_port']``
-     - The port on which the WebUI and API are bound for non-|ssl| connections. If this value is ``nil``, this port is disabled. Use ``nginx['enable_non_ssl'] to enable or disable |ssl| redirects on this port number. Default value: ``80``.
+     - |port non_ssl_nginx| Default value: ``80``. Use ``nginx['enable_non_ssl'] to enable or disable |ssl| redirects on this port number.
    * - ``nginx['sendfile']``
-     - Indicates whether ``sendfile()`` is used to copy data between file descriptors. Default value: ``on``.
+     - |use sendfile| Default value: ``on``.
    * - ``nginx['server_name']``
-     - The |fqdn| of the server. Default value: ``node['fqdn']``.
+     - |server_fqdn| Default value: ``node['fqdn']``.
    * - ``nginx['ssl_certificate']``
      - |ssl_certificate| Default value: ``nil``.
    * - ``nginx['ssl_certificate_key']``
      - |ssl_certificate key| Default value: ``nil``.
    * - ``nginx['ssl_ciphers']``
-     - The list of supported cipher suites that are used to establish a secure connection. Default value: varies.
+     - |ssl_ciphers| Default value: varies.
    * - ``nginx['ssl_company_name']``
      - Default value: ``YouCorp``.
    * - ``nginx['ssl_country_name']``
@@ -62,7 +62,7 @@ This configuration file has the following settings for |nginx|:
    * - ``nginx['ssl_port']``
      - Default value: ``443``.
    * - ``nginx['ssl_protocols']``
-     - The protocol versions that are enabled. Default value: varies, depending on the configuration of the |chef server| topology.
+     - |version protocols_ssl| Default value: varies, depending on the configuration of the |chef server| topology.
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
    * - ``nginx['svlogd_num']``
