@@ -7,14 +7,6 @@
 This topic is an alphabetical list of the various tasks that can be performed when using |webui|, the web user interface for |chef server oec|.
 
 
-
-
-Add Permission
-
-
-
-
-
 Add Client
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_add.rst
