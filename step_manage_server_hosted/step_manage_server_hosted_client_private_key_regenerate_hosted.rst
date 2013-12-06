@@ -12,7 +12,7 @@ To regenerate a client's private key:
 
    .. image:: ../../images/step_manage_server_hosted_client_private_key_regenerate_hosted.png
 
-   Your new private key will start downloading. Save this key! There is no way for |opscode| to recover the key if you lose it, though you can generate a new key again.
+   Your new private key will start downloading. Save this key! There is no way for |company_name| to recover the key if you lose it, though you can generate a new key again.
 
 
 

@@ -10,8 +10,8 @@ About Cookbooks
 
    * - Components
      - Description
-   * - :doc:`Opscode-authored Cookbooks </opscode_cookbooks>`
-     - |opscode| maintains a collection of cookbooks that are widely used by the community.
+   * - :doc:`Chef Cookbooks </opscode_cookbooks>`
+     - |company_name| maintains a collection of cookbooks that are widely used by the community.
    * - `Community-authored Cookbooks <http://community.opscode.com/cookbooks>`_
      - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that by nearly everyone.
    * - :doc:`Recipes </essentials_cookbook_recipes>`

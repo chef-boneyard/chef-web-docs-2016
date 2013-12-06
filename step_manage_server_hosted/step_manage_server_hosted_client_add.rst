@@ -14,7 +14,7 @@ If you need to manually create one, you can follow these steps:
 
    .. image:: ../../images/step_manage_server_hosted_client_add_1.png
 
-#. Enter a name for the client and press **Create Client**. A link to your client's private key will be shown. |opscode| does not store your private keys, so be sure to download and save the private key. You can generate a new private key if you lose it, however.
+#. Enter a name for the client and press **Create Client**. A link to your client's private key will be shown. |company_name| does not store your private keys, so be sure to download and save the private key. You can generate a new private key if you lose it, however.
 
    .. image:: ../../images/step_manage_server_hosted_client_add_2.png
 

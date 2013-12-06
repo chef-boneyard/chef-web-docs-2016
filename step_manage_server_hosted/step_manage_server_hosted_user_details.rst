@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-From the **My Profile** page of the account management tool, you can update the details about your |opscode| user account.
+From the **My Profile** page of the account management tool, you can update the details about your |company_name| user account.
 
 #. Go to the **Account Management** site (https://www.opscode.com/account) and login using your existing username.
 #. Go to the **My Profile** page by clicking on **My Profile** in the navigation bar.

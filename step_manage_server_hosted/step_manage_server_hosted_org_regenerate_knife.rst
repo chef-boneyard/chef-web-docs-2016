@@ -11,7 +11,7 @@ To download the private key and the knife.rb file:
 
 #. Click **Organizations** in the upper right of the screen, next to your username.
 
-#. On the **Organizations** page, click the **Regenerate validation key** and the **Generate knife config** links to regenerate the private key and download a |knife| config file. If there are no associated organizations listed, please make sure your user account is associated with an organization or contact |opscode| support.
+#. On the **Organizations** page, click the **Regenerate validation key** and the **Generate knife config** links to regenerate the private key and download a |knife| config file. If there are no associated organizations listed, please make sure your user account is associated with an organization or contact |company_name| support.
 
 Due to a bug with some browsers, the file may be named "_regenerate_key" after downloading. You can just rename this file to ORG-validator.pem substituting the name of your organization for ORG.
 If you will be using |knife|, be sure to download the user's private key as well.
