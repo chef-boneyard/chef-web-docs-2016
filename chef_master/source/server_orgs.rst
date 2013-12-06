@@ -63,4 +63,9 @@ The |chef server oec| supports using as many organizations as required. This can
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_groups_push_jobs.rst
 
+|reporting| Groups
+=====================================================
 
+.. include:: ../../includes_reporting/includes_reporting.rst
+
+.. include:: ../../includes_server_rbac/includes_server_rbac_groups_reporting.rst
