@@ -8,4 +8,4 @@ To view permissions for an environment object:
 #. Click |webui policy_client|.
 #. Select a client.
 #. Click the |webui tab_permissions| tab.
-#. Set the appropriate permissions: |webui permission delete|, |webui permission grant|, |webui permission read|, and/or |webui permission update|.ver.
+#. Set the appropriate permissions: |webui permission delete|, |webui permission grant|, |webui permission read|, and/or |webui permission update|.
