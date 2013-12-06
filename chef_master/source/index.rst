@@ -263,6 +263,13 @@ Cookbooks
    server_high_availability
    server_ldap
    server_logs
+   server_manage_clients
+   server_manage_cookbooks
+   server_manage_data_bags
+   server_manage_environments
+   server_manage_nodes
+   server_manage_reports
+   server_manage_roles
    server_monitor
    server_orgs
    server_security
