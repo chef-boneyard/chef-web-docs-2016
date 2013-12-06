@@ -11,7 +11,7 @@ After the prerequisites have been met, the remaining sections of this guide prov
 * **Tiered:** |chef private| on multiple servers.
 * **High Availability:** |chef private| on multiple servers with a highly available data storage layer.
 
-Representatives from |opscode| can provide guidance on which options are right for the environment in which |chef private| will be installed. If there are any doubts, follow the instructions for a standalone installation.
+Representatives from |company_name| can provide guidance on which options are right for the environment in which |chef private| will be installed. If there are any doubts, follow the instructions for a standalone installation.
 
 After |chef private| is installed, the next steps will be to create a user and an organization.
 

@@ -6,6 +6,19 @@
 
 This topic is an alphabetical list of the various tasks that can be performed when using |webui|, the web user interface for |chef server oec|.
 
+
+
+
+Add Permission
+
+
+
+
+
+Add Client
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_add.rst
+
 Add Data Bag
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_add.rst
@@ -45,6 +58,10 @@ Add Tag
 Change Password
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_change_password.rst
+
+Delete Client
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_delete.rst
 
 Delete Data Bag
 =====================================================
@@ -150,6 +167,10 @@ Remove User from Org
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_remove_from_org.rst
 
+Reset Client Key
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_reset_key.rst
+
 Reset Node Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_reset_key.rst
@@ -165,6 +186,10 @@ Reset Org Key
 Search Nodes
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_search.rst
+
+Set Client Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_set.rst
 
 Set Cookbook Permissions
 =====================================================
@@ -205,6 +230,10 @@ Set Tag
 Switch Orgs
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_switch.rst
+
+Update Client Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_add.rst
 
 Update Cookbook Permissions
 =====================================================
@@ -253,6 +282,14 @@ View All Environments
 View All Roles
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_roles_view.rst
+
+View Client Details
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_view_details.rst
+
+View Client Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_view.rst
 
 View Cookbook Details
 =====================================================

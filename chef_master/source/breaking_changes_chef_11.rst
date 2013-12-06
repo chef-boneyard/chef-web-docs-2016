@@ -352,7 +352,7 @@ Because of the way the the ``mixlib-cli`` library is implemented, it is difficul
 #. Configuration settings under Chef::Config[:knife]
 #. User supplied values parsed by mixlib-cli
 
-Depending on how |knife| plugin authors have worked around the |chef 10| behavior, it's possible that this change will lead to incorrect values being used for configurable parameters. The |opscode|-maintained cloud plugins have been reviewed and should work correctly on both |chef 10| and |chef 11|.
+Depending on how |knife| plugin authors have worked around the |chef 10| behavior, it's possible that this change will lead to incorrect values being used for configurable parameters. The |company_name|-maintained cloud plugins have been reviewed and should work correctly on both |chef 10| and |chef 11|.
 
 When writing |knife| plugins for |chef 11|, plugin authors are encouraged to define default settings using the ``mixlib-config`` DSL, like this:
 

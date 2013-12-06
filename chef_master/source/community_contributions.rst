@@ -7,17 +7,17 @@ We are glad you want to contribute to Chef! Here's how:
 #. Create an account on the open source ticket tracking system: http://tickets.opscode.com
 #. Sign the contributor licensing agreement (`CLA <http://docs.opscode.com/community_contributions.html#about-clas-and-cclas>`_) or corporate contributor license agreement (`CCLA <http://docs.opscode.com/community_contributions.html#about-clas-and-cclas>`_): https://secure.echosign.com/public/hostedForm?formid=PJIF5694K6L; both individuals and companies must sign the contributor licensing agreement unless the fix is an `Obvious Fix <http://docs.opscode.com/community_contributions.html#the-obvious-fix-rule>`_
 #. Create a ticket for the change on the bug tracker
-#. Link to your patch as a rebased git branch or pull request from the ticket; pull requests may be made in |github| against any |opscode|-managed open source project
+#. Link to your patch as a rebased git branch or pull request from the ticket; pull requests may be made in |github| against any |company_name|-managed open source project
 #. Resolve the ticket as fixed
 
 We regularly review contributions and will get back to you if we have any suggestions or concerns.
 
-|opscode|-managed open source projects are located here: https://github.com/opscode.
+|company_name|-managed open source projects are located here: https://github.com/opscode.
 
 
 About CLAs and CCLAs
 =====================================================
-A contributor licensing agreement (CLA) and/or a company contributor licensing agreement (CCLA) must be filled out by every contributor to an |opscode|-managed open source project.
+A contributor licensing agreement (CLA) and/or a company contributor licensing agreement (CCLA) must be filled out by every contributor to an |company_name|-managed open source project.
 
 The CLA (and CCLA) makes everyone's rights clear
 
@@ -35,7 +35,7 @@ The CLA is beneficial to our contributors and users because:
 * It makes clear what is required of our contributors.
 * The most important thing about the CLA is that it doesn't give Opscode any special rights - it just makes things more explicit.
 
-Opscode does not merge any pull requests made against an |opscode|-managed open source repository until that pull request is associated with a signed CLA (or CCLA), with two exceptions: "Obvious Fixes" and pull requests made against the documentation repository (https://github.com/opscode/chef-docs).
+Opscode does not merge any pull requests made against an |company_name|-managed open source repository until that pull request is associated with a signed CLA (or CCLA), with two exceptions: "Obvious Fixes" and pull requests made against the documentation repository (https://github.com/opscode/chef-docs).
 
 About the Apache License
 =====================================================
@@ -65,7 +65,7 @@ It is our goal to run a successful, truly open source business. To that end, we 
 
 The "Obvious Fix" Rule
 =====================================================
-|opscode|'s contribution policy is aimed at encouraging broad participation from our community, and minimizing risks to |chef| and our community due to inappropriate contributions of the intellectual property of others.
+|company_name|'s contribution policy is aimed at encouraging broad participation from our community, and minimizing risks to |chef| and our community due to inappropriate contributions of the intellectual property of others.
 
 As a general standard, require every contributor to fill out a Contributor License Agreement ("CLA"), either individually or on behalf of a corporation.
 

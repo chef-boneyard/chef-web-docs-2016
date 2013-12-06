@@ -1,9 +1,9 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The topology options supported by |opscode| allow for a wide range of successful |chef private| environments, and are not likely to require any modifications even for our larger customers.
+The topology options supported by |company_name| allow for a wide range of successful |chef private| environments, and are not likely to require any modifications even for our larger customers.
 
-The individual components of the |chef private| server are commonly available technologies and we expect that many of our customers are already familiar with them. However, |opscode| has taken the guesswork out of configuring |chef private| and has given you configurations that represent everything we have learned while building and running |chef hosted|.
+The individual components of the |chef private| server are commonly available technologies and we expect that many of our customers are already familiar with them. However, |company_name| has taken the guesswork out of configuring |chef private| and has given you configurations that represent everything we have learned while building and running |chef hosted|.
 
 Scaling individual components presents configuration and failover challenges to your |chef private| environment, and is not supported. We discourage our customers from going rogue and scaling things anyway; please give us a chance to work on your scaling issues before deviating your environment from the supported technologies.
 

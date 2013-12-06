@@ -9,6 +9,6 @@ By employing one of the three topologies discussed in this guide, our support te
 
 We know that many of our customers are talented and knowledgeable technical people, and have experience running many of the components that are included as part of |chef private|. Your environment may have an existing run book or best practice for any or all of these components individually already. We ask that you treat your |chef private| system as its own entity for optimal performance.
 
-We value your feedback and input on any questions, concerns, and issues you have with |chef private|. Our team is open to suggestions and community participation is encouraged, especially on our IRC channel and at our events. While we are not able to make extensive customizations for |chef private| installations, your feedback will help us decide on future development on the product for which |opscode| officially provides support.
+We value your feedback and input on any questions, concerns, and issues you have with |chef private|. Our team is open to suggestions and community participation is encouraged, especially on our IRC channel and at our events. While we are not able to make extensive customizations for |chef private| installations, your feedback will help us decide on future development on the product for which |company_name| officially provides support.
 
 The rest of this document serves as a FAQ of commonly requested modifications to |chef private|.

@@ -3,7 +3,7 @@
 
 Welcome to the |chef private| guide! This document is broken into the following sections:
 
-* **Engagement Overview:** A guide to working with |opscode| consulting to install |chef private| in your environment.
+* **Engagement Overview:** A guide to working with |company_name| consulting to install |chef private| in your environment.
 * **Architecture:** An overview of the three topology options: Standalone, Tiered, and High Availability.
 * **Installation:** Reference documentation on how to install |chef private|.
 * **Administration:** Deeper content on the specifics of how to administer |chef private|.

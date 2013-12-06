@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The short version of why |opscode| chose the |apache| license for |chef| is because we defined three broad requirements for a license under which we would release open source software:
+The short version of why |company_name| chose the |apache| license for |chef| is because we defined three broad requirements for a license under which we would release open source software:
 
 * We are an open source company and we make money from our open source software so we wanted a license that allowed us to build a business from the things we created
 * We wanted anyone (or any company) whose problems were solved by our software to be able to use it, in any environment they wanted, in whatever way they wanted

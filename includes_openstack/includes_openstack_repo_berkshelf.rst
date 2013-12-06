@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef repo openstack| uses |berkshelf| (https://berkshelf.com) to manage downloading all of the proper cookbook versions, whether from |git| or from the |opscode| community website (https://community.opscode.com). The preference is to eventually upstream all cookbook dependencies to the |opscode| community website. A .berksfile (the file type used by |berkshelf|) lists the current cookbook dependencies.
+The |chef repo openstack| uses |berkshelf| (https://berkshelf.com) to manage downloading all of the proper cookbook versions, whether from |git| or from the |company_name| community website (https://community.opscode.com). The preference is to eventually upstream all cookbook dependencies to the |company_name| community website. A .berksfile (the file type used by |berkshelf|) lists the current cookbook dependencies.

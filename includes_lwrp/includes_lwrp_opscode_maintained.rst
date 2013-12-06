@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Custom resources and providers can also be created using the |lwrp| DSL. |opscode| provides several cookbooks that define some commonly used |lwrp|. To use the lightweight resources provided by |opscode| the cookbook that defines it must also be used. These lightweight resources can be used within recipes to increase automation opportunities.
+Custom resources and providers can also be created using the |lwrp| DSL. |company_name| maintains a collection of cookbooks that define some common scenarios. Many of these cookbooks contain custom resources. To use these resources within recipes to increase automation opportunities the cookbook that defines these custom resources must also be uploaded to the |chef server| so that the custom resources are available to the |chef client| during a |chef client| run.
 
 .. list-table::
    :widths: 150 450

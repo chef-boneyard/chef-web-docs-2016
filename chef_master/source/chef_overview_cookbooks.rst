@@ -50,7 +50,7 @@ In addition to attributes, recipes, and versions, the following items are also p
 
 Community Cookbooks
 =====================================================
-|opscode| maintains a large collection of cookbooks. In addition, there are thousands of cookbooks created and maintained by the community:
+|company_name| maintains a large collection of cookbooks. In addition, there are thousands of cookbooks created and maintained by the community:
 
 .. list-table::
    :widths: 150 450
@@ -59,6 +59,6 @@ Community Cookbooks
    * - Components
      - Description
    * - :doc:`Cookbooks Maintained by Opscode </opscode_cookbooks>`
-     - |opscode| maintains a collection of cookbooks that are widely used by the community.
+     - |company_name| maintains a collection of cookbooks that are widely used by the community.
    * - `Cookbooks Maintained by the Community <http://community.opscode.com/cookbooks>`_
      - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that are some of the most popular and are used by nearly everyone.

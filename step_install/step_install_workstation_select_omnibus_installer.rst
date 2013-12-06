@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The bits for the |chef client| |omnibus installer| are available as a download from |opscode|.
+The bits for the |chef client| |omnibus installer| are available as a download from |company_name|.
 
 To download the |omnibus installer| for the |chef client|:
 

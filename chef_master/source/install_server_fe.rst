@@ -2,7 +2,7 @@
 Scaled Front End
 =====================================================
 
-The scaled front end installation allows you to install |chef server oec| on multiple servers, in order to scale portions of the service horizontally. It does not provide high availability for the back-end data services, but instead relies on the ability to quickly restore the state of the server from a backup or from source code control. |opscode| generally recommends a High Availability installation rather than a scaled front end installation, whenever possible.
+The scaled front end installation allows you to install |chef server oec| on multiple servers, in order to scale portions of the service horizontally. It does not provide high availability for the back-end data services, but instead relies on the ability to quickly restore the state of the server from a backup or from source code control. |company_name| generally recommends a High Availability installation rather than a scaled front end installation, whenever possible.
 
 We refer to all the servers in a particular installation of |chef server oec| as a cluster.
 

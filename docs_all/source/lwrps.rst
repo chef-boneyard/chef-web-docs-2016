@@ -196,7 +196,7 @@ Inline Resources
 
 Lightweight Resources and Providers
 =====================================================
-The following groups of lightweight resources are available in open source cookbooks that are provided by |opscode|:
+The following groups of lightweight resources are available in open source cookbooks that are provided by |company_name|:
 
 * application
 * apt

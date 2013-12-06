@@ -5,6 +5,6 @@ The front-end layer of a |chef private| topology can be scaled to as many nodes 
 
 The back-end portion of any High Availability topology can be scaled vertically to provide better I/O performance for searching. |chef private| can also be configured to cache cookbook files, which will improve of each node during every |chef| run.
 
-The High Availability topology uses |drbd| to provide data redundancy on the back-end layer. |drbd| is designed to run on a pair of hosts and that is the configuration officially supported by |opscode|.
+The High Availability topology uses |drbd| to provide data redundancy on the back-end layer. |drbd| is designed to run on a pair of hosts and that is the configuration officially supported by |company_name|.
 
 

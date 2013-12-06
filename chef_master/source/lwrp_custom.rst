@@ -32,7 +32,7 @@ Platform vs. Lightweight
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_compared_to_platform_resource.rst
 
-|opscode|-maintained
+|company_name|-maintained
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_opscode_maintained.rst
 

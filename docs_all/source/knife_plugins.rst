@@ -39,7 +39,7 @@ Authenticated API Requests
 Plugins
 =====================================================
 
-The following plugins for |knife| are provided by |opscode|:
+The following plugins for |knife| are provided by |company_name|:
 
 * knife azure
 * knife bluebox

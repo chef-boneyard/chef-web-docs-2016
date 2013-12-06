@@ -10,7 +10,7 @@ Inline Compile Mode
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst
 
-|opscode|-maintained
+|company_name|-maintained
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_opscode_maintained.rst
 

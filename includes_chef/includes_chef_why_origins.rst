@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|opscode| began as a consulting company named HJK Solutions, which built fully automated infrastructure for startups. Everything from installing operating systems to full application development. Over the course of building a dozen or so different startups on the same basic infrastructure timeline (over a one year period), we realized that getting to a place where everyone could have a fully automated infrastructure, regardless of the expertise of their system administrators, was possible. Only a few things stood in the way:
+|company_name| began as a consulting company named HJK Solutions, which built fully automated infrastructure for startups. Everything from installing operating systems to full application development. Over the course of building a dozen or so different startups on the same basic infrastructure timeline (over a one year period), we realized that getting to a place where everyone could have a fully automated infrastructure, regardless of the expertise of their system administrators, was possible. Only a few things stood in the way:
 
 * A fully automated infrastructure is a fully integrated infrastructure. The different components need to be able to communicate with each other. (Your application informs your infrastructure, just like your infrastructure informs your application.)
 * Configuration management is the fundamental bedrock of infrastructure automation. For the infrastructure to be fully automated, it must expose configuration management as a service.

@@ -5,7 +5,7 @@ Configuration of |chef private| SSL using certificate authority-verified certifi
 certificate and private key file obtained from your certifying authority in the correct files after the
 initial configuration of |chef private|.
 
-Initial configuration of |chef private| is done automatically using an |opscode| self-signed certificate to create the
+Initial configuration of |chef private| is done automatically using an |company_name| self-signed certificate to create the
 certificate and private key files for |nginx|.
 
 The locations of the certificate and private key files are 

@@ -3,4 +3,4 @@
 
 To delete an organization:
 
-#. Contact |opscode| support.
+#. Contact |company_name| support.

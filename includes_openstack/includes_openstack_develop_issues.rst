@@ -8,4 +8,4 @@ Bugs found in cookbooks are tracked and managed using |launchpad|:
 * View the list of open bugs: https://bugs.launchpad.net/openstack-chef
 * File a new bug: https://bugs.launchpad.net/openstack-chef/+filebug
 
-Issues with the |subcommand knife openstack| plugin are tracked using the |opscode| ticket tracking system: https://tickets.opscode.com.
+Issues with the |subcommand knife openstack| plugin are tracked using the |company_name| ticket tracking system: https://tickets.opscode.com.

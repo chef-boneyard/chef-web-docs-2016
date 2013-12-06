@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Each phase of the project will have one or more To-Do lists created, which are used to track deliverables (both from |opscode| to you, and from you to |opscode|.) As each task is performed, it will be crossed off the list---**To-Do** lists are a great way to see, at a glance, how the work on your project is going, and how much work remains.
+Each phase of the project will have one or more To-Do lists created, which are used to track deliverables (both from |company_name| to you, and from you to |company_name|.) As each task is performed, it will be crossed off the list---**To-Do** lists are a great way to see, at a glance, how the work on your project is going, and how much work remains.
 
 Most often, you will be accessing the **To-Do** tab to either review a particular phases status, or to cross off a **To-Do** item yourself.
 

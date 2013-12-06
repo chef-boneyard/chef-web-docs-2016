@@ -12,7 +12,7 @@ Private Chef 1.4.x
 
 **Admin:** :doc:`Configure </private_chef_1x_admin_configure>` | :doc:`Upgrade </private_chef_1x_admin_upgrade>` | :doc:`High Availability </private_chef_1x_admin_ha>` | :doc:`Logs </private_chef_1x_admin_logs>` | :doc:`AD / LDAP </private_chef_1x_admin_ad_ldap>` | :doc:`User Management </private_chef_1x_admin_user_management>` | :doc:`SSL Configuration </private_chef_1x_admin_ssl>` | :doc:`orgmapper </private_chef_1x_admin_orgmapper>` | :doc:`private-chef-ctl </private_chef_1x_admin_private_chef_ctl>`
 
-Contact |opscode| :doc:`Support </private_chef_1x_support>` for additional questions.
+Contact |company_name| :doc:`Support </private_chef_1x_support>` for additional questions.
 
 .. note:: Unless otherwise stated, all the commands in the documentation for |chef private| should be run as root, either directly or via the ``sudo`` command.
 

@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|opscode| provides the following plug-ins for |knife|, which work in much the same way as the built-in subcommands (including common options). Each plug-in must be downloaded separately from |github| and only works with a specific third-party environment:
+|company_name| provides the following plug-ins for |knife|, which work in much the same way as the built-in subcommands (including common options). Each plug-in must be downloaded separately from |github| and only works with a specific third-party environment:
 
 * ``knife azure`` for |windows azure|
 * ``knife bluebox`` for |bluebox|

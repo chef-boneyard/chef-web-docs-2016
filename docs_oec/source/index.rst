@@ -1,5 +1,5 @@
 =====================================================
-All About Enterprise Chef ...
+All About |chef server oec| ...
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
@@ -78,7 +78,7 @@ Knife Cloud Plugins
 -----------------------------------------------------
 Plugins allow |knife| to interact with all of the major cloud providers. All |knife| plugins share the same set of :doc:`common options </knife_common_options>` and built-in |knife| subcommands, plus |knife| plugins can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|.
 
-|opscode| maintains the following |knife| plugins:
+|company_name| maintains the following |knife| plugins:
 
 .. raw:: html
 
@@ -380,7 +380,7 @@ A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much lik
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_custom_provider.html">Create a lightweight provider using platform resources</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_custom_provider_ruby.html">Create a lightweight provider using Ruby</a> </br>
 
-The following LWRPs are available in |opscode|-maintained cookbooks:
+The following LWRPs are available in |company_name|-maintained cookbooks:
 
 .. raw:: html
 

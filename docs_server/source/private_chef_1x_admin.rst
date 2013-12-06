@@ -434,7 +434,7 @@ backend_vip
 
 General Options
 -----------------------------------------------------
-The vast majority of configurations are achieved using only the common options listed previously. |chef private| does offer additional configuration and this section lists them all. Please consider talking with an |opscode| solutions engineer about these settings before making changes.
+The vast majority of configurations are achieved using only the common options listed previously. |chef private| does offer additional configuration and this section lists them all. Please consider talking with an |company_name| solutions engineer about these settings before making changes.
 
 bootstrap
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

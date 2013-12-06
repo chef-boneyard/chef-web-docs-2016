@@ -16,7 +16,7 @@ where ``service_name`` is ``authz``, ``erchef``, or ``org_app``. This command wi
 
    $ Erlang R15B02 (erts-5.9.2) [source] [64-bit] ...
 
-.. warning:: Connecting to the |erlang| processes should only be done when directed by |opscode| support services.
+.. warning:: Connecting to the |erlang| processes should only be done when directed by |company_name| support services.
 
 To connect to the |service authz| service, use the following command:
 

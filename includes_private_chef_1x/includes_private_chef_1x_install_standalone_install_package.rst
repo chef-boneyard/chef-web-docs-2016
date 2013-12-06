@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Install the |chef private| package on the server, using the name of the package provided by |opscode|. For |redhat| and |centos| 6:
+Install the |chef private| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
 
 .. code-block:: bash
 

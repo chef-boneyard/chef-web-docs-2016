@@ -9,7 +9,7 @@ This subcommand has the following options:
    |forward_agent|
 
 ``--bootstrap-no-proxy NO_PROXY_URL_or_IP``
-   |bootstrap no_proxy| Note: This option is used internally by |opscode| to help verify bootstrap operations during testing and should never be used during an actual bootstrap operation.
+   |bootstrap no_proxy| Note: This option is used internally by |company_name| to help verify bootstrap operations during testing and should never be used during an actual bootstrap operation.
 
 ``--bootstrap-proxy PROXY_URL``
    |bootstrap proxy|

@@ -27,7 +27,7 @@ Why was Chef created?
 
 How can I help?
 -----------------------------------------------------
-`Join the community <http://docs.opscode.com/#the-community>`_, participate in the discussion going on right now on IRC, sign up for the mailing Lists, and read the instructions on how to contribute to an |opscode| open source project. For more information about participating in the community, see 
+`Join the community <http://docs.opscode.com/#the-community>`_, participate in the discussion going on right now on IRC, sign up for the mailing Lists, and read the instructions on how to contribute to an |company_name| open source project. For more information about participating in the community, see 
 
 Do I really need to know Ruby?
 -----------------------------------------------------

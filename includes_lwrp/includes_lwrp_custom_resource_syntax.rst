@@ -29,7 +29,7 @@ where
 * ``:validation_parameter`` represents a comma-delimited list of validation parameters for each attribute
 * ``attr_accessor`` allows the lightweight resource to use the ``Module`` |ruby| class to check for one (or more) named attributes, such as ``:exists`` or ``:running``
 
-For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| cookbook maintained by |opscode|) can be used to manage files located in ``/etc/cron.d``:
+For example, the ``cron_d`` lightweight resource (found in the |cookbook cron| cookbook) can be used to manage files located in ``/etc/cron.d``:
 
 .. code-block:: ruby
 

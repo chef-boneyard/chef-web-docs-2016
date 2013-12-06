@@ -12,6 +12,6 @@ To connect to the |postgresql| database, run the following command:
      export PATH=$PATH:/opt/opscode/bin:/opt/opscode/embedded/bin
      bin/psql -U opscode_chef
 
-.. warning:: Connecting to the |postgresql| database should only be done when directed by |opscode| support services.
+.. warning:: Connecting to the |postgresql| database should only be done when directed by |company_name| support services.
 
 

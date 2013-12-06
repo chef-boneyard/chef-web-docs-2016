@@ -18,7 +18,7 @@ Failover on the back-end servers is achieved using the following:
 
 .. image:: ../../images/oec_ha.png
 
-The front-end servers require load-balancers. |opscode| recommends:
+The front-end servers require load-balancers. |company_name| recommends:
 
 * Hardware load-balancers (such as |f5| or |netscalar|)
 * |ssl| off-loading

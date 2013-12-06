@@ -7,7 +7,7 @@ For a history of |chef|, where it came from and how it evolved, watch these two 
 * Part one: |url opscode_youtube_short_part_one|
 * Part two: |url opscode_youtube_short_part_two|
 
-For more information about |opscode|, cookbooks, and the community:
+For more information about |company_name|, cookbooks, and the community:
 
 * |url opscode|
 * |url opscode_community|

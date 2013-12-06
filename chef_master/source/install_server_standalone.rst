@@ -28,7 +28,7 @@ Upload the package provided to the server on which |chef server oec| will be ins
 
 Install the Package
 =====================================================
-Install the |chef server oec| package on the server, using the name of the package provided by |opscode|. For |redhat| and |centos| 6:
+Install the |chef server oec| package on the server, using the name of the package provided by |company_name|. For |redhat| and |centos| 6:
 
 .. code-block:: bash
 

@@ -6,7 +6,7 @@ Private Chef 1.x.x Engagement
 
 How Consulting Works
 =====================================================
-The following sections describe how |opscode| consulting works from the initial engagement through to the point at which the engagement is finished.
+The following sections describe how |company_name| consulting works from the initial engagement through to the point at which the engagement is finished.
 
 Initial Engagement
 -----------------------------------------------------
