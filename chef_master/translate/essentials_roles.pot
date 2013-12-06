@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-05 23:30\n"
+"POT-Creation-Date: 2013-12-06 00:26\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,448 +17,448 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/essentials_roles.rst:8
-# 623dc523a7a942d49102785ba7fa7451
+# 7714545748a041e9a0a7a0bf56094e31
 msgid "About Roles"
 msgstr ""
 
 #: ../../includes_role/includes_role.rst:5
-# d2d82c07bfbc49288c7e98eded52a284
+# 61947db5bbe34abc90f8f4895e224ba5
 msgid "A role is a way to define certain patterns and processes that exist across nodes in an organization as belonging to a single job function. Each role consists of zero (or more) attributes and a run list. Each node can have zero (or more) roles assigned to it. When a role is run against a node, the configuration details of that node are compared against the attributes of the role, and then the contents of that role's run list are applied to the node's configuration details. When a |chef client| runs, it merges its own attributes and run lists with those contained within each assigned role."
 msgstr ""
 
 #: ../source/essentials_roles.rst:13
-# 1bbbee0858824a9a8e59ee096f1e1e32
+# 185033a74a7b4cc3bb47ba1cb99ffd02
 msgid "Role Attributes"
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute.rst:4
-# 3c20df07bf5146e59b80e183afbd6a43
+# dd392114f2ca45418f3617abeec4b9a3
 msgid "An attribute can be defined in a role and then used to override the default settings on a node. When a role is applied during a |chef client| run, these attributes are compared to the attributes that are already present on the node. When the role attributes take precedence over the default attributes, the |chef client| will apply those new settings and values during the |chef client| run on the node."
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute.rst:6
-# 2e950bb01bdf49189aaf43a6cdf00ea6
+# a43c784b2d094e7896c690be43f941d2
 msgid "A role attribute can only be set to be a default attribute or an override attribute. A role attribute cannot be set to be a normal attribute. Use the ``default_attribute`` and ``override_attribute`` methods in the |ruby| DSL file or the ``default_attributes`` and ``override_attributes`` hashes in a |json| data file."
 msgstr ""
 
 #: ../source/essentials_roles.rst:16
-# 77010a146af94f9f8e40b1d5f6947795
+# 69f03e4991ce44a0a6983f6559b98cf1
 msgid "|note see_attributes_overview|"
 msgstr ""
 
 #: ../source/essentials_roles.rst:19
-# d7856d6a627649adba5b9eb21b3f0edd
+# 1e4c60c9c76d4bbf9c6d166986d64969
 msgid "Attribute Types"
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute_type.rst:4
-# 9ddaaf4a859b4c0b9853ea74a87ae952
+# 5a06c31d939d4252979f21eba7664043
 msgid "There are two types of attributes that can be used with roles:"
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute_type.rst:10
-# c38a87eccd1244aab7826971defc3a51
+# d904aa30543c40a6be3447f145d8a318
 msgid "Attribute Type"
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute_type.rst:11
 #: ../../includes_role/includes_role_formats_ruby.rst:11
 #: ../../includes_role/includes_role_formats_json.rst:53
-# b7680949bfd844e389999b062e79e853
-# 11acc27c2bab4ad9adb575d8df13d505
-# 9e32341bdfbb4b7088edfb30ef1d962d
+# 01123a70529447e5971f73151270b2d9
+# ff7b302efa2644faa0088bb6ca3d3ecd
+# 18eea09ad90e4fb09faeb08f33ead6dd
 msgid "Description"
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute_type.rst:12
-# 0abf9110b81f4c0296367a7a3fd2c111
+# fedc4b420a094ba68213f79c3aeda97b
 msgid "``default``"
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute_type.rst:13
-# 4c24e44ef3a84f60b09fb52dde4ab302
+# 9fcddfd740304283bdcb39da9c57f219
 msgid "|attribute_type default|"
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute_type.rst:14
-# 1e1387606eaa47b4865ada2f59f0c22c
+# 55be2cfb3bc94cc3bafc7272853322e8
 msgid "``override``"
 msgstr ""
 
 #: ../../includes_role/includes_role_attribute_type.rst:15
-# f0973ebd0d394b36bb7ab449593eec84
+# 474153245dae47bf88d50cd9a6efa049
 msgid "|attribute_type override|"
 msgstr ""
 
 #: ../source/essentials_roles.rst:23
-# ab7cab08b89f4ab5ac0ed02072636463
+# 9ea026ef0cf3430d9e4bbb7d321e8c3b
 msgid "Attribute Persistence"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_persistence.rst:4
-# 444a4d167c0844bca8c9e372910fe7e7
+# 0c5fa51d6cf44c2d886ad7b892677a60
 msgid "At the beginning of a |chef client| run, all default, override, and automatic attributes are reset. The |chef client| rebuilds them using data collected by |ohai| at the beginning of the |chef client| run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the |chef client| run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next |chef client| run."
 msgstr ""
 
 #: ../source/essentials_roles.rst:27
-# aab95e7b999746108826a4f0c8593a5f
+# e0ca29d1dbbc4acdad42f0c202ca58c3
 msgid "Attribute Precedence"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:4
-# 4bd293113f41437aafad21e6fab8e157
+# bbefc2f058064ef9823d1275a200eb96
 msgid "Attributes are always applied by the |chef client| in the following order:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:6
-# bcf56bddaf4e41e697ddbbabececac74
+# 859c49a8ddee48de9fa3083a67c4ba39
 msgid "A ``default`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:7
-# 8473219616984192810bd1fcaf503535
+# bbf45168147f4733b43480f3a63cde34
 msgid "A ``default`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:8
-# 66025cd733ba411cbe60ce0e390b268b
+# 2f90aeff934a404697b3d064453c1caf
 msgid "A ``default`` attribute located in an environment"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:9
-# c4285aca6821430bbaebbc0059c6ad94
+# 1711aad2e2fb43f9839be88572e0a87c
 msgid "A ``default`` attribute located in role"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:10
-# ae751906f5e34dcba73b1ae36f5fc534
+# 7d78b8a4c16142a1a1b0fd577556832d
 msgid "A ``force_default`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:11
-# aebc702a6be04bb29f84901e7e2463f8
+# b9cc55baca40416483cbf51ca87cf8e2
 msgid "A ``force_default`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:12
-# 8da4a9247ec04520878b2403e960d0ba
+# 112dac2af2b74d23828edcd0c4ddcf0f
 msgid "A ``normal`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:13
-# 707e738561154469b8050d84b2166696
+# dd5442be57f043be8770052aa3cf1db4
 msgid "A ``normal`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:14
-# 64b2526c06d44d25999458b0c1880bf7
+# cb233bd79a45486a93f87d4fa8f479a2
 msgid "An ``override`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:15
-# 731e795332b649bf944962d901486699
+# dd5778d2ff874c90a653fa7a5b3cbba8
 msgid "An ``override`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:16
-# d35859a76143472fb21809889a061d38
+# db2b0b67cbcc4b5aa6886da33b8cbecf
 msgid "An ``override`` attribute located in a role"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:17
-# f5a1616799454cbc9783eccbd7e02a6d
+# cb795ceba8a644e59a478848405f0fb5
 msgid "An ``override`` attribute located in an environment"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:18
-# 9deee03b0ec24dc484758952c6fea106
+# e17c317b292044fb9d13b66b408f7a4f
 msgid "A ``force_override`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:19
-# 3519268cfd1247ad8f2683eb6e4a1d88
+# 42a304c3976f469bb2a384b569698b33
 msgid "A ``force_override`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:20
-# c5d1b1fe874b41439af759c24cdf4376
+# 494e50a88136405b9d454016b162b584
 msgid "An ``automatic`` attribute identified by |ohai| at the start of the |chef client| run"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:22
-# acd470015be44cc288f69d626507250a
+# 1eda3cacd0814448b184411c95f7b77c
 msgid "where the last attribute in the list is the one that is applied to the node."
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:24
-# 1bc4387c914e40b083bc7b2b4c8f054a
+# 766020ea7aac422b862d554549a803cf
 msgid "The attribute precedence order for roles and environments is reversed for ``default`` and ``override`` attributes. The precedence order for ``default`` attributes is environment, then role. The precedence order for ``override`` attributes is role, then environment. Applying environment ``override`` attributes after role ``override`` attributes allows the same role to be used across multiple environments, yet ensuring that values can be set that are specific to each environment (when required). For example, the role for an application server may exist in all environments, yet one environment may use a database server that is different from other environments."
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:26
-# 23857f2cc4f84ca8aa5e2e8ad321d457
+# c3d6f95cd12c47a38ec30321f47acc00
 msgid "Attribute precedence, viewed from the same perspective as the overview diagram, where the numbers in the diagram match the order of attribute precedence:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:30
-# 8e1b939a752444c582a599bf3ec887a5
+# f48990f561634a579966deee79ff4295
 msgid "Attribute precedence, when viewed as a table:"
 msgstr ""
 
 #: ../source/essentials_roles.rst:31
-# ba6c1c47defa47bbbd415ad86eb95864
+# aefaac0f030c429d9cd655e24bec089a
 msgid "Role Formats"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats.rst:4
-# 760ff9eb08124c4d877df9ff0e46640b
+# 471e5444028c41a18b7a74f59e3ceb06
 msgid "Role data is stored in two formats: as a |ruby| file that contains domain-specific language and as |json| data."
 msgstr ""
 
 #: ../source/essentials_roles.rst:35
-# 16fe17ecb12944bf968dfb9e4d9d9c60
+# d38ef80443734cfc912f2d32171f5382
 msgid "Ruby DSL"
 msgstr ""
 
 #: ../../includes_ruby/includes_ruby_dsl.rst:5
-# feb3437082bf4f91a31ece6f385cc71a
+# 8f98c1c6281244818bd18ebf93810e1b
 msgid "The |chef client| uses |ruby| as its reference language for creating cookbooks and defining recipes, with an extended DSL (domain-specific language) that is used for specific resources. These settings are saved as |ruby| files and are stored in the |chef repo|. When these files are uploaded to the |chef server|, they are converted to |json|. Each time the |chef repo| is refreshed, the contents of all domain-specific |ruby| files are re-compiled to |json| and are re-uploaded to the |chef server|."
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:4
-# 37868a313b8f4c71aef22c61d62e566f
+# b414896053a644b6aac0a0f695cb1dd2
 msgid "Domain-specific |ruby| attributes:"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:10
 #: ../../includes_role/includes_role_formats_json.rst:52
-# a9d1bef1486e467a96bef46a98bc23ba
-# 64e7f88f5f934d2d9b2a164f2e9dafc4
+# 78249e93be664e25932346b557f273ac
+# fea34886af5249d4bdf4c0f9b85546de
 msgid "Setting"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:12
-# e486a94b591d4db28b12b0a180a89677
+# b2e9ab813b9d4a7688f1b6b85e11e8cb
 msgid "``default_attributes``"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:13
-# 401fb49809ef4b71aabe67f2d4d2dc62
+# 7bf013259226426bab9ad4f6bc974cef
 msgid "|ruby dsl default attribute| For example, to specify that a node that has the attribute ``apache2`` should listen on ports 80 and 443 (unless ports are already specified): ::"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:19
-# a7e5e5e8243346b2a590f86577e16bbb
+# 278953790bc14f0c95139d05c4a81884
 msgid "``description``"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:20
-# c9f3f0353aae4eb0a69b0eadf80201bc
+# a91d084a939440238f32b9de99114ee8
 msgid "|ruby dsl description| For example: ::"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:24
-# 56e9653cd3be48c09c0de52c05caf7ae
+# a0e32d762de742be911dfe9b8246889d
 msgid "``env_run_lists``"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:25
-# 6524dbe171dd42aa9752798c9596b53b
+# 029b97bb0861466596ce336ecd98756d
 msgid "|ruby dsl environment run list| For example: ::"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:31
-# c3a393139372469388f35c9855799b96
+# 5c959c77890048458be017d18ba8150f
 msgid "Using ``env_run_lists`` with roles is discouraged can be difficult to maintain over time. Instead, consider using multiple roles to define the required behavior."
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:32
-# 3aa9513ecaf54282b33f10330a21f70f
+# aec02aa64e6a49158ec4b00a27d6c1de
 msgid "``name``"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:33
-# cb2a66fca5c447f49d84d81c31b2a74c
+# e300462110c74d28b032e1a04d4b2c95
 msgid "|ruby dsl name| For example: ::"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:37
-# 26655788b00f4f1ea5719f415aee0e09
+# 14552efdd9f24a9f958f17769eb8d5ad
 msgid "``override_attributes``"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:38
-# 32f212d2dbc840e8b20826744e6da2e2
+# 1131cff1386c4861889d3767d72d0d55
 msgid "|ruby dsl override attribute| For example: ::"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:45
-# b7ecea990cf7420b99b002470e5876ff
+# 701799858c43496f997c03827628d5d8
 msgid "The parameters in a |ruby| file are |ruby| method calls, so parentheses can be used to provide clarity when specifying numerous or deeply-nested attributes. For example::"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:53
-# 8cee2b9ce8314d3d94bdec0be1551a1a
+# 177a85ad036149b3ab5add8995d37eb8
 msgid "Or::"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:63
-# 33b9a217d7dc4af5af3fab353ce7f33c
+# f5872a4b2f4343a3a8721b491ade8ef4
 msgid "``run_list``"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:64
-# 2e528495be07428b87a4347e559730e9
+# 5d5258450ef54075a8323b5590b98b16
 msgid "|ruby dsl run list| For example, the following run list: ::"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:71
-# da0f48eebdd44a32b304da074030227a
+# 2ec89404676f4b0faa971fde8660e689
 msgid "would apply the ``apache2`` recipe first, then the ``apache2::mod_ssl`` recipe, and then the ``role[monitor]`` recipe."
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:73
-# abd568628a664c70b84e77bc35679296
+# bd9e7e9cfaa449b2a5f1fed705d74ff8
 msgid "A |ruby| DSL file for each role must exist in the ``roles/`` subdirectory of the |chef repo|. (If the repository does not have this subdirectory, then create it using |knife|.) Each |ruby| file should have the .rb suffix. The complete roles |ruby| DSL has the following syntax:"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_ruby.rst:84
-# 1b6e3243dc4b4331865af9470c7ca6fb
+# 579497ef59ae483a8101faac362a2251
 msgid "where both default and override attributes are optional and at least one run-list (with at least one run-list item) is specified. For example, a role named \"webserver\" that has a run-list that defines actions for three different roles, and for certain roles takes extra steps (such as the \"apache2\" role listening on ports 80 and 443):"
 msgstr ""
 
 #: ../source/essentials_roles.rst:41
-# bd2bd53bae7e44aba67e55992d858198
+# c955bfaffa25492b8d547fb23bdcb2f3
 msgid "JSON"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_json.rst:4
-# b423486d539d443799685653431adf9d
+# 538cdbbd56284dcdbb7761f8d5cc4076
 msgid "The |json| format for environments maps directly to the domain-specific |ruby| format: same settings, attributes, and values, and a similar structure and organization. For example:"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_json.rst:46
-# dbe48c97cf5f476697a51c03b8a01fca
+# fc1ea255b77b4a46b71066a457a5b9c1
 msgid "The |json| format has two additional settings:"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_json.rst:54
-# 1df179b2e1b84bd88c10888e03f9eac7
+# 9fc79d7b2d514a8f9d995f0197e492a0
 msgid "``chef_type``"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_json.rst:55
-# 96b4f2b894894c14841b950364ed45d8
+# 7709d65baaf142249bf0a92f11667505
 msgid "|json dsl role chef type|"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_json.rst:56
-# 87d247a2137446d6bb10147d0721bc58
+# 5927ce9bb05840b0888204aac447c23f
 msgid "``json_class``"
 msgstr ""
 
 #: ../../includes_role/includes_role_formats_json.rst:57
-# f231a1d6f2e84476b1ea9b07871d30b6
+# 0ee2567f832d4b86bb6444ec56eb26fe
 msgid "|json dsl role json class|"
 msgstr ""
 
 #: ../source/essentials_roles.rst:45
-# faa83c8056b04d559685b476e5331561
+# f4f33f36f5464397b16584959d2aa43f
 msgid "Manage Roles"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:5
-# ffad82e5642e400582ab2933330a53bf
+# feda45316031431eb54acf6d81feb504
 msgid "There are several ways to manage roles:"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:7
-# 569523a565464589801f2ec0ccecd6cc
+# fbe5398394c5475ea9896187432afbee
 msgid "|knife| can be used to create, edit, view, list, tag, and delete roles."
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:8
-# f7d56e4940144b5c862505842422826d
+# bb489afffe8a40928f8b0c2f90d7fee7
 msgid "The |chef manager| can be used to create, edit, view, list, tag, and delete roles. In addition, role attributes can be modified and roles can be moved between environments."
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:9
-# 32a537b1c835484fbc602fe3239ed864
+# c0bc5d0dee974f11827fbd704561b82a
 msgid "The |chef client| can be used to manage role data using the command line and |json| files (that contain a hash, the elements of which are added as role attributes). In addition, the ``run_list`` setting allows roles and/or recipes to be added to the role."
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:10
-# 63b46a3d61e54b58bcb8683138ea04d7
+# 9d1cfce293ae4cdd9b92051a63db884a
 msgid "The open source |chef server| can be used to manage role data using the command line and |json| files (that contain a hash, the elements of which are added as role attributes). In addition, the ``run_list`` setting allows roles and/or recipes to be added to the role."
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:11
-# 04592afbddd94437876ede29a6a148c3
+# 9d1e41a6f843458994d2efe2915fbe54
 msgid "The |api chef server| can be used to create and manage roles directly, although using |knife| and/or the |chef manager| is the most common way to manage roles."
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:12
-# 976cc5a3ebd24f8ca4fc8f58cc3194f9
+# 28efdf2e8f7e4328bd8a69e00f3936eb
 msgid "The command line can also be used with |json| files and third-party services, such as |amazon ec2|, where the |json| files can contain per-instance metadata stored in a file on-disk and then read by |chef solo| or |chef client| as required."
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:14
-# 9929ef01652b4da394c9d5b65ee599c5
+# dd9d0fd471ae47cb9b6f5cf8fdbc3082
 msgid "By creating and editing files using the |ruby| DSL or |json|, role data can be dynamically generated with the |ruby| DSL. Roles created and edited using files are compatible with all versions of |chef|, including |chef solo|. Roles created and edited using files can be kept in version source control, which also keeps a history of what changed when. When roles are created and edited using files, they should not be managed using |knife| or the |chef manager|, as changes will be overwritten."
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:16
-# 5048464655b941b6957faadee7c48698
+# 4ec0269a3d5f46ac9cfd39b1a90a4466
 msgid "A run-list that is associated with a role can be edited using the |chef manager|. The canonical source of a role's data is stored on the |chef server|, which means that keeping role data in version source control can be challenging."
 msgstr ""
 
 #: ../../includes_role/includes_role_manage.rst:18
-# 96e037aeb305452c981e7d3e2051e281
+# 12a9794fada5436893a4aa73b631e01e
 msgid "When files are uploaded to a |chef server| from a file and then edited using the |chef manager|, if the file is edited and uploaded again, the changes made in the |chef manager| will be lost. The same is true with |knife|, in that if roles are created and managed using |knife| and then arbitrarily updated uploaded |json| data, that action will overwrite what has been done previously using |knife|. It is strongly recommended to keep to one process and not switch back and forth."
 msgstr ""
 
 #: ../source/essentials_roles.rst:49
-# 09682e40a5334a0daf3b12d077bd17f6
+# 4c40f60aa40b406eb9ddd8b58906a81f
 msgid "Set Per-environment Run-lists"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage_per_environment_run_lists.rst:4
-# 811e8d25d646409ebb141d991677ff00
+# 360c7d7419d0403c8925a15cc6bc1045
 msgid "A per-environment run-list is a run-list that is associated with a role and a specific environment. More than one environment can be specified in a role, but each specific environment may be associated with only one run-list. If a run-list is not specified, the default run-list will be used. For example::"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage_per_environment_run_lists.rst:24
-# 8f719f4746b742dab910bf6ad51e88a9
+# 99334b55b639431cacbe4754846398ae
 msgid "where:"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage_per_environment_run_lists.rst:26
-# 98602dbe2e044e01a4bdcf416fd9a36d
+# 211a8e5bfeff44d1a792c4451ac5d162
 msgid "``webserver`` is the name of the role"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage_per_environment_run_lists.rst:27
-# 495534545bce4c3d9860246cc84c1d14
+# 245bf2c2b90e453eb153c04ab2ccacbc
 msgid "``env_run_lists`` is a hash of per-environment run-lists for ``production``, ``preprod``, ``test``, and ``dev``"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage_per_environment_run_lists.rst:28
-# af0d05dd81c5448db0491a4351df70d8
+# 72c557c776b0464b9e354072f4cecca8
 msgid "``production`` and ``preprod`` use the default run-list because they do not have a per-environment run-list"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage_per_environment_run_lists.rst:29
-# 72168dfe009349f7a9153dbc616df85a
+# 84f7ec8ac6d94dd6bc40bd0a0fdc14a0
 msgid "``run_list`` defines the default run-list"
 msgstr ""
 
 #: ../source/essentials_roles.rst:53
-# 09bd23429abf4b43bfb938c0bd1e6eef
+# 3c92cf7c2268484bb79956f49c310dc3
 msgid "Delete from Run-list"
 msgstr ""
 
 #: ../../includes_role/includes_role_manage_delete.rst:4
-# eda37251a210424b8032f317f1faa339
+# ed561709e3104c6f841fbc22d4feb052
 msgid "When an environment is deleted, it will remain within a run-list for a role until it is removed from that run-list. If a new environment is created that has an identical name to an environment that was deleted, a run-list that contains an old environment name will use the new one."
 msgstr ""
 
