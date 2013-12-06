@@ -10,8 +10,6 @@ Requirements
 =====================================================
 .. include:: ../../includes_system_requirements/includes_system_requirements_reporting.rst
 
-.. warning:: |reporting| is only available when running |chef server oec| version 11.0.1 (or higher).
-
 The Reporting Run
 =====================================================
 .. include:: ../../includes_reporting/includes_reporting_run.rst
