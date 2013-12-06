@@ -5,4 +5,3 @@ The |reporting| feature of |chef server oec| is used to keep track of what happe
 
 |reporting| data is collected during the |chef client| run and the results are posted to the |chef server| at the end of the |chef client| run at the same time the node object is uploaded to the |chef server|.
 
-.. note:: |reporting| requires the |chef client| version 11.6.0 (or higher).
