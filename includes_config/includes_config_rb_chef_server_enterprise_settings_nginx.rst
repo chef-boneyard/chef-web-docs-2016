@@ -17,6 +17,8 @@ This configuration file has the following settings for |nginx|:
      - Default value: ``/var/opt/chef-server/nginx``.
    * - ``nginx['enable']``
      - |enable service| Default value: ``true``.
+   * - ``nginx['enable_ipv6']``
+     - Enables IPv6. Default value: ``false``.
    * - ``nginx['enable_non_ssl']``
      - Indicates whether port 80 redirects to port 443 are allowed. When this value is set to ``false``, load balancers on the front-end hardware are allowed to do |ssl| termination of the WebUI and API. Default value: ``false``.
    * - ``nginx['gzip']``
