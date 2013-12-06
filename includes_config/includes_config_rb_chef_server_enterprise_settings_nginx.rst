@@ -38,7 +38,7 @@ This configuration file has the following settings for |nginx|:
    * - ``nginx['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/nginx``.
    * - ``nginx['non_ssl_port']``
-     - |port non_ssl_nginx| Default value: ``80``. Use ``nginx['enable_non_ssl'] to enable or disable |ssl| redirects on this port number.
+     - |port non_ssl_nginx| Default value: ``80``. Use ``nginx['enable_non_ssl']`` to enable or disable |ssl| redirects on this port number.
    * - ``nginx['sendfile']``
      - |use sendfile| Default value: ``on``.
    * - ``nginx['server_name']``
