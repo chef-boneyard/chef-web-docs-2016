@@ -219,8 +219,17 @@ The |chef server| can be managed in the following ways:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_services.html">Services</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_users.html">Users</a> </br>
 
+The |chef manager| is an add-on for |chef server oec| that provides a user interface that enables the management of objects on the |chef server|:
 
-..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_orgs.html">Organizations</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_clients.html">Clients</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_cookbooks.html">Cookbooks</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_data_bags.html">Data Bags</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_environments.html">Environments</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_nodes.html">Nodes</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_orgs.html">Organizations, Groups, and Users</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_reports.html">Reports</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_roles.html">Roles</a> </br>
+
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_data.html">Server Data</a> </br>
 
 Settings and Tools 
@@ -670,6 +679,13 @@ The following topics discuss using |chef server oec| with platforms:
    server_high_availability
    server_ldap
    server_logs
+   server_manage_clients
+   server_manage_cookbooks
+   server_manage_data_bags
+   server_manage_environments
+   server_manage_nodes
+   server_manage_reports
+   server_manage_roles
    server_monitor
    server_orgs
    server_security
