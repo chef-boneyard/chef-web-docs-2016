@@ -6,7 +6,7 @@
 
 * |chef server oec| version 11.0.1 (or later)
 * To use the ``push-jobs`` cookbook to configure the |push jobs| client, the |chef client| must also be present on the node (because only the |chef client| can use a cookbook to configure a node)
-* TCP protocol ports 10000-10003
+* TCP protocol ports 10000-10003 (the ports through which the client communicates with the server)
 
 The |push jobs| client can run on the following platforms:
 
