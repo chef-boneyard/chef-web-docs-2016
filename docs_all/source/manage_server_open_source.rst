@@ -228,7 +228,7 @@ Manage User Accounts
 -----------------------------------------------------
 Users are managed from the users tab:
 
-.. image:: ../../images/step_manage_server_open_source_user_manage.jpg
+.. image:: ../../images_old/step_manage_server_open_source_user_manage.jpg
 
 Add
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
