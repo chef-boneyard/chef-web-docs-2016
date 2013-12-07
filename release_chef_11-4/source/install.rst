@@ -9,14 +9,3 @@ Install Chef
 #. :doc:`install_bootstrap`
 
 
-.. toctree::
-   :hidden:
-
-   install_server
-   install_server_scenario_vm
-   install_workstation
-   install_bootstrap
-
-
-
-

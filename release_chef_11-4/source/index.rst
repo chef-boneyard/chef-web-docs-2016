@@ -101,12 +101,13 @@ Cookbooks
 .. toctree::
    :hidden:
 
+   api_chef_server
+   api_cookbooks_site
+   api_omnitruck
+   auth
+   chef_client
    chef_overview
-   chef_quick_overview
-   community
-
-   release_notes
-   just_enough_ruby_for_chef
+   chef_overview_attributes
    chef_overview_cookbooks
    chef_overview_nodes
    chef_overview_server
@@ -114,52 +115,39 @@ Cookbooks
    chef_overview_server_open_source
    chef_overview_server_private
    chef_overview_workstation
-   chef_overview_attributes
    chef_private_keys
+   chef_quick_overview
+   chef_shell
+   chef_solo
    chef_why
-   install
-   install_server
-   install_server_scenario_vm
-   knife
-   plugin_knife
-   resource
-   opscode_cookbooks
-   lwrp
+   community
    config
    config_rb_chef_server
-   chef_client
-   chef_solo
-   api_chef_server
-   api_cookbooks_site
-   api_omnitruck
-   dsl_recipe
-   ohai
-   orgmapper
+   ctl_chef_apply
    ctl_chef_client
    ctl_chef_server
-   ctl_private_chef
+   ctl_chef_shell
    ctl_chef_solo
-   server_types
-   server_components
-
-   auth
-
-   essentials_nodes
-   essentials_nodes_chef_run
-   essentials_nodes_why_run
+   ctl_private_chef
+   dsl_recipe
+   dsl_recipe_method_attribute
+   dsl_recipe_method_cookbook_name
+   dsl_recipe_method_data_bag
+   dsl_recipe_method_platform
+   dsl_recipe_method_platform_family
+   dsl_recipe_method_recipe_name
+   dsl_recipe_method_registry_data_exists
+   dsl_recipe_method_registry_get_subkeys
+   dsl_recipe_method_registry_get_values
+   dsl_recipe_method_registry_has_subkeys
+   dsl_recipe_method_registry_key_exists
+   dsl_recipe_method_registry_value_exists
+   dsl_recipe_method_resources
+   dsl_recipe_method_search
+   dsl_recipe_method_tag
+   dsl_recipe_method_value_for_platform
+   dsl_recipe_method_value_for_platform_family
    essentials_chef_client
-   essentials_handlers
-   essentials_repository
-   essentials_repository_create
-   essentials_knife
-   essentials_policy
-   essentials_node_object
-   essentials_data_bags
-   essentials_environment_variables
-   essentials_environments
-   essentials_roles
-   essentials_search
-   essentials_cookbooks
    essentials_cookbook_attribute_files
    essentials_cookbook_directory
    essentials_cookbook_definitions
@@ -170,6 +158,89 @@ Cookbooks
    essentials_cookbook_resources
    essentials_cookbook_templates 
    essentials_cookbook_versions
+   essentials_cookbooks
+   essentials_data_bags
+   essentials_environments
+   essentials_environment_variables
+   essentials_handlers
+   essentials_knife
+   essentials_node_object
+   essentials_nodes
+   essentials_nodes_chef_run
+   essentials_nodes_why_run
+   essentials_repository
+   essentials_repository_create
+   essentials_policy
+   essentials_roles
+   essentials_search
+   just_enough_ruby_for_chef
+   install
+   install_server
+   install_server_scenario_vm
+   install_workstation
+   install_bootstrap
+   knife
+   knife_using
+   knife_common_options
+   knife_bootstrap
+   knife_client
+   knife_configure
+   knife_cookbook
+   knife_cookbook_site
+   knife_data_bag
+   knife_delete
+   knife_diff
+   knife_download
+   knife_environment
+   knife_exec
+   knife_index_rebuild
+   knife_list
+   knife_node
+   knife_raw
+   knife_recipe_list
+   knife_role
+   knife_search
+   knife_show
+   knife_ssh
+   knife_status
+   knife_tag
+   knife_upload
+   knife_user
+   lwrp
+   lwrp_apt
+   lwrp_aws
+   lwrp_bluepill
+   lwrp_chef_handler
+   lwrp_daemontools
+   lwrp_djbdns
+   lwrp_dmg
+   lwrp_dynect
+   lwrp_firewall
+   lwrp_freebsd
+   lwrp_gunicorn
+   lwrp_homebrew
+   lwrp_iis
+   lwrp_maven
+   lwrp_nagios
+   lwrp_pacman
+   lwrp_php
+   lwrp_powershell
+   lwrp_python
+   lwrp_rabbitmq
+   lwrp_riak
+   lwrp_samba
+   lwrp_sudo
+   lwrp_supervisor
+   lwrp_transmission
+   lwrp_users
+   lwrp_webpi
+   lwrp_windows
+   lwrp_yum
+   lwrp_custom
+   lwrp_custom_provider
+   lwrp_custom_provider_ruby
+   lwrp_custom_resource
+   lwrp_custom_resource_library
    manage_server_hosted
    manage_server_hosted_accounts
    manage_server_hosted_clients
@@ -183,10 +254,12 @@ Cookbooks
    manage_server_hosted_roles
    manage_server_hosted_search
    manage_server_hosted_users
+   ohai
+   opscode_cookbooks
+   orgmapper
+   plugin_knife
+   release_notes
+   resource
+   server_components
+   server_types
    upgrade_server
-   ctl_chef_shell
-   ctl_chef_apply
-   chef_shell
-
-
-   

@@ -177,6 +177,23 @@ Cookbooks
    ctl_private_chef
    debug
    dsl_recipe
+   dsl_recipe_method_attribute
+   dsl_recipe_method_cookbook_name
+   dsl_recipe_method_data_bag
+   dsl_recipe_method_platform
+   dsl_recipe_method_platform_family
+   dsl_recipe_method_recipe_name
+   dsl_recipe_method_registry_data_exists
+   dsl_recipe_method_registry_get_subkeys
+   dsl_recipe_method_registry_get_values
+   dsl_recipe_method_registry_has_subkeys
+   dsl_recipe_method_registry_key_exists
+   dsl_recipe_method_registry_value_exists
+   dsl_recipe_method_resources
+   dsl_recipe_method_search
+   dsl_recipe_method_tag
+   dsl_recipe_method_value_for_platform
+   dsl_recipe_method_value_for_platform_family
    essentials_chef_client
    essentials_cookbook_attribute_files
    essentials_cookbook_directory
@@ -206,6 +223,22 @@ Cookbooks
    essentials_roles
    essentials_search
    install
+   install_bootstrap
+   install_omnibus
+   install_server
+   install_server_be
+   install_server_fe
+   install_server_febe
+   install_server_hosted
+   install_server_ldap
+   install_server_oec
+   install_server_orgs
+   install_server_pre
+   install_server_scenario_vm
+   install_server_standalone
+   install_server_users
+   install_windows
+   install_workstation
    just_enough_ruby_for_chef
    knife
    lwrp

@@ -100,26 +100,6 @@ The following recipe DSL methods can be used to interact with |windows| registry
 
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
 
-.. toctree::
-   :hidden:
-
-   dsl_recipe_method_attribute
-   dsl_recipe_method_cookbook_name
-   dsl_recipe_method_data_bag
-   dsl_recipe_method_platform
-   dsl_recipe_method_platform_family
-   dsl_recipe_method_recipe_name
-   dsl_recipe_method_registry_data_exists
-   dsl_recipe_method_registry_get_subkeys
-   dsl_recipe_method_registry_get_values
-   dsl_recipe_method_registry_has_subkeys
-   dsl_recipe_method_registry_key_exists
-   dsl_recipe_method_registry_value_exists
-   dsl_recipe_method_resources
-   dsl_recipe_method_search
-   dsl_recipe_method_tag
-   dsl_recipe_method_value_for_platform
-   dsl_recipe_method_value_for_platform_family
 
 
 
