@@ -25,7 +25,7 @@ To set up the |chef manager| server:
 
       $ private-chef-ctl reconfigure
 
-   This step is required for each of the front end servers in the Enterprise Chef deployment.  For
+   This step is required for each of the front end servers in the |chef server oec| deployment.  For
    example, in a configuration with two back end servers and three front end servers, this command
    would need to be run on all three front end machines.
 
@@ -35,8 +35,12 @@ To set up the |chef manager| server:
 
       $ opscode-manage-ctl reconfigure
 
-   This step is required for each of the front end servers in the Enterprise Chef deployment.
+   This step is required for each of the front end servers in the |chef server oec| deployment.
 
 #. Verify the installation:
+
+   .. code-block:: bash
+
+      $ opscode-manage-ctl test
 
    The |chef manager| should now be running and accessible by a web browser on port 443 (HTTPS)
