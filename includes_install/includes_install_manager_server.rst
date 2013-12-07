@@ -12,12 +12,13 @@ To set up the |chef manager| server:
 
 #. Disable the legacy web interface:
 
-   Modify /etc/opscode/private-chef.rb to disable the existing opscode_webui service.
+   Modify the |enterprise rb| file (located at ``/etc/opscode/private-chef.rb``) to disable the existing |service webui| service.
 
    .. code-block:: bash
 
       opscode_webui['enable']=false
 
+   If the |enterprise rb| file does not exist, then create the file and add this setting to it.
 
 #. Reconfigure the |chef server oec| server:
 
@@ -43,4 +44,13 @@ To set up the |chef manager| server:
 
       $ opscode-manage-ctl test
 
-   The |chef manager| should now be running and accessible by a web browser on port 443 (HTTPS)
+   The |chef manager| should now be running and accessible by a web browser on port 443 (HTTPS). 
+
+   Some of the tests require the |subcommand knife reporting| subcommand have already been installed. If this subcommand hasn't been installed, the test may return something similar to the following:
+
+   .. code-block:: bash
+
+      Finished in 2 minutes 21.23 seconds
+      250 examples, 0 failures, 37 pending
+
+   where ``37 pending`` represents the number of tests that require the |subcommand knife reporting| subcommand to be installed before they can be fully processed.
