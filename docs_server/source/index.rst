@@ -1,5 +1,5 @@
 =====================================================
-|chef private| 1.4.x
+|chef private| 1.4.x 
 =====================================================
 
 .. warning:: This documentation is about |chef private|. For documentation about the newly-released |chef server oec|, see docs.opscode.com/enterprise.
