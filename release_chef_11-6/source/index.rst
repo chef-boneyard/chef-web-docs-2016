@@ -166,6 +166,12 @@ Cookbooks
    chef_why
    community
    community_contributions
+   community_guidelines
+   community_lists
+   community_plugin_chef
+   community_plugin_knife
+   community_plugin_ohai
+   community_plugin_report_handler
    config
    config_rb_chef_server
    ctl_chef_apply
