@@ -16,7 +16,7 @@
 
 "Yes, just like Chef."
 
-Sometimes we felt like we were explaining "Why Opscode?" more than we wanted to. And then Opscode itself turned out to be a weak brand:
+Sometimes we felt like we were explaining "Why Opscode?" more than we wanted to. And then Opscode itself turned out to be a weak brand, easily confused and often misspelled:
 
 .. image:: ../../images/includes_chef_why_origins.png
 
