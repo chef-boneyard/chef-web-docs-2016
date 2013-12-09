@@ -40,7 +40,7 @@ The following is an example of how the |resource registry_key| resource can work
      values [{
        :name => "NewRegistryKeyValue",
        :type => :multi_string,
-       :data => foo\0bar\0\0
+       :data => ['foo\0bar\0\0']
      }]
      action :create
    end
