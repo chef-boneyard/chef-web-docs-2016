@@ -107,7 +107,7 @@ The Nodes
 
 Cookbooks
 =====================================================
-**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` | `Cookbooks Maintained by Opscode <https://github.com/opscode-cookbooks>`_
+**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
 
 **LWRPs:** :doc:`About LWRPs in Community Cookbooks </lwrp>` | :doc:`About Custom LWRPs </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
 
@@ -206,6 +206,7 @@ Cookbooks
    install_bootstrap
    install_omnibus
    install_server
+   install_server_scenario_vm
    install_windows
    install_workstation
    just_enough_ruby_for_chef
@@ -224,6 +225,7 @@ Cookbooks
    plugin_knife
    plugin_knife_authenticated_requests
    plugin_knife_custom
+   plugin_knife_windows
    release_notes
    resource
 

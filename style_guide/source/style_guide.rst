@@ -2,9 +2,9 @@
 Style Guide 
 =====================================================
  
-The |company_name| style guide is just a limited subset of the full capabilities of Sphinx, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it.
+The |company_name| style guide is just a limited subset of the full capabilities of |python sphinx|, with regard to formatting and authoring options. Generally, if it's not listed here, we're not using it.
 
-All of the documents built by Sphinx for Chef can be found at docs.opscode.com.
+All of the documents built by |python sphinx| for |chef| can be found at |chef docs|.
 
 Basic Doc Template
 =====================================================
@@ -22,7 +22,7 @@ This is the only section header that requires the structure above and below the 
 
 Body
 -----------------------------------------------------
-The body of the topic contains anything else needed for the topic. Often, a topic contains an include file (or three), and then some topics contain sub-headers. Most of the topics that are published to docs.opscode.com contain a series of includes files. But some topics, like An Overview of Chef, include original content alongside the includes files. It just depends on what the topic requires.
+The body of the topic contains anything else needed for the topic. Often, a topic contains an include file (or three), and then some topics contain sub-headers. Most of the topics that are published to |chef docs| contain a series of includes files. But some topics, like An Overview of Chef, include original content alongside the includes files. It just depends on what the topic requires.
 
 Example
 -----------------------------------------------------
@@ -84,9 +84,9 @@ The following example is the first two sections from "An Overview of Chef"::
 
 Section Headers
 =====================================================
-Section headers create structure in a document. When section headers are part of a topic that is included in other topics, those headers are treated as if they first appeared at that location (and are bumped down appropriately). For this, and for other cosmetic reasons, the headers in Opscode documents are limited to 4 levels beyond the topic title. If headers are required beyond that, they should only be done using standard emphasis and white space or through some other creative method (such as creating more topics with less TOC depth).
+Section headers create structure in a document. When section headers are part of a topic that is included in other topics, those headers are treated as if they first appeared at that location (and are bumped down appropriately). For this, and for other cosmetic reasons, the headers in |company_name| documents are limited to 4 levels beyond the topic title. If headers are required beyond that, they should only be done using standard emphasis and white space or through some other creative method (such as creating more topics with less TOC depth).
 
-Sphinx allows many different conventions for how headers can exist in documents and looks for consistency to determine which ones go where. The width of the header must be equal to (or longer) than the length of the text in the header and (ideally) the same width for headers are used everywhere. (Having everything the same width can help spot the headers during reviews or when trying to find bugs in topics. The following sections describe the section header pattern that Opscode is using for topic titles, H1s, H2s, H3s, H4s, and the occasional H5.
+|python sphinx| allows many different conventions for how headers can exist in documents and looks for consistency to determine which ones go where. The width of the header must be equal to (or longer) than the length of the text in the header and (ideally) the same width for headers are used everywhere. (Having everything the same width can help spot the headers during reviews or when trying to find bugs in topics. The following sections describe the section header pattern that |company_name| is using for topic titles, H1s, H2s, H3s, H4s, and the occasional H5.
 
 .. note:: As a general rule, try to limit the number of header levels to no more than 2 within a topic. There can be exceptions, of course, and especially if the document is very large, but remember that HTML TOC structures usually have width limitations (on the display side) and the more structure within a TOC, the harder it can be for users to figure out what's in it.
 
@@ -100,7 +100,7 @@ If a topic requires a sub-header, this is the first one to use. Use the equals s
 
 H2
 -----------------------------------------------------
-If an H1 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H1. Use the dash symbol (-) below the header name. What it looks like as reST:: 
+If an H1 requires a sub-header, this is one to use. |python sphinx| will generate errors if this header is not a child of an H1. Use the dash symbol (-) below the header name. What it looks like as reST:: 
 
    header name goes here
    -----------------------------------------------------
@@ -108,7 +108,7 @@ If an H1 requires a sub-header, this is one to use. Sphinx will generate errors 
 
 H3
 -----------------------------------------------------
-If an H2 requires a sub-header, this is one to use. Sphinx will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like as reST:: 
+If an H2 requires a sub-header, this is one to use. |python sphinx| will generate errors if this header is not a child of an H2. Use the plus symbol (+) below the header name. What it looks like as reST:: 
 
    header name goes here
    +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -116,7 +116,7 @@ If an H2 requires a sub-header, this is one to use. Sphinx will generate errors 
 
 H4
 -----------------------------------------------------
-If a H3 requires a sub-header, this is the one to use. Sphinx will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like as reST:: 
+If a H3 requires a sub-header, this is the one to use. |python sphinx| will generate errors if this header is not a child of an H3. Use the caret symbol (^) below the header name. What it looks like as reST:: 
 
    header name goes here
    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -139,7 +139,7 @@ content, as normally authored.
 
 Lists and Tables
 =====================================================
-Lists and tables can be useful. The following sections describe the various lists and tables that Opscode is using for its documentation.
+Lists and tables can be useful. The following sections describe the various lists and tables that |company_name| is using for its documentation.
 
 Bullet Lists
 -----------------------------------------------------
@@ -150,7 +150,7 @@ Bulleted lists are useful for breaking up text blocks and for drawing attention 
    * text goes here
    * text goes here
 
-Use the asterisk symbol (*) only for bulleted lists, even though Sphinx supports using other symbols. For example:
+Use the asterisk symbol (*) only for bulleted lists, even though |python sphinx| supports using other symbols. For example:
 
 * text goes here
 * text goes here
@@ -166,7 +166,7 @@ Numbered lists are good for when people need to understand a list of information
    #. text goes here
    #. text goes here
 
-Use the number symbol (#) to let Sphinx handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. For example:
+Use the number symbol (#) to let |python sphinx| handle the actual ordering. If the number list needs to change later, you don't have to worry about making sure the numbers are in the correct order. For example:
 
 #. text goes here
 #. text goes here
@@ -193,7 +193,7 @@ What it looks like after it's built:
 
 List Tables
 -----------------------------------------------------
-The list table is the only table style that Opscode is using in the docs. Sphinx supports other approaches to tables, but they are crude and inelegant and are a pain so why bother with them. What the list table looks like as reST:: 
+The list table is the only table style that |company_name| is using in the docs. |python sphinx| supports other approaches to tables, but they are crude and inelegant and are a pain so why bother with them. What the list table looks like as reST:: 
 
    .. list-table::
       :widths: 250 250
@@ -206,7 +206,7 @@ The list table is the only table style that Opscode is using in the docs. Sphinx
       * - text, image, swap, or include
         - text, image, swap, or include
 
-The table cells support images and includes, along with all of the other standard Sphinx that is being used here. The widths can be changed and the number of columns can be changed too. In general, Opscode is trying to keep the number of columns below 4. When creating a list table, think about what it will look like in HTML, PDF, man-page, and other formats and keep in mind the width limitations inherent in print formats.
+The table cells support images and includes, along with all of the other standard |python sphinx| that is being used here. The widths can be changed and the number of columns can be changed too. In general, |company_name| is trying to keep the number of columns below 4. When creating a list table, think about what it will look like in HTML, PDF, man-page, and other formats and keep in mind the width limitations inherent in print formats.
 
 .. warning:: Tables (as opposed to list tables) should never be used. This is, in part, to help ensure that all topics can work in any published format, including HTML, PDF, and man-page, but also because list tables are much, much easier to work with.
 
@@ -272,23 +272,23 @@ Links are ways to get users to other useful topics.
 
 Internal
 -----------------------------------------------------
-An internal link is one that resolves to another topic that is built by Sphinx. What it looks like as reST:: 
+An internal link is one that resolves to another topic that is built by |python sphinx|. What it looks like as reST:: 
 
    :doc:`essentials_nodes`
 
-where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. If this isn't formatted correctly, Sphinx will let you know.
+where ``:doc:`` tells |python sphinx| that what follows is a file name that |python sphinx| will encounter during the build process. If this isn't formatted correctly, |python sphinx| will let you know.
 
 Internal w/short names
 -----------------------------------------------------
-An internal link is one that resolves to another topic that is built by Sphinx. Sometimes it's better to have the name of the link that displays be as short as possible (and different from the actual title of the topic). What it looks like as reST:: 
+An internal link is one that resolves to another topic that is built by |python sphinx|. Sometimes it's better to have the name of the link that displays be as short as possible (and different from the actual title of the topic). What it looks like as reST:: 
 
    :doc:`Actions </resource_common_actions>`
 
-where ``:doc:`` tells Sphinx that what follows is a file name that Sphinx will encounter during the build process. ``Actions`` represents the short name that will display on the page in which this internal link is located, and then ``resource_common_actions`` is the filename and is contained within brackets (< >). If this isn't formatted correctly, Sphinx will let you know.
+where ``:doc:`` tells |python sphinx| that what follows is a file name that |python sphinx| will encounter during the build process. ``Actions`` represents the short name that will display on the page in which this internal link is located, and then ``resource_common_actions`` is the filename and is contained within brackets (< >). If this isn't formatted correctly, |python sphinx| will let you know.
 
 External
 -----------------------------------------------------
-An external link points to something that does not live on docs.opscode.com. An external link requires an HTTP address. In general, it's better to spell out the HTTP address fully, in case the topic is printed out. What an external link looks like as reST:: 
+An external link points to something that does not live on |chef docs|. An external link requires an HTTP address. In general, it's better to spell out the HTTP address fully, in case the topic is printed out. What an external link looks like as reST:: 
 
    http://www.codecademy.com/tracks/ruby
 
@@ -298,7 +298,7 @@ What an external link looks like after it's built:
 
 TOC Trees
 =====================================================
-A TOC tree defines all of the topics that are children of this topic. In Sphinx outputs, the Previous and Next patterns use this topic structure to determine these links. In addition, a visible TOC will use the structure defined by the ``toctree`` directive. In general, Opscode is not using the visible TOC tree, but they still need to be present in the topics to keep Sphinx happy. What the hidden ``toctree`` looks like as reST:: 
+A TOC tree defines all of the topics that are children of this topic. In |python sphinx| outputs, the Previous and Next patterns use this topic structure to determine these links. In addition, a visible TOC will use the structure defined by the ``toctree`` directive. In general, |company_name| is not using the visible TOC tree, but they still need to be present in the topics to keep |python sphinx| happy. What the hidden ``toctree`` looks like as reST:: 
 
    .. toctree::
       :hidden:
@@ -307,9 +307,11 @@ A TOC tree defines all of the topics that are children of this topic. In Sphinx 
       just_enough_ruby_for_chef
       ...
 
+An effort is being made to move all of the ``toctree`` references to the main index.rst file. This prevents TOC tree warnings across the various builds that can be triggered if a TOC entry is embedded in a file, but not actually part of the current build.
+
 Code Blocks
 =====================================================
-Code blocks are used to show code samples, such as those for Ruby, JSON, and command-line strings. There are many options here, especially if Pygments is part of your Sphinx environment. The most common code block styles are shown below, but there are many lexers available.
+Code blocks are used to show code samples, such as those for |ruby|, |json|, and command-line strings. There are many options here, especially if Pygments is part of your |python sphinx| environment. The most common code block styles are shown below, but there are many lexers available.
 
 .. note:: For more information about all of the code styles that Pygments supports, see: http://pygments.org/docs/lexers/#lexers-for-other-languages.
 
@@ -485,15 +487,15 @@ https://github.com/opscode/quick-reference
 
 Localization
 =====================================================
-Sphinx supports localization into many languages.
+|python sphinx| supports localization into many languages.
 
 .pot files 
 -----------------------------------------------------
-.pot files are used by localization teams as an intermediate step in-between the native English content and the localized content. Opscode builds the .pot files periodically so that localization teams can feed them into their tools as part of their localization process.
+.pot files are used by localization teams as an intermediate step in-between the native English content and the localized content. |company_name| builds the .pot files periodically so that localization teams can feed them into their tools as part of their localization process.
 
 .. warning:: .pot files should be recompiled, not modified. Pull requests made against .pot files will be rejected; however, if the pull requests does point out an error in the docs, the error will be fixed in the original source file, of course.
 
-The .pot file is built using much the same process as a regular Sphinx content build. For example, a regular content build:
+The .pot file is built using much the same process as a regular |python sphinx| content build. For example, a regular content build:
 
 .. code-block:: bash
 
@@ -507,17 +509,17 @@ and then for the .pot files:
 
 with the very important difference of the ``/build`` vs. ``/translate`` folders for the output.
 
-.pot files should be checked into the github repository like every other source file and even though they are output of the source files, should be treated as if they are source files. 
+.pot files should be checked into the |github| repository like every other source file and even though they are output of the source files, should be treated as if they are source files. 
 
-.. note:: The /translate folder in the github source contains a regularly updated set of .pot files. That said, it is recommended that if you want to localize the Chef documentation, check with Opscode (send email to docs@opscode.com) and let us know that you want to participate in the localization process and we can sync up. Or just update the .pot files locally to make sure they are the most current versions of the .pot files.
+.. note:: The /translate folder in the |github| source contains a regularly updated set of .pot files. That said, it is recommended that if you want to localize the documentation, check with |company_name| (send email to |chef docs_email|) and let us know that you want to participate in the localization process and we can sync up. Or just update the .pot files locally to make sure they are the most current versions of the .pot files.
 
-conf.py Settings 
+conf.py Settings
 =====================================================
-Every Sphinx build has a configuration file.
+Every |python sphinx| build has a configuration file (conf.py).
 
 rst_prolog
 -----------------------------------------------------
-Opscode has added this configuration setting to every conf.py file to help streamline the inclusion of files at the beginning of the build process and to help support localization efforts. This setting is added to the general configuration settings and looks like this:
+|company_name| has added this configuration setting to every configuration file to help streamline the inclusion of files at the beginning of the build process and to help support localization efforts. This setting is added to the general configuration settings and looks like this:
 
 .. code-block:: python
 

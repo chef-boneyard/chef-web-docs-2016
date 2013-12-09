@@ -73,4 +73,4 @@ Once pushed, visit your repo on GitHub, and open a Pull Request against `opscode
 
 ## Questions?
 
-Open an [Issue](https://github.com/opscode/chef-docs/issues) and ask.
+Open an [Issue](https://github.com/opscode/chef-docs/issues) and ask. Or send email to docs@opscode.com.

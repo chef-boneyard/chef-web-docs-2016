@@ -38,7 +38,7 @@ A workstation must be configured with a |chef client|, must have access to a |ch
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_workstation.html">Set up a Workstation</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_bootstrap.html">Bootstrap a Node</a> </br>
 
-Knife
+|knife|
 -----------------------------------------------------
 |knife| is a command-line tool that provides an interface between a local |chef repo| and the |chef server|. All |knife| subcommands share a set of :doc:`common options </knife_common_options>` and :doc:`usage patterns </knife_using>`. 
 
@@ -74,7 +74,7 @@ The following |knife| subcommands are built-in:
 
 |knife| settings are stored in the :doc:`knife.rb </config_rb_knife>` file. There is a default |knife rb| file and there are :doc:`optional settings </config_rb_knife_optional_settings>` that can be added to the |knife rb| file.
 
-Knife Cloud Plugins
+|knife| Cloud Plugins
 -----------------------------------------------------
 Plugins allow |knife| to interact with all of the major cloud providers. All |knife| plugins share the same set of :doc:`common options </knife_common_options>` and built-in |knife| subcommands, plus |knife| plugins can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|.
 
@@ -202,7 +202,7 @@ Options:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_users.html">Create Users</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_orgs.html">Create Organizations</a> </br>
 
-Manage Enterprise Chef
+Manage |chef server oec|
 -----------------------------------------------------
 The |chef server| can be managed in the following ways:
 

@@ -2,7 +2,7 @@
 |chef private| 1.4.x 
 =====================================================
 
-.. warning:: This documentation is about |chef private|. For documentation about the newly-released |chef server oec|, see docs.opscode.com/enterprise.
+.. warning:: This documentation is about |chef private|. For documentation about the newly-released |chef server oec|, see |chef docs_enterprise|.
 
 **Engagement:** :doc:`How Consulting Works </private_chef_1x_engage_how_consulting_works>` | :doc:`Pre-Installation Steps </private_chef_1x_engage_preinstall>` | :doc:`Onsite Installation </private_chef_1x_engage_onsite>` | :doc:`Acceptance </private_chef_1x_engage_acceptance>`
 
