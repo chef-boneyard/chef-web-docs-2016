@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``block``
-     - |block_ruby| Default value: ``nil``.
+     - |block_ruby|
    * - ``block_name``
      - |name ruby_block| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``

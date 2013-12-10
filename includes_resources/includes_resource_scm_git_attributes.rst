@@ -12,13 +12,13 @@ This resource has the following attributes:
    * - ``additional_remotes``
      - |additional_remotes|
    * - ``depth``
-     - |depth git_shallow_clone| Default value: ``nil`` (full clone).
+     - |depth git_shallow_clone| The default behavior will do a full clone.
    * - ``destination``
      - |destination resource scm| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``enable_submodules``
      - |enable_submodules| Default value: ``false``.
    * - ``group``
-     - |group deploy| Default value: ``nil``.
+     - |group deploy|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``reference``
@@ -32,4 +32,4 @@ This resource has the following attributes:
    * - ``ssh_wrapper``
      - |ssh_wrapper resource|
    * - ``user``
-     - |user checked_out_code| Default value: ``nil``.
+     - |user checked_out_code|

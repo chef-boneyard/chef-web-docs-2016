@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``cookbook``
-     - |cookbook file_location| Default value: ``nil`` (the current cookbook).
+     - |cookbook file_location| The default value is the current cookbook.
    * - ``files_backup``
      - |files_backup| Default value: ``5``.
    * - ``files_group``

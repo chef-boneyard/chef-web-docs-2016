@@ -26,7 +26,7 @@ This resource has the following attributes:
    * - ``environment``
      - |environment variables|
    * - ``group``
-     - |group deploy| Default value: ``nil``.
+     - |group deploy|
    * - ``keep_releases``
      - |keep_releases| Default value: ``5``.
    * - ``migrate``
@@ -44,7 +44,7 @@ This resource has the following attributes:
    * - ``repository_cache``
      - |repository_cache| Default value: ``cached-copy``.
    * - ``restart_command``
-     - |restart shell_command| Default value: ``nil``.
+     - |restart shell_command|
    * - ``revision``
      - |revision| Default value: ``HEAD``.
    * - ``rollback_on_error``
@@ -56,7 +56,7 @@ This resource has the following attributes:
    * - ``symlink_before_migrate``
      - |symlink_before_migrate| Default value: ``{"config/database.yml" => "config/database.yml"}``.
    * - ``user``
-     - |user checked_out_code| Default value: ``nil``.
+     - |user checked_out_code|
 
 The following attributes are for use with |git| only:
 

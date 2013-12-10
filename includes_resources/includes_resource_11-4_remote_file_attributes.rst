@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``backup``
      - |backups_kept| Default value: ``5``.
    * - ``checksum``
-     - Optional. |checksum file| Default value: ``nil``.
+     - Optional. |checksum file|
    * - ``group``
      - |windows group_identifier|
    * - ``inherits``
@@ -34,4 +34,4 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - Required. |source file_location chef_11-4| Default value: ``nil``.
+     - Required. |source file_location chef_11-4|

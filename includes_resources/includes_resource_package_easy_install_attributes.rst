@@ -22,8 +22,8 @@ This resource has the following attributes:
    * - ``python_binary``
      - The location of the |python| binary.
    * - ``response_file``
-     - Optional. |response_file| Default value: ``nil``.
+     - Optional. |response_file|
    * - ``source``
      - Optional. |source resource package|
    * - ``version``
-     - |version package| Default value: ``nil``.
+     - |version package|

@@ -12,12 +12,12 @@ This resource has the following attributes:
    * - ``append``
      - |append resource group| Default value: ``false``.
    * - ``gid``
-     - |id group| Default value: ``nil``.
+     - |id group|
    * - ``group_name``
      - |name group| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``members``
-     - |group_members| Default value: ``nil``.
+     - |group_members|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``system``
-     - |system group| Default value: ``nil``.
+     - |system group|

@@ -14,7 +14,7 @@ This resource has the following attributes:
    * - ``arch``
      - |architecture package|
    * - ``flush_cache``
-     - |flush_cache| Default value: ``nil``.
+     - |flush_cache|
    * - ``options``
      - |command options|
    * - ``package_name``
@@ -22,9 +22,9 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``response_file``
-     - Optional. |response_file| Default value: ``nil``.
+     - Optional. |response_file|
    * - ``source``
      - Optional. |source resource package|
    * - ``version``
-     - |version package| Default value: ``nil``.
+     - |version package|
 

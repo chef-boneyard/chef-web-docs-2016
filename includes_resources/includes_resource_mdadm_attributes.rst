@@ -10,7 +10,7 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``bitmap``
-     - The path to a file in which a write-intent bitmap is stored. Default value: ``nil``.
+     - The path to a file in which a write-intent bitmap is stored.
    * - ``chunk``
      - |chunk_size| This attribute should not be used for a RAID 1 mirrored pair (i.e. when the ``level`` attribute is set to ``1``). Default value: ``16``.
    * - ``devices``

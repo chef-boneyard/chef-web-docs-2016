@@ -12,15 +12,15 @@ This resource has the following attributes:
    * - ``command``
      - |name command| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``creates``
-     - |creates file_exists| Default value: ``nil``.
+     - |creates file_exists|
    * - ``cwd``
-     - |cwd run_command| Default value: ``nil``.
+     - |cwd run_command|
    * - ``environment``
-     - |environment variables| Default value: ``nil``.
+     - |environment variables|
    * - ``group``
-     - |group command| Default value: ``nil``.
+     - |group command|
    * - ``path``
-     - |path resource execute| Default value: ``nil`` (uses system path).
+     - |path resource execute| The default value uses the system path.
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``returns``
@@ -28,6 +28,6 @@ This resource has the following attributes:
    * - ``timeout``
      - |timeout command| Default value: ``3600``.
    * - ``user``
-     - |user command| Default value: ``nil``.
+     - |user command|
    * - ``umask``
-     - |umask| Default value: ``nil``.
+     - |umask|

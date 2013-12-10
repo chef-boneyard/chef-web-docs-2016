@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``backup``
      - |backups_kept| Default value: ``5``.
    * - ``cookbook``
-     - |cookbook file_location| Default value: ``nil`` (the current cookbook).
+     - |cookbook file_location| The default value is the current cookbook.
    * - ``group``
      - |windows group_identifier|
    * - ``inherits``

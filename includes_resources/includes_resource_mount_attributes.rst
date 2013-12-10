@@ -10,13 +10,13 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``device``
-     - Required for ``:umount`` and ``:remount`` actions (for the purpose of checking the mount command output for presence). |device mount| Default value: ``nil``.
+     - Required for ``:umount`` and ``:remount`` actions (for the purpose of checking the mount command output for presence). |device mount|
    * - ``device_type``
      - |device_type| Default value: ``:device``.
    * - ``dump``
      - |dump_frequency| Default value: ``0``.
    * - ``fstype``
-     - Required. |fstype| Default value: ``nil``.
+     - Required. |fstype|
    * - ``mount_point``
      - |mount_point| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``options``

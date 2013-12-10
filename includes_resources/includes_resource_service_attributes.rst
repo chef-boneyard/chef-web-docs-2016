@@ -18,16 +18,16 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``reload_command``
-     - |command service_reload| Default value: ``nil``.
+     - |command service_reload|
    * - ``restart_command``
-     - |command service_restart| Default value: ``nil``.
+     - |command service_restart|
    * - ``service_name``
      - |name service| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``start_command``
-     - |command service_start| Default value: ``nil``.
+     - |command service_start|
    * - ``status_command``
-     - |command service_status| Default value: ``nil``.
+     - |command service_status|
    * - ``stop_command``
-     - |command service_stop| Default value: ``nil``.
+     - |command service_stop|
    * - ``supports``
      - |supports service| Default value: ``{ :restart => true, :status => true }``.

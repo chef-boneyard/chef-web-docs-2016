@@ -10,21 +10,21 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``code``
-     - |code quoted_string| Default value: ``nil``.
+     - |code quoted_string|
    * - ``command``
      - |name command| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``creates``
      - |creates file_exists|
    * - ``cwd``
-     - |cwd| Default value: ``nil``.
+     - |cwd|
    * - ``environment``
      - |environment variables|
    * - ``flags``
-     - |flags| Default value: ``nil``.
+     - |flags|
    * - ``group``
-     - |group command| Default value: ``nil``.
+     - |group command|
    * - ``path``
-     - |path resource execute| Default value: ``nil`` (uses system path).
+     - |path resource execute| The default value uses the system path.
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``returns``
@@ -32,6 +32,6 @@ This resource has the following attributes:
    * - ``timeout``
      - |timeout command|
    * - ``user``
-     - |user command| Default value: ``nil``.
+     - |user command|
    * - ``umask``
      - |umask|

@@ -12,20 +12,20 @@ This resource has the following attributes:
    * - ``allow_downgrade``
      - |allow_downgrade| Default value: ``false``.
    * - ``arch``
-     - |architecture package| Default value: ``nil``. This attribute is only available for the |resource yum_package| resource.
+     - |architecture package| This attribute is only available for the |resource yum_package| resource.
    * - ``flush_cache``
      - |resource yum_package| resource only. |flush_cache| Default value: ``{ :before => false, :after => false }``.
    * - ``gem_binary``
      - |gem_binary resource package|
    * - ``options``
-     - |command options| Can be used with |apt|, |debian dpkg|, |gentoo|, |rpm|, and |rubygems|. Default value: ``nil``.
+     - |command options| Can be used with |apt|, |debian dpkg|, |gentoo|, |rpm|, and |rubygems|.
    * - ``package_name``
      - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``response_file``
-     - Optional. |response_file| Default value: ``nil``.
+     - Optional. |response_file|
    * - ``source``
      - Optional. |source resource package|
    * - ``version``
-     - |version package| Default value: ``nil``.
+     - |version package|

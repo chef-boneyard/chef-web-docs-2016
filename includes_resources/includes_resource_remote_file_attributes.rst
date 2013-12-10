@@ -14,9 +14,9 @@ This resource has the following attributes:
    * - ``backup``
      - |backups_kept| Default value: ``5``.
    * - ``checksum``
-     - Optional, see ``use_conditional_get``. |checksum file| Default value: ``nil``.
+     - Optional, see ``use_conditional_get``. |checksum file|
    * - ``content``
-     - |content file| Default value: ``nil`` (don't modify content).
+     - |content file| The default behavior will not modify content.
    * - ``force_unlink``
      - |force_unlink| Default value: ``false``.
    * - ``ftp_active_mode``
@@ -46,7 +46,7 @@ This resource has the following attributes:
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - Required. |source file_location| Default value: ``nil``.
+     - Required. |source file_location|
    * - ``use_conditional_get``
      - |use conditional_get| Default value: ``true``.
    * - ``use_etag``

@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``destination``
      - |destination resource scm| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``group``
-     - |group deploy| Default value: ``nil``.
+     - |group deploy|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``repository``
@@ -28,4 +28,4 @@ This resource has the following attributes:
    * - ``svn_username``
      - |svn_username resource|
    * - ``user``
-     - |user checked_out_code| Default value: ``nil``.
+     - |user checked_out_code|

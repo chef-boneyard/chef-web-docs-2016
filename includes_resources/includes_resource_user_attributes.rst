@@ -10,22 +10,22 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``comment``
-     - |comment user| Default value: ``nil``.
+     - |comment user|
    * - ``gid``
-     - |id group| Default value: ``nil``.
+     - |id group|
    * - ``home``
-     - |home_directory| Default value: ``nil``.
+     - |home_directory|
    * - ``password``
-     - |password shadow_hash| Default value: ``nil``.
+     - |password shadow_hash|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``shell``
-     - |shell| Default value: ``nil``.
+     - |shell|
    * - ``supports``
      - |supports user| Default value: ``:manage_home => false, :non_unique => false``.
    * - ``system``
-     - |system user| Default value: ``nil``.
+     - |system user|
    * - ``uid``
-     - |user uid| Default value: ``nil``.
+     - |user uid|
    * - ``username``
      - |name user| Default value: the ``name`` of the resource block (see Syntax section above).

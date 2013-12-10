@@ -12,6 +12,6 @@ This resource has the following attributes:
    * - ``name``
      -  Always the same value as the ``name`` of the resource block (see Syntax section above).
    * - ``plugin``
-     - Optional. |plugin reload_by_ohai| Default value: ``nil`` (all plug-ins are reloaded ).
+     - Optional. |plugin reload_by_ohai| The default behavior reloads all plug-ins.
    * - ``provider``
      - Optional. |provider resource_parameter|

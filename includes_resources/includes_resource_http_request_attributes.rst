@@ -16,4 +16,4 @@ This resource has the following attributes:
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``url``
-     - |url http_request| Default value: ``nil``.
+     - |url http_request|

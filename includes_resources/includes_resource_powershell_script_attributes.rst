@@ -12,13 +12,13 @@ This resource has the following attributes:
    * - ``architecture``
      - |architecture windows_process|
    * - ``code``
-     - |code quoted_string| Default value: ``nil``.
+     - |code quoted_string|
    * - ``command``
      - |name command| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``flags``
      - |flags| Default value: ``[ -NoLogo, -NonInteractive, -NoProfile, -ExecutionPolicy RemoteSigned, -InputFormat None, -File ]``.
    * - ``interpreter``
-     - |interpreter| Default value: ``nil``.
+     - |interpreter|
    * - ``provider``
      - Optional. |provider resource_parameter|
 

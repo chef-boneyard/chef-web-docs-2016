@@ -10,27 +10,27 @@ This resource has the following attributes:
    * - Attribute
      - Description
    * - ``bcast``
-     - |broadcast_address| Default value: ``nil``.
+     - |broadcast_address|
    * - ``bootproto``
-     - |boot_protocol| Default value: ``nil``.
+     - |boot_protocol|
    * - ``device``
-     - |device ifconfig| Default value: ``nil``.
+     - |device ifconfig|
    * - ``hwaddr``
-     - |hardware_address| Default value: ``nil``.
+     - |hardware_address|
    * - ``inet_addr``
-     - |internet_host_address| Default value: ``nil``.
+     - |internet_host_address|
    * - ``mask``
-     - |netmask| For example: ``255.255.255.0``. Default value: ``nil``.
+     - |netmask| For example: ``255.255.255.0``.
    * - ``metric``
-     - |routing_metric| Default value: ``nil``.
+     - |routing_metric|
    * - ``mtu``
-     - |maximum_transmission_unit| Default value: ``nil``.
+     - |maximum_transmission_unit|
    * - ``network``
-     - |network_address| Default value: ``nil``.
+     - |network_address|
    * - ``onboot``
-     - |onboot ifconfig| Default value: ``nil``.
+     - |onboot ifconfig|
    * - ``onparent``
-     - |onparent ifconfig| Default value: ``nil``.
+     - |onparent ifconfig|
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``target``
