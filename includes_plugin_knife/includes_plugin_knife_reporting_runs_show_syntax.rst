@@ -7,4 +7,4 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife runs show NODE_NAME
+   $ knife runs show RUN_ID

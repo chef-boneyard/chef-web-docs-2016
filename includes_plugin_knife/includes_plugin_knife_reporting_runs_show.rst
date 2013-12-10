@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``runs show`` argument is used to return a detailed list of |chef client| runs that occurred on a specific node.
+The ``runs show`` argument is used to return the details for a |chef client| run (by run identifier).

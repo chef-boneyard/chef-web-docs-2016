@@ -53,10 +53,6 @@ Options
 
 Examples
 -----------------------------------------------------
-**Show runs by node**
-
-.. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_show_by_node.rst
-
 **Show runs by run identifier**
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_reporting_runs_show_by_run_id.rst
