@@ -4,7 +4,7 @@ Authorization
 
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization.rst
 
-|chef hosted| and |chef private|
+|chef server oec|
 =====================================================
 .. include:: ../../includes_chef_auth/includes_chef_auth_authorization_chef_server.rst
 
