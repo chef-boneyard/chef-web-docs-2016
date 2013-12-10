@@ -49,7 +49,6 @@ An API request can be made using |curl|, which is a |bash| shell script that req
      else
        endpoint=${2%%\?*}
      fi
-
      path=${chef_server_url}$2
      client_name="chef_user"
      method=$1
