@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``run_status`` object is initialized by the |chef client| before the ``report`` method is run for any handler. The ``run_status`` keeps track of the status of the |chef client| run and will contain some (or all) of the following properties:
+The ``run_status`` object is initialized by the |chef client| before the ``report`` interface is run for any handler. The ``run_status`` object keeps track of the status of the |chef client| run and will contain some (or all) of the following properties:
 
 .. list-table::
    :widths: 200 300

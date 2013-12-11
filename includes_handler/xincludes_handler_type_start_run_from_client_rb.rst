@@ -2,7 +2,18 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The configuration of a start handler can be configured in the |client rb| file. For example, the |reporting| start handler adds the following code to the top of the |client rb| file:
+The configuration of a start handler can be configured in the |client rb| file. The following setting must be added:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``start_handlers``
+     - |handler config_start|
+
+For example, the |reporting| start handler adds the following code to the top of the |client rb| file:
 
 .. code-block:: ruby
 

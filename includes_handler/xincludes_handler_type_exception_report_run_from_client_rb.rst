@@ -14,8 +14,6 @@ A simple handler may be installed and configured at run-time. This requires edit
      - |handler config_exception|
    * - ``report_handlers``
      - |handler config_report|
-   * - ``start_handlers``
-     - |handler config_start|
 
 When this approach is used, the |client rb| file must also tell the |chef client| how to install and run the handler. There is no default install location for handlers. The simplest way to distribute and install them is via |rubygems|, though other methods such as |github| or HTTP will also work. Once the handler is installed on the system, enable it in the |client rb| file by requiring it. After the handler is installed, it may require additional configuration. This will vary from handler to handler. If a handler is a very simple handler, it may only require the creation of a new instance. For example, if a handler named ``MyOrg::EmailMe`` is hardcoded for all of the values required to send email, a new instance is required. And then the custom handler must be associated with each of the handler types for which it will run.
 
