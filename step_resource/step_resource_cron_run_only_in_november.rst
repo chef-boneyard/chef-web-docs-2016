@@ -8,7 +8,7 @@ The following example shows a schedule that will run at 8:00 PM, every weekday (
      minute "0"
      hour "20"
      day "*"
-     month "10"
+     month "11"
      weekday "1-5"
      action :create
    end
