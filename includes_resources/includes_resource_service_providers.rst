@@ -21,7 +21,7 @@ The following providers are available. Use the short name to call the provider f
      - The provider that is used with the |debian| and |ubuntu| platforms.
    * - ``Chef::Provider::Service::Upstart``
      - ``service``
-     - The provider that is used with the |upstart| platform.
+     - The provider that is used when |upstart| is available on the platform.
    * - ``Chef::Provider::Service::Init::Freebsd``
      - ``service``
      - The provider that is used with the |freebsd| platform.
