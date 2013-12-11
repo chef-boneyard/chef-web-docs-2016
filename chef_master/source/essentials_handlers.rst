@@ -1,45 +1,119 @@
 =====================================================
-About Exception and Report Handlers
+About Handlers
 =====================================================
 
 .. include:: ../../includes_handler/includes_handler.rst
 
-Handler Properties
+.. include:: ../../includes_handler/includes_handler_types.rst
+
+Exception/Report Handlers
 =====================================================
-.. include:: ../../includes_handler/includes_handler_properties.rst
+.. include:: ../../includes_handler/includes_handler_type_exception_report.rst
 
-Writing a Handler
+Run from Recipes
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_type_exception_report_run_from_recipe.rst
+
+Run from |client rb|
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_type_exception_report_run_from_client_rb.rst
+
+Start Handlers
 =====================================================
-.. include:: ../../includes_handler/includes_handler_write.rst
+.. include:: ../../includes_handler/includes_handler_type_start.rst
 
-Example
+Run from Recipes
 -----------------------------------------------------
-.. include:: ../../includes_handler/includes_handler_write_example_send_email.rst
+.. include:: ../../includes_handler/includes_handler_type_start_run_from_recipe.rst
 
-Install and Configure a Handler
+Run from |client rb|
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_type_start_run_from_client_rb.rst
+
+
+Handlers in Cookbooks
 =====================================================
-.. include:: ../../includes_handler/includes_handler_install.rst
+The following cookbooks can be used to load handlers during the |chef client| run.
 
-|lwrp chef handler|
+|cookbook chef_handler|
 -----------------------------------------------------
-.. include:: ../../includes_handler/includes_handler_install_from_cookbook.rst
+.. include:: ../../includes_handler/includes_handler_cookbook_chef_handler.rst
 
-Manual Install
+``JsonFile`` Handler
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_cookbook_chef_handler_json_file.rst
+
+|cookbook chef_client|
 -----------------------------------------------------
-.. include:: ../../includes_handler/includes_handler_install_manual.rst
+.. include:: ../../includes_handler/includes_handler_cookbook_chef_client.rst
 
-Distribute a Handler
+
+Custom Handlers
 =====================================================
-.. include:: ../../includes_handler/includes_handler_distribute.rst
+.. include:: ../../includes_handler/includes_handler_custom.rst
 
-Available Handlers
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_custom_syntax.rst
+
+``report`` Interface
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_custom_interface_report.rst
+
+Optional Interfaces
+-----------------------------------------------------
+The following interfaces may be used in a handler in the same way as the ``report`` interface to override the default handler behavior in the |chef client|. That said, the following interfaces are not typically used in a handler and, for the most part, are completely unnecessary for a handler to work properly and/or as desired.
+
+``data``
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_custom_interface_data.rst
+
+``run_report_safely``
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_custom_interface_run_report_safely.rst
+
+``run_report_unsafe``
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_custom_interface_run_report_unsafe.rst
+
+``run_status`` Object
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_custom_object_run_status.rst
+
+
+Examples
 =====================================================
-.. include:: ../../includes_handler/includes_handler_available.rst
+The following sections show examples of handlers.
 
-JsonFile Handler
+Cookbook Versions
 -----------------------------------------------------
-.. include:: ../../includes_handler/includes_handler_available_jsonfile.rst
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions.rst
 
-Open Source Handlers
+cookbook_versions.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions_handler.rst
+
+default.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions_recipe.rst
+
+|reporting|
 -----------------------------------------------------
-.. include:: ../../includes_handler/includes_handler_available_community.rst
+.. include:: ../../includes_handler/includes_handler_custom_example_reporting.rst
+
+.. note:: The start handler used by the |reporting| add-on for |chef server oec| is always installed using the |cookbook chef_client| cookbook.
+
+start_handler.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_custom_example_reporting_handler.rst
+
+
+Community Handlers
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_community_handlers.rst
+
+
+
+
+
+
