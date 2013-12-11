@@ -8,4 +8,4 @@
 * The workstation is the location from which cookbooks (and recipes) are authored, policy data (such as roles, environments, and data bags) are defined, data is synchronized with the |chef repo|, and data is uploaded to the |chef server|. 
 * Each node contains a |chef client| that performs the various infrastructure automation tasks that each node requires.
 
-Cookbooks are also a very important element and are be treated as a separate component (alongside the server, nodes, and the workstation) across the documentation. In general, the cookbooks are authored and managed from the workstation, moved to the |chef server|, and then are pulled down to nodes by the |chef client| during each |chef client| run.
+Cookbooks are also a very important element and can be treated as a separate component (alongside the server, nodes, and the workstation) across the documentation. In general, the cookbooks are authored and managed from the workstation, moved to the |chef server|, and then are pulled down to nodes by the |chef client| during each |chef client| run.
