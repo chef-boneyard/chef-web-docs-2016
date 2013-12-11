@@ -30,4 +30,4 @@ This resource has the following attributes:
    * - ``stop_command``
      - |command service_stop|
    * - ``supports``
-     - |supports service| Default value: ``{ :restart => true, :status => true }``.
+     - |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }``.

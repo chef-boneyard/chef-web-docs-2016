@@ -34,6 +34,19 @@ from client.rb
 -----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_run_from_client_rb.rst
 
+Start Handlers
+-----------------------------------------------------
+.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install.rst
+
+|cookbook chef_client|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install_cookbook.rst
+
+|client rb|
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install_config.rst
+
+
 Custom Handlers
 =====================================================
 .. include:: ../../includes_handler/xincludes_handler_custom.rst
@@ -67,49 +80,37 @@ Start Handlers
 .. include:: ../../includes_handler/xincludes_handler_custom_type_start.rst
 
 
-Example: Cookbook Versions Handler
+Example Handlers
 =====================================================
+The following sections show examples of handlers.
+
+Cookbook Versions
+-----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions.rst
 
-cookbook_versions.rb (Handler)
------------------------------------------------------
+cookbook_versions.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions_handler.rst
 
-default.rb (Recipe)
------------------------------------------------------
+default.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_example_cookbook_versions_recipe.rst
 
-
-
-
-
-Example: Reporting Handler
-=====================================================
+|reporting|
+-----------------------------------------------------
 .. include:: ../../includes_handler/xincludes_handler_custom_example_reporting.rst
 
-start_handler.rb (Handler)
------------------------------------------------------
+.. note:: The start handler used by the |reporting| add-on for |chef server oec| is always installed using the |cookbook chef client| cookbook.
+
+start_handler.rb
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_handler.rst
 
-Install
------------------------------------------------------
-.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install.rst
 
-|cookbook chef_client|
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install_cookbook.rst
-
-|client rb|
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_handler/xincludes_handler_custom_example_reporting_install_config.rst
 
 Community Handlers
 =====================================================
 .. include:: ../../includes_handler/xincludes_handler_community_handlers.rst
-
-
-
-
 
 
 

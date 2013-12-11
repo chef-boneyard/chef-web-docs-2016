@@ -21,9 +21,6 @@ where:
 * ``ModuleName`` is the name of the module as it exists within the ``Chef`` library
 * ``HandlerName`` is the name of the handler as it is used in a recipe
 * ``report`` is an interface that is used to define the custom handler
-* ``run_report_safely`` is xxxxx
-* ``run_report_unsafe`` is xxxxx
-* ``data`` is xxxxxx
 
 For example, the following shows a custom handler that sends an email that contains the exception data when a |chef client| run fails:
 

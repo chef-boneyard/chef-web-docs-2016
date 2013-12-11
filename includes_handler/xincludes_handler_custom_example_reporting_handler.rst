@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following code shows the |reporting| start handler:
+The following code shows the start handler used by the |reporting| add-in for |chef server oec|:
 
 .. code-block:: ruby
 
