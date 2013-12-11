@@ -181,7 +181,6 @@ To learn more about |ruby|, see the following:
 * |url ruby_lang_org|
 * |url ruby_power_of_chef|
 * |url codeacademy|
-* |url ruby_central_book|
 * |url ruby_doc_org|
 
 
