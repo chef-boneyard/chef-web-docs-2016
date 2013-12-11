@@ -192,7 +192,7 @@ Installation scenarios:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_reporting.html">Install the Reporting Add-on</a> </br>
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manage.html">Install the Manager Add-on</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manager.html">Install the Manager Add-on</a> </br>
 
 Options: 
 
