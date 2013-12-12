@@ -31,7 +31,7 @@ Run from |client rb|
 .. include:: ../../includes_handler/includes_handler_type_start_run_from_client_rb.rst
 
 
-Handlers in Cookbooks
+Handler Cookbooks
 =====================================================
 The following cookbooks can be used to load handlers during the |chef client| run.
 
