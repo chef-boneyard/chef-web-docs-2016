@@ -12,10 +12,6 @@ General
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_general.rst
 
-bifrost
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bifrost.rst
-
 bookshelf
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bookshelf.rst
@@ -55,6 +51,10 @@ nginx
 chef-pedant
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_pedant.rst
+
+oc_bifrost
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bifrost.rst
 
 opscode-account
 -----------------------------------------------------

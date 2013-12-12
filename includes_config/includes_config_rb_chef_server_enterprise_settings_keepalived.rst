@@ -52,7 +52,7 @@ This configuration file has the following settings for |keepalived|:
      - |vrrp_instance_interface| Should be set to the name of the dedicated interface for |keepalived|. Default value: ``"eth0"``.
    * - ``keepalived['vrrp_instance_ipaddress']``
      - |vrrp_instance_ipaddress| This is typically set by the ``backend_vip`` option. Default value: ``keepalived['vrrp_instance_ipaddress'] = "192.168.4.131"``.
-   * - keepalived['vrrp_instance_ipaddress_dev']``
+   * - ``keepalived['vrrp_instance_ipaddress_dev']``
      - |vrrp_instance_ipaddress_device| Default value: ``"eth0"``. 
    * - ``keepalived['vrrp_instance_password']``
      - |vrrp_instance_password| This value is generated randomly when the bootstrap server is installed and does not need to be set explicitly. Default value: ``"sneakybeaky"``.

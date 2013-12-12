@@ -9,23 +9,29 @@ The |service bifrost| service has the following settings:
 
    * - Setting
      - Description
-   * - ``bifrost['dir']``
+   * - ``oc_bifrost['dir']``
      - 
-   * - ``bifrost['enable']``
+   * - ``oc_bifrost['enable']``
      - |enable service| Default value: ``true``.
-   * - ``bifrost['ha']``
+   * - ``oc_bifrost['ha']``
      - |use ha|
+<<<<<<< HEAD
    * - ``bifrost['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/opscode/oc_bifrost``.
    * - ``bifrost['db_pool_size']``
      - |db_pool_size| This value should be increased if failures indicate that the |service bifrost| service ran out of connections. This value should be tuned in conjunction with the ``postgresql['max_connections']`` setting for |postgresql|. Default value: ``20``.
    * - ``bifrost['log_rotation']``
+=======
+   * - ``oc_bifrost['log_directory']``
+     - |directory logs| The default value is the recommended value. Default value: ``xxxxx``.
+   * - ``oc_bifrost['log_rotation']``
+>>>>>>> fix service names + missing ``
      - 
-   * - ``bifrost['sql_password']``
+   * - ``oc_bifrost['sql_password']``
      - 
-   * - ``bifrost['sql_user']``
+   * - ``oc_bifrost['sql_user']``
      - 
-   * - ``bifrost['sql_ro_password']``
+   * - ``oc_bifrost['sql_ro_password']``
      - 
-   * - ``bifrost['sql_ro_user']``
+   * - ``oc_bifrost['sql_ro_user']``
      - 

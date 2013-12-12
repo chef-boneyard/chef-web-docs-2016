@@ -9,19 +9,19 @@ The |service expander| service has the following settings:
 
    * - Setting
      - Description
-   * - ``chef_expander['consumer_id']``
+   * - ``opscode_expander['consumer_id']``
      - Default value: ``default``.
-   * - ``chef_expander['dir']``
+   * - ``opscode_expander['dir']``
      - Default value: ``/var/opt/chef-server/chef-expander``.
-   * - ``chef_expander['enable']``
+   * - ``opscode_expander['enable']``
      - |enable service| Default value: ``true``.
-   * - ``chef_expander['ha']``
+   * - ``opscode_expander['ha']``
      - |use ha| Default value: ``false``.
-   * - ``chef_expander['log_directory']``
+   * - ``opscode_expander['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-expander``.
-   * - ``chef_expander['nodes']``
+   * - ``opscode_expander['nodes']``
      - |worker_processes| Default value: ``2``.
-   * - ``chef_expander['reindexer_log_directory']``
+   * - ``opscode_expander['reindexer_log_directory']``
      - Default value: ``/var/log/chef-server/chef-expander-reindexer``.
    * - ``opscode_expander['redindexer_svlogd_num']``
      - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
