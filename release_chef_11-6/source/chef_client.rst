@@ -12,6 +12,18 @@ Options
 =====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_11-6_options.rst
 
+Run with Elevated Privileges
+=====================================================
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges.rst
+
+Linux
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_linux.rst
+
+Windows
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_windows.rst
+
 Examples
 =====================================================
 

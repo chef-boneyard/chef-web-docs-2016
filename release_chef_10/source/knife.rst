@@ -37,24 +37,14 @@ About Knife
      - |knife site cookbook|
    * - :doc:`knife_data_bag`
      - |knife data bag|
-   * - :doc:`knife_delete`
-     - |knife delete|
-   * - :doc:`knife_diff`
-     - |knife diff|
-   * - :doc:`knife_download`
-     - |knife download|
    * - :doc:`knife_environment`
      - |knife environment|
    * - :doc:`knife_exec`
      - |knife exec|
    * - :doc:`knife_index_rebuild`
      - |knife index rebuild|
-   * - :doc:`knife_list`
-     - |knife list|
    * - :doc:`knife_node`
      - |knife node|
-   * - :doc:`knife_raw`
-     - |knife raw|
    * - :doc:`knife_recipe_list`
      - |knife recipe list|
    * - :doc:`knife_role`
@@ -69,40 +59,7 @@ About Knife
      - |knife status|
    * - :doc:`knife_tag`
      - |knife tag|
-   * - :doc:`knife_upload`
-     - |knife upload|
-   * - :doc:`knife_user`
-     - |knife user|
 
-.. toctree::
-   :hidden:
 
-   knife_using
-   knife_common_options
-   knife_bootstrap
-   knife_client
-   knife_configure
-   knife_cookbook
-   knife_cookbook_site
-   knife_data_bag
-   knife_delete
-   knife_deps
-   knife_diff
-   knife_download
-   knife_edit
-   knife_environment
-   knife_exec
-   knife_index_rebuild
-   knife_list
-   knife_node
-   knife_raw
-   knife_recipe_list
-   knife_role
-   knife_search
-   knife_show
-   knife_ssh
-   knife_status
-   knife_tag
-   knife_upload
-   knife_user
-   knife_xargs
+
+

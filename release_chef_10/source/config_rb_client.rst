@@ -1,5 +1,5 @@
 =====================================================
-client.rb 
+client.rb
 =====================================================
 
 .. include:: ../../includes_config/includes_config_rb_client.rst
@@ -7,12 +7,7 @@ client.rb
 Settings
 ==========================================================================
 
-.. include:: ../../includes_config/includes_config_rb_11-6_client_settings.rst
-
-Disable Ohai Plugins
-==========================================================================
-
-.. include:: ../../step_ohai/step_ohai_plugin_disable.rst
+.. include:: ../../includes_config/includes_config_rb_11-4_client_settings.rst
 
 
 

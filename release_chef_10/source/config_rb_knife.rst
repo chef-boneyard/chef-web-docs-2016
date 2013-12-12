@@ -1,5 +1,5 @@
 =====================================================
-knife.rb 
+knife.rb
 =====================================================
 
 .. include:: ../../includes_config/includes_config_rb_knife.rst
@@ -8,11 +8,7 @@ knife.rb
 
 Settings
 =====================================================
-.. include:: ../../includes_config/includes_config_rb_11-6_knife_settings.rst
-
-Proxy Settings
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_knife_settings_proxy.rst
+.. include:: ../../includes_config/includes_config_rb_11-4_knife_settings.rst
 
 Optional Settings
 =====================================================
