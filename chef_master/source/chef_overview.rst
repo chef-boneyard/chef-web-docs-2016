@@ -30,6 +30,8 @@ The following types of nodes can be managed:
      - .. include:: ../../includes_node/includes_node_physical.rst
    * - .. image:: ../../images/icon_node_virtual.png
      - .. include:: ../../includes_node/includes_node_virtual.rst
+   * - .. image:: ../../images/icon_node_networking.png
+     - Networking devices---switches, routers, and VLANs.
 
 Some important components on nodes include:
 

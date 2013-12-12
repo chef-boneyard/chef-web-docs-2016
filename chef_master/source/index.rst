@@ -96,7 +96,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 -----------------------------------------------------
 |chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|.
 
-**Install:** `Sign up for Hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) | `Install Enterprise Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>` | :doc:`Download with Omnitruck API </api_omnitruck>`
+**Install:** :doc:`Install the Open Source Chef Server </install_server>` | :doc:`Scenario: Install the Open Source Chef Server on a Virtual Machine </install_server_scenario_vm>` | :doc:`Download the Open Source Chef Server with Omnitruck API </api_omnitruck>`
 
 **Settings and Tools:** :doc:`chef-server.rb </config_rb_chef_server>` | :doc:`chef-server-ctl </ctl_chef_server>`
 
