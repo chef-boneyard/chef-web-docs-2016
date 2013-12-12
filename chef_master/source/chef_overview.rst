@@ -31,7 +31,7 @@ The following types of nodes can be managed:
    * - .. image:: ../../images/icon_node_virtual.png
      - .. include:: ../../includes_node/includes_node_virtual.rst
    * - .. image:: ../../images/icon_node_networking.png
-     - Networking devices---switches, routers, and VLANs.
+     - A network node is a networking device---a switch, a router, a VLAN---that is being managed by a |chef client|.
 
 Some important components on nodes include:
 
