@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The configuration of a start handler can be configured in the |client rb| file. The following setting must be added:
+A start handler can be configured in the |client rb| file by adding the following setting:
 
 .. list-table::
    :widths: 200 300

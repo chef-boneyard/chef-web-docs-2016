@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A simple handler may be installed and configured at run-time. This requires editing of a node's |client rb| file to add the appropriate setting and information about that handler to the |client rb| or |solo rb| files. Depending on the handler type, one (or more) of the following settings must be added:
+A simple exception or report handler may be installed and configured at run-time. This requires editing of a node's |client rb| file to add the appropriate setting and information about that handler to the |client rb| or |solo rb| files. Depending on the handler type, one (or more) of the following settings must be added:
 
 .. list-table::
    :widths: 200 300
