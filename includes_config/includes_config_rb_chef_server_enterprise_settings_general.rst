@@ -15,8 +15,6 @@ This configuration file has the following general settings:
      - Default value: ``11.0.2``.
    * - ``bootstrap``
      - Default value: ``true``.
-   * - ``database_type``
-     - The type of database we are using. Only ``postgresql`` is fully supported - while ``mysql`` can be used with |chef server oec|, it requires the end user to install and configure both the server itself and the |mysql| client libraries. Default value: ``postgresql``.
    * - ``flavor``
      - Default value: ``osc``.
    * - ``notification_email``
