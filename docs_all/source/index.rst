@@ -38,7 +38,7 @@ Chef Single-page Topics
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_roles.html">Roles</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_search.html">Search</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_chef_client.html">chef-client</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_handlers.html">Exception and Report Handlers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_handlers.html">Handlers</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_node_object.html">Node Objects</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/essentials_repository.html">Repository</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/auth.html">Authentication and Authorization</a> </br>

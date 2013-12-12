@@ -96,8 +96,6 @@ The Nodes
 
 **Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
-**Configure:** :doc:`Exception and Report Handlers </essentials_handlers>`
-
 **Ohai:** :doc:`About Ohai </ohai>`
 
 **Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
@@ -107,7 +105,7 @@ The Nodes
 
 Cookbooks
 =====================================================
-**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
+**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` | :doc:`Handlers </essentials_handlers>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
 
 **LWRPs:** :doc:`About LWRPs in Community Cookbooks </lwrp>` | :doc:`About Custom LWRPs </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
 
