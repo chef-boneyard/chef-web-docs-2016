@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-12-09 00:07\n"
+"POT-Creation-Date: 2013-12-12 15:43\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,132 +17,137 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/install_server_oec.rst:8
-# 5df67b95eb8740a49908c299c2486b29
+# 62ac77bc85964b4c9b94f82ad0a16294
 msgid "Install the Enterprise Chef Server"
 msgstr ""
 
 #: ../../includes_chef_server/includes_chef_server.rst:4
-# 3178818233294325b121744b0a0c29ef
+# f3c8cd4555014b85887a69c49519ca64
 msgid "The |chef server| acts as a hub for configuration data. The |chef server| stores cookbooks, the policies that are applied to nodes, and metadata that describes each registered node that is being managed by the |chef client|. Nodes use the |chef client| to ask the |chef server| for configuration details, such as recipes, templates, and file distributions. The |chef client| then does as much of the configuration work as possible on the nodes themselves (and not on the |chef server|). This scalable approach distributes the configuration effort throughout the organization."
 msgstr ""
 
 #: ../source/install_server_oec.rst:12
-# 34754b455806482e8276415f6aedf15b
+# 66b1cc3324df4a73a9a9e13631773d92
 msgid "The steps below describe the process for installing |chef server oec|."
 msgstr ""
 
 #: ../source/install_server_oec.rst:15
-# 4d94a81653674972b2938fb3d0d88ac5
+# cddee7286c2d4016ad3435857dc0f830
 msgid "Steps"
 msgstr ""
 
 #: ../../step_install/step_install_server_oec.rst:4
-# ed154414f186479e889a3b79e0eed487
+# 9e621782fa7d4cd8acaf0034d51772b5
 msgid "To install |chef server oec|, do the following:"
 msgstr ""
 
 #: ../../step_install/step_install_server_oec.rst:6
-# 49b17b96e68b4c15b1cb92cb3819db1b
+# 1029e79f391849c19830d062743f26bb
 msgid "Go to http://www.opscode.com/enterprise-chef/."
 msgstr ""
 
 #: ../../step_install/step_install_server_oec.rst:8
-# 46d719ed6b8c454b833dd08a2a2cc62f
+# 0973df8376ed4c88a3f1e3ffcd97d5ce
 msgid "Click the **Get Chef** button and sign up for |chef server oec|."
 msgstr ""
 
 #: ../../step_install/step_install_server_oec.rst:10
-# 52e12d92d78d4ab996a04cfee59fe0f2
+# ee961fa3b9004f40957751a0f19d4812
 msgid "Complete the sign-up page. At the bottom of the email that is sent to you by |company_name|, click the link to request a download of |chef server oec| to install locally."
 msgstr ""
 
 #: ../../step_install/step_install_server_oec.rst:12
-# 5b1b3c11da524f809fa51e799642cd88
+# 709b3941c62742e285fdc8e990c1a3b1
 msgid "Review the `prerequisites <http://docs.opscode.com/enterprise/install_server_pre.html>`_."
 msgstr ""
 
 #: ../../step_install/step_install_server_oec.rst:14
-# c13bda010ceb49c08d67d72b4b735c94
+# 48e681434dc9460bad4f2a5b485e7d7c
 msgid "Choose a topology---`standalone <http://docs.opscode.com/enterprise/install_server_standalone.html>`_, `scaled back end <http://docs.opscode.com/enterprise/install_server_be.html>`_, `scaled front end <http://docs.opscode.com/enterprise/install_server_fe.html>`_, or `scaled front and back ends <http://docs.opscode.com/enterprise/install_server_febe.html>`_---and then follow the steps for that scenario."
 msgstr ""
 
 #: ../source/install_server_oec.rst:19
-# 0241b78ae6ec4c6eb0ba9a49eb59fc1a
+# 701b21de727d4fc0a4239313bd6c0203
 msgid "About FQDNs and Hostnames"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_hostname.rst:4
-# 6c63745a1a0c4c709a4c704b7391f284
+# 19bd1136a6814535b39ad3b87a4b77da
 msgid "The hostname for the |chef server| must meet the following requirements:"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_hostname.rst:6
-# 730f16d1e5ee4088b651c2927b26a864
+# 4413a996c36e41fdb7bc9ed38271ea65
 msgid "The hostname must be a |fqdn|, including the domain suffix. For example, something like ``mychefserver.example.com`` (and not something like ``mychefserver``)"
 msgstr ""
 
 #: ../../includes_install/includes_install_server_hostname.rst:7
-# f1ed3aba41ec419380d76b391699a972
+# 97312501f98647cfa702e0fc01eb3ea9
 msgid "The hostname must be resolvable. In most cases, such as for a |chef server| that will run in a production environment, add the hostname for the |chef server| to the |dns| system. In some cases, such as when deploying |chef server| into a testing environment, just adding the hostname to the ``/etc/hosts`` file is enough to ensure that a hostname is resolvable"
 msgstr ""
 
+#: ../../includes_install/includes_install_server_hostname.rst:9
+# be67df8125e34c1fbc7012fc2b083d2d
+msgid "The ``api_fqdn`` setting can be added to the |enterprise rb| file (it is not there by default). When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. Then configure the same value for the ``bookshelf['vip']`` setting prior to installing |chef server oec|. For example: ``api_fqdn \"chef.example.com\"``."
+msgstr ""
+
 #: ../source/install_server_oec.rst:22
-# 428fbcdd5060496d9ecf1067ebed724c
+# 0a6911500e0b40f28634253ad81ffe1b
 msgid "**To verify if a hostname is a FQDN**"
 msgstr ""
 
 #: ../../step_install/step_install_hostname_is_fqdn.rst:4
-# 04846f9bbb0e464eb27fa4121ebf3eb0
+# 34f4c7bd64a949cd82e36f53d74a2728
 msgid "To verify if a hostname is a |fqdn|, run the following command:"
 msgstr ""
 
 #: ../../step_install/step_install_hostname_is_fqdn.rst:10
-# 5fa50ccc97ba4406906d79b6eb62f59a
+# a21638186a104a79b51f14aba9558ab8
 msgid "If the hostname is a |fqdn|, it will return something like:"
 msgstr ""
 
 #: ../../step_install/step_install_hostname_is_fqdn.rst:16
-# 1920c0b4f1864a16b057b57c52baef7b
+# b27386da6aca42948939655ce2899988
 msgid "If the hostname is not a |fqdn|, it must be configured so that it is one."
 msgstr ""
 
 #: ../source/install_server_oec.rst:26
-# f58ee0be6efe45d7804fd4519161aa47
+# a4516c7c4b1f4902853376faadc28043
 msgid "**To verify is a hostname is resolvable**"
 msgstr ""
 
 #: ../../step_install/step_install_hostname_is_resolvable.rst:4
-# cf0491406111430e958f6b25be9fe25c
+# 97251add3a13463faf1101ab9f51c99f
 msgid "To verify is a hostname is resolvable, run the following command:"
 msgstr ""
 
 #: ../../step_install/step_install_hostname_is_resolvable.rst:10
-# 7e672e05db6f4b288dc33f5656b112f2
+# 57d6a2ea02834086b06324845894bbe5
 msgid "If the hostname is resolvable, it will return something like:"
 msgstr ""
 
 #: ../source/install_server_oec.rst:30
-# e3be9a6080e74dec9d856a2c60fa0cf7
+# d54d5312753f4364980288c80ea70eb3
 msgid "**To change a hostname**"
 msgstr ""
 
 #: ../../step_install/step_install_hostname_edit.rst:4
-# a85f4a7a091743ab9ef05116d67e19d4
+# 4bc20deeb847453e9fc6fa98407c50c6
 msgid "In some cases, the hostname for the |chef server| needs to be updated. The process for updating a hostname varies, depending on the platform on which the |chef server| will run. Refer to the manual for the platform or contact a local systems administrator for specific guidance for a specific platform. The following example shows how a hostname can be changed when running |redhat| or |centos|:"
 msgstr ""
 
 #: ../../step_install/step_install_hostname_edit.rst:10
-# 1aa1efedf99d48edba359007366f0e56
+# 2ee1f935adaa4c46ac5cb97df0090bb0
 msgid "and then:"
 msgstr ""
 
 #: ../source/install_server_oec.rst:34
-# f507780d969c4df5bdf06653ee4826ce
+# 210371b8eb61440db1f4f3db8862dcf2
 msgid "**To add a hostname to /etc/hosts**"
 msgstr ""
 
 #: ../../step_install/step_install_hostname_add_to_etc_hosts.rst:4
-# 3a8a6a0b305f48708499ab5f72c28d6d
+# d4fd897ca69a472f858374072c6ed5f5
 msgid "If a hostname is not resolvable, refer to a local systems administrator for specific guidance on how to add the hostname to the |dns| system. If the |chef server| is being into a testing environment, just add the hostname to ``/etc/hosts``. The following example shows how a hostname can be added to ``/etc/hosts`` when running |redhat| or |centos|:"
 msgstr ""
 
