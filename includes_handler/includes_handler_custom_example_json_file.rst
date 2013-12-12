@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``JsonFile`` handler is available from the ``chef_handler`` cookbook and can be used with exceptions and reports. The ``JsonFile`` handler is used to serialize run status data to a |json| file. This handler needs to be enabled by adding the following lines of |ruby| code to either |client rb| or |solo rb|:
+The `json_file <https://github.com/opscode/chef/blob/master/lib/chef/handler/json_file.rb>`_ handler is available from the ``chef_handler`` cookbook and can be used with exceptions and reports. It serializes run status data to a |json| file. This handler needs to be enabled by adding the following lines of |ruby| code to either |client rb| or |solo rb|:
 
 .. code-block:: ruby
 

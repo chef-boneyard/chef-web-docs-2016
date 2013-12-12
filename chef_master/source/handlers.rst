@@ -39,10 +39,6 @@ The following cookbooks can be used to load handlers during the |chef client| ru
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_cookbook_chef_handler.rst
 
-``JsonFile`` Handler
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_handler/includes_handler_cookbook_chef_handler_json_file.rst
-
 |cookbook chef_client|
 -----------------------------------------------------
 .. include:: ../../includes_handler/includes_handler_cookbook_chef_client.rst
@@ -107,6 +103,13 @@ start_handler.rb
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_handler/includes_handler_custom_example_reporting_handler.rst
 
+``json_file`` Handler
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_custom_example_json_file.rst
+
+``error_report`` Handler
+-----------------------------------------------------
+.. include:: ../../includes_handler/includes_handler_custom_example_error_report.rst
 
 Community Handlers
 -----------------------------------------------------
