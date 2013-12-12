@@ -8,8 +8,8 @@ To use the |lwrp chef handler| resource in a recipe, add code similar to the fol
 
 .. code-block:: ruby
 
-   chef_handler "handler_namespace" do
-     source "/var/chef/handlers/email_me"
+   chef_handler "name_of_handler" do
+     source "/path/to/handler/handler_name"
      action :enable
    end
 
