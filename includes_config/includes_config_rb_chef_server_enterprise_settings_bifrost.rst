@@ -16,7 +16,9 @@ The |service bifrost| service has the following settings:
    * - ``bifrost['ha']``
      - |use ha|
    * - ``bifrost['log_directory']``
-     - |directory logs| The default value is the recommended value. Default value: ``xxxxx``.
+     - |directory logs| The default value is the recommended value. Default value: ``/var/log/opscode/oc_bifrost``.
+   * - ``bifrost['db_pool_size']``
+     - |db_pool_size| This value should be increased if failures indicate that the |service bifrost| service ran out of connections. This value should be tuned in conjunction with the ``postgresql['max_connections']`` setting for |postgresql|. Default value: ``20``.
    * - ``bifrost['log_rotation']``
      - 
    * - ``bifrost['sql_password']``
