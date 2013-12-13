@@ -4,33 +4,22 @@
 The following table lists the versions that are available for the |chef server|:
 
 .. list-table::
-   :widths: 320 60 60 60
+   :widths: 280 60 60 100
    :header-rows: 1
  
    * - Platform
      - p
-     - pv
      - m
+     - pv
    * - |redhat enterprise linux| / |centos|
      - ``el``
-     - ``5``
      - ``x86_64``
-   * - 
-     - ``el``
-     - ``6``
-     - ``x86_64``
+     - ``5``, ``6``
    * - |ubuntu|
      - ``ubuntu``
-     - ``10.04``
      - ``x86_64``
-   * - 
-     - ``ubuntu``
-     - ``11.04``
-     - ``x86_64``
-   * - 
-     - ``ubuntu``
-     - ``12.04``
-     - ``x86_64``
+     - ``10.04``, ``11.04``, ``12.04``
+
 
 
 
