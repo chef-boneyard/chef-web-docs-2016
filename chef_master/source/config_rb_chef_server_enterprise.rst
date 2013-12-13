@@ -10,7 +10,7 @@ Recommended Settings
 
 Optional Settings
 =====================================================
-The following settings are often used to for performance tuning of |chef server oec| in larger installations.
+The following settings are often used for performance tuning of |chef server oec| in larger installations.
 
 .. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``private-chef-ctl reconfigure`` command.
 
