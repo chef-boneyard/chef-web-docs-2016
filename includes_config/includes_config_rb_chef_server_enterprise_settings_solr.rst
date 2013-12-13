@@ -30,7 +30,7 @@ The |service solr| service has the following settings:
    * - ``opscode_solr['max_commit_docs']``
      - |solr_max_commit_docs| This value should be tuned carefully.  |solr_update_frequency_caveat| Default value: ``1000`` (every 1000 documents).
    * - ``opscode_solr['max_field_length']``
-     - Default value: ``100000``.
+     - |solr_max_field_length| Default value: ``100000`` (increased from the |apache solr| default value of ``10000``).
    * - ``opscode_solr['max_merge_docs']``
      - The maximum number of index segments allowed before they are merged into a single index. Default value: ``2147483647``.
    * - ``opscode_solr['merge_factor']``
