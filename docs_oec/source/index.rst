@@ -214,7 +214,7 @@ The |chef server| can be managed in the following ways:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_ldap.html">LDAP / Active Directory</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_logs.html">Logs</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_monitor.html">Monitor</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_tuning.html">Performance Tuning</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_tuning.html">Server Tuning</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_security.html">Security</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_services.html">Services</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_users.html">Users</a> </br>
