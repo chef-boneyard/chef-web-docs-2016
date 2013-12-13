@@ -11,8 +11,6 @@ Commonly tuned values include:
 
    * - Setting
      - Description
-   * - ``xxxxx``
-     - xxxxx. Suggested value: ``xxxxx``.
-   * - ``xxxxx``
-     - xxxxx. Suggested value: ``xxxxx``.
+   * - ``bookshelf['vip']``
+     - |ip_address virtual| Default value: ``node['fqdn']``.
 
