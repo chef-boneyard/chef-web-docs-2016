@@ -17,5 +17,7 @@ Commonly tuned values include:
        If |apache solr| is running out of memory, the ``/var/log/opscode/opscode-solr/current`` log file will contain ``SEVERE: java.lang.OutOfMemoryError: Java heap space``.
        
        The default value should work for many organizations with fewer than 25 nodes. Suggested value: ``256M`` per every 25 nodes. For example, an organization with 300 nodes, this value should be set to ``3072M``.
+   * - ``opscode_solr['max_field_length']``
+     - The maximum field length (in number of tokens/terms). If a field length exceeds this value, |apache solr| may not be able to build the index. Default value: ``100000`` (increased from the |apache solr| default value of ``10000``).
 
 
