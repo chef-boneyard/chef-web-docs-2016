@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The following settings to the |enterprise rb| file:
+The following settings are typically added to the |enterprise rb| file:
 
 .. list-table::
    :widths: 200 300

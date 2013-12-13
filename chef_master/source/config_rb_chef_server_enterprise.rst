@@ -4,8 +4,6 @@
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
-|note knife rb windows path|
-
 Recommended Settings
 =====================================================
 .. include:: ../../includes_server_tuning/includes_server_tuning_general.rst
