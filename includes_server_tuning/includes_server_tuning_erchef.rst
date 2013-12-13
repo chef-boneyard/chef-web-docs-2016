@@ -11,7 +11,7 @@ Commonly tuned values include:
 
    * - Setting
      - Description
-   * - ``erchef['db_pool_size']``
+   * - ``opscode_erchef['db_pool_size']``
      - |db_pool_size| This value should be increased if failures indicate that the |service erchef| service ran out of connections. This value should be tuned in conjunction with the ``postgresql['max_connections']`` setting for |postgresql|. Default value: ``20``.
 
  

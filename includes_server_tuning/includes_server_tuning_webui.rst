@@ -11,5 +11,5 @@ Commonly tuned values include:
 
    * - Setting
      - Description
-   * - ``chef_server_webui['worker_processes']``
+   * - ``opscode_webui['worker_processes']``
      - |worker_processes| This setting should be increased or decreased based on the number of users in an organization who use the |chef server| web user interface. The default value is ``2``.
