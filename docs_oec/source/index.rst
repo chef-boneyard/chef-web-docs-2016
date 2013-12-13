@@ -221,6 +221,8 @@ The |chef server| can be managed in the following ways:
 
 The |chef manager| is an add-on for |chef server oec| that provides a user interface that enables the management of objects on the |chef server|:
 
+.. raw:: html
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_clients.html">Clients</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_cookbooks.html">Cookbooks</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_manage_data_bags.html">Data Bags</a> </br>
