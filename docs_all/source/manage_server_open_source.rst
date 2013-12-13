@@ -6,8 +6,6 @@ Manage the Open Source Chef Server
 
 .. include:: ../../includes_manage_server_open_source/includes_manage_server_open_source.rst
 
-.. note:: In order to set up and start the management console, use the ``bootstrap_server`` recipe with ``webui_enabled``. The management console will be running on port 4040.
-
 Manage API Clients
 =====================================================
 .. include:: ../../includes_chef_client/includes_chef_client.rst
