@@ -4,108 +4,56 @@
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
-Settings
-=====================================================
-The following sections describe the various settings that are available in the |enterprise rb| file.
+|note knife rb windows path|
 
-General
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_general.rst
+Recommended Settings
+=====================================================
+.. include:: ../../includes_server_tuning/includes_server_tuning_general.rst
+
+Optional Settings
+=====================================================
+The following settings are often used to for performance tuning of |chef server oec| in larger installations.
+
+.. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``private-chef-ctl reconfigure`` command.
 
 bookshelf
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bookshelf.rst
-
-bootstrap
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bootstrap.rst
-
-couchdb
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_couchdb.rst
-
-drbd
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_drbd.rst
-
-keepalived
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_keepalived.rst
-
-ldap
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_ldap.rst
-
-load-balancer
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_load_balancer.rst
-
-logs
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_logs.rst
-
-nginx
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_nginx.rst
-
-chef-pedant
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_pedant.rst
-
-oc_bifrost
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bifrost.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_bookshelf.rst
 
 opscode-account
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_account.rst
-
-opscode-certificate
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_certificate.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_account.rst
 
 opscode-chef
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_chef.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_chef.rst
 
 opscode-erchef
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_erchef.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_erchef.rst
 
 opscode-expander
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_expander.rst
-
-opscode-org-creator
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_orgcreator.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_expander.rst
 
 opscode-solr
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_solr.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_solr.rst
+
+Update Frequency
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning/includes_server_tuning_solr_update_frequency.rst
 
 opscode-webui
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_webui.rst
-
-orgmapper
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_orgmapper.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_webui.rst
 
 postgresql
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_postgresql.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_postgresql.rst
 
-rabbitmq
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_rabbitmq.rst
+.. warning:: Review the full list of `optional settings <http://docs.opscode.com/config_rb_chef_server_enterprise_optional_settings.html>`_ that can be added to the |enterprise rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
 
-redis
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_redis.rst
 
-users
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_users.rst
 
 

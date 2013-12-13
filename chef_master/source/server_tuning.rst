@@ -9,7 +9,7 @@ Performance Tuning
 
 Customize the Config File
 =====================================================
-The |enterprise rb| file contains all of the non-default configuration settings used by the |chef server oec| server. (The default settings are built-in to the |chef server| configuration and are only added to the |enterprise rb| file when these settings need to be updated to be non-default.) These configuration settings are processed when the ``private-chef-ctl reconfigure`` command is run, such as immediately after setting up the |chef server oec| server or after making a change to the underlying configuration settings after the server has been deployed. The |enterprise rb| file is a |ruby| file, which means that conditional statements can be used in the configuration file.
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
 Use Conditions
 -----------------------------------------------------
@@ -18,27 +18,11 @@ Use Conditions
 
 Recommended Settings
 =====================================================
-The following settings should be added to the |enterprise rb| file:
+.. include:: ../../includes_server_tuning/includes_server_tuning_general.rst
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Setting
-     - Description
-   * - ``api_fqdn``
-     - The |fqdn| for the |chef server|. This setting is not in the |enterprise rb| file by default. When added, its value should be equal to the |fqdn| for the service URI used by the |chef server|. Then configure the same value for the ``bookshelf['vip']`` setting prior to installing |chef server oec|. For example: ``api_fqdn "chef.example.com"``.
-   * - ``bookshelf['vip']``
-     - |ip_address virtual| Default value: ``node['fqdn']``. (This setting is related to the |service bookshelf| service.)
-   * - ``bootstrap``
-     - Default value: ``true``.
-   * - ``notification_email``
-     - Default value: ``info@example.com``.
-
-
-Tuning Settings
+Optional Settings
 =====================================================
-The following settings are commonly tuned in larger installations.
+The following settings are often used to for performance tuning of |chef server oec| in larger installations.
 
 .. note:: When changes are made to the |enterprise rb| file the |chef server oec| must be reconfigured by running the ``private-chef-ctl reconfigure`` command.
 

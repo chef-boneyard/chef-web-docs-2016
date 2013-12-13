@@ -480,7 +480,6 @@ The following topics discuss using |chef server oec| with platforms:
    config_rb_chef_server_enterprise
    config_rb_client
    config_rb_knife
-   config_rb_knife_optional_settings
    config_rb_metadata
    config_rb_push_jobs_server
    config_rb_solo
