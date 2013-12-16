@@ -12,7 +12,7 @@ Sometimes when a role isn't fully defined (or implemented), it may be necessary 
 
 where ``host`` is the private IP address of the database server. Use the following |knife| query to view information about the node:
 
-.. code-block: bash
+.. code-block:: bash
 
    knife search node "name:name_of_database_server" --long
 
