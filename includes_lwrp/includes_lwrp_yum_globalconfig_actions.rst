@@ -9,7 +9,8 @@ This lightweight resource provider has the following actions:
 
    * - Action
      - Description
-   * - ``:add``
-     - Default. |lwrp action add yum_key|
-   * - ``:remove``
-     - |lwrp action remove yum_key|
+   * - ``:create``
+     - Default. |lwrp action create yum_globalconfig|
+   * - ``:delete``
+     - |lwrp action delete yum_globalconfig|
+

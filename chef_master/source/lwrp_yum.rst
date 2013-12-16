@@ -4,27 +4,25 @@ yum Lightweight Resources
 
 |cookbook name yum|
 
-The |cookbook yum| cookbook contains the following lightweight resources: ``yum_key`` and ``yum_repository``.
+The |cookbook yum| cookbook contains the following lightweight resources: ``yum_globalconfig`` and ``yum_repository``.
 
 .. note:: These lightweight resources are part of the |cookbook yum| cookbook (https://github.com/opscode-cookbooks/yum).
 
-yum_key
+yum_globalconfig
 =====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_yum_key.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_globalconfig.rst
 
 Actions
 -----------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_yum_key_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_globalconfig_actions.rst
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_yum_key_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_globalconfig_attributes.rst
 
 Examples
 -----------------------------------------------------
-.. include:: ../../step_lwrp/step_lwrp_yum_key_add.rst
-
-.. include:: ../../step_lwrp/step_lwrp_yum_key_remove.rst
+None.
 
 
 yum_repository

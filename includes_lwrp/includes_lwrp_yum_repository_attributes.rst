@@ -20,7 +20,7 @@ This lightweight resource provider has the following attributes:
    * - ``includepkgs``
      - |include_packages|
    * - ``key``
-     - Optional. |key gnupg|
+     - Optional. |name key_gnupg|
    * - ``make_cache``
      - Optional.
    * - ``mirrorlist``

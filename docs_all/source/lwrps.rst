@@ -1951,25 +1951,21 @@ Examples
 .. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_local.rst
 
 
-yum_key
+yum_globalconfig
 -----------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_yum_key.rst
-
-.. note:: This lightweight resource is part of the |cookbook yum| cookbook (http://community.opscode.com/cookbooks/yum).
+.. include:: ../../includes_lwrp/includes_lwrp_yum_globalconfig.rst
 
 Actions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_yum_key_actions.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_globalconfig_actions.rst
 
 Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_yum_key_attributes.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_globalconfig_attributes.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_lwrp/step_lwrp_yum_key_add.rst
-
-.. include:: ../../step_lwrp/step_lwrp_yum_key_remove.rst
+None.
 
 
 yum_repository
