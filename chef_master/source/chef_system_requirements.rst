@@ -65,13 +65,11 @@ The Server
 =====================================================
 The following sections describe the various requirements for the three |chef server| types.
 
-.. note:: For testing purposes, open source |chef server| can be run with a very small footprint, such as an m1.small instance on |amazon aws| or a local virtual machine. In this type of scenario, at least 1GB of memory should be available to the |chef server|.
-
 |chef hosted|
 -----------------------------------------------------
 |chef hosted| has the following requirements:
 
-* **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 8 and 9)
+* **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 9 or better)
 * Every node that will be configured by the |chef client| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
 
 
@@ -91,8 +89,8 @@ Before installing |chef server oec|, ensure that each machine has the following 
 
 |chef server oec| has the following requirements:
 
-* **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 8 and 9)
-* Every node that will be configured by the |chef client| and every workstation that will upload data to the |chef server| must be able to communicate with |chef hosted|
+* **Browser** --- |firefox|, |google chrome|, |apple safari|, or |microsoft ie| (versions 9 or better)
+* Every node that will be configured by the |chef client| and every workstation that will upload data to the |chef server| must be able to communicate with |chef server oec|
 
 For a standalone deployment:
 
@@ -125,6 +123,9 @@ For a high availability deployment:
 
 Open Source |chef server|
 -----------------------------------------------------
+
+.. note:: For testing purposes, open source |chef server| can be run with a very small footprint, such as an m1.small instance on |amazon aws| or a local virtual machine. In this type of scenario, at least 1GB of memory should be available to the |chef server|.
+
 Before installing the open source |chef server|, ensure that each machine has the following installed and configured properly:
 
 * **Cores** --- 4; 2.0 GHz AMD 41xx/61xx or Intel Xeon 5000/E5 CPUs or faster
