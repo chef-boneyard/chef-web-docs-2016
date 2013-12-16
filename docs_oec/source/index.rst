@@ -315,6 +315,7 @@ A cookbook is made up of the following components: attribute files, definitions,
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_attribute_files.html">Attribute Files</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_definitions.html">Definitions</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_files.html">Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_handlers.html">Handlers</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_libraries.html">Libraries</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_metadata.html">Metadata</a> (and <a href="http://docs.opscode.com/enterprise/config_rb_metadata.html">/cookbook directory settings</a>)</br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_recipes.html">Recipes</a> (and the <a href="http://docs.opscode.com/enterprise/dsl_recipe.html">Recipe DSL</a>)</br>
