@@ -4,54 +4,49 @@ chef-server.rb
 
 .. include:: ../../includes_config/includes_config_rb_chef_server.rst
 
-Settings
+Recommended Settings
 =====================================================
-The following sections describe the various settings that are available in the |chef server rb| file.
+.. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_general.rst
 
-General
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_general.rst
+Optional Settings
+=====================================================
+The following settings are often used for performance tuning of |chef server osc| in larger installations.
 
-Bookshelf
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_bookshelf.rst
+.. note:: When changes are made to the |chef server rb| file the |chef server osc| must be reconfigured by running the ``chef-server-ctl reconfigure`` command.
 
-Chef Expander
+bookshelf
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_chef_expander.rst
+.. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_bookshelf.rst
 
-Chef Pedant
+chef-expander
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_pedant.rst
+.. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_expander.rst
 
-Chef Solr
+chef-solr
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_chef_solr.rst
+.. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_solr.rst
 
-Erchef
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_erchef.rst
+Update Frequency
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_solr_update_frequency.rst
 
-Load Balancer
+erchef
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_load_balancer.rst
+.. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_erchef.rst
 
-Nginx
+postgresql
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_nginx.rst
+.. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_postgresql.rst
 
-PostgreSQL
+webui
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_postgresql.rst
+.. include:: ../../includes_server_tuning_osc/includes_server_tuning_osc_webui.rst
 
-RabbitMQ
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_rabbitmq.rst
+.. warning:: Review the full list of `optional settings <http://docs.opscode.com/config_rb_chef_server_optional_settings.html>`_ that can be added to the |chef server rb| file. Many of these optional settings should not be added without first consulting with |company_name| support.
 
-User
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_users.rst
 
-WebUI
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_settings_webui.rst
+
+
+
+
+

@@ -182,6 +182,7 @@ Cookbooks
    community_plugin_report_handler
    config
    config_rb_chef_server
+   config_rb_chef_server_optional_settings
    config_rb_chef_server_enterprise
    config_rb_chef_server_enterprise_optional_settings
    config_rb_client
