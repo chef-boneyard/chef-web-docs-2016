@@ -4,7 +4,7 @@
 
 .. note:: See http://linux.die.net/man/5/yum.conf for complete descriptions of these attributes as they exist from the |yum| command line.
 
-This lightweight resource provider has the following attributes:
+|description resource_attributes_intro|
 
 .. list-table::
    :widths: 200 300

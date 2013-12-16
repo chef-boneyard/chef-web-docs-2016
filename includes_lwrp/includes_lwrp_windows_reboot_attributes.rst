@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-This lightweight resource provider has the following attributes:
+|description resource_attributes_intro|
 
 .. list-table::
    :widths: 200 300
@@ -10,6 +10,6 @@ This lightweight resource provider has the following attributes:
    * - Attribute
      - Description
    * - ``reason``
-     - |reason windows_reboot| Default value: ``Opscode Chef initiated reboot``.
+     - |reason windows_reboot| Default value: ``Chef initiated reboot``.
    * - ``timeout``
      - |timeout reboot| Default value: ``60``.

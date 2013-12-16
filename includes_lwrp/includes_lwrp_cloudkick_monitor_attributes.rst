@@ -3,7 +3,7 @@
 
 **jamescott: THIS TOPIC IS CURRENTLY DEPRECATED FROM THE RESOURCES REFERENCE. MUST BE REVIEWED CLOSELY BEFORE IT CAN BE RE-ADDED.**
 
-This lightweight resource provider has the following attributes:
+|description resource_attributes_intro|
 
 .. list-table::
    :widths: 200 300
