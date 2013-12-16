@@ -4,6 +4,14 @@
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
+Customize the Config File
+=====================================================
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
+
+Use Conditions
+-----------------------------------------------------
+.. include:: ../../step_config/step_config_add_condition.rst
+
 Recommended Settings
 =====================================================
 .. include:: ../../includes_server_tuning/includes_server_tuning_general.rst
