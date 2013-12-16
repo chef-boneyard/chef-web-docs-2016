@@ -267,7 +267,7 @@ New settings have been added to the |client rb| file:
      - |file atomic_update| For example:
        ::
  
-          file_atomic_update false
+          file_atomic_update true
    * - ``no_lazy_load``
      - |no_lazy_load| Default value: ``false``. For example:
        ::

@@ -81,10 +81,10 @@ This configuration file has the following settings:
  
           environment "production"
    * - ``file_atomic_update``
-     - |file atomic_update| Default value: ``false``. For example:
+     - |file atomic_update| Default value: ``true``. For example:
        ::
  
-          file_atomic_update false
+          file_atomic_update true
    * - ``file_backup_path``
      - |path file_backup| Default value: ``/var/chef/backup``. For example:
        ::
