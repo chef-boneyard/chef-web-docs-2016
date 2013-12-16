@@ -10,8 +10,8 @@
    * - Attribute
      - Description
    * - ``description``
-     - The description of the VLAN.
+     - |description vlan|
    * - ``name``
-     - The name of the VLAN.
+     - |name vlan|
    * - ``vlan_id``
-     - The unique identifier for the VLAN.
+     - |id vlan|

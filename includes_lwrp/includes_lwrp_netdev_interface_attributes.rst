@@ -10,15 +10,15 @@
    * - Attribute
      - Description
    * - ``description``
-     - The description of the interface.
+     - |description interface|
    * - ``duplex``
-     - The duplex mode for the interface. Possible values: ``auto``, ``half``, or ``full``. Default value: ``auto``.
+     - |duplex mode| Default value: ``auto``.
    * - ``enable``
-     - Indicates whether the interface is activated. Default value: ``true``.
+     - |use interface| Default value: ``true``.
    * - ``mtu``
-     - The maximum transmission unit (MTU) for the interface.
+     - |maximum_transmission_unit|
    * - ``name``
-     - The name of the interface.
+     - |name interface|
    * - ``speed``
-     - The speed for the interface. Possible values: ``auto``, ``100m``, ``1g``, ``10g``, ``40g``, ``56g``, or ``100g``. Default value: ``auto``.
+     - |speed interface| Default value: ``auto``.
 

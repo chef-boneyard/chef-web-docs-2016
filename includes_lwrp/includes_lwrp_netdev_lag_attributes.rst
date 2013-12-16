@@ -10,11 +10,11 @@
    * - Attribute
      - Description
    * - ``lacp``
-     - The Link Aggregation Control Protocol (LACP) mode. Possible values: ``active`` (active mode), ``disable`` (not used), or ``passive`` (passive mode).
+     - |mode lacp|
    * - ``links``
-     - An array of interfaces to be configured as members of a link aggregation group (LAG).
+     - |links interface_lag|
    * - ``minimum_links``
-     - The minimum number of physical links that are required to ensure the availability of the link aggregation group (LAG).
+     - |links minimum_physical_lag|
    * - ``name``
-     - The name of the link aggregation group (LAG).
+     - |name lag|
 

@@ -10,12 +10,12 @@
    * - Attribute
      - Description
    * - ``description``
-     - The description of the interface.
+     - |description interface|
    * - ``name``
-     - The name of the interface.
+     - |name interface|
    * - ``tagged_vlans``
-     - An array of VLANs that carry traffic on a trunk interface.
+     - |vlan tag_array|
    * - ``untagged_vlan``
-     - The native VLAN on an interface.
+     - |vlan untagged|
    * - ``vlan_tagging``
-     - Indicates whether a port is in access or trunk mode. Default value: ``true`` (trunk mode).
+     - |vlan tagged| Default value: ``true`` (trunk mode).
