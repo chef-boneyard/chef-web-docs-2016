@@ -86,7 +86,7 @@
    * - ``installroot``
      - Use to specify an alternate ``installroot``.
    * - ``keepalive``
-     - Indicates whether HTTP keepalive is used (when available).
+     - Indicates whether HTTP keepalive is used (if available).
    * - ``keepcache``
      - Indicates whether the cache of headers and packages are kept after a successful installation. Default value: ``false``.
    * - ``kernelpkgnames``
