@@ -37,7 +37,7 @@ This command has the following options:
    |interval|
 
 ``-j PATH``, ``--json-attributes PATH``
-   |json attributes|
+   |json attributes| Attributes loaded from a |json| file using this option are considered ``normal`` attributes from the perspective of attribute precedence during the |chef client| run.
 
 ``-l LEVEL``, ``--log_level LEVEL``
    |log_level|
