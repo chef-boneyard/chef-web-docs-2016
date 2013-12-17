@@ -96,7 +96,7 @@
    * - ``logfile``
      - The full directory and file name for the location in which |yum| should write a log file. Default value: ``/var/log/yum.log``.
    * - ``max_retries``
-     - 
+     - The maximum number of attempts made to retrieve a file before returning an error.
    * - ``mdpolicy``
      - The metadata download policy for the repository metadata index.
    * - ``metadata_expire``
@@ -112,9 +112,9 @@
    * - ``password``
      - The password used with ``username`` for basic authentication.
    * - ``path``
-     - 
+     - The path to the repository.
    * - ``persistdir``
-     - 
+     - The directory in which |yum| stores information that should persist across multiple |chef client| runs.
    * - ``pluginconfpath``
      - The list of directories in which |yum| should look for plugin configuration files.
    * - ``pluginpath``

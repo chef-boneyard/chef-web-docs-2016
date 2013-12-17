@@ -89,32 +89,6 @@ To install |crontab| on |centos| 6, run the following command:
 
    $ yum install crontabs
 
-
-|git|
------------------------------------------------------
-|chef server oec| requires that |git| be installed so that various internal services can confirm their own revision. For |redhat| and |centos| 6:
-
-.. code-block:: bash
-
-   $ yum install git
-
-For |ubuntu|:
-
-.. code-block:: bash
-
-   $ apt-get install git-core
-
-
-
-|redhat| and |centos|
------------------------------------------------------
-|chef server oec| requires ``libfreetype`` and ``libpng``, which may not be present in a minimal installation. To install ``freetype`` and ``libpng`` on |redhat| and |centos| 6:
-
-.. code-block:: bash
-
-   $ yum install freetype libpng
-
-
 |apache qpid|
 -----------------------------------------------------
 On |centos| and |redhat| systems, the |apache qpid| daemon is installed by default. In order to run |chef server oec|, this daemon must be disabled, as |chef server oec| uses |rabbitmq| for messaging (and they share the same protocol).
