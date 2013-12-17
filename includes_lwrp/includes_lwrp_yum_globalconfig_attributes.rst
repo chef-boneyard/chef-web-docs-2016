@@ -130,7 +130,7 @@
    * - ``proxy_password``
      - The proxy password.
    * - ``proxy_username``
-     - The user name for the proxy.
+     - The username for the proxy.
    * - ``recent``
      - The age (in days) of a package, after which a package is no longer considered a "recent" package.
    * - ``repo_gpgcheck``

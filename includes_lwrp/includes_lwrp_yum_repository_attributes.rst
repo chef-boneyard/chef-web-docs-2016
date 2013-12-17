@@ -26,11 +26,11 @@
    * - ``failovermethod``
      - |failover_method|
    * - ``fastestmirror_enabled``
-     - 
+     - Indicates that |yum| will use the fastest available mirror.
    * - ``gpgcheck``
      - Indicates whether |yum| will perform a |gnupg| signature check on packages. Default value: ``true``.
    * - ``gpgkey``
-     - |name key_gnupg|
+     - A URL that points to the ASCII-armored |gnupg| key file for this repository. Use this attribute when |yum| needs a public key to verify a package and when that key has not been imported into the |rpm| database.
    * - ``http_caching``
      - Use to define how upstream HTTP caches handle HTTP downloads. Possible values: ``all`` (cache all HTTP downloads), ``none`` (cache no HTTP downloads), or ``packages`` (cache only |rpm| downloads, but not repository metadata downloads).
    * - ``include_config``
@@ -40,26 +40,25 @@
    * - ``keepalive``
      - Indicates whether HTTP keepalive is used (if available).
    * - ``max_retries``
-     - 
+     - The maximum number of attempts made to retrieve a file before returning an error.
    * - ``metadata_expire``
      - The amount of time (in seconds) before metadata for this repository expires.
-   * - ``mirrorexpire``
-     - 
    * - ``mirrorlist``
-     - |mirrorlist|
-
+     - A URL that points to a file that contains a list of base URLs. This attribute can be used with or instead of ``baseurl``.
+   * - ``mirror_expire``
+     - The amount of time (in seconds) after which a locally-cached mirror list will expire. When the current ``mirrorlist`` is less than this amount of time, |yum| will not download another copy of the mirror list.
    * - ``mirrorlist_expire``
-     - 
+     - The amount of time (in seconds) after which a locally-cached mirror list will expire. An alias for ``mirror_expire``.
    * - ``priority``
-     - 
+     - The priority for repository entries; a repository will have priority when its priority value is higher than another repository's priority value.. Possible values: ``1`` - ``99``.
    * - ``proxy``
-     - 
-   * - ``proxy_username``
-     - 
+     - The URL for the proxy server.
    * - ``proxy_password``
-     - 
+     - The proxy password.
+   * - ``proxy_username``
+     - The user name for the proxy.
    * - ``report_instanceid``
-     - 
+     - Use to ensure that instances running |amazon linux| can log the instance identifier (e.g. ``i-12345678``) and region (e.g. ``us-west-1``) for an instance that downloads a package. 
    * - ``repositoryid``
      - Default value: ``true``.
    * - ``sslcacert``

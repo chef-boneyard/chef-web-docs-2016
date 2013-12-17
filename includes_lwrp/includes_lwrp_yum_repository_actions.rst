@@ -9,9 +9,7 @@ This lightweight resource provider has the following actions:
 
    * - Action
      - Description
-   * - ``:add``
-     - Default. |lwrp action add yum_repository|
-   * - ``:remove``
-     - |lwrp action remove yum_repository|
-   * - ``:update``
-     - |lwrp action update yum_repository|
+   * - ``:create``
+     - Default. |lwrp action create yum_repository|
+   * - ``:delete``
+     - |lwrp action delete yum_repository|

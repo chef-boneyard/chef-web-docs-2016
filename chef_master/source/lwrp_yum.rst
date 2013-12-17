@@ -22,7 +22,7 @@ Attributes
 
 Examples
 -----------------------------------------------------
-None.
+.. include:: ../../step_lwrp/step_lwrp_yum_globalconfig_add.rst
 
 
 yum_repository
@@ -41,4 +41,4 @@ Examples
 -----------------------------------------------------
 .. include:: ../../step_lwrp/step_lwrp_yum_repository_add.rst
 
-.. include:: ../../step_lwrp/step_lwrp_yum_repository_remove.rst
+.. include:: ../../step_lwrp/step_lwrp_yum_repository_delete.rst
