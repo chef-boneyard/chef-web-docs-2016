@@ -13,6 +13,13 @@ The starting point for this version is a direct clone of the 11-6 repo, complete
 
 Until the consensus is such that people agree that this doc collection represents a "done" set of content for the chef-client 10-latest release, the version footer will include "(pending updates)" and the main page will have a warning at the top stating as such.
 
+# How should I make changes?
+
+The structure of the source files is designed to ensure that the same topic can be published in exactly the same way across any document version. That said, there will be instances where what is required for chef-client 10.latest is different from chef-client 11.x. Especially in the topics that follow the essentials_ naming pattern.
+
+a) are the changes that need to be made changes that apply to the chef-client globally? If yes, then update the file directly in the file(s) identified by the include_ paths
+b) If no, then do one of two things: copy the contents from the file(s) identified by the include_ paths and paste them into the 10.latest source file, edit and make the desired changes. This will be reconciled later (if possible) by the Chef doc team. Or, follow the approach discussed below under "Versioning strategy" if the desired changes are definitely specific to chef-client 10.latest.
+
 # Versioning strategy
 
 The contents of many of the topics in this repo simply look like this:
