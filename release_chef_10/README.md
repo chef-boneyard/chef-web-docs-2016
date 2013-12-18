@@ -22,46 +22,46 @@ b) If no, then do one of two things: copy the contents from the file(s) identifi
 
 # Versioning strategy
 
-The contents of many of the topics in this repo simply look like this::
+The contents of many of the topics in this repo simply look like this:
 
-   .. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server.html BY DESIGN
-   
-   .. include:: ../../chef_master/source/api_chef_server.rst
+    .. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server.html BY DESIGN
+      
+    .. include:: ../../chef_master/source/api_chef_server.rst
 
 and as long as we know that a page is still identical to the current version of that same topic that is managed/maintained in chef_master (which is the current version of everything, published to the docs.opscode.com root), then we should keep it the same and focus improvement efforts into the primary version folder.
 
 The docs versioning in this repo isn't done using git tags or branches. It's done within the repo itself by adding files. This is to preserve the string/description/terminology in a single source that builds across all of our possible versions.
 
-Let's say the template resource is wholly different in chef-client version 10-latest (when compared to chef_master), which it is. So when the topic in 10-latest needs to be different, start by copying the contents of the main file and putting it into the 10-latest file so it looks like this::
+Let's say the template resource is wholly different in chef-client version 10-latest (when compared to chef_master), which it is. So when the topic in 10-latest needs to be different, start by copying the contents of the main file and putting it into the 10-latest file so it looks like this:
 
-   =====================================================
-   template
-   =====================================================
-   .. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
-   
-   .. note:: |note cookbook template erubis|
-   
-   .. include:: ../../includes_resources/includes_resource_generic.rst
-   
-   .. include:: ../../includes_resources/includes_resource_template.rst
-  
-   Syntax
-   =====================================================
-   .. include:: ../../includes_resources/includes_resource_template_syntax.rst
-   
-   Actions
-   =====================================================
-   .. include:: ../../includes_resources/includes_resource_template_actions.rst
-   
-   # TRUNCATED FOR BREVITY
-
-   **Apply proxy settings consistently across a Chef organization**
-   
-   .. include:: ../../step_resource/step_resource_template_consistent_proxy_settings.rst
-   
-   **Get template settings from a local file**
-   
-   .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
+    =====================================================
+    template
+    =====================================================
+    .. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
+    
+    .. note:: |note cookbook template erubis|
+    
+    .. include:: ../../includes_resources/includes_resource_generic.rst
+    
+    .. include:: ../../includes_resources/includes_resource_template.rst
+    
+    Syntax
+    =====================================================
+    .. include:: ../../includes_resources/includes_resource_template_syntax.rst
+     
+    Actions
+    =====================================================
+    .. include:: ../../includes_resources/includes_resource_template_actions.rst
+     
+    # TRUNCATED FOR BREVITY
+    
+    **Apply proxy settings consistently across a Chef organization**
+      
+    .. include:: ../../step_resource/step_resource_template_consistent_proxy_settings.rst
+     
+    **Get template settings from a local file**
+      
+    .. include:: ../../step_resource/step_resource_template_get_settings_from_local_file.rst
 
 So now instead of being a direct clone of the file in chef_master this file is configured to pull in the same exact content. Now we can version part of the file. Let's say the syntax is different in 10-latest. So
 
@@ -69,11 +69,11 @@ a) create a new file in the includes_resources folder by copying the existing fi
 b) in the new 10-latest file, make any desired change
 c) update the include path in the 10-latest source file to pull in the new file
 
-like this::
+like this:
 
-   Syntax
-   =====================================================
-   .. include:: ../../includes_resources/includes_resource_template_syntax-10-latest.rst
+    Syntax
+    =====================================================
+    .. include:: ../../includes_resources/includes_resource_template_syntax-10-latest.rst
 
 (the use of underscores in the filename vs. hyphens for versions is deliberate and a pattern that forces both humans to pay attention and the build to get an extra trigger for when humans screw that up, and therefore catches breaking files more directly)
 
