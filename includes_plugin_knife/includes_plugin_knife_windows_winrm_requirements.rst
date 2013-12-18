@@ -49,3 +49,8 @@ and then:
 
    $ winrm set winrm/config/service/auth @{Basic="true"}
 
+Ensure that the |windows firewall| is configured to allow |windows remote management| connections from the workstation. For example:
+
+.. code-block:: bash
+
+   $ netsh advfirewall firewall set rule name="Windows Remote Management (HTTP-In)" profile=public protocol=tcp localport=5985 remoteip=localsubnet new remoteip=any
