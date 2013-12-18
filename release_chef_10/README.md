@@ -22,7 +22,7 @@ b) If no, then do one of two things: copy the contents from the file(s) identifi
 
 # Versioning strategy
 
-The contents of many of the topics in this repo simply look like this:
+The contents of many of the topics in this repo simply look like this::
 
    .. THIS PAGE IS IDENTICAL TO docs.opscode.com/api_chef_server.html BY DESIGN
    
@@ -32,7 +32,7 @@ and as long as we know that a page is still identical to the current version of 
 
 The docs versioning in this repo isn't done using git tags or branches. It's done within the repo itself by adding files. This is to preserve the string/description/terminology in a single source that builds across all of our possible versions.
 
-Let's say the template resource is wholly different in chef-client version 10-latest (when compared to chef_master), which it is. So when the topic in 10-latest needs to be different, start by copying the contents of the main file and putting it into the 10-latest file so it looks like this:
+Let's say the template resource is wholly different in chef-client version 10-latest (when compared to chef_master), which it is. So when the topic in 10-latest needs to be different, start by copying the contents of the main file and putting it into the 10-latest file so it looks like this::
 
    =====================================================
    template
@@ -69,7 +69,7 @@ a) create a new file in the includes_resources folder by copying the existing fi
 b) in the new 10-latest file, make any desired change
 c) update the include path in the 10-latest source file to pull in the new file
 
-like this:
+like this::
 
    Syntax
    =====================================================
