@@ -72,4 +72,6 @@ Attribute Precedence
 
 Examples
 -----------------------------------------------------
+.. warning:: In all 10.x.x versions of the chef-client, the ``node.default.my_attribute("value")`` pattern could be used to define attributes. Starting with the 11.0.0 version of the chef-client, this pattern is no longer supported and is replaced with the ``node.default.my_attribute = "value"`` pattern. 
+
 .. include:: ../../includes_node/includes_node_10_attribute_precedence_examples.rst
