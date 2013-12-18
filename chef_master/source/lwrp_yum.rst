@@ -10,9 +10,9 @@ The |cookbook yum| cookbook contains the following lightweight resources: ``yum_
 
 .. note:: These lightweight resources are part of the |cookbook yum| cookbook (https://github.com/opscode-cookbooks/yum).
 
-|yum| Channel Cookbooks
+Repository Cookbooks
 =====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_yum_channels.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_repos.rst
 
 yum_globalconfig
 =====================================================

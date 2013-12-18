@@ -1950,8 +1950,8 @@ Examples
 
 .. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_local.rst
 
-|yum| Channel Cookbooks
------------------------------------------------------
+|yum| Repository Cookbooks
+=====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_yum_channels.rst
 
 yum_globalconfig

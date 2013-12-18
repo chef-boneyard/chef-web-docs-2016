@@ -7,7 +7,7 @@ The following cookbooks should be used in conjunction with the |cookbook yum| to
    :widths: 60 420
    :header-rows: 1
 
-   * - Channel
+   * - Cookbook
      - Description
    * - `yum-amazon <https://github.com/opscode-cookbooks/yum-amazon>`_
      - Use the |cookbook yum_amazon| cookbook to manage |amazon linux| repositories: ``amzn-main``, ``amzn-main-debuginfo``, ``amzn-nosrc``, ``amzn-updates``, ``amzn-updates-debuginfo``, ``amzn-preview``, and ``amzn-preview-debuginfo``.
