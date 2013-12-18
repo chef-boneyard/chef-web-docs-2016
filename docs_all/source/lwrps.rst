@@ -1952,7 +1952,7 @@ Examples
 
 |yum| Repository Cookbooks
 =====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_yum_channels.rst
+.. include:: ../../includes_lwrp/includes_lwrp_yum_repos.rst
 
 yum_globalconfig
 -----------------------------------------------------

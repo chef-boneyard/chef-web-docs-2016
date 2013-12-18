@@ -11,7 +11,7 @@ To install the |chef client| on a node using ``knife bootstrap``:
 
       $ knife bootstrap 123.45.6.789 -x username -P password --sudo
 
-   where ``123.45.6.789`` is the IP address or the |fqdn| for the node. Use the ``--distro`` option to specify a non-default distribution. For more information about the options available to the |subcommand knife bootstrap| command for |ubuntu|- and |linux|-based platforms, see :doc:`knife bootstrap </knife_bootstrap>`. For |windows|, the |subcommand knife windows| plugin is required, see :doc:`knife windows </plugin_knife_windows>`.
+   where ``123.45.6.789`` is the IP address or the |fqdn| for the node. Use the ``--distro`` option to specify a non-default distribution. For more information about the options available to the |subcommand knife bootstrap| command for |ubuntu|- and |linux|-based platforms, see `knife bootstrap <http://docs.opscode.com/knife_bootstrap.html>`_. For |windows|, the |subcommand knife windows| plugin is required, see `knife windows <http://docs.opscode.com/plugin_knife_windows.html>`_.
 
 #. While the bootstrap operation is running, the command window will show something like the following:
 
