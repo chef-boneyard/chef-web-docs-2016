@@ -25,13 +25,13 @@ The following types of nodes can be managed:
    * - Feature
      - Description
    * - .. image:: ../../images/icon_node_cloud.png
-     - .. include:: ../../includes_node/includes_node_cloud.rst
+     - .. include:: ../../includes_node/includes_node_type_cloud.rst
    * - .. image:: ../../images/icon_node_physical.png
-     - .. include:: ../../includes_node/includes_node_physical.rst
+     - .. include:: ../../includes_node/includes_node_type_physical.rst
    * - .. image:: ../../images/icon_node_virtual.png
-     - .. include:: ../../includes_node/includes_node_virtual.rst
+     - .. include:: ../../includes_node/includes_node_type_virtual.rst
    * - .. image:: ../../images/icon_node_networking.png
-     - A network node is a networking device---a switch, a router, a VLAN---that is being managed by a |chef client|.
+     - .. include:: ../../includes_node/includes_node_type_network.rst
 
 Some important components on nodes include:
 
