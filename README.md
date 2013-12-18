@@ -40,6 +40,8 @@ Run:
 This will build *all* the documentation into HTML, and place it inside `./build/chef/`.
 Open `./build/chef/index.html` to view the rendered files locally.
 
+IMPORTANT: Depending on what has changed since the last time a build was run, the build process can take anywhere from a few minutes to a few hours. The make file gets changed a lot because Chef uses this file to manage how the docs get published to our website. For your local builds, you may want to edit the make file prior to building to only use the chef_master build, which is the build to use for the current version of Chef.
+
 The first time you run the build, it will probably take longer (5-10 min), as it has to generate _every_ file from scratch.
 
 This will also apply if you've run the `make clean` command, which effectively resets your working environment.
