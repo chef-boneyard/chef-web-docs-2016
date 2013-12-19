@@ -12,7 +12,7 @@ Role Attributes
 
 Attribute Types
 -----------------------------------------------------
-.. include:: ../../includes_role/includes_role_attribute_type.rst
+.. include:: ../../includes_node/includes_node_10-latest_attribute_type.rst
 
 Attribute Persistence
 -----------------------------------------------------
@@ -20,7 +20,7 @@ Attribute Persistence
 
 Attribute Precedence
 -----------------------------------------------------
-.. include:: ../../includes_node/includes_node_10_attribute_precedence.rst
+.. include:: ../../includes_node/includes_node_10-latest_attribute_precedence.rst
 
 Role Formats
 =====================================================

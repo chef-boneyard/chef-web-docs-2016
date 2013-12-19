@@ -194,6 +194,8 @@ Inline Resources
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst
 
+.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode_with.rst
+
 Lightweight Resources and Providers
 =====================================================
 The following groups of lightweight resources are available in open source cookbooks that are provided by |company_name|:

@@ -22,7 +22,7 @@ Attributes
 
 ``source`` Attribute Values
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_10_remote_file_attributes_source_as_string.rst
+.. include:: ../../includes_resources/includes_resource_10-latest_remote_file_attributes_source_as_string.rst
 
 Windows File Security
 -----------------------------------------------------

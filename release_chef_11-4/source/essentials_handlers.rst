@@ -4,7 +4,7 @@ About Handlers
 
 .. include:: ../../includes_handler/includes_handler.rst
 
-.. include:: ../../includes_handler/includes_handler_types_11-6.rst
+.. include:: ../../includes_handler/includes_handler_11-6_types.rst
 
 Exception/Report Handlers
 =====================================================

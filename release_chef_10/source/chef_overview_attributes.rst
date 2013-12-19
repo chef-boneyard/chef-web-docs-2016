@@ -9,7 +9,7 @@ So how does the |chef client| determine which value should be applied? Keep read
 
 Attribute Types
 =====================================================
-.. include:: ../../includes_node/includes_node_attribute_type.rst
+.. include:: ../../includes_node/includes_node_10-latest_attribute_type.rst
 
 .. include:: ../../includes_node/includes_node_attribute_persistence.rst
 
@@ -68,10 +68,10 @@ Environments
 
 Attribute Precedence
 =====================================================
-.. include:: ../../includes_node/includes_node_10_attribute_precedence.rst
+.. include:: ../../includes_node/includes_node_10-latest_attribute_precedence.rst
 
 Examples
 -----------------------------------------------------
 .. warning:: In all 10.x.x versions of the chef-client, the ``node.default.my_attribute("value")`` pattern could be used to define attributes. Starting with the 11.0.0 version of the chef-client, this pattern is no longer supported and is replaced with the ``node.default.my_attribute = "value"`` pattern. 
 
-.. include:: ../../includes_node/includes_node_10_attribute_precedence_examples.rst
+.. include:: ../../includes_node/includes_node_10-latest_attribute_precedence_examples.rst

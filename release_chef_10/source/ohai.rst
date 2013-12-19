@@ -22,7 +22,7 @@ Attribute Persistence
 
 Attribute Precedence
 -----------------------------------------------------
-.. include:: ../../includes_node/includes_node_10_attribute_precedence.rst
+.. include:: ../../includes_node/includes_node_10-latest_attribute_precedence.rst
 
 Install |ohai|
 =====================================================
