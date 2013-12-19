@@ -96,6 +96,8 @@ Notifications Timers
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_timers.rst
 
+.. note:: If the |chef-client| does not converge successfully, a ``:delayed`` notification timer will be lost. For example, if the |chef client| reconfigures a service, a ``:delayed`` notification timer to restart the service is queued. If an unrelated resource fails later on during the |chef client| run and the run stops, subsequent runs will not restart that service because it wasn't reconfigured during the previous |chef client| run. This issue is addressed in |chef client| 11.0.0 (and later) by ensuring that a ``:delayed`` notification timer will still run even if a |chef client| run fails.
+
 Notifies Syntax
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_10.rst
