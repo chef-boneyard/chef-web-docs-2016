@@ -18,7 +18,11 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_11-4_remote_file_attributes.rst
+.. include:: ../../includes_resources/includes_resource_10_remote_file_attributes.rst
+
+``source`` Attribute Values
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_10_remote_file_attributes_source_as_string.rst
 
 Windows File Security
 -----------------------------------------------------
