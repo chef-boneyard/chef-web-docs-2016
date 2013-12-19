@@ -41,7 +41,7 @@ All resources share a set of common actions, attributes, conditional executions,
 
 Resources
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_platform_11-4.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_11-4_resource_platform.rst
 
 
 .. toctree::

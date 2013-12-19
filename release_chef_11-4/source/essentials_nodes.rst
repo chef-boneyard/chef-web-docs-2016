@@ -1,21 +1,5 @@
-=====================================================
-About Nodes
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/essentials_nodes.html BY DESIGN
 
-.. include:: ../../includes_node/includes_node.rst
-
-Cloud vs. Physical Nodes
-=====================================================
-.. include:: ../../includes_node/includes_node_cloud.rst
-
-.. include:: ../../includes_node/includes_node_physical.rst
-
-Node Names
-=====================================================
-.. include:: ../../includes_node/includes_node_name.rst
-
-Manage Nodes
-=====================================================
-.. include:: ../../includes_node/includes_node_manage.rst
+.. include:: ../../chef_master/source/essentials_nodes.rst
 
 

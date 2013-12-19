@@ -2,4 +2,4 @@
 About Platform Resources 
 =====================================================
 
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_platform_11-4.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_11-4_resource_platform.rst

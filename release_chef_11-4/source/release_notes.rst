@@ -380,7 +380,7 @@ Further information is available in the ticket: CHEF-3497 - Allow |knife rb| to 
 
 Remote File Mirror Support May Break Subclasses	
 ---------------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_10_remote_file_attributes_source_as_string.rst
+.. include:: ../../includes_resources/includes_resource_10-latest_remote_file_attributes_source_as_string.rst
 
 The Server
 =====================================================
