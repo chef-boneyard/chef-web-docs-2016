@@ -18,7 +18,7 @@ Actions
 
 Attributes
 =====================================================
-.. include:: ../../includes_resources/includes_resource_10_remote_file_attributes.rst
+.. include:: ../../includes_resources/includes_resource_remote_file_attributes.rst
 
 ``source`` Attribute Values
 -----------------------------------------------------
