@@ -1,5 +1,5 @@
 =====================================================
-Documentation for Chef 11.0.x, 11.2.x, and 11.4.x
+Documentation for Chef 11.0.x, 11.2.x, and 11.4.x 
 =====================================================
 
 .. warning:: |note doc_version_11-4|

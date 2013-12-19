@@ -1,5 +1,5 @@
 =====================================================
-Documentation for chef-client 10 (current)
+Documentation for chef-client 10.latest
 =====================================================
 
 .. warning:: This document collection is only about the current version 10 chef-client. At present, this content is undergoing significant updates and may not accurately reflect the state of the current version 10 chef-client. This warning will be removed when the content does accurately reflect the state of the version 10 chef-client. For information about the current version of the chef-client 11, see docs.opscode.com. For information about the Chef 11 servers, see docs.opscode.com/open_source or docs.opscode.com/enterprise.
