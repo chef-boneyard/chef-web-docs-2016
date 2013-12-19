@@ -98,7 +98,9 @@ Notifications Timers
 
 Notifies Syntax
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_notifies.rst
+.. include:: ../../includes_cookbooks/includes_cookbooks_resource_common_notifications_syntax_10.rst
+
+.. note:: In the 11.0.0 version of the |chef client| the syntax for `defining notifications <http://docs.opscode.com/resource_common.html#notifications>`_ is changed.
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

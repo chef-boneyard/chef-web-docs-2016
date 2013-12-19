@@ -6,5 +6,5 @@ The basic syntax of a ``notifies`` notification is:
 .. code-block:: ruby
 
    resource "name" do
-     notifies :action, "resource_type[resource_name]", :notification_timing
+     notifies :notification, "resource_type[resource_name]", :timer
    end

@@ -6,5 +6,5 @@ The basic syntax of a ``subscribes`` notification is:
 .. code-block:: ruby
 
    resource "name" do
-     subscribes :action, "resource_type[resource_name]", :notification_timing
+     subscribes :notification, "resource_type[resource_name]", :timer
    end
