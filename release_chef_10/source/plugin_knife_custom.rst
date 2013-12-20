@@ -1,8 +1,6 @@
 =====================================================
-Custom Knife Plugins
+Custom |knife| Plugins
 =====================================================
-
-.. warning:: |note doc_version_11-4|
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
 

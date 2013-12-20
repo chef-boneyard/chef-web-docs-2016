@@ -2,7 +2,7 @@
 chef-solo 
 =====================================================
 
-.. warning:: |note doc_version_11-4|
+
 
 .. include:: ../../includes_chef_solo/includes_chef_solo_11-4.rst
 

@@ -1,5 +1,5 @@
 =====================================================
-About Knife Plugins
+About |knife| Plugins
 =====================================================
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
