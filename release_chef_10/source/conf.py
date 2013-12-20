@@ -136,7 +136,7 @@ html_static_path = ['_static']
 # hack that achieved the desired behavior. Plus, there's 0% chance that we'll
 # ever want to insert a datetime stamp in the docs.
 
-html_last_updated_fmt = 'chef-client, version 10 (current)'
+html_last_updated_fmt = 'chef-client, version 10.latest'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
