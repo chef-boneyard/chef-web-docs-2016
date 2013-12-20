@@ -127,6 +127,11 @@ Cookbooks
    community_plugin_report_handler
    config
    config_rb_chef_server
+   config_rb_client
+   config_rb_knife
+   config_rb_knife_optional_settings
+   config_rb_metadata
+   config_rb_solo
    ctl_chef_apply
    ctl_chef_client
    ctl_chef_server
@@ -169,6 +174,8 @@ Cookbooks
    essentials_handlers
    essentials_knife
    essentials_node_object
+   essentials_node_object_deep_merge
+   essentials_node_object_run_lists
    essentials_nodes
    essentials_nodes_chef_run
    essentials_nodes_why_run
@@ -264,6 +271,55 @@ Cookbooks
    plugin_knife
    release_notes
    resource
+   resource_apt_package
+   resource_bash
+   resource_breakpoint
+   resource_chef_gem
+   resource_common
+   resource_cookbook_file
+   resource_cron
+   resource_csh
+   resource_deploy
+   resource_directory
+   resource_dpkg_package
+   resource_easy_install_package
+   resource_env
+   resource_erlang_call
+   resource_execute
+   resource_file
+   resource_freebsd_package
+   resource_gem_package
+   resource_git
+   resource_group
+   resource_http_request
+   resource_ifconfig
+   resource_ips_package
+   resource_link
+   resource_log
+   resource_macports_package
+   resource_mdadm
+   resource_mount
+   resource_ohai
+   resource_package
+   resource_pacman_package
+   resource_perl
+   resource_portage_package
+   resource_python
+   resource_registry_key
+   resource_remote_directory
+   resource_remote_file
+   resource_rpm_package
+   resource_route
+   resource_ruby
+   resource_ruby_block
+   resource_script
+   resource_service
+   resource_smartos_package
+   resource_solaris_package
+   resource_subversion
+   resource_template
+   resource_user
+   resource_yum
    server_components
    server_types
    upgrade_server

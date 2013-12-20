@@ -24,8 +24,3 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-.. toctree::
-   :hidden:
-
-   essentials_node_object_deep_merge
-   essentials_node_object_run_lists

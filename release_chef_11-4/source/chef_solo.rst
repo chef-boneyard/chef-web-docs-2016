@@ -2,8 +2,6 @@
 chef-solo 
 =====================================================
 
-.. warning:: |note doc_version_11-4|
-
 .. include:: ../../includes_chef_solo/includes_chef_solo_11-4.rst
 
 .. note:: |chef solo| is configured using the :doc:`chef-solo (executable) </ctl_chef_solo>`.
