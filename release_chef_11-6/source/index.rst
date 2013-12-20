@@ -172,6 +172,12 @@ Cookbooks
    community_plugin_report_handler
    config
    config_rb_chef_server
+   config_rb_chef_server_enterprise
+   config_rb_client
+   config_rb_knife
+   config_rb_knife_optional_settings
+   config_rb_metadata
+   config_rb_solo
    ctl_chef_apply
    ctl_chef_client
    ctl_chef_server
@@ -264,9 +270,76 @@ Cookbooks
    ohai_custom
    opscode_cookbooks
    orgmapper
-   plugin_knife 
+   plugin_knife
+   plugin_knife_azure
+   plugin_knife_bluebox
+   plugin_knife_bluelock
+   plugin_knife_ec2
+   plugin_knife_eucalyptus
+   plugin_knife_google
+   plugin_knife_hp
+   plugin_knife_linode
+   plugin_knife_openstack
+   plugin_knife_rackspace
+   plugin_knife_terremark
+   plugin_knife_vcloud
+   plugin_knife_windows
+   plugin_knife_authenticated_requests
+   plugin_knife_custom
    release_notes
    resource
+   resource_apt_package
+   resource_bash
+   resource_batch
+   resource_breakpoint
+   resource_chef_gem
+   resource_common
+   resource_cookbook_file
+   resource_cron
+   resource_csh
+   resource_deploy
+   resource_directory
+   resource_dpkg_package
+   resource_easy_install_package
+   resource_env
+   resource_erlang_call
+   resource_execute
+   resource_file
+   resource_freebsd_package
+   resource_gem_package
+   resource_git
+   resource_group
+   resource_http_request
+   resource_ifconfig
+   resource_ips_package
+   resource_link
+   resource_log
+   resource_macports_package
+   resource_mdadm
+   resource_mount
+   resource_ohai
+   resource_package
+   resource_pacman_package
+   resource_perl
+   resource_portage_package
+   resource_powershell_script
+   resource_python
+   resource_registry_key
+   resource_remote_directory
+   resource_remote_file
+   resource_route
+   resource_rpm_package
+   resource_ruby
+   resource_ruby_block
+   resource_scm
+   resource_script
+   resource_service
+   resource_smartos_package
+   resource_solaris_package
+   resource_subversion
+   resource_template
+   resource_user
+   resource_yum
    server_backup_restore
    server_components 
    server_data

@@ -1,6 +1,3 @@
-=====================================================
-Scaled Front and Back Ends
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/server_deploy_febe.html BY DESIGN
 
-.. include:: ../../includes_server_deploy/includes_server_deploy_febe.rst
-
+.. include:: ../../chef_master/source/server_deploy_febe.rst

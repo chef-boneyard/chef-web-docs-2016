@@ -23,15 +23,6 @@ In the following sections, the settings are listed alphabetically, with a descri
    * - :doc:`config_rb_solo`
      - |config rb solo|
 
-.. toctree::
-   :hidden:
-
-   config_rb_chef_server
-   config_rb_client
-   config_rb_knife
-   config_rb_knife_optional_settings
-   config_rb_metadata
-   config_rb_solo
 
 
 

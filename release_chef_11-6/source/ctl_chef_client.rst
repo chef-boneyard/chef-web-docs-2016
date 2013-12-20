@@ -1,5 +1,5 @@
 =====================================================
-chef-client 
+|chef client|
 =====================================================
 
 .. include:: ../../includes_chef_client/includes_chef_client.rst
@@ -27,10 +27,10 @@ Windows
 Examples
 =====================================================
 
-**Start a Chef run when the chef-client is running as a daemon**
+**Start a run when the chef-client is running as a daemon**
 
 .. include:: ../../step_ctl_chef_client/step_ctl_chef_client_start_chef_run_daemon.rst
 
-**Start a Chef run manually**
+**Start a chef-client run manually**
 
 .. include:: ../../step_ctl_chef_client/step_ctl_chef_client_start_chef_run_manual.rst

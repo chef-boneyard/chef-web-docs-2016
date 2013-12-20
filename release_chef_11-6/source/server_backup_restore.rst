@@ -1,10 +1,3 @@
-=====================================================
-Backup and Restore
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/server_backup_restore.html BY DESIGN
 
-.. include:: ../../includes_server_backup_restore/includes_server_backup_restore.rst
-
-High Availability
-=====================================================
-
-.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_ha.rst
+.. include:: ../../chef_master/source/server_backup_restore.rst

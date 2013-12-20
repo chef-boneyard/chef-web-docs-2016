@@ -1,5 +1,3 @@
-=====================================================
-Server Data
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/server_data.html BY DESIGN
 
-.. include:: ../../includes_server_data/includes_server_data.rst
+.. include:: ../../chef_master/source/server_data.rst

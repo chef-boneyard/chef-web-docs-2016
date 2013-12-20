@@ -1,9 +1,3 @@
-=====================================================
-Security
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/server_security.html BY DESIGN
 
-.. include:: ../../includes_server_security/includes_server_security_ssl.rst
-
-Add Custom SSL Certificates
-=====================================================
-.. include:: ../../step_server_security/step_server_security_ssl_custom_certificates.rst
+.. include:: ../../chef_master/source/server_security.rst
