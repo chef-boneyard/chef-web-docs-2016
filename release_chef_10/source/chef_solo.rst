@@ -10,7 +10,7 @@ chef-solo
 
 File Evaluation
 -----------------------------------------------------
-.. include:: ../../includes_chef_solo/includes_ctl_chef_solo_10-latest_file_evaluation.rst
+.. include:: ../../includes_chef_solo/includes_chef_solo_10-latest_file_evaluation.rst
 
 Cookbooks
 -----------------------------------------------------
