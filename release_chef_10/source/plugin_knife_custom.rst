@@ -32,17 +32,9 @@ Requirements
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_require.rst
 
-Options
------------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst
-
 Arguments
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_arguments.rst
-
-|knife rb| Settings
------------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst
 
 Search
 -----------------------------------------------------
@@ -51,6 +43,18 @@ Search
 User Interaction
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_user_interaction.rst
+
+Custom Parameters
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_parameters.rst
+
+Command-line Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_options.rst
+
+|knife rb| Settings
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_syntax_settings.rst
 
 Create a Plugin
 =====================================================

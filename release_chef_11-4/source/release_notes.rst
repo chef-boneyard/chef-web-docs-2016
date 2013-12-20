@@ -329,53 +329,7 @@ For |chef client| users, there should be no negative impacts from this change, a
 
 |knife| Configuration Parameter Changes
 -----------------------------------------------------
-In |chef 10|, it is difficult and error-prone to ensure that configuration parameters are applied in the right order. Configuration should be applied in the following order:
-
-#. Default values
-#. Values set in |knife rb|
-#. Values passed by command line option
-
-Because of the way the the ``mixlib-cli`` library is implemented, it is difficult to determine which values are defaults and which values are user-supplied command line options. |chef 11| takes advantage of a new mode for ``mixlib-cli`` that keeps default values separate from user-supplied values. In the configuration process, |knife| automatically applies config:
-
-#. Default values set in the mixlib-cli DSL
-#. Configuration settings under Chef::Config[:knife]
-#. User supplied values parsed by mixlib-cli
-
-Depending on how |knife| plugin authors have worked around the |chef 10| behavior, it's possible that this change will lead to incorrect values being used for configurable parameters. The |company_name|-maintained cloud plugins have been reviewed and should work correctly on both |chef 10| and |chef 11|.
-
-When writing |knife| plugins for |chef 11|, plugin authors are encouraged to define default settings using the ``mixlib-config`` DSL, like this:
-
-.. code-block:: ruby
-
-   option :ssh_user,
-     :short => "-x USERNAME",
-     :long => "--ssh-user USERNAME",
-     :description => "The ssh username",
-     :default => "root"
-
-and access configurable values via the config hash with symbols, like this:
-
-.. code-block:: ruby
-
-   # The local variable isn't necessary, it's just here to clarify the example:
-   ssh_user_name = config[:ssh_user]
-
-If compatibility with |chef 10| is required, accessing configuration via a helper function like this will work correctly, but only if default values are NOT set with the ``mixlib-cli`` DSL.
-
-.. code-block:: ruby
-
-   def locate_config_value(key)
-     key = key.to_sym
-     config[key] || Chef::Config[:knife][key]
-   end
-
-Default values must be managed manually until support for |chef 10| is removed, for example, like this:
-
-.. code-block:: ruby
-
-   ssh_user_name = locate_config_value(:ssh_user) || "root"
-
-Further information is available in the ticket: CHEF-3497 - Allow |knife rb| to implicitly provide all |knife| related options - FIX COMMITTED
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_custom_parameters.rst
 
 
 Remote File Mirror Support May Break Subclasses	
