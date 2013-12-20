@@ -273,47 +273,26 @@ Instead of the above, just put multiple calls to notifies in your resource decla
    end
 
 
-Changes for Data Bag Encryption
+Encryption Changes
 -----------------------------------------------------
-In |chef 10|, objects in encrypted data bag items are serialized to |yaml| before being encrypted. Unfortunately, discrepancies between |yaml| engines in different versions of |ruby| (in particular, 1.8.7 and 1.9.3) may cause silent corruption of serialized data when decrypting the data bag (the version stored on the |chef server| is untouched and can be correctly deserialized with the same |ruby| version that was used to create it, however).
-
-Because the corruption is silent, there is no way for the |chef client| to detect it; furthermore, all workaround possibilities we've investigated have severe limitations. Additionally, we wanted to modify the encrypted data bag item format to support using a random initialization vector each time a value is encrypted, which provides protection against some forms of cryptanalysis. In order to solve these issues, we've implemented a new encrypted data bag item format:
-
-* The user interface to encrypted data bags is unchanged. This change only affects the format of the encrypted values.
-* |chef 11| clients will be able to read encrypted data bags created with either |chef 10| or |chef 11|.
-* |chef 10| clients |chef 10-18| and above will be able to read encrypted data bags created with either |chef 10| or |chef 11|
-* |chef 10| clients version |chef 10-16| and lower cannot read encrypted data bags created with |chef 11|
-* |chef 11| knife commands will only create data bags in the new format.
-* |chef 10| knife commands will only create data bags in the old format.
+.. include:: ../../includes_data_bag/includes_data_bag_10-latest_changes_in_11.rst
 
 Diagnosing Compatibility Errors
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-When trying to decrypt a |chef 11| format data bag item with |chef 10-16| or lower, you will see an error like this:
-
-.. code-block:: bash
-
-   shell$ knife data bag show secret-10-stable bar -c ~/opscode-ops/chef-oss-dev/.chef/knife.rb -s password
-   ERROR: knife encountered an unexpected error
-   This may be a bug in the 'data bag show' knife command or plugin
-   Please collect the output of this command with the `-VV` option before filing a bug report.
-   Exception: NoMethodError: undefined method `unpack' for #<Hash:0x007ff5b264e1f0>
-
-The above error output is from |knife|; the |chef client| will fail with a similar error.
+.. include:: ../../includes_data_bag/includes_data_bag_10-latest_changes_in_11_diagnose_errors.rst
 
 How to Upgrade
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Before upgrading on any workstation you use to create/edit encrypted data bag items, upgrade |chef client| on all machines that use encrypted data bags to version |chef 10-18| or above. Once your |chef client| fleet is upgraded, you can start using |chef 11| on your workstation (the box you create/update encrypted data bag items on).
-
-In order to get the benefits of improved security with the new data bag item format, it's recommended that you re-upload all of your encrypted data bag items once you've migrated to compatible versions of |chef client|. To migrate your data bag items, simply edit them with ``knife data bag edit`` or upload them with ``knife data bag from file``, whichever you normally do. |chef 11| will automatically upload your data bag items in the new format.
+.. include:: ../../includes_data_bag/includes_data_bag_10-latest_changes_in_11_upgrade.rst
 
 Server Versions
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-Because encrypted data bag items are implemented as a client-side layer on top of regular data bag items, the format change is transparent to the server. You can begin using |chef 11| data bags even if your server is version |chef 10|.
+.. include:: ../../includes_data_bag/includes_data_bag_10-latest_changes_in_11_server_versions.rst
 
 
 Non-recipe File Evaluation Includes Dependencies
 ---------------------------------------------------------------
-.. include:: ../../includes_chef_solo/includes_ctl_chef_solo_10-latest_file_evaluation.rst
+.. include:: ../../includes_chef_solo/includes_chef_solo_10-latest_file_evaluation.rst
 
 |knife| Configuration Parameter Changes
 -----------------------------------------------------
