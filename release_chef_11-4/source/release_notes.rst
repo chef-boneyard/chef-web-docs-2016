@@ -231,9 +231,7 @@ Use the following approach instead:
 
 Subtractive Merge Removed
 -----------------------------------------------------
-In |chef 10| and previous, you could use special "knockout prefix" attribute values beginning with ``!merge`` to make the deep merge algorithm remove values from arrays. This feature was very seldom used, confusing, and greatly increased the time and space complexity of the deep merge implementation. This feature is removed in |chef 11|, and attributes containing the "knockout prefix" will trigger an error upon merge.
-
-If you need to selectively remove elements from arrays in your attributes, you should place this logic in a cookbook. Combined with other fixes to attributes in |chef 11|, you can put this logic in an attributes file, which is the most natural place for it.
+.. include:: ../../includes_node/includes_node_10-latest_attribute_deep_merge_subtract.rst
 
 Chef::REST#run_request Removed
 -----------------------------------------------------
