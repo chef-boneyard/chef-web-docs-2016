@@ -4,13 +4,13 @@ maven Lightweight Resource
 
 |cookbook name maven|
 
-The |cookbook maven| cookbook contains the following lightweight resource: ``maven``.
+The |cookbook maven| cookbook contains the following resource: ``maven``.
 
 maven
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_maven.rst
 
-.. note:: This lightweight resource is part of the |cookbook maven| cookbook (https://github.com/opscode-cookbooks/maven).
+.. note:: This resource is part of the |cookbook maven| cookbook: https://github.com/opscode-cookbooks/maven.
 
 Actions
 -----------------------------------------------------

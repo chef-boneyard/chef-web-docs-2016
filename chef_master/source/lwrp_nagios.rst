@@ -4,13 +4,13 @@ nagios Lightweight Resource
 
 |cookbook name nagios|
 
-The |cookbook nagios| cookbook contains the following lightweight resource: ``nagios_nrpecheck``.
+The |cookbook nagios| cookbook contains the following resource: ``nagios_nrpecheck``.
 
 nagios_nrpecheck
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_nagios_nrpecheck.rst
 
-.. note:: This lightweight resource is part of the |cookbook nagios| cookbook (https://github.com/opscode-cookbooks/nagios).
+.. note:: This resource is part of the |cookbook nagios| cookbook: https://github.com/opscode-cookbooks/nagios.
 
 Actions
 -----------------------------------------------------

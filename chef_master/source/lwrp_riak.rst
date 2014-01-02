@@ -4,13 +4,13 @@ riak Lightweight Resource
 
 |cookbook name riak|
 
-The |cookbook riak| cookbook contains the following lightweight resource: ``riak_cluster``.
+The |cookbook riak| cookbook contains the following resource: ``riak_cluster``.
 
 riak_cluster
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_riak_cluster.rst
 
-.. note:: This lightweight resource is part of the |cookbook riak| cookbook (https://github.com/opscode-cookbooks/riak).
+.. note:: This resource is part of the |cookbook riak| cookbook: https://github.com/opscode-cookbooks/riak.
 
 Actions
 -----------------------------------------------------

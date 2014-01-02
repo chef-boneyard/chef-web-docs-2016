@@ -4,13 +4,13 @@ webpi Lightweight Resource
 
 |cookbook name webpi|
 
-The |cookbook webpi| cookbook contains the following lightweight resource: ``webpi_product``.
+The |cookbook webpi| cookbook contains the following resource: ``webpi_product``.
 
 webpi_product
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_webpi_product.rst
 
-.. note:: This lightweight resource is part of the |cookbook webpi| cookbook (https://github.com/opscode-cookbooks/webpi).
+.. note:: This resource is part of the |cookbook webpi| cookbook: https://github.com/opscode-cookbooks/webpi.
 
 Actions
 -----------------------------------------------------

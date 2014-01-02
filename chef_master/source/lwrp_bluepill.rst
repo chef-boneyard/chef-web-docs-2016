@@ -4,13 +4,13 @@ bluepill Lightweight Resource
 
 |cookbook name bluepill|
 
-The |cookbook bluepill| cookbook contains the following lightweight resource: ``bluepill_service``.
+The |cookbook bluepill| cookbook contains the following resource: ``bluepill_service``.
 
 bluepill_service
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_bluepill_service.rst
 
-.. note:: This lightweight resource is part of the |cookbook bluepill| cookbook (https://github.com/opscode-cookbooks/bluepill).
+.. note:: This resource is part of the |cookbook bluepill| cookbook: https://github.com/opscode-cookbooks/bluepill.
 
 Actions
 -----------------------------------------------------

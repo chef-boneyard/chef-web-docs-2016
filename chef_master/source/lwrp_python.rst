@@ -4,9 +4,9 @@ python Lightweight Resources
 
 |cookbook name python|
 
-The |cookbook python| cookbook contains the following lightweight resources: ``python_pip`` and ``python_virtualenv``.
+The |cookbook python| cookbook contains the following resources: ``python_pip`` and ``python_virtualenv``.
 
-.. note:: These lightweight resources are part of the |cookbook python| cookbook (https://github.com/opscode-cookbooks/python).
+.. note:: These resources are part of the |cookbook python| cookbook: https://github.com/opscode-cookbooks/python.
 
 python_pip
 =====================================================

@@ -6,9 +6,9 @@ application_python Lightweight Resource
 
 |cookbook name application_python|
 
-The |cookbook application_python| cookbook contains the following lightweight resources: ``application_python_celery``, ``application_python_django``, and ``application_python_gunicorn``.
+The |cookbook application_python| cookbook contains the following resources: ``application_python_celery``, ``application_python_django``, and ``application_python_gunicorn``.
 
-.. note:: These lightweight resources are part of the |cookbook application_python| cookbook (http://community.opscode.com/cookbooks/application_python).
+.. note:: These resources are part of the |cookbook application_python| cookbook: http://community.opscode.com/cookbooks/application_python.
 
 application_python_celery
 =====================================================

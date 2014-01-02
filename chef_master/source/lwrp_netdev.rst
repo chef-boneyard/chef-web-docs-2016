@@ -6,9 +6,9 @@ netdev Lightweight Resources
 
 The |cookbook netdev| cookbook is used to install and configure networking hardware by |juniper| and Arista.
 
-The |cookbook netdev| cookbook contains the following lightweight resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
+The |cookbook netdev| cookbook contains the following resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
 
-.. note:: These lightweight resources are part of the |cookbook netdev| cookbook (https://github.com/opscode-cookbooks/netdev).
+.. note:: These resources are part of the |cookbook netdev| cookbook: https://github.com/opscode-cookbooks/netdev.
 
 netdev_interface
 =====================================================

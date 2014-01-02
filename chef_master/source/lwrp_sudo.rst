@@ -4,13 +4,13 @@ sudo Lightweight Resource
 
 |cookbook name sudo|
 
-The |cookbook sudo| cookbook contains the following lightweight resource: ``sudo``.
+The |cookbook sudo| cookbook contains the following resource: ``sudo``.
 
 sudo
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_sudo.rst
 
-.. note:: This lightweight resource is part of the |cookbook sudo| cookbook (https://github.com/opscode-cookbooks/sudo).
+.. note:: This resource is part of the |cookbook sudo| cookbook: https://github.com/opscode-cookbooks/sudo.
 
 Actions
 -----------------------------------------------------

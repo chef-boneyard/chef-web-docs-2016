@@ -4,13 +4,13 @@ homebrew Lightweight Resource
 
 |cookbook name homebrew|
 
-The |cookbook homebrew| cookbook contains the following lightweight resource: ``homebrew``.
+The |cookbook homebrew| cookbook contains the following resource: ``homebrew``.
 
 homebrew
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_homebrew_tap.rst
 
-.. note:: This lightweight resource is part of the |cookbook homebrew| cookbook (https://github.com/opscode-cookbooks/homebrew).
+.. note:: This resource is part of the |cookbook homebrew| cookbook: https://github.com/opscode-cookbooks/homebrew.
 
 Actions
 -----------------------------------------------------

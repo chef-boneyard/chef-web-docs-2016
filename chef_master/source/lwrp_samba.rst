@@ -4,13 +4,13 @@ samba Lightweight Resource
 
 |cookbook name samba|
 
-The |cookbook samba| cookbook contains the following lightweight resource: ``samba_user``.
+The |cookbook samba| cookbook contains the following resource: ``samba_user``.
 
 samba_user
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_samba_user.rst
 
-.. note:: This lightweight resource is part of the |cookbook samba| cookbook (https://github.com/opscode-cookbooks/samba).
+.. note:: This resource is part of the |cookbook samba| cookbook: https://github.com/opscode-cookbooks/samba.
 
 Actions
 -----------------------------------------------------

@@ -6,9 +6,9 @@ application_java Lightweight Resource
 
 |cookbook name application_java|
 
-The |cookbook application_java| cookbook contains the following lightweight resources: ``application_java_tomcat`` and ``application_java_webapp``.
+The |cookbook application_java| cookbook contains the following resources: ``application_java_tomcat`` and ``application_java_webapp``.
 
-.. note:: These lightweight resources are part of the |cookbook application_java| cookbook (http://community.opscode.com/cookbooks/application_java).
+.. note:: These resources are part of the |cookbook application_java| cookbook: http://community.opscode.com/cookbooks/application_java.
 
 application_java_tomcat
 =====================================================

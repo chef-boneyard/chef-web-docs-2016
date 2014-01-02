@@ -4,9 +4,9 @@ php Lightweight Resources
 
 |cookbook name php|
 
-The |cookbook php| cookbook contains the following lightweight resources: ``php_pear`` and ``php_pear_channel``.
+The |cookbook php| cookbook contains the following resources: ``php_pear`` and ``php_pear_channel``.
 
-.. note:: These lightweight resources are part of the |cookbook php| cookbook (https://github.com/opscode-cookbooks/php).
+.. note:: These resources are part of the |cookbook php| cookbook: https://github.com/opscode-cookbooks/php.
 
 php_pear
 =====================================================

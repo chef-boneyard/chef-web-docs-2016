@@ -6,9 +6,9 @@ application_ruby Lightweight Resource
 
 |cookbook name application_ruby|
 
-The |cookbook application_ruby| cookbook contains the following lightweight resources: ``application_ruby_memcached``, ``application_ruby_passenger_apache2``, ``application_ruby_rails``, and ``application_ruby_unicorn``.
+The |cookbook application_ruby| cookbook contains the following resources: ``application_ruby_memcached``, ``application_ruby_passenger_apache2``, ``application_ruby_rails``, and ``application_ruby_unicorn``.
 
-.. note:: These lightweight resources are part of the  |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/application_ruby).
+.. note:: These resources are part of the |cookbook application_ruby| cookbook: http://community.opscode.com/cookbooks/application_ruby.
 
 application_ruby_memcached
 =====================================================

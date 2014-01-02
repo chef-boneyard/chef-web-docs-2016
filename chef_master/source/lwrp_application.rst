@@ -6,7 +6,7 @@ application Lightweight Resource
 
 |cookbook name application|
 
-This lightweight resource is the base lightweight resource for several other lightweight resources that may be used for package management on specific platforms. It is recommended to use the |resource package| resource as often as possible (and using these lightweight resources only when necessary). For more information about specific lightweight resources for specific platforms, see the following topics:
+This resource is the base resource for several other resources that may be used for package management on specific platforms. It is recommended to use the |resource package| resource as often as possible (and using the following resources only when necessary). For more information about specific resources for specific platforms, see the following topics:
 
 * :doc:`application_java </lwrp_application_java>`
 * :doc:`application_nginx </lwrp_application_nginx>`

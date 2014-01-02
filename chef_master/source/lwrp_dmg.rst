@@ -4,15 +4,15 @@ dmg Lightweight Resource
 
 |cookbook name dmg|
 
-The |cookbook dmg| cookbook contains the following lightweight resource: ``dmg_package``.
+The |cookbook dmg| cookbook contains the following resource: ``dmg_package``.
 
 dmg_package
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_dmg_package.rst
 
-.. note:: This lightweight resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
+.. note:: This resource does not do full package management for |mac os x| applications, as they have different installed artifacts.
 
-.. note:: This lightweight resource is part of the |cookbook dmg| cookbook (https://github.com/opscode-cookbooks/dmg).
+.. note:: This resource is part of the |cookbook dmg| cookbook: https://github.com/opscode-cookbooks/dmg.
 
 Actions
 -----------------------------------------------------

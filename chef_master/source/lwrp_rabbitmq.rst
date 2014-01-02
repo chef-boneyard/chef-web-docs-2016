@@ -4,9 +4,9 @@ rabbitmq Lightweight Resources
 
 |cookbook name rabbitmq|
 
-The |cookbook rabbitmq| cookbook contains the following lightweight resources: ``rabbitmq_plugin``, ``rabbitmq_user``, and ``rabbitmq_vhost``.
+The |cookbook rabbitmq| cookbook contains the following resources: ``rabbitmq_plugin``, ``rabbitmq_user``, and ``rabbitmq_vhost``.
 
-.. note:: These lightweight resources are part of the |cookbook rabbitmq| cookbook (https://github.com/opscode-cookbooks/rabbitmq).
+.. note:: These resources are part of the |cookbook rabbitmq| cookbook: https://github.com/opscode-cookbooks/rabbitmq.
 
 rabbitmq_plugin
 =====================================================

@@ -4,9 +4,9 @@ gunicorn Lightweight Resources
 
 |gunicorn desc| |cookbook name gunicorn|
 
-The |cookbook gunicorn| cookbook contains the following lightweight resources: ``gunicorn_config`` and ``gunicorn_install``.
+The |cookbook gunicorn| cookbook contains the following resources: ``gunicorn_config`` and ``gunicorn_install``.
 
-.. note:: These lightweight resources are part of the |cookbook gunicorn| cookbook (https://github.com/opscode-cookbooks/gunicorn).
+.. note:: These resources are part of the |cookbook gunicorn| cookbook: https://github.com/opscode-cookbooks/gunicorn.
 
 gunicorn_config
 =====================================================

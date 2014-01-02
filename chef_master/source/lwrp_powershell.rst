@@ -4,15 +4,17 @@ powershell Lightweight Resource
 
 |cookbook name powershell|
 
-The |cookbook powershell| cookbook contains the following lightweight resource: ``powershell``.
+The |cookbook powershell| cookbook contains the following resource: ``powershell``.
 
-.. warning:: The |resource powershell_script| resource was added in |chef 11-6| as a platform resource. In general, it is recommended to use the |resource powershell_script| resource instead of the |lwrp powershell| lightweight resource included in the |cookbook powershell| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer resource.
+This resource has been added to the |chef client|, starting with |chef 11|
+
+.. warning:: The |resource powershell_script| resource has been added to the |chef client|, starting with |chef 11-6|. In general, it is recommended to use the |resource powershell_script| resource instead of the |lwrp powershell| resource included in the |cookbook powershell| cookbook whenever possible, including updating any existing recipes that may be using the older resource in favor of the newer resource.
 
 powershell
 =====================================================
 .. include:: ../../includes_lwrp/includes_lwrp_powershell.rst
 
-.. note:: This lightweight resource is part of the |cookbook powershell| cookbook (https://github.com/opscode-cookbooks/powershell).
+.. note:: This resource is part of the |cookbook powershell| cookbook: https://github.com/opscode-cookbooks/powershell.
 
 Actions
 -----------------------------------------------------
