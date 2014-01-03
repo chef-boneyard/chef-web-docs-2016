@@ -22,7 +22,7 @@ If multiple cookbook directories are being used, |chef solo| expects the |tar gz
      |---- cbname2/
        |--attributes/
 
-The ``cookbook_path`` variable in the |solo rb| file must include both directories. For example::
+The ``cookbook_path`` variable in the |solo rb| file must include both directories. For example:
 
 .. code-block:: bash
 
