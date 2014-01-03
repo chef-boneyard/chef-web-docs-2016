@@ -5,7 +5,7 @@ The file you downloaded is a private key for the user account you created. It is
 
 If you open the file with a text editor (Notepad.exe on Windows, TextEdit on the Mac, gEdit / Vi / Emacs on Linux), it should look like the following, but the actual value will differ:
 
-code-block:: bash
+.. code-block:: bash
 
    -----BEGIN RSA PRIVATE KEY-----
    MIIEowIBAAKCAQEArp5wl2DsS3WtUa9T3fAfREEbvm9FkhCcYAW/6vHearRYH9oi
