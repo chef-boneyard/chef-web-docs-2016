@@ -1,4 +1,4 @@
-.. This is an included how-to. 
+.. This is an included how-to.
 
 
 The file you downloaded is a private key for the user account you created. It is used for both authentication, "are you a valid user?", and authorization, "are you allowed to perform this operation on this object?". More information on this can be found on the Authentication and Authorization page.
@@ -32,7 +32,7 @@ code-block:: bash
    0Pl99Ycl1oTCCJK+yMPkBDQ2akmcz74S0gFb2q1isgC2GsLuQ6zBetemOUm+4CdA
    tJrck5bF3y1115hrusd5nzKipPwSjNZKYsqovXQevOjjQU8q24vZBTPQXiNZ/cqR
    T7hl6b5fMp/c3d27aCg+9fBnjP9uGGtIftKigOZDpd5hvl72SsRxrHSm8ZFumWY3
-   TT6BQEheN21G6rXaYDVQ1WvQBpnMasWPBaHzLfbs4yS5dBVYYlS8 
+   TT6BQEheN21G6rXaYDVQ1WvQBpnMasWPBaHzLfbs4yS5dBVYYlS8
    -----END RSA PRIVATE KEY-----
 
 Any tool which sends a request to Hosted Chef on behalf of your user account uses this key to sign the request. This includes but is not limited to the command line tool 'knife', and the 'chef-client' which runs on machines under configuration management.
@@ -45,7 +45,7 @@ Make sure you can find this file later. You'll need its path when configuring ot
    log_location     STDOUT
    node_name        'your-user'
    client_key       '/Users/you/.chef/your-user.pem'
-   chef_server_url  'http://127.0.0.1/organizations/your-org/' 
+   chef_server_url  'http://127.0.0.1/organizations/your-org/'
    cache_type       'BasicFile'
    cache_options( :path => '/Users/you/.chef/checksums' )
 
