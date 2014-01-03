@@ -12,7 +12,7 @@ To set up the |push jobs| server:
 
    This step is required on each of the servers in the |chef server oec| deployment. For example, in a configuration with two back end servers and three front end servers, this command would need to be run on all five machines.
 
-#. Ensure that port 10003 is open so that the |push jobs| client may communicate with the |push jobs| server.
+#. Open ports 10000-10003 on each of the back end servers. This allows the |push jobs| clients to communicate with the |push jobs| server.
 
 #. Reconfigure the |push jobs| servers:
 
