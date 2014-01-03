@@ -12,6 +12,9 @@ This command has the following options:
 ``-A``, ``--fatal-windows-admin-check``
    |fatal_windows_admin_check|
 
+``--chef-zero-port PORT``
+   |port chef_zero|
+
 ``-c CONFIG``, ``--config CONFIG``
    |config chef-client|
 
