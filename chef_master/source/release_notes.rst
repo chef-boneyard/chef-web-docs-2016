@@ -28,6 +28,17 @@ The |chef client| can be run in local mode using the ``--local-mode`` option:
 .. include:: ../../includes_chef_client/includes_chef_client_local_mode.rst
 
 
+Knife Support for |chef zero|
+-----------------------------------------------------
+New common options have been added:
+
+``--chef-zero-port PORT``
+   |port chef_zero|
+
+``-z``, ``--local-mode``
+   |local_mode|
+
+
 New Config Settings
 -----------------------------------------------------
 Three new settings are available for the |knife rb| and |client rb| configuration files:

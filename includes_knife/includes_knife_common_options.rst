@@ -51,13 +51,8 @@ The following options can be run with all |knife| sub-commands and plug-ins:
 ``-y``, ``--yes``
    |yes|
 
-``--chef-zero-port PORT``
-   |port chef_zero|
-
 ``-z``, ``--local-mode``
    |local_mode|
-   
-
 
 
 
