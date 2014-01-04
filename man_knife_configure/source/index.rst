@@ -4,10 +4,6 @@ knife configure
 
 .. include:: ../../includes_knife/includes_knife_configure.rst
 
-**Common Options**
-
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 **Syntax**
 
 .. include:: ../../includes_knife/includes_knife_configure_syntax.rst

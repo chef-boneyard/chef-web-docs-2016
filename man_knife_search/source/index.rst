@@ -6,10 +6,6 @@ knife search
 
 .. include:: ../../includes_knife/includes_knife_search.rst
 
-**Common Options**
-
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 **Syntax**
 
 .. include:: ../../includes_knife/includes_knife_search_syntax.rst

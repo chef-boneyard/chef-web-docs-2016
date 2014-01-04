@@ -6,10 +6,6 @@ knife environment
 
 .. include:: ../../includes_knife/includes_knife_environment.rst
 
-Common Options
-=====================================================
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_create.rst

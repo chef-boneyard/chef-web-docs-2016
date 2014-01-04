@@ -4,10 +4,6 @@ knife exec
 
 .. include:: ../../includes_knife/includes_knife_exec.rst
 
-**Common Options**
-
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 **Authenticated API Requests**
 
 .. include:: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst

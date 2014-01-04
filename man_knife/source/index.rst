@@ -37,6 +37,10 @@ Working with Knife
 =====================================================
 .. include:: ../../includes_knife/includes_knife_using.rst
 
+Common Options
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_common_options.rst
+
 JSON Data Format
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_using_json.rst

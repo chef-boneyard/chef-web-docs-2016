@@ -4,10 +4,6 @@ knife show
 
 .. include:: ../../includes_knife/includes_knife_show.rst
 
-**Common Options**
-
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 **Syntax**
 
 .. include:: ../../includes_knife/includes_knife_show_syntax.rst

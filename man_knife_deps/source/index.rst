@@ -4,10 +4,6 @@ knife deps
 
 .. include:: ../../includes_knife/includes_knife_deps.rst
 
-**Common Options**
-
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 **Syntax**
 
 .. include:: ../../includes_knife/includes_knife_deps_syntax.rst

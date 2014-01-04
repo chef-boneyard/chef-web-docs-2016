@@ -4,10 +4,6 @@ knife download
 
 .. include:: ../../includes_knife/includes_knife_download.rst
 
-**Common Options**
-
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 **Syntax**
 
 .. include:: ../../includes_knife/includes_knife_download_syntax.rst

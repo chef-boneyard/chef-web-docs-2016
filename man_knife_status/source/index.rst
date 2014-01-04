@@ -4,10 +4,6 @@ knife status
 
 .. include:: ../../includes_knife/includes_knife_status.rst
 
-**Common Options**
-
-.. include:: ../../includes_knife/includes_knife_common_options.rst
-
 **Syntax**
 
 .. include:: ../../includes_knife/includes_knife_status_syntax.rst
