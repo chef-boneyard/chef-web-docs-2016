@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |firefox| as custom installer and manually set the silent install flags:
+.. To install |firefox| as custom installer and manually set the silent install flags:
 
 .. code-block:: ruby
 

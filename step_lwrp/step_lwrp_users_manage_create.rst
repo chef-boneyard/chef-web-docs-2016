@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create users based on data bag objects that have a ``group_id`` attribute value of ``2300``:
+.. To create users based on data bag objects that have a ``group_id`` attribute value of ``2300``:
 
 .. code-block:: ruby
 

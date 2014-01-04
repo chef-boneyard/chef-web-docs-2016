@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To untap a repository:
+.. To untap a repository:
 
 .. code-block:: ruby
 

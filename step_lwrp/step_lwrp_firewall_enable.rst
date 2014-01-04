@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To enable the default firewall:
+.. To enable the default firewall:
 
 .. code-block:: ruby
 

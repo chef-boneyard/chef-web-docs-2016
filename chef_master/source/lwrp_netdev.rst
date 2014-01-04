@@ -24,6 +24,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``netdev_interface`` resource:
+
+**Create an interface**
+
 .. include:: ../../step_lwrp/step_lwrp_netdev_interface.rst
 
 netdev_l2_interface
@@ -40,6 +44,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``netdev_l2_interface`` resource:
+
+**Create a Layer 2 interface**
+
 .. include:: ../../step_lwrp/step_lwrp_netdev_l2_interface.rst
 
 netdev_lag
@@ -56,6 +64,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``netdev_lag`` resource:
+
+**Create a link aggregation group**
+
 .. include:: ../../step_lwrp/step_lwrp_netdev_lag.rst
 
 netdev_vlan
@@ -72,4 +84,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``netdev_vlan`` resource:
+
+**Create a VLAN**
+
 .. include:: ../../step_lwrp/step_lwrp_netdev_vlan.rst

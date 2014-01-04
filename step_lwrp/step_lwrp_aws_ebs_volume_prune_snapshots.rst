@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To prune all snapshots (except for one):
+.. To prune all snapshots (except for one):
 
 .. code-block:: ruby
 

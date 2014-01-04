@@ -25,10 +25,18 @@ Attributes
 .. include:: ../../includes_lwrp/includes_lwrp_aws_ebs_volume_attributes.rst
 
 Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----------------------------------------------------
+The following examples show how to use the ``aws_ebs_volume`` resource:
+
+**Create a volume, attach to a node**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_create_volume_attach_to_node.rst
 
+**Create a volume from an existing snapshot**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_create_volume_from_existing_snapshot.rst
+
+**Prune all snapshots (except for one)**
 
 .. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_prune_snapshots.rst
 
@@ -46,7 +54,13 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``aws_elastic_ip`` resource:
+
+**Associate an IP address**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_elastic_ip_associate.rst
+
+**Disassociate an IP address**
 
 .. include:: ../../step_lwrp/step_lwrp_aws_elastic_ip_disassociate.rst
 
@@ -65,6 +79,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``aws_elastic_lb`` resource:
+
+**Add a load balancer**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_elastic_lb_add.rst
 
 
@@ -82,6 +100,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``aws_resource_tag`` resource:
+
+**Assign tags to a node**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_resource_tag_assign_to_node.rst
+
+**Assign tags to resources**
 
 .. include:: ../../step_lwrp/step_lwrp_aws_resource_tag_assign_to_resources.rst

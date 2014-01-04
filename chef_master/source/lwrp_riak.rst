@@ -22,5 +22,9 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``riak_cluster`` resource:
+
+**Add a node to a cluster**
+
 .. include:: ../../step_lwrp/step_lwrp_riak_cluster_add_to_cluster.rst
 

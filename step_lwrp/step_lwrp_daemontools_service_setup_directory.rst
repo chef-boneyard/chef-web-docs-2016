@@ -1,8 +1,9 @@
 .. This is an included how-to. 
 
-To set up the ``/etc/sv/chef-client`` directory, ``/etc/sv/chef-client/run`` script from the specified template, and the ``/etc/sv/chef-client/log/run`` script:
 
-chef-client service:
+The following example shows how to set up the ``chef-client`` directory using a template and a script.
+
+The resource that sets up the ``chef-client`` service:
 
 .. code-block:: ruby
 
@@ -13,7 +14,7 @@ chef-client service:
      log true
    end
 
-sv-chef-client-run.erb:
+The template (a file named ``sv-chef-client-run.erb``):
 
 .. code-block:: ruby
 
@@ -22,7 +23,7 @@ sv-chef-client-run.erb:
    exec 2>&1
    exec /usr/bin/env chef-client -i <%= node["chef_client"]["interval"] %> -s <%= node["chef_client"]["splay"] %>
 
-sv-chef-client-log-run.erb:
+The script (a file named ``sv-chef-client-log-run.erb``):
 
 .. code-block:: ruby
 

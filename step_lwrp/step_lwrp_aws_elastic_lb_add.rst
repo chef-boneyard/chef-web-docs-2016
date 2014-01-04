@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add a load balancer to an availability zone:
+.. To add a load balancer to an availability zone:
 
 .. code-block:: ruby
 

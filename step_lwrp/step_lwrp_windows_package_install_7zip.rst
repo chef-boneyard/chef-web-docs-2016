@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |7zip|:
+.. To install |7zip|:
 
 .. code-block:: ruby
 

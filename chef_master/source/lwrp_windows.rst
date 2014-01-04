@@ -24,6 +24,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``windows_auto_run`` resource:
+
+**Run a program at login**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_auto_run_at_login.rst
 
 
@@ -43,6 +47,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``windows_batch`` resource:
+
+**Run a batch file**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_batch_run.rst
 
 
@@ -64,7 +72,13 @@ Providers
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``windows_feature`` resource:
+
+**Enable a feature**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_feature_enable.rst
+
+**Disable a feature**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_feature_disable.rst
 
@@ -83,19 +97,37 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``windows_package`` resource:
+
+**Install PuTTY**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_putty.rst
+
+**Install 7-Zip**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_7zip.rst
 
+**Remove 7-Zip**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_package_remove_7zip.rst
+
+**Install Notepad++**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_notepad_plusplus.rst
 
+**Install Firefox silently**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_firefox.rst
+
+**Install the VLC media player**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_vlc.rst
 
+**Install Google Chrome**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_google_chrome.rst
+
+**Remove Google Chrome**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_package_remove_google_chrome.rst
 
@@ -114,7 +146,13 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``windows_path`` resource:
+
+**Add an item to the system path**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_path_add.rst
+
+**Remove an item from the system path**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_path_remove.rst
 
@@ -133,7 +171,13 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``windows_reboot`` resource:
+
+**Schedule a reboot**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_reboot_schedule.rst
+
+**Cancel a reboot**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_reboot_cancel.rst
 
@@ -141,22 +185,6 @@ Examples
 windows_registry
 =====================================================
 .. warning:: This resource has been added to the |chef client|, starting with |chef 11|. See: `registry_key <http://docs.opscode.com/resource_registry_key.html>`_ for details about the resource. Also, six helper methods for registry keys have been added to the Recipe DSL: `registry_data_exists? <http://docs.opscode.com/dsl_recipe_method_registry_data_exists.html>`_, `registry_get_subkeys <http://docs.opscode.com/dsl_recipe_method_registry_get_subkeys.html>`_, `registry_get_values <http://docs.opscode.com/dsl_recipe_method_registry_get_values.html>`_, `registry_has_subkeys? <http://docs.opscode.com/dsl_recipe_method_registry_has_subkeys.html>`_, `registry_key_exists? <http://docs.opscode.com/dsl_recipe_method_registry_key_exists.html>`_, and `registry_value_exists? <http://docs.opscode.com/dsl_recipe_method_registry_value_exists.html>`_.
-
-.. include:: ../../includes_lwrp/includes_lwrp_windows_registry.rst
-
-Actions
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_windows_registry_actions.rst
-
-Attributes
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_windows_registry_attributes.rst
-
-Examples
------------------------------------------------------
-.. include:: ../../step_lwrp/step_lwrp_windows_registry_enable_remote_desktop.rst
-
-.. include:: ../../step_lwrp/step_lwrp_windows_registry_match_proxy.rst
 
 
 windows_shortcut
@@ -190,6 +218,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``windows_zipfile`` resource:
+
+**Unzip a remote file**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_remote.rst
+
+**Unzip a local file**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_local.rst

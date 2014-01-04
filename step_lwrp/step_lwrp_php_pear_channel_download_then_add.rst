@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To download an XML file and then add the "symfony" channel:
+.. To download an XML file and then add the "symfony" channel:
 
 .. code-block:: ruby
 

@@ -24,12 +24,24 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``dmg_package`` resource:
+
+**Install Google Chrome**
+
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_install_google_chrome.rst
+
+**Install a previously-downloaded application**
 
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_already_downloaded_app.rst
 
+**Install DropBox**
+
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_install_dropbox.rst
 
+**Install MacIrssi**
+
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_macirssi.rst
+
+**Install Tunnelblick.app**
 
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_install_tunnelblick.rst

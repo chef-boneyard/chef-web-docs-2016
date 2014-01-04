@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To associate an IP address:
+.. To associate an IP address:
 
 .. code-block:: ruby
 

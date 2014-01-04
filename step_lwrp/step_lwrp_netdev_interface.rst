@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the ``netdev_interface`` lightweight resource:
+.. To use the ``netdev_interface`` lightweight resource:
 
 .. code-block:: ruby
 

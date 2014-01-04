@@ -22,6 +22,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``iis_app`` resource:
+
+**Create an application**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_app_create.rst
 
 
@@ -39,7 +43,13 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``iis_config`` resource:
+
+**Load an array of commands**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_config_load_array_of_commands.rst
+
+**Set up logging**
 
 .. include:: ../../step_lwrp/step_lwrp_iis_config_set_up_logging.rst
 
@@ -57,6 +67,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``iis_module`` resource:
+
+**Add a module**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_module_add.rst
 
 
@@ -74,6 +88,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``iis_pool`` resource:
+
+**Create an application pool**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_pool_create.rst
 
 iis_site
@@ -90,8 +108,16 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``iis_site`` resource:
+
+**Start, then map to domain**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_domain.rst
 
+**Start, then map to location**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_location.rst
+
+**Stop, then delete a site**
 
 .. include:: ../../step_lwrp/step_lwrp_iis_site_stop.rst

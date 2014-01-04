@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To enable the ``CloudkickHandler``, which was added to the default handler path. This example also passes the ``oauth`` key/secret to the handler's initializer:
+The following example shows how to enable the ``CloudkickHandler`` handler, which adds it to the default handler path and passes the ``oauth`` key/secret to the handler's initializer:
 
 .. code-block:: ruby
 

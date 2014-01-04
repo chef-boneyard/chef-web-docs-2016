@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To write ``freebsd-php5-options`` out as ``/var/db/ports/php5/options``:
+.. To write the default options:
 
 .. code-block:: ruby
 

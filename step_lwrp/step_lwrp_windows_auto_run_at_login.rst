@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To run ``BGInfo`` at login:
+.. To run ``BGInfo`` at login:
 
 .. code-block:: ruby
 

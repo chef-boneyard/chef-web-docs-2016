@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To assign a set of tags to multiple resources, for example more than one |amazon ebs| volume in a disk set:
+.. To assign a set of tags to multiple resources, for example more than one |amazon ebs| volume in a disk set:
 
 .. code-block:: ruby
 

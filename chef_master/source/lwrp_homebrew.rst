@@ -26,10 +26,20 @@ Providers
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``homebrew`` resource:
+
+**Install MySQL**
+
 .. include:: ../../step_lwrp/step_lwrp_homebrew_install_mysql.rst
+
+**Tap a repository**
 
 .. include:: ../../step_lwrp/step_lwrp_homebrew_tap_repository.rst
 
+**Untap a repository**
+
 .. include:: ../../step_lwrp/step_lwrp_homebrew_untap_repository.rst
+
+**Use the Homebrew provider**
 
 .. include:: ../../step_lwrp/step_lwrp_homebrew_use_provider.rst

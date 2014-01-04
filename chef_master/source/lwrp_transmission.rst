@@ -22,6 +22,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``transmission_torrent_file`` resource:
+
+**Download a file**
+
 .. include:: ../../step_lwrp/step_lwrp_transmission_torrent_file_download_iso.rst
+
+**Download a file, continue seeding**
 
 .. include:: ../../step_lwrp/step_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst

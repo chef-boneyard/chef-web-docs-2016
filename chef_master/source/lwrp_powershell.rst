@@ -26,12 +26,24 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``powershell`` resource:
+
+**Change a hostname**
+
 .. include:: ../../step_lwrp/step_lwrp_powershell_change_hostname.rst
+
+**Pass an environment variable**
 
 .. include:: ../../step_lwrp/step_lwrp_powershell_pass_env_variable.rst
 
+**Set the cwd attribute**
+
 .. include:: ../../step_lwrp/step_lwrp_powershell_set_cwd_attribute.rst
 
+**Use the cwd attribute**
+
 .. include:: ../../step_lwrp/step_lwrp_powershell_use_cwd.rst
+
+**Write to an interpolated path**
 
 .. include:: ../../step_lwrp/step_lwrp_powershell_write_to_interpolated_path.rst

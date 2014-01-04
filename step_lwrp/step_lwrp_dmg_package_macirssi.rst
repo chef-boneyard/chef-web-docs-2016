@@ -1,8 +1,6 @@
 .. This is an included how-to. 
 
-To install MacIrssi to ``~/Applications`` from the local file downloaded to the cache path into an ``/Applications`` directory in the current user's home directory.
-
-Chef should run as a non-root user for this: directory ``#{ENV['HOME']}/Applications``:
+The following example shows how to install MacIrssi to the ``~/Applications`` directory from the local file downloaded to the cache path into an ``/Applications`` directory in the current user's home directory.
 
 .. code-block:: ruby
 
@@ -11,4 +9,4 @@ Chef should run as a non-root user for this: directory ``#{ENV['HOME']}/Applicat
       action :install
     end
 
-The previous example uses the |sha256| checksum that was current when the application was originally installed, and may not be current for the latest releases.
+The |chef client| should run as a non-root user for the ``#{ENV['HOME']}/Applications`` directory. The |sha256| checksum that was current when the application was originally installed is assumed (it may not be current for the latest releases).

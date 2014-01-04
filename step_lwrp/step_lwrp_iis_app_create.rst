@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a new application:
+.. To create an application:
 
 .. code-block:: ruby
 

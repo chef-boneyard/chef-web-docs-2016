@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install the |yaml| |pear| from the |symfony| project:
+.. To install the |yaml| |pear| from the |symfony| project:
 
 .. code-block:: ruby
 

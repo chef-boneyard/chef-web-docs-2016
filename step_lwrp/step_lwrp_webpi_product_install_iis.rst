@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install the recommended configuration for |microsoft iis| 7:
+.. To install the recommended configuration for |microsoft iis| 7:
 
 .. code-block:: ruby
 

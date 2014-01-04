@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |google chrome|:
+.. To install |google chrome|:
 
 .. code-block:: ruby
 

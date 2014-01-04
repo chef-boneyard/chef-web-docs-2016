@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To target a |gunicorn| virtual environment:
+.. To target a |gunicorn| virtual environment:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To remove |zenoss|:
+.. To remove |zenoss|:
 
 .. code-block:: ruby
 

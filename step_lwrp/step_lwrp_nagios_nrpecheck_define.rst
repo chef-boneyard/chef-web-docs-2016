@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To define the ``check_load`` definition:
+.. To define the ``check_load`` definition:
 
 .. code-block:: ruby
 

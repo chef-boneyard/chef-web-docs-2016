@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install the |php extensions| for |apc| (with directives) that are available in the |php pecl| repository:
+.. To install the |php extensions| for |apc| (with directives) that are available in the |php pecl| repository:
 
 .. code-block:: ruby
 

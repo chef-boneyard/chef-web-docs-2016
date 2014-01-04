@@ -22,4 +22,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``djbdns_rr`` resource:
+
+**Configure Tinydns**
+
 .. include:: ../../step_lwrp/step_lwrp_djbdns_rr_configure_for_tinydns.rst

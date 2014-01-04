@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To enable a node as a DHCP server:
+.. To enable a node as a DHCP server:
 
 .. code-block:: ruby
 

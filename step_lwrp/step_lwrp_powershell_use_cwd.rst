@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the ``cwd`` attribute:
+.. To use the ``cwd`` attribute:
 
 .. code-block:: ruby
 

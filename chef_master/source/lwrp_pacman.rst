@@ -22,7 +22,13 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``pacman_aur`` resource:
+
+**Use a simple package**
+
 .. include:: ../../step_lwrp/step_lwrp_pacman_aur_use_simple_package.rst
+
+**Use a custom package**
 
 .. include:: ../../step_lwrp/step_lwrp_pacman_aur_use_custom_package.rst
 
@@ -40,4 +46,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``pacman_group`` resource:
+
+**Remove a group**
+
 .. include:: ../../step_lwrp/step_lwrp_pacman_group_base_devel.rst

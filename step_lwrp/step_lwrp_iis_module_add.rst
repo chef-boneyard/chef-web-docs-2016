@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add a module named "My 3rd-party module" to ``mySite``:
+.. To add a module named "My 3rd-party module" to ``mySite``:
 
 .. code-block:: ruby
 

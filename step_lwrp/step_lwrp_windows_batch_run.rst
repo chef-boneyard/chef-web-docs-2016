@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To run a batch file that unzips and moves |ruby|:
+The following examples show how to run a batch file that unzips and moves |ruby|:
 
 .. code-block:: ruby
 

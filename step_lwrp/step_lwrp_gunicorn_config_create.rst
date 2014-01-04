@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a configuration file with default values:
+.. To create a configuration file with default values:
 
 .. code-block:: ruby
 

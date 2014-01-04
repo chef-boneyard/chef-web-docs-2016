@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To open the standard |ssh| port and enable the firewall:
+.. To open the standard |ssh| port and enable the firewall:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To delete a |yum| repository:
+.. To delete a |yum| repository:
 
 .. code-block:: ruby
 

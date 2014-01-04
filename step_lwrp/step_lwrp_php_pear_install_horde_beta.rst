@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install the beta version of ``Horde_Url`` from the |horde| channel (pear.horde.org):
+.. To install the beta version of ``Horde_Url`` from the |horde| channel (pear.horde.org):
 
 .. code-block:: ruby
 

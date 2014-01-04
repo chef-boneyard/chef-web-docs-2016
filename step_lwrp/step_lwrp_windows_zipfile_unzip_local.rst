@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To unzip a local |zip| file:
+.. To unzip a local |zip| file:
 
 .. code-block:: ruby
 

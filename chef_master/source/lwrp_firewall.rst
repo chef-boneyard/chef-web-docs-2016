@@ -22,6 +22,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``firewall`` resource:
+
+**Enable the default firewall**
+
 .. include:: ../../step_lwrp/step_lwrp_firewall_enable.rst
 
 firewall_rule
@@ -38,6 +42,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``firewall_rule`` resource:
+
+**Open a port, enable a firewall**
+
 .. include:: ../../step_lwrp/step_lwrp_firewall_rule_open_ssh.rst
+
+**Open a port, insert a rule, enable a firewall**
 
 .. include:: ../../step_lwrp/step_lwrp_firewall_rule_open_tcp.rst

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To remove |7zip|:
+.. To remove |7zip|:
 
 .. code-block:: ruby
 

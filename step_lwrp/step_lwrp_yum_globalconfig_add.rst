@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To render a template with global |yum| configuration parameters:
+.. To render a template with global |yum| configuration parameters:
 
 .. code-block:: ruby
 

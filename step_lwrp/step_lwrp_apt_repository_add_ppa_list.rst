@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add ``/etc/apt/sources.list.d/hardy-rsyslog-ppa.list``:
+.. To add ``/etc/apt/sources.list.d/hardy-rsyslog-ppa.list``:
 
 .. code-block:: ruby
 

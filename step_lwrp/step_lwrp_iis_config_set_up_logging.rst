@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To set up logging:
+.. To set up logging:
 
 .. code-block:: ruby
 

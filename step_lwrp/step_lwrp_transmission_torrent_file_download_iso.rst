@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To download an |iso| file:
+.. To download an |iso| file:
 
 .. code-block:: ruby
 

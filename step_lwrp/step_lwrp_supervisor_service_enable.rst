@@ -1,6 +1,6 @@
 .. This is an included how-to.
 
-To enable the |celery| service:
+.. To enable the |celery| service:
 
 .. code-block:: ruby
 

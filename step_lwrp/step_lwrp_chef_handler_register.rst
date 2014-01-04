@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To register the ``Chef::Handler::JsonFile`` handler:
+.. To register the ``Chef::Handler::JsonFile`` handler:
 
 .. code-block:: ruby
 

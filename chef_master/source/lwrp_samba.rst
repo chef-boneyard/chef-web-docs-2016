@@ -22,4 +22,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``samba_user`` resource:
+
+**Create a user**
+
 .. include:: ../../step_lwrp/step_lwrp_samba_user_create.rst

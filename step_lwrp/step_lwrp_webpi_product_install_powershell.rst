@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |windows powershell|  2.0:
+.. To install |windows powershell|  2.0:
 
 .. code-block:: ruby
 

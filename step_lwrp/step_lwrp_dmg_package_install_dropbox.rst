@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |dropbox|. This recipe uses ``volumes_dir`` because the mounted directory is different than the name of the application directory. Installs in ``/Applications/Dropbox.app``.
+.. To install |dropbox|:
 
 .. code-block:: ruby
 
@@ -11,7 +11,7 @@ To install |dropbox|. This recipe uses ``volumes_dir`` because the mounted direc
       action :install
     end
 
-The previous example uses the |sha256| checksum that was current when the application was originally installed, and may not be current for the latest releases.
+The |sha256| checksum that was current when the application was originally installed is assumed (it may not be current for the latest releases).
 
 
 

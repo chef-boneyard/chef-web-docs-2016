@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add a virtual host:
+.. To add a virtual host:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To assign tags to a node to reflect it's role and environment:
+.. To assign tags to a node to reflect it's role and environment:
 
 .. code-block:: ruby
 

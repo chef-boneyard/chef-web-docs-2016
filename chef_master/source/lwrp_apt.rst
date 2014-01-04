@@ -22,7 +22,13 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``apt_preference`` resource:
+
+**Pin a package**
+
 .. include:: ../../step_lwrp/step_lwrp_apt_preference_pin.rst
+
+**Unpin a package**
 
 .. include:: ../../step_lwrp/step_lwrp_apt_preference_unpin.rst
 
@@ -41,14 +47,24 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``apt_repository`` resource:
+
+**Add the CloudKick repository**
+
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_add_cloudkick.rst
 
-.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_opscode_list_alternate.rst
+**Add opscode.list**
 
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_add_opscode_list.rst
 
+**Add hardy-rsyslog-ppa.list**
+
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_add_ppa_list.rst
 
+**Add Zenoss**
+
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_add_zenoss.rst
+
+**Remove Zenoss**
 
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_remove_zenoss.rst

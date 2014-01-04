@@ -24,4 +24,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``dynect_rr`` resource:
+
+**Create a record**
+
 .. include:: ../../step_lwrp/step_lwrp_dynect_rr_create_record.rst

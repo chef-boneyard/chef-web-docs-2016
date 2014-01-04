@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a record, with authentication credentials as node attributes:
+.. To create a record, with authentication credentials as node attributes:
 
 .. code-block:: ruby
 

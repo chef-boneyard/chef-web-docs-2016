@@ -56,4 +56,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``supervisor_service`` resource:
+
+**Enable a service**
+
 .. include:: ../../step_lwrp/step_lwrp_supervisor_service_enable.rst

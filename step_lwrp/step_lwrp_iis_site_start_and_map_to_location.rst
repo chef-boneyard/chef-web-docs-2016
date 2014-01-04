@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create and start a site that maps to the physical location ``C:\inetpub\wwwroot\testfu``:
+.. To create and start a site that maps to the physical location ``C:\inetpub\wwwroot\testfu``:
 
 .. code-block:: ruby
 

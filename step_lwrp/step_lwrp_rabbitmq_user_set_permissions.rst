@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To set the permissions for a user:
+.. To set user permissions:
 
 .. code-block:: ruby
 

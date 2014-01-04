@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |notepad plusplus| using a local installer:
+.. To install |notepad plusplus| using a local installer:
 
 .. code-block:: ruby
 

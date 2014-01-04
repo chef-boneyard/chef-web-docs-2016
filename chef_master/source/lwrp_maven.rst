@@ -22,4 +22,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``maven`` resource:
+
+**Install an artifact**
+
 .. include:: ../../step_lwrp/step_lwrp_maven_install.rst

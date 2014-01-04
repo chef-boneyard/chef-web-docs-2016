@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the ``pre_fork`` server hook to sleep for one second before forking:
+.. To use the ``pre_fork`` server hook to sleep for one second before forking:
 
 .. code-block:: ruby
 

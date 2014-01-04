@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add |zenoss|:
+.. To add |zenoss|:
 
 .. code-block:: ruby
 

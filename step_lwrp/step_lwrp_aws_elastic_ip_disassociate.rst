@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To disassociate an IP address:
+.. To disassociate an IP address:
 
 .. code-block:: ruby
 

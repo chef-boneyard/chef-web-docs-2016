@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add ``Sysinternals`` to the system path:
+.. To add ``Sysinternals`` to the system path:
 
 .. code-block:: ruby
 

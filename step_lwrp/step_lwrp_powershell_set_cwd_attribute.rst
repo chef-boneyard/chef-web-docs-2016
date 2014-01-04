@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To set the ``cwd`` attribute to a |windows| environment variable:
+.. To set the ``cwd`` attribute to a |windows| environment variable:
 
 .. code-block:: ruby
 

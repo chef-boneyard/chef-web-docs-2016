@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To enable a plugin:
+.. To enable a plugin:
 
 .. code-block:: ruby
 

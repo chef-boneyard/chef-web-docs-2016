@@ -22,6 +22,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``freebsd_port_options`` resource:
+
+**Read the default options**
+
 .. include:: ../../step_lwrp/step_lwrp_freebsd_port_options_read.rst
+
+**Write the default options**
 
 .. include:: ../../step_lwrp/step_lwrp_freebsd_port_options_write.rst

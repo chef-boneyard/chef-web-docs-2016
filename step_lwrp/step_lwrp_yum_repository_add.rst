@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a |yum| repository:
+.. To create a |yum| repository:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create a virtual |python| 2.4 environment:
+.. To create a virtual |python| 2.4 environment:
 
 .. code-block:: ruby
 

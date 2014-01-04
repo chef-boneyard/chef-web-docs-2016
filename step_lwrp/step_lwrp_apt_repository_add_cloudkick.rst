@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add |cloudkick|:
+.. To add |cloudkick|:
 
 .. code-block:: ruby
 

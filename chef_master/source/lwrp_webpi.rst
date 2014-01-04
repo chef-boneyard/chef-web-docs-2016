@@ -22,6 +22,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``webpi_product`` resource:
+
+**Install PowerShell**
+
 .. include:: ../../step_lwrp/step_lwrp_webpi_product_install_powershell.rst
+
+**Install IIS**
 
 .. include:: ../../step_lwrp/step_lwrp_webpi_product_install_iis.rst

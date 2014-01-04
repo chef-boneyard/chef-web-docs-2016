@@ -22,9 +22,17 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``gunicorn_config`` resource:
+
+**Create a configuration file**
+
 .. include:: ../../step_lwrp/step_lwrp_gunicorn_config_create.rst
 
+**Edit worker-related values**
+
 .. include:: ../../step_lwrp/step_lwrp_gunicorn_config_edit_values.rst
+
+**Use a pre_fork server hook**
 
 .. include:: ../../step_lwrp/step_lwrp_gunicorn_config_sleep_before_fork.rst
 
@@ -43,4 +51,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``gunicorn_install`` resource:
+
+**Install to a specified virtual environment**
+
 .. include:: ../../step_lwrp/step_lwrp_gunicorn_install_virtual_env.rst

@@ -200,7 +200,6 @@ Lightweight Resources and Providers
 =====================================================
 The following groups of lightweight resources are available in open source cookbooks that are provided by |company_name|:
 
-* application
 * apt
 * aws
 * bluepill
@@ -230,563 +229,9 @@ The following groups of lightweight resources are available in open source cookb
 * webpi
 * windows
 * yum
-* zenoss
+
 
 Some of the cookbooks contain more than one lightweight resource. Each lightweight resource is described individually in the following sections.
-
-
-
-
-application
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_base.rst
-
-.. note:: This lightweight resource is part of the |cookbook application| cookbook (http://community.opscode.com/cookbooks/application).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_base_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_base_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-See the application-specific lightweight resources.
-
-
-application_java_webapp
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_java_webapp.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_java| cookbook (http://community.opscode.com/cookbooks/application_java).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_java_webapp_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_java_webapp_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
-
-
-application_java_tomcat
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_java_tomcat.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_java| cookbook (http://community.opscode.com/cookbooks/application_java).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_java_tomcat_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_java_tomcat_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create an application that needs a database connection:
-
-.. code-block:: ruby
-
-   application "my-app" do
-     path "/usr/local/my-app"
-     repository "..."
-     revision "..."
-   
-     java_webapp do
-       database_master_role "database_master"
-       database do
-         driver 'org.gjt.mm.mysql.Driver'
-         database 'name'
-         port 5678
-         username 'user'
-         password 'password'
-         max_active 1
-         max_idle 2
-         max_wait 3
-       end
-     end
-   
-     tomcat
-   end
-
-To create an application using a template:
-
-.. code-block:: ruby
-
-   application "jenkins" do
-     path "/usr/local/jenkins"
-     owner node["tomcat"]["user"]
-     group node["tomcat"]["group"]
-     repository "http://mirrors.jenkins-ci.org/war/latest/jenkins.war"
-     revision "6facd94e958ecf68ffd28be371b5efcb5584c885b5f32a906e477f5f62bdb518-1"
-   
-     java_webapp do
-       context_template "jenkins-context.xml.erb"
-     end
-   
-     tomcat
-   end
-
-To invoke a method on the database block:
-
-.. code-block:: ruby
-
-   application "my-app" do
-     path "/usr/local/my-app"
-     repository "..."
-     revision "..."
-   
-     java_webapp do
-       database_master_role "database_master"
-       database do
-         database 'name'
-         quorum 2
-         replicas %w[Huey Dewey Louie]
-       end
-     end
-   end
-
-The corresponding entries will be passed to the context template:
-
-.. code-block:: ruby
-
-   <Context docBase="<%= @war %>" path="/">
-     <!-- <%= @database['quorum'] %> -->
-     <!-- <%= @database['replicas'].join(',') %> -->
-   </Context>
-
-
-application_nginx_load_balancer
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_nginx_load_balancer.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_nginx| cookbook (http://community.opscode.com/cookbooks/application_nginx).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_nginx_load_balancer_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_nginx_load_balancer_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create an application that needs a database connection:
-
-.. code-block:: ruby
-
-   application "my-app" do
-     path "/usr/local/my-app"
-     repository "..."
-     revision "..."
-   
-     rails do
-     end
-   
-     nginx_load_balancer do
-       only_if { node['roles'].include?('my-app_load_balancer') }
-     end
-   end
-
-Assuming you have a my-app_application_server role applied to nodes backend-0..backend-3, and a my-app_load_balancer role assigned to frontend-0..frontend-1, then nginx will be installed on the frontends, and configured like this:
-
-.. code-block:: ruby
-
-   upstream my-app {
-     server <IP of backend-0>:8000;
-     server <IP of backend-1>:8000;
-     server <IP of backend-2>:8000;
-     server <IP of backend-3>:8000;
-   }
-   
-   server {
-     listen 80;
-     server_name frontend-0;
-     location / {
-       proxy_pass http://my-app;
-     }
-   }
-
-To configure |nginx| to serve static files by setting the ``static_files`` attribute:
-
-.. code-block:: ruby
-
-   application "my-app" do
-     path "/usr/local/my-app"
-     repository "..."
-     revision "..."
-   
-     nginx_load_balancer do
-       only_if { node['roles'].include?('my-app_load_balancer') }
-       static_files "/img" => "images"
-     end
-   end
-
-which will be expanded to:
-
-.. code-block:: ruby
-
-   server {
-     listen 80;
-     server_name frontend-0;
-   
-     location /img {
-       alias /usr/local/my-app/current/images;
-     }
-   
-     location / {
-       proxy_pass http://my-app;
-     }
-   }
-
-
-application_php_mod_php_apache2
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_php_mod_php_apache2.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_php| cookbook (http://community.opscode.com/cookbooks/application_php).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_php_mod_php_apache2_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_php_mod_php_apache2_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create an application that needs a database connection:
-
-.. code-block:: ruby
-
-   application "phpvirtualbox" do
-     path "/usr/local/www/sites/phpvirtualbox"
-     owner node[:apache][:user]
-     group node[:apache][:user]
-     repository "..."
-     deploy_key "..."
-     revision "4_0_7"
-     packages ["php-soap"]
-   
-     php do
-       database_master_role "database_master"
-       local_settings_file "config.php"
-     end
-   
-     mod_php_apache2
-   end
-
-This will result in a ``config.php`` file getting created from a ``config.php.erb`` template that is present in the application cookbook. 
-
-To invoke a method on the database block:
-
-.. code-block:: ruby
-
-   application "my-app" do
-     path "/usr/local/my-app"
-     repository "..."
-     revision "..."
-   
-     php do
-       database_master_role "database_master"
-       database do
-         database 'name'
-         quorum 2
-         replicas %w[Huey Dewey Louie]
-       end
-     end
-   end
-
-The corresponding entries will be passed to the context template:
-
-.. code-block:: ruby
-
-   <%= @database['quorum']
-   <%= @database['replicas'].join(',') %>
-
-
-
-application_php_php
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_php_php.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_php| cookbook (http://community.opscode.com/cookbooks/application_php).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_php_php_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_php_php_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
-
-
-application_python_celery
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_celery.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_python| cookbook (http://community.opscode.com/cookbooks/application_python).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_celery_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_celery_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
-
-
-
-application_python_django
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_django.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_python| cookbook (http://community.opscode.com/cookbooks/application_python).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_django_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_django_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
-
-application_python_gunicorn
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_gunicorn.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_python| cookbook (http://community.opscode.com/cookbooks/application_python).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_gunicorn_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_python_gunicorn_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create a sample application that needs a database connection:
-
-.. code-block:: ruby
-
-   application "packaginator" do
-     path "/srv/packaginator"
-     owner "nobody"
-     group "nogroup"
-     repository "https://github.com/coderanger/packaginator.git"
-     revision "master"
-     migrate true
-     packages ["libpq-dev", "git-core", "mercurial"]
-   
-     django do 
-       packages ["redis"]
-       requirements "requirements/mkii.txt"
-       settings_template "settings.py.erb"
-       debug true
-       collectstatic "build_static --noinput"
-       database do
-         database "packaginator"
-         engine "postgresql_psycopg2"
-         username "packaginator"
-         password "awesome_password"
-       end
-       database_master_role "packaginator_database_master"
-     end
-   end
-
-You can invoke any method on the database block:
-
-.. code-block:: ruby
-
-   application "my-app" do
-     path "/srv/packaginator"
-     repository "..."
-     revision "..."
-   
-     django do
-       database_master_role "packaginator_database_master"
-       database do
-         database 'name'
-         quorum 2
-         replicas %w[Huey Dewey Louie]
-       end
-     end
-   end
-
-The corresponding entries will be passed to the context template:
-
-.. code-block:: ruby
-
-   <%= @database['quorum']
-   <%= @database['replicas'].join(',') %>
-
-application_ruby_memcached
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_memcached.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_memcached_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_memcached_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create an application that connects to |memcached|:
-
-.. code-block:: ruby
-
-   application "my-app" do
-     path "..."
-     repository "..."
-     revision "..."
-   
-     memcached do
-       role "memcached_master"
-       options do
-         ttl 1800
-         memory 256
-       end
-     end
-   end
-
-This will generate a config/memcached.yml file:
-
-.. code-block:: ruby
-
-   production:
-     ttl: 1800
-     memory: 256
-     servers:
-       - 192.168.0.10:11211
-
-
-application_ruby_passenger_apache2
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_passenger_apache2_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-To create an application that needs a database connection:
-
-.. code-block:: ruby
-
-   application "redmine" do
-     path "/usr/local/www/redmine"
-   
-     rails do 
-       database do
-         database "redmine"
-         username "redmine"
-         password "awesome_password"
-       end
-       database_master_role "redmine_database_master"
-     end
-   
-     passenger_apache2 do
-     end
-   end
-
-You can invoke any method on the database block:
-
-.. code-block:: ruby
-
-   application "my-app" do
-     path "..."
-     repository "..."
-     revision "..."
-   
-     rails do
-       database_master_role "my-app_database_master"
-       database do
-         database 'name'
-         quorum 2
-         replicas %w[Huey Dewey Louie]
-       end
-     end
-   end
-
-The corresponding entries will be passed to the context template:
-
-.. code-block:: ruby
-
-   <%= @database['quorum'] %>
-   <%= @database['replicas'].join(',') %>
-
-application_ruby_rails
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_rails_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
-
-
-application_ruby_unicorn
------------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_unicorn.rst
-
-.. note:: This lightweight resource is part of the |cookbook application_ruby| cookbook (http://community.opscode.com/cookbooks/aplication_ruby).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_unicorn_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_application_ruby_unicorn_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-None.
 
 
 apt_preference
@@ -805,10 +250,15 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``apt_preference`` resource:
+
+**Pin a package**
+
 .. include:: ../../step_lwrp/step_lwrp_apt_preference_pin.rst
 
-.. include:: ../../step_lwrp/step_lwrp_apt_preference_unpin.rst
+**Unpin a package**
 
+.. include:: ../../step_lwrp/step_lwrp_apt_preference_unpin.rst
 
 apt_repository
 -----------------------------------------------------
@@ -826,18 +276,27 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``apt_repository`` resource:
+
+**Add the CloudKick repository**
+
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_add_cloudkick.rst
 
-.. include:: ../../step_lwrp/step_lwrp_apt_repository_add_opscode_list_alternate.rst
+**Add opscode.list**
 
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_add_opscode_list.rst
 
+**Add hardy-rsyslog-ppa.list**
+
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_add_ppa_list.rst
+
+**Add Zenoss**
 
 .. include:: ../../step_lwrp/step_lwrp_apt_repository_add_zenoss.rst
 
-.. include:: ../../step_lwrp/step_lwrp_apt_repository_remove_zenoss.rst
+**Remove Zenoss**
 
+.. include:: ../../step_lwrp/step_lwrp_apt_repository_remove_zenoss.rst
 
 aws_ebs_volume
 -----------------------------------------------------
@@ -859,9 +318,17 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``aws_ebs_volume`` resource:
+
+**Create a volume, attach to a node**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_create_volume_attach_to_node.rst
 
+**Create a volume from an existing snapshot**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_create_volume_from_existing_snapshot.rst
+
+**Prune all snapshots (except for one)**
 
 .. include:: ../../step_lwrp/step_lwrp_aws_ebs_volume_prune_snapshots.rst
 
@@ -885,15 +352,15 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``aws_elastic_ip`` resource:
+
+**Associate an IP address**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_elastic_ip_associate.rst
 
+**Disassociate an IP address**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_elastic_ip_disassociate.rst
-
-
-
-
-
-
 
 aws_elastic_lb
 -----------------------------------------------------
@@ -915,6 +382,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``aws_elastic_lb`` resource:
+
+**Add a load balancer**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_elastic_lb_add.rst
 
 
@@ -938,7 +409,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``aws_resource_tag`` resource:
+
+**Assign tags to a node**
+
 .. include:: ../../step_lwrp/step_lwrp_aws_resource_tag_assign_to_node.rst
+
+**Assign tags to resources**
 
 .. include:: ../../step_lwrp/step_lwrp_aws_resource_tag_assign_to_resources.rst
 
@@ -960,9 +437,17 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``bluepill_service`` resource:
+
+**Use the bluepill_service resource**
+
 .. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_blupill_service.rst
 
+**Use as part of the service resource**
+
 .. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_resource.rst
+
+**Use as part of the template resource**
 
 .. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_resource_template.rst
 
@@ -984,11 +469,21 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``chef_handler`` resource:
+
+**Enable the CloudkickHandler handler**
+
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
+
+**Enable handlers during the compile phase**
 
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst
 
+**Handle only exceptions**
+
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst
+
+**Register the JsonFile handler**
 
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_register.rst
 
@@ -1008,6 +503,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``daemontools_service`` resource:
+
+**Set up a directory using a template and a script**
+
 .. include:: ../../step_lwrp/step_lwrp_daemontools_service_setup_directory.rst
 
 djbdns_rr
@@ -1026,6 +525,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``djbdns_rr`` resource:
+
+**Configure Tinydns**
+
 .. include:: ../../step_lwrp/step_lwrp_djbdns_rr_configure_for_tinydns.rst
 
 dmg_package
@@ -1046,13 +549,25 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``dmg_package`` resource:
+
+**Install Google Chrome**
+
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_install_google_chrome.rst
+
+**Install a previously-downloaded application**
 
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_already_downloaded_app.rst
 
+**Install DropBox**
+
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_install_dropbox.rst
 
+**Install MacIrssi**
+
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_macirssi.rst
+
+**Install Tunnelblick.app**
 
 .. include:: ../../step_lwrp/step_lwrp_dmg_package_install_tunnelblick.rst
 
@@ -1072,6 +587,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``dynect_rr`` resource:
+
+**Create a record**
+
 .. include:: ../../step_lwrp/step_lwrp_dynect_rr_create_record.rst
 
 firewall
@@ -1090,6 +609,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``firewall`` resource:
+
+**Enable the default firewall**
+
 .. include:: ../../step_lwrp/step_lwrp_firewall_enable.rst
 
 firewall_rule
@@ -1108,7 +631,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``firewall_rule`` resource:
+
+**Open a port, enable a firewall**
+
 .. include:: ../../step_lwrp/step_lwrp_firewall_rule_open_ssh.rst
+
+**Open a port, insert a rule, enable a firewall**
 
 .. include:: ../../step_lwrp/step_lwrp_firewall_rule_open_tcp.rst
 
@@ -1129,7 +658,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``freebsd_port_options`` resource:
+
+**Read the default options**
+
 .. include:: ../../step_lwrp/step_lwrp_freebsd_port_options_read.rst
+
+**Write the default options**
 
 .. include:: ../../step_lwrp/step_lwrp_freebsd_port_options_write.rst
 
@@ -1151,9 +686,17 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``gunicorn_config`` resource:
+
+**Create a configuration file**
+
 .. include:: ../../step_lwrp/step_lwrp_gunicorn_config_create.rst
 
+**Edit worker-related values**
+
 .. include:: ../../step_lwrp/step_lwrp_gunicorn_config_edit_values.rst
+
+**Use a pre_fork server hook**
 
 .. include:: ../../step_lwrp/step_lwrp_gunicorn_config_sleep_before_fork.rst
 
@@ -1176,6 +719,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``gunicorn_install`` resource:
+
+**Install to a specified virtual environment**
+
 .. include:: ../../step_lwrp/step_lwrp_gunicorn_install_virtual_env.rst
 
 
@@ -1199,11 +746,21 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``homebrew`` resource:
+
+**Install MySQL**
+
 .. include:: ../../step_lwrp/step_lwrp_homebrew_install_mysql.rst
+
+**Tap a repository**
 
 .. include:: ../../step_lwrp/step_lwrp_homebrew_tap_repository.rst
 
+**Untap a repository**
+
 .. include:: ../../step_lwrp/step_lwrp_homebrew_untap_repository.rst
+
+**Use the Homebrew provider**
 
 .. include:: ../../step_lwrp/step_lwrp_homebrew_use_provider.rst
 
@@ -1224,6 +781,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``iis_app`` resource:
+
+**Create an application**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_app_create.rst
 
 
@@ -1243,7 +804,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``iis_config`` resource:
+
+**Load an array of commands**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_config_load_array_of_commands.rst
+
+**Set up logging**
 
 .. include:: ../../step_lwrp/step_lwrp_iis_config_set_up_logging.rst
 
@@ -1263,6 +830,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``iis_module`` resource:
+
+**Add a module**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_module_add.rst
 
 iis_pool
@@ -1281,6 +852,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``iis_pool`` resource:
+
+**Create an application pool**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_pool_create.rst
 
 iis_site
@@ -1299,9 +874,17 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``iis_site`` resource:
+
+**Start, then map to domain**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_domain.rst
 
+**Start, then map to location**
+
 .. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_location.rst
+
+**Stop, then delete a site**
 
 .. include:: ../../step_lwrp/step_lwrp_iis_site_stop.rst
 
@@ -1322,6 +905,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``maven`` resource:
+
+**Install an artifact**
+
 .. include:: ../../step_lwrp/step_lwrp_maven_install.rst
 
 
@@ -1341,7 +928,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``nagios_nrpecheck`` resource:
+
+**Create a definition**
+
 .. include:: ../../step_lwrp/step_lwrp_nagios_nrpecheck_define.rst
+
+**Remove a definition**
 
 .. include:: ../../step_lwrp/step_lwrp_nagios_nrpecheck_remove.rst
 
@@ -1362,7 +955,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``pacman_aur`` resource:
+
+**Use a simple package**
+
 .. include:: ../../step_lwrp/step_lwrp_pacman_aur_use_simple_package.rst
+
+**Use a custom package**
 
 .. include:: ../../step_lwrp/step_lwrp_pacman_aur_use_custom_package.rst
 
@@ -1382,6 +981,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``pacman_group`` resource:
+
+**Remove a group**
+
 .. include:: ../../step_lwrp/step_lwrp_pacman_group_base_devel.rst
 
 php_pear
@@ -1400,15 +1003,29 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``php_pear`` resource:
+
+**Install extensions for Alternative PHP Cache**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_apc_pecl.rst
+
+**Install the Horde_Url beta**
 
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_horde_beta.rst
 
+**Install extensions for MongoDB**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_mongodb_pecl.rst
+
+**Install a specific version**
 
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_specific_version.rst
 
+**Install the YAML PEAR**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_yaml.rst
+
+**Upgrade a PEAR**
 
 .. include:: ../../step_lwrp/step_lwrp_php_pear_upgrade.rst
 
@@ -1428,9 +1045,17 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``php_pear_channel`` resource:
+
+**Discover horde**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_channel_discover_horde.rst
 
+**Download file, add to channel**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_channel_download_then_add.rst
+
+**Update main channels**
 
 .. include:: ../../step_lwrp/step_lwrp_php_pear_channel_update_main_channels.rst
 
@@ -1452,13 +1077,25 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``powershell`` resource:
+
+**Change a hostname**
+
 .. include:: ../../step_lwrp/step_lwrp_powershell_change_hostname.rst
+
+**Pass an environment variable**
 
 .. include:: ../../step_lwrp/step_lwrp_powershell_pass_env_variable.rst
 
+**Set the cwd attribute**
+
 .. include:: ../../step_lwrp/step_lwrp_powershell_set_cwd_attribute.rst
 
+**Use the cwd attribute**
+
 .. include:: ../../step_lwrp/step_lwrp_powershell_use_cwd.rst
+
+**Write to an interpolated path**
 
 .. include:: ../../step_lwrp/step_lwrp_powershell_write_to_interpolated_path.rst
 
@@ -1479,11 +1116,21 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``python_pip`` resource:
+
+**Install Gunicorn**
+
 .. include:: ../../step_lwrp/step_lwrp_python_pip_install_gunicorn.rst
+
+**Install a specific version of pip**
 
 .. include:: ../../step_lwrp/step_lwrp_python_pip_install_specific_pip.rst
 
+**Target a Gunicorn virtual environment**
+
 .. include:: ../../step_lwrp/step_lwrp_python_pip_target_virtualenv.rst
+
+**Use with the package resource**
 
 .. include:: ../../step_lwrp/step_lwrp_python_pip_use_with_core_package_resource.rst
 
@@ -1503,8 +1150,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``python_virtualenv`` resource:
+
+**Create a virtual environment**
 
 .. include:: ../../step_lwrp/step_lwrp_python_virtualenv_create_python.rst
+
+**Create a virtual environment owned by an Ubuntu user**
 
 .. include:: ../../step_lwrp/step_lwrp_python_virtualenv_create_ubuntu.rst
 
@@ -1525,7 +1177,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``rabbitmq_plugin`` resource:
+
+**Enable a plugin**
+
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_plugin_enable.rst
+
+**Disable a plugin**
 
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_plugin_disable.rst
 
@@ -1545,9 +1203,17 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``rabbitmq_user`` resource:
+
+**Add a user**
+
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_add.rst
 
+**Delete a user**
+
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_delete.rst
+
+**Set user permissions**
 
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_set_permissions.rst
 
@@ -1568,6 +1234,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``rabbitmq_vhost`` resource:
+
+**Add a virtual host**
+
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_vhost_add.rst
 
 
@@ -1587,6 +1257,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``riak_cluster`` resource:
+
+**Add a node to a cluster**
+
 .. include:: ../../step_lwrp/step_lwrp_riak_cluster_add_to_cluster.rst
 
 
@@ -1606,6 +1280,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``samba_user`` resource:
+
+**Create a user**
+
 .. include:: ../../step_lwrp/step_lwrp_samba_user_create.rst
 
 
@@ -1625,7 +1303,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``sudo`` resource:
+
+**Use default mode**
+
 .. include:: ../../step_lwrp/step_lwrp_sudo_mode_default.rst
+
+**Use template mode**
 
 .. include:: ../../step_lwrp/step_lwrp_sudo_mode_template.rst
 
@@ -1685,6 +1369,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``supervisor_service`` resource:
+
+**Enable a service**
+
 .. include:: ../../step_lwrp/step_lwrp_supervisor_service_enable.rst
 
 
@@ -1706,7 +1394,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``transmission_torrent_file`` resource:
+
+**Download a file**
+
 .. include:: ../../step_lwrp/step_lwrp_transmission_torrent_file_download_iso.rst
+
+**Download a file, continue seeding**
 
 .. include:: ../../step_lwrp/step_lwrp_transmission_torrent_file_download_iso_continue_seeding.rst
 
@@ -1727,7 +1421,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``users_manage`` resource:
+
+**Create users**
+
 .. include:: ../../step_lwrp/step_lwrp_users_manage_create.rst
+
+**Remove users**
 
 .. include:: ../../step_lwrp/step_lwrp_users_manage_remove.rst
 
@@ -1749,7 +1449,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``webpi_product`` resource:
+
+**Install PowerShell**
+
 .. include:: ../../step_lwrp/step_lwrp_webpi_product_install_powershell.rst
+
+**Install IIS**
 
 .. include:: ../../step_lwrp/step_lwrp_webpi_product_install_iis.rst
 
@@ -1771,6 +1477,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``windows_auto_run`` resource:
+
+**Run a program at login**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_auto_run_at_login.rst
 
 windows_batch
@@ -1789,6 +1499,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following example shows how to use the ``windows_batch`` resource:
+
+**Run a batch file**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_batch_run.rst
 
 windows_feature
@@ -1811,7 +1525,13 @@ Providers
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``windows_feature`` resource:
+
+**Enable a feature**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_feature_enable.rst
+
+**Disable a feature**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_feature_disable.rst
 
@@ -1832,19 +1552,37 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``windows_package`` resource:
+
+**Install PuTTY**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_putty.rst
+
+**Install 7-Zip**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_7zip.rst
 
+**Remove 7-Zip**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_package_remove_7zip.rst
+
+**Install Notepad++**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_notepad_plusplus.rst
 
+**Install Firefox silently**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_firefox.rst
+
+**Install the VLC media player**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_vlc.rst
 
+**Install Google Chrome**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_package_install_google_chrome.rst
+
+**Remove Google Chrome**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_package_remove_google_chrome.rst
 
@@ -1865,7 +1603,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``windows_path`` resource:
+
+**Add an item to the system path**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_path_add.rst
+
+**Remove an item from the system path**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_path_remove.rst
 
@@ -1887,31 +1631,19 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``windows_reboot`` resource:
+
+**Schedule a reboot**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_reboot_schedule.rst
+
+**Cancel a reboot**
 
 .. include:: ../../step_lwrp/step_lwrp_windows_reboot_cancel.rst
 
-
 windows_registry
 -----------------------------------------------------
-.. include:: ../../includes_lwrp/includes_lwrp_windows_registry.rst
-
-.. note:: This lightweight resource is part of the |cookbook windows| cookbook (http://community.opscode.com/cookbooks/windows).
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_windows_registry_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_windows_registry_attributes.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_lwrp/step_lwrp_windows_registry_enable_remote_desktop.rst
-
-.. include:: ../../step_lwrp/step_lwrp_windows_registry_match_proxy.rst
-
+.. warning:: This resource has been added to the |chef client|, starting with |chef 11|. See: `registry_key <http://docs.opscode.com/resource_registry_key.html>`_ for details about the resource. Also, six helper methods for registry keys have been added to the Recipe DSL: `registry_data_exists? <http://docs.opscode.com/dsl_recipe_method_registry_data_exists.html>`_, `registry_get_subkeys <http://docs.opscode.com/dsl_recipe_method_registry_get_subkeys.html>`_, `registry_get_values <http://docs.opscode.com/dsl_recipe_method_registry_get_values.html>`_, `registry_has_subkeys? <http://docs.opscode.com/dsl_recipe_method_registry_has_subkeys.html>`_, `registry_key_exists? <http://docs.opscode.com/dsl_recipe_method_registry_key_exists.html>`_, and `registry_value_exists? <http://docs.opscode.com/dsl_recipe_method_registry_value_exists.html>`_.
 
 windows_shortcut
 -----------------------------------------------------
@@ -1948,9 +1680,16 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``windows_zipfile`` resource:
+
+**Unzip a remote file**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_remote.rst
 
+**Unzip a local file**
+
 .. include:: ../../step_lwrp/step_lwrp_windows_zipfile_unzip_local.rst
+
 
 |yum| Repository Cookbooks
 =====================================================
@@ -1970,6 +1709,10 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``yum_globalconfig`` resource:
+
+**Render template with global configuration parameters**
+
 .. include:: ../../step_lwrp/step_lwrp_yum_globalconfig_add.rst
 
 
@@ -1989,7 +1732,13 @@ Attributes
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
+The following examples show how to use the ``yum_repository`` resource:
+
+**Create a repository**
+
 .. include:: ../../step_lwrp/step_lwrp_yum_repository_add.rst
+
+**Delete a repository**
 
 .. include:: ../../step_lwrp/step_lwrp_yum_repository_delete.rst
 

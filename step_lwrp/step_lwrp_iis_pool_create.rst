@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create an application pool:
+.. To create an application pool:
 
 .. code-block:: ruby
 

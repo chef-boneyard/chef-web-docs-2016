@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To create and start a site that maps to the ``testfu.opscode.com`` domain:
+.. To create and start a site that maps to the ``testfu.opscode.com`` domain:
 
 .. code-block:: ruby
 

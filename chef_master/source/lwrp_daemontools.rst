@@ -22,4 +22,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``daemontools_service`` resource:
+
+**Set up a directory using a template and a script**
+
 .. include:: ../../step_lwrp/step_lwrp_daemontools_service_setup_directory.rst

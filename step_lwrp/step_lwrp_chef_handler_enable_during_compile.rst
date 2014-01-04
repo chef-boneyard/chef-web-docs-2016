@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To enable a handler during the compile phase:
+.. To enable a handler during the compile phase:
 
 .. code-block:: ruby
 

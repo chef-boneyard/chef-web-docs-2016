@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To write to an interpolated path:
+.. To write to an interpolated path:
 
 .. code-block:: ruby
 

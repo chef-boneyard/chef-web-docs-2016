@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To remove the ``check_load`` definition:
+.. To remove the ``check_load`` definition:
 
 .. code-block:: ruby
 

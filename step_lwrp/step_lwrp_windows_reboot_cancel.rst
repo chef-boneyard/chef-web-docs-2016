@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To cancel a previously-requested reboot:
+.. To cancel a previously-requested reboot:
 
 .. code-block:: ruby
 

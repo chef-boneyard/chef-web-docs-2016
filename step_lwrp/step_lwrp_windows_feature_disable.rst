@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To disable a Telnet client/server:
+.. To disable a Telnet client/server:
 
 .. code-block:: ruby
 

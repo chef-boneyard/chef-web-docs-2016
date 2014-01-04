@@ -22,6 +22,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``users_manage`` resource:
+
+**Create users**
+
 .. include:: ../../step_lwrp/step_lwrp_users_manage_create.rst
+
+**Remove users**
 
 .. include:: ../../step_lwrp/step_lwrp_users_manage_remove.rst

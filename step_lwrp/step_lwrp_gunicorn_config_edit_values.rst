@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To edit some worker-related values:
+.. To edit worker-related values:
 
 .. code-block:: ruby
 

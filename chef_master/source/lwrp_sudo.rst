@@ -22,6 +22,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``sudo`` resource:
+
+**Use default mode**
+
 .. include:: ../../step_lwrp/step_lwrp_sudo_mode_default.rst
+
+**Use template mode**
 
 .. include:: ../../step_lwrp/step_lwrp_sudo_mode_template.rst

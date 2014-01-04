@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the |homebrew| provider:
+.. To use the |homebrew| provider:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |putty|:
+.. To install |putty|:
 
 .. code-block:: ruby
 

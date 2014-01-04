@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the natural (default) mode, do something like:
+.. To use the natural (default) mode, do something like:
 
 .. code-block:: ruby
 

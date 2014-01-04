@@ -22,8 +22,16 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``bluepill_service`` resource:
+
+**Use the bluepill_service resource**
+
 .. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_blupill_service.rst
 
+**Use as part of the service resource**
+
 .. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_resource.rst
+
+**Use as part of the template resource**
 
 .. include:: ../../step_lwrp/step_lwrp_bluepill_service_use_resource_template.rst

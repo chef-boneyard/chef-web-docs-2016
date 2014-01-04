@@ -22,7 +22,13 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``rabbitmq_plugin`` resource:
+
+**Enable a plugin**
+
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_plugin_enable.rst
+
+**Disable a plugin**
 
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_plugin_disable.rst
 
@@ -40,9 +46,17 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``rabbitmq_user`` resource:
+
+**Add a user**
+
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_add.rst
 
+**Delete a user**
+
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_delete.rst
+
+**Set user permissions**
 
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_user_set_permissions.rst
 
@@ -61,4 +75,8 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following example shows how to use the ``rabbitmq_vhost`` resource:
+
+**Add a virtual host**
+
 .. include:: ../../step_lwrp/step_lwrp_rabbitmq_vhost_add.rst

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To pin ``libmysqlclient16`` to version ``5.1.49-3``:
+.. To pin ``libmysqlclient16`` to version ``5.1.49-3``:
 
 .. code-block:: ruby
 

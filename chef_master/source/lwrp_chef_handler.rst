@@ -24,10 +24,20 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``chef_handler`` resource:
+
+**Enable the CloudkickHandler handler**
+
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
+
+**Enable handlers during the compile phase**
 
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst
 
+**Handle only exceptions**
+
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst
+
+**Register the JsonFile handler**
 
 .. include:: ../../step_lwrp/step_lwrp_chef_handler_register.rst

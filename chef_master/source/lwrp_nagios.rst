@@ -22,6 +22,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``nagios_nrpecheck`` resource:
+
+**Create a definition**
+
 .. include:: ../../step_lwrp/step_lwrp_nagios_nrpecheck_define.rst
+
+**Remove a definition**
 
 .. include:: ../../step_lwrp/step_lwrp_nagios_nrpecheck_remove.rst

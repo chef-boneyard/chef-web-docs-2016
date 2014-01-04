@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To remove |google chrome|:
+.. To remove |google chrome|:
 
 .. code-block:: ruby
 

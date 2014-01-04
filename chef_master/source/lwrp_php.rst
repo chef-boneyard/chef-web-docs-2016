@@ -22,15 +22,29 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``php_pear`` resource:
+
+**Install extensions for Alternative PHP Cache**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_apc_pecl.rst
+
+**Install the Horde_Url beta**
 
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_horde_beta.rst
 
+**Install extensions for MongoDB**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_mongodb_pecl.rst
+
+**Install a specific version**
 
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_specific_version.rst
 
+**Install the YAML PEAR**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_install_yaml.rst
+
+**Upgrade a PEAR**
 
 .. include:: ../../step_lwrp/step_lwrp_php_pear_upgrade.rst
 
@@ -48,8 +62,16 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``php_pear_channel`` resource:
+
+**Discover horde**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_channel_discover_horde.rst
 
+**Download file, add to channel**
+
 .. include:: ../../step_lwrp/step_lwrp_php_pear_channel_download_then_add.rst
+
+**Update main channels**
 
 .. include:: ../../step_lwrp/step_lwrp_php_pear_channel_update_main_channels.rst

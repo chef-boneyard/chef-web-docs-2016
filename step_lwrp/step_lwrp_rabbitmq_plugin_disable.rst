@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To disable a plugin:
+.. To disable a plugin:
 
 .. code-block:: ruby
 

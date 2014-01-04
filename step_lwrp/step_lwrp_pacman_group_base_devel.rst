@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To remove the "base-devel" group:
+.. To remove the "base-devel" group:
 
 .. code-block:: ruby
 

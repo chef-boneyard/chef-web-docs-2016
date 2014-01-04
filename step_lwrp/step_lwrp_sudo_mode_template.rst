@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use the template mode, do something like:
+.. To use the template mode, do something like:
 
 .. code-block:: ruby
 

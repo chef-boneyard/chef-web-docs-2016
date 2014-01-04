@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |google chrome|. This resource uses the ``dmg_name`` because the application name has spaces. Installs in ``/Applications/Google Chrome.app``.
+.. To install |google chrome|:
 
 .. code-block:: ruby
 
@@ -11,6 +11,6 @@ To install |google chrome|. This resource uses the ``dmg_name`` because the appl
       action :install
     end
 
-The previous example uses the |sha256| checksum that was current when the application was originally installed, and may not be current for the latest releases.
+The ``dmg_name`` attribute is used because the application name contains spaces. The |sha256| checksum that was current when the application was originally installed is assumed (it may not be current for the latest releases).
 
 

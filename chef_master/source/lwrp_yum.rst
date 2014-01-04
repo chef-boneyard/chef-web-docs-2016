@@ -28,6 +28,10 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``yum_globalconfig`` resource:
+
+**Render template with global configuration parameters**
+
 .. include:: ../../step_lwrp/step_lwrp_yum_globalconfig_add.rst
 
 
@@ -47,6 +51,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``yum_repository`` resource:
+
+**Create a repository**
+
 .. include:: ../../step_lwrp/step_lwrp_yum_repository_add.rst
+
+**Delete a repository**
 
 .. include:: ../../step_lwrp/step_lwrp_yum_repository_delete.rst

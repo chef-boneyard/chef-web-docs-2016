@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To add a node to a |riak| cluster:
+.. To add a node to a |riak| cluster:
 
 .. code-block:: ruby
 

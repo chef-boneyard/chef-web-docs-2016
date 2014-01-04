@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To stop, then delete a default site:
+.. To stop, then delete a default site:
 
 .. code-block:: ruby
 

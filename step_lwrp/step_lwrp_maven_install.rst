@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install the |mysql| artifact:
+.. To install the |mysql| artifact:
 
 .. code-block:: ruby
 

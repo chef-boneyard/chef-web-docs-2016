@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install the |vlc|:
+.. To install the |vlc|:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use this provider with |resource package| resource:
+.. To use this provider with |resource package| resource:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To use ``bluepill_service`` resources:
+.. To use ``bluepill_service`` resources:
 
 .. code-block:: ruby
 

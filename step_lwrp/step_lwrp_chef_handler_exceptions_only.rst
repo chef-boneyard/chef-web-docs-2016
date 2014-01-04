@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To handle exceptions only:
+.. To handle exceptions only:
 
 .. code-block:: ruby
 

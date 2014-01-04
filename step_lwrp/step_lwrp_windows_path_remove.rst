@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To remove |7zip| from the system path:
+.. To remove |7zip| from the system path:
 
 .. code-block:: ruby
 

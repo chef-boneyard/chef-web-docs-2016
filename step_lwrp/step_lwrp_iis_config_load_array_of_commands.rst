@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To load an array of commands from a node:
+.. To load an array of commands from a node:
 
 .. code-block:: ruby
 

@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install |gunicorn| to a specified virtual environment:
+.. To install |gunicorn| to a specified virtual environment:
 
 .. code-block:: ruby
 

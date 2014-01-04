@@ -22,11 +22,21 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``python_pip`` resource:
+
+**Install Gunicorn**
+
 .. include:: ../../step_lwrp/step_lwrp_python_pip_install_gunicorn.rst
+
+**Install a specific version of pip**
 
 .. include:: ../../step_lwrp/step_lwrp_python_pip_install_specific_pip.rst
 
+**Target a Gunicorn virtual environment**
+
 .. include:: ../../step_lwrp/step_lwrp_python_pip_target_virtualenv.rst
+
+**Use with the package resource**
 
 .. include:: ../../step_lwrp/step_lwrp_python_pip_use_with_core_package_resource.rst
 
@@ -44,6 +54,12 @@ Attributes
 
 Examples
 -----------------------------------------------------
+The following examples show how to use the ``python_virtualenv`` resource:
+
+**Create a virtual environment**
+
 .. include:: ../../step_lwrp/step_lwrp_python_virtualenv_create_python.rst
+
+**Create a virtual environment owned by an Ubuntu user**
 
 .. include:: ../../step_lwrp/step_lwrp_python_virtualenv_create_ubuntu.rst

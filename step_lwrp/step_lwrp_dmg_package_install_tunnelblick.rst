@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To install ``/Applications/Tunnelblick.app`` from the primary download site.
+.. To install ``/Applications/Tunnelblick.app`` from the primary download site.
 
 .. code-block:: ruby
 
@@ -10,4 +10,4 @@ To install ``/Applications/Tunnelblick.app`` from the primary download site.
       action :install
     end
 
-The previous example uses the |sha256| checksum that was current when the application was originally installed, and may not be current for the latest releases.
+The |sha256| checksum that was current when the application was originally installed is assumed (it may not be current for the latest releases).
