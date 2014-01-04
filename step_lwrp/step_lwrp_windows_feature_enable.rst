@@ -8,7 +8,9 @@
      action :install
    end
 
-or to enable a node as TFTP:
+.. To enable a node as TFTP:
+
+or:
 
 .. code-block:: ruby
 
