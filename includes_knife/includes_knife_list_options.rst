@@ -6,7 +6,7 @@
 This subcommand has the following options:
 
 ``-1``
-   Indicates that only one results column will be shown.
+   |one_column| Default: ``false``.
 
 ``--chef-repo-path PATH``
    |path chef_repo| This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
@@ -22,9 +22,6 @@ This subcommand has the following options:
 
 ``--local``
    |local_directory| Default: ``false``.
-
-``-1``
-   |one_column| Default: ``false``.
 
 ``-p``
    |use trailing_slash| Default: ``false``.
