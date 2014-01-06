@@ -6,6 +6,10 @@ knife cookbook site
 
 .. include:: ../../includes_knife/includes_knife_site_cookbook.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife_manpage_options/includes_knife_site_cookbook_options.rst
+
 download
 =====================================================
 .. include:: ../../includes_knife/includes_knife_site_cookbook_download.rst

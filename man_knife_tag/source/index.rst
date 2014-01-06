@@ -6,6 +6,10 @@ knife tag
 
 .. include:: ../../includes_knife/includes_knife_tag.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife_manpage_options/includes_knife_tag_options.rst
+
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_tag_create.rst

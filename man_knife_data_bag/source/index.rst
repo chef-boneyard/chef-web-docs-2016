@@ -8,6 +8,10 @@ knife data bag
 
 .. include:: ../../includes_knife/includes_knife_data_bag.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife_manpage_options/includes_knife_data_bag_options.rst
+
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_data_bag_create.rst

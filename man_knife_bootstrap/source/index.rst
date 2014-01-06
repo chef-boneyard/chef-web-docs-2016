@@ -12,7 +12,7 @@ knife bootstrap
 
 **Options**
 
-.. include:: ../../includes_knife/includes_knife_bootstrap_options.rst
+.. include:: ../../includes_knife_manpage_options/includes_knife_bootstrap_options.rst
 
 **Examples**
 

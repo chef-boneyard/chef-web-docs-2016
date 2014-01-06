@@ -10,7 +10,7 @@ knife-diff
 
 **Options**
 
-.. include:: ../../includes_knife/includes_knife_diff_options.rst
+.. include:: ../../includes_knife_manpage_options/includes_knife_diff_options.rst
 
 **knife.rb File Settings**
 

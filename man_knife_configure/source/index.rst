@@ -10,7 +10,7 @@ knife configure
 
 **Options**
 
-.. include:: ../../includes_knife/includes_knife_configure_options.rst
+.. include:: ../../includes_knife_manpage_options/includes_knife_configure_options.rst
 
 **Examples**
 

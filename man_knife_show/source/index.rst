@@ -10,7 +10,7 @@ knife show
 
 **Options**
 
-|no_options|
+.. include:: ../../includes_knife_manpage_options/includes_knife_show_options.rst
 
 **Examples**
 

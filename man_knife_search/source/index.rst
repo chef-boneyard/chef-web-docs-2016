@@ -12,7 +12,7 @@ knife search
 
 **Options**
 
-.. include:: ../../includes_knife/includes_knife_search_options.rst
+.. include:: ../../includes_knife_manpage_options/includes_knife_search_options.rst
 
 **Examples**
 

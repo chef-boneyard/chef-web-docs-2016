@@ -4,6 +4,10 @@ knife user
 
 .. include:: ../../includes_knife/includes_knife_user.rst
 
+Common Options
+=====================================================
+.. include:: ../../includes_knife_manpage_options/includes_knife_user_options.rst
+
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_user_create.rst
