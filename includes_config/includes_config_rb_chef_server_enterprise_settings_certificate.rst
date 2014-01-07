@@ -18,7 +18,7 @@ The |service certificate| service has the following settings:
    * - ``opscode_certificate['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-certificate"``.
    * - ``opscode_certificate['log_rotation']``
-     - 
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_certificate['num_certificates_per_worker']``
      - Default value: ``"50"``.
    * - ``opscode_certificate['num_workers']``

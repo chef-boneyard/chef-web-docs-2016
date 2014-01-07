@@ -27,6 +27,8 @@ The |service rabbitmq| service has the following settings:
      - Default value: ``"/jobs"``.
    * - ``rabbitmq['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/rabbitmq"``.
+   * - ``rabbitmq['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``rabbitmq['node_ip_address']``
      - |ip_address rabbitmq| Default value: ``"127.0.0.1"``.
    * - ``rabbitmq['node_port']``

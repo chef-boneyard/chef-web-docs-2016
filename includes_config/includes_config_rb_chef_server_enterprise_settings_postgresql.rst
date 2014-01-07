@@ -33,6 +33,8 @@ The |service postgresql| service has the following settings:
      - |port listen_postgresql| Default value: ``localhost``.
    * - ``postgresql['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/postgresql``.
+   * - ``postgresql['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``postgresql['max_connections']``
      - |max_connections| Default value: ``200``.
    * - ``postgresql['md5_auth_cidr_addresses']``

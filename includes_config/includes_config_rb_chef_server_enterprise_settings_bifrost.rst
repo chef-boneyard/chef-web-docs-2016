@@ -20,7 +20,7 @@ The |service bifrost| service has the following settings:
    * - ``oc_bifrost['db_pool_size']``
      - |db_pool_size| This value should be increased if failures indicate that the |service bifrost| service ran out of connections. This value should be tuned in conjunction with the ``postgresql['max_connections']`` setting for |postgresql|. Default value: ``20``.
    * - ``oc_bifrost['log_rotation']``
-     - 
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``oc_bifrost['sql_password']``
      - 
    * - ``oc_bifrost['sql_user']``

@@ -27,6 +27,8 @@ The |service webui| service has the following settings:
      - Default value: ``127.0.0.1:9462``.
    * - ``opscode_webui['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-server-webui``.
+   * - ``opscode_webui['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_webui['port']``
      - |port opscode_webui| Default value: ``9462``.
    * - ``opscode_webui['session_key']``

@@ -27,6 +27,8 @@ The |service solr| service has the following settings:
      - Default value: ``(empty)``.
    * - ``opscode_solr['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-solr``.
+   * - ``opscode_solr['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_solr['max_commit_docs']``
      - |solr_max_commit_docs| This value should be tuned carefully.  |solr_update_frequency_caveat| Default value: ``1000`` (every 1000 documents).
    * - ``opscode_solr['max_field_length']``

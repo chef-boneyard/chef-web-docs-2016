@@ -23,6 +23,8 @@ The |service bookshelf| service has the following settings:
      - Default value: ``127.0.0.1``.
    * - ``bookshelf['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/bookshelf``.
+   * - ``bookshelf['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``bookshelf['port']``
      - Default value: ``4321``.
    * - ``bookshelf['secret_access_key']``

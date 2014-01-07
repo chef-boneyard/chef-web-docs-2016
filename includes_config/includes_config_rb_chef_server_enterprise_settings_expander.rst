@@ -19,6 +19,8 @@ The |service expander| service has the following settings:
      - |use ha| Default value: ``false``.
    * - ``opscode_expander['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/chef-expander``.
+   * - ``opscode_expander['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_expander['nodes']``
      - |worker_processes| Default value: ``2``.
    * - ``opscode_expander['reindexer_log_directory']``

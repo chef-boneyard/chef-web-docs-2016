@@ -23,6 +23,8 @@ The |service account| service has the following settings:
      - Default value: ``"127.0.0.1:9465"``.
    * - ``opscode_account['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-account"``.
+   * - ``opscode_account['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_account['port']``
      - Default value: ``9465``.
    * - ``opscode_account['proxy_user']``

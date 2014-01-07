@@ -30,7 +30,7 @@ The |service couchdb| service has the following settings:
    * - ``couchdb['log_level']``
      - |log_level| Default value: ``"error"``.
    * - ``couchdb['log_rotation']``
-     - 
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``couchdb['max_attachment_chunk_size']``
      - The maximum attachment size. Default value: ``"4294967296"``.
    * - ``couchdb['max_dbs_open']``

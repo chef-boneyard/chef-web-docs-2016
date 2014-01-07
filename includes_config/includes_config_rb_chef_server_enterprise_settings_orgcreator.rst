@@ -21,6 +21,8 @@ The |service orgcreator| service has the following settings:
      - |use ha| Default value: ``false``.
    * - ``opscode_org_creator['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/opscode-org-creator"``.
+   * - ``opscode_org_creator['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``opscode_org_creator['max_workers']``
      - Default value: ``1``.
    * - ``opscode_org_creator['port']``

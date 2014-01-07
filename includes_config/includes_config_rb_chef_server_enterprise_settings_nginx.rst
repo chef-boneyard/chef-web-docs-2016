@@ -37,6 +37,8 @@ This configuration file has the following settings for |nginx|:
      - |worker_max_keepalive| Default value: ``65``.
    * - ``nginx['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``/var/log/chef-server/nginx``.
+   * - ``nginx['log_rotation']``
+     - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``nginx['non_ssl_port']``
      - |port non_ssl_nginx| Default value: ``80``. Use ``nginx['enable_non_ssl']`` to enable or disable |ssl| redirects on this port number.
    * - ``nginx['sendfile']``
