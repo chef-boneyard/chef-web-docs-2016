@@ -6,5 +6,5 @@
 
    apt__package "jwhois" do    
      action :install
-    source '/path/to/jwhois.deb'
+     source '/path/to/jwhois.deb'
    end   
