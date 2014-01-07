@@ -25,8 +25,5 @@ The |service expander| service has the following settings:
      - |worker_processes| Default value: ``2``.
    * - ``opscode_expander['reindexer_log_directory']``
      - Default value: ``/var/log/chef-server/chef-expander-reindexer``.
-   * - ``opscode_expander['redindexer_svlogd_num']``
-     - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
-   * - ``opscode_expander['reindexer_svlogd_size']``
-     - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
+
 
