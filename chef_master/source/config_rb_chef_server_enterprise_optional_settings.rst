@@ -52,7 +52,7 @@ oc_bifrost
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bifrost.rst
 
-oc_chef-pedant
+oc-chef-pedant
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_pedant.rst
 
