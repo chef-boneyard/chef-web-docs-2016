@@ -278,10 +278,10 @@ This configuration file has the following settings:
  
           solr_data_path "/var/chef/solr/data"
    * - ``solr_heap_size``
-     - |solr_heap_size| Default value: ``256M``. For example:
+     - |solr_heap_size| Default value: ``256``. For example:
        ::
  
-          solr_heap_size 256M
+          solr_heap_size 256
    * - ``solr_home_path``
      - |solr_home_path| Default value: ``/var/chef/solr``. For example:
        ::

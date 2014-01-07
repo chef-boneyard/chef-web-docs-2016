@@ -20,7 +20,7 @@ The |service solr| service has the following settings:
    * - ``opscode_solr['ha']``
      - |use ha| Default value: ``false``.
    * - ``opscode_solr['heap_size']``
-     - |heap_size solr| The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the amount of memory that is required often exceeds 3GB. Default value: ``nil``.
+     - |heap_size solr| The default value should work for many organizations with fewer than 25 nodes. For an organization with several hundred nodes, the amount of memory that is required often exceeds 3GB. Default value: ``nil``, which is equivalent to 25% of the system memory or 1024 (MB, but this setting is specified as an integer number of MB in EC11), whichever is smaller.
    * - ``opscode_solr['ip_address']``
      - Default value: ``127.0.0.1``.
    * - ``opscode_solr['java_opts']``
