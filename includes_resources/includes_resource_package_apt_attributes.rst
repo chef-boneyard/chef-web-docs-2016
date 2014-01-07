@@ -12,14 +12,14 @@ This resource has the following attributes:
    * - ``arch``
      - |architecture package|
    * - ``options``
-     - |command options|
+     - |command options| Include directives such as --dry-run and other common apt-get options.
    * - ``package_name``
      - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``response_file``
-     - Optional. |response_file| Default value: ``nil``.
+     - Optional. Direct path to pre-seed file. |response_file| Default value: ``nil``.
    * - ``source``
-     - Optional. |source resource package|
+     - Optional. Direct path to dpkg or deb package. |source resource package|
    * - ``version``
      - |version package| Default value: ``nil``.
