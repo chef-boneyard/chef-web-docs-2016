@@ -3,9 +3,17 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This argument has the following syntax:
+This argument has the following syntax when creating a |knife rb| file:
 
 .. code-block:: bash
 
    $ knife configure (options)
+
+and the following syntax when creating a |client rb| file:
+
+.. code-block:: bash
+
+   $ knife configure client DIRECTORY
+
+
 

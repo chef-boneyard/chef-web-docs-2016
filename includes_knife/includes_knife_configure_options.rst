@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This subcommand has the following options:
+This subcommand has the following options for use when configuring a |knife rb| file:
 
 ``--admin-client-name NAME``
    The name of the client, typically the name of the admin client.
@@ -22,3 +22,5 @@ This subcommand has the following options:
 
 ``--validation-key PATH``
    The path to the validation key used by the client, typically a file named ``validation.pem``.
+
+
