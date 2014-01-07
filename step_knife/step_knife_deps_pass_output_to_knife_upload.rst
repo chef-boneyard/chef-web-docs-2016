@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To pass the output of |subcommand knife deps| to |subcommand knife upload|, do something like the following:
+The output of |subcommand knife deps| can be passed to |subcommand knife upload|:
 
 .. code-block:: bash
 

@@ -48,7 +48,13 @@ Microsoft Windows
 
 Examples
 =====================================================
+The following examples show how to use this |knife| subcommand:
+
+**Use an SSH password**
+
 .. include:: ../../step_knife/step_knife_bootstrap_use_ssh_password.rst
+
+**Use a file that contains a private key**
 
 .. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
 

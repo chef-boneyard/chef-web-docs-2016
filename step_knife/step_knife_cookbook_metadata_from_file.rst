@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view cookbook metadata from a |json| file:
+.. To view cookbook metadata from a |json| file:
 
 .. code-block:: bash
 

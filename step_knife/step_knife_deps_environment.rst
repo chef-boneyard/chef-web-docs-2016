@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To find the dependencies for an environment:
+.. To find the dependencies for an environment:
 
 .. code-block:: bash
 

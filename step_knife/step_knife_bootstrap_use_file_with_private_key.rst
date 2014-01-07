@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To use a file that contains a private key:
+.. To use a file that contains a private key:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To bulk delete roles using a regular expression:
+Use a regular expression to define the pattern used to bulk delete roles:
 
 .. code-block:: bash
 

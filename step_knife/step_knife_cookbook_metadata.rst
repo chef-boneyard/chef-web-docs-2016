@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To generate metadata for all cookbooks:
+.. To generate metadata for all cookbooks:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To delete a role:
+.. To delete a role:
 
 .. code-block:: bash
 

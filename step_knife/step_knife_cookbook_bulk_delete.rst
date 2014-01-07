@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To bulk delete many cookbooks, use a regular expression to define the pattern:
+Use a regular expression to define the pattern used to bulk delete cookbooks:
 
 .. code-block:: bash
 

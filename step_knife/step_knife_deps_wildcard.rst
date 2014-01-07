@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To use a wildcard to return all the child nodes:
+A wildcard can be used to return all of the child nodes. For example, all of the environments:
 
 .. code-block:: bash
 

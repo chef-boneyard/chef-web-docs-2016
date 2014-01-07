@@ -1,4 +1,5 @@
-.. This is an included how-to. 
+.. This is an included how-to.
+.. This topic is NOT included in the knife-bootstrap topic
 
 To register nodes with |chef hosted|, run the following bootstrap command on every node:
 

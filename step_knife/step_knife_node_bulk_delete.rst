@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To bulk delete many nodes, use a regular expression to define the pattern:
+Use a regular expression to define the pattern used to bulk delete nodes:
 
 .. code-block:: bash
 

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To find the dependencies for a node:
+.. To find the dependencies for a node:
 
 .. code-block:: bash
 
