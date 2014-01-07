@@ -12,7 +12,7 @@ This resource has the following attributes:
    * - ``arch``
      - |architecture package|
    * - ``options``
-     - |command options| Include directives such as --dry-run and other common apt-get options.
+     - |command options| Include directives such as `--dry-run` and other common apt-get options.
    * - ``package_name``
      - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
