@@ -281,7 +281,7 @@ This configuration file has the following settings:
      - |solr_heap_size| For example:
        ::
  
-          solr_heap_size 256M
+          solr_heap_size 256
    * - ``solr_home_path``
      - |solr_home_path| For example:
        ::
