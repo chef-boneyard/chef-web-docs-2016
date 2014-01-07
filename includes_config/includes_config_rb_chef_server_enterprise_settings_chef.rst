@@ -33,10 +33,6 @@ The |service chef| service has the following settings:
      - Default value: ``"/var/opt/opscode/opscode-chef/sandbox"``.
    * - ``opscode_chef['tcp_nodelay']``
      - Default value: ``true``.
-   * - ``opscode_chef['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``opscode_chef['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_chef['umask']``
      - Default value: ``"0022"``.
    * - ``opscode_chef['upload_internal_port']``

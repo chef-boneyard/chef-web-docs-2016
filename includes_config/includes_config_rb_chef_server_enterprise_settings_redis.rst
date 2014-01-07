@@ -35,10 +35,6 @@ The |service redis| service has the following settings:
      - |port redis| Default value: ``"6379"``.
    * - ``redis['root']``
      - |root redis| Default value: ``"/var/opt/opscode/redis"``.
-   * - ``redis['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``redis['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
    * - ``redis['timeout']``
      - |timeout redis| Default value: ``"300"``.
    * - ``redis['vip']``

@@ -57,10 +57,6 @@ The |service postgresql| service has the following settings:
      - Default value: ``opscode_chef_ro``.
    * - ``postgresql['sql_user']``
      - Default value: ``opscode_chef``.
-   * - ``postgresql['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``postgresql['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
    * - ``postgresql['trust_auth_cidr_addresses']``
      - Default value: ``'127.0.0.1/32', '::1/128'``.
    * - ``postgresql['user_path']``

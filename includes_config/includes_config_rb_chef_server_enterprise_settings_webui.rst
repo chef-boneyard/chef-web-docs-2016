@@ -33,10 +33,6 @@ The |service webui| service has the following settings:
      - |port opscode_webui| Default value: ``9462``.
    * - ``opscode_webui['session_key']``
      - Default value: ``_sandbox_session``.
-   * - ``opscode_webui['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
-   * - ``opscode_webui['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
    * - ``opscode_webui['tcp_nodelay']``
      - Default value: ``true``.
    * - ``opscode_webui['umask']``

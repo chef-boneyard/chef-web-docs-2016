@@ -31,10 +31,6 @@ The |service account| service has the following settings:
      - Default value: ``"pivotal"``.
    * - ``opscode_account['session_secret_key']``
      - Default value: ``"change-by-default"``.
-   * - ``opscode_account['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``opscode_account['svlogd_size']``
-     - s Default value: ``1000000``. 
    * - ``opscode_account['tcp_nodelay']``
      - Default value: ``true``.
    * - ``opscode_account['umask']``

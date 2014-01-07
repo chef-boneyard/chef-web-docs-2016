@@ -39,11 +39,6 @@ The |service rabbitmq| service has the following settings:
      - |password rabbitmq| Default value: ``"chefrocks"``.
    * - ``rabbitmq['reindexer_vhost']``
      - Default value: ``"/reindexer"``.
-   * - ``rabbitmq['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-
-   * - ``rabbitmq['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
    * - ``rabbitmq['user']``
      - Default value: ``"chef"``.
    * - ``rabbitmq['vhost']``

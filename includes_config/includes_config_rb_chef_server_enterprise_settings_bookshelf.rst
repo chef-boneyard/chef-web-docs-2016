@@ -31,10 +31,6 @@ The |service bookshelf| service has the following settings:
      - Default value: ``generated-by-default``.
    * - ``bookshelf['stream_download']``
      - Default value: ``true``.
-   * - ``bookshelf['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``bookshelf['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
    * - ``bookshelf['url']``
      - This value will default to the value of the URL for |nginx|, which is built from the configured ``api_fqdn`` and the SSL port for |nginx|.
    * - ``bookshelf['vip']``

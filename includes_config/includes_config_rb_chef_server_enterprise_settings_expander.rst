@@ -29,7 +29,4 @@ The |service expander| service has the following settings:
      - For the svlogd-managed 'current' log set a retention policy based on the number of logfiles retained. Default value: ``10``.
    * - ``opscode_expander['reindexer_svlogd_size']``
      - For the svlogd-managed 'current' log set a rotation policy based on the size, in bytes, of the logfile. Default value: ``1000000``.
-   * - ``opscode_expander['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``opscode_expander['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
+

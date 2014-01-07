@@ -67,10 +67,6 @@ This configuration file has the following settings for |nginx|:
      - |version protocols_ssl| Default value: varies, depending on the configuration of the |chef server| topology.
    * - ``nginx['ssl_state_name']``
      - Default value: ``WA``.
-   * - ``nginx['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``nginx['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
    * - ``nginx['tcp_nodelay']``
      - |use nagle| Default value: ``on``.
    * - ``nginx['tcp_nopush']``

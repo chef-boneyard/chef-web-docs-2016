@@ -17,10 +17,6 @@ This configuration file has the following settings for |keepalived|:
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``.
    * - ``keepalived['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
-   * - ``keepalived['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``keepalived['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
    * - ``keepalived['service_order']``
      - |service_order keepalived| |opscode_support| Default value:
        ::

@@ -51,10 +51,6 @@ The |service erchef| service has the following settings:
      - Default value: ``5000``.
    * - ``opscode_erchef['s3_url_ttl']``
      - Default value: ``900``.
-   * - ``opscode_erchef['svlogd_num']``
-     - |svlogd_num| Default value: ``10``.
-   * - ``opscode_erchef['svlogd_size']``
-     - |svlogd_size| Default value: ``1000000``.
    * - ``opscode_erchef['umask']``
      - Default value: ``0022``.
    * - ``opscode_erchef['validation_client_name']``
