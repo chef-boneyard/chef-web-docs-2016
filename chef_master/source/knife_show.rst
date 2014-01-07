@@ -16,6 +16,12 @@ Options
 
 Examples
 =====================================================
+The following examples show how to use this |knife| subcommand:
+
+**Show all cookbooks**
+
 .. include:: ../../step_knife/step_knife_show_all_cookbooks.rst
+
+**Show roles and environments**
 
 .. include:: ../../step_knife/step_knife_show_roles_and_environments.rst

@@ -26,6 +26,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create a user**
+
 .. include:: ../../step_knife/step_knife_user_create.rst
 
 delete
@@ -42,6 +46,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Delete a user**
+
 .. include:: ../../step_knife/step_knife_user_delete.rst
 
 edit
@@ -97,6 +105,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Regenerate the RSA key-pair**
+
 .. include:: ../../step_knife/step_knife_user_reregister.rst
 
 show
@@ -113,7 +125,13 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Show user data**
+
 .. include:: ../../step_knife/step_knife_user_show.rst
+
+**Show user data as JSON**
 
 .. include:: ../../step_knife/step_knife_user_show_json.rst
 

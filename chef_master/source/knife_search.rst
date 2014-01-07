@@ -18,6 +18,8 @@ Options
 
 Examples
 =====================================================
+The following examples show how to use this |knife| subcommand:
+
 **Search by platform ID**
 
 .. include:: ../../step_knife/step_knife_search_by_platform_ids.rst

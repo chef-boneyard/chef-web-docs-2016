@@ -7,4 +7,4 @@ To view information in |json| format, use the ``-F`` common option as part of th
 
    $ knife user show "Dennis Teck" -F json
 
-Other formats available include ``text``, ``yaml``, and ``pp``.
+(Other formats available include ``text``, ``yaml``, and ``pp``, e.g. ``-F yaml`` for |yaml|.)

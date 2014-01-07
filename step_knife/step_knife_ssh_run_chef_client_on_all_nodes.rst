@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To run the |chef client| on all nodes, enter:
+.. To run the |chef client| on all nodes, enter:
 
 .. code-block:: bash
 

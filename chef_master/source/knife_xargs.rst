@@ -22,6 +22,10 @@ knife.rb Settings
 
 Examples
 =====================================================
+The following examples show how to use this |knife| subcommand:
+
+**Use output of knife deps to pass command to knife xargs**
+
 .. include:: ../../step_knife/step_knife_xargs_pass_command_to.rst
 
 

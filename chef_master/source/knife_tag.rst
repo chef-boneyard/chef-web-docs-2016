@@ -22,6 +22,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create tags**
+
 .. include:: ../../step_knife/step_knife_tag_create.rst
 
 delete
@@ -38,6 +42,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Delete tags**
+
 .. include:: ../../step_knife/step_knife_tag_delete.rst
 
 list
@@ -54,4 +62,8 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**View a list of tags**
+
 .. include:: ../../step_knife/step_knife_tag_list.rst

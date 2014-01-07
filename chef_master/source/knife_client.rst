@@ -42,7 +42,13 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create an admin client**
+
 .. include:: ../../step_knife/step_knife_client_create_admin.rst
+
+**Create an admin client for Enterprise Chef**
 
 .. include:: ../../step_knife/step_knife_client_create_hosted_and_private.rst
 
@@ -60,6 +66,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**xxxxx**
+
 .. include:: ../../step_knife/step_knife_client_delete.rst
 
 edit
@@ -76,6 +86,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**xxxxx**
+
 .. include:: ../../step_knife/step_knife_client_edit.rst
 
 list
@@ -92,6 +106,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**xxxxx**
+
 .. include:: ../../step_knife/step_knife_client_list_all.rst
 
 .. include:: ../../step_knife/step_knife_client_list_authenticate.rst
@@ -116,6 +134,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**xxxxx**
+
 .. include:: ../../step_knife/step_knife_client_reregister.rst
 
 show
@@ -132,6 +154,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**xxxxx**
+
 .. include:: ../../step_knife/step_knife_client_show.rst
 
 .. include:: ../../step_knife/step_knife_common_view_json.rst

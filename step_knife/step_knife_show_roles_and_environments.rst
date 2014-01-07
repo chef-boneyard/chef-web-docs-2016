@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To show roles and environments:
+.. To show roles and environments:
 
 .. code-block:: bash
 

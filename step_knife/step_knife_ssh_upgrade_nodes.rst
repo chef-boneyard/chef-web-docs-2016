@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To upgrade all nodes, enter:
+.. To upgrade all nodes, enter:
 
 .. code-block:: bash
 

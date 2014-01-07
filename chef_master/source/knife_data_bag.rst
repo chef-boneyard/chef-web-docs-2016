@@ -30,6 +30,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create a data bag**
+
 .. include:: ../../step_knife/step_knife_data_bag_create.rst
 
 delete
@@ -46,7 +50,13 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Delete a data bag**
+
 .. include:: ../../step_knife/step_knife_data_bag_delete.rst
+
+**Delete a data bag item**
 
 .. include:: ../../step_knife/step_knife_data_bag_delete_item.rst
 
@@ -70,7 +80,13 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Edit a data bag**
+
 .. include:: ../../step_knife/step_knife_data_bag_edit.rst
+
+**Edit a data bag item**
 
 .. include:: ../../step_knife/step_knife_data_bag_edit_item.rst
 
@@ -94,7 +110,13 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create a data bag from a file**
+
 .. include:: ../../step_knife/step_knife_data_bag_from_file_create.rst
+
+**Create an encrypted data bag from a file**
 
 .. include:: ../../step_knife/step_knife_data_bag_from_file_create_encrypted.rst
 
@@ -113,6 +135,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**View a list of data bags**
+
 .. include:: ../../step_knife/step_knife_data_bag_list.rst
 
 show
@@ -135,12 +161,24 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Show a data bag**
+
 .. include:: ../../step_knife/step_knife_data_bag_show.rst
+
+**Show a data bag item**
 
 .. include:: ../../step_knife/step_knife_data_bag_show_item.rst
 
+**Show a data bag, encrypted**
+
 .. include:: ../../step_knife/step_knife_data_bag_show_item_encrypted.rst
 
+**Show a data bag, decrypted**
+
 .. include:: ../../step_knife/step_knife_data_bag_show_item_decrypted.rst
+
+**Show a data bag as JSON**
 
 .. include:: ../../step_knife/step_knife_data_bag_show_as_json.rst

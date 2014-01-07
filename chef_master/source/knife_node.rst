@@ -23,6 +23,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Bulk delete nodes**
+
 .. include:: ../../step_knife/step_knife_node_bulk_delete.rst
 
 
@@ -40,6 +44,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create a node**
+
 .. include:: ../../step_knife/step_knife_node_create.rst
 
 
@@ -57,6 +65,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Delete a node**
+
 .. include:: ../../step_knife/step_knife_node_delete.rst
 
 
@@ -74,6 +86,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Edit a node**
+
 .. include:: ../../step_knife/step_knife_node_edit.rst
 
 
@@ -97,6 +113,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create a node using a JSON file**
+
 .. include:: ../../step_knife/step_knife_node_from_file.rst
 
 
@@ -120,6 +140,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**View a list of nodes**
+
 .. include:: ../../step_knife/step_knife_node_list_all.rst
 
 
@@ -147,13 +171,25 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Add a role**
+
 .. include:: ../../step_knife/step_knife_node_run_list_add_role.rst
+
+**Add roles and recipes**
 
 .. include:: ../../step_knife/step_knife_node_run_list_add_roles_and_recipes.rst
 
+**Add a recipe with a FQDN**
+
 .. include:: ../../step_knife/step_knife_node_run_list_add_recipe_with_fqdn.rst
 
+**Add a recipe with a cookbook**
+
 .. include:: ../../step_knife/step_knife_node_run_list_add_recipe_with_cookbook.rst
+
+**Add the default recipe**
 
 .. include:: ../../step_knife/step_knife_node_run_list_add_default_recipe.rst
 
@@ -178,7 +214,13 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Remove a role**
+
 .. include:: ../../step_knife/step_knife_node_run_list_remove_role.rst
+
+**Remove a run-list**
 
 .. include:: ../../step_knife/step_knife_node_run_list_remove_run_list.rst
 
@@ -197,18 +239,36 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Show all data about nodes**
+
 .. include:: ../../step_knife/step_knife_node_show_all_data.rst
+
+**Show basic information about nodes**
 
 .. include:: ../../step_knife/step_knife_node_show_all_data_basic.rst
 
+**Show all data about nodes, truncated**
+
 .. include:: ../../step_knife/step_knife_node_show_all_data_truncated.rst
+
+**Show attributes**
 
 .. include:: ../../step_knife/step_knife_node_show_attribute.rst
 
+**Show the FQDN**
+
 .. include:: ../../step_knife/step_knife_node_show_fqdn.rst
+
+**Show a run-list**
 
 .. include:: ../../step_knife/step_knife_node_show_run_list.rst
 
+**Show as JSON data**
+
 .. include:: ../../step_knife/step_knife_common_view_json.rst
+
+**Show as raw JSON data**
 
 .. include:: ../../step_knife/step_knife_common_view_json_raw.rst

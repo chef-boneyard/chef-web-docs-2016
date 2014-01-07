@@ -24,6 +24,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Bulk delete roles**
+
 .. include:: ../../step_knife/step_knife_role_bulk_delete.rst
 
 create
@@ -46,6 +50,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create a role**
+
 .. include:: ../../step_knife/step_knife_role_create.rst
 
 delete
@@ -62,6 +70,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Delete a role**
+
 .. include:: ../../step_knife/step_knife_role_delete.rst
 
 edit
@@ -78,6 +90,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Edit a role**
+
 .. include:: ../../step_knife/step_knife_role_edit.rst
 
 from file
@@ -100,6 +116,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create a role using JSON data**
+
 .. include:: ../../step_knife/step_knife_role_from_file.rst
 
 list
@@ -116,6 +136,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**View a list of roles**
+
 .. include:: ../../step_knife/step_knife_role_list.rst
 
 show
@@ -138,8 +162,14 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
-.. include:: ../../step_knife/step_knife_common_view_json.rst
+The following examples show how to use this |knife| subcommand:
+
+**Show as JSON data**
 
 .. include:: ../../step_knife/step_knife_common_view_json.rst
+
+**Show as raw JSON data**
+
+.. include:: ../../step_knife/step_knife_common_view_json_raw.rst
 
 

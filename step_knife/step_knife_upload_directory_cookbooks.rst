@@ -1,6 +1,6 @@
 .. This is an included how-to. 
 
-To upload the ``cookbooks/`` directory to the |chef server|, browse to the top level of the |chef repo| and enter:
+Browse to the top level of the |chef repo| and enter:
 
 .. code-block:: bash
 

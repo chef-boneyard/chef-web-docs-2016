@@ -22,7 +22,13 @@ knife.rb Settings
 
 Examples
 =====================================================
+The following examples show how to use this |knife| subcommand:
+
+**Configure knife.rb**
+
 .. include:: ../../step_knife/step_knife_configure_knife_rb.rst
+
+**Configure client.rb**
 
 .. include:: ../../step_knife/step_knife_configure_client_rb.rst
 

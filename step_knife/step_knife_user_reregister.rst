@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To regenerate the RSA key pair for a user named "Robert Younger", enter:
+.. To regenerate the RSA key pair for a user named "Robert Younger", enter:
 
 .. code-block:: bash
 

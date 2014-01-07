@@ -22,9 +22,17 @@ knife.rb Settings
 
 Examples
 =====================================================
+The following examples show how to use this |knife| subcommand:
+
+**List roles**
+
 .. include:: ../../step_knife/step_knife_list_roles.rst
 
+**List roles and environments**
+
 .. include:: ../../step_knife/step_knife_list_roles_and_environments.rst
+
+**List everything**
 
 .. include:: ../../step_knife/step_knife_list_everything.rst
 

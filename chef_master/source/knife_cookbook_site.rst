@@ -28,6 +28,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Download a cookbook**
+
 .. include:: ../../step_knife/step_knife_site_cookbook_download.rst
 
 install
@@ -50,6 +54,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Install a cookbook**
+
 .. include:: ../../step_knife/step_knife_site_cookbook_install.rst
 
 list
@@ -66,6 +74,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**View a list of cookbooks**
+
 .. include:: ../../step_knife/step_knife_site_cookbook_list.rst
 
 search
@@ -82,6 +94,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Search for cookbooks**
+
 .. include:: ../../step_knife/step_knife_site_cookbook_search.rst
 
 share
@@ -104,6 +120,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Share a cookbook**
+
 .. include:: ../../step_knife/step_knife_site_cookbook_share.rst
 
 
@@ -121,7 +141,13 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Show cookbook data**
+
 .. include:: ../../step_knife/step_knife_site_cookbook_show.rst
+
+**Show cookbook data as JSON**
 
 .. include:: ../../step_knife/step_knife_common_view_json.rst
 
@@ -140,6 +166,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Unshare a cookbook**
+
 .. include:: ../../step_knife/step_knife_site_cookbook_unshare.rst
 
 

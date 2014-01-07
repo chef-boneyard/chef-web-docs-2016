@@ -28,6 +28,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create an environment**
+
 .. include:: ../../step_knife/step_knife_environment_create.rst
 
 
@@ -45,6 +49,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Delete an environment**
+
 .. include:: ../../step_knife/step_knife_environment_delete.rst
 
 
@@ -62,6 +70,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Edit an environment**
+
 .. include:: ../../step_knife/step_knife_environment_edit.rst
 
 
@@ -85,6 +97,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create an environment from a JSON file**
+
 .. include:: ../../step_knife/step_knife_environment_from_file.rst
 
 
@@ -102,6 +118,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**View a list of environments**
+
 .. include:: ../../step_knife/step_knife_environment_list.rst
 
 
@@ -119,6 +139,12 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Show environments**
+
 .. include:: ../../step_knife/step_knife_environment_show.rst
+
+**Show environments as JSON**
 
 .. include:: ../../step_knife/step_knife_common_view_json.rst

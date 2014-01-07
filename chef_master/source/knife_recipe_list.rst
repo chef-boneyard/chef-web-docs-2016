@@ -16,4 +16,8 @@ Options
 
 Examples
 =====================================================
+The following examples show how to use this |knife| subcommand:
+
+**View a list of recipes**
+
 .. include:: ../../step_knife/step_knife_recipe_list.rst

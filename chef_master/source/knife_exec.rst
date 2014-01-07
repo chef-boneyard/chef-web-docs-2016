@@ -26,12 +26,24 @@ knife.rb Settings
 
 Examples
 =====================================================
+The following examples show how to use this |knife| subcommand:
+
+**Run Ruby scripts**
+
 .. include:: ../../step_knife/step_knife_exec_run_ruby_scripts.rst
+
+**Chef Knife status**
 
 .. include:: ../../step_knife/step_knife_exec_check_knife_status.rst
 
+**List available free memory**
+
 .. include:: ../../step_knife/step_knife_exec_list_available_free_memory.rst
 
+**List available search indexes**
+
 .. include:: ../../step_knife/step_knife_exec_list_available_search_indexes.rst
+
+**Query for multiple attributes**
 
 .. include:: ../../step_knife/step_knife_exec_query_for_multiple_attributes.rst
