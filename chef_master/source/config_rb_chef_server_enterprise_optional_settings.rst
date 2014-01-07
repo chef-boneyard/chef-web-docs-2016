@@ -48,13 +48,13 @@ nginx
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_nginx.rst
 
-chef-pedant
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_pedant.rst
-
 oc_bifrost
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bifrost.rst
+
+oc_chef-pedant
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_pedant.rst
 
 opscode-account
 -----------------------------------------------------
