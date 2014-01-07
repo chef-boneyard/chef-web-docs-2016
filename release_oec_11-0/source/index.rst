@@ -541,40 +541,12 @@ The following topics discuss using |chef server oec| with platforms:
    knife_using
    knife_xargs
    lwrp
-   lwrp_aws
-   lwrp_apt
-   lwrp_bluepill
    lwrp_chef_handler
    lwrp_custom
-   lwrp_custom_provider_ruby
    lwrp_custom_provider
+   lwrp_custom_provider_ruby
    lwrp_custom_resource
    lwrp_custom_resource_library
-   lwrp_daemontools
-   lwrp_djbdns
-   lwrp_dmg
-   lwrp_dynect
-   lwrp_firewall
-   lwrp_freebsd
-   lwrp_gunicorn
-   lwrp_homebrew
-   lwrp_iis
-   lwrp_maven
-   lwrp_nagios
-   lwrp_pacman
-   lwrp_php
-   lwrp_powershell
-   lwrp_python
-   lwrp_rabbitmq
-   lwrp_riak
-   lwrp_samba
-   lwrp_sudo
-   lwrp_supervisor
-   lwrp_transmission
-   lwrp_users
-   lwrp_webpi
-   lwrp_windows
-   lwrp_yum
    migrate_to_hosted
    oec_overview
    ohai

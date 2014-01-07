@@ -252,6 +252,12 @@ Cookbooks
    just_enough_ruby_for_chef
    knife
    lwrp
+   lwrp_chef_handler
+   lwrp_custom
+   lwrp_custom_provider
+   lwrp_custom_provider_ruby
+   lwrp_custom_resource
+   lwrp_custom_resource_library
    manage_server_hosted 
    manage_server_hosted_accounts
    manage_server_hosted_clients
