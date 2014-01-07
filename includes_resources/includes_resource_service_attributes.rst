@@ -30,4 +30,4 @@
    * - ``stop_command``
      - |command service_stop|
    * - ``supports``
-     - |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }`` for all platforms with the exception of the |redhat| platform family, which defaults to ``{ :restart => false, :reload => false, :status => true }``.
+     - |supports service| Default value: ``{ :restart => false, :reload => false, :status => false }`` for all platforms (except for the |redhat| platform family, which defaults to ``{ :restart => false, :reload => false, :status => true }``.)
