@@ -12,7 +12,7 @@
    * - ``arch``
      - |architecture package|
    * - ``options``
-     - |command options|
+     - |command options| For example, common |aptget| directives, such as ``--dry-run``.
    * - ``package_name``
      - |name package| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``

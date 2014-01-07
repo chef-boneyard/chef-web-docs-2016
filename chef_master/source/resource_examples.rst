@@ -126,9 +126,13 @@ apt_package
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_apt.rst
 
-**Install a package**
+**Install a package using package manager** 
 
-.. include:: ../../step_resource/step_resource_apt_package_install.rst
+.. include:: ../../step_resource/step_resource_apt_package_install_package.rst
+
+**Install a package using local file** 
+
+.. include:: ../../step_resource/step_resource_apt_package_install_package_using_local_file.rst
 
 
 bash
