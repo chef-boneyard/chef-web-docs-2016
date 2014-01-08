@@ -20,6 +20,6 @@
    * - ``response_file``
      - Optional. |response_file|
    * - ``source``
-     - Optional. |source resource package|
+     - Optional. |source resource apt_package|
    * - ``version``
      - |version package|
