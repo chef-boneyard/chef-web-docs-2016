@@ -31,6 +31,8 @@ Gem Package Options
 =====================================================
 .. include:: ../../includes_resources/includes_resource_package_options.rst
 
+.. warning:: Gem package options should only be used when |gems| are installed into the system-wide instance of |ruby|, and not the instance of |ruby| dedicated to the |chef client|.
+
 Specify with Hash
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_package_options_hash.rst
