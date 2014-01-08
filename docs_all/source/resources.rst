@@ -227,54 +227,54 @@ Resources
 =====================================================
 The following resources are platform resources with built-in providers:
 
-* apt_package
+* apt_package (based on the package resource)
 * bash
-* chef_gem
+* chef_gem (based on the package resource)
 * cookbook_file
 * cron
 * csh
 * deploy (including |git| and |svn|)
 * directory
-* dpkg_package
-* easy_install_package
+* dpkg_package (based on the package resource)
+* easy_install_package (based on the package resource)
 * env
 * erl_call
 * execute
 * file
-* freebsd_package
-* gem_package
+* freebsd_package (based on the package resource)
+* gem_package (based on the package resource)
 * git
 * group
 * http_request
 * ifconfig
-* ips_package
+* ips_package (based on the package resource)
 * link
 * log
-* macports_package
+* macports_package (based on the package resource)
 * mdadm
 * mount
 * ohai
 * package
-* pacman_package
+* pacman_package (based on the package resource)
 * perl
-* portage_package
+* portage_package (based on the package resource)
 * powershell_script
 * python
 * registry_key
 * remote_directory
 * remote_file
-* rpm_package
+* rpm_package (based on the package resource)
 * route
 * ruby
 * ruby_block
 * script
 * service
-* smart_o_s_package
-* solaris_package
+* smart_o_s_package (based on the package resource)
+* solaris_package (based on the package resource)
 * subversion
 * template
 * user
-* yum
+* yum (based on the package resource)
 
 See below for more information about each of these resources, their related actions and attributes, the providers they rely on, and examples of how these resources can be used in recipes.
 
@@ -1425,6 +1425,8 @@ Examples
 package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package.rst
+
+.. note:: There are a number of platform-specific resources available for package management. In general, the |resource package| resource will use the correct package manager based on the platform-specific details collected by |ohai| at the start of the |chef client| run, which means that the platform-specific resources are often unnecessary. That said, there are cases when using a platform-specific package-based resource is desired. See the following resources for more information about these platform-specific resources: ``apt_package``, ``chef_gem``, ``dpkg_package``, ``easy_install_package``, ``freebsd_package``, ``gem_package``, ``ips_package``, ``macports_package``, ``pacman_package``, ``portage_package``, ``rpm_package``, ``smartos_package``, ``solaris_package``, and ``yum_package``.
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
