@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-03 23:17\n"
+"POT-Creation-Date: 2014-01-07 21:21\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,334 +17,339 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/resource_user.rst:8
-# be50d0a9603643b3ba3136a0083be1f0
+# 323cb893b1b8420e92fad4dcf44a22d2
 msgid "user"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_generic.rst:4
-# 606d239ff97c4e6b98bf2e99b3da5e75
+# ba1593d6265d47a8a40a1b36e8bba3c8
 msgid "A `resource <http://docs.opscode.com/resource.html>`_ is a key part of a `recipe <http://docs.opscode.com/essentials_cookbook_recipes.html>`_ that defines the actions that can be taken against a piece of the system. These actions are identified during each `chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_ as the resource collection is compiled. Once identified, each resource (in turn) is mapped to a provider, which then configures each piece of the system."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user.rst:4
-# 5af83575fb4f4af1a0ae616420701fb0
-msgid "The |resource user| resource is used to manage a local user."
+# a7a5eb072cf94dbbb2c3c9e37c92e2a8
+msgid "The |resource user| resource is used to add users, update existing users, remove users, and to lock/unlock user passwords."
+msgstr ""
+
+#: ../../includes_resources/includes_resource_user.rst:6
+# be29fe6816bc44ac843a960682040f6f
+msgid "System attributes are collected by |ohai| at the start of every |chef client| run. By design, the actions available to the |resource user| resource are processed **after** the start of the |chef client| run. This means that attributes added or modified by the |resource user| resource during the |chef client| run must be reloaded before they can be available to the |chef client|. These attributes can be reloaded in two ways: by picking up the values at the start of the (next) |chef client| run or by using the :doc:`ohai resource </resource_ohai>` to reload these attributes during the current |chef client| run."
 msgstr ""
 
 #: ../source/resource_user.rst:15
-# 156c9e92a6f240188a5957beba0f10ff
+# 3c9b989585cc4e6bbeb7d9285406c93f
 msgid "Syntax"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_syntax.rst:4
-# 7e0978758be945ff89b1cea981289c01
+# 469c4f6d8ce24c8b8c5aeeb7ea98893a
 msgid "The syntax for using the |resource user| resource in a recipe is as follows:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_syntax.rst:14
-# 4357e39dad6a495bb5fcb920dd1fa40f
+# 837d4b40cde14c96aa00ec3ada938543
 msgid "where"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_syntax.rst:16
-# f09064e01ae345fdb8a50f2d8754852e
+# cac3c971c5f14b07abe89d2be65fa16e
 msgid "``user`` tells the |chef client| to use one of the following providers during the |chef client| run: ``Chef::Provider::User::Useradd``, ``Chef::Provider::User::Pw``, ``Chef::Provider::User::Dscl``, or ``Chef::Provider::User::Windows``. The provider that is used by the |chef client| depends on the platform of the machine on which the |chef client| run is taking place"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_syntax.rst:17
-# 3b889d574e8e46888abedb807d4185c5
+# b1484f6b392a4866b974fdc9cd488829
 msgid "``name`` is the name of the resource block; when the ``username`` attribute is not specified as part of a recipe, ``name`` is also the name of the user"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_syntax.rst:18
-# 1a0d61a5c0364b1b9dc7c3212324e302
+# f4bb0ba8d9804fd1b2a16cb0f78e7d3f
 msgid "``attribute`` is zero (or more) of the attributes that are available for this resource"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_syntax.rst:19
-# 876a32c185024306aea4e29d6c91f3c3
+# b21b00efee3d43218cfcca6b43d05e63
 msgid "``:action`` is the step that the resource will ask the provider to take during the |chef client| run"
 msgstr ""
 
 #: ../source/resource_user.rst:19
-# daeca63b446c4d0393b83498a5c2772c
+# f088d03127bb4575aaad6ad7160fa6b4
 msgid "Actions"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:4
-# 98c09ee1f1b54a47a6bd97f13a194add
+# 0b4f86fb6d36428890bcfc0e670ee1eb
 msgid "This resource has the following actions:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:10
-# c91e6c21b4794aeb91a65616f5879199
+# 0b23bce69eae40a48453d9034a651227
 msgid "Action"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:11
 #: ../../includes_resources/includes_resource_user_attributes.rst:11
-# d42bb96ed99d44a98324cacdb8a9719a
-# 42369914deeb4f51ac837afa6a757a2f
+# 6fb1484aff2543428bfb57cb74f6b2da
+# 0a4ed310ee104e018f916dd507129cf6
 msgid "Description"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:12
-# 715362c5eb6d4acea1401aece5384455
+# ced015e6e77c438986ccf7eedb904da8
 msgid "``:create``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:13
-# 9f1f789ff6124d2eb8d646886c3a4194
+# 0965321112af400c8dc7f825401f729d
 msgid "Default. |resource action create user|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:14
-# f9b24c8268654ff9b996b37b2347f684
+# 91eb0d8ee175420ea49e2e50c8e86b7b
 msgid "``:remove``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:15
-# 9471ef6f61d7440d86413783d7f35fd8
+# ade8b3120f3445f5acf7ce21c6656bb1
 msgid "|resource action remove user|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:16
-# 659354d133c54581acf72ac797847e4d
+# 2c50a32feb2e41e8a5cb44727daa732d
 msgid "``:modify``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:17
-# 3696a5f1207b45d18a240872710e62a6
+# 0aab0547512944479e4d4820faeef726
 msgid "|resource action modify user|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:18
-# 970eb28d2a704497b2eae18d5d94953c
+# 4ade446b304d407cad43d2ba31fc3170
 msgid "``:manage``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:19
-# be4ffb3df86442899e053610405b59fe
+# 299c0f93862e49629f0c65709c3a0a29
 msgid "|resource action manage user|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:20
-# dd0c731d2ad34bbaab9ff521885fcc7d
+# c74644cebbd1463b873cdc0c608a5fb2
 msgid "``:lock``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:21
-# 2fef66fb599343f48a565da621ff81af
+# 51429b46328a4476af5ec9e5e86c3af0
 msgid "|resource action lock user|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:22
-# c31b4f12c8084ce3b2217691a02f548f
+# 3b5efc99117f443f80facaace9702ea7
 msgid "``:unlock``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_actions.rst:23
-# 1100ec1e93574f2d97b3b3f6e680f221
+# 6e0fecd51b96431fbefdacd08e54eff2
 msgid "|resource action unlock user|"
 msgstr ""
 
 #: ../source/resource_user.rst:23
-# e6fdae3b200a4810a17e045ed950e18a
+# ae03bf09263942b9a8cad02aa94dc99e
 msgid "Attributes"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:4
-# e0b0cbe1bc194661b1e083a6281a2a4f
+# a46e6cfc616a4229981a2eced8133abc
 msgid "|description resource_attributes_intro|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:10
-# cc198b7fa994482da95d729b1867dc43
+# 5e6c77fe7df744ea9f3fdf5017dab5e1
 msgid "Attribute"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:12
-# 0c88050e2ac84f1f8b22443b7f42e098
+# 9bdca4a9b3384050bc457479c0c5e6e5
 msgid "``comment``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:13
-# 930358c7836b45f38062b75e45112bcf
+# cec8cdfcb6334d0fbad493b78bab8a3f
 msgid "|comment user|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:14
-# 23035a6d5e1045b99c575637aa6f0a9a
+# f59232b5d48041dfb5f2988a8a7596b7
 msgid "``gid``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:15
-# 1c9b982c18b94d96b5871ad0c373a4ba
+# 862f146ffda748a7a699dec84cfe2af9
 msgid "|id group|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:16
-# 9d45f7805169483c86cbd9738acc32e5
+# 3f6926ad0c40422ab71c0fb3b8618707
 msgid "``home``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:17
-# dcf24830127b4d86b0f0aa42e80215b3
+# 51db9af7ccce456ca154519ae87b7712
 msgid "|home_directory|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:18
-# 27517ddbcea9490a95c033678d0c069e
+# 0bc385978779434db6e0fe7a8bec7e64
 msgid "``password``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:19
-# 4864a56567514f37bd87f7fc587c3eed
+# 9ea289ebe48147f5b5e094408e692b95
 msgid "|password shadow_hash|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:20
-# 7339d032bc2a4709883085d29907d74d
+# 2227274b6ee5415c9979061298523d16
 msgid "``provider``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:21
-# 8c89dda46d4342489b4534b82e8ded97
+# a5385fdfc3f44d0384264344415e6c78
 msgid "Optional. |provider resource_parameter|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:22
-# 740ba56af4f0492c9171c32ffade8d05
+# 1f028b799f6d43529b7a084baefcd72f
 msgid "``shell``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:23
-# f779469a6305494f869d2ddbb7546c65
+# 1e2a5bafa3d2490ba791aa5a9d692764
 msgid "|shell|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:24
-# a4906ff0ef7f46d8ac66e6b1ea8ada65
+# 90c8856b34b24dbc8aaea54e9bb07ead
 msgid "``supports``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:25
-# f7d5b314ee9841f1b5af50c29ef66f50
+# 8594864eaf4b4178b85fbd9dee348d8a
 msgid "|supports user| Default value: ``:manage_home => false, :non_unique => false``."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:26
-# 40a4e4ecfa2c410b8de2db33a1ca762e
+# 5d02d4c3645c4b78b88438b6ca874940
 msgid "``system``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:27
-# 10a43a95fcdf4b13bdaf7200227444b6
+# e3dce8a4037a478aa102e671b4334b62
 msgid "|system user|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:28
-# 1f0271d87f694648a83c6bb63f5412b1
+# 595d96e4603941218c4dbb26acb01ce5
 msgid "``uid``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:29
-# 6d39be00caf54524bd31344daa801664
+# a1ee3ceb12ee4d39a1f29b4f8c423347
 msgid "|user uid|"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:30
-# 2c592b6ef60a4d519c466c2e8bffd9e5
+# 4d1d08a2c2af4755826344c7b6935b72
 msgid "``username``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_attributes.rst:31
-# 1cd061d599724e1a9b16c1f443967326
+# ab990dbd7ec145c6bf8c98ca7ba8855a
 msgid "|name user| Default value: the ``name`` of the resource block (see Syntax section above)."
 msgstr ""
 
 #: ../source/resource_user.rst:27
-# 3fa7bd7289e943d092d4f11ca91fd7ca
+# b4b88f5d92bd4bd7b5840689ba756a4d
 msgid "Supported Features"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_supported_features.rst:5
-# 817410ee9b1747c6bd55c240651672e7
+# 22afbe58760646b7952ba32538bde00e
 msgid "The ``supports`` attribute allows a list of supported features to be identified. There are two features of note:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_supported_features.rst:7
-# 6f4035f98f66412383b1f4b65a60f975
+# e92a53a4e3954482a92005d31dd5b85d
 msgid "``:manage_home`` indicates whether a user's home directory will be created when the user is created. When the ``Useradd`` provider is used, ``-dm`` wil be passed to ``useradd`` (when the ``:create`` action is used) and ``-d`` will be passed to ``usermod`` (when the ``:manage`` or ``:modify`` actions are used). If ``supports :manage_home=>true``, the |resource user| resource does not pass the ``-d`` and ``-m`` parameters together (i.e. ``-dm``) to ``usermod``."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_supported_features.rst:9
-# 760c6c5ae89f4806b5b3c6f4c6b6a385
+# 7a5e762b92924957b773a136c66d0451
 msgid "When the ``Windows`` provider is used, |windows| does not create a home directory for a user until that user logs on for the first time; specifying the home directory does not have any effect as to where |windows| ultimately places the home directory."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_supported_features.rst:10
-# 25a345571c124b7892e69c9f78c2d1c2
+# abb16eeac8324d4297e7b77a2f9d1181
 msgid "``:non_unique`` indicates whether non-unique UIDs are allowed. This option is currently unused by the existing providers."
 msgstr ""
 
 #: ../source/resource_user.rst:31
-# 01bdb15d7c6a47a99ccf4599ee65a81f
+# bf402eff1a6643f28b543e1345551d7b
 msgid "Password Shadow Hash"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_password_shadow_hash.rst:4
-# 4a99d12583f849a1b6d1f25c7878ea3d
+# 96143f138f7d4ba9b7906850d7cdc2f2
 msgid "There are a number of encryption options and tools that can be used to create a password shadow hash. In general, using a strong encryption method like SHA-512 and the ``passwd`` command in the |open ssl| toolkit is a good approach, however the encryption options and tools that are available may be different from one distribution to another. The following examples show how the command line can be used to create a password shadow hash. When using the ``passwd`` command in the |open ssl| tool:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_password_shadow_hash.rst:10
-# e901e2ec36e2473fb1d06a5b4e99cdc9
+# 80b87357bd4847d98f05a23ce3df55a5
 msgid "When using ``mkpasswd``:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_password_shadow_hash.rst:16
-# 2a0040456d4d48099021547173ba1651
+# a99e58635449480282630d54931dd088
 msgid "For more information:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_password_shadow_hash.rst:18
-# b5ef4702f3374c32ae7b5d1e4a8fb75c
+# 049d3bd346f54548b7894f90148ecb55
 msgid "http://www.openssl.org/docs/apps/passwd.html"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_password_shadow_hash.rst:19
-# d9a1836357034222a866ead4006a4f17
+# a4d50855be024831ac1a17ced49b85a8
 msgid "Check the local documentation or package repository for the distribution that is being used. For example, on |ubuntu| 9.10-10.04, the ``mkpasswd`` package is required and on |ubuntu| 10.10+ the ``whois`` package is required."
 msgstr ""
 
 #: ../source/resource_user.rst:35
-# 41dbca1bf10749969015c8e4463543cb
+# 7d0f080c23de4726bd17f57c3ec48e2c
 msgid "Providers"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:4
-# 27f903ab8896476b8ef296fbdff10090
+# afe36102bf6c48e686ecbc29009fb0dd
 msgid "The following providers are available. Use the short name to use the provider in a recipe:"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:10
-# bc74050231234d028137801e3861f98f
+# 9cb8a00fdd074f97b6a8ec787e0c2122
 msgid "Long name"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:11
-# be0e5fbb67d147938418a408e214c04b
+# a12d7b99525b405594a08ad677eeb2b7
 msgid "Short name"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:12
-# b591d057c35b4bb7a8277b0f98368ec2
+# 74d06728d5c04c46b63e6e739678b2fd
 msgid "Notes"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:13
-# 873615d191324f52ba3aa15715e32b06
+# f5512eaaf1404a1c9773fabd86f08311
 msgid "``Chef::Provider::User::Useradd``"
 msgstr ""
 
@@ -352,80 +357,80 @@ msgstr ""
 #: ../../includes_resources/includes_resource_user_providers.rst:17
 #: ../../includes_resources/includes_resource_user_providers.rst:20
 #: ../../includes_resources/includes_resource_user_providers.rst:23
-# 19932a25f5c348b4867373a2e1d85e91
-# e194746505134e7dadd122549f91f0ec
-# e49c463e53fa44b69d14fed1be19d0a4
-# 44212d3d92644c568551f248eccc0c71
+# 4c035fff9a234fa0aff1082dfe0ad74f
+# f29b11f78b6849c49c7b952380144663
+# 2d9dd079657144a784d898b0cce926c3
+# 89311407dcf9470faf10840e2230f72e
 msgid "``user``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:15
-# f3cb573cab124a7ab733a9c57e7e5bdf
+# 39a47377321645dfa1faec44e443c1db
 msgid "The default provider for the |resource user| resource."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:16
-# 3b6e90b865d74f97af5c2e08335d7fca
+# 79f1249c96d24c1899e4f06cc74002bb
 msgid "``Chef::Provider::User::Pw``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:18
-# a74c93c4cf3b4ad0a9dc6c7014ffcc71
+# c220193361a64e73a504c2f82286851a
 msgid "The provider that is used with the |freebsd| platform."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:19
-# 38adc9a67757480180552cda3fa2fe61
+# 8eeb78fcfda24e68ba66e2db559bb3ac
 msgid "``Chef::Provider::User::Dscl``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:21
-# 99a76c2726f843ed91de87b86defc266
+# e5a0dc5e9965453f8f9dfabef73b332b
 msgid "The provider that is used with the |mac os x| platform."
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:22
-# b922aa2e63d64067bf5af65d697be276
+# 713afd1729dd4610bc03f99a21254042
 msgid "``Chef::Provider::User::Windows``"
 msgstr ""
 
 #: ../../includes_resources/includes_resource_user_providers.rst:24
-# 63ef46b26a2541d9a481f5eae9c8256f
+# 0210b32fd9204602acf8e78c849545fb
 msgid "The provider that is used with all |windows| platforms."
 msgstr ""
 
 #: ../source/resource_user.rst:39
-# ecd6132d237b4e8cbc09fd75947959e3
+# 490f28726fc14e68b7fc2d39bf6ea90f
 msgid "Examples"
 msgstr ""
 
 #: ../source/resource_user.rst:40
-# 95b890df1f514b70beb54189722c032f
+# 861d2c649c944035b7739b65ee723893
 msgid "|generic resource statement|"
 msgstr ""
 
 #: ../source/resource_user.rst:42
-# 511d9d29ced54932a7ff055464df7316
+# 8e4baa4499614a5e979b3893963c8a85
 msgid "**Create a random user**"
 msgstr ""
 
 #: ../source/resource_user.rst:46
-# 0b7a150b85854ffbad4f9cda7098bc59
+# 4f570e39948a463b8c81ea665d6f39e7
 msgid "**Create a system user**"
 msgstr ""
 
 #: ../source/resource_user.rst:50
-# fb5b1595d4e2464d926148f51b3780f0
+# d0705877e4db4912917af733a4d261fb
 msgid "**Create a system user with a variable**"
 msgstr ""
 
 #: ../../step_resource/step_resource_user_create_system_user_with_variable.rst:3
-# 679721e452454ad69d0d834e062a972b
+# a94a715acf204c668b0c22b4e6e9879f
 msgid "The following example shows how to create a system user using a variable called ``user_home`` where the matching nodes have a group identifier that is the same as the node, and the login shell is ``/bin/bash``:"
 msgstr ""
 
 #: ../../step_resource/step_resource_user_create_system_user_with_variable.rst:17
-# be0f1a2b28904d70946d0f43a3dc609f
+# df31eecf256d4d2c9dc273ed9f7f99e5
 msgid "where ``matching_node`` represents a type of node. For example, if the ``user_home`` variable specified ``{node[:nginx]...}``, a recipe might look something like this:"
 msgstr ""
 
