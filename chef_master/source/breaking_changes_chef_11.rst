@@ -15,9 +15,10 @@ Custom API usage and Databag Population require Chef 11.6.0 or greater
 
 .. code-block:: bash 
 
-knife data bag from_file
+   knife data bag from_file
 
-This example will fail with Chef < 11.6.0 and EC11 or OSS, as the /data endpoint has become more RESTfully correct.
+This example will fail with Chef < 11.8.0 and EC11 or OSS, as the /data endpoint has become more RESTfully correct.
+
 See https://tickets.opscode.com/browse/CHEF-4435 for details.
 
 |shef| is now |chef shell|
