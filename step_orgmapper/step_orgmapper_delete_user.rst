@@ -4,7 +4,6 @@
 
 .. code-block:: ruby
 
-   orgmapper:0 > USERS['USERNAME']
-   orgmapper:0 > USERS['USERNAME'].destroy
+   orgmapper:0 > USERS.mapper.destroy(USERS['USERNAME'])
 
 where ``USERNAME`` is replaced by the user name that will be deleted.
