@@ -184,14 +184,9 @@ Installation scenarios:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_be.html">Scaled Back End</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_fe.html">Scaled Front End</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Scaled Front and Back Ends</a> </br>
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
-
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Standalone Upgrade</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability Upgrade</a> </br>
-
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_reporting.html">Install the Reporting Add-on</a> </br>
-
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manager.html">Install the Manager Add-on</a> </br>
 
 Options: 
@@ -613,7 +608,6 @@ The following topics discuss using |chef server oec| with platforms:
    lwrp_windows
    lwrp_yum
    manager
-   migrate_to_hosted
    oec_overview
    ohai
    orgmapper
