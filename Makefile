@@ -47,7 +47,7 @@ server:
 	mkdir -p $(BUILDDIR)/release/11-8/
 	sphinx-build release_chef_11-8/source $(BUILDDIR)/release/11-8/
 
-11-8:
+11-10:
 	mkdir -p $(BUILDDIR)/release/11-10/
 	sphinx-build release_chef_11-10/source $(BUILDDIR)/release/11-10/
 
