@@ -80,7 +80,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Install:** :doc:`Prerequisites </install_server_pre>` | :doc:`Install the Enterprise Chef Server </install_server_oec>` | :doc:`Download the chef-client using the Omnitruck API </api_omnitruck>`
 
-**Install Scenarios:** :doc:`Standalone </install_server_standalone>` | :doc:`Scaled Back End </install_server_be>` | :doc:`Scaled Front End </install_server_fe>` | :doc:`Scaled Front and Back Ends </install_server_febe>` | :doc:`Migrate to Hosted Enterprise Chef </migrate_to_hosted>` | :doc:`Upgrade from Private Chef </upgrade_server>`
+**Install Scenarios:** :doc:`Standalone </install_server_standalone>` | :doc:`Scaled Back End </install_server_be>` | :doc:`Scaled Front End </install_server_fe>` | :doc:`Scaled Front and Back Ends </install_server_febe>` | :doc:`Migrate to Hosted Enterprise Chef from Open Source Chef </migrate_to_hosted>` | :doc:`Upgrade for Standalone </upgrade_server_standalone>` | :doc:`Upgrade for High Availability </upgrade_server_ha>`
 
 **Install Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
 
@@ -96,7 +96,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 -----------------------------------------------------
 |chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|.
 
-**Install:** :doc:`Install the Open Source Chef Server </install_server>` | :doc:`Scenario: Install the Open Source Chef Server on a Virtual Machine </install_server_scenario_vm>` | :doc:`Download the Open Source Chef Server with Omnitruck API </api_omnitruck>`
+**Install:** :doc:`Install the Open Source Chef Server </install_server>` | :doc:`Scenario: Install the Open Source Chef Server on a Virtual Machine </install_server_scenario_vm>` | :doc:`Download the Open Source Chef Server with Omnitruck API </api_omnitruck>`  | :doc:`Upgrade </upgrade_server_open_source>`
 
 **Settings and Tools:** :doc:`chef-server.rb </config_rb_chef_server>` | :doc:`chef-server-ctl </ctl_chef_server>`
 
