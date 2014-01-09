@@ -10,4 +10,6 @@ There are three upgrade options for upgrading to the |erlang|-based |chef server
 
 * Upgrading a high availability installation of Private Chef :doc:`to a high availability installation of Enterprise Chef Server 11 </upgrade_server_ha>`
 
+.. note:: Upgrades to |chef server oec| are only supported from Private Chef 1.4.6.
+
 
