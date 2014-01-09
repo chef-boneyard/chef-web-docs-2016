@@ -239,6 +239,8 @@ Cookbooks
    opscode_cookbooks
    orgmapper
    plugin_knife
+   plugin_knife_authenticated_requests
+   plugin_knife_custom
    release_notes
    resource
    resource_apt_package
