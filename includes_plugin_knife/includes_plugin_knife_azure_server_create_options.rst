@@ -5,11 +5,8 @@
 
 This argument has the following options:
 
-``-a STORAGE_ACCOUNT_NAME``, ``--storage-account STORAGE_ACCOUNT_NAME``
-   |storage account| A storage account name may be between 3 and 24 characters (lower-case letters and numbers only).
-
 ``--azure-affinity-group GROUP``
-   |azure affinity_group|
+   |azure affinity_group| Required when not using ``--azure-service-location``.
 
 ``--azure-availability-set NAME``
    |azure availability_set|
@@ -23,6 +20,9 @@ This argument has the following options:
 ``--azure-publish-settings-file FILE_NAME``
    |file azure_publish_settings|
 
+``--azure-storage-account STORAGE_ACCOUNT_NAME``
+   |storage account| A storage account name may be between 3 and 24 characters (lower-case letters and numbers only) and must be unique within |windows azure|.
+
 ``--azure-subnet-name SUBNET_NAME``
    |azure subnet_name|
 
@@ -30,7 +30,7 @@ This argument has the following options:
    |azure virtual_machine_name|
 
 ``--bootstrap-protocol PROTOCOL``
-   |bootstrap protocol|
+   |bootstrap protocol| Default value: ``winrm``.
 
 ``--bootstrap-version VERSION``
    |bootstrap version|
@@ -60,7 +60,7 @@ This argument has the following options:
    |identity_file_passphrase|
 
 ``-m LOCATION``, ``--azure-service-location LOCATION``
-   |media location|
+   |media location| Required when not using ``--azure-affinity-group``.
 
 ``-N NAME``, ``--node-name NAME``
    |name node| Node names, when used with |windows azure|, must be 91 characters or shorter.
@@ -105,5 +105,5 @@ This argument has the following options:
    |ssh_user|
 
 ``-z SIZE``, ``--azure-vm-size SIZE``
-   |role-size|
+   |role-size| Default value: ``Small``.
 

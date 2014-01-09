@@ -41,3 +41,6 @@ This argument has the following options:
 ``--verify-ssl-cert``
    |ssl_certificate|
 
+``--wait``
+  Use to have the console wait until the server has finished processing the request.  
+
