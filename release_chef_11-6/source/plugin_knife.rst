@@ -17,25 +17,25 @@ The following |knife| plug-ins are maintained by |company_name|:
 
    * - Sub-command
      - Description
-   * - `apt <http://docs.opscode.com/plugin_knife_azure.html>`_
+   * - `knife azure <http://docs.opscode.com/plugin_knife_azure.html>`_
      - |knife azure|
-   * - `apt <http://docs.opscode.com/plugin_knife_bluebox.html>`_
+   * - `knife bluebox <http://docs.opscode.com/plugin_knife_bluebox.html>`_
      - |knife bluebox|
-   * - `apt <http://docs.opscode.com/plugin_knife_ec2.html>`_
+   * - `knife ec2 <http://docs.opscode.com/plugin_knife_ec2.html>`_
      - |knife ec2|
-   * - `apt <http://docs.opscode.com/plugin_knife_eucalyptus.html>`_
+   * - `knife eucalyptus <http://docs.opscode.com/plugin_knife_eucalyptus.html>`_
      - |knife eucalyptus|
-   * - `apt <http://docs.opscode.com/plugin_knife_google.html>`_
+   * - `knife google <http://docs.opscode.com/plugin_knife_google.html>`_
      - |knife google|
-   * - `apt <http://docs.opscode.com/plugin_knife_hp.html>`_
+   * - `knife hp <http://docs.opscode.com/plugin_knife_hp.html>`_
      - |knife hp|
-   * - `apt <http://docs.opscode.com/plugin_knife_linode.html>`_
+   * - `knife linode <http://docs.opscode.com/plugin_knife_linode.html>`_
      - |knife linode|
-   * - `apt <http://docs.opscode.com/plugin_knife_openstack.html>`_
+   * - `knife openstack <http://docs.opscode.com/plugin_knife_openstack.html>`_
      - |knife openstack|
-   * - `apt <http://docs.opscode.com/plugin_knife_rackspace.html>`_
+   * - `knife rackspace <http://docs.opscode.com/plugin_knife_rackspace.html>`_
      - |knife rackspace|
-   * - `apt <http://docs.opscode.com/plugin_knife_terremark.html>`_
+   * - `knife terremark <http://docs.opscode.com/plugin_knife_terremark.html>`_
      - |knife terremark|
-   * - `apt <http://docs.opscode.com/plugin_knife_windows.html>`_
+   * - `knife windows <http://docs.opscode.com/plugin_knife_windows.html>`_
      - |knife windows|

@@ -9,7 +9,7 @@ Use knife-windows
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 
-For more information about the |subcommand knife windows| plugin, see :doc:`windows </plugin_knife_windows>`.
+For more information about the |subcommand knife windows| plugin, see `knife windows <http://docs.opscode.com/plugin_knife_windows.html>`_.
 
 Ports
 -----------------------------------------------------
