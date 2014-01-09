@@ -17,25 +17,25 @@ The following |knife| plug-ins are maintained by |company_name|:
 
    * - Sub-command
      - Description
-   * - :doc:`plugin_knife_azure`
+   * - `apt <http://docs.opscode.com/plugin_knife_azure.html>`_
      - |knife azure|
-   * - :doc:`plugin_knife_bluebox`
+   * - `apt <http://docs.opscode.com/plugin_knife_bluebox.html>`_
      - |knife bluebox|
-   * - :doc:`plugin_knife_ec2`
+   * - `apt <http://docs.opscode.com/plugin_knife_ec2.html>`_
      - |knife ec2|
-   * - :doc:`plugin_knife_eucalyptus`
+   * - `apt <http://docs.opscode.com/plugin_knife_eucalyptus.html>`_
      - |knife eucalyptus|
-   * - :doc:`plugin_knife_google`
+   * - `apt <http://docs.opscode.com/plugin_knife_google.html>`_
      - |knife google|
-   * - :doc:`plugin_knife_hp`
+   * - `apt <http://docs.opscode.com/plugin_knife_hp.html>`_
      - |knife hp|
-   * - :doc:`plugin_knife_linode`
+   * - `apt <http://docs.opscode.com/plugin_knife_linode.html>`_
      - |knife linode|
-   * - :doc:`plugin_knife_openstack`
+   * - `apt <http://docs.opscode.com/plugin_knife_openstack.html>`_
      - |knife openstack|
-   * - :doc:`plugin_knife_rackspace`
+   * - `apt <http://docs.opscode.com/plugin_knife_rackspace.html>`_
      - |knife rackspace|
-   * - :doc:`plugin_knife_terremark`
+   * - `apt <http://docs.opscode.com/plugin_knife_terremark.html>`_
      - |knife terremark|
-   * - :doc:`plugin_knife_windows`
+   * - `apt <http://docs.opscode.com/plugin_knife_windows.html>`_
      - |knife windows|
