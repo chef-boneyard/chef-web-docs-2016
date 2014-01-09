@@ -1,9 +1,9 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Configuration of |ssl| for |chef server oec| by using certificate authority-verified certificates is done by placing the certificate and private key file obtained from the certifying authority in the correct files after the initial configuration of |chef server oec|.
+Configuration of |ssl| for the |chef server| using certificate authority-verified certificates is done by placing the certificate and private key file obtained from the certifying authority in the correct files after the initial configuration of |chef server|.
 
-Initial configuration of |chef server oec| is done automatically using a self-signed certificate to create the certificate and private key files for |nginx|.
+Initial configuration of the |chef server| is done automatically using a self-signed certificate to create the certificate and private key files for |nginx|.
 
 The locations of the certificate and private key files are 
 

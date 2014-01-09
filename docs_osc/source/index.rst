@@ -130,6 +130,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 * The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
 * Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
+* The |chef server| can be :doc:`configured to use SSL </server_security>`.
 
 Server Components
 -----------------------------------------------------
@@ -574,4 +575,5 @@ The following topics discuss using |chef server osc| with platforms:
    resource_user
    resource_yum
    server_components
+   server_security
    upgrade_server_open_source
