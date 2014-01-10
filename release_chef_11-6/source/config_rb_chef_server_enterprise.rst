@@ -44,10 +44,6 @@ load-balancer
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_load_balancer.rst
 
-logs
------------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_logs.rst
-
 nginx
 -----------------------------------------------------
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_nginx.rst
