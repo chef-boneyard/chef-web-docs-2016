@@ -31,18 +31,25 @@
        
        .. code-block:: bash
        
-          $ msiexec /qn /i "c:\chef\cache\msodbcsql_64.msi
+          $ msiexec /qn /i "c:\chef\cache\msodbcsql_64.msi" IACCEPTMSODBCSQLLICENSETERMS=YES
        
-       but with the acceptance of the EULA included.
 
    * - ``package_name``
-     - |name windows_package| 
+     - |name windows_package| The easiest way to find the correct value for ``DisplayName`` is to install a package on a machine and then search for the uninstall information under one of the following registry keys:
+       
+       * ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall``
+       * ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall``
+       * ``HKEY_LOCAL_MACHINE\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall``
+       * ``HKEY_LOCAL_MACHINE\Software\Wow6464Node\Microsoft\Windows\CurrentVersion\Uninstall``
+       
+       Sometimes this value is identified by the uninstaller itself (in the ``Name`` column) and can be viewed while running the uninstaller.
+
    * - ``source``
      - |source windows_package|
    * - ``success_codes``
      - |success_codes| This value must be an array. Default value: ``[0, 42, 127]``.
    * - ``timeout``
-     - |timeout| Default value: ``600`` (seconds).
+     - |timeout| Default value: ``600``.
    * - ``version``
      - |version package_windows_registry|
 

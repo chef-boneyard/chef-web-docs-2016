@@ -530,7 +530,7 @@
 .. |inherits windows security| replace:: Indicates that a file inherits rights from its parent.
 .. |initial| replace:: Use to create a |chef api client|, typically an administrator client on a freshly-installed |chef server|.
 .. |input file| replace:: The name of a file to be used with the ``PUT`` or a ``POST`` request.
-.. |installer_type windows| replace:: The type of windows installation package: ``:msi``, ``:inno``, ``:nsis``, ``:wise``, ``:installshield``, or ``:custom``. If this value is not specified, the provider will attempt to identify the installer type on its own and will use the best match. If this value cannot be properly specified, use the ``:custom`` value to pass a value to the ``installer_type`` attribute and then the ``options`` attribute to set the proper flags for a silent or quite installation.
+.. |installer_type windows| replace:: The type of windows installation package: ``:msi``, ``:inno``, ``:nsis``, ``:wise``, ``:installshield``, or ``:custom``. If this value is not specified, the provider will attempt to identify the installer type on its own and will use the best match. If this value cannot be properly specified, use the ``:custom`` value to pass a value to the ``installer_type`` attribute and then the ``options`` attribute to set the proper flags for a silent or quiet installation.
 .. |internal-ip-address| replace:: A static IP address that is provided by |google compute engine|.
 .. |interpreter| replace:: The script interpreter to be used during code execution.
 .. |interpreter python| replace:: The |python| script interpreter to be used during code execution.
@@ -982,7 +982,7 @@
 .. |name virtual_machine| replace:: The host name for the virtual machine.
 .. |name vlan| replace:: The name of the VLAN.
 .. |name windows_feature| replace:: The name of a server role, role service, or feature. Depending on the provider being used, the same feature may have different names. For example: ``DHCPServer`` vs. ``DHCP``; ``DNS-Server-Full-Role`` vs. ``DNS``.
-.. |name windows_package| replace:: The display name of the application installation package. This is the same as the ``DisplayName`` registry value in the uninstallation data that is created during package installation. The easiest way to find the proper ``DisplayName`` value is to install a package on a machine and search for the uninstall information under one of the following registry keys: ``HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Uninstall``, ``HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Uninstall``, or ``HKEY_LOCAL_MACHINE\Software\Wow6464Node\Microsoft\Windows\CurrentVersion\Uninstall``. This value may also be identified by the uninstaller itself (in the ``Name`` column) and can be viewed while running the uninstaller.
+.. |name windows_package| replace:: The display name of the application installation package. This is the same as the ``DisplayName`` registry value in the uninstallation data that is created during package installation.
 .. |name windows_shortcut| replace:: The name of the |windows| shortcut.
 .. |name windows_registry_value| replace:: The name of the value to be stored in the |windows| registry.
 .. |name only| replace:: Indicates that only the names of modified files will be shown.
@@ -1432,7 +1432,7 @@
 .. |source file_location| replace:: The location (URI) of the source file. This value may also specify HTTP (``http://``), FTP (``ftp://``),  or local (``file://``) source file locations.
 .. |source file_location chef_11-4| replace:: The location (URI) of the source file.
 .. |source template| replace:: The location of a file in the ``/templates`` directory in a cookbook located in the |chef repo|.
-.. |source windows_package| replace:: A URI or a local path that specifies the source of a |windows| installer.
+.. |source windows_package| replace:: A URI or a local path that specifies the source of a |windows| installer. A local file must be expressed as a URI, for example ``"file:///C:/Users/Downloads/myinstaller.msi"``.
 .. |source windows_zipfile| replace:: A URI or a local path that specifies the source of a |zip| file.
 .. |source resource apt_package| replace:: The direct path to a |debian dpkg| or |deb_package| package.
 .. |source resource package| replace:: The package source for providers that use a local file.
@@ -1630,7 +1630,7 @@
 .. |version dotnet_runtime| replace:: The version of |microsoft dotnet|.
 .. |version package| replace:: The version of a package to be installed or upgraded.
 .. |version package_version_assumed| replace:: The version of a package to be installed or upgraded. If a version is not specified, the latest version is assumed.
-.. |version package_windows_registry| replace:: The version number of a package, as indicated by the ``DisplayVersion`` property for an ``Uninstall`` registry key. If the version number equals the display version, the package will be installed.
+.. |version package_windows_registry| replace:: The version number of a package, as indicated by the ``DisplayVersion`` property for an ``Uninstall`` registry key. If the version number equals the display version, the package will not be installed.
 .. |version push jobs| replace:: The version of |push jobs|.
 .. |version protocols_ssl| replace:: The |ssl| protocol versions that are enabled.
 .. |versioned_cookbooks| replace:: Use to append cookbook versions to cookbooks. Set to ``false`` to hide cookbook versions: ``cookbooks/apache``. Set to ``true`` to show cookbook versions: ``cookbooks/apache-1.0.0`` and/or ``cookbooks/apache-1.0.1``. When this setting is ``true``, |subcommand knife download| will download ALL cookbook versions, which can be useful if a full-fidelity backup of data on the |chef server| is required.
