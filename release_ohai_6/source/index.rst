@@ -206,6 +206,14 @@ Options
 .. include:: ../../includes_ctl_ohai/includes_ctl_ohai_6_options.rst
 
 
+|ohai| Settings in |client rb|
+=====================================================
+
+.. include:: ../../includes_config/includes_config_rb_ohai.rst
+
+.. include:: ../../includes_config/includes_config_rb_ohai_6_settings.rst
+
+
 
 Community |ohai| Plugins
 =====================================================

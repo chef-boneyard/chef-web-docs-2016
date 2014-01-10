@@ -10,7 +10,7 @@ This command has the following syntax::
 This tool has the following options:
 
 ``-d PATH``, ``--directory PATH``
-   The directory in which |ohai| plugins are located. For example: ``/etc/ohai/plugins``.
+   |path plugin_ohai| For example: ``/etc/ohai/plugins``.
 
 ``-f FILE_NAME``, ``--file FILE_NAME``
    The file against which |ohai| will run.

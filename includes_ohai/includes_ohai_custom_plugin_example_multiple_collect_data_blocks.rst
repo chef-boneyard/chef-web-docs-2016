@@ -21,12 +21,9 @@ The following |ohai| plugin uses multiple ``collect_data`` blocks and shared met
        end
      end
    
-     collect_data(:aix, :hpux, :sigar) do
-       require 'sigar'
-   
-       sigar = Sigar.new
-       hostname sigar.net_info.host_name
-       fqdn sigar.fqdn
+     collect_data(:aix, :hpux) do
+       hostname from_cmd("hostname -s")
+       fqdn from_cmd("hostname")
        domain collect_domain
      end
    

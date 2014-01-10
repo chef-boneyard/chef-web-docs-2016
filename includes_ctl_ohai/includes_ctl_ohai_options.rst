@@ -9,11 +9,11 @@ This command has the following syntax::
 
 This tool has the following options:
 
-``-d PATH``, ``--directory PATH``
-   The directory in which |ohai| plugins are located. For example: ``/etc/ohai/plugins``.
+``ATTRIBUTE_NAME ATTRIBUTE NAME ...``
+   Use to have |ohai| show only output for named attributes.
 
-``-f FILE_NAME``, ``--file FILE_NAME``
-   The file against which |ohai| will run.
+``-d PATH``, ``--directory PATH``
+   |path plugin_ohai| For example: ``/etc/ohai/plugins``.
 
 ``-h``, ``--help``
    |help subcommand|
@@ -26,4 +26,3 @@ This tool has the following options:
 
 ``-v``, ``--version``
    |version ohai|
-

@@ -184,6 +184,28 @@ Options
 -----------------------------------------------------
 .. include:: ../../includes_ctl_ohai/includes_ctl_ohai_options.rst
 
+Examples
+-----------------------------------------------------
+To show output for specific attributes, run a command similar to:
+
+.. code-block:: bash
+
+   $ ohai attribute_name attribute_name
+
+To return information only about the named attributes. For example:
+
+.. code-block:: bash
+
+   $ ohai kernel memory
+
+
+|ohai| Settings in |client rb|
+=====================================================
+
+.. include:: ../../includes_config/includes_config_rb_ohai.rst
+
+.. include:: ../../includes_config/includes_config_rb_ohai_settings.rst
+
 
 Community Plugins
 =====================================================
