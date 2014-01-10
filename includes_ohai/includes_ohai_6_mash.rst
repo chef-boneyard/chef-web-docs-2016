@@ -11,3 +11,4 @@ In plugins/canhas.rb:
    provides "canhas"
    canhas Mash.new
    canhas[:burger] = "want"
+

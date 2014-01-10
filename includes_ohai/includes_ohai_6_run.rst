@@ -11,3 +11,5 @@ Now to fire up irb (and assuming the directory "plugins" is the current folder; 
    >> o = Ohai::System.new
    >> o.all_plugins
    >> o.orly #=> "yea, rly"
+
+
