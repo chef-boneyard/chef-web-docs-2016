@@ -173,6 +173,17 @@ Add |ohai| to a Run-list
 .. include:: ../../step_ohai/step_ohai_add_to_run_list.rst
 
 
+The ohai Command Line Tool
+=====================================================
+
+.. include:: ../../includes_ohai/includes_ohai.rst
+
+.. include:: ../../includes_ctl_ohai/includes_ctl_ohai.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_ohai/includes_ctl_ohai_options.rst
+
 
 Community Plugins
 =====================================================
