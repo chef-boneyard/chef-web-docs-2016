@@ -77,7 +77,7 @@ In this situation, re-sync the system clocks with the |ntp| server and then re-r
 
 Mail Relay
 -----------------------------------------------------
-The |chef server oec| system utilizes email to send notifications for various events (such as cluster fail-over, or failed periodic jobs.) We recommend you follow your operating system's guidelines and individual corporate policy for installation and configuration of a local mail transfer agent.
+The |chef server oec| server uses email to send notifications for various events (such as cluster fail-over, failed periodic jobs, resetting passwords, and sending user's invites). Follow the guidelines appropriate for the platform on which |chef server oec| is running to configure a local mail transfer agent.
 
 |cron|
 -----------------------------------------------------
