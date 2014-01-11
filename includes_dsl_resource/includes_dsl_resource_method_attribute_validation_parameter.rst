@@ -85,7 +85,7 @@ A validation parameter is used to add zero (or more) validation parameters to an
 
        .. code-block:: ruby
        
-          :regex => /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/
+          :regex => [ /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/ ]
    * - ``:required``
      - Indicates that an attribute is required. For example:
 
