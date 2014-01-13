@@ -10,10 +10,10 @@ This command has the following syntax::
 This tool has the following options:
 
 ``-d PATH``, ``--directory PATH``
-   |path plugin_ohai| For example: ``/etc/ohai/plugins``.
+   |path plugin_ohai| For example: ``/etc/ohai/plugins``. (Only one directory may be specified when using this option.)
 
 ``-f FILE_NAME``, ``--file FILE_NAME``
-   The file against which |ohai| will run.
+   The name of an |ohai| plugin against which |ohai| will run. (Only one |ohai| plugin may be specified when using this option.)
 
 ``-h``, ``--help``
    |help subcommand|

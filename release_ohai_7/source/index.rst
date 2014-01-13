@@ -119,7 +119,7 @@ Disable Plugins
 
 
 
-The ohai Resource
+ohai Resource
 =====================================================
 
 .. include:: ../../includes_resources/includes_resource_generic.rst
@@ -156,7 +156,7 @@ Examples
 
 
 
-The ohai Cookbook
+ohai Cookbook
 =====================================================
 .. include:: ../../step_ohai/step_ohai_download_cookbook.rst
 
@@ -173,7 +173,7 @@ Add |ohai| to a Run-list
 .. include:: ../../step_ohai/step_ohai_add_to_run_list.rst
 
 
-The ohai Command Line Tool
+ohai Command Line Tool
 =====================================================
 
 .. include:: ../../includes_ohai/includes_ohai.rst
