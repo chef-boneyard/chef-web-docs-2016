@@ -33,8 +33,6 @@ Custom Plugins
 
 .. warning:: This topic includes descriptions of functionality will be available in an upcoming release for |ohai|.
 
-.. include:: ../../includes_ohai/includes_ohai.rst
-
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
 
 Syntax
@@ -100,10 +98,8 @@ Disable Plugins
 .. include:: ../../step_ohai/step_ohai_plugin_disable.rst
 
 
-
 ohai Resource
 =====================================================
-
 .. include:: ../../includes_resources/includes_resource_generic.rst
 
 .. include:: ../../includes_resources/includes_resource_ohai.rst
@@ -157,9 +153,6 @@ Add |ohai| to a Run-list
 
 ohai Command Line Tool
 =====================================================
-
-.. include:: ../../includes_ohai/includes_ohai.rst
-
 .. include:: ../../includes_ctl_ohai/includes_ctl_ohai.rst
 
 Options
@@ -168,17 +161,8 @@ Options
 
 Examples
 -----------------------------------------------------
-To show output for specific attributes, run a command similar to:
+.. include:: ../../step_ohai/step_ohai_show_specific_attributes.rst
 
-.. code-block:: bash
-
-   $ ohai attribute_name attribute_name
-
-To return information only about the named attributes. For example:
-
-.. code-block:: bash
-
-   $ ohai kernel memory
 
 
 |ohai| Settings in |client rb|
