@@ -6,7 +6,7 @@ Documentation for |ohai 7|
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
-
+.. note:: |ohai| is required component of the |chef client| and is always installed as part of the |chef client| install.
 
 Automatic Attributes
 =====================================================
@@ -25,24 +25,6 @@ Attribute Persistence
 Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
-
-
-
-Install |ohai|
-=====================================================
-|ohai| is a requirement for the |chef client| and must be installed whenever (and wherever) the |chef client| is installed. |ohai| is always installed as part of the |chef client| installation, but it may be installed separately.
-
-Install from Github
------------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_from_git.rst
-
-Install from RubyGems
------------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_from_rubygem.rst
-
-Install on Microsoft Windows
------------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_on_windows.rst
 
 
 

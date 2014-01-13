@@ -6,6 +6,8 @@ Documentation for |ohai 6|
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
+.. note:: |ohai| is required component of the |chef client| and is always installed as part of the |chef client| install.
+
 View the :doc:`release notes </release_notes>` for |ohai 6|.
 
 Automatic Attributes
@@ -25,22 +27,6 @@ Attribute Persistence
 Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
-
-Install |ohai 6|
-=====================================================
-|ohai 6| can be installed in the following ways:
-
-Install from Github
------------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_from_git.rst
-
-Install from RubyGems
------------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_from_rubygem.rst
-
-Install on Microsoft Windows
------------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_on_windows.rst
 
 Custom |ohai 6| Plugins
 =====================================================
@@ -140,11 +126,6 @@ Options
 
 .. include:: ../../includes_config/includes_config_rb_ohai_6_settings.rst
 
-
-
-Community |ohai| Plugins
-=====================================================
-.. include:: ../../includes_ohai/includes_ohai_6_community_plugins.rst
 
 
 .. Hide the TOC from this file.  
