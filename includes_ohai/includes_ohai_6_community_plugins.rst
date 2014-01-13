@@ -21,8 +21,6 @@ The following |ohai| plugins are available from the open source community:
      - Adds |ladvd| information to |ohai|, when it exists.
    * - `lxc_virtualization.rb <https://github.com/jespada/ohai-plugins/blob/master/lxc_virtualization.rb>`_
      - Adds extensions for virtualization attributes to provide host and guest information for |linux| containers.
-   * - `network_addr.rb <https://gist.github.com/1040543>`_
-     - Adds extensions for network attributes with additional ``ipaddrtype_iface`` attributes to make it semantically easier to retrieve addresses. For example: ``node['network']['ipaddress_eth0']`` versus ``node['network']['interfaces']['eth0']['addresses'].guesswhichisfirst``.
    * - `network_ports.rb <https://github.com/agoddard/ohai-plugins/blob/master/plugins/network_ports.rb>`_
      - Adds extensions for network attributes so that |ohai| can detect to which interfaces TCP and UDP ports are bound.
    * - `parse_host_plugin.rb <https://github.com/sbates/Chef-odds-n-ends/blob/master/ohai/parse_host_plugin.rb>`_
