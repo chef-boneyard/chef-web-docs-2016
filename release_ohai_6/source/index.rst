@@ -39,7 +39,7 @@ Custom |ohai 6| Plugins
 
 Syntax
 -----------------------------------------------------
-.. include:: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst
+.. include:: ../../includes_ohai/includes_ohai_6_custom_plugin_syntax.rst
 
 
 Load a Plugin
