@@ -207,10 +207,6 @@ To return information only about the named attributes. For example:
 .. include:: ../../includes_config/includes_config_rb_ohai_settings.rst
 
 
-Community Plugins
-=====================================================
-.. include:: ../../includes_ohai/includes_ohai_plugins.rst
-
 
 
 

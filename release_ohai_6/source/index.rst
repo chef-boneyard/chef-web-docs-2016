@@ -89,7 +89,7 @@ Work with Platforms
 -----------------------------------------------------
 One of the main reasons for using |ohai| is to gather information regardless of the operating system. Luckily this is made easy by optionally loading recipes based on the platform. With that platform specific calls abstracted away you can keep your code DRY.
 
-The built-in plugins that come with |ohai| use the following trick to load platform specific code. It works by creating a base cross-platform plugin that loads the platform specific plugin from a subdirectory. In plugins/lolcode.rb:
+The built-in plugins that come with |ohai| use the following syntax to load platform specific code. It works by creating a base cross-platform plugin that loads the platform specific plugin from a subdirectory. In plugins/lolcode.rb:
 
 .. code-block:: ruby
 
@@ -217,7 +217,7 @@ Options
 
 Community |ohai| Plugins
 =====================================================
-.. include:: ../../includes_ohai/includes_ohai_plugins.rst
+.. include:: ../../includes_ohai/includes_ohai_6_community_plugins.rst
 
 
 .. Hide the TOC from this file.  
