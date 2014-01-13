@@ -79,7 +79,7 @@ The above code is simple, traditional |ruby|---no magic at all. A number of gett
    actions :create, :delete, :touch, :create_if_missing
    
    attribute :backup,   :kind_of => [ Integer, FalseClass ]
-   attribute :group,    :regex => /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/
+   attribute :group,    :regex => [ /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/ ]
    attribute :mode,     :regex => /^0?\d{3,4}$/
    attribute :owner,    :regex => [ /^([a-z]|[A-Z]|[0-9]|_|-)+$/, /^\d+$/ ]
    attribute :path,     :kind_of => String
