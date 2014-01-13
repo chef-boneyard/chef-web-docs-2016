@@ -15,8 +15,8 @@ The syntax for an |ohai| plugin is as follows:
 where 
 
 * ``require_plugin`` is used to extend one (or more) existing |ohai| plugins; an often-used value for ``require_plugin`` is ``"#{os}::hostname"``
-* Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin; a sub-attribute can also be defined using the ``attribute/subattribute`` pattern
-* ``Mash.new`` is used to define how the |ohai| plugin will handle any occurrence of ``attribute`` (or ``attribute/subattribute``)
+* Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin. This becomes an automatic attribute (i.e. ``node[:attribute]``) that is collected by |ohai| at the start of every |chef client| run. For example, the syntax example will create an automatic attribute: ``node[:attribute] => "some_value"`` with ``some_value`` being defined by ``Mash.new``. An attribute can also be defined using an ``attribute/subattribute`` pattern
+* ``Mash.new`` is used to define the |ohai| plugin
 
 For example, a plugin could be built to add additional ``ipaddrtype_iface`` network attributes to help make it semantically easier to retrieve addresses:
 

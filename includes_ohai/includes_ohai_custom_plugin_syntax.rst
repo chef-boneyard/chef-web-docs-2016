@@ -30,7 +30,7 @@ where
 
 * Required. ``(:Name)`` is used to identify the plugin; when two plugins have the same ``(:Name)``, those plugins are joined together and run as if they were a single plugin. This value must be a valid |ruby| class name, starting with a capital letter and containing only alphanumeric characters
 * ``include`` is a standard |ruby| method that allows an |ohai| plugin to include a class, such as ``Ohai::Mixin::ModuleName``
-* Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin; a sub-attribute can also be defined using the ``attribute/subattribute`` pattern
+* Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin. This becomes an automatic attribute (i.e. ``node[:attribute]``) that is collected by |ohai| at the start of every |chef client| run. For example, the syntax example will create an automatic attribute: ``node[:attribute] => "some_value"`` with ``some_value`` being defined by ``Mash.new``. An attribute can also be defined using an ``attribute/subattribute`` pattern
 * ``depends`` is a comma-separated list of one (or more) attributes that are collected by another plugin; as long as the value is collected by another |ohai| plugin, it can be used by any plugin
 * ``shared_methods`` defines code that can be shared among one (or more) ``collect_data`` blocks; for example, instead of defining a mash for each ``collect_data`` block, the code can be defined as a shared method, and then called from any ``collect_data`` block
 * ``collect_data`` is a block of |ruby| code that is called by |ohai| when it runs; one (or more) ``collect_data`` blocks can be defined in a plugin, but only a single ``collect_data`` block is ever run.
