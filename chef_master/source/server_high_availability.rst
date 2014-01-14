@@ -16,6 +16,10 @@ Graceful Transitions
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_transitions.rst
 
+Status
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst
+
 DRBD
 =====================================================
 .. include:: ../../includes_server_ha/includes_server_ha_drbd.rst

@@ -16,6 +16,10 @@ Graceful Transitions
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_transitions.rst
 
+Status
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst
+
 DRBD
 =====================================================
 .. include:: ../../includes_private_chef_1x/includes_private_chef_1x_admin_ha_drbd.rst
