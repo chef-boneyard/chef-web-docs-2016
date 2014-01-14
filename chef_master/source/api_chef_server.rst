@@ -404,6 +404,9 @@ POST
 
 .. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_index_post.rst
 
+_status
+=====================================================
+.. include:: ../../includes_api_chef_server/includes_api_chef_server_endpoint_status.rst
 
 /users
 -----------------------------------------------------
