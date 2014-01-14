@@ -6,8 +6,6 @@ Documentation for |ohai 6|
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
-.. note:: |ohai| is required component of the |chef client| and is always installed as part of the |chef client| install.
-
 View the :doc:`release notes </release_notes>` for |ohai 6|.
 
 Automatic Attributes

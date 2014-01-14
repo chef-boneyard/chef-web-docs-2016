@@ -1,7 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|ohai| is a tool that is used to detect attributes on a node, and then provide these attributes to the |chef client| at the start of every |chef client| run. |ohai| is required by the |chef client| and must be present on a node. The types of attributes |ohai| collects include (but are not limited to):
+|ohai| is a tool that is used to detect attributes on a node, and then provide these attributes to the |chef client| at the start of every |chef client| run. |ohai| is required by the |chef client| and must be present on a node. (|ohai| is installed on a node as part of the |chef client| install process.)
+
+The types of attributes |ohai| collects include (but are not limited to):
 
 * Platform details
 * Network usage
