@@ -92,10 +92,14 @@ Get Kernel Values
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_kernels.rst
 
 
-
 Disable Plugins
 =====================================================
 .. include:: ../../step_ohai/step_ohai_plugin_disable.rst
+
+
+Run Plugins Separately
+=====================================================
+.. include:: ../../step_ohai/step_ohai_run_plugin.rst
 
 
 ohai Resource

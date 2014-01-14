@@ -44,13 +44,10 @@ Load a Plugin
 =====================================================
 .. include:: ../../step_ohai/step_ohai_plugin_load.rst
 
-Run a Plugin
+
+Run Plugins Separately
 =====================================================
-To run a plugin, use the ``ohai`` command line tool:
-
-.. code-block:: bash
-
-   $ ohai -f /path/to/plugin.rb
+.. include:: ../../step_ohai/step_ohai_run_plugin.rst
 
 
 Disable a Plugin
