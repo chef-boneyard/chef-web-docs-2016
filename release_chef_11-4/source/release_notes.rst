@@ -364,6 +364,21 @@ If you prefer one type of output over the other, you can force the |chef client|
 
 .. note:: In previous versions, bootstrapping templates would generally configure the log level to ``info`` in the |client rb| file. You may wish to change this to ``auto`` or remove the setting from your config file entirely.
 
+``add_formatter`` setting
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+The ``add_formatter`` setting can be added to the client.rb file to specify a 3rd-party formatter:
+
+.. code-block:: ruby
+
+   add_formatter :name_of_3rd_party_formatter
+
+For example::
+
+   add_formatter :nyan
+
+will add this formatter: https://github.com/andreacampi/nyan-cat-chef-formatter.
+
 Inline Compile Mode for Lightweight Resources
 -----------------------------------------------------
 In |chef 11|, there is an optional "inline compilation" mode for lightweight resources, which is intended to make notifications work correctly for lightweight resources.
