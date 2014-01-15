@@ -38,17 +38,12 @@ Syntax
 .. include:: ../../includes_ohai/includes_ohai_6_custom_plugin_syntax.rst
 
 
-Load a Plugin
-=====================================================
-.. include:: ../../step_ohai/step_ohai_plugin_load.rst
 
-
-Run Plugins Separately
+Run Plugins
 =====================================================
 .. include:: ../../step_ohai/step_ohai_run_plugin.rst
 
-
-Disable a Plugin
+Disable Plugins
 =====================================================
 .. include:: ../../step_ohai/step_ohai_plugin_disable.rst
 
