@@ -25,7 +25,7 @@ This command has the following options:
    |fork_chef|
 
 ``-F FORMAT``, ``--format FORMAT``
-   |format chef_ctls| Other formatting options are available by using 3rd party formatters.
+   |format chef_ctls|
 
 ``-g GROUP``, ``--group GROUP``
    |name group_process_owner|
