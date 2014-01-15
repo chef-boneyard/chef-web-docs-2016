@@ -1,3 +1,11 @@
-.. THIS PAGE IS IDENTICAL TO docs.opscode.com/config_rb_solo.html BY DESIGN
+=====================================================
+solo.rb
+=====================================================
 
-.. include:: ../../chef_master/source/config_rb_solo.rst
+.. include:: ../../includes_config/includes_config_rb_solo.rst
+
+Settings
+==========================================================================
+
+.. include:: ../../includes_config/includes_config_rb_10-latest_solo_settings.rst
+

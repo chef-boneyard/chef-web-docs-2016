@@ -10,12 +10,13 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``add_formatter``
-     - |add_formatter| Each formatter requires its own entry. For example:
+     - |add_formatter| For example:
        ::
  
-          add_formatter :nyan
-          add_formatter :foo
-          add_formatter :bar
+          add_formatter [ 
+            "/path/to/formatter", 
+            "/path/to/formatter" 
+          ]
    * - ``authorized_openid_identifiers``
      - |authorized_openid_identifiers| For example:
        ::
@@ -49,16 +50,6 @@ This configuration file has the following settings:
        ::
  
           data_bag_path "/var/chef/databags"
-   * - ``environment``
-     - |name environment| For example:
-       ::
- 
-          environment "production"
-   * - ``environment_path``
-     - |path environment|  Default value: ``/var/chef/environments``. For example:
-       ::
- 
-          environment_path "/var/chef/environments"
    * - ``file_backup_path``
      - |path file_backup| Default value: ``/var/chef/backup``. For example:
        ::

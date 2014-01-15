@@ -9,13 +9,6 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
-   * - ``add_formatter``
-     - |add_formatter| Each formatter requires its own entry. For example:
-       ::
- 
-          add_formatter :nyan
-          add_formatter :foo
-          add_formatter :bar
    * - ``chef_server_url``
      - |chef_server_url| For example:
        ::
@@ -40,7 +33,7 @@ This configuration file has the following settings:
             "/var/chef/site-cookbooks" 
           ]
    * - ``data_bag_decrypt_minimum_version``
-     - |data_bag_decrypt_minimum_version| For example:
+     - The minimum required version of data bag encryption. Possible values: ``0``, ``1``, and ``2``. When all of the machines in an organization are running |chef client| version 11.6 (or higher), it is recommended that this value be set to ``2``. For example:
        ::
  
           data_bag_decrypt_minimum_version "2"
@@ -59,21 +52,11 @@ This configuration file has the following settings:
        ::
  
           diff_output_threshold 1000000
-   * - ``enable_selinux_file_permission_fixup``
-     - |enable_selinux_file_permission_fixup| For example:
-       ::
- 
-          enable_selinux_file_permission_fixup true
    * - ``environment``
-     - |name environment| For example:
+     - |name environment| This is typically set from the command line (using the ``-E`` option) or in the |client rb| configuration file. For example:
        ::
  
           environment "production"
-   * - ``file_atomic_update``
-     - |file atomic_update| Default value: ``true``. For example:
-       ::
- 
-          file_atomic_update true
    * - ``file_backup_path``
      - |path file_backup| Default value: ``/var/chef/backup``. For example:
        ::
@@ -90,32 +73,32 @@ This configuration file has the following settings:
  
           group nil
    * - ``http_proxy``
-     - |http_proxy| Default value: ``nil``. For example:
+     - |http_proxy| For example:
        ::
  
           http_proxy "http://proxy.vmware.com:3128"
    * - ``http_proxy_pass``
-     - |http_proxy_pass| Default value: ``nil``. For example:
+     - |http_proxy_pass| For example:
        ::
  
           http_proxy_pass "1234567890"
    * - ``http_proxy_user``
-     - |http_proxy_user| Default value: ``nil``. For example:
+     - |http_proxy_user| For example:
        ::
  
           http_proxy_user "my_username"
    * - ``http_retry_count``
-     - |http_retry_count| Default value: ``5``. For example:
+     - |http_retry_count| For example:
        ::
  
           http_retry_count 5
    * - ``http_retry_delay``
-     - |http_retry_delay| Default value: ``5``. For example:
+     - |http_retry_delay| For example:
        ::
  
           http_retry_delay 5
    * - ``https_proxy``
-     - |https_proxy| Default value: ``nil``. For example:
+     - |https_proxy| For example:
        ::
  
           https_proxy "http://proxy.vmware.com:3128"
@@ -144,11 +127,6 @@ This configuration file has the following settings:
        ::
  
           log_location STDOUT
-   * - ``no_lazy_load``
-     - |no_lazy_load| Default value: ``false``. For example:
-       ::
- 
-          no_lazy_load false
    * - ``no_proxy``
      - |no_proxy| Default value: ``nil``. For example:
        ::
@@ -170,7 +148,7 @@ This configuration file has the following settings:
  
           pid_file "/tmp/chef-client.pid"
    * - ``rest_timeout``
-     - |rest_timeout| For example:
+     - |rest_timeout| Default value: ``300``. For example:
        ::
  
           rest_timeout 300
@@ -200,7 +178,7 @@ This configuration file has the following settings:
  
           ssl_client_key ""
    * - ``ssl_verify_mode``
-     - |ssl_verify_mode| For example, on an |ubuntu| system:
+     - |ssl_verify_mode_11-6| For example, on an |ubuntu| system:
        ::
  
           ssl_verify_mode :verify_peer
@@ -268,3 +246,7 @@ This configuration file has the following settings:
           [date] INFO: Report handlers complete
 
        Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Mon, 21 Nov 2011 09:37:39 -0800]``.
+..   * - ``whitelist``
+..     - The path to the attribute file that contains the whitelist used by |push jobs|.
+..
+..       .. warning:: This setting is available only when using |push jobs|, a tool that runs jobs against nodes in a |chef private| organization.

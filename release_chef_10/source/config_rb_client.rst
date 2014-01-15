@@ -7,7 +7,7 @@ client.rb
 Settings
 ==========================================================================
 
-.. include:: ../../includes_config/includes_config_rb_11-4_client_settings.rst
+.. include:: ../../includes_config/includes_config_rb_10-latest_client_settings.rst
 
 
 
