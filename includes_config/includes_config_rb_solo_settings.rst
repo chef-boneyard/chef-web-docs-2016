@@ -10,7 +10,7 @@ This configuration file has the following settings:
    * - Setting
      - Description
    * - ``add_formatter``
-     - |add_formatter| Each formatter requires its own entry. For example:
+     - |add_formatter| (See `nyan-cat <https://github.com/andreacampi/nyan-cat-chef-formatter>`_ for an example of a 3rd-party formatter.) Each formatter requires its own entry. For example:
        ::
  
           add_formatter :nyan
