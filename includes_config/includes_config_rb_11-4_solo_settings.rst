@@ -9,6 +9,14 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
+   * - ``add_formatter``
+     - |add_formatter| For example:
+       ::
+ 
+          add_formatter [ 
+            "/path/to/formatter", 
+            "/path/to/formatter" 
+          ]
    * - ``authorized_openid_identifiers``
      - |authorized_openid_identifiers| For example:
        ::

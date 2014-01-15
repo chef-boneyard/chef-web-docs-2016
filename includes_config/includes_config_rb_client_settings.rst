@@ -9,6 +9,14 @@ This configuration file has the following settings:
 
    * - Setting
      - Description
+   * - ``add_formatter``
+     - |add_formatter| For example:
+       ::
+ 
+          add_formatter [ 
+            "/path/to/formatter", 
+            "/path/to/formatter" 
+          ]
    * - ``chef_server_url``
      - |chef_server_url| For example:
        ::
