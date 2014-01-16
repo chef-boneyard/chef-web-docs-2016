@@ -205,6 +205,7 @@ The following command-line tools can be run on any node:
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/ctl_chef_client.html">chef-client</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/ctl_chef_solo.html">chef-solo</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/ctl_ohai.html">ohai</a> </br>
 
 
 Cookbooks
