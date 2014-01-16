@@ -52,13 +52,13 @@ To upgrade to |chef server oec|, do the following:
 
    In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine.
 
-#. Upgrade each front end machine with the following commands:
+#. Upgrade all front end machines with the following commands:
 
    .. code-block:: bash
       
       $ private-chef-ctl upgrade
 
-   and then followed by:
+#. Run the following command on all front end and back end machines:
 
    .. code-block:: bash
       
