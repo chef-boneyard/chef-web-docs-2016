@@ -25,7 +25,7 @@ This page describes how to use the |chef openstack| cookbooks as the basis for m
    * - :doc:`Cookbooks </openstack_cookbooks>`
      - All of the cookbooks used by |chef openstack| are hosted on |github|.
    * - :doc:`knife-openstack </plugin_knife_openstack>`
-     - |knife openstack|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack.rst
    * - :doc:`Example Deployment </openstack_example>`
      - A sample |chef openstack| deployment.
 
