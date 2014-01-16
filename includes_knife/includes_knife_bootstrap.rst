@@ -3,8 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife bootstrap|
-
-.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.opscode.com/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
-
-
+The |subcommand knife bootstrap| subcommand is used run a bootstrap operation that installs the |chef client| on the target system. The bootstrap operation must specify the IP address or |fqdn| of the target system.

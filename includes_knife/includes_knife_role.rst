@@ -3,12 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife role|
-
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ knife role [ARGUMENT] (options)
-
-
+The |subcommand knife role| subcommand is used to manage the roles that are associated with one or more nodes on a |chef server|.

@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife environment|
-
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ knife environment [ARGUMENT] (options)
-
+The |subcommand knife environment| subcommand is used to manage environments within a single organization on the |chef server|.

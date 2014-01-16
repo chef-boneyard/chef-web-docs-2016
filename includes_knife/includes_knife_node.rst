@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife node|
-
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ knife node [ARGUMENT] (options)
-
+The |subcommand knife node| subcommand is used to manage the nodes that exist on a |chef server|.

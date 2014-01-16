@@ -3,10 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife tag|
-
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ knife tag [ARGUMENT]
+The |subcommand knife tag| subcommand is used to apply tags to nodes on a |chef server|.

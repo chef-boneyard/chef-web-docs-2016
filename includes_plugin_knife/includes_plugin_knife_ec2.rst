@@ -3,13 +3,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife ec2|
+|amazon ec2| is a web service that provides resizable compute capacity in the cloud, based on pre-configured operating systems and virtual application software using |amazon ami|. The |subcommand knife ec2| subcommand is used to manage API-driven cloud servers that are hosted by |amazon ec2|.
 
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
 
-.. note:: This plugin requires the |subcommand knife windows| plugin to be present on the same machine.
 
-This subcommand has the following syntax::
-
-   knife ec2 [ARGUMENT] (options)
 

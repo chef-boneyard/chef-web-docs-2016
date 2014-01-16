@@ -3,14 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife windows|
-
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
-
-This subcommand has the following syntax when connecting to one (or more) machines that run |windows|::
-
-   knife winrm [ARGUMENT] (options)
-
-And the following syntax when performing a bootstrap::
-
-   knife bootstrap windows [ARGUMENT] (options)
+The |subcommand knife windows| subcommand is used to configure and interact with nodes that exist on server and/or desktop machines that are running |windows|. Nodes are configured using |windows remote management|, which allows native objects---batch scripts, |windows powershell| scripts, or scripting library variables---to be called by external applications.

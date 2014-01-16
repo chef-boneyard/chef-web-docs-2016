@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife data bag|
-
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ knife data bag [ARGUMENT] (options)
-
+The |subcommand knife data bag| subcommand is used to manage arbitrary stores of globally available |json| data.

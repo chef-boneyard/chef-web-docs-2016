@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife cookbook|
-
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ knife cookbook [ARGUMENT] (options)
-
+The |subcommand knife cookbook| subcommand is used to interact with cookbooks that are located on the |chef server| or the local |chef repo|.

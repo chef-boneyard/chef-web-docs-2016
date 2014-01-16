@@ -3,13 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife user|
-
-.. note:: This subcommand ONLY works when run against the open source |chef server| and will not run against |chef server oec| (including hosted |chef server oec|), or |chef private|.
-
-This subcommand has the following syntax:
-
-.. code-block:: bash
-
-   $ knife user [ARGUMENT] (options)
-   
+The |subcommand knife user| subcommand is used to manage the list of users and their associated RSA public key-pairs.

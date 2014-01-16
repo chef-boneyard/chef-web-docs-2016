@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife bluelock|
-
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
-
-This subcommand has the following syntax::
-
-   knife bluelock [ARGUMENT] (options)
-
+|bluelock| is a |vmware| |vcloud datacenter| service provider that provides mid-size and large enterprises flexible IT infrastructure solutions that are hosted in the public cloud.

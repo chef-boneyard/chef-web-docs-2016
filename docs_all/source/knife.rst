@@ -59,6 +59,8 @@ bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
+.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.opscode.com/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
+
 Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_bootstrap_syntax.rst
@@ -1106,6 +1108,10 @@ Authenticated API Requests
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst
 
+|ruby| Scripts
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_exec_ruby.rst
+
 Syntax
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_exec_syntax.rst
@@ -1140,6 +1146,8 @@ Examples
 index rebuild
 =====================================================
 .. include:: ../../includes_knife/includes_knife_index_rebuild.rst
+
+.. note:: This subcommand ONLY works when run against the open source |chef server| version 10.x. This subcommand will NOT run against open source |chef server| 11, |chef server oec| (including hosted |chef server oec|), or |chef private|.
 
 Syntax
 -----------------------------------------------------
@@ -1844,6 +1852,8 @@ user
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_user.rst
+
+.. note:: This subcommand ONLY works when run against the open source |chef server| and will not run against |chef server oec| (including hosted |chef server oec|), or |chef private|.
 
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 

@@ -8,6 +8,10 @@ Authenticated API Requests
 =====================================================
 .. include:: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst
 
+|ruby| Scripts
+=====================================================
+.. include:: ../../includes_knife/includes_knife_exec_ruby.rst
+
 Syntax
 =====================================================
 .. include:: ../../includes_knife/includes_knife_exec_syntax.rst

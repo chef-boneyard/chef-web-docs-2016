@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife push jobs|
-
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
-
-This subcommand has the following syntax::
-
-   knife pushy [ARGUMENT] (options)
-
+The |subcommand knife push jobs| subcommand is used by |push jobs| to start jobs, view job status, view job lists, and view node status.

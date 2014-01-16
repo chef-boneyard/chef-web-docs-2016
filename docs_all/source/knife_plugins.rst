@@ -1,5 +1,5 @@
 =====================================================
-Knife Plugins Reference
+Knife Cloud Plugins Reference
 =====================================================
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
@@ -59,6 +59,8 @@ The following plugins for |knife| are provided by |company_name|:
 knife azure
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
+
+.. note:: This plugin requires the |subcommand knife windows| plugin to be present on the same machine.
 
 .. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
@@ -280,6 +282,8 @@ Options
 knife ec2
 -----------------------------------------------------
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2.rst
+
+.. note:: This plugin requires the |subcommand knife windows| plugin to be present on the same machine.
 
 .. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 

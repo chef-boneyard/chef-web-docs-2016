@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife bluebox|
-
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
-
-This subcommand has the following syntax::
-
-   knife bluebox [ARGUMENT] (options)
-
+|bluebox| provides on-demand computing that is backed by a proprietary cloud operating system. The |subcommand knife bluebox| subcommand is used to manage API-driven cloud servers that are hosted by |bluebox|.

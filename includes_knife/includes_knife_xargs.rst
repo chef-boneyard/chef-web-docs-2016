@@ -3,5 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife xargs|
- 
+The |subcommand knife xargs| subcommand is used to build and execute command lines against objects on a |chef server| using standard input.

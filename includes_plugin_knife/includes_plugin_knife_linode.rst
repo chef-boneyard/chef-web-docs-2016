@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife linode|
-
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
-
-This subcommand has the following syntax::
-
-   knife linode [ARGUMENT] (options)
-
+|linode| is a cloud hosting platform that provides virtual private server hosting from the kernal and root access on up. The |subcommand knife linode| subcommand is used to manage API-driven cloud servers that are hosted by |linode|.

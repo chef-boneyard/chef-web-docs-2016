@@ -98,6 +98,8 @@ knife bootstrap
 
 .. include:: ../../includes_knife/includes_knife_bootstrap.rst
 
+.. note:: To bootstrap the |chef client| on |windows| machines, the `knife-windows <http://docs.opscode.com/plugin_knife_windows.html>`_ plugins is required, which includes the necessary bootstrap scripts that are used to do the actual installation.
+
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_bootstrap_syntax.rst

@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife hp|
-
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
-
-This subcommand has the following syntax::
-
-   knife hp [ARGUMENT] (options)
-
+|hp cloud| is a cloud hosting platform that provides computing, storage, identity, and other services across private, managed, and public clouds. The |subcommand knife hp| subcommand is used to manage API-driven cloud servers that are hosted by |hp cloud|.

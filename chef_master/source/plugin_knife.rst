@@ -1,5 +1,5 @@
 =====================================================
-About Knife Plugins
+About Knife Cloud Plugins
 =====================================================
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
@@ -18,27 +18,27 @@ The following |knife| plug-ins are maintained by |company_name|:
    * - Sub-command
      - Description
    * - :doc:`plugin_knife_azure`
-     - |knife azure|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
    * - :doc:`plugin_knife_bluebox`
-     - |knife bluebox|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_bluebox.rst
    * - :doc:`plugin_knife_ec2`
-     - |knife ec2|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_ec2.rst
    * - :doc:`plugin_knife_eucalyptus`
-     - |knife eucalyptus|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_eucalyptus.rst
    * - :doc:`plugin_knife_google`
-     - |knife google|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_google.rst
    * - :doc:`plugin_knife_hp`
-     - |knife hp|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_hp.rst
    * - :doc:`plugin_knife_linode`
-     - |knife linode|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_linode.rst
    * - :doc:`plugin_knife_openstack`
-     - |knife openstack|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack.rst
    * - :doc:`plugin_knife_rackspace`
-     - |knife rackspace|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_rackspace.rst
    * - :doc:`plugin_knife_terremark`
-     - |knife terremark|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_terremark.rst
    * - :doc:`plugin_knife_windows`
-     - |knife windows|
+     - .. include:: ../../includes_plugin_knife/includes_plugin_knife_windows.rst
 
 .. toctree::
    :hidden:

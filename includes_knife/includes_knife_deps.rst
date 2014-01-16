@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife deps|
+The |subcommand knife deps| subcommand is used to identify dependencies for a node, role, or cookbook.

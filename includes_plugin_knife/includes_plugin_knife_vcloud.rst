@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife vcloud|
-
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
-
-This subcommand has the following syntax::
-
-   knife vcloud [ARGUMENT] (options)
-
+|vcloud| is an integrated cloud infrastructure solution that simplifies IT operations. The |subcommand knife vcloud| subcommand is used to manage API-driven cloud servers that are hosted by |vcloud|.

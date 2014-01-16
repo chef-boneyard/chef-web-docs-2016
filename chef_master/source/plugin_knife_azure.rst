@@ -4,6 +4,8 @@ knife azure
 
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_azure.rst
 
+.. note:: This plugin requires the |subcommand knife windows| plugin to be present on the same machine.
+
 .. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
 Install this plugin

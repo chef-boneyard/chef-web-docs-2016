@@ -3,6 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife search|
-
-
+The |subcommand knife search| subcommand is used run a search query for information that is indexed on a |chef server|.

@@ -3,12 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife azure|
+|windows azure| is a cloud hosting platform from |microsoft| that provides virtual machines for |linux| and |windows server|, cloud and database services, and more. The |subcommand knife azure| subcommand is used to manage API-driven cloud servers that are hosted by |windows azure|.
 
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
 
-.. note:: This plugin requires the |subcommand knife windows| plugin to be present on the same machine.
 
-This subcommand has the following syntax::
-
-   knife azure [ARGUMENT] (options)

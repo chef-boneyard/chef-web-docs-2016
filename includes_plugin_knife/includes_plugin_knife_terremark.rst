@@ -3,11 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife terremark|
-
-This subcommand should be installed as a |knife| plugin, using |rubygems|.
-
-This subcommand has the following syntax::
-
-   knife terremark [ARGUMENT] (options)
-
+|terremark| is a cloud hosting platform that provides cloud, IT infrastructure, and managed hosting services. The |subcommand knife terremark| subcommand is used to manage API-driven cloud servers that are hosted by |terremark|.
