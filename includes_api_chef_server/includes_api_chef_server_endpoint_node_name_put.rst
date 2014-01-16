@@ -24,7 +24,8 @@ with a request body that looks something like:
        "hardware_type": "laptop"
      },
      "run_list": [
-       "recipe[apache2]"
+       'recipe[cookbook_name::recipe_name],
+       role[role_name]'
      ],
      "defaults": {}
    }
