@@ -2,26 +2,26 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The syntax for an |ohai| plugin is as follows:
+The syntax for an |ohai 6| plugin is as follows:
 
 .. code-block:: ruby
 
    require_plugin "plugin_name"
    provides "attribute", "attribute/subattribute"
 
-   # start of Ruby code that defines the Ohai plugin
+   # start of Ruby code that defines the Ohai 6 plugin
    
      attribute Mash.new
    
-   # end of Ruby code that defines the Ohai plugin
+   # end of Ruby code that defines the Ohai 6 plugin
 
 where 
 
-* ``require_plugin`` is used to extend one (or more) existing |ohai| plugins; an often-used value for ``require_plugin`` is ``"#{os}::hostname"``
+* ``require_plugin`` is used to extend one (or more) existing |ohai 6| plugins; an often-used value for ``require_plugin`` is ``"#{os}::hostname"``
 * Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin. This becomes an automatic attribute (i.e. ``node[:attribute]``) that is collected by |ohai| at the start of every |chef client| run. For example, the syntax example will create an automatic attribute: ``node[:attribute] => "some_value"`` with ``some_value`` being defined by ``Mash.new``. An attribute can also be defined using an ``attribute/subattribute`` pattern
-* ``Mash.new`` is used to collect the data defined by the |ohai| plugin; this location will vary, depending on the complexity of the |ohai| plugin and the |ruby| code used to define it
+* ``Mash.new`` is used to collect the data defined by the |ohai 6| plugin; this location will vary, depending on the complexity of the |ohai 6| plugin and the |ruby| code used to define it
 
-For example, a plugin could be built to add additional ``ipaddrtype_iface`` network attributes to help make it semantically easier to retrieve addresses:
+For example, an |ohai 6| plugin could be built to add additional ``ipaddrtype_iface`` network attributes to help make it semantically easier to retrieve addresses:
 
 .. code-block:: ruby
 
