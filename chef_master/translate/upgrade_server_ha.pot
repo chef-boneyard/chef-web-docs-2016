@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-09 15:33\n"
+"POT-Creation-Date: 2014-01-16 13:47\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,97 +17,97 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/upgrade_server_ha.rst:8
-# 2d409f7ba5624c5caf38c2099e693257
+# 6944275dfe4d4d3d8c9b7e9431ff0bb2
 msgid "Upgrade to Enterprise Chef 11: High Availability"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:10
-# 970c8e40e7134fbe8f58f067ab14b9f3
+# 1a2acf6e434c44d48cec0ade99e7740c
 msgid "This topic describes the upgrade process from |chef private| to |chef server oec|. The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |debian dpkg| or |rpm|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete."
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:12
-# 2055c4ae527d4895b1674280c9fd45b0
+# 6897e07369fe4695bff6feff7fb77f8d
 msgid "To upgrade to |chef server oec|, do the following:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:14
-# 245e2b8c4ebf43f9ad39d369868bcc36
+# 5c9e99765ed3488ab1a96857cc2e0430
 msgid "Stop all of the front end machines:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:20
-# 23db57877df0441c97295c478355e1a6
+# 48fd53d7314b4dc59a1b7b3624a205cf
 msgid "Stop the back end secondary machine:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:26
-# f9a3c7c47ccf454ea075f164a036638d
+# c5496839c38c4a30b1f7181cddb5547e
 msgid "Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:32
-# 7815084803724bcebeb116d6e6a94516
+# 69086190e1634e1bbb6747a9ed5c5316
 msgid "where ``-D`` enables debugging and ``10`` creates output for each file that is processed during the upgrade. See the man pages for |debian dpkg| for more information about this option."
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:34
-# 604e05fc6a76441b9afd69a1fcaa1783
+# b62bd18f43554d43b4ccb7297980fc92
 msgid "For |rpm|:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:40
-# 76d6e76b654f46ffb82fe8309b784c89
+# 0d5183c697394db3af473c57b72ecf0e
 msgid "Identify the original back end primary and secondary machines. The original primary is the same machine on which the initial bootstrap operation was run and will have a setting in the ``private-chef.rb`` file that sets ``:bootstrap => true``. The upgrade process for the back end machines requires the original primary machine to be upgraded before the original secondary machine. This may require using failover to move the original primary machine back into a state where it is the current primary back end machine."
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:42
-# 9e5cf3262e9b4097a381115f420eb18f
+# 5b128ba4b90d4ad0afcb647ac55eab7f
 msgid "Upgrade the back end primary machine with the following command:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:48
-# 2c55e9b3b13c4ba090a10a42ed0992c8
+# 74736b4d999e42ed9c602752629c5987
 msgid "If the upgrade process times out, re-run the command until it finishes successfully."
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:50
-# 0478d5474274416899db1ea5659917fc
+# 2f541620e9054dca88791545e597f506
 msgid "Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes."
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:52
-# c3fb35251a7b431f9963c876d4629592
+# 9ebb7c6667eb4a379d34157c8b0589eb
 msgid "Upgrade the back end secondary machine with the following command:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:58
-# 1fe0d55b4e3b43e484f243a8b09b7378
+# d640b205c107471ca3de8a66b07441a6
 msgid "In some instances, after the upgrade processes is complete, it may be required to stop |keepalived| on the back end secondary machine, then restart |keepalived| on the back end primary machine, and then restart |keepalived| on the back end secondary machine."
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:60
-# 15ea8b0c66bc479f9afa634833b108d9
-msgid "Upgrade each front end machine with the following commands:"
+# 7f93ca8c9f1447378beb3f1ae835169a
+msgid "Upgrade all front end machines with the following commands:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:66
-# a2486e5d1b1c401da91227e2ba225636
-msgid "and then followed by:"
+# cbc3347fa8ed414a89ef5a9badde6f15
+msgid "Run the following command on all front end and back end machines:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:72
-# 252471bea64241d1bf1c6f92ec654ab3
+# 6e52a10a80464e8e8a9b46d033eef449
 msgid "After the upgrade process is complete, the state of the system after the upgrade has been tested and verified, and that everything looks satisfactory, remove old data by running the following command on each machine:"
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:78
-# d7d8ac3474d14d74ae5567b5544889ff
+# 16af13e06abc42c9b99c384e18d9bc36
 msgid "This process will remove old services, old data, messages about old services not running, and so on."
 msgstr ""
 
 #: ../source/upgrade_server_ha.rst:80
-# e9324cbd21dc416d8c7527083ee46d08
+# 33f34f2fca1d43fdade4160d765e9b46
 msgid "The message ``[ERROR] opscode-chef-mover is not running`` is expected, does not indicate an actual error, and is safe to ignore."
 msgstr ""
 
