@@ -33,3 +33,7 @@ Examples
 **Send a POST request**
 
 .. include:: ../../step_resource/step_resource_http_request_send_post.rst
+
+**Transfer a file only when the remote source changes**
+
+.. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst
