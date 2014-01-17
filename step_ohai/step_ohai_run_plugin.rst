@@ -22,7 +22,7 @@ To run that plugin from the command line, use the following command:
 
 .. code-block:: bash
 
-   $ ohai -f sl_installed.rb
+   $ ohai --directory /path/to/plugin_file.rb sl
 
 The command will return something similar to:
 
