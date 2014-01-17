@@ -394,6 +394,7 @@ The following topics discuss using |chef server osc| with platforms:
    ctl_chef_server
    ctl_chef_shell
    ctl_chef_solo
+   ctl_ohai
    dsl_recipe
    dsl_recipe_method_attribute
    dsl_recipe_method_cookbook_name
@@ -577,4 +578,5 @@ The following topics discuss using |chef server osc| with platforms:
    resource_yum
    server_components
    server_security
+   supported_platforms
    upgrade_server_open_source

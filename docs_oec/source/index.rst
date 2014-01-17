@@ -487,6 +487,7 @@ The following topics discuss using |chef server oec| with platforms:
    ctl_chef_client
    ctl_chef_shell
    ctl_chef_solo
+   ctl_ohai
    ctl_reporting 
    ctl_private_chef
    ctl_push_jobs_client
@@ -710,5 +711,6 @@ The following topics discuss using |chef server oec| with platforms:
    server_services
    server_tuning
    server_users
+   supported_platforms
    upgrade_server_ha
    upgrade_server_standalone
