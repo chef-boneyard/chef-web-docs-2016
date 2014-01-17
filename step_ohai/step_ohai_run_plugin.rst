@@ -6,15 +6,19 @@ An |ohai| plugin can be run independently of a |chef client| run. First, ensure 
 .. code-block:: ruby
 
    Ohai.plugin(:sl) do
-     include Ohai::sl
      provides "sl"
    
      collect_data(:default) do
-       if ::File.exists?("/usr/games/sl")
-         sl Mash.new
-         sl[:installed] = true
-       end
        sl Mash.new
+   
+       if ::File.exists?("/usr/games/sl")
+         sl[:installed] = true
+       else
+         sl[:installed] = false
+       end
+   
+       # sl[:installed] = ::File.exists?("/usr/games/sl")
+   
      end
    end
 
