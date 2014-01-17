@@ -37,7 +37,9 @@ Syntax
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_6_custom_plugin_syntax.rst
 
-
+Use a Mash
+-----------------------------------------------------
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst
 
 ohai Resource
 =====================================================
