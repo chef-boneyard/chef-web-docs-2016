@@ -118,12 +118,6 @@ Use Search Results
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_search_indexes.rst
 
-Use Tags
------------------------------------------------------
-.. include:: ../../includes_chef/includes_chef_tags.rst
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
-
 End a |chef client| Run 
 -----------------------------------------------------
 .. include:: ../../includes_chef_client/includes_chef_client_run_end.rst
