@@ -14,6 +14,14 @@
    * - ``source``
      - |path chef_handler|
    * - ``arguments``
-     - |arguments chef_handler|
+     - |arguments chef_handler| Default value: ``[]``. For example:
+       ::
+ 
+          arguments :key1 => 'val1'
+
+       or:
+       ::
+ 
+          arguments [:key1 => 'val1', :key2 => 'val2]
    * - ``supports``
      - |supports chef_handler| Default value: ``{ :report => true, :exception => true }``.
