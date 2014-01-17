@@ -14,7 +14,7 @@ Syntax
 
 Supported Platforms
 -----------------------------------------------------
-.. include:: ../../includes_api_omnitruck/includes_api_omnitruck_client_supported_versions.rst
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_client.rst
 
 Examples
 -----------------------------------------------------
@@ -33,7 +33,7 @@ Examples
 
 Supported Platforms
 -----------------------------------------------------
-.. include:: ../../includes_api_omnitruck/includes_api_omnitruck_server_supported_versions.rst
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_server_osc.rst
 
 Examples
 -----------------------------------------------------
