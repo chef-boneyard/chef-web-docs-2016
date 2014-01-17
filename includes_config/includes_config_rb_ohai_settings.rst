@@ -20,7 +20,7 @@ The following settings can be added to the |client rb| file:
        or:
        ::
  
-          ohai[:disabled_plugins] = [":passwd", ":rackspace", ":dmi", ":dmi_common"]
+          ohai[:disabled_plugins] = [:passwd, :rackspace, :dmi, :dmi_common]
 
    * - ``ohai[:hints_path]``
      - |path hint_ohai|
