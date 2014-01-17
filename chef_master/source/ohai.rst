@@ -155,14 +155,6 @@ Add |ohai| to a Run-list
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_add_to_run_list.rst
 
-Load a Plugin
-=====================================================
-.. include:: ../../step_ohai/step_ohai_plugin_load.rst
-
-Disable a Plugin
-=====================================================
-.. include:: ../../step_ohai/step_ohai_plugin_disable.rst
-
 Community |ohai| Plugins
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_plugins.rst

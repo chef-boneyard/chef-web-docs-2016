@@ -12,7 +12,21 @@ The following settings can be added to the |client rb| file:
    * - ``ohai[:directory]``
      - |path plugin_ohai|
    * - ``ohai[:disabled_plugins]``
-     - |disable plugin_ohai| For example: ``my_plugin`` or ``windows::my_plugin``.
+     - |disable plugin_ohai| For example:
+       ::
+ 
+          ohai[:disabled_plugins] = "my_plugin"
+
+       or:
+       ::
+ 
+          ohai[:disabled_plugins] = "windows::my_plugin"
+
+       or:
+       ::
+ 
+          ohai[:disabled_plugins] = ["passwd", "rackspace", "dmi", "dmi_common"]
+
    * - ``ohai[:hints_path]``
      - |path hint_ohai|
    * - ``ohai[:log_level]``

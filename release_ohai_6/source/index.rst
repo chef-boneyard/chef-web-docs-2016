@@ -38,10 +38,6 @@ Syntax
 .. include:: ../../includes_ohai/includes_ohai_6_custom_plugin_syntax.rst
 
 
-Disable Plugins
-=====================================================
-.. include:: ../../step_ohai/step_ohai_plugin_disable.rst
-
 
 ohai Resource
 =====================================================
@@ -118,7 +114,7 @@ The following examples show how to use the |ohai| command-line tool:
 =====================================================
 .. include:: ../../includes_config/includes_config_rb_ohai.rst
 
-.. include:: ../../includes_config/includes_config_rb_ohai_6_settings.rst
+.. include:: ../../includes_config/includes_config_rb_6_ohai_settings.rst
 
 
 
