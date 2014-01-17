@@ -4,6 +4,7 @@ About Recipes
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
 
+
 Recipe Attributes
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
@@ -117,6 +118,12 @@ Use Search Results
 .. include:: ../../includes_search/includes_search.rst
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_search_indexes.rst
+
+Use Tags
+-----------------------------------------------------
+.. include:: ../../includes_chef/includes_chef_tags.rst
+
+.. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
 
 End a |chef client| Run 
 -----------------------------------------------------
