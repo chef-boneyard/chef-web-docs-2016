@@ -26,53 +26,53 @@ About |knife|
    * - Sub-command
      - Description
    * - :doc:`knife_bootstrap`
-     - |knife bootstrap|
+     - .. include:: ../../includes_knife/includes_knife_bootstrap.rst
    * - :doc:`knife_client`
-     - |knife client|
+     - .. include:: ../../includes_knife/includes_knife_client.rst
    * - :doc:`knife_configure`
-     - |knife configure|
+     - .. include:: ../../includes_knife/includes_knife_configure.rst
    * - :doc:`knife_cookbook`
-     - |knife cookbook|
+     - .. include:: ../../includes_knife/includes_knife_cookbook.rst
    * - :doc:`knife_cookbook_site`
-     - |knife site cookbook|
+     - .. include:: ../../includes_knife/includes_knife_site_cookbook.rst
    * - :doc:`knife_data_bag`
-     - |knife data bag|
+     - .. include:: ../../includes_knife/includes_knife_data_bag.rst
    * - :doc:`knife_delete`
-     - |knife delete|
+     - .. include:: ../../includes_knife/includes_knife_delete.rst
    * - :doc:`knife_diff`
-     - |knife diff|
+     - .. include:: ../../includes_knife/includes_knife_diff.rst
    * - :doc:`knife_download`
-     - |knife download|
+     - .. include:: ../../includes_knife/includes_knife_download.rst
    * - :doc:`knife_environment`
-     - |knife environment|
+     - .. include:: ../../includes_knife/includes_knife_environment.rst
    * - :doc:`knife_exec`
-     - |knife exec|
+     - .. include:: ../../includes_knife/includes_knife_exec.rst
    * - :doc:`knife_index_rebuild`
-     - |knife index rebuild|
+     - .. include:: ../../includes_knife/includes_knife_index_rebuild.rst
    * - :doc:`knife_list`
-     - |knife list|
+     - .. include:: ../../includes_knife/includes_knife_list.rst
    * - :doc:`knife_node`
-     - |knife node|
+     - .. include:: ../../includes_knife/includes_knife_node.rst
    * - :doc:`knife_raw`
-     - |knife raw|
+     - .. include:: ../../includes_knife/includes_knife_raw.rst
    * - :doc:`knife_recipe_list`
-     - |knife recipe list|
+     - .. include:: ../../includes_knife/includes_knife_recipe_list.rst
    * - :doc:`knife_role`
-     - |knife role|
+     - .. include:: ../../includes_knife/includes_knife_role.rst
    * - :doc:`knife_search`
-     - |knife search|
+     - .. include:: ../../includes_knife/includes_knife_search.rst
    * - :doc:`knife_show`
-     - |knife show|
+     - .. include:: ../../includes_knife/includes_knife_show.rst
    * - :doc:`knife_ssh`
-     - |knife ssh|
+     - .. include:: ../../includes_knife/includes_knife_ssh.rst
    * - :doc:`knife_status`
-     - |knife status|
+     - .. include:: ../../includes_knife/includes_knife_status.rst
    * - :doc:`knife_tag`
-     - |knife tag|
+     - .. include:: ../../includes_knife/includes_knife_tag.rst
    * - :doc:`knife_upload`
-     - |knife upload|
+     - .. include:: ../../includes_knife/includes_knife_upload.rst
    * - :doc:`knife_user`
-     - |knife user|
+     - .. include:: ../../includes_knife/includes_knife_user.rst
 
 .. toctree::
    :hidden:

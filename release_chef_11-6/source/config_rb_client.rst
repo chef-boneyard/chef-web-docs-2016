@@ -9,10 +9,12 @@ Settings
 
 .. include:: ../../includes_config/includes_config_rb_11-6_client_settings.rst
 
-Disable Ohai Plugins
-==========================================================================
+|ohai| Settings
+=====================================================
 
-.. include:: ../../step_ohai/step_ohai_plugin_disable.rst
+.. include:: ../../includes_config/includes_config_rb_ohai.rst
+
+.. include:: ../../includes_config/includes_config_rb_ohai_settings.rst
 
 
 
