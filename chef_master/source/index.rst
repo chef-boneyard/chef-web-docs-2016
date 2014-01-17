@@ -397,6 +397,7 @@ Cookbooks
    server_users
    server_webui_tasks
    style_guide
+   supported_platforms
    upgrade_server
    upgrade_server_ha
    upgrade_server_open_source

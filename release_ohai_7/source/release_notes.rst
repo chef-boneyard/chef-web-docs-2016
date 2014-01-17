@@ -6,6 +6,10 @@ Release Notes: |ohai 7|
 
 .. warning:: This topic is a placeholder for an upcoming release of |ohai|.
 
+Supported Platforms
+=====================================================
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_ohai.rst
+
 What's New
 =====================================================
 The following items are new for |ohai 7| and/or are changes from previous versions. The short version:

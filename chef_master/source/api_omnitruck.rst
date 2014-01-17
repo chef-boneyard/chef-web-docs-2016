@@ -12,7 +12,7 @@ Syntax
 =====================================================
 .. include:: ../../includes_api_omnitruck/includes_api_omnitruck_client.rst
 
-Versions
+Supported Platforms
 -----------------------------------------------------
 .. include:: ../../includes_api_omnitruck/includes_api_omnitruck_client_supported_versions.rst
 
@@ -31,7 +31,7 @@ Examples
 =====================================================
 .. include:: ../../includes_api_omnitruck/includes_api_omnitruck_server.rst
 
-Versions
+Supported Platforms
 -----------------------------------------------------
 .. include:: ../../includes_api_omnitruck/includes_api_omnitruck_server_supported_versions.rst
 
