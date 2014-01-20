@@ -3,8 +3,6 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|knife search|
-
 .. note:: The following changes were made to the |subcommand knife search| subcommand, starting with the 11.0.0 version of the |chef client|:
 
    * |subcommand knife search| will assume node search when the object type is omitted
