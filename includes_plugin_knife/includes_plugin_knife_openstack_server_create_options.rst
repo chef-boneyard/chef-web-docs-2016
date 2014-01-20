@@ -5,8 +5,17 @@
 
 This argument has the following options:
 
-``-A ID``, ``--openstack-access-key-id ID``
-   |id openstack_access_key|
+``-a [IP]``, ``--floating-ip [IP]``
+   The floating IP address to be associated with a new |openstack| node (assuming that IP addresses have been allocated to the project).
+
+``-A USER_NAME``, ``--openstack-username USER_NAME``
+   The |openstack compute| user name.
+
+``--bootstrap-protocol PROTOCOL``
+   |bootstrap protocol|
+
+``--bootstrap-proxy PROXY_URL``
+   |bootstrap proxy|
 
 ``--bootstrap-version VERSION``
    |bootstrap version|
@@ -14,7 +23,7 @@ This argument has the following options:
 ``-d DISTRO``, ``--distro DISTRO``
    |distro|
 
-``-f FLAVOR``, ``--flavor FLAVOR``
+``-f FLAVOR_ID``, ``--flavor FLAVOR_ID``
    |flavor|
 
 ``-G X,Y,Z``, ``--groups X,Y,Z``
@@ -23,11 +32,17 @@ This argument has the following options:
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
 
-``-I IMAGE``, ``--image IMAGE``
+``-I IMAGE_ID``, ``--image IMAGE_ID``
    |image|
 
-``-K SECRET``, ``--openstack-secret-access-key SECRET``
-   |key openstack_secret_access|
+``--insecure``
+   Use to ignore SSL certificates for the Auth URL.
+
+``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
+   |json first_run_string|
+
+``-K SECRET``, ``--openstack-password SECRET``
+   The |openstack compute| password.
 
 ``-N NAME``, ``--node-name NAME``
    |name node|
@@ -35,8 +50,11 @@ This argument has the following options:
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.
 
-``--openstack-api-endpoint ENDPOINT``
+``--openstack-api-endpoint``
    |api openstack_endpoint|
+
+``-p PORT``, ``--ssh-port PORT``
+   |ssh_port| Default value: ``22``.
 
 ``-P PASSWORD``, ``--ssh-password PASSWORD``
    |ssh_password|
@@ -44,14 +62,20 @@ This argument has the following options:
 ``--prerelease``
    |prerelease|
 
+``--private-network``
+   Indicates that a private IP address is used for a bootstrap operation. Default value: ``false`` (a public IP address).
+
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
 
-``--region REGION``
-   |region openstack|
-
 ``-S KEY``, ``--ssh-key KEY``
    |ssh_key openstack|
+
+``--server-create-timeout TIMEOUT``
+   |timeout| Default value: ``600``.
+
+``-T NAME``, ``--openstack-tenant NAME``
+   The |openstack compute| tenant name.
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|
@@ -59,6 +83,10 @@ This argument has the following options:
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh_user|
 
-``-Z ZONE"``, ``--availability-zone ZONE``
-   |availability_zone| Default: ``us-east-1b``.
+
+
+
+
+
+
 

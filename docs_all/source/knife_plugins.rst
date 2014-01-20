@@ -847,6 +847,19 @@ Examples
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_openstack_flavor_list.rst
 
+
+group list
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_group_list.rst
+
+Syntax
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_group_list_syntax.rst
+
+Options
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_group_list_options.rst
+
 image list
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_openstack_image_list.rst

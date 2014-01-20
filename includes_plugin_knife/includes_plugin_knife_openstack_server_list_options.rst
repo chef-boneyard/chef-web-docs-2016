@@ -5,15 +5,18 @@
 
 This argument has the following options:
 
-``-A ID``, ``--openstack-access-key-id ID``
-   |id openstack_access_key|
+``-A USER_NAME``, ``--openstack-username USER_NAME``
+   The |openstack compute| user name.
 
-``-K SECRET``, ``--openstack-secret-access-key SECRET``
-   |key openstack_secret_access|
+``--insecure``
+   Use to ignore SSL certificates for the Auth URL.
 
-``--openstack-api-endpoint ENDPOINT``
+``-K SECRET``, ``--openstack-password SECRET``
+   The |openstack compute| password.
+
+``--openstack-api-endpoint``
    |api openstack_endpoint|
 
-``--region REGION``
-   |region openstack|
+``-T NAME``, ``--openstack-tenant NAME``
+   The |openstack compute| tenant name.
 
