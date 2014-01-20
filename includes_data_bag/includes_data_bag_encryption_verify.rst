@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-When the contents of a data bag are encrypted, they will not be readable until they are decrypted. Encryption can be verified with a |knife| command similar to:
+When the contents of a data bag item are encrypted, they will not be readable until they are decrypted. Encryption can be verified with a |knife| command similar to:
 
 .. code-block:: bash
 

@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Encrypting a data bag requires a secret key. A secret key can be created in any number of ways. For example, |open ssl| can be used to generate a random number, which can then be used as the secret key:
+Encrypting a data bag item requires a secret key. A secret key can be created in any number of ways. For example, |open ssl| can be used to generate a random number, which can then be used as the secret key:
 
 .. code-block:: bash
 

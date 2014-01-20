@@ -28,7 +28,7 @@ Data Bag Items
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_item.rst
 
-Encrypt a Data Bag
+Encrypt a Data Bag Item
 =====================================================
 .. include:: ../../includes_data_bag/includes_data_bag_encryption.rst
 
@@ -48,7 +48,7 @@ Encrypt
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_encrypt.rst
 
-Verify encryption
+Verify Encryption
 -----------------------------------------------------
 .. include:: ../../includes_data_bag/includes_data_bag_encryption_verify.rst
 

@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-|knife| can encrypt and decrypt data when the ``knife data bag`` sub-command is run with the ``create``, ``edit``, ``from file``, or ``show`` arguments and the following options:
+|knife| can encrypt and decrypt data bag items when the ``knife data bag`` sub-command is run with the ``create``, ``edit``, ``from file``, or ``show`` arguments and the following options:
 
 .. list-table::
    :widths: 200 300
