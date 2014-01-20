@@ -39,8 +39,8 @@
      - The color used when a package to be installed are newer than an available package with the same name and architecture.
    * - ``color_list_installed_older``
      - The color used when a package to be installed are older than an available package with the same name and architecture.
-   * - ``color_list_installed_reinstal``
-     - The color used for a package reinstall.
+   * - ``color_list_installed_reinstall``
+     - The color used when a package to be installed are same version as an available package with the same name and architecture.
    * - ``color_search_match``
      - The color used for text matches in search.
    * - ``color_update_installed``
@@ -58,7 +58,7 @@
    * - ``distroverpkg``
      - The package used by |yum| to determine the version for a distribution.
    * - ``enable_group_conditionals``
-     - Indicates whether |yum| allows conditional pages.
+     - Indicates whether |yum| allows conditional packages.
    * - ``errorlevel``
      - The output level for error messages.
    * - ``exactarch``

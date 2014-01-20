@@ -34,7 +34,7 @@
    * - ``http_caching``
      - Use to define how upstream HTTP caches handle HTTP downloads. Possible values: ``all`` (cache all HTTP downloads), ``none`` (cache no HTTP downloads), or ``packages`` (cache only |rpm| downloads, but not repository metadata downloads).
    * - ``include_config``
-     - 
+     - The external configuration files for inclusion.
    * - ``includepkgs``
      - |include_packages|
    * - ``keepalive``
@@ -60,7 +60,7 @@
    * - ``report_instanceid``
      - Use to ensure that instances running |amazon linux| can log the instance identifier (e.g. ``i-12345678``) and region (e.g. ``us-west-1``) for an instance that downloads a package. 
    * - ``repositoryid``
-     - Default value: ``true``.
+     - |name repository_yum|
    * - ``sslcacert``
      - The path to the directory in which the certificate authorities |yum| should use to verify |ssl| certificates are located.
    * - ``sslclientcert``
