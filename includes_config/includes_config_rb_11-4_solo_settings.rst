@@ -105,7 +105,7 @@ This configuration file has the following settings:
  
           recipe_url "http://path/to/remote/cookbook"
    * - ``rest_timeout``
-     - |rest_timeout| Default value: ``300``. For example:
+     - |timeout rest| Default value: ``300``. For example:
        ::
  
           rest_timeout 300

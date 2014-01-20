@@ -225,6 +225,7 @@
 .. |COOKBOOK_VERSION show| replace:: The version of a cookbook to be shown. If a cookbook has only one version, this option does not need to be specified. If a cookbook has more than one version and this option is not specified, a list of cookbook versions will be returned.
 .. |cookie resource erlang_call| replace:: The magic cookie for the node to which a connection is made.
 .. |copyright| replace:: The name of the copyright holder. This option will place a copyright notice that contains the name of the copyright holder in each of the pre-created files. If this option is not specified, a copyright name of "your_company_name" will be used instead; it can be easily modified later.
+.. |cost_repo| replace:: The relative cost of accessing this repository.
 .. |couchdb_database| replace:: The name of the |couch db| database.
 .. |couchdb_url| replace:: The URL for the |couch db| database.
 .. |couchdb_version| replace:: Optional. The version of the |couch db| database.
@@ -327,6 +328,7 @@
 .. |editor| replace:: The |chef editor| that is used for all interactive commands.
 .. |effective_cache_size postgresql| replace:: The size of the disk cache that is used for data files.
 .. |email| replace:: The email address for the individual who maintains the cookbook. This option will place an email address in each of the pre-created files. If this option is not specified, an email name of "your_email" will be used instead; it can be easily modified later.
+.. |enable_package_groups| replace:: Indicates whether |yum| will allow the use of package groups for this repository.
 .. |enable_reporting| replace:: Indicates that data collection reporting is enabled during a |chef client| run.
 .. |enable_selinux_file_permission_fixup| replace:: |selinux| environments only. Indicates whether the |chef client| will attempt to apply the correct file permissions to an updated file by using the ``restorecon`` command. Set this value to ``false`` to prevent the |chef client| from attempting this action.
 .. |enable_submodules| replace:: Use to perform a sub-module initialization and update.
@@ -345,6 +347,7 @@
 .. |environment variables| replace:: A |hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``. (These variables must exist for a command to be run successfully.)
 .. |ephemeral device| replace:: A comma-separated list of device locations to be mapped to ephemeral devices.
 .. |exec| replace:: A string of code that will be executed.
+.. |exclude_package_list| replace:: A space-separated list of packages to be excluded from updates and installs.
 .. |execute chef_apply| replace:: Use to execute a resource using a string.
 .. |exists package| replace:: Indicates that a package already exists.
 .. |exitcodes| replace:: A list of expected exit codes for a program.
@@ -360,6 +363,7 @@
 .. F
 .. 
 
+.. |fastest_mirror_enabled| replace:: Indicates that |yum| will use the fastest available mirror.
 .. |fatal_windows_admin_check| replace:: Indicates that a |chef client| run should fail if the |chef client| does not have administrator privileges in |windows|.
 .. |failover_method| replace:: The fail-over method. ``roundrobin`` randomly selects a URL out of a list of URLs and proceeds through each of them as it encounters a failure when contacting the host; ``priority`` starts from the first base URL listed and proceeds through them sequentially.
 .. |file| replace:: The name of the cookbook file to be downloaded.
@@ -418,13 +422,15 @@
 .. |git_ssh_wrapper| replace:: The alias for the ``ssh_wrapper``.
 .. |google_image| replace:: The name of the virtual application template or image that will be used to create the virtual machine.
 .. |google_compute_disks| replace:: A comma-separated list of disks to be attached.
-.. |google_compute_public_ip| replace:: The public IP address for |google compute engine|. Options: ``EPHEMERAL``, a static IP address, or ``NONE``.
+.. |google_compute_public_ip| replace:: The public IP address for |google compute engine|.
 .. |google_compute_machine_type| replace:: The machine type for the instance running in |google compute engine| server. For example, ``n1-highcpu-2`` or ``n1-highcpu-2-d``. The full list of available machine types: https://developers.google.com/compute/docs/instances.
 .. |google_compute_metadata| replace:: A list of metadata key-value pairs that are associated with an instance.
 .. |google_compute_network| replace:: The name of the network in which an instance is running.
 .. |google_compute_server_connect_ip| replace:: Indicates whether the IP address for |google compute engine| is ``PUBLIC`` or ``PRIVATE``.
 .. |google_compute_tags| replace:: A list of tags that are associated with an instance.
 .. |google_compute_user_data| replace:: The user data file used to provision |google compute engine|.
+.. |gpg_check| replace:: Indicates whether |yum| will perform a |gnupg| signature check on packages.
+.. |gpg_key| replace:: A URL that points to the ASCII-armored |gnupg| key file for this repository. Use this attribute when |yum| needs a public key to verify a package and when that key has not been imported into the |rpm| database.
 .. |group command| replace:: The group name or group ID that must be changed before running a command.
 .. |group config| replace:: The group that owns a process. This is required when starting any executable as a daemon. Default value: ``nil``.
 .. |group default_admins| replace:: Use the |webui group admins| group to define the list of users who have administrative rights to all objects and object types for a single organization.
@@ -482,6 +488,7 @@
 .. |host vcloud| replace:: The |vcloud| API endpoint.
 .. |hosted-service-name| replace:: The name of the hosted service.
 .. |hour cron| replace:: The hour at which the |cron| entry should run (0 - 23).
+.. |http_caching| replace:: Use to define how upstream HTTP caches handle HTTP downloads.
 .. |http_proxy| replace:: The proxy server for HTTP connections.
 .. |http_proxy_pass| replace:: The password for the proxy server when the proxy server is using an HTTP connection.
 .. |http_proxy_user| replace:: The user name for the proxy server when the proxy server is using an HTTP connection.
@@ -512,9 +519,9 @@
 .. |id hp_tenant| replace:: The tenant identifier that represents a collection of service subscriptions and/or resources in the |hp cloud| account.
 .. |id monitor_cloudkick| replace:: The identifier of a |cloudkick| monitor, which will be the parent of a |cloudkick| check.
 .. |id network_vcloud| replace:: The |vcloud| network ID.
-.. |id openstack_access_key| replace:: The access key identifier used with the |openstack| environment.
 .. |id product_webpi| replace:: The identifier of the product to be installed.
 .. |id chef_client_run| replace:: The identifier for a |chef client| run.
+.. |id report_instance| replace:: Use to ensure that instances running |amazon linux| can log the instance identifier (e.g. ``i-12345678``) and region (e.g. ``us-west-1``) for an instance that downloads a package.
 .. |id site| replace:: The identifier for the site.
 .. |id vlan| replace:: The identifier for the VLAN.
 .. |id-only| replace:: Indicates that only matching object IDs will be shown.
@@ -530,7 +537,9 @@
 .. |iis_cache_dir| replace:: The directory in which cached data is located.
 .. |image| replace:: The name of the image that identifies the operating system (and version) that will be used to create the virtual machine.
 .. |include-dependencies| replace:: Indicates that when a cookbook has a dependency on one (or more) cookbooks, those cookbooks will also be uploaded.
+.. |include_config| replace:: The external configuration files to be included.
 .. |include_packages| replace:: A list of packages in a |yum| repository.
+.. |insecure openstack| replace:: Indicates that the Auth URL will ignore SSL certificates.
 .. |internet_host_address| replace:: The Internet host address for the network interface.
 .. |inherits windows security| replace:: Indicates that a file inherits rights from its parent.
 .. |initial| replace:: Use to create a |chef api client|, typically an administrator client on a freshly-installed |chef server|.
@@ -541,6 +550,7 @@
 .. |interpreter python| replace:: The |python| script interpreter to be used during code execution.
 .. |interval| replace:: The frequency (in seconds) at which the |chef client| runs.
 .. |ip_address| replace:: The IP address.
+.. |ip_address floating_openstack| replace:: The floating IP address to be associated with a new |openstack| node (assuming that IP addresses have been allocated to the project).
 .. |ip_address node| replace:: The IP address for the node.
 .. |ip_address rabbitmq| replace:: The IP address for machine on which |rabbitmq| is running.
 .. |ip_address virtual| replace:: The virtual IP address.
@@ -584,7 +594,6 @@
 .. |key hp_secret| replace:: The secret key for the |hp cloud| account.
 .. |key application_deploy| replace:: The RSA private key needed to deploy an application.
 .. |key hp_account| replace:: The access key identifier for the |hp cloud| account.
-.. |key openstack_secret_access| replace:: The secret access key for the API endpoint used with the |openstack| environment.
 .. |key_name resource registry_key| replace:: The path to the location in which a registry key will be created or from which a registry key will be deleted.
 .. |key_name resource registry_key hives| replace:: The path must include the registry hive, which can be specified either as its full name or as the 3- or 4-letter abbreviation. For example, both ``HKLM\SECURITY`` and ``HKEY_LOCAL_MACHINE\SECURITY`` are both valid and equivalent. The following hives are valid: ``HKEY_LOCAL_MACHINE``, ``HKLM``, ``HKEY_CURRENT_CONFIG``, ``HKCC``, ``HKEY_CLASSES_ROOT``, ``HKCR``, ``HKEY_USERS``, ``HKU``, ``HKEY_CURRENT_USER``, and ``HKCU``.
 .. |key_name windows_registry| replace:: The registry key to create or modify.
@@ -817,6 +826,7 @@
 .. |manage_symlink_source| replace:: Indicates that the |chef client| will detect and manage the source file for a symlink.
 .. |manual_list| replace:: Indicates that a search query is a space-separated list of servers.
 .. |max_connections| replace:: The maximum number of allowed concurrent connections.
+.. |max_retry| replace:: The maximum number of attempts made to retrieve a file before returning an error.
 .. |maximum_transmission_unit| replace:: The maximum transmission unit (MTU) for the network interface.
 .. |media location| replace:: The geographic location for a virtual machine and its services.
 .. |medium| replace:: Display more, but not all, of a node's data when searching using the default summary format.
@@ -826,6 +836,7 @@
 .. |message http_request| replace:: The message that is sent by the HTTP request.
 .. |message resource log| replace:: The message to be added to a log file.
 .. |metadata attributes| replace:: The list of attributes that are required to configure a cookbook. An attribute name is required, followed by any of these options: ``display_name`` (the name that appears in the user interface), ``description`` (a short description), ``choice`` (an array of choices that are presented to a user), ``calculated`` (indicates if the default value is calculated by the recipe), ``type`` (the type of value, either ``string``, ``array``, or ``hash``), ``required`` (the level of user input, either ``required``, ``recommended``, or ``optional``), ``recipes`` (an array of recipes), or ``default`` (the attribute's default value).
+.. |metadata_expire| replace:: The amount of time (in seconds) before metadata for this repository expires.
 .. |metadata rb conflicts| replace:: Indicates that a cookbook conflicts with another cookbook or cookbook version. Use a version constraint to define constraints for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than).  This field requires that a cookbook with a matching name and version does not exist on the |chef server|. When the match exists, the |chef server| will ensure that any conflicted cookbooks are not included with the set of cookbooks that are sent to the node when the |chef client| runs.
 .. |metadata rb depends| replace:: Indicates that a cookbook has a dependency on another cookbook. Use a version constraint to define dependencies for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than). This field requires that a cookbook with a matching name and version exists on the |chef server|. When the match exists, the |chef server| will include the dependency as part of the set of cookbooks that are sent to the node when the |chef client| runs. It is very important that the ``depends`` field contain accurate data. If a dependency statement is inaccurate, the |chef client| may not be able to complete the configuration of the system.
 .. |metadata rb provides| replace:: Adds a recipe, definition, or resource that is provided by this cookbook, should the auto-populated list be insufficient.
@@ -837,7 +848,10 @@
 .. |migrate command_run| replace:: Indicates that the migration command will be run.
 .. |migration command_string| replace:: A string that contains a shell command that can be executed to run a migration operation.
 .. |minute cron| replace:: The minute at which the |cron| entry should run (0 - 59).
+.. |mirror_expire yum| replace:: The amount of time (in seconds) after which a locally-cached mirror list will expire. When the current ``mirrorlist`` is less than this amount of time, |yum| will not download another copy of the mirror list.
 .. |mirrorlist| replace:: A string that contains the URI to the mirror list, starting with ``http://``, ``ftp://``, or ``file://``. Use ``file://`` if the mirror list is a text file or resides on the local system.
+.. |mirrorlist yum| replace:: A URL that points to a file that contains a list of base URLs. This attribute can be used with or instead of ``baseurl``.
+.. |mirrorlist_expire yum| replace:: The amount of time (in seconds) after which a locally-cached mirror list will expire. An alias for ``mirror_expire``.
 .. |mod_aspnet| replace:: Use to install |microsoft aspdotnet| runtime components.
 .. |mod_auth_basic| replace:: Use to install support for basic authentication.
 .. |mod_auth_windows| replace:: Use to install |windows| authentication, which allows clients to authenticate using |kerberos| or |ntlm|.
@@ -912,6 +926,8 @@
 .. |name monitor| replace:: The name of the monitor.
 .. |name nagios_nrpecheck| replace:: The name of the |nagios nrpe| check.
 .. |name node| replace:: The name of the node.
+.. |name openstack_compute| replace:: The |openstack compute| user name.
+.. |name openstack_tenant| replace:: The |openstack compute| tenant name.
 .. |name owner| replace:: The name of the owner.
 .. |name package| replace:: The name of the package.
 .. |name package_group| replace:: The name of the package group.
@@ -922,6 +938,7 @@
 .. |name port| replace:: The name of the port.
 .. |name process_supervisor| replace:: A |python| string expression that is used to compose the |python supervisor| process name for a process.
 .. |name program| replace:: The name of the program.
+.. |name proxy| replace:: The user name for the proxy.
 .. |name repository_apt| replace:: The name of the |apt| repository.
 .. |name repository_yum| replace:: The name of the |yum| repository.
 .. |name ruby_block| replace:: The name of the |ruby| block.
@@ -1001,7 +1018,6 @@
 .. |options mount| replace:: An array or string that contains mount options. If this value is a string, it will be converted to an array.
 .. |orgmapper desc| replace:: |orgmapper| is a tool that can be used with non-hosted |chef server oec| to provide administrative access to back-end objects. |orgmapper| can be a dangerous tool and should be used carefully. In general, anything that needs to be done around automating user creation, making permissions changes, and so on, can be done more easily using the ``knife-acl`` plugin and by using the |chef server oec| web interface.
 .. |orgmapper desc_private_chef| replace:: |orgmapper| is a tool that can be used with |chef private| to provide administrative access to back-end objects. |orgmapper| can be a dangerous tool and should be used carefully. In general, anything that needs to be done around automating user creation, making permissions changes, and so on, can be done more easily using the ``knife-acl`` plugin and by using the |chef private| web interface.
-.. |os_process_timeout| replace:: The amount of time (in milliseconds) before an external process times out.
 .. |os-disk-name| replace:: The operating system type of the |windows azure| OS image: ``Linux`` or ``Windows``.
 .. |override_runlist| replace:: Replace the current run list with the specified items.
 .. |owner python_virtualenv| replace:: The owner of the virtual |python| environment.
@@ -1035,6 +1051,8 @@
 .. |password customer_dynect| replace:: The |dns update api| password.
 .. |password shadow_hash| replace:: The password shadow hash. This attribute requires that ``ruby-shadow`` be installed. This is part of the |debian| package: ``libshadow-ruby1.8``.
 .. |password application| replace:: The application password.
+.. |password openstack_compute| replace:: The |openstack compute| password.
+.. |password proxy_server| replace:: The password for the proxy server.
 .. |password rabbitmq| replace:: The password for the |rabbitmq| user.
 .. |password terremark| replace:: The password for the |terremark| service.
 .. |password user| replace:: The user password.
@@ -1059,10 +1077,14 @@
 .. |path pid_file| replace:: The location in which a process identification number (pid) is saved. An executable, when started as a daemon, will write the pid to the specified file.
 .. |path plugin_ohai| replace:: The directory in which |ohai| plugins are located.
 .. |path python_virtualenv| replace:: The path to the location in which the virtual |python| environment will be created.
+.. |path repository| replace:: The path to the repository.
 .. |path requirements_file| replace:: The relative path to a requirements file. If this attribute is unspecified, the provider will look for one in the project root named ``requirements/#{chef_environment}.txt`` or ``requirements.txt``.
 .. |path resource execute| replace:: An array of paths to use when searching for a command. These paths are not added to the command's environment $PATH.
 .. |path riak_admin| replace:: The directory in which ``riak`` and ``riak-admin`` scripts are located.
 .. |path roles_chef| replace:: The location in which role files are located.
+.. |path ssl_certificate yum_client| replace:: The path to the |ssl| client certificate that |yum| should use to connect to repositories and/or remote sites.
+.. |path ssl_certificate yum_client_key| replace:: The path of the location in which the |ssl| client key used by |yum| is located.
+.. |path ssl_certificate yum_directory| replace:: The path to the directory in which the certificate authorities |yum| should use to verify |ssl| certificates are located.
 .. |path torrent_file| replace:: The path to the torrent file.
 .. |path windows_path| replace:: The value to be added to or removed from a system path.
 .. |pattern process_table| replace:: The pattern to look for in the process table.
@@ -1107,8 +1129,10 @@
 .. |priority process| replace:: A priority value assigned to the process.
 .. |priority group| replace:: A priority value assigned to the group.
 .. |priority service| replace:: The relative priority of the program for start and shutdown ordering.
+.. |priority yum| replace:: The priority for repository entries; a repository will have priority when its priority value is higher than another repository's priority value.
 .. |private-key-file| replace:: The file in which the |ssh| private key used for authentication is located.
 .. |private_memory| replace:: The maximum amount of private memory (in KB) that a worker process can consume before the application pool will recycle. A value of ``0`` means there is no limit.
+.. |private_network| replace:: Indicates that a private IP address is used for a bootstrap operation.
 .. |programs supervisor_group| replace:: An array of program names. Programs that are listed will become members of the group.
 .. |protocol http| replace:: The HTTP protocol type to which a site responds: ``:http`` or ``:https``.
 .. |provider resource_parameter| replace:: Use to specify a provider by using its long name. For example: ``provider Chef::Provider::Long::Name``. See the Providers section below for the list of providers available to this resource.
@@ -1167,7 +1191,6 @@
 .. |reference resource scm| replace:: The alias for revision.
 .. |region amazon| replace:: The name of the region from which instances of hosted applications are launched. Each region has a unique endpoint.
 .. |region eucalyptus| replace:: The name of the region from which instances of hosted applications are launched.
-.. |region openstack| replace:: The name of the region from which instances of hosted applications are launched.
 .. |remote resource| replace:: The remote repository to be used when synchronizing an existing clone.
 .. |remote deps_on_server| replace:: Indicates that dependencies will be determined from objects located on the |chef server| instead of the local |chef repo|.
 .. |repo_mode| replace:: The layout of the local |chef repo|. Possible values: ``static``, ``everything``, or ``hosted_everything``. Use ``static`` for just roles, environments, cookbooks, and data bags. By default, ``everything`` and ``hosted_everything`` are dynamically selected depending on the server type.
@@ -1282,7 +1305,6 @@
 .. |response code 412 cookbook version| replace:: Not allowed. A set of cookbooks and/or cookbook versions could not be found that met all of the requirements of the run-list. A cookbook in the run-list may not exist. A dependency may be present for a cookbook that does not exist. A constraint on a cookbook made by a run-list, environment, or cookbook version may not match an available cookbook version.
 .. |response code 413 entity_too_large| replace:: Request entity too large. A request may not be larger than 1000000 bytes.
 .. |response_file| replace:: The direct path to the file used to pre-seed a package.
-.. |rest_timeout| replace:: The time (in seconds) after which an HTTP REST request will time out.
 .. |restart shell_command| replace:: A string that contains a shell command that can be executed to run a restart operation.
 .. |retries| replace:: Use to specify the number of times to catch exceptions and retry the resource.
 .. |retry_delay| replace:: Use to specify the retry delay (in seconds).
@@ -1316,11 +1338,6 @@
 
 
 
-
-
-
-
-
 .. Description strings that begin with the letter S.
 .. The pattern is |sxxxx| replace:: string.
 .. 
@@ -1346,7 +1363,7 @@
 .. |search_index| replace:: The name of the index to be queried: ``client``, ``environment``, ``node``, ``role``, or ``DATA_BAG_NAME``.
 .. |search_query| replace:: The search query used to identify a a list of items on a |chef server|. This option uses the same syntax as the ``search`` sub-command.
 .. |search_query ssh| replace:: The search query used to return a list of servers to be accessed using |ssh| and the specified ``SSH_COMMAND``. This option uses the same syntax as the search sub-command.
-.. |secret| replace:: The encryption key that is used for values contained within a data bag.
+.. |secret| replace:: The encryption key that is used for values contained within a data bag item.
 .. |secret-file| replace:: The path to the file that contains the encryption key.
 .. |server_aliases| replace:: An array of server aliases.
 .. |server_fqdn| replace:: The |fqdn| for the server.
@@ -1371,7 +1388,6 @@
 .. |size volume| replace:: The size of the volume (in gigabytes).
 .. |size disk| replace:: The size of a disk, in GB.
 .. |skip-dependencies| replace:: Indicates that all cookbooks to which the installed cookbook has a dependency will not be installed.
-.. |smtp connect_timeout| replace:: The amount of time (in seconds) to wait for a connection to an |smtp| server.
 .. |smtp server| replace:: The |smtp| server to which a connection is made.
 .. |snapshots_to_keep| replace:: The number of snapshots to maintain. This attribute is available only when the ``:prune`` action is used.
 .. |socket fcgi| replace:: The |fcgi| socket for a program.
@@ -1501,11 +1517,16 @@
 .. |timeout| replace:: The amount of time (in seconds) to wait before timing out.
 .. |timeout aws_ec2| replace:: The connection timeout for the |amazon ec2| API.
 .. |timeout command| replace:: The amount of time (in seconds) a command will wait before timing out.
+.. |timeout connection| replace:: The amount of time (in seconds) to wait before a connection times out.
+.. |timeout os_process| replace:: The amount of time (in milliseconds) before an external process times out.
 .. |timeout push jobs| replace:: The maximum amount of time (in seconds) by which a job must complete, before it will be stopped.
 .. |timeout reboot| replace:: The amount of time (in seconds) a command will wait before proceeding with a reboot.
 .. |timeout redis| replace:: The amount of time (in seconds) a client may be idle before timeout.
+.. |timeout rest| replace:: The time (in seconds) after which an HTTP REST request will time out.
 .. |timeout ring_convergence| replace:: The amount of time (in seconds) a command will wait for ring convergence.
+.. |timeout smtp_connect| replace:: The amount of time (in seconds) to wait for a connection to an |smtp| server.
 .. |timeout worker| replace:: The amount of time (in seconds) that a worker can be silent before it is killed and restarted.
+.. |timeout worker_process| replace:: The amount of time (in seconds) before a worker process times out.
 .. |to resource link| replace:: The actual file to which the link will be created.
 .. |torrent_file| replace:: A URI or a local path that specifies a file in a |bittorrent| swarm that will be joined.
 .. |trace functions_on_server| replace:: Indicates whether trace functions are executed by the server.
@@ -1534,6 +1555,7 @@
 .. |url http_request| replace:: The URL to which an HTTP request is sent.
 .. |url key_download| replace:: The URL from which a key is downloaded.
 .. |url package_download| replace:: The URL from which a package is downloaded.
+.. |url proxy_server| replace:: The URL for the proxy server.
 .. |url server_supervisor| replace:: The URL passed in the environment to the sub-process process.
 .. |use bundler| replace:: Indicates whether ``bundler`` will be used. If ``false``, |bundler| will never be used. This attribute defaults to ``true`` when a |gem| includes |bundler|.
 .. |use bundler_option_deployment| replace:: Indicates whether |bundler| will be run with the ``--deployment`` options. This attribute defaults to ``true`` when a |gemfilelock| is present.
@@ -1545,6 +1567,7 @@
 .. |use ha| replace:: Indicates whether the |chef server| is running in a high availability topology.
 .. |use file_overwrite| replace:: Indicates that a file (if different) will be overwritten.
 .. |use interface| replace:: Indicates whether the interface is activated.
+.. |use keepalive| replace:: Indicates whether HTTP keepalive is used (if available).
 .. |use last_modified| replace:: Indicates that |if_modified_since| headers are enabled. Set to ``false`` to disable |if_modified_since| headers. To use this setting, ``use_conditional_get`` must also be set to ``true``.
 .. |use nagle| replace:: Indicates whether the |nagle| buffering algorithm is enabled.
 .. |use pkgbuild| replace:: Indicates that a custom ``PKGBUILD`` file will be used. When ``true``, the |lwrp pacman aur| lightweight resource will look for a ``cookbook_file`` named ``PKGBUILD`` to use as package instructions.
@@ -1564,9 +1587,6 @@
 .. |user terremark| replace:: A user name with permission to access a |terremark| service.
 .. |user uid| replace:: The numeric user identifier.
 .. |user unix_account| replace:: The |unix| user account that runs the program.
-
-
-
 
        
 .. Description strings that begin with the letter V.
@@ -1667,7 +1687,7 @@
 .. |worker_max_keepalive| replace:: The amount of time (in seconds) to wait for requests on a |keepalived| connection.
 .. |worker_max_requests| replace:: The maximum number of requests a worker will process before restarting.
 .. |worker_processes| replace:: The number of allowed worker processes.
-.. |worker_timeout| replace:: The amount of time (in seconds) before a worker process times out.
+
 
 
 

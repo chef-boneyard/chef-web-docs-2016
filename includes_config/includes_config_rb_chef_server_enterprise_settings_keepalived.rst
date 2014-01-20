@@ -41,7 +41,7 @@ This configuration file has the following settings for |keepalived|:
            {"key"=>"nginx", "service_name"=>"nginx"}]``. 
 
    * - ``keepalived['smtp_connect_timeout']``
-     - |smtp connect_timeout| Default value: ``"30"``.
+     - |timeout smtp_connect| Default value: ``"30"``.
    * - ``keepalived['smtp_server']``
      - |smtp server| Default value: ``"127.0.0.1"``.
    * - ``keepalived['vrrp_instance_advert_int']``

@@ -6,17 +6,17 @@
 This argument has the following options:
 
 ``-A USER_NAME``, ``--openstack-username USER_NAME``
-   The |openstack compute| user name.
+   |name openstack_compute|
 
 ``--insecure``
-   Use to ignore SSL certificates for the Auth URL.
+   |insecure openstack|
 
 ``-K SECRET``, ``--openstack-password SECRET``
-   The |openstack compute| password.
+   |password openstack_compute|
 
 ``--openstack-api-endpoint``
    |api openstack_endpoint|
 
 ``-T NAME``, ``--openstack-tenant NAME``
-   The |openstack compute| tenant name.
+   |name openstack_tenant|
 

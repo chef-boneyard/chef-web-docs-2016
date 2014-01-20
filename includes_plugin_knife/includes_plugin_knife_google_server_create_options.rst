@@ -18,7 +18,7 @@ This argument has the following options:
    |google_compute_disks|
 
 ``--google-compute-public-ip IP_ADDRESS``
-   |google_compute_public_ip| Default value: ``EPHEMERAL``.
+   |google_compute_public_ip| Options: ``EPHEMERAL``, a static IP address, or ``NONE``. Default value: ``EPHEMERAL``.
 
 ``--google-compute-server-connect-ip PUBLIC``
    |google_compute_server_connect_ip| Default value: ``PUBLIC``.

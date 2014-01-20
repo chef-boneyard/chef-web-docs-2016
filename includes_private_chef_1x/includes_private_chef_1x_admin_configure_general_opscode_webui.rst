@@ -125,7 +125,7 @@ This configuration file has the following settings for the |service webui| servi
           opscode_webui['worker_processes'] = 4
 
    * - ``opscode_webui['worker_timeout']``
-     - |worker_timeout| Default value: ``3600``. For example:
+     - |timeout worker| Default value: ``3600``. For example:
        ::
 
           opscode_webui['worker_timeout'] = 3600

@@ -22,4 +22,4 @@
    * - ``worker_processes``
      - |worker_processes|
    * - ``worker_timeout``
-     - |worker_timeout|
+     - |timeout worker|

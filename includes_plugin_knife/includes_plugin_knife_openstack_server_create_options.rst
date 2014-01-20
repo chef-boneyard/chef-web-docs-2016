@@ -6,10 +6,10 @@
 This argument has the following options:
 
 ``-a [IP]``, ``--floating-ip [IP]``
-   The floating IP address to be associated with a new |openstack| node (assuming that IP addresses have been allocated to the project).
+   |ip_address floating_openstack|
 
 ``-A USER_NAME``, ``--openstack-username USER_NAME``
-   The |openstack compute| user name.
+   |name openstack_compute|
 
 ``--bootstrap-protocol PROTOCOL``
    |bootstrap protocol|
@@ -36,13 +36,13 @@ This argument has the following options:
    |image|
 
 ``--insecure``
-   Use to ignore SSL certificates for the Auth URL.
+   |insecure openstack|
 
 ``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
    |json first_run_string|
 
 ``-K SECRET``, ``--openstack-password SECRET``
-   The |openstack compute| password.
+   |password openstack_compute|
 
 ``-N NAME``, ``--node-name NAME``
    |name node|
@@ -63,7 +63,7 @@ This argument has the following options:
    |prerelease|
 
 ``--private-network``
-   Indicates that a private IP address is used for a bootstrap operation. Default value: ``false`` (a public IP address).
+   |private_network| Default value: ``false`` (a public IP address).
 
 ``-r RUN_LIST``, ``--run-list RUN_LIST``
    |run-list|
@@ -75,7 +75,7 @@ This argument has the following options:
    |timeout| Default value: ``600``.
 
 ``-T NAME``, ``--openstack-tenant NAME``
-   The |openstack compute| tenant name.
+   |name openstack_tenant|
 
 ``--template-file TEMPLATE``
    |path bootstrap_template|

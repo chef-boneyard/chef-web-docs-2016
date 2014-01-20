@@ -52,4 +52,4 @@ The |service webui| service has the following settings:
    * - ``opscode_webui['worker_processes']``
      - |worker_processes| Default value: ``2``.
    * - ``opscode_webui['worker_timeout']``
-     - |worker_timeout| Default value: ``3600``.
+     - |timeout worker| Default value: ``3600``.

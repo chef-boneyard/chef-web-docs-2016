@@ -76,7 +76,7 @@ This configuration file has the following settings for |keepalived|:
           ]
 
    * - ``keepalived['smtp_connect_timeout']``
-     - |smtp connect_timeout| Default value: ``"30"``. For example:
+     - |timeout smtp_connect| Default value: ``"30"``. For example:
        ::
 
           keepalived['smtp_connect_timeout'] = "30"
