@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-16 13:47\n"
+"POT-Creation-Date: 2014-01-20 09:14\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,356 +17,356 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/essentials_cookbook_attribute_files.rst:8
-# e0a5464d75624e6d8074c2e7073c909d
+# 43b125c758a344e0a57d5e4d6bcc0ef3
 msgid "About Attribute Files"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute.rst:4
-# f7e58070013f47ee8e274070ba45e08c
+# 79fcabf1fb1240cf93b619cf03710c65
 msgid "An attribute can be defined in a cookbook (or a recipe) and then used to override the default settings on a node. When a cookbook is loaded during a |chef client| run, these attributes are compared to the attributes that are already present on the node. When the cookbook attributes take precedence over the default attributes, the |chef client| will apply those new settings and values during the |chef client| run on the node."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file.rst:4
-# 91476d13257b487784042dbe7465f21c
+# 836ca8f2c5d44f7598d1e5871a5fd616
 msgid "An attribute file is located in the ``attributes/`` sub-directory for a cookbook. When a cookbook is run against a node, the attributes contained in all attribute files are evaluated in the context of the node object. Node methods (when present) are used to set attribute values on a node. For example, the |cookbook apache2| cookbook contains an attribute file called ``default.rb``, which contains the following attributes:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file.rst:11
-# 605c244b2bf048d5809c2cd6ea7d198b
+# 34531c8b114c414aa3189542c4635607
 msgid "The use of the node object (``node``) is implicit in the previous example; the following example defines the node object itself as part of the attribute:"
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:15
-# 29a206119063483681b39ec5a4320d36
+# 67ae11489d2e402a85aab781a19ca6b1
 msgid "Attribute File Ordering"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_ordering.rst:4
-# 0503f500d8ed48228feeedbc76b1ea9f
+# b99336fef55f4513842f13f4c47b5e20
 msgid "When the |chef client| loads cookbook attribute files, the |chef client| first identifies all of the cookbook dependencies, then identifies all of the attributes defined in those cookbooks, and then evaluates these attributes based on the order defined in the run-list. If one attribute file must be loaded before another, use the ``include_attribute`` method."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_ordering.rst:10
-# 81e75664612b4a24b070b4b92fb49d4f
+# 3df2305fa1e4412ab34cdfea7a24f35a
 msgid "For example, if a cookbook requires that attributes from the |cookbook apache2| cookbook must be available, add the following:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_ordering.rst:16
-# 3ca934e9342f4a608b103ab97950f335
+# a33bd4fd56214636afb8b6643264e6bd
 msgid "The |chef client| will load the ``apache2/attributes/default.rb`` file before continuing the processing of the current attribute file. If a specific attributes file (and not the ``default.rb`` attributes file) needs to be loaded, then use the double colon (``::``) pattern (similar to the ``include_recipe`` method), like the following:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_ordering.rst:22
-# 566fdfba2c3143b0bff5f3a4833a5597
+# a4b6117312bc4f239473fa245ea9e5f8
 msgid "This will load the ``apache2/attributes/mod_ssl.rb`` file in the |cookbook apache2| cookbook."
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:19
-# ddee8486165d4db28e533da9ef13c807
+# bd756b047d4444cabc6908d2430da0ac
 msgid "Accessor Methods"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst:5
-# c088c18da79d43028594a370473344df
+# e934d732d0a44ceb9b0d821fe38f944b
 msgid "Attribute accessor methods are automatically created and the method invocation can be used interchangeably with the keys. For example:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_accessor.rst:12
-# fa6e3f5c280547f3835d824d735e0a80
+# 770771f5819b4a118230f8f050cf5d22
 msgid "This is a matter of style and preference for how attributes are reloaded from recipes, and may be seen when retrieving the value of an attribute."
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:23
-# c00da40ce6a140518281b315a252ca54
+# 6bbd80f557fb4026bc36ea8abdac4de9
 msgid "Use Attribute Files"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_when_to_use.rst:5
-# bddc74962b804faa8041c47f3fa03b8b
+# 604ca0c73143490dbf069cfdef8b1707
 msgid "An attribute is a specific detail about a node, such as an IP address, a host name, a list of loaded kernel modules, the version(s) of available programming languages that are available, and so on. An attribute may be unique to a specific node or it can be identical across every node in the organization. Attributes are most commonly set from a cookbook, by using |knife|, or are retrieved by |ohai| from each node prior to every |chef client| run. All attributes are indexed for search on the |chef server|. Good candidates for attributes include:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_when_to_use.rst:7
-# bd4c3fd264454c3b80ba666dfd5f4e6b
+# ee2da373e1084abbaaaba85579655ee1
 msgid "any cross-platform abstraction for an application, such as the path to a configuration files"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_when_to_use.rst:8
-# 89511dd104a24611909476bfd6e73af9
+# ea82439526af463ea1fe1b2e71dad794
 msgid "default values for tunable settings, such as the amount of memory assigned to a process or the number of workers to spawn"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_when_to_use.rst:9
-# 59a2c805f5624902a4a5b464f7b513ba
+# ceef54b9665043e38f0ac04e2c5366f1
 msgid "anything that may need to be persisted in node data between |chef client| runs"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_when_to_use.rst:11
-# 05d70309ccf14ec481299833e42979d3
+# 72cc6aec274e4c25b12c617f99a2f8be
 msgid "In general, attribute precedence is set to enable cookbooks and roles to define attribute defaults, for normal attributes to define the values that should be specific for a node, and for override attributes to force a certain value, even when a node already has that value specified."
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_when_to_use.rst:13
-# d1f3e01796be493992856d69256f15da
+# a10f6b34a5c643d78ae98e08ae6e6f85
 msgid "One approach is to set attributes at the same precedence level by setting attributes in a cookbook's attribute files, and then also setting the same default attributes (but with different values) using a role. The attributes set in the role will be deep merged on top of the attributes from the attribute file, and the attributes set by the role will take precedence over the attributes specified in the cookbook's attribute files."
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_when_to_use.rst:15
-# 2ed34c04000847b5830df394deb9d949
+# 708718cb83a0446a83bbd6028a0078dc
 msgid "Another (much less common) approach is to set a value only if an attribute has no value. This can be done by using the ``_unless`` variants of the attribute priority methods: ``default_unless``, ``set_unless``, and ``override_unless``. These variants should be used carefully because when they are used, the attributes applied to nodes may become out of sync with the values in the cookbooks as these cookbooks are updated. This approach can create situations where two otherwise identical nodes end up having slightly different configurations. This approach can also be a challenge to debug, so it is recommended to use the ``_unless`` variants carefully (and only when they are really necessary)."
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:26
-# 10f4eac12fef454c99f66c5884b46ab9
+# 180d9ca209b3491b96349e12b31b33f3
 msgid "|note see_attributes_overview|"
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:29
-# 362ebe21fa3842928912a92cdc8c22f3
+# a204bb67a9e34a63bf7d80558d2f905c
 msgid "Attribute Types"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:4
-# ebc1dde76149466dbb4dbd8e417a839c
+# 436fd8568e634e02ad898fa011b9f8a3
 msgid "Attribute types can be any of the following:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:10
-# 039c38688dff412cb931f87893e9b521
+# c2754ef967b74d9ca46f0686017b138d
 msgid "Attribute Type"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:11
-# 8c03de7c0b9c4967bc8f5a5561e6639b
+# d5409b09a11d45c3be5822d0d076ef5a
 msgid "Description"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:12
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst:7
-# a67a2bc3fb63496dbe58b3fff2548aee
-# fe17425d60fd4fef8da1af943cc0f39d
+# 6cf6e0fb6d6c4abf90836a978d4ecd46
+# 8fe9a7c0d40348b194a401987f4c767b
 msgid "``default``"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:13
-# 02ce7a93fec94c2aaf19e6a17dd1a83d
+# b618f3299b3349fe8126797d01fa1e15
 msgid "|attribute_type default|"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:14
-# 670a53d1f87b4b0d9c2f241d6f168050
+# 5ea8d0953b03479f8b2d94560ae38f40
 msgid "``force_default``"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:15
-# 3c582439746a4e3cb2e70932a1b26c96
+# 58da773dd7214039a77180c3a1b9e288
 msgid "|attribute_type force_default|"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:16
-# 0223e33c8d49420db7182c62187b0a70
+# 24f5c5f895f24ae8bb0dc16f2a3e62ec
 msgid "``normal``"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:17
-# 79dc3e6892b54dc29fc6f076711ba839
+# ea40440ce4cd4871992b5f7d1eba2267
 msgid "|attribute_type normal|"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:18
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst:6
-# a2fc7dd22ea54063ba7960cbda21cc6f
-# 433243de95f54968b63e819b549733ab
+# 055208475bb849178fc6c37f8d9d11ed
+# a0c07135520048fca2c9069a0164c35f
 msgid "``override``"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:19
-# 181cab8b9f59441282e12c63a1b2f89d
+# 7a2c2a0b7db6408f8ef95ee7db749278
 msgid "|attribute_type override|"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:20
-# 6083a2c39c5d4e8991feb8aa13670e2a
+# 27fb39bfb74a476393076044642c47bc
 msgid "``force_override``"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:21
-# 705d9e68eaad4bc99410ee57d4851d1d
+# d13cba3707a04454a0d17074246a5f38
 msgid "|attribute_type force_override|"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:22
-# aa915c00b51243bd9bf33411739ed2ce
+# 74e6e136b2cc46ef977cc9a9123a27e3
 msgid "``automatic``"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_type.rst:23
-# 5fe357abf4c64285b6b15a0eba2c7ad5
+# d67e4979638247a289578066e69ace70
 msgid "|attribute_type automatic|"
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:33
-# c7515b6b5dd04702b9f230aec0b52b22
+# c3bd71d06b574be59adfd2e866a796e0
 msgid "Attribute Persistence"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_persistence.rst:4
-# 9d160ff7095d4308ae7919cdf72afdcd
+# e380aa83f5b049ef80e555d7c2823094
 msgid "At the beginning of a |chef client| run, all default, override, and automatic attributes are reset. The |chef client| rebuilds them using data collected by |ohai| at the beginning of the |chef client| run and by attributes that are defined in cookbooks, roles, and environments. Normal attributes are never reset. All attributes are then merged and applied to the node according to attribute precedence. At the conclusion of the |chef client| run, all default, override, and automatic attributes disappear, leaving only a collection of normal attributes that will persist until the next |chef client| run."
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:37
-# ccf6ead719304bccbe6b6aa27621f626
+# af10d9c2fe5a4cde8de8de55ad43dd53
 msgid "Attribute Precedence"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:4
-# 94a57cd844cf4f48bb97d03ed02d74ce
+# ab738365eaea4a86b1404ad3ceefe7e6
 msgid "Attributes are always applied by the |chef client| in the following order:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:6
-# 707b07c6a7b54963bda69405d5d78ed7
+# 807acb1c954c4d11971428e4bf3466c0
 msgid "A ``default`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:7
-# e6aea39183da43608cabcf449b2665ac
+# 4674c521e3bf4ac188195bf2529b5786
 msgid "A ``default`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:8
-# ad0657ea3123464aadf30b57a0acf182
+# f726f2b49d27476f9ebe74e58aa1c427
 msgid "A ``default`` attribute located in an environment"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:9
-# 2c637ee440cd44bea8dd62a2bf8e635a
+# c1d1e1b15cb24a6d8ee6a9211d4eec2a
 msgid "A ``default`` attribute located in role"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:10
-# d0e8120cdf7a4981a8f256c7c1ba7a7e
+# 4baaa7bbbd064210882892af872f17eb
 msgid "A ``force_default`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:11
-# c7d3337a2bd744c5899295247f8923d6
+# 6f3e7e7d451445f8853beb502c4c5889
 msgid "A ``force_default`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:12
-# d9b00738b8264e5e9a816784328634de
+# 3cdb0e40c421454bb4ee42a4e97d26fb
 msgid "A ``normal`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:13
-# ac60e30dd7234d39a2ac5c0bd4f73dd2
+# 531950db57e444399ec0b95deffc4ebb
 msgid "A ``normal`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:14
-# 13ddc6e5d6c54bc6bab311a492f2571f
+# 7f112cfa0e7548aabb3cb78741d960d6
 msgid "An ``override`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:15
-# 9ed1df8b610746a0a7c2800351033c0d
+# 6352b545affd43d286493f6cac0829c0
 msgid "An ``override`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:16
-# 6e74b27f95a24ec39a8a9bb20000d68e
+# dc5851f0c64049278b5d044ea2547f37
 msgid "An ``override`` attribute located in a role"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:17
-# a4ff587800254a688ea81ecdea82f934
+# 83e0b97ec16d423babdb4ba26dec98db
 msgid "An ``override`` attribute located in an environment"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:18
-# 09d3870983f04eb1b9109bd58a9742ec
+# 3d1ad5de14214766a86cd4357d003f5d
 msgid "A ``force_override`` attribute located in a cookbook attribute file"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:19
-# 127055c07963484c9f7886e00a05cd6b
+# fd30f2b7b66e4ce9bc5507d0ff782d70
 msgid "A ``force_override`` attribute located in a recipe"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:20
-# c851d83d5b774ca78190f777841ff38a
+# 09efee5f0a5a4f3cb83eefce3c2cabc0
 msgid "An ``automatic`` attribute identified by |ohai| at the start of the |chef client| run"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:22
-# cc740a115b87470b8b5f96b23c301491
+# 498d987a7ab948228baf367a2941d2ff
 msgid "where the last attribute in the list is the one that is applied to the node."
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:24
-# 7bd746c00c9a4927bbb631de91c86146
+# e0fd30d4a4c4463789f314fb6469bb46
 msgid "The attribute precedence order for roles and environments is reversed for ``default`` and ``override`` attributes. The precedence order for ``default`` attributes is environment, then role. The precedence order for ``override`` attributes is role, then environment. Applying environment ``override`` attributes after role ``override`` attributes allows the same role to be used across multiple environments, yet ensuring that values can be set that are specific to each environment (when required). For example, the role for an application server may exist in all environments, yet one environment may use a database server that is different from other environments."
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:26
-# d86e889c9a284bc0aa21be033762ff9f
+# b64814a3488946119057109bb5a8729b
 msgid "Attribute precedence, viewed from the same perspective as the overview diagram, where the numbers in the diagram match the order of attribute precedence:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_precedence.rst:30
-# f6c9c15e6def40888abebaa97a7dbea5
+# 5fc63f759327451cb9fa53f858378c86
 msgid "Attribute precedence, when viewed as a table:"
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:41
-# 5ff3770a3a4344099ce614fc11efc444
+# f913b0085b2b4d868b4d6ac63d0b753c
 msgid "Attribute File Methods"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst:4
-# 890f1f2a357b466fa06928864f1793ba
+# 092504a9c88e4361a4c619f6a8654e98
 msgid "Use the following methods within the attributes file for a cookbook or within a recipe. These methods correspond to the attribute type of the same name:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst:8
-# 39ef71c6877a4c5c96f6d9d6cfda6ba2
+# 2aa0e7ca6eea43e6bf4529d1369c9ebc
 msgid "``normal`` (or ``set``, where ``set`` is an alias for ``normal``)"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst:9
-# a0fdb1f8771f4700a192b414c79c5ddb
+# feac21a95b984f829899c9a8643c583d
 msgid "``_unless``"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst:10
-# 4596039d2f6c4f36b11c78c5656934e2
+# 05a894bdcdbd46cf80bbe6726f474e7c
 msgid "``attribute?``"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods.rst:12
-# 96cd6740301f4bbebbfbf704e7df52d3
+# 4257965a08344112be9ff1cb82041d96
 msgid "Additionally, there are ``_unless`` methods available."
 msgstr ""
 
 #: ../source/essentials_cookbook_attribute_files.rst:45
-# 769115812e4a4c378994427878967cb5
+# fbe558b4ce67440e95a8e652049675bd
 msgid "``attribute?`` Method"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_attribute.rst:4
-# 5d416a91e7f1402fa55490d7e4405d1d
+# 0a5c2a24b6294f319b1d8050024c7eb0
 msgid "A useful method that is related to attributes is the ``attribute?`` method. This method will check for the existence of an attribute, so that processing can be done in an attributes file or recipe, but only if a specific attribute exists."
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_attribute.rst:6
-# 3991bfc9f0154394a26e05642445da0c
+# ac0649d2dbb0462ab33b579761c4d5e0
 msgid "Using ``attribute?()`` in an attributes file:"
 msgstr ""
 
 #: ../../includes_cookbooks/includes_cookbooks_attribute_file_methods_attribute.rst:14
-# 503bee29b94d48ffb8b27fafb66969fd
+# 2c12fb6c147d422c8dc201157afa184a
 msgid "Using ``attribute?()`` in a recipe:"
 msgstr ""
 
