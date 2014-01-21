@@ -11,7 +11,7 @@ For a front-end server:
 
    server "fe1.example.com",
      :ipaddress => "192.168.4.2",
-     :role => "fronted"
+     :role => "frontend"
 
 For a back-end server that is not marked to run the bootstrap:
 
