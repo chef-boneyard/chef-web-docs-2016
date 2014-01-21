@@ -4,19 +4,16 @@
 The following table lists the supported platforms for |chef server oec|:
 
 .. list-table::
-   :widths: 280 60 60 100
+   :widths: 280 100 120
    :header-rows: 1
  
    * - Platform
-     - p
-     - m
-     - pv
+     - Architecture
+     - Version
    * - |redhat enterprise linux| / |centos|
-     - ``el``
      - ``x86_64``
      - ``5``, ``6``
    * - |ubuntu|
-     - ``ubuntu``
      - ``x86_64``
      - ``10.04``, ``11.04``, ``12.04``
 
