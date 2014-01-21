@@ -24,122 +24,103 @@ Attribute Precedence
 -----------------------------------------------------
 .. include:: ../../includes_node/includes_node_attribute_precedence.rst
 
-Install |ohai|
+Custom Plugins
 =====================================================
-|ohai| is a requirement for the |chef client| and must be installed whenever (and wherever) the |chef client| is installed. |ohai| is always installed as part of the |chef client| installation, but it may be installed separately.
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
 
-Install from Github
+Syntax
 -----------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_from_git.rst
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_syntax.rst
 
-Install from RubyGems
+|dsl ohai| Methods
 -----------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_from_rubygem.rst
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai.rst
 
-Install on Microsoft Windows
------------------------------------------------------
-.. include:: ../../step_ohai/step_ohai_install_on_windows.rst
-
-.. deprecate the following sections on v7 release: "Create Ohai Plugins", "Create a Simple Plugin", "Load a Plugin", "Use a Mash", "Extend a Plugin", and "Work with Platforms" and replace with a link to docs.opscode.com/ohai_custom.html.
-
-Create |ohai| Plugins
-=====================================================
-.. this is Ohai 6 information that will be deprecated and replaced by Ohai 7 information
-
-|ohai| is a requirement for the |chef client| and is installed whenever (and wherever) the |chef client| is installed. |ohai| can also be installed separately.
-
-Create a Simple Plugin
------------------------------------------------------
-.. this is Ohai 6 information that will be deprecated and replaced by Ohai 7 information
-
-When additional data about a system infrastructure is required, a custom |ohai| plugin can be used to gather that information. An |ohai| plugin is a |ruby| DSL. For example, the following is about as simple as it gets:
-
-.. code-block:: ruby
-
-   provides "orly"
-   orly "yeah, rly."
-
-
-Run a Plugin
------------------------------------------------------
-.. this is Ohai 6 information that will be deprecated and replaced by Ohai 7 information
-
-To load a plugin, create a "plugins" folder and put the above code in the plugins/orly.rb file.
-
-Now to fire up irb (and assuming the directory "plugins" is the current folder; if not adjust your path):
-
-.. code-block:: ruby
-
-   >> require 'ohai'
-   >> Ohai::Config[:plugin_path] << './plugins'
-   >> o = Ohai::System.new
-   >> o.all_plugins
-   >> o.orly #=> "yea, rly"
-
+collect_data
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data.rst
 
 Use a Mash
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst
+
+Examples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_example.rst
+
+require
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_require.rst
+
+/common Directory
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_require_common.rst
+
+Shared Methods
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_shared_methods.rst
+
+Log Entries
 -----------------------------------------------------
-.. this is Ohai 6 information that will be deprecated and replaced by Ohai 7 information
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_logs.rst
 
-Most of the information we want to lookup would be nested in some way, and |ohai| tends to do this by storing the data in a mash. This can be done by creating a new mash and setting the attribute to it.
+rescue
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_logs_rescue.rst
 
-In plugins/canhas.rb:
-
-.. code-block:: ruby
-
-   provides "canhas"
-   canhas Mash.new
-   canhas[:burger] = "want"
-
-
-Work with Platforms
+Examples 
 -----------------------------------------------------
-.. this is Ohai 6 information that will be deprecated and replaced by Ohai 7 information
+The following examples show different ways of building |ohai| plugins.
 
-One of the main reasons for using |ohai| is to gather information regardless of the operating system. Luckily this is made easy by optionally loading recipes based on the platform. With that platform specific calls abstracted away you can keep your code DRY.
+``collect_data`` Blocks
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_multiple_collect_data_blocks.rst
 
-The built-in plugins that come with |ohai| use the following trick to load platform specific code. It works by creating a base cross-platform plugin that loads the platform specific plugin from a subdirectory. In plugins/lolcode.rb:
+Use a ``mixin`` Library
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_use_mixin_library.rst
 
-.. code-block:: ruby
-
-   provides "languages/lolcode"
-   require_plugin "languages"
-   require_plugin "#{os}::lolcode"
-   
-   languages[:lolcode] = Mash.new unless languages[:lolcode]
-   languages[:lolcode][:version] = "TEH VERSHIONS"
-
-In plugins/darwin/lolcode.rb:
-
-.. code-block:: ruby
-
-   provides "languages/lolcode"
-   require_plugin "languages"
-   languages[:lolcode] = Mash.new unless languages[:lolcode]
-   languages[:lolcode][:platform] = "MACKERS"
-
-Checkout the |ohai| os.rb file for the list of platform names.
-
-All of these examples can be found in the ``ohai-plugin-howto`` |github| repo, you should be able to clone that and run the ruby scripts in the repo's root directory. If you figure out any other handy tricks please fork the project and add them.
+Get Kernel Values
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_kernels.rst
 
 
-Extend a Plugin
+ohai Resource
+=====================================================
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_ohai.rst
+
+Syntax
 -----------------------------------------------------
-.. this is Ohai 6 information that will be deprecated and replaced by Ohai 7 information
+.. include:: ../../includes_resources/includes_resource_ohai_syntax.rst
 
-|ohai| makes it very easy to extend a current plugin with new information. Simply require the plugin you want to extend and extend away. In this example we want to add LOLCODE to languages.
+Actions
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_ohai_actions.rst
 
-In plugins/lolcode.rb:
+Attributes
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_ohai_attributes.rst
 
-.. code-block:: ruby
+Providers
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_ohai_providers.rst
 
-   provides "languages/lolcode"
-   require_plugin "languages"
-   languages[:lolcode] = Mash.new
-   languages[:lolcode][:version] = "TEH VERSHIONS"
+Examples
+-----------------------------------------------------
+|generic resource statement|
+
+**Reload Ohai**
+
+.. include:: ../../step_resource/step_resource_ohai_reload.rst
+
+**Reload Ohai after a new user is created**
+
+.. include:: ../../step_resource/step_resource_ohai_reload_after_create_user.rst
 
 
-The ohai Cookbook
+ohai Cookbook
 =====================================================
 .. include:: ../../step_ohai/step_ohai_download_cookbook.rst
 
@@ -155,6 +136,27 @@ Add |ohai| to a Run-list
 -----------------------------------------------------
 .. include:: ../../step_ohai/step_ohai_add_to_run_list.rst
 
-Community |ohai| Plugins
+
+ohai Command Line Tool
 =====================================================
-.. include:: ../../includes_ohai/includes_ohai_plugins.rst
+.. include:: ../../includes_ctl_ohai/includes_ctl_ohai.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_ctl_ohai/includes_ctl_ohai_options.rst
+
+Examples
+-----------------------------------------------------
+The following examples show how to use the |ohai| command-line tool:
+
+**Run a plugin independently of a chef-client run**
+
+.. include:: ../../step_ohai/step_ohai_run_plugin.rst
+
+
+|ohai| Settings in |client rb|
+=====================================================
+
+.. include:: ../../includes_config/includes_config_rb_ohai.rst
+
+.. include:: ../../includes_config/includes_config_rb_ohai_settings.rst
