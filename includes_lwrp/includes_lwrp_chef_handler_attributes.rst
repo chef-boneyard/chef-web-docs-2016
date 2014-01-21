@@ -24,4 +24,4 @@
  
           arguments [:key1 => 'val1', :key2 => 'val2]
    * - ``supports``
-     - |supports chef_handler| Default value: ``{ :report => true, :exception => true }``.
+     - |supports chef_handler| Possible values: ``:exception``, ``:report``, ``:both`` (exception **and** report handlers), or ``:start``. Default value: ``{ :report => true, :exception => true }``.
