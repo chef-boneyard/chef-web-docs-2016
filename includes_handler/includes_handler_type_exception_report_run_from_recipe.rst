@@ -13,13 +13,11 @@ To use the |lwrp chef handler| resource in a recipe, add code similar to the fol
      action :enable
    end
 
-For example, a handler for |growl| needs to be installed at the beginning of the |chef client| run using the |resource package_gem| resource:
+For example, a handler for |growl| needs to be enabled at the beginning of the |chef client| run::
 
 .. code-block:: ruby
 
-   gem_package "chef-handler-growl"
-     action :nothing
-   end.run_action(:install)
+   chef_gem "chef-handler-growl"
 
 and then is activated in a recipe by using the |lwrp chef handler| resource:
 
