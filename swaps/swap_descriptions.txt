@@ -21,6 +21,7 @@
 .. |all data bags| replace:: Indicates that all data bags found at the specified path will be uploaded.
 .. |all environments| replace:: Indicates that all environments found at the specified path will be uploaded.
 .. |allow_downgrade| replace:: |resource yum_package| resource only. Indicates that |yum| can downgrade a package to satisfy requested version requirements.
+.. |alwaysprompt| replace:: Indicates whether |yum| will prompt for confirmation when the list of packages to be installed exactly matches the list of packages given from the command line.
 .. |amqp_host| replace:: The IP address for the host to which a connection is made.
 .. |amqp_pass| replace:: The password for the ``amqp_user``.
 .. |amqp_port| replace:: The port number for the host to which a connection is made.
@@ -47,6 +48,7 @@
 .. |arguments windows_autorun| replace:: The arguments for a program.
 .. |arguments chef_handler| replace:: An array of arguments that are passed to the initializer for the handler class.
 .. |arguments windows_shortcut| replace:: The command-line arguments associate with a shortcut.
+.. |assume_yes| replace:: Indicates whether |yum| will prompt for confirmation of critical actions.
 .. |atomic_update| replace:: Indicates whether atomic file updates are used on a per-resource basis. Set to ``true`` for atomic file updates. Set to ``false`` for non-atomic file updates. (This setting overrides ``file_atomic_update``, which is a global setting found in the |client rb| file.)
 .. |attribute_show| replace:: The attribute (or attributes) to show.
 .. |attribute python_install_method| replace:: The method used to install |python|.
@@ -91,7 +93,8 @@
 .. 
 
 .. |backlog_connections| replace:: The maximum number of pending connections.
-.. |backups_kept| replace:: The number of backups to be kept. Set to ``false`` to prevent backups from being kept. 
+.. |backups_kept| replace:: The number of backups to be kept. Set to ``false`` to prevent backups from being kept.
+.. |bandwidth_yum| replace:: The maximum amount of network bandwidth (in bytes).
 .. |before_fork| replace:: The object that is called by the master process before executing the |unicorn| binary.
 .. |before_migrate| replace:: A block of code (or a path to a file that contains code) that is run before a migration.
 .. |before_restart| replace:: A block of code (or a path to a file that contains code) that is run before restarting.
@@ -123,6 +126,7 @@
 
 
 .. |ca_trust_file| replace:: The |ca| trust file used for |ssl| transport.
+.. |cachedir| replace:: The directory in which |yum| stores cache and db files.
 .. |CATEGORY| replace:: The cookbook category: ``Databases``, ``Web Servers``, ``Process Management``, ``Monitoring and Trending``, ``Programming Languages``, ``Package Management``, ``Applications``, ``Networking``, ``Operations Systems and Virtualization``, ``Utilities``, or ``Other``.
 .. |cfg_cmd| replace:: A command to be passed in after ``appcmd.exe set config``.
 .. |checkpoint_completion_target| replace:: A completion percentage that is used to determine how quickly a checkpoint should finish in relation to the completion status of the next checkpoint. For example, if the value is ``0.5``, then a checkpoint will attempt to finish before 50% of the next checkpoint is done.
@@ -139,6 +143,7 @@
 .. |chef_zero_enabled| replace:: Indicates whether |chef zero| is enabled.
 .. |chef_zero_port| replace:: The port on which |chef zero| will listen.
 .. |chunk_size| replace:: The chunk size.
+.. |clean_requirements_on_remove| replace:: Indicates whether package dependencies are also removed when a package is removed.
 .. |client| replace:: Use to create a client configuration. This will read from the |knife rb| config file to generate a config file suitable for use in |path chef client rb|, and will then copy the validation certificate into the specified directory.
 .. |client_key| replace:: The location of the file which contains the client key.
 .. |client_registration_retries| replace:: The number of times a |chef client| should attempt to register with a |chef server|.
@@ -147,6 +152,18 @@
 .. |code erlang_call| replace:: The code to be executed on a node located within a distributed |erlang| system.
 .. |collectstatic| replace:: Indicates the behavior of the ``staticfiles`` application. If ``true``, it will invoke ``manage.py`` with ``collectstatic -- noinput``.
 .. |color| replace:: Indicates whether colored output will be used.
+.. |color_list_available_downgrade| replace:: The color used for a package downgrade.
+.. |color_list_available_install| replace:: The color used for a package install.
+.. |color_list_available_reinstall| replace:: The color used for a package reinstall.
+.. |color_list_available_upgrade| replace:: The color used for a package upgrade.
+.. |color_list_installed_extra| replace:: The color used when a package to be installed does not match an available package with the same name and architecture.
+.. |color_list_installed_newer| replace:: The color used when a package to be installed are newer than an available package with the same name and architecture.
+.. |color_list_installed_older| replace:: The color used when a package to be installed are older than an available package with the same name and architecture.
+.. |color_list_installed_reinstall| replace:: The color used when a package to be installed are same version as an available package with the same name and architecture.
+.. |color_search_match| replace:: The color used for text matches in search.
+.. |color_update_installed| replace:: The color used for a package in the updates list, which are already installed.
+.. |color_update_local| replace:: The color used for a package in the updates list, which are already downloaded.
+.. |color_update_remote| replace:: The color used for a package in the updates list, which need to be downloaded.
 .. |command options| replace:: One (or more) additional options that are passed to the command.
 .. |command parameters| replace:: One (or more) additional parameters that are passed to the command.
 .. |command service_init| replace:: The path to the init script associated with the service.
@@ -157,6 +174,7 @@
 .. |command service_status| replace:: The command used to check the run status for a service.
 .. |command_or_path| replace:: The command to be run or the path to a file that contains the command to be run.
 .. |commands sudo| replace:: An array of commands that the user or group can execute using |sudo cmd|. This value must use the full path for each command, otherwise the resulting fragment will fail validation.
+.. |commands_yum| replace:: A list of commands to run when no functional commands are specified on the command line.
 .. |comment user| replace:: One (or more) comments about the user.
 .. |components array| replace:: An array of components. For example: ``["main", "street"]``.
 .. |config chef-client| replace:: The configuration file to use.
@@ -259,6 +277,7 @@
 .. |day cron| replace:: The day of month at which the |cron| entry should run (1 - 31).
 .. |db_pool_size| replace:: The number of open connections to |postgresql| that are maintained by the |service erchef| service.
 .. |debug_enabled| replace:: Indicates whether debugging is turned on.
+.. |debug_level| replace:: The output level for debug messages.
 .. |debug settings_template| replace:: Indicates that the default settings template will control debugging.
 .. |defaults| replace:: Indicates that |knife| will use the default value, instead of asking a user to provide one.
 .. |delete_local_and_remote| replace:: Indicates that both local and remote copies of an object should be deleted.
@@ -275,9 +294,6 @@
 .. |description vlan| replace:: The description of the VLAN.
 .. |description windows_shortcut| replace:: A description of the |windows| shortcut.
 .. |description yum_repository| replace:: A description of the |yum| repository.
-
-
-
 .. |details cloudkick_check| replace:: A |json| object with data specific to a |cloudkick| check.
 .. |device aws_ebs_volume| replace:: The local block device to be attached to an |amazon ebs| volume.
 .. |device ifconfig| replace:: The network interface to be configured.
@@ -305,6 +321,8 @@
 .. |directory daemontools| replace:: The directory in which the service is set up.
 .. |disable plugin_ohai| replace:: An array of |ohai| plugins to be disabled on a node.
 .. |disable-bootstrap| replace:: Indicates that the bootstrap process should be disabled.
+.. |diskspacecheck| replace:: Indicates whether |yum| checks for sufficient disk space before a transaction is run.
+.. |distroverpkg| replace:: The package used by |yum| to determine the version for a distribution.
 .. |distributed_erlang_node| replace:: Indicates that a node is a distributed |erlang| node.
 .. |distro| replace:: The template file to be used during a bootstrap operation. The following distributions are supported: ``chef-full`` (the default bootstrap), ``centos5-gems``, ``fedora13-gems``, ``ubuntu10.04-gems``, ``ubuntu10.04-apt``, ``ubuntu12.04-gems``, and the name of a custom bootstrap template file. When this option is used, |knife| will search for the template file in the following order: the ``bootstrap/`` folder in the current working directory, the ``bootstrap/`` folder in the |chef repo|, the ``bootstrap/`` folder in the ``~/.chef/`` directory, or a default bootstrap file. Do not use the ``--template-file`` option when ``--distro`` is specified.
 .. |dns_zone| replace:: The DNS zone.
@@ -328,6 +346,7 @@
 .. |editor| replace:: The |chef editor| that is used for all interactive commands.
 .. |effective_cache_size postgresql| replace:: The size of the disk cache that is used for data files.
 .. |email| replace:: The email address for the individual who maintains the cookbook. This option will place an email address in each of the pre-created files. If this option is not specified, an email name of "your_email" will be used instead; it can be easily modified later.
+.. |enable_group_conditionals| replace:: Indicates whether |yum| allows conditional packages.
 .. |enable_package_groups| replace:: Indicates whether |yum| will allow the use of package groups for this repository.
 .. |enable_reporting| replace:: Indicates that data collection reporting is enabled during a |chef client| run.
 .. |enable_selinux_file_permission_fixup| replace:: |selinux| environments only. Indicates whether the |chef client| will attempt to apply the correct file permissions to an updated file by using the ``restorecon`` command. Set this value to ``false`` to prevent the |chef client| from attempting this action.
@@ -346,6 +365,8 @@
 .. |environment set_shell| replace:: Use to set the ``SHELL`` environment variable.
 .. |environment variables| replace:: A |hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``. (These variables must exist for a command to be run successfully.)
 .. |ephemeral device| replace:: A comma-separated list of device locations to be mapped to ephemeral devices.
+.. |errorlevel| replace:: The output level for error messages.
+.. |exactarch| replace:: Indicates whether |yum| will update only packages that match the architecture already installed.
 .. |exec| replace:: A string of code that will be executed.
 .. |exclude_package_list| replace:: A space-separated list of packages to be excluded from updates and installs.
 .. |execute chef_apply| replace:: Use to execute a resource using a string.
@@ -440,8 +461,10 @@
 .. |group deploy| replace:: The system group that is responsible for the checked-out code.
 .. |group ids| replace:: A comma-separated list of security group identifiers.
 .. |group_members| replace:: Indicates that users are included in the group.
+.. |group_package_types| replace:: The types of packages installed when ``groupinstall`` is called. Possible values: ``default``, ``mandatory``, and ``optional``.
 .. |group resource link| replace:: A string or ID that identifies the group associated with a symbolic link.
 .. |grouping| replace:: Adds a title and description to a group of attributes within a namespace. Takes a name (along with the / notation that defines a nested grouping), a title, and a short description.
+.. |groupremove_leaf_only| replace:: Indicates whether all packages in a group will be removed. Set this value to ``1`` to remove only those packages that are not required by another package.
 .. |groups| replace:: A comma-separated list of security groups.
 .. |gunicorn desc| replace:: |gunicorn| is a web service gateway interface server for |unix| that is a pre-fork worker model from the |ruby| |ruby unicorn| project.
 .. |gzip compression_level| replace:: The compression level used with |gzip|, from least amount of compression (``1``, fastest) to the most (``2``, slowest).
@@ -483,6 +506,9 @@
 .. |helpers| replace:: Use to define a helper module inline or in a library. For example, an inline module: ``helpers do``, which is then followed by a block of |ruby| code. And for a library module: ``helpers(MyHelperModule)``.
 .. |hide_healthy| replace:: Indicates that nodes on which a |chef client| run has occurred within the previous hour will be hidden.
 .. |hint| replace:: An |ohai| hint to be set on the target of the bootstrap. The hint is contained in a file and is formatted as |json|: ``{"attribute":"value","attribute":"value"...}``. ``HINT_NAME`` is the name of the hint and ``HINT_FILE`` is the name of the hint file located at ``/etc/chef/ohai/hints/HINT_FILE.json``. Use multiple ``--hint`` options in the command to specify multiple hints.
+.. |history_list_view| replace:: Use to set which column of information is displayed in the |yum| history list: ``cmds`` (display the command-line for the transaction), ``single-user-commands`` (display users, if more than one), or ``users`` (display the user who initiated the transaction).
+.. |history_record| replace:: Indicates whether |yum| should record history entries for transactions. This attribute typically requires extra disk space and may take longer to process than when this attribute is not used; however, when this attribute is not enabled, |yum| may not be able to provide warnings for problems that may arise.
+.. |history_record_packages| replace:: A list of package names that should be recorded as having helped the transaction.
 .. |home_directory| replace:: The location of the home directory.
 .. |host_header| replace:: The host header, domain, or host name to which a site is mapped.
 .. |host vcloud| replace:: The |vcloud| API endpoint.
@@ -544,6 +570,9 @@
 .. |inherits windows security| replace:: Indicates that a file inherits rights from its parent.
 .. |initial| replace:: Use to create a |chef api client|, typically an administrator client on a freshly-installed |chef server|.
 .. |input file| replace:: The name of a file to be used with the ``PUT`` or a ``POST`` request.
+.. |installonly_limit| replace:: The number of packages listed in ``installonlypkgs``.
+.. |installonlypkgs| replace:: A list of package provides that should only be installed (and never updated).
+.. |installroot| replace:: Use to specify an alternate ``installroot``.
 .. |installer_type windows| replace:: The type of windows installation package: ``:msi``, ``:inno``, ``:nsis``, ``:wise``, ``:installshield``, or ``:custom``. If this value is not specified, the provider will attempt to identify the installer type on its own and will use the best match. If this value cannot be properly specified, use the ``:custom`` value to pass a value to the ``installer_type`` attribute and then the ``options`` attribute to set the proper flags for a silent or quiet installation.
 .. |internal-ip-address| replace:: A static IP address that is provided by |google compute engine|.
 .. |interpreter| replace:: The script interpreter to be used during code execution.
@@ -583,10 +612,13 @@
 .. K
 .. 
 
+.. |keepalive| replace:: Indicates whether HTTP keepalive is used (if available).
 .. |keepalive request_time| replace:: The amount of time (in seconds) to wait for requests on a |keepalived| connection.
+.. |keepcache| replace:: Indicates whether the cache of headers and packages are kept after a successful installation.
 .. |keep_releases| replace:: The number of releases for which a backup is kept.
 .. |kerberos-realm| replace:: The administrative domain to which a user belongs.
 .. |kerberos-service| replace:: The service principal used during |kerberos|-based authentication.
+.. |kernelpkgnames| replace:: A list of package names that are kernels.
 .. |key| replace:: The private key that |knife| will use to sign requests made by the |chef api client| to the |chef server|.
 .. |key apt_repository| replace:: The fingerprint of the key server or the URI for the |pgp| encryption key associated with the |apt| repository specified by ``repo_name``.
 .. |key eucalyptus_access_id| replace:: The access key identifier for |eucalyptus|.
@@ -641,7 +673,9 @@
 .. |local_directory| replace:: Indicates that only contents of the local directory will be returned.
 .. |local_mode| replace:: Indicates that the |chef client| will be run in local mode, which allows all commands that work against the |chef server| to also work against the local |chef repo|.
 .. |local_object| replace:: Indicates that only the local copy of an object should be deleted. (The remote copy will not be deleted.)
+.. |localpkg_gpgcheck| replace:: Indicates whether |yum| should perform a |gnu pg| signature check on local packages.
 .. |lockfile| replace:: A lock used by the |chef client| to ensure that only one instance of |chef client| or |chef solo| is modifying the system at any time. By default, the lock file is located in the ``file_cache_path`` so that intentional uses of multiple instances work automatically. If ``file_cache_path`` is located on an NF mount a different location for the lock file is recommended.
+.. |logfile_yum| replace:: The full directory and file name for the location in which |yum| should write a log file.
 .. |log_level| replace:: The level of logging that will be stored in a log file: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``.
 .. |log_location| replace:: The location in which log file output files will be saved. If this location is set to something other than ``STDOUT``, standard output logging will still be performed (otherwise there would be no output other than to a file).
 .. |log_rotation| replace:: Use to define the log rotation policy for this service. Log files are rotated when they exceed ``file_maxbytes``. The maximum number of log files in the rotation is defined by ``num_to_keep``.
@@ -828,6 +862,7 @@
 .. |max_connections| replace:: The maximum number of allowed concurrent connections.
 .. |max_retry| replace:: The maximum number of attempts made to retrieve a file before returning an error.
 .. |maximum_transmission_unit| replace:: The maximum transmission unit (MTU) for the network interface.
+.. |mdpolicy| replace:: The metadata download policy for the repository metadata index.
 .. |media location| replace:: The geographic location for a virtual machine and its services.
 .. |medium| replace:: Display more, but not all, of a node's data when searching using the default summary format.
 .. |memory mb| replace:: The amount of memory, in megabytes. Possible values: ``512``, ``1024``, ``1536``, ``2048``, ``4096``, ``8192``, ``12288``, or ``16384``.
@@ -875,7 +910,7 @@
 .. |mode windows security| replace:: The octal mode that is translated into rights for |windows| security. Values up to ``0777`` are allowed (no sticky bits) and mean the same in |windows| as they do in |unix|, where ``4`` equals ``GENERIC_READ``, ``2`` equals ``GENERIC_WRITE``, and ``1`` equals ``GENERIC_EXECUTE``. This attribute cannot be used to set ``:full_control``. This attribute has no effect if not specified, but when this attribute and ``rights`` are both specified, the effects will be cumulative.
 .. |month cron| replace:: The month in the year on which a |cron| entry should run (1 - 12).
 .. |mount_point| replace:: The directory (or path) in which the device should be mounted.
-
+.. |multilib_policy| replace:: Use to install all possible architectures for any package or only the best architecture for the platform. Possible values: ``all`` or ``best``.
 
 .. Description strings that begin with the letter N.
 .. The pattern is |nxxxx| replace:: string.
@@ -957,6 +992,7 @@
 .. |name user postgresql| replace:: The user name for the |postgresql| account.
 .. |name user rackspace| replace:: The user name for the |rackspace| account.
 .. |name user vcloud| replace:: The |vcloud| user name.
+.. |name user yum_basic_auth| replace:: The user name for basic authentication to a repository or to a URL.
 .. |name virtual_host| replace:: The name of the virtual host.
 .. |name virtual_machine| replace:: The host name for the virtual machine.
 .. |name vlan| replace:: The name of the VLAN.
@@ -1007,6 +1043,7 @@
 
 .. |oauth_key cloudkick| replace:: The |oauth| key used to authenticate to the |cloudkick| API.
 .. |oauth_secret cloudkick| replace:: The |oauth| secret used to authenticate to the |cloudkick| API.
+.. |obsoletes| replace:: Indicates whether obsoletes logic processing is used during distribution level upgrades.
 .. |onboot  ifconfig| replace:: Indicates that the network interface should be brought up on boot when this value is set to ``yes``.
 .. |once| replace:: Indicates that the |chef client| is run once and that interval and splay options are cancelled.
 .. |one_column| replace:: Indicates that only one column of results will be shown.
@@ -1020,6 +1057,7 @@
 .. |orgmapper desc_private_chef| replace:: |orgmapper| is a tool that can be used with |chef private| to provide administrative access to back-end objects. |orgmapper| can be a dangerous tool and should be used carefully. In general, anything that needs to be done around automating user creation, making permissions changes, and so on, can be done more easily using the ``knife-acl`` plugin and by using the |chef private| web interface.
 .. |os-disk-name| replace:: The operating system type of the |windows azure| OS image: ``Linux`` or ``Windows``.
 .. |override_runlist| replace:: Replace the current run list with the specified items.
+.. |overwrite_groups| replace:: Indicates whether |yum| will use all matching repositories or only the last matching repository.
 .. |owner python_virtualenv| replace:: The owner of the virtual |python| environment.
 .. |owner directory_service| replace:: The owner of a service directory and scripts.
 .. |owner file| replace:: The owner of a file.
@@ -1057,6 +1095,7 @@
 .. |password terremark| replace:: The password for the |terremark| service.
 .. |password user| replace:: The user password.
 .. |password vcloud| replace:: The |vcloud| password.
+.. |password yum_basic_auth| replace:: The password used with ``username`` for basic authentication.
 .. |patch file_array| replace:: An array of files to be used as patches for the package.
 .. |path application_physical| replace:: The physical path to the location where the application resides.
 .. |path application_virtual| replace:: The virtual path to the location where the application resides.
@@ -1095,6 +1134,7 @@
 .. |permission read| replace:: Use the |webui permission read| permission to define which users and groups may view the details of an object.
 .. |permission update| replace:: Use the |webui permission update| permission to define which users and groups may edit the details of an object. 
 .. |permissions| replace:: One (or more) permissions that will be set.
+.. |persistdir| replace:: The directory in which |yum| stores information that should persist across multiple |chef client| runs.
 .. |pin| replace:: The package version or |apt| repository to be pinned.
 .. |pin_priority| replace:: The priority for the package version or |apt| repository, in comparison to the priority for other versions of the same package or repository. The higher value will have the higher priority.
 .. |pipeline_mode| replace:: The pipeline mode with which an application pool is created.
@@ -1102,6 +1142,9 @@
 .. |platform_node| replace:: The platform on which a node is running.
 .. |platform_version| replace:: The version of the platform.
 .. |plugin reload_by_ohai| replace:: Indicates that the specified plug-ins are reloaded by |ohai|.
+.. |pluginconfpath| replace:: The list of directories in which |yum| should look for plugin configuration files.
+.. |pluginpath| replace:: The list of directories in which |yum| should look for plugin modules.
+.. |plugins_yum| replace:: Indicates whether plugins are enabled.
 .. |port chef_zero| replace:: The port on which |chef zero| will listen.
 .. |port iis| replace:: The port on which a |microsoft iis| site will listen.
 .. |port listen| replace:: The port on which the application will bind. This value must be a string in the form: ``HOST``, ``HOST:PORT``, or ``unix:PATH``.
@@ -1134,6 +1177,8 @@
 .. |private_memory| replace:: The maximum amount of private memory (in KB) that a worker process can consume before the application pool will recycle. A value of ``0`` means there is no limit.
 .. |private_network| replace:: Indicates that a private IP address is used for a bootstrap operation.
 .. |programs supervisor_group| replace:: An array of program names. Programs that are listed will become members of the group.
+.. |protected_multilib| replace:: Indicates whether |yum| will perform a check to ensure multilib packages are of the same version.
+.. |protected_packages| replace:: The list of packages that should never be completely removed by |yum|.
 .. |protocol http| replace:: The HTTP protocol type to which a site responds: ``:http`` or ``:https``.
 .. |provider resource_parameter| replace:: Use to specify a provider by using its long name. For example: ``provider Chef::Provider::Long::Name``. See the Providers section below for the list of providers available to this resource.
 .. |public-key-file| replace:: The file in which the |ssh| public key used for authentication is located.
@@ -1184,6 +1229,7 @@
 .. |record_type| replace:: The record type: ``ns``, ``childns``, ``host``, ``alias``, or ``mx``.
 .. |readme-format| replace:: The document format of the readme file: ``md`` (markdown) and ``rdoc`` (|ruby| docs).
 .. |reason windows_reboot| replace:: The reason for a |windows| reboot.
+.. |recent_yum| replace:: The age (in days) of a package, after which a package is no longer considered a "recent" package.
 .. |recipe_url| replace:: The URL location from which a remote cookbook |tar gz| will be downloaded.
 .. |recursive directory| replace:: Indicates whether parent directories are created or deleted recursively. For the ``owner``, ``group``, and ``mode`` attributes, the value of this attribute applies only to the leaf directory.
 .. |recursive registry_key| replace:: When creating a key, this value indicates whether the required keys for the specified path will be created. When using the ``:delete_key`` action in a recipe, and if the registry key has subkeys, then the value for this attribute should be set to ``true``.
@@ -1193,12 +1239,14 @@
 .. |region eucalyptus| replace:: The name of the region from which instances of hosted applications are launched.
 .. |remote resource| replace:: The remote repository to be used when synchronizing an existing clone.
 .. |remote deps_on_server| replace:: Indicates that dependencies will be determined from objects located on the |chef server| instead of the local |chef repo|.
+.. |repo_gpgcheck| replace:: Indicates whether |yum| will perform a |gnu pg| signature check on data in the repository.
 .. |repo_mode| replace:: The layout of the local |chef repo|. Possible values: ``static``, ``everything``, or ``hosted_everything``. Use ``static`` for just roles, environments, cookbooks, and data bags. By default, ``everything`` and ``hosted_everything`` are dynamically selected depending on the server type.
 .. |repository| replace:: The path to the |chef repo|.
 .. |repository git_or_svn| replace:: The alias for the repository.
 .. |repository application| replace:: The name of the sub-directory in which the pristine copy of an application’s source is kept.
 .. |repository_cache| replace:: The name of the sub-directory in which the pristine copy of an application's source is kept.
 .. |repositories maven| replace:: An array of |apache maven| repositories.
+.. |reset_nice| replace:: Indicates whether |yum| will attempt to reset the nice value to zero before running the transaction.
 .. |resource action add ifconfig| replace:: Use to run |ifconfig| to configure a network interface and (on some platforms) write a configuration file for that network interface.
 .. |resource action add route| replace:: Use to add a route.
 .. |resource action assemble mdadm| replace:: Use to assemble a previously created array into an active array.
@@ -1325,6 +1373,7 @@
 .. |rpc_password| replace:: The password for the |bittorrent| transmission account. This is often ``node['transmission']['rpc_password']``, which by default is a secure password generated for the node.
 .. |rpc_port| replace:: The port for the host to which a |bittorrent| transmission connection is made.
 .. |rpc_username| replace:: The user name for the |bittorrent| transmission account.
+.. |rpm_verbosity| replace:: Use to set the output level: ``critical``, ``debug``, ``info`` (default), ``emergency``, ``error``, or ``warn``.
 .. |ruby dsl cookbook| replace:: A version constraint for a single cookbook.
 .. |ruby dsl cookbook version| replace:: A version constraint for a group of cookbooks.
 .. |ruby dsl default attribute| replace:: Optional. A set of attributes that should be applied to all nodes, assuming the node does not already have a value for the attribute. This is useful for setting global defaults that can then be overridden for specific nodes. If more than one role attempts to set a default value for the same attribute, the last role applied will be the role to set the attribute value. When nested attributes are present, they will be preserved.
@@ -1375,6 +1424,7 @@
 .. |shell| replace:: The login shell.
 .. |show_all_images| replace:: Indicates that all fields for all images will be shown.
 .. |show_local_files| replace:: Indicates that instead of remote files, local files will be shown.
+.. |showdupesfromrepos| replace:: Indicates whether duplicate packages are shown. When false, only the newest packages are shown.
 .. |signing_ca_cert| replace:: The path to where the certificate is located. This setting is generated automatically by the |chef client| and is passed to |open ssl|.
 .. |signing_ca_country| replace:: The country code associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
 .. |signing_ca_domain| replace:: The domain associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
@@ -1387,6 +1437,7 @@
 .. |signing_ca_user| replace:: The user associated with the |ca| policy. This setting is passed by the |chef client| to |open ssl|.
 .. |size volume| replace:: The size of the volume (in gigabytes).
 .. |size disk| replace:: The size of a disk, in GB.
+.. |skip_broken| replace:: Indicates whether packages are removed from the transaction if they are causing problems.
 .. |skip-dependencies| replace:: Indicates that all cookbooks to which the installed cookbook has a dependency will not be installed.
 .. |smtp server| replace:: The |smtp| server to which a connection is made.
 .. |snapshots_to_keep| replace:: The number of snapshots to maintain. This attribute is available only when the ``:prune`` action is used.
@@ -1430,17 +1481,22 @@
 .. |ssh_port| replace:: The |ssh| port.
 .. |ssh_user| replace:: The |ssh| user name.
 .. |ssh_wrapper resource| replace:: The path to the wrapper script used when running |ssh| with |git|. The ``GIT_SSH`` environment variable is set to this.
+.. |ssl_ca_cert_yum| replace:: The path to the directory in which the certificate authorities |yum| should use to verify |ssl| certificates are located.
 .. |ssl_ca_file| replace:: The file in which the |open ssl| key is saved. This setting is generated automatically by the |chef client| and most users will not need to modify it.
 .. |ssl_ca_path| replace:: The path to where the |open ssl| key is located. This setting is generated automatically by the |chef client| and most users will not need to modify it.
 .. |ssl_certificate| replace:: The |ssl| certificate used to verify communication over HTTPS.
 .. |ssl_certificate key| replace:: The certificate key used for |ssl| communication.
 .. |ssl_certificate verify| replace:: Indicates whether SSL certificates are verified.
+.. |ssl_check_cert_permissions_yum| replace:: Indicates whether |yum| should check permissions on both local and remote paths for certificates.
 .. |ssl_ciphers| replace:: The list of supported cipher suites that are used to establish a secure connection.
 .. |ssl_client_cert| replace:: The |open ssl| |x509| certificate. This setting is generated automatically by the |chef client| and most users will not need to modify it.
+.. |ssl_client_cert_yum| replace:: The path to the |ssl| client certificate that |yum| should use to connect to repositories and/or remote sites.
 .. |ssl_client_key| replace:: The |open ssl| |x509| key. This setting is generated automatically by the |chef client| and most users will not need to modify it.
+.. |ssl_client_key_yum| replace:: The path of the location in which the |ssl| client key used by |yum| is located.
 .. ssl_verify_mode is also in the server_security.html topic.
 .. |ssl_verify_mode| replace:: The verify mode for HTTPS requests. Set to ``:verify_none`` to not send certificate requests. Set to ``:verify_peer`` to send certificate requests to a |chef client|. Set to ``:verify_api_cert`` to enable SSL validation for HTTPS connections between the |chef client| and the |chef server|. For users of hosted |chef server oec|, ``:verify_peer`` is recommended as the verification mode; depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified.
 .. |ssl_verify_mode_11-6| replace:: The verify mode for HTTPS requests. Set to ``:verify_none`` to not send certificate requests. Set to ``:verify_peer`` to send certificate requests to a |chef client|. For users of hosted |chef server oec|, ``:verify_peer`` is recommended as the verification mode; depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified.
+.. |ssl_verify_yum| replace:: Indicates whether |yum| verifies |ssl| certificates.
 .. |start| replace:: The row at which return results will begin.
 .. |startretries| replace:: The number of serial failure attempts |python supervisor| will allow when attempting to start a program before giving up.
 .. |startsecs| replace:: The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.
@@ -1471,7 +1527,7 @@
 .. |supervisor_minfds| replace:: The minimum number of file descriptors that must be available before ``supervisord`` will start successfully.
 .. |supervisor_minprocs| replace:: The minimum number of process descriptors that must be available before ``supervisord`` will start successfully.
 .. |supervisor_version| replace:: Sets the version of ``supervisor`` to install; must be version 3.0 (or higher) to use ``minprocs`` and ``minfds``.
-.. |supports chef_handler| replace:: The type of handler to be registered as: ``:report``, ``:exception`` or ``both``.
+.. |supports chef_handler| replace:: The type of handler.
 .. |supports mount| replace:: A |hash| of options for supported mount features.
 .. |supports service| replace:: A list of attributes that controls how the |chef client| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, the |chef client| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, the |chef client| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute.
 .. |supports user| replace:: A Mash where keys represent features and values are booleans that indicate if that feature is supported.
@@ -1484,6 +1540,9 @@
 .. |symlink_before_migrate| replace:: Use this attribute to map files in a shared directory to the current release directory. The symbolic links for these files will be created before any migration is run. Use ``symlink_before_migrate({})`` or ``symlink_before_migrate nil`` instead of ``symlink_before_migrate {}`` because ``{}`` will be interpreted as a block rather than an empty |hash|. Set to ``nil`` to prevent the creation of default symbolic links.
 .. |symlinks| replace:: Use this attribute to map files in a shared directory to their paths in the current release directory. This attribute runs after ``create_dirs_before_symlink`` and ``purge_before_symlink``.
 .. |syntax_check_cache_path| replace:: All files in a cookbook must contain valid |ruby| syntax. Use this setting to specify the location in which |knife| caches information about files that have been checked for valid |ruby| syntax.
+.. |syslog_device| replace:: The path of the location to which syslog messages are sent.
+.. |syslog_facility| replace:: The facility name for syslog messages.
+.. |syslog_ident| replace:: The program name for syslog messages.
 .. |system group| replace:: Indicates whether a group is a system group (``true``) or is not a system group (``false``).
 .. |system user| replace:: Indicates that a system user should be created. This attribute may be used with ``useradd`` as the provider to create a system user which passes the ``-r`` flag to ``useradd``.
 
@@ -1511,6 +1570,7 @@
 .. |template file_config| replace:: The template to use when rendering a configuration file. 
 .. |template sudo| replace:: A |erb| template file in the current cookbook (not the ``sudo`` cookbook). If this attribute is used, all other attributes will be ignored except for ``variables``.
 .. |thirty_two_bit| replace:: Indicates whether an |microsoft iis| application pool can run in 64-bit mode.
+.. |throttle| replace:: Indicates whether bandwidth throttling is enabled for downloads. When set to ``0``, bandwidth throttling is disabled. When set to an integer, along with ``k``, ``M``, or ``G``, represents the bandwidth value. For example: ``6.5k`` represents 6.5 kilobytes per second and ``4M`` represents 4 megabytes per second. Use a ``%`` to assign an integer as a percentage of total bandwidth. For example: ``80%`` will use 80% of the total available bandwidth.
 .. |time reports_end| replace:: Use to find runs with an end time less than or equal to the specified date. This option must be used in conjunction with ``--starttime`` and may define up to a 90-day time period.
 .. |time reports_start| replace:: Use to find runs with a start time greater than or equal to the specified date. This option must be used in conjunction with ``--endtime`` and may define up to a 90-day time period.
 .. |timestamp reports_unix| replace:: Indicates whether the start and end times are given as |unix| timestamps. This option may be used when the ``--endtime`` and ``--starttime`` options are used.
@@ -1528,9 +1588,11 @@
 .. |timeout worker| replace:: The amount of time (in seconds) that a worker can be silent before it is killed and restarted.
 .. |timeout worker_process| replace:: The amount of time (in seconds) before a worker process times out.
 .. |to resource link| replace:: The actual file to which the link will be created.
+.. |tolerant| replace:: Indicates whether |yum| will be tolerant of errors that may occur on the command line.
 .. |torrent_file| replace:: A URI or a local path that specifies a file in a |bittorrent| swarm that will be joined.
 .. |trace functions_on_server| replace:: Indicates whether trace functions are executed by the server.
 .. |tree| replace:: Indicates that dependencies are shown in a visual tree structure (including duplicates, if they exist).
+.. |tsflags| replace:: A comma- or space-separated list of transaction flags to be passed to the transaction set.
 .. |type module| replace:: The module type.
 .. |type package| replace:: The package type.
 
@@ -1551,6 +1613,7 @@
 .. |uri repository_apt| replace:: The URI for the |apt| repository.
 .. |uri repository_git| replace:: The URI for the |git| repository.
 .. |uri repository_svn| replace:: The URI for the |svn| repository.
+.. |url_bugtracker| replace:: The URL at which bugs are filed.
 .. |url chef_server| replace:: The URL for the |chef server|.
 .. |url http_request| replace:: The URL to which an HTTP request is sent.
 .. |url key_download| replace:: The URL from which a key is downloaded.
