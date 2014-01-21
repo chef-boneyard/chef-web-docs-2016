@@ -230,6 +230,7 @@ The following resources are platform resources with built-in providers:
 * apt_package (based on the package resource)
 * bash
 * chef_gem (based on the package resource)
+* chef_handler (available from the chef_handler cookbook)
 * cookbook_file
 * cron
 * csh
@@ -390,6 +391,119 @@ Examples
 **Install MySQL for Chef**
 
 .. include:: ../../step_resource/step_resource_chef_gem_install_mysql.rst
+
+
+
+
+chef_handler
+-----------------------------------------------------
+
+.. include:: ../../includes_resources/includes_resource_generic.rst
+
+.. include:: ../../includes_resources/includes_resource_chef_handler.rst
+
+Handler Types
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_types.rst
+
+Exception / Report
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_handler/includes_handler_type_exception_report.rst
+
+.. include:: ../../includes_handler/includes_handler_type_exception_report_run_from_recipe.rst
+
+Start
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_handler/includes_handler_type_start.rst
+
+.. include:: ../../includes_handler/includes_handler_type_start_run_from_recipe.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_handler_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_handler_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_chef_handler_attributes.rst
+
+
+Custom Handlers
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_handler/includes_handler_custom.rst
+
+Syntax
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_handler/includes_handler_custom_syntax.rst
+
+``report`` Interface
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_handler/includes_handler_custom_interface_report.rst
+
+Optional Interfaces
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The following interfaces may be used in a handler in the same way as the ``report`` interface to override the default handler behavior in the |chef client|. That said, the following interfaces are not typically used in a handler and, for the most part, are completely unnecessary for a handler to work properly and/or as desired.
+
+**``data``**
+
+.. include:: ../../includes_handler/includes_handler_custom_interface_data.rst
+
+**``run_report_safely``**
+
+.. include:: ../../includes_handler/includes_handler_custom_interface_run_report_safely.rst
+
+**``run_report_unsafe``**
+
+.. include:: ../../includes_handler/includes_handler_custom_interface_run_report_unsafe.rst
+
+``run_status`` Object
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_handler/includes_handler_custom_object_run_status.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+|generic resource statement|
+
+**Enable the CloudkickHandler handler**
+
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
+
+**Enable handlers during the compile phase**
+
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst
+
+**Handle only exceptions**
+
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst
+
+**Cookbook Versions (a custom handler)**
+
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions.rst
+
+cookbook_versions.rb:
+
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions_handler.rst
+
+default.rb:
+
+.. include:: ../../includes_handler/includes_handler_custom_example_cookbook_versions_recipe.rst
+
+**JsonFile Handler**
+
+.. include:: ../../includes_handler/includes_handler_custom_example_json_file.rst
+
+**Register the JsonFile handler**
+
+.. include:: ../../step_lwrp/step_lwrp_chef_handler_register.rst
+
+**ErrorReport Handler**
+
+.. include:: ../../includes_handler/includes_handler_custom_example_error_report.rst
+
+
 
 
 cookbook_file

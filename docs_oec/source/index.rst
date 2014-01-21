@@ -344,6 +344,7 @@ The following resources are built-in and can be used in any recipe:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_batch.html">batch</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_breakpoint.html">breakpoint</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_chef_gem.html">chef_gem</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_chef_gem.html">chef_handler</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_cookbook_file.html">cookbook_file</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_cron.html">cron</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_deploy.html">deploy</a> </br>
@@ -641,6 +642,7 @@ The following topics discuss using |chef server oec| with platforms:
    resource_batch
    resource_breakpoint
    resource_chef_gem
+   resource_chef_handler
    resource_common
    resource_cookbook_file
    resource_cron
