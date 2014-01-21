@@ -6,6 +6,7 @@ Documentation for |ohai 7|
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
+View the :doc:`release notes </release_notes>` for |ohai 7|.
 
 Automatic Attributes
 =====================================================
@@ -29,9 +30,6 @@ Attribute Precedence
 
 Custom Plugins
 =====================================================
-
-.. warning:: This topic includes descriptions of functionality will be available in an upcoming release for |ohai|.
-
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
 
 Syntax
@@ -167,8 +165,6 @@ The following examples show how to use the |ohai| command-line tool:
 .. include:: ../../includes_config/includes_config_rb_ohai.rst
 
 .. include:: ../../includes_config/includes_config_rb_ohai_settings.rst
-
-
 
 
 

@@ -41,6 +41,10 @@ Use a Mash
 -----------------------------------------------------
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst
 
+About |ohai 7| Plugins
+-----------------------------------------------------
+.. include:: ../../includes_ohai/includes_ohai_migrate_plugins_6_to_7.rst
+
 ohai Resource
 =====================================================
 .. include:: ../../includes_resources/includes_resource_generic.rst
