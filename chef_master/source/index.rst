@@ -17,7 +17,7 @@ Getting Started
 
 **learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
 
-**Docs about only:** `Open Source Chef <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef <http://docs.opscode.com/enterprise/>`_ | :doc:`Chef for OpenStack </openstack>` | :doc:`Chef for Windows </windows>`
+**Docs for:** `Open Source Chef <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef <http://docs.opscode.com/enterprise/>`_ | :doc:`Chef for OpenStack </openstack>` | :doc:`Chef for Windows </windows>`
 
 **What's new:** :doc:`Release Notes for Chef 11.8 </release_notes>`
 
