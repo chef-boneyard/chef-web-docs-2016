@@ -289,6 +289,11 @@ The following settings files are used to configure behavior for the |chef client
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_client.html">client.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_solo.html">solo.rb</a> </br>
 
+|ohai| collects important data about every node:
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ohai.html">About Ohai</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ohai_custom.html">Build Custom Ohai Plugins</a> </br>
+
 The following command-line tools can be run on any node:
 
 .. raw:: html

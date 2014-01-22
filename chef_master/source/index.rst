@@ -121,7 +121,7 @@ The Nodes
 
 **Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
-**Ohai:** :doc:`About Ohai </ohai>`
+**Ohai:** :doc:`About Ohai </ohai>` | :doc:`Custom Ohai Plugins </ohai_custom>`
 
 **Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
 
