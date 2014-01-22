@@ -1,6 +1,9 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
+
+.. warning:: In all 10.x.x versions of the chef-client, the ``node.default.my_attribute("value")`` pattern can be used to define attributes. Starting with the 11.0.0 version of the chef-client, this pattern is no longer supported and is replaced with the ``node.default.my_attribute = "value"`` pattern.
+
 The following examples are listed from low to high precedence.
 
 **Default attribute in /attributes/default.rb**
