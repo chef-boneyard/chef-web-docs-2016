@@ -621,6 +621,7 @@ The following topics discuss using |chef server oec| with platforms:
    migrate_to_hosted
    oec_overview
    ohai
+   ohai_custom
    orgmapper
    plugin_knife_authenticated_requests
    plugin_knife_azure

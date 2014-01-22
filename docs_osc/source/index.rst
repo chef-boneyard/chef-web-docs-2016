@@ -515,6 +515,7 @@ The following topics discuss using |chef server osc| with platforms:
    migrate_to_hosted
    osc_overview
    ohai
+   ohai_custom
    plugin_knife_authenticated_requests
    plugin_knife_azure
    plugin_knife_bluebox
