@@ -4,6 +4,8 @@ Release Notes: Chef 11.2.0
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+.. note:: The |chef client| 11.2 release is updated for Ruby 1.9.3-p484, which resolves a security vulnerability that existed when using prior versions of |ruby|.
+
 What's New
 =====================================================
 The following items are new for |chef 11-2| and/or are changes from previous versions. The short version:
