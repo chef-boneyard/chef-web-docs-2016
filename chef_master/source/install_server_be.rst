@@ -71,7 +71,7 @@ and:
 
 .. code-block:: bash
 
-   $ lvcreate -L 900G --name drbd opscode
+   $ lvcreate -L 300G --name drbd opscode
 
 .. warning:: Talk with your systems administrators about disk configuration if you are at all uncertain of how to configure a new logical volume with |lvm|, as the operations can be destructive.
 
