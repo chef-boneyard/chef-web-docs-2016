@@ -1,12 +1,12 @@
 =====================================================
-What's New in Chef 11.0
+Release Notes: Chef 11.0.0
 =====================================================
+
+.. include:: ../../includes_chef/includes_chef.rst
 
 The following items are new for |chef 11| and/or are changes from |chef 10|.
 
-.. note:: The |chef client| 11.2 release is updated for Ruby 1.9.3-p484, which resolves a security vulnerability that existed when using prior versions of |ruby|.
-
-|chef client| and |chef solo|
+What's New for |chef client| and |chef solo|
 =====================================================
 The following changes have been made to |chef client| and |chef solo|. Some of these changes may break recipes (or may change their behavior); other changes may affect workflow or scripts.
 
@@ -300,7 +300,7 @@ Remote File Mirror Support May Break Subclasses
 ---------------------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_10-latest_remote_file_attributes_source_as_string.rst
 
-The Server
+What's New for the |chef server|
 =====================================================
 The following items are new for |chef 11| server and/or are changes from |chef 10|.
 
@@ -434,3 +434,99 @@ Miscellaneous
 * |knife| essentials (|subcommand knife upload|, |subcommand knife download|, |subcommand knife diff|, and so on) have been merged into |chef 11-0|
 
 
+
+
+What's Fixed
+=====================================================
+The following bugs were fixed:
+
+* `CHEF-581 <http://tickets.opscode.com/browse/CHEF-581>`_  --- Delayed scripts don't run on failure
+* `CHEF-867 <http://tickets.opscode.com/browse/CHEF-867>`_  --- Use exclusive file locks with chef-client
+* `CHEF-1804 <http://tickets.opscode.com/browse/CHEF-1804>`_  --- Values of nested Node attributes disappear after iterating
+* `CHEF-2591 <http://tickets.opscode.com/browse/CHEF-2591>`_  --- Chef::ChecksumCache not working due to :skip_expires => true
+* `CHEF-2627 <http://tickets.opscode.com/browse/CHEF-2627>`_  --- Knife SSH should return exit code based on whether or not ssh command is successful or not
+* `CHEF-2792 <http://tickets.opscode.com/browse/CHEF-2792>`_  --- XSS vulnerability in messages field on login page
+* `CHEF-2903 <http://tickets.opscode.com/browse/CHEF-2903>`_  --- Attribute files not loaded in deterministic order
+* `CHEF-2923 <http://tickets.opscode.com/browse/CHEF-2923>`_  --- Cookbook Upload Fails due to Syntax Error in unrelated cookbook's metadata file
+* `CHEF-3068 <http://tickets.opscode.com/browse/CHEF-3068>`_  --- Chef resources display incorrectly in log files on windows due to splitting on :
+* `CHEF-3376 <http://tickets.opscode.com/browse/CHEF-3376>`_  --- Chef Should Load Cookbooks In Dependency Order
+* `CHEF-3393 <http://tickets.opscode.com/browse/CHEF-3393>`_  --- Chef Encrypted Data Bag Error due to Different YAML Engines
+* `CHEF-3467 <http://tickets.opscode.com/browse/CHEF-3467>`_  --- Permissions Not Inherited from Parent on Child Object cookbook_file (Windows)
+* `CHEF-3477 <http://tickets.opscode.com/browse/CHEF-3477>`_  --- knife node show shows unexpected brackets for single-member arrays
+* `CHEF-3480 <http://tickets.opscode.com/browse/CHEF-3480>`_  --- When Encrypting Data-Bag Items, Use Different IV Per Encrypt
+* `CHEF-3555 <http://tickets.opscode.com/browse/CHEF-3555>`_  --- knife cookbook site install fails due to not allowing string format cookbook_path
+* `CHEF-3561 <http://tickets.opscode.com/browse/CHEF-3561>`_  --- Error inspectors seem to quash template error contextual information
+* `CHEF-3589 <http://tickets.opscode.com/browse/CHEF-3589>`_  --- Why Run code runs code in {{converge_by}} blocks after the provider action is complete
+* `CHEF-3604 <http://tickets.opscode.com/browse/CHEF-3604>`_  --- Chef::Provider::Service::Init should pass why run assertions if a custom command is provided
+* `CHEF-3617 <http://tickets.opscode.com/browse/CHEF-3617>`_  --- Chef::RunLock incorrectly assumes the full path to the run lock file exists before opening for writing
+* `CHEF-3619 <http://tickets.opscode.com/browse/CHEF-3619>`_  --- Chef still has obsolete 'rake/rdoctask' require
+* `CHEF-3632 <http://tickets.opscode.com/browse/CHEF-3632>`_  --- All providers have whyrun enabled by default due to RemoteDirectory
+* `CHEF-3638 <http://tickets.opscode.com/browse/CHEF-3638>`_  --- knife cookbook upload with–all flag fails
+* `CHEF-3639 <http://tickets.opscode.com/browse/CHEF-3639>`_  --- 'knife index rebuild' no longer works with Chef Server 11
+* `CHEF-3640 <http://tickets.opscode.com/browse/CHEF-3640>`_  --- bookshelf is logging to the wrong directory
+* `CHEF-3641 <http://tickets.opscode.com/browse/CHEF-3641>`_  --- lock down permissions on omnibus generated private keys
+* `CHEF-3643 <http://tickets.opscode.com/browse/CHEF-3643>`_  --- WebUI: cookbook version show generates "undefined method `close!' for nil:NilClass" error
+* `CHEF-3647 <http://tickets.opscode.com/browse/CHEF-3647>`_  --- changing a user's password in chef-server-webui changes their public key to undefined
+* `CHEF-3648 <http://tickets.opscode.com/browse/CHEF-3648>`_  --- WebUI: creating client fails with 'Could not create client: 500 "Internal Server Error"'
+* `CHEF-3653 <http://tickets.opscode.com/browse/CHEF-3653>`_  --- Unable to show data bag items in webui
+* `CHEF-3654 <http://tickets.opscode.com/browse/CHEF-3654>`_  --- Adding role to node run list in webui gives undefined method `empty?' for nil:NilClass
+* `CHEF-3655 <http://tickets.opscode.com/browse/CHEF3655>`_  --- Webui node show run\_list: ERROR: Unable to create Chef::RunList::RunListItem from String
+* `CHEF-3656 <http://tickets.opscode.com/browse/CHEF-3656>`_  --- Last check-in display shows > entity in webui for /status
+* `CHEF-3657 <http://tickets.opscode.com/browse/CHEF-3657>`_  --- Unable to add cookbook version constraints to an environment via webui
+* `CHEF-3658 <http://tickets.opscode.com/browse/CHEF-3658>`_  --- Admin clients should not be able to de-admin the last admin user
+* `CHEF-3662 <http://tickets.opscode.com/browse/CHEF-3662>`_  --- knife client reregister fails against Chef 11 Server
+* `CHEF-3666 <http://tickets.opscode.com/browse/CHEF-3666>`_  --- Postgresql recipe is overzealously guarding configuration files behind bootstrap variable
+* `CHEF-3673 <http://tickets.opscode.com/browse/CHEF-3673>`_  --- Bookshelf URL is not configurable
+* `CHEF-3674 <http://tickets.opscode.com/browse/CHEF-3674>`_  --- Psql doesn't work by default, since /opt/chef-server/embedded/bin is not in the path
+* `CHEF-3675 <http://tickets.opscode.com/browse/CHEF-3675>`_  --- Bookshelf cannot be disabled
+* `CHEF-3680 <http://tickets.opscode.com/browse/CHEF-3680>`_  --- json error: (eval):3:in `keys'
+* `CHEF-3688 <http://tickets.opscode.com/browse/CHEF-3688>`_  --- Stale attribute read protection does more harm than good
+* `CHEF-3689 <http://tickets.opscode.com/browse/CHEF-3689>`_  --- Client registration fails on existing clients
+* `CHEF-3699 <http://tickets.opscode.com/browse/CHEF-3699>`_  --- Getting ISE when depsolver runs
+* `CHEF-3702 <http://tickets.opscode.com/browse/CHEF-3702>`_  --- Postgresql foreign key integrity error on cookbook upload in Erchef alpha
+* `CHEF-3710 <http://tickets.opscode.com/browse/CHEF-3710>`_  --- chef\_wm: exception handling for bad\_headers in chef\_wm:malformed\_request/2
+* `CHEF-3716 <http://tickets.opscode.com/browse/CHEF-3716>`_  --- Erchef 1.0.21 knife cookbook upload succeeds, but cookbook content gives 404 from chef-client
+* `CHEF-3718 <http://tickets.opscode.com/browse/CHEF-3718>`_  --- peg 2.2.0 version of systemu for win ruby 1.9 compat
+* `CHEF-3724 <http://tickets.opscode.com/browse/CHEF-3724>`_  --- node.recipe? appears to be broken
+* `CHEF-3782 <http://tickets.opscode.com/browse/CHEF-3782>`_  --- Bad regular expression make sandbox test fail in pedant
+* `CHEF-3783 <http://tickets.opscode.com/browse/CHEF-3783>`_  --- compatibility for chef/dsl/recipe not found in chef/mixin/recipe_definition\_dsl\_core.rb
+* `CHEF-3792 <http://tickets.opscode.com/browse/CHEF-3792>`_  --- chef-apply is still referred to as chef-recipe in places
+* `CHEF-3793 <http://tickets.opscode.com/browse/CHEF-3793>`_  --- knife is broken in latest Chef 11 client beta
+* `CHEF-3799 <http://tickets.opscode.com/browse/CHEF-3799>`_  --- Cannot call puts on a VividMash
+* `CHEF-3802 <http://tickets.opscode.com/browse/CHEF-3802>`_  --- omnibus package symlinks not created for chef-apply, chef-shell
+* `CHEF-3806 <http://tickets.opscode.com/browse/CHEF-3806>`_  --- when setting node attributes, after a set\_unless call subsequent set calls behave like set\_unless (and correspondingly for other attribute levels)
+
+What's Improved
+=====================================================
+The following improvements were made:
+
+* `CHEF-707 <http://tickets.opscode.com/browse/CHEF-707>`_  --- Change "gid" to "group" for the User Resource
+* `CHEF-2936 <http://tickets.opscode.com/browse/CHEF-2936>`_  --- Cookbook attribute file to have access to expanded attributes
+* `CHEF-2984 <http://tickets.opscode.com/browse/CHEF-2984>`_  --- Remove moneta dependency
+* `CHEF-3021 <http://tickets.opscode.com/browse/CHEF-3021>`_  --- Convert chef-server-webui from merb to Rails 3.2
+* `CHEF-3197 <http://tickets.opscode.com/browse/CHEF-3197>`_  --- Undefined methods on a node should not be assumed to be attributes
+* `CHEF-3249 <http://tickets.opscode.com/browse/CHEF-3249>`_  --- Chef support for template partials
+* `CHEF-3385 <http://tickets.opscode.com/browse/CHEF-3385>`_  --- Remove support for multiple notifications in one call to Resource#notifies
+* `CHEF-3392 <http://tickets.opscode.com/browse/CHEF-3392>`_  --- Serialize Encrypted Data-Bag Item Values with JSON Instead of YAML
+* `CHEF-3438 <http://tickets.opscode.com/browse/CHEF-3438>`_  --- Allow Chef::REST.new() to read raw keys
+* `CHEF-3487 <http://tickets.opscode.com/browse/CHEF-3487>`_  --- Refactor CookbookLoader to walk @repo\_paths only once
+* `CHEF-3497 <http://tickets.opscode.com/browse/CHEF-3497>`_  --- Allow knife.rb to implicitly provide all knife related options
+* `CHEF-3499 <http://tickets.opscode.com/browse/CHEF-3499>`_  --- Allow access to platform? and friends in attribute files
+* `CHEF-3500 <http://tickets.opscode.com/browse/CHEF-3500>`_  --- ruby_block resource's action "create" is counter-intuitive
+* `CHEF-3556 <http://tickets.opscode.com/browse/CHEF-3556>`_  --- Knife search should assume you're searching for nodes, and make a fuzzy query if the query is not in solr syntax
+* `CHEF-3576 <http://tickets.opscode.com/browse/CHEF-3576>`_  --- support raspbian as a platform
+* `CHEF-3603 <http://tickets.opscode.com/browse/CHEF-3603>`_  --- Chef::Provider::Service::Init should support specification of alternate 'init_command'
+* `CHEF-3616 <http://tickets.opscode.com/browse/CHEF-3616>`_  --- Include cipher in Encrypted Data Bag Item v1 Format
+* `CHEF-3628 <http://tickets.opscode.com/browse/CHEF-3628>`_  --- knife upload with no parameters should prompt before uploading EVERYTHING
+* `CHEF-3663 <http://tickets.opscode.com/browse/CHEF-xxxxx>`_  --- Knife's config file lookup doesn't work when the current directory or parent is a symlink
+* `CHEF-3681 <http://tickets.opscode.com/browse/CHEF-3681>`_  --- the LWRP DSL should automatically create and converge a new run_context
+* `CHEF-3715 <http://tickets.opscode.com/browse/CHEF-3715>`_  --- Remove caching of SHA256 sums in Chef::ChecksumCache
+
+New Features
+=====================================================
+The following features were added:
+
+* `CHEF-2004 <http://tickets.opscode.com/browse/CHEF-2004>`_  --- knife environment show should have an attribute selection option (-a / –attribute)
+* `CHEF-3375 <http://tickets.opscode.com/browse/CHEF-3375>`_  --- remote_file support for URL lists to use as mirrors
+* `CHEF-3520 <http://tickets.opscode.com/browse/CHEF-3520>`_  --- Bring knife-essentials commands into Chef proper
+* `CHEF-3571 <http://tickets.opscode.com/browse/CHEF-3571>`_  --- Add a chef-apply ruby script into chef gem for running a single recipe without modifying the node's run\_list
