@@ -200,6 +200,7 @@ Cookbooks
    ctl_push_jobs_client
    debug
    dsl_recipe
+   dsl_recipe_helper_windows_platform
    dsl_recipe_method_attribute
    dsl_recipe_method_cookbook_name
    dsl_recipe_method_data_bag
