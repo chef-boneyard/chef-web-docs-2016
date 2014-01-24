@@ -21,7 +21,7 @@ Getting Started
 
 **What's new:** :doc:`Release Notes for Chef 11.8 </release_notes>`
 
-**Docs for Previous Versions of Chef:** `11.6 <http://docs.opscode.com/release/11-6/>`_ | `11.0, 11.2, and 11.4 <http://docs.opscode.com/release/11-4/>`_ | `10.latest <http://docs.opscode.com/release/10/>`_ | :doc:`Documentation Feedback </feedback>`
+**Docs for Previous Versions of Chef:** `11.6 <http://docs.opscode.com/release/11-6/>`_ | `11.4 <http://docs.opscode.com/release/11-4/>`_ | `11.2 <http://docs.opscode.com/release/11-2/>`_ | `11.0 <http://docs.opscode.com/release/11-0/>`_ | `10.latest <http://docs.opscode.com/release/10/>`_ | :doc:`Documentation Feedback </feedback>`
 
 
 The Community
@@ -121,7 +121,7 @@ The Nodes
 
 **Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
-**Ohai:** :doc:`About Ohai </ohai>` | :doc:`Custom Ohai Plugins </ohai_custom>`
+**Ohai:** :doc:`About Ohai 7 </ohai>` | :doc:`Custom Ohai 7 Plugins </ohai_custom>` | `Ohai 6 <http://docs.opscode.com/release/ohai-6/>`_
 
 **Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
 
