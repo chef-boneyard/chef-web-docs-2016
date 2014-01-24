@@ -28,7 +28,7 @@ Custom Plugins
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin.rst
 
-.. warning:: Custom plugins change significantly between |ohai 6| and |ohai 7|. This page is about |ohai 7| plugins and `this page is about Ohai 6 plugins <http://docs.opscode.com/release/ohai-6/>`_). While |company_name| has worked to ensure backwards compatibility for all plugins in |ohai 7|, a plan should be put in place to update the syntax for all |ohai 6| plugins so they are using the |ohai 7| pattern. Once updated, please test and verify those plugins before running them in a production environment.
+.. warning:: The syntax for custom plugins changes significantly between |ohai 6| and |ohai 7|. This page is about |ohai 7| plugins and `this page is about Ohai 6 plugins <http://docs.opscode.com/release/ohai-6/>`_). While |company_name| has worked to ensure backwards compatibility for all plugins in |ohai 7|, a plan should be put in place to update the syntax for all |ohai 6| plugins so they are using the |ohai 7| pattern. Once updated, please test and verify those plugins before running them in a production environment.
 
 Syntax
 -----------------------------------------------------
