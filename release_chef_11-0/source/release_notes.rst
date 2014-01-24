@@ -409,6 +409,14 @@ LWRP Class Hierarchy Changes
 -----------------------------------------------------
 In |chef 11|, lightweight resources resources now inherit from a ``LWRPBase`` resource instead of directly inheriting from ``Chef::Resource``. Likewise, lightweight resources providers inherit from a ``LWRPBase`` provider instead of ``Chef::Provider``. This should not impact existing code for lightweight resources.
 
+Partial Search
+-----------------------------------------------------
+.. include:: ../../includes_search/includes_search_partial.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_search/includes_search_partial_example.rst
+
 Partial Support in Templates
 -----------------------------------------------------
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_partials.rst
