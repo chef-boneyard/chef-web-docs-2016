@@ -9,7 +9,7 @@ Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
 
-**Key concepts:** :doc:`Workstations </chef_overview_workstation>` | :doc:`The Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`LWRPs </lwrp_custom>` | :doc:`Knife </knife>`
+**Key concepts:** :doc:`Workstations </chef_overview_workstation>` | :doc:`The Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`LWRPs (Custom Resources) </lwrp_custom>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
@@ -17,11 +17,9 @@ Getting Started
 
 **learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
 
-**Docs for:** `Open Source Chef <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef <http://docs.opscode.com/enterprise/>`_ | :doc:`Chef for OpenStack </openstack>` | :doc:`Chef for Windows </windows>`
+**Docs for Current Versions:** :doc:`chef-client </release_notes>` | :doc:`Ohai 7 </ohai>` | `Open Source Chef Server <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef Server <http://docs.opscode.com/enterprise/>`_
 
-**What's new:** :doc:`Release Notes for Chef 11.8 </release_notes>`
-
-**Docs for Previous Versions of Chef:** `11.6 <http://docs.opscode.com/release/11-6/>`_ | `11.4 <http://docs.opscode.com/release/11-4/>`_ | `11.2 <http://docs.opscode.com/release/11-2/>`_ | `11.0 <http://docs.opscode.com/release/11-0/>`_ | `10.latest <http://docs.opscode.com/release/10/>`_ | :doc:`Documentation Feedback </feedback>`
+**Docs for Older Versions:** `11.6 <http://docs.opscode.com/release/11-6/>`_ | `11.4 <http://docs.opscode.com/release/11-4/>`_ | `11.2 <http://docs.opscode.com/release/11-2/>`_ | `11.0 <http://docs.opscode.com/release/11-0/>`_ | `10.latest <http://docs.opscode.com/release/10/>`_ | :doc:`Documentation Feedback </feedback>`
 
 
 The Community
