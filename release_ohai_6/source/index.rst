@@ -1,5 +1,5 @@
 =====================================================
-Documentation for |ohai 6|
+Documentation for |ohai 6| 
 =====================================================
 
 .. include:: ../../includes_ohai/includes_ohai.rst
