@@ -17,7 +17,7 @@ Getting Started
 
 **learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
 
-**Docs for Current Versions:** :doc:`chef-client </release_notes>` | :doc:`Ohai 7 </ohai>` | `Open Source Chef Server <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef Server <http://docs.opscode.com/enterprise/>`_
+**Docs for Current Versions:** :doc:`Ohai 7 </ohai>` | `Open Source Chef Server <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef Server <http://docs.opscode.com/enterprise/>`_ | :doc:`Release Notes for 11.8 </release_notes>`
 
 **Docs for Older Versions:** `11.6 <http://docs.opscode.com/release/11-6/>`_ | `11.4 <http://docs.opscode.com/release/11-4/>`_ | `11.2 <http://docs.opscode.com/release/11-2/>`_ | `11.0 <http://docs.opscode.com/release/11-0/>`_ | `10.latest <http://docs.opscode.com/release/10/>`_ | :doc:`Documentation Feedback </feedback>`
 
