@@ -71,8 +71,7 @@ About Knife
      - .. include:: ../../includes_knife/includes_knife_tag.rst
    * - :doc:`knife_upload`
      - .. include:: ../../includes_knife/includes_knife_upload.rst
-   * - :doc:`knife_user`
-     - .. include:: ../../includes_knife/includes_knife_user.rst
+
 
 
 
