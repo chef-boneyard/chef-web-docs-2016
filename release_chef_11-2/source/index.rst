@@ -4,6 +4,8 @@ Documentation for Chef 11.2.x
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
+View the :doc:`release notes </release_notes>` for Chef 11.2.x.
+
 Getting Started  
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
@@ -15,8 +17,6 @@ Getting Started
 **Try it out:** (1) `Sign up for Hosted Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) or `Sign up for Private Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**), then (2) :doc:`Install the chef-client on a Workstation </install_workstation>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
 
 **learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
-
-**What's new:** :doc:`Chef 11.0 </release_notes>`
 
 
 The Chef Community 
