@@ -20,11 +20,17 @@ This argument has the following options:
 ``-f FLAVOR``, ``--linode-flavor FLAVOR``
    |linode-flavor|
 
+``--hint HINT_NAME[=HINT_FILE]``
+   |hint|
+
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
    |identity-file|
 
 ``-I IMAGE``, ``--linode-image IMAGE``
    |linode-image|
+
+``-j JSON_ATTRIBS``, ``--json-attributes JSON_ATTRIBS``
+   |json first_run_string|
 
 ``-k KERNEL``, ``--linode-kernel KERNEL``
    |linode-kernel|

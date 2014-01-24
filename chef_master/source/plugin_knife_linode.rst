@@ -92,7 +92,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-|no_options|
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_server_list_options.rst
 
 server reboot
 =====================================================
@@ -104,7 +104,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-|no_options|
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_server_reboot_options.rst
 
 stackscript list
 =====================================================
@@ -116,4 +116,4 @@ Syntax
 
 Options
 -----------------------------------------------------
-|no_options|
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_linode_stackscript_list_options.rst
