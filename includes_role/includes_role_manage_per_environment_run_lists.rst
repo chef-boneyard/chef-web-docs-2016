@@ -11,7 +11,7 @@ A per-environment run-list is a run-list that is associated with a role and a sp
      "env_run_lists": {
        "production": [],
        "preprod": [],
-       "test": [ "role[base]", "recipe[apache]" "recipe[apache::copy_test_configs]" ],
+       "test": [ "role[base]", "recipe[apache]", "recipe[apache::copy_test_configs]" ],
        "dev": [ "role[base]", "recipe[apache]", "recipe[apache::copy_dev_configs]" ]
        },
      "run_list": [ "role[base]", "recipe[apache]" ],
