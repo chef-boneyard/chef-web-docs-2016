@@ -465,11 +465,11 @@ The following bugs were fixed:
 * `CHEF-3639 <http://tickets.opscode.com/browse/CHEF-3639>`_  --- 'knife index rebuild' no longer works with Chef Server 11
 * `CHEF-3640 <http://tickets.opscode.com/browse/CHEF-3640>`_  --- bookshelf is logging to the wrong directory
 * `CHEF-3641 <http://tickets.opscode.com/browse/CHEF-3641>`_  --- lock down permissions on omnibus generated private keys
-* `CHEF-3643 <http://tickets.opscode.com/browse/CHEF-3643>`_  --- WebUI: cookbook version show generates "undefined method `close!' for nil:NilClass" error
+* `CHEF-3643 <http://tickets.opscode.com/browse/CHEF-3643>`_  --- WebUI: cookbook version show generates "undefined method 'close!' for nil:NilClass" error
 * `CHEF-3647 <http://tickets.opscode.com/browse/CHEF-3647>`_  --- changing a user's password in chef-server-webui changes their public key to undefined
 * `CHEF-3648 <http://tickets.opscode.com/browse/CHEF-3648>`_  --- WebUI: creating client fails with 'Could not create client: 500 "Internal Server Error"'
 * `CHEF-3653 <http://tickets.opscode.com/browse/CHEF-3653>`_  --- Unable to show data bag items in webui
-* `CHEF-3654 <http://tickets.opscode.com/browse/CHEF-3654>`_  --- Adding role to node run list in webui gives undefined method `empty?' for nil:NilClass
+* `CHEF-3654 <http://tickets.opscode.com/browse/CHEF-3654>`_  --- Adding role to node run list in webui gives undefined method 'empty?' for nil:NilClass
 * `CHEF-3655 <http://tickets.opscode.com/browse/CHEF3655>`_  --- Webui node show run\_list: ERROR: Unable to create Chef::RunList::RunListItem from String
 * `CHEF-3656 <http://tickets.opscode.com/browse/CHEF-3656>`_  --- Last check-in display shows > entity in webui for /status
 * `CHEF-3657 <http://tickets.opscode.com/browse/CHEF-3657>`_  --- Unable to add cookbook version constraints to an environment via webui
@@ -479,7 +479,7 @@ The following bugs were fixed:
 * `CHEF-3673 <http://tickets.opscode.com/browse/CHEF-3673>`_  --- Bookshelf URL is not configurable
 * `CHEF-3674 <http://tickets.opscode.com/browse/CHEF-3674>`_  --- Psql doesn't work by default, since /opt/chef-server/embedded/bin is not in the path
 * `CHEF-3675 <http://tickets.opscode.com/browse/CHEF-3675>`_  --- Bookshelf cannot be disabled
-* `CHEF-3680 <http://tickets.opscode.com/browse/CHEF-3680>`_  --- json error: (eval):3:in `keys'
+* `CHEF-3680 <http://tickets.opscode.com/browse/CHEF-3680>`_  --- json error: (eval):3:in 'keys'
 * `CHEF-3688 <http://tickets.opscode.com/browse/CHEF-3688>`_  --- Stale attribute read protection does more harm than good
 * `CHEF-3689 <http://tickets.opscode.com/browse/CHEF-3689>`_  --- Client registration fails on existing clients
 * `CHEF-3699 <http://tickets.opscode.com/browse/CHEF-3699>`_  --- Getting ISE when depsolver runs

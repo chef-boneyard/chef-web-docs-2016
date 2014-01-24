@@ -87,7 +87,7 @@ The following bugs were fixed:
 * `CHEF-2960 <http://tickets.opscode.com/browse/CHEF-2960>`_  --- Upgrade JSON dependency to 1.7+
 * `CHEF-3706 <http://tickets.opscode.com/browse/CHEF-3706>`_  --- Knife should provide commands for the user endpoint
 * `CHEF-3707 <http://tickets.opscode.com/browse/CHEF-3707>`_  --- knife configure -i should create a user and not a client
-* `CHEF-3809 <http://tickets.opscode.com/browse/CHEF-3809>`_  --- Getting error NoMethodError: undefined method `CloseHandle' for Chef::ReservedNames::Win32::Handle:Class on Windows servers
+* `CHEF-3809 <http://tickets.opscode.com/browse/CHEF-3809>`_  --- Getting error NoMethodError: undefined method 'CloseHandle' for Chef::ReservedNames::Win32::Handle:Class on Windows servers
 * `CHEF-3836 <http://tickets.opscode.com/browse/CHEF-3836>`_  --- Run Lock tests randomly fail on slower Ci machines
 
 
