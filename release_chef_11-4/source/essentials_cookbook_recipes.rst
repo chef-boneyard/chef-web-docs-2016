@@ -142,6 +142,4 @@ Rescue Blocks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_recipe/step_recipe_end_chef_run_rescue_block.rst
 
-Send to Log Files
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_recipe/step_recipe_end_chef_run_send_fatal_message.rst
+
