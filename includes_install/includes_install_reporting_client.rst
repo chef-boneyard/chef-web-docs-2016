@@ -14,5 +14,5 @@
    Chef Client finished, 2 resources updated
    [date] INFO: Sending resource update report (run-id: 51ceb817-ba7e-47e5-9bca-096fe9ef9740)
 
-This includes the run id of the run, which can be used in the |subcommand knife reporting| plugin or the management console to access the reporting information generated during the run.
+This includes the run id of the run, which can be used in the `knife reporting plugin <http://docs.opscode.com/enterprise/plugin_knife_reporting.html>`_ or the management console to access the reporting information generated during the run.
 

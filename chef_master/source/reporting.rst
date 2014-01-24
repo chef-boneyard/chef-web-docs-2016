@@ -22,7 +22,7 @@ When |reporting| and |chef manager| are both added to |chef server oec|, a user 
 
 .. image:: ../../images/step_manage_webui_reports.png
 
-knife-reporting
+knife reporting
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_reporting.rst
 
