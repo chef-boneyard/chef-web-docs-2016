@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The following example shows how to use the |windows| platform helpers to test for specific platforms and then provide specific steps for those platforms:
+The following example installs |windows powershell| 2.0 on systems that do not already have it and uses the |windows| platform helpers to define specific behaviors for specific platforms:
 
 .. code-block:: ruby
 
@@ -12,7 +12,6 @@ The following example shows how to use the |windows| platform helpers to test fo
      windows_version = Chef::ReservedNames::Win32::Version.new
    
      if (windows_version.windows_server_2008_r2? || windows_version.windows_7?) && windows_version.core?
-       # Windows Server 2008 R2 Core does not come with .NET or Powershell 2.0 enabled
    
        windows_feature 'NetFx2-ServerCore' do
          action :install
@@ -26,13 +25,11 @@ The following example shows how to use the |windows| platform helpers to test fo
          windows_version.windows_server_2003? || windows_version.windows_xp?
    
        if windows_version.windows_server_2008?
-         # Windows PowerShell 2.0 requires version 2.0 of the common language runtime (CLR).
-         # CLR 2.0 is included with the Microsoft .NET Framework versions 2.0, 3.0, or 3.5 with Service Pack 1.
          windows_feature 'NET-Framework-Core' do
            action :install
          end
+
        else
-         # XP, 2003 and 2003R2 don't have DISM or servermanagercmd, so download .NET 2.0 manually
          windows_package 'Microsoft .NET Framework 2.0 Service Pack 2' do
            source node['ms_dotnet2']['url']
            checksum node['ms_dotnet2']['checksum']
@@ -51,3 +48,5 @@ The following example shows how to use the |windows| platform helpers to test fo
        level :warn
      end
    end
+
+The previous example is from the `ms_dotnet2 cookbook <https://github.com/juliandunn/ms_dotnet2>`_, created by community member ``juliandunn``. cookbook).
