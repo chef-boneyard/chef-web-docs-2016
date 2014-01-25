@@ -1,7 +1,12 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-The |dsl recipe| provides support for verifying the specific platform in a |windows| environment by creating a variable in a recipe based off the ``Chef::ReservedNames::Win32::Version`` class, and then associating that variable with a handler specific the |windows| platform. Add the following to the recipe:
+The |dsl recipe| 
+
+
+
+
+provides support for verifying the specific platform in a |windows| environment by creating a variable in a recipe based off the ``Chef::ReservedNames::Win32::Version`` class, and then associating that variable with a handler specific the |windows| platform. Add the following to the recipe:
 
 .. code-block:: ruby
 
@@ -23,7 +28,7 @@ after which the variable can be used to define specific behaviors in a recipe. F
        # resource block
      end
 
-   elseif (windows_version.handler_name?)
+   elsif (windows_version.handler_name?)
      # Ruby code goes here
      resource_name do
        # resource block for something else
