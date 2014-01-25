@@ -30,8 +30,8 @@ To create the |chef repo hidden| directory:
          environments/
          roles/
 
-#. Add ``.chef`` to the ``.gitignore`` file to prevent uploading the contents of the ``.chef`` folder to |github|. For example, in a |centos| environment, enter the following:
+#. Add ``.chef`` to the ``.gitignore`` file to prevent uploading the contents of the ``.chef`` folder to |github|. For example:
 
    .. code-block:: bash
 
-      $ cat .gitignore .chef
+      $ echo '.chef' >> .gitignore
