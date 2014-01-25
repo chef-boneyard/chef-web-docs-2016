@@ -8,29 +8,29 @@ A recipe can define specific behaviors for specific |windows| platform versions 
 
    require 'chef/win32/version'
 
-and then declare a variable using the ``Chef::ReservedNames::Win32::Version`` class. For example:
+Then declare a variable using the ``Chef::ReservedNames::Win32::Version`` class:
 
 .. code-block:: ruby
 
-   windows_version = Chef::ReservedNames::Win32::Version.new
+   variable_name = Chef::ReservedNames::Win32::Version.new
 
-after which the variable can be used to define specific behaviors for specific |windows| platform versions. For example:
+Then use the variable to define specific behaviors for specific |windows| platform versions. For example:
 
 .. code-block:: ruby
 
-   if windows_version.helper_name?
+   if variable_name.helper_name?
      # Ruby code goes here, such as
      resource_name do
        # resource block
      end
 
-   elsif windows_version.helper_name?
+   elsif variable_name.helper_name?
      # Ruby code goes here
      resource_name do
        # resource block for something else
      end
 
-   else windows_version.helper_name?
+   else variable_name.helper_name?
      # Ruby code goes here, such as
      log 'log entry' do
        level :level
