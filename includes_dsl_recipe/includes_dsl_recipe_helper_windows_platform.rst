@@ -22,19 +22,19 @@ after which the variable can be used to define specific behaviors in a recipe. F
 
 .. code-block:: ruby
 
-   if (windows_version.handler_name?)
+   if windows_version.handler_name?
      # Ruby code goes here, such as
      resource_name do
        # resource block
      end
 
-   elsif (windows_version.handler_name?)
+   elsif windows_version.handler_name?
      # Ruby code goes here
      resource_name do
        # resource block for something else
      end
 
-   else (windows_version.handler_name?)
+   else windows_version.handler_name?
      # Ruby code goes here, such as
      log 'log entry' do
        level :level
