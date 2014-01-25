@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A recipe can define specific behaviors for specific |windows| platform versions. To enable a series of helper methods that can be used to determine the platform version, add the following to the recipe:
+A recipe can define specific behaviors for specific |windows| platform versions by using a series of helper methods. To enable these helper methods, add the following to the recipe:
 
 .. code-block:: ruby
 
