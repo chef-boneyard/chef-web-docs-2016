@@ -160,7 +160,8 @@ registry_value_exists?
 
 Windows Platform Helpers
 =====================================================
-A recipe can define specific behaviors for specific |windows| platform versions by using :doc:`a series of helper methods </dsl_recipe_helper_windows_platform>`.
+.. include:: ../../includes_dsl_recipe/dsl_recipe_helper_windows_platform.rst
+
 
 
 
