@@ -49,4 +49,4 @@ The following example installs |windows powershell| 2.0 on systems that do not a
      end
    end
 
-The previous example is from the `ms_dotnet2 cookbook <https://github.com/juliandunn/ms_dotnet2>`_, created by community member ``juliandunn``. cookbook).
+The previous example is from the `ms_dotnet2 cookbook <https://github.com/juliandunn/ms_dotnet2>`_, created by community member ``juliandunn``.
