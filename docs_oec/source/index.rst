@@ -458,7 +458,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_tag.html">untag</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
- 
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_helper_windows_platform.html">Microsoft Windows Platform Helpers</a> </br>
 
 Platforms
 =====================================================

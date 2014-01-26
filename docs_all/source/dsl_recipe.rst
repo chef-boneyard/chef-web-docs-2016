@@ -158,6 +158,10 @@ registry_value_exists?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_value_exists.rst
 
+Windows Platform Helpers
+=====================================================
+A recipe can define specific behaviors for specific |windows| platform versions by using :doc:`a series of helper methods </dsl_recipe_helper_windows_platform>`.
+
 
 
     
