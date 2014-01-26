@@ -77,7 +77,7 @@ Recipe DSL Methods
    * - :doc:`value_for_platform_family </dsl_recipe_method_value_for_platform_family>`
      - Use in a recipe to check for a value for a platform family.
 
-Windows Registry Methods
+Windows Registry
 -----------------------------------------------------
 The following methods can be used to interact with |windows| registry keys.
 
@@ -102,7 +102,7 @@ The following methods can be used to interact with |windows| registry keys.
 
 .. note:: The recommended order in which registry key-specific methods should be used within a recipe is: ``key_exists?``, ``value_exists?``, ``data_exists?``, ``get_values``, ``has_subkeys?``, and then ``get_subkeys``.
 
-Windows Platform Helpers
+Windows Platform
 -----------------------------------------------------
 A recipe can define specific behaviors for specific |windows| platform versions by using :doc:`a series of helper methods </dsl_recipe_helper_windows_platform>`. 
 
