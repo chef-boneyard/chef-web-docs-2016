@@ -33,13 +33,13 @@ The following |windows| platform-specific helpers can be used in recipes:
    * - ``windows_server_2003_r2?``
      - Use to test for |windows server| 2003 R2.
    * - ``windows_server_2008?``
-     - Use to |windows server| 2008.
+     - Use to test for |windows server| 2008.
    * - ``windows_server_2008_r2?``
-     - Use to |windows server| 2008 R2.
+     - Use to test for |windows server| 2008 R2.
    * - ``windows_server_2012?``
-     - Use to |windows server| 2012.
+     - Use to test for |windows server| 2012.
    * - ``windows_server_2012_r2?``
-     - Use to |windows server| 2012 R2.
+     - Use to test for |windows server| 2012 R2.
    * - ``windows_vista?``
      - Use to test for |windows vista|.
    * - ``windows_xp?``
