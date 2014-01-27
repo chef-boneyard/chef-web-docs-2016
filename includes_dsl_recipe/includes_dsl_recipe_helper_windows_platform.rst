@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A recipe can define specific behaviors for specific |windows| platform versions by using a series of helper methods. To enable these helper methods, add the following to the recipe:
+A recipe can define specific behaviors for specific |windows| platform versions by using a series of helper methods. To enable these helper methods, add the following to a recipe:
 
 .. code-block:: ruby
 
@@ -14,7 +14,7 @@ Then declare a variable using the ``Chef::ReservedNames::Win32::Version`` class:
 
    variable_name = Chef::ReservedNames::Win32::Version.new
 
-Then use the variable to define specific behaviors for specific |windows| platform versions. For example:
+And then use this variable to define specific behaviors for specific |windows| platform versions. For example:
 
 .. code-block:: ruby
 
