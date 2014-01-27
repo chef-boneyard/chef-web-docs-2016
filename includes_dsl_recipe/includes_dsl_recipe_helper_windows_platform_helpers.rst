@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following helpers can be used in a recipe to test for a specific |windows| platform:
+The following |windows| platform-specific helpers can be used in recipes:
 
 .. list-table::
    :widths: 200 300
