@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-The following example installs |windows powershell| 2.0 on systems that do not already have it and uses the |windows| platform helpers to define specific behaviors for specific platforms:
+The following example installs |windows powershell| 2.0 on systems that do not already have it installed. |windows| platform helpers are used to define specific behaviors for specific platform versions:
 
 .. code-block:: ruby
 
