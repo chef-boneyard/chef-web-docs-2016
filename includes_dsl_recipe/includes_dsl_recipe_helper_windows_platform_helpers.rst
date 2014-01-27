@@ -17,7 +17,7 @@ The following |windows| platform-specific helpers can be used in recipes:
    * - ``datacenter?``
      - Use to test for a |microsoft datacenter| |microsoft sku|.
    * - ``marketing_name``
-     - Use to display the marketing name used for a |windows| platform.
+     - Use to display the marketing name for a |windows| platform.
    * - ``windows_7?``
      - Use to test for |windows 7|.
    * - ``windows_8?``
