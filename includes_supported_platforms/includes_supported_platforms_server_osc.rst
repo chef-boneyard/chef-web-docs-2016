@@ -15,7 +15,7 @@ The following table lists the supported platforms for |chef server osc|:
      - ``5``, ``6``
    * - |ubuntu|
      - ``x86_64``
-     - ``10.04``, ``11.04``, ``12.04``
+     - ``10.04``, ``10.10``, ``11.04``, ``11.10``, ``12.04``, ``12.10``
 
 
 
