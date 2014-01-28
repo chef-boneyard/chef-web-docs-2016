@@ -100,82 +100,22 @@ Some more complex ways to debug issues with a |chef client| run include:
 * Using |chef solo| to run targeted |chef client| runs for specific scenarios
 
 
+
+
 chef_hander
 -----------------------------------------------------
-.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler.rst
+.. include:: ../../includes_handler/includes_handler.rst
 
-.. note:: This cookbook is available from |github|: https://github.com/opscode-cookbooks/chef_handler.
+.. include:: ../../includes_handler/includes_handler_types.rst
 
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_attributes.rst
+Read more :doc:`about exception, report, and start handlers </handlers>`.
 
-chef_handler LWRP
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_lightweight_resource.rst
-
-.. include:: ../../includes_lwrp/includes_lwrp_chef_handler.rst
-
-**Actions**
-
-.. include:: ../../includes_lwrp/includes_lwrp_chef_handler_actions.rst
-
-**Attributes**
-
-.. include:: ../../includes_lwrp/includes_lwrp_chef_handler_attributes.rst
-
-Usage
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-The following sections describe the usage options that are available in this cookbook.
-
-**default**
-
-.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_usage_default.rst
-
-**json_file**
-
-.. include:: ../../includes_cookbooks_opscode/includes_cookbooks_opscode_chef_handler_usage_json_file.rst
-
-Examples
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. This is a temporary home for examples for this cookbook.
-
-**Register the Chef::Handler::JsonFile handler**
-
-.. include:: ../../step_lwrp/step_lwrp_chef_handler_register.rst
-
-**Register the Chef::Handler::JsonFile handler during the compile phase**
-
-.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_during_compile.rst
-
-**Handle exceptions only**
-
-.. include:: ../../step_lwrp/step_lwrp_chef_handler_exceptions_only.rst
-
-**Enable the CloudkickHandler**
-
-.. include:: ../../step_lwrp/step_lwrp_chef_handler_enable_cloudkickhandler.rst
 
 chef-shell
 -----------------------------------------------------
-.. SET THIS UP FOR INCLUDES
+.. include:: ../../includes_chef_shell/includes_chef_shell.rst
 
-|chef shell| is a recipe debugging tool for the |chef client| that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features.
-
-|chef shell| is tool that allows |knife| to be run using an |ruby irb| session. |chef shell| currently supports recipe and attribute file syntax, as well as interactive debugging features. |chef shell| has three run modes:
-
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Mode
-     - Description
-   * - Standalone
-     - No cookbooks are loaded, and the run list is empty. This mode is the default.
-   * - Solo
-     - |chef shell| acts as a |chef solo| client. It attempts to load the |chef solo| configuration file and |json| attributes. If the |json| attributes set a run list, it will be honored. Cookbooks will be loaded in the same way that |chef solo| loads them. |chef solo| mode is activated with the ``-s`` or ``--solo`` command line option, and |json| attributes are specified in the same way as for |chef solo|, with ``-j /path/to/chef-solo.json``.
-   * - Client
-     - |chef shell| acts as a |chef client|. During startup, it reads the |chef client| configuration file and contacts the |chef server| to get attributes and cookbooks. The run list will be set in the same way as normal |chef client| runs. |chef client| mode is activated with the ``-z`` or ``--client`` options. You can also specify the configuration file with ``-c CONFIG`` and the server URL with ``-S SERVER_URL``.
+.. include:: ../../includes_chef_shell/includes_chef_shell_modes.rst
 
 breakpoint Resource
 -----------------------------------------------------
