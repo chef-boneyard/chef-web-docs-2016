@@ -4,6 +4,8 @@
 
 .. include:: ../../includes_config/includes_config_rb_chef_server_enterprise.rst
 
+.. note:: If the |enterprise rb| file does not exist, create a file called ``private-chef.rb`` and put it in the ``/etc/opscode/`` directory.
+
 Use Conditions
 =====================================================
 .. include:: ../../step_config/step_config_add_condition.rst
