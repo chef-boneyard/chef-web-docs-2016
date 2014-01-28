@@ -12,13 +12,9 @@ If you do not have a copy of |chef server oec|, please contact your sales repres
 
 Supported Platforms
 =====================================================
-|chef server oec| is supported on the following operating systems:
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_server_oec.rst
 
-* |redhat enterprise linux| 6.2 or newer
-* |centos| 6.2 or newer
-* |ubuntu| 10.04
-
-|chef server oec| requires an x86_64 compatible systems architecture. When installing on |redhat enterprise linux| or |centos| please note that we recommend you run 'yum update' prior to the installation of |chef server oec| as you may encounter issues due to out of date dependencies |chef server oec| requires.
+.. note:: |chef server oec| requires an x86_64 compatible systems architecture. When installing on |redhat enterprise linux| or |centos| it is recommended to run ``yum update`` prior to the installation of |chef server oec| to prevent issues related to out-of-date dependencies |chef server oec| requires.
 
 Configuring the Platform
 =====================================================
