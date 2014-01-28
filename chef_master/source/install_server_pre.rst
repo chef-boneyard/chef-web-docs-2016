@@ -4,7 +4,7 @@ Prerequisites
 
 The following prerequisites apply to every installation of |chef server oec|.
 
-Download |chef server oec| 1.x.x
+Download |chef server oec|
 =====================================================
 If you do not have a copy of |chef server oec|, please contact your sales representative (sales@opscode.com) or installation engineer via the customer portal to receive one.
 
