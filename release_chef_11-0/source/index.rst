@@ -19,17 +19,10 @@ Getting Started
 **learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
 
 
-The Chef Community 
+The Community
 =====================================================
-The community is one of the best features of |chef| because it is populated by all of the people who use |chef|. This also means that the community is a great place to bounce ideas around, ask questions, and to find ways to help make |chef| better.
+.. include:: ../../includes_chef/includes_chef_index_community.rst
 
-**Workflow:**  `Berkshelf <http://berkshelf.com/>`_ | `Librarian <https://github.com/applicationsonline/librarian>`_ | `Spiceweasel <https://github.com/mattray/spiceweasel>`_
-
-**Development tools:**  `test-kitchen <https://github.com/opscode/test-kitchen>`_ | `Food Critic <http://acrmp.github.com/foodcritic/>`_ | `cucumber-chef <http://www.cucumber-chef.org/>`_ | `chef-workflow <https://github.com/chef-workflow>`_ | `chefspec <https://github.com/acrmp/chefspec>`_ | `yard-chef <https://rubygems.org/gems/yard-chef/>`_ | `Cookbooks <http://community.opscode.com/cookbooks>`_ | `Jenkins Plugin <https://github.com/melezhik/chef-plugin/>`_
-
-**Discussion:** :doc:`Guidelines </community_guidelines>` | :doc:`lists.opscode.com </community_lists>` | `Food Fight Show <http://foodfightshow.org/>`_ --- **Chat channels:** `chef <http://community.opscode.com/chat/chef>`_ | `chef-hacking <http://community.opscode.com/chat/chef-hacking>`_ | `openstack-chef <http://community.opscode.com/chat/openstack-chef>`_
-
-**Plugins:** :doc:`Chef </community_plugin_chef>` | :doc:`Knife </community_plugin_knife>` | :doc:`Ohai </community_plugin_ohai>` | :doc:`Report handlers </community_plugin_report_handler>` | `Ridley <https://github.com/reset/ridley>`_
 
 The Workstation
 =====================================================
