@@ -25,7 +25,7 @@ create
 .. include:: ../../includes_knife/includes_knife_user_create_syntax.rst
 
 **Options**
------------------------------------------------------
+
 .. include:: ../../includes_knife/includes_knife_user_create_options.rst
 
 delete
@@ -53,7 +53,7 @@ list
 .. include:: ../../includes_knife/includes_knife_user_list_syntax.rst
 
 **Options**
------------------------------------------------------
+
 .. include:: ../../includes_knife/includes_knife_user_list_options.rst
 
 reregister
@@ -65,7 +65,7 @@ reregister
 .. include:: ../../includes_knife/includes_knife_user_reregister_syntax.rst
 
 **Options**
------------------------------------------------------
+
 .. include:: ../../includes_knife/includes_knife_user_reregister_options.rst
 
 show
@@ -77,7 +77,7 @@ show
 .. include:: ../../includes_knife/includes_knife_user_show_syntax.rst
 
 **Options**
------------------------------------------------------
+
 .. include:: ../../includes_knife/includes_knife_user_show_options.rst
 
 What's Fixed
