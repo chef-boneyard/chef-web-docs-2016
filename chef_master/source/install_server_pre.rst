@@ -14,11 +14,13 @@ Supported Platforms
 =====================================================
 .. include:: ../../includes_supported_platforms/includes_supported_platforms_server_oec.rst
 
-.. note:: |chef server oec| requires an x86_64 compatible systems architecture. When installing on |redhat enterprise linux| or |centos| it is recommended to run ``yum update`` prior to the installation of |chef server oec| to prevent issues related to out-of-date dependencies |chef server oec| requires.
-
 Configuring the Platform
 =====================================================
 Before installing |chef server oec|, ensure that each system has the following installed and configured:
+
+Update Enterprise Linux Platforms
+-----------------------------------------------------
+|chef server oec| requires an x86_64 compatible systems architecture. When installing on |redhat enterprise linux| or |centos| it is recommended to run ``yum update`` prior to the installation of |chef server oec| to prevent issues related to out-of-date dependencies |chef server oec| requires.
 
 Hostnames, FQDNs
 -----------------------------------------------------
