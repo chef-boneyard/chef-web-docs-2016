@@ -12,7 +12,7 @@ The community is one of the best features of |chef| because it is populated by a
 
 **Books about Chef:** `Test-Driven Infrastructure with Chef, 2nd Edition <http://shop.oreilly.com/product/0636920030973.do>`_ | `Instant Chef Starter <http://www.packtpub.com/chef-starter/book>`_ | `Chef Infrastructure Automation Cookbook <http://www.packtpub.com/chef-infrastructure-automation-cookbook/book>`_ | `Chef Survival Guide <https://leanpub.com/chef-survival-guide>`_
 
-**Plugins:** :doc:`Chef </community_plugin_chef>` | :doc:`Knife </community_plugin_knife>` | :doc:`Ohai </community_plugin_ohai>` | :doc:`Report handlers </community_plugin_report_handler>` | `Ridley <https://github.com/reset/ridley>`_
+**Plugins:** :doc:`Chef </community_plugin_chef>` | :doc:`Knife </community_plugin_knife>` | :doc:`Ohai </community_plugin_ohai>` | :doc:`Handlers </community_plugin_report_handler>` | `Ridley <https://github.com/reset/ridley>`_
 
 **Chef for OpenStack:** `Overview <http://docs.opscode.com/openstack.html>`_ | `knife-openstack <http://docs.opscode.com/plugin_knife_openstack.html>`_
 
