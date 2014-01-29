@@ -13,9 +13,9 @@ Getting Started
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
-**Try it out:** (1) `Sign up for Hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) or `Install Enterprise Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**), then (2) :doc:`Install the chef-client on a Workstation </install_workstation>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
+.. include:: ../../includes_chef/includes_chef_index_getchef.rst
 
-**learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
+.. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
 **Docs for Current Versions:** :doc:`Ohai 7 </ohai>` | `Open Source Chef Server <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef Server <http://docs.opscode.com/enterprise/>`_ | :doc:`Release Notes for 11.8 </release_notes>`
 

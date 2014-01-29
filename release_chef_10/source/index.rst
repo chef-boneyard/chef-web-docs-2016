@@ -6,6 +6,7 @@ Documentation for chef-client 10.latest
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
+View the :doc:`release notes </release_notes>` for Chef 10.latest.
 
 Getting Started 
 =====================================================
@@ -15,11 +16,10 @@ Getting Started
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
-**Try it out:** (1) `Sign up for Hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) or `Install Enterprise Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**), then (2) :doc:`Install the chef-client on a Workstation </install_workstation>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
+.. include:: ../../includes_chef/includes_chef_index_getchef.rst
 
-**learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
+.. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
-**What's new:** :doc:`Release Notes for Chef 10-latest </release_notes>`
 
 
 

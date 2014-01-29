@@ -1,5 +1,5 @@
 =====================================================
-Documentation for Chef 11.8.x 
+Documentation for |chef client| 11.8.x 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
@@ -16,7 +16,7 @@ Getting Started
 
 .. include:: ../../includes_chef/includes_chef_index_getchef.rst
 
-**learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
+.. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
 
 The Community
