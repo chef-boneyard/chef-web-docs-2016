@@ -1,26 +1,3 @@
-=====================================================
-About Node Objects
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/essentials_node_object.html BY DESIGN
 
-.. include:: ../../includes_node/includes_node_object.rst
-
-.. include:: ../../includes_node/includes_node_attribute.rst
-
-Attributes
-=====================================================
-.. include:: ../../includes_node/includes_node_attribute_when_to_use.rst
-
-.. note:: |note see_attributes_overview|
-
-Attribute Types
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_type.rst
-
-Attribute Persistence
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_persistence.rst
-
-Attribute Precedence
------------------------------------------------------
-.. include:: ../../includes_node/includes_node_attribute_precedence.rst
-
+.. include:: ../../chef_master/source/essentials_node_object.rst

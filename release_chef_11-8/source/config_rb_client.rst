@@ -1,22 +1,3 @@
-=====================================================
-client.rb
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/config_rb_client.html BY DESIGN
 
-.. include:: ../../includes_config/includes_config_rb_client.rst
-
-Settings
-==========================================================================
-
-.. include:: ../../includes_config/includes_config_rb_client_settings.rst
-
-|ohai| Settings
-=====================================================
-
-.. include:: ../../includes_config/includes_config_rb_ohai.rst
-
-.. include:: ../../includes_config/includes_config_rb_ohai_settings.rst
-
-
-
-
-
+.. include:: ../../chef_master/source/config_rb_client.rst

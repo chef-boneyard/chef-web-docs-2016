@@ -1,15 +1,3 @@
-=====================================================
-About Deep Merge
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/essentials_node_object_deep_merge.html BY DESIGN
 
-.. include:: ../../includes_node/includes_node_attribute_deep_merge.rst
-
-The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes.
-
-Substitution
-=====================================================
-.. include:: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst
-
-Addition
-=====================================================
-.. include:: ../../includes_node/includes_node_attribute_deep_merge_add.rst
+.. include:: ../../chef_master/source/essentials_node_object_deep_merge.rst

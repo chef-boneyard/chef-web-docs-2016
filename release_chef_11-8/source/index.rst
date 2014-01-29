@@ -97,10 +97,10 @@ Cookbooks
 
    api_chef_server
    api_omnitruck
-   auth
    auth_authentication
    auth_authorization
    chef_client
+   chef_cookbooks
    chef_overview
    chef_overview_attributes
    chef_overview_cookbooks
@@ -141,8 +141,8 @@ Cookbooks
    dsl_recipe_method_value_for_platform_family
    essentials_chef_client
    essentials_cookbook_attribute_files
-   essentials_cookbook_directory
    essentials_cookbook_definitions
+   essentials_cookbook_directory
    essentials_cookbook_files
    essentials_cookbook_libraries
    essentials_cookbook_metadata
@@ -152,23 +152,19 @@ Cookbooks
    essentials_cookbook_versions
    essentials_cookbooks
    essentials_data_bags
-   essentials_environment_variables
    essentials_environments
-   essentials_handlers
-   essentials_knife
-   essentials_nodes
-   essentials_nodes_chef_run
-   essentials_nodes_why_run
    essentials_node_object
    essentials_node_object_deep_merge
    essentials_node_object_run_lists
+   essentials_nodes
+   essentials_nodes_chef_run
+   essentials_nodes_why_run
    essentials_policy
    essentials_repository
    essentials_repository_create
    essentials_roles
    essentials_search
    handlers
-   install
    install_bootstrap
    install_omnibus
    install_windows
@@ -218,7 +214,6 @@ Cookbooks
    resource_apt_package
    resource_bash
    resource_batch
-   resource_bff_package
    resource_breakpoint
    resource_chef_gem
    resource_chef_handler
@@ -232,7 +227,6 @@ Cookbooks
    resource_easy_install_package
    resource_env
    resource_erlang_call
-   resource_examples
    resource_execute
    resource_file
    resource_freebsd_package

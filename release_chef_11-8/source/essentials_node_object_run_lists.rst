@@ -1,9 +1,3 @@
-=====================================================
-About Run-lists
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/essentials_node_object_run_lists.html BY DESIGN
 
-.. include:: ../../includes_node/includes_node_run_list.rst
-
-.. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
-
-.. include:: ../../includes_role/includes_role.rst
+.. include:: ../../chef_master/source/essentials_node_object_run_lists.rst

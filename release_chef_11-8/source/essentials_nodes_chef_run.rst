@@ -1,5 +1,3 @@
-=====================================================
-About the chef-client Run
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/essentials_nodes_chef_run.html BY DESIGN
 
-.. include:: ../../includes_chef_client/includes_chef_client_run.rst
+.. include:: ../../chef_master/source/essentials_nodes_chef_run.rst

@@ -1,14 +1,3 @@
-=====================================================
-Windows Platform Helper Methods
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/dsl_recipe_helper_windows_platform.html BY DESIGN
 
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform.rst
-
-Helper Methods
-=====================================================
-.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform_helpers.rst
-
-Example
-=====================================================
-.. include:: ../../step_dsl_recipe/step_dsl_recipe_helper_windows_platform.rst
-
+.. include:: ../../chef_master/source/dsl_recipe_helper_windows_platform.rst

@@ -1,13 +1,3 @@
-=====================================================
-Create the chef-repo
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/essentials_repository_create.html BY DESIGN
 
-.. include:: ../../includes_repository/includes_repository_create.rst
-
-Clone
-=====================================================
-.. include:: ../../step_repository/step_repository_create_clone.rst
-
-Download
-=====================================================
-.. include:: ../../step_repository/step_repository_create_download.rst
+.. include:: ../../chef_master/source/essentials_repository_create.rst

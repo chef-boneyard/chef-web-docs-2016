@@ -1,33 +1,3 @@
-=====================================================
-pacman_package
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/resource_pacman_package.html BY DESIGN
 
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
-.. include:: ../../includes_resources/includes_resource_package_pacman.rst
-
-.. note:: |note resource_based_on_package|
-
-Syntax
-=====================================================
-.. include:: ../../includes_resources/includes_resource_package_pacman_syntax.rst
-
-Actions
-=====================================================
-.. include:: ../../includes_resources/includes_resource_package_pacman_actions.rst
-
-Attributes
-=====================================================
-.. include:: ../../includes_resources/includes_resource_package_pacman_attributes.rst
-
-Providers
-=====================================================
-.. include:: ../../includes_resources/includes_resource_package_pacman_providers.rst
-
-Examples
-=====================================================
-|generic resource statement|
-
-**Install a package**
-
-.. include:: ../../step_resource/step_resource_pacman_package_install.rst
+.. include:: ../../chef_master/source/resource_pacman_package.rst

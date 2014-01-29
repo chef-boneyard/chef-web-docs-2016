@@ -1,8 +1,3 @@
-=====================================================
-Authenticated API Requests
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/plugin_knife_authenticated_requests.html BY DESIGN
 
-.. include:: ../../includes_plugin_knife/includes_plugin_knife.rst
-
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst
-
+.. include:: ../../chef_master/source/plugin_knife_authenticated_requests.rst

@@ -1,10 +1,3 @@
-=====================================================
-scm
-=====================================================
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/resource_scm.html BY DESIGN
 
-.. include:: ../../includes_resources/includes_resource_generic.rst
-
-The following resources can be used for version source control management:
-
-* :doc:`git </resource_git>`
-* :doc:`subversion </resource_subversion>`
+.. include:: ../../chef_master/source/resource_scm.rst
