@@ -403,6 +403,7 @@ The following topics discuss using |chef server osc| with platforms:
    ctl_chef_solo
    ctl_ohai
    dsl_recipe
+   dsl_recipe_helper_windows_platform
    dsl_recipe_method_attribute
    dsl_recipe_method_cookbook_name
    dsl_recipe_method_data_bag

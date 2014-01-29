@@ -498,6 +498,7 @@ The following topics discuss using |chef server oec| with platforms:
    ctl_private_chef
    ctl_push_jobs_client
    dsl_recipe
+   dsl_recipe_helper_windows_platform
    dsl_recipe_method_attribute
    dsl_recipe_method_cookbook_name
    dsl_recipe_method_data_bag
