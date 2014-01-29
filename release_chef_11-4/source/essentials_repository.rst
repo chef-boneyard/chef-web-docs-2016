@@ -8,13 +8,7 @@ Directory Structure
 =====================================================
 .. include:: ../../includes_repository/includes_repository_directory.rst
 
-The sub-directories in the |chef repo| are:
-
-* ``.chef/``
-* ``cookbooks/``
-* ``data_bags/``
-* ``environments/``
-* ``roles/``
+.. include:: ../../includes_repository/includes_repository_directory_structure.rst
 
 .chef/
 -----------------------------------------------------
@@ -71,12 +65,6 @@ Clone
 Download
 -----------------------------------------------------
 .. include:: ../../step_repository/step_repository_create_download.rst
-
-.. toctree::
-   :hidden:
-
-   essentials_repository_structure
-   essentials_repository_structure_chefignore
 
 
 
