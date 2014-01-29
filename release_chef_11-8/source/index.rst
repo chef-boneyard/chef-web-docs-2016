@@ -4,17 +4,17 @@ Documentation for Chef 11.8.x
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-View the :doc:`release notes </release_notes>` for Chef 11.8.x.
+View the :doc:`release notes </release_notes>` for Chef 11.8.x. 
 
 Getting Started
 =====================================================
-**From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
+**From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
 
 **Key concepts:** :doc:`Workstations </chef_overview_workstation>` | :doc:`The Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`LWRPs (Custom Resources) </lwrp_custom>` | :doc:`Knife </knife>`
 
 **Using Ruby:** :doc:`Just Enough Ruby for Chef </just_enough_ruby_for_chef>`
 
-**Try it out:** (1) `Sign up for Hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) or `Install Enterprise Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**), then (2) :doc:`Install the chef-client on a Workstation </install_workstation>`, (3) and then :doc:`Bootstrap a Node </install_bootstrap>`
+.. include:: ../../includes_chef/includes_chef_index_getchef.rst
 
 **learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
 
@@ -114,15 +114,6 @@ Cookbooks
    chef_quick_overview
    chef_shell
    chef_solo
-   chef_why
-   community
-   community_contributions
-   community_guidelines
-   community_lists
-   community_plugin_chef
-   community_plugin_knife
-   community_plugin_ohai
-   community_plugin_report_handler
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
@@ -222,7 +213,6 @@ Cookbooks
    lwrp_custom_provider_ruby
    lwrp_custom_resource
    lwrp_custom_resource_library
-   migrate_to_hosted
    plugin_knife
    plugin_knife_authenticated_requests
    plugin_knife_custom
