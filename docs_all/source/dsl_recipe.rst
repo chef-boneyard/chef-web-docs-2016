@@ -160,9 +160,11 @@ registry_value_exists?
 
 Windows Platform Helpers
 =====================================================
-.. include:: ../../includes_dsl_recipe/dsl_recipe_helper_windows_platform.rst
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform.rst
 
-
+Helper Methods
+----------------------------------------------------- 
+.. include:: ../../includes_dsl_recipe/includes_dsl_recipe_helper_windows_platform_helpers.rst
 
 
     
