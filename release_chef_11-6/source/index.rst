@@ -1,14 +1,14 @@
 =====================================================
-Documentation for Chef 11.6.x 
+Documentation for |chef client| 11.6.x
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-View the :doc:`release notes </release_notes>` for Chef 11.6.x.
+View the :doc:`release notes </release_notes>` for |chef client| 11.6.x.
 
 Getting Started 
 =====================================================
-**From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>` | :doc:`Why Chef? </chef_why>`
+**From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
 
 **Key concepts:** :doc:`Workstations </chef_overview_workstation>` | :doc:`The Server </chef_overview_server>` | :doc:`Nodes </chef_overview_nodes>` | :doc:`Cookbooks </chef_overview_cookbooks>` | :doc:`Attributes </chef_overview_attributes>` | :doc:`Resources and Providers </resource>` | :doc:`LWRPs </lwrp_custom>` | :doc:`Knife </knife>`
 
@@ -47,49 +47,20 @@ Server Essentials
 The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
 
 * A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
-* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_. 
+* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_.
 * All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
 * The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
 * Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
+* The :doc:`Chef Server API </api_chef_server>` can be used to access objects on the |chef server|
 
-|chef server oec| 
+|chef server oec|
 -----------------------------------------------------
-|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes support for high availability deployment scenarios.
-
-**Deployment Scenarios:** :doc:`Standalone </server_deploy_standalone>` | :doc:`Scaled Back End </server_deploy_be>` | :doc:`Scaled Front End </server_deploy_fe>` | :doc:`Scaled Front and Back Ends </server_deploy_febe>`
-
-**Install:** :doc:`Prerequisites </install_server_pre>` | :doc:`Install the Enterprise Chef Server </install_server_oec>` | :doc:`Download the chef-client using the Omnitruck API </api_omnitruck>`
-
-**Install Scenarios:** :doc:`Standalone </install_server_standalone>` | :doc:`Scaled Back End </install_server_be>` | :doc:`Scaled Front End </install_server_fe>` | :doc:`Scaled Front and Back Ends </install_server_febe>` | :doc:`Migrate to Hosted Enterprise Chef </migrate_to_hosted>` | :doc:`Upgrade from Private Chef </upgrade_server>`
-
-**Install Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
-
-**Manage:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>` 
-
-**Settings and Tools:** :doc:`private-chef.rb </config_rb_chef_server_enterprise>` | :doc:`private-chef-ctl </ctl_private_chef>` | :doc:`orgmapper </orgmapper>`
+|chef server oec| is a |chef server| that can be deployed behind the firewall or be accessed from the hosted platform. |chef server oec| includes all of the core functionality included in the |chef server osc| version, but includes additional functionality like |reporting| and built-in support for high availability deployment scenarios. For more information about |chef server oec|, see http://docs.opscode.com/enterprise/.
 
 |chef server osc|
 -----------------------------------------------------
-|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|.
-
-**Install:** `Sign up for Hosted Enterprise Chef <http://www.opscode.com/hosted-chef/?utm_source=docs>`_ (click **Get Chef**) | `Install Enterprise Chef <http://www.opscode.com/private-chef/?utm_source=docs>`_ (click **Get Chef**) | :doc:`Install the Chef Server </install_server>` | :doc:`Scenario: Install the Chef Server on a Virtual Machine </install_server_scenario_vm>` | :doc:`Download with Omnitruck API </api_omnitruck>`
-
-**Settings and Tools:** :doc:`chef-server.rb </config_rb_chef_server>` | :doc:`chef-server-ctl </ctl_chef_server>`
-
-Common Features
------------------------------------------------------
-The following features are available in both |chef server oec| and |chef server osc|:
-
-**The Node Object:** :doc:`About Node Objects </essentials_node_object>` | :doc:`Run-lists </essentials_node_object_run_lists>` | :doc:`Deep Merge </essentials_node_object_deep_merge>`
-
-**Search:** :doc:`About Search </essentials_search>`
-
-**Security:** :doc:`Authentication and Authorization </auth>` | :doc:`Headers and Endpoints </api_chef_server>` | :doc:`Private Keys </chef_private_keys>`
-
-**Policy:** :doc:`About Policy </essentials_policy>` | :doc:`Data Bags </essentials_data_bags>` | :doc:`Environments </essentials_environments>` | :doc:`Roles </essentials_roles>`
-
-**APIs:** :doc:`Cookbooks Site API </api_cookbooks_site>` | :doc:`Chef Server API </api_chef_server>`
+|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|. For more information about |chef server oec|, see http://docs.opscode.com/open_source/.
 
 
 The Nodes 
@@ -98,16 +69,16 @@ The Nodes
 
 **Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
-**Ohai:** :doc:`About Ohai </ohai>`
+.. include:: ../../includes_chef/includes_chef_index_ohai.rst
 
 **Settings:** :doc:`client.rb </config_rb_client>` | :doc:`solo.rb </config_rb_solo>`
 
-**Tools:** :doc:`chef-client (executable) </ctl_chef_client>` | :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-solo (executable) </ctl_chef_solo>`
+**Command-line Tools:** :doc:`chef-client (executable) </ctl_chef_client>` | :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-solo (executable) </ctl_chef_solo>`
 
 
 Cookbooks
 =====================================================
-**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` | :doc:`Handlers </essentials_handlers>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
+**The Basics:** :doc:`About Cookbooks </essentials_cookbooks>` | :doc:`About Recipes </essentials_cookbook_recipes>` | :doc:`About Attribute Files </essentials_cookbook_attribute_files>` | :doc:`Handlers </handlers>` | `Popular Cookbooks <https://github.com/opscode-cookbooks>`_
 
 **LWRPs:** :doc:`About Custom LWRPs </lwrp_custom>` | :doc:`Lightweight Resources </lwrp_custom_resource>` | :doc:`Lightweight Providers w/Chef Resources </lwrp_custom_provider>` | :doc:`Lightweight Providers w/Custom Ruby </lwrp_custom_provider_ruby>`
 
@@ -115,7 +86,7 @@ Cookbooks
 
 **The Recipe DSL:** :doc:`About the Recipe DSL </dsl_recipe>` --- **Methods:** :doc:`attribute? </dsl_recipe_method_attribute>` | :doc:`cookbook_name </dsl_recipe_method_cookbook_name>` | :doc:`data_bag </dsl_recipe_method_data_bag>` | :doc:`data_bag_item </dsl_recipe_method_data_bag>` | :doc:`platform? </dsl_recipe_method_platform>` | :doc:`platform_family? </dsl_recipe_method_platform_family>` | :doc:`recipe_name </dsl_recipe_method_recipe_name>` |  :doc:`registry_data_exists? </dsl_recipe_method_registry_data_exists>` | :doc:`registry_get_subkeys </dsl_recipe_method_registry_get_subkeys>` | :doc:`registry_get_values </dsl_recipe_method_registry_get_values>` | :doc:`registry_has_subkeys? </dsl_recipe_method_registry_has_subkeys>` | :doc:`registry_key_exists? </dsl_recipe_method_registry_key_exists>` | :doc:`registry_value_exists? </dsl_recipe_method_registry_value_exists>` | :doc:`resources </dsl_recipe_method_resources>` | :doc:`search </dsl_recipe_method_search>` | :doc:`tag </dsl_recipe_method_tag>` | :doc:`tagged? </dsl_recipe_method_tag>` | :doc:`untag </dsl_recipe_method_tag>` | :doc:`value_for_platform </dsl_recipe_method_value_for_platform>` | :doc:`value_for_platform_family </dsl_recipe_method_value_for_platform_family>`
 
-**Resources and Providers:** :doc:`About Resources and Providers </resource>` | :doc:`Common Functionality </resource_common>` --- **Resources:** :doc:`apt_package </resource_apt_package>` | :doc:`bash </resource_bash>` | :doc:`batch </resource_batch>` | :doc:`breakpoint </resource_breakpoint>` | :doc:`chef_gem </resource_chef_gem>` | :doc:`cookbook_file </resource_cookbook_file>` | :doc:`cron </resource_cron>` | :doc:`deploy </resource_deploy>` | :doc:`directory </resource_directory>` | :doc:`dpkg_package </resource_dpkg_package>` | :doc:`easy_install_package </resource_easy_install_package>` | :doc:`env </resource_env>` | :doc:`erl_call </resource_erlang_call>` | :doc:`execute </resource_execute>` | :doc:`file </resource_file>` | :doc:`gem_package </resource_gem_package>` | :doc:`git </resource_git>` | :doc:`group </resource_group>` | :doc:`http_request </resource_http_request>` | :doc:`ifconfig </resource_ifconfig>` | :doc:`link </resource_link>` | :doc:`log </resource_log>` | :doc:`mdadm </resource_mdadm>` | :doc:`mount </resource_mount>` | :doc:`ohai </resource_ohai>` | :doc:`package </resource_package>` | :doc:`powershell_script </resource_powershell_script>` | :doc:`registry_key </resource_registry_key>` | :doc:`remote_directory </resource_remote_directory>` | :doc:`remote_file </resource_remote_file>` | :doc:`route </resource_route>` | :doc:`rpm_package </resource_rpm_package>` | :doc:`ruby_block </resource_ruby_block>` | :doc:`script </resource_script>` | :doc:`service </resource_service>` | :doc:`subversion </resource_subversion>` | :doc:`template </resource_template>` | :doc:`user </resource_user>` | :doc:`yum_package </resource_yum>`
+**Resources and Providers:** :doc:`About Resources and Providers </resource>` | :doc:`Common Functionality </resource_common>` --- **Resources:** :doc:`apt_package </resource_apt_package>` | :doc:`bash </resource_bash>` | :doc:`batch </resource_batch>` | :doc:`breakpoint </resource_breakpoint>` | :doc:`chef_gem </resource_chef_gem>` | :doc:`chef_handler </resource_chef_handler>` | :doc:`cookbook_file </resource_cookbook_file>` | :doc:`cron </resource_cron>` | :doc:`deploy </resource_deploy>` | :doc:`directory </resource_directory>` | :doc:`dpkg_package </resource_dpkg_package>` | :doc:`easy_install_package </resource_easy_install_package>` | :doc:`env </resource_env>` | :doc:`erl_call </resource_erlang_call>` | :doc:`execute </resource_execute>` | :doc:`file </resource_file>` | :doc:`gem_package </resource_gem_package>` | :doc:`git </resource_git>` | :doc:`group </resource_group>` | :doc:`http_request </resource_http_request>` | :doc:`ifconfig </resource_ifconfig>` | :doc:`link </resource_link>` | :doc:`log </resource_log>` | :doc:`mdadm </resource_mdadm>` | :doc:`mount </resource_mount>` | :doc:`ohai </resource_ohai>` | :doc:`package </resource_package>` | :doc:`powershell_script </resource_powershell_script>` | :doc:`registry_key </resource_registry_key>` | :doc:`remote_directory </resource_remote_directory>` | :doc:`remote_file </resource_remote_file>` | :doc:`route </resource_route>` | :doc:`rpm_package </resource_rpm_package>` | :doc:`ruby_block </resource_ruby_block>` | :doc:`script </resource_script>` | :doc:`service </resource_service>` | :doc:`subversion </resource_subversion>` | :doc:`template </resource_template>` | :doc:`user </resource_user>` | :doc:`yum_package </resource_yum>`
 
 .. Hide the TOC from this file.
 
@@ -123,37 +94,21 @@ Cookbooks
    :hidden:
 
    api_chef_server
-   api_cookbooks_site
    api_omnitruck
-   auth
    auth_authentication
    auth_authorization
    chef_client
+   chef_cookbooks
    chef_overview
    chef_overview_attributes
    chef_overview_cookbooks
    chef_overview_nodes
    chef_overview_server
-   chef_overview_server_hosted
-   chef_overview_server_open_source
-   chef_overview_server_private
    chef_overview_workstation
    chef_private_keys
    chef_quick_overview
    chef_shell
    chef_solo
-   chef_why
-   community
-   community_contributions
-   community_guidelines
-   community_lists
-   community_plugin_chef
-   community_plugin_knife
-   community_plugin_ohai
-   community_plugin_report_handler
-   config
-   config_rb_chef_server
-   config_rb_chef_server_enterprise
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
@@ -161,12 +116,8 @@ Cookbooks
    config_rb_solo
    ctl_chef_apply
    ctl_chef_client
-   ctl_chef_server
    ctl_chef_shell
    ctl_chef_solo
-   ctl_ohai
-   ctl_private_chef
-   debug
    dsl_recipe
    dsl_recipe_method_attribute
    dsl_recipe_method_cookbook_name
@@ -187,8 +138,8 @@ Cookbooks
    dsl_recipe_method_value_for_platform_family
    essentials_chef_client
    essentials_cookbook_attribute_files
-   essentials_cookbook_directory
    essentials_cookbook_definitions
+   essentials_cookbook_directory
    essentials_cookbook_files
    essentials_cookbook_libraries
    essentials_cookbook_metadata
@@ -198,65 +149,60 @@ Cookbooks
    essentials_cookbook_versions
    essentials_cookbooks
    essentials_data_bags
-   essentials_environment_variables
    essentials_environments
-   essentials_handlers
-   essentials_knife
-   essentials_nodes
-   essentials_nodes_chef_run
-   essentials_nodes_why_run
    essentials_node_object
    essentials_node_object_deep_merge
    essentials_node_object_run_lists
+   essentials_nodes
+   essentials_nodes_chef_run
+   essentials_nodes_why_run
    essentials_policy
    essentials_repository
    essentials_repository_create
    essentials_roles
    essentials_search
-   install
+   handlers
    install_bootstrap
    install_omnibus
-   install_server
-   install_server_be
-   install_server_fe
-   install_server_febe
-   install_server_hosted
-   install_server_ldap
-   install_server_oec
-   install_server_orgs
-   install_server_pre
-   install_server_scenario_vm
-   install_server_standalone
-   install_server_users
    install_windows
    install_workstation
    just_enough_ruby_for_chef
    knife
+   knife_common_options
+   knife_bootstrap
+   knife_client
+   knife_configure
+   knife_cookbook
+   knife_cookbook_site
+   knife_data_bag
+   knife_delete
+   knife_deps
+   knife_diff
+   knife_download
+   knife_edit
+   knife_environment
+   knife_exec
+   knife_index_rebuild
+   knife_list
+   knife_node
+   knife_raw
+   knife_recipe_list
+   knife_role
+   knife_search
+   knife_show
+   knife_ssh
+   knife_status
+   knife_tag
+   knife_upload
+   knife_user
+   knife_using
+   knife_xargs
    lwrp
-   lwrp_chef_handler
    lwrp_custom
    lwrp_custom_provider
    lwrp_custom_provider_ruby
    lwrp_custom_resource
    lwrp_custom_resource_library
-   manage_server_hosted 
-   manage_server_hosted_accounts
-   manage_server_hosted_clients
-   manage_server_hosted_cookbooks
-   manage_server_hosted_data_bags
-   manage_server_hosted_environments
-   manage_server_hosted_groups
-   manage_server_hosted_nodes
-   manage_server_hosted_organizations
-   manage_server_hosted_permissions
-   manage_server_hosted_roles
-   manage_server_hosted_search
-   manage_server_hosted_users
-   migrate_to_hosted
-   ohai
-   ohai_custom
-   opscode_cookbooks
-   orgmapper
    plugin_knife
    plugin_knife_authenticated_requests
    plugin_knife_custom
@@ -267,6 +213,7 @@ Cookbooks
    resource_batch
    resource_breakpoint
    resource_chef_gem
+   resource_chef_handler
    resource_common
    resource_cookbook_file
    resource_cron
@@ -314,24 +261,3 @@ Cookbooks
    resource_template
    resource_user
    resource_yum
-   server_backup_restore
-   server_components 
-   server_data
-   server_deploy_be
-   server_deploy_fe
-   server_deploy_febe
-   server_deploy_standalone
-   server_firewalls_and_ports
-   server_high_availability
-   server_ldap
-   server_logs
-   server_monitor
-   server_security
-   server_services
-   server_tuning
-   server_types
-   server_users
-   upgrade_server
-   upgrade_server_ha
-   upgrade_server_open_source
-   upgrade_server_standalone
