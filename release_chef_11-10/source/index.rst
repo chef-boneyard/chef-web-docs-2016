@@ -1,12 +1,12 @@
 =====================================================
-Documentation for Chef 11.10.x 
+Documentation for |chef client| 11.10.x 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-View the :doc:`release notes </release_notes>` for Chef 11.10.x.
+View the :doc:`release notes </release_notes>` for |chef client| 11.10.x.
 
-This is a placeholder for Chef 11-10 documentation, which is an upcoming release of |chef|. See |chef docs| for the current documentation.
+This is a placeholder for |chef client| 11-10 documentation, which is an upcoming release of the |chef client|. See |chef docs| for the current documentation.
 
 .. Hide the TOC from this file.  
 
