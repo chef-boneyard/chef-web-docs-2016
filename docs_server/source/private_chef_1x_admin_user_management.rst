@@ -2,6 +2,8 @@
 User Management
 =====================================================
 
+.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
+
 The following tasks can be done around user management.
 
 Change Password

@@ -2,6 +2,8 @@
 orgmapper
 =====================================================
 
+.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
+
 |orgmapper desc_private_chef|
 
 Examples

@@ -2,6 +2,8 @@
 Prerequisites
 =====================================================
 
+.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
+
 The following prerequisites apply to every installation of |chef private|.
 
 Download |chef private| 1.x.x

@@ -2,6 +2,8 @@
 Pre-installation Steps
 =====================================================
 
+.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
+
 This section details what needs to be done before your consultants arrive on-site to install and configure |chef private|.
 
 Questionnaire

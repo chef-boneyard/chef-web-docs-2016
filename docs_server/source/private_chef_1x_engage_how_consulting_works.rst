@@ -2,6 +2,8 @@
 How Consulting Works
 =====================================================
 
+.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
+
 The following sections describe how |company_name| consulting works from the initial engagement through to the point at which the engagement is finished.
 
 Initial Engagement

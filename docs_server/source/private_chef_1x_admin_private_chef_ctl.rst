@@ -2,6 +2,8 @@
 private-chef-ctl
 =====================================================
 
+.. warning:: This topic is about an older version of Enterprise Chef. For documentation about the current version see: http://docs.opscode.com/enterprise/.
+
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef.rst
 
 backup-recover
