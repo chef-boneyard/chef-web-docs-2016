@@ -13,8 +13,6 @@
      - |atomic_update| Default value: ``true``.
    * - ``backup``
      - |backups_kept| Default value: ``5``.
-   * - ``content``
-     - |content file| The default behavior will not modify content.
    * - ``cookbook``
      - |cookbook file_location| The default value is the current cookbook.
    * - ``force_unlink``
