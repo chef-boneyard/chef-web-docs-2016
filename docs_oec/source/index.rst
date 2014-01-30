@@ -1,5 +1,5 @@
 =====================================================
-All About |chef server oec| ...
+All About |chef server oec| ... 
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
