@@ -16,7 +16,7 @@ The following items are new for |chef 11-10| and/or are changes from previous ve
 A recipe can be specified when running the |chef client|, typically when running the |chef client| in local mode:
 
 ``RECIPE_FILE``
-   The path to a recipe. For example, if a recipe file is in the current directory, use ``recipe_file.rb``. This is typically used with the ``--local-mode`` option.
+   |path recipe_file|
 
 
 |resource group| Resource Attributes
@@ -30,9 +30,9 @@ The following attributes have been added to the |resource group| resource:
    * - Attribute
      - Description
    * - ``excluded_members``
-     - Indicates which users should be removed from a group. May only be used when ``append`` is set to ``true``.
+     - |excluded_members|
    * - ``non_unique``
-     - Indicates that ``gid`` duplication is allowed. May only be used with the ``Groupadd`` provider. Default value: ``false``.
+     - |non_unique_members| Default value: ``false``.
 
 
 What's Fixed

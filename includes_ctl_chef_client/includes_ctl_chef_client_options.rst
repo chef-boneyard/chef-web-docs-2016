@@ -73,7 +73,7 @@ This command has the following options:
    |enable_reporting|
 
 ``RECIPE_FILE``
-   The path to a recipe. For example, if a recipe file is in the current directory, use ``recipe_file.rb``. This is typically used with the ``--local-mode`` option.
+   |path recipe_file|
 
 ``-s SECONDS``, ``--splay SECONDS``
    |splay|

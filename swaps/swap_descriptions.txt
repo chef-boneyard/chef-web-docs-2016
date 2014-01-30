@@ -33,7 +33,7 @@
 .. |api eucalyptus_endpoint| replace:: The API endpoint used with the |eucalyptus| environment.
 .. |api openstack_endpoint| replace:: The API endpoint used with the |openstack| environment.
 .. |app_module lwrp application_python_gunicorn| replace:: Set this value to ``django`` to run a |django| application; any other string or symbol will build a |gunicorn| base command.
-.. |append resource group| replace:: Indicates whether members are added to a group. If ``true``, the listed members will be added to a group.
+.. |append_group| replace:: Use to specify how members should be appended and/or removed from a group. When ``true``, ``members`` will be appended and ``excluded_members`` will be removed. When ``false``, group members will be reset to the value of the ``members`` attribute.
 .. |appendfsync| replace:: Indicates the frequency at which the operating system will write data on-disk, instead of waiting for more data. Possible values: ``no`` (don't fsync, let operating system flush data), ``always`` (fsync after every write to the append-only log file), and ``everysec`` (fsync only once time per second).
 .. |appendonly| replace:: Indicates whether data is dumped asynchronously on-disk or to an append-only log file.
 .. |application_pool app| replace:: The application pool to which an application belongs.
@@ -369,6 +369,7 @@
 .. |exactarch| replace:: Indicates whether |yum| will update only packages that match the architecture already installed.
 .. |exec| replace:: A string of code that will be executed.
 .. |exclude_package_list| replace:: A space-separated list of packages to be excluded from updates and installs.
+.. |excluded_members| replace:: Indicates which users should be removed from a group. May only be used when ``append`` is set to ``true``.
 .. |execute chef_apply| replace:: Use to execute a resource using a string.
 .. |exists package| replace:: Indicates that a package already exists.
 .. |exitcodes| replace:: A list of expected exit codes for a program.
@@ -460,7 +461,6 @@
 .. |group default_users| replace:: Use the |webui group users| group to define the list of users who will use |knife| and the |webui| user interface to interact with objects and object types. In general, think of this permission as "all of the non-admin human actors who will work with data that is uploaded to and/or downloaded from the |chef server|".
 .. |group deploy| replace:: The system group that is responsible for the checked-out code.
 .. |group ids| replace:: A comma-separated list of security group identifiers.
-.. |group_members| replace:: Indicates that users are included in the group.
 .. |group_package_types| replace:: The types of packages installed when ``groupinstall`` is called. Possible values: ``default``, ``mandatory``, and ``optional``.
 .. |group resource link| replace:: A string or ID that identifies the group associated with a symbolic link.
 .. |grouping| replace:: Adds a title and description to a group of attributes within a namespace. Takes a name (along with the / notation that defines a nested grouping), a title, and a short description.
@@ -865,6 +865,7 @@
 .. |mdpolicy| replace:: The metadata download policy for the repository metadata index.
 .. |media location| replace:: The geographic location for a virtual machine and its services.
 .. |medium| replace:: Display more, but not all, of a node's data when searching using the default summary format.
+.. |members_group| replace:: Indicates which users should be set or appended to a group.
 .. |memory mb| replace:: The amount of memory, in megabytes. Possible values: ``512``, ``1024``, ``1536``, ``2048``, ``4096``, ``8192``, ``12288``, or ``16384``.
 .. |memory maximum_redis| replace:: The maximum amount of memory (in bytes).
 .. |memory maximum_policy_redis| replace:: The policy applied when the maximum amount of memory is reached. Possible values: ``allkeys-lru`` (remove keys, starting with those used least frequently), ``allkeys-random`` (remove keys randomly), ``noeviction`` (don't expire, return an error on write operation), ``volatile-lru`` (remove expired keys, starting with those used least frequently), ``volatile-random`` (remove expired keys randomly), and ``volatile-ttl`` (remove keys, starting with nearest expired time).
@@ -1025,6 +1026,7 @@
 .. |node_purge| replace:: The name of the node to be deleted, if different from the server name.
 .. |node_name workstation1| replace:: The name of the node.
 .. |node_path| replace:: The location in which to look for node-specific recipes.
+.. |non_unique_members| replace:: Indicates that ``gid`` duplication is allowed. May only be used with the ``Groupadd`` provider.
 .. |nopasswd| replace:: Indicates whether a password must be supplied when invoking |sudo cmd|.
 .. |notes cloudkick| replace:: Notes about the monitor.
 .. |num_versions| replace:: The number of cookbook versions to include in the response, where ``n`` is the number of cookbook versions. For example: ``num_versions=3`` will return the three latest versions, in descending order (newest to oldest). Use ``num_versions=all`` to return all cookbook versions. If ``num_versions`` is not specified, it will return a single cookbook version. ``0`` is an invalid input (it will return an empty array for the versions of each cookbook).
@@ -1116,6 +1118,7 @@
 .. |path pid_file| replace:: The location in which a process identification number (pid) is saved. An executable, when started as a daemon, will write the pid to the specified file.
 .. |path plugin_ohai| replace:: The directory in which |ohai| plugins are located.
 .. |path python_virtualenv| replace:: The path to the location in which the virtual |python| environment will be created.
+.. |path recipe_file| replace:: The path to a recipe. For example, if a recipe file is in the current directory, use ``recipe_file.rb``. This is typically used with the ``--local-mode`` option.
 .. |path repository| replace:: The path to the repository.
 .. |path requirements_file| replace:: The relative path to a requirements file. If this attribute is unspecified, the provider will look for one in the project root named ``requirements/#{chef_environment}.txt`` or ``requirements.txt``.
 .. |path resource execute| replace:: An array of paths to use when searching for a command. These paths are not added to the command's environment $PATH.
