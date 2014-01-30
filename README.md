@@ -61,7 +61,7 @@ The first time you run the build, it will probably take longer (30-45 min), as i
 
 This will also apply when you've run the `make clean` command, which effectively resets your working environment or if files located in the `/swaps` folder are changed.
 
-Subsequent runs of `make release` should be relatively fast (2-5 mins), and you can use subsets named: `master, all, server` to build one part.
+Subsequent runs of `make release` should be relatively fast (2-5 mins), and you can use subsets. For example: `master` for the main docs build, `enterprise` for Enterprise Chef, `open_source` for Open Source Chef, and so on. The full list is available at the top of the `makefile`.
 
 
 ## About Docs Versions
@@ -176,8 +176,6 @@ And then if everything else in the template resource file is the same for 10-lat
 ### So what types of files typically change?
 
 Mostly the settings have changed in the versioning effort. Knife attributes get added, resource attributes get added. New features get added, but generally don't require appending version info to them because they start out fresh and clean.
-
-This will be interesting because we're, effectively, going back in time. So some -10-latest filename extensions are expected, especially around attributes, config settings, resources/providers, recipe DSL methods, and Knife subcommands.
 
 ### So what types of changes do we want?
 
