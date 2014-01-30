@@ -19,7 +19,7 @@ The Workstation
 =====================================================
 The workstation is the location from which most users will do most of their work. This work includes:
 
-* Developing `cookbooks <http://docs.opscode.com/enterprise/index.html#cookbooks>`_ and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
+* Developing `cookbooks <http://docs.opscode.com/release/oec_11-0/index.html#cookbooks>`_ and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
 * Synchronizing the :doc:`chef-repo </essentials_repository>` with version source control like |git| or |svn|
 * Using |knife| to upload items from the |chef repo| to the |chef server|
 * Configuring :doc:`organizational policy </essentials_policy>`
@@ -33,9 +33,9 @@ A workstation must be configured with a |chef client|, must have access to a |ch
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_repository_create.html">Create and Sync the chef-repo</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_workstation.html">Set up a Workstation</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_bootstrap.html">Bootstrap a Node</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_repository_create.html">Create and Sync the chef-repo</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_workstation.html">Set up a Workstation</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_bootstrap.html">Bootstrap a Node</a> </br>
 
 Knife
 -----------------------------------------------------
@@ -45,31 +45,31 @@ The following |knife| subcommands are built-in:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_bootstrap.html">knife bootstrap</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_client.html">knife client</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_configure.html">knife configure</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_cookbook.html">knife cookbook</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_cookbook_site.html">knife cookbook site</a> (which uses the <a href="http://docs.opscode.com/enterprise/api_cookbooks_site.html">Cookbooks Site API</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_data_bag.html">knife data bag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_delete.html">knife delete</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_deps.html">knife deps</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_diff.html">knife diff</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_download.html">knife download</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_edit.html">knife edit</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_environment.html">knife environment</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_exec.html">knife exec</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_list.html">knife list</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_node.html">knife node</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_raw.html">knife raw</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_recipe_list.html">knife recipe list</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_role.html">knife role</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_search.html">knife search</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_show.html">knife show</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_ssh.html">knife ssh</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_status.html">knife status</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_tag.html">knife tag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_upload.html">knife upload</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_xargs.html">knife xargs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_bootstrap.html">knife bootstrap</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_client.html">knife client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_configure.html">knife configure</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_cookbook.html">knife cookbook</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_cookbook_site.html">knife cookbook site</a> (which uses the <a href="http://docs.opscode.com/release/oec_11-0/api_cookbooks_site.html">Cookbooks Site API</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_data_bag.html">knife data bag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_delete.html">knife delete</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_deps.html">knife deps</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_diff.html">knife diff</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_download.html">knife download</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_edit.html">knife edit</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_environment.html">knife environment</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_exec.html">knife exec</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_list.html">knife list</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_node.html">knife node</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_raw.html">knife raw</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_recipe_list.html">knife recipe list</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_role.html">knife role</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_search.html">knife search</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_show.html">knife show</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_ssh.html">knife ssh</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_status.html">knife status</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_tag.html">knife tag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_upload.html">knife upload</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/knife_xargs.html">knife xargs</a> </br>
 
 |knife| settings are stored in the :doc:`knife.rb </config_rb_knife>` file. There is a default |knife rb| file and there are :doc:`optional settings </config_rb_knife_optional_settings>` that can be added to the |knife rb| file.
 
@@ -95,7 +95,7 @@ Plugins allow |knife| to interact with all of the major cloud providers. All |kn
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_vcloud.html">knife vcloud</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_windows.html">knife windows</a> </br>
 
-A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/enterprise/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/enterprise/plugin_knife_custom.html>`_ can be created.
+A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/release/oec_11-0/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/release/oec_11-0/plugin_knife_custom.html>`_ can be created.
 
 Settings and Tools
 -----------------------------------------------------
@@ -103,14 +103,14 @@ The following settings files are used to configure behavior for |knife| and how 
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_knife.html">knife.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/config_rb_knife.html">knife.rb</a> </br>
 
 The following command-line tools can be run on the workstation to simulate a |chef client| run locally:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_chef_apply.html">chef-apply</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_chef_shell.html">chef-shell</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/ctl_chef_apply.html">chef-apply</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/ctl_chef_shell.html">chef-shell</a> </br>
 
 
 
@@ -131,7 +131,7 @@ Server Essentials
 The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
 
 * A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
-* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/enterprise/essentials_node_object.html#attributes>`_. 
+* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/release/oec_11-0/essentials_node_object.html#attributes>`_. 
 * All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
 * The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
@@ -149,10 +149,10 @@ The following sections discuss these deployment configuration options in greater
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_standalone.html">Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_be.html">Scaled Back End</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_fe.html">Scaled Front End</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_deploy_febe.html">Scaled Front and Back Ends</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_deploy_standalone.html">Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_deploy_be.html">Scaled Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_deploy_fe.html">Scaled Front End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_deploy_febe.html">Scaled Front and Back Ends</a> </br>
 
 .. note:: For more information about signing up for hosted |chef server oec|, see https://getchef.opscode.com/signup.
 
@@ -162,31 +162,31 @@ The |chef server| can be installed via download or by using the |api omnitruck|:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server.html">Install the Enterprise Chef Server</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server.html">Install the Enterprise Chef Server</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
 Installation scenarios:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_pre.html">Prerequisites</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_standalone.html">Standalone</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_be.html">Scaled Back End</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_fe.html">Scaled Front End</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Scaled Front and Back Ends</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server_pre.html">Prerequisites</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server_standalone.html">Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server_be.html">Scaled Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server_fe.html">Scaled Front End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server_febe.html">Scaled Front and Back Ends</a> </br>
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Standalone Upgrade</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">High Availability Upgrade</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/upgrade_server_standalone.html">Standalone Upgrade</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/upgrade_server_ha.html">High Availability Upgrade</a> </br>
 
 Options: 
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_ldap.html">Active Directory / LDAP</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_users.html">Create Users</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_orgs.html">Create Organizations</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server_ldap.html">Active Directory / LDAP</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server_users.html">Create Users</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_server_orgs.html">Create Organizations</a> </br>
 
 Manage Enterprise Chef 
 -----------------------------------------------------
@@ -194,20 +194,20 @@ The |chef server| can be managed in the following ways:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_backup_restore.html">Backup and Restore</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_firewalls_and_ports.html">Firewalls and Ports</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_high_availability.html">High Availability</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_ldap.html">LDAP / Active Directory</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_logs.html">Logs</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_monitor.html">Monitor</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_tuning.html">Performance Tuning</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_security.html">Security</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_services.html">Services</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_users.html">Users</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_backup_restore.html">Backup and Restore</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_firewalls_and_ports.html">Firewalls and Ports</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_high_availability.html">High Availability</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_ldap.html">LDAP / Active Directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_logs.html">Logs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_monitor.html">Monitor</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_tuning.html">Performance Tuning</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_security.html">Security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_services.html">Services</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_users.html">Users</a> </br>
 
 
-..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_orgs.html">Organizations</a> </br>
-..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_data.html">Server Data</a> </br>
+..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_orgs.html">Organizations</a> </br>
+..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/server_data.html">Server Data</a> </br>
 
 Settings and Tools 
 -----------------------------------------------------
@@ -215,14 +215,14 @@ The following settings files are used to configure behavior for the |chef server
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">private-chef.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/config_rb_chef_server_enterprise.html">private-chef.rb</a> </br>
 
 The following command-line tools can be run on the |chef server|:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/orgmapper.html">orgmapper</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_private_chef.html">private-chef-ctl</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/orgmapper.html">orgmapper</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/ctl_private_chef.html">private-chef-ctl</a> </br>
 
 
 APIs
@@ -231,7 +231,7 @@ The following APIs can be used to access data on the |chef server|:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_chef_server.html">Chef Server API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/api_chef_server.html">Chef Server API</a> </br>
 
 
 
@@ -252,8 +252,8 @@ The |chef client| can be installed with the :doc:`knife bootstrap </knife_bootst
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
 Settings and Tools
 -----------------------------------------------------
@@ -261,15 +261,15 @@ The following settings files are used to configure behavior for the |chef client
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_client.html">client.rb</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_solo.html">solo.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/config_rb_client.html">client.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/config_rb_solo.html">solo.rb</a> </br>
 
 The following command-line tools can be run on any node:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_chef_client.html">chef-client</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/ctl_chef_solo.html">chef-solo</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/ctl_chef_client.html">chef-client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/ctl_chef_solo.html">chef-solo</a> </br>
 
 
 Cookbooks
@@ -284,15 +284,15 @@ A cookbook is made up of the following components: attribute files, definitions,
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_attribute_files.html">Attribute Files</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_definitions.html">Definitions</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_files.html">Files</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_libraries.html">Libraries</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_metadata.html">Metadata</a> (and <a href="http://docs.opscode.com/enterprise/config_rb_metadata.html">/cookbook directory settings</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_recipes.html">Recipes</a> (and the <a href="http://docs.opscode.com/enterprise/dsl_recipe.html">Recipe DSL</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_resources.html">Resources and Providers</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_templates.html">Templates</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/essentials_cookbook_versions.html">Versions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_attribute_files.html">Attribute Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_definitions.html">Definitions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_files.html">Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_libraries.html">Libraries</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_metadata.html">Metadata</a> (and <a href="http://docs.opscode.com/release/oec_11-0/config_rb_metadata.html">/cookbook directory settings</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_recipes.html">Recipes</a> (and the <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe.html">Recipe DSL</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_resources.html">Resources and Providers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_templates.html">Templates</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/essentials_cookbook_versions.html">Versions</a> </br>
 
 Resources
 -----------------------------------------------------
@@ -300,57 +300,58 @@ A :doc:`resource </resource>` is a key part of a recipe that defines the actions
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#actions">Actions</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#attributes">Attributes</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#conditionals">Conditionals</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#notifications">Notifications</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#relative-paths">Relative Paths</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#windows-file-security">Windows File Security</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#run-from-resource-collection">Run During Resource Compilation</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_common.html#actions">Actions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_common.html#attributes">Attributes</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_common.html#conditionals">Conditionals</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_common.html#notifications">Notifications</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_common.html#relative-paths">Relative Paths</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_common.html#windows-file-security">Windows File Security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_common.html#run-from-resource-collection">Run During Resource Compilation</a> </br>
 
 The following resources are built-in and can be used in any recipe:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_apt_package.html">apt_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_bash.html">bash</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_batch.html">batch</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_breakpoint.html">breakpoint</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_chef_gem.html">chef_gem</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_cookbook_file.html">cookbook_file</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_cron.html">cron</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_deploy.html">deploy</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_directory.html">directory</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_dpkg_package.html">dpkg_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_easy_install_package.html">easy_install_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_env.html">env</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_erlang_call.html">erl_call</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_execute.html">execute</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_file.html">file</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_gem_package.html">gem_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_git.html">git</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_group.html">group</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_http_request.html">http_request</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_ifconfig.html">ifconfig</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_link.html">link</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_log.html">log</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_mdadm.html">mdadm</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_mount.html">mount</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_ohai.html">ohai</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_package.html">package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_powershell_script.html">powershell_script</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_registry_key.html">registry_key</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_remote_directory.html">remote_directory</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_remote_file.html">remote_file</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_route.html">route</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_rpm_package.html">rpm_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_ruby_block.html">ruby_block</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_script.html">script</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_service.html">service</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_subversion.html">subversion</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_template.html">template</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_user.html">user</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_yum.html">yum_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_apt_package.html">apt_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_bash.html">bash</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_batch.html">batch</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_breakpoint.html">breakpoint</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_chef_gem.html">chef_gem</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_chef_handler.html">chef_handler</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_cookbook_file.html">cookbook_file</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_cron.html">cron</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_deploy.html">deploy</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_directory.html">directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_dpkg_package.html">dpkg_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_easy_install_package.html">easy_install_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_env.html">env</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_erlang_call.html">erl_call</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_execute.html">execute</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_file.html">file</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_gem_package.html">gem_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_git.html">git</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_group.html">group</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_http_request.html">http_request</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_ifconfig.html">ifconfig</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_link.html">link</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_log.html">log</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_mdadm.html">mdadm</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_mount.html">mount</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_ohai.html">ohai</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_package.html">package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_powershell_script.html">powershell_script</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_registry_key.html">registry_key</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_remote_directory.html">remote_directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_remote_file.html">remote_file</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_route.html">route</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_rpm_package.html">rpm_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_ruby_block.html">ruby_block</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_script.html">script</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_service.html">service</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_subversion.html">subversion</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_template.html">template</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_user.html">user</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/resource_yum.html">yum_package</a> </br>
 
 LWRPs
 -----------------------------------------------------
@@ -358,10 +359,10 @@ A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much lik
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_custom.html">About custom LWRPs</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_custom_resource.html">Create a lightweight resource</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_custom_provider.html">Create a lightweight provider using platform resources</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_custom_provider_ruby.html">Create a lightweight provider using Ruby</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/lwrp_custom.html">About custom LWRPs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/lwrp_custom_resource.html">Create a lightweight resource</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/lwrp_custom_provider.html">Create a lightweight provider using platform resources</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/lwrp_custom_provider_ruby.html">Create a lightweight provider using Ruby</a> </br>
 
 The following LWRPs are available in |company_name|-maintained cookbooks:
 
@@ -405,27 +406,27 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_attribute.html">attribute?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_cookbook_name.html">cookbook_name</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_data_bag.html">data_bag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_data_bag.html">data_bag_item</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_platform.html">platform?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_platform_family.html">platform_family?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_recipe_name.html">recipe_name</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_registry_data_exists.html">registry_data_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_registry_get_subkeys.html">registry_get_subkeys</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_registry_get_values.html">registry_get_values</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_registry_has_subkeys.html">registry_has_subkeys?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_registry_key_exists.html">registry_key_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_registry_value_exists.html">registry_value_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_resources.html">resources</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_search.html">search</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_tag.html">tag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_tag.html">tagged?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_tag.html">untag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
- 
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_attribute.html">attribute?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_cookbook_name.html">cookbook_name</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_data_bag.html">data_bag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_data_bag.html">data_bag_item</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_platform.html">platform?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_platform_family.html">platform_family?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_recipe_name.html">recipe_name</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_registry_data_exists.html">registry_data_exists?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_registry_get_subkeys.html">registry_get_subkeys</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_registry_get_values.html">registry_get_values</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_registry_has_subkeys.html">registry_has_subkeys?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_registry_key_exists.html">registry_key_exists?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_registry_value_exists.html">registry_value_exists?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_resources.html">resources</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_search.html">search</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_tag.html">tag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_tag.html">tagged?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_tag.html">untag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-0/dsl_recipe_helper_windows_platform.html">Microsoft Windows Platform Helpers</a> </br>
 
 Platforms 
 =====================================================
@@ -459,6 +460,7 @@ The following topics discuss using |chef server oec| with platforms:
    ctl_chef_solo
    ctl_private_chef
    dsl_recipe
+   dsl_recipe_helper_windows_platform
    dsl_recipe_method_attribute
    dsl_recipe_method_cookbook_name
    dsl_recipe_method_data_bag
@@ -559,6 +561,7 @@ The following topics discuss using |chef server oec| with platforms:
    resource_batch
    resource_breakpoint
    resource_chef_gem
+   resource_chef_handler
    resource_common
    resource_cookbook_file
    resource_cron
