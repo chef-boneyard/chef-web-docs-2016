@@ -13,14 +13,6 @@ To install |chef server 11|, do the following:
 
 #. Install the downloaded package using the correct method for the operating system on which |chef server 11| will be installed.
 
-or:
-
-#. Run the following command: 
-
-   .. code-block:: bash
-
-      $ 
-
 #. Configure |chef server 11| by running the following command:
 
    .. code-block:: bash
