@@ -13,13 +13,21 @@ To install |chef server 11|, do the following:
 
 #. Install the downloaded package using the correct method for the operating system on which |chef server 11| will be installed.
 
+or:
+
+#. Run the following command: 
+
+   .. code-block:: bash
+
+      $ 
+
 #. Configure |chef server 11| by running the following command:
 
    .. code-block:: bash
    
       $ sudo chef-server-ctl reconfigure
 
-   This command will set up all of the required components, including |erchef|, |rabbitmq|, |postgresql|, and all of the cookbooks that are used by |chef solo| to maintain |chef server 11|.
+   This command will set up all of the required components, including |erchef|, |rabbitmq|, and |postgresql|.
 
 #. Verify the the hostname for the |chef server| by running the ``hostname`` command. The hostname for the |chef server| must be a |fqdn|.
 
