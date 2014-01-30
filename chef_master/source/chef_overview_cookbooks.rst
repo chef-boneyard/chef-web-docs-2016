@@ -58,7 +58,7 @@ Community Cookbooks
 
    * - Components
      - Description
-   * - :doc:`Cookbooks Maintained by Opscode </opscode_cookbooks>`
+   * - :doc:`Cookbooks Maintained by Chef </chef_cookbooks>`
      - |company_name| maintains a collection of cookbooks that are widely used by the community.
    * - `Cookbooks Maintained by the Community <http://community.opscode.com/cookbooks>`_
      - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations to cookbooks that are some of the most popular and are used by nearly everyone.
