@@ -15,9 +15,10 @@ Until the consensus is such that people agree that this doc collection represent
 
 # How should I make changes?
 
-The structure of the source files is designed to ensure that the same topic can be published in exactly the same way across any document version. That said, there will be instances where what is required for chef-client 10.latest is different from chef-client 11.x. Especially in the topics that follow the essentials_ naming pattern.
+The structure of the source files is designed to ensure that the same topic can be published in exactly the same way across any document version. That said, there will be instances where specific docs versions need specific files. When this occurs:
 
-a) are the changes that need to be made changes that apply to the chef-client globally? If yes, then update the file directly in the file(s) identified by the include_ paths
+a) are the changes that need to be made changes that apply to the chef-client globally? If yes, then update the main file directly in the file(s) identified by the include_ paths, via pull request
+
 b) If no, then do one of two things: copy the contents from the file(s) identified by the include_ paths and paste them into the 10.latest source file, edit and make the desired changes. This will be reconciled later (if possible) by the Chef doc team. Or, follow the approach discussed below under "Versioning strategy" if the desired changes are definitely specific to chef-client 10.latest.
 
 # Versioning strategy
