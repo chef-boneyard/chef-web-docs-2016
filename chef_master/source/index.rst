@@ -141,6 +141,8 @@ Cookbooks
    auth_authorization
    breaking_changes_chef_11
    chef_client
+   chef_cookbooks
+   chef_cookbooks_chef_handler
    chef_overview
    chef_overview_attributes
    chef_overview_cookbooks
@@ -347,7 +349,6 @@ Cookbooks
    ohai
    ohai_custom
    openstack
-   opscode_cookbooks
    orgmapper
    plugin_knife
    pushy
