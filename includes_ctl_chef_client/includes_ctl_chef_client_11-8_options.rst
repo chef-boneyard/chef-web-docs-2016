@@ -72,9 +72,6 @@ This command has the following options:
 ``-R``, ``--enable-reporting``
    |enable_reporting|
 
-``RECIPE_FILE``
-   The path to a recipe. For example, if a recipe file is in the current directory, use ``recipe_file.rb``. This is typically used with the ``--local-mode`` option.
-
 ``-s SECONDS``, ``--splay SECONDS``
    |splay|
 
@@ -91,6 +88,5 @@ This command has the following options:
    |whyrun_mode|
 
 ``-z``, ``--local-mode``
-   |local_mode|.
-
+   |local_mode|
 

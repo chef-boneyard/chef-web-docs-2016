@@ -4,6 +4,20 @@ Release Notes: Chef 11.10.0
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+What's New
+=====================================================
+The following items are new for |chef 11-10| and/or are changes from previous versions. The short version:
+
+* **Use a recipe with the chef-client local mode** A recipe can now be specified when running the |chef client| in local mode. 
+
+|chef client| Options
+-----------------------------------------------------
+A recipe can be specified when running the |chef client|, typically when running the |chef client| in local mode:
+
+``RECIPE_FILE``
+   The path to a recipe. For example, if a recipe file is in the current directory, use ``recipe_file.rb``. This is typically used with the ``--local-mode`` option.
+
+
 What's Fixed
 =====================================================
 
