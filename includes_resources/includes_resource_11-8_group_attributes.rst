@@ -3,7 +3,6 @@
 
 .. |append resource group| needs updating to current string below.
 .. |group_members| needs updating to current string below.
-.. ADD excluded_members and non_unique
 
 |description resource_attributes_intro|
 
@@ -15,16 +14,12 @@
      - Description
    * - ``append``
      - Use to specify how members should be appended and/or removed from a group. When ``true``, ``members`` will be appended and ``excluded_members`` will be removed. When ``false``, group members will be reset to the value of the ``members`` attribute. Default value: ``false``.
-   * - ``excluded_members``
-     - Indicates which users should be removed from a group. May only be used when ``append`` is set to ``true``.
    * - ``gid``
      - |id group|
    * - ``group_name``
      - |name group| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``members``
      - Indicates which users should be set or appended to a group.
-   * - ``non_unique``
-     - Indicates that ``gid`` duplication is allowed. May only be used with the ``Groupadd`` provider. Default value: ``false``.
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``system``

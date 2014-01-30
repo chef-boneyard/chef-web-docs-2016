@@ -8,7 +8,8 @@ What's New
 =====================================================
 The following items are new for |chef 11-10| and/or are changes from previous versions. The short version:
 
-* **Use a recipe with the chef-client local mode** A recipe can now be specified when running the |chef client| in local mode. 
+* **Use a recipe with the chef-client local mode** A recipe can now be specified when running the |chef client| in local mode.
+* **New attributes for the group resource** Members can be removed from groups (``excluded_members``) and duplicate group identifiers are allowed (``non_unique``).
 
 |chef client| Options
 -----------------------------------------------------
@@ -16,6 +17,22 @@ A recipe can be specified when running the |chef client|, typically when running
 
 ``RECIPE_FILE``
    The path to a recipe. For example, if a recipe file is in the current directory, use ``recipe_file.rb``. This is typically used with the ``--local-mode`` option.
+
+
+|resource group| Resource Attributes
+-----------------------------------------------------
+The following attributes have been added to the |resource group| resource:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``excluded_members``
+     - Indicates which users should be removed from a group. May only be used when ``append`` is set to ``true``.
+   * - ``non_unique``
+     - Indicates that ``gid`` duplication is allowed. May only be used with the ``Groupadd`` provider. Default value: ``false``.
 
 
 What's Fixed
