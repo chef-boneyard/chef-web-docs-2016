@@ -15,8 +15,6 @@
      - |backups_kept| Default value: ``5``.
    * - ``checksum``
      - Optional, see ``use_conditional_get``. |checksum file|
-   * - ``content``
-     - |content file| The default behavior will not modify content.
    * - ``force_unlink``
      - |force_unlink| Default value: ``false``.
    * - ``ftp_active_mode``
