@@ -28,7 +28,7 @@ or:
      block do
        puts "Found 32-bit key"
      end
-     only_if { registry_key_exists("HKEY_LOCAL_MACHINE\SOFTWARE\\Example", :i386) }
+     only_if { registry_key_exists?("HKEY_LOCAL_MACHINE\SOFTWARE\\Example", :i386) }
    end
 
 or: 
@@ -39,7 +39,7 @@ or:
      block do
        puts "Found 64-bit key"
      end
-     only_if { registry_key_exists("HKEY_LOCAL_MACHINE\\SOFTWARE\\Example", :x86_64) }
+     only_if { registry_key_exists?("HKEY_LOCAL_MACHINE\\SOFTWARE\\Example", :x86_64) }
    end
 
 
