@@ -1,5 +1,5 @@
 =====================================================
-Documentation for |chef client| 11.4.x
+Docs for |chef client| 11.4.x
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index.rst
