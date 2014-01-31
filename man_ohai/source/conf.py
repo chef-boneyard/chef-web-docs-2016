@@ -56,7 +56,7 @@ project = u'ohai'
 
 # There are two options for replacing |today|: either, you set today to some
 # non-false value, then it is used:
-today = 'Ohai 6.20.0'
+today = 'Ohai 7.0.0'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
