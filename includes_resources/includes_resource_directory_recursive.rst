@@ -33,7 +33,7 @@ But with this example, the ``group``, ``mode``, and ``owner`` attribute values w
      end
    end
 
-This approach will create each directory with the correct hierarchy---``/foo``, then ``/bar`` in ``/foo``, and then ``/baz`` in ``/bar``---and also with the correct attribute values for ``group``, ``mode``, and ``owner``.
+This approach will create the correct hierarchy---``/foo``, then ``/bar`` in ``/foo``, and then ``/baz`` in ``/bar``---and also with the correct attribute values for ``group``, ``mode``, and ``owner``.
 
 A similar approach is required when changing the access permissions to directory objects, the owner of a file, or the group associated with a directory object. For example:
 
