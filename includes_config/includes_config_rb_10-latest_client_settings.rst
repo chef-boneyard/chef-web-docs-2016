@@ -118,7 +118,7 @@ This configuration file has the following settings:
  
           lockfile nil
    * - ``log_level``
-     - |log_level| For example:
+     - |log_level| Possible levels: ``debug``, ``info``, ``warn``, ``error``, or ``fatal``. For example:
        ::
  
           log_level :info
