@@ -111,7 +111,7 @@ html_theme_path = ['../../_themes/']
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = "Chef 11.10.x Documentation"
+html_title = "chef-client 11.10.x Documentation"
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #html_short_title = None
@@ -182,5 +182,5 @@ html_show_copyright = True
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'Chef 11.10.x Documentation'
+htmlhelp_basename = 'chef-client 11.10.x Documentation'
 
