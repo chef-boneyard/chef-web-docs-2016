@@ -18,6 +18,8 @@ This subcommand has the following options:
    |bootstrap version|
 
 ``-d DISTRO``, ``--distro DISTRO``
+   .. warning:: The default bootstrap operation uses the |omnibus installer|, which means the default template file (``chef-full``) should work on all supported platforms. It is recommended to use custom bootstrap templates only when the |omnibus installer| cannot be used.
+   
    |distro|
 
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
