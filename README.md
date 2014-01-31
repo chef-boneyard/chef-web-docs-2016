@@ -112,6 +112,34 @@ release_ohai-7
 All of the versions have release notes. Append release_notes.html at the end of the base URL, i.e. http://docs.opscode.com/release/ohai-7/release_notes.html
 
 
+### How Frequently are Docs Versions Built?
+
+Chef builds the following docs collections on a daily basis:
+
+chef_master
+docs_oec
+docs_osc
+release_ohai-7
+release_11-10
+
+Chef builds the following docs collections often, but not necessarily every day:
+
+docs_all
+
+Chef builds the following docs collections as needed, by request, or based on specific feedback, but typically not "daily" or "often":
+
+docs_server
+release_10
+release_11-0
+release_11-2
+release_11-4
+release_11-6
+release_11-8
+release_oec_11-0
+release_ohai-6
+
+Note that Ohai 7 documents are also included in the chef_master doc collection (so those topics get rebuilt every day for the root collection).
+
 ## Versioning strategy
 
 The contents of many of the topics in this repo simply look like this:
