@@ -290,12 +290,6 @@ Cookbooks
    knife_using
    knife_xargs
    lwrp
-   lwrp_application
-   lwrp_application_java
-   lwrp_application_nginx
-   lwrp_application_php
-   lwrp_application_python
-   lwrp_application_ruby
    lwrp_apt
    lwrp_aws
    lwrp_bluepill
