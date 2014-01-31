@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The following example shows an authentication request to |chef hosted|:
+The following example shows an authentication request:
 
 .. code-block:: http
 
