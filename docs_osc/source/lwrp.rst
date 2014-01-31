@@ -8,5 +8,5 @@ Read more about how to build :doc:`custom lightweight resources </lwrp_custom>`.
 
 |company_name|-maintained
 =====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_opscode_maintained.rst
+.. include:: ../../includes_lwrp/includes_lwrp_chef_maintained.rst
 
