@@ -1,5 +1,5 @@
 =====================================================
-All About Chef ... 
+All about Chef ... 
 =====================================================
 
 .. note:: This page contains the same exact set of topics that are available from docs.opscode.com, just organized differently and in bigger sections.

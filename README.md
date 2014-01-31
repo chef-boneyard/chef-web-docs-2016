@@ -74,11 +74,13 @@ The following folders are used to build Chef documentation sets:
 
 chef_master -- the main set of documentation about the current versions of the chef-client, Ohai, the Open Source Chef Server, and the Enterprise Chef Server. http://docs.opscode.com
 
-docs_oec -- a filtered set of documentation about the current versions of the chef-client, Ohai, and the Enterprise Chef Server. http://docs.opscode.com/enterprise/
+client -- the main set of documentation about the current version of the chef-client. http://docs.opscode.com/client/
 
-docs_osc -- a filtered set of documentation about the current versions of the chef-client, Ohai, and the Open Source Chef Server. http://docs.opscode.com/enterprise/
+docs_oec -- a filtered set of documentation about the current version of the Enterprise Chef Server. http://docs.opscode.com/enterprise/
 
-These three sets of docs are actively maintained and in many places are identical (because the functionality is the same). Only where there is some divergence---some knife commands, server functionality, and so on---is there a difference in the documentation.
+docs_osc -- a filtered set of documentation about the current version of the Open Source Chef Server. http://docs.opscode.com/open_source/
+
+These sets of docs are actively maintained and in many places are identical (because the functionality is the same). Only where there is some divergence---some knife commands, server functionality, and so on---is there a difference in the documentation.
 
 docs_all -- a filtered set of the main set of documentation that a) has a single-page flat structure (including a flat table of contents) and b) consolidates much of the information in the main doc set into a smaller collection of longer pages. Some of the most popular pages in all of chef-docs land are found here, such as http://docs.opscode.com/chef/resources.html, http://docs.opscode.com/chef/dsl_recipe.html, and http://docs.opscode.com/chef/knife.html. http://docs.opscode.com/chef/
 
@@ -117,6 +119,7 @@ All of the versions have release notes. Append release_notes.html at the end of 
 Chef builds the following docs collections on a daily basis:
 
 chef_master
+client
 docs_oec
 docs_osc
 release_ohai-7
