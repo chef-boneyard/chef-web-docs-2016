@@ -17,7 +17,7 @@ Getting Started
 
 .. include:: ../../includes_chef/includes_chef_index_learnchef.rst
 
-**Docs for Current Versions:** :doc:`Ohai 7 </ohai>` | `Open Source Chef Server <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef Server <http://docs.opscode.com/enterprise/>`_ | :doc:`Release Notes for 11.8 </release_notes>`
+**Docs for Current Versions:** `chef-client <http://docs.opscode.com/client/>`_ | `Open Source Chef Server <http://docs.opscode.com/open_source/>`_ | `Enterprise Chef Server <http://docs.opscode.com/enterprise/>`_ | :doc:`Ohai 7 </ohai>` | :doc:`Release Notes for 11.8 </release_notes>`
 
 **Docs for Older Versions:** `chef-client 11.8 <http://docs.opscode.com/release/11-8/>`_ | `chef-client 11.6 <http://docs.opscode.com/release/11-6/>`_ | `chef-client 11.4 <http://docs.opscode.com/release/11-4/>`_ | `chef-client 11.2 <http://docs.opscode.com/release/11-2/>`_ | `chef-client 11.0 <http://docs.opscode.com/release/11-0/>`_ | `chef-client 10.latest <http://docs.opscode.com/release/10/>`_ | `Private Chef 1.4.x <http://docs.opscode.com/server/>`_ | :doc:`Documentation Feedback </feedback>`
 
