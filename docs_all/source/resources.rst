@@ -740,6 +740,10 @@ Attributes
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_directory_attributes.rst
 
+Recursive Directories
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: ../../includes_resources/includes_resource_directory_recursive.rst
+
 Providers
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_resources/includes_resource_directory_providers.rst

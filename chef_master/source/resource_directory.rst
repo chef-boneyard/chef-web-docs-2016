@@ -18,6 +18,10 @@ Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_directory_attributes.rst
 
+Recursive Directories
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_directory_recursive.rst
+
 Windows File Security
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_common_windows_security.rst
