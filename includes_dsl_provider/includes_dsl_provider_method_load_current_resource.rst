@@ -23,5 +23,4 @@ For example:
      @current_resource
    end
 
-
-
+In the previous example, if a resource exists with matching attributes, the |chef client| does nothing and if a resource does not exist with matching attributes, the |chef client| will enforce the state declared in ``new_resource``.
