@@ -48,7 +48,20 @@ knife environment compare
 
 .. include:: ../../includes_knife/includes_knife_environment_compare_options.rst
 
+**Example**
 
+.. code-block:: bash
+
+   $ knife environment compare development staging
+
+will return something similar to:
+
+.. code-block:: bash
+
+               development  staging
+   apache      2.3.1        1.2.2
+   windows     4.1.2        1.0.0
+   postgresql  1.0.0        1.0.0
 
 
 What's Fixed
