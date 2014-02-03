@@ -44,6 +44,10 @@ use_inline_resources
 
 .. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_background.rst
 
+**Turn off Inline Compile Mode**
+
+.. include:: ../../includes_dsl_provider/includes_dsl_provider_method_use_inline_resources_definition.rst
+
 whyrun_supported?
 -----------------------------------------------------
 .. include:: ../../includes_chef_client/includes_chef_client_whyrun_mode.rst
