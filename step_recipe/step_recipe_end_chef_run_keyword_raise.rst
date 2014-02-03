@@ -1,11 +1,8 @@
 .. This is an included how-to. 
 
-In certain situations it may be useful to stop a |chef client| run entirely, such as when an unhandled exception occurs. For example, a |resource template| resource may not be able to find its source file. Or a user does not have permission to create a directory. The ``raise`` keyword can be useful for stopping the |chef client| run if an unhandled exception occurs. There are two approaches:
+In certain situations it may be useful to stop a |chef client| run entirely by using an unhandled exception. The ``raise`` keyword can be used to stop a |chef client| run in both the compile and execute phases.
 
-* Place the ``raise`` keyword in a recipe (instead of the ``return`` keyword) to raise an exception during the compile phase
-* Place the ``raise`` keyword in a |resource ruby_block| resource to raise an exception during the execution phase
-
-For example, using the ``raise`` keyword in a recipe to raise an exception during the compile phase may look something like this:
+Use the ``raise`` keyword in a recipe---but outside of any resource blocks---to trigger an unhandled exception during the compile phase. For example:
 
 .. code-block:: ruby
 
@@ -19,4 +16,16 @@ For example, using the ``raise`` keyword in a recipe to raise an exception durin
      action :install
    end
 
-where ``node['platform'] == 'windows'`` is the condition set on the ``raise`` keyword. This condition is useful in a situation where the |windows| system does not have a package manager available, but the package (``name_of_package``) should be installed. Because the package should be installed, but cannot be, the |chef client| will exit the run with a fatal error and will provide a stack trace.
+where ``node['platform'] == 'windows'`` is the condition that will trigger the unhandled exception.
+
+Use the ``raise`` keyword in the |resource ruby_block| resource to trigger an unhandled exception during the execute phase. For example:
+
+.. code-block:: ruby
+
+   ruby_block "name" do
+     block do
+       # Ruby code with a condition, e.g. if ::File.exist?(::File.join(path, "/tmp"))
+       raise "message"  # e.g. "Ordering issue with file path, expected foo"
+     end
+   end
+
