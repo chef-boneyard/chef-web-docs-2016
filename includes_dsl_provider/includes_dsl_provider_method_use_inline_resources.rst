@@ -2,51 +2,14 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A lightweight resource is created by the ``action`` block of a lightweight provider. When the resource collection is compiled, and as a lightweight resource is discovered by the |chef client|, each lightweight resource is inserted into the resource collection after the point at which it was discovered. For example, a resource collection may start out like this:
+A lightweight resource should be set to inline compile mode by adding the ``use_inline_resources`` method at the top of the provider. This ensures that notifications work properly across the resource collection. For example:
 
 .. code-block:: ruby
 
-   resource_one
-   resource_two
-   resource_three
+   use_inline_resoures
 
-If a lightweight resource is discovered while processing the second resource, it will be inserted into the resource collection like this:
+   action :run do
+     # Ruby code that implements the provider
+   end
 
-.. code-block:: ruby
-
-   resource_one
-   resource_two
-     lightweight_resource_one
-   resource_three
-
-If that lightweight resource then contains references to other resources---|resource file|, |resource template|, |resource cookbook_file|, and so on---then those additional resources are inserted into the resource collection in much the same way as a lightweight resource. For example:
-
-.. code-block:: ruby
-
-   resource_one
-   resource_two
-     lightweight_resource_one
-       embedded_resource_a
-       embedded_resource_b
-   resource_three
-
-where resources are processed in exactly the same order as defined by the resource collection. In addition, each resource is processed fully before the |chef client| moves on to the next resource in the resource collection. 
-
-This behavior can create a situation where resources that have been embedded into the resource collection by a lightweight resource are unable to notify their parent lightweight resource when processing is finished. For example:
-
-.. code-block:: ruby
-
-   resource_one
-     lightweight_resource_one
-       a
-       b
-   resource_two
-     lightweight_resource_two
-       c
-   resource_three
-
-where embedded resources ``a`` and ``b`` would be unable to notify ``lightweight_resource_one`` and embedded resource ``c`` would be unable to notify ``lightweight_resource_two``.
-
-This is the default behavior of the |chef client|. This may not be the desired behavior. To change the default behavior so that the |chef client| can notify its parent lightweight resource, use the ``use_inline_resources`` method at the top of the lightweight provider. This ensures that the |chef client| executes the ``action`` blocks within that lightweight resource as part of a self-contained |chef client| run. Once notified, the parent lightweight resource is marked as updated (``updated_by_last_action``) and then any notifications that are set on that lightweight resource may be triggered normally.
-
-
+.. warning:: The ``use_inline_resources`` method was added to the |chef client| starting in version 11.0 to address the following behavior. The ``use_inline_resources`` method should be considered a requirement for any lightweight resource authored against the 11.0+ versions of the |chef client|. This behavior will become the default behavior in an upcoming version of the |chef client|.
