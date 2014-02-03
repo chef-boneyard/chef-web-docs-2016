@@ -7,5 +7,5 @@ This argument has the following syntax:
 
 .. code-block:: bash
 
-   $ knife environment compare ENVIRONMENT_NAME (options)
+   $ knife environment compare [ENVIRONMENT_NAME...] (options)
 
