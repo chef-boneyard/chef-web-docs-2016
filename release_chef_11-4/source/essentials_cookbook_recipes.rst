@@ -124,22 +124,26 @@ Use Tags
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_tags.rst
 
-End a |chef client| Run 
+End |chef client| Run 
 -----------------------------------------------------
 .. include:: ../../includes_chef_client/includes_chef_client_run_end.rst
 
 The following sections show various approaches to ending a |chef client| run.
 
-Return Keyword
+Fatal Messages
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst
-
-Raise Keyword
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst
+.. include:: ../../step_recipe/step_recipe_end_chef_run_application_fatal.rst
 
 Rescue Blocks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_recipe/step_recipe_end_chef_run_rescue_block.rst
+
+Stop a Recipe
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst
+
+Unhandled Exceptions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst
 
 
