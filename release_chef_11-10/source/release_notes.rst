@@ -10,6 +10,7 @@ The following items are new for |chef 11-10| and/or are changes from previous ve
 
 * **Use a recipe with the chef-client local mode** A recipe can now be specified when running the |chef client| in local mode.
 * **New attributes for the group resource** Members can be removed from groups (``excluded_members``) and duplicate group identifiers are allowed (``non_unique``).
+* **New compare subcommand for knife environment** Compare cookbook versions for environments
 
 |chef client| Options
 -----------------------------------------------------
@@ -33,6 +34,21 @@ The following attributes have been added to the |resource group| resource:
      - |excluded_members|
    * - ``non_unique``
      - |non_unique_members| Default value: ``false``.
+
+
+knife environment compare
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_environment_compare.rst
+
+**Syntax**
+
+.. include:: ../../includes_knife/includes_knife_environment_compare_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_knife/includes_knife_environment_compare_options.rst
+
+
 
 
 What's Fixed
