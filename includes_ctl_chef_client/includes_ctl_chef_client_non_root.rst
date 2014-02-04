@@ -16,7 +16,7 @@ To run the |chef client| in non-root mode, edit the ``file_cache_path`` setting 
 
    file_cache_path "~/.chef/cache"
 
-or as an alias:
+or by using an alias:
 
 .. code-block:: ruby
 
