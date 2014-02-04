@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef client| can run as a non-root user. For tasks that require privileged access---installing packages, for example---the |chef client|, when running as a non-root user, can use |sudo| to complete specific tasks. (On the |solaris| platform the |chef client| can even be granted fine-grained RBAC for execution through pfexec.)
+The |chef client| can be run as a non-root user. For tasks that require privileged access---installing packages, for example---the |chef client|, when running as a non-root user, can use |sudo| to complete specific tasks. (On the |solaris| platform the |chef client| can even be granted fine-grained RBAC for execution through pfexec.)
 
 This is not a common approach for installing the |chef client|. Or even a typical approach. But sometimes it is necessary. For example, an organization may need to ensure that only system administrators can manage the server (via a manually-triggered root user |chef client|) while ensuring that the development teams manage the application stacks on that server using normal processes (cookbooks, a daemonized |chef client|, and so on).
 
