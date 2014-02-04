@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-04 13:03\n"
+"POT-Creation-Date: 2014-02-04 15:04\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -302,11 +302,61 @@ msgid "Open a command prompt by right-clicking on the command prompt application
 msgstr ""
 
 #: ../source/ctl_chef_client.rst:33
+# d0ed784ab78b41a8808049f1c9d06d47
+msgid "Run as non-Root User"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:5
+# 8f593c6c431c4902bd1dfa6eaeded345
+msgid "The |chef client| can be run as a non-root user. For tasks that require privileged access---installing packages, for example---the |chef client|, when running as a non-root user, can use |sudo cmd| to complete specific tasks. (On the |solaris| platform the |chef client| can even be granted fine-grained permission to use ``pfexec``.)"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:7
+# 466e177694c440f690e75746dea2ece8
+msgid "This is not a common approach for installing the |chef client|, but is sometimes necessary. For example, an organization may want to ensure that only system administrators can manage a server (via a manually-triggered root user |chef client|) while ensuring that development teams who manage the application stacks on that server can do so using normal processes (i.e. cookbooks, a daemonized |chef client|, and so on)."
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:9
+# bb2e93c95591485ca6eac15526cf5b71
+msgid "In this type of scenario, a node should be managed as if it were two nodes:"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:11
+# cb9f0627c724488eab849793b2d7487f
+msgid "Configure one node to run the |chef client| as the root user; trigger this |chef client| manually  (via |ssh|, |push jobs|, and so on)"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:12
+# 3a718a2951f24ee29c9c475825d4b48e
+msgid "Configure another node to run the |chef client| as a daemonized user; this |chef client| manages the application stack on the node"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:14
+# 24e6d3e4f8984b1ab88902cc389c27ef
+msgid "And then register both nodes with the |chef server|. Use the |chef server oec| security model to limit access to the node on which the |chef client| is installed as a root user."
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:16
+# eb04e2d0140d4b9eb2553c438f4f2952
+msgid "And then to run a |chef client| in non-root mode, add the ``cache_path`` setting to the |client rb| file for the node that will run as the non-root user. Set the value of ``cache_path`` to be the home directory for the user that is running the |chef client|. For example:"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:22
+# f216e35cbfcf48e49f8b866b1fa7cf85
+msgid "or:"
+msgstr ""
+
+#: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst:28
+# 3c5e7d54078c4c73a14acb270c17b60a
+msgid "When running the |chef client| using the ``--local-mode`` option, ``~/.chef/local-mode-cache`` is the default value for ``cache_path``."
+msgstr ""
+
+#: ../source/ctl_chef_client.rst:37
 # 17c807ab0a5b401ea2f5a630fb168c8e
 msgid "Examples"
 msgstr ""
 
-#: ../source/ctl_chef_client.rst:35
+#: ../source/ctl_chef_client.rst:39
 # aca1d83860da411aa38e38e3a760d10a
 msgid "**Start a Chef run when the chef-client is running as a daemon**"
 msgstr ""
@@ -316,7 +366,7 @@ msgstr ""
 msgid "A |chef client| that is running as a daemon can be woken up and started by sending the process a ``SIGUSR1``. For example, to trigger a |chef client| run on a machine running |linux|:"
 msgstr ""
 
-#: ../source/ctl_chef_client.rst:39
+#: ../source/ctl_chef_client.rst:43
 # adabef6e77454080b25224fd6a85bb8c
 msgid "**Start a Chef run manually**"
 msgstr ""
