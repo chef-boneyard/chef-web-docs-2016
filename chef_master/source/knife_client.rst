@@ -68,7 +68,7 @@ Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
 
-**xxxxx**
+**Delete a client**
 
 .. include:: ../../step_knife/step_knife_client_delete.rst
 
@@ -88,7 +88,7 @@ Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
 
-**xxxxx**
+**Edit a client**
 
 .. include:: ../../step_knife/step_knife_client_edit.rst
 
@@ -108,7 +108,7 @@ Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
 
-**xxxxx**
+**View a list of clients**
 
 .. include:: ../../step_knife/step_knife_client_list_all.rst
 
@@ -136,7 +136,7 @@ Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
 
-**xxxxx**
+**Reregister a client**
 
 .. include:: ../../step_knife/step_knife_client_reregister.rst
 
@@ -156,7 +156,7 @@ Examples
 -----------------------------------------------------
 The following examples show how to use this |knife| subcommand:
 
-**xxxxx**
+**Show clients**
 
 .. include:: ../../step_knife/step_knife_client_show.rst
 
