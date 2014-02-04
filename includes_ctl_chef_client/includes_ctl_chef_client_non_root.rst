@@ -8,21 +8,21 @@ This is not a common approach for installing the |chef client|, but is sometimes
 
 In this type of scenario, a node should be managed as if it were two nodes:
 
-* Configure a |chef client| to run as the root user on one node. Trigger the |chef client| manually  (via |ssh|, |push jobs|, and so on)
-* Configure another |chef client| to run as a daemonized user that manages the application stack on the node
+* Configure one node to run the |chef client| as the root user. Trigger this |chef client| manually  (via |ssh|, |push jobs|, and so on)
+* Configure another node to run the |chef client| as a daemonized user. This |chef client| manages the application stack on the node
 
-and then register both nodes with the |chef server|. Use the |chef server oec| security model to limit access to the node on which the |chef client| is installed as a root user.
+And then register both nodes with the |chef server|. Use the |chef server oec| security model to limit access to the node on which the |chef client| is installed as a root user.
 
-And then to run a |chef client| in non-root mode, edit the ``file_cache_path`` setting in that node's |client rb| file. Set the value to be the home directory for the user that is running the |chef client|. For example:
+And then to run a |chef client| in non-root mode, add the ``cache_path`` setting to the |client rb| file for the node that will run as the non-root user. Set the value of ``cache_path`` to be the home directory for the user that is running the |chef client|. For example:
 
 .. code-block:: ruby
 
-   file_cache_path "~/.chef/cache"
+   cache_path "~/.chef/cache"
 
 or:
 
 .. code-block:: ruby
 
-   file_cache_path "File.join(File.expand_path("~"), ".chef", "cache")"
+   cache_path "File.join(File.expand_path("~"), ".chef", "cache")"
 
-.. note:: When running the |chef client| using the ``--local-mode`` option, ``~/.chef/local-mode-cache`` is the default value for ``file_cache_path``.
+.. note:: When running the |chef client| using the ``--local-mode`` option, ``~/.chef/local-mode-cache`` is the default value for ``cache_path``.
