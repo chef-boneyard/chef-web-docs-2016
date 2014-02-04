@@ -26,7 +26,6 @@ to return something similar to:
    rbenv              latest   latest
    rabbitmq           latest   latest
    postgresql         latest   latest
-   build-essential    latest   latest
    mysql              latest   latest
    ohai               latest   latest
    git                latest   latest
