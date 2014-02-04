@@ -26,7 +26,7 @@ Windows
 
 Run as a non-Root User
 =====================================================
-.. include:: ../../includes_chef_client/includes_ctl_chef_client_non_root.rst
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst
 
 Examples
 =====================================================
