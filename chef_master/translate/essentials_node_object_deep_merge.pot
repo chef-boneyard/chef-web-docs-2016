@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-31 13:34\n"
+"POT-Creation-Date: 2014-02-04 13:03\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,112 +17,112 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/essentials_node_object_deep_merge.rst:8
-# 1ad6db6a7be240b98af47c5178d36288
+# 75a9bebcd5824fd88de807fa13ce27e7
 msgid "About Deep Merge"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:4
-# 9c072759a4a24f65a1e76fd35ec4533b
+# ea11f5102f6240b0a53752096a9134cb
 msgid "Attributes are typically stored in cookbooks and recipes, roles, and environments. These attributes are rolled-up to the node level during a |chef client| run. For example, a recipe can store attributes using a multi-level hash or array; a group of attributes for web servers might be:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:19
-# 98c051e2d2fc4226823a6944548b018b
+# 7f4ee763b3c94a7ba453e63adf221c49
 msgid "But what if all of the web servers are not the same? What if some of the web servers required a single attribute to have a different value? You could store these settings in two locations, once just like the preceding example and once just like the following:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:34
-# dbab3afad41b42dcba01ecfa94238516
+# 7fb5cbd70deb4ef39f95804136564cc6
 msgid "But that is not very efficient, especially because most of them are identical. The deep merge capabilities of the |chef client| allows attributes to be layered across recipes and cookbooks, roles, and environments. This allows an attribute to be reused across nodes, making use of default attributes set at the cookbook level, but also providing a way for certain attributes (with a higher attribute precedence) to be applied only when they are supposed to be. For example, a role named ``baseline.rb``:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:53
-# b44cec1430e84668832688efc29465a0
+# aefa9de3edd34e338b76ccdd2b9cc6ba
 msgid "and then a role named ``web.rb``:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:69
-# 929ff7976420455382a9382b22d19e81
+# 338b6c613bdd43f48c752877032205cf
 msgid "Both of these files are similar. They share the same structure. When an attribute is of the same type of data, such as  a hash or an array, the contents are merged. This is true even with different levels of precedence, such as default and override attributes. If the attribute is of a different data type, it is overwritten at higher levels of precedence."
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:71
-# dbbe92da77ea4af996da866a7658609f
+# 126bc24fb4ac407cbbe090deb2bfaed8
 msgid "For example, the ``web.rb`` references the ``baseline.rb`` role. The ``web.rb`` file only provides a value for one attribute: ``:startservers``. When the |chef client| compares these attributes, the deep merge feature will ensure that ``:startservers`` (and its value of ``30``) will be applied to any node for which the ``web.rb`` attribute structure should be applied."
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:73
-# 732058a1e2704befa23a83d850c99de2
+# cf3063b6e17d47c99cd6498c28c82d43
 msgid "This approach will allow a recipe like this:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:80
-# 8bca8edc121144b8b9cdded294705a33
+# f985d985d0504c0895c171f5d160daf2
 msgid "and a ``run_list`` like this:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:89
-# 10cbeb7b17374f9b909f1593fdb05547
+# 586799719418471ab1a64f32b2bef800
 msgid "to produce results like this:"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge.rst:103
-# aa65b75feb054e55a60feca8c2f347ba
+# 82b1e7b5dd34456e88aa410ec0129c14
 msgid "Even though the ``web.rb`` file does not contain attributes and values for ``minspareservers``, ``maxspareservers``, ``serverlimit``, ``maxclients``, and ``maxrequestsperchild``, the deep merge capabilities pulled them in."
 msgstr ""
 
 #: ../source/essentials_node_object_deep_merge.rst:12
-# 7215d52991e640d0b30fa4807f069d81
+# 636317744ca049b992ab4fa0247f585c
 msgid "The following sections show how the logic works for using deep merge to perform substitutions and additions of attributes."
 msgstr ""
 
 #: ../source/essentials_node_object_deep_merge.rst:15
-# d45b954b5fec4002b8ab2dee224d80ec
+# 761c0f0a553e4f9e8f2a4b992885e38b
 msgid "Substitution"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:4
-# c869d20513b6405f8f244d2e6dd6fcd8
+# 1bebe0e598a74bf383fbc954c51bcf14
 msgid "The following examples show how the logic works for substituting an existing string using a hash::"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:12
-# 6d849763db734e7f84d70adc998c576f
+# 35707c48347d4fe2a8bc85df3fd7bfdb
 msgid "For substituting an existing boolean using a hash::"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:20
-# 06c45282583c4ae797278aa640565564
+# 6bb601df7d3f407095cf9c8be6052aba
 msgid "For substituting an array with a hash::"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge_substitute.rst:28
-# abb8c458f32345df9b2a4b2532d6191e
+# 33e2813ba7324cd2ae54d7cb25bcae40
 msgid "When items cannot be merged through substitution, the original data is overwritten."
 msgstr ""
 
 #: ../source/essentials_node_object_deep_merge.rst:19
-# b0394a1a5eb34c559fdc333217385e9d
+# 2b1accc5a89948b68a0e056e85acc40d
 msgid "Addition"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge_add.rst:4
-# eb056893f9d44a9eb6f04b1650a204f6
+# f89aeca497cc4cdf9fbbdee612ecaace
 msgid "The following examples show how the logic works for adding a string using a hash::"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge_add.rst:12
-# 25972cca1e964b3da82d7e53b3ca67e7
+# 71b1d717d82e4e28b4bbb002a180dfa2
 msgid "For adding a string using an array::"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge_add.rst:20
-# 59cecb7e01a24e508c9d31b74426da40
+# 1f9e8ba202e046d9ad7d35f3d246590e
 msgid "For adding a string using a multi-level hash::"
 msgstr ""
 
 #: ../../includes_node/includes_node_attribute_deep_merge_add.rst:28
-# d77d458010414d34bc2b715796fe6091
+# 2ed047fa6eed4ba8810800db62569e42
 msgid "For adding a string using a multi-level array::"
 msgstr ""
 
