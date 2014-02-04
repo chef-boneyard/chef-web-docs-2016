@@ -10,6 +10,12 @@ To set up the |reporting| server:
 
       $ dpkg -i opscode-reporting_1.0.0-1.ubuntu.10.04_amd64.deb
 
+#. Reconfigure the |chef server oec| server:
+
+   .. code-block:: bash
+
+      $ private-chef-ctl reconfigure
+
 #. Reconfigure the |reporting| server:
 
    .. code-block:: bash
