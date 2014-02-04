@@ -10,6 +10,26 @@ Common Options
 =====================================================
 .. include:: ../../includes_knife_manpage_options/includes_knife_environment_options.rst
 
+compare
+=====================================================
+.. include:: ../../includes_knife/includes_knife_environment_compare.rst
+
+**Syntax**
+
+.. include:: ../../includes_knife/includes_knife_environment_compare_syntax.rst
+
+**Options**
+
+.. include:: ../../includes_knife/includes_knife_environment_compare_options.rst
+
+**Example**
+
+.. include:: ../../step_knife/step_knife_environment_compare_single.rst
+
+.. include:: ../../step_knife/step_knife_environment_compare_multiple.rst
+
+.. include:: ../../step_knife/step_knife_environment_compare_all.rst
+
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_create.rst
