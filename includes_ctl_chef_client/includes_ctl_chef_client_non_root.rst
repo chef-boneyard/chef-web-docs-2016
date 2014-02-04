@@ -10,10 +10,16 @@ In this scenario, a node is managed as if it were two nodes. On one node, the |c
 
 And then use the |chef server oec| security model to limit access to the node on which the |chef client| is installed as a root user.
 
-To run the |chef client| in non-root mode, edit the ``file_cache_path`` setting in the |client rb| file to be:
+To run the |chef client| in non-root mode, edit the ``file_cache_path`` setting in the |client rb| file to be the home directory for the user that is running the |chef client|. For example:
 
 .. code-block:: ruby
 
    file_cache_path "~/.chef/cache"
+
+or as an alias:
+
+.. code-block:: ruby
+
+   file_cache_path "File.join(File.expand_path("~"), ".chef", "cache")"
 
 .. note:: When running the |chef client| using the ``--local-mode`` option, ``~/.chef/local-mode-cache`` is the default value for ``file_cache_path``.
