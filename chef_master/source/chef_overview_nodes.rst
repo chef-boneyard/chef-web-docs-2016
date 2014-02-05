@@ -4,7 +4,7 @@ About Nodes
 
 .. include:: ../../includes_node/includes_node.rst
 
-There are two types of nodes that be managed:
+There following types of nodes can be managed by the |chef client|:
 
 .. list-table::
    :widths: 60 420
