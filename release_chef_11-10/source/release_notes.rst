@@ -6,7 +6,7 @@ Release Notes: |chef client| 11.10.0
 
 Supported Platforms
 =====================================================
-.. include:: ../../includes_supported_platforms/includes_supported_platforms_client.rst
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_11-10_client.rst
 
 What's New
 =====================================================
