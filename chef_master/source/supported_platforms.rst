@@ -2,8 +2,6 @@
 Supported Platforms
 =====================================================
 
-.. warning:: This topic is a work in progress.
-
 The sections below list the supported platforms for the |chef client|, |ohai|, and the |chef server| (|chef server oec| and |chef server osc|).
 
 
