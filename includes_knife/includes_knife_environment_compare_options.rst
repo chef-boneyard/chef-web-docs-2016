@@ -9,5 +9,5 @@ This argument has the following options:
    |all environments|
 
 ``-m``, ``--mismatch``
-   Use to show only matching versions.
+   |mismatch|
 

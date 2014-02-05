@@ -74,7 +74,7 @@
 .. |azure preserve_os_disk| replace:: Indicates that the corresponding operating system disk will be preserved.
 .. |azure preserve_virtual_disk| replace:: Indicates that the underlying virtual hard disk (VHD) will be preserved.
 .. |azure preserve_dns_name| replace:: Indicates that the DNS entries for corresponding cloud services will be preserved. If this option is ``false``, any service not used by any virtual machine will be deleted.
-.. |azure delete_storage_account| replace:: Indicates that any corresponding storage account will be deleted. When this option is ``true``, any storage account not used by any virtual machine will be deleted.           
+.. |azure delete_storage_account| replace:: Indicates that any corresponding storage account will be deleted. When this option is ``true``, any storage account not used by any virtual machine will be deleted.      
 .. |azure affinity_group| replace:: The affinity group to which the virtual machine belongs. Required when not using a service location.
 .. |azure availability_set| replace:: The name of the availability set for the virtual machine.
 .. |azure dns_name| replace:: Required. The name of the DNS prefix that is used to access the cloud service. This name must be unique within Azure. Use with ``--azure-connect-to-existing-dns`` to use an existing DNS prefix.
@@ -110,6 +110,7 @@
 .. |bootstrap version| replace:: The version of the |chef client| to install.
 .. |branch| replace:: The name of the default branch. This will default to the master branch.
 .. |broadcast_address| replace:: The broadcast address for a network interface. One some platforms this attribute is not set using |ifconfig|, but is instead added to the startup configuration file for the network interface.
+.. |build_local_file| replace:: Indicates that a command line will be built or executed against a local file.
 .. |bundler_unicorn| replace:: Indicates whether |unicorn| bundles the application.
 .. |bundler_skip_groups| replace:: An array of |bundler| groups to skip.
 
@@ -326,6 +327,7 @@
 .. |distro| replace:: The template file to be used during a bootstrap operation. The following distributions are supported: ``chef-full`` (the default bootstrap), ``centos5-gems``, ``fedora13-gems``, ``ubuntu10.04-gems``, ``ubuntu10.04-apt``, ``ubuntu12.04-gems``, and the name of a custom bootstrap template file. When this option is used, |knife| will search for the template file in the following order: the ``bootstrap/`` folder in the current working directory, the ``bootstrap/`` folder in the |chef repo|, the ``bootstrap/`` folder in the ``~/.chef/`` directory, or a default bootstrap file. Do not use the ``--template-file`` option when ``--distro`` is specified.
 .. |dns_zone| replace:: The DNS zone.
 .. |dry_run| replace:: Indicates that no action is taken and that results are only printed out.
+.. |dry_run no_upload| replace:: Use to prevent changes from being uploaded to the |chef server|.
 .. |dump_frequency| replace:: The dump frequency (in days) used while creating a file systems table (fstab) entry.
 .. |duplex mode| replace:: The duplex mode for the interface. Possible values: ``auto``, ``half``, or ``full``.
 
@@ -409,7 +411,7 @@
 .. |flush_cache| replace:: An array that indicates whether the |yum| cache should be flushed before or after a |yum| operation that installs, upgrades, or removes a package. Possible values: ``:before`` and ``:after``.
 .. |force| replace:: Indicates that the download of a deprecated cookbook will be forced.
 .. |force directory| replace:: Indicates that an existing directory will be overwritten.
-.. |force knife download| replace:: Use ``--force`` to download files even when the file on the hard drive is identical to the object on the server (role, cookbook, etc.).  By default, files are compared to see if they have equivalent content, and local files are only overwritten if they are different.
+.. |force knife download| replace:: Use ``--force`` to download files even when the file on the hard drive is identical to the object on the server (role, cookbook, etc.). By default, files are compared to see if they have equivalent content, and local files are only overwritten if they are different.
 .. |force knife upload| replace:: Use ``--force`` to upload roles, cookbooks, etc. even if the file in the directory is identical (by default, no ``POST`` or ``PUT`` is performed unless an actual change would be made).
 .. |force update| replace:: Indicates that a cookbook should be updated even if the ``--freeze`` flag has been set.
 .. |force_formatter| replace:: Indicates that formatter output will be used instead of logger output.
@@ -856,6 +858,8 @@
 .. |maintainer email| replace:: The email address for the person responsible for maintaining a cookbook. Only one email can be listed here, so if this needs to be forwarded to multiple people consider using an email address that is already setup for mail forwarding.
 .. |manage_symlink_source| replace:: Indicates that the |chef client| will detect and manage the source file for a symlink.
 .. |manual_list| replace:: Indicates that a search query is a space-separated list of servers.
+.. |max_args| replace:: The maximum number of arguments per command line.
+.. |max_chars| replace:: The maximum size (in characters) for a command line.
 .. |max_connections| replace:: The maximum number of allowed concurrent connections.
 .. |max_retry| replace:: The maximum number of attempts made to retrieve a file before returning an error.
 .. |maximum_transmission_unit| replace:: The maximum transmission unit (MTU) for the network interface.
@@ -870,7 +874,7 @@
 .. |message resource log| replace:: The message to be added to a log file.
 .. |metadata attributes| replace:: The list of attributes that are required to configure a cookbook. An attribute name is required, followed by any of these options: ``display_name`` (the name that appears in the user interface), ``description`` (a short description), ``choice`` (an array of choices that are presented to a user), ``calculated`` (indicates if the default value is calculated by the recipe), ``type`` (the type of value, either ``string``, ``array``, or ``hash``), ``required`` (the level of user input, either ``required``, ``recommended``, or ``optional``), ``recipes`` (an array of recipes), or ``default`` (the attribute's default value).
 .. |metadata_expire| replace:: The amount of time (in seconds) before metadata for this repository expires.
-.. |metadata rb conflicts| replace:: Indicates that a cookbook conflicts with another cookbook or cookbook version. Use a version constraint to define constraints for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than).  This field requires that a cookbook with a matching name and version does not exist on the |chef server|. When the match exists, the |chef server| will ensure that any conflicted cookbooks are not included with the set of cookbooks that are sent to the node when the |chef client| runs.
+.. |metadata rb conflicts| replace:: Indicates that a cookbook conflicts with another cookbook or cookbook version. Use a version constraint to define constraints for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than). This field requires that a cookbook with a matching name and version does not exist on the |chef server|. When the match exists, the |chef server| will ensure that any conflicted cookbooks are not included with the set of cookbooks that are sent to the node when the |chef client| runs.
 .. |metadata rb depends| replace:: Indicates that a cookbook has a dependency on another cookbook. Use a version constraint to define dependencies for cookbook versions: ``<`` (less than), ``<=`` (less than or equal to), ``=`` (equal to), ``>=`` (greater than or equal to), ``~>`` (approximately greater than), or ``>`` (greater than). This field requires that a cookbook with a matching name and version exists on the |chef server|. When the match exists, the |chef server| will include the dependency as part of the set of cookbooks that are sent to the node when the |chef client| runs. It is very important that the ``depends`` field contain accurate data. If a dependency statement is inaccurate, the |chef client| may not be able to complete the configuration of the system.
 .. |metadata rb provides| replace:: Adds a recipe, definition, or resource that is provided by this cookbook, should the auto-populated list be insufficient.
 .. |metadata rb recommends| replace:: Adds a dependency on another cookbook that is recommended, but not required. A cookbook will still work even if recommended dependencies are not available.
@@ -885,6 +889,7 @@
 .. |mirrorlist| replace:: A string that contains the URI to the mirror list, starting with ``http://``, ``ftp://``, or ``file://``. Use ``file://`` if the mirror list is a text file or resides on the local system.
 .. |mirrorlist yum| replace:: A URL that points to a file that contains a list of base URLs. This attribute can be used with or instead of ``baseurl``.
 .. |mirrorlist_expire yum| replace:: The amount of time (in seconds) after which a locally-cached mirror list will expire. An alias for ``mirror_expire``.
+.. |mismatch| replace:: Use to show only matching versions.
 .. |mod_aspnet| replace:: Use to install |microsoft aspdotnet| runtime components.
 .. |mod_auth_basic| replace:: Use to install support for basic authentication.
 .. |mod_auth_windows| replace:: Use to install |windows| authentication, which allows clients to authenticate using |kerberos| or |ntlm|.
@@ -1004,7 +1009,9 @@
 .. |network_address| replace:: The address for the network interface.
 .. |no name tags| replace:: Indicates that tag names will not be displayed in the output.
 .. |no_bootstrap| replace:: Indicates whether the |chef client| bootstrap is enabled.
+.. |no_diff| replace:: Use to show a diff when a file changes.
 .. |no_editor| replace:: Indicates that |chef editor| will not be opened; data will be accepted as-is.
+.. |no_force| replace:: Use to force the upload of files even if they haven't been changed.
 .. |no_host_key_verify| replace:: Use ``--no-host-key-verify`` to disable host key verification.
 .. |no_lazy_load| replace:: Use to download all cookbook files and templates at the beginning of the |chef client| run.
 .. |no_options| replace:: This command does not have any specific options.
@@ -1101,8 +1108,8 @@
 .. |path bootstrap_template| replace:: The path to a template file that will be used during a bootstrap operation. Do not use the ``--distro`` option when ``--template-file`` is specified.
 .. |path chef_handler| replace:: The full path to the handler file or the path to a |gem| (if the handler ships as part of a |ruby| |gem|).
 .. |path chef_handler_directory| replace:: The directory in which handlers are dropped.
-.. |path chef_repo| replace:: The path to the |chef repo|. 
-.. |path directory| replace:: The path to the directory. 
+.. |path chef_repo| replace:: The path to the |chef repo|.
+.. |path directory| replace:: The path to the directory.
 .. |path directory_chdir| replace:: The path to a directory in which a temporary ``chdir`` will occur.
 .. |path directory_unzip| replace:: The path to the directory in which a file will be unzipped.
 .. |path environment| replace:: The path to the environment.
@@ -1126,6 +1133,7 @@
 .. |path ssl_certificate yum_directory| replace:: The path to the directory in which the certificate authorities |yum| should use to verify |ssl| certificates are located.
 .. |path torrent_file| replace:: The path to the torrent file.
 .. |path windows_path| replace:: The value to be added to or removed from a system path.
+.. |pattern command_line| replace:: One (or more) patterns for a command line. If this option is not specified, a list of patterns may be expected on standard input.
 .. |pattern process_table| replace:: The pattern to look for in the process table.
 .. |permission create| replace:: Use the |webui permission create| global permission to define which users and groups may create the following server object types: cookbooks, data bags, environments, nodes, roles, and tags.
 .. |permission delete| replace:: Use the |webui permission delete| permission to define which users and groups may delete an object.
@@ -1169,6 +1177,7 @@
 .. |preferred_state php_pear| replace:: By default, |pear| only installs stable packages. Packages can be installed in various non-stable states: ``devel``, ``alpha`` or ``beta``.
 .. |prerelease| replace:: Indicates that pre-release gems should be installed.
 .. |print_after| replace:: Indicates that data will be shown after a destructive operation.
+.. |print_on_command_line| replace:: Indicates that the print command will be run on the command line.
 .. |priority process| replace:: A priority value assigned to the process.
 .. |priority group| replace:: A priority value assigned to the group.
 .. |priority service| replace:: The relative priority of the program for start and shutdown ordering.
@@ -1185,7 +1194,7 @@
 .. |purge amazon ec2| replace:: Indicates that all corresponding nodes and clients on the |chef server| will be destroyed, in addition to the |amazon ec2| node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the ``--node-name`` option must be used to specify the name of the node.
 .. |purge cookbook| replace:: Indicates that a cookbook (or cookbook version) will be removed entirely from the |chef server|. This action should be used carefully because only one copy of any single file is stored on the |chef server|. Consequently, purging a cookbook will disable any other cookbook that references one or more files from a cookbook that has been purged.
 .. |purge google| replace:: Indicates that all corresponding nodes and clients on the |chef server| will be destroyed, in addition to the |google compute engine| node itself. This action (by itself) assumes that the node and client have the same name as the server; if they do not have the same names, then the ``--node-name`` option must be used to specify the name of the node.
-.. |purge knife download| replace:: Use ``--purge`` to delete local files and directories that do not exist on the |chef server|.  By default, if a role, cookbook, etc. does not exist on the |chef server|, the local file for said role will be left alone and NOT deleted.
+.. |purge knife download| replace:: Use ``--purge`` to delete local files and directories that do not exist on the |chef server|. By default, if a role, cookbook, etc. does not exist on the |chef server|, the local file for said role will be left alone and NOT deleted.
 .. |purge knife upload| replace:: Use ``--purge`` to delete roles, cookbooks, etc. from the |chef server| if their corresponding files do not exist in the |chef repo|. By default, such objects are left alone and NOT purged.
 .. |purge node bluelock| replace:: Indicates that all corresponding nodes on the |chef server| will be destroyed, in addition to the |bluelock| node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the ``--node-name`` option to specify the correct name for the node.
 .. |purge node hp| replace:: Indicates that all corresponding nodes on the |chef server| will be destroyed, in addition to the |hp cloud| node itself. This option (by itself) assumes that the node and client have the same name as the server. If they do not, use the ``--node-name`` option to specify the correct name for the node.
@@ -1239,6 +1248,8 @@
 .. |region eucalyptus| replace:: The name of the region from which instances of hosted applications are launched.
 .. |remote resource| replace:: The remote repository to be used when synchronizing an existing clone.
 .. |remote deps_on_server| replace:: Indicates that dependencies will be determined from objects located on the |chef server| instead of the local |chef repo|.
+.. |replace_file| replace:: Use to define a string that will be used to replace the first occurrence of a file name.
+.. |replace_string| replace:: Use to define a string that will be used to replace all occurrences of a file name.
 .. |repo_gpgcheck| replace:: Indicates whether |yum| will perform a |gnu pg| signature check on data in the repository.
 .. |repo_mode| replace:: The layout of the local |chef repo|. Possible values: ``static``, ``everything``, or ``hosted_everything``. Use ``static`` for just roles, environments, cookbooks, and data bags. By default, ``everything`` and ``hosted_everything`` are dynamically selected depending on the server type.
 .. |repository| replace:: The path to the |chef repo|.
@@ -1632,6 +1643,7 @@
 .. |use keepalive| replace:: Indicates whether HTTP keepalive is used (if available).
 .. |use last_modified| replace:: Indicates that |if_modified_since| headers are enabled. Set to ``false`` to disable |if_modified_since| headers. To use this setting, ``use_conditional_get`` must also be set to ``true``.
 .. |use nagle| replace:: Indicates whether the |nagle| buffering algorithm is enabled.
+.. |use null_character| replace:: Indicates that a ``NULL`` character (``\0``) will be used as a separator, instead of white space.
 .. |use pkgbuild| replace:: Indicates that a custom ``PKGBUILD`` file will be used. When ``true``, the |lwrp pacman aur| lightweight resource will look for a ``cookbook_file`` named ``PKGBUILD`` to use as package instructions.
 .. |use repo| replace:: Indicates that a repository is enabled.
 .. |use sendfile| replace:: Indicates whether ``sendfile()`` is used to copy data between file descriptors.
@@ -1673,6 +1685,7 @@
 .. |version chef| replace:: The version of the |chef client|.
 .. |version ohai| replace:: The version of |ohai|.
 .. |version cookbook| replace:: The current version of a cookbook. Version numbers always follow a simple three-number version sequence.
+.. |version cookbook_download| replace:: The version of a cookbook to download.
 .. |version dotnet_runtime| replace:: The version of |microsoft dotnet|.
 .. |version package| replace:: The version of a package to be installed or upgraded.
 .. |version package_version_assumed| replace:: The version of a package to be installed or upgraded. If a version is not specified, the latest version is assumed.
@@ -1790,7 +1803,6 @@
 .. |zenoss zenpack desc| replace:: A |zenoss zenpack| is used to add or override functionality within the |zenoss| platform.
 .. |zone google| replace:: The |google compute engine| zone in which a disk is located.
 .. |zone hp| replace:: The name of the |hp cloud| availability zone.
-
 
 
 

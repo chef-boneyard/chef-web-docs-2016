@@ -15,4 +15,3 @@ This argument has the following options:
    |secret-file|
 
 .. note::  For encrypted data bag items, use *either* ``--secret`` or ``--secret-file``, not both.
-

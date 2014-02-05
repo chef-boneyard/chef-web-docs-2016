@@ -16,4 +16,3 @@ This subcommand has the following options:
 
 ``-s``, ``--sort-reverse``
    |sort_reverse|
-

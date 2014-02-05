@@ -10,4 +10,3 @@ This subcommand has the following options:
 
 ``-p PATH:PATH``, ``--script-path PATH:PATH``
    |script-path|
-

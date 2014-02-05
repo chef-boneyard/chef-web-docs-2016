@@ -7,4 +7,3 @@ This argument has the following options:
 
 ``-a ITEM``, ``--after ITEM``
    |after|
-

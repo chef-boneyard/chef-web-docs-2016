@@ -10,4 +10,3 @@ This argument has the following options:
 
 ``-f``, ``--force``
    |force directory|
-

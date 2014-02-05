@@ -6,46 +6,46 @@
 This subcommand has the following options:
 
 ``-0``
-   Indicates that a ``NULL`` character (``\0``) will be used as a separator, instead of white space. Default: ``false``.
+   |use null_character| Default: ``false``.
 
 ``--chef-repo-path PATH``
-   |path chef_repo| This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
+   |path chef_repo| This setting will override the default path to the |chef repo|. Default: same value as specified by ``chef_repo_path`` in |client rb|.
 
 ``--concurrency``
    |concurrency| Default: ``10``.
 
 ``--[no-]diff``
-   Use to show a diff when a file changes. Default: ``--diff``.
+   |no_diff| Default: ``--diff``.
 
 ``--dry-run``
-   Use to prevent changes from being uploaded to the |chef server|. Default: ``false``.
+   |dry_run no_upload| Default: ``false``.
 
 ``--[no-]force``
-   Use to force the upload of files even if they haven't been changed. Default: ``--no-force``. 
+   |no_force| Default: ``--no-force``. 
 
 ``--local``
-   Indicates that a command line will be built or executed against a local file. Set to ``false`` to build or execute against a remote file. Default: ``false``.
+   |build_local_file| Set to ``false`` to build or execute against a remote file. Default: ``false``.
 
 ``-n MAX_ARGS``, ``--max-args MAX_ARGS``
-   The maximum number of arguments per command line. Default: ``nil``.
+   |max_args| Default: ``nil``.
 
 ``-s LENGTH``, ``--max-chars LENGTH``
-   The maximum size (in characters) for a command line. Default: ``nil``.
+   |max_chars| Default: ``nil``.
 
 ``-p [PATTERN...]``, ``--pattern [PATTERN...]``
-   One (or more) patterns for a command line. If this option is not specified, a list of patterns may be expected on standard input. Default: ``nil``.
+   |pattern command_line| Default: ``nil``.
 
 ``-I REPLACE_STRING``, ``--replace REPLACE_STRING``
-   Use to define a string that will be used to replace all occurrences of a file name. Default: ``nil``.
+   |replace_string| Default: ``nil``.
 
 ``-J REPLACE_STRING``, ``--replace-first REPLACE_STRING``
-   Use to define a string that will be used to replace the first occurrence of a file name. Default: ``nil``.
+   |replace_file| Default: ``nil``.
 
 ``--repo-mode MODE``
    |repo_mode| Default value: ``default``.
 
 ``-t``
-   Indicates that the print command will be run on the command line. Default: ``nil``.
+   |print_on_command_line| Default: ``nil``.
 
 
 

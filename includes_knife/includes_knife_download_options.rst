@@ -6,13 +6,13 @@
 This subcommand has the following options:
 
 ``--chef-repo-path PATH``
-   |path chef_repo| This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
+   |path chef_repo| This setting will override the default path to the |chef repo|. Default: same value as specified by ``chef_repo_path`` in |client rb|.
 
 ``--concurrency``
    |concurrency| Default: ``10``.
 
 ``--cookbook-version VERSION``
-   The version of a cookbook to be downloaded.
+   |version cookbook_download|
 
 ``--[no-]force``
    |force knife download| Default: ``--no-force``.

@@ -10,4 +10,3 @@ This argument has the following options:
 
 ``-w``, ``--with-uri``
    |with_uri|
-

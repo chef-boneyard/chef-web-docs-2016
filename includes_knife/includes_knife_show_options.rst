@@ -9,7 +9,7 @@ This subcommand has the following options:
    |attribute_show|
 
 ``--chef-repo-path PATH``
-   |path chef_repo| This setting will override the default path to the |chef repo|. Default: same as specified by ``chef_repo_path`` in config.rb.
+   |path chef_repo| This setting will override the default path to the |chef repo|. Default: same value as specified by ``chef_repo_path`` in |client rb|.
 
 ``--concurrency``
    |concurrency| Default: ``10``.
