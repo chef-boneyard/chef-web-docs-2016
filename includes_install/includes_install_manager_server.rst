@@ -38,11 +38,11 @@ To set up the |chef manager| server:
 
    This step is required for each of the front end servers in the |chef server oec| deployment.
 
-#. Verify the installation:
-
-   .. code-block:: bash
-
-      $ opscode-manage-ctl test
-
-   The |chef manager| should now be running and accessible by a web browser on port 443 (HTTPS). 
+.. #. Verify the installation:
+.. 
+..    .. code-block:: bash
+.. 
+..       $ opscode-manage-ctl test
+.. 
+..    The |chef manager| should now be running and accessible by a web browser on port 443 (HTTPS). 
 
