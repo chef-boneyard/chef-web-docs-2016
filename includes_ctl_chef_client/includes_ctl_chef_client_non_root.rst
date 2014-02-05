@@ -22,6 +22,6 @@ or:
 
 .. code-block:: ruby
 
-   cache_path "File.join(File.expand_path("~"), ".chef", "cache")"
+   cache_path File.join(File.expand_path("~"), ".chef", "cache")
 
 .. note:: When running the |chef client| using the ``--local-mode`` option, ``~/.chef/local-mode-cache`` is the default value for ``cache_path``.
