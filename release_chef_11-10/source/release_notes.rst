@@ -4,6 +4,10 @@ Release Notes: |chef client| 11.10.0
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+Supported Platforms
+=====================================================
+.. include:: ../../includes_supported_platforms/includes_supported_platforms_client.rst
+
 What's New
 =====================================================
 The following items are new for |chef 11-10| and/or are changes from previous versions. The short version:
