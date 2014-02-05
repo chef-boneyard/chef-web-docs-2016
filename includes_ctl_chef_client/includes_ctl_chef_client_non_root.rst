@@ -10,7 +10,7 @@ In this type of scenario, a node should be managed as if it were two nodes:
 
 * Configure one node to run the |chef client| as the root user; trigger this |chef client| manually  (via |ssh|, |push jobs|, and so on)
 * Configure another node to run the |chef client| as a daemonized user; this |chef client| manages the application stack on the node
-* Register both nodes with the |chef server|; use the |chef server oec| security model to limit access to the node on which the |chef client| is installed as a root user
+* Register both of these nodes with the |chef server|; use the |chef server oec| security model to limit access to the node on which the |chef client| is installed as a root user
 
 To run a |chef client| in non-root mode, add the ``cache_path`` setting to the |client rb| file for the node that will run as the non-root user. Set the value of ``cache_path`` to be the home directory for the user that is running the |chef client|. For example:
 
