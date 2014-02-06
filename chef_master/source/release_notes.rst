@@ -1,90 +1,76 @@
 =====================================================
-Release Notes: Chef 11.8.0
+Release Notes: |chef client| 11.10.0
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef.rst
 
+.. Supported Platforms
+.. =====================================================
+.. .. include:: ../../includes_supported_platforms/includes_supported_platforms_11-10_client.rst
 
 What's New
 =====================================================
-The following items are new for |chef 11-8| and/or are changes from previous versions. The short version:
+The following items are new for |chef 11-10| and/or are changes from previous versions. The short version:
 
-* **Local mode for the chef-client** The |chef client| can now be run in local mode, which allows the |chef client| to run against the local |chef repo| as if it were running against a |chef server|.
-* **New configuration settings** Three configuration settings have been added to support the use of local mode: ``chef_zero[:enabled]``, ``chef_zero[:port]``, and ``local_mode``.
-* **New man pages for Knife** The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.opscode.com and are current as of the |chef client| 11.8.0 release.
-* **New command line option for knife-diff and knife-download** The ``--cookbook-version`` option has been added, which allows a specific cookbook version to be specified as part of a command.
+* **Use a recipe with the chef-client local mode** A recipe can now be specified when running the |chef client| in local mode.
+* **New attributes for the group resource** Members can be removed from groups (``excluded_members``) and duplicate group identifiers are allowed (``non_unique``).
+* **New compare subcommand for knife environment** Compare cookbook versions for environments
 
-|chef zero|
+|chef client| Options
 -----------------------------------------------------
-.. include:: ../../includes_chef/includes_chef_zero.rst
+A recipe can be specified when running the |chef client|, typically when running the |chef client| in local mode:
 
-|chef client| Local Mode
+``RECIPE_FILE``
+   |path recipe_file|
+
+For example:
+
+.. code-block:: bash
+
+   $ chef-client [options] [RECIPE_FILE...]
+
+|resource group| Resource Attributes
 -----------------------------------------------------
-The |chef client| can be run in local mode using the ``--local-mode`` option:
-
-``-z``, ``--local-mode``
-   |local_mode|
-
-.. include:: ../../includes_chef_client/includes_chef_client_local_mode.rst
-
-
-Knife Support for |chef zero|
------------------------------------------------------
-New common options have been added:
-
-``--chef-zero-port PORT``
-   |port chef_zero|
-
-``-z``, ``--local-mode``
-   |local_mode|
-
-
-New Config Settings
------------------------------------------------------
-Three new settings are available for the |knife rb| and |client rb| configuration files:
+The following attributes have been added to the |resource group| resource:
 
 .. list-table::
-   :widths: 200 300
+   :widths: 150 450
    :header-rows: 1
 
-   * - Setting
+   * - Attribute
      - Description
-   * - ``chef_zero[:enabled]``
-     - |chef_zero_enabled| Default value: ``false``. For example:
-       ::
- 
-          chef_zero[:enabled]true
-   * - ``chef_zero[:port]``
-     - |chef_zero_port| Default value: ``8889``. For example:
-       ::
- 
-          chef_zero[:port] 8889
-   * - ``local_mode``
-     - |local_mode| For example:
-       ::
- 
-          local_mode true
+   * - ``excluded_members``
+     - |excluded_members|
+   * - ``non_unique``
+     - |non_unique_members| Default value: ``false``.
 
 
-New Man Pages
+knife environment compare
 -----------------------------------------------------
-The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.opscode.com and are current as of the |chef client| 11.8.0 release. The man pages and online topics are published using the same process, which means that the information published to each format is identical. That said, the docs.opscode.com pages are updated more frequently than man pages will be; changes made to the topics on docs.opscode.com after this release will be included in future updates of the |chef client|.
+.. include:: ../../includes_knife/includes_knife_environment_compare.rst
 
-Knife Options
------------------------------------------------------
-New options have been added to the following |knife| subcommands:
+**Syntax**
 
-knife diff
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_environment_compare_syntax.rst
 
-``--cookbook-version VERSION``
-   The version of a cookbook to be downloaded.
+**Options**
 
-knife download
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_environment_compare_options.rst
 
-``--cookbook-version VERSION``
-   The version of a cookbook to be downloaded.
+**Example**
+
+.. code-block:: bash
+
+   $ knife environment compare development staging
+
+will return something similar to:
+
+.. code-block:: bash
+
+               development  staging
+   apache      2.3.1        1.2.2
+   windows     4.1.2        1.0.0
+   postgresql  1.0.0        1.0.0
 
 
 What's Fixed
@@ -92,80 +78,68 @@ What's Fixed
 
 The following bugs were fixed:
 
-* `CHEF-1559 <http://tickets.opscode.com/browse/CHEF-1559>`_  --- Debian service provider does not modify the priorities of service
-* `CHEF-3159 <http://tickets.opscode.com/browse/CHEF-3159>`_  --- Do not silently exit when the daemon isn't executable in init scripts on Debian
-* `CHEF-3798 <http://tickets.opscode.com/browse/CHEF-3798>`_  --- user provider on Windows tries to set the password even if not provided
-* `CHEF-3881 <http://tickets.opscode.com/browse/CHEF-3881>`_  --- exit 1, not 0, if $DAEMON (chef-client) is not executable
-* `CHEF-3982 <http://tickets.opscode.com/browse/CHEF-3982>`_  --- wget/curl dep in chef-full knife bootstrap script fails on Solaris 10
-* `CHEF-4014 <http://tickets.opscode.com/browse/CHEF-4014>`_  --- Group provider does not respect group_name on Windows
-* `CHEF-4084 <http://tickets.opscode.com/browse/CHEF-4084>`_  --- knife status -r adds incorrect punctuation
-* `CHEF-4155 <http://tickets.opscode.com/browse/CHEF-4155>`_  --- remove the chef-apply symlink in postinst/postrm
-* `CHEF-4196 <http://tickets.opscode.com/browse/CHEF-4196>`_  --- chef-shell & chef-apply aren't deleted by postinst & postrm scripts
-* `CHEF-4197 <http://tickets.opscode.com/browse/CHEF-4197>`_  --- Chef::Provider::Mount device_mount_regex fails to populate capture groups when device is symlink (Ubuntu 12)
-* `CHEF-4200 <http://tickets.opscode.com/browse/CHEF-4200>`_  --- When uid is sent into user provider as a string, chef should not update user on each chef run
-* `CHEF-4271 <http://tickets.opscode.com/browse/CHEF-4271>`_  --- "--sudo-use-password" option for knife-bootstrap should escape passwords with ' ' to allow for special characters to be passed in via command line
-* `CHEF-4335 <http://tickets.opscode.com/browse/CHEF-4335>`_  --- Knife ssh adds annoying extra newlines to output
-* `CHEF-4344 <http://tickets.opscode.com/browse/CHEF-4344>`_  --- Fix typo in spec
-* `CHEF-4353 <http://tickets.opscode.com/browse/CHEF-4353>`_  --- No way to assign validator property to client.
-* `CHEF-4371 <http://tickets.opscode.com/browse/CHEF-4371>`_  --- FreeBSD Package Provider fails when package name contains +'s.
-* `CHEF-4375 <http://tickets.opscode.com/browse/CHEF-4375>`_  --- chef-service-manager --version shows "version unknown"
-* `CHEF-4394 <http://tickets.opscode.com/browse/CHEF-4394>`_  --- Add an equivalent for --fork on Windows
-* `CHEF-4399 <http://tickets.opscode.com/browse/CHEF-4399>`_  --- Line endings for templates are based on the platform the template was written on not on the node platform
-* `CHEF-4406 <http://tickets.opscode.com/browse/CHEF-4406>`_  --- response_file fails trying to load preseed templates and falls back to cookbook files.
-* `CHEF-4411 <http://tickets.opscode.com/browse/CHEF-4411>`_  --- Fix --copyright and --email typos in knife cookbook create docs
-* `CHEF-4422 <http://tickets.opscode.com/browse/CHEF-4422>`_  --- remote_file fails when source becomes too long
-* `CHEF-4426 <http://tickets.opscode.com/browse/CHEF-4426>`_  --- knife cookbook upload doesn't work on windows when working with :versioned_cookbooks
-* `CHEF-4435 <http://tickets.opscode.com/browse/CHEF-4435>`_  --- Chef::DataBag.save does a PUT getting a 405 from the chef server
-* `CHEF-4456 <http://tickets.opscode.com/browse/CHEF-4456>`_  --- Knife cookbook site share fails with Ruby 2
-* `CHEF-4457 <http://tickets.opscode.com/browse/CHEF-4457>`_  --- Diffs fail when there are spaces in the path
-* `CHEF-4470 <http://tickets.opscode.com/browse/CHEF-4470>`_  --- Running chef-client fails when chef is running as a service on windows
-* `CHEF-4482 <http://tickets.opscode.com/browse/CHEF-4482>`_  --- user resource allows defining uid as a string but results in re-applying the change with each run
-* `CHEF-4493 <http://tickets.opscode.com/browse/CHEF-4493>`_  --- Merge unmerged knife-essentials code into chef
-* `CHEF-4499 <http://tickets.opscode.com/browse/CHEF-4499>`_  --- knife upload subcommand does not support any options
-* `CHEF-4507 <http://tickets.opscode.com/browse/CHEF-4507>`_  --- smartos package provider matches package names too loosely in candidate_version
-* `CHEF-4509 <http://tickets.opscode.com/browse/CHEF-4509>`_  --- After CHEF-4011 - Double encryption problem
-* `CHEF-4513 <http://tickets.opscode.com/browse/CHEF-4513>`_  --- HTTPS proxy not set (wget only) using HTTPS to download the Omnibus installer
-* `CHEF-4515 <http://tickets.opscode.com/browse/CHEF-4515>`_  --- Wrong puzzling/confusing message "Unsupported `json_class` type 'Chef::WebUIUser' (JSON::ParserError)" while users upload
-* `CHEF-4526 <http://tickets.opscode.com/browse/CHEF-4526>`_  --- knife environment edit still is .js temp files
-* `CHEF-4534 <http://tickets.opscode.com/browse/CHEF-4534>`_  --- Upstart provider's restart_service if..else has a syntax bug
-* `CHEF-4554 <http://tickets.opscode.com/browse/CHEF-4554>`_  --- Typo in chef solo config file option default
-* `CHEF-4556 <http://tickets.opscode.com/browse/CHEF-4556>`_  --- chef-client service starts at every run of chef-client::service recipe
-* `CHEF-4561 <http://tickets.opscode.com/browse/CHEF-4561>`_  --- :write is not a valid action for log resource
-* `CHEF-4567 <http://tickets.opscode.com/browse/CHEF-4567>`_  --- SmartOSPackage class expands to the wrong DSL method
-* `CHEF-4592 <http://tickets.opscode.com/browse/CHEF-4592>`_  --- "knife delete" subcommand options not showing on the command line
-* `CHEF-4602 <http://tickets.opscode.com/browse/CHEF-4602>`_  --- Errno::ETXTBSY Text file busy
-* `CHEF-4610 <http://tickets.opscode.com/browse/CHEF-4610>`_  --- Chef on Windows prints "deprecated" warning for every operation
-* `CHEF-4614 <http://tickets.opscode.com/browse/CHEF-4614>`_  --- ResourceReporter should check that before/after state for a resource are hashes
-* `CHEF-4615 <http://tickets.opscode.com/browse/CHEF-4615>`_  --- --chef-repo-path doesn't work for knife deps, download, etc
-* `CHEF-4625 <http://tickets.opscode.com/browse/CHEF-4625>`_  --- Remote_file local file copy on Windows fails with EACCESS, requires atomic_update false workaround
-* `CHEF-4649 <http://tickets.opscode.com/browse/CHEF-4649>`_  --- Auto configure ssl_ca_file on windows when running in omnibus
-* `CHEF-4671 <http://tickets.opscode.com/browse/CHEF-4671>`_  --- Remote file cache control handling needs to be updated for HTTP library refactor
-* `CHEF-4674 <http://tickets.opscode.com/browse/CHEF-4674>`_  --- 11.6.2 windows MSI does not include Erubis executable
+* `CHEF-1260 <http://tickets.opscode.com/browse/CHEF-1260>`_  --- File Resource shouldn't checksum large files if checksum is not needed
+* `CHEF-1459 <http://tickets.opscode.com/browse/CHEF-1459>`_  --- Chef::Provider::Group::Pw doesn't support append members on FreeBSD
+* `CHEF-1699 <http://tickets.opscode.com/browse/CHEF-1699>`_  --- Getting group not working right after useradd
+* `CHEF-1977 <http://tickets.opscode.com/browse/CHEF-1977>`_  --- recipes added via include_recipe are not found via search for recipes:<name>
+* `CHEF-2418 <http://tickets.opscode.com/browse/CHEF-2418>`_  --- 'knife ssh' should prompt for user password
+* `CHEF-2688 <http://tickets.opscode.com/browse/CHEF-2688>`_  --- group resource fails if group already exists
+* `CHEF-3012 <http://tickets.opscode.com/browse/CHEF-3012>`_  --- Windows group provider is not idempotent for domain users
+* `CHEF-3041 <http://tickets.opscode.com/browse/CHEF-3041>`_  --- Group::Aix provider should have specs
+* `CHEF-3042 <http://tickets.opscode.com/browse/CHEF-3042>`_  --- Group::Suse provider should have specs
+* `CHEF-3297 <http://tickets.opscode.com/browse/CHEF-3297>`_  --- The groupmod provider should allow you to remove individual users
+* `CHEF-3531 <http://tickets.opscode.com/browse/CHEF-3531>`_  --- data bags searched by the 'users' cookbook can't have dots in the value for 'id'
+* `CHEF-3539 <http://tickets.opscode.com/browse/CHEF-3539>`_  --- inconsistent man page for chef-client
+* `CHEF-3582 <http://tickets.opscode.com/browse/CHEF-3582>`_  --- whyrun mode fails for user resource lock action
+* `CHEF-3651 <http://tickets.opscode.com/browse/CHEF-3651>`_  --- group provider on suse Linux adds user multiple times
+* `CHEF-3691 <http://tickets.opscode.com/browse/CHEF-3691>`_  --- Windows provider for service resource automatically times out after 60 seconds
+* `CHEF-3734 <http://tickets.opscode.com/browse/CHEF-3734>`_  --- add options to control "git checkout -b deploy"
+* `CHEF-3857 <http://tickets.opscode.com/browse/CHEF-3857>`_  --- allow convert attributes to ruby hashes for easy modification
+* `CHEF-3940 <http://tickets.opscode.com/browse/CHEF-3940>`_  --- Chef::Provider::Git with user attribute queries /root/.conf/git/config
+* `CHEF-3983 <http://tickets.opscode.com/browse/CHEF-3983>`_  --- control-c during chef-client runs leave yum-dump.py child processes around
+* `CHEF-4093 <http://tickets.opscode.com/browse/CHEF-4093>`_  --- knife environment compare
+* `CHEF-4110 <http://tickets.opscode.com/browse/CHEF-4110>`_  --- ruby_blocks should support why_run
+* `CHEF-4347 <http://tickets.opscode.com/browse/CHEF-4347>`_  --- Typo in generated cookbook README when using knife
+* `CHEF-4358 <http://tickets.opscode.com/browse/CHEF-4358>`_  --- Chef client fails when invoked with an empty environment
+* `CHEF-4363 <http://tickets.opscode.com/browse/CHEF-4363>`_  --- Unable to add event handlers from config file
+* `CHEF-4379 <http://tickets.opscode.com/browse/CHEF-4379>`_  --- Adding runtime in stdout for Chef 11
+* `CHEF-4420 <http://tickets.opscode.com/browse/CHEF-4420>`_  --- mailto attribute in Cron resource can not be removed once set
+* `CHEF-4421 <http://tickets.opscode.com/browse/CHEF-4421>`_  --- Improve "No cookbook found" error message
+* `CHEF-4439 <http://tickets.opscode.com/browse/CHEF-4439>`_  --- A single character is valid user name in linux/unix (hence valud owner of a file)
+* `CHEF-4441 <http://tickets.opscode.com/browse/CHEF-4441>`_  --- decrypting an encrypted data bag w/o a key now throws "can't convert nil into String"
+* `CHEF-4498 <http://tickets.opscode.com/browse/CHEF-4498>`_  --- install.sh doesn't work on FreeBSD 9.1
+* `CHEF-4616 <http://tickets.opscode.com/browse/CHEF-4616>`_  --- Chef-client Cannot Handle Bare IPv6 In chef_server_url
+* `CHEF-4632 <http://tickets.opscode.com/browse/CHEF-4632>`_  --- Loosen JSON dependency to support 1.8.0+
+* `CHEF-4633 <http://tickets.opscode.com/browse/CHEF-4633>`_  --- deep merge should not re-assign dest var for every key in a source hash
+* `CHEF-4639 <http://tickets.opscode.com/browse/CHEF-4639>`_  --- writing credentials files with `file` or `template` may leak credentials in diffs
+* `CHEF-4673 <http://tickets.opscode.com/browse/CHEF-4673>`_  --- change doc URL in shell to docs.opscode.com
+* `CHEF-4676 <http://tickets.opscode.com/browse/CHEF-4676>`_  --- depend on net-ssh-multi 1.2.0
+* `CHEF-4700 <http://tickets.opscode.com/browse/CHEF-4700>`_  --- Remove an unused variable in spec/unit/client_spec.rb
+* `CHEF-4703 <http://tickets.opscode.com/browse/CHEF-4703>`_  --- Refactor handle_command_failures method.
+* `CHEF-4709 <http://tickets.opscode.com/browse/CHEF-4709>`_  --- knife bootstrap of Solaris fails again
+* `CHEF-4725 <http://tickets.opscode.com/browse/CHEF-4725>`_  --- Chef 11.8 buffers all output until the end of the run instead of displaying as it runs
+* `CHEF-4730 <http://tickets.opscode.com/browse/CHEF-4730>`_  --- knife environment compare
+* `CHEF-4733 <http://tickets.opscode.com/browse/CHEF-4733>`_  --- Directory, template providers: owner validation fails on single-character strings
+* `CHEF-4734 <http://tickets.opscode.com/browse/CHEF-4734>`_  --- Stop enforcing group/owner regular expressions
+* `CHEF-4747 <http://tickets.opscode.com/browse/CHEF-4747>`_  --- Allow configuring how many threads will be used for knife cookbook upload
+* `CHEF-4748 <http://tickets.opscode.com/browse/CHEF-4748>`_  --- Knife data bag accepts different ID validation during "data bag item from file" and "data bag edit" vs the "data bag create"
+* `CHEF-4759 <http://tickets.opscode.com/browse/CHEF-4759>`_  --- chef-solo on Windows prints out ASCII escape sequences
+* `CHEF-4762 <http://tickets.opscode.com/browse/CHEF-4762>`_  --- http_request with action :head does not behave correctly in 11.8.0
+* `CHEF-4782 <http://tickets.opscode.com/browse/CHEF-4782>`_  --- chef service provider action "enable" not idempodent on ubuntu/debian
+* `CHEF-4806 <http://tickets.opscode.com/browse/CHEF-4806>`_  --- debian service not idempotent and ignoring S runlevel
+* `CHEF-4822 <http://tickets.opscode.com/browse/CHEF-4822>`_  --- Remove unused instance variable startup_type from service resource
+* `CHEF-4825 <http://tickets.opscode.com/browse/CHEF-4825>`_  --- Omnitruck and install.sh overall rollup ticket
+* `CHEF-4842 <http://tickets.opscode.com/browse/CHEF-4842>`_  --- User resource comparison fails if comment includes unicode characters
+* `CHEF-4845 <http://tickets.opscode.com/browse/CHEF-4845>`_  --- Invalid regexp in aix package provider
+* `CHEF-4849 <http://tickets.opscode.com/browse/CHEF-4849>`_  --- Package resource should implement variables method for use with templates
+* `CHEF-4850 <http://tickets.opscode.com/browse/CHEF-4850>`_  --- Chef::Util::FileEdit leaks handle
+* `CHEF-4852 <http://tickets.opscode.com/browse/CHEF-4852>`_  --- Print total resources along with updated resources in doc formatter
+* `CHEF-4909 <http://tickets.opscode.com/browse/CHEF-4909>`_  --- Add support for loading a static list of plugins to knife
+* `CHEF-4910 <http://tickets.opscode.com/browse/CHEF-4910>`_  --- Ruby 2.1 compatibility
+* `CHEF-4913 <http://tickets.opscode.com/browse/CHEF-4913>`_  --- ffi 1.3.1 is too low a version when using Ruby 2.0.0 with Windows
+* `CHEF-4914 <http://tickets.opscode.com/browse/CHEF-4914>`_  --- integration tests fail when there is another chef-client first in the PATH
+* `CHEF-4958 <http://tickets.opscode.com/browse/CHEF-4958>`_  --- (Refactor) Extract policy setup code from Chef::Client to a new component
+* `CHEF-4963 <http://tickets.opscode.com/browse/CHEF-4963>`_  --- Mixlib-shellout library is incorrect for Chef 11.8.2
+* `CHEF-4983 <http://tickets.opscode.com/browse/CHEF-4983>`_  --- Incompatibility with ChefSpec introduced by CHEF-4958
+* `CHEF-4984 <http://tickets.opscode.com/browse/CHEF-4984>`_  --- Experimental Support for Policyfile-based node policy
 
-What's Improved
-=====================================================
-The following improvements were made:
-
-* `CHEF-3609 <http://tickets.opscode.com/browse/CHEF-3609>`_  --- when bootstrapping, should generate no_proxy in /etc/chef/client.rb if no_proxy is configured in knife.rb
-* `CHEF-4248 <http://tickets.opscode.com/browse/CHEF-4248>`_  --- Expose timeout attribute on scm resource and associated providers
-* `CHEF-4343 <http://tickets.opscode.com/browse/CHEF-4343>`_  --- Only test certain branches on Travis
-* `CHEF-4458 <http://tickets.opscode.com/browse/CHEF-4458>`_  --- add chef_ca_cert resource
-* `CHEF-4465 <http://tickets.opscode.com/browse/CHEF-4465>`_  --- mdadm provider shouldn't pass chunk size for mirrors
-* `CHEF-4469 <http://tickets.opscode.com/browse/CHEF-4469>`_  --- Allow Solaris package install from Jumpstart install server's NFS share of packages
-* `CHEF-4471 <http://tickets.opscode.com/browse/CHEF-4471>`_  --- Add Windows 8.1/2012 R2 to Chef Windows Helper
-* `CHEF-4477 <http://tickets.opscode.com/browse/CHEF-4477>`_  --- fix typographical errors in autogenerated README.md
-* `CHEF-4488 <http://tickets.opscode.com/browse/CHEF-4488>`_  --- Support chef_server_url 'local' running chef-zero
-* `CHEF-4497 <http://tickets.opscode.com/browse/CHEF-4497>`_  --- tag method should be moved into the Node object
-* `CHEF-4529 <http://tickets.opscode.com/browse/CHEF-4529>`_  --- A Timestamp of backup_filename is too short.
-* `CHEF-4568 <http://tickets.opscode.com/browse/CHEF-4568>`_  --- Normalize whitespace
-* `CHEF-4571 <http://tickets.opscode.com/browse/CHEF-4571>`_  --- GET '/cookbooks/foo/_latest' returns duplicate JSON keys in recipes
-* `CHEF-4578 <http://tickets.opscode.com/browse/CHEF-4578>`_  --- groupadd add non_unique support (-o)
-* `CHEF-4585 <http://tickets.opscode.com/browse/CHEF-4585>`_  --- chef/mixin/shell_out should require mixlib/shellout and document why it requires chef/shell_out
-* `CHEF-4603 <http://tickets.opscode.com/browse/CHEF-4603>`_  --- Refactor Chef::REST so behavior is swappable
-* `CHEF-4648 <http://tickets.opscode.com/browse/CHEF-4648>`_  --- Add Pry as a runtime dep
-
-New Features
-=====================================================
-The following features were added:
-
-* `CHEF-2928 <http://tickets.opscode.com/browse/CHEF-2928>`_  --- Chef solo's role_path should allow for an array of paths
