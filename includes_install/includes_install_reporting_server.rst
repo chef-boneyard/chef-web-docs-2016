@@ -22,8 +22,14 @@ To set up the |reporting| server:
 
       $ opscode-reporting-ctl reconfigure
 
-#. Restart the |reporting| components:
+.. #. Restart the |reporting| components:
+.. 
+..    .. code-block:: bash
+.. 
+..       $ private-chef-ctl restart opscode-reporting
+
+#. Verify the installation:
 
    .. code-block:: bash
 
-      $ private-chef-ctl restart opscode-reporting
+      $ opscode-reporting-ctl test

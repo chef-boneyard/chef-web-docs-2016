@@ -26,13 +26,13 @@ To set up the |reporting| server:
 
    .. code-block:: bash
       
-      $ scp -r <Bootstrap server IP>:/etc/opscode /etc
+      $ scp -r <Bootstrap server IP>:/etc/opscode-reporting /etc
 
    or from the back end primary machine:
 
    .. code-block:: bash
       
-      $ scp -r /etc/opscode <each servers IP>:/etc
+      $ scp -r /etc/opscode-reporting <each servers IP>:/etc
 
 #. Reconfigure the |chef server oec| servers on which |reporting| services have been installed:
 
@@ -46,10 +46,14 @@ To set up the |reporting| server:
 
       $ opscode-reporting-ctl reconfigure
 
-#. Restart the |reporting| components:
+.. #. Restart the |reporting| components:
+.. 
+..    .. code-block:: bash
+.. 
+..       $ private-chef-ctl restart opscode-reporting
+
+#. Verify the installation:
 
    .. code-block:: bash
 
-      $ private-chef-ctl restart opscode-reporting
-
-
+      $ opscode-reporting-ctl test
