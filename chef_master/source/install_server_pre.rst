@@ -123,6 +123,6 @@ By default, accounts required by the |chef server| are created during setup. If 
    * - ``opscode``
      - The group name under which services will run.
    * - ``opscode-pgsql``
-     - The user name for |postgresql|.
+     - The user name for |postgresql|. (This is only required on the back end servers in a high availability setup.)
 
 .. note:: Add-ons for |chef server oec|---|push jobs| and |reporting|, for example---use the same accounts listed above.
