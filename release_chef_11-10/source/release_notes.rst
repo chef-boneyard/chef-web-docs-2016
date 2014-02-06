@@ -23,6 +23,11 @@ A recipe can be specified when running the |chef client|, typically when running
 ``RECIPE_FILE``
    |path recipe_file|
 
+For example:
+
+.. code-block:: bash
+
+   $ chef-client [options] [RECIPE_FILE...]
 
 |resource group| Resource Attributes
 -----------------------------------------------------
