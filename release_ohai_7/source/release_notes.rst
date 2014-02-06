@@ -6,9 +6,9 @@ Release Notes: |ohai 7|
 
 .. warning:: |ohai 7| is planned to be fully integrated into the |chef client| starting with the 11.12.0 release (~April 2014).
 
-Supported Platforms
-=====================================================
-.. include:: ../../includes_supported_platforms/includes_supported_platforms_ohai.rst
+.. Supported Platforms
+.. =====================================================
+.. .. include:: ../../includes_supported_platforms/includes_supported_platforms_ohai.rst
 
 What's New
 =====================================================
