@@ -22,10 +22,6 @@ To set up the |reporting| server:
 
       $ opscode-reporting-ctl reconfigure
 
-   This step is required for each of the servers in the Enterprise Chef deployment. For example, in
-   a configuration with two back end servers and three front end servers, this command would
-   need to be run on all five machines.
-
 #. Restart the |reporting| components:
 
    .. code-block:: bash
