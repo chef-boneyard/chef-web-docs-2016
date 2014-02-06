@@ -131,21 +131,24 @@ End |chef client| Run
 
 The following sections show various approaches to ending a |chef client| run.
 
-Fatal Messages
+return Keyword
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_recipe/step_recipe_end_chef_run_application_fatal.rst
+.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst
+
+raise Keyword
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst
 
 Rescue Blocks
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_recipe/step_recipe_end_chef_run_rescue_block.rst
 
-Stop a Recipe
+Fatal Messages
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_return.rst
+.. include:: ../../step_recipe/step_recipe_end_chef_run_application_fatal.rst
 
-Unhandled Exceptions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../step_recipe/step_recipe_end_chef_run_keyword_raise.rst
+
+
 
 
 
