@@ -118,7 +118,7 @@ By default, accounts required by the |chef server| are created during setup. If 
 
    * - User Account
      - Description
-   * - ``ospcode``
+   * - ``opscode``
      - The user name under which services will run.
    * - ``opscode-pgsql``
      - The user name for |postgresql|. (This is only required on the back end servers in a high availability setup.)
