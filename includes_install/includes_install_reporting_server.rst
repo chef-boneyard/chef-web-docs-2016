@@ -10,6 +10,18 @@ To set up the |reporting| server:
 
       $ dpkg -i opscode-reporting_1.0.0-1.ubuntu.10.04_amd64.deb
 
+#. Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
+
+   .. code-block:: bash
+      
+      $ scp -r <Bootstrap server IP>:/etc/opscode /etc
+
+   or from the back end primary machine:
+
+   .. code-block:: bash
+      
+      $ scp -r /etc/opscode <each servers IP>:/etc
+
 #. Reconfigure the |chef server oec| server:
 
    .. code-block:: bash
