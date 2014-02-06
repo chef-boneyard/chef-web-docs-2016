@@ -116,14 +116,14 @@ By default, accounts required by the |chef server| are created during setup. If 
    :widths: 60 420
    :header-rows: 1
 
-   * - User Account
+   * - User Accounts
      - Description
    * - ``opscode``
      - The user name under which services will run.
    * - ``opscode-pgsql``
      - The user name for |postgresql|. (This is only required on the back end servers in a high availability setup.)
 
- The following group accounts are required:
+The following group accounts are required:
 
 .. list-table::
    :widths: 60 420
