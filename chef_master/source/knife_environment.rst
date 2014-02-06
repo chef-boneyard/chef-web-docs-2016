@@ -8,6 +8,34 @@ knife environment
 
 .. note:: Review the list of :doc:`common options </knife_common_options>` available to this (and all) |knife| subcommands and plugins.
 
+compare
+=====================================================
+.. include:: ../../includes_knife/includes_knife_environment_compare.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_environment_compare_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_environment_compare_options.rst
+
+Examples
+-----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Compare cookbook versions in a single environment**
+
+.. include:: ../../step_knife/step_knife_environment_compare_single.rst
+
+**Compare cookbook versions for multiple environments**
+
+.. include:: ../../step_knife/step_knife_environment_compare_multiple.rst
+
+**Compare cookbook versions for all environments**
+
+.. include:: ../../step_knife/step_knife_environment_compare_all.rst
+
 create
 =====================================================
 .. include:: ../../includes_knife/includes_knife_environment_create.rst
