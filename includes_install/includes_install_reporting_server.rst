@@ -10,21 +10,17 @@ To set up the |reporting| server:
 
       $ dpkg -i opscode-reporting_1.0.0-1.ubuntu.10.04_amd64.deb
 
-#. Reconfigure the |chef server oec| server:
+#. Reconfigure the |chef server oec| server on the back end primary server (bootstrap):
 
    .. code-block:: bash
 
       $ private-chef-ctl reconfigure
 
-#. Reconfigure the |reporting| server:
+#. Reconfigure the |reporting| server on the back end primary server (bootstrap):
 
    .. code-block:: bash
 
       $ opscode-reporting-ctl reconfigure
-
-   This step is required for each of the servers in the Enterprise Chef deployment. For example, in
-   a configuration with two back end servers and three front end servers, this command would
-   need to be run on all five machines.
 
 #. Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
 
@@ -38,13 +34,13 @@ To set up the |reporting| server:
       
       $ scp -r /etc/opscode <each servers IP>:/etc
 
-#. Reconfigure each of the |chef server oec| servers:
+#. Reconfigure the |chef server oec| servers on which |reporting| services have been installed:
 
    .. code-block:: bash
 
       $ private-chef-ctl reconfigure
 
-#. Reconfigure each of the |reporting| servers:
+#. Reconfigure |reporting| services on each server:
 
    .. code-block:: bash
 
@@ -56,8 +52,4 @@ To set up the |reporting| server:
 
       $ private-chef-ctl restart opscode-reporting
 
-#. Verify the installation:
 
-   .. code-block:: bash
-
-      $ opscode-reporting-ctl test
