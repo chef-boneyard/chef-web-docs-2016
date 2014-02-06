@@ -12,4 +12,4 @@ A lightweight resource should be set to inline compile mode by adding the ``use_
      # Ruby code that implements the provider
    end
 
-.. warning:: The ``use_inline_resources`` method was added to the |chef client| starting in version 11.0 to address the following behavior. The ``use_inline_resources`` method should be considered a requirement for any lightweight resource authored against the 11.0+ versions of the |chef client|. This behavior will become the default behavior in an upcoming version of the |chef client|.
+.. warning:: The ``use_inline_resources`` method was added to the |chef client| starting in version 11.0 to address the behavior described below. The ``use_inline_resources`` method should be considered a requirement for any lightweight resource authored against the 11.0+ versions of the |chef client|. This behavior will become the default behavior in an upcoming version of the |chef client|.
