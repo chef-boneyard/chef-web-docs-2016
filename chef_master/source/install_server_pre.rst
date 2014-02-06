@@ -108,7 +108,21 @@ If you see a response like the above, you have the |apache qpid| server installe
 
 
 
-Required Users
+Required Accounts
 =====================================================
-If the environment has restrictions on the creation of local user and group accounts (via the ``adduser`` command), you will need to ensure that the correct users exist.
+By default, accounts required by the |chef server| are created during setup. If your environment has restrictions on the creation of local user and group accounts that will prevent these accounts from being created automatically during setup, you will need to create these accounts. The following accounts are required:
 
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Account Name
+     - Description
+   * - ``ospcode``
+     - The user name under which services will run.
+   * - ``opscode``
+     - The group name under which services will run.
+   * - ``opscode-pgsql``
+     - The user name for |postgresql|.
+
+.. note:: Add-ons for |chef server oec|---|push jobs| and |reporting|, for example---use the same accounts listed above.
