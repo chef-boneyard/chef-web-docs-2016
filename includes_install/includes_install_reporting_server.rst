@@ -22,7 +22,7 @@ To set up the |reporting| server:
 
       $ opscode-reporting-ctl reconfigure
 
-#. Copy the entire ``/etc/opscode`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
+#. Copy the entire ``/etc/opscode-reporting`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
 
    .. code-block:: bash
       
