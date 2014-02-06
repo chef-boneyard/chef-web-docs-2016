@@ -18,6 +18,16 @@ This configuration file has the following settings:
           add_formatter :nyan
           add_formatter :foo
           add_formatter :bar
+   * - ``cache_path``
+     - Optional. |cache_path| For example:
+       ::
+ 
+          cache_path "~/.chef/cache"
+ 
+       or:
+       ::
+
+          cache_path File.join(File.expand_path("~"), ".chef", "cache")
    * - ``chef_server_url``
      - |chef_server_url| For example:
        ::
