@@ -31,9 +31,3 @@ To set up the |reporting| server:
    .. code-block:: bash
 
       $ private-chef-ctl restart opscode-reporting
-
-#. Verify the installation:
-
-   .. code-block:: bash
-
-      $ opscode-reporting-ctl test
