@@ -28,3 +28,32 @@ For example, a definition named ``apache_site`` with an parameter called ``actio
         ...
      end
    end
+
+Or the following definition, which looks like a resource when used in a recipe, but also contains resources---|resource directory| and |resource file|---that are repeated, but with slightly different parameters:
+
+.. code-block:: ruby
+
+   define :host_porter, :port => 4000, :hostname => nil do
+     params[:hostname] ||= params[:name]
+   
+     directory "/etc/#{params[:hostname]}" do
+       recursive true
+     end
+   
+     file "/etc/#{params[:hostname]}/#{params[:port]}" do
+       content "some content"
+     end
+   end
+
+which is then used in a recipe like this:
+
+.. code-block:: ruby
+
+   host_porter node['hostname'] do
+    port 4000
+   end
+   
+   host_porter "www1" do
+     port 4001
+   end
+
