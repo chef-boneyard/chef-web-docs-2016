@@ -23,7 +23,7 @@ A recipe can be specified when `running the chef-client <http://docs.opscode.com
 ``RECIPE_FILE``
    |path recipe_file|
 
-For example:
+The syntax for using this option is:
 
 .. code-block:: bash
 
