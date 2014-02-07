@@ -2,4 +2,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A custom |ohai| plugin describes a set of attributes to be to the |chef client| at the start of the |chef client| run.
+A custom |ohai| plugin describes a set of attributes to be collected by |ohai|, and then provided to the |chef client| at the start of the |chef client| run.
