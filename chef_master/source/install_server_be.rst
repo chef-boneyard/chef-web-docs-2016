@@ -41,19 +41,19 @@ The back-end servers will share a virtual IP address, which needs to be accessib
 
 Disk Configuration
 -----------------------------------------------------
-We recommend that disks are dedicated entirely to storing the data for the |chef server oec| installation. These disks should be:
+The data that is stored in the |chef server oec| database is primarily cookbook data. It is recommended that disks are dedicated entirely to storing this data for the |chef server oec| installation. These disks should:
 
-* Utilizing Hardware |raid|
+* Utilize hardware |raid|
 * Be configured in either |raid1| or |raid5|
 * Be identical across both of your back-end servers
 
 Our recommended configuration utilizes the |linux| |lvm| as the backing store for |drbd|. This assumes that:
 
-* 1TB of raw, unpartitioned disk space is available
+* ~300GB of raw, unpartitioned disk space is available
 * The disk space presents as a single device, ``/dev/sdb``
 * The storage is added to a volume group named ``opscode``
 * The storage is added in a logical volume group named ``drbd``
-* The volume group should have adequate space to enable |lvm| snapshots to be used for backups (at least 40GB)
+* The volume group should have adequate space to enable |lvm| snapshots to be used for backups
 
 The following commands would properly set up the back-end disk configuration for |drbd|:
 
