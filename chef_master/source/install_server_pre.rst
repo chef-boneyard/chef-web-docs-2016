@@ -116,7 +116,7 @@ By default, accounts required by the |chef server| are created during setup. If 
    :widths: 60 420
    :header-rows: 1
 
-   * - User Accounts
+   * - User Account
      - Description
    * - ``opscode``
      - The user name under which services will run.
