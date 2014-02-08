@@ -12,6 +12,12 @@ Options
 
 Examples
 =====================================================
+**Run chef-solo using solo.rb settings**
+
+.. code-block:: bash
+
+   $ chef-solo -c ~/chef/solo.rb
+
 **Use a URL**
 
 .. include:: ../../step_ctl_chef_solo/step_ctl_chef_solo_use_url.rst
