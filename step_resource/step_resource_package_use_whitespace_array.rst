@@ -12,11 +12,11 @@ The following examples show different ways of doing the same thing. The first sh
      action :upgrade
    end
    
-   package "package-b" do
+   package "package-c" do
      action :upgrade
    end
    
-   package "package-b" do
+   package "package-d" do
      action :upgrade
    end
 
