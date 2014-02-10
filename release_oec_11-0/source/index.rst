@@ -13,11 +13,13 @@ Server Essentials
 The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
 
 * A `node object <http://docs.opscode.com/essentials_node_object.html>`_ exists for each node that is being managed by the |chef client|
-* Each node object consists of a `run-list <http://docs.opscode.com/essentials_node_object_run_lists.html>`_ and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_. 
+* Each node object consists of a `run-list <http://docs.opscode.com/essentials_node_object_run_lists.html>`_ and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_
+Cookbooks are the fundamental unit of configuration and policy distribution and include: `attribute files <http://docs.opscode.com/essentials_cookbook_attribute_files.html>`_, `definitions <http://docs.opscode.com/essentials_cookbook_definitions.html>`_, `files, <http://docs.opscode.com/essentials_cookbook_files.html>`_, `libraries <http://docs.opscode.com/essentials_cookbook_libraries.html>`_, `metadata <http://docs.opscode.com/essentials_cookbook_metadata.html>`_, `recipes <http://docs.opscode.com/essentials_cookbook_recipes.html>`_, `resources and providers <http://docs.opscode.com/essentials_cookbook_resources.html>`_, `templates <http://docs.opscode.com/essentials_cookbook_templates.html>`_, and `versions <http://docs.opscode.com/essentials_cookbook_versions.html>`_
 * All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is `searchable <http://docs.opscode.com/essentials_search.html>`_ from both recipes (using the `search method <http://docs.opscode.com/dsl_recipe_method_search.html>`_ in the |dsl recipe|) and the workstation (using the `knife search <http://docs.opscode.com/knife_search.html>`_ subcommand)
-* The |chef server| can apply `global policy settings <http://docs.opscode.com/essentials_policy.html>`_ to all nodes across the organization, including for `data bags <http://docs.opscode.com/essentials_data_bags.html>`_, `environments <http://docs.opscode.com/essentials_environments.html>`_, and `roles <http://docs.opscode.com/essentials_roles.html>`_.
+The |chef client| does the actual configuration on `the nodes <http://docs.opscode.com/essentials_nodes.html>`_. The |chef client| receives its instructions from cookbooks (`recipes <http://docs.opscode.com/essentials_cookbook_recipes.html>`_, mostly). The process of configuring a node is called `the chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_. At the beginning of each run, the |chef client| `validates to the server <http://docs.opscode.com/essentials_chef_client.html>`_, `collects important data about that node <http://docs.opscode.com/ohai.html>`_, and then configures the node. At the end of each run, the |chef client| `reports the successes and failures that may have occurred <http://docs.opscode.com/essentials_handlers.html>`_
+* The |chef server| can apply `global policy settings <http://docs.opscode.com/essentials_policy.html>`_ to all nodes across the organization, including for `data bags <http://docs.opscode.com/essentials_data_bags.html>`_, `environments <http://docs.opscode.com/essentials_environments.html>`_, and `roles <http://docs.opscode.com/essentials_roles.html>`_
 * The `authentication <http://docs.opscode.com/auth_authentication.html>`_ process ensures that requests can only be made to the |chef server| by authorized users
-* Users, once `authorized <http://docs.opscode.com/auth_authorization.html>`_ can only perform certain actions.
+* Users, once `authorized <http://docs.opscode.com/auth_authorization.html>`_ can only perform certain actions
 
 Server Components
 =====================================================
@@ -114,26 +116,6 @@ The following APIs can be used to access data on the |chef server|:
 .. raw:: html
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/api_chef_server.html">Chef Server API</a> </br>
-
-
-
-
-The Nodes
-=====================================================
-.. include:: ../../includes_node/includes_node.rst
-
-About the chef-client
------------------------------------------------------
-The |chef client| does the actual configuration on `the nodes <http://docs.opscode.com/essentials_nodes.html>`_. The |chef client| receives its instructions from cookbooks (`recipes <http://docs.opscode.com/essentials_cookbook_recipes.html>`_, mostly). The process of configuring a node is called `the chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_. At the beginning of each run, the |chef client| `validates to the server <http://docs.opscode.com/essentials_chef_client.html>`_, `collects important data about that node <http://docs.opscode.com/ohai.html>`_, and then configures the node. At the end of each run, the |chef client| `reports the successes and failures that may have occurred <http://docs.opscode.com/essentials_handlers.html>`_.
-
-Cookbooks
-=====================================================
-A cookbook is the fundamental unit of configuration and policy distribution. A cookbook defines a scenario and contains all of the components that are required to support that scenario, including: `attribute files <http://docs.opscode.com/essentials_cookbook_attribute_files.html>`_, `definitions <http://docs.opscode.com/essentials_cookbook_definitions.html>`_, `files, <http://docs.opscode.com/essentials_cookbook_files.html>`_, `libraries <http://docs.opscode.com/essentials_cookbook_libraries.html>`_, `metadata <http://docs.opscode.com/essentials_cookbook_metadata.html>`_, `recipes <http://docs.opscode.com/essentials_cookbook_recipes.html>`_, `resources and providers <http://docs.opscode.com/essentials_cookbook_resources.html>`_, `templates <http://docs.opscode.com/essentials_cookbook_templates.html>`_, and `versions <http://docs.opscode.com/essentials_cookbook_versions.html>`_.
-
-A cookbook is authored using |ruby|, which is a programming language with a simple, easy to follow syntax. Being an expert in |ruby| programming is not a requirement for authoring cookbooks because most of the structures found in cookbooks are just patterns; knowing `some basic Ruby <http://docs.opscode.com/just_enough_ruby_for_chef.html>`_ will help a lot.
-
-
-
 
 
 
