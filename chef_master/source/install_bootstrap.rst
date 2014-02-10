@@ -24,7 +24,7 @@ Use Unattended Installs
 =====================================================
 The |chef client| can be installed using an unattended bootstrap. For example, machines are often created using environments like |amazon aws autoscaling|, |amazon aws cloudformation|, |rackspace autoscale|, and |pxe|. In this scenario, using tooling for attended, single-machine installs like ``knife bootstrap`` or ``knife CLOUD_PLUGIN create`` is not practical because the machines are created automatically and someone cannot always be on-hand to initiate the bootstrap process.
 
-When the |chef client| is installed using an unattended bootstrap, remember that the |chef client|
+When the |chef client| is installed using an unattended bootstrap, remember that the |chef client|:
 
 * Must be able to authenticate to the |chef server|
 * Must be able to configure a run-list
