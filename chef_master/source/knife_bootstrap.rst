@@ -52,6 +52,10 @@ Examples
 =====================================================
 The following examples show how to use this |knife| subcommand:
 
+**Bootstrap a node**
+
+.. include:: ../../step_knife/step_knife_bootstrap_node.rst
+
 **Use an SSH password**
 
 .. include:: ../../step_knife/step_knife_bootstrap_use_ssh_password.rst
