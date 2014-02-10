@@ -3,7 +3,7 @@
 
 To install |chef server oec|, do the following:
 
-#. Go to http://www.opscode.com/enterprise-chef/.
+#. Go to |url opscode_chef_install_oec|.
 
 #. Click the **Get Chef** button and sign up for |chef server oec|.
 
