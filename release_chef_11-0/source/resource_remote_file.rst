@@ -44,6 +44,8 @@ Examples
 
 .. include:: ../../step_resource/step_resource_remote_file_transfer_from_url.rst
 
+.. The "Transfer a file only when the source has changed" example is deprecated in chef-client 11-6
+
 **Transfer a file only when the source has changed**
 
 .. include:: ../../step_resource/step_resource_remote_file_transfer_remote_source_changes.rst

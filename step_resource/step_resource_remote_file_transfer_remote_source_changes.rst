@@ -2,6 +2,8 @@
 
 .. To transfer a file only if the remote source has changed (using the |resource http request| resource):
 
+.. The "Transfer a file only when the source has changed" example is deprecated in chef-client 11-6
+
 .. code-block:: ruby
 
    remote_file "/tmp/couch.png" do
