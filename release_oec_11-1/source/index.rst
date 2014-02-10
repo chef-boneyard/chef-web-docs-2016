@@ -1,0 +1,178 @@
+=====================================================
+Docs for |chef server oec| 11.1.x
+=====================================================
+
+.. include:: ../../includes_chef/includes_chef_index_oec.rst
+
+The |chef server oec| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
+
+Server Essentials
+=====================================================
+The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
+
+* A `node object <http://docs.opscode.com/essentials_node_object.html>`_ exists for each node that is being managed by the |chef client|
+* Each node object consists of a `run-list <http://docs.opscode.com/essentials_node_object_run_lists.html>`_ and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_. 
+* All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is `searchable <http://docs.opscode.com/essentials_search.html>`_ from both recipes (using the `search method <http://docs.opscode.com/dsl_recipe_method_search.html>`_ in the |dsl recipe|) and the workstation (using the `knife search <http://docs.opscode.com/knife_search.html>`_ subcommand)
+* The |chef server| can apply `global policy settings <http://docs.opscode.com/essentials_policy.html>`_ to all nodes across the organization, including for `data bags <http://docs.opscode.com/essentials_data_bags.html>`_, `environments <http://docs.opscode.com/essentials_environments.html>`_, and `roles <http://docs.opscode.com/essentials_roles.html>`_.
+* The `authentication <http://docs.opscode.com/auth_authentication.html>`_ process ensures that requests can only be made to the |chef server| by authorized users
+* Users, once `authorized <http://docs.opscode.com/auth_authorization.html>`_ can only perform certain actions.
+
+Server Components
+=====================================================
+The |chef server oec| acts as a hub for configuration data. The :doc:`components that make up the server </server_components>` work together to store cookbooks, provide a management layer, and databases that store cookbook and node data.
+
+Deployment Scenarios
+=====================================================
+.. include:: ../../includes_server_deploy/includes_server_deploy.rst
+
+The following sections discuss these deployment configuration options in greater detail:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_deploy_standalone.html">Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_deploy_be.html">Scaled Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_deploy_fe.html">Scaled Front End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_deploy_febe.html">Scaled Front and Back Ends</a> </br>
+
+.. note:: For more information about signing up for hosted |chef server oec|, see https://getchef.opscode.com/signup.
+
+Install Enterprise Chef
+-----------------------------------------------------
+The |chef server| can be installed via download or by using the |api omnitruck|:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server.html">Install the Enterprise Chef Server</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
+
+Installation scenarios:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_pre.html">Prerequisites</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_standalone.html">Standalone</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_be.html">Scaled Back End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_fe.html">Scaled Front End</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_febe.html">Scaled Front and Back Ends</a> </br>
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/upgrade_server_standalone.html">Standalone Upgrade</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/upgrade_server_ha.html">High Availability Upgrade</a> </br>
+
+Options: 
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_ldap.html">Active Directory / LDAP</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_users.html">Create Users</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_orgs.html">Create Organizations</a> </br>
+
+Manage Enterprise Chef 
+=====================================================
+The |chef server| can be managed in the following ways:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_backup_restore.html">Backup and Restore</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_firewalls_and_ports.html">Firewalls and Ports</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_high_availability.html">High Availability</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_ldap.html">LDAP / Active Directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_logs.html">Logs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_monitor.html">Monitor</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_tuning.html">Performance Tuning</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_security.html">Security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_services.html">Services</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_users.html">Users</a> </br>
+
+
+..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_orgs.html">Organizations</a> </br>
+..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/server_data.html">Server Data</a> </br>
+
+Settings and Tools 
+=====================================================
+The following settings files are used to configure behavior for the |chef server|:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/config_rb_chef_server_enterprise.html">private-chef.rb</a> </br>
+
+The following command-line tools can be run on the |chef server|:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/orgmapper.html">orgmapper</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/ctl_private_chef.html">private-chef-ctl</a> </br>
+
+APIs
+=====================================================
+The following APIs can be used to access data on the |chef server|:
+
+.. raw:: html
+
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/api_chef_server.html">Chef Server API</a> </br>
+
+The Nodes
+=====================================================
+.. include:: ../../includes_node/includes_node.rst
+
+About the chef-client
+-----------------------------------------------------
+The |chef client| does the actual configuration on `the nodes <http://docs.opscode.com/essentials_nodes.html>`_. The |chef client| receives its instructions from cookbooks (`recipes <http://docs.opscode.com/essentials_cookbook_recipes.html>`_, mostly). The process of configuring a node is called `the chef-client run <http://docs.opscode.com/essentials_nodes_chef_run.html>`_. At the beginning of each run, the |chef client| `validates to the server <http://docs.opscode.com/essentials_chef_client.html>`_, `collects important data about that node <http://docs.opscode.com/ohai.html>`_, and then configures the node. At the end of each run, the |chef client| `reports the successes and failures that may have occurred <http://docs.opscode.com/essentials_handlers.html>`_.
+
+Cookbooks
+=====================================================
+A cookbook is the fundamental unit of configuration and policy distribution. A cookbook defines a scenario and contains all of the components that are required to support that scenario, including: `attribute files <http://docs.opscode.com/essentials_cookbook_attribute_files.html>`_, `definitions <http://docs.opscode.com/essentials_cookbook_definitions.html>`_, `files, <http://docs.opscode.com/essentials_cookbook_files.html>`_, `libraries <http://docs.opscode.com/essentials_cookbook_libraries.html>`_, `metadata <http://docs.opscode.com/essentials_cookbook_metadata.html>`_, `recipes <http://docs.opscode.com/essentials_cookbook_recipes.html>`_, `resources and providers <http://docs.opscode.com/essentials_cookbook_resources.html>`_, `templates <http://docs.opscode.com/essentials_cookbook_templates.html>`_, and `versions <http://docs.opscode.com/essentials_cookbook_versions.html>`_.
+
+A cookbook is authored using |ruby|, which is a programming language with a simple, easy to follow syntax. Being an expert in |ruby| programming is not a requirement for authoring cookbooks because most of the structures found in cookbooks are just patterns; knowing `some basic Ruby <http://docs.opscode.com/just_enough_ruby_for_chef.html>`_ will help a lot.
+
+
+
+
+
+
+.. Hide the TOC from this file.
+
+.. toctree::
+   :hidden:
+
+   api_chef_server
+   api_cookbooks_site
+   api_omnitruck
+   auth_authentication
+   auth_authorization
+   config_rb_chef_server_enterprise
+   ctl_private_chef
+   install_server
+   install_server_be
+   install_server_fe
+   install_server_febe
+   install_server_hosted
+   install_server_ldap
+   install_server_orgs
+   install_server_pre
+   install_server_standalone
+   install_server_users
+   migrate_to_hosted
+   oec_overview
+   orgmapper
+   release_notes
+   server_backup_restore
+   server_components
+   server_data
+   server_deploy_be
+   server_deploy_fe
+   server_deploy_febe
+   server_deploy_standalone
+   server_firewalls_and_ports
+   server_high_availability
+   server_ldap
+   server_logs
+   server_monitor
+   server_orgs
+   server_security
+   server_services
+   server_tuning
+   server_users
+   upgrade_server_ha
+   upgrade_server_standalone
