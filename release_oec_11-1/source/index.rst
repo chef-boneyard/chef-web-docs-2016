@@ -6,6 +6,8 @@ Docs for |chef server oec| 11.1.x
 
 The |chef server oec| is a centralized location where all of the objects needed by |chef| are stored, including data that has been uploaded from the |chef repo|, data that is needed by the |chef client| while it configures nodes, and data that is uploaded to the |chef server| by the |chef client| at the conclusion of every |chef client| run.
 
+.. note:: This set of topics is only about the |chef server oec| server. For information about the |chef client|, |ohai|, cookbooks, and so on, see |url docs|.
+
 Server Essentials
 =====================================================
 The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
