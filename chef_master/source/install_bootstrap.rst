@@ -22,7 +22,7 @@ The ``knife bootstrap`` command requires the |fqdn| or the IP address for the no
 
 Use Unattended Installs
 =====================================================
-The |chef client| can be installed using an unattended bootstrap. For example, machines are often created using environments like |amazon aws autoscaling|, |amazon aws cloudformation|, and |rackspace autoscale| and |pxe|. In this scenario, using tooling for attended, single-machine installs like ``knife bootstrap`` or ``knife CLOUD_PLUGIN create`` is not practical because the machines are created automatically and it's not practical to expect someone to be on-hand to initiate the bootstrap process.
+The |chef client| can be installed using an unattended bootstrap. For example, machines are often created using environments like |amazon aws autoscaling|, |amazon aws cloudformation|, |rackspace autoscale|, and |pxe|. In this scenario, using tooling for attended, single-machine installs like ``knife bootstrap`` or ``knife CLOUD_PLUGIN create`` is not practical because the machines are created automatically and it's not practical to expect someone to be on-hand to initiate the bootstrap process.
 
 When the |chef client| is installed using an unattended bootstrap, remember that the |chef client|
 
