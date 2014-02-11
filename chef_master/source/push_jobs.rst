@@ -70,9 +70,9 @@ The following sections describe the |knife| subcommands, the |api push jobs|, an
 
 .. note:: Review the list of `common options <http://docs.opscode.com/knife_common_options.html>`_ available to this (and all) |knife| subcommands and plugins.
 
-Install this plugin
------------------------------------------------------
-.. include:: ../../step_plugin_knife/step_plugin_knife_push_jobs_install_rubygem.rst
+.. Install this plugin
+.. -----------------------------------------------------
+.. .. include:: ../../step_plugin_knife/step_plugin_knife_push_jobs_install_rubygem.rst
 
 job list
 -----------------------------------------------------
