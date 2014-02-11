@@ -38,3 +38,7 @@ Examples
 **Start a Chef run manually**
 
 .. include:: ../../step_ctl_chef_client/step_ctl_chef_client_start_chef_run_manual.rst
+
+**Setting the initial run-list using a JSON file**
+
+.. include:: ../../step_install/step_install_chef_client_bootstrap_initial_run_list.rst
