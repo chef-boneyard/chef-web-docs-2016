@@ -13,15 +13,15 @@ This can be resolved by running the command as root. There are a few ways this c
 
 * Log in as root and then run the |chef client|
 * Use ``su`` to become the root user, and then run the |chef client|. For example:
-
+   
    .. code-block:: bash
-
+   
       $ su
-
-and then:
-
+   
+   and then:
+   
    .. code-block:: bash
-
+   
       $ chef-client
 
 * Use the |sudo cmd| utility
