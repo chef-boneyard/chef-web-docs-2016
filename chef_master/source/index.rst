@@ -224,6 +224,7 @@ Cookbooks
    essentials_handlers
    essentials_knife
    essentials_nodes
+   essentials_nodes_bootstrap
    essentials_nodes_chef_run
    essentials_nodes_why_run
    essentials_node_object
