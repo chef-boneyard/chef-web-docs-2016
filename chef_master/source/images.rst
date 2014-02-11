@@ -42,6 +42,10 @@ Instead of using this page to view these images, click these links:
 
 .. image:: ../../images/overview_push_jobs_states_300dpi.png
 
+* http://docs.opscode.com/_images/chef_bootstrap_300dpi.png
+
+.. image:: ../../images/chef_bootstrap_300dpi.png
+
 
 
 
