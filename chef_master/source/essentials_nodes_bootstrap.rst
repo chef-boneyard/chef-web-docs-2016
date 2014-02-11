@@ -23,7 +23,7 @@ During a ``knife bootstrap`` bootstrap operation on |unix|- and |linux|-based ma
    * - **Get the install script from Chef**
      - On most |unix|- and |linux|-based architectures, the shell script that is derived from the ``chef-full.erb`` bootstrap template will make a request to the |company_name| website to get the most recent version of a second shell script (``install.sh``).
    * - **Get the chef-client package from Chef**
-     - The second shell script then gathers system-specific information and determines the correct package for the |chef client|. The second shell script makes a request to the |company_name| website, and then downloads the appropriate package.
+     - The second shell script then gathers system-specific information and determines the correct package for the |chef client|. The second shell script makes a request to the |company_name| website, and then downloads the appropriate package from s3.amazonaws.com.
    * - **Install the chef-client**
      - The |chef client| is installed on the target node.
    * - **Start the chef-client run**
@@ -46,7 +46,7 @@ During a ``knife bootstrap`` bootstrap operation on |windows| machines, the foll
    * - **Get the install script from Chef**
      - On |windows|-based architectures, the shell script that is derived from the ``windows-chef-client-msi.erb`` bootstrap template will make a request to the |company_name| website to get the .msi installer.
    * - **Get the chef-client package from Chef**
-     - The second shell script then gathers system-specific information and determines the correct package for the |chef client|. The second shell script makes a request to the |company_name| website, and then downloads the appropriate package.
+     - The second shell script then gathers system-specific information and determines the correct package for the |chef client|. The second shell script makes a request to the |company_name| website, and then downloads the appropriate package from s3.amazonaws.com.
    * - **Install the chef-client**
      - The |chef client| is installed on the target node.
    * - **Start the chef-client run**
