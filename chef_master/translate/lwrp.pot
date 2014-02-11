@@ -1,0 +1,413 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-11 15:41\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/lwrp.rst:8
+# 518b9e31481f42a7b4e32d06c18c8905
+msgid "About LWRPs"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:5
+# e88c65bd79514435a9435e205b501d77
+msgid "A |lwrp| is a part of a cookbook that is used to extend the |chef client| in a way that allows custom actions to be defined, and then used in recipes in much the same way as any platform resource. A |lwrp| has two principal components:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:7
+# e6fedc4a4ae34136a619d580de83ce6b
+msgid "A `lightweight resource <http://docs.opscode.com/lwrp_custom_resource.html>`_ that defines a set of actions and attributes"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:8
+# 63cda4484f6a4180906a0007d0c77467
+msgid "A lightweight provider that tells the |chef client| how to handle each action, what to do if certain conditions are met, and so on"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:10
+# f1a832238d804b29b0866242ee414b35
+msgid "In addition, most lightweight providers are built `using platform resources <http://docs.opscode.com/lwrp_custom_provider.html>`_ and some lightweight providers are built `using custom Ruby code <http://docs.opscode.com/lwrp_custom_provider_ruby.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:12
+# abef946209ac4b81b9645fe8bbdce10f
+msgid "Once created, a |lwrp| becomes a |ruby| class within the organization. During each |chef client| run, the |chef client| will read the lightweight resources from recipes and process them alongside all of the other resources. When it is time to configure the node, the |chef client| will use the corresponding lightweight provider to determine the steps required to bring the system into the desired state."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:14
+# f4a4ce9c95b84e29bca846e3a691bed4
+msgid "Where the lightweight resource represents a piece of the system, its current state, and the action that is needed to move it to the desired state, a lightweight provider defines the steps that are required to bring that piece of the system from its current state to the desired state. A |lwrp| behaves similar to platform resources and providers:"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:16
+# d82f736be72f402fa816335e9cbcc5d5
+msgid "A lightweight resource is a key part of a recipe"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:17
+# 95f4546385f74f028d1936f0ba8dce6f
+msgid "A lightweight resource defines the actions that can be taken"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:18
+# 911d4323dde6494091ce10c4519834b9
+msgid "During a |chef client| run, each lightweight resource is identified, and then associated with a lightweight provider"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp.rst:19
+# 9e9fa649e4814e6bbacaa14f7e1a6ef7
+msgid "A lightweight provider does the work to complete the action requested by the lightweight resource"
+msgstr ""
+
+#: ../source/lwrp.rst:12
+# 4559c4f668a0421eb66fc903e20f2f08
+msgid "Read more about how to build :doc:`custom lightweight resources </lwrp_custom>`."
+msgstr ""
+
+#: ../source/lwrp.rst:15
+# 89e0f48614b543068ac76ca7a9a388d9
+msgid "Inline Compile Mode"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst:4
+# d9df5fcf409d44569b91190065f43a9c
+msgid "A lightweight resource is created by the ``action`` block of a lightweight provider. When the resource collection is compiled, a lightweight resource is inserted into the top-level resource collection after the point at which the lightweight provider is associated. For example, if a resource collection looks like::"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst:10
+# fb45cd8c336842d79ed998625e1383b8
+msgid "then when ``lwrp_resource`` is executed, the resource collection will be modified as follows::"
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode.rst:18
+# c4265a72292d4886a643be79ba1593da
+msgid "In this situation, embedded lightweight resources cannot notify the top-level resource because the top-level resource has finished processing. This has the same effect as if the top-level resource collection were invisible to the embedded lightweight resources."
+msgstr ""
+
+#: ../../includes_cookbooks/includes_cookbooks_lightweight_resource_inline_compile_mode_with.rst:5
+# 50e6341113c84a658b2984ace3bbc797
+msgid "To ensure that an embedded lightweight resource can notify the top-level resource add ``use_inline_resources`` to the top of the file that defines the lightweight provider that is associated with that lightweight resource. When ``use_inline_resources`` is added to the file, the code in the lightweight provider's ``action`` block will execute as part of a self-contained |chef client| run. If any embedded lightweight resources are updated, the top-level lightweight resource is marked as updated and notifications set for the top-level resource will be triggered normally."
+msgstr ""
+
+#: ../source/lwrp.rst:21
+# 7c4e0c8aa8684952a42164f1f0d545dd
+msgid "|company_name|-maintained"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:5
+# 454217e3937443059e4f86a5029cf254
+msgid "Custom resources and providers can also be created using the |lwrp| DSL. |company_name| maintains a collection of cookbooks that define some common scenarios. Many of these cookbooks contain custom resources. To use these resources within recipes to increase automation opportunities the cookbook that defines these custom resources must also be uploaded to the |chef server| so that the custom resources are available to the |chef client| during a |chef client| run."
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:11
+# a272e496a25c4beea9d789b406bfff97
+msgid "Cookbook"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:12
+# 769b855d0fc44b008779cf189cc3ae8e
+msgid "Description"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:13
+# fdbfa5773e904374851cbfe9ab0d260b
+msgid "`apt <http://docs.opscode.com/lwrp_apt.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:14
+# 23e7123402d1470e9219093c42d826eb
+msgid "|cookbook name apt|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:15
+# 9f09bdba6a63476eba7927de9d47692f
+msgid "`aws <http://docs.opscode.com/lwrp_aws.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:16
+# e084b98c9df440e0a570bcbfb3e641f7
+msgid "|cookbook name aws|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:17
+# ebcbf8e2069b4d5989a809e04c7f5f94
+msgid "`bluepill <http://docs.opscode.com/lwrp_bluepill.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:18
+# e56335ec703a440b8ce9eb7d8068c2fe
+msgid "|cookbook name bluepill|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:19
+# edf1934c21bf4e3597573ee3fee3e80e
+msgid "`chef_handler <http://docs.opscode.com/lwrp_chef_handler.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:20
+# c872f90f3885447e97b91dbc0e284b2a
+msgid "|cookbook name chef_handler|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:21
+# 94b3bed38ff3401f9f311807340299fa
+msgid "`daemontools <http://docs.opscode.com/lwrp_daemontools.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:22
+# 25efc05352314ba2817285f8516ba38d
+msgid "|cookbook name daemontools|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:23
+# 9872383703c64914b42e99a7ee6bcffd
+msgid "`djbdns <http://docs.opscode.com/lwrp_djbdns.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:24
+# 5f92420430f144359dbf2c60ed345c60
+msgid "|cookbook name djbdns|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:25
+# a763f14249dd4342855820b26dd9b4fe
+msgid "`dmg <http://docs.opscode.com/lwrp_dmg.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:26
+# bdc3f43561094430bb3a7fc9d9e1ea1a
+msgid "|cookbook name dmg|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:27
+# 8f000c5ade054dcb813e624357a36416
+msgid "`dynect <http://docs.opscode.com/lwrp_dynect.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:28
+# 4c80b9dd7bbe4f369ce59c782317d368
+msgid "|cookbook name dynect|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:29
+# 2a37eb991f004d85898ebdb9f50fb80b
+msgid "`firewall <http://docs.opscode.com/lwrp_firewall.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:30
+# 6e6753eed08a445e86263897c86e94c8
+msgid "|cookbook name firewall|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:31
+# d77eb28f402145499a1e73aa0b8e6eff
+msgid "`freebsd <http://docs.opscode.com/lwrp_freebsd.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:32
+# 55c49aea30d74cb0aa7d1714088a3839
+msgid "|cookbook name freebsd|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:33
+# 788193af33fe4ea3a6b40251baf8c5ff
+msgid "`gunicorn <http://docs.opscode.com/lwrp_gunicorn.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:34
+# 2dfbad10f7e64048bd66da0da1756c33
+msgid "|cookbook name gunicorn|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:35
+# 2c386e7e57384118872b454124d02b39
+msgid "`homebrew <http://docs.opscode.com/lwrp_homebrew.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:36
+# 0aa3a4513ff34e2984cc5e77509cf2ef
+msgid "|cookbook name homebrew|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:37
+# 4376b266706c451f81294793cb34e852
+msgid "`iis <http://docs.opscode.com/lwrp_iis.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:38
+# 2175140deb344876a601ee0281749dc1
+msgid "|cookbook name iis|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:39
+# bc13610623944cb3b0a61cb90b341d35
+msgid "`maven <http://docs.opscode.com/lwrp_maven.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:40
+# f65cf6bb19504f2994a13555239a84fa
+msgid "|cookbook name maven|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:41
+# 2465ad02abd4466e90e9e614650315ab
+msgid "`nagios <http://docs.opscode.com/lwrp_nagios.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:42
+# 95bcd416c5fc40edab6a0ca477d65b26
+msgid "|cookbook name nagios|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:43
+# 19da37a304734719b3ae50997480d9a2
+msgid "`pacman <http://docs.opscode.com/lwrp_pacman.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:44
+# 1b5d9870ddb949938c3865c9a63b8885
+msgid "|cookbook name pacman|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:45
+# 906d3436b13141509ae69fe88f19a2fb
+msgid "`php <http://docs.opscode.com/lwrp_php.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:46
+# 2b29eafc592842869db51497f948e9cf
+msgid "|cookbook name php|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:47
+# a9d1ba82ca364b8cbe23d0f4977d8b41
+msgid "`powershell <http://docs.opscode.com/lwrp_powershell.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:48
+# 052cd9125c424bbe92fc275b61d196d2
+msgid "|cookbook name powershell|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:49
+# 9af541a8c7194639acfebee90c034b61
+msgid "`python <http://docs.opscode.com/lwrp_python.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:50
+# df2bead6ffb34186947ec29b78ca4cae
+msgid "|cookbook name python|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:51
+# 93d1bc4bef96455c8292f15552addaba
+msgid "`rabbit mq <http://docs.opscode.com/lwrp_rabbitmq.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:52
+# 9f82bf3afa624a1bb6d9bc79cc4e5f6a
+msgid "|cookbook name rabbitmq|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:53
+# d5038abc76ba4a9a898581811aa2d889
+msgid "`riak <http://docs.opscode.com/lwrp_riak.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:54
+# 8735ceb262c542429028db71293fe032
+msgid "|cookbook name riak|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:55
+# 4b46a5e36ab44c13830905e56d096681
+msgid "`samba <http://docs.opscode.com/lwrp_samba.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:56
+# 3e1437d2c0174b38822de26650ab07a0
+msgid "|cookbook name samba|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:57
+# f6b7548157e947c49d5efc70c88104ea
+msgid "`sudo <http://docs.opscode.com/lwrp_sudo.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:58
+# 878a26580bb04e56bd06f96c342b6e8b
+msgid "|cookbook name sudo|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:59
+# 6ffd1614bc804abdbc820e4c91d747d1
+msgid "`supervisor <http://docs.opscode.com/lwrp_supervisor.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:60
+# d8e1979405b74420bbb83d153722c41e
+msgid "|cookbook name supervisor|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:61
+# fc4c2bbc9a4146e4b0e5471a9eeee1cf
+msgid "`transmission <http://docs.opscode.com/lwrp_transmission.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:62
+# a8910b1751e44d6585580cca1193ff8a
+msgid "|cookbook name transmission|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:63
+# cf50ac459b9742a2aeb170ab5401d9ff
+msgid "`users <http://docs.opscode.com/lwrp_users.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:64
+# ca5bed8724bf4fa5a8454802e4b725bb
+msgid "|cookbook name users|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:65
+# 59a2c3879a7c4924810e7e4fed309d91
+msgid "`webpi <http://docs.opscode.com/lwrp_webpi.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:66
+# 574d7f1ef9404e6390917546b3859ff4
+msgid "|cookbook name webpi|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:67
+# 45ac28abb42d4401b71cf8998f049530
+msgid "`windows <http://docs.opscode.com/lwrp_windows.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:68
+# eb2e84913ed74f82bd44e3d6a3afcac5
+msgid "|cookbook name windows|"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:69
+# 49ae37531eef48b6a3fe6e5d03bba8d0
+msgid "`yum <http://docs.opscode.com/lwrp_yum.html>`_"
+msgstr ""
+
+#: ../../includes_lwrp/includes_lwrp_chef_maintained.rst:70
+# 96a99aa6bd4546f3999fbbf06bb7d55f
+msgid "|cookbook name yum|"
+msgstr ""
+

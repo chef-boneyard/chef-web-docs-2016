@@ -1,0 +1,542 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-11 15:41\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/chef_shell.rst:8
+# 49c921b335754744a55b7ee30c4bebb1
+msgid "chef-shell"
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell.rst:5
+# c58c4aa974594f1a96aa2e7075f8a856
+msgid "|chef shell| is a recipe debugging tool that allows the use of breakpoints within recipes. |chef shell| runs as an |ruby irb| session. |chef shell| supports both recipe and attribute file syntax, as well as interactive debugging features."
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell.rst:7
+# 75b5efa40fa64fb4a1ff4e7b051e035b
+msgid "|chef shell| is the new name for |shef| as of |chef 11|. |chef shell| is backwards compatible and aside from the name change, has the same set of functionality as with previous releases."
+msgstr ""
+
+#: ../source/chef_shell.rst:12
+# bd76d0a232cc4577888c1fd8eb71ba6f
+msgid "|chef shell| is configured using the :doc:`chef-shell (executable) </ctl_chef_shell>`."
+msgstr ""
+
+#: ../source/chef_shell.rst:15
+# 3266e1c6c701410a90ac955e8fa86dbc
+msgid "Modes"
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:5
+# b0e1edb1e441486fa41155f5707d4e62
+msgid "|chef shell| is tool that allows |knife| to be run using an |ruby irb| session. |chef shell| currently supports recipe and attribute file syntax, as well as interactive debugging features. |chef shell| has three run modes:"
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:11
+# eaeaa85b752c45cc8085c849994ad372
+msgid "Mode"
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:12
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:11
+# 61b2f2d48ead48fdbfb9ab8834dafa13
+# 6b30d50efee24e7a9df4c33a43834575
+msgid "Description"
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:13
+# 462beddf62c34b8e9ef96d3fa8b75ba3
+msgid "Standalone"
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:14
+# 4f9a1f7b5b5f48e99f5b98405657f57a
+msgid "No cookbooks are loaded, and the run list is empty. This mode is the default."
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:15
+# ba5dc7792b2342dabcaf6c14601dc026
+msgid "Solo"
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:16
+# 45a5bc6616874c5fbd56f88cc9245411
+msgid "|chef shell| acts as a |chef solo| client. It attempts to load the |chef solo| configuration file and |json| attributes. If the |json| attributes set a run list, it will be honored. Cookbooks will be loaded in the same way that |chef solo| loads them. |chef solo| mode is activated with the ``-s`` or ``--solo`` command line option, and |json| attributes are specified in the same way as for |chef solo|, with ``-j /path/to/chef-solo.json``."
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:17
+# c4795bc854e7406ca2c38d293bfccb74
+msgid "Client"
+msgstr ""
+
+#: ../../includes_chef_shell/includes_chef_shell_modes.rst:18
+# c7ece3bb27624824bbd56916ff795fcf
+msgid "|chef shell| acts as a |chef client|. During startup, it reads the |chef client| configuration file and contacts the |chef server| to get attributes and cookbooks. The run list will be set in the same way as normal |chef client| runs. |chef client| mode is activated with the ``-z`` or ``--client`` options. You can also specify the configuration file with ``-c CONFIG`` and the server URL with ``-S SERVER_URL``."
+msgstr ""
+
+#: ../source/chef_shell.rst:19
+# 6353adb5404c4a57b3853c1284bdcd7c
+msgid "Configure"
+msgstr ""
+
+#: ../source/chef_shell.rst:20
+# 6c67c36101ef48daa491812849f309a9
+msgid "|chef shell| determines which configuration file to load based on the following:"
+msgstr ""
+
+#: ../source/chef_shell.rst:22
+# 2369bcea29684726b9b1d82beaad7c55
+msgid "If a configuration file is specified using the ``-c`` option, |chef shell| will use the specified configuration file"
+msgstr ""
+
+#: ../source/chef_shell.rst:23
+# 8b22163de7634d9e8adb6c64b3828007
+msgid "When |chef shell| is started using a named configuration as an argument, |chef shell| will search for a |chef_shell rb| file in that directory under ``~/.chef``. For example, if |chef shell| is started using ``production`` as the named configuration, the |chef shell| will load a configuration file from ``~/.chef/production/chef_shell.rb``"
+msgstr ""
+
+#: ../source/chef_shell.rst:24
+# 65737cdd202942059c9385ef32704df4
+msgid "If a named configuration is not provided, |chef shell| will attempt to load the |chef_shell rb| file from the ``.chef`` directory. For example: ``~/.chef/chef_shell.rb``"
+msgstr ""
+
+#: ../source/chef_shell.rst:25
+# e3aaa549f20f48a19957d097c5f01c2d
+msgid "If a |chef_shell rb| file is not found, |chef shell| will attempt to load the |client rb| file"
+msgstr ""
+
+#: ../source/chef_shell.rst:26
+# 58754111ebbb42ce824117d70686508b
+msgid "If a |chef_shell rb| file is not found, |chef shell| will attempt to load the |solo rb| file"
+msgstr ""
+
+#: ../source/chef_shell.rst:29
+# ce15adbad5484ce4a99a808ea1f08fdf
+msgid "|chef_shell rb|"
+msgstr ""
+
+#: ../source/chef_shell.rst:30
+# e5f853d8384d476cb5ced4200a73f612
+msgid "The |chef_shell rb| file can be used to configure |chef shell| in the same way as the |client rb| file is used to configure the |chef client|. For example, to configure |chef shell| to authenticate to the |chef server|, copy the ``node_name``, ``client_key``, and ``chef_server_url`` settings from the |knife rb| file:"
+msgstr ""
+
+#: ../source/chef_shell.rst:38
+# fff0f9f2261348cabda25f9b3434f3a8
+msgid "and then add them to the |chef_shell rb| file. Other configuration possibilities include disabling |ohai| plugins (which will speed up the |chef shell| boot process) or including arbitrary |ruby| code in the |chef_shell rb| file."
+msgstr ""
+
+#: ../source/chef_shell.rst:41
+# e0113d4b4c3b4349abff60ea8f5ac5dd
+msgid "Run as a |chef client|"
+msgstr ""
+
+#: ../source/chef_shell.rst:42
+# 36696b2e05cc49c69d52067de6f2e5b6
+msgid "By default, |chef shell| loads in standalone mode and does not connect to the |chef server|. The |chef shell| can be run as a |chef client| to verify functionality that is only available when the |chef client| connects to the |chef server|, such as search functionality or accessing data stored in data bags."
+msgstr ""
+
+#: ../source/chef_shell.rst:44
+# 3dff6417ffb94a08bb0157d83cfa665f
+msgid "|chef shell| can use the same credentials as |knife| when connecting to a |chef server|. Make sure that the settings in |chef_shell rb| are the same as those in |knife rb|, and then use the ``-z`` option as part of the command. For example:"
+msgstr ""
+
+#: ../source/chef_shell.rst:51
+# 1b403c6f3e4d412e8da45dc2dad580e4
+msgid "Manage"
+msgstr ""
+
+#: ../source/chef_shell.rst:52
+# feb766765d3a48259950229c16c945e9
+msgid "When |chef shell| is configured to access a |chef server|, |chef shell| can list, show, search for and edit cookbooks, clients, nodes, roles, environments, and data bags."
+msgstr ""
+
+#: ../source/chef_shell.rst:54
+# 1212c28417184dfb88e1f6a931be4d65
+msgid "The syntax for managing objects on the |chef server| is as follows:"
+msgstr ""
+
+#: ../source/chef_shell.rst:60
+# a1f709601691412c8d77d66d079bd86f
+msgid "where:"
+msgstr ""
+
+#: ../source/chef_shell.rst:62
+# 425e9febc96e43bb92231517db0094a5
+msgid "``named_configuration`` is a named configuration, such as ``production``, ``staging``, or ``test``"
+msgstr ""
+
+#: ../source/chef_shell.rst:63
+# a73e62fa50964d2ca7e18cddf143c5c9
+msgid "``items`` is the type of item to search for: ``cookbooks``, ``clients``, ``nodes``, ``roles``, ``environments`` or a data bag"
+msgstr ""
+
+#: ../source/chef_shell.rst:64
+# 858045d87c6e4139864054e5a2b2d0ef
+msgid "``command`` is the command: ``list``, ``show``, ``find``, or ``edit``"
+msgstr ""
+
+#: ../source/chef_shell.rst:66
+# e82a650d933c48fe99b5ef8f0c5da678
+msgid "For example, to list all of the nodes in a configuration named \"preprod\":"
+msgstr ""
+
+#: ../source/chef_shell.rst:72
+#: ../source/chef_shell.rst:93
+#: ../source/chef_shell.rst:109
+#: ../source/chef_shell.rst:121
+#: ../source/chef_shell.rst:139
+#: ../source/chef_shell.rst:159
+# 75dd5696e8a243539c1eb34ecc89d3cd
+# eee043982a8b4b27a3c5110740cfeb69
+# 4a2921ace57444cd8159c0ef856989f6
+# cefc8f0ab8a642ba8f920eb8631b1b77
+# 08d4c9e4b0de4534bd9dfe164c0f1733
+# 76bbf3d1c5b04c108b6c6e7408ca7b53
+msgid "to return something similar to:"
+msgstr ""
+
+#: ../source/chef_shell.rst:87
+# 821fbfb3afcb4a56aa033651faefdadb
+msgid "The ``list`` command can take a code block, which will applied (but not saved) to each object that is returned from the server. For example:"
+msgstr ""
+
+#: ../source/chef_shell.rst:103
+# a842d28918bb491693e8602d9eea7960
+msgid "The ``show`` command can be used to display a specific node. For example:"
+msgstr ""
+
+#: ../source/chef_shell.rst:115
+# fc09a263d8fb4f8f84077d52a9d0f0f5
+msgid "or:"
+msgstr ""
+
+#: ../source/chef_shell.rst:127
+# 532cf5b5a2ed4f4c995c8ef568eaf127
+msgid "The ``find`` command can be used to search the |chef server| from the |chef shell|. For example:"
+msgstr ""
+
+#: ../source/chef_shell.rst:133
+# cf5c4e3e08df493bae7b57e662e2897f
+msgid "A code block can be used to format the results. For example:"
+msgstr ""
+
+#: ../source/chef_shell.rst:152
+# c8e4eed11b064933aa73d25aee1293de
+msgid "Or:"
+msgstr ""
+
+#: ../source/chef_shell.rst:170
+# 79137f243df34c8da42d46298a5b565d
+msgid "Debug Recipes"
+msgstr ""
+
+#: ../source/chef_shell.rst:172
+# 3df12764f9f147c38dea379c04833b4e
+msgid "|chef shell| allows the current position in a run-list to be manipulated during a |chef client| run. Add breakpoints to a recipe to take advantage of this functionality."
+msgstr ""
+
+#: ../source/chef_shell.rst:175
+# 5eef001c60f64340898b1e5de908deb8
+msgid "Breakpoint Resource"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint.rst:5
+# c21ece6d81d54f949ab25356ca2cf6c4
+msgid "The |resource breakpoint| resource is used to add breakpoints to recipes in the same way as any other resource. When the |chef client| is run in |chef shell| mode, those breakpoints can be used to debug recipes. Breakpoints are ignored by the |chef client| during an actual |chef client| run.  In general, breakpoints are used most often in a non-production environment, for the purpose of debugging recipes. After those recipes are debugged and the desired behavior has been tested, the breakpoints are typically removed from the recipes before uploading the cookbooks to a production environment (even if the |chef client| ignores them when building the resource collection during an official |chef client| run)."
+msgstr ""
+
+#: ../source/chef_shell.rst:179
+# 02b3314072054e5bab9da11c27f46f7a
+msgid "Syntax"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_syntax.rst:4
+# ea6c7684dde544d58defae585dd081a3
+msgid "The syntax for using the |resource breakpoint| resource in a recipe is as follows:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_syntax.rst:12
+# d82e69622b3f4da797dfc766e6b85e5e
+msgid "where"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_syntax.rst:14
+# 03efc201a9934d0aa09b2983e7fc862e
+msgid "``:break`` will tell the |chef client| to stop running a recipe; can only be used when the |chef client| is being run in |chef shell| mode"
+msgstr ""
+
+#: ../source/chef_shell.rst:183
+# a43db2028db14265b34be60449fed7e1
+msgid "Actions"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:4
+# b94ebb8139ae47e690d18bcab9f70588
+msgid "This resource has the following actions:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:10
+# 1a00e6928bb44daaacbbd318f3feaf5e
+msgid "Action"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:12
+# 7243c5b11dc4485cae0e8b80b3757c89
+msgid "``:break``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_actions.rst:13
+# 89a623b3a33041beb762e7e51b5f9b5a
+msgid "Use to add a breakpoint to a recipe."
+msgstr ""
+
+#: ../source/chef_shell.rst:187
+# 6456bca5ef7246fabfe82227b3726c1d
+msgid "Attributes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_attributes.rst:4
+# 8717bd7eb431414e8910a1d4b1edea54
+msgid "This resource does not have any attributes."
+msgstr ""
+
+#: ../source/chef_shell.rst:191
+# e50108fe9c5942ddbe6c1db6c91a1bb0
+msgid "Providers"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:4
+# df1c47b141d84d0cbb4cb63598f99ae6
+msgid "The following providers are available:"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:10
+# abf41b2c1984441683e8bca0df3423f1
+msgid "Long name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:11
+# d071f592221c4a9db95671405fd0ddb1
+msgid "Short name"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:12
+# da7f632b9a7043228335312c17e602fd
+msgid "Notes"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:13
+# 939734f0960d438c870b56054540da35
+msgid "``Chef::Provider::Breakpoint``"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:14
+# 594553bafb21419187addbc1e045f99b
+msgid "breakpoint"
+msgstr ""
+
+#: ../../includes_resources/includes_resource_breakpoint_providers.rst:15
+# c4427e4c922e4f1dbcd1f3d9a8dcf12c
+msgid "The default provider for all recipes."
+msgstr ""
+
+#: ../source/chef_shell.rst:195
+#: ../source/chef_shell.rst:366
+# 430d7e0838864503ab771603e94bc06e
+# 85be2bae4689469fbf5c55d013c17701
+msgid "Examples"
+msgstr ""
+
+#: ../source/chef_shell.rst:196
+# 76c0ac3b6bf64ac2bf59a383b750241d
+msgid "|generic resource statement|"
+msgstr ""
+
+#: ../source/chef_shell.rst:198
+# 399fb7d8d11b477aacdfba3158643f64
+msgid "**A recipe without a breakpoint**"
+msgstr ""
+
+#: ../source/chef_shell.rst:202
+# a4a057dd415c4890a8a0df1e45615d04
+msgid "**The same recipe with breakpoints**"
+msgstr ""
+
+#: ../../step_resource/step_resource_breakpoint_yes.rst:37
+# e1f8a7e27b36441887d18901a725db14
+msgid "where the ``\"name\"`` of each breakpoint is an arbitrary string. In the previous example, ``\"name\"`` is used to indicate if the breakpoint is before or after a resource, and then also to specify which resource."
+msgstr ""
+
+#: ../source/chef_shell.rst:207
+# c3b4ae2044714d6bbcca9ce4812c9197
+msgid "Step Through a Run-list"
+msgstr ""
+
+#: ../source/chef_shell.rst:208
+# 314be18a020b4fe0a979b691df02e471
+msgid "To explore how using the |resource breakpoint| to manually step through a |chef client| run, create a simple recipe in |chef shell|:"
+msgstr ""
+
+#: ../source/chef_shell.rst:218
+# 61bd555c803b4ce783933db97b0175b0
+msgid "and then run the |chef client|:"
+msgstr ""
+
+#: ../source/chef_shell.rst:229
+# 91c1289eae0d48868c71c634dadd28cb
+msgid "The |chef client| ran the first resource before the breakpoint (``file[/tmp/before-breakpoint]``), but then stopped after execution. The |chef client| attempted to name the breakpoint after its position in the source file, but the |chef client| was confused because the resource was entered interactively. From here, |chef shell| can resume the |chef client| run:"
+msgstr ""
+
+#: ../source/chef_shell.rst:236
+# 78fc5a32c5b84e56a055bfcaccc741fa
+msgid "A quick view of the ``/tmp`` directory shows that the following files were created:"
+msgstr ""
+
+#: ../source/chef_shell.rst:243
+# fd038e304e474e709aa1891a2edcdd47
+msgid "The |chef client| run can also be rewound, and then stepped through."
+msgstr ""
+
+#: ../source/chef_shell.rst:264
+# de5062c3544e434cbbf7eacac61255ed
+msgid "From the output, the rewound run-list is shown, but when the resources are executed again, they will repeat their checks for the existence of files. If they exist, the |chef client| will skip creating them. If the files are deleted, then:"
+msgstr ""
+
+#: ../source/chef_shell.rst:271
+# 041068556c4949b080eb909062c04b1b
+msgid "Rewind, and then resume the |chef client| run to get the expected results:"
+msgstr ""
+
+#: ../source/chef_shell.rst:288
+# e765862f2c1f4c6c8d7fa978a7d70fcf
+msgid "Debug Existing Recipe"
+msgstr ""
+
+#: ../source/chef_shell.rst:289
+# 82fe055aded046009dc488a748d62319
+msgid "|chef shell| can be used to debug existing recipes. The recipe first needs to be added to a run-list for the node, so that it is cached when starting |chef shell| and then used for debugging. |chef shell| will report which recipes are being cached when it is started:"
+msgstr ""
+
+#: ../source/chef_shell.rst:308
+# 52034bbaf74b427e93cd540446855e68
+msgid "To just load one recipe from the run-list, go into the recipe and use the ``include_recipe`` command. For example:"
+msgstr ""
+
+#: ../source/chef_shell.rst:317
+# e5e3e4d307de47a49beac01c18967004
+msgid "To load all of the recipes from a run-list, use code similar to the following:"
+msgstr ""
+
+#: ../source/chef_shell.rst:325
+# 28a83bdcf8074608b9c88956ee52ddb0
+msgid "After the recipes that are to be debugged have been loaded, use the ``run_chef`` command to run them."
+msgstr ""
+
+#: ../source/chef_shell.rst:328
+# 272472f9bab341e9bf0394e3078e1b06
+msgid "Advanced Debugging"
+msgstr ""
+
+#: ../source/chef_shell.rst:329
+# b3c9c3a4b2774ce895e53e28c6d17961
+msgid "In |chef shell|, it is possible to get extremely verbose debugging using the tracing feature in |ruby irb|. |chef shell| provides a shortcut for turning tracing on and off. For example:"
+msgstr ""
+
+#: ../source/chef_shell.rst:339
+# 1750794ee49e4791a43a2d60246a4666
+msgid "and:"
+msgstr ""
+
+#: ../source/chef_shell.rst:362
+# a689d004454e4b9ab803b81e623ec255
+msgid "Help"
+msgstr ""
+
+#: ../source/chef_shell.rst:363
+# e85df3da9c144936b59e315f7168645b
+msgid "Use the ``--help`` option in |chef shell| to view help."
+msgstr ""
+
+#: ../source/chef_shell.rst:367
+# 9ecdc2ef0ffb4ed592c4ad5a1249b21a
+msgid "The following examples show how to use |chef shell| to debug recipes."
+msgstr ""
+
+#: ../source/chef_shell.rst:370
+# dfd5a0942c4f4634990139143cb0a23a
+msgid "\"Hello World\""
+msgstr ""
+
+#: ../source/chef_shell.rst:371
+# 487c963b57874ffda28b098e6b2a15a9
+msgid "This example shows how to run |chef shell| in standalone mode. (For |chef solo| or |chef client| modes, you would need to run |chef shell| using the ``-s`` or ``-z`` command line options, and then take into consideration the necessary configuration settings.)"
+msgstr ""
+
+#: ../source/chef_shell.rst:373
+# 6008f3cd4e0144c6af4b8a017bdc2123
+msgid "When the |chef client| is installed using |rubygems| or a package manager, |chef shell| should already be installed. When the |chef client| is run from a |git| clone, it will be located in ``chef/bin/chef shell``. To start |chef shell|, just run it without any options. You'll see the loading message, then the banner, and then the |chef shell| prompt:"
+msgstr ""
+
+#: ../source/chef_shell.rst:392
+# f4608f25320e46e0aa383d67901a07ee
+msgid "(Use the help command to print a list of supported commands.) Use the recipe_mode command to switch to recipe context:"
+msgstr ""
+
+#: ../source/chef_shell.rst:399
+# 240488d2924f4d0ba9866f18437e59b0
+msgid "Typing is evaluated in the same context as recipes. Create a file resource:"
+msgstr ""
+
+#: ../source/chef_shell.rst:432
+# 9fc2cab98f564e9387be6f4aa164e922
+msgid "(The previous example was formatted for presentation.) At this point, |chef shell| has created the resource and put it in the run list, but not yet created the file. To initiate the |chef client| run, use the ``run_chef`` command:"
+msgstr ""
+
+#: ../source/chef_shell.rst:442
+# 360976aff7bf4eb8975e8b4f1c6c0288
+msgid "|chef shell| can also switch to the same context as attribute files. Set an attribute with the following syntax:"
+msgstr ""
+
+#: ../source/chef_shell.rst:451
+# eeaec920a8be4367a8a70d05f52bb5f8
+msgid "Switch back to recipe_mode context and use the attributes:"
+msgstr ""
+
+#: ../source/chef_shell.rst:459
+# f7435d7877d749c4bf77ce79737b9edc
+msgid "Now, run the |chef client| again:"
+msgstr ""
+
+#: ../source/chef_shell.rst:472
+# b6117892e5f24e5c8fa5fe1630cae021
+msgid "Because the first resource (``file[/tmp/ohai2u_shef]``) is still in the run-list, it gets executed again. And because that file already exists, the |chef client| doesn't attempt to re-create it. Finally, the files were created using the ``ls`` method:"
+msgstr ""
+
+#: ../source/chef_shell.rst:482
+# 396d4dd21d484726bed3c5a1452056eb
+msgid "Get Specific Nodes"
+msgstr ""
+
+#: ../source/chef_shell.rst:483
+# bb6b0976bb604f8c85daaf82f02cfb45
+msgid "To get a list of nodes using a recipe named ``postfix`` use ``search(:node,\"recipe:postfix\")``. To get a list of nodes using a sub-recipe named ``delivery``, use |chef shell|. For example:"
+msgstr ""
+
+#: ../source/chef_shell.rst:489
+# 15be571d3276406da09b51fb947e2171
+msgid "Single (' ') vs. double (\" \") is important. This is because a backslash (\\) needs to be included in the string, instead of having |ruby| interpret it as an escape."
+msgstr ""
+

@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+# This file is distributed under the same license as the Chef Docs package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Chef Docs \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-02-11 15:41\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../source/essentials_nodes_bootstrap.rst:8
+# ff31b03518824da89ceec3f66ec663e3
+msgid "About Bootstrap Operations"
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client.rst:4
+# e3091cda608342d49b32283b3e8b8818
+msgid "The ``knife bootstrap`` command is a common way to install the |chef client| on a node, as long as that node can download the package for the |chef client| from the |company_name| website to the target node. When using the ``knife bootstrap`` command, the |omnibus installer| will detect the version of the operating system, and then install the appropriate version of the |chef client|."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client.rst:6
+# e3a6ec9f75894467b97a4e36cfb1b4f6
+msgid "The |omnibus installer| uses a single command to install the |chef client| and all of its dependencies, including an embedded version of |ruby|, |rubygems|, |open ssl|, key-value stores, parsers, libraries, and command line utilities. The |omnibus installer| puts everything into a unique directory (``opt/opscode/``) so that the |chef client| will not interfere with other applications that may be running on the target machine. Once installed, the |chef client| requires a few more configuration steps before it can perform its first |chef client| run on a node."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:12
+# 6b5f146adb7b40aaa90ca772ec7a2800
+msgid "The following diagram shows the stages of the bootstrap operation, and then the list below the diagram describes in greater detail each of those stages."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:16
+# 1c474222f4974d30959bb085819b04f5
+msgid "During a ``knife bootstrap`` bootstrap operation, the following happens:"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:22
+# aeb7ab66058740278bab2ef614d32917
+msgid "Stages"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:23
+# 7ea344c81fe1476e91cdc290af9f2ad4
+msgid "Description"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:24
+# 259b11fc8ff44e309af4090f34d28ff0
+msgid "**$ knife bootstrap**"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:25
+# 465d5b7dc9324e00ac47df425afd9f53
+msgid "On |unix|- and |linux|-based machines: The ``knife bootstrap`` command is issued from a workstation. The hostname, IP address, or |fqdn| of the target node is issued as part of this command. An |ssh| connection is established with the target node using port 22. A shell script is assembled using the ``chef-full.erb`` (the default bootstrap template), and is then executed on the target node."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:27
+# 2cbe5d9427f146ecb3c97e51a1c10738
+msgid "On |windows| machines: The ``knife bootstrap windows winrm`` command is issued from a workstation. (This command is part of the `knife windows plugin <http://docs.opscode.com/plugin_knife_windows.html>`_.) The hostname, IP address, or |fqdn| of the target node is issued as part of this command. A connection is established with the target node using |windows remote management| over port 5985. (|windows remote management| must be enabled with the corresponding firewall rules in place.)"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:28
+# 7a586b6e874c43239e571fad34e485eb
+msgid "**Get the install script from Chef**"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:29
+# 5da36f827ed9425889898da4a5d25169
+msgid "On |unix|- and |linux|-based machines: The shell script that is derived from the ``chef-full.erb`` bootstrap template will make a request to the |company_name| website to get the most recent version of a second shell script (``install.sh``)."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:31
+# 6b28584a5bb2420d8fac7e5383f67114
+msgid "On |windows| machines: The batch file that is derived from the ``windows-chef-client-msi.erb`` bootstrap template will make a request to the |company_name| website to get the .msi installer."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:32
+# c87d9d33757948c6bd272dc770ea8987
+msgid "**Get the chef-client package from Chef**"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:33
+# b8e49daca4d84e53a9a06fe1246d5fa4
+msgid "The second shell script (or batch file) then gathers system-specific information and determines the correct package for the |chef client|. The second shell script (or batch file) makes a request to the |company_name| website, and then downloads the appropriate package from s3.amazonaws.com."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:34
+# d704fef69aca42b6abb804a8a5803b13
+msgid "**Install the chef-client**"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:35
+# d53761f5e95c439a90b2a136c0493db4
+msgid "The |chef client| is installed on the target node."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:36
+# e330b515ec8d422f8926fd20e720e580
+msgid "**Start the chef-client run**"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:37
+# 57c0731118c44a50898d2fd80694ac3c
+msgid "On |unix|- and |linux|-based machines: The second shell script executes the ``chef-client`` binary with a set of initial settings stored within ``first-boot.json`` on the node. ``first-boot.json`` is generated from the workstation as part of the initial ``knife bootstrap`` command."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:39
+# 27473714db824977a7eb99aa9af110e3
+msgid "On |windows| machines: The batch file that is derived from the ``windows-chef-client-msi.erb`` bootstrap template executes the ``chef-client`` binary with a set of initial settings stored within ``first-boot.json`` on the node. ``first-boot.json`` is generated from the workstation as part of the initial ``knife bootstrap`` command."
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:40
+# 1a0d759a557f42cdba4eb7efd208560b
+msgid "**Complete the chef-client run**"
+msgstr ""
+
+#: ../source/essentials_nodes_bootstrap.rst:41
+# 3c8969d3f6e64d97931bb22fff90d119
+msgid "The |chef client| run proceeds, using HTTPS (port 443), and registers the node with the |chef server|."
+msgstr ""
+
