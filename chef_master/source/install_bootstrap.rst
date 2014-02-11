@@ -7,7 +7,7 @@ A node is any physical, virtual, or cloud machine that is configured to be maint
 * Use the |subcommand knife bootstrap| subcommand
 * Use an unattended install
 
-Use ``knife bootstrap``
+``knife bootstrap``
 =====================================================
 The |subcommand knife bootstrap| subcommand is used to run a bootstrap operation that installs the |chef client| on the target node. The following steps describe how to bootstrap a node using |knife|.
 
@@ -23,7 +23,7 @@ The ``knife bootstrap`` command requires the |fqdn| or the IP address for the no
 
 .. include:: ../../step_install/step_install_node_verify.rst
 
-Use Unattended Installs
+Unattended Installs
 =====================================================
 The |chef client| can be installed using an unattended bootstrap. For example, machines are often created using environments like |amazon aws autoscaling|, |amazon aws cloudformation|, |rackspace autoscale|, and |pxe|. In this scenario, using tooling for attended, single-machine installs like ``knife bootstrap`` or ``knife CLOUD_PLUGIN create`` is not practical because the machines are created automatically and someone cannot always be on-hand to initiate the bootstrap process.
 
