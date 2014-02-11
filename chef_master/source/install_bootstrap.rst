@@ -35,6 +35,8 @@ When the |chef client| is installed using an unattended bootstrap, remember that
 * Must be able to access the |chef validator pem| so that it may create a new identity on the |chef server|
 * Must have a unique node name; the |chef client| will use the |fqdn| for the host system by default
 
+When the |chef client| is installed using an unattended bootstrap, it is typically built into an image that starts the |chef client| on boot. The type of image used depends on the platform on which the unattended bootstrap will take place.
+
 **Setting the initial run-list**
 
 A node's initial run-list is specified using a |json| file on the host system. When running the |chef client| as an executable, use the ``-j`` option to tell the |chef client| which |json| file to use. For example:
