@@ -37,6 +37,8 @@ When the |chef client| is installed using an unattended bootstrap, remember that
 
 When the |chef client| is installed using an unattended bootstrap, it is typically built into an image that starts the |chef client| on boot. The type of image used depends on the platform on which the unattended bootstrap will take place.
 
+Settings in the :doc:`client.rb file </config_rb_client>`---``chef_server_url``, ``http_proxy``, and other connection details---can also be configured to be part of this process.
+
 **Setting the initial run-list**
 
 A node's initial run-list is specified using a |json| file on the host system. When running the |chef client| as an executable, use the ``-j`` option to tell the |chef client| which |json| file to use. For example:
