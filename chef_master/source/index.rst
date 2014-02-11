@@ -345,7 +345,6 @@ Cookbooks
    openstack
    orgmapper
    plugin_knife
-   pushy
    push_jobs
    reporting
    release_notes
