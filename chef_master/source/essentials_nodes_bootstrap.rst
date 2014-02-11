@@ -19,7 +19,7 @@ During a ``knife bootstrap`` bootstrap operation, the following happens:
    * - **$ knife bootstrap**
      - On |unix|- and |linux|-based machines: The ``knife bootstrap`` command is issued from a workstation. The hostname, IP address, or |fqdn| of the target node is issued as part of this command. An |ssh| connection is established with the target node using port 22. A shell script is assembled using the ``chef-full.erb`` (the default bootstrap template), and is then executed on the target node.
 
-       On |windows| machines: The ``knife bootstrap windows winrm`` command is issued from a workstation. (This command is part of the ``knife-windows`` plugin.) The hostname, IP address, or |fqdn| of the target node is issued as part of this command. A connection is established with the target node.
+       On |windows| machines: The ``knife bootstrap windows winrm`` command is issued from a workstation. (This command is part of the `knife windows plugin <http://docs.opscode.com/plugin_knife_windows.html>`_.) The hostname, IP address, or |fqdn| of the target node is issued as part of this command. A connection is established with the target node.
    * - **Get the install script from Chef**
      - On |unix|- and |linux|-based machines: The shell script that is derived from the ``chef-full.erb`` bootstrap template will make a request to the |company_name| website to get the most recent version of a second shell script (``install.sh``).
 
