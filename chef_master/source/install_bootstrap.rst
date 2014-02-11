@@ -2,11 +2,14 @@
 Bootstrap a Node
 =====================================================
 
-A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|. The |subcommand knife bootstrap| subcommand is used to run a bootstrap operation that installs the |chef client| on the target node.
+A node is any physical, virtual, or cloud machine that is configured to be maintained by a |chef client|. There are two ways to install the |chef client| on a node so that it may be manintained by the |chef client|:
+
+* Use the |subcommand knife bootstrap| subcommand
+* Use an unattended install
 
 Use ``knife bootstrap``
 =====================================================
-The following steps describe how to bootstrap a node using |knife|.
+The |subcommand knife bootstrap| subcommand is used to run a bootstrap operation that installs the |chef client| on the target node. The following steps describe how to bootstrap a node using |knife|.
 
 **Identify the FQDN or IP Address**
 
