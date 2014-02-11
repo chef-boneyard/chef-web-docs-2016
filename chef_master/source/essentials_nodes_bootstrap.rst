@@ -19,9 +19,9 @@ During the ``knife bootstrap`` bootstrap operation, the following happens:
    * - **$ knife bootstrap**
      - The ``knife bootstrap`` command is issued from a workstation. The hostname, IP address, or |fqdn| of the target node is issued as part of this command. An |ssh| connection is established with the target node using port 22. A shell script is assembled using the ``chef-full.erb`` (the default bootstrap template), and is then executed on the target node.
    * - **Get the install script from Chef**
-     - On most |unix|- and |linux|-based architectures, the shell script that is derived from the ``chef-full.erb`` bootstrap template will make a request to |company_name| to collect the most recent version of a second shell script (``install.sh``).
+     - On most |unix|- and |linux|-based architectures, the shell script that is derived from the ``chef-full.erb`` bootstrap template will make a request to the |company_name| website to get the most recent version of a second shell script (``install.sh``).
    * - **Get the chef-client package from Chef**
-     - The second shell script then gathers system-specific information and determines the correct package for the |chef client|. The second shell script makes a request to |company_name| and downloads the appropriate package.
+     - The second shell script then gathers system-specific information and determines the correct package for the |chef client|. The second shell script makes a request to the |company_name| website, and then downloads the appropriate package.
    * - **Install the chef-client**
      - The |chef client| is installed on the target node.
    * - **Start the chef-client run**
