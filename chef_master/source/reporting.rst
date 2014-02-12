@@ -16,7 +16,7 @@ The Reporting Run
 
 |chef manager|, Reports
 =====================================================
-.. include:: ../../includes_manager/includes_manager.rst
+.. include:: ../../includes_manage/includes_manage.rst
 
 When |reporting| and |chef manager| are both added to |chef server oec|, a user interface for |reporting| is also available.
 

@@ -2,7 +2,7 @@
 Install |chef manager|
 =====================================================
 
-.. include:: ../../includes_manager/includes_manager.rst
+.. include:: ../../includes_manage/includes_manage.rst
 
 Requirements
 =====================================================

@@ -2,9 +2,9 @@
 |chef manager|
 =====================================================
 
-.. include:: ../../includes_manager/includes_manager.rst
+.. include:: ../../includes_manage/includes_manage.rst
 
-.. note:: |chef manager| is an add-on to |chef server oec| and must be :doc:`installed on the same physical hardware </install_manager>` as the |chef server oec| server.
+.. note:: |chef manager| is an add-on to |chef server oec| and must be :doc:`installed on the same physical hardware </install_manage>` as the |chef server oec| server.
 
 Nodes
 =====================================================
@@ -34,7 +34,7 @@ The |chef manager| provides ways for users to manage `data bags <http://docs.ops
 
 Admin
 =====================================================
-.. include:: ../../includes_manager/includes_manager_admin.rst
+.. include:: ../../includes_manage/includes_manage_admin.rst
 
 .. include:: ../../includes_server_rbac/includes_server_rbac.rst
 

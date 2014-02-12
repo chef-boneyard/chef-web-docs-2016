@@ -147,7 +147,7 @@ The |chef server oec| acts as a hub for configuration data. The :doc:`components
 
 In addition to the built-in features of |chef server oec|, the following optional components are available:
 
-* **Chef Manager** :doc:`Chef Manager </manager>` provides a web user interface that can be used to manage |chef server oec|.
+* **Chef Manager** :doc:`Chef Manage </manage>` provides a web user interface that can be used to manage |chef server oec|.
 * **Reporting** :doc:`Reporting </reporting>` is used to get a list of |chef client| runs, either by organization or by node.
 * **Push Jobs** :doc:`Push Jobs </push_jobs>` is used to run jobs against nodes independently of |chef client| runs.
 
@@ -188,7 +188,7 @@ Installation scenarios:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">Upgrade for High Availability</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef from the Open Source Chef Server</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_reporting.html">Install the Reporting Add-on</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manager.html">Install the Manager Add-on</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manage.html">Install the Manager Add-on</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_push_jobs.html">Install the Push Jobs Add-on</a> </br>
 
 Options: 
@@ -540,7 +540,7 @@ The following topics discuss using |chef server oec| with platforms:
    essentials_roles
    essentials_search
    install_bootstrap
-   install_manager
+   install_manage
    install_push_jobs
    install_reporting
    install_server
@@ -618,7 +618,7 @@ The following topics discuss using |chef server oec| with platforms:
    lwrp_webpi
    lwrp_windows
    lwrp_yum
-   manager
+   manage
    migrate_to_hosted
    oec_overview
    ohai
