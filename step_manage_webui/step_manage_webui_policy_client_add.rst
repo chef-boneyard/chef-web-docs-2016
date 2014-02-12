@@ -11,7 +11,7 @@ To add an environment:
 
    .. image:: ../../images/step_manage_webui_policy_client_add.png
 
-   Click |webui button_next|.
+   Click |webui button_create_client|.
 #. Copy the private key:
 
    .. image:: ../../images/step_manage_webui_policy_client_add_private_key.png
