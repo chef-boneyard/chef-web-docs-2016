@@ -148,9 +148,6 @@ Cookbooks
    chef_overview_cookbooks
    chef_overview_nodes
    chef_overview_server
-   chef_overview_server_hosted
-   chef_overview_server_open_source
-   chef_overview_server_private
    chef_overview_workstation
    chef_private_keys
    chef_quick_overview
