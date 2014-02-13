@@ -75,16 +75,12 @@ Authorization
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_workflow.rst
 
-Permissions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_server_rbac/includes_server_rbac_permissions.rst
-
 Object Permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst
 
 Global Permissions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_global.rst
 
 Default Groups
