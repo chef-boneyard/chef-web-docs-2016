@@ -24,9 +24,21 @@ Windows
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_windows.rst
 
-Run as non-Root User
+Run as a Non-root User
 =====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst
+
+Set the Cache Path
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root_set_cache_path.rst
+
+Configure Multiple Teams
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root_two_teams.rst
+
+Elevate Commands
+-----------------------------------------------------
+.. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root_use_attributes.rst
 
 Examples
 =====================================================

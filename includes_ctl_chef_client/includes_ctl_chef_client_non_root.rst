@@ -2,27 +2,8 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The |chef client| can be run as a non-root user. This is not a common approach for installing the |chef client|, but is sometimes necessary. For example, an organization may want to ensure that only system administrators can manage a server (via a manually-triggered root user |chef client|) while ensuring that development teams who manage the application stacks on that server can do so using normal processes (via cookbooks, a daemonized |chef client|, and so on).
+In large, distributed organizations the ability to modify the configuration of systems is sometimes segmented across teams, often with varying levels of access to those systems. For example, core application services may be deployed to systems by a central server provisioning team, and then developers on different teams build tooling to support specific applications. In this situation, a developer only requires limited access to machines and only needs to perform the operations that are necessary to deploy tooling for a specific application.
 
-In this type of scenario, a node should be managed as if it were two nodes:
+The default configuration of the |chef client| assumes that it is run as the root user. This affords the |chef client| the greatest flexibility when managing the state of any object. However, the |chef client| may be run as a non-root user, i.e. "run as a user with limited system privileges", which can be useful when the objects on the system are available to other user accounts. 
 
-* Configure one node to run the |chef client| as the non-root user; trigger this |chef client| manually  (via |ssh|, |push jobs|, and so on)
-* Configure another node to run the |chef client| as a daemonized user; this |chef client| manages the application stack on the node
-* Register both of these nodes with the |chef server|; use the |chef server oec| security model to limit access to the node on which the |chef client| is installed as a root user
-* Further separation of workflows can be done using multiple organizations in |chef server oec|
-
-**Set the cache path**
-
-To run a |chef client| in non-root mode, add the ``cache_path`` setting to the |client rb| file for the node that will run as the non-root user. Set the value of ``cache_path`` to be the home directory for the user that is running the |chef client|. For example:
-
-.. code-block:: ruby
-
-   cache_path "~/.chef/cache"
-
-or:
-
-.. code-block:: ruby
-
-   cache_path File.join(File.expand_path("~"), ".chef", "cache")
-
-.. note:: When running the |chef client| using the ``--local-mode`` option, ``~/.chef/local-mode-cache`` is the default value for ``cache_path``.
+When the |chef client| is run as a non-root user the |chef client| can perform any action allowed to that user, as long as that action does not also require elevated privileges (such as |sudo cmd| or pbrun). Attempts to manage any object that requires elevated privileges will result in an error. For example, when the |chef client| is run as a non-root user that is unable to create or modify users, the |resource user| resource will not work.
