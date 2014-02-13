@@ -6,7 +6,7 @@ The |chef client| can be run as a non-root user. This is not a common approach f
 
 In this type of scenario, a node should be managed as if it were two nodes:
 
-* Configure one node to run the |chef client| as the root user; trigger this |chef client| manually  (via |ssh|, |push jobs|, and so on)
+* Configure one node to run the |chef client| as the non-root user; trigger this |chef client| manually  (via |ssh|, |push jobs|, and so on)
 * Configure another node to run the |chef client| as a daemonized user; this |chef client| manages the application stack on the node
 * Register both of these nodes with the |chef server|; use the |chef server oec| security model to limit access to the node on which the |chef client| is installed as a root user
 * Further separation of workflows can be done using multiple organizations in |chef server oec|
