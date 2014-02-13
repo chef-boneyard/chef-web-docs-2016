@@ -91,6 +91,6 @@ This command has the following options:
    |whyrun_mode|
 
 ``-z``, ``--local-mode``
-   |local_mode|.
+   |local_mode|
 
 
