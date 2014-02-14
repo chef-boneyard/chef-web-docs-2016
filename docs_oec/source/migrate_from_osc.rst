@@ -7,7 +7,7 @@ The steps for migrating to hosted |chef server oec| from an instance of the open
 #. In hosted |chef server oec| create an organization
 #. For each node, update the ``chef_server_url`` setting in the |client rb| files so that it points to the URL for hosted |chef server oec|
 #. Create an empty |chef repo|
-#. Update ``versioned_cookbooks``
+#. Use versioned cookbooks
 #. Run ``knife download`` from the |chef server osc| server
 #. Update ``chef_server_url``
 #. Run ``knife upload`` to hosted |chef server oec|
@@ -31,12 +31,6 @@ To add an organization:
 Update client.rb
 =====================================================
 On each node, the ``chef_server_url`` setting in the |client rb| file needs to be updated so that its value is the URL for the hosted |chef server oec|.
-
-Update ``versioned_cookbooks``
-=====================================================
-On the workstation from which the migration is being done, the following settings need to be updated:
-
-* The value for ``versioned_cookbooks`` must be set to ``true``; if this setting is not in the |knife rb| file, add it
 
 Create an empty repository
 =====================================================
@@ -68,8 +62,13 @@ The |knife rb| file should look similar to the following:
     
    client_key "/etc/chef/client.pem"
     
-   chef_server_url "http://localhost:4000"
-   
+   chef_server_url "http://url_for_open_source_chef_server"
+
+Use Versioned Cookbooks
+=====================================================
+On the workstation from which the migration is being done, add the ``versioned_cookbook`` setting to the |knife rb| file, and then set it to true. This setting ensures that all cookbooks and cookbook versions are downloaded when using the ``knife download`` subcommand.
+
+.. code-block:: ruby
    
    ######################################################################
    # In order to download all cookbooks and all cookbook versions
@@ -91,9 +90,27 @@ This command will create subdirectories for clients, cookbooks, data bags, envir
 
 Update ``chef_server_url``
 =====================================================
-On the workstation from which the migration is being done, the following settings need to be updated:
+On the workstation from which the migration is being done, update the value for ``chef_server_url`` to point to the hosted |chef server oec| URL:
 
-* The value for ``chef_server_url`` must be updated for the new hosted |chef server oec| URL
+.. code-block:: ruby
+
+   # Knife Configuration File for Migrations to Enterprise Chef
+   #
+   ######################################################################
+   # In order to interact with a Chef Server, three configuration
+   # settings are *required*, and you must change them.
+   #
+   # node_name
+   # client_key
+   # chef_server_url
+   #
+   
+   node_name ""
+    
+   client_key "/etc/chef/client.pem"
+    
+   chef_server_url "http://url_for_hosted_enterprise_chef_server"
+
 
 Run ``knife upload``
 =====================================================
