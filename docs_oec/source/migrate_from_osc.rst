@@ -65,10 +65,16 @@ Run ``knife upload``
 =====================================================
 To restore the data (including run-lists and node attributes) that was being used with the open source |chef server| server, it must be uploaded to the hosted |chef server oec| server. Use the ``knife upload`` subcommand to perform this task.
 
-.. include:: ../../step_knife/step_knife_upload_repository.rst
+Browse to the top level of the |chef repo| and enter:
 
-.. include:: ../../step_knife/step_knife_upload_directory.rst
+.. code-block:: bash
 
-If only data for specific data bags, environments, nodes, and roles should be uploaded, use the ``from file`` arguments for the ``knife data bag``, ``knife environment``, ``knife node``, and ``knife role`` sub-commands. The path used for the ``from file`` argument must be the path to backed-up data bag, environment, node, or role. 
+   $ knife upload
+
+or from anywhere in the |chef repo|, enter:
+
+.. code-block:: bash
+
+   $ knife upload .
 
 A cookbook can be uploaded individually using the ``upload`` argument for the ``knife cookbook`` sub-command.
