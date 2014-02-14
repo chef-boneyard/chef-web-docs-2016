@@ -10,5 +10,5 @@ or from anywhere in the |chef repo|, enter:
 
 .. code-block:: bash
 
-   $ knife upload .
+   $ knife upload /
 
