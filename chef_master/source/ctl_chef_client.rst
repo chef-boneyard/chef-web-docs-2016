@@ -24,7 +24,7 @@ Windows
 -----------------------------------------------------
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges_windows.rst
 
-Run as a Non-root User
+Run as Non-root User
 =====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_non_root.rst
 
