@@ -6,8 +6,8 @@ One example of running the |chef client| as a non-root user involves multiple te
 
 There are two approaches:
 
-* Configure two nodes, one for each team
 * Configure a single node and configure privileges for the non-root user
+* Configure two nodes, one for each team
 
 **Configure one node, configure privileges for non-root user**
 
