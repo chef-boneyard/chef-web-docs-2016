@@ -619,6 +619,7 @@ The following topics discuss using |chef server oec| with platforms:
    lwrp_windows
    lwrp_yum
    manage
+   migrate_from_osc
    migrate_to_hosted
    oec_overview
    ohai
