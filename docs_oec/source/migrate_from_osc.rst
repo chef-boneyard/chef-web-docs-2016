@@ -10,10 +10,17 @@ Migrate to Hosted |chef server oec|
 
 The steps for migrating to hosted |chef server oec| from an instance of the open source |chef server| are:
 
+#. In hosted |chef server oec| create an organization
 #. For each node, update the ``chef_server_url`` setting in the |client rb| files so that it points to the URL for hosted |chef server oec|
 #. Run ``knife download`` from the |chef server osc| server
-#. In hosted |chef server oec| create an organization
+#. Point the |knife rb| file at the hosted |chef server oec| organization
 #. Run ``knife upload`` to hosted |chef server oec|
+
+Create an Organization
+=====================================================
+An organization is the top-level entity in hosted |chef server oec|.
+
+.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_add.rst
 
 Update the Server URL
 =====================================================
@@ -27,12 +34,9 @@ To download the data (including run-lists and node attributes) that is being use
 
 .. include:: ../../step_knife/step_knife_download_directory.rst
 
-Create an Organization
+Update the Organization
 =====================================================
-An organization is the top-level entity in hosted |chef server oec|.
-
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_add.rst
-
+On each workstation (or at least the workstation from which the migration is being done), the ``chef_server_url`` setting in the |knife rb| file needs to be updated so that its value is the URL for the hosted |chef server oec|.
 
 Run ``knife upload``
 =====================================================
