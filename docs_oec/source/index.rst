@@ -270,9 +270,10 @@ The |chef client| does the actual configuration on :doc:`the nodes </essentials_
 
 Be sure to :doc:`test and debug your recipes </chef_shell>` before running them in production! Run the |chef client| in :doc:`why-run mode </essentials_nodes_why_run>` to simulate what should happen during the |chef client| run, but without configuring anything.
 
+
 Install the |chef client|
 -----------------------------------------------------
-The |chef client| can be installed with the :doc:`knife bootstrap </knife_bootstrap>` subcommand from a workstation or by downloading the |chef client| to the node directly using the |api omnitruck|.
+The |chef client| is typically installed using a :doc:`bootstrap operation </essentials_nodes_bootstrap>`. This is done by running the :doc:`knife bootstrap </knife_bootstrap>` subcommand from a workstation. Alternately, the |chef client| can be downloaded to a node directly using the |api omnitruck|.
 
 .. raw:: html
 
@@ -532,6 +533,7 @@ The following topics discuss using |chef server oec| with platforms:
    essentials_node_object
    essentials_node_object_run_lists
    essentials_nodes
+   essentials_nodes_bootstrap
    essentials_nodes_chef_run
    essentials_nodes_why_run
    essentials_policy
