@@ -2,7 +2,7 @@
 Release Notes: |chef server oec| 11.1.x
 =====================================================
 
-.. include:: ../../includes_chef/includes_chef.rst
+.. include:: ../../includes_chef/includes_chef_index_oec.rst.rst
 
 What's New
 =====================================================
