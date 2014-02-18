@@ -103,7 +103,7 @@ The Nodes
 =====================================================
 **The Basics:** :doc:`About Nodes </essentials_nodes>` | :doc:`chef-client (agent) </essentials_chef_client>` | :doc:`The chef-client Run </essentials_nodes_chef_run>` | :doc:`Chef Solo </chef_solo>` | :doc:`Debug Recipes </chef_shell>`
 
-**Install:** :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
+**Install:** :doc:`About Bootstrap </essentials_nodes_bootstrap>` | :doc:`Install the chef-client on a Node (Bootstrap) </install_bootstrap>` and :doc:`knife bootstrap </knife_bootstrap>` | :doc:`Install the chef-client on Windows </install_windows>` | :doc:`Download the chef-client with Omnitruck API </api_omnitruck>`
 
 **Ohai:** :doc:`About Ohai 7 </ohai>` | :doc:`Custom Ohai 7 Plugins </ohai_custom>` | `Ohai 6 <http://docs.opscode.com/release/ohai-6/>`_
 
