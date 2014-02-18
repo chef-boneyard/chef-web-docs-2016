@@ -54,13 +54,6 @@ All about Chef ...
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server_scenario_vm.html">Install Chef Server 11.x on a Virtual Machine</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
 
-**Manage the Chef Server** 
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/manage_server_hosted.html">Hosted Enterprise Chef</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/manage_server_open_source.html">Open Source Chef</a> </br>
-
 **Configuration Files** 
 
 .. raw:: html
@@ -140,8 +133,6 @@ All about Chef ...
    knife_plugins
    lwrps
    lwrps_custom
-   manage_server_hosted
-   manage_server_open_source
    metadata_rb
    migrate_to_hosted
    ohai
