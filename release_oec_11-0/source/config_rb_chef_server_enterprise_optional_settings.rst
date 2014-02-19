@@ -14,7 +14,7 @@ General
 
 bookshelf
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bookshelf.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_enterprise_settings_bookshelf.rst
 
 bootstrap
 -----------------------------------------------------
@@ -30,7 +30,7 @@ drbd
 
 keepalived
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_keepalived.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_enterprise_settings_keepalived.rst
 
 ldap
 -----------------------------------------------------
@@ -38,7 +38,7 @@ ldap
 
 load-balancer
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_enterprise_settings_load_balancer.rst
+.. include:: ../../includes_config/includes_config_rb_11-includes_config_rb_11-0_chef_server_enterprise_settings_load_balancer.rst
 
 nginx
 -----------------------------------------------------
@@ -46,7 +46,7 @@ nginx
 
 oc_bifrost
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_bifrost.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_enterprise_settings_bifrost.rst
 
 oc-chef-pedant
 -----------------------------------------------------
@@ -66,7 +66,7 @@ opscode-chef
 
 opscode-erchef
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_erchef.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_enterprise_settings_erchef.rst
 
 opscode-expander
 -----------------------------------------------------
