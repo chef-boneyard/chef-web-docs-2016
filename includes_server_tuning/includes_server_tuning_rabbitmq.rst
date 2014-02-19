@@ -7,9 +7,7 @@ OR
 
 The following settings are often modified from the default as part of the tuning effort for the
 
- |service rabbitmq| service. 
-
-Commonly tuned values include:
+ |service rabbitmq| service:
 
 .. list-table::
    :widths: 200 300

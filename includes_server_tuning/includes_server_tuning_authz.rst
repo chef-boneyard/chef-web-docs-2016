@@ -7,9 +7,7 @@ OR
 
 The following settings are often modified from the default as part of the tuning effort for the
 
-|service authz| service. 
-
-Commonly tuned values include:
+|service authz| service:
 
 .. list-table::
    :widths: 200 300
