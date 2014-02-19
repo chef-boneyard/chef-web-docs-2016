@@ -12,9 +12,9 @@ The **redis-lb** service has the following settings:
    * - ``redis_lb['activewritehashing']``
      - Default value: ``"no"``.
    * - ``redis_lb['aof_rewrite_min_size']``
-     - Default value: ``"16mb"``.
+     - The minimum size of the append only file. Only files larger than this value will be rewritten. Default value: ``"16mb"``.
    * - ``redis_lb['aof_rewrite_percent']``
-     - Default value: ``"50"``.
+     - The size of the current append only file, as compared to the base size. The append only file is rewritten when the current file exceeds the base size by this value. Default value: ``"50"``.
    * - ``redis_lb['appendfsync']``
      - |appendfsync| Default value: ``"always"``.
    * - ``redis_lb['appendonly']``
@@ -48,7 +48,7 @@ The **redis-lb** service has the following settings:
    * - ``redis_lb['port']``
      - |port redis| Default value: ``"16379"``.
    * - ``redis_lb['save_frequency']``
-     - Default value: ``{ "900" => "1", "300" => "10", "60" => "1000" }``.
+     - Use to set the save frequency. Pattern: ``{ "seconds" => "keys", "seconds" => "keys", "seconds" => "keys" }``. ``Default value: ``{ "900" => "1", "300" => "10", "60" => "1000" }``, which will save the database every 15 minutes if at least one key changes, every 5 minutes if at least 10 keys change, and every 60 seconds if 10000 keys change.
    * - ``redis_lb['timeout']``
      - |timeout redis| Default value: ``"300"``.
    * - ``redis_lb['vip']``
