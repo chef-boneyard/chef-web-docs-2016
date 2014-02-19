@@ -1,0 +1,56 @@
+.. The contents of this file are included in multiple topics.
+.. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
+
+The |service redis| service has the following settings:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``redis_lb['activewritehashing']``
+     - Default value: ``"no"``.
+   * - ``redis_lb['aof_rewrite_min_size']``
+     - Default value: ``"16mb"``.
+   * - ``redis_lb['aof_rewrite_percent']``
+     - Default value: ``"50"``.
+   * - ``redis_lb['appendfsync']``
+     - |appendfsync| Default value: ``"always"``.
+   * - ``redis_lb['appendonly']``
+     - |appendonly| Set to ``yes`` to dump data to an append-only log file. Default value: ``"no"``.
+   * - ``redis_lb['bind']``
+     - |bind redis| Default value: ``"127.0.0.1"``.
+   * - ``redis_lb['data_dir']``
+     - Default value: ``"/var/opt/opscode/redis_lb/data"``.
+   * - ``redis_lb['databases']``
+     - |database_quantity| Default value: ``"16"``.
+   * - ``redis_lb['dir']``
+     - |directory redis| Default value: ``"/var/opt/opscode/redis_lb"``.
+   * - ``redis_lb['enable']``
+     - |enable service| Default value: ``true``.
+   * - ``redis_lb['ha']``
+     - |use ha| Default value: ``false``.
+   * - ``redis_lb['keepalive']``
+     - Default value: ``"60"``.
+   * - ``redis_lb['log_directory']``
+     - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/redis_lb"``.
+   * - ``redis_lb['log_rotation']['file_maxbytes']``
+     - The size of the rotated redis_lb log file. Default value: ``1000000``.
+   * - ``redis_lb['log_rotation']['num_to_keep']``
+     - The number of rotated redis_lb log files to keep. Default value: ``10``.
+   * - ``redis_lb['loglevel']``
+     - Default value: ``"notice"``.
+   * - ``redis_lb['maxmemory']``
+     - |memory maximum_redis| Default value: ``"8m"``.
+   * - ``redis_lb['maxmemory_policy']``
+     - |memory maximum_policy_redis| Default value: ``"noeviction"``.
+   * - ``redis_lb['port']``
+     - |port redis| Default value: ``"16379"``.
+   * - ``redis_lb['save_frequency']``
+     - Default value: ``{ "900" => "1", "300" => "10", "60" => "1000" }``.
+   * - ``redis_lb['timeout']``
+     - |timeout redis| Default value: ``"300"``.
+   * - ``redis_lb['vip']``
+     - |ip_address virtual| Default value: ``"127.0.0.1"``.
+
