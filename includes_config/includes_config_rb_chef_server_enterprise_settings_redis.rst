@@ -26,7 +26,7 @@ The |service redis| service has the following settings:
    * - ``redis['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/redis"``.
    * - ``redis['loglevel']``
-     - Default value: ``"notice"``.
+     - |log_level| Possible values: ``debug``, ``notice``, ``verbose``, and ``warning``. Default value: ``"notice"``.
    * - ``redis['maxmemory']``
      - |memory maximum_redis| Default value: ``"1g"``.
    * - ``redis['maxmemory_policy']``

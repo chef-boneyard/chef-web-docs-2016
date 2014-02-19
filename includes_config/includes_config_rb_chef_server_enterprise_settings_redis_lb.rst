@@ -10,11 +10,11 @@ The **redis-lb** service has the following settings:
    * - Setting
      - Description
    * - ``redis_lb['activewritehashing']``
-     - Default value: ``"no"``.
+     - |active_rehashing| Default value: ``"no"``.
    * - ``redis_lb['aof_rewrite_min_size']``
-     - The minimum size of the append only file. Only files larger than this value will be rewritten. Default value: ``"16mb"``.
+     - |appendonly_min_size| Default value: ``"16mb"``.
    * - ``redis_lb['aof_rewrite_percent']``
-     - The size of the current append only file, as compared to the base size. The append only file is rewritten when the current file exceeds the base size by this value. Default value: ``"50"``.
+     - |appendonly_percent| Default value: ``"50"``.
    * - ``redis_lb['appendfsync']``
      - |appendfsync| Default value: ``"always"``.
    * - ``redis_lb['appendonly']``
@@ -22,7 +22,7 @@ The **redis-lb** service has the following settings:
    * - ``redis_lb['bind']``
      - |bind redis| Default value: ``"127.0.0.1"``.
    * - ``redis_lb['data_dir']``
-     - Default value: ``"/var/opt/opscode/redis_lb/data"``.
+     - |directory redis| Default value: ``"/var/opt/opscode/redis_lb/data"``.
    * - ``redis_lb['databases']``
      - |database_quantity| Default value: ``"16"``.
    * - ``redis_lb['dir']``
@@ -32,15 +32,15 @@ The **redis-lb** service has the following settings:
    * - ``redis_lb['ha']``
      - |use ha| Default value: ``false``.
    * - ``redis_lb['keepalive']``
-     - Default value: ``"60"``.
+     - |keepalive request_time| Default value: ``"60"``.
    * - ``redis_lb['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/redis_lb"``.
    * - ``redis_lb['log_rotation']['file_maxbytes']``
-     - The size of the rotated redis_lb log file. Default value: ``1000000``.
+     - |log_rotation| Default value: ``1000000``.
    * - ``redis_lb['log_rotation']['num_to_keep']``
-     - The number of rotated redis_lb log files to keep. Default value: ``10``.
+     - |num_to_keep| Default value: ``10``.
    * - ``redis_lb['loglevel']``
-     - Default value: ``"notice"``.
+     - |log_level|. Possible values: ``debug``, ``notice``, ``verbose``, and ``warning``. Default value: ``"notice"``.
    * - ``redis_lb['maxmemory']``
      - |memory maximum_redis| Default value: ``"8m"``.
    * - ``redis_lb['maxmemory_policy']``
@@ -48,7 +48,7 @@ The **redis-lb** service has the following settings:
    * - ``redis_lb['port']``
      - |port redis| Default value: ``"16379"``.
    * - ``redis_lb['save_frequency']``
-     - Use to set the save frequency. Pattern: ``{ "seconds" => "keys", "seconds" => "keys", "seconds" => "keys" }``. ``Default value: ``{ "900" => "1", "300" => "10", "60" => "1000" }``, which will save the database every 15 minutes if at least one key changes, every 5 minutes if at least 10 keys change, and every 60 seconds if 10000 keys change.
+     - |save_frequency_redis| ``Default value: ``{ "900" => "1", "300" => "10", "60" => "1000" }``, which will save the database every 15 minutes if at least one key changes, every 5 minutes if at least 10 keys change, and every 60 seconds if 10000 keys change.
    * - ``redis_lb['timeout']``
      - |timeout redis| Default value: ``"300"``.
    * - ``redis_lb['vip']``
