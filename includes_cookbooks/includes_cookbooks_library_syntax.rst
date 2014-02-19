@@ -10,6 +10,7 @@ The basic syntax of a library::
        # ... do something useful  
      end
    end
+   
    your_cookbook/recipes/default.rb
    # open the Chef::Recipe class and mix in the library module
    class Chef::Recipe::namespace
