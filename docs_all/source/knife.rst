@@ -83,7 +83,13 @@ Examples
 
 .. include:: ../../step_knife/step_knife_bootstrap_use_file_with_private_key.rst
 
-The following examples show how to customize the default bootstraps. 
+Custom Templates
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_bootstrap_template.rst
+
+Template Locations
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_bootstrap_template_location.rst
 
 Ubuntu 12.04
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -92,6 +98,11 @@ Ubuntu 12.04
 Debian and Apt
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_knife/includes_knife_bootstrap_example_debian.rst
+
+Microsoft Windows
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_knife/includes_knife_bootstrap_example_windows.rst
+
 
 
 
