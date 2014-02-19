@@ -12,7 +12,7 @@ Use Conditions
 
 Recommended Settings
 =====================================================
-.. include:: ../../includes_server_tuning/includes_server_tuning_general.rst
+.. include:: ../../includes_server_tuning/includes_server_tuning_11-0_general.rst
 
 Optional Settings
 =====================================================

@@ -10,7 +10,7 @@ The following sections describe the various settings that are available in the |
 
 General
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_general.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_enterprise_settings_general.rst
 
 bookshelf
 -----------------------------------------------------
