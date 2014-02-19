@@ -44,7 +44,7 @@ In |ruby|, the current environment can be altered via the ``ENV`` variable. Any 
 
    ENV['FOO'] = "bar"
    bash "env_test0" do
-     code<<-EOF
+     code <<-EOF
      echo $FOO
    EOF
    end
@@ -56,13 +56,13 @@ However, just as in |bash|, changes made in child processes have no affect on th
 .. code-block:: bash
 
    bash "env_test1" do
-     code<<-EOF
+     code <<-EOF
      export BAZ="bar"
    EOF
    end
    
    bash "env_test2" do
-     code<<-EOF
+     code <<-EOF
      echo $BAZ
    EOF
    end

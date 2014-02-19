@@ -6,7 +6,7 @@ If processes is started by using the |resource execute| or |resource script| res
 .. code-block:: bash
 
    bash "env_test" do
-     code<<-EOF
+     code <<-EOF
      echo $FOO
    EOF
      environment { 'FOO' => "bar" }
