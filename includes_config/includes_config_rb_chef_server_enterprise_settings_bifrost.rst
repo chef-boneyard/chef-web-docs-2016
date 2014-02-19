@@ -13,6 +13,8 @@ The |service bifrost| service has the following settings:
      - 
    * - ``oc_bifrost['enable']``
      - |enable service| Default value: ``true``.
+   * - ``oc_bifrost['extended_perf_log']``
+     - Default value: ``true``.
    * - ``oc_bifrost['ha']``
      - |use ha|
    * - ``oc_bifrost['log_directory']``

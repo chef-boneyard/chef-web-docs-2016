@@ -13,6 +13,8 @@ This configuration file has the following settings for |keepalived|:
      - |directory keepalived| The default value is the recommended value. Default value: ``"/var/opt/opscode/keepalived"``.
    * - ``keepalived['enable']``
      - |enable service| Backend servers in a high availability topologies should have this setting enabled. Default value: ``false``.
+   * - ``keepalived['ipv6_on']``
+     - Use to enable IPv6. Default value: ``false``.
    * - ``keepalived['log_directory']``
      - |directory logs| The default value is the recommended value. Default value: ``"/var/log/opscode/keepalived"``.
    * - ``keepalived['log_rotation']``
