@@ -38,7 +38,7 @@ ldap
 
 load-balancer
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_load_balancer.rst
+.. include:: ../../includes_config/includes_config_rb_11-0_chef_server_enterprise_settings_load_balancer.rst
 
 nginx
 -----------------------------------------------------
