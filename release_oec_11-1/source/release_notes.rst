@@ -16,7 +16,7 @@ The following items are new for |chef server oec| 11.1.x and/or are changes from
 
 Configuration Setting for IPv6
 -----------------------------------------------------
-The following settings is used to configure IPv6 for |chef server oec|:
+The following setting is used to configure IPv6 for |chef server oec|:
 
 .. list-table::
    :widths: 200 300
