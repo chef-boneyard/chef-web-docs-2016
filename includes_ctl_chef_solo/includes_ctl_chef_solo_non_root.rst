@@ -9,4 +9,4 @@
    # chef-solo privilege specification
    chef ALL=(ALL) NOPASSWD: /usr/bin/chef-solo
 
-where ``chef`` is the name of the non-root user. This allows |chef solo| to run any command on the node without requiring a password.
+where ``chef`` is the name of the non-root user. This would allow |chef solo| to run any command on the node without requiring a password.
