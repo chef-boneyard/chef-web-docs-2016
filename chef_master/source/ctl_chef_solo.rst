@@ -10,6 +10,10 @@ Options
 =====================================================
 .. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_options.rst
 
+Run as Non-root User
+=====================================================
+.. include:: ../../includes_ctl_chef_solo/includes_ctl_chef_solo_non_root.rst
+
 Examples
 =====================================================
 **Run chef-solo using solo.rb settings**
