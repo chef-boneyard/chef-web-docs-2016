@@ -18,7 +18,7 @@ The |service bookshelf| service has the following settings:
    * - ``bookshelf['enable']``
      - |enable service| Default value: ``true``.
    * - ``bookshelf['external_url']``
-     - The base URL to which the opscode-erchef service will return links. Use to ``:host_header`` to ensure the bookshelf URL is derived from the host header of the incoming HTTP request. Default value: ``:host_header``.
+     - The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request. Default value: ``:host_header``.
    * - ``bookshelf['ha']``
      - |use ha| Default value: ``false``.
    * - ``bookshelf['listen']``

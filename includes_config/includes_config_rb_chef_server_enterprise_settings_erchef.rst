@@ -11,6 +11,8 @@ The |service erchef| service has the following settings:
      - Description
    * - ``opscode_erchef['auth_skew']``
      - Default value: ``900``.
+   * - ``opscode_erchef['base_resource_url']``
+     - The base URL to which the service will return links to API resources. Use ``:host_header`` to ensure the URL is derived from the host header of the incoming HTTP request. Default value: ``:host_header``.
    * - ``opscode_erchef['bulk_fetch_batch_size']``
      - Default value: ``5``.
    * - ``opscode_erchef['cache_ttl']``
