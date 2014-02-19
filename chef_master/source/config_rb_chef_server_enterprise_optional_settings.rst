@@ -102,7 +102,7 @@ redis
 
 redis-lb
 -----------------------------------------------------
-.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_redis.rst
+.. include:: ../../includes_config/includes_config_rb_chef_server_enterprise_settings_redis_lb.rst
 
 users
 -----------------------------------------------------
