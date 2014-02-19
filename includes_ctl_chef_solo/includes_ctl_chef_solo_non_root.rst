@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|chef solo| may be run as a non-root user. For example, the ``sudoers`` can be updated similar to:
+|chef solo| may be run as a non-root user. For example, the ``sudoers`` file can be updated similar to:
 
 .. code-block:: ruby
 
