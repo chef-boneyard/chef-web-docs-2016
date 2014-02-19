@@ -130,6 +130,7 @@ The following APIs can be used to access data on the |chef server|:
    auth_authentication
    auth_authorization
    config_rb_chef_server_enterprise
+   config_rb_chef_server_enterprise_optional_settings
    ctl_private_chef
    install_server
    install_server_be
