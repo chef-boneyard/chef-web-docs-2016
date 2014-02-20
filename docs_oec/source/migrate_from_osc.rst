@@ -1,10 +1,10 @@
 =====================================================
-Migrate to Hosted |chef server oec|
+Migrate to |chef server oec|
 =====================================================
 
-The steps for migrating to hosted |chef server oec| from an instance of the open source |chef server| are:
+Migrating data from |chef server osc| to |chef server oec| (hosted or on premises) is described below. The short version:
 
-#. In hosted |chef server oec| create an organization
+#. Create an organization
 #. For each node, update the ``chef_server_url`` setting in the |client rb| files so that it points to the URL for hosted |chef server oec|
 #. Create an empty |chef repo|
 #. Use versioned cookbooks
@@ -14,7 +14,7 @@ The steps for migrating to hosted |chef server oec| from an instance of the open
 
 Create an Organization
 =====================================================
-An organization is the top-level entity in hosted |chef server oec|.
+An organization is the top-level entity in |chef server oec|. Hosted |chef server oec| allows a single organization; on premises |chef server oec| allows multiple organizations.
 
 To add an organization:
 
