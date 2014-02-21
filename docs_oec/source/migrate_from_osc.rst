@@ -134,7 +134,7 @@ Configure Permissions
 =====================================================
 The permissions for all nodes need to be set. Typically, all nodes that will be configured by the |chef client| have the same permissions---``LIST``, ``READ``, and ``UPDATE``---and belong to the ``clients`` group.
 
-Add the following to a recipe, and then set this recipe to be the first item in the run-list for all nodes:
+The following code can be used to set the correct permissions:
 
 .. code-block:: ruby
 
@@ -155,5 +155,8 @@ Add the following to a recipe, and then set this recipe to be the first item in 
      end
    end
 
-and then after all of the nodes have completed their first |chef client| run, remove this recipe from the run-list.
+Save that as a |ruby| script---chef_server_permissions.rb, for example---and then run a |knife| command similar to:
 
+.. code-block:: bash
+
+   $ knife exec -p /path/to/chef_server_permissions.rb
