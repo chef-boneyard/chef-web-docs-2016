@@ -23,26 +23,26 @@ This subcommand has the following options:
 ``--[no-]force``
    |no_force| Default: ``--no-force``. 
 
-``--local``
-   |build_local_file| Set to ``false`` to build or execute against a remote file. Default: ``false``.
-
-``-n MAX_ARGS``, ``--max-args MAX_ARGS``
-   |max_args| Default: ``nil``.
-
-``-s LENGTH``, ``--max-chars LENGTH``
-   |max_chars| Default: ``nil``.
-
-``-p [PATTERN...]``, ``--pattern [PATTERN...]``
-   |pattern command_line| Default: ``nil``.
-
 ``-I REPLACE_STRING``, ``--replace REPLACE_STRING``
    |replace_string| Default: ``nil``.
 
 ``-J REPLACE_STRING``, ``--replace-first REPLACE_STRING``
    |replace_file| Default: ``nil``.
 
+``--local``
+   |build_local_file| Set to ``false`` to build or execute against a remote file. Default: ``false``.
+
+``-n MAX_ARGS``, ``--max-args MAX_ARGS``
+   |max_args| Default: ``nil``.
+
+``-p [PATTERN...]``, ``--pattern [PATTERN...]``
+   |pattern command_line| Default: ``nil``.
+
 ``--repo-mode MODE``
    |repo_mode| Default value: ``default``.
+
+``-s LENGTH``, ``--max-chars LENGTH``
+   |max_chars| Default: ``nil``.
 
 ``-t``
    |print_on_command_line| Default: ``nil``.
