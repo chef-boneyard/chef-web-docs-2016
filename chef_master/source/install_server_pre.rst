@@ -90,7 +90,7 @@ To install |crontab| on |centos| 6, run the following command:
 
 |apache qpid|
 -----------------------------------------------------
-On |centos| and |redhat| systems, the |apache qpid| daemon is installed by default. In order to run |chef server oec|, this daemon must be disabled, as |chef server oec| uses |rabbitmq| for messaging (and they share the same protocol).
+On |centos| and |redhat| systems, the |apache qpid| daemon is installed by default. In order to run |chef server oec| this daemon must be disabled, as |chef server oec| uses |rabbitmq| for messaging (and they share the same protocol).
 
 To determine if it is installed:
 

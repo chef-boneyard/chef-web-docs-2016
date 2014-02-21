@@ -51,19 +51,4 @@ The following definition uses the |resource template| resource for |debian|-spec
      @lsb_init
    end
 
-The following definition leverages the |resource log| resource:
-
-.. code-block:: ruby
-
-   def action_grant
-     begin
-       grant_statement = "GRANT #{@new_resource.privileges.join(', ')} ON DATABASE \"#{@new_resource.database_name}\" TO \"#{@new_resource.username}\""
-       Chef::Log.info("#{@new_resource}: granting access with statement [#{grant_statement}]")
-       db(@new_resource.database_name).query(grant_statement)
-       @new_resource.updated_by_last_action(true)
-     ensure
-       close
-     end
-   end
-
 Otherwise, a resource defined in the ``/libraries`` directory is done using |ruby|, is added to recipes as if it were any other resource, and is processed by the |chef client| in the same way as any other resource. See the ``/libraries`` directory in the `database <https://github.com/opscode-cookbooks/database>`_ and `runit <https://github.com/opscode-cookbooks/runit>`_ cookbooks for complete examples of how to use this approach when defining a resource.
