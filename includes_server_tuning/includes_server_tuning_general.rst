@@ -16,7 +16,7 @@ The following settings are typically added to the |enterprise rb| file:
    * - ``bootstrap``
      - Default value: ``true``.
    * - ``ip_version``
-     - Use to set the IP version: ``ipv4`` or ``ipv6``. When configuring for IPv6 in a high availability configuration, be sure to set the netmask on the IPv6 ``backend_vip`` attribute. Default value: ``ipv4``.
+     - Use to set the IP version: ``"ipv4"`` or ``"ipv6"``. When set to ``"ipv6"``, the API listens on IPv6 and front end and back end services communicate via IPv6 when a high availability configuration is used. When configuring for IPv6 in a high availability configuration, be sure to set the netmask on the IPv6 ``backend_vip`` attribute. Default value: ``"ipv4"``.
    * - ``notification_email``
      - Default value: ``info@example.com``.
 
