@@ -129,3 +129,35 @@ or from anywhere in the |chef repo|, enter:
    $ knife upload .
 
 A cookbook can be uploaded individually using the ``upload`` argument for the ``knife cookbook`` sub-command.
+
+
+Configure Permissions for Nodes
+=====================================================
+The permissions for all nodes need to be set. Typically, all nodes that will be configured by the |chef client| have the same permissions---``LIST``, ``READ``, and ``UPDATE``---and belong to the ``clients`` group.
+
+Add the following to a recipe, and then set this recipe to be the first item in the run-list for all nodes:
+
+.. code-block:: ruby
+
+   #!/usr/bin/env ruby
+   require 'rubygems'
+   require 'chef/knife'
+   
+   Chef::Config.from_file(File.join(Chef::Knife.chef_config_dir, 'knife.rb'))
+   
+   rest = Chef::REST.new(Chef::Config[:chef_server_url])
+   
+   Chef::Node.list.each do |node|
+     %w{read update delete grant}.each do |perm|
+       ace = rest.get("nodes/#{node[0]}/_acl")[perm]
+       ace['actors'] << node[0] unless ace['actors'].include?(node[0])
+       rest.put("nodes/#{node[0]}/_acl/#{perm}", perm => ace)
+       puts "Client \"#{node[0]}\" granted \"#{perm}\" access on node \"#{node[0]}\""
+     end
+   end
+
+and then after all of the nodes have completed their first |chef client| run, remove this recipe from the run-list.
+
+
+
+
