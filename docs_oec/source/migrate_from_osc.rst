@@ -155,8 +155,8 @@ The following code can be used to set the correct permissions:
      end
    end
 
-Save that as a |ruby| script---chef_server_permissions.rb, for example---and then run a |knife| command similar to:
+Save that as a |ruby| script---chef_server_permissions.rb, for example---in the ``.chef/scripts`` directory located in the |chef repo|, and then run a |knife| command similar to:
 
 .. code-block:: bash
 
-   $ knife exec -p /path/to/chef_server_permissions.rb
+   $ knife exec ./chef_server_permissions.rb
