@@ -130,7 +130,7 @@ or from anywhere in the |chef repo|, enter:
 A cookbook can be uploaded individually using the ``upload`` argument for the ``knife cookbook`` sub-command.
 
 
-Configure Permissions for Nodes
+Configure Permissions
 =====================================================
 The permissions for all nodes need to be set. Typically, all nodes that will be configured by the |chef client| have the same permissions---``LIST``, ``READ``, and ``UPDATE``---and belong to the ``clients`` group.
 
@@ -156,3 +156,4 @@ Add the following to a recipe, and then set this recipe to be the first item in 
    end
 
 and then after all of the nodes have completed their first |chef client| run, remove this recipe from the run-list.
+
