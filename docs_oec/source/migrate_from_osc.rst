@@ -159,4 +159,4 @@ Save that as a |ruby| script---chef_server_permissions.rb, for example---in the 
 
 .. code-block:: bash
 
-   $ knife exec ./chef_server_permissions.rb
+   $ knife exec chef_server_permissions.rb
