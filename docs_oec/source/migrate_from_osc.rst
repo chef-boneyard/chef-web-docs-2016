@@ -2,7 +2,9 @@
 Migrate to |chef server oec|
 =====================================================
 
-Migrating data from |chef server osc| to |chef server oec| (hosted or on premises) is described below. The short version:
+.. warning:: The steps described in this topic are typically enough to complete a migration from |chef server osc| to |chef server oec| (hosted or on premises). That said, |company_name| would prefer that you consult with our support and/or consulting teams prior to doing a migration. This will help ensure that your migration is completed successfully!
+
+The steps for migrating data from |chef server osc| to |chef server oec| (hosted or on premises) is described below. The short version:
 
 #. Create an organization
 #. For each node, update the ``chef_server_url`` setting in the |client rb| files so that it points to the URL for hosted |chef server oec|
@@ -23,9 +25,6 @@ To add an organization:
 #. Click |webui admin_orgs|.
 #. Click |webui admin_orgs_create|.
 #. In the |webui db_create_org| dialog box, enter the full and short names for the organization:
-
-   .. image:: ../../images/step_manage_webui_admin_organization_add.png
-
 #. Click |webui button_create_organization|.
 
 Update client.rb
