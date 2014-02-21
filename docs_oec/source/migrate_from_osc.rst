@@ -156,7 +156,3 @@ Add the following to a recipe, and then set this recipe to be the first item in 
    end
 
 and then after all of the nodes have completed their first |chef client| run, remove this recipe from the run-list.
-
-
-
-
