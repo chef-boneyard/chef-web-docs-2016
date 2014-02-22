@@ -3,8 +3,17 @@
 
 To set up the |push jobs| client:
 
-#. Add the |cookbook push jobs| cookbook to the run-list for each of the nodes on which |push jobs| is to be configured
-#. Run the |chef client| to configure |push jobs| for that node
+#. Add the |cookbook push jobs| cookbook to the run-list for each of the nodes on which |push jobs| is to be configured.
+#. Add the following attributes to the role used for nodes that are managed by |push jobs|:
+
+   .. code-block:: javascript
+
+      "push_jobs": {
+        "package_url": "<package_url>",
+        "package_checksum": "<checksum>"
+      }
+
+#. Run the |chef client| to configure |push jobs|
 #. Verify that the |push jobs| client is running as a daemon or as a service:
 
    .. code-block:: bash
