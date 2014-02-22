@@ -4,7 +4,7 @@
 To set up the |push jobs| client:
 
 #. Add the |cookbook push jobs| cookbook to the run-list for each of the nodes on which |push jobs| is to be configured.
-#. Add the following attributes to the role used for nodes that are managed by |push jobs|:
+#. Add the following default attributes on all nodes that are managed by |push jobs|:
 
    .. code-block:: javascript
 
