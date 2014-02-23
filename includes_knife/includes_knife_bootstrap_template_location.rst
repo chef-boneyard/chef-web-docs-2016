@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A custom bootstrap template file (``template_filename.erb``) must be located in a ``bootstrap/`` directory, typically located within the ``~/.chef/`` directory.
+A custom bootstrap template file (``template_filename``) must be located in a ``bootstrap/`` directory, typically located within the ``~/.chef/`` directory.
 
 Use the ``--distro`` option with the ``knife bootstrap`` subcommand to specify the bootstrap template file. This location is configurable when the following settings are added to the |knife rb| file:
 
