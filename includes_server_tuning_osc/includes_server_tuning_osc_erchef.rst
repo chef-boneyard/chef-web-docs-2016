@@ -11,5 +11,7 @@ The following setting is often modified from the default as part of the tuning e
      - Description
    * - ``erchef['db_pool_size']``
      - |db_pool_size| This value should be increased if failures indicate that the |service erchef| service ran out of connections. This value should be tuned in conjunction with the ``postgresql['max_connections']`` setting for |postgresql|. Default value: ``20``.
+   * - ``erchef['s3_url_ttl']``
+     - The amount of time (in seconds) before the |chef client| run will time out. If |chef client| runs are timing out, increase this setting to ``3600``, and then adjust again if necessary. Default value: ``900``.
 
  

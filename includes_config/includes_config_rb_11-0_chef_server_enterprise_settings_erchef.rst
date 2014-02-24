@@ -50,7 +50,7 @@ The |service erchef| service has the following settings:
    * - ``opscode_erchef['s3_parallel_ops_timeout']``
      - Default value: ``5000``.
    * - ``opscode_erchef['s3_url_ttl']``
-     - Default value: ``900``.
+     - The amount of time (in seconds) before the |chef client| run will time out. Default value: ``900``.
    * - ``opscode_erchef['umask']``
      - Default value: ``0022``.
    * - ``opscode_erchef['validation_client_name']``
