@@ -8,8 +8,14 @@ This argument has the following options:
 ``-a``, ``--all``
    |all cookbooks|
 
+``--concurrency``
+   |concurrency| Default: ``10``.
+
 ``-d``, ``--include-dependencies``
    |include-dependencies|
+
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   Use to set the environment version dependency to the cookbook version being uploaded.
 
 ``--force``
    |force update|
