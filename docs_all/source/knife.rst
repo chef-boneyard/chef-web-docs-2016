@@ -827,7 +827,7 @@ Options
 -----------------------------------------------------
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-4_delete_options.rst
+.. include:: ../../includes_knife/includes_knife_delete_options.rst
 
 **knife.rb Settings**
 
@@ -898,7 +898,7 @@ Options
 -----------------------------------------------------
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-4_diff_options.rst
+.. include:: ../../includes_knife/includes_knife_diff_options.rst
 
 **knife.rb Settings**
 
@@ -929,7 +929,7 @@ Options
 -----------------------------------------------------
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-4_download_options.rst
+.. include:: ../../includes_knife/includes_knife_download_options.rst
 
 **knife.rb Settings**
 
@@ -1190,7 +1190,7 @@ Options
 -----------------------------------------------------
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-4_list_options.rst
+.. include:: ../../includes_knife/includes_knife_list_options.rst
 
 **knife.rb Settings**
 
@@ -1834,7 +1834,7 @@ Options
 -----------------------------------------------------
 Review the list of `common options <http://docs.opscode.com/chef/knife.html#common-options>`_ available to this (and all) |knife| subcommands and plugins.
 
-.. include:: ../../includes_knife/includes_knife_11-4_upload_options.rst
+.. include:: ../../includes_knife/includes_knife_upload_options.rst
 
 **knife.rb Settings**
 
