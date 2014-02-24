@@ -46,7 +46,7 @@ This configuration file has the following settings:
    * - ``erchef['s3_parallel_ops_timeout']``
      - Default value: ``5000``.
    * - ``erchef['s3_url_ttl']``
-     - The amount of time (in seconds) before the |chef client| run will time out. Default value: ``900``.
+     - |s3_url_ttl| Default value: ``900``.
    * - ``erchef['svlogd_size']``
      - |svlogd_size| Default value: ``1000000``.
    * - ``erchef['svlogd_num']``
