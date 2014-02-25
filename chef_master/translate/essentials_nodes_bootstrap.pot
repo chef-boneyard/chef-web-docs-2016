@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Chef Docs \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-02-11 15:41\n"
+"POT-Creation-Date: 2014-02-25 13:54-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,112 +17,117 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../source/essentials_nodes_bootstrap.rst:8
-# ff31b03518824da89ceec3f66ec663e3
+# 28cdb1c086434117aec7102d3c3d9cb9
 msgid "About Bootstrap Operations"
 msgstr ""
 
 #: ../../includes_install/includes_install_chef_client.rst:4
-# e3091cda608342d49b32283b3e8b8818
-msgid "The ``knife bootstrap`` command is a common way to install the |chef client| on a node, as long as that node can download the package for the |chef client| from the |company_name| website to the target node. When using the ``knife bootstrap`` command, the |omnibus installer| will detect the version of the operating system, and then install the appropriate version of the |chef client|."
+# 54de1aab43e149e690790aae1dd1a97e
+msgid "The ``knife bootstrap`` command is a common way to install the |chef client| on a node. The default for this approach assumes that node can access the |company_name| website so that it may download the |chef client| package from that location."
 msgstr ""
 
 #: ../../includes_install/includes_install_chef_client.rst:6
-# e3a6ec9f75894467b97a4e36cfb1b4f6
-msgid "The |omnibus installer| uses a single command to install the |chef client| and all of its dependencies, including an embedded version of |ruby|, |rubygems|, |open ssl|, key-value stores, parsers, libraries, and command line utilities. The |omnibus installer| puts everything into a unique directory (``opt/opscode/``) so that the |chef client| will not interfere with other applications that may be running on the target machine. Once installed, the |chef client| requires a few more configuration steps before it can perform its first |chef client| run on a node."
+# a926604450c242edb0758989c66081b1
+msgid "The |omnibus installer| will detect the version of the operating system, and then install the appropriate version of the |chef client| using a single command to install the |chef client| and all of its dependencies, including an embedded version of |ruby|, |rubygems|, |open ssl|, key-value stores, parsers, libraries, and command line utilities."
+msgstr ""
+
+#: ../../includes_install/includes_install_chef_client.rst:8
+# f5468298e59b4b4e959c9bfbc82c4829
+msgid "The |omnibus installer| puts everything into a unique directory (``opt/opscode/``) so that the |chef client| will not interfere with other applications that may be running on the target machine. Once installed, the |chef client| requires a few more configuration steps before it can perform its first |chef client| run on a node."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:12
-# 6b5f146adb7b40aaa90ca772ec7a2800
+# fc5c06a744aa48088c75a4172e0c4e0f
 msgid "The following diagram shows the stages of the bootstrap operation, and then the list below the diagram describes in greater detail each of those stages."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:16
-# 1c474222f4974d30959bb085819b04f5
+# 129bc8fb6d8c422a8b7ec64557716cd0
 msgid "During a ``knife bootstrap`` bootstrap operation, the following happens:"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:22
-# aeb7ab66058740278bab2ef614d32917
+# 5f8051287de44dcfb5bbfe8efa3e7dea
 msgid "Stages"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:23
-# 7ea344c81fe1476e91cdc290af9f2ad4
+# 669daaabb6924e9b95433a861fc76c23
 msgid "Description"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:24
-# 259b11fc8ff44e309af4090f34d28ff0
+# fb7973dde38b4db1b9881b7f92070262
 msgid "**$ knife bootstrap**"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:25
-# 465d5b7dc9324e00ac47df425afd9f53
-msgid "On |unix|- and |linux|-based machines: The ``knife bootstrap`` command is issued from a workstation. The hostname, IP address, or |fqdn| of the target node is issued as part of this command. An |ssh| connection is established with the target node using port 22. A shell script is assembled using the ``chef-full.erb`` (the default bootstrap template), and is then executed on the target node."
+# 53b3f2298128430c89263c37c69dfe72
+msgid "On |unix|- and |linux|-based machines: The ``knife bootstrap`` command is issued from a workstation. The hostname, IP address, or |fqdn| of the target node is issued as part of this command. An |ssh| connection is established with the target node using port 22. A shell script is assembled using the |erb chef_full| (the default bootstrap template), and is then executed on the target node."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:27
-# 2cbe5d9427f146ecb3c97e51a1c10738
+# be6909ddf2ba404484a18d7d39b51f13
 msgid "On |windows| machines: The ``knife bootstrap windows winrm`` command is issued from a workstation. (This command is part of the `knife windows plugin <http://docs.opscode.com/plugin_knife_windows.html>`_.) The hostname, IP address, or |fqdn| of the target node is issued as part of this command. A connection is established with the target node using |windows remote management| over port 5985. (|windows remote management| must be enabled with the corresponding firewall rules in place.)"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:28
-# 7a586b6e874c43239e571fad34e485eb
+# 711389f98b3e42ddb8fd4ab11fca092b
 msgid "**Get the install script from Chef**"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:29
-# 5da36f827ed9425889898da4a5d25169
-msgid "On |unix|- and |linux|-based machines: The shell script that is derived from the ``chef-full.erb`` bootstrap template will make a request to the |company_name| website to get the most recent version of a second shell script (``install.sh``)."
+# 363733a0cc6543b999c93977371e3c0d
+msgid "On |unix|- and |linux|-based machines: The shell script that is derived from the |erb chef_full| bootstrap template will make a request to the |company_name| website to get the most recent version of a second shell script (``install.sh``)."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:31
-# 6b28584a5bb2420d8fac7e5383f67114
-msgid "On |windows| machines: The batch file that is derived from the ``windows-chef-client-msi.erb`` bootstrap template will make a request to the |company_name| website to get the .msi installer."
+# 1c4c288316f84dbfae89a8de45784804
+msgid "On |windows| machines: The batch file that is derived from the |erb chef_windows| bootstrap template will make a request to the |company_name| website to get the .msi installer."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:32
-# c87d9d33757948c6bd272dc770ea8987
+# 0e4c4d8f210c4602844092ad63153366
 msgid "**Get the chef-client package from Chef**"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:33
-# b8e49daca4d84e53a9a06fe1246d5fa4
-msgid "The second shell script (or batch file) then gathers system-specific information and determines the correct package for the |chef client|. The second shell script (or batch file) makes a request to the |company_name| website, and then downloads the appropriate package from s3.amazonaws.com."
+# 7d18f800ada545c3b7a5df6ec0862d0c
+msgid "The second shell script (or batch file) then gathers system-specific information and determines the correct package for the |chef client|. The second shell script (or batch file) makes a request to the |company_name| website, and then downloads the appropriate package from |url bootstrap_s3|."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:34
-# d704fef69aca42b6abb804a8a5803b13
+# 9d84e4ef2c624d95b970546ae03494cf
 msgid "**Install the chef-client**"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:35
-# d53761f5e95c439a90b2a136c0493db4
+# d57d3b9e8a84463ca66ee956a3578f58
 msgid "The |chef client| is installed on the target node."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:36
-# e330b515ec8d422f8926fd20e720e580
+# dd380d7321f24a7c9bb5f4fe5633d0f5
 msgid "**Start the chef-client run**"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:37
-# 57c0731118c44a50898d2fd80694ac3c
+# f169c2ca836f41cb93fb219456fc41d7
 msgid "On |unix|- and |linux|-based machines: The second shell script executes the ``chef-client`` binary with a set of initial settings stored within ``first-boot.json`` on the node. ``first-boot.json`` is generated from the workstation as part of the initial ``knife bootstrap`` command."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:39
-# 27473714db824977a7eb99aa9af110e3
-msgid "On |windows| machines: The batch file that is derived from the ``windows-chef-client-msi.erb`` bootstrap template executes the ``chef-client`` binary with a set of initial settings stored within ``first-boot.json`` on the node. ``first-boot.json`` is generated from the workstation as part of the initial ``knife bootstrap`` command."
+# 34f224f4e99e4da6aab9ce51145606f1
+msgid "On |windows| machines: The batch file that is derived from the |erb chef_windows| bootstrap template executes the ``chef-client`` binary with a set of initial settings stored within ``first-boot.json`` on the node. ``first-boot.json`` is generated from the workstation as part of the initial ``knife bootstrap`` command."
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:40
-# 1a0d759a557f42cdba4eb7efd208560b
+# 9053a629595b4af3ba2b9a2fac857b6f
 msgid "**Complete the chef-client run**"
 msgstr ""
 
 #: ../source/essentials_nodes_bootstrap.rst:41
-# 3c8969d3f6e64d97931bb22fff90d119
+# ed35075c81e94b04936e3c4b7c2838c3
 msgid "The |chef client| run proceeds, using HTTPS (port 443), and registers the node with the |chef server|."
 msgstr ""
 
