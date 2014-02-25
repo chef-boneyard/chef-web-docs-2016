@@ -23,16 +23,30 @@
        |windows|: |mode windows security|
    * - ``files_owner``
      - |owner windows security|
+   * - ``group``
+     - |windows group_identifier|
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
+   * - ``mode``
+     - |mode resource_directory|
+       
+       The behavior is different depending on the platform.
+       
+       |unix|- and |linux|-based systems: |mode *nix|
+       
+       |windows|: |mode windows security|
    * - ``overwrite``
      - |use file_overwrite| Default value: ``true``.
+   * - ``owner``
+     - |owner windows security|
    * - ``path``
      - |path directory| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_parameter|
    * - ``purge``
      - |purge target_directory| Default value: ``false``.
+   * - ``recursive``
+     - Indicates that parent directories are created or deleted recursively. Required value: ``true``; the |chef client| must be able to create the directory structure, including parent directories (if missing), as defined in ``COOKBOOK_NAME/files/default/REMOTE_DIRECTORY``.
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
