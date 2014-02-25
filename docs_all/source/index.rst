@@ -52,7 +52,7 @@ All about Chef ...
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_windows.html">Install the chef-client on a Machine Running Microsoft Windows</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_bootstrap.html">Bootstrap a Node</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/install_server_scenario_vm.html">Install Chef Server 11.x on a Virtual Machine</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/migrate_to_hosted.html">Migrate to Enterprise Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef/migrate_to_enterprise.html">Migrate to Enterprise Chef</a> </br>
 
 **Configuration Files** 
 
@@ -134,7 +134,7 @@ All about Chef ...
    lwrps
    lwrps_custom
    metadata_rb
-   migrate_to_hosted
+   migrate_to_enterprise
    ohai
    openstack
    resources

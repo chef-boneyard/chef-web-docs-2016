@@ -186,7 +186,7 @@ Installation scenarios:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_server_febe.html">Scaled Front and Back Ends</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_standalone.html">Upgrade for Standalone</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/upgrade_server_ha.html">Upgrade for High Availability</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_hosted.html">Migrate to Enterprise Chef from Open Source Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/migrate_to_enterprise.html">Migrate to Enterprise Chef from Open Source Chef</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_reporting.html">Install the Reporting Add-on</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_manage.html">Install the Manager Add-on</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/install_push_jobs.html">Install the Push Jobs Add-on</a> </br>
@@ -621,8 +621,7 @@ The following topics discuss using |chef server oec| with platforms:
    lwrp_windows
    lwrp_yum
    manage
-   migrate_from_osc
-   migrate_to_hosted
+   migrate_to_enterprise
    oec_overview
    ohai
    ohai_custom

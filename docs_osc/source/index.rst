@@ -515,7 +515,6 @@ The following topics discuss using |chef server osc| with platforms:
    lwrp_webpi
    lwrp_windows
    lwrp_yum
-   migrate_to_hosted
    osc_overview
    ohai
    ohai_custom
