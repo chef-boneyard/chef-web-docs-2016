@@ -64,7 +64,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Install:** :doc:`Prerequisites </install_server_pre>` | :doc:`Install the Enterprise Chef Server </install_server_oec>` | :doc:`Download the chef-client using the Omnitruck API </api_omnitruck>`
 
-**Install Scenarios:** :doc:`Standalone </install_server_standalone>` | :doc:`Scaled Back End </install_server_be>` | :doc:`Scaled Front End </install_server_fe>` | :doc:`Scaled Front and Back Ends </install_server_febe>` | :doc:`Migrate to Hosted Enterprise Chef from Open Source Chef </migrate_to_hosted>` | :doc:`Upgrade for Standalone </upgrade_server_standalone>` | :doc:`Upgrade for High Availability </upgrade_server_ha>`
+**Install Scenarios:** :doc:`Standalone </install_server_standalone>` | :doc:`Scaled Back End </install_server_be>` | :doc:`Scaled Front End </install_server_fe>` | :doc:`Scaled Front and Back Ends </install_server_febe>` | :doc:`Migrate to Enterprise Chef from Open Source Chef </migrate_from_osc>` | :doc:`Upgrade for Standalone </upgrade_server_standalone>` | :doc:`Upgrade for High Availability </upgrade_server_ha>`
 
 **Install Options:** :doc:`Active Directory / LDAP </install_server_ldap>` | :doc:`Create Users </install_server_users>` | :doc:`Create Organizations </install_server_orgs>`
 
@@ -324,6 +324,7 @@ Cookbooks
    lwrp_windows
    lwrp_yum
    manage
+   migrate_from_osc
    migrate_to_hosted
    ohai
    ohai_custom
