@@ -40,6 +40,10 @@ Actions
 =====================================================
 .. include:: ../../includes_resources/includes_resource_deploy_actions.rst
 
+Naming Resources
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_deploy_actions_resource_names.rst
+
 Attributes
 =====================================================
 .. include:: ../../includes_resources/includes_resource_deploy_attributes.rst
