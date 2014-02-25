@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This resource can be used to create directory structures, as long as each directory within that structure is created explicitly. This is because the ``recursive`` attribute only applies ``group``, ``mode``, and ``owner`` attribute values to the leaf directory. 
+The |resource remote_directory| resource can be used to create directory structures on a target node based on a directory structure that is defined in a cookbook. When the required directory structure does not exist, the |resource remote_directory| resource will create that structure explicitly. 
 
 A directory structure::
 
@@ -21,35 +21,16 @@ The following example shows a way create a file in the ``/baz`` directory:
      action :create
    end
 
-But with this example, the ``group``, ``mode``, and ``owner`` attribute values will only be applied to ``/baz``. Which is fine, if that's what you want. But most of the time, when the entire ``/foo/bar/baz`` directory structure is not there, you must be explicit about each directory. For example:
+With this example, the ``group``, ``mode``, and ``owner`` attribute values will be applied to ``/baz``. If the directory structure were::
 
-.. code-block:: ruby
+  /foo
 
-   %w[ /foo /foo/bar /foo/bar/baz ].each do |path|
-     remote_directory path do
-       owner "root"
-       group "root"
-       mode 00755
-     end
-   end
+the |resource remote_directory| resource would first create the required directory structure::
 
-This approach will create the correct hierarchy---``/foo``, then ``/bar`` in ``/foo``, and then ``/baz`` in ``/bar``---and also with the correct attribute values for ``group``, ``mode``, and ``owner``.
+  /foo
+    /bar
+      /baz
 
-A similar approach is required when changing the access permissions to directory objects, the owner of a file, or the group associated with a directory object. For example:
-
-.. code-block:: ruby
-
-   %w[ "/usr/local/**/*" ].each do |path|
-     file path do
-       owner "root"
-       group "root"
-     end if File.file?(path)
-     remote_directory path do
-       owner "root"
-       group "root"
-     end if File.directory?(path)
-   end
-
-Though it should be noted that the previous example isn't a great approach when there are a large number of actions that will take place. Consider using the |resource execute| resource and/or a definition to handle use cases that need to support a large number of recursive actions.
+and apply the ``group``, ``mode``, and ``owner`` attribute values to the entire directory structure.
 
 
