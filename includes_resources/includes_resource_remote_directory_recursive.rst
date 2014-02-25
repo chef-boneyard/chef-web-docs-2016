@@ -14,7 +14,7 @@ The following example shows a way create a file in the ``/baz`` directory:
 
 .. code-block:: ruby
 
-   directory "/foo/bar/baz" do
+   remote_directory "/foo/bar/baz" do
      owner "root"
      group "root"
      mode 00755
@@ -26,7 +26,7 @@ But with this example, the ``group``, ``mode``, and ``owner`` attribute values w
 .. code-block:: ruby
 
    %w[ /foo /foo/bar /foo/bar/baz ].each do |path|
-     directory path do
+     remote_directory path do
        owner "root"
        group "root"
        mode 00755
@@ -44,7 +44,7 @@ A similar approach is required when changing the access permissions to directory
        owner "root"
        group "root"
      end if File.file?(path)
-     directory path do
+     remote_directory path do
        owner "root"
        group "root"
      end if File.directory?(path)
