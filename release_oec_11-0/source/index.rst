@@ -58,7 +58,7 @@ Installation scenarios:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_fe.html">Scaled Front End</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/install_server_febe.html">Scaled Front and Back Ends</a> </br>
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/migrate_to_hosted.html">Migrate to Hosted Enterprise Chef</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/migrate_to_hosted.html">Migrate from Open Source Chef</a> </br>
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/upgrade_server_standalone.html">Standalone Upgrade</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/release/oec_11-1/upgrade_server_ha.html">High Availability Upgrade</a> </br>
