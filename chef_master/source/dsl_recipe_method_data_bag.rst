@@ -12,11 +12,7 @@ The following examples show how the ``data_bag`` and ``data_bag_item`` methods c
 
 **Get the contents of a data bag**
 
-.. code-block:: ruby
-
-   data_bag('users').each do |user|
-     data_bag_item('users', user['id'])
-   end
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_data_bag.rst
 
 **Use the contents of a data bag in a recipe**
 

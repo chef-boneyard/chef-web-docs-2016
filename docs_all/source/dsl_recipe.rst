@@ -63,6 +63,10 @@ data_bag, data_bag_item
 
 The following examples show how the ``data_bag`` and ``data_bag_item`` methods can be used in a recipe.
 
+**Get the contents of a data bag**
+
+.. include:: ../../step_dsl_recipe/step_dsl_recipe_data_bag.rst
+
 **Use the contents of a data bag in a recipe**
 
 .. include:: ../../step_resource/step_resource_file_use_data_bag.rst
