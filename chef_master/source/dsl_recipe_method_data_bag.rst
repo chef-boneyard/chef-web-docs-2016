@@ -10,6 +10,14 @@ Examples
 =====================================================
 The following examples show how the ``data_bag`` and ``data_bag_item`` methods can be used in a recipe.
 
+**Get the contents of a data bag**
+
+.. code-block:: ruby
+
+   data_bag('users').each do |user|
+     data_bag_item('users', user['id'])
+   end
+
 **Use the contents of a data bag in a recipe**
 
 .. include:: ../../step_resource/step_resource_file_use_data_bag.rst
