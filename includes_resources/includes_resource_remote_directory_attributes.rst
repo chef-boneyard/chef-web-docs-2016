@@ -46,7 +46,7 @@
    * - ``purge``
      - |purge target_directory| Default value: ``false``.
    * - ``recursive``
-     - Indicates that parent directories are created or deleted recursively. Required value: ``true``; the |chef client| must be able to create the directory structure, including parent directories (if missing), as defined in ``COOKBOOK_NAME/files/default/REMOTE_DIRECTORY``.
+     - Indicates that parent directories are created or deleted recursively. Default value: ``true``; the |chef client| must be able to create the directory structure, including parent directories (if missing), as defined in ``COOKBOOK_NAME/files/default/REMOTE_DIRECTORY``.
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
