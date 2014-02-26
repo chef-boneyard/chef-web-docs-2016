@@ -4,7 +4,7 @@ To install the |subcommand knife push jobs| plugin using |rubygems|, run the fol
 
 .. code-block:: bash
 
-   $ /opt/chef/embedded/bin/gem install knife-pushy
+   $ /opt/chef/embedded/bin/gem install knife-push
 
 
 
