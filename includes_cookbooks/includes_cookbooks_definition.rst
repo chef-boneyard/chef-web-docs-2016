@@ -14,4 +14,3 @@ A definition is best-used when:
 
 * Data needs to be passed from one (or more) recipes into a single definition
 * A repeating usage pattern exists for one (or more) resources
-* An action does not need to be sent directly to a resource; resource notifications will not work normally when the resource to be notified is located in a definition
