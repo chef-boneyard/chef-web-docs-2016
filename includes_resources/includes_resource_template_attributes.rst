@@ -48,6 +48,6 @@
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source template| Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: the ``name`` of the resource block (see Syntax section above).
+     - |source template| |source template_local| May be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``variables``
      - |variables passed_to_template|

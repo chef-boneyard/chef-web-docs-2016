@@ -36,6 +36,6 @@
    * - ``rights``
      - |windows| only. |rights windows security|
    * - ``source``
-     - |source file_location chef_11-4| Can be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: basename of ``name`` plus ``.erb``.
+     - |source template| |source template_local| May be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``variables``
      - |variables passed_to_template|
