@@ -1,3 +1,3 @@
-.. THIS PAGE IS IDENTICAL TO docs.opscode.com/migrate_from_osc.html BY DESIGN
+.. THIS PAGE IS IDENTICAL TO docs.opscode.com/migrate_to_enterprise.html BY DESIGN
 
-.. include:: ../../chef_master/source/migrate_from_osc.rst
+.. include:: ../../chef_master/source/migrate_to_enterprise.rst

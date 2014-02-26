@@ -1511,7 +1511,10 @@
 .. |ssl_client_key| replace:: The |open ssl| |x509| key. This setting is generated automatically by the |chef client| and most users will not need to modify it.
 .. |ssl_client_key_yum| replace:: The path of the location in which the |ssl| client key used by |yum| is located.
 .. ssl_verify_mode is also in the server_security.html topic.
-.. |ssl_verify_mode| replace:: The verify mode for HTTPS requests. Set to ``:verify_none`` to not send certificate requests. Set to ``:verify_peer`` to send certificate requests to a |chef client|. Set to ``:verify_api_cert`` to enable SSL validation for HTTPS connections between the |chef client| and the |chef server|. For users of hosted |chef server oec|, ``:verify_peer`` is recommended as the verification mode; depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified.
+.. |ssl_verify_mode| replace:: The verify mode for HTTPS requests.
+.. |ssl_verify_mode_verify_api_cert| replace:: Use ``:verify_api_cert`` to only do SSL validation of the chef server connection; may be needed if the |chef client| needs to talk to other services that have broken SSL certificates.
+.. |ssl_verify_mode_verify_none| replace:: Use ``:verify_none`` to do no validation of SSL certificates.
+.. |ssl_verify_mode_verify_peer| replace:: Use ``:verify_peer`` to do validation of all SSL certificates, including the |chef server| connections, S3 connections, and any HTTPS |resource remote_file| resource URLs used in the |chef client| run.
 .. |ssl_verify_mode_11-6| replace:: The verify mode for HTTPS requests. Set to ``:verify_none`` to not send certificate requests. Set to ``:verify_peer`` to send certificate requests to a |chef client|. For users of hosted |chef server oec|, ``:verify_peer`` is recommended as the verification mode; depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified.
 .. |ssl_verify_yum| replace:: Indicates whether |yum| verifies |ssl| certificates.
 .. |start| replace:: The row at which return results will begin.
