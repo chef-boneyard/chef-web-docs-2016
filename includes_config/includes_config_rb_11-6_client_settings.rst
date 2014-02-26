@@ -228,7 +228,12 @@ This configuration file has the following settings:
  
           ssl_client_key ""
    * - ``ssl_verify_mode``
-     - |ssl_verify_mode_11-6| For example, on an |ubuntu| system:
+     - |ssl_verify_mode|
+       
+       * |ssl_verify_mode_verify_none|
+       * |ssl_verify_mode_verify_peer| This is the recommended setting.
+       
+       Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified. For example:
        ::
  
           ssl_verify_mode :verify_peer
