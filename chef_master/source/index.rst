@@ -233,6 +233,7 @@ Cookbooks
    essentials_roles
    essentials_search
    feedback
+   getting_started_with_chef
    handlers
    images
    install
