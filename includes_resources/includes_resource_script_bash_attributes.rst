@@ -30,7 +30,7 @@
    * - ``returns``
      - |return_value cmd| Default value: ``0``.
    * - ``timeout``
-     - |timeout command|
+     - |timeout command| Default value: ``3600``.
    * - ``user``
      - |user command|
    * - ``umask``
