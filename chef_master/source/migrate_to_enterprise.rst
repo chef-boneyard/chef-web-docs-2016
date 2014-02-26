@@ -132,7 +132,7 @@ A cookbook can be uploaded individually using the ``upload`` argument for the ``
 
 Configure Permissions
 =====================================================
-The permissions for all nodes need to be set. Typically, all nodes that will be configured by the |chef client| have the same permissions---``LIST``, ``READ``, and ``UPDATE``---and belong to the ``clients`` group.
+The permissions for all nodes need to be set. Typically, all nodes that will be configured by the |chef client| have the same permissions---``DELETE``, ``GRANT``, ``READ`` and ``UPDATE``---and belong to the ``clients`` group.
 
 The following code can be used to set the correct permissions:
 
