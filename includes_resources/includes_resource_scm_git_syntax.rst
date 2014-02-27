@@ -24,7 +24,7 @@ The following is an example shows the git resource:
 
    git "#{Chef::Config[:file_cache_path]}/app_name" do
      repository node[:app_name][:git_repository]
-     reference node[:app_name][:git_revision]
+     revision node[:app_name][:git_revision]
      action :sync
      notifies :run, "bash[compile_app_name]"
    end
