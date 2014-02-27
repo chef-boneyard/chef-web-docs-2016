@@ -13,6 +13,7 @@ The steps for migrating data from |chef server osc| to |chef server oec| (hosted
 #. Run ``knife download`` from the |chef server osc| server
 #. Update ``chef_server_url``
 #. Run ``knife upload`` to hosted |chef server oec|
+#. Configure permissions for each node
 
 Create an Organization
 =====================================================
