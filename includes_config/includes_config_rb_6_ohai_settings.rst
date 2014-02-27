@@ -7,30 +7,30 @@
 
    * - Setting
      - Description
-   * - ``ohai[:directory]``
+   * - ``Ohai::Config[:directory]``
      - |path plugin_ohai|
-   * - ``ohai[:disabled_plugins]``
+   * - ``Ohai::Config[:disabled_plugins]``
      - |disable plugin_ohai| For example:
        ::
  
-          ohai[:disabled_plugins] = "my_plugin"
+          Ohai::Config[:disabled_plugins] = "my_plugin"
 
        or:
        ::
  
-          ohai[:disabled_plugins] = "windows::my_plugin"
+          Ohai::Config[:disabled_plugins] = "windows::my_plugin"
 
        or:
        ::
  
-          ohai[:disabled_plugins] = ["passwd", "rackspace", "dmi", "dmi_common"]
+          Ohai::Config[:disabled_plugins] = ["passwd", "rackspace", "dmi", "dmi_common"]
 
-   * - ``ohai[:hints_path]``
+   * - ``Ohai::Config[:hints_path]``
      - |path hint_ohai|
-   * - ``ohai[:log_level]``
+   * - ``Ohai::Config[:log_level]``
      - |log_level|
-   * - ``ohai[:logfile]``
+   * - ``Ohai::Config[:logfile]``
      - |log_location|
-   * - ``ohai[:version]``
+   * - ``Ohai::Config[:version]``
      - |version ohai|
 
