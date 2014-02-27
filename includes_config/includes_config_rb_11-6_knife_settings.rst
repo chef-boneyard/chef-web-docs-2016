@@ -38,7 +38,7 @@ This configuration file has the following settings:
      - The minimum required version of data bag encryption. Possible values: ``1`` or ``2``. When all of the machines in an organization are running |chef client| version 11.6 (or higher), it is recommended that this value be set to ``2``. For example:
        ::
  
-          data_bag_encrypt_version "2"   
+          data_bag_encrypt_version 2   
    * - ``node_name``
      - |name node| This is typically also the same name as the computer from which |knife| is run. For example:
        ::
