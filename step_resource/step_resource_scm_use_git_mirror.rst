@@ -6,6 +6,6 @@
 
    git "/opt/mysources/couch" do
      repository "git://git.apache.org/couchdb.git"
-     reference "master"
+     revision "master"
      action :sync
    end
