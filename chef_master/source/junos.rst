@@ -54,7 +54,7 @@ netdev_lag
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_lwrp/includes_lwrp_netdev_lag.rst
 
-.. note:: The number of supported aggregated Ethernet interfaces on a switch must be manually configured before this resource can be used to create LAGs. Use the following command to configure the number of supported interfaces:
+.. note:: The number of supported aggregated Ethernet interfaces on a switch must be manually configured before this resource can be used to create LAGs. Use the `aggregated-devices <http://www.juniper.net/techpubs/en_US/junos13.3/topics/reference/configuration-statement/aggregated-devices-chassis-ex-series.html>`_ command to configure the number of supported interfaces:
    
    .. code-block:: bash
    
