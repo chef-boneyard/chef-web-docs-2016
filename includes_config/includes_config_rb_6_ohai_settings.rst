@@ -34,3 +34,4 @@
    * - ``Ohai::Config[:version]``
      - |version ohai|
 
+.. note:: The |ohai| executable ignores settings in the |client rb| file when |ohai| is run independently of the |chef client|.
