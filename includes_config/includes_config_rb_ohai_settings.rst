@@ -13,12 +13,17 @@
      - |disable plugin_ohai| For example:
        ::
  
-          Ohai::Config[:disabled_plugins] = :my_plugin
+          Ohai::Config[:disabled_plugins] = "my_plugin"
 
        or:
        ::
  
-          Ohai::Config[:disabled_plugins] = [:passwd, :rackspace, :dmi, :dmi_common]
+          Ohai::Config[:disabled_plugins] = "windows::my_plugin"
+
+       or:
+       ::
+ 
+          Ohai::Config[:disabled_plugins] = ["passwd", "rackspace", "dmi", "dmi_common"]
 
    * - ``Ohai::Config[:hints_path]``
      - |path hint_ohai|
