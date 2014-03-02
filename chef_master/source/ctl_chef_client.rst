@@ -12,6 +12,14 @@ Options
 =====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_options.rst
 
+Run in Local Mode
+=====================================================
+.. include:: ../../includes_chef_client/includes_chef_client_local_mode.rst
+
+About |chef zero|
+-----------------------------------------------------
+.. include:: ../../includes_chef/includes_chef_zero.rst
+
 Run with Elevated Privileges
 =====================================================
 .. include:: ../../includes_ctl_chef_client/includes_ctl_chef_client_elevated_privileges.rst
