@@ -12,9 +12,10 @@ What's New
 =====================================================
 The following items are new for |chef 11-10| and/or are changes from previous versions. The short version:
 
-* **Use a recipe with the chef-client local mode** A recipe can now be specified when running the |chef client| in local mode.
-* **New attributes for the group resource** Members can be removed from groups (``excluded_members``) and duplicate group identifiers are allowed (``non_unique``).
+* **Use a recipe with the chef-client local mode** A recipe can now be specified when running the |chef client| in local mode
+* **New attributes for the group resource** Members can be removed from groups (``excluded_members``) and duplicate group identifiers are allowed (``non_unique``)
 * **New compare subcommand for knife environment** Compare cookbook versions for environments
+* **New attributes for git resource** The ``checkout_branch`` and ``enable_checkout`` attributes were added to allow greater specificity for branch checkouts
 
 |chef client| Options
 -----------------------------------------------------
@@ -29,7 +30,7 @@ The syntax for using this option is:
 
    $ chef-client [options] [RECIPE_FILE...]
 
-|resource group| Resource Attributes
+|resource group| Attributes
 -----------------------------------------------------
 The following attributes have been added to the |resource group| resource:
 
@@ -44,6 +45,20 @@ The following attributes have been added to the |resource group| resource:
    * - ``non_unique``
      - |non_unique_members| Default value: ``false``.
 
+|resource scm_git| Attributes
+-----------------------------------------------------
+The following attributes have been added to the |resource scm_git| resource:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``checkout_branch``
+     - Use to specify the name of a branch to be checked out. Default value: ``deploy``.
+   * - ``enable_checkout``
+     - Use to check out a repo from master. Default value: ``true``.
 
 knife environment compare
 -----------------------------------------------------
