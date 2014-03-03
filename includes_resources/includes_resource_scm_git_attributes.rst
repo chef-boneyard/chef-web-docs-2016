@@ -11,10 +11,14 @@
      - Description
    * - ``additional_remotes``
      - |additional_remotes|
+   * - ``checkout_branch``
+     - Use to specify the name of a branch to be checked out. Default value: ``deploy``.
    * - ``depth``
      - |depth git_shallow_clone| The default behavior will do a full clone.
    * - ``destination``
      - |destination resource scm| Default value: the ``name`` of the resource block (see Syntax section above).
+   * - ``enable_checkout``
+     - Use to check out a repo from master. Default value: ``true``.
    * - ``enable_submodules``
      - |enable_submodules| Default value: ``false``.
    * - ``group``
