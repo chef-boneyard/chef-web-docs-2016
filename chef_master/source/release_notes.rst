@@ -56,9 +56,9 @@ The following attributes have been added to the |resource scm_git| resource:
    * - Attribute
      - Description
    * - ``checkout_branch``
-     - Use to specify the name of a branch to be checked out. Default value: ``deploy``.
+     - |checkout_branch git| Default value: ``deploy``.
    * - ``enable_checkout``
-     - Use to check out a repo from master. Default value: ``true``.
+     - |enable_checkout git| Default value: ``true``.
 
 knife environment compare
 -----------------------------------------------------
