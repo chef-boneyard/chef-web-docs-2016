@@ -13,17 +13,17 @@ The syntax for an |ohai| plugin is as follows:
      
      def shared_method
        # some Ruby code that defines the shared method
-       attribute Mash.new
+       attribute my_data
      end
 
      collect_data(:default) do
        # some Ruby code
-       attribute Mash.new
+       attribute my_data
      end
 
      collect_data(:platform...) do
        # some Ruby code that defines platform-specific requirements
-       attribute Mash.new
+       attribute my_data
      end
 
    end
@@ -38,7 +38,7 @@ where
 * ``collect_data`` is a block of |ruby| code that is called by |ohai| when it runs; one (or more) ``collect_data`` blocks can be defined in a plugin, but only a single ``collect_data`` block is ever run.
 * ``collect_data(:default)`` is the code block that runs when a node's platform is not defined by a platform-specific ``collect_data`` block
 * ``collect_data(:platform)`` is a platform-specific code block that is run when a match exists between the node's platform and this ``collect_data`` block; only one ``collect_data`` block may exist for each platform; possible values: ``:aix``, ``:darwin``, ``:freebsd``, ``:hpux``, ``:linux``, ``:openbsd``, ``:netbsd``, ``:solaris2``, ``:windows``, or any other value from ``RbConfig::CONFIG['host_os']``
-* ``Mash.new`` is used to collect the data defined by the |ohai| plugin; this location will vary, depending on the complexity of the |ohai| plugin and the |ruby| code used to define it 
+* ``my_data`` is  string or an empty mash (``Mash.new``). This is used to define the data that should be collected by the plugin
 
 For example, the following plugin looks up data on virtual machines hosted in |amazon ec2|, |google compute engine|, |rackspace|, |eucalyptus|, |linode|, |openstack|, and |windows azure|:
 

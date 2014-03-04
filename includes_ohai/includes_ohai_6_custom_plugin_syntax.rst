@@ -11,7 +11,7 @@ The syntax for an |ohai 6| plugin is as follows:
 
    # start of Ruby code that defines the Ohai 6 plugin
    
-     attribute Mash.new
+     attribute my_data
    
    # end of Ruby code that defines the Ohai 6 plugin
 
@@ -19,7 +19,7 @@ where
 
 * ``require_plugin`` is used to extend one (or more) existing |ohai 6| plugins; an often-used value for ``require_plugin`` is ``"#{os}::hostname"``
 * Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin. This attribute will become an automatic attribute (i.e. ``node[:attribute]``) after it is collected by |ohai| at the start of the |chef client| run. An attribute can also be defined using an ``attribute/subattribute`` pattern
-* ``Mash.new`` is used to collect the data defined by the |ohai 6| plugin; this location will vary, depending on the complexity of the |ohai 6| plugin and the |ruby| code used to define it
+* ``my_data`` is  string or an empty mash (``Mash.new``). This is used to define the data that should be collected by the plugin
 
 For example, an |ohai 6| plugin could be built to add additional ``ipaddrtype_iface`` network attributes to help make it semantically easier to retrieve addresses:
 
