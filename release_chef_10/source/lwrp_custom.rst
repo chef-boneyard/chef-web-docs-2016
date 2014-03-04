@@ -34,7 +34,7 @@ Platform vs. Lightweight
 
 |company_name|-maintained
 =====================================================
-.. include:: ../../includes_lwrp/includes_lwrp_opscode_maintained.rst
+.. include:: ../../includes_lwrp/includes_lwrp_chef_maintained.rst
 
 More Reading
 =====================================================

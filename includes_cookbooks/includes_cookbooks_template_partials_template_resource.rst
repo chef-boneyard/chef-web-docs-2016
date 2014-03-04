@@ -2,8 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-
-The |resource template| resource can be used to reference a partial template file by using the ``variables`` parameter, the ``:partials`` option, and a |hash| of partial template files. For example:
+The |resource template| resource can be used to reference a partial template file by using the ``variables`` parameter, the ``:partials`` option, and a |ruby hash| of partial template files. For example:
 
 .. code-block:: ruby
 

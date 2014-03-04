@@ -97,7 +97,7 @@ Create lists using arrays:
    x = x + ["d"]       # => ["a", "b", "c", "d"]
    x                   # => ["a", "b", "c", "d"]
  
-A hash is a list with keys and values. Sometimes they don't have a set order:
+A |ruby hash| is a list with keys and values. Sometimes they don't have a set order:
 
 .. code-block:: ruby
 

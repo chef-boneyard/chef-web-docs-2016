@@ -253,7 +253,7 @@
 .. |couchdb_url| replace:: The URL for the |couch db| database.
 .. |couchdb_version| replace:: Optional. The version of the |couch db| database.
 .. |create_dirs_before_symlink| replace:: Use this attribute to create directories before symbolic links are created. This attribute runs after ``purge_before_symlink`` and before ``symlink``.
-.. |create_env_directory| replace:: Use to create an ``env`` directory for a service. The directory will contain files named for each environment variable that is required, with the contents of its value in a |hash|. For more information about the ``env`` directory, see: http://cr.yp.to/daemontools/envdir.html.
+.. |create_env_directory| replace:: Use to create an ``env`` directory for a service. The directory will contain files named for each environment variable that is required, with the contents of its value in a |ruby hash|. For more information about the ``env`` directory, see: http://cr.yp.to/daemontools/envdir.html.
 .. |creates file_exists| replace:: Indicates that a command to create a file will not be run when that file already exists.
 .. |credential_file google| replace:: The credential file used by |google compute engine|. (This file is created when running the ``knife google setup`` command.)
 .. |critical_condition nagios_nrpecheck| replace:: A string that is passed to the command using the ``-c`` flag.
@@ -352,7 +352,7 @@
 .. |editor| replace:: The |chef editor| that is used for all interactive commands.
 .. |effective_cache_size postgresql| replace:: The size of the disk cache that is used for data files.
 .. |email| replace:: The email address for the individual who maintains the cookbook. This option will place an email address in each of the pre-created files. If this option is not specified, an email name of "your_email" will be used instead; it can be easily modified later.
-.. |enable_checkout git| replace: Use to check out a repo from master.
+.. |enable_checkout git| replace:: Use to check out a repo from master.
 .. |enable_group_conditionals| replace:: Indicates whether |yum| allows conditional packages.
 .. |enable_package_groups| replace:: Indicates whether |yum| will allow the use of package groups for this repository.
 .. |enable_reporting| replace:: Indicates that data collection reporting is enabled during a |chef client| run.
@@ -365,12 +365,12 @@
 .. |enable reporting_url_fatals| replace:: Indicates that the |chef client| run will fail if reporting data cannot be sent to the |chef server oec| server (for any reason).
 .. |enable service| replace:: Indicates whether the service is enabled.
 .. |environment cookbooks| replace:: The environment that will be applied to all cookbooks that are uploaded using the same action. This will automatically set the version constraint on the environment to match the version of a cookbook that is being uploaded.
-.. |environment key_value_pairs| replace:: A |hash| of key-value pairs in the form of ``KEY1=val1,KEY2=val2`` that will be placed in the environment for a child process.
+.. |environment key_value_pairs| replace:: A |ruby hash| of key-value pairs in the form of ``KEY1=val1,KEY2=val2`` that will be placed in the environment for a child process.
 .. |environment set_home| replace:: Use to set the ``HOME`` environment variable.
 .. |environment set_mailto| replace:: Use to set the ``MAILTO`` environment variable.
 .. |environment set_path| replace:: Use to set the ``PATH`` environment variable.
 .. |environment set_shell| replace:: Use to set the ``SHELL`` environment variable.
-.. |environment variables| replace:: A |hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``. (These variables must exist for a command to be run successfully.)
+.. |environment variables| replace:: A |ruby hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``. (These variables must exist for a command to be run successfully.)
 .. |ephemeral device| replace:: A comma-separated list of device locations to be mapped to ephemeral devices.
 .. |errorlevel| replace:: The output level for error messages.
 .. |exactarch| replace:: Indicates whether |yum| will update only packages that match the architecture already installed.
@@ -506,7 +506,7 @@
 .. |handler config_report| replace:: A list of report handlers that are available to the |chef client| during a |chef client| run.
 .. |handler config_start| replace:: A list of start handlers that are available to the |chef client| at the start of a |chef client| run.
 .. |hardware_address| replace:: The hardware address for the network interface.
-.. |headers custom| replace:: A |hash| of custom headers.
+.. |headers custom| replace:: A |ruby hash| of custom headers.
 .. |heap_size solr| replace:: The amount of memory available to |apache solr|. If there is not enough memory available, search queries made by nodes to |apache solr| may fail. The amount of memory that must be available also depends on the number of nodes in the organization, the frequency of search queries, and other characteristics that are unique to each organization. In general, as the number of nodes increases, so will the amount of memory.
 .. |help subcommand| replace:: Shows help for the command.
 .. |helper| replace:: Use to define a helper method inline. For example: ``helper(:hello_world) { "hello world" }`` or ``helper(:app) { node["app"] }`` or ``helper(:app_conf) { |setting| node["app"][setting] }``.
@@ -717,7 +717,7 @@
 .. |lwrp action create cloudkick_check| replace:: Use to create a |cloudkick| check.
 .. |lwrp action create cloudkick_monitor| replace:: Use to create a |cloudkick| monitor.
 .. |lwrp action create dynect_rr| replace:: Use to create a record.
-.. |lwrp action create freebsd_port| replace:: Use to create a port options file using a template or an options |hash|.
+.. |lwrp action create freebsd_port| replace:: Use to create a port options file using a template or an options |ruby hash|.
 .. |lwrp action create gunicorn_config| replace:: Use to create a |gunicorn| configuration file.
 .. |lwrp action create python_virtualenv| replace:: Use to create a virtual |python| environment.
 .. |lwrp action create samba_user| replace:: Use to create a user.
@@ -1064,7 +1064,7 @@
 .. |openid_cstore_couchdb| replace:: Indicates whether |open id| data is stored in |couch db| (instead of the file system).
 .. |openid_cstore_path| replace:: The location in which |open id| data is stored in the file system.
 .. |opscode_support| replace:: This setting should not be changed without first consulting an |company_name| support engineer.
-.. |options freebsd| replace:: A |hash| with the option name as the key and a boolean value. For example: ``"APACHE" => true``.
+.. |options freebsd| replace:: A |ruby hash| with the option name as the key and a boolean value. For example: ``"APACHE" => true``.
 .. |options mount| replace:: An array or string that contains mount options. If this value is a string, it will be converted to an array.
 .. |orgmapper desc| replace:: |orgmapper| is a tool that can be used with non-hosted |chef server oec| to provide administrative access to back-end objects. |orgmapper| can be a dangerous tool and should be used carefully. In general, anything that needs to be done around automating user creation, making permissions changes, and so on, can be done more easily using the ``knife-acl`` plugin and by using the |chef server oec| web interface.
 .. |orgmapper desc_private_chef| replace:: |orgmapper| is a tool that can be used with |chef private| to provide administrative access to back-end objects. |orgmapper| can be a dangerous tool and should be used carefully. In general, anything that needs to be done around automating user creation, making permissions changes, and so on, can be done more easily using the ``knife-acl`` plugin and by using the |chef private| web interface.
@@ -1095,7 +1095,7 @@
 .. 
 
 .. |packages array| replace:: An array of packages to install.
-.. |params| replace:: A |hash| of extra parameters that will be passed to a template file.
+.. |params| replace:: A |ruby hash| of extra parameters that will be passed to a template file.
 .. |PART| replace:: The part of the cookbook to show: ``attributes``, ``definitions``, ``files``, ``libraries``, ``providers``, ``recipes``, ``resources``, or ``templates``. More than one part can be specified.
 .. |pass_number| replace:: The pass number used by the file system check (``fsck``) command while creating a file systems table (``fstab``) entry.
 .. |password bluelock| replace:: The password for the |bluelock| account.
@@ -1377,7 +1377,7 @@
 .. |returns| replace:: A comma-delimited list of return codes, which indicate the success or failure for the command that was run remotely.
 .. |return_value cmd| replace:: The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match.
 .. |revision| replace:: The revision to be checked out. This can be symbolic, like ``HEAD`` or it can be a source control management-specific revision identifier.
-.. |rights windows security| replace:: The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a |hash| with one (or more) advanced rights options.
+.. |rights windows security| replace:: The permissions for users and groups in a |windows| environment. For example: ``rights <permissions>, <principal>, <options>`` where ``<permissions>`` specifies the rights granted to the principal, ``<principal>`` is the group or user name, and ``<options>`` is a |ruby hash| with one (or more) advanced rights options.
 .. |role memcached| replace:: The name of a role. During a |chef client| run, a search will be performed to find a node with the same name as this value in the same environment as the current role. If a node is found, it's IP address will be used when rendering the ``memcached.yml`` file.
 .. |role-name| replace:: The name of the virtual machine.
 .. |role-size| replace:: The size of the virtual machine: ``ExtraSmall``, ``Small``, ``Medium``, ``Large``, or ``ExtraLarge``.
@@ -1435,9 +1435,9 @@
 .. |secret-file| replace:: The path to the file that contains the encryption key.
 .. |server_aliases| replace:: An array of server aliases.
 .. |server_fqdn| replace:: The |fqdn| for the server.
-.. |server_hooks| replace:: A |hash| with values that are rendered as |gunicorn| server hook functions named after the |hash| item's key name.
+.. |server_hooks| replace:: A |ruby hash| with values that are rendered as |gunicorn| server hook functions named after the |ruby hash| item's key name.
 .. |service_order keepalived| replace:: The order by which |keepalived| will start and stop services when transitioning from a primary server to a backup.
-.. |settings django_template| replace:: A |hash| of additional settings that will be made available to a template.
+.. |settings django_template| replace:: A |ruby hash| of additional settings that will be made available to a template.
 .. |shallow_clone| replace:: Indicates that the clone depth is set to ``5``.
 .. |shared_buffers postgresql| replace:: The amount of memory that is dedicated to |postgresql| for data caching.
 .. |shell| replace:: The login shell.
@@ -1523,7 +1523,7 @@
 .. |start| replace:: The row at which return results will begin.
 .. |startretries| replace:: The number of serial failure attempts |python supervisor| will allow when attempting to start a program before giving up.
 .. |startsecs| replace:: The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.
-.. |static_files| replace:: A |hash| that maps URLs to files.
+.. |static_files| replace:: A |ruby hash| that maps URLs to files.
 .. |stdin chef_apply| replace:: Use to execute a resource using standard input.
 .. |stderr_capture_maxbytes| replace:: The maximum number of bytes written to capture for ``stderr_logfile``.
 .. |stderr_events_enabled| replace:: Indicates whether events are omitted from ``stderr_logfile``.
@@ -1551,7 +1551,7 @@
 .. |supervisor_minprocs| replace:: The minimum number of process descriptors that must be available before ``supervisord`` will start successfully.
 .. |supervisor_version| replace:: Sets the version of ``supervisor`` to install; must be version 3.0 (or higher) to use ``minprocs`` and ``minfds``.
 .. |supports chef_handler| replace:: The type of handler.
-.. |supports mount| replace:: A |hash| of options for supported mount features.
+.. |supports mount| replace:: A |ruby hash| of options for supported mount features.
 .. |supports service| replace:: A list of attributes that controls how the |chef client| will attempt to manage a service: ``:restart``, ``:reload``, ``:status``. For ``:restart``, the init script or other service provider can use a restart command; if ``:restart`` is not specified, the |chef client| will attempt to stop and then start a service. For ``:reload``, the init script or other service provider can use a reload command. For ``:status``, the init script or other service provider can use a status command to determine if the service is running; if ``:status`` is not specified, the |chef client| will attempt to match the ``service_name`` against the process table as a regular expression, unless a pattern is specified as a parameter attribute.
 .. |supports user| replace:: A Mash where keys represent features and values are booleans that indicate if that feature is supported.
 .. |svlogd_num| replace:: The number of |svlogd| log files to retain.
@@ -1560,7 +1560,7 @@
 .. |svn_info_args resource| replace:: Use when the ``svn info`` command is used by the |chef client| and arguments need to be passed. (The ``svn_arguments`` command does not work when the ``svn info`` command is used.)
 .. |svn_password resource| replace:: The password for the user that has access to the |svn| repository.
 .. |svn_username resource| replace:: The user name for a user that has access to the |svn| repository.
-.. |symlink_before_migrate| replace:: Use this attribute to map files in a shared directory to the current release directory. The symbolic links for these files will be created before any migration is run. Use ``symlink_before_migrate({})`` or ``symlink_before_migrate nil`` instead of ``symlink_before_migrate {}`` because ``{}`` will be interpreted as a block rather than an empty |hash|. Set to ``nil`` to prevent the creation of default symbolic links.
+.. |symlink_before_migrate| replace:: Use this attribute to map files in a shared directory to the current release directory. The symbolic links for these files will be created before any migration is run. Use ``symlink_before_migrate({})`` or ``symlink_before_migrate nil`` instead of ``symlink_before_migrate {}`` because ``{}`` will be interpreted as a block rather than an empty |ruby hash|. Set to ``nil`` to prevent the creation of default symbolic links.
 .. |symlinks| replace:: Use this attribute to map files in a shared directory to their paths in the current release directory. This attribute runs after ``create_dirs_before_symlink`` and ``purge_before_symlink``.
 .. |syntax_check_cache_path| replace:: All files in a cookbook must contain valid |ruby| syntax. Use this setting to specify the location in which |knife| caches information about files that have been checked for valid |ruby| syntax.
 .. |syslog_device| replace:: The path of the location to which syslog messages are sent.
@@ -1581,7 +1581,7 @@
 
 .. |tags| replace:: The tags for this server.
 .. |tags list| replace:: A list of tags that will be displayed in the output.
-.. |tags hash| replace:: A |hash| of key value pairs that are used as resource tags. For example: ``{ "Name" => "foo", "Environment" => "node.chef_environment" }``.
+.. |tags hash| replace:: A |ruby hash| of key value pairs that are used as resource tags. For example: ``{ "Name" => "foo", "Environment" => "node.chef_environment" }``.
 .. |tapped| replace:: Indicates that a |homebrew| formula repository is tapped.
 .. |target windows_shortcut| replace:: The unique identifier for the object to which a |windows| shortcut will link.
 .. |target_interface| replace:: The IP address that will be assigned to the network interface.
@@ -1687,10 +1687,10 @@
 .. |validation_client_name| replace:: The name of the server that--along with the ``validation_key``--is used to determine whether a |chef client| may register with a |chef server|. The validation_client_name located in the server and client configuration files must match.
 .. |validation_key| replace:: The location of the file which contains the key used when a |chef client| is registered with a |chef server|. A validation key is signed using the ``validation_client_name`` for authentication.
 .. |value resource directory| replace:: The value with which ``key_name`` is set.
-.. |values windows_registry| replace:: A |hash| of values to be set under a registry key. The individual |hash| items will become  ``value_name => value_data`` items in the registry key.
-.. |values resource registry_key| replace:: An array of hashes, where each |hash| contains the values that will be set under a registry key. Each |hash| must contain ``:name``, ``:type``, and ``:data`` (and must contain no other key values). 
+.. |values windows_registry| replace:: A |ruby hash| of values to be set under a registry key. The individual |ruby hash| items will become  ``value_name => value_data`` items in the registry key.
+.. |values resource registry_key| replace:: An array of hashes, where each |ruby hash| contains the values that will be set under a registry key. Each |ruby hash| must contain ``:name``, ``:type``, and ``:data`` (and must contain no other key values). 
 .. |values resource registry_key types| replace:: ``:type`` represents the values available for registry keys in |windows|. Use ``:binary`` for REG_BINARY, ``:string`` for REG_SZ, ``:multi_string`` for REG_MULTI_SZ, ``:expand_string`` for REG_EXPAND_SZ, ``:dword`` for REG_DWORD, ``:dword_big_endian`` for REG_DWORD_BIG_ENDIAN, or ``:qword`` for REG_QWORD.
-.. |variables passed_to_template| replace:: A |hash| of variables that are passed into a |ruby| template file.
+.. |variables passed_to_template| replace:: A |ruby hash| of variables that are passed into a |ruby| template file.
 .. |vcpus| replace:: The number of virtual CPUs that are available per virtual machine. Possible values: ``1``, ``2``, ``4``, or ``8``.
 .. |verbose| replace:: Set for more verbose outputs. Use ``-VV`` for maximum verbosity.
 .. |verbose_logging| replace:: Indicates the level of logging. Options: ``true``, ``nil``, and ``false``. When this is set to ``false``, notifications about individual resources being processed will be suppressed (and will be output at the ``:info`` logging level). Setting this to ``false`` can be useful when a |chef client| is run as a daemon.

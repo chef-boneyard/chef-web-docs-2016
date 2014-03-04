@@ -11,7 +11,7 @@ A validation parameter is used to add zero (or more) validation parameters to an
    * - Parameter
      - Description
    * - ``:callbacks``
-     - Use to define a collection of unique keys and values (a |hash|) that should return true. For example: ``"Option #{key}'s value #{value} #{message}!"``, which will insert a key into an error message if the |ruby proc| object does not return true. For example:
+     - Use to define a collection of unique keys and values (a |ruby hash|) that should return true. For example: ``"Option #{key}'s value #{value} #{message}!"``, which will insert a key into an error message if the |ruby proc| object does not return true. For example:
 
        .. code-block:: ruby
        

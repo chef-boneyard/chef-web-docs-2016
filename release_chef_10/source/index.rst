@@ -216,10 +216,8 @@ Cookbooks
    lwrp_custom_provider_ruby
    lwrp_custom_resource
    lwrp_custom_resource_library
-   migrate_to_hosted
    ohai
    ohai_custom
-   opscode_cookbooks
    plugin_knife
    plugin_knife_authenticated_requests
    plugin_knife_custom
