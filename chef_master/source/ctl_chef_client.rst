@@ -51,13 +51,15 @@ Elevate Commands
 Examples
 =====================================================
 
-**Start a Chef run when the chef-client is running as a daemon**
+**Run the chef-client**
+
+.. code-block:: bash
+
+   $ sudo chef-client
+
+**Start a run when the chef-client is running as a daemon**
 
 .. include:: ../../step_ctl_chef_client/step_ctl_chef_client_start_chef_run_daemon.rst
-
-**Start a Chef run manually**
-
-.. include:: ../../step_ctl_chef_client/step_ctl_chef_client_start_chef_run_manual.rst
 
 **Setting the initial run-list using a JSON file**
 
