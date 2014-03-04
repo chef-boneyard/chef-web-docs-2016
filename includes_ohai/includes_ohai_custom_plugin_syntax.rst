@@ -11,7 +11,7 @@ The syntax for an |ohai| plugin is as follows:
      provides "attribute", "attribute/subattribute"
      depends "attribute", "attribute"
      
-     def a_shared_method
+     def shared_method
        # some Ruby code that defines the shared method
        attribute Mash.new
      end
@@ -34,7 +34,7 @@ where
 * ``include`` is a standard |ruby| method that allows an |ohai| plugin to include a class, such as ``Ohai::Mixin::ModuleName``
 * Required. ``provides`` is a comma-separated list of one (or more) attributes that are defined by this plugin. This attribute will become an automatic attribute (i.e. ``node[:attribute]``) after it is collected by |ohai| at the start of the |chef client| run. An attribute can also be defined using an ``attribute/subattribute`` pattern
 * ``depends`` is a comma-separated list of one (or more) attributes that are collected by another plugin; as long as the value is collected by another |ohai| plugin, it can be used by any plugin
-* ``shared_methods`` defines code that can be shared among one (or more) ``collect_data`` blocks; for example, instead of defining a mash for each ``collect_data`` block, the code can be defined as a shared method, and then called from any ``collect_data`` block
+* ``shared_method`` defines code that can be shared among one (or more) ``collect_data`` blocks; for example, instead of defining a mash for each ``collect_data`` block, the code can be defined as a shared method, and then called from any ``collect_data`` block
 * ``collect_data`` is a block of |ruby| code that is called by |ohai| when it runs; one (or more) ``collect_data`` blocks can be defined in a plugin, but only a single ``collect_data`` block is ever run.
 * ``collect_data(:default)`` is the code block that runs when a node's platform is not defined by a platform-specific ``collect_data`` block
 * ``collect_data(:platform)`` is a platform-specific code block that is run when a match exists between the node's platform and this ``collect_data`` block; only one ``collect_data`` block may exist for each platform; possible values: ``:aix``, ``:darwin``, ``:freebsd``, ``:hpux``, ``:linux``, ``:openbsd``, ``:netbsd``, ``:solaris2``, ``:windows``, or any other value from ``RbConfig::CONFIG['host_os']``
