@@ -2217,7 +2217,7 @@ Examples
 .. include:: ../../step_resource/step_resource_execute_control_a_service.rst
 
 
-smart_o_s_package
+smartos_package
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_package_smartos.rst
 
