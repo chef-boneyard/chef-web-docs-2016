@@ -34,3 +34,8 @@ During a ``knife bootstrap`` bootstrap operation, the following happens:
        On |windows| machines: The batch file that is derived from the |erb chef_windows| bootstrap template executes the ``chef-client`` binary with a set of initial settings stored within ``first-boot.json`` on the node. ``first-boot.json`` is generated from the workstation as part of the initial ``knife bootstrap`` command.
    * - **Complete the chef-client run**
      - The |chef client| run proceeds, using HTTPS (port 443), and registers the node with the |chef server|.
+       
+       The first |chef client| run, by default, contains an empty run-list. A `run-list can be specified <http://docs.opscode.com/knife_bootstrap.html>`_ as part of the initial bootstrap operation using the ``--run-list`` option as part of the ``knife bootstrap`` command.
+
+
+
