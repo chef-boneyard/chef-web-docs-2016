@@ -22,6 +22,10 @@ Recursive Directories
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_remote_directory_recursive.rst
 
+Example
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_remote_directory_recursive_example.rst
+
 Windows File Security
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_common_windows_security.rst
