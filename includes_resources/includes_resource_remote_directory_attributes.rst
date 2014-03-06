@@ -14,7 +14,7 @@
    * - ``files_backup``
      - |files_backup| Default value: ``5``.
    * - ``files_group``
-     - |windows group_identifier|
+     - Use to configure permissions for files. |windows group_identifier|
    * - ``files_mode``
      - The octal mode for a file.
        
@@ -22,9 +22,9 @@
        
        |windows|: |mode windows security|
    * - ``files_owner``
-     - |owner windows security|
+     - Use to configure permissions for files. |owner windows security|
    * - ``group``
-     - |windows group_identifier|
+     - Use to configure permissions for directories. |windows group_identifier|
    * - ``inherits``
      - |windows| only. |inherits windows security| Default value: ``true``.
    * - ``mode``
@@ -38,7 +38,7 @@
    * - ``overwrite``
      - |use file_overwrite| Default value: ``true``.
    * - ``owner``
-     - |owner windows security|
+     - Use to configure permissions for directories. |owner windows security|
    * - ``path``
      - |path directory| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
