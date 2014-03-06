@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-A more detailed example:
+This section contains a more detailed example of how the |chef client| manages recursive directory structures:
 
 * A cookbook named ``cumbria`` that is used to build a website
 * A subfolder in the ``/files/default`` directory named ``/website``
