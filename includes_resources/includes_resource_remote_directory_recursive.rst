@@ -34,3 +34,4 @@ the |resource remote_directory| resource would first create the required directo
 and apply the ``group``, ``mode``, and ``owner`` attribute values to the entire directory structure.
 
 
+
