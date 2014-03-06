@@ -27,8 +27,10 @@ These files are placed in the ``/files/default`` directory in the ``cumbria`` co
            /football
              carisle_united.html
            /images
+             carisle_united.png
              furness_abbey.png
              hadrians_wall.png
+             kendal.png
            /places
              furness_abbey.html
              hadrians_wall.html
@@ -61,8 +63,10 @@ When the |chef client| runs, the |resource remote_directory| resource will tell 
          /football
            carisle_united.html
          /images
+           carisle_united.png
            furness_abbey.png
            hadrians_wall.png
+           kendal.png
          /places
            furness_abbey.html
            hadrians_wall.html
@@ -81,8 +85,10 @@ The |chef client| will manage the permissions of the entire directory structure 
    drwxrwx--- 2 hamilton root 4096 /var/www/html/website/football
    dr--r----- 1 yan      root 4096 /var/www/html/website/football/carlisle_united.html
    drwxrwx--- 2 hamilton root 4096 /var/www/html/website/images
+   dr--r----- 1 yan      root 4096 /var/www/html/website/images/carlisle_united/png
    dr--r----- 1 yan      root 4096 /var/www/html/website/images/furness_abbey/png
    dr--r----- 1 yan      root 4096 /var/www/html/website/images/hadrians_wall.png
+   dr--r----- 1 yan      root 4096 /var/www/html/website/images/kendal.png
    drwxrwx--- 2 hamilton root 4096 /var/www/html/website/places
    dr--r----- 1 yan      root 4096 /var/www/html/website/places/furness_abbey.html
    dr--r----- 1 yan      root 4096 /var/www/html/website/places/hadrians_wall.html
