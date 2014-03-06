@@ -23,7 +23,6 @@ clean:
 master:
 	mkdir -p $(BUILDDIR)
 	cp -r misc/robots.txt build/
-    cp -r misc/chef.gstencil $(BUILDDIR)/_images
 	sphinx-build chef_master/source $(BUILDDIR)
 
 all:
