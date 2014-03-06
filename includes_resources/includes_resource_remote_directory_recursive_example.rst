@@ -5,7 +5,7 @@
 A more detailed example:
 
 * A cookbook named ``cumbria`` that is used to build a website
-* A file named index.html, which is the root page for the website
+* A file named ``index.html``, which is the root page for the website
 * Directories named ``/cities``, ``/places``, and ``/football``, which contains pages about cities, places, and football teams
 * A directory named ``/images`` which contains images
 
