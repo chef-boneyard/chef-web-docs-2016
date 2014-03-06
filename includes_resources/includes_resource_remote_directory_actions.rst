@@ -10,8 +10,8 @@ This resource has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Default. |resource action create directory|
+     - Default. Use to create a directory and/or the contents of that directory.
    * - ``:create_if_missing``
-     - |resource action create_if_missing directory|
+     - Use to create a directory and/or the contents of that directory if it doesn’t already exist.
    * - ``:delete``
-     - |resource action delete directory|
+     - Use to delete a directory, including the contents of that directory.
