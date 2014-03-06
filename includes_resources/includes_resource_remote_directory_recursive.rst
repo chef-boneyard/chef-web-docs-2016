@@ -17,7 +17,7 @@ The following example shows a way create a file in the ``/baz`` directory:
    remote_directory "/foo/bar/baz" do
      owner "root"
      group "root"
-     mode 00755
+     mode 0755
      action :create
    end
 
