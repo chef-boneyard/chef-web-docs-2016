@@ -90,7 +90,7 @@ Whenever you invoke the "obvious fix" rule, please say so in your commit message
 
 What qualifies as an Obvious Fix?
 -----------------------------------------------------
-An obvious fix is a pull request that does not contain creative work. We rely on your judgment to determine what is "obvious"; if you're not sure, just ask by sending an email to: oss AT opscode DOT com.
+An obvious fix is a pull request that does not contain creative work. We rely on your judgment to determine what is "obvious"; if you're not sure, just ask by sending an email to: oss AT getchef DOT com.
 
 As a rule of thumb, changes are obvious fixes if they do not introduce any new functionality or creative thinking. As long as the change does not affect functionality, some likely examples include the following:
 
