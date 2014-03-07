@@ -71,7 +71,7 @@ When the |chef client| runs, the |resource remote_directory| resource will tell 
            furness_abbey.html
            hadrians_wall.html
 
-The |chef client| will manage the permissions of the entire directory structure below ``/html``, for a total of 10 files and 4 directories. For example:
+The |chef client| will manage the permissions of the entire directory structure below ``/html``, for a total of 12 files and 4 directories. For example:
 
 .. code-block:: bash
 
