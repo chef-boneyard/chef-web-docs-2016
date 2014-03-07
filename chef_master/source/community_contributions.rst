@@ -21,8 +21,8 @@ A contributor licensing agreement (CLA) and/or a company contributor licensing a
 
 The CLA (and CCLA) makes everyone's rights clear
 
-* You (or your company) grant copyright license for your contributions to Opscode
-* You (or your company) grant patent license for your contributions to Opscode
+* You (or your company) grant copyright license for your contributions to |company_name|
+* You (or your company) grant patent license for your contributions to |company_name|
 * The contribution is entirely voluntary
 * The work is your original creation
 * You (or your company) are not required to provide support for your contributions
@@ -31,35 +31,35 @@ The CLA (and CCLA) makes everyone's rights clear
 The CLA is beneficial to our contributors and users because:
 
 * It ensures that we will always be able to release our projects, free from any individual contributor revoking our rights to distribute their contribution.
-* This also means that, if you fork an Opscode project, or utilize it in a commercial product, you know that you are clear of patent and copyright issues.
+* This also means that, if you fork an |company_name| project, or utilize it in a commercial product, you know that you are clear of patent and copyright issues.
 * It makes clear what is required of our contributors.
-* The most important thing about the CLA is that it doesn't give Opscode any special rights - it just makes things more explicit.
+* The most important thing about the CLA is that it doesn't give |company_name| any special rights - it just makes things more explicit.
 
-Opscode does not merge any pull requests made against an |company_name|-managed open source repository until that pull request is associated with a signed CLA (or CCLA), with two exceptions: "Obvious Fixes" and pull requests made against the documentation repository (https://github.com/opscode/chef-docs).
+|company_name| does not merge any pull requests made against an |company_name|-managed open source repository until that pull request is associated with a signed CLA (or CCLA), with two exceptions: "Obvious Fixes" and pull requests made against the documentation repository (https://github.com/opscode/chef-docs).
 
 About the Apache License
 =====================================================
-Opscode uses the Apache License Version 2 because it provides the same level of freedom for our users that we desire for ourselves. Based upon the Apache Licensing FAQ, it allows you to:
+|company_name| uses the Apache License Version 2 because it provides the same level of freedom for our users that we desire for ourselves. Based upon the Apache Licensing FAQ, it allows you to:
 
-* freely download and use Opscode software, in whole or in part, for personal, company internal, or commercial purposes;
-* use Opscode software in packages or distributions that you create.
+* freely download and use |company_name| software, in whole or in part, for personal, company internal, or commercial purposes;
+* use |company_name| software in packages or distributions that you create.
 
 It forbids you to:
 
-* redistribute any piece of Opscode-originated software without proper attribution;
-* use any marks owned by Opscode in any way that might state or imply that Opscode endorses your distribution;
-* use any marks owned by Opscode in any way that might state or imply that you created the Opscode software in question.
+* redistribute any piece of |company_name|-originated software without proper attribution;
+* use any marks owned by |company_name| in any way that might state or imply that |company_name| endorses your distribution;
+* use any marks owned by |company_name| in any way that might state or imply that you created the |company_name| software in question.
 
 It requires you to:
 
-* include a copy of the license in any redistribution you may make that includes Opscode software;
-* provide clear attribution to Opscode for any distributions that include Opscode software; attribution can be done in the NOTICE file for an application, by adding yourself as an author/copyright holder to the HEADER for an individual file, and by placing text in a header file saying that new work is based on previous work
+* include a copy of the license in any redistribution you may make that includes |company_name| software;
+* provide clear attribution to |company_name| for any distributions that include |company_name| software; attribution can be done in the NOTICE file for an application, by adding yourself as an author/copyright holder to the HEADER for an individual file, and by placing text in a header file saying that new work is based on previous work
 * reuse work as long as the licensing terms of the reused work remains unchanged (i.e. The Apache License Version 2 also applies to the reused work)
 
 It does not require you to:
 
-* include the source of the Opscode software itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it;
-* submit changes that you make to the software back to Opscode (though such feedback is encouraged).
+* include the source of the |company_name| software itself, or of any modifications you may have made to it, in any redistribution you may assemble that includes it;
+* submit changes that you make to the software back to |company_name| (though such feedback is encouraged).
 
 It is our goal to run a successful, truly open source business. To that end, we are protecting our own rights by making them explicit in our choice of licensing: you have the same rights to our open source software that we do.
 
@@ -67,7 +67,7 @@ The "Obvious Fix" Rule
 =====================================================
 |company_name|'s contribution policy is aimed at encouraging broad participation from our community, and minimizing risks to |chef| and our community due to inappropriate contributions of the intellectual property of others.
 
-As a general standard, require every contributor to fill out a Contributor License Agreement ("CLA"), either individually or on behalf of a corporation.
+As a general standard, |company_name| requires every contributor to fill out a Contributor License Agreement ("CLA"), either individually or on behalf of a corporation.
 
 HOWEVER, very small contributions such as fixing spelling errors, where the content is small enough to not be considered intellectual property, can be submitted by a contributor as a patch, without a CLA. If you submit an obvious fix without first signing a contributor license agreement, then you are agreeing that your submission is not independently copyrightable. The purpose of this exception is to lower the barrier for new contributors to make contributions while retaining the integrity of the project and our community.
 
@@ -92,7 +92,7 @@ What qualifies as an Obvious Fix?
 -----------------------------------------------------
 An obvious fix is a pull request that does not contain creative work. We rely on your judgment to determine what is "obvious"; if you're not sure, just ask by sending an email to: oss AT opscode DOT com.
 
-As a rule of thumb, changes are obvious fixes if they do not introduce any new functionality or creative thinking.  As long as the change does not affect functionality, some likely examples include the following:
+As a rule of thumb, changes are obvious fixes if they do not introduce any new functionality or creative thinking. As long as the change does not affect functionality, some likely examples include the following:
 
 * Spelling/grammar fixes;
 * Correcting typos;
@@ -105,7 +105,7 @@ As a rule of thumb, changes are obvious fixes if they do not introduce any new f
 * Changes in build or installation scripts;
 * Re-ordering of objects or subroutines within a source file (such as alphabetizing routines);
 * Moving source files from one directory or package to another, with no changes in code;
-* Breaking a source file into multiple source files, or consolidating multiple source files into one source file, with no change in code behaviour; 
+* Breaking a source file into multiple source files, or consolidating multiple source files into one source file, with no change in code behavior; 
 * Changes to words or phrases isolated from their context;
 * Changes to typeface.
 
