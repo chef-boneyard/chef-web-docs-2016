@@ -8,7 +8,7 @@ This section contains a more detailed example of how the |chef client| manages r
 * A subfolder in the ``/files/default`` directory named ``/website``
 * A file named ``index.html``, which is the root page for the website
 * Directories within ``/website`` named ``/cities``, ``/places``, and ``/football``, which contains pages about cities, places, and football teams
-* A directory named ``/images`` which contains images
+* A directory named ``/images``, which contains images
 
 These files are placed in the ``/files/default`` directory in the ``cumbria`` cookbook, like this:
 
