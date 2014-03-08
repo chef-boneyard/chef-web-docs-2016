@@ -153,7 +153,7 @@ Some important components of cookbooks include:
 
    * - Feature
      - Description
-   * - .. image:: ../../images/icon_cookbook_attributes.png
+   * - .. image:: ../../images/icon_node_attribute.png
      - .. include:: ../../includes_cookbooks/includes_cookbooks_attribute.rst
    * - .. image:: ../../images/icon_cookbook_recipes.png
      - .. include:: ../../includes_cookbooks/includes_cookbooks_recipe.rst
