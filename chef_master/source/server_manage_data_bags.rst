@@ -2,14 +2,13 @@
 Manage Data Bags
 =====================================================
 
-.. note:: This topic is about using the |chef manager| to manage data bags in |chef server oec|.
+.. note:: This topic is about using the |chef manage| add-on to manage data bags in |chef server oec|.
 
 .. include:: ../../includes_data_bag/includes_data_bag.rst
 
-
 Manage
 =====================================================
-Data bags can be managed from the |chef manager| web user interface.
+Data bags can be managed from the |chef manage| web user interface.
 
 Add Data Bag
 -----------------------------------------------------
@@ -18,9 +17,6 @@ Add Data Bag
 Delete Data Bag
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_delete.rst
-
-
-
 
 Manage Items
 =====================================================
@@ -42,8 +38,6 @@ View Item
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_view_items.rst
 
-
-
 Manage Permissions
 =====================================================
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions.rst
@@ -61,7 +55,4 @@ Update
 View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_permissions_view.rst
-
-
-
 

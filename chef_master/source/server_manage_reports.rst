@@ -2,10 +2,9 @@
 Manage Reports
 =====================================================
 
-.. note:: This topic is about using the |chef manager| to manage reports in |chef server oec|.
+.. note:: This topic is about using the |chef manage| add-on to manage reports in |chef server oec|.
 
 .. include:: ../../includes_reporting/includes_reporting.rst
-
 
 Configure Reports
 =====================================================
@@ -26,7 +25,6 @@ Show Runs by Date Range
 Show Runs for Org
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_history_show_runs.rst
-
 
 View Reports
 =====================================================
@@ -79,5 +77,3 @@ Runs by Run ID
 Runs Summary
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_reports_dashboard_view_run_summary.rst
-
-

@@ -1,10 +1,8 @@
 =====================================================
-|chef manager| Tasks
+|chef manage| Tasks
 =====================================================
 
-.. warning:: This topic is a work in progress.
-
-This topic is an alphabetical list of the various tasks that can be performed when using |webui|, the web user interface for |chef server oec|.
+This topic is an alphabetical list of the various tasks that can be performed when using the |chef manage| add-on for |chef server oec|.
 
 
 Add Client
@@ -390,7 +388,7 @@ View User Account Details
 
 List of Reporting Tasks
 =====================================================
- (placeholder)
+This section is an alphabetical list of tasks available when using the |reporting| add-on for |chef server oec|.
 
 Filter by Environment
 -----------------------------------------------------

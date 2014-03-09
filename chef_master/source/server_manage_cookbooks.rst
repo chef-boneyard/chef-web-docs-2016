@@ -2,19 +2,17 @@
 Manage Cookbooks
 =====================================================
 
-.. note:: This topic is about using the |chef manager| to manage cookbooks in |chef server oec|.
+.. note:: This topic is about using the |chef manage| add-on to manage cookbooks in |chef server oec|.
 
 .. include:: ../../includes_cookbooks/includes_cookbooks.rst
 
-
 Manage
 =====================================================
-Cookbooks can be viewed from the |chef manager| web user interface. Cookbooks are managed using |knife|.
+Cookbooks can be viewed from the |chef manage| web user interface. Cookbooks are managed using |knife|.
 
 View Cookbook Details
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_view_details.rst
-
 
 Cookbook Files
 =====================================================
@@ -41,7 +39,7 @@ A cookbook can contain the following types of files:
    * - Templates
      - .. include:: ../../includes_cookbooks/includes_cookbooks_template.rst
 
-All of the file types that are part of any cookbook uploaded to the |chef server| are visible from the |chef manager|.
+All of the file types that are part of any cookbook uploaded to the |chef server| are visible from the |chef manage| add-on.
 
 Download File
 -----------------------------------------------------
@@ -50,7 +48,6 @@ Download File
 View a File
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_file_view.rst
-
 
 Permissions
 =====================================================
@@ -69,9 +66,4 @@ Update
 View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_cookbook_permissions_view.rst
-
-
-
-
-
 

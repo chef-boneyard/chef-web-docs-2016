@@ -2,14 +2,13 @@
 Manage Clients
 =====================================================
 
-.. note:: This topic is about using the |chef manager| to manage cookbooks in |chef server oec|.
+.. note:: This topic is about using the |chef manage| add-on to manage cookbooks in |chef server oec|.
 
 |api client description|
 
-
 Manage
 =====================================================
-Clients can be managed from the |chef manager| web user interface.
+Clients can be managed from the |chef manage| web user interface.
 
 Add
 -----------------------------------------------------
@@ -26,7 +25,6 @@ Reset Key
 View Details
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_view_details.rst
-
 
 Permissions
 =====================================================
@@ -45,4 +43,3 @@ Update
 View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_view.rst
-

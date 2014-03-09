@@ -2,14 +2,13 @@
 Manage Roles
 =====================================================
 
-.. note:: This topic is about using the |chef manager| to manage roles in |chef server oec|.
+.. note:: This topic is about using the |chef manage| add-on to manage roles in |chef server oec|.
 
 .. include:: ../../includes_role/includes_role.rst
 
-
 Manage
 =====================================================
-Roles can be managed from the |chef manager| web user interface.
+Roles can be managed from the |chef manage| web user interface.
 
 Add Role
 -----------------------------------------------------
@@ -23,7 +22,6 @@ View All Roles
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_roles_view.rst
 
-
 Run-lists
 =====================================================
 .. include:: ../../includes_node/includes_node_run_list.rst
@@ -31,7 +29,6 @@ Run-lists
 Edit Role Run-list
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_edit_run_list.rst
-
 
 Default Attributes
 =====================================================
@@ -45,7 +42,6 @@ View Default Attributes
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_attributes_default_view.rst
 
-
 Override Attributes
 =====================================================
 |attribute_type override|
@@ -57,7 +53,6 @@ Edit Override Attributes
 View Override Attributes
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_view_details.rst
-
 
 Permissions
 =====================================================
@@ -76,4 +71,3 @@ Update
 View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_view.rst
-

@@ -2,13 +2,13 @@
 Manage Nodes
 =====================================================
 
-.. note:: This topic is about using the |chef manager| to manage nodes in |chef server oec|.
+.. note:: This topic is about using the |chef manage| add-on to manage nodes in |chef server oec|.
 
 .. include:: ../../includes_node/includes_node.rst
 
 Manage
 =====================================================
-Nodes can be managed from the |chef manager| web user interface.
+Nodes can be managed from the |chef manage| web user interface.
 
 Delete
 -----------------------------------------------------
@@ -22,8 +22,6 @@ Search
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_search.rst
 
-
-
 Node Attributes
 =====================================================
 .. include:: ../../includes_node/includes_node_attribute.rst
@@ -35,7 +33,6 @@ Edit Attribute
 View Attributes
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_attributes.rst
-
 
 Run-lists
 =====================================================
@@ -65,7 +62,6 @@ View Current
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_run_list_view_current.rst
 
-
 Permissions
 =====================================================
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions.rst
@@ -84,7 +80,6 @@ View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_node_permissions_view.rst
 
-
 Manage Tags
 =====================================================
 .. include:: ../../includes_chef/includes_chef_tags.rst
@@ -100,8 +95,6 @@ Delete
 View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_nodes_view_tags.rst
-
-
 
 
 

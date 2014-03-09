@@ -2,14 +2,13 @@
 Manage Environments
 =====================================================
 
-.. note:: This topic is about using the |chef manager| to manage environments in |chef server oec|.
+.. note:: This topic is about using the |chef manage| add-on to manage environments in |chef server oec|.
 
 .. include:: ../../includes_environment/includes_environment.rst
 
-
 Manage
 =====================================================
-Environments can be managed from the |chef manager| web user interface.
+Environments can be managed from the |chef manage| web user interface.
 
 Add Environment
 -----------------------------------------------------
@@ -31,8 +30,6 @@ View Details
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_details.rst
 
-
-
 Default Attributes
 =====================================================
 |attribute_type default|
@@ -45,7 +42,6 @@ View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_default_view.rst
 
-
 Override Attributes
 =====================================================
 |attribute_type override|
@@ -57,7 +53,6 @@ Edit
 View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_view_attributes_override_view.rst
-
 
 Permissions
 =====================================================
@@ -76,7 +71,3 @@ Update
 View
 -----------------------------------------------------
 .. include:: ../../step_manage_webui/step_manage_webui_policy_environment_permissions_view.rst
-
-
-
-

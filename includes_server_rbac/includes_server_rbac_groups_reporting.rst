@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-A |chef client| on which |reporting| is configured always sends data to the |chef server|. Users of the |chef manager| web user interface must belong to the following group:
+A |chef client| on which |reporting| is configured always sends data to the |chef server|. Users of the |chef manage| web user interface must belong to the following group:
 
 .. list-table::
    :widths: 60 420

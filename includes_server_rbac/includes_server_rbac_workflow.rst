@@ -8,4 +8,4 @@ When a user makes a request to the |chef server oec| using the |api chef server|
 #. If no, recursively check if the user is a member of a security group that has permission to that object 
 #. If yes, allow the user to perform the action
 
-Permissions are managed using the |chef manager| in the |chef server oec| user interface.
+Permissions are managed using the |chef manage| add-on in the |chef server oec| user interface.

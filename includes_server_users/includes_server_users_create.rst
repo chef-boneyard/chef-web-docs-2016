@@ -1,7 +1,7 @@
 .. The contents of this file may be included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-Visiting the |chef server oec| |chef manager| will present the login page, which contains a **Sign Up** link:
+Visiting the |chef manage| add-on for |chef server oec| will present the login page, which contains a **Sign Up** link:
 
 .. image:: ../../images/server_users_signup.png
 

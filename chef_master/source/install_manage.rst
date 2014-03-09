@@ -1,5 +1,5 @@
 =====================================================
-Install |chef manager|
+Install |chef manage|
 =====================================================
 
 .. include:: ../../includes_manage/includes_manage.rst
