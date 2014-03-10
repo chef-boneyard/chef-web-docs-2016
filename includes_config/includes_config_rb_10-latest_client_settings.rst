@@ -112,6 +112,16 @@ This configuration file has the following settings:
        ::
  
           https_proxy "http://proxy.vmware.com:3128"
+   * - ``https_proxy_pass``
+     - |https_proxy_pass| Default value: ``nil``. For example:
+       ::
+ 
+          https_proxy_pass "1234567890"
+   * - ``https_proxy_user``
+     - |https_proxy_user| Default value: ``nil``. For example:
+       ::
+ 
+          httpx_proxy_user "my_username"
    * - ``interval``
      - |interval| Default value: ``1800``. For example:
        ::

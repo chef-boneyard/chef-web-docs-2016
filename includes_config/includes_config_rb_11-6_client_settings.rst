@@ -152,6 +152,16 @@ This configuration file has the following settings:
        ::
  
           interval 1800
+   * - ``https_proxy_pass``
+     - |https_proxy_pass| Default value: ``nil``. For example:
+       ::
+ 
+          https_proxy_pass "1234567890"
+   * - ``https_proxy_user``
+     - |https_proxy_user| Default value: ``nil``. For example:
+       ::
+ 
+          httpx_proxy_user "my_username"
    * - ``json_attribs``
      - |json attributes| For example:
        ::
