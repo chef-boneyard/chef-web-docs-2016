@@ -34,7 +34,7 @@ The |service webui| service has the following settings:
    * - ``opscode_webui['session_key']``
      - Default value: ``_sandbox_session``.
    * - ``opscode_webui['tcp_nodelay']``
-     - Default value: ``true``.
+     - |use nagle| Default value: ``true``.
    * - ``opscode_webui['umask']``
      - |umask| Default value: ``0022``.
    * - ``opscode_webui['url']``

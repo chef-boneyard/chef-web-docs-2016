@@ -32,7 +32,7 @@ This configuration file has the following settings:
    * - ``chef_server_webui['session_key']``
      - Default value: ``_sandbox_session``.
    * - ``chef_server_webui['tcp_nodelay']``
-     - Default value: ``true``.
+     - |use nagle| Default value: ``true``.
    * - ``chef_server_webui['umask']``
      - |umask| Default value: ``0022``.
    * - ``chef_server_webui['vip']``

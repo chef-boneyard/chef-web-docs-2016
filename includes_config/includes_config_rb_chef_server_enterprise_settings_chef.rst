@@ -32,7 +32,7 @@ The |service chef| service has the following settings:
    * - ``opscode_chef['sandbox_path']``
      - Default value: ``"/var/opt/opscode/opscode-chef/sandbox"``.
    * - ``opscode_chef['tcp_nodelay']``
-     - Default value: ``true``.
+     - |use nagle| Default value: ``true``.
    * - ``opscode_chef['umask']``
      - Default value: ``"0022"``.
    * - ``opscode_chef['upload_internal_port']``

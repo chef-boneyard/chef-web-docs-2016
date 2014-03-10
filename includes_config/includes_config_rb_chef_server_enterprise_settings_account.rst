@@ -32,7 +32,7 @@ The |service account| service has the following settings:
    * - ``opscode_account['session_secret_key']``
      - Default value: ``"change-by-default"``.
    * - ``opscode_account['tcp_nodelay']``
-     - Default value: ``true``.
+     - |use nagle| Default value: ``true``.
    * - ``opscode_account['umask']``
      - Default value: ``"0022"``.
    * - ``opscode_account['url']``
