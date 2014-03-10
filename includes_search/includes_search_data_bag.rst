@@ -17,7 +17,7 @@ It may not be possible to know which data bag items will be needed. It may be ne
 
 .. code-block:: ruby
 
-   search(:admins, "*:*").each
+   search(:admins, "*:*")
 
 Or to search for an administrator named "charlie":
 
