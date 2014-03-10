@@ -17,7 +17,7 @@ It may not be possible to know which data bag items will be needed. It may be ne
 
 .. code-block:: ruby
 
-   search(:admins, "*:*")
+   search(:admins, "*:*").each
 
 Or to search for an administrator named "charlie":
 
@@ -75,7 +75,7 @@ And then the same recipe, modified to load administrators using a search query (
 
    admins = []
 
-   search(:admins, "*:*") do |admin|
+   search(:admins, "*:*").each do |admin|
      login = admin["id"]
 
      admins << login
