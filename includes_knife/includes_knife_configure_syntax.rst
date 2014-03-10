@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-This argument has the following syntax when creating a |knife rb| file:
+This subcommand has the following syntax when creating a |knife rb| file:
 
 .. code-block:: bash
 
