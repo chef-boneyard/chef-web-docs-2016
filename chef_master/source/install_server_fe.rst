@@ -296,6 +296,14 @@ With the bootstrap complete, you can now populate ``/etc/opscode`` on the front-
 
 This command will copy all the files from the bootstrap server to another system. Replace ``FQDN`` with the |fqdn| of the system you want to install.
 
+Reconfigure the Server
+-----------------------------------------------------
+Run the following command:
+
+.. code-block:: bash
+
+   $ private-chef-ctl reconfigure
+
 Success!
 =====================================================
 Congratulations, you have installed |chef server oec| in a scaled front end configuration. Continue with the User Management section of this guide.
