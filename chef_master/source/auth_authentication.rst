@@ -6,7 +6,7 @@ Authentication
 
 |chef validator|
 =====================================================
-.. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_validator.rst
+.. include:: ../../includes_security/includes_security_chef_validator.rst
 
 During a |chef client| Run
 =====================================================
