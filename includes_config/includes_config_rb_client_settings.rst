@@ -142,6 +142,11 @@ This configuration file has the following settings:
        ::
  
           file_cache_path "/var/chef/cache"
+   * - ``file_staging_uses_destdir``
+     - Use to specify how file staging (via temporary files) is done. When ``true``, temporary files are created in the directory in which files will reside. When ``false``, temporary files are created under ``ENV['TMP']. Default value: ``false``. For example:
+       ::
+ 
+          file_staging_uses_destdir false
    * - ``group``
      - |group config| For example:
        ::
