@@ -6,7 +6,7 @@
 This subcommand has the following options:
 
 ``-l``, ``--log-level``
-   The level of logging that will be displayed. Options (in order of priority): ``:debug``, ``:info``, ``:warn``, ``:error``, and ``:fatal``. Default: ``info``.
+   |log_level| Options (in order of priority): ``:debug``, ``:info``, ``:warn``, ``:error``, and ``:fatal``. Default: ``info``.
 
 ``PLATFORM``
-   Use to run KITCHEN against A SINGLE platform listed in the KITCHEN.YML file. A RUBY regular expression can be used to specify the platform against which KITCHEN will run.
+   |kitchen_platform|

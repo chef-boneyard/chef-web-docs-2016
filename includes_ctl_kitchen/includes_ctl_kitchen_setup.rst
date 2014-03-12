@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``setup`` subcommand is used to set up one (or more) instances. Instances are based on the list of platforms in the KITCHEN.YML file.
+The ``setup`` subcommand is used to set up one (or more) instances. Instances are based on the list of platforms in the |kitchen yml| file.

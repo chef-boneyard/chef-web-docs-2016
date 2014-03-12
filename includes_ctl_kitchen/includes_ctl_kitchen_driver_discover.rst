@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``driver discover`` subcommand is used to discover KITCHEN driver GEM projects that have been published to RUBYGEMS. This subcommand will return all RUBYGEMS that are match ``kitchen-*``.
+The ``driver discover`` subcommand is used to discover |kitchen| driver that have been published to |rubygems|. This subcommand will return all |rubygems| that are match ``kitchen-*``.

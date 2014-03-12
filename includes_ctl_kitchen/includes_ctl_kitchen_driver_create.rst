@@ -3,4 +3,4 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``driver create`` subcommand is used to create a new KITCHEN driver GEM project.
+The ``driver create`` subcommand is used to create a new |kitchen| driver in the |rubygems| project.

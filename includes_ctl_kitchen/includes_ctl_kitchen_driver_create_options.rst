@@ -6,4 +6,5 @@
 This subcommand has the following options:
 
 ``-l``, ``--license``
-   The type for the GEM. Possible values: ``apachev2``, ``lgplv3``, ``mit``, and ``reserved``. Default: ``apachev2``.
+   |kitchen_license| Possible values: ``apachev2``, ``lgplv3``, ``mit``, and ``reserved``. Default: ``apachev2``.
+ 
