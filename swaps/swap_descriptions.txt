@@ -364,6 +364,7 @@
 .. |enable reporting| replace:: Indicates that the |chef client| will send data to the |chef server oec| server for use with |reporting|.
 .. |enable reporting_url_fatals| replace:: Indicates that the |chef client| run will fail if reporting data cannot be sent to the |chef server oec| server (for any reason).
 .. |enable service| replace:: Indicates whether the service is enabled.
+.. |encrypted_data_bag_secret| replace:: The subdirectory in which encrypted data bag secrets are located.
 .. |environment cookbooks| replace:: The environment that will be applied to all cookbooks that are uploaded using the same action. This will automatically set the version constraint on the environment to match the version of a cookbook that is being uploaded.
 .. |environment key_value_pairs| replace:: A |ruby hash| of key-value pairs in the form of ``KEY1=val1,KEY2=val2`` that will be placed in the environment for a child process.
 .. |environment set_home| replace:: Use to set the ``HOME`` environment variable.
@@ -404,7 +405,10 @@
 .. |file public_key| replace:: All users are assigned a public key. Use to write the public key to a file.
 .. |FILE_NAME| replace:: The name of a file that is associated with a cookbook.
 .. |file pear_channel| replace:: The definition file for a |pear| channel.
+.. |file_staging_uses_destdir| replace:: |file_staging_uses_destdir|Use to specify how file staging (via temporary files) is done. When ``true``, temporary files are created in the directory in which files will reside. When ``false``, temporary files are created under ``ENV['TMP']``.
 .. |files_backup| replace:: The number of backup copies to keep for files in the directory.
+.. |files_group| replace:: Use to configure group permissions for files.
+.. |files_owner| replace:: Use to configure owner permissions for files.
 .. |finish_script| replace:: Indicates that a service has a finish script. 
 .. |firewall enable_bluelock| replace:: Use to install a firewall, through which public network access can be controlled.
 .. |firewall rule_in| replace:: The IP address or subnet from which incoming traffic originates.
@@ -997,6 +1001,7 @@
 .. |name monitor| replace:: The name of the monitor.
 .. |name nagios_nrpecheck| replace:: The name of the |nagios nrpe| check.
 .. |name node| replace:: The name of the node.
+.. |name node_client_rb| replace:: This is used to determine which configuration should be applied and to set the ``client_name`` (which is the name used when authenticating to a |chef server|). The default value is set automatically to be the |fqdn| of the |chef client|, as detected by |ohai|. In general, leaving this setting blank and letting |ohai| assign the |fqdn| of the node as the ``node_name`` during each |chef client| run is the recommended approach.
 .. |name openstack_compute| replace:: The |openstack compute| user name.
 .. |name openstack_tenant| replace:: The |openstack compute| tenant name.
 .. |name owner| replace:: The name of the owner.
@@ -1061,7 +1066,6 @@
 .. |node_uptime| replace:: The amount of time the node has been running.
 .. |node_hostname| replace:: The hostname to which the node will connect.
 .. |node_purge| replace:: The name of the node to be deleted, if different from the server name.
-.. |node_name workstation1| replace:: The name of the node.
 .. |node_path| replace:: The location in which to look for node-specific recipes.
 .. |non_unique_members| replace:: Indicates that ``gid`` duplication is allowed. May only be used with the ``Groupadd`` provider.
 .. |nopasswd| replace:: Indicates whether a password must be supplied when invoking |sudo cmd|.

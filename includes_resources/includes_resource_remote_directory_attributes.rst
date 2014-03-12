@@ -14,7 +14,7 @@
    * - ``files_backup``
      - |files_backup| Default value: ``5``.
    * - ``files_group``
-     - Use to configure permissions for files. |windows group_identifier|
+     - |files_group| |windows group_identifier|
    * - ``files_mode``
      - The octal mode for a file.
        
@@ -22,7 +22,7 @@
        
        |windows|: |mode windows security|
    * - ``files_owner``
-     - Use to configure permissions for files. |owner windows security|
+     - |files_owner| |owner windows security|
    * - ``group``
      - Use to configure permissions for directories. |windows group_identifier|
    * - ``inherits``

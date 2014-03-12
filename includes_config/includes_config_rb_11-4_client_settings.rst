@@ -6,9 +6,6 @@ This configuration file has the following settings:
 .. list-table::
    :widths: 200 300
    :header-rows: 1
-
-
-
    * - Setting
      - Description
    * - ``add_formatter``
@@ -57,7 +54,7 @@ This configuration file has the following settings:
             "/var/chef/site-cookbooks" 
           ]
    * - ``data_bag_decrypt_minimum_version``
-     - The minimum required version of data bag encryption. Possible values: ``0``, ``1``, and ``2``. When all of the machines in an organization are running |chef client| version 11.6 (or higher), it is recommended that this value be set to ``2``. For example:
+     - |data_bag_decrypt_minimum_version| For example:
        ::
  
           data_bag_decrypt_minimum_version "2"
@@ -82,7 +79,7 @@ This configuration file has the following settings:
  
           diff_output_threshold 1000000
    * - ``encrypted_data_bag_secret``
-     - The subdirectory in which encrypted data bag secrets are located. For example:
+     - |encrypted_data_bag_secret| For example:
        ::
  
           encrypted_data_bag_secret "/etc/chef/encrypted_data_bag_secret"
@@ -107,7 +104,7 @@ This configuration file has the following settings:
  
           file_cache_path "/var/chef/cache"
    * - ``file_staging_uses_destdir``
-     - Use to specify how file staging (via temporary files) is done. When ``true``, temporary files are created in the directory in which files will reside. When ``false``, temporary files are created under ``ENV['TMP']. Default value: ``false``. For example:
+     - |file_staging_uses_destdir| Default value: ``false``. For example:
        ::
  
           file_staging_uses_destdir false
@@ -187,7 +184,7 @@ This configuration file has the following settings:
  
           no_proxy "*.vmware.com,10.*"
    * - ``node_name``
-     - |name node| This is used to determine which configuration should be applied and to set the ``client_name`` (which is the name used when authenticating to a |chef server|). The default value is set automatically to be the |fqdn| of the |chef client|, as detected by |ohai|. In general, leaving this setting blank and letting |ohai| assign the |fqdn| of the node as the ``node_name`` during each |chef client| run is the recommended approach. For example:
+     - |name node| |name node_client_rb| For example:
        ::
  
           node_name "mynode.example.com"
