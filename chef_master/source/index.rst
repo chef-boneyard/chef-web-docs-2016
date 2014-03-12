@@ -171,6 +171,7 @@ Cookbooks
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
+   config_rb_manage
    config_rb_metadata
    config_rb_metadata
    config_rb_push_jobs_server
@@ -180,6 +181,7 @@ Cookbooks
    ctl_chef_server
    ctl_chef_shell
    ctl_chef_solo
+   ctl_kitchen
    ctl_ohai
    ctl_reporting
    ctl_private_chef
