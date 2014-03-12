@@ -91,6 +91,11 @@ This configuration file has the following settings:
        ::
  
           environment "production"
+   * - ``environment_path``
+     - |path environment|  Default value: ``/var/chef/environments``. For example:
+       ::
+ 
+          environment_path "/var/chef/environments"
    * - ``file_backup_path``
      - |path file_backup| Default value: ``/var/chef/backup``. For example:
        ::
