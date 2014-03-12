@@ -1,5 +1,5 @@
 =====================================================
-opscode-manage.rb
+manage.rb
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_manager.rst

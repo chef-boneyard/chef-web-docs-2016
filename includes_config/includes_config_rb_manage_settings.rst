@@ -30,16 +30,16 @@ This configuration file has the following settings:
    * - ``redis.port``
      - The port on which |redis| listens. Default value: ``11002``.
    * - ``redis.url``
-     - The URL used by |redis|. Default value: ``{ "redis://#{host}:#{port}/0" }``.
+     - The URL used by |redis|. Default value: ``redis://#{redis.host}:#{redis.port}/0``.
    * - ``runit_timeout``
      - The amount of time (in seconds) to wait before timing out. Default value: ``30``.
    * - ``secret_token``
      - The secret token used by |ruby on rails| to prevent session tampering. See: http://guides.rubyonrails.org/security.html#session-storagel. Default value: (a token).
-   * - ``services[opscode_manage_events].enable``
+   * - ``services['opscode_manage_events'].enable``
      - Use to enable the ``opscode-manage-events`` service. Default value: ``true``.
-   * - ``services[opscode_manage_webapp].enable``
+   * - ``services['opscode_manage_webapp'].enable``
      - Use to enable the ``opscode-manage-webapp`` service. Default value: ``true``.
-   * - ``services[opscode_manage_worker].enable``
+   * - ``services['opscode_manage_worker'].enable``
      - Use to enable the ``opscode-manage-worker`` service. Default value: ``true``.
    * - ``support_email_address``
      - The email address used to send feedback. Default value: ``support@getchef.com``.
