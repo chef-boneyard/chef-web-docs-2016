@@ -232,6 +232,11 @@ This configuration file has the following settings:
        ::
  
           rest_timeout 300
+   * - ``role_path``
+     - |path roles_chef| Default value: ``/var/chef/roles``. For example:
+       ::
+ 
+          role_path "/var/chef/roles"
    * - ``splay``
      - |splay| Default value: ``nil``. For example:
        ::
