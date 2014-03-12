@@ -7,3 +7,5 @@ The ``upload`` argument is used to upload one or more cookbooks (and any files t
 
 .. note:: Use a |chefignore| file to prevent the upload of specific files and file types, such as temporary files or files placed in folders by version control systems. The |chefignore| file must be located in the root of the cookbook repository and must use rules similar to filename globbing (as defined by the |ruby| ``File.fnmatch`` syntax).
 
+.. note:: Empty directories are not uploaded to the |chef server|. To upload an empty directory, create a "dot" file---e.g. ``.keep``---in that directory to ensure that the directory itself is not empty.
+
