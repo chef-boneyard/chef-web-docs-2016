@@ -26,6 +26,11 @@ This configuration file has the following settings:
        ::
 
           cache_path File.join(File.expand_path("~"), ".chef", "cache")
+   * - ``checksum_path``
+     - |checksum_path| For example:
+       ::
+ 
+          checksum_path "/var/chef/checksums"
    * - ``chef_server_url``
      - |chef_server_url| For example:
        ::

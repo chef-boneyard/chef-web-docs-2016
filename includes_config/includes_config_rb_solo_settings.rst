@@ -35,7 +35,7 @@ This configuration file has the following settings:
      - |checksum_path| For example:
        ::
  
-          checksum_path "path_to_folder"
+          checksum_path "/var/chef/checksums"
    * - ``cookbook_path``
      - |cookbook_path subdirectory| For example:
        ::
