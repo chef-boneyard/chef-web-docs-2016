@@ -81,6 +81,11 @@ This configuration file has the following settings:
        ::
  
           diff_output_threshold 1000000
+   * - ``encrypted_data_bag_secret``
+     - The subdirectory in which encrypted data bag secrets are located. For example:
+       ::
+ 
+          encrypted_data_bag_secret "/etc/chef/encrypted_data_bag_secret"
    * - ``environment``
      - |name environment| This is typically set from the command line (using the ``-E`` option) or in the |client rb| configuration file. For example:
        ::

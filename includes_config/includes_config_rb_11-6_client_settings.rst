@@ -102,6 +102,11 @@ This configuration file has the following settings:
        ::
  
           enable_selinux_file_permission_fixup true
+   * - ``encrypted_data_bag_secret``
+     - The subdirectory in which encrypted data bag secrets are located. For example:
+       ::
+ 
+          encrypted_data_bag_secret "/etc/chef/encrypted_data_bag_secret"
    * - ``environment``
      - |name environment| For example:
        ::
