@@ -14,11 +14,11 @@ The Reporting Run
 =====================================================
 .. include:: ../../includes_reporting/includes_reporting_run.rst
 
-|chef manager|, Reports
+|chef manage|, Reports
 =====================================================
 .. include:: ../../includes_manage/includes_manage.rst
 
-When |reporting| and |chef manager| are both added to |chef server oec|, a user interface for |reporting| is also available.
+When |reporting| and |chef manage| are both added to |chef server oec|, a user interface for |reporting| is also available.
 
 .. image:: ../../images/step_manage_webui_reports.png
 
@@ -31,7 +31,6 @@ knife reporting
 Install this plugin
 -----------------------------------------------------
 .. include:: ../../step_plugin_knife/step_plugin_knife_reporting_install_rubygem.rst
-
 
 runs list
 -----------------------------------------------------

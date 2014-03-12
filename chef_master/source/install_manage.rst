@@ -8,7 +8,7 @@ Requirements
 =====================================================
 .. include:: ../../includes_system_requirements/includes_system_requirements_manager.rst
 
-|chef manager| Server
+Manage the Server
 =====================================================
 .. include:: ../../includes_install/includes_install_manager_server.rst
 

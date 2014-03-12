@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
-To set up the |chef manager| server:
+To set up the |chef manage| server:
 
 #. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system
 #. Install the package on the same machine that is running |chef server oec| 11.0.1 or higher. For example on |ubuntu|:
@@ -30,7 +30,7 @@ To set up the |chef manager| server:
    example, in a configuration with two back end servers and three front end servers, this command
    would need to be run on all three front end machines.
 
-#. Reconfigure the |chef manager| server:
+#. Reconfigure the |chef manage| server:
 
    .. code-block:: bash
 
@@ -44,5 +44,5 @@ To set up the |chef manager| server:
 .. 
 ..       $ opscode-manage-ctl test
 .. 
-..    The |chef manager| should now be running and accessible by a web browser on port 443 (HTTPS). 
+..    The |chef manage| should now be running and accessible by a web browser on port 443 (HTTPS). 
 
