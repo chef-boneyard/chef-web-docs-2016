@@ -26,7 +26,7 @@ Policy
 =====================================================
 .. include:: ../../includes_chef/includes_chef_policy.rst
 
-The |chef manager| provides ways for users to manage `data bags <http://docs.opscode.com/server_manage_data_bags.html>`_, `environments <http://docs.opscode.com/server_manage_environments.html>`_, `roles <http://docs.opscode.com/server_manage_roles.html>`_, `cookbooks <http://docs.opscode.com/server_manage_cookbooks.html>`_, and `clients <http://docs.opscode.com/server_manage_clients.html>`_,
+The |chef manage| provides ways for users to manage `data bags <http://docs.opscode.com/server_manage_data_bags.html>`_, `environments <http://docs.opscode.com/server_manage_environments.html>`_, `roles <http://docs.opscode.com/server_manage_roles.html>`_, `cookbooks <http://docs.opscode.com/server_manage_cookbooks.html>`_, and `clients <http://docs.opscode.com/server_manage_clients.html>`_,
 
 `managing tags <http://docs.opscode.com/server_manage_nodes.html#manage-tags>`_.
 
