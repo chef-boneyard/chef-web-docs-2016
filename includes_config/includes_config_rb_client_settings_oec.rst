@@ -59,6 +59,11 @@ This configuration file has the following settings:
        ::
  
           data_bag_decrypt_minimum_version "2"
+   * - ``data_bag_path``
+     - |data_bag_path| Default value: ``/var/chef/data_bags``. For example:
+       ::
+ 
+          data_bag_path "/var/chef/data_bags"
    * - ``diff_disabled``
      - |diff_disabled| Default value: ``false``. For example:
        ::
