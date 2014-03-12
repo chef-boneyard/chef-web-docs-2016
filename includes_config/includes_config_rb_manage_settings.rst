@@ -12,11 +12,11 @@ This configuration file has the following settings:
    * - ``chef_documentation_url``
      - The URL at which documentation for |chef| is located. Default value: ``http://docs.opscode.com``.
    * - ``events.port``
-     - The port on which the events services run. This value is defined in the ``/libraries/config.rb`` file. Default value: ``11001``.
+     - The port on which the events services run. Default value: ``11001``.
    * - ``logging.chef_log_level``
-     - The log level used for requests to the |chef server| from the web application. This value is defined in the ``/libraries/config.rb`` file. Default value: ``info``.
+     - The log level used for requests to the |chef server| from the web application. Default value: ``info``.
    * - ``logging.log_level``
-     - The log level for |ruby on rails| services. This value is defined in the ``/libraries/config.rb`` file. Default value: ``info``.
+     - The log level for |ruby on rails| services. Default value: ``info``.
    * - ``nginx_addon_prefix``
      - The prefix used by the |chef manage| add-on. Default value: ``30``.
    * - ``platform.user``
@@ -26,11 +26,11 @@ This configuration file has the following settings:
    * - ``public_port``
      - The port on which the external load balancer will listen. Default value: ``443``.
    * - ``redis.host``
-     - The host on which |redis| runs. This value is defined in the ``/libraries/config.rb`` file. Default value: ``localhost``.
+     - The host on which |redis| runs. Default value: ``localhost``.
    * - ``redis.port``
-     - The port on which |redis| listens. This value is defined in the ``/libraries/config.rb`` file. Default value: ``11002``.
+     - The port on which |redis| listens. Default value: ``11002``.
    * - ``redis.url``
-     - The URL used by |redis|. This value is defined in the ``/libraries/config.rb`` file. Default value: ``{ "redis://#{host}:#{port}/0" }``.
+     - The URL used by |redis|. Default value: ``{ "redis://#{host}:#{port}/0" }``.
    * - ``runit_timeout``
      - The amount of time (in seconds) to wait before timing out. Default value: ``30``.
    * - ``secret_token``
@@ -50,9 +50,9 @@ This configuration file has the following settings:
    * - ``webapp.backlog``
      - The size of the backlog. Default value: ``1024``.
    * - ``webapp.listen``
-     - The port on which |chef manage| services listen. This value is defined in the ``/libraries/config.rb`` file. Default value: ``{ "127.0.0.1:#{port}" }``.
+     - The port on which |chef manage| services listen. Default value: ``{ "127.0.0.1:#{port}" }``.
    * - ``webapp.port``
-     - The port on which |chef manage| services run. This value is defined in the ``/libraries/config.rb`` file. Default value: ``9462``.
+     - The port on which |chef manage| services run. Default value: ``9462``.
    * - ``webapp.tcp_nodelay``
      - |use nagle| Default value: ``true``.
    * - ``webapp.worker_processes``
