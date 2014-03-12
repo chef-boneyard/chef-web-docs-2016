@@ -6,6 +6,8 @@ About |ohai|
 
 .. include:: ../../includes_ohai/includes_ohai_platforms.rst
 
+.. warning:: `Ohai 7 <http://docs.opscode.com/release/ohai-7/>`_ is planned to be fully integrated into the |chef client| starting with the 11.12.0 release (~April 2014). The current version is `Ohai 6 <http://docs.opscode.com/release/ohai-6/>`_.
+
 Automatic Attributes
 =====================================================
 .. include:: ../../includes_ohai/includes_ohai_automatic_attribute.rst
