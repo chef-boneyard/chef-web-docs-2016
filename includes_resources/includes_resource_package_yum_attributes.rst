@@ -14,7 +14,7 @@
    * - ``arch``
      - |architecture package|
    * - ``flush_cache``
-     - |flush_cache|
+     - |flush_cache| Default value: ``{ :before => false, :after => false }``.
    * - ``options``
      - |command options|
    * - ``package_name``
