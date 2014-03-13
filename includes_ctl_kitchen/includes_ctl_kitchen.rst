@@ -5,6 +5,6 @@
 
 |kitchen_cli| is the command-line tool used by |kitchen|, an automated testing tool used by the |chef client| for automated cookbook testing and integration. |kitchen| can run tests against any combination of platforms using any combination of test suites. Each test, however, is done against a specific instance, which is comprised of a single platform and a single set of testing criteria. This allows each test to be run in isolation, which ensures that different behaviors within the same codebase can be tested thoroughly before those changes are committed to production.
 
-..note:: Any |kitchen| subcommand that does not specify an instance will be applied to all instances.
+.. note:: Any |kitchen| subcommand that does not specify an instance will be applied to all instances.
 
 
