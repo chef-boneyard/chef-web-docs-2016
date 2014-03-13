@@ -6,6 +6,6 @@ Every request made by the |chef client| to the |chef server| must be an authenti
 
 However, during the first |chef client| run, this private key does not exist. Instead, the |chef client| will attempt to use the private key assigned to the |chef validator|, located in ``/etc/chef/validation.pem``. (If, for any reason, the |chef validator| is unable to make an authenticated request to the |chef server|, the initial |chef client| run will fail.)
 
-During the initial |chef client| run, the |chef client| will register with the |chef server| using the private key assigned to the |chef validator|. During the initial |chef client| run, the |chef client| will obtain a ``client.pem`` private key that will be for all future authentication requests to the |chef server|. 
+During the initial |chef client| run, the |chef client| will register with the |chef server| using the private key assigned to the |chef validator|, after which the |chef client| will obtain a ``client.pem`` private key for all future authentication requests to the |chef server|. 
 
 After the initial |chef client| run has completed successfully, the |chef validator| is no longer required and may be deleted from the node. Use the ``delete_validation`` recipe found in the ``chef-client`` cookbook (https://github.com/opscode-cookbooks/chef-client) to remove the |chef validator|.
