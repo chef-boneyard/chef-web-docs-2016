@@ -4,6 +4,8 @@ kitchen
 
 .. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen.rst
 
+.. warning:: This topic details functionality that will be packaged with Chef in an upcoming release. This topic does NOT detail the basic functionality of test-kitchen. See http://kitchen.ci/docs/getting-started/ for the official description of test-kitchen, how to get it set up, and how to use it for integrated cookbook testing.
+
 .. kitchen console
 .. =====================================================
 .. .. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen_console.rst
