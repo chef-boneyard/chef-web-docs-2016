@@ -72,7 +72,7 @@
        
        .. code-block:: ruby
        
-          source ["http://seapower/spring.png", "http://seapower/has.png", , "http://seapower/sprung.png"]
+          source ["http://seapower/spring.png", "http://seapower/has.png", "http://seapower/sprung.png"]
        
        When multiple paths are specified, the |chef client| will attempt to download the files in the order listed, stopping after the first successful download.
    * - ``use_conditional_get``
