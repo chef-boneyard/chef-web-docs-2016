@@ -66,7 +66,7 @@
        
        .. code-block:: ruby
        
-          source "http://seapower/spring.png", "http://seapower/has.png", , "http://seapower/sprung.png"
+          source "http://seapower/spring.png", "http://seapower/has.png", "http://seapower/sprung.png"
        
        By defining those same multiple paths as an array:
        
