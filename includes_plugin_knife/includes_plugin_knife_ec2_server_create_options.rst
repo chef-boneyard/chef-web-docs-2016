@@ -8,7 +8,7 @@ This argument has the following options:
 ``-A KEY``, ``--aws-access-key-id KEY``
    |aws_access_key_id|
 
-``-bootstrap-protocol PROTOCOL``
+``--bootstrap-protocol PROTOCOL``
    |bootstrap protocol|
 
 ``--bootstrap-version VERSION``
@@ -23,13 +23,13 @@ This argument has the following options:
 ``--ebs-no-delete-on-term``
    |ebs-no-delete-on-term|
 
-``-ephemeral DEVICE``
+``--ephemeral DEVICE``
    |ephemeral device|
 
 ``-f FLAVOR``, ``--flavor FLAVOR``
    |flavor|
 
-``-fqdn FQDN``
+``--fqdn FQDN``
    |name fqdn| This value should be pre-defined.
 
 ``-g X,Y,Z``, ``--security-group-ids X,Y,Z``
@@ -38,7 +38,7 @@ This argument has the following options:
 ``-G X,Y,Z``, ``--groups X,Y,Z``
    |groups| Not supported when using |amazon vpc|.
 
-``-hint HINT_NAME[=HINT_FILE]``
+``--hint HINT_NAME[=HINT_FILE]``
    |hint|
 
 ``-i IDENTITY_FILE``, ``--identity-file IDENTITY_FILE``
@@ -77,7 +77,7 @@ This argument has the following options:
 ``-S KEY``, ``--ssh-key KEY``
    |ssh_key amazon_ec2|
 
-``-server-connect-attribute ATTRIBUTE``
+``--server-connect-attribute ATTRIBUTE``
    |attribute ssh| This should be an |amazon ec2| server attribute.
 
 ``--T Tag=Value[,Tag=Value]``, ``--tags Tag=Value[,Tag=Value]``
