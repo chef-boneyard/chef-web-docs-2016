@@ -39,3 +39,24 @@
      - |source template| |source template_cookbook| |source template_local| This attribute may also be used to distribute specific files to specific platforms (see the section "File Specificity", below). Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``variables``
      - |variables passed_to_template|
+       
+       This attribute can also be used to reference a partial template file by using a |ruby hash|. For example:
+       
+       .. code-block:: ruby
+       
+          template "/file/name.txt" do
+            variables :partials => {
+              "partial_name_1.txt.erb" => "message",
+              "partial_name_2.txt.erb" => "message",
+              "partial_name_3.txt.erb" => "message"
+            },
+          end
+       
+       where each of the partial template files can then be combined using normal |ruby| template patterns within a template file, such as:
+       
+       .. code-block:: ruby
+       
+          <% @partials.each do |partial, message| %>
+            Here is <%= partial %>
+          <%= render partial, :variables => {:message => message} %>
+          <% end %>

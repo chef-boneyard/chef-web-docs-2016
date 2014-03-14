@@ -510,9 +510,28 @@ Partial Support in Templates
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_render_method.rst
 
-Template Resource
+``variables`` attribute
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_cookbooks/includes_cookbooks_template_partials_template_resource.rst
+The ``variables`` attribute in the |resource template| resource can be used to reference a partial template file by using a |ruby hash|. For example:
+
+.. code-block:: ruby
+
+   template "/file/name.txt" do
+     variables :partials => {
+       "partial_name_1.txt.erb" => "message",
+       "partial_name_2.txt.erb" => "message",
+       "partial_name_3.txt.erb" => "message"
+      },
+    end
+
+where each of the partial template files can then be combined using normal |ruby| template patterns within a template file, such as:
+
+.. code-block:: ruby
+
+   <% @partials.each do |partial, message| %>
+     Here is <%= partial %>
+   <%= render partial, :variables => {:message => message} %>
+   <% end %>
  
 |chef apply|
 -----------------------------------------------------
