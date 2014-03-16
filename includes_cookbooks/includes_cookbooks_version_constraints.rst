@@ -13,18 +13,18 @@ The following operators can be used with cookbook versions:
 
    * - Operator
      - Description
-   * - =
-     - Equal to
-   * - >
-     - Greater than
-   * - <
-     - Less than
-   * - >=
-     - Greater than or equal to; also known as "optimistically greater than" (or "optimistic")
-   * - <=
-     - Less than or equal to
-   * - ~>
-     - Approximately greater than; also known as "pessimistically greater than" (or "pessimistic")
+   * - ``=``
+     - |ruby equal|
+   * - ``>``
+     - |ruby greater|
+   * - ``<``
+     - |ruby less|
+   * - ``>=``
+     - |ruby greater_optimistic|
+   * - ``<=``
+     - |ruby less_or_equal|
+   * - ``~>``
+     - |ruby greater_pessimistic|
 
 For example, a version constraint for "equals version 1.0.7" is expressed like this:
 

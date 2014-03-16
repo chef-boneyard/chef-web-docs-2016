@@ -27,7 +27,7 @@ This configuration file has the following settings:
            :default => "kitty kitty"
 
    * - ``conflicts``
-     - |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named "dogs":
+     - For information only; not used outside this file. |metadata rb conflicts| For example, if a cookbook conflicts with another cookbook named "dogs":
        ::
 
           conflicts "dogs"
@@ -166,7 +166,7 @@ This configuration file has the following settings:
 
           recommends "dogs", "> 1.0"
    * - ``replaces``
-     - |metadata rb replaces| For example, to replace a cookbook named "dogs" with this cookbook:
+     - For information only; not used outside this file. |metadata rb replaces| For example, to replace a cookbook named "dogs" with this cookbook:
        ::
 
           replaces "dogs"
@@ -176,7 +176,7 @@ This configuration file has the following settings:
 
          replaces "dogs", "< 4.0"
    * - ``suggests``
-     - |metadata rb suggests| For example:
+     - For information only; not used outside this file. |metadata rb suggests| For example:
        ::
 
           suggests "cats"
