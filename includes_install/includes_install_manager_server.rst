@@ -14,9 +14,19 @@ To set up the |chef manage| server:
 
    Modify the |enterprise rb| file (located at ``/etc/opscode/private-chef.rb``) to disable the existing |service webui| service.
 
-   .. code-block:: bash
+   For Standalone servers:
 
-      opscode_webui['enable']=false
+   .. code-block:: ruby
+   
+        opscode_webui['enable'] = false
+   
+   For Tiered and HA topologies:
+
+   .. code-block:: ruby
+   
+      if PrivateChef['servers'][node['fqdn']]['role'] == 'frontend'
+        opscode_webui['enable'] = false
+      end      
 
    If the |enterprise rb| file does not exist, then create the file and add this setting to it.
 
