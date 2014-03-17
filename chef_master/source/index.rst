@@ -178,6 +178,7 @@ Cookbooks
    config_rb_metadata
    config_rb_push_jobs_server
    config_rb_solo
+   config_yml_kitchen
    ctl_chef_apply
    ctl_chef_client
    ctl_chef_server
