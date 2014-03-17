@@ -168,7 +168,7 @@ The following sections discuss these deployment configuration options in greater
 
 Install |chef server oec|
 -----------------------------------------------------
-The |chef server oec| server can be installed via download or by using the |api omnitruck|:
+The |chef server oec| server can be installed via download:
 
 .. raw:: html
 
