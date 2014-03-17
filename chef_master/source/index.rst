@@ -264,6 +264,7 @@ Cookbooks
    install_workstation
    junos
    just_enough_ruby_for_chef
+   kitchen
    knife
    knife_common_options
    knife_bootstrap
