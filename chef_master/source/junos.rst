@@ -10,6 +10,8 @@
 
 .. include:: ../../includes_juniper/includes_juniper_junos.rst
 
+For more information about |juniper chef|, including information about installing and configuring the |chef client| on a |junos| device, see the |juniper| |juniper chef| documentation at http://www.juniper.net/techpubs/en_US/release-independent/junos-chef/information-products/pathway-pages/index.html.
+
 The netdev Lightweight Resources
 -----------------------------------------------------
 |cookbook name netdev|
