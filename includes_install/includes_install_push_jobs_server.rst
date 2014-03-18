@@ -1,7 +1,7 @@
 .. The contents of this file are included in multiple topics.
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets. 
 
-To set up the |push jobs| server:
+To set up the |push jobs| server for a standalone configuration:
 
 #. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system.
 #. Install the |push jobs| servers. For example on |ubuntu|:

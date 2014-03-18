@@ -4,15 +4,23 @@ Install |push jobs|
 
 .. include:: ../../includes_install/includes_install_push_jobs_overview.rst
 
-|push jobs| Server
+Install the Server
 =====================================================
+The |push jobs| server can be installed as part of a standalone or high availability configuration.
+
+Standalone
+-----------------------------------------------------
 .. include:: ../../includes_install/includes_install_push_jobs_server.rst
 
-|push jobs| Client
+High Availability
+-----------------------------------------------------
+.. include:: ../../includes_install/includes_install_push_jobs_server_ha.rst
+
+Install the Client
 =====================================================
 .. include:: ../../includes_install/includes_install_push_jobs_client.rst
 
-|push jobs| Workstation
+Install the Workstation
 =====================================================
 .. include:: ../../includes_install/includes_install_push_jobs_workstation.rst
 

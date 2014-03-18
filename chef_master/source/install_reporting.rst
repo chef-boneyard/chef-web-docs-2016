@@ -8,7 +8,7 @@ Requirements
 =====================================================
 .. include:: ../../includes_system_requirements/includes_system_requirements_reporting.rst
 
-|reporting| Server
+Install the Server
 =====================================================
 The |reporting| server can be installed as part of a standalone or high availability configuration.
 
@@ -22,11 +22,11 @@ High Availability
 
 .. include:: ../../includes_install/includes_install_reporting_server_ha.rst
 
-|reporting| Client
+Install the Client
 =====================================================
 .. include:: ../../includes_install/includes_install_reporting_client.rst
 
-|reporting| Workstation
+Install the Workstation
 =====================================================
 .. include:: ../../includes_install/includes_install_reporting_workstation.rst
 
