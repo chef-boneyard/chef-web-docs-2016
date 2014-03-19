@@ -131,6 +131,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
 * Users, once :doc:`authorized </auth_authorization>` can only perform certain actions.
 * The |chef server| can be :doc:`configured to use SSL </server_security>`.
+* The :doc:`user interface </manage>` can be used to manage clients, cookbooks, data bags, environments, nodes, roles, and users.
 
 Server Components
 -----------------------------------------------------
@@ -517,6 +518,7 @@ The following topics discuss using |chef server osc| with platforms:
    lwrp_webpi
    lwrp_windows
    lwrp_yum
+   manage
    osc_overview
    ohai
    ohai_custom
