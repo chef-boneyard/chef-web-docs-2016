@@ -30,6 +30,10 @@ default_action
 -----------------------------------------------------
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_default_action.rst
 
+state_attrs
+-----------------------------------------------------
+.. include:: ../../includes_dsl_resource/includes_dsl_resource_method_state_attrs.rst
+
 Validation Parameters
 -----------------------------------------------------
 .. include:: ../../includes_dsl_resource/includes_dsl_resource_method_attribute_validation_parameter.rst
