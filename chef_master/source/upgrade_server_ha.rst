@@ -6,6 +6,12 @@ This topic describes the upgrade process from |chef private| to |chef server oec
 
 To upgrade to |chef server oec|, do the following:
 
+#. Run the following on all machines to make sure all services are in a sane state.
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl reconfigure
+
 #. Stop all of the front end machines:
 
    .. code-block:: bash
