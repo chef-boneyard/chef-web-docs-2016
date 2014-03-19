@@ -21,9 +21,9 @@ to:
    {
       "id": "charlie",
       "uid": 1005,
-      "gid":"ops",
-      "shell":"/bin/zsh",
-      "comment":"Crazy Charlie"
+      "gid": "ops",
+      "shell": "/bin/zsh",
+      "comment": "Crazy Charlie"
    }
 
 
