@@ -216,7 +216,7 @@ The |chef server| can be managed in the following ways:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_services.html">Services</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/server_users.html">Users</a> </br>
 
-The |chef manager| is an add-on for |chef server oec| that provides a user interface that enables the management of objects on the |chef server|:
+The |chef manage| add-on for |chef server oec| provides a user interface that enables the management of objects on the |chef server|:
 
 .. raw:: html
 
