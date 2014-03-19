@@ -18,9 +18,9 @@ To upgrade to |chef server oec|, do the following:
       
       $ private-chef-ctl stop
 
-#. Identify the name of the original non-bootstrap backend which does **not** have `:bootstrap => true` in `/etc/opscode/private-chef.rb`.
+#. Identify the name of the original non-bootstrap backend machine. This is the back end machine that does **not** have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``.
 
-#. Stop keepalived on the original non-bootstrap backend to enforce that the bootstrap backend is active. This may trigger a failover.
+#. Stop |keepalived| on the original non-bootstrap backend machine. This will ensure that the bootstrap back end machine is the active machine. This action may trigger a failover.
 
    .. code-block:: bash
       
