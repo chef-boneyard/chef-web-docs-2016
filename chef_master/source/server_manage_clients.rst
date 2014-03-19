@@ -6,7 +6,7 @@ Manage Clients
 
 |api client description|
 
-Manage
+Manage Clients
 =====================================================
 Clients can be managed from the |chef manage| web user interface.
 
@@ -27,19 +27,57 @@ View Details
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_view_details.rst
 
 Permissions
-=====================================================
+-----------------------------------------------------
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions.rst
 
 .. include:: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst
 
 Set
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_set.rst
 
 Update
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_add.rst
 
 View
------------------------------------------------------
++++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_view.rst
+
+Validation Clients
+=====================================================
+.. include:: ../../includes_security/includes_security_chef_validator.rst
+
+Add
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_add.rst
+
+Delete
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_delete.rst
+
+Reset Key
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_reset_key.rst
+
+View Details
+-----------------------------------------------------
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_view_details.rst
+
+Permissions
+-----------------------------------------------------
+.. include:: ../../includes_server_rbac/includes_server_rbac_permissions.rst
+
+.. include:: ../../includes_server_rbac/includes_server_rbac_permissions_object.rst
+
+Set
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_permissions_add.rst
+
+Update
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_permissions_add.rst
+
+View
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_permissions_view.rst

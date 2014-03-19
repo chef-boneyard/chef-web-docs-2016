@@ -45,6 +45,10 @@ Add Tag
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_tags_add.rst
 
+Add Validation Client
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_add.rst
+
 Change Password
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_change_password.rst
@@ -84,6 +88,10 @@ Delete Role
 Delete Tag
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_tags_delete.rst
+
+Delete Validation Client
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_delete.rst
 
 Download Cookbook File
 =====================================================
@@ -165,13 +173,17 @@ Reset Node Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_reset_key.rst
 
+Reset Org Key
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_reset_key.rst
+
 Reset User Key
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_reset_key.rst
 
-Reset Org Key
+Reset Validation Client Key
 =====================================================
-.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_reset_key.rst
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_reset_key.rst
 
 Search Nodes
 =====================================================
@@ -217,6 +229,10 @@ Set Tag
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_node_tags_set.rst
 
+Set Validation Client Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_permissions_set.rst
+
 Switch Orgs
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_organization_switch.rst
@@ -252,6 +268,10 @@ Update Node Permissions
 Update Role Permissions
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_role_permissions_add.rst
+
+Update Validation Client Permissions
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_permissions_add.rst
 
 View All Cookbook Files
 =====================================================
@@ -377,7 +397,9 @@ View User Account Details
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_admin_users_view_account.rst
 
-
+View Validation Client Details
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_view_details.rst
 
 
 
