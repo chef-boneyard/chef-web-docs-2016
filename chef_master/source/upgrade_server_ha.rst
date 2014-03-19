@@ -6,19 +6,26 @@ This topic describes the upgrade process from |chef private| to |chef server oec
 
 To upgrade to |chef server oec|, do the following:
 
+#. Run the following on all machines to make sure all services are in a sane state.
+
+   .. code-block:: bash
+      
+      $ private-chef-ctl reconfigure
+
 #. Stop all of the front end machines:
 
    .. code-block:: bash
       
       $ private-chef-ctl stop
 
-#. Identify the original back end primary and secondary machines. The original primary is the same machine on which the initial bootstrap operation was run and will have a setting in the ``private-chef.rb`` file that sets ``:bootstrap => true``. The upgrade process for the back end machines requires the original primary machine to be upgraded before the original secondary machine. This may require using failover to move the original primary machine back into a state where it is the current primary back end machine.
+#. The upgrade process for the back end machines requires the original primary machine (bootstrap back end) to be upgraded before the original secondary machine. This may require using failover to move the original primary machine back into a state where it is the current primary back end machine.
 
-#. Stop the back end secondary machine:
+   #. Identify the name of the original non-bootstrap backend which does **not** have `:bootstrap => true` in `/etc/opscode/private-chef.rb`.
+   #. On the original non-bootstrap backend, stop keepalived to failover to the bootstrap backend if necessary and to prevent unintended failover during the upgrade.
 
-   .. code-block:: bash
+      .. code-block:: bash
       
-      $ private-chef-ctl stop keepalived
+         $ private-chef-ctl stop keepalived
 
 #. Run |debian dpkg| or |rpm| on all machines. For |debian dpkg|:
 
