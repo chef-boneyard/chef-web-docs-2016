@@ -36,7 +36,7 @@ The |service postgresql| service has the following settings:
    * - ``postgresql['log_rotation']``
      - |log_rotation| Default value: ``{ 'file_maxbytes' => 104857600, 'num_to_keep' => 10 }``
    * - ``postgresql['max_connections']``
-     - |max_connections| Default value: ``200``.
+     - |max_connections| Default value: ``350``.
    * - ``postgresql['md5_auth_cidr_addresses']``
      - Default value: ``[ ]``.
    * - ``postgresql['port']``
