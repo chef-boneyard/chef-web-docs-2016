@@ -4,6 +4,8 @@
 
 The ``state_attrs`` method is used to define the attributes that will be tracked by the |reporting| server. In general, this should be a list of attributes that describe the desired state of the system, such as file permissions, cloud provider data (like snapshots, volumes, identifiers, sizes, and access keys), and so on.
 
+.. note:: This method only works with the |reporting| add-on for |chef server oec|.
+
 The syntax for the ``state_attrs`` method is as follows:
 
 .. code-block:: ruby
