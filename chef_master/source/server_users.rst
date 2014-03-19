@@ -4,26 +4,34 @@ Users
 
 .. include:: ../../includes_server_users/includes_server_users.rst
 
-Create a User
+Change Password
 =====================================================
-.. include:: ../../includes_server_users/includes_server_users_create.rst
+.. include:: ../../step_manage_webui/step_manage_webui_admin_users_change_password.rst
 
-View a User Profile
+Generate Config File
 =====================================================
-.. include:: ../../includes_server_users/includes_server_users_view_profile.rst
+.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_generate_config.rst
 
-Edit a User Profile
+Get Starter Kit
 =====================================================
-.. include:: ../../includes_server_users/includes_server_users_edit_profile.rst
+.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_get_starter_kit.rst
 
-Recover a Password
+Reset Client Key
 =====================================================
-.. include:: ../../includes_server_users/includes_server_users_recover_password.rst
+.. include:: ../../step_manage_webui/step_manage_webui_policy_client_reset_key.rst
 
-Change a Password
+Reset Node Key
 =====================================================
-.. include:: ../../includes_server_users/includes_server_users_change_password.rst
+.. include:: ../../step_manage_webui/step_manage_webui_node_reset_key.rst
 
-Regenerate the Private Key
+Reset User Key
 =====================================================
-.. include:: ../../includes_server_users/includes_server_users_regenerate_private_key.rst
+.. include:: ../../step_manage_webui/step_manage_webui_admin_users_reset_key.rst
+
+Reset Org Key
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_organization_reset_key.rst
+
+View User Account Details
+=====================================================
+.. include:: ../../step_manage_webui/step_manage_webui_admin_users_view_account.rst
