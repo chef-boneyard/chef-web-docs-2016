@@ -201,6 +201,8 @@ The following settings files are used to configure behavior for the |chef client
 
 |ohai| collects important data about every node:
 
+.. raw:: html
+
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/ohai.html">About Ohai</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/ohai_custom.html">Build Custom Ohai Plugins</a> </br>
 
