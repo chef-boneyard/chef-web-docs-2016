@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To add an environment:
+To add a client:
 
 #. Open |webui|.
 #. Click |webui policy|.

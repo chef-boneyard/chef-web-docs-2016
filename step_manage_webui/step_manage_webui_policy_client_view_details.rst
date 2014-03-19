@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view environment details:
+To view client details:
 
 #. Open |webui|.
 #. Click |webui policy|.

@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To view permissions for an environment object:
+To view permissions for a client object:
 
 #. Open |webui|.
 #. Click |webui policy|.

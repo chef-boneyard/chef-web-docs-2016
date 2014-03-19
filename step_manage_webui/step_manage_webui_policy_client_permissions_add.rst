@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To update the permissions list for an environment object:
+To update the permissions list for a client object:
 
 #. Open |webui|.
 #. Click |webui policy|.

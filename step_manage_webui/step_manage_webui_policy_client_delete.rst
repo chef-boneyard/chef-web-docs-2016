@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To delete an environment:
+To delete a client:
 
 #. Open |webui|.
 #. Click |webui policy|.

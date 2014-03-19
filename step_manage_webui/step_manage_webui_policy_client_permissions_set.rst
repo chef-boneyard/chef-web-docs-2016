@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-To set permissions list for an environment object:
+To set permissions list for a client object:
 
 #. Open |webui|.
 #. Click |webui policy|.
