@@ -38,7 +38,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Chef 11.10.x Documentation'
+project = u'Chef 11.12.x Documentation'
 copyright = u'This work is licensed under a Creative Commons Attribution 3.0 Unported License.'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -136,7 +136,7 @@ html_static_path = ['_static']
 # hack that achieved the desired behavior. Plus, there's 0% chance that we'll
 # ever want to insert a datetime stamp in the docs.
 
-html_last_updated_fmt = 'chef-client, version 11.10.x'
+html_last_updated_fmt = 'chef-client, version 11.12.x'
 
 # If true, SmartyPants will be used to convert quotes and dashes to
 # typographically correct entities.
@@ -182,5 +182,5 @@ html_show_copyright = True
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'chef-client 11.10.x Documentation'
+htmlhelp_basename = 'chef-client 11.12.x Documentation'
 
