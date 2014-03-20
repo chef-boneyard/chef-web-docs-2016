@@ -5,6 +5,8 @@ A version constraint is a string that combines the cookbook version syntax with 
 
    operator cookbook_version_syntax
 
+.. note:: Single digit cookbook versions are not allowed. Cookbook versions must specify at least the major and minor version. For example, use ``1.0`` or ``1.0.1``; do not use ``1``.
+
 The following operators can be used with cookbook versions:
 
 .. list-table::
