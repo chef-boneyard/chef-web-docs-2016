@@ -28,13 +28,13 @@
        
        .. code-block:: javascript
        
-       {
-         "name":"backend",
-         "description":"",
-         "cookbook_versions":{},
-         "json_class":"Chef::Environment",
-         "chef_type":"environment",
-         "default_attributes":{},
-         "override_attributes":{}
-       }
+          {
+            "name":"backend",
+            "description":"",
+            "cookbook_versions":{},
+            "json_class":"Chef::Environment",
+            "chef_type":"environment",
+            "default_attributes":{},
+            "override_attributes":{}
+          }
 

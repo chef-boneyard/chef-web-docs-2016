@@ -24,7 +24,7 @@
        
        .. code-block:: javascript
        
-       {
-         "id": "adam",
-         "real_name": "Adam Brent Jacob"
-       }
+          {
+            "id": "adam",
+            "real_name": "Adam Brent Jacob"
+          }

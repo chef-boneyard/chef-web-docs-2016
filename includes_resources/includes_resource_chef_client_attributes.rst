@@ -26,17 +26,17 @@
        
        .. code-block:: javascript
        
-       {
-       "clientname": "client_name",
-       "orgname": "org_name",
-       "validator": false,
-       "certificate": "-----BEGIN CERTIFICATE-----\n
-                       ...
-                       1234567890abcdefghijklmnopq\n
-                       ...
-                       -----END CERTIFICATE-----\n",
-       "name": "node_name"
-       }
+          {
+          "clientname": "client_name",
+          "orgname": "org_name",
+          "validator": false,
+          "certificate": "-----BEGIN CERTIFICATE-----\n
+                          ...
+                          1234567890abcdefghijklmnopq\n
+                          ...
+                          -----END CERTIFICATE-----\n",
+          "name": "node_name"
+          }
    * - ``source_key``
      - Use to copy a public key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
    * - ``source_key_pass_phrase``

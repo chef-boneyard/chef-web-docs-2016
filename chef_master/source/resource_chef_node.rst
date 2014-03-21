@@ -24,7 +24,7 @@ Attributes
 
 Providers
 =====================================================
-.. include:: ../../includes_resources/includes_resource_chef_nodeproviders.rst
+.. include:: ../../includes_resources/includes_resource_chef_node_providers.rst
 
 Examples
 =====================================================

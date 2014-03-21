@@ -30,9 +30,9 @@
        
        .. code-block:: javascript
        
-       {
-         "name": "Robert Forster"
-       }
+          {
+            "name": "Robert Forster"
+          }
    * - ``recovery_authentication_enabled``
      - xxxxx
    * - ``source_key``
