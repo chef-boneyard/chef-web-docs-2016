@@ -287,7 +287,6 @@ This configuration file has the following settings:
        
        * |ssl_verify_mode_verify_none|
        * |ssl_verify_mode_verify_peer| This is the recommended setting.
-       * |ssl_verify_mode_verify_api_cert|
        
        Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified. For example:
        ::
@@ -357,6 +356,8 @@ This configuration file has the following settings:
           [date] INFO: Report handlers complete
 
        Where in the examples above, ``[date]`` represents the date and time the long entry was created. For example: ``[Mon, 21 Nov 2011 09:37:39 -0800]``.
+   * - ``verify_api_cert``
+     - |ssl_verify_mode_verify_api_cert|
    * - ``whitelist``
      - A |ruby hash| that contains the whitelist used by |push jobs|. For example:
 
