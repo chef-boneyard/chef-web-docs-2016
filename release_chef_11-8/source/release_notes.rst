@@ -63,6 +63,8 @@ Three new settings are available for the |knife rb| and |client rb| configuratio
        ::
  
           local_mode true
+   * - ``verify_api_cert``
+     - |ssl_verify_mode_verify_api_cert| Default value: ``false``.
 
 
 New Man Pages
