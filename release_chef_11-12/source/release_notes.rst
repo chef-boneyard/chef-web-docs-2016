@@ -9,7 +9,8 @@ What's New
 The following items are new for |chef 11-12| and/or are changes from previous versions. The short version:
 
 * **Ohai 7.0** |ohai 7| is part of the |chef client| 11-12 install
-* **xxxxx** xxxxx
+* **knife ssl check** Use the |subcommand knife ssl_check| subcommand to xxxxx.
+* **knife ssl fetch** Use the |subcommand knife ssl_fetch| subcommand to xxxxx.
 * **xxxxx** xxxxx
 
 |ohai 7|
@@ -30,9 +31,74 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_example.rst
 
-xxxxx
+``knife ssl check``
 -----------------------------------------------------
-xxxxx
+.. include:: ../includes_knife_ssl_check.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../includes_knife_ssl_check_syntax.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+**Verify the SSL configuration for the Chef server**
+
+.. code-block:: bash
+
+   $ knife ssl check
+
+**Verify the SSL configuration for the chef-client**
+
+.. code-block:: bash
+
+   $ knife ssl check -c /etc/chef/client.rb
+
+**Verify an external server's SSL certificate**
+
+.. code-block:: bash
+
+   $ knife ssl check URL_or_URI
+
+for example:
+
+.. code-block:: bash
+
+   $ knife ssl check https://www.getchef.com
+
+``knife ssl fetch``
+-----------------------------------------------------
+.. include:: ../includes_knife_ssl_fetch.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../includes_knife_ssl_fetch_syntax.rst
+
+Examples
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+**Fetch the SSL certificates used by Knife from the Chef server**
+
+.. code-block:: bash
+
+   $ knife ssl fetch
+
+**Fetch the SSL certificates used by the chef-client from the Chef server**
+
+.. code-block:: bash
+
+   $ knife ssl fetch -c /etc/chef/client.rb
+
+**Fetch SSL certificates from a URL or URI**
+
+.. code-block:: bash
+
+   $ knife ssl fetch URL_or_URI
+
+for example:
+
+.. code-block:: bash
+
+   $ knife ssl fetch https://www.getchef.com
+
 
 xxxxx
 -----------------------------------------------------
