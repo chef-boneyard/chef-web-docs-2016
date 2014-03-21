@@ -59,7 +59,7 @@ project = u'knife node'
 # 
 # This is being used to define the version number for Chef, for now.
 # 
-today = 'Chef 11.10.0'
+today = 'Chef 11.12.0'
 # Else, today_fmt is used as the format for a strftime call.
 #today_fmt = '%B %d, %Y'
 
