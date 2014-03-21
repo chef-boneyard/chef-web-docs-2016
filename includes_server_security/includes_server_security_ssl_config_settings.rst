@@ -25,5 +25,5 @@ The |client rb| file has the following settings for configuring SSL:
        
        Depending on how |open ssl| is configured, the ``ssl_ca_path`` may need to be specified.
    * - ``verify_api_cert``
-     - |ssl_verify_mode_verify_api_cert|
+     - |ssl_verify_mode_verify_api_cert| Default value: ``false``.
 
