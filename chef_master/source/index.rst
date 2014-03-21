@@ -348,8 +348,15 @@ Cookbooks
    resource_batch
    resource_bff_package
    resource_breakpoint
+   resource_chef_client
+   resource_chef_data_bag
+   resource_chef_data_bag_item
+   resource_chef_environment
    resource_chef_gem
    resource_chef_handler
+   resource_chef_node
+   resource_chef_role
+   resource_chef_user
    resource_common
    resource_cookbook_file
    resource_cron
@@ -381,6 +388,8 @@ Cookbooks
    resource_perl
    resource_portage_package
    resource_powershell_script
+   resource_private_key
+   resource_public_key
    resource_python
    resource_registry_key
    resource_remote_directory
