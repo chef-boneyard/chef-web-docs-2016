@@ -5,4 +5,4 @@
 
 The |subcommand knife ssl_check| subcommand is used to verify the SSL configuration for the |chef server oec| and/or |chef server osc| servers, or at another location specified by a URL or URI.
 
-.. warning:: When verification of a remote server's |ssl| certificate is disabled, |knife| will issue a warning similar to "SSL validation of HTTPS requests is disabled. HTTPS connections are still encrypted, but the chef-client is not able to detect forged replies or man-in-the-middle attacks." To configure |ssl| for the |chef client|, set ``ssl_verify_mode`` to ``:verify_peer`` and ``verify_api_cert`` to ``true`` in the |client rb| file.
+.. warning:: When verification of a remote server's |ssl| certificate is disabled, the |chef client| will issue a warning similar to "SSL validation of HTTPS requests is disabled. HTTPS connections are still encrypted, but the chef-client is not able to detect forged replies or man-in-the-middle attacks." To configure |ssl| for the |chef client|, set ``ssl_verify_mode`` to ``:verify_peer`` **or** ``verify_api_cert`` to ``true`` in the |client rb| file.
