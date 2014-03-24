@@ -330,7 +330,7 @@ knife xargs
 
 Many of these settings are also configurable in the |knife rb| file.
 
-Knife Options
+|knife| Options
 -----------------------------------------------------
 New options have been added to the following |knife| subcommands:
 
