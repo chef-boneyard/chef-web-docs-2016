@@ -13,6 +13,7 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 * **knife ssl fetch** Use the |subcommand knife ssl_fetch| subcommand to xxxxx.
 * **New options for knife client subcommands** New options allow the creation and deletion of the |chef validator|.
 * **New options for chef-client** A new option allows a run-list to be specified, and then set permanently.
+* **Weekdays as symbols** The |resource cron| resource allows weekdays to be entered as a symbol, e.g. ``:monday`` or ``:friday``.
 
 |ohai 7|
 -----------------------------------------------------
