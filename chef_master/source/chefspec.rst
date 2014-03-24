@@ -6,7 +6,7 @@ ChefSpec is a unit testing framework that simulates the convergence of a node lo
 
 For more information ...
 =====================================================
-For more information about |foodcritic|:
+For more information about ChefSpec:
 
 * `ChefSpec Github Repo <https://github.com/sethvargo/chefspec>`_
 * `RSpec Documentation <https://relishapp.com/rspec/rspec-core/docs/command-line>`_
