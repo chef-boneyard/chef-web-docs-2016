@@ -9,7 +9,7 @@ This argument has the following options:
    |admin client| This option only works when used with the open source |chef server| and will have no effect when used with |chef server oec|.
 
 ``-f FILE``, ``--file FILE``
-   |path private_key| The path is specified by ``FILE``.
+   |file private_key|
 
 ``--validator``
    Use to create the client as the |chef validator|. Default value: ``false``.

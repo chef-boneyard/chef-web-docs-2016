@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``bulk delete`` argument is used to delete any |chef api client| that matches a pattern defined by a regular expression. The regular expression must be within quotes and not be surrounded by forward slashes (/).
+The ``bulk delete`` argument is used to delete any |chef api client| that matches a pattern defined by a regular expression. The regular expression must be within quotes and not be surrounded by forward slashes (``/``).
 
