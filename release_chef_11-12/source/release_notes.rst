@@ -11,7 +11,8 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 * **Ohai 7.0** |ohai 7| is part of the |chef client| 11-12 install
 * **knife ssl check** Use the |subcommand knife ssl_check| subcommand to xxxxx.
 * **knife ssl fetch** Use the |subcommand knife ssl_fetch| subcommand to xxxxx.
-* **xxxxx** xxxxx
+* **New options for knife client subcommands** New options allow the creation and deletion of the |chef validator|.
+* **New options for chef-client** A new option allows a run-list to be specified, and then set permanently.
 
 |ohai 7|
 -----------------------------------------------------
@@ -98,6 +99,36 @@ for example:
 .. code-block:: bash
 
    $ knife ssl fetch https://www.getchef.com
+
+|knife| Options
+-----------------------------------------------------
+New options have been added to the following |knife| subcommands:
+
+knife client bulk delete
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``-D``, ``--delete-validators``
+   |delete chef_validator|
+
+knife client create
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``--validator``
+   Use to create the client as the |chef validator|.
+
+knife client delete
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``-D``, ``--delete-validators``
+   |delete chef_validator|
+
+
+|chef client| Options
+-----------------------------------------------------
+New options have been added to the |chef client|:
+
+``-r RUN_LIST_ITEM``, ``--runlist RUN_LIST_ITEM``
+   |runlist_items|
 
 
 xxxxx
