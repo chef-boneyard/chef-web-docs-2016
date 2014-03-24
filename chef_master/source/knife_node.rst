@@ -224,6 +224,21 @@ The following examples show how to use this |knife| subcommand:
 
 .. include:: ../../step_knife/step_knife_node_run_list_remove_run_list.rst
 
+run_list set
+=====================================================
+.. include:: ../../includes_knife/includes_knife_node_run_list_set.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_knife/includes_knife_node_run_list_set_syntax.rst
+
+Options
+-----------------------------------------------------
+|no_options|
+
+Examples
+-----------------------------------------------------
+None.
 
 show
 =====================================================
