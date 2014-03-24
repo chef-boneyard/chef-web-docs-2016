@@ -3,4 +3,4 @@
 
 |config rb client| This file is the default configuration file and is loaded every time the |chef client| executable is run. The |chef client| executable can be run as a daemon. 
 
-On |unix|- and |linux|-based machines, the configuration file is located at: |path chef client rb|. On |windows| machines, the configuration file is located at |path chef client rb windows|. When a |client rb| file is present in this directory, the settings contained within that file will override the default configuration settings.
+On |unix|- and |linux|-based machines, the default location for this file is |path chef client rb|. On |windows| machines, the default location for this file is |path chef client rb windows|. When a |client rb| file is present in this directory, the settings contained within that file will override the default configuration settings.
