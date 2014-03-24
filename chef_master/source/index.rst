@@ -157,6 +157,7 @@ Cookbooks
    chef_solo
    chef_system_requirements
    chef_why
+   chefspec
    community
    community_contributions
    community_guidelines
