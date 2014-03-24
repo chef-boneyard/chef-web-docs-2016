@@ -8,5 +8,8 @@ This argument has the following options:
 ``COOKBOOK_VERSION``
    |COOKBOOK_VERSION download|
 
-``-f``, ``--force``
+``-f FILE``, ``--file FILE``
+   |file cookbook_download|
+
+``--force``
    |force directory|
