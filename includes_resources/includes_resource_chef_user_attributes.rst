@@ -36,7 +36,7 @@
    * - ``recovery_authentication_enabled``
      - xxxxx
    * - ``source_key``
-     - Use to copy a public key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
+     - Use to copy a public or private key, but apply a different ``format`` and ``password``. Use in conjunction with ``source_key_pass_phrase``` and ``source_key_path``.
    * - ``source_key_pass_phrase``
      - The pass phrase for the public key. Use in conjunction with ``source_key``` and ``source_key_path``.
    * - ``source_key_path``
