@@ -14,20 +14,20 @@ This subcommand has the following options:
 ``--cookbook-version VERSION``
    |version cookbook_download|
 
-``--[no-]force``
-   |force knife download| Default: ``--no-force``.
-
 ``-n``, ``--dry-run``
    |dry_run| Default: ``false``.
 
 ``--[no-]diff``
    |diff_download| Set to ``false`` to download all files. Default: ``--diff``.
 
-``--[no-]recurse``
-   |no_recurse_download| Default: ``--recurse``.
+``--[no-]force``
+   |force knife download| Default: ``--no-force``.
 
 ``--[no-]purge``
    |purge knife download| Default: ``--no-purge``.
+
+``--[no-]recurse``
+   |no_recurse_download| Default: ``--recurse``.
 
 ``--repo-mode MODE``
    |repo_mode| Default: ``everything`` / ``hosted_everything``.
