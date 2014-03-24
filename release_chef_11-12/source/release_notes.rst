@@ -123,6 +123,11 @@ knife client delete
 ``-D``, ``--delete-validators``
    |delete chef_validator|
 
+knife node run list add
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``-b ITEM``, ``--before ITEM``
+   |before|
 
 |chef client| Options
 -----------------------------------------------------
