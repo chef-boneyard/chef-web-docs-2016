@@ -141,6 +141,7 @@ Cookbooks
    auth
    auth_authentication
    auth_authorization
+   berkshelf
    breaking_changes_chef_11
    chef_client
    chef_cookbooks
