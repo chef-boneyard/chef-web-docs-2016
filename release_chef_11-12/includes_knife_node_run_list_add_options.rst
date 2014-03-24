@@ -7,3 +7,6 @@ This argument has the following options:
 
 ``-a ITEM``, ``--after ITEM``
    |after|
+
+``-b ITEM``, ``--before ITEM``
+   |before|
