@@ -3,5 +3,5 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-The ``run_list add`` argument is used to add run list items (roles or recipes) to a node.
+The ``run_list add`` argument is used to add run-list items (roles or recipes) to a node.
 
