@@ -8,3 +8,6 @@ This argument has the following options:
 ``-a``, ``--admin``
    |admin client| This option only works when used with the open source |chef server| and will have no effect when used with |chef server oec|.
 
+``-f FILE``, ``--file FILE``
+   Use to write a private key to the path specified by ``FILE``.
+
