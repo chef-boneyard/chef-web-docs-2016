@@ -10,3 +10,5 @@ A |chef client| is an agent that runs locally on every node that is registered w
 * Compiling the resource collection by loading each of the required cookbooks, including recipes, attributes, and all other dependencies
 * Taking the appropriate and required actions to configure the node
 * Looking for exceptions and notifications, handling each as required
+
+.. note:: The |chef client| executable can be run as a daemon.

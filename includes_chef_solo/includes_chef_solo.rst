@@ -10,3 +10,5 @@
 * Authentication or authorization
 * Persistent attributes
 
+.. note:: |chef solo| can be run as a daemon. 
+
