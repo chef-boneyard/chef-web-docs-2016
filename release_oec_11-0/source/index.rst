@@ -1,5 +1,5 @@
 =====================================================
-Docs for |chef server oec| 11.1.x 
+Docs for |chef server oec| 11.1.x
 =====================================================
 
 .. include:: ../../includes_chef/includes_chef_index_oec.rst
