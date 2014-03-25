@@ -72,7 +72,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Add-ons:** :doc:`Chef Manage </manage>` | :doc:`Reporting </reporting>` | :doc:`Push Jobs </push_jobs>`
 
-**Manage Server:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>`
+**Manage Server:** :doc:`Backup and Restore </server_backup_restore>` | :doc:`Firewalls and Ports </server_firewalls_and_ports>` | :doc:`High Availability </server_high_availability>` | :doc:`LDAP </server_ldap>` | :doc:`Logs </server_logs>` | :doc:`Monitor </server_monitor>` | :doc:`Organizations, Groups, and Users </server_orgs>` | :doc:`Security </server_security>` | :doc:`Services </server_services>` | :doc:`Performance Tuning </server_tuning>` | :doc:`Users </server_users>`
 
 **Chef Manager Web User Interface:** :doc:`Clients </server_manage_clients>` | :doc:`Cookbooks </server_manage_cookbooks>` | :doc:`Data Bags </server_manage_data_bags>` | :doc:`Environments </server_manage_environments>` | :doc:`Nodes </server_manage_nodes>` | :doc:`Reports </server_manage_reports>` | :doc:`Roles </server_manage_roles>`
 
