@@ -147,6 +147,18 @@ The ``admin.pem`` private key must be correct for each workstation that will hav
       $ knife download users/admin.json
       $ grep public_key clients/admin.json
 
+#. User-hashed passwords are not transferred to or from the |chef server| when using the |subcommand knife download| or |subcommand knife upload| subcommands. When using these commands to upgrade to a newer version of the |chef server osc| server, each user should run the following command:
+
+   .. code-block:: bash
+   
+      $ knife user edit user_name
+   
+   and then add the following to the |json| data:
+   
+   .. code-block:: javascript
+   
+      "password":"password_value"
+
 #. Replace the public key in ``users/admin.json`` with the results of the previous step:
 
    .. code-block:: bash
@@ -167,21 +179,6 @@ The ``admin.pem`` private key must be correct for each workstation that will hav
       $ knife list /users
 
    to return a list of all users, including ``users/admin.json``.
-
-Verify User Passwords
-=====================================================
-User-hashed passwords are not transferred to or from the |chef server| when using the |subcommand knife download| or |subcommand knife upload| subcommands. When using these commands to upgrade to a newer version of the |chef server osc| server, each user should run the following command:
-
-.. code-block:: bash
-
-   $ knife user edit user_name
-
-and then add the following to the |json| data:
-
-.. code-block:: javascript
-
-   "password":"password_value"
-   
 
 
 Upload Data to |chef server 11|
