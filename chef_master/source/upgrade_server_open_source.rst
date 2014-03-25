@@ -33,6 +33,7 @@ Set up Access to |chef server 10|
 Use the following steps to configure a workstation so that it can communicate with the |chef server 10| server:
 
 #. Create a directory to use as the location to which data will be downloaded. This topic uses a directory named ``~/transfer``.
+
 #. In the ``~/transfer`` directory, create a file named ``.chef/knife-chef10.rb``. The contents of this file should be similar to the following:
 
    .. code-block:: ruby
@@ -46,6 +47,7 @@ Use the following steps to configure a workstation so that it can communicate wi
       chef_repo_path transfer_repo
 
    where ``chef_server_url`` is the URL for the |chef server 10| server from which the data will be downloaded and ``node_name`` is the name of the workstation from which |knife| runs (with admin rights).
+
 #. Copy the private key for the |chef server 10| server to the ``.chef`` directory. The private key is typically located at ``/etc/chef/webui.pem``. For example:
 
    .. code-block:: bash
@@ -58,7 +60,7 @@ Use the following steps to configure a workstation so that it can communicate wi
 
       $ knife list /clients
 
-   to return a list of all clients, including ``clients/chef-webui.json`` and ``clients/chef-validator.json``.
+   to return a list of all clients, including ``/clients/chef-webui.json`` and ``/clients/chef-validator.json``.
 
 
 Download Data from |chef server 10|
@@ -102,14 +104,14 @@ Use the following steps to configure a workstation so that it can communicate wi
 
       $ knife list /users
 
-   to return a list of all users, including ``users/admin.json``.
+   to return a list of all users, including ``/users/admin.json``.
 
 
 Update the chef-validator settings
 =====================================================
 The |chef validator| client is no longer special; |chef server 11| requires the ``chef-validator`` flag to be set in order for the |chef validator| to be created. 
 
-#. Edit the ``clients/chef-validator.json`` file---located in the ``~/transfer`` directory---and add ``"validator": true`` as a property, like this:
+#. Edit the ``/clients/chef-validator.json`` file---located in the ``~/transfer`` directory---and add ``"validator": true`` as a property, like this:
 
 .. code-block:: javascript
 
@@ -133,7 +135,7 @@ The |chef validator| client is no longer special; |chef server 11| requires the 
 
       $ knife list /clients
 
-   to return a list of all clients, including ``clients/chef-validator.json``.
+   to return a list of all clients, including ``/clients/chef-validator.json``.
 
 
 Verify the admin public key
@@ -144,7 +146,7 @@ The ``admin.pem`` private key must be correct for each workstation that will hav
 
    .. code-block:: bash
 
-      $ knife download users/admin.json
+      $ knife download /users/admin.json
       $ grep public_key clients/admin.json
 
 #. User-hashed passwords are not transferred to or from the |chef server| when using the |subcommand knife download| or |subcommand knife upload| subcommands. When using these commands to upgrade to a newer version of the |chef server osc| server, each user should run the following command:
@@ -165,18 +167,18 @@ The ``admin.pem`` private key must be correct for each workstation that will hav
    
       syntax_check_cache_path  '/home/<user>/.chef/syntax_check_cache'
 
-#. Replace the public key in ``users/admin.json`` with the results of the previous step:
+#. Replace the public key in ``/users/admin.json`` with the results of the previous step:
 
    .. code-block:: bash
 
-      $ knife upload users/admin.json
+      $ knife upload /users/admin.json
       $ cp <Chef 10 admin.pem> .chef/admin.pem
 
 #. Remove the following:
 
    .. code-block:: bash
 
-      $ rm clients/admin.json
+      $ rm /clients/admin.json
 
 #. Verify the configuration by running the following command:
 
@@ -184,7 +186,7 @@ The ``admin.pem`` private key must be correct for each workstation that will hav
 
       $ knife list /users
 
-   to return a list of all users, including ``users/admin.json``.
+   to return a list of all users, including ``/users/admin.json``.
 
 
 Upload Data to |chef server 11|
