@@ -107,6 +107,13 @@ The following rules are checked by |foodcritic|:
 
 .. note:: Some |foodcritic| rules have been deprecated: FC001, FC021, FC020, FC035, and FC036. FC018 deals with issues that may exist in older versions of the |chef client| that pre-date this documentation.
 
+Custom Rules
+-----------------------------------------------------
+The following rules for |foodcritic| have been developed by the |chef| community:
+
+* `/customink-webops/foodcritic-rules <https://github.com/customink-webops/foodcritic-rules>`_
+* `/etsy/foodcritic-rules <Etsy https://github.com/etsy/foodcritic-rules>`_
+
 |foodcritic| CLI
 =====================================================
 The ``foodcritic`` command is used to run |foodcritic| against one (or more) cookbooks.
