@@ -109,7 +109,7 @@ Update the chef-validator settings
 =====================================================
 The |chef validator| client is no longer special; |chef server 11| requires the ``chef-validator`` flag to be set in order for the |chef validator| to be created. 
 
-#. Edit the ``clients/chef-validator.json`` file and add ``"validator": true`` as a property, like this:
+#. Edit the ``clients/chef-validator.json`` file---located in the ``~/transfer`` directory---and add ``"validator": true`` as a property, like this:
 
 .. code-block:: javascript
 
@@ -158,6 +158,12 @@ The ``admin.pem`` private key must be correct for each workstation that will hav
    .. code-block:: javascript
    
       "password":"password_value"
+
+#. |chef 11| prefers the ``syntax_check_cache_path`` setting for keeping track of cookbook files that have been syntax checked. Add the ``syntax_check_cache_path`` setting to the |knife rb| file if it is not already there. For example:
+
+   .. code-block:: ruby
+   
+      syntax_check_cache_path  '/home/<user>/.chef/syntax_check_cache'
 
 #. Replace the public key in ``users/admin.json`` with the results of the previous step:
 
