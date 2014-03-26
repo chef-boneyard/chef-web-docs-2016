@@ -14,6 +14,7 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 * **New options for knife client subcommands** New options allow the creation and deletion of the |chef validator|.
 * **New options for chef-client** A new option allows a run-list to be specified, and then set permanently.
 * **Weekdays as symbols** The |resource cron| resource allows weekdays to be entered as a symbol, e.g. ``:monday`` or ``:friday``.
+* **Generate the public/private key pair on a node** The ``local_key_generation`` setting has been added to the |config rb| file. When ``true``, key pairs will be generated on the node and the public key will be sent to the |chef server|.
 
 |ohai 7|
 -----------------------------------------------------
@@ -137,9 +138,15 @@ New options have been added to the |chef client|:
    |runlist_items|
 
 
-xxxxx
+|client rb| Settings
 -----------------------------------------------------
-xxxxx
+New settings have been added to the |client rb| file:
+
+   * - ``local_key_generation``
+     - Use to specify whether the |chef server| or |chef client| will generate the private/public key pair. When ``true``, the |chef client| will generate the key pair, and then send the public key to the |chef server|. For example:
+       ::
+ 
+          local_key_generation false
 
 
 What's Fixed
