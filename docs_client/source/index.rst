@@ -4,8 +4,6 @@ All about the |chef client| ...
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-View the :doc:`release notes </release_notes>` for the current version of the |chef client|. 
-
 Getting Started
 =====================================================
 **From the beginning:** :doc:`Overview (long) </chef_overview>` | :doc:`Overview (short) </chef_quick_overview>`
@@ -209,7 +207,6 @@ Cookbooks
    plugin_knife
    plugin_knife_authenticated_requests
    plugin_knife_custom
-   release_notes
    resource
    resource_apt_package
    resource_bash
