@@ -1,5 +1,5 @@
 =====================================================
-knife.rb Optional Settings
+|knife rb| Optional Settings
 =====================================================
 
 .. include:: ../../includes_knife/includes_knife_using_knife_rb.rst

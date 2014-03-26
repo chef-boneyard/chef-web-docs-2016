@@ -1,5 +1,5 @@
 =====================================================
-chef-server.rb
+|chef server rb|
 =====================================================
 
 .. include:: ../../includes_config/includes_config_rb_chef_server.rst

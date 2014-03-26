@@ -1,5 +1,5 @@
 =====================================================
-client.rb 
+|client rb|
 =====================================================
 
 .. include:: ../../includes_config/includes_config_rb_client.rst

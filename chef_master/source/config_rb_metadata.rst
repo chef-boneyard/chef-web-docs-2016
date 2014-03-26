@@ -1,5 +1,5 @@
 =====================================================
-metadata.rb
+|metadata rb|
 =====================================================
 
 .. include:: ../../includes_cookbooks/includes_cookbooks_metadata.rst
