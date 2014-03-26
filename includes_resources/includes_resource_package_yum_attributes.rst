@@ -15,16 +15,18 @@
      - |architecture package|
    * - ``flush_cache``
      - |flush_cache| Default value: ``{ :before => false, :after => false }``.
-   * - ``options``
-     - |command options|
    * - ``package_name``
      - |name package_yum| Default value: the ``name`` of the resource block (see Syntax section above).
    * - ``provider``
      - Optional. |provider resource_parameter|
-   * - ``response_file``
-     - Optional. |response_file|
-   * - ``source``
-     - Optional. |source resource package|
-   * - ``version``
-     - |version package|
 
+.. Removing, pending outcome of discussion
+..
+..   * - ``options``
+..     - |command options|
+..   * - ``response_file``
+..     - Optional. |response_file|
+..   * - ``source``
+..     - Optional. |source resource package|
+..   * - ``version``
+..     - |version package|
