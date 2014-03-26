@@ -1,5 +1,5 @@
 =====================================================
-chef-server-ctl
+|chef server ctl| (executable)
 =====================================================
 
 .. include:: ../../includes_ctl_chef_server/includes_ctl_chef_server.rst

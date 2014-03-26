@@ -1,5 +1,5 @@
 =====================================================
-|chef client|
+|chef client| (executable)
 =====================================================
 
 .. include:: ../../includes_chef_client/includes_chef_client.rst

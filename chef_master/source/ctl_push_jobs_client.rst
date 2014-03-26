@@ -1,5 +1,5 @@
 =====================================================
-ctl-pushy-client
+|push jobs client| (executable)
 =====================================================
 
 .. include:: ../../includes_push_jobs/includes_push_jobs.rst

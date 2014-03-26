@@ -1,5 +1,5 @@
 =====================================================
-chef-solo 
+|chef solo| (executable)
 =====================================================
 
 .. include:: ../../includes_chef_solo/includes_chef_solo.rst

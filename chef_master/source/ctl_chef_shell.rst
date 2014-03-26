@@ -1,5 +1,5 @@
 =====================================================
-chef-shell
+|chef shell| (executable)
 =====================================================
 
 .. include:: ../../includes_chef_shell/includes_chef_shell.rst

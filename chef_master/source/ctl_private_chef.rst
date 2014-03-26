@@ -1,5 +1,5 @@
 =====================================================
-private-chef-ctl
+|private chef ctl| (executable)
 =====================================================
 
 .. include:: ../../includes_ctl_private_chef/includes_ctl_private_chef.rst

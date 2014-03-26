@@ -1,5 +1,5 @@
 =====================================================
-chef-apply
+|chef apply| (executable)
 =====================================================
 
 .. include:: ../../includes_ctl_chef_apply/includes_ctl_chef_apply.rst

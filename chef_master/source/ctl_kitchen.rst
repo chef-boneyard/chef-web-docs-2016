@@ -1,5 +1,5 @@
 =====================================================
-kitchen
+|kitchen_cli| (executable)
 =====================================================
 
 .. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen.rst

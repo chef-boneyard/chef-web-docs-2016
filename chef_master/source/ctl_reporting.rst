@@ -1,5 +1,5 @@
 =====================================================
-|reporting ctl|
+|reporting ctl| (executable)
 =====================================================
 
 .. include:: ../../includes_ctl_reporting/includes_ctl_reporting.rst
