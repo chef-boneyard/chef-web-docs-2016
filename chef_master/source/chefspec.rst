@@ -4,6 +4,8 @@
 
 |chef spec| is a unit testing framework that simulates the convergence of a node locally using |chef solo| or |chef zero|. |chef spec| is `an extension of |rspec| <https://relishapp.com/rspec/rspec-core/docs/command-line>`_, which is a behavior-driven development (BDD) framework for |ruby|.
 
+.. warning:: This topic details functionality that will be packaged with Chef in an upcoming release.
+
 Unit Test Syntax
 =====================================================
 The following code block shows the basic structure of a |chef spec| unit test:

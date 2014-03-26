@@ -4,6 +4,7 @@
 
 |berkshelf| is a dependency manager for community cookbooks.
 
+.. warning:: This topic details functionality that will be packaged with Chef in an upcoming release.
 
 For more information ...
 =====================================================
