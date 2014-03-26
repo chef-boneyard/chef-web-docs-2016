@@ -4,6 +4,8 @@ orgmapper
 
 |orgmapper desc|
 
+.. warning:: This tool is, effectively, deprecated.
+
 Examples
 =====================================================
 The following examples show how to use |orgmapper|:
