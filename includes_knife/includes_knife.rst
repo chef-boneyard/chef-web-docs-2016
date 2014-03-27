@@ -12,6 +12,5 @@
 * The installation of the |chef client| on management workstations
 * Searching of indexed data on the |chef server|
 
-.. note:: The |knife| executable cannot be run as a daemon. 
 
 

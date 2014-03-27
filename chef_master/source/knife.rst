@@ -17,6 +17,8 @@ About Knife
    * - :doc:`knife_common_options`
      - There are many options that are available for all |knife| sub-commands.
 
+.. note:: The |knife| executable cannot be run as a daemon. 
+
 |knife| includes the following sub-commands: 
 
 .. list-table::
