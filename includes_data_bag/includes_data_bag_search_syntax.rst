@@ -21,7 +21,7 @@ Or, to search for all administrators with an ID that begins with the letter "j":
 
    search(:admins, "id:j*")
 
-Once returned, this data can be used as if it were a |hash|. For example::
+Once returned, this data can be used as if it were a |ruby hash|. For example::
 
    justin = search(:admins, "id:justin").first
    # => variable 'justin' is set to the justin data bag item
