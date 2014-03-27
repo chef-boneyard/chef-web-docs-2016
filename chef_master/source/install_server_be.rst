@@ -181,10 +181,8 @@ Add an entry for the back-end virtual IP address that was assigned earlier:
    backend_vip "FQDN",
      :ipaddress => "IPADDRESS",
      :device => "eth0",
-     :heartbeat_device => "eth1"
 
-Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the virtual IP address. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind (i.e. the public interface of the server). The ``:heartbeat_device`` parameter should be the ethernet interface that the cluster heartbeat goes over (i.e. the interface of the ``cluster_ipaddress`` on the backend servers).
-
+Replace ``FQDN`` with the |fqdn| of the server, and ``IPADDRESS`` with the IP address of the virtual IP address. The ``:device`` parameter should be the ethernet interface to which the floater virtual IP address will bind (i.e. the public interface of the server).
 Front-end entries
 -----------------------------------------------------
 For each front-end server in the |private chef rb| file, add the following:
@@ -267,8 +265,7 @@ Looks like this:
    
    backend_vip "be.example.com",
      :ipaddress => "192.168.4.7",
-     :device => "eth0",
-     :heartbeat_device => "eth1"
+     :device => "eth0"
    
    server "fe1.example.com",
      :ipaddress => "192.168.4.2",
@@ -548,8 +545,7 @@ Set the following in ``/etc/opscode/private-chef.rb``:
 
    backend_vip "192.168.141.108",
      :ipaddress => "192.168.141.108",
-     :device => "eth0",
-     :heartbeat_device => "pc"
+     :device => "eth0"
 
 And set the |keepalived| unicast addresses to the GRE tunnel addresses.
 
