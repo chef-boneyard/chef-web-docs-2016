@@ -16,21 +16,6 @@ This configuration file has the following settings:
           add_formatter :nyan
           add_formatter :foo
           add_formatter :bar
-   * - ``authorized_openid_identifiers``
-     - |authorized_openid_identifiers| For example:
-       ::
- 
-          username.myopenid.com
-
-       or: 
-       ::
- 
-          http://username.myopenid.com
-   * - ``authorized_openid_providers``
-     - |authorized_openid_providers| For example:
-       ::
- 
-          myopenid.com
    * - ``checksum_path``
      - |checksum_path| For example:
        ::
@@ -99,16 +84,6 @@ This configuration file has the following settings:
        ::
  
           node_path "/var/chef/node"
-   * - ``openid_cstore_couchdb``
-     - |openid_cstore_couchdb| Default value: ``false``. For example:
-       ::
- 
-          openid_cstore_couchdb false
-   * - ``openid_cstore_path``
-     - |openid_cstore_path| Default value: ``/var/chef/openid/cstore``. For example:
-       ::
- 
-          openid_cstore_path "/var/chef/openid/cstore"
    * - ``recipe_url``
      - |recipe_url| For example:
        ::
