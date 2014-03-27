@@ -142,6 +142,12 @@ New options have been added to the |chef client|:
 -----------------------------------------------------
 New settings have been added to the |client rb| file:
 
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
    * - ``local_key_generation``
      - Use to specify whether the |chef server| or |chef client| will generate the private/public key pair. When ``true``, the |chef client| will generate the key pair, and then send the public key to the |chef server|. For example:
        ::
