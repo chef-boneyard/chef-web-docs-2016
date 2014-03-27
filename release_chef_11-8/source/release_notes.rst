@@ -72,6 +72,34 @@ New Man Pages
 The man pages built into |knife|, |chef client|, |chef shell|, |chef solo|, and |ohai| are now synchronized with the same topics from docs.opscode.com and are current as of the |chef client| 11.8.0 release. The man pages and online topics are published using the same process, which means that the information published to each format is identical. That said, the docs.opscode.com pages are updated more frequently than man pages will be; changes made to the topics on docs.opscode.com after this release will be included in future updates of the |chef client|.
 
 
+|resource http_request| resource, |json| messages
+-----------------------------------------------------
+The approach for using the |resource http_request| resource to send a ``POST`` request that has a |json| message body has changed. Specifically, the ``message`` must be converted to |json| using ``to_json`` and the content-type header must be specified within the header.
+
+For releases prior to |chef 11-8|, ``POST`` requests with a |json| message body looked like:
+
+.. code-block:: ruby
+
+   http_request "posting data" do
+     action :post
+     url "http://example.com/check_in"
+     message :some => "data"
+     headers({"AUTHORIZATION" => "Basic #{Base64.encode64("username:password")}"})
+   end
+
+And starting with |chef 11-8|, they should be like:
+
+.. code-block:: ruby
+
+   http_request "posting data" do
+     action :post
+     url "http://example.com/check_in"
+     message ({:some => "data"}.to_json)
+     headers({"AUTHORIZATION" => "Basic #{Base64.encode64("username:password")}","Content-Type" => "application/data"})
+   end
+
+
+
 What's Fixed
 =====================================================
 
