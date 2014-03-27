@@ -43,7 +43,7 @@ where:
 * ``cookbook_name::recipe_name`` identifies the cookbook and recipe that is being tested; this pattern typically appears many times within the same unit test
 * ``let`` is a helper method in |rspec| that is used to kick off the |chef client| run, using ``(:chef_run)``
 * ``describe`` is the |rspec| method that defines the unit test; ``context`` is another |rspec| method that is used to group specific contexts, such as "do this on |windows|" and "do that on |linux|"
-* ``runner`` is a component of |chef spec| that defines the group of attributes to be unit tested
+* ``runner`` is a component of |chef spec| that defines the group of attributes to be unit tested, converges the node using the specified cookbook and recipe, and then calls the ``Chef::Runner`` class to execute the mock |chef client| run
 * ``it`` is an |rspec| helper method that puts context around each unit test, i.e. "it should do this", "it stops that", "it disables this service", and so on; the actual unit test is defined within the ``it`` block, often something like ``expect(chef_run).to action('object')``. For example:
    
    .. code-block:: ruby
