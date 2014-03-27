@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|kitchen| uses a driver architecture to enable |kitchen| to simulate testing on cloud providers like |amazon ec2|, |openstack|, |rackspace|, and so on. Each driver is responsible for managing a virtual instance of that platform so that it may be used by |kitchen| during cookbook testing.
+|kitchen| uses a driver plugin architecture to enable |kitchen| to simulate testing on cloud providers, such as |amazon ec2|, |openstack|, and |rackspace|. Each driver is responsible for managing a virtual instance of that platform so that it may be used by |kitchen| during cookbook testing.
 
 Most drivers have driver-specific configuration settings that must be added to the |kitchen yml| file before |kitchen| will be able to use that platform during cookbook testing. Some popular drivers:
 
@@ -10,7 +10,7 @@ Most drivers have driver-specific configuration settings that must be added to t
    :widths: 150 450
    :header-rows: 1
 
-   * - Driver
+   * - Driver Plugin
      - Description
    * - `kitchen-all <https://rubygems.org/gems/kitchen-all>`_
      - A driver for everything, or "all the drivers in a single Rubygem".
