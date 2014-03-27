@@ -79,6 +79,9 @@ This argument has the following options:
 
 ``--server-connect-attribute ATTRIBUTE``
    |attribute ssh| This should be an |amazon ec2| server attribute.
+   This option is especially useful when creating instances in a VPC.
+   Will allow the bootstrapping ssh client to connect to the VPC
+   after an EIP is attached.
 
 ``--T Tag=Value[,Tag=Value]``, ``--tags Tag=Value[,Tag=Value]``
    |tags|
