@@ -51,3 +51,7 @@ The following examples show how to use this |knife| subcommand:
 **Query for multiple attributes**
 
 .. include:: ../../step_knife/step_knife_exec_query_for_multiple_attributes.rst
+
+**Find shadow cookbooks**
+
+.. include:: ../../step_knife/step_knife_exec_find_cookbook_shadows.rst
