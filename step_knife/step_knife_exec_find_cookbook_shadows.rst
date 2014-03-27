@@ -1,8 +1,7 @@
 .. This is an included how-to. 
 
 
-To find all of the locations in which cookbooks exist that may shadow each other, create a file called ``shadow-check.rb`` using the following |ruby| code:
-
+To find all of the locations in which cookbooks exist that may shadow each other, create a file called ``shadow-check.rb`` that contains the following |ruby| code:
 
 .. code-block:: ruby
 
