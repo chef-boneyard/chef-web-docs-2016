@@ -1,5 +1,5 @@
 =====================================================
-Upgrade to Enterprise Chef 11: Standalone
+Upgrade to Enterprise Chef 11: Standalone 
 =====================================================
 
 This topic describes the upgrade process from |chef private| to |chef server oec|. The upgrade process will require downtime equal to the amount of time it takes to stop the machine, run |debian dpkg| or |rpm|, and then upgrade the machine. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete.
