@@ -33,7 +33,7 @@ The following bugs may affect the upgrade:
 * OC-11297 --- EC 11.0.X not saving its migration-level state on HA back end machines. Breaks ``private-chef-ctl upgrade`` on subsequent upgrades
 * OC-11382 --- HA Upgrades to 11.1.x fail because keepalived restart interferes with partybus migrations
 
-.. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6 -> check runsvdir status -> |chef server oec| 11.x -> check runsvdir status
+.. warning:: Check runsvdir status using the info at `Runit Process Structure and Checks`_ during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6 -> check runsvdir status -> |chef server oec| 11.x -> check runsvdir status
 
 
 Pre-Flight Check
@@ -77,7 +77,7 @@ It is recommended to do the following:
       * - |chef server oec| 11.1.x
         - 11.1.x	major: 1, minor: 13
 
-#. Before proceeding, make sure that the bootstrap back end machine and all of its services are healthy, and that all services are stopped on the standby. Please check runsvdir status to make a determination about "healthy".
+#. Before proceeding, make sure that the bootstrap back end machine and all of its services are healthy, and that all services are stopped on the standby. Please check runsvdir status using the info at `Runit Process Structure and Checks`_ to make a determination about "healthy".
 
 
 Upgrade Steps
@@ -97,7 +97,7 @@ Upgrade Steps
 
       private-chef-ctl reconfigure
 
-#. Once all services are verified, upgrade the bootstrap back end machine. (If anything strange happens here, please consider how the issue you see you could be related to runit. Please check runsvdir status for cleanup. You will also need to ensure that all ``omnibus-ctl``, ``private-chef-ctl``, and ``sv`` processes are gone. Then, be sure that the ``opscode-chef-mover`` service is started and retry the upgrade.)
+#. Once all services are verified, upgrade the bootstrap back end machine. (If anything strange happens here, please consider how the issue you see you could be related to runit. Please check runsvdir status using the info at `Runit Process Structure and Checks`_ for cleanup. You will also need to ensure that all ``omnibus-ctl``, ``private-chef-ctl``, and ``sv`` processes are gone. Then, be sure that the ``opscode-chef-mover`` service is started and retry the upgrade.)
 
    .. code-block:: bash
 
