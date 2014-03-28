@@ -4,19 +4,6 @@ Notes for High Availability |chef server oec| Upgrades
 
 The following sections contain notes about specific scenarios that some customers may run into when upgrading from |chef private| to |chef server oec|. Please consult with |company_name| support about any of these situations.
 
-.. list-table::
-   :widths: 200 300
-   :header-rows: 1
-
-   * - Chef Server Version
-     - migration-state
-   * - |chef private| 1.4.6
-     - major: 1, minor: 7
-   * - |chef server oec| 11.0.x
-     - major: 1, minor: 12
-   * - |chef server oec| 11.1.x
-     - 11.1.x	major: 1, minor: 13
-
 All Upgrade Scenarios
 =====================================================
 
@@ -36,7 +23,7 @@ Upgrading from |chef private| 1.4.6 to |chef server oec| 11.1.2
 
 The following sections are specific to |chef private| 1.4.6 upgrades to |chef server oec| 11.1.2.
 
-..note:: Unless otherwise noted, all patching should be done after OPC 1.4.6 is installed, and before the EC11.1.2 package install and upgrade begins.
+.. note:: Unless otherwise noted, all patching should be done after OPC 1.4.6 is installed, and before the EC11.1.2 package install and upgrade begins.
 
 Known Issues
 =====================================================
@@ -76,6 +63,19 @@ It is recommended to do the following:
       ``private-chef-ctl stop keepalived``
 
 #. For known issue OC-11297 - On the back end machines, examine the ``/var/opt/opscode/upgrades/migration-level`` file. It should match the version on the front end machines. In high availability systems, the migration-level file is usually correct on the front end nodes but not the back end nodes due to the fact that the back end machine installation process gets interrupted for DRBD setup. If it is incorrect on the back end machines, please copy it from the front end nodes before proceeding.
+
+   .. list-table::
+      :widths: 200 300
+      :header-rows: 1
+   
+      * - Chef Server Version
+        - Migration Level
+      * - |chef private| 1.4.6
+        - major: 1, minor: 7
+      * - |chef server oec| 11.0.x
+        - major: 1, minor: 12
+      * - |chef server oec| 11.1.x
+        - 11.1.x	major: 1, minor: 13
 
 #. Before proceeding, make sure that the bootstrap back end machine and all of its services are healthy, and that all services are stopped on the standby. Please check runsvdir status to make a determination about "healthy".
 
