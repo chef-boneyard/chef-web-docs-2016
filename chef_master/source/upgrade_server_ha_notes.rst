@@ -85,7 +85,7 @@ Upgrade Steps
 
 #. Install the |chef server oec| server package on all machines using dpkg or rpm.
 
-#. OC-11382 - On both back end machines, copy the ``upgrade.rb`` file from this gist to ``/opt/opscode/embedded/service/omnibus-ctl/upgrade.rb``.
+#. OC-11382 - On both back end machines, copy the ``upgrade.rb`` file from the end of these notes to ``/opt/opscode/embedded/service/omnibus-ctl/upgrade.rb``.
 
    .. code-block:: bash
 
@@ -181,7 +181,7 @@ When this type of problem is encountered, the process is to check the error outp
 
    private-chef-ctl stop
 
-Notes:
+Restart the runsvdir:
 
 * For |chef private| 1.4.6 on RHEL6 and ubuntu10.04+ ``initctl stop opscode-runsvdir``
 * For |chef server oec| 11x on RHEL6 and ubuntu10.04+ ``initctl stop private-chef-runsvdir``
