@@ -46,13 +46,13 @@ It is recommended to do the following:
 
    .. code-block:: bash
 
-      $ ``private-chef-ctl reconfigure``
+      $ private-chef-ctl reconfigure
 
 #. Stop all frontend machines:
 
    .. code-block:: bash
 
-      ``private-chef-ctl stop``
+      private-chef-ctl stop
 
 #. Identify the name of the original non-bootstrap back end machine. This is the back end machine that does not have ``:bootstrap => true`` in ``/etc/opscode/private-chef.rb``.
 
@@ -60,7 +60,7 @@ It is recommended to do the following:
 
    .. code-block:: bash
 
-      ``private-chef-ctl stop keepalived``
+      private-chef-ctl stop keepalived
 
 #. For known issue OC-11297 - On the back end machines, examine the ``/var/opt/opscode/upgrades/migration-level`` file. It should match the version on the front end machines. In high availability systems, the migration-level file is usually correct on the front end nodes but not the back end nodes due to the fact that the back end machine installation process gets interrupted for DRBD setup. If it is incorrect on the back end machines, please copy it from the front end nodes before proceeding.
 
@@ -85,7 +85,7 @@ Upgrade Steps
 
 #. Install the |chef server oec| server package on all machines using dpkg or rpm.
 
-#. OC-11382 - On both back end machines, copy the ``upgrade.rb`` file from this gist to ``/opt/opscode/embedded/service/omnibus-ctl/upgrade.rb``.
+#. OC-11382 - On both back end machines, copy the ``upgrade.rb`` file from the end of these notes to ``/opt/opscode/embedded/service/omnibus-ctl/upgrade.rb``.
 
    .. code-block:: bash
 
@@ -95,43 +95,43 @@ Upgrade Steps
 
    .. code-block:: bash
 
-      ``private-chef-ctl reconfigure``
+      private-chef-ctl reconfigure
 
 #. Once all services are verified, upgrade the bootstrap back end machine. (If anything strange happens here, please consider how the issue you see you could be related to runit. Please check runsvdir status for cleanup. You will also need to ensure that all ``omnibus-ctl``, ``private-chef-ctl``, and ``sv`` processes are gone. Then, be sure that the ``opscode-chef-mover`` service is started and retry the upgrade.)
 
    .. code-block:: bash
 
-      ``private-chef-ctl upgrade``
+      private-chef-ctl upgrade
 
 #. Copy the entire ``/etc/opscode`` directory from the bootstrap back end machine to all front end and back end machines. For example, from each machine run:
 
    .. code-block:: bash
 
-      ``scp -r BOOTSTRAP_SERVER_IP:/etc/opscode /etc``
+      scp -r BOOTSTRAP_SERVER_IP:/etc/opscode /etc
 
 #. Upgrade the secondary back end machine.
 
    .. code-block:: bash
 
-      ``private-chef-ctl upgrade``
+      private-chef-ctl upgrade
 
 #. Upgrade all frontend machines.
 
    .. code-block:: bash
 
-      ``private-chef-ctl upgrade``
+      private-chef-ctl upgrade
 
 #. Run the following on all machines to make sure all services are started.
 
    .. code-block:: bash
 
-      ``private-chef-ctl start``
+      private-chef-ctl start
 
 #. After the upgrade process is complete, and the state of the system after the upgrade has been tested and verified, remove old data on all machines.
 
    .. code-block:: bash
 
-      ``private-chef-ctl cleanup``
+      private-chef-ctl cleanup
 
 
 Runit Process Structure and Checks
@@ -179,9 +179,9 @@ When this type of problem is encountered, the process is to check the error outp
 
 .. code-block:: bash
 
-   ``private-chef-ctl stop``
+   private-chef-ctl stop
 
-Notes:
+Restart the runsvdir:
 
 * For |chef private| 1.4.6 on RHEL6 and ubuntu10.04+ ``initctl stop opscode-runsvdir``
 * For |chef server oec| 11x on RHEL6 and ubuntu10.04+ ``initctl stop private-chef-runsvdir``
