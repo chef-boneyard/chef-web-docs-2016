@@ -32,7 +32,7 @@ The following code block shows the basic structure of a |chef spec| unit test:
        end
    
      it 'should do something' do
-       # a 
+       expect(chef_run).to ACTION_RESOURCE(NAME) 
      end
    
    end
@@ -43,7 +43,7 @@ where:
 * ``cookbook_name::recipe_name`` identifies the cookbook and recipe that is being tested; this pattern typically appears many times within the same unit test
 * ``let`` is a helper method in |rspec| that is used to kick off the |chef client| run, using ``(:chef_run)``
 * ``describe`` is the |rspec| method that defines the unit test; ``context`` is another |rspec| method that is used to group specific contexts, such as "do this on |windows|" and "do that on |linux|"
-* ``runner`` is a component of |chef spec| that defines the group of attributes to be unit tested, converges the node using the specified cookbook and recipe, and then calls the ``Chef::Runner`` class to execute the mock |chef client| run
+* ``runner`` is a component of |chef spec| that defines the group of attributes to be unit tested, converges the node using the specified cookbook and recipe 
 * ``it`` is an |rspec| helper method that puts context around each unit test, i.e. "it should do this", "it stops that", "it disables this service", and so on; the actual unit test is defined within the ``it`` block, often something like ``expect(chef_run).to action('object')``. For example:
    
    .. code-block:: ruby
@@ -52,7 +52,19 @@ where:
         expect(chef_run).to remove_package('splunk')
       end
 
-For example, a recipe from the |cookbook chef_splunk| cookbook:
+   ``expect`` is xxxxx.
+   
+   ``(chef_run)`` calls the ``Chef::Runner`` class to execute the mock |chef client| run.
+   
+   ``.to`` xxxxx.
+   
+   ``ACTION_RESOURCE(NAME)`` is the action from a resource, the resource, and the name of the resource (e.g. the same as "name" at the start of the ``resource "name" do`` block in the recipe). 
+
+
+
+**Example**
+
+The following example starts with a recipe in the |cookbook chef_splunk| cookbook:
 
 .. code-block:: ruby
 
@@ -68,9 +80,7 @@ For example, a recipe from the |cookbook chef_splunk| cookbook:
      action :start
    end
 
-This recipe starts the ``splunk`` service, but only if the node itself is a licensed |splunk| node.
-
-A |chef spec| unit test can be used to do several things, including testing to see that the recipe does test for the |splunk| license, and then restart the ``splunk`` service, but only if the license is present:
+This recipe is used to start the ``splunk`` service, but only if the node itself is a licensed |splunk| node. This recipe has a corresponding |chef spec| unit test, which does several things: first testing to see that the recipe does test for the |splunk| license, and then restarting the ``splunk`` service, but only if the license is present:
 
 .. code-block:: ruby
 
