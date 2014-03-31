@@ -44,22 +44,23 @@ where:
 * ``let`` is a helper method in |rspec| that is used to kick off the |chef client| run, using ``(:chef_run)``
 * ``describe`` is the |rspec| method that defines the unit test; ``context`` is another |rspec| method that is used to group specific contexts, such as "do this on |windows|" and "do that on |linux|"
 * ``runner`` is a component of |chef spec| that defines the group of attributes to be unit tested, converges the node using the specified cookbook and recipe 
-* ``it`` is an |rspec| helper method that puts context around each unit test, i.e. "it should do this", "it stops that", "it disables this service", and so on; the actual unit test is defined within the ``it`` block, often something like ``expect(chef_run).to action('object')``. For example:
+* ``it`` is an |rspec| helper method that puts context around each unit test, i.e. "it should do this", "it stops that", "it disables this service", and so on.
+   
+   The actual unit test is defined within the ``it`` block, often something like ``expect(chef_run).to action('object')``.
+   
+   ``expect().to`` is the assertion syntax in |rspec|.
+   
+   ``(chef_run)`` calls the ``Chef::Runner`` class to execute the mock |chef client| run.
+   
+   ``ACTION_RESOURCE(NAME)`` is the action from a resource, the resource itself, and the name of the resource (e.g. the same as "name" at the start of the ``resource "name" do`` block in the recipe). 
+
+   For example:
    
    .. code-block:: ruby
    
       it 'uninstalls the splunk package' do
         expect(chef_run).to remove_package('splunk')
       end
-
-   ``expect`` is xxxxx.
-   
-   ``(chef_run)`` calls the ``Chef::Runner`` class to execute the mock |chef client| run.
-   
-   ``.to`` xxxxx.
-   
-   ``ACTION_RESOURCE(NAME)`` is the action from a resource, the resource, and the name of the resource (e.g. the same as "name" at the start of the ``resource "name" do`` block in the recipe). 
-
 
 
 **Example**
