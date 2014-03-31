@@ -135,6 +135,10 @@ On the back-end servers:
 
 Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
 
+Hostnames, FQDNs
+-----------------------------------------------------
+The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.opscode.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
+
 private-chef.rb
 =====================================================
 Each |chef server oec| cluster has a single configuration file: |private chef rb|. This file describes the topology of the entire cluster and lives in ``/etc/opscode`` on each server. In any text editor, create a file called |private chef rb|.

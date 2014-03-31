@@ -14,13 +14,17 @@ A standalone installation scenario has the following system requirements:
 * 5 GB of free disk space in ``/var``
 
 Firewall Requirements
-=====================================================
+-----------------------------------------------------
 If you are using host-based firewalls (iptables, ufw, etc.) ensure that the following ports are open:
 
 * Port 80, nginx 
 * Port 443, nginx
 
 Refer to the operating system's manual, or a site systems administrator for instructions on how to enable this change.
+
+Hostnames, FQDNs
+-----------------------------------------------------
+The hostname for the |chef server| must be a |fqdn|, including the domain suffix, and must be resolvable. See `Hostnames, FQDNs <http://docs.opscode.com/install_server_pre.html#hostnames-fqdns>`_ for more information.
 
 Add Package to Server
 =====================================================
