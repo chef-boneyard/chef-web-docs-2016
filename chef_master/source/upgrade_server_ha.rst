@@ -4,7 +4,9 @@ Upgrade to Enterprise Chef 11: High Availability
 
 This topic describes the upgrade process from |chef private| to |chef server oec|. The upgrade process will require downtime equal to the amount of time it takes to stop all of the machines, run |debian dpkg| or |rpm|, and then upgrade each of the machines. The final step will remove older components (like the |couch db|) and will destroy the data after the upgrade process is complete.
 
-.. note:: Please :doc:`view the notes about the high availability Enterprise Chef upgrade </upgrade_server_ha_notes>` for any changes that may exist for your upgrade process.
+.. note:: Please :doc:`About Nodes </essentials_nodes>` for any changes that may exist for your upgrade process.
+
+.. :doc:`view the notes about the high availability Enterprise Chef upgrade </upgrade_server_ha_notes>`
 
 To upgrade to |chef server oec|, do the following:
 
