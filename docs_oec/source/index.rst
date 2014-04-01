@@ -727,4 +727,6 @@ The following topics discuss using |chef server oec| with platforms:
    server_users
    supported_platforms
    upgrade_server_ha
+   upgrade_server_ha_notes
    upgrade_server_standalone
+   upgrade_server_standalone_notes
