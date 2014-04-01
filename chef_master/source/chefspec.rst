@@ -16,20 +16,6 @@ The following code block shows the basic structure of a |chef spec| unit test:
 
    describe 'cookbook_name::recipe_name' do
      let (:chef_run) { ChefSpec::ChefRunner.new.converge('cookbook_name::recipe_name') }
-     it 'should do something' do
-       chef_run.should something 'cookbook_name::recipe_name'
-     end
-   
-     context 'context' do
-       let (:chef_run) do
-         runner = ChefSpec::ChefRunner.new(
-           'platform' => 'windows',
-           'version' => 'version'
-           )
-         runner.node.set['cookbook_name']['attribute'] = 'value'
-         ...
-         runner.converge('cookbook_name::recipe_name')
-       end
    
      it 'should do something' do
        expect(chef_run).to ACTION_RESOURCE(NAME) 
@@ -40,10 +26,9 @@ The following code block shows the basic structure of a |chef spec| unit test:
 where:
 
 * ``'../spec_helper.rb'`` is the path to the |spec_helper rb| file, typically located at the root of the ``/spec`` folder that contains |chef spec| unit tests
+* ``describe`` is the |rspec| method that defines the unit test; ``context`` is another |rspec| method that is used to group specific contexts, such as "do this on |windows|" and "do that on |linux|"
 * ``cookbook_name::recipe_name`` identifies the cookbook and recipe that is being tested; this pattern typically appears many times within the same unit test
 * ``let`` is a helper method in |rspec| that is used to kick off the |chef client| run, using ``(:chef_run)``
-* ``describe`` is the |rspec| method that defines the unit test; ``context`` is another |rspec| method that is used to group specific contexts, such as "do this on |windows|" and "do that on |linux|"
-* ``runner`` is a component of |chef spec| that defines the group of attributes to be unit tested, converges the node using the specified cookbook and recipe 
 * ``it`` is an |rspec| helper method that puts context around each unit test, i.e. "it should do this", "it stops that", "it disables this service", and so on.
    
    The actual unit test is defined within the ``it`` block, often something like ``expect(chef_run).to action('object')``.
