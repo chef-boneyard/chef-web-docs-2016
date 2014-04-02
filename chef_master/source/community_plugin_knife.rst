@@ -4,6 +4,10 @@ Community Plugins: knife
 
 .. include:: ../../includes_knife/includes_knife.rst
 
+|knife| plugins for cloud hosting platforms--- `knife azure <http://docs.opscode.com/plugin_knife_azure.html>`_, `knife bluebox <http://docs.opscode.com/plugin_knife_bluebox.html>`_, `knife ec2 <http://docs.opscode.com/plugin_knife_ec2.html>`_, `knife eucalyptus <http://docs.opscode.com/plugin_knife_eucalyptus.html>`_, `knife google <http://docs.opscode.com/plugin_knife_google.html>`_, `knife hp <http://docs.opscode.com/plugin_knife_hp.html>`_, `knife linode <http://docs.opscode.com/plugin_knife_linode.html>`_, `knife openstack <http://docs.opscode.com/plugin_knife_openstack.html>`_, `knife rackspace <http://docs.opscode.com/plugin_knife_rackspace.html>`_, and `knife terremark <http://docs.opscode.com/plugin_knife_terremark.html>`_ ---are built and maintained by |company_name|. 
+
+The following table lists |knife| plugins built by the |chef| community.
+
 .. list-table::
    :widths: 60 420
    :header-rows: 1
