@@ -21,7 +21,7 @@ This argument has the following options:
    |file azure_publish_settings|
 
 ``--azure-storage-account STORAGE_ACCOUNT_NAME``
-   |storage account| A storage account name may be between 3 and 24 characters (lower-case letters and numbers only) and must be unique within |windows azure|.
+   |storage account| A storage account name may be between 3 and 24 characters (lower-case letters and numbers only) and must be unique within |azure|.
 
 ``--azure-subnet-name SUBNET_NAME``
    |azure subnet_name|
