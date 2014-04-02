@@ -527,6 +527,10 @@ Examples
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_google_server_create.rst
 
+**Create a Jenkins continuous integration pipeline**
+
+.. include:: ../../step_plugin_knife/step_plugin_knife_google_server_create_jenkins.rst
+
 server delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_delete.rst
