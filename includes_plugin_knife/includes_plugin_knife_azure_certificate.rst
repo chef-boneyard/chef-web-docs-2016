@@ -5,7 +5,7 @@
 
 |knife azure certificate|
 
-The management certificate is required for secure communication with the |windows azure| platform via the REST APIs. To generate the management certificate (.pem file):
+The management certificate is required for secure communication with the |azure| platform via the REST APIs. To generate the management certificate (.pem file):
 
 #. Download the settings file: http://go.microsoft.com/fwlink/?LinkId=254432.
 #. Extract the data from the ``ManagementCertificate`` field into a separate file named ``cert.pfx``.

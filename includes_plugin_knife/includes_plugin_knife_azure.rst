@@ -3,7 +3,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-|windows azure| is a cloud hosting platform from |microsoft| that provides virtual machines for |linux| and |windows server|, cloud and database services, and more. The |subcommand knife azure| subcommand is used to manage API-driven cloud servers that are hosted by |windows azure|.
+|azure| is a cloud hosting platform from |microsoft| that provides virtual machines for |linux| and |windows server|, cloud and database services, and more. The |subcommand knife azure| subcommand is used to manage API-driven cloud servers that are hosted by |azure|.
 
 
 
