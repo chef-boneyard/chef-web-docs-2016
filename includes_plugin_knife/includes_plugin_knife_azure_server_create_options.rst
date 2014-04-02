@@ -63,7 +63,7 @@ This argument has the following options:
    |media location| Required when not using ``--azure-affinity-group``.
 
 ``-N NAME``, ``--node-name NAME``
-   |name node| Node names, when used with |windows azure|, must be 91 characters or shorter.
+   |name node| Node names, when used with |azure|, must be 91 characters or shorter.
 
 ``--[no-]host-key-verify``
    |no_host_key_verify| Default setting: ``--host-key-verify``.
