@@ -141,6 +141,7 @@ Cookbooks
    auth
    auth_authentication
    auth_authorization
+   azure_portal
    berkshelf
    breaking_changes_chef_11
    chef_client
