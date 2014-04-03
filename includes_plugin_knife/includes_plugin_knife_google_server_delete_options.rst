@@ -5,7 +5,7 @@
 
 This argument has the following options:
 
-``-f CREDENTIAL_FILE``, ``--compute-credential-file CREDENTIAL_FILE``
+``-f CREDENTIAL_FILE``, ``--gce-credential-file CREDENTIAL_FILE``
    |credential_file google|
 
 ``-N NAME``, ``--node-name NAME``
@@ -14,7 +14,7 @@ This argument has the following options:
 ``-p``, ``--purge``
    |purge google|
 
-``-Z ZONE``, ``--google-compute-zone ZONE``
+``-Z ZONE``, ``--gce-zone ZONE``
    |zone google|
 
 

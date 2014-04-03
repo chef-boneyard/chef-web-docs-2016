@@ -5,7 +5,7 @@
 
 This argument has the following options:
 
-``-f CREDENTIAL_FILE``, ``--compute-credential-file CREDENTIAL_FILE``
+``-f CREDENTIAL_FILE``, ``--gce-credential-file CREDENTIAL_FILE``
    |credential_file google|
 
 ``-L``, ``--with-limits``
