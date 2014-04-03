@@ -239,6 +239,7 @@ The following settings files are used to configure behavior for the |chef server
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_chef_server_enterprise.html">private-chef.rb</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_push_jobs_server.html">push-jobs-server.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/config_rb_manage.html">manage.rb</a> </br>
 
 The following command-line tools can be run on the |chef server|:
 
@@ -490,6 +491,7 @@ The following topics discuss using |chef server oec| with platforms:
    config_rb_client
    config_rb_knife
    config_rb_knife_optional_settings
+   config_rb_manage
    config_rb_metadata
    config_rb_push_jobs_server
    config_rb_solo
