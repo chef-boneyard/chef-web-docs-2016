@@ -4,7 +4,7 @@ All about the |chef dk| ...
 
 .. include:: ../../includes_chef/includes_chef_index.rst
 
-.. .. include:: ../../includes_chef/includes_chef_dk.rst
+.. include:: ../../includes_chef/includes_chef_dk.rst
 
 **The Basics:** :doc:`Overview of Chef </chef_overview>`
 
