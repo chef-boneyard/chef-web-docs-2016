@@ -4,5 +4,5 @@ To search for nodes assigned the role "webapp", and where 90% of those nodes mus
 
 .. code-block:: bash
 
-   $ knife job start -quorum 90% 'chef-client' --search 'role:webapp`
+   $ knife job start --quorum 90% 'chef-client' --search 'role:webapp'
 
