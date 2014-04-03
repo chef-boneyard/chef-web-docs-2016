@@ -10,7 +10,7 @@ To set up the |push jobs| server for a high availability configuration:
 
       $ dpkg -i opscode-push-jobs-server_0.0.1+20130307070157.git.98.c04f587-1.ubuntu.10.04_amd64.deb
 
-#. Copy the entire ``/etc/opscode-push-jobs-server`` directory from the back end primary machine to all front and back end nodes. For example, from each server run:
+#. Copy the entire ``/etc/opscode-push-jobs-server`` directory from the back end primary machine to all front and back end machines. For example, from each server run:
 
    .. code-block:: bash
       
