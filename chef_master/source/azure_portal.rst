@@ -6,6 +6,11 @@ Microsoft Azure Portal
 
 To use the |chef| integration with the |azure portal|, `all you need is a Chef server <http://www.getchef.com/chef/choose-your-version/>`_. If you don’t already have a |chef server|, hosted |chef server oec| is the fastest way to get up and running. The on-premises |chef server oec| and |chef server osc| servers will also work.
 
+The following platforms within the |azure portal| may be integrated with |chef|:
+
+* |windows server| 2012 Datacenter
+* |windows server| 2012 R2 Datacenter
+
 .. note:: Virtual machines running on |azure| can also be provisioned from the command-line using the |subcommand knife azure| plugin for |knife|. This approach is ideal for cases that require automation or for users who are more suited to command-line interfaces.
 
 |chef client| Settings
@@ -28,7 +33,7 @@ Once this information has been identified, launch the |azure portal|, start the 
 
 #. Choose **Virtual Machine**, and then **From Gallery**.
 
-#. Choose one of the following **Featured Images** (currently only |windows| images are supported): ``Windows Server 2012 R2 Datacenter``, ``Windows Server 2012 Datacenter``, or ``Windows Server 2008 R2 SP1``.
+#. Choose one of the following **Featured Images** (currently only |windows| images are supported): ``Windows Server 2012 R2 Datacenter`` or ``Windows Server 2012 Datacenter``.
 
 #. Fill in the virtual machine configuration information, such as machine name, user name, and so on. When finished, click to the next page.
 
@@ -87,6 +92,59 @@ Once this information has been identified, launch the |azure portal|, start the 
    .. image:: ../../images/azure_portal_2.png
 
 After the process is complete, the virtual machine will be registered with the |chef server| and it will have been provisioned with the configuration (applications, services, etc.) from the specified run-list. The |chef server| can now be used to perform all ongoing management of the virtual machine node. 
+
+
+Log Files
+=====================================================
+If the |azure portal| displays an error in dashboard, check the log files. The log files are created by the |chef client|. The log files can be accessed from within the |azure portal| or by running the |chef client| on the node itself and then reproducing the issue interactively.
+
+From the |azure portal|
+-----------------------------------------------------
+Log files are available from within the |azure portal|:
+
+#. Select **Virtual Machines** in the left pane of the |azure portal|.
+
+#. Select the virtual machine that has the error status.
+
+#. Click the **Connect** button at the bottom of the portal to launch a |windows remote desktop| session, and then log in to the virtual machine.
+
+#. Start up a |windows powershell| command shell.
+
+   .. code-block:: bash
+
+      $ cd c:\windowsazure\logs
+        ls –r chef*.log
+
+#. This should display the log files, including the |chef client| log file. 
+
+From the |chef client|
+-----------------------------------------------------
+The |chef client| can be run interactively by using |windows remote desktop| to connect to the virtual machine, and then running the |chef client|:
+
+#. Log into the virtual machine.
+
+#. Start up a |windows powershell| command shell.
+
+#. Run the following command:
+   
+   .. code-block:: bash
+   
+      $ chef-client -l debug
+
+#. View the logs.
+
+Troubleshooting
+-----------------------------------------------------
+After the log files have been located, open them using a text editor to view the log file. The most common problem are below:
+
+* Connectivity errors with the |chef server| caused by incorrect settings in the |client rb| file. Ensure that the ``chef_server_url`` value in the |client rb| file is the correct value and that it can be resolved.
+
+* An invalid validator key has been specified. This will prevent the |chef client| from authenticating to the |chef server|. Ensure that the ``validaton_client_name`` value in the |client rb| file is the correct value
+
+* The name of the node is the same as an existing node. Node names must be unique. Ensure that the name of the virtual machine in |azure| has a unique name.
+
+* An error in one the run-list. The log file will specify the details about errors related to the run-list.
+
 
 For more information ...
 =====================================================
