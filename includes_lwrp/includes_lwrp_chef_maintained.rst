@@ -2,7 +2,9 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Custom resources and providers can also be created using the |lwrp| DSL. |company_name| maintains a collection of cookbooks that define some common scenarios. Many of these cookbooks contain custom resources. To use these resources within recipes to increase automation opportunities the cookbook that defines these custom resources must also be uploaded to the |chef server| so that the custom resources are available to the |chef client| during a |chef client| run.
+|company_name| maintains a collection of cookbooks that define some common scenarios and provides resources to support them. These cookbooks are located at https://github.com/opscode-cookbooks. To use these resources within recipes, first download the cookbook. Then add those resources to recipes.
+
+Some of the most popular |company_name|-maintained cookbooks are listed below:
 
 .. list-table::
    :widths: 150 450
@@ -10,63 +12,63 @@ Custom resources and providers can also be created using the |lwrp| DSL. |compan
 
    * - Cookbook
      - Description
-   * - `apt <http://docs.opscode.com/lwrp_apt.html>`_
+   * - `apt <https://github.com/opscode-cookbooks/apt>`_
      - |cookbook name apt|
-   * - `aws <http://docs.opscode.com/lwrp_aws.html>`_
+   * - `ark <https://github.com/opscode-cookbooks/ark>`_
+     - Use to manage software archives.
+   * - `aws <https://github.com/opscode-cookbooks/aws>`_
      - |cookbook name aws|
-   * - `bluepill <http://docs.opscode.com/lwrp_bluepill.html>`_
+   * - `bluepill <https://github.com/opscode-cookbooks/bluepill>`_
      - |cookbook name bluepill|
    * - `chef_handler <http://docs.opscode.com/lwrp_chef_handler.html>`_
      - |cookbook name chef_handler|
-   * - `daemontools <http://docs.opscode.com/lwrp_daemontools.html>`_
+   * - `cron <https://github.com/opscode-cookbooks/cron>`_
+     - Use to install cron and start the crond service.
+   * - `daemontools <https://github.com/opscode-cookbooks/daemontools>`_
      - |cookbook name daemontools|
-   * - `djbdns <http://docs.opscode.com/lwrp_djbdns.html>`_
+   * - `djbdns <https://github.com/opscode-cookbooks/djbdns>`_
      - |cookbook name djbdns|
-   * - `dmg <http://docs.opscode.com/lwrp_dmg.html>`_
+   * - `dmg <https://github.com/opscode-cookbooks/dmg>`_
      - |cookbook name dmg|
-   * - `dynect <http://docs.opscode.com/lwrp_dynect.html>`_
+   * - `dynect <https://github.com/opscode-cookbooks/dynect>`_
      - |cookbook name dynect|
-   * - `firewall <http://docs.opscode.com/lwrp_firewall.html>`_
+   * - `firewall <https://github.com/opscode-cookbooks/firewall>`_
      - |cookbook name firewall|
-   * - `freebsd <http://docs.opscode.com/lwrp_freebsd.html>`_
+   * - `freebsd <https://github.com/opscode-cookbooks/freebsd>`_
      - |cookbook name freebsd|
-   * - `gunicorn <http://docs.opscode.com/lwrp_gunicorn.html>`_
+   * - `gunicorn <https://github.com/opscode-cookbooks/gunicorn>`_
      - |cookbook name gunicorn|
-   * - `homebrew <http://docs.opscode.com/lwrp_homebrew.html>`_
+   * - `homebrew <https://github.com/opscode-cookbooks/homebrew>`_
      - |cookbook name homebrew|
-   * - `iis <http://docs.opscode.com/lwrp_iis.html>`_
+   * - `iis <https://github.com/opscode-cookbooks/iis>`_
      - |cookbook name iis|
-   * - `maven <http://docs.opscode.com/lwrp_maven.html>`_
+   * - `lvm <https://github.com/opscode-cookbooks/lvm>`_
+     - Use to install the lvm2 package, and then manage LVM.
+   * - `maven <https://github.com/opscode-cookbooks/maven>`_
      - |cookbook name maven|
-   * - `nagios <http://docs.opscode.com/lwrp_nagios.html>`_
-     - |cookbook name nagios|
-   * - `pacman <http://docs.opscode.com/lwrp_pacman.html>`_
-     - |cookbook name pacman|
-   * - `php <http://docs.opscode.com/lwrp_php.html>`_
+   * - `nginx <https://github.com/opscode-cookbooks/nginx>`_
+     - Use to install nginx from package or source code, and then set up configuration handling.
+   * - `openssh <https://github.com/opscode-cookbooks/openssh>`_
+     - The **openssh** cookbook is used to install OpenSSH.
+   * - `omnibus <https://github.com/opscode-cookbooks/omnibus>`_
+     - Use to prepare a machine to be an Omnibus builder.
+   * - `php <https://github.com/opscode-cookbooks/php>`_
      - |cookbook name php|
-   * - `powershell <http://docs.opscode.com/lwrp_powershell.html>`_
+   * - `postfix <https://github.com/opscode-cookbooks/postfix>`_
+     - Use to install and configure postfix for client or outbound relayhost.
+   * - `powershell <https://github.com/opscode-cookbooks/powershell>`_
      - |cookbook name powershell|
-   * - `python <http://docs.opscode.com/lwrp_python.html>`_
-     - |cookbook name python|
-   * - `rabbit mq <http://docs.opscode.com/lwrp_rabbitmq.html>`_
+   * - `rabbit mq <https://github.com/opscode-cookbooks/rabbitmq>`_
      - |cookbook name rabbitmq|
-   * - `riak <http://docs.opscode.com/lwrp_riak.html>`_
-     - |cookbook name riak|
-   * - `samba <http://docs.opscode.com/lwrp_samba.html>`_
-     - |cookbook name samba|
-   * - `sudo <http://docs.opscode.com/lwrp_sudo.html>`_
+   * - `squid <https://github.com/opscode-cookbooks/squid>`_
+     - Use to configure squid as a caching proxy.
+   * - `sudo <https://github.com/opscode-cookbooks/sudo>`_
      - |cookbook name sudo|
-   * - `supervisor <http://docs.opscode.com/lwrp_supervisor.html>`_
-     - |cookbook name supervisor|
-   * - `transmission <http://docs.opscode.com/lwrp_transmission.html>`_
+   * - `transmission <https://github.com/opscode-cookbooks/transmission>`_
      - |cookbook name transmission|
-   * - `users <http://docs.opscode.com/lwrp_users.html>`_
-     - |cookbook name users|
-   * - `webpi <http://docs.opscode.com/lwrp_webpi.html>`_
+   * - `webpi <https://github.com/opscode-cookbooks/webpi>`_
      - |cookbook name webpi|
-   * - `windows <http://docs.opscode.com/lwrp_windows.html>`_
+   * - `windows <https://github.com/opscode-cookbooks/windows>`_
      - |cookbook name windows|
    * - `yum <http://docs.opscode.com/lwrp_yum.html>`_
      - |cookbook name yum|
-
-

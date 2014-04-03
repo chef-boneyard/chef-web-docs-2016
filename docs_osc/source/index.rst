@@ -313,35 +313,32 @@ The following LWRPs are available in |company_name|-maintained cookbooks:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_apt.html">apt</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_aws.html">aws</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_bluepill.html">bluepill</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_chef_handler.html">chef_handler</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_daemontools.html">daemontools</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_djbdns.html">djbdns</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_dmg.html">dmg</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_dynect.html">dynect</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_firewall.html">firewall</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_freebsd.html">freebsd</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_gunicorn.html">gunicorn</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_homebrew.html">homebrew</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_iis.html">iis</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_maven.html">maven</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_nagios.html">nagios</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_pacman.html">pacman</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_php.html">php</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_powershell.html">powershell</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_python.html">python</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_rabbitmq.html">rabbitmq</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_riak.html">riak</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_samba.html">samba</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_sudo.html">sudo</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_supervisor.html">supervisor</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_transmission.html">transmission</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_users.html">users</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_webpi.html">webpi</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_windows.html">windows</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_yum.html">yum</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/apt">apt</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/aws">aws</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/bluepill">bluepill</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_chef_handler.html">chef_handler</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/daemontools">daemontools</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/djbdns">djbdns</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/dmg">dmg</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/dynect">dynect</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/firewall">firewall</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/freebsd">freebsd</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/gunicorn">gunicorn</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/homebrew">homebrew</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/iis">iis</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/lvm">lvm</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/maven">maven</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/nginx">nginx</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/omnibus">omnibus</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/openssh">openssh</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/php">php</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/powershell">powershell</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/rabbitmq">rabbitmq</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/sudo">sudo</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/transmission">transmission</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/webpi">webpi</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/windows">windows</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_yum.html">yum</a> </br>
 
 See the `opscode-cookbooks <https://github.com/opscode-cookbooks>`_ repository for the full list.
 
@@ -484,39 +481,12 @@ The following topics discuss using |chef server osc| with platforms:
    knife_using
    knife_xargs
    lwrp
-   lwrp_aws
-   lwrp_apt
-   lwrp_bluepill
    lwrp_chef_handler
    lwrp_custom
    lwrp_custom_provider_ruby
    lwrp_custom_provider
    lwrp_custom_resource
    lwrp_custom_resource_library
-   lwrp_daemontools
-   lwrp_djbdns
-   lwrp_dmg
-   lwrp_dynect
-   lwrp_firewall
-   lwrp_freebsd
-   lwrp_gunicorn
-   lwrp_homebrew
-   lwrp_iis
-   lwrp_maven
-   lwrp_nagios
-   lwrp_pacman
-   lwrp_php
-   lwrp_powershell
-   lwrp_python
-   lwrp_rabbitmq
-   lwrp_riak
-   lwrp_samba
-   lwrp_sudo
-   lwrp_supervisor
-   lwrp_transmission
-   lwrp_users
-   lwrp_webpi
-   lwrp_windows
    lwrp_yum
    manage
    osc_overview
