@@ -8,12 +8,16 @@ To use the |chef| integration with the |azure portal|, `all you need is a Chef s
 
 .. note:: Virtual machines running on |azure| can also be provisioned from the command-line using the |subcommand knife azure| plugin for |knife|. This approach is ideal for cases that require automation or for users who are more suited to command-line interfaces.
 
+|chef-client| Settings
+=====================================================
 Before virtual machines are created using the |azure portal|, some |chef client|-specific settings will need to be identified so they may be provided to the |azure portal| during the virtual machine creation workflow. These settings are available from the |chef client| configuration settings:
 
 #. The ``chef_server_url`` and ``validaton_client_name``. These are settings in the `client.rb file <http://docs.opscode.com/config_rb_client.html>`_.
 
 #. The file for the `validator key <http://docs.opscode.com/chef_private_keys.html>`_.
 
+Set up Virtual Machines
+=====================================================
 Once this information has been identified, launch the |azure portal|, start the virtual machine creation workflow, and then bootstrap virtual machines with |chef|:
 
 #. `Sign in to Microsoft Azure <https://manage.windowsazure.com>`_. Authenticate using your |azure| account credentials.
