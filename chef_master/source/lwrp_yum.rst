@@ -6,7 +6,7 @@ yum Lightweight Resources
 
 The |cookbook yum| cookbook contains the following resources: ``yum_globalconfig`` and ``yum_repository``.
 
-.. warning:: The |cookbook name yum| cookbook, version 3.0.0 (and above) contains breaking changes that are not compatible with previous versions. The |lwrp yum repository| resource is changed, the |lwrp yum globalconfig| resource is new, and the **yum_key** resource is deprecated. Recipes have been moved into repository-specific cookbooks. If your organization is using an older version of the |cookbook name yum| cookbook, lock |yum| to that cookbook version until all of the cookbooks that may have a dependency on |yum| are updated to work with the newest version of this cookbook.
+.. warning:: The |cookbook yum| cookbook, version 3.0.0 (and above) contains breaking changes that are not compatible with previous versions. The |lwrp yum repository| resource is changed, the |lwrp yum globalconfig| resource is new, and the **yum_key** resource is deprecated. Recipes have been moved into repository-specific cookbooks. If your organization is using an older version of the |cookbook name yum| cookbook, lock |yum| to that cookbook version until all of the cookbooks that may have a dependency on |yum| are updated to work with the newest version of this cookbook.
 
 Repository Cookbooks
 =====================================================
