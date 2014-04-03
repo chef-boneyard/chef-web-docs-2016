@@ -56,6 +56,38 @@ Examples
 
 .. include:: ../../step_plugin_knife/step_plugin_knife_google_disk_list.rst
 
+project list
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_project_list.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_project_list_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_project_list_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
+region list
+=====================================================
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_region_list.rst
+
+Syntax
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_region_list_syntax.rst
+
+Options
+-----------------------------------------------------
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_google_region_list_options.rst
+
+Examples
+-----------------------------------------------------
+None.
+
 server create
 =====================================================
 .. include:: ../../includes_plugin_knife/includes_plugin_knife_google_server_create.rst
