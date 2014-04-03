@@ -23,7 +23,7 @@
        or:
        ::
  
-          Ohai::Config[:disabled_plugins] = ["passwd", "rackspace", "dmi", "dmi_common"]
+          Ohai::Config[:disabled_plugins] = ["my_plugin", "my_plugin", "my_plugin"]
 
    * - ``Ohai::Config[:hints_path]``
      - |path hint_ohai|
