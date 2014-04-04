@@ -57,6 +57,12 @@ Delete Client
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_client_delete.rst
 
+Delete Cookbook
+=====================================================
+.. note:: The |manage| web user interface currently requires that cookbooks be deleted using |knife|, the command line interface to the |chef server|.
+
+.. include:: ../../step_knife/step_knife_cookbook_delete.rst
+
 Delete Data Bag
 =====================================================
 .. include:: ../../step_manage_webui/step_manage_webui_policy_data_bag_delete.rst
