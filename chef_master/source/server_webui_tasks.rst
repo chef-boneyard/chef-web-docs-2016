@@ -59,7 +59,7 @@ Delete Client
 
 Delete Cookbook
 =====================================================
-.. note:: The |manage| web user interface currently requires that cookbooks be deleted using |knife|, the command line interface to the |chef server|.
+.. note:: The |chef manage| web user interface currently requires that cookbooks be deleted using |knife|, the command line interface to the |chef server|.
 
 .. include:: ../../step_knife/step_knife_cookbook_delete.rst
 
