@@ -61,6 +61,8 @@ Delete Cookbook
 =====================================================
 .. note:: The |chef manage| web user interface currently requires that cookbooks be deleted using |knife|, the command line interface to the |chef server|.
 
+**To delete a cookbook**
+
 .. include:: ../../step_knife/step_knife_cookbook_delete.rst
 
 Delete Data Bag
