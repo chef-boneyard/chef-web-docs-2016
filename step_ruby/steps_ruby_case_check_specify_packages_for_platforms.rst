@@ -14,6 +14,7 @@ The following example shows how to use a case statement to tell the |chef client
        package "package_a"
        package "package_b"
        package "package_c"
+     end
    end
 
 where ``node[:platform]`` for each node is identified by |ohai| during every |chef client|. For example:
@@ -30,4 +31,5 @@ where ``node[:platform]`` for each node is identified by |ohai| during every |ch
        package "openssl"
        package "pkg-config"
        package "subversion"
+     end
    end
