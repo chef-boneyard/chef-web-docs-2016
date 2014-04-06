@@ -76,7 +76,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 **Chef Manager Web User Interface:** :doc:`Clients </server_manage_clients>` | :doc:`Cookbooks </server_manage_cookbooks>` | :doc:`Data Bags </server_manage_data_bags>` | :doc:`Environments </server_manage_environments>` | :doc:`Nodes </server_manage_nodes>` | :doc:`Reports </server_manage_reports>` | :doc:`Roles </server_manage_roles>`
 
-**Settings and Tools:** :doc:`private-chef.rb </config_rb_chef_server_enterprise>` | :doc:`private-chef-ctl </ctl_private_chef>` | :doc:``manage.rb </config_rb_manage>`
+**Settings and Tools:** :doc:`private-chef.rb </config_rb_chef_server_enterprise>` | :doc:`private-chef-ctl </ctl_private_chef>` | :doc:`manage.rb </config_rb_manage>`
 
 |chef server osc|
 -----------------------------------------------------
