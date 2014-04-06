@@ -6,7 +6,7 @@
 
    service "example_service" do
      case node["platform"]
-     when "CentOS","RedHat","Fedora"
+     when "centos","redhat","fedora"
        service_name "redhat_name"
      else
        service_name "other_name"
