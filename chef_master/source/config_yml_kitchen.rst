@@ -28,10 +28,14 @@ Examples
 ==========================================================================
 The following examples show actual |kitchen yml| files used in |company_name|-maintained cookbooks.
 
-``chef-client`` Cookbook
+|cookbook chef_client| Cookbook
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_client.rst
 
-``chef-splunk`` Cookbook
+|cookbook chef_splunk| Cookbook
 --------------------------------------------------------------------------
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_chef_splunk.rst
+
+|cookbook yum| Cookbook
+--------------------------------------------------------------------------
+.. include:: ../../includes_test_kitchen/includes_test_kitchen_yml_example_yum.rst
