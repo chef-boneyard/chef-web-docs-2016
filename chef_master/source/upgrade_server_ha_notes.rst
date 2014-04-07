@@ -33,7 +33,7 @@ The following bugs may affect the upgrade:
 * OC-11297 --- EC 11.0.X not saving its migration-level state on HA back end machines. Breaks ``private-chef-ctl upgrade`` on subsequent upgrades
 * OC-11382 --- HA Upgrades to 11.1.x fail because keepalived restart interferes with partybus migrations
 
-.. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6 -> check runsvdir status -> |chef server oec| 11.x -> check runsvdir status
+.. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6 -> check runsvdir status -> |chef server oec| 11.x -> check runsvdir status. See "Runit Process Structure and Checks" below for more information.
 
 
 Pre-Flight Check
@@ -77,7 +77,7 @@ It is recommended to do the following:
       * - |chef server oec| 11.1.x
         - 11.1.x	major: 1, minor: 13
 
-#. Before proceeding, make sure that the bootstrap back end machine and all of its services are healthy, and that all services are stopped on the standby. Please check runsvdir status to make a determination about "healthy".
+#. Before proceeding, make sure that the bootstrap back end machine and all of its services are healthy, and that all services are stopped on the standby. Please check runsvdir status to make a determination about "healthy". See "Runit Process Structure and Checks" below for more information.
 
 
 Upgrade Steps
@@ -103,6 +103,8 @@ Upgrade Steps
 
       private-chef-ctl upgrade
 
+   
+    See "Runit Process Structure and Checks" below for more information.
 #. Copy the entire ``/etc/opscode`` directory from the bootstrap back end machine to all front end and back end machines. For example, from each machine run:
 
    .. code-block:: bash
