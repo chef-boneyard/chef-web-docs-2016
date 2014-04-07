@@ -24,6 +24,9 @@ This subcommand has the following options:
 
    .. warning:: The default bootstrap operation uses the |omnibus installer|, which means the default template file (``chef-full``) should work on all supported platforms. It is recommended to use custom bootstrap templates only when the |omnibus installer| cannot be used. The ``.erb`` file extension is added automatically and should not be passed as part of the bootstrap command.
 
+``-E ENVIRONMENT``, ``--environment ENVIRONMENT``
+   |name environment| When this option is added to a command, the command will run only against the named environment.
+
 ``-G GATEWAY``, ``--ssh-gateway GATEWAY``
    |ssh_gateway|
 
