@@ -7,11 +7,7 @@ To set or remove a system recovery password for a user, see the instructions in 
 
 Once a user has a system recovery password, they can log into the system by clicking the System Recovery link found on the right hand side of the login page.
 
-.. image:: ../../images_old/private_chef_1x_system_recovery_link.png 
-
 Once on the System Recovery page, the user will be asked to enter their username and system recovery password.
-
-.. image:: ../../images_old/private_chef_1x_system_recovery.png 
 
 Once the user successfully logs in, they will gain access to the system and see the same screens as if |windows ad| or |ldap| were functioning.
 
