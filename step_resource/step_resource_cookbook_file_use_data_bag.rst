@@ -41,6 +41,4 @@ The following example shows how to use a data bag named "ssl_certificate" to:
       
    end
 
-where:
-
-* ``Chef::Cookbook.get_ssl_certificate_data_bag`` is a custom method used to define  ``matching_node`` represents a type of node.
+where ``matching_node`` represents a type of node.
