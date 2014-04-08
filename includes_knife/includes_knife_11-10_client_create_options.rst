@@ -5,8 +5,9 @@
 
 This argument has the following options:
 
-``-a ITEM``, ``--after ITEM``
-   |after|
+``-a``, ``--admin``
+   |admin client| This option only works when used with the open source |chef server| and will have no effect when used with |chef server oec|.
 
-``-b ITEM``, ``--before ITEM``
-   |before|
+``-f FILE_NAME``, ``--file FILE_NAME``
+   |file private_key|
+

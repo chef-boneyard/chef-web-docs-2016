@@ -202,6 +202,11 @@ This configuration file has the following settings:
        ::
  
           json_attribs nil
+   * - ``local_key_generation``
+     - Use to specify whether the |chef server| or |chef client| will generate the private/public key pair. When ``true``, the |chef client| will generate the key pair, and then send the public key to the |chef server|. For example:
+       ::
+ 
+          local_key_generation false
    * - ``local_mode``
      - |local_mode| For example:
        ::

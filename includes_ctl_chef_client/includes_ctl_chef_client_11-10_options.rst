@@ -12,6 +12,9 @@ This command has the following options:
 ``-A``, ``--fatal-windows-admin-check``
    |fatal_windows_admin_check|
 
+``-c CONFIG``, ``--config CONFIG``
+   |config chef-client|
+
 ``--chef-zero-port PORT``
    |port chef_zero|
 
@@ -68,9 +71,6 @@ This command has the following options:
 
 ``-P PID_FILE``, ``--pid PID_FILE``
    |path pid_file| Default value: ``/tmp/name-of-executable.pid``.
-
-``-r RUN_LIST_ITEM``, ``--runlist RUN_LIST_ITEM``
-   |runlist_items|
 
 ``-R``, ``--enable-reporting``
    |enable_reporting|

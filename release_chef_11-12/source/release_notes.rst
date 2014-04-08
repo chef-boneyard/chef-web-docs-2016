@@ -36,11 +36,11 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 
 ``knife ssl check``
 -----------------------------------------------------
-.. include:: ../includes_knife_ssl_check.rst
+.. include:: ../../includes_knife/includes_knife_ssl_check.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../includes_knife_ssl_check_syntax.rst
+.. include:: ../../includes_knife/includes_knife_ssl_check_syntax.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -70,11 +70,11 @@ for example:
 
 ``knife ssl fetch``
 -----------------------------------------------------
-.. include:: ../includes_knife_ssl_fetch.rst
+.. include:: ../../includes_knife/includes_knife_ssl_fetch.rst
 
 Syntax
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../includes_knife_ssl_fetch_syntax.rst
+.. include:: ../../includes_knife/includes_knife_ssl_fetch_syntax.rst
 
 Examples
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

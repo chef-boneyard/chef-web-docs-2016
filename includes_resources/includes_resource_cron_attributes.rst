@@ -56,4 +56,4 @@
    * - ``user``
      - |name user cron| Default value: ``root``.
    * - ``weekday``
-     - |weekday cron| Default value: ``*``.
+     - |weekday cron| Default value: ``*``. May be entered as a symbol, e.g. ``:monday`` or ``:friday``.

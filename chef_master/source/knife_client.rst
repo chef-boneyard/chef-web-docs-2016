@@ -16,7 +16,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-|no_options|
+.. include:: ../../includes_knife/includes_knife_client_bulk_delete_options.rst
 
 Examples
 -----------------------------------------------------
@@ -62,7 +62,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-|no_options|
+.. include:: ../../includes_knife/includes_knife_client_delete_options.rst
 
 Examples
 -----------------------------------------------------
