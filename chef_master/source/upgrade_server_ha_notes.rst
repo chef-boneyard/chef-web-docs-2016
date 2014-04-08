@@ -220,39 +220,39 @@ Example
 -----------------------------------------------------
 The following is one specific problem-fix scenario encountered while proceeding through an OPC 1.4.6 -> EC11.1.2 upgrade. The issue was likely triggered by an unhealthy runit status while running at version OPC 1.4.6::
 
-   +   1. Checked runvsvdir status when it became apparent that the Partybus
-   +   initiated final private-chef-ctl start during the EC11.1.2 upgrade
-   +   was looping on starting services. It was failing, because it was
-   +   getting stuck on the old OPC 1.4.6 processes. This is likely because
-   +   the OPC 1.4.6 runsvdir was no longer able to control the processes through
-   +   incorrect permissions leading to a bad runsvdir state.
-   +
-   +   2. Just for good measure, I removed the following links that pointed to
-   +   the old process run control directories
-   +   lrwxrwxrwx. 1 root root 24 Feb 3 08:08 fcgiwrap ->/opt/opscode/sv/fcgiwrap
-   +   lrwxrwxrwx. 1 root root 22 Feb 3 08:08 nagios -> /opt/opscode/sv/nagios
-   +   lrwxrwxrwx. 1 root root 20 Feb 3 08:08 nrpe -> /opt/opscode/sv/nrpe
-   +   lrwxrwxrwx. 1 root root 28 Feb 3 08:07 opscode-chef -> /opt/opscode/sv/opscode-chef
-   +   lrwxrwxrwx. 1 root root 23 Feb 3 08:08 php-fpm -> /opt/opscode/sv/php-fpm
-   +   lrwxrwxrwx. 1 root root 21 Feb 3 08:07 redis -> /opt/opscode/sv/redis
-   +
-   +   3. We had to cancel the first upgrade attempt, stop opscode-runsvdir and
-   +   private-chef-runsvdir and make sure all their child processes were removed from the process list.
-   +
-   +   4. chown -R opscode.opscode /var/log/opscode # Fix permissions, so
-   +   that the new runsvdir can do stuff with its runsv and svlogd processes.
-   +
-   +   5. start private-chef-runsvdir
-   +
-   +   6. Wait for good bootstrap master state.
-   +
-   +   7. Check ps aux | grep runsvdir. Status looks good.
-   +
-   +   8. Restart the upgrade.
-   +
-   +   9. Proceeded to the end of the upgrade.
-   +
-   +   10. p-c-c cleanup
+      1. Checked runvsvdir status when it became apparent that the Partybus
+      initiated final private-chef-ctl start during the EC11.1.2 upgrade
+      was looping on starting services. It was failing, because it was
+      getting stuck on the old OPC 1.4.6 processes. This is likely because
+      the OPC 1.4.6 runsvdir was no longer able to control the processes through
+      incorrect permissions leading to a bad runsvdir state.
+      
+      2. Just for good measure, I removed the following links that pointed to
+      the old process run control directories
+      lrwxrwxrwx. 1 root root 24 Feb 3 08:08 fcgiwrap ->/opt/opscode/sv/fcgiwrap
+      lrwxrwxrwx. 1 root root 22 Feb 3 08:08 nagios -> /opt/opscode/sv/nagios
+      lrwxrwxrwx. 1 root root 20 Feb 3 08:08 nrpe -> /opt/opscode/sv/nrpe
+      lrwxrwxrwx. 1 root root 28 Feb 3 08:07 opscode-chef -> /opt/opscode/sv/opscode-chef
+      lrwxrwxrwx. 1 root root 23 Feb 3 08:08 php-fpm -> /opt/opscode/sv/php-fpm
+      lrwxrwxrwx. 1 root root 21 Feb 3 08:07 redis -> /opt/opscode/sv/redis
+      
+      3. We had to cancel the first upgrade attempt, stop opscode-runsvdir and
+      private-chef-runsvdir and make sure all their child processes were removed from the process list.
+      
+      4. chown -R opscode.opscode /var/log/opscode # Fix permissions, so
+      that the new runsvdir can do stuff with its runsv and svlogd processes.
+      
+      5. start private-chef-runsvdir
+      
+      6. Wait for good bootstrap master state.
+      
+      7. Check ps aux | grep runsvdir. Status looks good.
+      
+      8. Restart the upgrade.
+      
+      9. Proceeded to the end of the upgrade.
+      
+      10. p-c-c cleanup
 
 OC-11449 patch for EC11.1.2
 =====================================================
@@ -335,9 +335,9 @@ The following is the code for the ``OC-11490.patch`` file:
    +  mode "0700"
    +end
    +
-   template File.join(keepalived_etc_dir, "keepalived.conf") do
-     source "keepalived.conf.erb"
-     mode "0644"
+    template File.join(keepalived_etc_dir, "keepalived.conf") do
+      source "keepalived.conf.erb"
+      mode "0644"
    -- 
    1.9.1
 
