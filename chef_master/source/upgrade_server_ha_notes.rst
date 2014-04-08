@@ -32,6 +32,9 @@ The following bugs may affect the upgrade:
 
 * OC-11297 --- EC 11.0.X not saving its migration-level state on HA back end machines. Breaks ``private-chef-ctl upgrade`` on subsequent upgrades
 * OC-11382 --- HA Upgrades to 11.1.x fail because keepalived restart interferes with partybus migrations
+* OC-11449 --- Umasks other than 0022 break permissions
+* OC-11490 --- Root ownership of ``/var/log/opscode/keepalived`` prevents keepalived from running properly
+* OC--11426 --- Upgrade Runit Ownership Issue OPC 1.4.6 -> EC11.1.2
 
 .. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6 -> check runsvdir status -> |chef server oec| 11.x -> check runsvdir status. See "Runit Process Structure and Checks" below for more information.
 
@@ -76,6 +79,26 @@ It is recommended to do the following:
         - major: 1, minor: 12
       * - |chef server oec| 11.1.x
         - 11.1.x	major: 1, minor: 13
+
+#. For known issue OC-11449 - While running OPC 1.4.6 and before the upgrade, be sure that the permissions on /var/log/opscode are 0755. After installing the EC11.1.2 package and before a reconfigure, please apply the OC-11449.patch file listed below using the following commands as root. Please change the DIRECTORY as desired.
+
+   .. code-block:: bash
+
+      PATCH_LOCATION=/DIRECTORY/OC-11449.patch
+      cd /opt/opscode/embedded/cookbooks
+      patch --dry-run --verbose -p3 <$PATCH_LOCATION
+      patch -p3 </root/$PATCH_LOCATION
+
+#. For known issue OC-11490 - After installing the EC11.1.2 package and before a reconfigure or upgrade, please apply the OC-11490.patch file listed below using the following commands as root. Please change the DIRECTORY as desired.
+
+   .. code-block:: bash
+   
+      PATCH_LOCATION=/DIRECTORY/OC-11490.patch
+      cd /opt/opscode/embedded/cookbooks
+      patch --dry-run --verbose -p3 <$PATCH_LOCATION
+      patch -p3 </root/$PATCH_LOCATION
+
+#. For known issue OC-11426 - While running |chef private| 1.4.6 and before the upgrade, be sure that the status for Runit looks good. See "Runit Process Structure and Checks" below for more information.
 
 #. Before proceeding, make sure that the bootstrap back end machine and all of its services are healthy, and that all services are stopped on the standby. Please check runsvdir status to make a determination about "healthy". See "Runit Process Structure and Checks" below for more information.
 
@@ -193,6 +216,130 @@ Restart the runsvdir:
 * If continuing an |chef server oec| 11.1.2 upgrade ``initctl start private-chef-runsvdir``
 * If fixing up an |chef private| 1.4.6 system before an upgrade to |chef server oec| 11.1.2 ``initctl start private-chef-runsvdir``
 
+Example
+-----------------------------------------------------
+The following is one specific problem-fix scenario encountered while proceeding through an OPC 1.4.6 -> EC11.1.2 upgrade. The issue was likely triggered by an unhealthy runit status while running at version OPC 1.4.6::
+
+   +   1. Checked runvsvdir status when it became apparent that the Partybus
+   +   initiated final private-chef-ctl start during the EC11.1.2 upgrade
+   +   was looping on starting services. It was failing, because it was
+   +   getting stuck on the old OPC 1.4.6 processes. This is likely because
+   +   the OPC 1.4.6 runsvdir was no longer able to control the processes through
+   +   incorrect permissions leading to a bad runsvdir state.
+   +
+   +   2. Just for good measure, I removed the following links that pointed to
+   +   the old process run control directories
+   +   lrwxrwxrwx. 1 root root 24 Feb 3 08:08 fcgiwrap ->/opt/opscode/sv/fcgiwrap
+   +   lrwxrwxrwx. 1 root root 22 Feb 3 08:08 nagios -> /opt/opscode/sv/nagios
+   +   lrwxrwxrwx. 1 root root 20 Feb 3 08:08 nrpe -> /opt/opscode/sv/nrpe
+   +   lrwxrwxrwx. 1 root root 28 Feb 3 08:07 opscode-chef -> /opt/opscode/sv/opscode-chef
+   +   lrwxrwxrwx. 1 root root 23 Feb 3 08:08 php-fpm -> /opt/opscode/sv/php-fpm
+   +   lrwxrwxrwx. 1 root root 21 Feb 3 08:07 redis -> /opt/opscode/sv/redis
+   +
+   +   3. We had to cancel the first upgrade attempt, stop opscode-runsvdir and
+   +   private-chef-runsvdir and make sure all their child processes were removed from the process list.
+   +
+   +   4. chown -R opscode.opscode /var/log/opscode # Fix permissions, so
+   +   that the new runsvdir can do stuff with its runsv and svlogd processes.
+   +
+   +   5. start private-chef-runsvdir
+   +
+   +   6. Wait for good bootstrap master state.
+   +
+   +   7. Check ps aux | grep runsvdir. Status looks good.
+   +
+   +   8. Restart the upgrade.
+   +
+   +   9. Proceeded to the end of the upgrade.
+   +
+   +   10. p-c-c cleanup
+
+OC-11449 patch for EC11.1.2
+=====================================================
+The following is the code for the ``OC-11449.patch`` file:
+
+.. code-block:: ruby
+
+   From 7aa73aa23c4550d232cb9f6dadd72d924fbfffb0 Mon Sep 17 00:00:00 2001
+   From: Sean Horn <sean_horn@opscode.com>
+   Date: Fri, 21 Mar 2014 02:00:49 -0400
+   Subject: [PATCH] Protect logfiles against root umask other than 0022
+   
+   ---
+    CHANGELOG.md                                                 | 1 +
+    RELEASE_NOTES.md                                             | 1 +
+    files/private-chef-cookbooks/private-chef/recipes/default.rb | 7 +++++++
+    3 files changed, 9 insertions(+)
+   
+   diff --git a/files/private-chef-cookbooks/private-chef/recipes/default.rb b/files/private-chef-cookbooks/private-chef/recipes/default.rb
+   index 2d9615d..b1280ae 100644
+   --- a/files/private-chef-cookbooks/private-chef/recipes/default.rb
+   +++ b/files/private-chef-cookbooks/private-chef/recipes/default.rb
+   @@ -139,6 +139,13 @@
+      action :create
+    end
+   
+   +directory "/var/log/opscode" do
+   +  owner "opscode"
+   +  group "opscode"
+   +  mode "0755"
+   +  action :create
+   +end
+   +
+    include_recipe "enterprise::runit"
+    include_recipe "private-chef::sysctl-updates"
+   
+   --
+   1.9.1
+
+OC-11449 patch for EC11.1.2
+=====================================================
+The following is the code for the ``OC-11490.patch`` file:
+
+.. code-block:: ruby
+
+   From 5bd73ecae3aec99930ea23b03f502da28eb5b3bb Mon Sep 17 00:00:00 2001
+   From: Jeremiah Snapp <jeremiah@getchef.com>
+   Date: Mon, 7 Apr 2014 06:49:35 -0400
+   Subject: [PATCH] OC-11490 Explicitly set keepalived directory ownership
+   
+   Keeaplived's svlogd runs as the opscode user but cannot
+   write to log files in /var/log/opscode/keepalived because
+   the directory is owned by root.
+   
+   This prevents keepalived from running properly.
+   ---
+    files/private-chef-cookbooks/private-chef/recipes/keepalived.rb | 9 ++++++++-
+    1 file changed, 8 insertions(+), 1 deletion(-)
+   
+   diff --git a/files/private-chef-cookbooks/private-chef/recipes/keepalived.rb b/files/private-chef-cookbooks/private-chef/recipes/keepalived.rb
+   index b8c7925..e415af6 100644
+   --- a/files/private-chef-cookbooks/private-chef/recipes/keepalived.rb
+   +++ b/files/private-chef-cookbooks/private-chef/recipes/keepalived.rb
+   @@ -10,13 +10,20 @@
+    keepalived_bin_dir = File.join(keepalived_dir, "bin")
+    keepalived_log_dir = node['private_chef']['keepalived']['log_directory']
+    
+   -[ keepalived_dir, keepalived_etc_dir, keepalived_bin_dir, keepalived_log_dir ].each do |dir|
+   +[ keepalived_dir, keepalived_etc_dir, keepalived_bin_dir ].each do |dir|
+      directory dir do
+   +    owner "root"
+        recursive true
+        mode "0755"
+      end
+    end
+    
+   +directory keepalived_log_dir do
+   +  owner node['private_chef']['user']['username']
+   +  recursive true
+   +  mode "0700"
+   +end
+   +
+   template File.join(keepalived_etc_dir, "keepalived.conf") do
+     source "keepalived.conf.erb"
+     mode "0644"
+   -- 
+   1.9.1
 
 LDAP Authentication Bug
 =====================================================
