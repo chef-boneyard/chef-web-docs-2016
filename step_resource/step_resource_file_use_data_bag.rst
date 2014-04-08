@@ -3,8 +3,6 @@
 The following example shows how to apply the contents of a data bag named "ssl_certificate" to certain files:
 
 .. code-block:: ruby
-
-   data_bag_item = Chef::Cookbook.get_ssl_certificate_data_bag
    
    if data_bag_item[node[:matching_node][:ssl_certificate][:key]]
    

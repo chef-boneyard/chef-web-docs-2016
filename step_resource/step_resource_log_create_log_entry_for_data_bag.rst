@@ -3,8 +3,6 @@
 The following example shows how to create log entries each time the contents of a data bag named "ssl_certificate" are used.
 
 .. code-block:: ruby
-
-   data_bag_item = Chef::Cookbook.get_ssl_certificate_data_bag
    
    if data_bag_item[node[:matching_node][:ssl_certificate][:key]]
    

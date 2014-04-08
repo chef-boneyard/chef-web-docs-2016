@@ -8,8 +8,6 @@ The following example shows how to use a data bag named "ssl_certificate" to:
 * Create a log entry every time the default |ssl| certificates are used
 
 .. code-block:: ruby
-
-   data_bag_item = Chef::Cookbook.get_ssl_certificate_data_bag
    
    if data_bag_item[node[:matching_node][:ssl_certificate][:key]]
    
@@ -43,4 +41,6 @@ The following example shows how to use a data bag named "ssl_certificate" to:
       
    end
 
-where ``matching_node`` represents a type of node.
+where:
+
+* ``Chef::Cookbook.get_ssl_certificate_data_bag`` is a custom method used to define  ``matching_node`` represents a type of node.
