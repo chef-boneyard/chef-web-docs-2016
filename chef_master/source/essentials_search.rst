@@ -120,6 +120,10 @@ AND
 -----------------------------------------------------
 .. include:: ../../step_search/step_search_boolean_and.rst
 
+AND -id:foo
+-----------------------------------------------------
+.. include:: ../../step_search/step_search_boolean_andnot.rst
+
 NOT
 -----------------------------------------------------
 .. include:: ../../step_search/step_search_boolean_not.rst
