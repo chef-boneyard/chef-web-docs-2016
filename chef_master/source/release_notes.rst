@@ -154,6 +154,9 @@ New settings have been added to the |client rb| file:
  
           local_key_generation false
 
+Changelog
+=====================================================
+https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
 
 .. What's Fixed
 .. =====================================================
