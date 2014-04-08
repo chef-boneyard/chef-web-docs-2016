@@ -104,7 +104,7 @@ Fuzzy Matching
 
 .. include:: ../../step_search/step_search_pattern_fuzzy.rst
 
-Boolean Operators
+Operators
 =====================================================
 .. include:: ../../includes_search/includes_search_boolean_operators.rst
 
