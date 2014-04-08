@@ -4,7 +4,7 @@ The following example shows how to use a data bag named "ssl_certificate" to:
 
 * Create a log entry every time the data bag is used
 * Set variables for each data bag item
-* Specify what to do if the ``ssl_certificates`` data bag cannot be found and in which cookbook files to look for the default certificates
+* Specify what to do if the ``ssl_certificate`` data bag cannot be found and in which cookbook files to look for the default certificates
 * Create a log entry every time the default |ssl| certificates are used
 
 .. code-block:: ruby
