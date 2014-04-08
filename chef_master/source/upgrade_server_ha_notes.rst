@@ -34,7 +34,7 @@ The following bugs may affect the upgrade:
 * OC-11382 --- HA Upgrades to 11.1.x fail because keepalived restart interferes with partybus migrations
 * OC-11449 --- Umasks other than 0022 break permissions
 * OC-11490 --- Root ownership of ``/var/log/opscode/keepalived`` prevents keepalived from running properly
-* OC--11426 --- Upgrade Runit Ownership Issue OPC 1.4.6 -> EC11.1.2
+* OC-11426 --- Upgrade Runit Ownership Issue OPC 1.4.6 -> EC11.1.2
 
 .. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6 -> check runsvdir status -> |chef server oec| 11.x -> check runsvdir status. See "Runit Process Structure and Checks" below for more information.
 
@@ -87,7 +87,7 @@ It is recommended to do the following:
       PATCH_LOCATION=/DIRECTORY/OC-11449.patch
       cd /opt/opscode/embedded/cookbooks
       patch --dry-run --verbose -p3 <$PATCH_LOCATION
-      patch -p3 </root/$PATCH_LOCATION
+      patch -p3 <$PATCH_LOCATION
 
 #. For known issue OC-11490 - After installing the EC11.1.2 package and before a reconfigure or upgrade, please apply the OC-11490.patch file listed below using the following commands as root. Please change the DIRECTORY as desired.
 
@@ -96,7 +96,7 @@ It is recommended to do the following:
       PATCH_LOCATION=/DIRECTORY/OC-11490.patch
       cd /opt/opscode/embedded/cookbooks
       patch --dry-run --verbose -p3 <$PATCH_LOCATION
-      patch -p3 </root/$PATCH_LOCATION
+      patch -p3 <$PATCH_LOCATION
 
 #. For known issue OC-11426 - While running |chef private| 1.4.6 and before the upgrade, be sure that the status for Runit looks good. See "Runit Process Structure and Checks" below for more information.
 
@@ -292,7 +292,7 @@ The following is the code for the ``OC-11449.patch`` file:
    --
    1.9.1
 
-OC-11449 patch for EC11.1.2
+OC-11490 patch for EC11.1.2
 =====================================================
 The following is the code for the ``OC-11490.patch`` file:
 
