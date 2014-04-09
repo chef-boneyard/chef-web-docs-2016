@@ -1,7 +1,39 @@
 =====================================================
-Upgrade to Open Source Server 11
+Upgrade the |chef server osc| Server
 =====================================================
+The |chef server osc| server can be upgraded to newer versions of the |chef server 11| release and also from |chef server 10|.
 
+Upgrade to Newer Versions of |chef server 11|
+======================================================
+To upgrade to newer versions of the |chef server osc| server, do the following:
+
+#. Go to http://www.getchef.com/chef/install/.
+
+#. Click the **Chef Server** tab.
+
+#. Select the operating system, version, and architecture.
+
+#. Select the version of |chef server 11| to download, and then click the link that appears to download the package.
+
+#. Install the downloaded package using the correct method for the operating system on which |chef server 11| will be installed.
+
+#. Configure |chef server 11| by running the following command:
+
+   .. code-block:: bash
+   
+      $ sudo chef-server-ctl reconfigure
+
+   This command will set up all of the required components, including |erchef|, |rabbitmq|, and |postgresql|.
+
+#. Restart |chef server 11| by running the following command:
+
+   .. code-block:: bash
+   
+      $ sudo chef-server-ctl restart
+
+
+Upgrade to |chef server osc| Server 11 from 10.x
+=====================================================
 Upgrading to |chef server 11| from |chef server 10| is a relatively simple process: install the |chef server 11| and then move the data from |chef server 10| to the new one. Because the |chef server 10| database is |couch db| and the |chef server 11| database is |postgresql|, the data cannot be moved directly. Instead, use the following |knife| subcommands:
 
 * ``knife download``
