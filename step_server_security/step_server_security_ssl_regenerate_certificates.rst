@@ -12,11 +12,19 @@ To regenerate |ssl| certificates, run the following command:
 
 and then do one of the following:
 
-* If the |chef server oec| already uses |ssl| certificates, they are located in ``/etc/opscode/private-chef.rb`` as values for the ``nginx[‘ssl_certificate’]`` and ``nginx[‘ssl_certificate_key’]`` settings. Delete these files and regenerate new keys using the same authority.
-
-* If the |chef server oec| does not already use |ssl| certificates, |chef server oec| can generate them. These certificates will be located in ``xxxx`` and will be named after the |fqdn| for the |chef server oec| server. To determine the |fqdn| for the server, run ``hostname -f``. The files to be deleted will be named ``$FQDN.crt`` and ``$FQDN.key``. After these files are deleted, run the following command:
+* If the |chef server oec| uses |chef server oec|-generated |ssl| certificates, |chef server oec| can regenerate them. These certificates will be located in ``/var/opt/opscode/nginx/ca/`` and will be named after the |fqdn| for the |chef server oec| server. To determine the |fqdn| for the server, run the following command:
 
    .. code-block:: bash
 
-      private-chef-ctl start
+      $ hostname -f
+
+   The files to be deleted will be named ``$FQDN.crt`` and ``$FQDN.key``. After these files are deleted, run the following command:
+
+   .. code-block:: bash
+
+      $ private-chef-ctl start
+
+* If your organization has provided |ssl| certificates to the |chef server oec| server, they are located in ``/etc/opscode/private-chef.rb`` as values for the ``nginx[‘ssl_certificate’]`` and ``nginx[‘ssl_certificate_key’]`` settings. Delete these files and regenerate new keys using the same authority.
+
+
 
