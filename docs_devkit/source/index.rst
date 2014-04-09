@@ -10,7 +10,7 @@ All about the |chef dk| ...
 
 **Install:** :doc:`Install the chef-dk </install_dk>`
 
-**Tools:** :doc:`Berkshelf </berkshelf>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`test-kitchen </kitchen>`
+**Tools:** :doc:`chef (executable) </ctl_chef>` | :doc:`Berkshelf </berkshelf>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`test-kitchen </kitchen>`
 
 
 .. Hide the TOC from this file.
@@ -22,6 +22,7 @@ All about the |chef dk| ...
    chef_overview
    chefspec
    config_yml_kitchen
+   ctl_chef
    ctl_kitchen
    foodcritic
    install_dk
