@@ -32,7 +32,7 @@ To upgrade to newer versions of the |chef server osc| server, do the following:
       $ sudo chef-server-ctl restart
 
 
-Upgrade to |chef server osc| Server 11 from 10.x
+Upgrade from |chef server osc| 10.x
 =====================================================
 Upgrading to |chef server 11| from |chef server 10| is a relatively simple process: install the |chef server 11| and then move the data from |chef server 10| to the new one. Because the |chef server 10| database is |couch db| and the |chef server 11| database is |postgresql|, the data cannot be moved directly. Instead, use the following |knife| subcommands:
 
@@ -52,16 +52,15 @@ For more information about ``knife-essentials``, see https://github.com/jkeiser/
 
 
 Requirements
-=====================================================
+-----------------------------------------------------
 
 * A live |chef server 10| server
 * A live |chef server 11| server
 * A workstation (running |knife|) that can access both the |chef server 10| and |chef server 11| servers
 * The ability to run the |subcommand knife download| and |subcommand knife upload| subcommands
 
-
-Set up Access to |chef server 10|
-=====================================================
+Set up |chef server 10| Access 
+-----------------------------------------------------
 Use the following steps to configure a workstation so that it can communicate with the |chef server 10| server:
 
 #. Create a directory to use as the location to which data will be downloaded. This topic uses a directory named ``~/transfer``.
@@ -95,8 +94,8 @@ Use the following steps to configure a workstation so that it can communicate wi
    to return a list of all clients, including ``/clients/chef-webui.json`` and ``/clients/chef-validator.json``.
 
 
-Download Data from |chef server 10|
-=====================================================
+Download Data
+-----------------------------------------------------
 To download data from the |chef server 10|, run the following command:
 
 .. code-block:: bash
@@ -106,8 +105,8 @@ To download data from the |chef server 10|, run the following command:
 This will transfer all of the data on |chef server 10| to the transfer directory.
 
 
-Set up Access to |chef server 11|
-=====================================================
+Set up |chef server 11| Access 
+-----------------------------------------------------
 Use the following steps to configure a workstation so that it can communicate with the |chef server 11| server:
 
 #. In the same ``~/transfer`` directory, create a file named ``.chef/knife.rb``. The contents of this file should be similar to the following:
@@ -139,8 +138,8 @@ Use the following steps to configure a workstation so that it can communicate wi
    to return a list of all users, including ``/users/admin.json``.
 
 
-Update the chef-validator settings
-=====================================================
+Update chef-validator settings
+-----------------------------------------------------
 The |chef validator| client is no longer special; |chef server 11| requires the ``chef-validator`` flag to be set in order for the |chef validator| to be created. 
 
 #. Edit the ``/clients/chef-validator.json`` file---located in the ``~/transfer`` directory---and add ``"validator": true`` as a property, like this:
@@ -171,7 +170,7 @@ The |chef validator| client is no longer special; |chef server 11| requires the 
 
 
 Verify the admin public key
-=====================================================
+-----------------------------------------------------
 The ``admin.pem`` private key must be correct for each workstation that will have access to |chef server 11|. |chef server 11| has a new user named ``admin``, whereas many instances of |chef server 10| have an admin client named ``admin``. For |chef 11|, |knife| requires a private key named ``admin.pem``. This naming similarity can be an issue if the name of the client doesn't match the name of the private key.
 
 #. Copy the ``admin.pem`` to each workstation or replace the |chef 11| admin private key with the old private key. To do this, run the following commands:
@@ -221,8 +220,8 @@ The ``admin.pem`` private key must be correct for each workstation that will hav
    to return a list of all users, including ``/users/admin.json``.
 
 
-Upload Data to |chef server 11|
-=====================================================
+Upload Data
+-----------------------------------------------------
 To upload data to the |chef server 11|, run the following command:
 
 .. code-block:: bash
@@ -233,5 +232,5 @@ This will transfer all of the data in the transfer directory to |chef server 11|
 
 
 Last Steps
-=====================================================
+-----------------------------------------------------
 At this point, the |chef server 11| should have all of the data that used to be on the |chef server 10|. Point the DNS or load balancer at the new |chef server|. The |chef client| should continue to run properly on all nodes and each workstation should be able to manage objects on the |chef server| using |knife|. If issues remain, try the IRC channel or email the chef@lists.opscode.com discussion alias. If ``knife-essentials`` is the issue, file an issue in |github| or check the IRC channel.
