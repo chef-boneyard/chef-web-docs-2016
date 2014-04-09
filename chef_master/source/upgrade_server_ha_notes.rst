@@ -296,13 +296,13 @@ The following is the code for the ``OC-11490.patch`` file:
 LDAP Authentication Bug
 =====================================================
 
-OC-11384 - EC 11.1.3+: Creating a new user with LDAP enabled fails
+OC-11384 - EC 11.1.0-2: Creating a new user with LDAP enabled fails
 
 If you use LDAP authentication for the |chef server oec| server then you will also want to use the following instructions on the front end machines.
 
-|chef server oec| 11.1.3+ has a bug [OC-11384] when an LDAP user attempts to create a new account that has never existed in the |chef server oec| database before, rather than linking with an existing internal user. 
+|chef server oec| 11.1.0-2 has a bug [OC-11384] when an LDAP user attempts to create a new account that has never existed in the |chef server oec| database before, rather than linking with an existing internal user. 
  
-Please apply the following patch to your |chef server oec| 11.1.3+ release using these instructions:
+Please apply the following patch to your |chef server oec| 11.1.0-2 release using these instructions:
 
 .. code-block:: bash
  
