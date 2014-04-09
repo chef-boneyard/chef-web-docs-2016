@@ -19,7 +19,7 @@ To regenerate |ssl| certificates:
 
    The files to be deleted will be named ``$FQDN.crt`` and ``$FQDN.key``.
 
-#. If your organization has provided |ssl| certificates to the |chef server osc| server, they are located in ``/etc/chef-server/chef-server.rb`` as values for the ``nginx[‘ssl_certificate’]`` and ``nginx[‘ssl_certificate_key’]`` settings. Delete these files and regenerate new keys using the same authority.
+#. If your organization has provided custom |ssl| certificates to the |chef server osc| server, they are located in ``/etc/chef-server/chef-server.rb`` as values for the ``nginx[‘ssl_certificate’]`` and ``nginx[‘ssl_certificate_key’]`` settings. Delete these files and regenerate new keys using the same authority.
 
 #. After these files are regenerated, run the following command:
 
