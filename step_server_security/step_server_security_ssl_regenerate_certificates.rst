@@ -1,7 +1,7 @@
 .. This is an included how-to. 
 
 
-|ssl| certificates should be regenerated periodically. This is an important part of protecting the |chef server oec| from vulnerabilities and helping to prevent the information stored on the |chef server| from being compromised.
+|ssl| certificates should be regenerated periodically. This is an important part of protecting |chef server oec| from vulnerabilities and helps to prevent the information stored on the |chef server oec| server from being compromised.
 
 To regenerate |ssl| certificates:
 
