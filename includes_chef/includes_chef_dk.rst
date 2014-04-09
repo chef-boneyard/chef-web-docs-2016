@@ -3,7 +3,7 @@
 
 The |chef dk| defines a common workflow for cookbook development:
 
-#. Create a skeleton cookbook. This is a cookbook with the standard files already included. The package manager is often |berkshelf| (included as part of the |chef dk|) and the revision control system is typically |git|. |berkshelf| helps manage cookbooks and cookbook dependencies.
+#. Create a skeleton cookbook. This is a cookbook with the standard files already included. The package manager is often |berkshelf|, which is included as part of the |chef dk|, plus a revision control system, typically |git|. |berkshelf| helps manage cookbooks and cookbook dependencies.
 
 #. Create a virtual machine environment. This is the environment that will be used to develop the cookbook, including the location in which automated testing and debugging of that cookbook will be done as it is being developed.
 
