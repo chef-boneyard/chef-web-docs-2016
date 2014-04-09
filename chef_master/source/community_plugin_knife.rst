@@ -102,6 +102,8 @@ The following table lists |knife| plugins built by the |chef| community.
      - Adds the ability to manage a |chef server|, including bootstrapping a |chef server| on |amazon ec2| or a standalone server and backing up and/or restoring node, role, data bag, and environment data.
    * - `knife-set-environment <https://gist.github.com/961827>`_
      - Adds the ability to set a node environment.
+   * - `knife-softlayer <https://github.com/softlayer/knife-softlayer>`_
+     - Adds the ability to launch and bootstrap instances in the IBM SoftLayer cloud.
    * - `knife-solo <https://rubygems.org/gems/knife-solo>`_
      - Adds support for bootstrapping and running |chef solo|, search, and data bags.
    * - `knife-slapchop <https://github.com/kryptek/knife-slapchop>`_
