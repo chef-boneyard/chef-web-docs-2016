@@ -7,7 +7,7 @@ The following sections contain notes about specific scenarios that some customer
 All Upgrade Scenarios
 =====================================================
 
-All upgrades should be performed first with a copy of Production data, but in an environment that is non-essential. This is often done using a Vagrant VM, but any non-essential environment suitable for testing the upgrade of production data is OK.
+All upgrades should be performed first with a copy of production data, but in an environment that is non-essential. This is often done using a |vagrant| virtual machine, but any non-essential environment suitable for testing the upgrade of production data is OK.
 
 Backups are good to have for many reasons, at all times. This is especially true during upgrades. Therefore, ensure that tested backups are available during the entire upgrade process.
 
@@ -15,28 +15,27 @@ Backups are good to have for many reasons, at all times. This is especially true
 Upgrading from |chef private| 1.2.x
 =====================================================
 
-Upgrading from |chef private| 1.2.x to any version of |chef server oec| 11 **REQUIRES** that |chef private| 1.2.x first be upgraded (on all systems) to |chef private| 1.4.6.
+Upgrading from |chef private| 1.2.x to any version of |chef server oec| 11 **REQUIRES** that |chef private| 1.2.x first be upgraded (on all systems) to |chef private| 1.4.6+.
 
 
-Upgrading from |chef private| 1.4.6 to |chef server oec| 11.1.2
+Upgrading from |chef private| 1.4.6+ to |chef server oec| 11.1.3+
 ===========================================================================
 
-The following sections are specific to |chef private| 1.4.6 upgrades to |chef server oec| 11.1.2.
+The following sections are specific to |chef private| 1.4.6+ upgrades to |chef server oec| 11.1.3+.
 
-.. note:: Unless otherwise noted, all patching should be done after OPC 1.4.6 is installed, and before the EC11.1.2 package install and upgrade begins.
+.. note:: Unless otherwise noted, all patching should be done after |chef private| 1.4.6+ is installed, and before the |chef server oec| 11.1.3+ package install and upgrade begins.
 
 Known Issues
 =====================================================
 
 The following bugs may affect the upgrade:
 
-* OC-11297 --- EC 11.0.X not saving its migration-level state on HA back end machines. Breaks ``private-chef-ctl upgrade`` on subsequent upgrades
-* OC-11382 --- HA Upgrades to 11.1.x fail because keepalived restart interferes with partybus migrations
-* OC-11449 --- Umasks other than 0022 break permissions
+* OC-11297 --- |chef server oec| 11.0.X not saving its migration-level state on HA back end machines. Breaks ``private-chef-ctl upgrade`` on subsequent upgrades
+* OC-11382 --- HA Upgrades to 11.1.3+ fail because keepalived restart interferes with partybus migrations
 * OC-11490 --- Root ownership of ``/var/log/opscode/keepalived`` prevents keepalived from running properly
-* OC-11426 --- Upgrade Runit Ownership Issue OPC 1.4.6 -> EC11.1.2
+* OC-11426 --- Upgrade Runit Ownership Issue OPC 1.4.6 -> EC11.1.3+
 
-.. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6 -> check runsvdir status -> |chef server oec| 11.x -> check runsvdir status. See "Runit Process Structure and Checks" below for more information.
+.. warning:: Check runsvdir status during the upgrade, especially between each upgrade of the system. Here is an example of the highest level upgrade process that should be followed: check runsvdir status -> |chef private| 1.2.x -> check runsvdir status -> |chef private| 1.4.6+ -> check runsvdir status -> |chef server oec| 11.1.3+ -> check runsvdir status. See "Runit Process Structure and Checks" below for more information.
 
 
 Pre-Flight Check
@@ -73,14 +72,14 @@ It is recommended to do the following:
    
       * - Chef Server Version
         - Migration Level
-      * - |chef private| 1.4.6
+      * - |chef private| 1.4.6+
         - major: 1, minor: 7
       * - |chef server oec| 11.0.x
         - major: 1, minor: 12
-      * - |chef server oec| 11.1.x
-        - 11.1.x	major: 1, minor: 13
+      * - |chef server oec| 11.1.3+
+        - major: 1, minor: 13
 
-#. For known issue OC-11449 - While running OPC 1.4.6 and before the upgrade, be sure that the permissions on /var/log/opscode are 0755. After installing the EC11.1.2 package and before a reconfigure, please apply the OC-11449.patch file listed below using the following commands as root. Please change the DIRECTORY as desired.
+#. For known issue OC-11449 - While running |chef private| 1.4.6+ and before the upgrade, be sure that the permissions on ``/var/log/opscode`` are ``0755``. After installing the |chef server oec| 11.1.3+ package and before a reconfigure, please apply the ``OC-11449.patch`` file listed below using the following commands as root. Please change the DIRECTORY as desired.
 
    .. code-block:: bash
 
@@ -89,7 +88,7 @@ It is recommended to do the following:
       patch --dry-run --verbose -p3 <$PATCH_LOCATION
       patch -p3 <$PATCH_LOCATION
 
-#. For known issue OC-11490 - After installing the EC11.1.2 package and before a reconfigure or upgrade, please apply the OC-11490.patch file listed below using the following commands as root. Please change the DIRECTORY as desired.
+#. For known issue OC-11490 - After installing the |chef server oec| 11.1.3+ package and before a reconfigure or upgrade, please apply the ``OC-11490.patch`` file listed below using the following commands as root. Please change the DIRECTORY as desired.
 
    .. code-block:: bash
    
@@ -98,7 +97,7 @@ It is recommended to do the following:
       patch --dry-run --verbose -p3 <$PATCH_LOCATION
       patch -p3 <$PATCH_LOCATION
 
-#. For known issue OC-11426 - While running |chef private| 1.4.6 and before the upgrade, be sure that the status for Runit looks good. See "Runit Process Structure and Checks" below for more information.
+#. For known issue OC-11426 - While running |chef private| 1.4.6+ and before the upgrade, be sure that the status for |runit| looks good. See "Runit Process Structure and Checks" below for more information.
 
 #. Before proceeding, make sure that the bootstrap back end machine and all of its services are healthy, and that all services are stopped on the standby. Please check runsvdir status to make a determination about "healthy". See "Runit Process Structure and Checks" below for more information.
 
@@ -106,7 +105,7 @@ It is recommended to do the following:
 Upgrade Steps
 =====================================================
 
-#. Install the |chef server oec| server package on all machines using dpkg or rpm.
+#. Install the |chef server oec| server package on all machines using |debian dpkg| or rpm.
 
 #. OC-11382 - On both back end machines, copy the ``upgrade.rb`` file from the end of these notes to ``/opt/opscode/embedded/service/omnibus-ctl/upgrade.rb``.
 
@@ -172,7 +171,7 @@ Please use the following diagram to understand the runit process supervision tre
             |
             ---->svlogd -> (Logging for each service's STDOUT. Goes into a "current" file)
 
-.. note:: In the diagram above, the Upstart config file is located at ``/etc/init/opscode-runsvdir`` on pre-|chef server oec| 11, and at ``/etc/init/private-chef-runsvdir`` in |chef server oec| 11.x.
+.. note:: In the diagram above, the Upstart config file is located at ``/etc/init/opscode-runsvdir`` on pre-|chef server oec| 11, and at ``/etc/init/private-chef-runsvdir`` in |chef server oec| 11.1.3+.
 
 Between upgrades from major version to major version of |chef private| or |chef server oec|, you will want to check that the ``ps aux | grep [r]unsvdir`` output looks similar to:
 
@@ -193,14 +192,14 @@ and not similar to:
    pausing: unable to rename current: /var/log/opscode/opscode-erchef: file does not exist?svlogd: 
    pausing: unable to rename current: /var/log/opscode/opscode-erchef: file does not exist?
 
-Any number of issues can occur with runit's runsvdir process. The most common in an |chef private| or |chef server oec| setting are these:
+Any number of issues can occur with the runsvdir process in |runit|. The most common in an |chef private| or |chef server oec| setting are these:
 
-* In |chef private| 1.4.6, ``/var/log/opscode`` should have ``755`` permissions, but it doesn't
+* In |chef private| 1.4.6+, ``/var/log/opscode`` should have ``755`` permissions, but it doesn't
 * Any of the ``/var/log/opscode/SERVICE/current`` files are missing
 * In |chef server oec|, the ownership of ``/var/log/opscode`` is not ``opscode``, so the processes cannot read/write their log files
 * The filesystem where the logs are stored is full
 
-When this type of problem is encountered, the process is to check the error output in the process list as above, and figure out what has gone wrong for either the runsvdir, or its svlogd processes, or both. Correct the issue, shutdown |chef private| or |chef server oec|, then use Upstart to restart runit's runsvdir:
+When this type of problem is encountered, the process is to check the error output in the process list as above, and figure out what has gone wrong for either the runsvdir, or its svlogd processes, or both. Correct the issue, shutdown |chef private| or |chef server oec|, then use |upstart| to restart runsvdir:
 
 .. code-block:: bash
 
@@ -208,17 +207,17 @@ When this type of problem is encountered, the process is to check the error outp
 
 Restart the runsvdir:
 
-* For |chef private| 1.4.6 on RHEL6 and ubuntu10.04+ ``initctl stop opscode-runsvdir``
-* For |chef server oec| 11x on RHEL6 and ubuntu10.04+ ``initctl stop private-chef-runsvdir``
+* For |chef private| 1.4.6+ on RHEL6 and ubuntu10.04+ ``initctl stop opscode-runsvdir``
+* For |chef server oec| 11.x on RHEL6 and ubuntu10.04+ ``initctl stop private-chef-runsvdir``
 
-.. note:: During the upgrade of |chef private| 1.4.6 -> |chef server oec| 11.1.2, you may have both of the above.
+.. note:: During the upgrade of |chef private| 1.4.6+ -> |chef server oec| 11.1.3+, you may have both of the above.
 
-* If continuing an |chef server oec| 11.1.2 upgrade ``initctl start private-chef-runsvdir``
-* If fixing up an |chef private| 1.4.6 system before an upgrade to |chef server oec| 11.1.2 ``initctl start private-chef-runsvdir``
+* If continuing an |chef server oec| 11.1.3+ upgrade ``initctl start private-chef-runsvdir``
+* If fixing up an |chef private| 1.4.6+ system before an upgrade to |chef server oec| 11.1.3+ ``initctl start private-chef-runsvdir``
 
 Example
 -----------------------------------------------------
-The following is one specific problem-fix scenario encountered while proceeding through an OPC 1.4.6 -> EC11.1.2 upgrade. The issue was likely triggered by an unhealthy runit status while running at version OPC 1.4.6::
+The following is one specific problem-fix scenario encountered while proceeding through an |chef private| 1.4.6+ -> |chef server oec| 11.1.3+ upgrade. The issue was likely triggered by an unhealthy |runit| status while running at version |chef private| 1.4.6+::
 
       1. Checked runvsvdir status when it became apparent that the Partybus
       initiated final private-chef-ctl start during the EC11.1.2 upgrade
@@ -254,45 +253,7 @@ The following is one specific problem-fix scenario encountered while proceeding 
       
       10. p-c-c cleanup
 
-OC-11449 patch for EC11.1.2
-=====================================================
-The following is the code for the ``OC-11449.patch`` file:
-
-.. code-block:: ruby
-
-   From 7aa73aa23c4550d232cb9f6dadd72d924fbfffb0 Mon Sep 17 00:00:00 2001
-   From: Sean Horn <sean_horn@opscode.com>
-   Date: Fri, 21 Mar 2014 02:00:49 -0400
-   Subject: [PATCH] Protect logfiles against root umask other than 0022
-   
-   ---
-    CHANGELOG.md                                                 | 1 +
-    RELEASE_NOTES.md                                             | 1 +
-    files/private-chef-cookbooks/private-chef/recipes/default.rb | 7 +++++++
-    3 files changed, 9 insertions(+)
-   
-   diff --git a/files/private-chef-cookbooks/private-chef/recipes/default.rb b/files/private-chef-cookbooks/private-chef/recipes/default.rb
-   index 2d9615d..b1280ae 100644
-   --- a/files/private-chef-cookbooks/private-chef/recipes/default.rb
-   +++ b/files/private-chef-cookbooks/private-chef/recipes/default.rb
-   @@ -139,6 +139,13 @@
-      action :create
-    end
-   
-   +directory "/var/log/opscode" do
-   +  owner "opscode"
-   +  group "opscode"
-   +  mode "0755"
-   +  action :create
-   +end
-   +
-    include_recipe "enterprise::runit"
-    include_recipe "private-chef::sysctl-updates"
-   
-   --
-   1.9.1
-
-OC-11490 patch for EC11.1.2
+OC-11490 patch for |chef server oec| 11.1.3+
 =====================================================
 The following is the code for the ``OC-11490.patch`` file:
 
@@ -344,13 +305,13 @@ The following is the code for the ``OC-11490.patch`` file:
 LDAP Authentication Bug
 =====================================================
 
-OC-11384 - EC 11.1.1+: Creating a new user with LDAP enabled fails
+OC-11384 - EC 11.1.3+: Creating a new user with LDAP enabled fails
 
 If you use LDAP authentication for the |chef server oec| server then you will also want to use the following instructions on the front end machines.
 
-|chef server oec| 11.1.x has a bug [OC-11384] when an LDAP user attempts to create a new account that has never existed in the |chef server oec| database before, rather than linking with an existing internal user. 
+|chef server oec| 11.1.3+ has a bug [OC-11384] when an LDAP user attempts to create a new account that has never existed in the |chef server oec| database before, rather than linking with an existing internal user. 
  
-Please apply the following patch to your |chef server oec| 11.1.x release using these instructions:
+Please apply the following patch to your |chef server oec| 11.1.3+ release using these instructions:
 
 .. code-block:: bash
  
