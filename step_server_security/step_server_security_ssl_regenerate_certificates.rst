@@ -11,7 +11,7 @@ To regenerate |ssl| certificates:
    
       $ private-chef-ctl stop
 
-#. If the |chef server oec| uses |chef server oec|-generated |ssl| certificates, |chef server oec| can regenerate them. These certificates will be located in ``/var/opt/opscode/nginx/ca/`` and will be named after the |fqdn| for the |chef server oec| server. To determine the |fqdn| for the server, run the following command:
+#. If the |chef server oec| server uses |chef server oec|-generated |ssl| certificates, |chef server oec| can regenerate them. These certificates will be located in ``/var/opt/opscode/nginx/ca/`` and will be named after the |fqdn| for the |chef server oec| server. To determine the |fqdn| for the server, run the following command:
 
    .. code-block:: bash
 
