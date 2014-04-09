@@ -33,3 +33,31 @@ Two important pieces of this DSL:
 Attribute name-based user interaction
 -----------------------------------------------------
 |ohai 6| required users to know the file path for each plugin in order to use it. |ohai 7| only requires users to know the attribute for which |ohai| should collect data. |ohai 7| will figure out where the required plugins are located.
+
+Disable plugins
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_ohai.rst
+
+Use the following setting to disable plugins:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``Ohai::Config[:disabled_plugins]``
+     - |disable plugin_ohai| For example:
+       ::
+ 
+          Ohai::Config[:disabled_plugins] = [:MyPlugin]
+
+       or:
+       ::
+ 
+          Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, :MyPlugin]
+
+       or to disable both |ohai 6| and |ohai 7| versions:
+       ::
+ 
+          Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, "my_ohai_6_plugin"]

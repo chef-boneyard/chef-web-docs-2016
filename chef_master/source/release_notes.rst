@@ -154,6 +154,35 @@ New settings have been added to the |client rb| file:
  
           local_key_generation false
 
+Disable |ohai| plugins
+-----------------------------------------------------
+.. include:: ../../includes_config/includes_config_rb_ohai.rst
+
+Use the following setting to disable plugins:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``Ohai::Config[:disabled_plugins]``
+     - |disable plugin_ohai| For example:
+       ::
+ 
+          Ohai::Config[:disabled_plugins] = [:MyPlugin]
+
+       or:
+       ::
+ 
+          Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, :MyPlugin]
+
+       or to disable both |ohai 6| and |ohai 7| versions:
+       ::
+ 
+          Ohai::Config[:disabled_plugins] = [:MyPlugin, :MyPlugin, "my_ohai_6_plugin"]
+
+
 Changelog
 =====================================================
 https://github.com/opscode/chef/blob/11-stable/CHANGELOG.md
