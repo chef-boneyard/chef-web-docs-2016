@@ -79,15 +79,6 @@ It is recommended to do the following:
       * - |chef server oec| 11.1.3+
         - major: 1, minor: 13
 
-#. For known issue OC-11449 - While running |chef private| 1.4.6+ and before the upgrade, be sure that the permissions on ``/var/log/opscode`` are ``0755``. After installing the |chef server oec| 11.1.3+ package and before a reconfigure, please apply the ``OC-11449.patch`` file listed below using the following commands as root. Please change the DIRECTORY as desired.
-
-   .. code-block:: bash
-
-      PATCH_LOCATION=/DIRECTORY/OC-11449.patch
-      cd /opt/opscode/embedded/cookbooks
-      patch --dry-run --verbose -p3 <$PATCH_LOCATION
-      patch -p3 <$PATCH_LOCATION
-
 #. For known issue OC-11490 - After installing the |chef server oec| 11.1.3+ package and before a reconfigure or upgrade, please apply the ``OC-11490.patch`` file listed below using the following commands as root. Please change the DIRECTORY as desired.
 
    .. code-block:: bash
