@@ -20,6 +20,6 @@
    * - ``response_file``
      - Optional. |response_file|
    * - ``source``
-     - Optional. |source resource package|
+     - Optional. The URL at which the gem package is located.
    * - ``version``
      - |version package|
