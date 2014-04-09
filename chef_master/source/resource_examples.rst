@@ -190,9 +190,6 @@ cookbook_file
 
 .. include:: ../../step_resource/step_resource_cookbook_file_use_case_statement.rst
 
-**Use the data_bag_item method in the recipe DSL**
-
-.. include:: ../../step_resource/step_resource_cookbook_file_use_data_bag.rst
 
 
 cron
@@ -422,9 +419,6 @@ file
 
 .. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
 
-**Use the contents of a data bag in a recipe**
-
-.. include:: ../../step_resource/step_resource_file_use_data_bag.rst
 
 
 freebsd_package
@@ -548,10 +542,6 @@ log
 .. include:: ../../step_resource/step_resource_log_set_info.rst
 
 **Set debug logging level**
-
-.. include:: ../../step_resource/step_resource_log_set_debug.rst
-
-**Create log entry when the contents of a data bag are used**
 
 .. include:: ../../step_resource/step_resource_log_set_debug.rst
 

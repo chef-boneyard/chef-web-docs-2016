@@ -65,7 +65,3 @@ Examples
 **Delete a repository using yum to scrub the cache**
 
 .. include:: ../../step_resource/step_resource_yum_package_delete_repo_use_yum_to_scrub_cache.rst
-
-**Use the contents of a data bag in a recipe**
-
-.. include:: ../../step_resource/step_resource_file_use_data_bag.rst
