@@ -11,6 +11,8 @@ This configuration file has the following settings:
      - Description
    * - ``chef_documentation_url``
      - The URL at which documentation for |chef| is located. Default value: ``http://docs.opscode.com``.
+   * - ``disable_sign_up``
+     - Use to disable sign-up and only allow sign-in. Default value: ``false``.
    * - ``events.port``
      - The port on which the events services run. Default value: ``11001``.
    * - ``logging.chef_log_level``
