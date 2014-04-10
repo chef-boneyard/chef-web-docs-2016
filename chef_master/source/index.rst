@@ -384,6 +384,9 @@ Cookbooks
    resource_ips_package
    resource_link
    resource_log
+   resource_machine
+   resource_machine_execute
+   resource_machine_file
    resource_macports_package
    resource_mdadm
    resource_mount
