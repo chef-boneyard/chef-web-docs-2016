@@ -143,6 +143,7 @@ Cookbooks
    berkshelf
    breaking_changes_chef_11
    chef_client
+   chef_client_security
    chef_cookbooks
    chef_cookbooks_chef_handler
    chef_overview
