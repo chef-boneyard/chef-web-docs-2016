@@ -4,9 +4,9 @@ Release Notes: |ohai 6|
 
 .. include:: ../../includes_ohai/includes_ohai.rst
 
-Supported Platforms
-=====================================================
-.. include:: ../../includes_supported_platforms/includes_supported_platforms_ohai_6.rst
+.. Supported Platforms
+.. =====================================================
+.. .. include:: ../../includes_supported_platforms/includes_supported_platforms_ohai_6.rst
 
 What's Fixed
 =====================================================
