@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - |lwrp action install webpi|
+     - Use to install a product.

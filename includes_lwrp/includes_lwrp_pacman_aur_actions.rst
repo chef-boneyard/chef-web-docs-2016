@@ -10,7 +10,7 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:build``
-     - |lwrp action build pacman_aur|
+     - Use to build a package using the information stored in a |archlinux pkgbuild| script.
    * - ``:install``
-     - |lwrp action install pacman_aur|
+     - Use to install a package that has been built with the ``:build`` action.
 

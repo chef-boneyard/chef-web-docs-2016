@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - |lwrp action create transmission_torrent_file|
+     - Use to download a file using the |bittorrent| protocol.

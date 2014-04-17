@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Default. |lwrp action create yum_repository|
+     - Default. Use to create a |yum| repository file and build a |yum| repository listing.
    * - ``:delete``
-     - |lwrp action delete yum_repository|
+     - Use to delete a |yum| repository file.

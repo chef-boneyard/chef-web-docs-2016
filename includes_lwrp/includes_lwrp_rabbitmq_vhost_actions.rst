@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - |lwrp action add rabbitmq_vhost|
+     - Use to add a virtual host.
    * - ``:delete``
-     - |lwrp action delete rabbitmq_vhost|
+     - Use to delete a virtual host.

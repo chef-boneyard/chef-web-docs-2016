@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - |lwrp action install windows_package|
+     - Use to install a package.
    * - ``:remove``
-     - |lwrp action remove windows_package|
+     - Use to remove a package.

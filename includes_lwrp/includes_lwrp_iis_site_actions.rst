@@ -10,14 +10,14 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - |lwrp action add iis_site|
+     - Use to add a virtual site.
    * - ``:config``
-     - |lwrp action config iis_site|
+     - Use to configure a virtual site.
    * - ``:delete``
-     - |lwrp action delete iis_site|
+     - Use to delete a virtual site.
    * - ``:restart``
-     - |lwrp action restart iis_site|
+     - Use to restart a virtual site.
    * - ``:start``
-     - |lwrp action start iis_site|
+     - Use to start a virtual site.
    * - ``:stop``
-     - |lwrp action stop iis_site|
+     - Use to stop a virtual site.

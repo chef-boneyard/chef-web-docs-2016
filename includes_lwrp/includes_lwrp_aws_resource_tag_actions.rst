@@ -10,10 +10,10 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - |lwrp action add aws_resource_tag|
+     - Use to add a tag to a resource.
    * - ``:force_remove``
-     - |lwrp action force_remove aws_resource_tag|
+     - Use to remove all tags from a resource.
    * - ``:remove``
-     - |lwrp action remove aws_resource_tag|
+     - Use to remove a tag from a resource that matches one (or more) tags.
    * - ``:update``
-     - Default. |lwrp action update aws_resource_tag|
+     - Default. Use to modify a tag already assigned to a resource.

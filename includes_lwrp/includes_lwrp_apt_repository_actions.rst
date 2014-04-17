@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - |lwrp action add apt_repository|
+     - Use to add an |apt| repository.
    * - ``:remove``
-     - |lwrp action remove apt_repository|
+     - Use to delete an |apt| repository.

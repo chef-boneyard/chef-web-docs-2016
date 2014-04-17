@@ -9,11 +9,11 @@ This lightweight resource provider has the following actions:
 
    * - Action
      - Description
-   * - ``:delete``
-     - |lwrp action delete dynect_rr|
    * - ``:create``
-     - |lwrp action create dynect_rr|
-   * - ``:update``
-     - |lwrp action update dynect_rr|
+     - Use to create a record.
+   * - ``:delete``
+     - Use to delete a record.
    * - ``:replace``
-     - |lwrp action replace dynect_rr|
+     - Use to replace an existing record.
+   * - ``:update``
+     - Use to update an existing record.

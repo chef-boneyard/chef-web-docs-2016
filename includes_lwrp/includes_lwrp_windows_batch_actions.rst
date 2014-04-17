@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:run``
-     - |lwrp action run windows_batch|
+     - Use to run a batch file.

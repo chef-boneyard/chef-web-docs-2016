@@ -9,9 +9,9 @@ This lightweight resource provider has the following actions:
 
    * - Action
      - Description
-   * - ``:enable``
-     - |lwrp action enable firewall|
    * - ``:disable``
-     - |lwrp action disable firewall|
+     - Use to disable a firewall. Rules will be de-activated and the node will be put into an unprotected state.
+   * - ``:enable``
+     - Use to enable a firewall. Rules that have been defined for that firewall will be activated.
    * - ``:reset``
-     - |lwrp action reset firewall|
+     - Use to reset a firewall. Rules will be de-activated and the node will be put into the default state. This action does not enable or disable a firewall.

@@ -9,15 +9,15 @@ This lightweight resource provider has the following actions:
 
    * - Action
      - Description
-   * - ``:start``
-     - |lwrp action start bluepill_service|
-   * - ``:stop``
-     - |lwrp action stop bluepill_service|
-   * - ``:enable``
-     - |lwrp action enable bluepill_service|
    * - ``:disable``
-     - |lwrp action disable bluepill_service|
+     - Use to disable a service by removing a pill link.
+   * - ``:enable``
+     - Use to enable a service by adding a pill link.
    * - ``:load``
-     - |lwrp action load bluepill_service|
+     - Use to load a service's pill to |bluepill|.
    * - ``:restart``
-     - |lwrp action restart bluepill_service|
+     - Use to restart a service.
+   * - ``:start``
+     - Use to start a service.
+   * - ``:stop``
+     - Use to stop a service.

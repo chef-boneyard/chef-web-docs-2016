@@ -10,6 +10,6 @@ This resource has the following actions:
    * - Action
      - Description
    * - ``:enable``
-     - |lwrp action enable chef_handler|
+     - |resource action enable chef_handler|
    * - ``:disable``
-     - |lwrp action disable chef_handler|
+     - |resource action disable chef_handler|

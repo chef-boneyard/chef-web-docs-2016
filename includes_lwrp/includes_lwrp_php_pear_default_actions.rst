@@ -10,10 +10,10 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - |lwrp action install php_pear|
-   * - ``:upgrade``
-     - |lwrp action upgrade php_pear|
-   * - ``:remove``
-     - |lwrp action remove php_pear|
+     - Use to install a |pear| package. If a version is provided, use to install that version.
    * - ``:purge``
-     - |lwrp action purge php_pear|
+     - Use to purge a |pear| package. This is identical in behavior to the ``:remove`` action.
+   * - ``:remove``
+     - Use to remove a |pear| package.
+   * - ``:upgrade``
+     - Use to upgrade a |pear| package. If a version is provided, use to upgrade to that version.

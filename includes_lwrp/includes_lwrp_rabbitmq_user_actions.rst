@@ -10,10 +10,10 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - |lwrp action add rabbitmq_user|
+     - Use to add a user (with a password).
    * - ``:clear_permissions``
-     - |lwrp action clear_permissions rabbitmq_user|
+     - Use to clear permissions for a user.
    * - ``:delete``
-     - |lwrp action delete rabbitmq_user|
+     - Use to delete a user.
    * - ``:set_permissions``
-     - |lwrp action set_permissions rabbitmq_user|
+     - Use to set permissions for a user. (The virtual host is optional.)

@@ -10,8 +10,8 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:allow``
-     - |lwrp action allow firewall_rule|
+     - Use to set a rule that allows incoming traffic.
    * - ``:deny``
-     - |lwrp action deny firewall_rule|
+     - Use to set a rule that denies incoming traffic.
    * - ``:reject``
-     - |lwrp action reject firewall_rule|
+     - Use to set a rule that rejects incoming traffic.

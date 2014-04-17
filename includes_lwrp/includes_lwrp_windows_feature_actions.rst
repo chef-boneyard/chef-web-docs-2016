@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - |lwrp action install windows_feature|
+     - Use to install a server role, role service, or feature.
    * - ``:remove``
-     - |lwrp action remove windows_feature|
+     - Use to remove a server role, role service, or feature.

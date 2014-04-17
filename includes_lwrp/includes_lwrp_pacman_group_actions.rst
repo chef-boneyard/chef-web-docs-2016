@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - |lwrp action install pacman_group|
+     - Use to install a group.
    * - ``:remove``
-     - |lwrp action remove pacman_group|
+     - Use to remove a group.

@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - |lwrp action install dmg_package|
+     - Use to install an application. (There is no ``:uninstall`` action because on in the |mac os x| environment, uninstalling an application only requires it being dragged to the trash can.)

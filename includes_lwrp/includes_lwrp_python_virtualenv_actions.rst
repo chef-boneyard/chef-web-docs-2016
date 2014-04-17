@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - |lwrp action create python_virtualenv|
+     - Use to create a virtual |python| environment.
    * - ``:delete``
-     - |lwrp action delete python_virtualenv|
+     - Use to delete a virtual |python| environment.

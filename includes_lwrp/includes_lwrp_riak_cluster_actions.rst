@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:join``
-     - |lwrp action join riak_cluster|
+     - Use to join a local node to a cluster.
    * - ``:wait_for_ringready``
-     - |lwrp action wait_for_ringready riak_cluster|
+     - Use to wait for cluster membership to converge ("all nodes in the cluster agree on the ring state") before joining a local node to a cluster.

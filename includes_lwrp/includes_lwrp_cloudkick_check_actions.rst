@@ -12,8 +12,9 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - |lwrp action create cloudkick|
+     - Use to create a |cloudkick| check.
    * - ``:disable``
-     - |lwrp action disable cloudkick|
+     - Use to disable a |cloudkick| check.
    * - ``:enable``
-     - |lwrp action enable cloudkick|
+     - Use to enable a |cloudkick| check.
+

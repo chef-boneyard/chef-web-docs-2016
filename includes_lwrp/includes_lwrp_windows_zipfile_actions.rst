@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:unzip``
-     - |lwrp action unzip windows_zipfile|
+     - Use to unzip a compressed file.

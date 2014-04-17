@@ -10,7 +10,7 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - Default. |lwrp action create yum_globalconfig|
+     - Default. Use to create a |yum| global configuration file.
    * - ``:delete``
-     - |lwrp action delete yum_globalconfig|
+     - Use to delete a |yum| global configuration file.
 

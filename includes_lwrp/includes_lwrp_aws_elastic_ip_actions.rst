@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:associate``
-     - |lwrp action associate aws_elastic_ip|
+     - Use to associate the specified IP address with a node.
    * - ``:disassociate``
-     - |lwrp action disassociate aws_elastic_ip|
+     - Use to disassociate the specified IP address from a node.

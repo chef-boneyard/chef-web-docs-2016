@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:run``
-     - |lwrp action run powershell|
+     - Use to run a script.

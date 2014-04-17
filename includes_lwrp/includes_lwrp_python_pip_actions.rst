@@ -10,10 +10,10 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:install``
-     - |lwrp action install python_pip|
-   * - ``:upgrade``
-     - |lwrp action upgrade python_pip|
-   * - ``:remove``
-     - |lwrp action remove python_pip|
+     - Use to install a |python pip| package. If a version is provided, use to install that version.
    * - ``:purge``
-     - |lwrp action purge python_pip|
+     - Use to purge a |python pip| package. This is identical in behavior to the ``:remove`` action.
+   * - ``:remove``
+     - Use to remove a |python pip| package.
+   * - ``:upgrade``
+     - Use to upgrade a |python pip| package. If a version is provided, use to upgrade to that version.

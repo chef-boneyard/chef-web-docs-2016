@@ -10,30 +10,30 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:start``
-     - |lwrp action start daemontools_service|
+     - Use to start a service. If the service stops, restart it. The following command is used: ``svc -u``.
    * - ``:stop``
-     - |lwrp action stop daemontools_service|
+     - Use to send the ``STOP`` signal to pause a service. The following command is used: ``svc -p``.
    * - ``:restart``
-     - |lwrp action restart daemontools_service|
-   * - ``:up``
-     - |lwrp action up daemontools_service|
+     - Use to restart a service using the ``TERM`` signal. The following command is used: ``svc -t``.
    * - ``:once``
-     - |lwrp action once daemontools_service|
+     - Use to start a service. The service does not restart if it stops. The following command is used: ``svc -o``.
    * - ``:pause``
-     - |lwrp action pause daemontools_service|
+     - Use to pause a service.
    * - ``:cont``
-     - |lwrp action cont daemontools_service|
+     - Use to send the ``CONT`` signal. The following command is used: ``svc -c``.
    * - ``:hup``
-     - |lwrp action hup daemontools_service|
+     - Use to send the ``HUP`` signal. The following command is used: ``svc -h``.
    * - ``:alrm``
-     - |lwrp action alrm daemontools_service|
+     - Use to send the ``ALRM`` signal. The following command is used: ``svc -a``.
    * - ``:int``
-     - |lwrp action int daemontools_service|
+     - Use to send the ``INT`` signal. The following command is used: ``svc -i``.
    * - ``:term``
-     - |lwrp action term daemontools_service|
+     - Use to send the ``TERM`` signal. The following command is used: ``svc -t``.
    * - ``:kill``
-     - |lwrp action kill daemontools_service|
-   * - ``:enable``
-     - |lwrp action enable daemontools_service|
+     - Use to send the ``KILL`` signal. The following command is used: ``svc -k``.
    * - ``:disable``
-     - |lwrp action disable daemontools_service|
+     - Use to disable a service by removing the link to the service directory.
+   * - ``:enable``
+     - Use to enable a service by setting up the service directory and link.
+   * - ``:up``
+     - Use to start a service. If the service stops, restart it. The following command is used: ``svc -u``.

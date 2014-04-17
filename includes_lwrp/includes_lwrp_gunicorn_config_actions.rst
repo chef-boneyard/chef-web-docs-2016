@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - |lwrp action create gunicorn_config|
+     - Use to create a |gunicorn| configuration file.
    * - ``:delete``
-     - |lwrp action delete gunicorn_config|
+     - Use to delete a |gunicorn| configuration file.

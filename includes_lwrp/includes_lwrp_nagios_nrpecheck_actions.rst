@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - Default. |lwrp action add nagios_nrpecheck|
+     - Default. Use to create a |nagios nrpe| configuration file and restart the process.
    * - ``:remove``
-     - |lwrp action remove nagios_nrpecheck|
+     - Use to remove a |nagios nrpe| configuration file and restart the process.

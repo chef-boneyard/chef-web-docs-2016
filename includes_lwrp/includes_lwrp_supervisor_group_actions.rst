@@ -10,14 +10,14 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:disable``
-     - |lwrp action disable supervisor_group|
+     - Use to disable a group.
    * - ``:enable``
-     - |lwrp action enable supervisor_group|
+     - Use to enable a group.
    * - ``:reload``
-     - |lwrp action reload supervisor_group|
+     - Use to reload a group.
    * - ``:restart``
-     - |lwrp action restart supervisor_group|
+     - Use to restart a group.
    * - ``:start``
-     - |lwrp action start supervisor_group|
+     - Use to start a group.
    * - ``:stop``
-     - |lwrp action stop supervisor_group|
+     - Use to stop a group.

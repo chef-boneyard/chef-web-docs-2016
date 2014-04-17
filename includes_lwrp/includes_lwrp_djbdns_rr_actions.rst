@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - |lwrp action add djbdns_rr|
+     - Use to add a new resource record to |tinydns|.

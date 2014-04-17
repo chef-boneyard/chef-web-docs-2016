@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - |lwrp action add iis_module|
+     - Use to add a module.
    * - ``:delete``
-     - |lwrp action delete iis_module|
+     - Use to delete a module.

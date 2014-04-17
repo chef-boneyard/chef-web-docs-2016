@@ -10,8 +10,10 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - |lwrp action create samba_user|
-   * - ``:enable``
-     - |lwrp action enable samba_user|
+     - Use to create a user.
    * - ``:delete``
-     - |lwrp action delete samba_user|
+     - Use to delete a user.
+   * - ``:enable``
+     - Use to enable a user.
+
+

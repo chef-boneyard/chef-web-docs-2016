@@ -10,14 +10,14 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:add``
-     - |lwrp action add iis_pool|
+     - Use to add an application pool.
    * - ``:config``
-     - |lwrp action config iis_pool|
+     - Use to configure an application pool.
    * - ``:delete``
-     - |lwrp action delete iis_pool|
+     - Use to delete an application pool.
    * - ``:restart``
-     - |lwrp action restart iis_pool|
+     - Use to restart an application pool.
    * - ``:start``
-     - |lwrp action start iis_pool|
+     - Use to start an application pool.
    * - ``:stop``
-     - |lwrp action stop iis_pool|
+     - Use to stop an application pool.

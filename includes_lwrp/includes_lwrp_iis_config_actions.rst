@@ -10,4 +10,4 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:config``
-     - |lwrp action config iis_config|
+     - Use to run the configuration command on an instance of |microsoft iis|.

@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:cancel``
-     - |lwrp action cancel windows_reboot|
+     - Indicates to remove a reboot request from ``node.run_state``. This will cancel all previously-requested reboots.
    * - ``:request``
-     - |lwrp action request windows_reboot|
+     - Use to request a reboot at the completion of a successful |chef client| run. This action requires ``WindowsRebootHandler`` to be registered as a report handler.

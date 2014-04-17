@@ -10,6 +10,6 @@ This lightweight resource provider has the following actions:
    * - Action
      - Description
    * - ``:create``
-     - |lwrp action create windows_registry|
+     - Use to create a registry key with the provided values.
    * - ``:modify``
-     - |lwrp action modify windows_registry|
+     - Use to modify an existing registry key with the provided values.

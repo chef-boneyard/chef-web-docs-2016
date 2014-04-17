@@ -9,11 +9,12 @@ This lightweight resource provider has the following actions:
 
    * - Action
      - Description
-   * - ``:discover``
-     - |lwrp action discover php_pear_channel|
    * - ``:add``
-     - |lwrp action add php_pear_channel|
-   * - ``:update``
-     - |lwrp action update php_pear_channel|
+     - Use to add a channel to the channel list. Typically, this is used only for private channels. Public channels should be added using the ``:discover`` action.
+   * - ``:discover``
+     - Use to initialize a channel from its server.
    * - ``:remove``
-     - |lwrp action remove php_pear_channel|
+     - Use to remove a channel from the channel list.
+   * - ``:update``
+     - Use to update an existing channel.
+
