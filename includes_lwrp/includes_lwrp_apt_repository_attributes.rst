@@ -10,16 +10,16 @@
    * - Attribute
      - Description
    * - ``components``
-     - |components array| Default value: ``[]``.
+     - An array of components. For example: ``["main", "street"]``. Default value: ``[]``.
    * - ``deb_src``
-     - |use debsrc| Default value: ``false``.
+     - Indicates whether the ``deb-src`` source repository is added. Default value: ``false``.
    * - ``distribution``
-     - |name distribution| For example: ``lucid``.
+     - The name of the distribution. For example: ``lucid``.
    * - ``key``
-     - |key apt_repository| Default value: ``nil``.
+     - The fingerprint of the key server or the URI for the |pgp| encryption key associated with the |apt| repository specified by ``repo_name``. Default value: ``nil``.
    * - ``keyserver``
-     - |keyserver apt_repository| Default value: ``nil``.
+     - The key server from which a |pgp| encryption key is downloaded. Default value: ``nil``.
    * - ``repo_name``
-     - |name repository_apt| Default value: ``name``.
+     - The name of the |apt| repository. Default value: ``name``.
    * - ``uri``
-     - |uri repository_apt| Default value: ``nil``.
+     - The URI for the |apt| repository. Default value: ``nil``.

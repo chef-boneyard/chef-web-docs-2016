@@ -10,20 +10,20 @@
    * - Attribute
      - Description
    * - ``availability_zone``
-     - |name availability_zone|
+     - The name of the availability zone. Each availability zone is unique within a region.
    * - ``aws_access_key``
-     - |aws_access_key_username|
+     - The user name for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``aws_secret_access_key``
-     - |aws_access_key_password|
+     - The password for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``device``
-     - |device aws_ebs_volume|
+     - The local block device to be attached to an |amazon ebs| volume.
    * - ``size``
-     - |size volume|
+     - The size of the volume (in gigabytes).
    * - ``snapshot_id``
-     - |id aws_snapshot|
+     - The identifier used to build an |amazon ebs| volume snapshot.
    * - ``snapshots_to_keep``
-     - |snapshots_to_keep| Default value: ``2``.
+     - The number of snapshots to maintain. This attribute is available only when the ``:prune`` action is used. Default value: ``2``.
    * - ``timeout``
-     - |timeout aws_ec2| Default value: ``3 minutes``.
+     - The connection timeout for the |amazon ec2| API. Default value: ``3 minutes``.
    * - ``volume_id``
-     - |id ebs_volume|
+     - The identifier for an |amazon ebs| volume.

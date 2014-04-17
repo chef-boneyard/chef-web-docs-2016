@@ -9,11 +9,11 @@
 
    * - Attribute
      - Description
-   * - ``aws_access_key``
-     - |aws_access_key_username|
+      * - ``aws_access_key``
+     - The user name for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``aws_secret_access_key``
-     - |aws_access_key_password|
+     - The password for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``resource_id``
-     - |id aws_resource_tag|
+     - One or more resources whose tags will be modified. This value may be a single ID as a string or multiple IDs as an array. If this value is not specified, then the ``name`` attribute for each resource will be used.
    * - ``tags``
-     - Required. |tags hash|
+     - Required. A |ruby hash| of key value pairs that are used as resource tags. For example: ``{ "Name" => "foo", "Environment" => "node.chef_environment" }``.

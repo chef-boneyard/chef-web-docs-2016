@@ -10,8 +10,8 @@
    * - Attribute
      - Description
    * - ``aws_access_key``
-     - |aws_access_key_username|
+     - The user name for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``aws_secret_access_key``
-     - |aws_access_key_password|
+     - The password for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``name``
-     - Required. |name load_balancer|
+     - Required. The name of the load balancer.

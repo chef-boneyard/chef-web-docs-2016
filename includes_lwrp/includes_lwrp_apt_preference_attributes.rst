@@ -10,8 +10,8 @@
    * - Attribute
      - Description
    * - ``package_name``
-     - |name package|
+     - The name of the package.
    * - ``pin``
-     - |pin|
+     - The package version or |apt| repository to be pinned.
    * - ``pin_priority``
-     - |pin_priority|
+     - The priority for the package version or |apt| repository, in comparison to the priority for other versions of the same package or repository. The higher value will have the higher priority.

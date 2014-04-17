@@ -10,10 +10,10 @@
    * - Attribute
      - Description
    * - ``aws_access_key``
-     - |aws_access_key_username|
+     - The user name for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``aws_secret_access_key``
-     - |aws_access_key_password|
+     - The password for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``ip``
-     - |ip_address node|
+     - The IP address for the node.
    * - ``timeout``
-     - |timeout aws_ec2| Default value: ``3 minutes``.
+     - The connection timeout for the |amazon ec2| API. Default value: ``3 minutes``.
