@@ -347,6 +347,7 @@ Cookbooks
    push_jobs
    reporting
    release_notes
+   releases
    resource
    resource_apt_package
    resource_bash
