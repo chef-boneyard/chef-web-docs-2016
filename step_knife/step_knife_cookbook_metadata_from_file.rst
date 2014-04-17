@@ -5,4 +5,4 @@
 
 .. code-block:: bash
 
-   $ knife cookbook metadta from file /path/to/file
+   $ knife cookbook metadata from file /path/to/file
