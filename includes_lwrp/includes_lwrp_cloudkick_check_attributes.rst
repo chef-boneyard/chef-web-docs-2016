@@ -14,10 +14,10 @@
    * - ``code``
      - 
    * - ``details``
-     - |details cloudkick_check|
+     - A |json| object with data specific to a |cloudkick| check.
    * - ``monitor``
-     - |id monitor_cloudkick|
+     - The identifier of a |cloudkick| monitor, which will be the parent of a |cloudkick| check.
    * - ``oauth_key``
-     - |oauth_key cloudkick|
+     - The |oauth| key used to authenticate to the |cloudkick| API.
    * - ``oauth_secret``
-     - |oauth_secret cloudkick|
+     - The |oauth| secret used to authenticate to the |cloudkick| API.

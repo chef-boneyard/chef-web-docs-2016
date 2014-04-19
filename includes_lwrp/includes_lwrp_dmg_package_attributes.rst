@@ -10,14 +10,14 @@
    * - Attribute
      - Description
    * - ``app``
-     - |name application| This is used for the ``/Volumes`` directory and ``.app`` directory that is copied to ``/Applications``. Default value: ``name``.
+     - The name of the application. This is used for the ``/Volumes`` directory and ``.app`` directory that is copied to ``/Applications``. Default value: ``name``.
    * - ``checksum``
-     - |checksum apple_disk_image| Default value: ``nil``.
+     - The |sha256| checksum for the |apple disk image|. If the local file matches the checksum, the |chef client| will not download it. Default value: ``nil``.
    * - ``destination``
-     - |directory dmg_package| Default value: ``/Applications``.
+     - The directory to which the ``.app`` directory is copied. Default value: ``/Applications``.
    * - ``dmg_name``
-     - |name apple_disk_image| Default value: ``nil``.
+     - The name of the |apple disk image| (if it is not the same as the ``app`` attribute or if the name of the application contains spaces). Default value: ``nil``.
    * - ``source``
-     - |source dmg_package| Default value: ``nil``.
+     - The remote URL for the |apple disk image| to be download. Default value: ``nil``.
    * - ``volumes_dir``
-     - |directory apple_disk_image| Default value: ``app``.
+     - The directory under ``/Volumes`` where the |apple disk image| is to be mounted. Default value: ``app``.

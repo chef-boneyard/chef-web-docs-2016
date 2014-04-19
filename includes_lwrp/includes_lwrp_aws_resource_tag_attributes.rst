@@ -9,7 +9,7 @@
 
    * - Attribute
      - Description
-      * - ``aws_access_key``
+   * - ``aws_access_key``
      - The user name for the secret access key for the API endpoint used with |amazon ec2|.
    * - ``aws_secret_access_key``
      - The password for the secret access key for the API endpoint used with |amazon ec2|.

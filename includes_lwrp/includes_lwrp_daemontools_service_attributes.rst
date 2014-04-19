@@ -10,22 +10,22 @@
    * - Attribute
      - Description
    * - ``cookbook``
-     - |cookbook template_location|
+     - The cookbook in which a template files is located (if it is not located in the current cookbook).
    * - ``directory``
-     - Required. |directory daemontools|
+     - Required. The directory in which the service is set up.
    * - ``env``
-     - |create_env_directory| Default value: ``{}``.
+     - Use to create an ``env`` directory for a service. The directory will contain files named for each environment variable that is required, with the contents of its value in a |ruby hash|. For more information about the ``env`` directory, see: http://cr.yp.to/daemontools/envdir.html. Default value: ``{}``.
    * - ``finish``
-     - |finish_script| Default value: ``nil``.
+     - Indicates that a service has a finish script. Default value: ``nil``.
    * - ``group``
-     - |name group_service_directory|
+     - The name of the group for which access to service directory and scripts is granted.
    * - ``log``
-     - |use custom_log_script| Default value: ``nil``.
+     - Indicates whether a service has a custom logging script. Default value: ``nil``.
    * - ``owner``
-     - |owner directory_service|
+     - The owner of a service directory and scripts.
    * - ``service_name``
-     - |name service|
+     - The name of the service.
    * - ``template``
-     - |template daemontools| Default value: ``NAME``.
+     - The name variable for the template files. The run script is set up by a template named ``sv-NAME-run.erb``. The log/run script is set up by a template named ``sv-NAME-log-run.erb``. The finish script is set up by a template named ``sv-NAME-finish.erb``. For each of these scripts, the ``NAME`` placeholder will be replaced by the value specified for this attribute. These templates should be located in the directory of a cookbook that uses this lightweight resource. Default value: ``NAME``.
    * - ``variables``
-     - |variables passed_to_template| Default value: ``{}``.
+     - A |ruby hash| of variables that are passed into a |ruby| template file. Default value: ``{}``.

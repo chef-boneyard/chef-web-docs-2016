@@ -10,18 +10,18 @@
    * - Attribute
      - Description
    * - ``record_type``
-     - |record_type| For example: ``A``, ``CNAME``, and so on.
+     - The record type: ``ns``, ``childns``, ``host``, ``alias``, or ``mx``. For example: ``A``, ``CNAME``, and so on.
    * - ``rdata``
-     - |record_data|
+     - The record data.
    * - ``ttl``
-     - |record_ttl|
+     - The record time to live.
    * - ``fqdn``
-     - |name fqdn|
+     - The |fqdn| of the host.
    * - ``username``
-     - |name user api_dns_update|
+     - The |dns update api| username.
    * - ``customer``
-     - |id customer_dynect|
+     - The |dns update api| customer ID.
    * - ``password``
-     - |password customer_dynect|
+     - The |dns update api| password.
    * - ``zone``
-     - |dns_zone|
+     - The DNS zone.

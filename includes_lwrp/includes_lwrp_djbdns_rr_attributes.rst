@@ -10,10 +10,10 @@
    * - Attribute
      - Description
    * - ``cwd``
-     - |cwd tinydns|
+     - The current working directory in which the |tinydns| data file is located.
    * - ``fqdn``
-     - |name fqdn|
+     - The |fqdn| of the host.
    * - ``ip``
-     - Required. |ip_address|
+     - Required. The IP address.
    * - ``type``
-     - |record_type| Default value: ``host``.
+     - The record type: ``ns``, ``childns``, ``host``, ``alias``, or ``mx``. Default value: ``host``.
