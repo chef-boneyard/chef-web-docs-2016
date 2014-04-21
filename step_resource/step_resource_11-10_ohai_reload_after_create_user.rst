@@ -6,7 +6,7 @@
 
    ohai "reload_passwd" do
      action :nothing
-     plugin "etc"
+     plugin "passwd"
    end
    
    user "daemonuser" do

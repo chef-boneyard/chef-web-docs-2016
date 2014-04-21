@@ -63,7 +63,7 @@ Actions
 
 Attributes
 -----------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_ohai_attributes.rst
+.. include:: ../../includes_resources/includes_resource_11-10_ohai_attributes.rst
 
 Providers
 -----------------------------------------------------
@@ -79,9 +79,7 @@ Examples
 
 **Reload Ohai after a new user is created**
 
-.. include:: ../../step_resource/step_resource_ohai_reload_after_create_user.rst
-
-
+.. include:: ../../step_resource/step_resource_11-10_ohai_reload_after_create_user.rst
 
 ohai Cookbook
 =====================================================
