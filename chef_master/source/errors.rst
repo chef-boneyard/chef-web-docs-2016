@@ -37,20 +37,18 @@ If you're receiving an error like the following it most likely means you'll need
 
 Failed to authenticate to https://api.opscode.com
 -----------------------------------------------------
-If you're getting an error like:
+When the values for certain settings in the |client rb| file---``node_name`` and ``client_key``---are incorrect, it will not be possible to authenticate to the |chef server|. An error similar to the following is shown:
 
 .. code-block:: bash
 
    ERROR: Failed to authenticate to https://api.opscode.com/organizations/ORGANIZATION as USERNAME with key /path/to/USERNAME.pem
    Response:  Failed to authenticate as USERNAME. Ensure that your node_name and client key are correct.
 
-when issuing |knife| commands, it means the local |client rb| file is unable to authenticate to the |chef server|.
+To resolve this type of error, do one of the following:
 
-**Troubleshooting Steps**
+* Verify you have the correct values in your |knife rb| file, especially for the ``node_name`` and ``client_key`` settings.
 
-#. Verify you have the correct values in your |knife rb| file, especially for the ``node_name`` and ``client_key`` settings.
-
-#. Check if the file referenced in the ``client_key`` setting (usually |user pem|) exists. Some common locations include::
+* Check if the file referenced in the ``client_key`` setting (usually |user pem|) exists. Some common locations include::
    
       ~/.chef
       ~/projects/current_project/.chef
@@ -58,22 +56,17 @@ when issuing |knife| commands, it means the local |client rb| file is unable to 
    
    If one is present, verify that it has the correct read permissions.
 
-#. If there's no file, regenerate it.
+* If there's no |client rb| file, regenerate it and ensure the values for the ``node_name`` and ``client_key`` settings are correct.
 
 Organization not found 
 -----------------------------------------------------
-If you see this error when trying to recreate the |organization pem|, it's possible that the client itself was deleted. You will need to create the validator key again by using the following directions. In these directions, ORGANIZATION should be replaced by your organization's short name.
+If you see this error when trying to recreate the |organization pem|, it's possible that the |chef client| itself was deleted. In this situation, the |organization pem| will need to be recreated. In these directions, ``ORGANIZATION`` should be replaced with the name of your organization.
 
-#. Login to the |webui|.
-#. Click on the |webui policy| tab.
-#. Click on the |webui policy_client| link on the left.
-#. Click on the |webui policy_client_create| link on the left.
-#. Enter |organization pem| as the name, substituting your organization's name, check the |webui button_validation_client| box and click on the |webui button_create_client| button.
-#. Save a copy of the private key to |organization pem| in your workstation's .chef directory - this will be your organization's new validator key.
+.. include:: ../../step_manage_webui/step_manage_webui_policy_validation_reset_key.rst
 
 Synchronize the clock on your host
 -----------------------------------------------------
-If you're getting an error like this:
+If the system clock drifts more than 15 minutes from the actual time, the following type of error will be shown:
 
 .. code-block:: bash
 
@@ -82,7 +75,7 @@ If you're getting an error like this:
    FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
    FATAL: Net::HTTPServerException: 401 "Unauthorized"
 
-it means that your system clock has drifted from the actual time by more than 15 minutes. This can be fixed by synchronizing your clock with an NTP server.
+To resolve this error, synchronize the clock with an NTP server.
 
 All other 401 errors
 -----------------------------------------------------
