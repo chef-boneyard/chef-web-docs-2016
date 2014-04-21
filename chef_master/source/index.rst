@@ -212,6 +212,7 @@ Cookbooks
    dsl_recipe_method_tag
    dsl_recipe_method_value_for_platform
    dsl_recipe_method_value_for_platform_family
+   errors
    essentials_chef_client
    essentials_cookbook_attribute_files
    essentials_cookbook_directory
@@ -343,6 +344,7 @@ Cookbooks
    ohai_custom
    openstack
    orgmapper
+   page_not_found
    plugin_knife
    push_jobs
    reporting
