@@ -28,8 +28,6 @@ Array Syntax Shortcut
 -----------------------------------------------------
 .. include:: ../../includes_ruby/includes_ruby_shortcut_array.rst
 
-.. include:: ../../step_lwrp/step_lwrp_windows_feature_disable.rst
-
 Include Recipes
 =====================================================
 .. include:: ../../includes_cookbooks/includes_cookbooks_recipe_include_in_recipe.rst
