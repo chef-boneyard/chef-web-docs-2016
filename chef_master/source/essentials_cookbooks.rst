@@ -10,7 +10,7 @@ About Cookbooks
 
    * - Components
      - Description
-   * - :doc:`Chef Cookbooks </chef_cookbooks>`
+   * - `Cookbooks Maintained by Chef <http://community.opscode.com/chef_cookbooks>`_
      - |company_name| maintains a collection of cookbooks that are important and are widely used by the community.
    * - `Community-authored Cookbooks <http://community.opscode.com/cookbooks>`_
      - The community has authored thousands of cookbooks, ranging from niche cookbooks that are used by only a few organizations, to cookbooks that are used by nearly everyone.
