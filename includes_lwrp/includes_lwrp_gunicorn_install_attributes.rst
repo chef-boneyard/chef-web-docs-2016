@@ -10,4 +10,4 @@
    * - Attribute
      - Description
    * - ``virtualenv``
-     - |virtual_environment|
+     - The name of the virtual environment.

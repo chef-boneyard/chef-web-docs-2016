@@ -10,18 +10,18 @@
    * - Attribute
      - Description
    * - ``application_pool``
-     - |application_pool site|
+     - The application pool to which a site belongs.
    * - ``bindings``
-     - |bindings|
+     - A string that identifies the information needed to communicate with a site. This information may be an IP address, unspecified IP addresses, a port number, or an (optional) host header. For example: ``111.111.1.1:443:www.opscode.com`` or ``*:443:``.
    * - ``host_header``
-     - |host_header| Default value: all host headers.
+     - The host header, domain, or host name to which a site is mapped. Default value: all host headers.
    * - ``path``
-     - |path iis_pool|
+     - A local path that is mapped to the root application and root virtual directory. If this is not specified, |microsoft iis| will generate this path.
    * - ``port``
-     - |port iis| Default value: ``80``.
+     - The port on which a |microsoft iis| site will listen. Default value: ``80``.
    * - ``protocol``
-     - |protocol http| Default value: ``:http``.
+     - The HTTP protocol type to which a site responds: ``:http`` or ``:https``. Default value: ``:http``.
    * - ``site_id``
-     - |id site| If this is not specified, |microsoft iis| will generate a unique identifier.
+     - The identifier for the site. If this is not specified, |microsoft iis| will generate a unique identifier.
    * - ``site_name``
-     - |name site|
+     - The name of the site.

@@ -10,10 +10,10 @@
    * - Attribute
      - Description
    * - ``password``
-     - |password user|
+     - The user password.
    * - ``permissions``
-     - |permissions|
+     - One (or more) permissions that will be set.
    * - ``user``
-     - |name user|
+     - The name of the user.
    * - ``vhost``
-     - |name virtual_host|
+     - The name of the virtual host.

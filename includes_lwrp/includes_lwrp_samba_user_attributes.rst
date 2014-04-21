@@ -10,4 +10,4 @@
    * - Attribute
      - Description
    * - ``password``
-     - |password user| This is passed to the ``smbpasswd`` program in |samba|.
+     - The user password. This is passed to the ``smbpasswd`` program in |samba|.

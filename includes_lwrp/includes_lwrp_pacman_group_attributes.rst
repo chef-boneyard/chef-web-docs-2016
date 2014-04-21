@@ -10,7 +10,7 @@
    * - Attribute
      - Description
    * - ``options``
-     - |command options|
+     - One (or more) additional options that are passed to the command.
    * - ``package_name``
-     - |name package_group|
+     - The name of the package group.
 

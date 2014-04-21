@@ -10,4 +10,4 @@
    * - Attribute
      - Description
    * - ``path``
-     - |path windows_path|
+     - The value to be added to or removed from a system path.

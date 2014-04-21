@@ -10,10 +10,10 @@
    * - Attribute
      - Description
    * - ``app_name``
-     - |name application|
+     - The name of the application.
    * - ``application_pool``
-     - |application_pool app|
+     - The application pool to which an application belongs.
    * - ``path``
-     - |path application_virtual|
+     - The virtual path to the location where the application resides.
    * - ``physical_path``
-     - |path application_physical|
+     - The physical path to the location where the application resides.

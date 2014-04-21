@@ -10,8 +10,8 @@
    * - Attribute
      - Description
    * - ``group_name``
-     - |name group|
+     - The name of the group.
    * - ``priority``
-     - |priority group|
+     - A priority value assigned to the group.
    * - ``programs``
-     - |programs supervisor_group| Default value: ``[]``.
+     - The relative priority of the program for start and shutdown ordering. Default value: ``[]``.

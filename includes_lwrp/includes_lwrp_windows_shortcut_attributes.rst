@@ -10,12 +10,12 @@
    * - Attribute
      - Description
    * - ``arguments``
-     - |arguments windows_shortcut|
+     - The command-line arguments associate with a shortcut.
    * - ``cwd``
-     - |cwd|
+     - The current working directory.
    * - ``description``
-     - |description windows_shortcut|
+     - A description of the |windows| shortcut.
    * - ``name``
-     - |name windows_shortcut|
+     - The name of the |windows| shortcut.
    * - ``target``
-     - |target windows_shortcut|
+     - The unique identifier for the object to which a |windows| shortcut will link.

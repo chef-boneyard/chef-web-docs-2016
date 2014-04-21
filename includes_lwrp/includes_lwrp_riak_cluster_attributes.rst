@@ -10,12 +10,12 @@
    * - Attribute
      - Description
    * - ``cluster_name``
-     - |name cluster|
+     - The name of the cluster.
    * - ``cluster_members``
-     - |cluster member_nodes| Default value: discovered by |chef server| search functionality.
+     - A list of nodes that should be part of a cluster. Default value: discovered by |chef server| search functionality.
    * - ``node_name``
-     - |name local_riak_node|
+     - The name of the local node, as identified by the ``riak.erlang.node_name`` attribute.
    * - ``timeout``
-     - |timeout ring_convergence| Default value: ``30``.
+     - The amount of time (in seconds) a command will wait for ring convergence. Default value: ``30``.
    * - ``riak_admin_path``
-     - |path riak_admin| Default value: ``/usr/sbin``.
+     - The directory in which ``riak`` and ``riak-admin`` scripts are located. Default value: ``/usr/sbin``.

@@ -10,10 +10,10 @@
    * - Attribute
      - Description
    * - ``group``
-     - |name group_owner_python_virtualenv|
+     - The name of the group that owns the virtual |python| environment.
    * - ``interpreter``
-     - |interpreter python| Default value: ``python2.6``.
+     - The |python| script interpreter to be used during code execution. Default value: ``python2.6``.
    * - ``owner``
-     - |owner python_virtualenv|
+     - The owner of the virtual |python| environment.
    * - ``path``
-     - |path python_virtualenv| Default value: ``\``.
+     - The path to the location in which the virtual |python| environment will be created. Default value: ``\``.

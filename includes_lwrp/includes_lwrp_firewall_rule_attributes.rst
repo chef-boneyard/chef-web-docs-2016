@@ -10,14 +10,14 @@
    * - Attribute
      - Description
    * - ``name``
-     - |name firewall_rule|
+     - The name of the firewall rule.
    * - ``protocol``
-     - |firewall rule_protocol| Default value: ``:all``.
+     - The protocol used by the firewall rule. Valid values are: ``:all``, ``:udp``, ``:tcp``. Default value: ``:all``.
    * - ``port``
-     - |port number|
+     - The port number.
    * - ``source``
-     - |firewall rule_in| Default value: ``0.0.0.0/0`` (from "anywhere").
+     - The IP address or subnet from which incoming traffic originates. Default value: ``0.0.0.0/0`` (from "anywhere").
    * - ``destination``
-     - |firewall rule_out|
+     - The IP address or subnet to which traffic is routed.
    * - ``position``
-     - |firewall rule_position|
+     - The position at which a rule is inserted. If this value is not specified, a rule is inserted at the end of a rule list.

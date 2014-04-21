@@ -10,12 +10,12 @@
    * - Attribute
      - Description
    * - ``cookbook``
-     - |name cookbook_authorized_keys|
+     - The name of the cookbook in which the ``authorized_keys`` template is located.
    * - ``data_bag``
-     - |name data_bag|
+     - The name of the data bag.
    * - ``group_id``
-     - |id group|
+     - The identifier for the group.
    * - ``group_name``
-     - |name group| This value defaults to the name of the resource if left empty.
+     - The name of the group. This value defaults to the name of the resource if left empty.
    * - ``search_group``
-     - |name group_search| This value defaults to the name of the resource if left empty.
+     - The name of the group to be searched. This value defaults to the name of the resource if left empty.

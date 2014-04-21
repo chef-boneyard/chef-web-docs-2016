@@ -10,12 +10,12 @@
    * - Attribute
      - Description
    * - ``directives``
-     - |directives php_pear|
+     - Extra extension directives (or settings) for a |pecl|. On most platforms, these directives are rendered into the extension's .ini file.
    * - ``options``
-     - |command options|
+     - One (or more) additional options that are passed to the command.
    * - ``package_name``
-     - |name package|
+     - The name of the package.
    * - ``preferred_state``
-     - |preferred_state php_pear| Default value: ``stable``.
+     - By default, |pear| only installs stable packages. Packages can be installed in various non-stable states: ``devel``, ``alpha`` or ``beta``. Default value: ``stable``.
    * - ``version``
-     - |version package|
+     - The version of a package to be installed or upgraded.

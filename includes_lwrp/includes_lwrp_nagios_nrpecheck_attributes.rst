@@ -10,12 +10,12 @@
    * - Attribute
      - Description
    * - ``command``
-     - |name command| Default value: ``node['nagios']['plugin']['plugin_dir']/command_name``.
+     - The name of the command to be executed. Default value: ``node['nagios']['plugin']['plugin_dir']/command_name``.
    * - ``command_name``
-     - |name nagios_nrpecheck| This must be referenced in the ``commands.cfg`` template.
+     - The name of the |nagios nrpe| check. This must be referenced in the ``commands.cfg`` template.
    * - ``critical_condition``
-     - |critical_condition nagios_nrpecheck|
+     - A string that is passed to the command using the ``-c`` flag.
    * - ``parameters``
-     - |command parameters|
+     - One (or more) additional parameters that are passed to the command.
    * - ``warning_condition``
      - |warning_condition|

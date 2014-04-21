@@ -10,6 +10,6 @@
    * - Attribute
      - Description
    * - ``key_name``
-     - |key_name windows_registry|
+     - The registry key to create or modify.
    * - ``values``
-     - |values windows_registry|
+     - A |ruby hash| of values to be set under a registry key. The individual |ruby hash| items will become  ``value_name => value_data`` items in the registry key.

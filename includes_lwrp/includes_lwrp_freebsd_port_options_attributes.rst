@@ -18,8 +18,8 @@
    * - ``full_path``
      - 
    * - ``name``
-     - |name port| This is the port for which a port options file will be modified.
+     - The name of the port. This is the port for which a port options file will be modified.
    * - ``options``
-     - |options freebsd|
+     - A |ruby hash| with the option name as the key and a boolean value. For example: ``"APACHE" => true``.
    * - ``source``
-     - |source freebsd| For example: ``source "freebsd-php5-options.erb"``.
+     - A template that is used to create the port options file. For example: ``source "freebsd-php5-options.erb"``.

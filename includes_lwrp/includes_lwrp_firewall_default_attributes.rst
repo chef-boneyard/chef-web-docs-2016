@@ -10,4 +10,4 @@
    * - Attribute
      - Description
    * - ``name``
-     - |name firewall|
+     - The name of the firewall.

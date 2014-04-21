@@ -10,6 +10,6 @@
    * - Attribute
      - Description
    * - ``name``
-     - |name git_repo|
+     - The name of the |git| repository.
    * - ``tapped``
-     - |tapped|
+     - Indicates that a |homebrew| formula repository is tapped.

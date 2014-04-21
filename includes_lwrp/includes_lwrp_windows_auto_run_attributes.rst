@@ -10,8 +10,8 @@
    * - Attribute
      - Description
    * - ``args``
-     - |arguments windows_autorun|
+     - The arguments for a program.
    * - ``name``
-     - |name windows_registry_value|
+     - The name of the value to be stored in the |windows| registry.
    * - ``program``
-     - |name program|
+     - The name of the program.

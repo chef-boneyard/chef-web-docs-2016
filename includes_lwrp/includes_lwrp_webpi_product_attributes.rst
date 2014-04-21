@@ -10,6 +10,6 @@
    * - Attribute
      - Description
    * - ``accept_eula``
-     - |accept_license| Default value: ``false``.
+     - Indicates that an end-user license agreement will be accepted automatically. Default value: ``false``.
    * - ``product_id``
-     - |id product_webpi|
+     - The identifier of the product to be installed.

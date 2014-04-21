@@ -10,4 +10,4 @@
    * - Attribute
      - Description
    * - ``plugin``
-     - |name plugin|
+     - The name of the plugin.

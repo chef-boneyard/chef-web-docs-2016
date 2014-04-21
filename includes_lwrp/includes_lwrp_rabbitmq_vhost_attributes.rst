@@ -10,4 +10,4 @@
    * - Attribute
      - Description
    * - ``vhost``
-     - |name virtual_host|
+     - The name of the virtual host.

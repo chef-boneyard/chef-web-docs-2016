@@ -10,6 +10,6 @@
    * - Attribute
      - Description
    * - ``channel_name``
-     - |name pear_channel|
+     - The name of a channel that a |pear| installation needs to know about (i.e. "channel discovery").
    * - ``channel_xml``
-     - |file pear_channel|
+     - The definition file for a |pear| channel.

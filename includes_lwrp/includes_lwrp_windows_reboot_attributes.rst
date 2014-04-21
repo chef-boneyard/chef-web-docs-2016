@@ -10,6 +10,6 @@
    * - Attribute
      - Description
    * - ``reason``
-     - |reason windows_reboot| Default value: ``Chef initiated reboot``.
+     - The reason for a |windows| reboot. Default value: ``Chef initiated reboot``.
    * - ``timeout``
-     - |timeout reboot| Default value: ``60``.
+     - The amount of time (in seconds) a command will wait before proceeding with a reboot. Default value: ``60``.

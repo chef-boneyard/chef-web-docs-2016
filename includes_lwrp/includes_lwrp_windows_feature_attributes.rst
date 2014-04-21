@@ -10,4 +10,4 @@
    * - Attribute
      - Description
    * - ``feature_name``
-     - |name windows_feature|
+     - The name of a server role, role service, or feature. Depending on the provider being used, the same feature may have different names. For example: ``DHCPServer`` vs. ``DHCP``; ``DNS-Server-Full-Role`` vs. ``DNS``.

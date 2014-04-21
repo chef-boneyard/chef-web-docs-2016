@@ -10,18 +10,18 @@
    * - Attribute
      - Description
    * - ``command``
-     - |name command|
+     - The name of the command to be executed.
    * - ``creates``
-     - |creates file_exists|
+     - Indicates that a command to create a file will not be run when that file already exists.
    * - ``cwd``
-     - |cwd run_command|
+     - The current working directory from which a command is run.
    * - ``environment``
-     - |environment variables|
+     - A |ruby hash| of environment variables in the form of ``{"ENV_VARIABLE" => "VALUE"}``. (These variables must exist for a command to be run successfully.)
    * - ``group``
-     - |group command|
+     - The group name or group ID that must be changed before running a command.
    * - ``returns``
-     - |return_value cmd| Default value: ``0``.
+     - The return value for a command. This may be an array of accepted values. An exception is raised when the return value(s) do not match. Default value: ``0``.
    * - ``timeout``
-     - |timeout command|
+     - The amount of time (in seconds) a command will wait before timing out.
    * - ``user``
-     - |user name_or_id|
+     - A user name or identifier that must be changed before running a command.

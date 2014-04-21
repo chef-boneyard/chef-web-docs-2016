@@ -10,11 +10,11 @@
    * - Attribute
      - Description
    * - ``application``
-     - |application_pool app|
+     - The application pool to which an application belongs.
    * - ``module_name``
-     - |name module|
+     - The name of the module.
    * - ``type``
-     - |type module|
+     - The module type.
    * - ``precondition``
-     - |precondition iis_module|
+     - The pre-condition for a module, if applicable.
 

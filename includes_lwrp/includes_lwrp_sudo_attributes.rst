@@ -10,18 +10,18 @@
    * - Attribute
      - Description
    * - ``commands``
-     - |commands sudo|
+     - An array of commands that the user or group can execute using |sudo cmd|. This value must use the full path for each command, otherwise the resulting fragment will fail validation.
    * - ``group``
-     - |name group_sudo|
+     - The name of the group for which |sudo cmd| privileges are provided.
    * - ``host``
      - 
    * - ``nopasswd``
-     - |nopasswd|
+     - Indicates whether a password must be supplied when invoking |sudo cmd|.
    * - ``runas``
      - 
    * - ``template``
-     - |template sudo|
+     - A |erb| template file in the current cookbook (not the ``sudo`` cookbook). If this attribute is used, all other attributes will be ignored except for ``variables``.
    * - ``user``
-     - |user sudo|
+     - The user for which |sudo cmd| privileges are provided.
    * - ``variables``
-     - |variables passed_to_template|
+     - A |ruby hash| of variables that are passed into a |ruby| template file.

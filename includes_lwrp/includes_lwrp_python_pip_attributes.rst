@@ -10,10 +10,10 @@
    * - Attribute
      - Description
    * - ``options``
-     - |command options|
+     - One (or more) additional options that are passed to the command.
    * - ``package_name``
-     - |name package|
+     - The name of the package.
    * - ``version``
-     - |version package|
+     - The version of a package to be installed or upgraded.
    * - ``virtualenv``
-     - |virtual_environment|
+     - The name of the virtual environment.

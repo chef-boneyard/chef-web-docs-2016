@@ -10,4 +10,4 @@
    * - Attribute
      - Description
    * - ``cfg_cmd``
-     - |cfg_cmd|
+     - A command to be passed in after ``appcmd.exe set config``.

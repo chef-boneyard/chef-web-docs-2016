@@ -10,8 +10,8 @@
    * - Attribute
      - Description
    * - ``overwrite``
-     - |use file_overwrite| Default value: ``false``.
+     - Indicates that a file (if different) will be overwritten. Default value: ``false``.
    * - ``path_to_location``
-     - |path directory_unzip|
+     - The path to the directory in which a file will be unzipped.
    * - ``source``
-     - |source windows_zipfile|
+     - A URI or a local path that specifies the source of a |zip| file.

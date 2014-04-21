@@ -10,23 +10,23 @@
    * - Attribute
      - Description
    * - ``blocking``
-     - |blocking_torrent_file|
+     - Indicates whether a file should be downloaded in a single |chef client| run. If ``false``, the download may take place across one (or more) |chef client| runs.
    * - ``continue_seeding``
-     - |continue_seeding_torrent_file|
+     - Indicates whether a file should continue to be seeded to the |bittorrent| swarm after download.
    * - ``group``
-     - |id group_torrent_file|
+     - A string or ID that identifies the group owner of a file.
    * - ``owner``
-     - |owner file|
+     - The owner of a file.
    * - ``path``
-     - |path torrent_file|
+     - The path to the torrent file.
    * - ``rpc_host``
-     - |rpc_host| Default value: ``localhost``.
+     - The address for the host to which a |bittorrent| transmission connection is made. Default value: ``localhost``.
    * - ``rpc_password``
-     - |rpc_password|
+     - The password for the |bittorrent| transmission account. This is often ``node['transmission']['rpc_password']``, which by default is a secure password generated for the node.
    * - ``rpc_port``
-     - |rpc_port| Default value: ``9091``.
+     - The port for the host to which a |bittorrent| transmission connection is made. Default value: ``9091``.
    * - ``rpc_username``
-     - |rpc_username| Default value: ``transmission``.
+     - The user name for the |bittorrent| transmission account.
    * - ``torrent``
-     - |torrent_file|
+     - A URI or a local path that specifies a file in a |bittorrent| swarm that will be joined.
 

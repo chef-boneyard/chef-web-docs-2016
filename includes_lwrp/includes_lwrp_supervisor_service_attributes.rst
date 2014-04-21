@@ -10,61 +10,61 @@
    * - Attribute
      - Description
    * - ``autorestart``
-     - |autorestart supervisor|
+     - Indicates if a process is never auto-restarted (``false``), restarted when a program exits with an unknown exit code (``unexpected``), or unconditionally restarted (``true``).
    * - ``autostart``
-     - |autostart supervisor|
+     - Indicates if a program starts automatically when |python supervisor| is started.
    * - ``command``
-     - |name command|
+     - The name of the command to be executed.
    * - ``directory``
-     - |path directory_chdir|
+     - The path to a directory in which a temporary ``chdir`` will occur.
    * - ``environment``
-     - |environment key_value_pairs|
+     - A |ruby hash| of key-value pairs in the form of ``KEY1=val1,KEY2=val2`` that will be placed in the environment for a child process.
    * - ``exitcodes``
-     - |exitcodes|
+     - A list of expected exit codes for a program.
    * - ``numprocs``
-     - |number_of_processes|
+     - The number of instances that will be started.
    * - ``numprocs_start``
-     - |number_of_processes_start|
+     - An integer offset that is used to compute the point at which the number of processes begins.
    * - ``priority``
-     - |priority service|
+     - The relative priority of the program for start and shutdown ordering.
    * - ``process_name``
-     - |name process_supervisor|
+     - A |python| string expression that is used to compose the |python supervisor| process name for a process.
    * - ``redirect_stderr``
-     - |redirect_stderr|
+     - Indicates that the ``STDERR`` output for a process is sent back to |python supervisor| using ``STDOUT``.
    * - ``serverurl``
-     - |url server_supervisor|
+     - The URL passed in the environment to the sub-process process.
    * - ``service_name``
-     - |name service|
+     - The name of the service.
    * - ``startretries``
-     - |startretries|
+     - The number of serial failure attempts |python supervisor| will allow when attempting to start a program before giving up.
    * - ``startsecs``
-     - |startsecs|
+     - The length of time (in seconds) a program will stay running after startup, at which point the startup will be considered successful.
    * - ``stopsignal``
-     - |stopsignal|
+     - The signal used to kill a program when a stop is requested: ``TERM``, ``HUP``, ``INT``, ``QUIT``, ``KILL``, ``USR1``, or ``USR2``.
    * - ``stopwaitsecs``
-     - |stopwaitsecs|
+     - The amount of time (in seconds) to wait (after ``stopsignal``) before a ``SIGKILL`` message is sent.
    * - ``stderr_capture_maxbytes``
-     - |stderr_capture_maxbytes|
+     - The maximum number of bytes written to capture for ``stderr_logfile``.
    * - ``stderr_events_enabled``
-     - |stderr_events_enabled|
+     - Indicates whether events are omitted from ``stderr_logfile``.
    * - ``stderr_logfile``
-     - |stderr_logfile| 
+     - The location of the ``STDERR`` logfile.
    * - ``stderr_logfile_backups``
-     - |stderr_logfile_backups|
+     - The number of ``stderr_logfile`` backups to keep.
    * - ``stderr_logfile_maxbytes``
-     - |stderr_logfile_maxbytes|
+     - The maximum size (in bytes) that may be consumed by ``stderr_logfile`` before it is rotated.
    * - ``stdout_capture_maxbytes``
-     - |stdout_capture_maxbytes|
+     - The maximum number of bytes written to capture for ``stdout_logfile``.
    * - ``stdout_events_enabled``
-     - |stdout_events_enabled|
+     - Indicates whether events are omitted from ``stdout_logfile``.
    * - ``stdout_logfile``
-     - |stdout_logfile|
+     - The location of the ``STDOUT`` logfile.
    * - ``stdout_logfile_backups``
-     - |stdout_logfile_backups|
+     - The number of ``stdout_logfile`` backups to keep.
    * - ``stdout_logfile_maxbytes``
-     - |stdout_logfile_maxbytes|
+     - The maximum size (in bytes) that may be consumed by ``stdout_logfile`` before it is rotated.
    * - ``umask``
-     - |umask|
+     - The file mode creation mask, or umask.
    * - ``user``
-     - |user unix_account|
+     - The |unix| user account that runs the program.
 

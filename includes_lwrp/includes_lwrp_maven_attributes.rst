@@ -10,18 +10,18 @@
    * - Attribute
      - Description
    * - ``artifact_id``
-     - |artifact_id|
+     - The identifier for an artifact. If this value is not specified, the name of the resource will be used as the identifier.
    * - ``dest``
-     - |directory maven|
+     - The folder in which the |jar| file and its dependencies will be located.
    * - ``group_id``
-     - |id group|
+     - The identifier for the group.
    * - ``mode``
-     - |mode *nix| Default value: ``0644``.
+     - The octal mode that is passed to |chmod|. If the value is specified as a quoted string, it will work exactly as if the ``chmod`` command was passed. If the value is specified as an integer, prepend a zero (``0``) to the value to ensure it is interpreted as an octal number. For example, to assign read, write, and execute rights for all users, use ``0777`` or ``'777'``; for the same rights, plus the sticky bit, use ``01777`` or ``'1777'``. Default value: ``0644``.
    * - ``owner``
-     - |owner file_artifact| Default value: ``root``.
+     - The owner of an artifact file. Default value: ``root``.
    * - ``packaging``
-     - |type package| Default value: ``jar``.
+     - The package type. Default value: ``jar``.
    * - ``repositories``
-     - |repositories maven| Default value: ``["http://repo1.maven.apache.org/maven2"]``.
+     - An array of |apache maven| repositories. Default value: ``["http://repo1.maven.apache.org/maven2"]``.
    * - ``version``
-     - |version artifact|
+     - The version of an artifact.

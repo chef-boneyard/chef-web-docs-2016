@@ -10,14 +10,14 @@
    * - Attribute
      - Description
    * - ``max_proc``
-     - |worker_processes|
+     - The number of allowed worker processes.
    * - ``pipeline_mode``
-     - |pipeline_mode|
+     - The pipeline mode with which an application pool is created.
    * - ``private_mem``
-     - |private_memory|
+     - The maximum amount of private memory (in KB) that a worker process can consume before the application pool will recycle. A value of ``0`` means there is no limit.
    * - ``pool_name``
-     - |name application_pool|
+     - The name of the application pool.
    * - ``runtime_version``
-     - |version dotnet_runtime|
+     - The version of |microsoft dotnet|.
    * - ``thirty_two_bit``
-     - |thirty_two_bit| Default value: ``false``.
+     - Indicates whether an |microsoft iis| application pool can run in 64-bit mode. Default value: ``false``.
