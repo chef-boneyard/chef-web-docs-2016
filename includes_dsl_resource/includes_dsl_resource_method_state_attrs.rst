@@ -14,7 +14,7 @@ The syntax for the ``state_attrs`` method is as follows:
                :attribute, 
                :attribute
 
-where ``attribute`` is a comma-delimited list of attributes. For example, the |lwrp aws ebs volume| resource uses the ``state_attrs`` method to tell the |reporting| server to track the following attributes:
+where ``attribute`` is a comma-delimited list of attributes. For example, the ``ebs_volume`` resource (available from the `aws <https://github.com/opscode-cookbooks/aws>`_ cookbook) uses the ``state_attrs`` method to tell the |reporting| server to track the following attributes:
 
 .. code-block:: ruby
 
