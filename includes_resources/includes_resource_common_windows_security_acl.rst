@@ -9,7 +9,11 @@ The ``rights`` attribute can be used in a recipe to manage access control lists 
 
 where
 
-* ``permission`` is used to specify which rights will be granted to the ``principal``. The possible values are: ``:read``, ``:write``, ``:full_control``, ``:modify``, and ``:deny``. These permissions are cumulative. If ``:write`` is specified, then it includes ``:read``. If ``:full_control`` is specified, then it includes both ``:write`` and ``:read``. If ``:deny`` is specified, then the user or group will not have rights to the object. (For those who know the |windows| API: ``:read`` corresponds to ``GENERIC_READ`` and ``GENERIC_EXECUTE``; ``:write`` corresponds to ``GENERIC_WRITE``, ``GENERIC_READ``, and ``GENERIC_EXECUTE``; ``:full_control`` corresponds to ``GENERIC_ALL``, which allows a user to change the owner and other metadata about a file.)
+* ``permission`` is used to specify which rights will be granted to the ``principal``. The possible values are: ``:read``, ``:write``, ``read_execute``, ``:modify``, ``:full_control``,  and ``:deny``. 
+   
+   These permissions are cumulative. If ``:write`` is specified, then it includes ``:read``. If ``:full_control`` is specified, then it includes both ``:write`` and ``:read``. If ``:deny`` is specified, then the user or group will not have rights to the object. 
+   
+   (For those who know the |windows| API: ``:read`` corresponds to ``GENERIC_READ``; ``:write`` corresponds to ``GENERIC_WRITE``; ``:read_execute`` corresponds to ``GENERIC_READ`` and ``GENERIC_EXECUTE``; ``:modify`` corresponds to ``GENERIC_WRITE``, ``GENERIC_READ``, ``GENERIC_EXECUTE``, and ``DELETE``; ``:full_control`` corresponds to ``GENERIC_ALL``, which allows a user to change the owner and other metadata about a file.)
 * ``principal`` is used to specify a group or user name. This is identical to what is entered in the login box for |windows|, such as ``user_name``, ``domain\user_name``, or ``user_name@fully_qualified_domain_name``. The |chef client| does not need to know if a principal is a user or a group.
 * ``option_type`` is a hash that contains advanced rights options. For example, the rights to a directory that only applies to the first level of children might look something like: ``rights :write, "domain\group_name", :one_level_deep => true``. Possible option types:
 
