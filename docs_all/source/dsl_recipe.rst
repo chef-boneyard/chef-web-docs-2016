@@ -71,14 +71,6 @@ The following examples show how the ``data_bag`` and ``data_bag_item`` methods c
 
 .. include:: ../../step_resource/step_resource_file_use_data_bag.rst
 
-**Create log entry when the contents of a data bag are used**
-
-.. include:: ../../step_resource/step_resource_log_set_debug.rst
-
-**Use the data_bag_item method with the cookbook_file resource**
-
-.. include:: ../../step_resource/step_resource_cookbook_file_use_data_bag.rst
-
 platform?
 -----------------------------------------------------
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_platform.rst
