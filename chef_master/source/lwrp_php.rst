@@ -2,7 +2,7 @@
 php Lightweight Resources
 =====================================================
 
-|cookbook name php|
+The |cookbook php| cookbook is used to install and configure |php| and |php| modules.
 
 The |cookbook php| cookbook contains the following resources: ``php_pear`` and ``php_pear_channel``.
 

@@ -2,7 +2,7 @@
 webpi Lightweight Resource
 =====================================================
 
-|cookbook name webpi|
+The |cookbook webpi| cookbook is used to run the |microsoft webpi|.
 
 The |cookbook webpi| cookbook contains the following resource: ``webpi_product``.
 

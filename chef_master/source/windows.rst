@@ -494,59 +494,22 @@ Examples
 
 **Delete a registry key and its subkeys, recursively**
 
-.. include:: ../../step_resource/step_resource_registry_key_delete_recursively.rst
-
-**Use re-directed keys**
-
-.. include:: ../../step_resource/step_resource_registry_key_redirect.rst
-
-Dedicated Providers
------------------------------------------------------
-The following resources have dedicated providers for the |windows| platform:
-
-* |resource group|
-* |resource mount|
-* |resource service|
-* |resource user|
-
-supports Attribute
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-The ``supports`` attribute can be used with the |resource user| resource.
-
-.. include:: ../../includes_resources/includes_resource_user_supported_features.rst
-
-
-Lightweight Resources
+Cookbook Resources
 =====================================================
-.. include:: ../../includes_lwrp/includes_lwrp.rst
+Some of the most popular |company_name|-maintained cookbooks that contain lightweight resources useful when configuring machines running |windows| are listed below:
 
-iis Lightweight Resources
------------------------------------------------------
-|cookbook name iis|
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
 
-The |cookbook iis| cookbook contains the following lightweight resources: ``iis_app``, ``iis_config``, ``iis_module``, ``iis_pool``, and ``iis_site``.
-
-.. note:: These lightweight resources are part of the |cookbook iis| cookbook (https://github.com/opscode-cookbooks/iis).
-
-
-webpi Lightweight Resource
------------------------------------------------------
-|cookbook name webpi|
-
-The |cookbook webpi| cookbook contains the following lightweight resource: ``webpi_product``.
-
-.. note:: This lightweight resource is part of the |cookbook webpi| cookbook (https://github.com/opscode-cookbooks/webpi).
-
-
-windows Lightweight Resources
------------------------------------------------------
-|cookbook name windows|
-
-The |cookbook windows| cookbook contains the following lightweight resources: ``windows_auto_run``, ``windows_batch``, ``windows_feature``, ``windows_package``, ``windows_path``, ``windows_reboot``, ``windows_registry``, ``windows_shortcut``, and ``windows_zipfile``.
-
-.. warning:: The |resource batch| resource was added to |chef 11-6| as a core resource. In general, it is recommended to use the |resource batch| resource instead of the ``windows_batch`` lightweight resource included in the |cookbook windows| cookbook whenever possible, including updating any existing recipes that may be using the older lightweight resource in favor of the newer resource.
-
-.. note:: These lightweight resources are part of the |cookbook windows| cookbook (https://github.com/opscode-cookbooks/windows).
+   * - Cookbook
+     - Description
+   * - `iis <https://github.com/opscode-cookbooks/iis>`_
+     - The |cookbook iis| cookbook is used to install and configure |microsoft iis|.
+   * - `webpi <https://github.com/opscode-cookbooks/webpi>`_
+     - The |cookbook webpi| cookbook is used to run the |microsoft webpi|.
+   * - `windows <https://github.com/opscode-cookbooks/windows>`_
+     - The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
 
 Recipe DSL Methods
 =====================================================

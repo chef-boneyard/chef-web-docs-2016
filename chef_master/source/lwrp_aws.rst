@@ -2,7 +2,7 @@
 aws Resources
 =====================================================
 
-|cookbook name aws|
+The |cookbook aws| cookbook is used to manage resources that are running in |amazon aws|.
 
 The |cookbook aws| cookbook contains the following resources: ``aws_ebs_volume``, ``aws_elastic_ip``, ``aws_elastic_lb``, and ``aws_resource_tag``.
 

@@ -2,7 +2,7 @@
 dmg Lightweight Resource
 =====================================================
 
-|cookbook name dmg|
+The |cookbook dmg| cookbook is used to create a |dmg| package for use with |mac os x|.
 
 The |cookbook dmg| cookbook contains the following resource: ``dmg_package``.
 

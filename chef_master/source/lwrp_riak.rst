@@ -2,7 +2,7 @@
 riak Lightweight Resource
 =====================================================
 
-|cookbook name riak|
+The |cookbook riak| cookbook is used to install and configure the |riak| distributed data store.
 
 The |cookbook riak| cookbook contains the following resource: ``riak_cluster``.
 

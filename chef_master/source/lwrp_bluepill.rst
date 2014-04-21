@@ -2,7 +2,7 @@
 bluepill Lightweight Resource
 =====================================================
 
-|cookbook name bluepill|
+The |cookbook bluepill| cookbook is used to install |bluepill|, and then use it to manage services.
 
 The |cookbook bluepill| cookbook contains the following resource: ``bluepill_service``.
 

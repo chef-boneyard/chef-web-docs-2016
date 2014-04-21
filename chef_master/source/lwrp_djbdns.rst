@@ -2,7 +2,7 @@
 djbdns Lightweight Resource
 =====================================================
 
-|cookbook name djbdns|
+The |cookbook djbdns| cookbook is used to install |djbdns| and use it to configure DNS services.
 
 The |cookbook djbdns| cookbook contains the following resource: ``djbdns_rr``.
 

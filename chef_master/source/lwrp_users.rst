@@ -2,7 +2,7 @@
 users Lightweight Resource
 =====================================================
 
-|cookbook name users|
+The |cookbook users| cookbook is used to create users based on a data bag search.
 
 The |cookbook users| cookbook contains the following resource: ``users_manage``.
 

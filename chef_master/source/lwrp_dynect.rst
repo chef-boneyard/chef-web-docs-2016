@@ -2,7 +2,7 @@
 dynect Lightweight Resource
 =====================================================
 
-|cookbook name dynect|
+The |cookbook dynect| cookbook is used to manage DNS records using the |dynect| REST API.
 
 The |cookbook dynect| cookbook contains the following resource: ``dynect_rr``.
 

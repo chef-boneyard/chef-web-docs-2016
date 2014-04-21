@@ -2,7 +2,7 @@
 maven Lightweight Resource
 =====================================================
 
-|cookbook name maven|
+The |cookbook maven| cookbook is used to install and configure |apache maven|.
 
 The |cookbook maven| cookbook contains the following resource: ``maven``.
 

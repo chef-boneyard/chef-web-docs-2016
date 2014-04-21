@@ -2,7 +2,7 @@
 daemontools Lightweight Resource
 =====================================================
 
-|cookbook name daemontools|
+The |cookbook daemontools| cookbook is used to install and configure |daemontools| so that it can be used to manage |unix| services.
 
 The |cookbook daemontools| cookbook contains the following resource: ``daemontools_service``.
 

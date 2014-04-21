@@ -2,7 +2,7 @@
 windows Lightweight Resources
 =====================================================
 
-|cookbook name windows|
+The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
 
 The |cookbook windows| cookbook contains the following resources: ``windows_auto_run``, ``windows_batch``, ``windows_feature``, ``windows_package``, ``windows_path``, ``windows_reboot``, ``windows_registry``, ``windows_shortcut``, and ``windows_zipfile``.
 

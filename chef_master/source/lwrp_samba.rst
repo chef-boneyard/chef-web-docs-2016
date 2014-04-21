@@ -2,7 +2,7 @@
 samba Lightweight Resource
 =====================================================
 
-|cookbook name samba|
+The |cookbook samba| cookbook is used to install and configure |samba|.
 
 The |cookbook samba| cookbook contains the following resource: ``samba_user``.
 

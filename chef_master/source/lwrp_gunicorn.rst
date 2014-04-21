@@ -2,7 +2,7 @@
 gunicorn Lightweight Resources
 =====================================================
 
-|gunicorn desc| |cookbook name gunicorn|
+|gunicorn desc| The |cookbook gunicorn| cookbook is used to install and configure |gunicorn|.
 
 The |cookbook gunicorn| cookbook contains the following resources: ``gunicorn_config`` and ``gunicorn_install``.
 

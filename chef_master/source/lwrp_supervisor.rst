@@ -2,7 +2,7 @@
 supervisor Lightweight Resources
 =====================================================
 
-|cookbook name supervisor|
+The |cookbook supervisor| cookbook is used to install |python supervisor| and use it to provide resources while configuring services.
 
 The |cookbook supervisor| cookbook contains the following resources: ``supervisor_fcgi``, ``supervisor_group``, and ``supervisor_service``.
 

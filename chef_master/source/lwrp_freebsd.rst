@@ -2,7 +2,7 @@
 freebsd Lightweight Resource
 =====================================================
 
-|cookbook name freebsd|
+The |cookbook freebsd| cookbook is used to manage port options for |freebsd|.
 
 The |cookbook freebsd| cookbook contains the following resource: ``freebsd_port_options``.
 

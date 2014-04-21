@@ -14,7 +14,7 @@ For more information about |juniper chef|, including information about installin
 
 The netdev Lightweight Resources
 -----------------------------------------------------
-|cookbook name netdev|
+The |cookbook netdev| cookbook is used to install and configure network interfaces and Layer 2 switching.
 
 The |cookbook netdev| cookbook contains the following lightweight resources: ``netdev_interface``, ``netdev_l2_interface``, ``netdev_lag``, and ``netdev_vlan``.
 

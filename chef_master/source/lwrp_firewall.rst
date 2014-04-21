@@ -2,7 +2,7 @@
 firewall Lightweight Resources
 =====================================================
 
-|cookbook name firewall|
+The |cookbook firewall| cookbook is used to manage firewalls and their associated firewall rulesets.
 
 The |cookbook firewall| cookbook contains the following resources: ``firewall`` and ``firewall_rule``.
 

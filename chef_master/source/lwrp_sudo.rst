@@ -2,7 +2,7 @@
 sudo Lightweight Resource
 =====================================================
 
-|cookbook name sudo|
+The |cookbook sudo| cookbook is used to install |sudo cmd| and configure |path etc sudoers|.
 
 The |cookbook sudo| cookbook contains the following resource: ``sudo``.
 

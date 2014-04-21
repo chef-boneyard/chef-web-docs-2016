@@ -2,7 +2,7 @@
 rabbitmq Lightweight Resources
 =====================================================
 
-|cookbook name rabbitmq|
+The |cookbook rabbitmq| cookbook is used to install and configure |rabbitmq|.
 
 The |cookbook rabbitmq| cookbook contains the following resources: ``rabbitmq_plugin``, ``rabbitmq_user``, and ``rabbitmq_vhost``.
 

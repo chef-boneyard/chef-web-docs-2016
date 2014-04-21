@@ -13,39 +13,39 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
    * - Cookbook
      - Description
    * - `apt <https://github.com/opscode-cookbooks/apt>`_
-     - |cookbook name apt|
+     - The |cookbook apt| cookbook is used to configure |apt| and |apt| services, for managing |apt| repositories and preferences.
    * - `ark <https://github.com/opscode-cookbooks/ark>`_
      - Use to manage software archives.
    * - `aws <https://github.com/opscode-cookbooks/aws>`_
-     - |cookbook name aws|
+     - The |cookbook aws| cookbook is used to manage resources that are running in |amazon aws|.
    * - `bluepill <https://github.com/opscode-cookbooks/bluepill>`_
-     - |cookbook name bluepill|
+     - The |cookbook bluepill| cookbook is used to install |bluepill|, and then use it to manage services.
    * - `chef_handler <http://docs.opscode.com/lwrp_chef_handler.html>`_
      - |cookbook name chef_handler|
    * - `cron <https://github.com/opscode-cookbooks/cron>`_
      - Use to install cron and start the crond service.
    * - `daemontools <https://github.com/opscode-cookbooks/daemontools>`_
-     - |cookbook name daemontools|
+     - The |cookbook daemontools| cookbook is used to install and configure |daemontools| so that it can be used to manage |unix| services.
    * - `djbdns <https://github.com/opscode-cookbooks/djbdns>`_
-     - |cookbook name djbdns|
+     - The |cookbook djbdns| cookbook is used to install |djbdns| and use it to configure DNS services.
    * - `dmg <https://github.com/opscode-cookbooks/dmg>`_
-     - |cookbook name dmg|
+     - The |cookbook dmg| cookbook is used to create a |dmg| package for use with |mac os x|.
    * - `dynect <https://github.com/opscode-cookbooks/dynect>`_
-     - |cookbook name dynect|
+     - The |cookbook dynect| cookbook is used to manage DNS records using the |dynect| REST API.
    * - `firewall <https://github.com/opscode-cookbooks/firewall>`_
-     - |cookbook name firewall|
+     - The |cookbook firewall| cookbook is used to manage firewalls and their associated firewall rulesets.
    * - `freebsd <https://github.com/opscode-cookbooks/freebsd>`_
-     - |cookbook name freebsd|
+     - The |cookbook freebsd| cookbook is used to manage port options for |freebsd|.
    * - `gunicorn <https://github.com/opscode-cookbooks/gunicorn>`_
-     - |cookbook name gunicorn|
+     - |gunicorn desc| The |cookbook gunicorn| cookbook is used to install and configure |gunicorn|.
    * - `homebrew <https://github.com/opscode-cookbooks/homebrew>`_
-     - |cookbook name homebrew|
+     - The |cookbook homebrew| cookbook is used to install and configure |homebrew| for use as the package manager for |mac os x|.
    * - `iis <https://github.com/opscode-cookbooks/iis>`_
-     - |cookbook name iis|
+     - The |cookbook iis| cookbook is used to install and configure |microsoft iis|.
    * - `lvm <https://github.com/opscode-cookbooks/lvm>`_
      - Use to install the lvm2 package, and then manage LVM.
    * - `maven <https://github.com/opscode-cookbooks/maven>`_
-     - |cookbook name maven|
+     - The |cookbook maven| cookbook is used to install and configure |apache maven|.
    * - `nginx <https://github.com/opscode-cookbooks/nginx>`_
      - Use to install nginx from package or source code, and then set up configuration handling.
    * - `openssh <https://github.com/opscode-cookbooks/openssh>`_
@@ -53,22 +53,22 @@ Some of the most popular |company_name|-maintained cookbooks are listed below:
    * - `omnibus <https://github.com/opscode-cookbooks/omnibus>`_
      - Use to prepare a machine to be an Omnibus builder.
    * - `php <https://github.com/opscode-cookbooks/php>`_
-     - |cookbook name php|
+     - The |cookbook php| cookbook is used to install and configure |php| and |php| modules.
    * - `postfix <https://github.com/opscode-cookbooks/postfix>`_
      - Use to install and configure postfix for client or outbound relayhost.
    * - `powershell <https://github.com/opscode-cookbooks/powershell>`_
-     - |cookbook name powershell|
+     - The |cookbook powershell| cookbook is used to install |windows powershell|.
    * - `rabbit mq <https://github.com/opscode-cookbooks/rabbitmq>`_
-     - |cookbook name rabbitmq|
+     - The |cookbook rabbitmq| cookbook is used to install and configure |rabbitmq|.
    * - `squid <https://github.com/opscode-cookbooks/squid>`_
      - Use to configure squid as a caching proxy.
    * - `sudo <https://github.com/opscode-cookbooks/sudo>`_
-     - |cookbook name sudo|
+     - The |cookbook sudo| cookbook is used to install |sudo cmd| and configure |path etc sudoers|.
    * - `transmission <https://github.com/opscode-cookbooks/transmission>`_
-     - |cookbook name transmission|
+     - The |cookbook transmission| cookbook is used to install and configure the |transmission| |bittorrent| client.
    * - `webpi <https://github.com/opscode-cookbooks/webpi>`_
-     - |cookbook name webpi|
+     - The |cookbook webpi| cookbook is used to run the |microsoft webpi|.
    * - `windows <https://github.com/opscode-cookbooks/windows>`_
-     - |cookbook name windows|
+     - The |cookbook windows| cookbook is used to configure auto run, batch, reboot, enable built-in operating system packages, configure |windows| packages, reboot machines, and more.
    * - `yum <http://docs.opscode.com/lwrp_yum.html>`_
-     - |cookbook name yum|
+     - The |cookbook yum| cookbook is used to manage the contents of the ``yum.conf`` configuration file for global |yum| configurations and for individual |yum| repositories.

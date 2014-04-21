@@ -2,7 +2,7 @@
 pacman Lightweight Resources
 =====================================================
 
-|cookbook name pacman|
+The |cookbook pacman| cookbook is used to install the |archlinux pacman| package manager and configure groups.
 
 The |cookbook pacman| cookbook contains the following resources: ``pacman_aur`` and ``pacman_group``.
 

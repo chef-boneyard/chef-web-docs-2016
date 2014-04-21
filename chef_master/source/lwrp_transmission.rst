@@ -2,7 +2,7 @@
 transmission Lightweight Resource
 =====================================================
 
-|cookbook name transmission|
+The |cookbook transmission| cookbook is used to install and configure the |transmission| |bittorrent| client.
 
 The |cookbook transmission| cookbook contains the following resource: ``transmission_torrent_file``.
 

@@ -2,7 +2,7 @@
 nagios Lightweight Resource
 =====================================================
 
-|cookbook name nagios|
+The |cookbook nagios| cookbook is used to install and configure |nagios|.
 
 The |cookbook nagios| cookbook contains the following resource: ``nagios_nrpecheck``.
 

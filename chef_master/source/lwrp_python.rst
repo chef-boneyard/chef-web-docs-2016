@@ -2,7 +2,7 @@
 python Lightweight Resources
 =====================================================
 
-|cookbook name python|
+The |cookbook python| cookbook is used to install |python|, |python pip|, and |python virtualenv|.
 
 The |cookbook python| cookbook contains the following resources: ``python_pip`` and ``python_virtualenv``.
 

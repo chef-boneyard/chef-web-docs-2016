@@ -2,7 +2,7 @@
 apt Lightweight Resources
 =====================================================
 
-|cookbook name apt|
+The |cookbook apt| cookbook is used to configure |apt| and |apt| services, for managing |apt| repositories and preferences.
 
 The |cookbook apt| cookbook contains the following resources: ``apt_preference`` and ``apt_repository``.
 

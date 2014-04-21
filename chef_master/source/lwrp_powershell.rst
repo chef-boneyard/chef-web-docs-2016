@@ -2,7 +2,7 @@
 powershell Lightweight Resource
 =====================================================
 
-|cookbook name powershell|
+The |cookbook powershell| cookbook is used to install |windows powershell|.
 
 The |cookbook powershell| cookbook contains the following resource: ``powershell``.
 

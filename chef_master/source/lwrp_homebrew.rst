@@ -2,7 +2,7 @@
 homebrew Lightweight Resource
 =====================================================
 
-|cookbook name homebrew|
+The |cookbook homebrew| cookbook is used to install and configure |homebrew| for use as the package manager for |mac os x|.
 
 The |cookbook homebrew| cookbook contains the following resource: ``homebrew``.
 
