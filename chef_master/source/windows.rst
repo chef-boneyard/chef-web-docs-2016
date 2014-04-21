@@ -528,94 +528,6 @@ The |cookbook iis| cookbook contains the following lightweight resources: ``iis_
 
 .. note:: These lightweight resources are part of the |cookbook iis| cookbook (https://github.com/opscode-cookbooks/iis).
 
-iis_app
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_iis_app.rst
-
-Actions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_app_actions.rst
-
-Attributes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_app_attributes.rst
-
-Examples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../step_lwrp/step_lwrp_iis_app_create.rst
-
-
-iis_config
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_iis_config.rst
-
-Actions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_config_actions.rst
-
-Attributes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_config_attributes.rst
-
-Examples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../step_lwrp/step_lwrp_iis_config_load_array_of_commands.rst
-
-.. include:: ../../step_lwrp/step_lwrp_iis_config_set_up_logging.rst
-
-iis_module
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_iis_module.rst
-
-Actions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_module_actions.rst
-
-Attributes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_module_attributes.rst
-
-Examples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../step_lwrp/step_lwrp_iis_module_add.rst
-
-
-iis_pool
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_iis_pool.rst
-
-Actions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_pool_actions.rst
-
-Attributes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_pool_attributes.rst
-
-Examples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../step_lwrp/step_lwrp_iis_pool_create.rst
-
-iis_site
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_iis_site.rst
-
-Actions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_site_actions.rst
-
-Attributes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_iis_site_attributes.rst
-
-Examples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_domain.rst
-
-.. include:: ../../step_lwrp/step_lwrp_iis_site_start_and_map_to_location.rst
-
-.. include:: ../../step_lwrp/step_lwrp_iis_site_stop.rst
-
 
 webpi Lightweight Resource
 -----------------------------------------------------
@@ -623,25 +535,7 @@ webpi Lightweight Resource
 
 The |cookbook webpi| cookbook contains the following lightweight resource: ``webpi_product``.
 
-webpi_product
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_lwrp/includes_lwrp_webpi_product.rst
-
 .. note:: This lightweight resource is part of the |cookbook webpi| cookbook (https://github.com/opscode-cookbooks/webpi).
-
-Actions
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_webpi_product_actions.rst
-
-Attributes
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../includes_lwrp/includes_lwrp_webpi_product_attributes.rst
-
-Examples
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. include:: ../../step_lwrp/step_lwrp_webpi_product_install_powershell.rst
-
-.. include:: ../../step_lwrp/step_lwrp_webpi_product_install_iis.rst
 
 
 windows Lightweight Resources
@@ -663,7 +557,7 @@ registry_data_exists? Method
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_data_exists.rst
 
-registry_get_subkeys Method
+registry_get_subkeys Method 
 -----------------------------------------------------
 
 .. include:: ../../includes_dsl_recipe/includes_dsl_recipe_method_registry_get_subkeys.rst
