@@ -28,6 +28,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Bulk delete many cookbooks**
+
 .. include:: ../../step_knife/step_knife_cookbook_bulk_delete.rst
 
 
@@ -51,6 +55,10 @@ knife.rb Settings
 
 Examples 
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Create a cookbook**
+
 .. include:: ../../step_knife/step_knife_cookbook_create_with_options.rst
 
 
@@ -64,7 +72,7 @@ Syntax
 
 Options
 -----------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_10-latest_cookbook_delete_options.rst
+.. include:: ../../includes_knife/includes_knife_cookbook_delete_options.rst
 
 knife.rb Settings
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -74,6 +82,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Delete a cookbook**
+
 .. include:: ../../step_knife/step_knife_cookbook_delete.rst
 
 
@@ -97,6 +109,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Download a cookbook**
+
 .. include:: ../../step_knife/step_knife_cookbook_download.rst
 
 
@@ -120,6 +136,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**View a list of cookbooks**
+
 .. include:: ../../step_knife/step_knife_cookbook_list.rst
 
 
@@ -143,6 +163,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Generate metadata**
+
 .. include:: ../../step_knife/step_knife_cookbook_metadata.rst
 
 
@@ -160,6 +184,10 @@ Options
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**View metadata**
+
 .. include:: ../../step_knife/step_knife_cookbook_metadata_from_file.rst
 
 
@@ -183,18 +211,28 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Show cookbook data**
+
 .. include:: ../../step_knife/step_knife_cookbook_show_cookbook_data.rst
+
+**Show cookbook versions**
 
 .. include:: ../../step_knife/step_knife_cookbook_show_cookbook_versions.rst
 
+**Show a cookbook version**
+
 .. include:: ../../step_knife/step_knife_cookbook_show_cookbook_version.rst
+
+**Show cookbook data as JSON**
 
 .. include:: ../../step_knife/step_knife_common_view_json.rst
 
 
 test
 =====================================================
-.. include:: ../../includes_knife/includes_knife_cookbook_test.rst
+.. include:: ../../includes_knife/includes_knife_11-10_cookbook_test.rst
 
 Syntax
 -----------------------------------------------------
@@ -212,6 +250,10 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Test a cookbook**
+
 .. include:: ../../step_knife/step_knife_cookbook_test.rst
 
 
@@ -235,7 +277,13 @@ knife.rb Settings
 
 Examples
 -----------------------------------------------------
+The following examples show how to use this |knife| subcommand:
+
+**Upload a cookbook**
+
 .. include:: ../../step_knife/step_knife_cookbook_upload.rst
+
+**Freeze a cookbook**
 
 .. include:: ../../step_knife/step_knife_cookbook_upload_freeze.rst
 
