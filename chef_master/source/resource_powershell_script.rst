@@ -41,3 +41,7 @@ Examples
 **Pass an environment variable to a script**
 
 .. include:: ../../step_resource/step_resource_powershell_pass_env_to_script.rst
+
+**Evaluate for true and/or false**
+
+.. include:: ../../step_resource/step_resource_powershell_convert_boolean_return.rst

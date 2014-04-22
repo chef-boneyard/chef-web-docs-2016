@@ -11,6 +11,7 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 * **Ohai 7.0** |ohai 7| is part of the |chef client| 11-12 install
 * **New windows_package resource** Use the |resource package_windows| resource to manage packages on the |windows| platform.
 * **New guard_interpreter attribute** Use the ``guard_interpreter`` attribute to specify a |resource script|-based resource---|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource powershell_script|, |resource script_python|, and |resource script_ruby|---that will be used to evaluate a string command.
+* **New convert_boolean_true attribute** Use the ``convert_boolean_true`` attribute to return ``0`` (true) or ``1`` (false) based on certain conditions in a |resource powershell_script| resource block.
 * **knife ssl check** Use the |subcommand knife ssl_check| subcommand to verify SSL configuration for the |chef server|.
 * **knife ssl fetch** Use the |subcommand knife ssl_fetch| subcommand to copy SSL certificates from an HTTPS server to the ``trusted_certs_dir`` directory.
 * **New options for knife client subcommands** New options allow the creation and deletion of the |chef validator|.
@@ -56,6 +57,21 @@ Attributes
 ``guard_interpreter`` Attribute
 -----------------------------------------------------
 .. include:: ../../includes_resources/includes_resource_common_guard_interpreter.rst
+
+|resource powershell_script| Attributes
+-----------------------------------------------------
+The following attributes have been added to the |resource powershell_script| resource:
+
+.. list-table::
+   :widths: 150 450
+   :header-rows: 1
+
+   * - Attribute
+     - Description
+   * - ``convert_boolean_return``
+     - |convert_boolean_return|
+
+.. include:: ../../step_resource/step_resource_powershell_convert_boolean_return.rst
 
 ``knife ssl check``
 -----------------------------------------------------
