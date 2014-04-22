@@ -156,7 +156,7 @@ The URL will help identify the type of permission issue. If the URL is an index 
 
 To fix the global permissions:
 
-#. Login to the |webui| and click on the failing object type (most likely |webui nodes|).
+#. Log in to the |webui| and click on the failing object type (most likely |webui nodes|).
 
 #. Click on the |webui tab_permissions| sub-tab. Which permission it needs, depends on which request that failed::
 
@@ -167,7 +167,7 @@ To fix the global permissions:
 
 To fix object permissions:
 
-#. Login to the |webui| and click on the failing object type (most likely |webui nodes|).
+#. Log in to the |webui| and click on the failing object type (most likely |webui nodes|).
 
 #. Click on the object in the list that is causing the error.
 
