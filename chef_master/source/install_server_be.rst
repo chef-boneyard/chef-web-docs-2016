@@ -95,8 +95,6 @@ If host-based firewalls (iptables, ufw, etc.) are being used, ensure that the fo
      - nginx
    * - 443
      - nginx
-   * - 9672
-     - nrpe
 
 On the back-end servers:
 
@@ -118,8 +116,6 @@ On the back-end servers:
      - nginx
    * - 9683
      - nginx
-   * - 9672
-     - nrpe
    * - 5984
      - couchdb
    * - 8983
@@ -128,9 +124,11 @@ On the back-end servers:
      - postgresql
    * - 5672
      - rabbitmq
-   * - 6379
+   * - 16379
      - redis
-   * - 7788
+   * - 4321
+     - bookshelf
+   * - 7788-7799
      - drbd
 
 Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
