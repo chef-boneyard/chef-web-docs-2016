@@ -6,7 +6,7 @@ The following sections describe troubleshooting some common errors and problems.
 
 401 Unauthorized
 =====================================================
-There are multiple causes of the Chef 401 "Unathorized" error, so please use the sections below to find the error message that most closely matches your output. If you are unable to find a matching error, or if the provided steps are unhelpful, please `file a help ticket <http://www.opscode.com/support/tickets>`_.
+There are multiple causes of the Chef 401 "Unauthorized" error, so please use the sections below to find the error message that most closely matches your output. If you are unable to find a matching error, or if the provided steps are unhelpful, please `file a help ticket <http://www.opscode.com/support/tickets>`_.
 
 Failed to authenticate as ORGANIZATION-validator
 -----------------------------------------------------
