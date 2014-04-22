@@ -3,7 +3,7 @@
 
 To filter report histories by |chef client| run status:
 
-#. Log on to |webui|.
+#. Open |webui|.
 #. Click |webui reports|.
 #. Click |webui reports_run_history|.
 #. From the |webui button_filter_by_status| drop-down, select ``All``, ``Success``, ``Failure``, or ``Started``:

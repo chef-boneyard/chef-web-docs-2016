@@ -3,6 +3,6 @@
 
 To view the reports dashboard:
 
-#. Log on to |webui|.
+#. Open |webui|.
 #. Click |webui reports|.
 #. Click |webui reports_dashboard|.

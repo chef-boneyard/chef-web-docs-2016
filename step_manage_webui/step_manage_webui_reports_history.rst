@@ -3,6 +3,6 @@
 
 To report histories:
 
-#. Log on to |webui|.
+#. Open |webui|.
 #. Click |webui reports|.
 #. Click |webui reports_run_history|.
