@@ -2,5 +2,10 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-**learnchef.opscode.com:**  `Install a Workstation <https://learnchef.opscode.com/quickstart/workstation-setup/>`_ | `Use the chef-repo <https://learnchef.opscode.com/quickstart/chef-repo/>`_ | `Converge a Node <https://learnchef.opscode.com/quickstart/converge/>`_
+**learnchef.opscode.com:**  `Learn Chef <http://learnchef.opscode.com>`_ | `Get started <http://learnchef.opscode.com/get-started>`_ | `Create your first cookbook <http://learnchef.opscode.com/tutorials/create-your-first-cookbook>`_
+
+
+
+
+
 
