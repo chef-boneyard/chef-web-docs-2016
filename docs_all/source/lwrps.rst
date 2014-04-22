@@ -213,7 +213,9 @@ The following groups of lightweight resources are available in open source cookb
 * `gunicorn <https://github.com/opscode-cookbooks/gunicorn>`_
 * `homebrew <https://github.com/opscode-cookbooks/homebrew>`_
 * `iis <https://github.com/opscode-cookbooks/iis>`_
+* `junos <http://docs.opscode.com/junos.html>`_
 * `maven <https://github.com/opscode-cookbooks/maven>`_
+* `netdev <https://github.com/opscode-cookbooks/netdev>`_
 * `nginx <https://github.com/opscode-cookbooks/nginx>`_
 * `omnibus <https://github.com/opscode-cookbooks/omnibus>`_
 * `openssh <https://github.com/opscode-cookbooks/openssh>`_
