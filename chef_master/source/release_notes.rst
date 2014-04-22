@@ -19,6 +19,7 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 * **Weekdays as symbols** The |resource cron| resource allows weekdays to be entered as a symbol, e.g. ``:monday`` or ``:friday``.
 * **Generate the public/private key pair on a node** The ``local_key_generation`` setting has been added to the |client rb| file. When ``true``, key pairs will be generated on the node and the public key will be sent to the |chef server|.
 * **knife cookbook test and .chefignore files** The ``knife cookbook test`` command will respect the settings in a |chefignore| file.
+* **knife bootstrap -V -V** The |subcommand knife bootstrap| command can set the initial |chef client| run to be logged at the debug level.
 
 |ohai 7|
 -----------------------------------------------------
@@ -145,6 +146,12 @@ for example:
 |knife| Options
 -----------------------------------------------------
 New options have been added to the following |knife| subcommands:
+
+knife bootstrap
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+``-V -V``
+   |verbose knife_bootstrap|
 
 knife client bulk delete
 +++++++++++++++++++++++++++++++++++++++++++++++++++++

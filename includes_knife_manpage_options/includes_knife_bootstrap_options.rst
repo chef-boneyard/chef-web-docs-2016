@@ -112,6 +112,9 @@ This subcommand has the following options:
 ``-V``, ``--verbose``
   |verbose|
 
+``-V -V``
+   |verbose knife_bootstrap|
+
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh_user|
 

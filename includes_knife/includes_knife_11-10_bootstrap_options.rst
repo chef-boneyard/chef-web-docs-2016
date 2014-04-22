@@ -72,9 +72,6 @@ This subcommand has the following options:
 ``--use-sudo-password``
    |use sudo_password|
 
-``-V -V``
-   |verbose knife_bootstrap|
-
 ``-x USERNAME``, ``--ssh-user USERNAME``
    |ssh_user|
 
