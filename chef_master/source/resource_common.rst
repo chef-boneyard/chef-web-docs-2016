@@ -88,6 +88,11 @@ only_if Examples
 
 .. include:: ../../step_recipe/step_recipe_guard_onlyif_reregister_aspdotnet.rst
 
+Guard Interpreters
+=====================================================
+.. include:: ../../includes_resources/includes_resource_common_guard_interpreter.rst
+
+
 Lazy Attribute Evaluation
 =====================================================
 .. include:: ../../includes_resources/includes_resource_common_lazy_evaluation.rst

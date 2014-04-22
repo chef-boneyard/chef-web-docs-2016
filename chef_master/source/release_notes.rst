@@ -9,8 +9,10 @@ What's New
 The following items are new for |chef 11-12| and/or are changes from previous versions. The short version:
 
 * **Ohai 7.0** |ohai 7| is part of the |chef client| 11-12 install
-* **knife ssl check** Use the |subcommand knife ssl_check| subcommand to xxxxx.
-* **knife ssl fetch** Use the |subcommand knife ssl_fetch| subcommand to xxxxx.
+* **New windows_package resource** Use the |resource package_windows| resource to manage packages on the |windows| platform.
+* **New guard_interpreter attribute** Use the ``guard_interpreter`` attribute to specify a |resource script|-based resource---|resource script_bash|, |resource script_csh|, |resource script_perl|, |resource powershell_script|, |resource script_python|, and |resource script_ruby|---that will be used to evaluate a string command.
+* **knife ssl check** Use the |subcommand knife ssl_check| subcommand to verify SSL configuration for the |chef server|.
+* **knife ssl fetch** Use the |subcommand knife ssl_fetch| subcommand to copy SSL certificates from an HTTPS server to the ``trusted_certs_dir`` directory.
 * **New options for knife client subcommands** New options allow the creation and deletion of the |chef validator|.
 * **New options for chef-client** A new option allows a run-list to be specified, and then set permanently.
 * **Weekdays as symbols** The |resource cron| resource allows weekdays to be entered as a symbol, e.g. ``:monday`` or ``:friday``.
@@ -33,6 +35,27 @@ The following items are new for |chef 11-12| and/or are changes from previous ve
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_mash.rst
 
 .. include:: ../../includes_dsl_ohai/includes_dsl_ohai_method_collect_data_example.rst
+
+
+|resource package_windows| Resource
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_package_windows.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_windows_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_windows_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
+
+``guard_interpreter`` Attribute
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_common_guard_interpreter.rst
 
 ``knife ssl check``
 -----------------------------------------------------
@@ -67,24 +90,6 @@ for example:
 .. code-block:: bash
 
    $ knife ssl check https://www.getchef.com
-
-
-|resource package_windows| Resource
------------------------------------------------------
-.. include:: ../../includes_resources/includes_resource_package_windows.rst
-
-Syntax
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_windows_syntax.rst
-
-Actions
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_windows_actions.rst
-
-Attributes
-+++++++++++++++++++++++++++++++++++++++++++++++++++++
-.. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
-
 
 ``knife ssl fetch``
 -----------------------------------------------------
