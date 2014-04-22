@@ -38,7 +38,7 @@ Workstations
 
 |cookbook push jobs| Cookbook
 =====================================================
-The |cookbook push jobs| cookbook is used by |push jobs| to install the |push jobs| client on managed nodes, and then set up the |push jobs| client to run as a service. In addition, |push jobs| relies on a cookbook attribute to manage the whitelist, which is a list of jobs (and commands) that are available to |push jobs|.
+The |cookbook push jobs| cookbook contains attributes that are used to configure the |push jobs| client. In addition, |push jobs| relies on the ``whitelist`` attribute to manage the list of jobs (and commands) that are available to |push jobs|.
 
 Whitelist
 -----------------------------------------------------
