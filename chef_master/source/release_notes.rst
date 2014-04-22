@@ -143,6 +143,24 @@ for example:
 
    $ knife ssl fetch https://www.getchef.com
 
+
+|client rb| Settings
+-----------------------------------------------------
+New settings have been added to the |client rb| file:
+
+.. list-table::
+   :widths: 200 300
+   :header-rows: 1
+
+   * - Setting
+     - Description
+   * - ``ssl_verify_mode``
+     - |ssl_verify_mode|
+       
+       * |ssl_verify_mode_verify_none|
+       * |ssl_verify_mode_verify_peer| This is the recommended setting.
+
+
 |knife| Options
 -----------------------------------------------------
 New options have been added to the following |knife| subcommands:
