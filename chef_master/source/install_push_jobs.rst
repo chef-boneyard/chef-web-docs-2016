@@ -24,6 +24,6 @@ Install the Workstation
 =====================================================
 .. include:: ../../includes_install/includes_install_push_jobs_workstation.rst
 
-push-jobs Cookbook
+|cookbook push jobs| Cookbook
 -----------------------------------------------------
 .. include:: ../../includes_install/includes_install_push_jobs_cookbook.rst

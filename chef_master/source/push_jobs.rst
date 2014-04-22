@@ -6,7 +6,7 @@
 
 .. note:: |push jobs| is an add-on feature for on-premise installations of the |chef server oec| server only.
 
-:doc:`Install Push Jobs </install_push_jobs>` using the ``push-jobs`` cookbook and a |chef client| run on each of the target nodes.
+:doc:`Install Push Jobs </install_push_jobs>` using the |cookbook push jobs| cookbook and a |chef client| run on each of the target nodes.
 
 Requirements
 =====================================================
@@ -49,7 +49,7 @@ Whitelist
 .. 
 .. Messages
 .. =====================================================
-.. xxxxx sends two types of messages: heartbeat and job.
+.. |push jobs| sends two types of messages: heartbeat and job.
 .. 
 .. Heartbeat Messages
 .. -----------------------------------------------------

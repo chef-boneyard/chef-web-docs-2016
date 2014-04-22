@@ -1,5 +1,5 @@
 =====================================================
-Pushy API
+|api push jobs|
 =====================================================
 
 .. include:: ../../includes_api_push_jobs/includes_api_push_jobs.rst
