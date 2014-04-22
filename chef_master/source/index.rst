@@ -417,6 +417,7 @@ Cookbooks
    resource_subversion
    resource_template
    resource_user
+   resource_windows_package
    resource_yum
    server_backup_restore
    server_components

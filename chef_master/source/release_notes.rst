@@ -68,6 +68,24 @@ for example:
 
    $ knife ssl check https://www.getchef.com
 
+
+|resource package_windows| Resource
+-----------------------------------------------------
+.. include:: ../../includes_resources/includes_resource_package_windows.rst
+
+Syntax
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_windows_syntax.rst
+
+Actions
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_windows_actions.rst
+
+Attributes
++++++++++++++++++++++++++++++++++++++++++++++++++++++
+.. include:: ../../includes_resources/includes_resource_package_windows_attributes.rst
+
+
 ``knife ssl fetch``
 -----------------------------------------------------
 .. include:: ../../includes_knife/includes_knife_ssl_fetch.rst

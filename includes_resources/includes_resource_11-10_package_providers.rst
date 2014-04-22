@@ -52,9 +52,6 @@ The following providers are available. Use the short name to call the provider f
    * - ``Chef::Provider::Package::Solaris``
      - ``solaris_package``
      - 
-   * - ``Chef::Provider::Package::Windows``
-     - ``package``
-     - The provider that is used with the |windows| platform.
    * - ``Chef::Provider::Package::Yum``
      - ``yum_package``
      - 
