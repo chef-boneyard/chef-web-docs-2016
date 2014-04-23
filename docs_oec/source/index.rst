@@ -67,6 +67,8 @@ The following |knife| subcommands are built-in:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_search.html">knife search</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_show.html">knife show</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_ssh.html">knife ssh</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_ssl_check.html">knife ssl check</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_ssl_fetch.html">knife ssl fetch</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_status.html">knife status</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_tag.html">knife tag</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/knife_upload.html">knife upload</a> </br>
@@ -583,6 +585,8 @@ The following topics discuss using |chef server oec| with platforms:
    knife_search
    knife_show
    knife_ssh
+   knife_ssl_check
+   knife_ssl_fetch
    knife_status
    knife_tag
    knife_upload
