@@ -85,9 +85,59 @@ Firewalls
 -----------------------------------------------------
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst
 
+<<<<<<< HEAD
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst
 
 .. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst
+=======
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Port
+     - Used by ...
+   * - 80
+     - nginx
+   * - 443
+     - nginx
+
+On the back-end servers:
+
+.. list-table::
+   :widths: 60 420
+   :header-rows: 1
+
+   * - Port
+     - Used by ...
+   * - 80
+     - nginx
+   * - 443
+     - nginx
+   * - 9671
+     - nginx
+   * - 9680
+     - nginx
+   * - 9685
+     - nginx
+   * - 9683
+     - nginx
+   * - 5984
+     - couchdb
+   * - 8983
+     - opscode-solr
+   * - 5432
+     - postgresql
+   * - 5672
+     - rabbitmq
+   * - 16379
+     - redis
+   * - 4321
+     - bookshelf
+   * - 7788-7799
+     - drbd
+
+Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
+>>>>>>> FETCH_HEAD
 
 Hostnames, FQDNs
 -----------------------------------------------------
