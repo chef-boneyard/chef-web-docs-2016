@@ -30,6 +30,8 @@ All resources share a set of common actions, attributes, conditional executions,
      - |resource short_attributes|
    * - `Guards <http://docs.opscode.com/resource_common.html#conditionals>`_
      - |resource short_conditions|
+   * - `Guard Interpreters <http://docs.opscode.com/resource_common.html#guard-interpreters>`_
+     - Evaluate a string command using a |resource script|-based resource: |resource script_bash|, |resource script_csh|, |resource script_perl|, |resource powershell_script|, |resource script_python|, or |resource script_ruby|.
    * - `Notifications <http://docs.opscode.com/resource_common.html#notifications>`_
      - |resource short_notifications|
    * - `Relative Paths <http://docs.opscode.com/resource_common.html#relative-paths>`_
