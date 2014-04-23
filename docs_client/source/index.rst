@@ -19,7 +19,7 @@ The Workstation
 =====================================================
 The workstation is the location from which most users will do most of their work. This work includes:
 
-* Developing `cookbooks <http://docs.opscode.com/open_source/index.html#cookbooks>`_ and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
+* Developing `cookbooks <http://docs.opscode.com/client/essentials_cookbooks.html>`_ and :doc:`recipes </essentials_cookbook_recipes>` (and authoring them using :doc:`using Ruby </just_enough_ruby_for_chef>`), including :doc:`debugging recipes </chef_shell>`
 * Synchronizing the :doc:`chef-repo </essentials_repository>` with version source control like |git| or |svn|
 * Using |knife| to upload items from the |chef repo| to the |chef server|
 * Configuring :doc:`organizational policy </essentials_policy>`
@@ -33,9 +33,9 @@ A workstation must be configured with a |chef client|, must have access to a |ch
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_repository_create.html">Create and Sync the chef-repo</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/install_workstation.html">Set up a Workstation</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/install_bootstrap.html">Bootstrap a Node</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_repository_create.html">Create and Sync the chef-repo</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/install_workstation.html">Set up a Workstation</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/install_bootstrap.html">Bootstrap a Node</a> </br>
 
 Knife
 -----------------------------------------------------
@@ -45,35 +45,35 @@ The following |knife| subcommands are built-in:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_bootstrap.html">knife bootstrap</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_client.html">knife client</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_configure.html">knife configure</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_cookbook.html">knife cookbook</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_cookbook_site.html">knife cookbook site</a> (<a href="http://docs.opscode.com/chef_client/api_cookbooks_site.html">which uses the Cookbooks Site API</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_data_bag.html">knife data bag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_delete.html">knife delete</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_deps.html">knife deps</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_diff.html">knife diff</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_download.html">knife download</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_edit.html">knife edit</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_environment.html">knife environment</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_exec.html">knife exec</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_index_rebuild.html">knife index rebuild</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_list.html">knife list</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_node.html">knife node</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_raw.html">knife raw</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_recipe_list.html">knife recipe list</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_role.html">knife role</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_search.html">knife search</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_show.html">knife show</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_ssh.html">knife ssh</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_ssl_check.html">knife ssl check</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_ssl_fetch.html">knife ssl fetch</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_status.html">knife status</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_tag.html">knife tag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_upload.html">knife upload</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_user.html">knife user</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/knife_xargs.html">knife xargs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_bootstrap.html">knife bootstrap</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_client.html">knife client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_configure.html">knife configure</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_cookbook.html">knife cookbook</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_cookbook_site.html">knife cookbook site</a> (<a href="http://docs.opscode.com/client/api_cookbooks_site.html">which uses the Cookbooks Site API</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_data_bag.html">knife data bag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_delete.html">knife delete</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_deps.html">knife deps</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_diff.html">knife diff</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_download.html">knife download</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_edit.html">knife edit</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_environment.html">knife environment</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_exec.html">knife exec</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_index_rebuild.html">knife index rebuild</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_list.html">knife list</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_node.html">knife node</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_raw.html">knife raw</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_recipe_list.html">knife recipe list</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_role.html">knife role</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_search.html">knife search</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_show.html">knife show</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_ssh.html">knife ssh</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_ssl_check.html">knife ssl check</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_ssl_fetch.html">knife ssl fetch</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_status.html">knife status</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_tag.html">knife tag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_upload.html">knife upload</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_user.html">knife user</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/knife_xargs.html">knife xargs</a> </br>
 
 |knife| settings are stored in the :doc:`knife.rb </config_rb_knife>` file. There is a default |knife rb| file and there are :doc:`optional settings </config_rb_knife_optional_settings>` that can be added to the |knife rb| file.
 
@@ -85,21 +85,21 @@ Plugins allow |knife| to interact with all of the major cloud providers. All |kn
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_azure.html">knife azure</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_bluebox.html">knife bluebox</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_bluelock.html">knife bluelock</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_ec2.html">knife ec2</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_eucalyptus.html">knife eucalyptus</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_google.html">knife google</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_hp.html">knife hp</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_linode.html">knife linode</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_openstack.html">knife openstack</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_rackspace.html">knife rackspace</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_terremark.html">knife terremark</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_vcloud.html">knife vcloud</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/plugin_knife_windows.html">knife windows</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_azure.html">knife azure</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_bluebox.html">knife bluebox</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_bluelock.html">knife bluelock</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_ec2.html">knife ec2</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_eucalyptus.html">knife eucalyptus</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_google.html">knife google</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_hp.html">knife hp</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_linode.html">knife linode</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_openstack.html">knife openstack</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_rackspace.html">knife rackspace</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_terremark.html">knife terremark</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_vcloud.html">knife vcloud</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_windows.html">knife windows</a> </br>
 
-A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/open_source/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/open_source/plugin_knife_custom.html>`_ can be created.
+A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/client/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/client/plugin_knife_custom.html>`_ can be created.
 
 Settings and Tools
 -----------------------------------------------------
@@ -107,14 +107,14 @@ The following settings files are used to configure behavior for |knife| and how 
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/config_rb_knife.html">knife.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/config_rb_knife.html">knife.rb</a> </br>
 
 The following command-line tools can be run on the workstation to simulate a |chef client| run locally:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/ctl_chef_apply.html">chef-apply</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/ctl_chef_shell.html">chef-shell</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/ctl_chef_apply.html">chef-apply</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/ctl_chef_shell.html">chef-shell</a> </br>
 
 
 The Server
@@ -139,7 +139,7 @@ The server acts as a hub for all of the data needed by the |chef client| while i
 
 |chef server osc|
 -----------------------------------------------------
-|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|. For more information about |chef server oec|, see http://docs.opscode.com/open_source/.
+|chef server osc| is the open source |chef server| that shares many of the same capabilities as the |chef server oec|. For more information about |chef server osc|, see http://docs.opscode.com/open_source/.
 
 
 The Nodes
@@ -158,8 +158,8 @@ The |chef client| is typically installed using a :doc:`bootstrap operation </ess
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/install_bootstrap.html">Install the chef-client with a bootstrap</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/api_omnitruck.html">Download the chef-client using the Omnitruck API</a> </br>
 
 
 Settings and Tools
@@ -168,23 +168,23 @@ The following settings files are used to configure behavior for the |chef client
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/config_rb_client.html">client.rb</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/config_rb_solo.html">solo.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/config_rb_client.html">client.rb</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/config_rb_solo.html">solo.rb</a> </br>
 
 |ohai| collects important data about every node:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/ohai.html">About Ohai</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/ohai_custom.html">Build Custom Ohai Plugins</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/ohai.html">About Ohai</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/ohai_custom.html">Build Custom Ohai Plugins</a> </br>
 
 The following command-line tools can be run on any node:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/ctl_chef_client.html">chef-client</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/ctl_chef_solo.html">chef-solo</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/ctl_ohai.html">ohai</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/ctl_chef_client.html">chef-client</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/ctl_chef_solo.html">chef-solo</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/ctl_ohai.html">ohai</a> </br>
 
 
 Cookbooks
@@ -199,16 +199,16 @@ A cookbook is made up of the following components: attribute files, definitions,
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_cookbook_attribute_files.html">Attribute Files</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_cookbook_definitions.html">Definitions</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_cookbook_files.html">Files</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_handlers.html">Handlers</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_cookbook_libraries.html">Libraries</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_cookbook_metadata.html">Metadata</a> (and <a href="http://docs.opscode.com/chef_client/config_rb_metadata.html">/cookbook directory settings</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/essentials_cookbook_recipes.html">Recipes</a> (and the <a href="http://docs.opscode.com/open_source/dsl_recipe.html">Recipe DSL</a>)</br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_cookbook_resources.html">Resources and Providers</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_cookbook_templates.html">Templates</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/essentials_cookbook_versions.html">Versions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_attribute_files.html">Attribute Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_definitions.html">Definitions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_files.html">Files</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_handlers.html">Handlers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_libraries.html">Libraries</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_metadata.html">Metadata</a> (and <a href="http://docs.opscode.com/client/config_rb_metadata.html">/cookbook directory settings</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_recipes.html">Recipes</a> (and the <a href="http://docs.opscode.com/client/dsl_recipe.html">Recipe DSL</a>)</br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_resources.html">Resources and Providers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_templates.html">Templates</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_versions.html">Versions</a> </br>
 
 Resources
 -----------------------------------------------------
@@ -216,59 +216,59 @@ A :doc:`resource </resource>` is a key part of a recipe that defines the actions
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_common.html#actions">Actions</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_common.html#attributes">Attributes</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_common.html#conditionals">Conditionals</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_common.html#notifications">Notifications</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_common.html#relative-paths">Relative Paths</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_common.html#windows-file-security">Windows File Security</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_common.html#run-from-resource-collection">Run During Resource Compilation</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#actions">Actions</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#attributes">Attributes</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#conditionals">Conditionals</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#notifications">Notifications</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#relative-paths">Relative Paths</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#windows-file-security">Windows File Security</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#run-from-resource-collection">Run During Resource Compilation</a> </br>
 
 The following resources are built-in and can be used in any recipe:
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_apt_package.html">apt_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_bash.html">bash</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_batch.html">batch</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_breakpoint.html">breakpoint</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_chef_gem.html">chef_gem</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_chef_handler.html">chef_gem</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_cookbook_file.html">cookbook_file</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_cron.html">cron</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_deploy.html">deploy</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_directory.html">directory</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_dpkg_package.html">dpkg_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_easy_install_package.html">easy_install_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_env.html">env</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_erlang_call.html">erl_call</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_execute.html">execute</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_file.html">file</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_gem_package.html">gem_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_git.html">git</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_group.html">group</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_http_request.html">http_request</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_ifconfig.html">ifconfig</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_link.html">link</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_log.html">log</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_mdadm.html">mdadm</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_mount.html">mount</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_ohai.html">ohai</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_package.html">package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_powershell_script.html">powershell_script</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_registry_key.html">registry_key</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_remote_directory.html">remote_directory</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_remote_file.html">remote_file</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_route.html">route</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_rpm_package.html">rpm_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_ruby_block.html">ruby_block</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_script.html">script</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_service.html">service</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_subversion.html">subversion</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_template.html">template</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_user.html">user</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_windows_package.html">windows_package</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/resource_yum.html">yum_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_apt_package.html">apt_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_bash.html">bash</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_batch.html">batch</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_breakpoint.html">breakpoint</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_chef_gem.html">chef_gem</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_chef_handler.html">chef_gem</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_cookbook_file.html">cookbook_file</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_cron.html">cron</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_deploy.html">deploy</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_directory.html">directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_dpkg_package.html">dpkg_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_easy_install_package.html">easy_install_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_env.html">env</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_erlang_call.html">erl_call</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_execute.html">execute</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_file.html">file</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_gem_package.html">gem_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_git.html">git</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_group.html">group</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_http_request.html">http_request</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_ifconfig.html">ifconfig</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_link.html">link</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_log.html">log</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_mdadm.html">mdadm</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_mount.html">mount</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_ohai.html">ohai</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_package.html">package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_powershell_script.html">powershell_script</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_registry_key.html">registry_key</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_remote_directory.html">remote_directory</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_remote_file.html">remote_file</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_route.html">route</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_rpm_package.html">rpm_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_ruby_block.html">ruby_block</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_script.html">script</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_service.html">service</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_subversion.html">subversion</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_template.html">template</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_user.html">user</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_windows_package.html">windows_package</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_yum.html">yum_package</a> </br>
 
 LWRPs 
 -----------------------------------------------------
@@ -276,10 +276,10 @@ A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much lik
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/lwrp_custom.html">About custom LWRPs</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/lwrp_custom_resource.html">Create a lightweight resource</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/lwrp_custom_provider.html">Create a lightweight provider using platform resources</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/lwrp_custom_provider_ruby.html">Create a lightweight provider using Ruby</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/lwrp_custom.html">About custom LWRPs</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/lwrp_custom_resource.html">Create a lightweight resource</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/lwrp_custom_provider.html">Create a lightweight provider using platform resources</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/lwrp_custom_provider_ruby.html">Create a lightweight provider using Ruby</a> </br>
 
 The following LWRPs are available in |company_name|-maintained cookbooks:
 
@@ -320,27 +320,27 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
 
 .. raw:: html
 
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_attribute.html">attribute?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_cookbook_name.html">cookbook_name</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_data_bag.html">data_bag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_data_bag.html">data_bag_item</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_platform.html">platform?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_platform_family.html">platform_family?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_recipe_name.html">recipe_name</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_registry_data_exists.html">registry_data_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_registry_get_subkeys.html">registry_get_subkeys</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_registry_get_values.html">registry_get_values</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_registry_has_subkeys.html">registry_has_subkeys?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_registry_key_exists.html">registry_key_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_registry_value_exists.html">registry_value_exists?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_resources.html">resources</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_search.html">search</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_tag.html">tag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_tag.html">tagged?</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_tag.html">untag</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/chef_client/dsl_recipe_helper_windows_platform.html">Microsoft Windows Platform Helpers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_attribute.html">attribute?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_cookbook_name.html">cookbook_name</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_data_bag.html">data_bag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_data_bag.html">data_bag_item</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_platform.html">platform?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_platform_family.html">platform_family?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_recipe_name.html">recipe_name</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_registry_data_exists.html">registry_data_exists?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_registry_get_subkeys.html">registry_get_subkeys</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_registry_get_values.html">registry_get_values</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_registry_has_subkeys.html">registry_has_subkeys?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_registry_key_exists.html">registry_key_exists?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_registry_value_exists.html">registry_value_exists?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_resources.html">resources</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_search.html">search</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_tag.html">tag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_tag.html">tagged?</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_tag.html">untag</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_value_for_platform.html">value_for_platform</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/dsl_recipe_helper_windows_platform.html">Microsoft Windows Platform Helpers</a> </br>
 
 
 .. Hide the TOC from this file.
@@ -387,6 +387,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    essentials_chef_client
    essentials_cookbook_attribute_files
    essentials_cookbook_definitions
+   essentials_cookbook_directory
    essentials_cookbook_files
    essentials_cookbook_libraries
    essentials_cookbook_metadata
@@ -394,6 +395,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    essentials_cookbook_resources
    essentials_cookbook_templates
    essentials_cookbook_versions
+   essentials_cookbooks
    essentials_data_bags
    essentials_environments
    essentials_node_object
