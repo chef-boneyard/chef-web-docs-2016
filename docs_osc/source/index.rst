@@ -319,7 +319,7 @@ The following LWRPs are available in |company_name|-maintained cookbooks:
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/apt">apt</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/aws">aws</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/bluepill">bluepill</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_chef_handler.html">chef_handler</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_chef_handler.html">chef_handler</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/daemontools">daemontools</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/djbdns">djbdns</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/dmg">dmg</a> </br>
@@ -341,7 +341,7 @@ The following LWRPs are available in |company_name|-maintained cookbooks:
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/transmission">transmission</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/webpi">webpi</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/windows">windows</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_yum.html">yum</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/lwrp_yum.html">yum</a> </br>
 
 See the `opscode-cookbooks <https://github.com/opscode-cookbooks>`_ repository for the full list.
 
