@@ -373,14 +373,6 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/dsl_recipe_method_value_for_platform_family.html">value_for_platform_family</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/dsl_recipe_helper_windows_platform.html">Microsoft Windows Platform Helpers</a> </br>
 
-Platforms 
-=====================================================
-The following topics discuss using |chef server osc| with platforms:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/openstack.html">OpenStack</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/windows.html">Microsoft Windows</a> </br>
 
 .. Hide the TOC from this file.
 
