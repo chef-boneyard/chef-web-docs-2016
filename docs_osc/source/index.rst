@@ -296,6 +296,7 @@ The following resources are built-in and can be used in any recipe:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_subversion.html">subversion</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_template.html">template</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_user.html">user</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_windows_package.html">windows_package</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/open_source/resource_yum.html">yum_package</a> </br>
 
 LWRPs 
@@ -559,6 +560,7 @@ The following topics discuss using |chef server osc| with platforms:
    resource_service
    resource_template
    resource_user
+   resource_windows_package
    resource_yum
    server_components
    server_security
