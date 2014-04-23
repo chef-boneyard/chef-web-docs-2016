@@ -59,9 +59,11 @@ For back-end servers:
      - |service postgresql|
    * - 5672
      - |service rabbitmq|
-   * - 6379
+   * - 16379
      - |service redis|
-   * - 7788
+   * - 4321
+     - |service bookshelf|
+   * - 7788-7799
      - |drbd|
 
 Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
