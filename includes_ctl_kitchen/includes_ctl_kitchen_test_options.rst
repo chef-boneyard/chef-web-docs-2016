@@ -8,8 +8,8 @@ This subcommand has the following options:
 ``--auto-init``
    |kitchen_auto_init| Default: ``false``.
 
-``-c``, ``--concurrency``
-   |concurrency| Default: ``9999`` (all instances, effectively).
+``-c NUMBER``, ``--concurrency NUMBER``
+   |concurrency| Use this option to limit the number of instances that are tested concurrently. For example, ``--concurrency 6`` will set this limit to six concurrent instances. Default: ``9999`` (all instances, effectively).
 
 ``-d``, ``--destroy``
    |kitchen_destroy| Default: ``passing``.

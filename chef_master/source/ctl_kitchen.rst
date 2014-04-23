@@ -6,6 +6,72 @@
 
 .. warning:: This topic details functionality that will be packaged with Chef in an upcoming release. See http://kitchen.ci/docs/getting-started/ for the official description of test-kitchen, how to get it set up, and how to use it for integrated cookbook testing.
 
+Fuzzy Matching
+=====================================================
+Fuzzy matching can be used with all commands because |kitchen_cli| uses regular expressions to search. For example, a fully qualified name:
+
+.. code-block:: bash
+
+   $ kitchen list default-ubuntu-1404 --bare
+
+will return something similar to:
+
+.. code-block:: bash
+
+   client-ubuntu-1404
+
+A partial name:
+
+.. code-block:: bash
+
+   $ kitchen list ubuntu --bare
+
+will return something similar to:
+
+.. code-block:: bash
+
+   client-ubuntu-1404
+   server-ubuntu-1404
+
+A short string:
+
+.. code-block:: bash
+
+   $ kitchen list ub --bare
+
+will return something similar to:
+
+.. code-block:: bash
+
+   client-ubuntu-1404
+   server-ubuntu-1404
+
+An integer:
+
+.. code-block:: bash
+
+   $ kitchen list 4 --bare
+
+will return something similar to:
+
+.. code-block:: bash
+
+   client-ubuntu-1404
+   server-ubuntu-1404
+
+A single-quoted |ruby| regular expression:
+
+.. code-block:: bash
+
+   $ kitchen list '^cli.*-65$' --bare
+
+will return something similar to:
+
+.. code-block:: bash
+
+   client-centos-65
+
+
 .. kitchen console
 .. =====================================================
 .. .. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen_console.rst
@@ -99,7 +165,101 @@ Options
 
 Examples
 -----------------------------------------------------
-None.
+This command returns data as |yaml|:
+
+.. code-block:: yaml
+
+   ---
+   timestamp: 2014-04-15 18:59:58.460470000 Z
+   kitchen-version: 1.2.2.dev
+   instances:
+     default-ubuntu-1404
+       # ...
+     default-centos-65
+       # ...
+
+When |kitchen| is being used to test cookbooks, |kitchen| will track state data:
+
+.. code-block:: yaml
+
+   ---
+   instances:
+     default-ubuntu-1404
+       state_file:
+         hostname: 192.168.123.456
+         last_action: create
+         port: '22'
+         ssh_key: "/Users/username/path/to/key"
+         username: vagrant
+     default-centos-65
+       # ...
+
+and will track information that was given to a driver:
+
+.. code-block:: yaml
+
+   ---
+   instances:
+     default-ubuntu-1404
+       driver:
+         box: opscode-ubuntu-12.04
+         box_url: https://URL/path/to/filename.box
+         kitchen_root: "/Users/username/Projects/sandbox/"
+
+and will track information about provisioners:
+
+.. code-block:: yaml
+
+   ---
+   instances:
+     default-ubuntu-1404
+       provisioner:
+         attributes: {}
+         chef_omnibus_url: https://www.getchef.com/chef/install.sh
+         clients_path: 
+         name: chef_zero
+
+Use the ``--instances`` option to track instances, which are based on the list of platforms and suites in the |kitchen yml| file:
+
+.. code-block:: yaml
+
+   ---
+   instances
+     default-ubuntu-1204
+       busser:
+         root_path: /tmp/busser
+         ruby_bindir: /opt/chef/embedded/bin
+         sudo: true
+
+Use the ``--loader`` option to include diagnostic data in the output:
+
+.. code-block:: yaml
+
+   ---
+   loader:
+     combined_config:
+       filename: 
+       raw_data:
+         driver:
+           name: vagrant
+           socket: tcp://192.168.12.34:1234
+       provisioner:
+        #...
+
+or:
+
+.. code-block:: yaml
+
+   ---
+   loader:
+     global_config:
+       filename: "/Users/username/.kitchen/config.yml"
+       raw_data: #...
+     project_config:
+       filename: "/Users/username/Projects/sandbox/path/to/kitchen.yml"
+       raw_data: #...
+     local_config:
+
 
 kitchen driver create
 =====================================================
@@ -338,6 +498,31 @@ to return something similar to:
    -----> Kitchen is finished. (2m3.45s)
    $ echo $?
    0
+
+Use the ``--concurrency`` option to control the number of instances that are tested concurrently on the local workstation. The default setting is to test all instances, but the practical setting depends on the capabilities of the local machine itself. The following examples will limit the number of instances to four:
+
+.. code-block:: bash
+
+   $ kitchen test --concurrency=4
+
+or:
+
+.. code-block:: bash
+
+   $ kitchen test --concurrency 4
+
+or:
+
+.. code-block:: bash
+
+   $ kitchen test -c=4
+
+or:
+
+.. code-block:: bash
+
+   $ kitchen test -c 4
+
 
 kitchen verify
 =====================================================
