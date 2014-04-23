@@ -83,57 +83,11 @@ Create a DNS entry for the load balanced virtual IP address, which will be used 
 
 Firewalls
 -----------------------------------------------------
-If host-based firewalls (iptables, ufw, etc.) are being used, ensure that the following ports are open on each of the front-end servers:
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst
 
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_fe.rst
 
-   * - Port
-     - Used by ...
-   * - 80
-     - nginx
-   * - 443
-     - nginx
-   * - 9672
-     - nrpe
-
-On the back-end servers:
-
-.. list-table::
-   :widths: 60 420
-   :header-rows: 1
-
-   * - Port
-     - Used by ...
-   * - 80
-     - nginx
-   * - 443
-     - nginx
-   * - 9671
-     - nginx
-   * - 9680
-     - nginx
-   * - 9685
-     - nginx
-   * - 9683
-     - nginx
-   * - 9672
-     - nrpe
-   * - 5984
-     - couchdb
-   * - 8983
-     - opscode-solr
-   * - 5432
-     - postgresql
-   * - 5672
-     - rabbitmq
-   * - 6379
-     - redis
-   * - 7788
-     - drbd
-
-Refer to the operating system's manual or site systems administrators for instructions on how to enable this change.
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_be.rst
 
 Hostnames, FQDNs
 -----------------------------------------------------

@@ -15,12 +15,9 @@ A standalone installation scenario has the following system requirements:
 
 Firewall Requirements
 -----------------------------------------------------
-If you are using host-based firewalls (iptables, ufw, etc.) ensure that the following ports are open:
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports.rst
 
-* Port 80, nginx 
-* Port 443, nginx
-
-Refer to the operating system's manual, or a site systems administrator for instructions on how to enable this change.
+.. include:: ../../includes_server_firewalls_and_ports/includes_server_firewalls_and_ports_standalone.rst
 
 Hostnames, FQDNs
 -----------------------------------------------------
