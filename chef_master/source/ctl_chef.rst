@@ -1,5 +1,5 @@
 =====================================================
-|chef ctl|
+|chef ctl| (executable)
 =====================================================
 
 .. include:: ../../includes_ctl_chef/includes_ctl_chef.rst

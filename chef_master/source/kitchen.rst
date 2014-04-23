@@ -14,7 +14,7 @@ Drivers
 =====================================================
 .. include:: ../../includes_test_kitchen/includes_test_kitchen_drivers.rst
 
-kitchen CLI
+kitchen (executable)
 =====================================================
 .. include:: ../../includes_ctl_kitchen/includes_ctl_kitchen.rst
 
