@@ -12,4 +12,4 @@ and then restore the previously backed-up files to the following locations:
 
 * /etc/opscode 
 * /var/opt/opscode
-* /var/log/opscode
+

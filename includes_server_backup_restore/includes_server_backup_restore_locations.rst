@@ -5,6 +5,5 @@ Data stored in the following directories should be backed up periodically:
 
 * /etc/opscode 
 * /var/opt/opscode
-* /var/log/opscode
 
 This data is also essential when any type of backup and restore operation is done for the |chef server oec| server.
