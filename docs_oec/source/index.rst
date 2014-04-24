@@ -80,24 +80,7 @@ The following |knife| subcommands are built-in:
 -----------------------------------------------------
 Plugins allow |knife| to interact with all of the major cloud providers. All |knife| plugins share the same set of :doc:`common options </knife_common_options>` and built-in |knife| subcommands, plus |knife| plugins can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|.
 
-|company_name| maintains the following |knife| plugins:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_azure.html">knife azure</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_bluebox.html">knife bluebox</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_bluelock.html">knife bluelock</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_ec2.html">knife ec2</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_eucalyptus.html">knife eucalyptus</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_google.html">knife google</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_hp.html">knife hp</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_linode.html">knife linode</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_openstack.html">knife openstack</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_rackspace.html">knife rackspace</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_reporting.html">knife reporting</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_terremark.html">knife terremark</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_vcloud.html">knife vcloud</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_windows.html">knife windows</a> </br>
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_chef_maintained_index_list.rst
 
 ..   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/plugin_knife_push_jobs.html">knife push jobs</a> </br>
 
@@ -341,7 +324,7 @@ A :doc:`resource </resource>` is a key part of a recipe that defines the actions
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#actions">Actions</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#attributes">Attributes</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#conditionals">Conditionals</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#guards">Guards</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#notifications">Notifications</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#relative-paths">Relative Paths</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_common.html#windows-file-security">Windows File Security</a> </br>
@@ -356,7 +339,7 @@ The following resources are built-in and can be used in any recipe:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_batch.html">batch</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_breakpoint.html">breakpoint</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_chef_gem.html">chef_gem</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_chef_gem.html">chef_handler</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_chef_handler.html">chef_handler</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_cookbook_file.html">cookbook_file</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_cron.html">cron</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/resource_deploy.html">deploy</a> </br>
@@ -404,36 +387,7 @@ A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much lik
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_custom_provider.html">Create a lightweight provider using platform resources</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_custom_provider_ruby.html">Create a lightweight provider using Ruby</a> </br>
 
-The following LWRPs are available in |company_name|-maintained cookbooks:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/apt">apt</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/aws">aws</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/bluepill">bluepill</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_chef_handler.html">chef_handler</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/daemontools">daemontools</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/djbdns">djbdns</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/dmg">dmg</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/dynect">dynect</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/firewall">firewall</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/freebsd">freebsd</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/gunicorn">gunicorn</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/homebrew">homebrew</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/iis">iis</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/lvm">lvm</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/maven">maven</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/nginx">nginx</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/omnibus">omnibus</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/openssh">openssh</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/php">php</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/powershell">powershell</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/rabbitmq">rabbitmq</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/sudo">sudo</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/transmission">transmission</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/webpi">webpi</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/windows">windows</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/enterprise/lwrp_yum.html">yum</a> </br>
+.. include:: ../../includes_lwrp/includes_lwrp_chef_maintained_index_list.rst
 
 See the `opscode-cookbooks <https://github.com/opscode-cookbooks>`_ repository for the full list.
 
