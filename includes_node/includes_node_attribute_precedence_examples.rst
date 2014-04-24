@@ -9,6 +9,12 @@ The following examples are listed from low to high precedence.
 
    default["apache"]["dir"] = "/etc/apache2"
 
+**Default attribute in node object in recipe**
+
+.. code-block:: ruby
+
+   node.default["apache"]["dir"] = "/etc/apache2"
+
 **Default attribute in /environments/environment_name.rb**
 
 .. code-block:: ruby
@@ -20,12 +26,6 @@ The following examples are listed from low to high precedence.
 .. code-block:: ruby
 
    default_attributes({ "apache" => {"dir" => "/etc/apache2"}})
-
-**Default attribute in node object in recipe**
-
-.. code-block:: ruby
-
-   node.default["apache"]["dir"] = "/etc/apache2"
 
 **Normal attribute set as a cookbook attribute**
 
