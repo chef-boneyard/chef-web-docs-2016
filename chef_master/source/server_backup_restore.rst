@@ -16,8 +16,8 @@ Required Directories
 
 Backup
 -----------------------------------------------------
-.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst
+.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_locations_backup.rst
 
 Restore
 -----------------------------------------------------
-.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_locations.rst
+.. include:: ../../includes_server_backup_restore/includes_server_backup_restore_locations_restore.rst
