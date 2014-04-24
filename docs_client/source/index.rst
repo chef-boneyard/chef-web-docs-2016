@@ -81,23 +81,7 @@ Knife Cloud Plugins
 -----------------------------------------------------
 Plugins allow |knife| to interact with all of the major cloud providers. All |knife| plugins share the same set of :doc:`common options </knife_common_options>` and built-in |knife| subcommands, plus |knife| plugins can make :doc:`authenticated API requests </plugin_knife_authenticated_requests>` to the |chef server|.
 
-|company_name| maintains the following |knife| plugins:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_azure.html">knife azure</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_bluebox.html">knife bluebox</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_bluelock.html">knife bluelock</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_ec2.html">knife ec2</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_eucalyptus.html">knife eucalyptus</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_google.html">knife google</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_hp.html">knife hp</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_linode.html">knife linode</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_openstack.html">knife openstack</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_rackspace.html">knife rackspace</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_terremark.html">knife terremark</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_vcloud.html">knife vcloud</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/plugin_knife_windows.html">knife windows</a> </br>
+.. include:: ../../includes_plugin_knife/includes_plugin_knife_chef_maintained_index_list.rst
 
 A number of |knife| plugins are `built and maintained by the community <http://docs.opscode.com/client/community_plugin_knife.html>`_. In addition, `custom Knife plugins <http://docs.opscode.com/client/plugin_knife_custom.html>`_ can be created.
 
@@ -126,7 +110,7 @@ Server Essentials
 The server acts as a hub for all of the data needed by the |chef client| while it configures a node:
 
 * A :doc:`node object </essentials_node_object>` exists for each node that is being managed by the |chef client|
-* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/essentials_node_object.html#attributes>`_.
+* Each node object consists of a :doc:`run-list </essentials_node_object_run_lists>` and a `collection of attributes <http://docs.opscode.com/client/essentials_node_object.html#attributes>`_.
 * All data that is stored on the |chef server|---including everything uploaded to the server from the |chef repo| and by the |chef client|---is :doc:`searchable </essentials_search>` from both recipes (using the :doc:`search method </dsl_recipe_method_search>` in the |dsl recipe|) and the workstation (using the :doc:`knife search </knife_search>` subcommand)
 * The |chef server| can apply :doc:`global policy settings </essentials_policy>` to all nodes across the organization, including for :doc:`data bags </essentials_data_bags>`, :doc:`environments </essentials_environments>`, and :doc:`roles </essentials_roles>`.
 * The :doc:`authentication </auth_authentication>` process ensures that requests can only be made to the |chef server| by authorized users
@@ -202,7 +186,7 @@ A cookbook is made up of the following components: attribute files, definitions,
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_attribute_files.html">Attribute Files</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_definitions.html">Definitions</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_files.html">Files</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_handlers.html">Handlers</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/handlers.html">Handlers</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_libraries.html">Libraries</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_metadata.html">Metadata</a> (and <a href="http://docs.opscode.com/client/config_rb_metadata.html">/cookbook directory settings</a>)</br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/essentials_cookbook_recipes.html">Recipes</a> (and the <a href="http://docs.opscode.com/client/dsl_recipe.html">Recipe DSL</a>)</br>
@@ -218,7 +202,7 @@ A :doc:`resource </resource>` is a key part of a recipe that defines the actions
 
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#actions">Actions</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#attributes">Attributes</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#conditionals">Conditionals</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#guards">Guards</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#notifications">Notifications</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#relative-paths">Relative Paths</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_common.html#windows-file-security">Windows File Security</a> </br>
@@ -233,7 +217,7 @@ The following resources are built-in and can be used in any recipe:
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_batch.html">batch</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_breakpoint.html">breakpoint</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_chef_gem.html">chef_gem</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_chef_handler.html">chef_gem</a> </br>
+   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_chef_handler.html">chef_handler</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_cookbook_file.html">cookbook_file</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_cron.html">cron</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/resource_deploy.html">deploy</a> </br>
@@ -281,36 +265,7 @@ A :doc:`LWRP </lwrp>` is an extension of the |chef client| that behaves much lik
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/lwrp_custom_provider.html">Create a lightweight provider using platform resources</a> </br>
    &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/client/lwrp_custom_provider_ruby.html">Create a lightweight provider using Ruby</a> </br>
 
-The following LWRPs are available in |company_name|-maintained cookbooks:
-
-.. raw:: html
-
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/apt">apt</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/aws">aws</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/bluepill">bluepill</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/lwrp_chef_handler.html">chef_handler</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/daemontools">daemontools</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/djbdns">djbdns</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/dmg">dmg</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/dynect">dynect</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/firewall">firewall</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/freebsd">freebsd</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/gunicorn">gunicorn</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/homebrew">homebrew</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/iis">iis</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/lvm">lvm</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/maven">maven</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/nginx">nginx</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/omnibus">omnibus</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/openssh">openssh</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/php">php</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/powershell">powershell</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/rabbitmq">rabbitmq</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/sudo">sudo</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/transmission">transmission</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/webpi">webpi</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="https://github.com/opscode-cookbooks/windows">windows</a> </br>
-   &nbsp;&nbsp;&nbsp;   <a href="http://docs.opscode.com/lwrp_yum.html">yum</a> </br>
+.. include:: ../../includes_lwrp/includes_lwrp_chef_maintained_index_list.rst
 
 See the `opscode-cookbooks <https://github.com/opscode-cookbooks>`_ repository for the full list.
 
@@ -365,6 +320,7 @@ The :doc:`Recipe DSL </dsl_recipe>` is used to declare resources in recipes. The
    ctl_chef_client
    ctl_chef_shell
    ctl_chef_solo
+   ctl_ohai
    dsl_recipe
    dsl_recipe_helper_windows_platform
    dsl_recipe_method_attribute
