@@ -88,6 +88,9 @@ Get Kernel Values
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
 .. include:: ../../includes_ohai/includes_ohai_custom_plugin_example_kernels.rst
 
+|ohai 6| vs. |ohai 7| Plugins
+-----------------------------------------------------
+.. include:: ../../includes_ohai/includes_ohai_migrate_plugins_6_to_7.rst
 
 ohai Resource
 =====================================================

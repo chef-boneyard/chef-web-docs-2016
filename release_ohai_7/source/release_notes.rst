@@ -17,7 +17,7 @@ What's New
 * **New DSL** New features like ``collect_data()`` blocks and ``depends`` / ``provides`` statements make it easier to build plugins for platform-specific situations.
 * **Attribute name-based user interaction** Only specify the name of the attribute; |ohai 7| will figure out which plugins are required to collect that data. 
 
-Build |ohai 7| Plugins
+|ohai 6| vs. |ohai 7| Plugins
 -----------------------------------------------------
 .. include:: ../../includes_ohai/includes_ohai_migrate_plugins_6_to_7.rst
 
