@@ -38,6 +38,12 @@ The Workstation
 
 **Tools:** :doc:`chef-shell (executable) </ctl_chef_shell>` | :doc:`chef-apply (executable) </ctl_chef_apply>`
 
+|chef dk|
+-----------------------------------------------------
+The |chef dk| defines a common workflow for cookbook development, including unit and integration testing, identifying lint-like behavior, dedicated tooling, and more:
+
+**chef-dk:** :doc:`Install the chef-dk </install_dk>` | :doc:`Kitchen </kitchen>` | :doc:`ChefSpec </chefspec>` | :doc:`Foodcritic </foodcritic>` | :doc:`Berkshelf </berkshelf>` --- **chef-dk Tools:** :doc:`kitchen (executable) </ctl_kitchen>` | :doc:`chef (executable) </ctl_chef>`
+
 
 The Server
 =====================================================
@@ -247,6 +253,7 @@ Cookbooks
    images
    install
    install_bootstrap
+   install_dk
    install_manage
    install_omnibus
    install_push_jobs
