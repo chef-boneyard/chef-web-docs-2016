@@ -424,6 +424,7 @@ Cookbooks
    resource_user
    resource_windows_package
    resource_yum
+   security_notes
    server_backup_restore
    server_components
    server_data
