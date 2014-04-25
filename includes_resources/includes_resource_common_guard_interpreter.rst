@@ -2,7 +2,7 @@
 .. This file should not be changed in a way that hinders its ability to appear in multiple documentation sets.
 
 
-Any resource that passes a string command may also specify the interpreter that will be used to evaluate that string command. This is done by using the ``guard_interpreter`` attribute to specify a |resource script|-based resource: |resource script_bash|, |resource script_csh|, |resource script_perl|, |resource powershell_script|, |resource script_python|, and |resource script_ruby|. For example, the following code block will ensure the command is evaluated using |bash| (and not any other interpreter):
+Any resource that passes a string command may also specify the interpreter that will be used to evaluate that string command. This is done by using the ``guard_interpreter`` attribute to specify a |resource script|-based resource: |resource script_bash|, |resource script_csh|, |resource script_perl|, |resource powershell_script|, |resource script_python|, and |resource script_ruby|, plus the |resource batch| resource. For example, the following code block will ensure the command is evaluated using |bash| (and not any other interpreter):
 
 .. code-block:: ruby
 
@@ -22,6 +22,8 @@ The ``guard_interpreter`` attribute may be set to any of the following values:
      - Description
    * - ``:bash``
      - Use to evaluate a string command using the |resource script_bash| resource.
+   * - ``:batch``
+     - Use to evaluate a string command using the |resource batch| resource.
    * - ``:csh``
      - Use to evaluate a string command using the |resource script_csh| resource.
    * - ``:default``
