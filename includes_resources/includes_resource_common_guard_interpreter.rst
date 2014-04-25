@@ -37,30 +37,7 @@ The ``guard_interpreter`` attribute may be set to any of the following values:
    * - ``:ruby``
      - Use to evaluate a string command using the |resource script_ruby| resource.
 
-All non-default interpreters will also inherit the following attributes from the |resource script|-based resource specified by the ``guard_interpreter`` attribute:
-
-.. list-table::
-   :widths: 150 450
-   :header-rows: 1
-
-   * - Attribute
-     - Description
-   * - ``architecture``
-     - |resource powershell_script| resource only. |architecture windows_process|
-   * - ``cwd``
-     - |cwd|
-   * - ``environment``
-     - |environment variables|
-   * - ``group``
-     - |group command|
-   * - ``path``
-     - |path resource execute| The default value uses the system path.
-   * - ``user``
-     - |user command|
-   * - ``umask``
-     - |umask|
-
-For example, the ``:environment`` hash only needs to be set once since the |resource script_bash| resource that executes the ``guard_interpreter`` will inherit the same value:
+All non-default interpreters will also inherit attributes. For example, the ``:environment`` hash only needs to be set once since the |resource script_bash| resource that executes the ``guard_interpreter`` will inherit the same value:
 
 .. code-block:: ruby
 
