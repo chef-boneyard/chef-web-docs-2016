@@ -12,7 +12,7 @@ How Keys are Used?
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
 
-Knife
+|knife|
 -----------------------------------------------------
 .. include:: ../../includes_security/includes_security_key_pairs_knife.rst
 

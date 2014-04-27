@@ -14,19 +14,17 @@ Authentication
 
 During a |chef client| Run
 -----------------------------------------------------
-.. include:: ../../includes_chef_auth/includes_chef_auth_authentication_chef_run.rst
+.. include:: ../../includes_security/includes_security_key_pairs_chef_client.rst
+
+|knife|
+-----------------------------------------------------
+.. include:: ../../includes_security/includes_security_key_pairs_knife.rst
+
+|knife| can also use the |subcommand knife exec| subcommand to make specific, authenticated requests to the |chef server|. |knife| plugins can also make authenticated requests to the |chef server| by leveraging the |subcommand knife exec| subcommand.
 
 From the Web Interface
 -----------------------------------------------------
 .. include:: ../../includes_chef_auth/includes_chef_auth_authentication_webui.rst
-
-knife exec
------------------------------------------------------
-.. include:: ../../includes_knife/includes_knife_exec_authenticated_api_requests.rst
-
-|knife| Plugins
------------------------------------------------------
-.. include:: ../../includes_plugin_knife/includes_plugin_knife_using_authenticated_requests.rst
 
 Other Options
 -----------------------------------------------------
