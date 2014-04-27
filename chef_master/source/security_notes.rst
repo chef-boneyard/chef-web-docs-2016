@@ -26,7 +26,7 @@ Depending on your comfort level with the defense around your |chef server|, you 
 
 Actions
 -----------------------------------------------------
-The following steps MUST be taken:
+The following steps should be taken:
 
 #. Upgrade to the latest version of the |chef server|; click `here <http://www.getchef.com/blog/2014/04/09/chef-server-11-0-12-release/>`__ for |chef server osc|, `here <http://www.getchef.com/blog/2014/04/09/enterprise-chef-11-1-3-release/>`__ for |chef server oec|, and `here <http://www.getchef.com/blog/2014/04/09/enterprise-chef-1-4-9-release/>`__ for |chef private|.
 
