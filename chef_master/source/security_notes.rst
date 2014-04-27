@@ -47,7 +47,7 @@ The following steps MUST be taken:
     curl -L https://www.opscode.com/chef/install.sh | sudo bash -s -- -v 10.32.2 
 #. After the |chef server| and every |chef client| is patched, it's still possible that arbitrary data was compromised during the patching process. Depending on your organization's comfort level with the defense around your |chef| installation, you may want to change user passwords and/or take additional steps to protect other sensitive data.
 
-  .. note:: The credentials for the |chef client| do not need to be regenerated because the |chef server| `signs each request during the authentication and authorization process <http://docs.opscode.com/chef_private_keys.html#chef-client/>`__. This prevents a node from accessing any data it shouldn't.
+  .. note:: The credentials for the |chef client| do not need to be regenerated because the |chef server| `signs each request during the authentication and authorization process <http://docs.opscode.com/chef_private_keys.html#chef-client>`__. This prevents a node from accessing any data it shouldn't.
 
 
 More Information
