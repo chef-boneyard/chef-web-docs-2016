@@ -28,7 +28,7 @@ To upgrade the |chef manage| server:
 
 #. Contact |company_name| and get the package that is appropriate for your |chef server oec| server's platform and operating system.
 
-#. Install the package on the same front end machines that are running |chef server oec|, version 11.0.1 or higher. For example on |ubuntu|:
+#. Install the package on the same front end machines that are running |chef server oec|. For example on |ubuntu|:
 
    .. code-block:: bash
 
